@@ -1,0 +1,72 @@
+{% load i18n %}
+{% load utils %}
+
+<section class="section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "Hyper Exchange Protocol" %}</strong><span></span>
+                </h2>
+            </div>
+        </div><!-- end -->
+        <div class="row">
+            <div class="feature-item col-md-4 col-xs-12 fr">
+                <div class="feature-item-wrap">
+                    <img class="feature-icon" src="{% version "images/features/icon-5.svg" %}"/>
+                </div>
+            </div>
+            <div class="feature-item col-md-4 col-xs-12">
+                <div class="feature-item-wrap">
+                    <ul>
+                        <li>{% trans "数字身份与信用" %}</li>
+                        <p>
+                            {% trans "运用数字身份，用户可以方便管理自己的数字资产。" %}
+                        </p>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="feature-item col-md-4 col-xs-12">
+                <div class="feature-item-wrap">
+                    <ul>
+                        <li>{% trans "供应链" %}</li>
+                        <p>
+                            {% trans "通过运用原子哈希等技术为商品建立全网唯一数字身份。" %}
+                        </p>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature-item col-md-4 col-xs-12">
+                <div class="feature-item-wrap">
+                    <ul>
+                        <li>{% trans "数字营销" %}</li>
+                        <p>
+                            {% trans "广告主通过系统内置的各种营销类智能合约模版设定营销方案。" %}
+                        </p>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature-item col-md-4 col-xs-12">
+                <div class="feature-item-wrap">
+                    <ul>
+                        <li>{% trans "交易和支付" %}</li>
+                        <p>
+                            {% trans "支持跨境交易、超小额支付、闪电结算等，同时提供完善的线上、线下支付工具。" %}
+                        </p>
+                    </ul>
+                </div>
+            </div>
+            <div class="feature-item col-lg-12 col-xs-12">
+                <div class="feature-item-wrap">
+                    <div class="more">
+                        <a href="/protocol/">{% trans "MORE" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</section><!-- end -->

@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Jobs" %}
+{% endblock %}
+
+{% block content %}
+
+<section id="jobs" class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Join Us" %}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="about_list">
+            <div>
+                <h2>{% trans "About Newton Project" %}</h2>
+                <p>
+                    {% trans "We are committed to building an efficient, collaborative, low-cost, highly automated business infrastructure ecosystem." %}
+                </p>
+                
+                <h2>{% trans "OUR CULTURE" %}</h2>
+                <p>
+                    {% trans "We believe in the free, open and inclusive culture advocated by the liberal open source philosophy. Decentralization is the core of our values." %}
+                </p>
+                <p>
+                    {% trans "Currently, Newton project team has attracted many professional talents from the free and open source software community, covering the field of e-commerce, finance, media, etc. And we are sincerely inviting more outstanding talents to join us." %}
+                </p>
+                <p>
+                    {% trans "In addition, developers around the world can join us by telecommuting. The space constraint will not hinder our cooperation ." %}
+                </p>
+                <h2>{% trans "WHO WE ARE LOOKING FOR" %}</h2>
+                <p>
+                    {% trans "We need technical talents in distributed systems, operating systems, encryption algorithms, blockchains, mobile development, product design, and other fields. We also need professionals in the fields of currency theory, economic models, asset management, and financial innovation. We welcome volunteers and enthusiasts in all fields." %}
+                </p>
+                <p>
+                    {% trans "We need every talent to be passionate and believe in decentralized business, because Newton is closely related to everyone’s life." %}
+                </p>
+                <p>
+                    {% trans "In addition, we will use NEW to pay part of the salary, which is a condition that must be accepted." %}
+                </p>
+
+                <h2>{% trans "Currently open positions" %}</h2>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading collapsed" id="headingOne" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" onclick="javascript:arrowToggle('One');">
+                        <h4 class="panel-title">
+                          <a>
+                            {% trans "Senior R&D Engineer" %}
+                          </a>
+                        </h4>
+                        <span id="arrow-One" class="arrow-down"></span>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <p class="job-title">{% trans "Job description:" %}</p>
+                            <ol>
+                                <li>{% trans "Being responsible for the design and development of the Newton system." %}</li>
+                                <li>{% trans "Being responsible for researching the latest technologies in the industry and applying them to Newtonian system improvements." %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Qualifications:" %}</p>
+                            <ol>
+                                <li>{% trans "Bachelor degree or above, applicants major in computer science or related professions shall be prioritized." %}</li>
+                                <li>{% trans "More than 5 years of system development experience." %}</li>
+                                <li>{% trans "Skilled in a variety of programming languages (C#, Java, Go, C++, Kotlin)." %}</li>
+                                <li>{% trans "Being familiar with the principle of software security, can apply security standards to research and development." %}</li>
+                                <li>{% trans "Good English reading ability, able to read English technical documents smoothly." %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Priority recruitment conditions:" %}</p>
+                            <ol>
+                                <li>{% trans "Blockchain related system R&D experience." %}</li>
+                                <li>{% trans "Distributed network system development experience." %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Recruitment number: 2 people " %}</p>
+                            <p class="job-title">{% trans "Working Location: Beijing - Chaoyang District" %}</p>
+                            <p class="job-title">{% trans "Payments: Salary to be discussed" %}</p>
+                            <p class="job-title">{% trans "Contact:<a>newton-hr@newtonproject.org</a>" %}</p>
+                        </div>
+                      </div>
+                </div>
+
+<!-- 
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading collapsed" id="headingTwo" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" onclick="javascript:arrowToggle('Two');">
+                        <h4 class="panel-title">
+                          <a>
+                            {% trans "Blockchain Engineer" %}
+                          </a>
+                        </h4>
+                        <span id="arrow-Two" class="arrow-down"></span>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <p class="job-title">{% trans "Job description:" %}</p>
+                            <ol>
+                                <li>{% trans "Design and develop Newton software, related decentralized applications and cooperate with the rest of the team working on various layers of infrastructure;" %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Job Responsibilities:" %}</p>
+                            <ol>
+                                <li>{% trans "Design, build, and maintain efficient, reusable, and reliable C++/Go code." %}</li>
+                                <li>{% trans "Develop blockchain solutions and provide support for blockchain development." %}</li>
+                                <li>{% trans "Implement performance and quality modules." %}</li>
+                                <li>{% trans "Able to work independently with minimal guidance on tasks." %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Qualifications:" %}</p>
+                            <ol>
+                                <li>{% trans "Strong proficiency in C++/Go, with solid knowledge of language specification." %}</li>
+                                <li>{% trans "1+ years of experience, preferably in an environment where latency and speed are factors (e.g., finance)." %}</li>
+                                <li>{% trans "Computer Science or related degree." %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Priority recruitment conditions:" %}</p>
+                            <ol>
+                                <li>{% trans "Blockchain related system R&D experience." %}</li>
+                                <li>{% trans "Distributed network system development experience." %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Working Location: Beijing - Chaoyang District" %}</p>
+                            <p class="job-title">{% trans "Payments: Salary to be discussed" %}</p>
+                            <p class="job-title">{% trans "Contact:<a>newton-hr@newtonproject.org</a>" %}</p>
+                        </div>
+                      </div>
+                </div> -->
+
+
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading collapsed" id="headingThree" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" onclick="javascript:arrowToggle('Three');">
+                        <h4 class="panel-title">
+                          <a>
+                            {% trans "Fullstack Web Developer" %}
+                          </a>
+                        </h4>
+                        <span id="arrow-Three" class="arrow-down"></span>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <p class="job-title">{% trans "Job description:" %}</p>
+                            <ol>
+                                <li>{% trans "Write well designed, testable, efficient code by using best software development practices;" %}</li>
+                                <li>{% trans "Create website layout/user interface by using standard HTML/CSS practices;" %}</li>
+                                <li>{% trans "Build web based backends and micro-services;" %}</li>
+                                <li>{% trans "Stay plugged into emerging technologies/industry trends and apply them into operations and activities;" %}</li>
+                                <li>{% trans "Cooperate with designers to match visual design intent." %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Qualifications:" %}</p>
+                            <ol>
+                                <li>{% trans "Proven experience working with React or other modern Frontend Javascript Framework;" %}</li>
+                                <li>{% trans "Experience with Python/Django/Node.js;" %}</li>
+                                <li>{% trans "Experience writing frontend and backend unit and integration tests;" %}</li>
+                                <li>{% trans "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;" %}</li>
+                                <li>{% trans "A solid understanding of how web applications work including security, session management, and best development practices;" %}</li>
+                                <li>{% trans "Strong organizational skills to juggle multiple tasks within the constraints of timelines and budgets with business acumen;" %}</li>
+                                <li>{% trans "Ability to work and thrive in a fast-paced environment, learn rapidly and master diverse web technologies and techniques;" %}</li>
+                                <li>{% trans "Bachelor or masters degree in computer science or relevant experience;" %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Working Location: Beijing - Chaoyang District" %}</p>
+                            <p class="job-title">{% trans "Payments: Salary to be discussed" %}</p>
+                            <p class="job-title">{% trans "Contact:<a>newton-hr@newtonproject.org</a>" %}</p>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading collapsed" id="headingFour" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" onclick="javascript:arrowToggle('Four');">
+                        <h4 class="panel-title">
+                          <a>
+                            {% trans "Communication Specialist" %}
+                          </a>
+                        </h4>
+                        <span id="arrow-Four" class="arrow-down"></span>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                            <p class="job-title">{% trans "Job description:" %}</p>
+                            <ol>
+                                <li>{% trans "Deliver customer service and technical support on email/facebook/twitter;" %}</li>
+                                <li>{% trans "Communicate customer feedback and process suggestions;" %}</li>
+                                <li>{% trans "Identifying cause of dissatisfactions, and provide ways for improvement;" %}</li>
+                                <li>{% trans "Prepare reports on enquiries summary and improvement area;" %}</li>
+                                <li>{% trans "Ensure that all enquiries at the social media channel in compliance with all internal and external regulations, policies and guideline;" %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Qualifications:" %}</p>
+                            <ol>
+                                <li>{% trans "Bachelor degree or above;" %}</li>
+                                <li>{% trans "Preferably with 2 years of working experience in customer support role;" %}</li>
+                                <li>{% trans "MUST speak fluent using english and written English and Chinese with good presentation, communication and computer skills;" %}</li>
+                                <li>{% trans "Self-motivated and able to work independently;" %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Working Location: Beijing - Chaoyang District" %}</p>
+                            <p class="job-title">{% trans "Payments: Salary to be discussed" %}</p>
+                            <p class="job-title">{% trans "Contact:<a>newton-hr@newtonproject.org</a>" %}</p>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading collapsed" id="headingFive" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive" onclick="javascript:arrowToggle('Five');">
+                        <h4 class="panel-title">
+                          <a>
+                            {% trans "Developer Relations Advocate" %}
+                          </a>
+                        </h4>
+                        <span id="arrow-Five" class="arrow-down"></span>
+                      </div>
+                      <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                        <div class="panel-body">
+                            <p class="job-title">{% trans "Job description:" %}</p>
+                            <ol>
+                                <li>{% trans "Content creation and distribution and analytics – tutorials, developer guides, newsletters, sample apps, client libraries;" %}</li>
+                                <li>{% trans "Creating and implementing detailed annual, monthly & weekly plans for advocacy/engagement activities;" %}</li>
+                                <li>{% trans "Organize and coordinating marketing engagement activities including social media campaigns, youtube broadcasts, progress reports;" %}</li>
+                                <li>{% trans "Content sourcing from 3rd parties, distribution and analytics;" %}</li>
+                                <li>{% trans "Engage with and provide support to community meetup organizers;" %}</li>
+                                
+                            </ol>
+                            <p class="job-title">{% trans "Qualifications:" %}</p>
+                            <ol>
+                                <li>{% trans "MUST speak fluent and written English with good presentation, communication and computer skills;" %}</li>
+                                <li>{% trans "Experience writing tutorials, guides, API docs, sample apps;" %}</li>
+                                <li>{% trans "Experience writing code in C++/JavaScript;" %}</li>
+                                <li>{% trans "Preferably with 2 years of working experience in IT industry customer support role;" %}</li>
+                                <li>{% trans "Self-motivated and able to work independently." %}</li>
+                            </ol>
+                     
+                            <p class="job-title">{% trans "Working Location: Beijing - Chaoyang District" %}</p>
+                            <p class="job-title">{% trans "Payments: Salary to be discussed" %}</p>
+                            <p class="job-title">{% trans "Contact:<a>newton-hr@newtonproject.org</a>" %}</p>
+                        </div>
+                      </div>
+                </div>
+
+
+
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading collapsed" id="headingSix" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix" onclick="javascript:arrowToggle('Six');">
+                        <h4 class="panel-title">
+                          <a>
+                            {% trans "Senior UX Designer" %}
+                          </a>
+                        </h4>
+                        <span id="arrow-Six" class="arrow-down"></span>
+                      </div>
+                      <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                        <div class="panel-body">
+                            <p class="job-title">{% trans "Job description:" %}</p>
+                            <ol>
+                                <li>{% trans "Translate concepts into user flows, wireframes, mockups and prototypes that lead to intuitive user experiences;" %}</li>
+                                <li>{% trans "Identify design problems and devise elegant solutions;" %}</li>
+                                <li>{% trans "Take a user-centered design approach and rapidly test and iterate your designs;" %}</li>
+                                <li>{% trans "Collaborate with other team members and stakeholders;" %}</li>
+                            </ol>
+                            <p class="job-title">{% trans "Qualifications:" %}</p>
+                            <ol>
+                                <li>{% trans "Three or more years of UX design experience. Preference will be given to candidates who have experience designing complex solutions for complete digital environments;" %}</li>
+                                <li>{% trans "Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel App. Basic React, SCSS, or JavaScript skills are a plus;" %}</li>
+                                <li>{% trans "Ability to work with clients to understand detailed requirements and design complete user experiences that meet client needs and vision;" %}</li>
+                                <li>{% trans "Extensive experience in using UX design best practices to design solutions, and a deep understanding of mobile-first and responsive design;" %}</li>
+                                <li>{% trans "A solid grasp of user-centered design (UCD), planning and conducting user research, user testing, A/B testing, rapid prototyping, heuristic analysis, usability and accessibility concerns;" %}</li>
+                                <li>{% trans "Ability to clearly and effectively communicate design processes, ideas, and solutions to teams and clients;" %}</li>
+                                <li>{% trans "Be open to receiving feedback and constructive criticism;" %}</li>
+                                <li>{% trans "Be passionate about resolving user pain points through great design." %}</li>
+                            </ol>
+                     
+                            <p class="job-title">{% trans "Working Location: Beijing - Chaoyang District" %}</p>
+                            <p class="job-title">{% trans "Payments: Salary to be discussed" %}</p>
+                            <p class="job-title">{% trans "Contact:<a>newton-hr@newtonproject.org</a>" %}</p>
+                        </div>
+                      </div>
+                </div>
+
+
+            </div>
+        </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    function arrowToggle(index){
+        var label = "#arrow-" + index;
+        var parent = "#heading" + index;
+        if($(parent).hasClass("collapsed")){
+            $(label).addClass("arrow-trans");
+        }else{
+            $(label).removeClass("arrow-trans");
+        }
+    }
+</script>
+{% endblock %}

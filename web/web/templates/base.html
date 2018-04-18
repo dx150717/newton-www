@@ -1,0 +1,67 @@
+{% load i18n %}
+{% load utils %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="description" content="{% trans "Newton-Infrastructure of protocol-based economy,We are committed to creating a decentralized protocol standards and development tool chains that can be used in the entire business process, including supply chain, marketing, payment, transaction, credit, finance and so on, thereby building a highly collaborative, fair and reasonable, highly automated business environment with lower cost and fewer conflicts." %}{% block description %}{% endblock %}"/>
+        <meta name="author" content="Newton{% block author %}{% endblock %}"/>
+        <meta name="keywords" content="{% trans "Newton,NewtonProject,newtonproject.org,NewChain,NewNet,Protocol-based Economy,Atom Hashing,NewIOT,DAI,Hyper Exchange Protocol,Automatic finance,NNIO,Reliable physical tunnel,Digital Marketing,Supply Chain,Blockchain,Intelligent Contract,Open Source Community,Digital Assets,token" %}{% block keywords %}{% endblock %}"/>
+        <title>{% block title %}{% endblock %} | {% trans "Newton" %}</title>
+
+        <!-- Fav and touch icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <!-- CSS -->
+        <!-- HTML5 IE Enabling Script -->
+        <link rel="shortcut icon" href="{% version "images/favicon.ico" %}" type="image/x-icon" />
+    	<!--==== style css ====-->
+        <link href="{% version "css/bootstrap.min.css" %}" rel="stylesheet" />
+        <link href="{% version "css/style.css" %}" rel="stylesheet" />
+        
+        <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116218760-1"></script>
+        
+        {% block css %}
+        {% endblock %}
+
+	    <!--[if lt IE 9]>
+            <script src="{% version "js/html5shiv/3.7.2/html5shiv.min.js" %}"></script>
+            <script src="{% version "js/respond/1.4.2/respond.min.js" %}"></script>
+            <![endif]-->
+    </head>
+    <body>
+        <div style="margin:0 auto; width:0px;height:0px;overflow:hidden;">
+            <img src="{% version "images/pic300.jpg" %}">
+        </div>
+        {% comment %}
+        <div class="Notice">
+            <div class="container">Notice：...</div>
+        </div>
+        {% endcomment %}
+        
+         {% block header %}
+         {% include "header.html" %}
+         {% endblock %}
+         <div role="main" id="main" class="main">
+             {% block content %}{% endblock %}
+         </div>
+	     {% block footer %}
+         {% include "footer.html" %}
+         {% endblock %}
+
+         <!-- jquery lib -->
+         <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
+         <!-- bootstrap lib -->
+         <script src="{% version "js/bootstrap.min.js" %}"></script>
+         <script src="{% version "js/index.js" %}"></script>
+         
+         {% block inline_js %}{% endblock %}
+
+         {% block js %}{% endblock %}
+         
+    </body>
+</html>

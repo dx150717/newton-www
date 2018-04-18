@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Partner" %}
+{% endblock %}
+
+{% block content %}
+<section id="partner" class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Partner" %}</p>
+        </div>
+    </div>
+</section>
+{% include "welcome/include-partner.html" %}
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    $("#construction").addClass("bg-gray");
+    $("#organization").removeClass("bg-gray")
+</script>
+{% endblock %}

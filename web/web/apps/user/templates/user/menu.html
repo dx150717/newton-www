@@ -1,0 +1,15 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="left-menu-head">
+    <img class="img-rounded" src="{% version "images/global-user-anonymous.jpg" %}" style="width: 100%;"/>
+    <div class="left-menu-username">{{ request.user.first_name }}</div>
+</div>
+
+<ul class="nav nav-pills nav-stacked">
+    <li {% if request.view_name == "user.views.user_edit_profile_view" %} class="active" {% endif %} ><a href="/user/edit/profile/">{% trans "个人简介" %}</a></li>
+    {% if can_edit_account %}
+    <li {% if request.view_name == "user.views.user_edit_account_view" %} class="active" {% endif %} ><a href="/user/edit/account/">{% trans "账户" %}</a></li>
+    {% endif %}
+</ul>
+

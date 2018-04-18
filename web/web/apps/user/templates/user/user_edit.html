@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}{% trans "帐号" %}{% endblock %}
+
+{% block content %}
+<div class="container user">
+    <div class="row">
+        <div class="col-md-2">
+            {% include "user/menu.html" %}
+        </div>
+
+        <div class="col-md-10">
+            {% if request.view_name == "user.views.user_edit_profile_view" %}
+            {% include "user/user_edit_fragment_profile.html" %}
+            {% endif %}
+
+            {% if request.view_name == "user.views.user_edit_account_view" %}
+            {% include "user/user_edit_fragment_account.html" %}
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}

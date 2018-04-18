@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "NewPay" %}
+{% endblock %}
+
+{% block content %}
+<section id="technology" class="section-list">
+    <div class="page-title">
+      <div class="container">
+          <p>{% trans "NewPay" %}</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="technology_list">
+        <h1>{% trans "DID" %}</h1>
+        <div class="technology_text row">      
+          <div class="fr"><img class="technology_icon1" src="{% version "images/technology/new-chain.svg" %}" alt="NewChain - high performance, heterogeneous, parallel block chain"></div>
+            <div class="col-sm-6">
+              <p>{% trans "全网络的唯一的数字身份 DID，确保信息的准确性，不可篡改性。保证用户隐私，保证用户信息安全。" %}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray">
+        <div class="container">
+          <div class="technology_list">
+            <h1>{% trans "联合登录Dapp" %}</h1>
+            <div class="technology_text row">      
+              <div class="fl"><img class="technology_icon2" src="{% version "images/technology/new-net.svg" %}" alt="NewNet - de centralization of cloud computing infrastructure"></div>
+                <div class="col-sm-6">
+                  <p>{% trans "联合登录其他dapp，主要使用 NEW 支付，可以选择其他主流数字货币。" %}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+          <div class="technology_list">
+            <h1>{% trans "Feature" %}</h1>
+            <div class="technology_text row">      
+              <div class="fl"><img class="technology_icon4" src="{% version "images/technology/hash.png" %}" alt="Atomic hash universal real object validation algorithm"></div>
+                <div class="col-sm-6">
+                  <p>{% trans "全球支付，微支付，闪电结算。" %}</p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="bg-gray">
+    <div class="container">
+      <div class="technology_list">
+        <h1>{% trans "Develop Tools" %}</h1>
+        <div class="technology_text row">      
+          <div class="fr"><img class="technology_icon5" src="{% version "images/technology/giot.svg" %}" alt="GIOT - Universal IoT device access framework"></div>
+            <div class="col-sm-6">
+              <p>{% trans "开发工具支持，直接接入 NewPay SDK。" %}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

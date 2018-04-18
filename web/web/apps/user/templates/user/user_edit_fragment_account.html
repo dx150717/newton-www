@@ -1,0 +1,39 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="panel panel-default">
+    <div class="panel-heading">{% trans "账户" %}</div>
+    <div class="panel-body">
+        <form role="form">
+            <div class="form-group">
+                <label>{% trans "电子邮件" %}</label>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="{% trans "输入电子邮件地址" %}" />
+            </div>
+
+            <div class="form-group">
+                <label>{% trans "密码" %}</label>
+            </div>
+            
+             <div class="form-group">
+                <input type="text" name="self_introduction" class="form-control" placeholder="{% trans "输入当前密码" %}" />
+            </div>
+
+             <div class="form-group">
+                <input type="text" name="self_introduction" class="form-control" placeholder="{% trans "输入新密码" %}" />
+            </div>
+
+             <div class="form-group">
+                <input type="text" name="self_introduction" class="form-control" placeholder="{% trans "重复输入新密码" %}" />
+            </div>
+
+             <div class="form-group">
+                 <button type="submit" class="btn btn-primary">{% trans "保存" %}</button>
+                 <button type="button" class="btn btn-default">{% trans "取消" %}</button>
+             </div>
+        </form>
+    </div>
+</div>
+

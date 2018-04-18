@@ -1,0 +1,100 @@
+{% load i18n %}
+{% load utils %}
+
+<section id="subscribe" class="section bg-gray">
+    <div class="container text-center">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title">
+                    <strong>{% trans "SUBSCRIBE TO US" %}</strong><span></span>
+                </h2>
+            </div>
+        </div><!-- end -->
+        <p>{% trans "Subscribe to Newton updates, or miss the juiciest bits!" %}</p>
+        <div class="raw">
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-0"></div>
+            <div id="dialog" class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+        
+            </div>  
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-0"></div>
+        </div>
+        
+        <div class="text-center" style="padding: 30px;">
+            <form>
+                <input class="email_add" type="text" placeholder="{% trans "Email Address" %}">
+                <a class="subscription-button">{% trans "SUBSCRIBE" %}</a>
+            </form>
+        </div>
+        <p class="small">{% trans "We won't share your email address or send you any spam." %}</p>
+    </div>
+</section><!-- end -->
+{% block js %}
+<script>
+
+// subscribe email list
+var FAIL = 0
+var SUCCESS = 1
+var UNAUTH = 2
+var SIGN_ERROR = 3
+var INVALID_PARAMS = 4
+var MAINTAIN = 5
+var UPGRADE = 6
+var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
+
+$(".subscription-button").click(function () {
+	if ($(".subscription-height")[0]) {
+		return;
+	}
+	var email_address = $("input[type='text']").val();
+	if(email_address.length > 0){
+		if(emailReg.test(email_address)){
+			$.post("/subscribe/", { "email_address": email_address }, function (ret) {
+				if (ret.error_code === FAIL) {
+					var content = ret.error_message;
+					var alertType = "alert-danger";
+					showSubscriptionResult(content, alertType);
+				} else {
+					if (ret.result) {
+						var content = ret.result.msg;
+						var alertType = "alert-success";
+						showSubscriptionResult(content, alertType);
+					}else{
+                        var content = "{% trans 'Subscribed Failed!' %}";
+                        var alertType = "alert-danger";
+                        showSubscriptionResult(content, alertType);
+                    }
+				}
+			});
+		}else{
+			var content = "{% trans 'Invalid Email Address!' %}";
+			var alertType = "alert-danger";
+			showSubscriptionResult(content, alertType);
+		}
+	}else{
+		var content = "{% trans 'Please Input Email Address!' %}";
+		var alertType = "alert-danger";
+		showSubscriptionResult(content, alertType);
+	}
+})
+
+/**
+ * Show the subscription's result with parameters.
+ * 
+ * @param content { String } alert content for show in page
+ * @param alertType { String } eg: alert-success, alert-danger 
+ */
+function showSubscriptionResult(content, alertType) {
+	$("#subscribe .raw").addClass("subscription-height");
+	var t1 = "<div class='alert " + alertType + " alert-dismissible' role='alert'>";
+	var t2 = "<button type='button' class='close tf10' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
+    var t3 = "<strong>" + content + "</strong></div>";
+	var t = t1 + t2 + t3;
+	$("#dialog").append(t);
+	setTimeout(() => {
+		$(".close").click();
+		$(".raw").removeClass("subscription-height")
+	}, 3000);
+}
+</script>
+{% endblock %}

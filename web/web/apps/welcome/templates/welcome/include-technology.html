@@ -1,0 +1,72 @@
+{% load i18n %}
+{% load utils %}
+
+<section class="section bg-gray">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "TECHNOLOGY" %}</strong><span></span>
+                </h2>
+            </div>
+        </div><!-- end -->
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="feature-item-img">
+                    <img class="feature-icon"  src="{% version "images/features/icon-6.svg" %}"/>
+                </div>
+            </div>
+            <div class="col-md-8 col-xs-12">
+                <div class="col-md-6 col-xs-12">
+                    <div class="feature-item-wrap">
+                        <ul>
+                            <li>{% trans "NewChain" %}</li>
+                            <p>
+                                {% trans "采用主链、子链设计方案，子链支持多种共识机制和数据结构，主链与子链之间，子链与子链之间可以进行资产交换。" %}
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="feature-item-wrap">
+                        <ul>
+                            <li>{% trans "Atom Hashing" %}</li>
+                            <p>
+                                {% trans "原子哈希应用放射性定年、PCA、机器视觉、深度学习等技术生成数字哈希。" %}
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix col-md-visible"></div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="feature-item-wrap">
+                        <ul>
+                            <li>{% trans "NewNet" %}</li>
+                            <p>
+                                {% trans "由大量节点组成的开放式云计算网络。" %}
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="feature-item-wrap">
+                        <ul>
+                            <li>{% trans "NewIOT" %}</li>
+                            <p>
+                                {% trans "区块链雾计算关，物联设备与网关间的通讯协议， NewChain物联网设备开发规范。" %}
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-item col-lg-12 col-xs-12">
+                <div class="feature-item-wrap">
+                    <div class="more">
+                        <a href="/technology/">{% trans "MORE" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- end -->

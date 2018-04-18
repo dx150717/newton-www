@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Media Kit" %}
+{% endblock %}
+
+{% block content %}
+<section id="mediakit" class="section-list section">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Media Kit" %}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="download_list">
+            <div>
+            <div>
+                <img src="{% version "/images/logo.svg" %}">
+            </div>
+            <div class="download-but">
+                <div class="raw">
+                    <div class="col-md-4 col-sm-6 p10">
+                        <a href="{% version "images/logo-16.png" %}" download="logo-16.png">16*16　PNG</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p10">
+                        <a href="{% version "images/logo-32.png" %}" download="logo-32.png">32*32　PNG</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p10">
+                        <a href="{% version "images/logo-64.png" %}" download="logo-64.png">64*64　PNG</a>
+                    </div>
+                    <div class="clearfix visible-md-block"></div>
+                    <div class="col-md-4 col-sm-6 p10">
+                        <a href="{% version "images/logo-128.png" %}" download="logo-128.png">128*128　PNG</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p10">
+                        <a href="{% version "images/logo-256.png" %}" download="logo-256.png">256*256　PNG</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p10">
+                        <a href="{% version "images/logo-512.png" %}" download="logo-512.png">512*512　PNG</a>        
+                    </div>
+                    <div class="clearfix visible-md-block"></div>
+                    <div class="col-md-4 col-sm-6 p10">
+                        <a href="{% version "images/logo_newton.svg" %}" download="logo_b.svg">SVG-BLACK</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p10">
+                        <a href="{% version "images/logo_newton1.svg" %}" download="logo_w.svg">SVG-WHITE</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

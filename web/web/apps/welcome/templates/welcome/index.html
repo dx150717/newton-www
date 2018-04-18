@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Home" %}
+{% endblock %}
+
+{% block content %}
+<section id="intro">
+    <div class="container">
+      <div class="row relative">
+        <div class="col-md-12 text-center">
+          <h1>{% trans "Everyone should benefit directly from economic growth" %}</h1>
+          <p class="sty1">{% trans "Infrastructure of protocol-based economy" %}</p>
+          {% comment %}
+          <div class="more"> 
+            <a href="/#/" target="_self"><span class="f20">{% trans "Whitepaper" %}</span></a> 
+          </div>
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% include "welcome/include-feature.html" %}
+
+{% include "welcome/include-protocol.html" %}
+
+{% include "welcome/include-technology.html" %}
+
+
+{% include "welcome/include-team.html" %}
+
+{% include "welcome/include-advisor.html" %}
+
+{% include "welcome/include-investor.html" %}
+
+{% include "welcome/include-roadmap.html" %}
+
+{% include "welcome/include-partner.html" %}
+<section id="sir" class="section">
+  <div class="container"><img class="img-1" src="{% version "images/partners/bitmap.png" %}" width="200">
+      <p class="sty1">{% trans "Tribute to one of the greatest scientists ever to impact our lives, Sir Isaac Newton." %}</p>
+    <!-- end --> 
+  </div>
+</section>
+{% include "subscription/include-subscription.html" %}
+{% endblock %}
+
+{% block inline_js %}
+
+{% endblock %}

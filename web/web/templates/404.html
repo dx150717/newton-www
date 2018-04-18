@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block content %}
+<div class="container page">
+	<div>
+        {% trans "You enter the blackhole." %}
+    </div>
+</div>
+<script language="javascript">
+    setTimeout(function(){location.href='/';}, 2000);
+</script>
+{% endblock %}
+

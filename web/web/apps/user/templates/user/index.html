@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}{{ request.user.first_name }}{% endblock %}
+
+{% block content %}
+<div class="banner banner-4">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <ul class="title-user list-unstyled text-center">
+                    <li><div class="pic-wrap"><img class="img-circle" src="{{ request.user.userprofile.head_image_url }}" alt="{{ request.user.first_name }}" /></div></li>
+                    <li class="h3">{{ request.user.first_name }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container user">
+    <!-- TAB -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#id_all_tab" role="tab" data-toggle="tab">{% trans "全部课程" %}</a>
+        </li>
+        <li>
+            <a href="#id_wish_tab" role="tab" data-toggle="tab">{% trans "计划学习" %}</a>
+        </li>
+        <li>
+            <a href="#id_like_tab" role="tab" data-toggle="tab">{% trans "喜欢" %}</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+        <div class="tab-pane active" id="id_all_tab">
+            <div class="row">
+                {% for course in all_courses %}
+                <div class="col-md-4">
+                    {% include "course/snippet-course-grid-item.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="tab-pane" id="id_wish_tab">
+            <div class="row">
+                {% for course in wish_courses %}
+                <div class="col-md-4">
+                    {% include "course/snippet-course-grid-item.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="tab-pane" id="id_like_tab">
+            <div class="row">
+                {% for course in like_courses %}
+                <div class="col-md-4">
+                    {% include "course/snippet-course-grid-item.html" %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
