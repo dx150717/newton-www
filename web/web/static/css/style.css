@@ -104,6 +104,7 @@ h6, .f12 { font-size: 12px; }
 #announcement .page-title{background-color:rgb(240, 211, 109);}
 #announcementdetail .page-title{background-color:rgb(240, 211, 109);}
 #faq .page-title{background-color: #5c8dbd;}
+#newpay .page-title{background-color: #6969AF}
 /*title bg*/
 #technology .page-title .container{ background: url(../images/titlebg/technology-bg.svg) no-repeat left bottom;}
 #protocol .page-title .container{background: url(../images/titlebg/ehp-bg.svg) no-repeat left bottom}/*Hyper Exchange Protocol*/
@@ -112,7 +113,6 @@ h6, .f12 { font-size: 12px; }
 #community .page-title .container{background: url(../images/titlebg/community-bg.svg) no-repeat left bottom}
 #economy .page-title .container,#team .page-title .container{background: url(../images/titlebg/economy-bg.svg) no-repeat left bottom}
 #announcement .page-title .container,#announcementdetail .page-title .container{background: url(../images/titlebg/announcement-bg-2.svg) no-repeat left bottom}
-
 #partner .page-title .container{background: url(../images/titlebg/partner-bg.svg) no-repeat left bottom}
 #blog-list .page-title .container{background: url(../images/titlebg/blog-bg.svg) no-repeat left bottom}
 #jobs .page-title .container{background: url(../images/titlebg/join-bg.svg) no-repeat left bottom}
@@ -120,6 +120,7 @@ h6, .f12 { font-size: 12px; }
 #copyright .page-title .container{background: url(../images/titlebg/copyright-bg.svg) no-repeat left bottom}
 #terms .page-title .container{background: url(../images/titlebg/terms-bg.svg) no-repeat left bottom}
 #privacy .page-title .container{background: url(../images/titlebg/privacy-bg.svg) no-repeat left bottom}
+#newpay .page-title .container{background: url(../images/titlebg/newpay-bg.svg) no-repeat left bottom}
 
 @media(max-width:991px) and (min-width: 768px){
 .page-title{ height: 200px;}
@@ -751,7 +752,6 @@ canvas { display: block; vertical-align: top; }
 #announcement .content{width: 100%;}
 #announcementdetail .content-area .content{padding-top: 20px;}
 #announcementdetail .entry-body .entry-content dd p,#announcement .entry-content .summary p{font-size: 18px;line-height: 1.58;letter-spacing: -.004em; margin-top: 21px;}
-
 }
 
 /* community */
@@ -767,6 +767,14 @@ canvas { display: block; vertical-align: top; }
 @media (max-width: 767px) {
 #announcement .announcement-type{ text-align: left;}
 }
+
+/* newpay */
+.newpay_bg{ background:#F4F4F4 url(../images/newpay/newpay_bg.png) no-repeat; width:1920px; height:1040px;}
+.newpay_text{ padding-bottom:120px;}
+.newpay_text img{ text-align:center; margin:0 auto;}
+.newpay_text h2{ padding-left:10px; color:#333; font-size:32px;}
+.newpay_text p{ padding-left:10px; color:#333; font-size:18px;}
+.newpay_text .col-xs-6{ margin:120px 0 0;}
 
 /* whitepaper*/
 #whitepaper .sub_title{ font-size: 40px; color: #666;}
@@ -796,3 +804,6 @@ canvas { display: block; vertical-align: top; }
 #register .email_add{ border:1px solid #ebebeb; width:338px; padding-left:12px; margin-bottom: 30px; height: 40px; border-radius: 4px;}
 #register .raw{min-height: 100px;}
 #register #dialog{padding-top: 30px;}
+
+/* login */
+#login p input{padding: 5px; width: 300px;}

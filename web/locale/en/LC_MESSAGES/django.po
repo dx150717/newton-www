@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-08 08:16+0800\n"
+"POT-Creation-Date: 2018-04-19 21:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,6 +162,40 @@ msgstr ""
 msgid "No"
 msgstr ""
 
+#: web/apps/faq/models.py:23 web/apps/faq/models.py:26
+#: web/apps/zinnia/models/category.py:49
+#: web/apps/zinnia/models_bases/entry.py:104
+#: web/apps/zinnia/models_bases/entry.py:107
+msgid "Language"
+msgstr ""
+
+#: web/apps/faq/models.py:33
+msgid "faq"
+msgstr ""
+
+#: web/apps/faq/templates/faq/faq.html:6 web/apps/faq/templates/faq/faq.html:13
+#: web/templates/footer.html:24
+msgid "FAQ"
+msgstr ""
+
+#: web/apps/faq/templates/faq/faq.html:33
+#: web/apps/welcome/templates/welcome/announcement-detail.html:46
+#: web/apps/welcome/templates/welcome/announcement.html:72
+#: web/apps/welcome/templates/welcome/press.html:38
+msgid "previous"
+msgstr ""
+
+#: web/apps/faq/templates/faq/faq.html:37
+#: web/apps/welcome/templates/welcome/announcement-detail.html:50
+#: web/apps/welcome/templates/welcome/announcement.html:76
+#: web/apps/welcome/templates/welcome/press.html:42
+msgid "next"
+msgstr ""
+
+#: web/apps/faq/templates/faq/faq.html:42
+msgid "No FAQ"
+msgstr ""
+
 #: web/apps/press/models.py:21
 msgid "press"
 msgstr ""
@@ -250,30 +284,187 @@ msgstr ""
 msgid "No search query entered."
 msgstr ""
 
-#: web/apps/subscription/models.py:18
+#: web/apps/subscription/models.py:19
 msgid "Subscribed emails"
 msgstr ""
 
-#: web/apps/subscription/views.py:29
+#: web/apps/subscription/views.py:34
 msgid "Email Has Exist!"
 msgstr ""
 
-#: web/apps/subscription/views.py:33
-msgid "Subscribe Successed!"
+#: web/apps/subscription/views.py:38 web/apps/subscription/views.py:47
+msgid "we've sent you a confirming e-mail,please check your email box."
 msgstr ""
 
-#: web/apps/subscription/views.py:35
+#: web/apps/subscription/views.py:40 web/apps/subscription/views.py:49
+msgid "Subscribe Failed!"
+msgstr ""
+
+#: web/apps/subscription/views.py:51
 msgid "You can only subscribe once per minute."
 msgstr ""
 
-#: web/apps/subscription/views.py:38
-#: web/apps/welcome/templates/welcome/include-subscribe.html:70
+#: web/apps/subscription/views.py:54
+#: web/apps/subscription/templates/subscription/include-subscription.html:70
 msgid "Invalid Email Address!"
+msgstr ""
+
+#: web/apps/subscription/views.py:78
+msgid "NewtonProject Notifications: Please Confirm Subscription"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/confirm.html:6
+msgid "Subscription Confirmation"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/confirm.html:17
+msgid "Subscribe Successed!"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/confirm.html:18
+msgid "Your subscription to our list has been confirmed."
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/confirm.html:19
+msgid "Thank you for subscribing!"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:10
+msgid "SUBSCRIBE TO US"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:14
+msgid "Subscribe to Newton updates, or miss the juiciest bits!"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:25
+msgid "Email Address"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:26
+msgid "SUBSCRIBE"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:29
+msgid "We won't share your email address or send you any spam."
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:63
+msgid "Subscribed Failed!"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:75
+msgid "Please Input Email Address!"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/subscription-letter.html:44
+msgid "Welcome! Please Confirm Your Subscription"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/subscription-letter.html:45
+msgid "Yes,subscribe me to this list."
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/subscription-letter.html:46
+msgid ""
+"If you received this email by mistake, simply delete it. You won't be "
+"subscribed if you don't click the confirmation link above."
+msgstr ""
+
+#: web/apps/user/templates/user/index.html:25
+msgid "全部课程"
+msgstr ""
+
+#: web/apps/user/templates/user/index.html:28
+msgid "计划学习"
+msgstr ""
+
+#: web/apps/user/templates/user/index.html:31
+msgid "喜欢"
+msgstr ""
+
+#: web/apps/user/templates/user/menu.html:10
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:5
+msgid "个人简介"
+msgstr ""
+
+#: web/apps/user/templates/user/menu.html:12
+#: web/apps/user/templates/user/user_edit_fragment_account.html:5
+msgid "账户"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit.html:5
+msgid "帐号"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_account.html:9
+msgid "电子邮件"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_account.html:13
+msgid "输入电子邮件地址"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_account.html:17
+msgid "密码"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_account.html:21
+msgid "输入当前密码"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_account.html:25
+msgid "输入新密码"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_account.html:29
+msgid "重复输入新密码"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_account.html:33
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:41
+msgid "保存"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_account.html:34
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:42
+msgid "取消"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:11
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:12
+msgid "姓名"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:16
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:17
+msgid "自我介绍"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:21
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:22
+msgid "个人网站"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:26
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:27
+#: web/templates/dialog.html:14
+msgid "QQ"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:31
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:32
+msgid "微信"
+msgstr ""
+
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:36
+#: web/apps/user/templates/user/user_edit_fragment_profile.html:37
+msgid "微博"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:6
 #: web/apps/welcome/templates/welcome/about.html:13
-#: web/templates/footer.html:32
+#: web/templates/footer.html:34
 msgid "ABOUT"
 msgstr ""
 
@@ -344,8 +535,8 @@ msgid ""
 "For technical, business, governance, economic or general questions, contact"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/announcement-detail.html:6
-#: web/apps/welcome/templates/welcome/announcement-detail.html:13
+#: web/apps/welcome/templates/welcome/announcement-detail.html:9
+#: web/apps/welcome/templates/welcome/announcement-detail.html:17
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
@@ -353,40 +544,36 @@ msgstr ""
 msgid "Announcement"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/announcement-detail.html:42
-#: web/apps/welcome/templates/welcome/announcement.html:67
-#: web/apps/welcome/templates/welcome/press.html:38
-msgid "previous"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/announcement-detail.html:46
-#: web/apps/welcome/templates/welcome/announcement.html:71
-#: web/apps/welcome/templates/welcome/press.html:42
-msgid "next"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/announcement-detail.html:51
-#: web/apps/welcome/templates/welcome/announcement.html:76
+#: web/apps/welcome/templates/welcome/announcement-detail.html:55
+#: web/apps/welcome/templates/welcome/announcement.html:81
 msgid "No entrys"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/announcement.html:25
+#: web/apps/welcome/templates/welcome/announcement.html:24
 msgid "All"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/announcement.html:28
-#: web/apps/zinnia/models_bases/entry.py:62
-msgid "Activity"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/announcement.html:31
+#: web/apps/welcome/templates/welcome/announcement.html:27
 #: web/apps/zinnia/models_bases/entry.py:63
 msgid "Operation"
 msgstr ""
 
+#: web/apps/welcome/templates/welcome/announcement.html:30
+#: web/apps/zinnia/models_bases/entry.py:64
+msgid "Weekly"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/announcement.html:33
+#: web/apps/zinnia/models_bases/entry.py:62
+msgid "Activity"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
-#: web/templates/header.html:34
+#: web/apps/welcome/templates/welcome/community.html:45
+#: web/apps/welcome/templates/welcome/wechat.html:6
+#: web/apps/welcome/templates/welcome/wechat.html:13
+#: web/templates/header.html:31
 msgid "Community"
 msgstr ""
 
@@ -394,21 +581,30 @@ msgstr ""
 msgid "Socail Network"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/community.html:31
+#: web/apps/welcome/templates/welcome/community.html:27
+#: web/apps/welcome/templates/welcome/wechat.html:20
+msgid "Scan QR Code to join us"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/community.html:34
 msgid "Email-list"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/community.html:42
-msgid "Online Communities"
+#: web/apps/welcome/templates/welcome/community.html:51
+msgid "English"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/community.html:61
+#: web/apps/welcome/templates/welcome/community.html:54
+msgid "Chinese"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/community.html:68
 msgid "Press"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/community.html:67
+#: web/apps/welcome/templates/welcome/community.html:74
 #: web/apps/welcome/templates/welcome/include-protocol.html:64
-#: web/apps/welcome/templates/welcome/include-technology.html:65
+#: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
 msgstr ""
 
@@ -418,19 +614,204 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
-#: web/templates/footer.html:47
+#: web/templates/footer.html:49
 msgid "Copyright"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:20
+msgid ""
+"This copyright policy applies to content posted on Newton forums and "
+"websites."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:22
+msgid "DO YOU HAVE RIGHTS IN A COPYRIGHTED WORK?"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:23
+msgid ""
+"Please think carefully before sending us a copyright notice or counter-"
+"notice, because the Newton imposes legal and financial penalties for making "
+"fraudulent or bad-faith claims. If you aren’t sure whether you’re the actual "
+"copyright holder or if you’re authorized to act on a rights holder’s behalf, "
+"check with an attorney before submitting a copyright notice or counter-"
+"notice to us."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:25
+msgid "HOW TO SUBMIT A COPYRIGHT NOTICE"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:26
+msgid ""
+"To send us a notice concerning copyright infringement on a Newton site, "
+"you’ll need to provide the following information:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:28
+msgid ""
+"A physical or electronic signature of the copyright owner or a person "
+"authorized to act on their behalf (typing your full name will do);"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:29
+msgid ""
+"Identification of the copyrighted work claimed to have been infringed (e.g., "
+"a copy of or link to your original work or clear description of the "
+"materials allegedly being infringed);"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:30
+msgid ""
+"Identification of the infringing material and information reasonably "
+"sufficient to permit us to locate the material on our services (e.g., a link "
+"to the allegedly infringing material on our site);"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:31
+msgid ""
+"Your contact information, including your address, telephone number, and an "
+"email address;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:32
+msgid ""
+"A statement that you have a good-faith belief that the use of the material "
+"in the manner asserted is not authorized by the copyright owner, its agent, "
+"or the law;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:33
+msgid ""
+"A statement that the information in the notification is accurate, and, under "
+"penalty of perjury, that you are authorized to act on behalf of the "
+"copyright owner."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:35
+msgid ""
+"You can report alleged copyright infringement by emailing the above "
+"information to contact@newtonproject.org."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:37
+msgid "HOW NEWTON RESPONDS TO COPYRIGHT CLAIMS"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:38
+msgid ""
+"Our response to notices of copyright infringement may include removing or "
+"restricting access to allegedly infringing material. If we take either of "
+"these actions in response to a copyright notice, we’ll make a good-faith "
+"effort to get in touch with the affected poster to provide information about "
+"the situation, including a copy of the takedown notice and instructions for "
+"filing a counter-notice."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:40
+msgid "WHEN YOU RECEIVE WORD OF A NEWTON NOTICE"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:41
+msgid ""
+"If you get a message from us about a Newton complaint, it means that the "
+"content identified in the notice has been removed from our site or access to "
+"the content has been restricted."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:42
+msgid ""
+"Please read our message carefully, because it’ll include information about "
+"the copyright notice we received and instructions about how to file a "
+"counter-notice."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:44
+msgid "HOW TO FILE A COUNTER-NOTICE"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:45
+msgid ""
+"If you receive a Newton notification about material you’ve posted and "
+"believe that material was misidentified or removed in error, you can file a "
+"counter-notice by sending us the following information:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:47
+msgid "A physical or electronic signature (typing your full name will do);"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:48
+msgid ""
+"Identification of the material that has been removed or to which access has "
+"been disabled and the location at which the material appeared before it was "
+"removed or access to it was disabled (the description from the Newton notice "
+"is enough);"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:49
+msgid ""
+"A statement under penalty of perjury that you have a good-faith belief that "
+"the material was removed or disabled as a result of mistake or "
+"misidentification of the material to be removed or disabled;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:50
+msgid ""
+"Your name, address, and telephone number, and a statement that you consent "
+"to the jurisdiction of the federal district court for the judicial district "
+"in which your address is located, or if your address is outside of the "
+"United States, for any judicial district in which Newton may be found, and "
+"that you will accept service of process from the person who provided the "
+"copyright notification or an agent of such person."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:52
+msgid ""
+"To submit a counter-notice, please respond to our original email letting you "
+"know about the removal, and include the above information in the body of "
+"your reply."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:53
+msgid ""
+"Note: If you re-post material removed in response to a Newton notification, "
+"we may permanently suspend your forum account. If you believe content was "
+"removed in error, please consider filing a counter-notice instead of re-"
+"posting the material."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:55
+msgid "AFTER YOU SUBMIT A COUNTER-NOTICE"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:56
+msgid ""
+"When we receive a valid counter-notice, we’ll promptly forward a copy to the "
+"person who sent us the copyright notice. If we aren’t told within 10 "
+"business days that the original reporter is seeking a court order to prevent "
+"further infringement of the material, we may replace or cease disabling "
+"access to the material that was removed."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:58
+msgid "REPEAT INFRINGER POLICY"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/copyright.html:59
+msgid ""
+"Where appropriate, Newton may warn and suspend repeat infringers. In more "
+"serious cases, we may permanently terminate user accounts on our forum."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
-#: web/templates/header.html:37
+#: web/templates/header.html:34
 msgid "Economy"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:23
 #: web/apps/welcome/templates/welcome/include-partner.html:20
-#: web/apps/welcome/templates/welcome/partner.html:34
 msgid "Joint Business Organization"
 msgstr ""
 
@@ -508,12 +889,12 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
 #: web/apps/welcome/templates/welcome/include-investor.html:127
-msgid "Previous President of Chongqing Lifan"
+msgid "Chairman of elastos ecosystem board"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
 #: web/apps/welcome/templates/welcome/include-investor.html:127
-msgid "Chairman of elastos ecosystem board"
+msgid "Previous President of Chongqing Lifan"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:75
@@ -664,8 +1045,38 @@ msgstr ""
 msgid "Founder and CEO of Distributed Credit Chain"
 msgstr ""
 
+#: web/apps/welcome/templates/welcome/include-investor.html:177
+#: web/apps/welcome/templates/welcome/include-investor.html:179
+#: web/apps/welcome/templates/welcome/include-investor.html:190
+#: web/apps/welcome/templates/welcome/include-investor.html:204
+msgid "Li Zhu"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:181
+msgid "Founder of Innoangel Fund"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:192
+msgid "Shi Junchao"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:194
+msgid "Senior gem jade appraiser."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:195
+msgid "Deputy secretary general of xinjiang hetian jade industry association."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:206
+msgid "Guo Hongchi"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:208
+msgid "Founder of xijie.com"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-partner.html:8
-#: web/apps/welcome/templates/welcome/partner.html:19
 msgid "Joint Ecological Construction"
 msgstr ""
 
@@ -730,40 +1141,12 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
 #: web/apps/welcome/templates/welcome/include-roadmap.html:76
-msgid "The Newton main chian and wallet officially released."
+msgid "The Newton main chain and wallet officially released."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:48
 #: web/apps/welcome/templates/welcome/include-roadmap.html:85
 msgid "The NewMall officially released."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-subscribe.html:10
-msgid "SUBSCRIBE US"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-subscribe.html:14
-msgid "Subscribe for Newton updates, you won't miss any important information."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-subscribe.html:25
-msgid "Email Address"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-subscribe.html:26
-msgid "SUBSCRIBE"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-subscribe.html:29
-msgid "We won't share your email address or send you any spam."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-subscribe.html:63
-msgid "Subscribed Failed!"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-subscribe.html:75
-msgid "Please Input Email Address!"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:9
@@ -826,7 +1209,7 @@ msgid "Marketing Specialist"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
-msgid "Founder of 5ipush.cn"
+msgid "Founder of WuZhou Online"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:78
@@ -892,12 +1275,12 @@ msgstr ""
 msgid "TECHNOLOGY"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-technology.html:23
+#: web/apps/welcome/templates/welcome/include-technology.html:24
 #: web/apps/welcome/templates/welcome/tech.html:18
 msgid "NewChain"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-technology.html:25
+#: web/apps/welcome/templates/welcome/include-technology.html:26
 msgid ""
 "采用主链、子链设计方案，子链支持多种共识机制和数据结构，主链与子链之间，子链"
 "与子链之间可以进行资产交换。"
@@ -907,12 +1290,12 @@ msgstr ""
 "assets transactions between the main chain and sub-chains, sub-chains and "
 "sub-chains. "
 
-#: web/apps/welcome/templates/welcome/include-technology.html:33
+#: web/apps/welcome/templates/welcome/include-technology.html:34
 #: web/apps/welcome/templates/welcome/tech.html:45
 msgid "Atom Hashing"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-technology.html:35
+#: web/apps/welcome/templates/welcome/include-technology.html:36
 msgid "原子哈希应用放射性定年、PCA、机器视觉、深度学习等技术生成数字哈希。"
 msgstr ""
 "By using radiometric dating, PCA, machine vision, and deep learning "
@@ -943,16 +1326,10 @@ msgstr ""
 msgid "Everyone should benefit directly from economic growth"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/index.html:16
-#: web/apps/welcome/templates/welcome/whitepaper.html:13
-#: web/templates/footer.html:10
-msgid "Whitepaper"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/index.html:40
+#: web/apps/welcome/templates/welcome/index.html:45
 msgid ""
-"Tribute to one of the greatest scientist ever to impact our lives, Sir Isaac "
-"Newton"
+"Tribute to one of the greatest scientists ever to impact our lives, Sir "
+"Isaac Newton."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:6
@@ -960,7 +1337,7 @@ msgid "Jobs"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:14
-#: web/templates/footer.html:35
+#: web/templates/footer.html:37
 msgid "Join Us"
 msgstr ""
 
@@ -986,15 +1363,16 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:30
 msgid ""
-"Today's Newton is made up of top talent from the free open source software "
-"community, e-commerce, finance, media, etc. We want more fields and "
-"professionals to join us."
+"Currently, Newton project team has attracted many professional talents from "
+"the free and open source software community, covering the field of e-"
+"commerce, finance, media, etc. And we are sincerely inviting more "
+"outstanding talents to join us."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
 msgid ""
-"In addition, developers around the world can add to the Newton by "
-"telecommuting, and you don't have to worry about space constraints."
+"In addition, developers around the world can join us by telecommuting. The "
+"space constraint will not hinder our cooperation ."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:35
@@ -1031,6 +1409,11 @@ msgid "Senior R&D Engineer"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:59
+#: web/apps/welcome/templates/welcome/joinus.html:98
+#: web/apps/welcome/templates/welcome/joinus.html:141
+#: web/apps/welcome/templates/welcome/joinus.html:180
+#: web/apps/welcome/templates/welcome/joinus.html:215
+#: web/apps/welcome/templates/welcome/joinus.html:255
 msgid "Job description:"
 msgstr ""
 
@@ -1045,6 +1428,11 @@ msgid ""
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:64
+#: web/apps/welcome/templates/welcome/joinus.html:109
+#: web/apps/welcome/templates/welcome/joinus.html:149
+#: web/apps/welcome/templates/welcome/joinus.html:188
+#: web/apps/welcome/templates/welcome/joinus.html:224
+#: web/apps/welcome/templates/welcome/joinus.html:262
 msgid "Qualifications:"
 msgstr ""
 
@@ -1076,14 +1464,17 @@ msgid ""
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:72
+#: web/apps/welcome/templates/welcome/joinus.html:115
 msgid "Priority recruitment conditions:"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:74
+#: web/apps/welcome/templates/welcome/joinus.html:117
 msgid "Blockchain related system R&D experience."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:75
+#: web/apps/welcome/templates/welcome/joinus.html:118
 msgid "Distributed network system development experience."
 msgstr ""
 
@@ -1092,15 +1483,317 @@ msgid "Recruitment number: 2 people "
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:78
+#: web/apps/welcome/templates/welcome/joinus.html:120
+#: web/apps/welcome/templates/welcome/joinus.html:160
+#: web/apps/welcome/templates/welcome/joinus.html:195
+#: web/apps/welcome/templates/welcome/joinus.html:233
+#: web/apps/welcome/templates/welcome/joinus.html:274
 msgid "Working Location: Beijing - Chaoyang District"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:79
+#: web/apps/welcome/templates/welcome/joinus.html:121
+#: web/apps/welcome/templates/welcome/joinus.html:161
+#: web/apps/welcome/templates/welcome/joinus.html:196
+#: web/apps/welcome/templates/welcome/joinus.html:234
+#: web/apps/welcome/templates/welcome/joinus.html:275
 msgid "Payments: Salary to be discussed"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:80
+#: web/apps/welcome/templates/welcome/joinus.html:122
+#: web/apps/welcome/templates/welcome/joinus.html:162
+#: web/apps/welcome/templates/welcome/joinus.html:197
+#: web/apps/welcome/templates/welcome/joinus.html:235
+#: web/apps/welcome/templates/welcome/joinus.html:276
 msgid "Contact:<a>newton-hr@newtonproject.org</a>"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:91
+msgid "Blockchain Engineer"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:100
+msgid ""
+"Design and develop Newton software, related decentralized applications and "
+"cooperate with the rest of the team working on various layers of "
+"infrastructure;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:102
+msgid "Job Responsibilities:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:104
+msgid ""
+"Design, build, and maintain efficient, reusable, and reliable C++/Go code."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:105
+msgid ""
+"Develop blockchain solutions and provide support for blockchain development."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:106
+msgid "Implement performance and quality modules."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:107
+msgid "Able to work independently with minimal guidance on tasks."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:111
+msgid ""
+"Strong proficiency in C++/Go, with solid knowledge of language specification."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:112
+msgid ""
+"1+ years of experience, preferably in an environment where latency and speed "
+"are factors (e.g., finance)."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:113
+msgid "Computer Science or related degree."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:134
+msgid "Fullstack Web Developer"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:143
+msgid ""
+"Write well designed, testable, efficient code by using best software "
+"development practices;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:144
+msgid ""
+"Create website layout/user interface by using standard HTML/CSS practices;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:145
+msgid "Build web based backends and micro-services;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:146
+msgid ""
+"Stay plugged into emerging technologies/industry trends and apply them into "
+"operations and activities;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:147
+msgid "Cooperate with designers to match visual design intent."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:151
+msgid ""
+"Proven experience working with React or other modern Frontend Javascript "
+"Framework;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:152
+msgid "Experience with Python/Django/Node.js;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:153
+msgid "Experience writing frontend and backend unit and integration tests;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:154
+msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:155
+msgid ""
+"A solid understanding of how web applications work including security, "
+"session management, and best development practices;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:156
+msgid ""
+"Strong organizational skills to juggle multiple tasks within the constraints "
+"of timelines and budgets with business acumen;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:157
+msgid ""
+"Ability to work and thrive in a fast-paced environment, learn rapidly and "
+"master diverse web technologies and techniques;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:158
+msgid "Bachelor or masters degree in computer science or relevant experience;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:173
+msgid "Communication Specialist"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:182
+msgid ""
+"Deliver customer service and technical support on email/facebook/twitter;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:183
+msgid "Communicate customer feedback and process suggestions;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:184
+msgid ""
+"Identifying cause of dissatisfactions, and provide ways for improvement;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:185
+msgid "Prepare reports on enquiries summary and improvement area;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:186
+msgid ""
+"Ensure that all enquiries at the social media channel in compliance with all "
+"internal and external regulations, policies and guideline;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:190
+msgid "Bachelor degree or above;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:191
+msgid "Preferably with 2 years of working experience in customer support role;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:192
+msgid ""
+"MUST speak fluent using english and written English and Chinese with good "
+"presentation, communication and computer skills;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:193
+msgid "Self-motivated and able to work independently;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:208
+msgid "Developer Relations Advocate"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:217
+msgid ""
+"Content creation and distribution and analytics – tutorials, developer "
+"guides, newsletters, sample apps, client libraries;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:218
+msgid ""
+"Creating and implementing detailed annual, monthly & weekly plans for "
+"advocacy/engagement activities;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:219
+msgid ""
+"Organize and coordinating marketing engagement activities including social "
+"media campaigns, youtube broadcasts, progress reports;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:220
+msgid "Content sourcing from 3rd parties, distribution and analytics;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:221
+msgid "Engage with and provide support to community meetup organizers;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:226
+msgid ""
+"MUST speak fluent and written English with good presentation, communication "
+"and computer skills;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:227
+msgid "Experience writing tutorials, guides, API docs, sample apps;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:228
+msgid "Experience writing code in C++/JavaScript;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:229
+msgid ""
+"Preferably with 2 years of working experience in IT industry customer "
+"support role;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:230
+msgid "Self-motivated and able to work independently."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:248
+msgid "Senior UX Designer"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:257
+msgid ""
+"Translate concepts into user flows, wireframes, mockups and prototypes that "
+"lead to intuitive user experiences;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:258
+msgid "Identify design problems and devise elegant solutions;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:259
+msgid ""
+"Take a user-centered design approach and rapidly test and iterate your "
+"designs;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:260
+msgid "Collaborate with other team members and stakeholders;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:264
+msgid ""
+"Three or more years of UX design experience. Preference will be given to "
+"candidates who have experience designing complex solutions for complete "
+"digital environments;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:265
+msgid ""
+"Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
+"App. Basic React, SCSS, or JavaScript skills are a plus;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:266
+msgid ""
+"Ability to work with clients to understand detailed requirements and design "
+"complete user experiences that meet client needs and vision;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:267
+msgid ""
+"Extensive experience in using UX design best practices to design solutions, "
+"and a deep understanding of mobile-first and responsive design;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:268
+msgid ""
+"A solid grasp of user-centered design (UCD), planning and conducting user "
+"research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
+"usability and accessibility concerns;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:269
+msgid ""
+"Ability to clearly and effectively communicate design processes, ideas, and "
+"solutions to teams and clients;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:270
+msgid "Be open to receiving feedback and constructive criticism;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:271
+msgid "Be passionate about resolving user pain points through great design."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/legal.html:6
@@ -1111,13 +1804,86 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/mediakit.html:6
 #: web/apps/welcome/templates/welcome/mediakit.html:13
 #: web/apps/welcome/templates/welcome/whitepaper.html:6
-#: web/templates/footer.html:40
+#: web/templates/footer.html:42
 msgid "Media Kit"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:6
-#: web/apps/welcome/templates/welcome/newpay.html:13
-msgid "Newpay"
+#: web/apps/welcome/templates/welcome/newpay.html:5
+#: web/templates/header.html:28
+msgid "NewPay"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:23
+#, fuzzy
+msgid "数字身份"
+msgstr "Digital Identity and Credit"
+
+#: web/apps/welcome/templates/welcome/newpay.html:24
+msgid "创建和管理DID(Decentralized ID)"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:25
+msgid "设置个人信息隐私模式"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:26
+msgid "交易信息共享定价及收益"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:27
+msgid "交易信息管理"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:28
+msgid "数字资产管理，包括NEW、BTC、ETH等"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:37
+msgid "支付"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:38
+msgid "支持跨境交易"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:39
+msgid "支持超小额度支付"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:40
+msgid "极快的交易确认速度"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:50
+msgid "联合登录"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:51
+msgid "使用统一身份登录多个Dapp"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:52
+msgid "Dapp管理和权限控制"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:53
+msgid "安全审计"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:62
+msgid "内置应用"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:63
+msgid "支持采用自由开源方式发布的内置应用"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:64
+msgid "支持内置应用购买"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:65
+msgid "内置应用开发工具支持"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/partner.html:6
@@ -1141,8 +1907,293 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
-#: web/templates/footer.html:49
+#: web/apps/welcome/templates/welcome/privacy.html:19
+#: web/templates/footer.html:51
 msgid "Privacy Policy"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:20
+msgid ""
+"Newton Foundation is committed to protecting and respecting your privacy."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:21
+msgid ""
+"This policy (together with our terms of use and any other documents referred "
+"to it) sets out the basis on which any personal data we collect from you, or "
+"that you provide to us, will be processed by us. Please read the following "
+"carefully to understand our views and practices regarding your personal data "
+"and how we will treat it. "
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:23
+msgid "INFORMATION WE COLLECT FROM YOU"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:24
+msgid "We will collect and process the following data about you:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:26
+msgid "Information you give us."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:26
+msgid ""
+"This is information about you that you give us by filling in forms on our "
+"sites newtonproject.org (each a “site” and together, our “sites”) or by "
+"corresponding with us by phone, e-mail or otherwise. It includes information "
+"you provide when you register to use our sites, add products or services to "
+"a shopping cart on our sites, place an order on our sites, participate in "
+"discussion boards or other social media functions on our sites, and when you "
+"contact us on our sites and when you report a problem with our sites. The "
+"information you give us may include your name, address, e-mail address, "
+"phone number, web site Uniform Resource Locator (URL), financial and credit "
+"card information, personal description, and free-form text."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:27
+#: web/apps/welcome/templates/welcome/privacy.html:49
+msgid "Information we collect about you."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:27
+msgid ""
+"With regard to each of your visits to our sites we will automatically "
+"collect the following information:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:29
+msgid ""
+"technical information, including the Internet protocol (IP) address used to "
+"connect your computer to the Internet, browser type and version, time zone "
+"setting, browser plug-in types and versions, operating system, and platform."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:30
+msgid ""
+"information about your visit, including the full Uniform Resource Locator "
+"(URL), products you added to your shopping cart, download errors, length of "
+"visits to certain pages."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:36
+msgid "COOKIES"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:37
+msgid ""
+"Our websites use cookies to distinguish you from other users of our "
+"websites. This helps us to provide you with a good experience when you "
+"browse our websites and also allows us to improve our sites. For detailed "
+"information on the cookies we use and the purposes for which we use them, "
+"see our Cookie Policy."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:39
+msgid "USES MADE OF THE INFORMATION"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:40
+msgid "We use information held about you in the following ways:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:42
+msgid "Information you give to us. "
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:42
+#: web/apps/welcome/templates/welcome/privacy.html:49
+msgid "We will use this information:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:44
+msgid ""
+"to carry out our obligations arising from any contracts entered into between "
+"you and us, and to provide you with the information, products and services "
+"that you request from us;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:45
+msgid "to notify you about changes to our service;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:46
+msgid ""
+"to ensure that content from our sites is presented in the most effective "
+"manner for you and for your computer."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:51
+msgid ""
+"to administer our sites and for internal operations, including "
+"troubleshooting, data analysis, testing, research, statistical and survey "
+"purposes;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:52
+msgid ""
+"to improve our site to ensure that content is presented in the most "
+"effective manner for you and for your computer;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:53
+msgid ""
+"to allow you to participate in interactive features of our service, when you "
+"choose to do so;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:54
+msgid "as part of our efforts to keep our site safe and secure;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:57
+msgid "Information we receive from other sources."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:57
+msgid ""
+"We will combine this information with information you give to us and "
+"information we collect about you. We will use this information and the "
+"combined information for the purposes set out above (depending on the types "
+"of information we receive)."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:60
+msgid "DISCLOSURE OF YOUR INFORMATION"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:61
+msgid ""
+"You agree that we have the right to share your personal information with:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:63
+msgid "Selected third parties including:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:65
+msgid ""
+"Analytics and search engine providers that assist us in the improvement and "
+"optimisation of our site;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:66
+msgid ""
+"E-commerce providers such as payment solution providers to assist us in the "
+"processing of your online purchases, donations and other payments."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:70
+msgid "We will disclose your personal information to third parties:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:72
+msgid ""
+"In the event that we sell or buy any business or assets, in which case we "
+"will disclose your personal data to the prospective seller or buyer of such "
+"business or assets."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:73
+msgid ""
+"If the Company or substantially all of its assets are acquired by a third "
+"party, in which case personal data held by it about its customers will be "
+"one of the transferred assets."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:74
+msgid ""
+"If we are under a duty to disclose or share your personal data in order to "
+"comply with any legal obligation, or in order to enforce or apply our terms "
+"of use or terms and conditions for Devcon events and other agreements; or to "
+"protect the rights, property, or safety of the Company or others. This "
+"includes exchanging information with other companies and organisations for "
+"the purposes of fraud protection and credit risk reduction."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:77
+msgid "WHERE WE STORE YOUR PERSONAL DATA"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:78
+msgid ""
+"The data that we collect from you will be transferred to, and stored at, a "
+"destination inside the European Economic Area (”EEA”). It will be processed "
+"by staff operating outside the EEA who work for us or for one of our "
+"suppliers. This includes staff engaged in, among other things, the "
+"fulfillment of your order, the processing of your payment details and the "
+"provision of support services. By submitting your personal data, you agree "
+"to this transfer, storing or processing. We will take all steps reasonably "
+"necessary to ensure that your data is treated securely and in accordance "
+"with this privacy policy."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:79
+msgid ""
+"All information you provide to us is stored on our secure servers. Any web-"
+"based payment transactions will be encrypted using SSL technology."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:80
+msgid ""
+"Unfortunately, the transmission of information via the internet is not "
+"completely secure. Although we will do our best to protect your personal "
+"data, we cannot guarantee the security of your data transmitted to our "
+"sites; any transmission is at your own risk. Once we have received your "
+"information, we will use strict procedures and security features to try to "
+"prevent unauthorised access."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:82
+msgid "YOUR RIGHTS"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:83
+msgid ""
+"You have the right to ask us not to process your personal data for marketing "
+"purposes. We will usually inform you (before collecting your data) if we "
+"intend to use your data for such purposes or if we intend to disclose your "
+"information to any third party for such purposes. You can exercise your "
+"right to prevent such processing by checking certain boxes on the forms we "
+"use to collect your data. You can also exercise the right at any time by "
+"contacting us at contact@newtonproject.org."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:84
+msgid ""
+"Our sites may, from time to time, contain links to and from the websites of "
+"our partner networks, sponsors and affiliates. If you follow a link to any "
+"of these websites, please note that these websites have their own privacy "
+"policies and that we do not accept any responsibility or liability for these "
+"policies. Please check these policies before you submit any personal data to "
+"these websites."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:86
+msgid "CHANGES TO OUR PRIVACY POLICY"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:87
+msgid ""
+"Any changes we make to our privacy policy in the future will be posted on "
+"this page and, where appropriate and available, may be notified to you by e-"
+"mail. Please check back frequently to see any updates or changes to our "
+"privacy policy."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:89
+msgid "CONTACT"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:90
+msgid ""
+"Questions, comments and requests regarding this privacy policy should be "
+"addressed to contact@newtonproject.org."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:91
+msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
@@ -1273,7 +2324,7 @@ msgstr ""
 msgid "Roadmap"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/team.html:6
+#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
 msgid "Team"
 msgstr ""
 
@@ -1286,11 +2337,12 @@ msgid ""
 "NewChain adopts a main chain and sub-chain design scheme. The main chain is "
 "responsible for account management, Newton token management, sub-chain "
 "management, and network management. The sub-chain supports specific service "
-"systems, such as the hyer-exchange protocol. The sub-chain supports multiple "
-"consensus mechanisms and data structures, ensures the assets transactions "
-"between the main chain and sub-chains, sub-chains and sub-chains. After a "
-"third-party developer has staked in a certain number of Newton Tokens and "
-"passed the review, they can create a new sub-chain and publish new tokens."
+"systems, such as the hyper-exchange protocol. The sub-chain supports "
+"multiple consensus mechanisms and data structures, ensures the assets "
+"transactions between the main chain and sub-chains, sub-chains and sub-"
+"chains. After a third-party developer has staked in a certain number of "
+"Newton Tokens and passed the review, they can create a new sub-chain and "
+"publish new tokens."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:23
@@ -1376,8 +2428,583 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
-#: web/templates/footer.html:48
+#: web/templates/footer.html:50
 msgid "Terms of Use"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:20
+msgid "PLEASE READ THESE TERMS OF USE BEFORE USING THE WEBSITE."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:21
+msgid ""
+"Acceptance of the Terms of Use These terms of use are entered into by and "
+"between You and the Newton Foundation ('Company', 'we' or 'us'). The "
+"following terms and conditions, together with any documents they expressly "
+"incorporate by reference (collectively, these 'Terms of Use'), govern your "
+"access to and use of newtonproject.org, including any content, functionality "
+"and services offered on or through newtonproject.org."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:23
+msgid ""
+"Please read the Terms of Use carefully before you start to use the Website. "
+"By using the Website or by clicking to accept or agree to the Terms of Use "
+"when this option is made available to you, you accept and agree to be bound "
+"and abide by these Terms of Use in addition to"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:25
+msgid "Who May Use the Website"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:26
+msgid ""
+"This Website is offered and available to users who are 13 years of age or "
+"older for personal use only and not for commercial use. The Website is not "
+"intended for children under 13 years of age. By using this Website, you "
+"represent and warrant that you (i) are 13 years of age or older, (ii) are "
+"not barred to use the Website under any applicable law, and (iii) are using "
+"the Website only for your own personal use. If you do not meet these "
+"requirements, you must not access or use the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:28
+msgid "Changes to the Terms of Use"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:29
+msgid ""
+"We may revise and update these Terms of Use from time to time in our sole "
+"discretion. All changes are effective immediately when we post them.Your "
+"continued use of the Website following the posting of revised Terms of Use "
+"means that you accept and agree to the changes. You are expected to check "
+"this page frequently so you are aware of any changes, as they are binding on "
+"you."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:31
+msgid "Accessing the Website and Account Security"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:32
+msgid ""
+"We reserve the right to withdraw or amend this Website, and any service or "
+"material we provide on the Website, in our sole discretion without notice. "
+"We do not guarantee that our site or any content on it, will always be "
+"available or be interrupted. We will not be liable if for any reason all or "
+"any part of the Website is unavailable at any time or for any period. From "
+"time to time, we may restrict access to some parts of the Website, or the "
+"entire Website, to users."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:33
+msgid "You are responsible for:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:35
+msgid ""
+"Making all arrangements necessary for you to have access to the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:36
+msgid ""
+"Ensuring that all persons who access the Website through your internet "
+"connection are aware of these Terms of Use and comply with them."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:39
+msgid ""
+"To access the Website or some of the resources it offers, you may be asked "
+"to provide certain registration details or other information. It is a "
+"condition of your use of the Website that all the information you provide on "
+"the Website is correct, current and complete. You agree that all information "
+"you provide to register using this Website or otherwise, including, but not "
+"limited to, using any interactive features on the Website, is governed by "
+"our Privacy Policy, and you consent to all actions we take with respect to "
+"your information consistent with our Privacy Policy."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:40
+msgid ""
+"You should use particular caution when inputting personal information on to "
+"the Website on a public or shared computer so that others are not able to "
+"view or record your personal information."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:44
+msgid "Intellectual Property Rights"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:45
+msgid ""
+"The Website and its entire contents, features and functionality (including "
+"but not limited to all information, software, text, displays, images, video "
+"and audio, and the design, selection and arrangement thereof), are owned by "
+"the Company, its licensors or other providers of such material and are "
+"protected by copyright, trademark, patent, trade secret and other "
+"intellectual property or proprietary rights laws."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:46
+msgid ""
+"These Terms of Use permit you to use the Website for your personal, non-"
+"commercial use only. You must not reproduce, distribute, modify, create "
+"derivative works of, publicly display, publicly perform, republish, "
+"download, store or transmit any of the material on our Website, except as "
+"follows:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:48
+msgid ""
+"Your computer may temporarily store copies of such materials in RAM "
+"incidental to your accessing and viewing those materials."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:49
+msgid ""
+"You may store files that are automatically cached by your Web browser for "
+"display enhancement purposes."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:50
+msgid ""
+"You may print or download one copy of a reasonable number of pages of the "
+"Website for your own personal, non-commercial use and not for further "
+"reproduction, publication or distribution."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:51
+msgid ""
+"If we provide desktop, mobile or other applications for download, you may "
+"download a single copy to your computer or mobile device solely for your own "
+"personal, non-commercial use, provided you agree to be bound by our end user "
+"license agreement for such applications."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:53
+msgid "You must not:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:55
+msgid "Modify copies of any materials from this site."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:56
+msgid ""
+"Delete or alter any copyright, trademark or other proprietary rights notices "
+"from copies of materials from this site."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:58
+msgid ""
+"You must not access or use for any commercial purposes any part of the "
+"Website or any services or materials available through the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:59
+msgid ""
+"If you wish to make any use of materials on the Website other than that set "
+"out in this section, please address your request to: contact@newtonproject."
+"org."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:60
+msgid ""
+"If you print, copy, modify, download or otherwise use or provide any other "
+"person with access to any part of the Website in breach of the Terms of Use, "
+"your right to use the Website will cease immediately and you must, at our "
+"option, return or destroy any copies of the materials you have made. No "
+"right, title or interest in or to the Website or any content on the Website "
+"is transferred to you, and all rights not expressly granted are reserved by "
+"the Company. Any use of the Website not expressly permitted by these Terms "
+"of Use is a breach of these Terms of Use and may violate copyright, "
+"trademark and other laws."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:62
+msgid "Trademarks"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:63
+msgid ""
+"The Company name, the terms Newton, the Company logo and all related names, "
+"logos, product and service names, designs and slogans are trademarks of the "
+"Company or its affiliates or licensors. You must not use such marks without "
+"the prior written permission of the Company. All other names, logos, product "
+"and service names, designs and slogans on this Website are the trademarks of "
+"their respective owners."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:65
+msgid "Prohibited Uses"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:66
+msgid ""
+"You may use the Website only for lawful purposes and in accordance with "
+"these Terms of Use. You agree not to use the Website:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:68
+msgid ""
+"In any way that violates any applicable federal, state, local or "
+"international law or regulation (including, without limitation, any laws "
+"regarding the export of data or software to and from the US or other "
+"countries)."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:69
+msgid ""
+"For the purpose of exploiting, harming or attempting to exploit or harm "
+"minors in any way by exposing them to inappropriate content, asking for "
+"personally identifiable information or otherwise."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:70
+msgid ""
+"To send, knowingly receive, upload, download, use or re-use any material "
+"which does not comply with these Terms of Use."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:71
+msgid ""
+"To transmit, or procure the sending of, any advertising or promotional "
+"material without our prior written consent, including any 'junk mail', "
+"'chain letter' or 'spam' or any other similar solicitation."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:72
+msgid ""
+"To impersonate or attempt to impersonate the Company, a Company employee, "
+"another user or any other person or entity (including, without limitation, "
+"by using e-mail addresses or screen names associated with any of the "
+"foregoing)."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:73
+msgid ""
+"To engage in any other conduct that restricts or inhibits anyone's use or "
+"enjoyment of the Website, or which, as determined by us, may harm the "
+"Company or users of the Website or expose them to liability."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:75
+msgid "Additionally, you agree not to:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:77
+msgid ""
+"Use the Website in any manner that could disable, overburden, damage, or "
+"impair the site or interfere with any other party's use of the Website, "
+"including their ability to engage in real time activities through the "
+"Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:78
+msgid ""
+"Use any robot, spider or other automatic device, process or means to access "
+"the Website for any purpose, including monitoring or copying any of the "
+"material on the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:79
+msgid ""
+"Use any manual process to monitor or copy any of the material on the Website "
+"or for any other unauthorized purpose without our prior written consent."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:80
+msgid ""
+"Use any device, software or routine that interferes with the proper working "
+"of the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:81
+msgid ""
+"Introduce any viruses, trojan horses, worms, logic bombs or other material "
+"which is malicious or technologically harmful."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:82
+msgid ""
+"Attempt to gain unauthorized access to, interfere with, damage or disrupt "
+"any parts of the Website, the server on which the Website is stored, or any "
+"server, computer or database connected to the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:83
+msgid ""
+"Attack the Website via a denial-of-service attack or a distributed denial-of-"
+"service attack."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:84
+msgid "Otherwise attempt to interfere with the proper working of the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:88
+msgid "Reliance on Information Posted"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:89
+msgid ""
+"The information presented on or through the Website is made available solely "
+"for general information purposes. We do not warrant the accuracy, "
+"completeness or usefulness of this information. Any reliance you place on "
+"such information is strictly at your own risk. We disclaim all liability and "
+"responsibility arising from any reliance placed on such materials by you or "
+"any other visitor to the Website, or by anyone who may be informed of any of "
+"its contents."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:90
+msgid ""
+"This Website includes content provided by third parties, including materials "
+"provided by other users, bloggers and third-party licensors, syndicators, "
+"aggregators and/or reporting services. All statements and/or opinions "
+"expressed in these materials, and all articles and responses to questions "
+"and other content, other than the content provided by the Company, are "
+"solely the opinions and the responsibility of the person or entity providing "
+"those materials. These materials do not necessarily reflect the opinion of "
+"the Company. We are not responsible, or liable to you or any third party, "
+"for the content or accuracy of any materials provided by any third parties."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:92
+msgid "Changes to the Website"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:93
+msgid ""
+"We may update the content on this Website from time to time, but its content "
+"is not necessarily complete or up-to-date. Any of the material on the "
+"Website may be out of date at any given time, and we are under no obligation "
+"to update such material."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:96
+msgid "Information About You and Your Visits to the Website"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:97
+msgid ""
+"All information we collect on this Website is subject to our <a "
+"href='https://www.newtonproject.org/privacy/'>https://www.newtonproject.org/"
+"privacy/</a>. By using the Website, you consent to all actions taken by us "
+"with respect to your information in compliance with the Privacy Policy."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:100
+msgid "Online Purchases and Other Terms and Conditions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:101
+msgid ""
+"Additional terms and conditions may also apply to specific portions, "
+"services or features of the Website, including the registration and "
+"sponsorship for conference events. All such additional terms and conditions "
+"are hereby incorporated by this reference into these Terms of Use. In the "
+"event of terms that are directly conflicting between these Terms of Use and "
+"terms of conditions for the registration or sponsorship of a conference "
+"event, the terms and conditions for the event shall control."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:104
+msgid "Linking to the Website and Social Media Features"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:105
+msgid ""
+"You may link to our homepage, provided you do so in a way that is fair and "
+"legal and does not damage our reputation or take advantage of it, but you "
+"must not establish a link in such a way as to suggest any form of "
+"association, approval or endorsement on our part without our express written "
+"consent."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:107
+msgid "Links from the Website"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:108
+msgid ""
+"If the Website contains links to other sites and resources provided by third "
+"parties, these links are provided for your convenience only. This includes "
+"links contained in advertisements, including banner advertisements and "
+"sponsored links. We have no control over the contents of those sites or "
+"resources, and accept no responsibility for them or for any loss or damage "
+"that may arise from your use of them. If you decide to access any of the "
+"third party websites linked to this Website, you do so entirely at your own "
+"risk and subject to the terms and conditions of use for such websites. We "
+"reserve the right to withdraw linking permission without notice."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:110
+msgid "Disclaimer of Warranties"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:111
+msgid ""
+"You understand that we cannot and do not guarantee or warrant that files "
+"available for downloading from the internet or the Website will be free of "
+"viruses or other destructive code. You are responsible for implementing "
+"sufficient procedures and checkpoints to satisfy your particular "
+"requirements for anti-virus protection and accuracy of data input and "
+"output, and for maintaining a means external to our site for any "
+"reconstruction of any lost data. WE WILL NOT BE LIABLE FOR ANY LOSS OR "
+"DAMAGE CAUSED BY A DISTRIBUTED DENIAL-OF-SERVICE ATTACK, VIRUSES OR OTHER "
+"TECHNOLOGICALLY HARMFUL MATERIAL THAT MAY INFECT YOUR COMPUTER EQUIPMENT, "
+"COMPUTER PROGRAMS, DATA OR OTHER PROPRIETARY MATERIAL DUE TO YOUR USE OF THE "
+"WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE OR TO YOUR "
+"DOWNLOADING OF ANY MATERIAL POSTED ON IT, OR ON ANY WEBSITE LINKED TO IT."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:112
+msgid ""
+"YOUR USE OF THE WEBSITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED "
+"THROUGH THE WEBSITE IS AT YOUR OWN RISK. THE WEBSITE, ITS CONTENT AND ANY "
+"SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE ARE PROVIDED ON AN 'AS IS' "
+"AND 'AS AVAILABLE' BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS "
+"OR IMPLIED. NEITHER THE COMPANY NOR ANY PERSON ASSOCIATED WITH THE COMPANY "
+"MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, "
+"SECURITY, RELIABILITY, QUALITY, ACCURACY OR AVAILABILITY OF THE WEBSITE. "
+"WITHOUT LIMITING THE FOREGOING, NEITHER THE COMPANY NOR ANYONE ASSOCIATED "
+"WITH THE COMPANY REPRESENTS OR WARRANTS THAT THE WEBSITE, ITS CONTENT OR ANY "
+"SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE WILL BE ACCURATE, RELIABLE, "
+"ERROR-FREE OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT OUR SITE "
+"OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL "
+"COMPONENTS OR THAT THE WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE "
+"WEBSITE WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:113
+msgid ""
+"THE COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR "
+"IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES "
+"OF MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR PARTICULAR PURPOSE."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:114
+msgid ""
+"SOME JURISDICTIONS DO NOT ALLOW EXCLUSION OF WARRIANTIES OR LIMITATIONS ON "
+"THE DURATION OF IMPLIED WARRANTIES, SO THE ABOVE DISCLAIMER MAY NOT APPLY TO "
+"YOU IN THEIR ENTIRETIES, BUT WILL APPLY TO THE MAXIMUM EXTENT PERMITTED BY "
+"APPLICABLE LAW."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:116
+msgid "Limitation on Liability"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:117
+msgid ""
+"IN NO EVENT WILL THE COMPANY, ITS AFFILIATES OR THEIR LICENSORS, SERVICE "
+"PROVIDERS, EMPLOYEES, AGENTS, OFFICERS OR DIRECTORS BE LIABLE FOR DAMAGES OF "
+"ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR "
+"USE, OR INABILITY TO USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY "
+"CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES OR ANY SERVICES OR ITEMS "
+"OBTAINED THROUGH THE WEBSITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, "
+"INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING "
+"BUT NOT LIMITED TO, PERSONAL INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, "
+"LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, "
+"LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND WHETHER CAUSED BY TORT "
+"(INCLUDING NEGLIGENCE), BREACH OF CONTRACT OR OTHERWISE, EVEN IF "
+"FORESEEABLE. THE FOREGOING DOES NOT AFFECT ANY LIABILITY WHICH CANNOT BE "
+"EXCLUDED OR LIMITED UNDER APPLICABLE LAW WHICH MAY INCLUDE FRAUD."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:119
+msgid "Indemnification"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:120
+msgid ""
+"You agree to defend, indemnify and hold harmless the Company, its "
+"affiliates, licensors and service providers, and its and their respective "
+"officers, directors, employees, contractors, agents, licensors, suppliers, "
+"successors and assigns from and against any claims, liabilities, damages, "
+"judgments, awards, losses, costs, expenses or fees (including reasonable "
+"attorneys' fees) arising out of or relating to your violation of these Terms "
+"of Use or your use of the Website, including, but not limited to, any use of "
+"the Website's content, services and products other than as expressly "
+"authorized in these Terms of Use or your use of any information obtained "
+"from the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:122
+msgid "Governing Law and Jurisdiction"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:123
+msgid ""
+"All matters relating to the Website and these Terms of Use and any dispute "
+"or claim arising therefrom or related thereto (in each case, including non-"
+"contractual disputes or claims), shall be governed by and construed in "
+"accordance with the internal laws of Singapore without giving effect to any "
+"choice or conflict of law provision or rule (whether of Singapore or any "
+"other jurisdiction)."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:124
+msgid ""
+"Any legal suit, action or proceeding arising out of, or related to, these "
+"Terms of Use or the Website shall be instituted exclusively in the Singapore "
+"although we retain the right to bring any suit, action or proceeding against "
+"you for breach of these Terms of Use in your country of residence or any "
+"other relevant country. You waive any and all objections to the exercise of "
+"jurisdiction over you by such courts and to venue in such courts."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:126
+msgid "Waiver and Severability"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:127
+msgid ""
+"No waiver of by the Company of any term or condition set forth in these "
+"Terms of Use shall be deemed a further or continuing waiver of such term or "
+"condition or a waiver of any other term or condition, and any failure of the "
+"Company to assert a right or provision under these Terms of Use shall not "
+"constitute a waiver of such right or provision."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:128
+msgid ""
+"If any provision of these Terms of Use is held by a court or other tribunal "
+"of competent jurisdiction to be invalid, illegal or unenforceable for any "
+"reason, such provision shall be eliminated or limited to the minimum extent "
+"such that the remaining provisions of the Terms of Use will continue in full "
+"force and effect."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:130
+msgid "Entire Agreement"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:131
+msgid ""
+"The Terms of Use, our Privacy Policy and terms of conditions for the "
+"registration of events constitute the sole and entire agreement between you "
+"and the Newton Foundation with respect to the Website and supersede all "
+"prior and contemporaneous understandings, agreements, representations and "
+"warranties, both written and oral, with respect to the Website."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:133
+msgid "Your Comments and Concerns"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/terms-of-use.html:134
+msgid ""
+"This Website is operated by the Company. All other feedback, comments, "
+"requests for technical support and other communications relating to the "
+"Website should be directed to: contact@newtonproject.org. Last modified: "
+"April, 2018"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/whitepaper.html:13
+msgid "Whitepaper"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/whitepaper.html:20
@@ -1413,7 +3040,6 @@ msgstr ""
 
 #: web/apps/zinnia/feeds.py:175
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:4
-#: web/apps/zinnia/templates/zinnia/entry_archive.html:6
 msgid "Latest entries"
 msgstr ""
 
@@ -1560,7 +3186,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:67
+#: web/apps/zinnia/models_bases/entry.py:68
 msgid "title"
 msgstr ""
 
@@ -1697,7 +3323,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:472
+#: web/apps/zinnia/models_bases/entry.py:473
 msgid "categories"
 msgstr ""
 
@@ -1711,13 +3337,13 @@ msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
 #: web/apps/zinnia/models_bases/entry.py:57
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6
+#: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:70
+#: web/apps/zinnia/models_bases/entry.py:71
 msgid "slug"
 msgstr ""
 
@@ -1737,14 +3363,8 @@ msgstr ""
 msgid "language"
 msgstr ""
 
-#: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:103
-#: web/apps/zinnia/models_bases/entry.py:106
-msgid "Language"
-msgstr ""
-
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:113
+#: web/apps/zinnia/models_bases/entry.py:114
 msgid "Entry type"
 msgstr ""
 
@@ -1764,169 +3384,169 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:72
-#: web/apps/zinnia/models_bases/entry.py:97
+#: web/apps/zinnia/models_bases/entry.py:73
+#: web/apps/zinnia/models_bases/entry.py:98
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:75
+#: web/apps/zinnia/models_bases/entry.py:76
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:79
+#: web/apps/zinnia/models_bases/entry.py:80
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:81
+#: web/apps/zinnia/models_bases/entry.py:82
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:84
+#: web/apps/zinnia/models_bases/entry.py:85
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:87
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:91
+#: web/apps/zinnia/models_bases/entry.py:92
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:92
+#: web/apps/zinnia/models_bases/entry.py:93
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:95
+#: web/apps/zinnia/models_bases/entry.py:96
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:100
+#: web/apps/zinnia/models_bases/entry.py:101
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:110
+#: web/apps/zinnia/models_bases/entry.py:111
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:117
+#: web/apps/zinnia/models_bases/entry.py:118
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:223
+#: web/apps/zinnia/models_bases/entry.py:224
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:224
+#: web/apps/zinnia/models_bases/entry.py:225
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:238
+#: web/apps/zinnia/models_bases/entry.py:239
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:280
+#: web/apps/zinnia/models_bases/entry.py:281
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:281
+#: web/apps/zinnia/models_bases/entry.py:282
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:283
+#: web/apps/zinnia/models_bases/entry.py:284
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:284
+#: web/apps/zinnia/models_bases/entry.py:285
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:286
+#: web/apps/zinnia/models_bases/entry.py:287
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:287
+#: web/apps/zinnia/models_bases/entry.py:288
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:290
+#: web/apps/zinnia/models_bases/entry.py:291
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:292
+#: web/apps/zinnia/models_bases/entry.py:293
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:294
+#: web/apps/zinnia/models_bases/entry.py:295
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:378
+#: web/apps/zinnia/models_bases/entry.py:379
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:396
+#: web/apps/zinnia/models_bases/entry.py:397
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:397
+#: web/apps/zinnia/models_bases/entry.py:398
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:430
+#: web/apps/zinnia/models_bases/entry.py:431
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:432
+#: web/apps/zinnia/models_bases/entry.py:433
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:443
+#: web/apps/zinnia/models_bases/entry.py:444
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:458
+#: web/apps/zinnia/models_bases/entry.py:459
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:482
+#: web/apps/zinnia/models_bases/entry.py:483
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:501
+#: web/apps/zinnia/models_bases/entry.py:502
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:502
+#: web/apps/zinnia/models_bases/entry.py:503
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:514
+#: web/apps/zinnia/models_bases/entry.py:515
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:515
+#: web/apps/zinnia/models_bases/entry.py:516
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:527
+#: web/apps/zinnia/models_bases/entry.py:528
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:529
-#: web/apps/zinnia/models_bases/entry.py:545
+#: web/apps/zinnia/models_bases/entry.py:530
+#: web/apps/zinnia/models_bases/entry.py:546
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:531
+#: web/apps/zinnia/models_bases/entry.py:532
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:543
+#: web/apps/zinnia/models_bases/entry.py:544
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:547
+#: web/apps/zinnia/models_bases/entry.py:548
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -2096,7 +3716,8 @@ msgstr ""
 #: web/apps/zinnia/templates/feeds/discussion_title.html:2
 #: web/apps/zinnia/templates/feeds/pingback_title.html:2
 #: web/apps/zinnia/templates/feeds/trackback_title.html:2
-#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:22
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:23
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:52
 msgctxt "on date"
 msgid "on"
 msgstr ""
@@ -2284,18 +3905,18 @@ msgstr ""
 msgid "Return to entry list"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:24
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:25
 #: web/apps/zinnia/templates/zinnia/entry_detail_base.html:54
 msgid "Written on"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:90
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:91
 #: web/apps/zinnia/templates/zinnia/entry_detail_base.html:121
 #, python-format
 msgid "%(percent)s%% of %(object)s still remains to read."
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:92
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:93
 #: web/apps/zinnia/templates/zinnia/entry_detail_base.html:123
 msgid "Continue reading"
 msgstr ""
@@ -2441,10 +4062,6 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/entry_detail_base.html:28
 msgid "RSS Feed of trackbacks on"
-msgstr ""
-
-#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:52
-msgid "/"
 msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/entry_detail_base.html:210
@@ -2933,6 +4550,24 @@ msgstr ""
 msgid "System Error."
 msgstr ""
 
+#: web/templates/base.html:10
+msgid ""
+"Newton-Infrastructure of protocol-based economy,We are committed to creating "
+"a decentralized protocol standards and development tool chains that can be "
+"used in the entire business process, including supply chain, marketing, "
+"payment, transaction, credit, finance and so on, thereby building a highly "
+"collaborative, fair and reasonable, highly automated business environment "
+"with lower cost and fewer conflicts."
+msgstr ""
+
+#: web/templates/base.html:12
+msgid ""
+"Newton,NewtonProject,newtonproject.org,NewChain,NewNet,Protocol-based "
+"Economy,Atom Hashing,NewIOT,DAI,Hyper Exchange Protocol,Automatic finance,"
+"NNIO,Reliable physical tunnel,Digital Marketing,Supply Chain,Blockchain,"
+"Intelligent Contract,Open Source Community,Digital Assets,token"
+msgstr ""
+
 #: web/templates/dialog.html:8
 msgid "关闭"
 msgstr ""
@@ -2945,10 +4580,6 @@ msgstr ""
 msgid "新浪微博"
 msgstr ""
 
-#: web/templates/dialog.html:14
-msgid "QQ"
-msgstr ""
-
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
 msgstr ""
@@ -2957,11 +4588,7 @@ msgstr ""
 msgid "COMMUNITY"
 msgstr ""
 
-#: web/templates/footer.html:34
-msgid "Team Introduction"
-msgstr ""
-
-#: web/templates/footer.html:45
+#: web/templates/footer.html:47
 msgid "Service Terms"
 msgstr ""
 
