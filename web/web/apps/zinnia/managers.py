@@ -29,7 +29,7 @@ def tags_published():
     return Tag.objects.filter(name__in=[t.name for t in tags_entry_published])
 
 
-def entries_published(queryset):
+def entries_published(queryset, language_flag=True):
     """
     Return only the entries published.
     """
@@ -42,25 +42,30 @@ def entries_published(queryset):
     else:
         language = CHINESE
         
-    return queryset.filter(
+    res = queryset.filter(
         models.Q(start_publication__lte=now) |
         models.Q(start_publication=None),
         models.Q(end_publication__gt=now) |
         models.Q(end_publication=None),
-        status=PUBLISHED, sites=Site.objects.get_current(), language=language,entry_type=0)
+        status=PUBLISHED, sites=Site.objects.get_current(),entry_type=0)
+    if language_flag == True:
+        res = res.filter(language=language)
+    return res
 
 
 class EntryPublishedManager(models.Manager):
     """
     Manager to retrieve published entries.
     """
-    
+    language_flag = True
+
     def get_queryset(self):
         """
         Return published entries.
         """
-        return entries_published(
-            super(EntryPublishedManager, self).get_queryset())
+        flag = self.language_flag
+        print(flag)
+        return entries_published((super(EntryPublishedManager, self).get_queryset()),flag)
 
     def on_site(self):
         """

@@ -172,8 +172,10 @@ class CoreEntry(models.Model):
                 previous_next = (None, None)
                 setattr(self, 'previous_next', previous_next)
                 return previous_next
-
+                
+            self.__class__.published.language_flag = False
             entries = list(self.__class__.published.all())
+            self.__class__.published.language_flag = True
             index = entries.index(self)
             try:
                 previous = entries[index + 1]
