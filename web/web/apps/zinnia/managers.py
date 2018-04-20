@@ -29,7 +29,7 @@ def tags_published():
     return Tag.objects.filter(name__in=[t.name for t in tags_entry_published])
 
 
-def entries_published(queryset, language_flag=True):
+def entries_published(queryset, is_query_by_language=False):
     """
     Return only the entries published.
     """
@@ -47,8 +47,8 @@ def entries_published(queryset, language_flag=True):
         models.Q(start_publication=None),
         models.Q(end_publication__gt=now) |
         models.Q(end_publication=None),
-        status=PUBLISHED, sites=Site.objects.get_current(),entry_type=0)
-    if language_flag == True:
+        status=PUBLISHED, sites=Site.objects.get_current(), entry_type=0)
+    if is_query_by_language == True:
         res = res.filter(language=language)
     return res
 
@@ -57,13 +57,13 @@ class EntryPublishedManager(models.Manager):
     """
     Manager to retrieve published entries.
     """
-    language_flag = True
+    is_query_by_language = True
 
     def get_queryset(self):
         """
         Return published entries.
         """
-        flag = self.language_flag
+        flag = self.is_query_by_language
         return entries_published((super(EntryPublishedManager, self).get_queryset()),flag)
 
     def on_site(self):
