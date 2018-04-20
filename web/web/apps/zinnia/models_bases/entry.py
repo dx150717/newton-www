@@ -10,6 +10,7 @@ from django.contrib.sites.models import Site
 from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
+from django.utils import timezone
 
 import django_comments as comments
 from django_comments.models import CommentFlag
@@ -172,10 +173,14 @@ class CoreEntry(models.Model):
                 previous_next = (None, None)
                 setattr(self, 'previous_next', previous_next)
                 return previous_next
-
-            self.__class__.published.is_query_by_language = False
-            entries = list(self.__class__.published.all())
-            self.__class__.published.is_query_by_language = True
+            now = timezone.now()
+            query_set = self.__class__.objects.all().filter(
+                models.Q(start_publication__lte=now) |
+                models.Q(start_publication=None),
+                models.Q(end_publication__gt=now) |
+                models.Q(end_publication=None),
+                status=PUBLISHED, sites=Site.objects.get_current())
+            entries = list(query_set)
             index = entries.index(self)
             try:
                 previous = entries[index + 1]
