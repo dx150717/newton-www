@@ -64,7 +64,6 @@ class EntryPublishedManager(models.Manager):
         Return published entries.
         """
         flag = self.language_flag
-        print(flag)
         return entries_published((super(EntryPublishedManager, self).get_queryset()),flag)
 
     def on_site(self):
