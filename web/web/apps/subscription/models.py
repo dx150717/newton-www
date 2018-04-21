@@ -6,7 +6,7 @@ class SubscribedEmail(models.Model):
     """
     Entry of Subscribed Email. And we can get subscribed email list.
     """
-    email_address = models.CharField(max_length=200, unique=True)
+    email_address = models.CharField(max_length=200, db_index=True)
     uuid = models.CharField(max_length=200,null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
