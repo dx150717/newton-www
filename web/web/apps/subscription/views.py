@@ -8,6 +8,7 @@ from django.template import Template,Context,loader
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext as _
+from django.views.decorators.http import require_http_methods
 from ratelimit.decorators import ratelimit
 from subscription import models as subscription_model
 from config import codes
@@ -18,6 +19,7 @@ import task as subscription_task
 logger = logging.getLogger(__name__)
 
 #@ratelimit(key='ip', rate='1/m', method=['GET','POST'])
+@require_http_methods(["POST"])
 def subscribe(request):
     """
     Add email address to email list database.
@@ -49,9 +51,9 @@ def subscribe(request):
             else:
                 return http.JsonErrorResponse(error_message=_("Subscribe Failed!"))
     except ValidationError:
-        return http.JsonErrorResponse(error_message = _("Invalid Email Address!"))
+        return http.JsonErrorResponse(error_message=_("Invalid Email Address!"))
     except Exception, inst:
-        logger.exception('error unknown : %s' % str(inst))
+        logger.exception("fail to subscribe: %s" % str(inst))
         return http.JsonErrorResponse()
 
 
