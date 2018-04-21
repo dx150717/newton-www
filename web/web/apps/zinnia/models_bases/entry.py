@@ -179,7 +179,7 @@ class CoreEntry(models.Model):
                 models.Q(start_publication=None),
                 models.Q(end_publication__gt=now) |
                 models.Q(end_publication=None),
-                status=PUBLISHED, sites=Site.objects.get_current())
+                status=PUBLISHED,entry_type=TYPE_ANNOUNCEMENT, sites=Site.objects.get_current())
             entries = list(query_set)
             index = entries.index(self)
             try:
