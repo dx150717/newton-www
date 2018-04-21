@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-19 21:08+0800\n"
+"POT-Creation-Date: 2018-04-21 18:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,54 +119,54 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:66
+#: web/apps/base/templatetags/utils.py:70
 #, python-format
 msgid "%(duration)d minute"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:68
+#: web/apps/base/templatetags/utils.py:72
 #, python-format
 msgid "%(duration)d hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:107
+#: web/apps/base/templatetags/utils.py:111
 #, python-format
 msgid "%(hour)d hour ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:110
+#: web/apps/base/templatetags/utils.py:114
 #, python-format
 msgid "%(minute)d minute ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:112
+#: web/apps/base/templatetags/utils.py:116
 #, python-format
 msgid "%(second)d second ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:141
+#: web/apps/base/templatetags/utils.py:145
 #, python-format
 msgid "%.f hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:171
+#: web/apps/base/templatetags/utils.py:175
 msgid "unfilled"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:177
-#: web/apps/base/templatetags/utils.py:184
+#: web/apps/base/templatetags/utils.py:181
+#: web/apps/base/templatetags/utils.py:188
 msgid "Yes"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:178
-#: web/apps/base/templatetags/utils.py:185
+#: web/apps/base/templatetags/utils.py:182
+#: web/apps/base/templatetags/utils.py:189
 msgid "No"
 msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:104
-#: web/apps/zinnia/models_bases/entry.py:107
+#: web/apps/zinnia/models_bases/entry.py:105
+#: web/apps/zinnia/models_bases/entry.py:108
 msgid "Language"
 msgstr "语言"
 
@@ -289,28 +289,29 @@ msgstr ""
 msgid "Subscribed emails"
 msgstr "订阅邮箱"
 
-#: web/apps/subscription/views.py:34
-msgid "Email Has Exist!"
-msgstr "邮箱已经存在！"
-
-#: web/apps/subscription/views.py:38 web/apps/subscription/views.py:47
-msgid "we've sent you a confirming e-mail,please check your email box."
-msgstr "确认邮件已经发送到您的邮箱，请注意查收。"
-
-#: web/apps/subscription/views.py:40 web/apps/subscription/views.py:49
-msgid "Subscribe Failed!"
-msgstr "订阅失败"
-
-#: web/apps/subscription/views.py:51
+#: web/apps/subscription/views.py:31
 msgid "You can only subscribe once per minute."
 msgstr "每分钟只能订阅一次。"
 
-#: web/apps/subscription/views.py:54
+#: web/apps/subscription/views.py:37
+msgid "Email Has Exist!"
+msgstr "邮箱已经存在！"
+
+#: web/apps/subscription/views.py:41 web/apps/subscription/views.py:50
+msgid "we've sent you a confirming e-mail,please check your email box."
+msgstr "确认邮件已经发送到您的邮箱，请注意查收。"
+
+#: web/apps/subscription/views.py:43 web/apps/subscription/views.py:52
+#: web/apps/subscription/views.py:76
+msgid "Subscribe Failed!"
+msgstr "订阅失败"
+
+#: web/apps/subscription/views.py:54 web/apps/subscription/views.py:72
 #: web/apps/subscription/templates/subscription/include-subscription.html:70
 msgid "Invalid Email Address!"
 msgstr "无效的邮箱地址！"
 
-#: web/apps/subscription/views.py:78
+#: web/apps/subscription/views.py:80
 msgid "NewtonProject Notifications: Please Confirm Subscription"
 msgstr "牛顿提醒：请确认您的订阅"
 
@@ -549,7 +550,7 @@ msgstr "技术、商业、经济或其他问题，联系"
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:58 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:59 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "公告"
 
@@ -563,17 +564,17 @@ msgid "All"
 msgstr "全部公告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:63
+#: web/apps/zinnia/models_bases/entry.py:64
 msgid "Operation"
 msgstr "运营公告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:64
+#: web/apps/zinnia/models_bases/entry.py:65
 msgid "Weekly"
 msgstr "周报"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:62
+#: web/apps/zinnia/models_bases/entry.py:63
 msgid "Activity"
 msgstr "活动公告"
 
@@ -1885,11 +1886,11 @@ msgid "设置个人信息隐私模式"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:26
-msgid "交易信息共享定价及收益"
+msgid "交易信息管理"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:27
-msgid "交易信息管理"
+msgid "交易信息共享定价及收益"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:28
@@ -3460,7 +3461,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:68
+#: web/apps/zinnia/models_bases/entry.py:69
 msgid "title"
 msgstr ""
 
@@ -3597,7 +3598,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:473
+#: web/apps/zinnia/models_bases/entry.py:483
 msgid "categories"
 msgstr ""
 
@@ -3610,14 +3611,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:57
+#: web/apps/zinnia/models_bases/entry.py:58
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:71
+#: web/apps/zinnia/models_bases/entry.py:72
 msgid "slug"
 msgstr ""
 
@@ -3638,7 +3639,7 @@ msgid "language"
 msgstr "语言"
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:114
+#: web/apps/zinnia/models_bases/entry.py:115
 msgid "Entry type"
 msgstr "文章类型"
 
@@ -3646,181 +3647,181 @@ msgstr "文章类型"
 msgid "category"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:47
+#: web/apps/zinnia/models_bases/entry.py:48
 msgid "draft"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:48
+#: web/apps/zinnia/models_bases/entry.py:49
 msgid "hidden"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:49
+#: web/apps/zinnia/models_bases/entry.py:50
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:73
-#: web/apps/zinnia/models_bases/entry.py:98
+#: web/apps/zinnia/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:99
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:76
+#: web/apps/zinnia/models_bases/entry.py:77
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:80
+#: web/apps/zinnia/models_bases/entry.py:81
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:82
+#: web/apps/zinnia/models_bases/entry.py:83
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:85
+#: web/apps/zinnia/models_bases/entry.py:86
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:87
+#: web/apps/zinnia/models_bases/entry.py:88
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:92
+#: web/apps/zinnia/models_bases/entry.py:93
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:93
+#: web/apps/zinnia/models_bases/entry.py:94
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:96
+#: web/apps/zinnia/models_bases/entry.py:97
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:101
+#: web/apps/zinnia/models_bases/entry.py:102
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:111
+#: web/apps/zinnia/models_bases/entry.py:112
 msgid "entry type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:118
+#: web/apps/zinnia/models_bases/entry.py:119
 msgid "entry_sub_type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:224
+#: web/apps/zinnia/models_bases/entry.py:234
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:225
+#: web/apps/zinnia/models_bases/entry.py:235
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:239
+#: web/apps/zinnia/models_bases/entry.py:249
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:281
+#: web/apps/zinnia/models_bases/entry.py:291
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:282
+#: web/apps/zinnia/models_bases/entry.py:292
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:284
+#: web/apps/zinnia/models_bases/entry.py:294
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:285
+#: web/apps/zinnia/models_bases/entry.py:295
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:287
+#: web/apps/zinnia/models_bases/entry.py:297
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:288
+#: web/apps/zinnia/models_bases/entry.py:298
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:291
+#: web/apps/zinnia/models_bases/entry.py:301
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:293
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:295
+#: web/apps/zinnia/models_bases/entry.py:305
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:379
+#: web/apps/zinnia/models_bases/entry.py:389
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:397
+#: web/apps/zinnia/models_bases/entry.py:407
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:398
+#: web/apps/zinnia/models_bases/entry.py:408
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:431
+#: web/apps/zinnia/models_bases/entry.py:441
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:433
+#: web/apps/zinnia/models_bases/entry.py:443
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:444
+#: web/apps/zinnia/models_bases/entry.py:454
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:459
+#: web/apps/zinnia/models_bases/entry.py:469
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:483
+#: web/apps/zinnia/models_bases/entry.py:493
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:502
+#: web/apps/zinnia/models_bases/entry.py:512
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:503
+#: web/apps/zinnia/models_bases/entry.py:513
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:515
+#: web/apps/zinnia/models_bases/entry.py:525
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:516
+#: web/apps/zinnia/models_bases/entry.py:526
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:528
+#: web/apps/zinnia/models_bases/entry.py:538
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:530
-#: web/apps/zinnia/models_bases/entry.py:546
+#: web/apps/zinnia/models_bases/entry.py:540
+#: web/apps/zinnia/models_bases/entry.py:556
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:532
+#: web/apps/zinnia/models_bases/entry.py:542
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:544
+#: web/apps/zinnia/models_bases/entry.py:554
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:548
+#: web/apps/zinnia/models_bases/entry.py:558
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -4858,6 +4859,10 @@ msgstr ""
 #: web/templates/dialog.html:13
 msgid "新浪微博"
 msgstr ""
+
+#: web/templates/error.html:6
+msgid "Error"
+msgstr "错误"
 
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
