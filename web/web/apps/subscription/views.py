@@ -69,10 +69,11 @@ def subscribed_confirm(request):
             return render(request, 'subscription/confirm.html')
         else:
             logger.error("fail to find email by uuid: %s" % str(inst))
-            return http.JsonErrorResponse()
+            return render(request, "404.html")
     except Exception, inst:
+        print("eror")
         logger.error("fail to confirm email: %s" % str(inst))
-        return http.JsonErrorResponse()
+        return render(request, "404.html")
 
 def do_send_mail(subscribed_email, request):
     subject = _("NewtonProject Notifications: Please Confirm Subscription")
