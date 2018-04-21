@@ -25,31 +25,29 @@ def subscribe(request):
     """
     try:
         was_limited = getattr(request, 'limited', False)
-        if not was_limited:
-            email_address = request.POST['email_address']
-            validate_email(email_address)
-            subscribed_email = subscription_model.SubscribedEmail.objects.filter(email_address = email_address).first()
-            if subscribed_email:
-                if subscribed_email.status == codes.StatusCode.RELEASE.value:
-                    result = http.JsonErrorResponse(error_message = _('Email Has Exist!'))
-                else:
-                    send_flag = do_send_mail(subscribed_email,request)
-                    if send_flag:
-                        result = http.JsonSuccessResponse(data = {"msg": _("we've sent you a confirming e-mail,please check your email box.")})
-                    else:
-                        result = http.JsonErrorResponse(error_message = _("Subscribe Failed!"))
+        if was_limited:
+            return http.JsonErrorResponse(error_message=_("You can only subscribe once per minute."))
+        email_address = request.POST['email_address']
+        validate_email(email_address)
+        subscribed_email = subscription_model.SubscribedEmail.objects.filter(email_address=email_address).first()
+        if subscribed_email:
+            if subscribed_email.status == codes.StatusCode.RELEASE.value:
+                return http.JsonErrorResponse(error_message=_('Email Has Exist!'))
             else:
-                subscribed_email = subscription_model.SubscribedEmail(email_address = email_address)
-                subscribed_email.uuid = security.generate_uuid()
-                subscribed_email.save()
-                send_flag = do_send_mail(subscribed_email,request)
-                if send_flag:
-                    result = http.JsonSuccessResponse(data = {"msg": _("we've sent you a confirming e-mail,please check your email box.")})
+                is_send_success = do_send_mail(subscribed_email, request)
+                if is_send_success:
+                    return http.JsonSuccessResponse(data={"msg": _("we've sent you a confirming e-mail,please check your email box.")})
                 else:
-                    result = http.JsonErrorResponse(error_message = _("Subscribe Failed!"))
+                    return http.JsonErrorResponse(error_message=_("Subscribe Failed!"))
         else:
-            result = http.JsonErrorResponse(error_message = _("You can only subscribe once per minute."))
-        return result
+            subscribed_email = subscription_model.SubscribedEmail(email_address=email_address)
+            subscribed_email.uuid = security.generate_uuid()
+            subscribed_email.save()
+            is_send_success = do_send_mail(subscribed_email, request)
+            if is_send_success:
+                return http.JsonSuccessResponse(data={"msg": _("we've sent you a confirming e-mail,please check your email box.")})
+            else:
+                return http.JsonErrorResponse(error_message=_("Subscribe Failed!"))
     except ValidationError:
         return http.JsonErrorResponse(error_message = _("Invalid Email Address!"))
     except Exception, inst:
@@ -60,7 +58,7 @@ def subscribe(request):
 def subscribed_confirm(request):
     try:
         email_address = request.GET['u']
-        subscribed_email = subscription_model.SubscribedEmail.objects.filter(uuid = email_address).first()
+        subscribed_email = subscription_model.SubscribedEmail.objects.filter(uuid=email_address).first()
         if subscribed_email:
             code = subscribed_email.status
             if code == codes.StatusCode.AVAILABLE.value:
