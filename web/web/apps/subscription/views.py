@@ -72,7 +72,7 @@ def subscribed_confirm(request):
         logger.error("fail to confirm email: %s" % str(inst))
         return http.JsonErrorResponse()
 
-def do_send_mail(subscribed_email,request):
+def do_send_mail(subscribed_email, request):
     subject = _("NewtonProject Notifications: Please Confirm Subscription")
     targetUrl = settings.BASE_URL + "/subscribe/confirmed/?u=" + str(subscribed_email.uuid)
     try:
@@ -81,7 +81,7 @@ def do_send_mail(subscribed_email,request):
         html_content = template.render(context)
         to_email = subscribed_email.email_address
         from_email = settings.FROM_EMAIL
-        subscription_task.send_email.delay(subject,html_content,from_email,[to_email])
+        subscription_task.send_email.delay(subject, html_content, from_email, [to_email])
         return True
     except Exception,inst:
         logger.error("fail to send email: %s" % str(inst))
