@@ -13,6 +13,6 @@ def send_email(subject, content, from_email, to_emails, content_type='html'):
         msg.content_subtype = content_type
         msg.send()
     except Exception, inst:
-        logger.error("fail to send email in task: %s" % str(inst))
+        logger.error("fail to send email: %s" % str(inst))
 
 
