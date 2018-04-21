@@ -86,5 +86,5 @@ def do_send_mail(subscribed_email, request):
         subscription_task.send_email.delay(subject, html_content, from_email, [to_email])
         return True
     except Exception,inst:
-        logger.error("fail to send email: %s" % str(inst))
+        logger.error("fail to send email in do_send_mail: %s" % str(inst))
         return False
