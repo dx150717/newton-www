@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:10+0800\n"
+"POT-Creation-Date: 2018-04-21 20:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -302,16 +302,19 @@ msgid "we've sent you a confirming e-mail,please check your email box."
 msgstr "确认邮件已经发送到您的邮箱，请注意查收。"
 
 #: web/apps/subscription/views.py:43 web/apps/subscription/views.py:52
-#: web/apps/subscription/views.py:76
 msgid "Subscribe Failed!"
 msgstr "订阅失败"
 
-#: web/apps/subscription/views.py:54 web/apps/subscription/views.py:72
+#: web/apps/subscription/views.py:54
 #: web/apps/subscription/templates/subscription/include-subscription.html:70
 msgid "Invalid Email Address!"
 msgstr "无效的邮箱地址！"
 
-#: web/apps/subscription/views.py:80
+#: web/apps/subscription/views.py:72
+msgid "Links expire or invalid pages."
+msgstr "链接过期或者无效页面"
+
+#: web/apps/subscription/views.py:79
 msgid "NewtonProject Notifications: Please Confirm Subscription"
 msgstr "牛顿提醒：请确认您的订阅"
 
@@ -4860,10 +4863,6 @@ msgstr ""
 msgid "新浪微博"
 msgstr ""
 
-#: web/templates/error.html:6
-msgid "Error"
-msgstr "错误"
-
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
 msgstr "发展规划"
@@ -4910,6 +4909,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Error"
+#~ msgstr "错误"
 
 #, fuzzy
 #~ msgid "NewtonProject Notifications: Please Register"
