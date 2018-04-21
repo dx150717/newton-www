@@ -59,8 +59,8 @@ def subscribe(request):
 
 def subscribed_confirm(request):
     try:
-        email_address = request.GET['uuid']
-        subscribed_email = subscription_model.SubscribedEmail.objects.filter(uuid=email_address).first()
+        uuid = request.GET['uuid']
+        subscribed_email = subscription_model.SubscribedEmail.objects.filter(uuid=uuid).first()
         if subscribed_email:
             code = subscribed_email.status
             if code == codes.StatusCode.AVAILABLE.value:
@@ -69,11 +69,12 @@ def subscribed_confirm(request):
             return render(request, 'subscription/confirm.html')
         else:
             logger.error("fail to find email by uuid: %s" % str(inst))
-            return render(request, "404.html")
+            error_message = _("Invalid Email Address!")
+            return render(request, "error.html", locals())
     except Exception, inst:
-        print("eror")
         logger.error("fail to confirm email: %s" % str(inst))
-        return render(request, "404.html")
+        error_message = _("Subscribe Failed!")
+        return render(request, "error.html", locals())
 
 def do_send_mail(subscribed_email, request):
     subject = _("NewtonProject Notifications: Please Confirm Subscription")
