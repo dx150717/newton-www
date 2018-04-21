@@ -119,6 +119,5 @@ class EntryRelatedPublishedManager(models.Manager):
             models.Q(entries__end_publication__gt=now) |
             models.Q(entries__end_publication=None),
             entries__status=PUBLISHED,
-            entry_type=0,
             entries__sites=Site.objects.get_current()
             ).distinct()
