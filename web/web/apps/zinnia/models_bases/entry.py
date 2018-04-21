@@ -174,13 +174,6 @@ class CoreEntry(models.Model):
                 setattr(self, 'previous_next', previous_next)
                 return previous_next
             now = timezone.now()
-            language = translation.get_language()
-            if language.startswith('zh'):
-                language = CHINESE
-            elif language.startswith('en'):
-                language = ENGLISH
-            else:
-                language = ENGLISH
             query_set = self.__class__.objects.all().filter(
                 models.Q(start_publication__lte=now) |
                 models.Q(start_publication=None),
