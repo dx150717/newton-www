@@ -11,7 +11,7 @@ from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils import timezone
-
+from django.utils import translation
 import django_comments as comments
 from django_comments.models import CommentFlag
 
@@ -174,12 +174,19 @@ class CoreEntry(models.Model):
                 setattr(self, 'previous_next', previous_next)
                 return previous_next
             now = timezone.now()
+            language = translation.get_language()
+            if language.startswith('zh'):
+                language = CHINESE
+            elif language.startswith('en'):
+                language = ENGLISH
+            else:
+                language = ENGLISH
             query_set = self.__class__.objects.all().filter(
                 models.Q(start_publication__lte=now) |
                 models.Q(start_publication=None),
                 models.Q(end_publication__gt=now) |
                 models.Q(end_publication=None),
-                status=PUBLISHED, entry_type=TYPE_BLOG, sites=Site.objects.get_current())
+                status=PUBLISHED, entry_type=TYPE_BLOG,language=language, sites=Site.objects.get_current())
             entries = list(query_set)
             index = entries.index(self)
             try:
