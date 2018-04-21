@@ -47,7 +47,7 @@ def entries_published(queryset):
         models.Q(start_publication=None),
         models.Q(end_publication__gt=now) |
         models.Q(end_publication=None),
-        status=PUBLISHED, sites=Site.objects.get_current(),language=language)
+        status=PUBLISHED, sites=Site.objects.get_current(), language=language, entry_type=0)
     return res
 
 
