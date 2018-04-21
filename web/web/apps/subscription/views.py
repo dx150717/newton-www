@@ -59,7 +59,7 @@ def subscribe(request):
 
 def subscribed_confirm(request):
     try:
-        email_address = request.GET['u']
+        email_address = request.GET['uuid']
         subscribed_email = subscription_model.SubscribedEmail.objects.filter(uuid=email_address).first()
         if subscribed_email:
             code = subscribed_email.status
@@ -76,7 +76,7 @@ def subscribed_confirm(request):
 
 def do_send_mail(subscribed_email, request):
     subject = _("NewtonProject Notifications: Please Confirm Subscription")
-    targetUrl = settings.BASE_URL + "/subscribe/confirmed/?u=" + str(subscribed_email.uuid)
+    targetUrl = settings.BASE_URL + "/subscribe/confirmed/?uuid=" + str(subscribed_email.uuid)
     try:
         template = loader.get_template("subscription/subscription-letter.html")
         context = Context({"targetUrl":targetUrl,"request":request})
