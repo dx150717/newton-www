@@ -181,6 +181,9 @@ class CoreEntry(models.Model):
                 models.Q(end_publication=None),
                 status=PUBLISHED, entry_type=TYPE_BLOG, sites=Site.objects.get_current())
             entries = list(query_set)
+            pre_index = entries.index(self)
+            entry_language = entries[pre_index].language
+            entries = list(query_set.filter(language=entry_language))
             index = entries.index(self)
             try:
                 previous = entries[index + 1]
