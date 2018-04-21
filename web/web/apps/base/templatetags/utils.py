@@ -3,6 +3,7 @@ __author__ = 'xiawu@xiawu.org'
 __version__ = '$Rev$'
 __doc__ = """ """
 
+import logging
 import re
 import datetime
 from django import template
@@ -15,6 +16,8 @@ from django.utils.timezone import utc
 
 from config import codes
 
+logger = logging.getLogger(__name__)
+
 register = template.Library()
 version_pattern = re.compile(r"^(.*)\.(.*?)$")
 
@@ -24,7 +27,8 @@ def version(path_string):
     """
     try:
         return "%s%s?v=%s" % (settings.STATIC_URL, path_string, settings.STATIC_DEFAULT_VERSION)
-    except:
+    except Exception, inst:
+        logger.exception(str(inst))
         return path_string
 
 register.simple_tag(version)
