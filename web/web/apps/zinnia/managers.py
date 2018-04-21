@@ -49,7 +49,6 @@ def entries_published(queryset):
         models.Q(end_publication=None),
         status=PUBLISHED, sites=Site.objects.get_current(), language=language,entry_type=TYPE_BLOG)
 
-
 class EntryPublishedManager(models.Manager):
     """
     Manager to retrieve published entries.
