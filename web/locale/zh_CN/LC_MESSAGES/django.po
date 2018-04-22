@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 18:10+0800\n"
+"POT-Creation-Date: 2018-04-21 20:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -302,16 +302,19 @@ msgid "we've sent you a confirming e-mail,please check your email box."
 msgstr "确认邮件已经发送到您的邮箱，请注意查收。"
 
 #: web/apps/subscription/views.py:43 web/apps/subscription/views.py:52
-#: web/apps/subscription/views.py:76
 msgid "Subscribe Failed!"
 msgstr "订阅失败"
 
-#: web/apps/subscription/views.py:54 web/apps/subscription/views.py:72
+#: web/apps/subscription/views.py:54
 #: web/apps/subscription/templates/subscription/include-subscription.html:70
 msgid "Invalid Email Address!"
 msgstr "无效的邮箱地址！"
 
-#: web/apps/subscription/views.py:80
+#: web/apps/subscription/views.py:72
+msgid "Links expire or invalid pages."
+msgstr "链接过期或者无效页面"
+
+#: web/apps/subscription/views.py:79
 msgid "NewtonProject Notifications: Please Confirm Subscription"
 msgstr "牛顿提醒：请确认您的订阅"
 
@@ -1878,23 +1881,23 @@ msgid "数字身份"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:24
-msgid "创建和管理DID(Decentralized ID)"
+msgid "创建和管理DID(Decentralized ID)；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:25
-msgid "设置个人信息隐私模式"
+msgid "设置个人信息隐私模式；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:26
-msgid "交易信息管理"
+msgid "交易信息管理；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:27
-msgid "交易信息共享定价及收益"
+msgid "交易信息共享定价及收益；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:28
-msgid "数字资产管理，包括NEW、BTC、ETH等"
+msgid "数字资产管理，包括NEW、BTC、ETH等。"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:37
@@ -1902,15 +1905,15 @@ msgid "支付"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:38
-msgid "支持跨境交易"
+msgid "支持跨境交易；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:39
-msgid "支持超小额度支付"
+msgid "支持超小额度支付；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:40
-msgid "极快的交易确认速度"
+msgid "极快的交易确认速度；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:50
@@ -1918,15 +1921,15 @@ msgid "联合登录"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:51
-msgid "使用统一身份登录多个Dapp"
+msgid "使用统一身份登录多个Dapp；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:52
-msgid "Dapp管理和权限控制"
+msgid "Dapp管理和权限控制；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:53
-msgid "安全审计"
+msgid "安全审计。"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:62
@@ -1934,15 +1937,15 @@ msgid "内置应用"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:63
-msgid "支持采用自由开源方式发布的内置应用"
+msgid "支持采用自由开源方式发布的内置应用；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:64
-msgid "支持内置应用购买"
+msgid "支持内置应用购买；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:65
-msgid "内置应用开发工具支持"
+msgid "内置应用开发工具支持；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/partner.html:6
@@ -4860,10 +4863,6 @@ msgstr ""
 msgid "新浪微博"
 msgstr ""
 
-#: web/templates/error.html:6
-msgid "Error"
-msgstr "错误"
-
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
 msgstr "发展规划"
@@ -4910,6 +4909,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Error"
+#~ msgstr "错误"
 
 #, fuzzy
 #~ msgid "NewtonProject Notifications: Please Register"
