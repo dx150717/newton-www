@@ -71,6 +71,11 @@ INSTALLED_APPS = (
     'subscription',
     'press',
     'faq',
+    'user',
+    'login',
+    'register',
+    'reset',
+    'verification',
 )
 
 MIDDLEWARE_CLASSES = (

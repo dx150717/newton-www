@@ -9,7 +9,7 @@ from user.models import UserProfile
 from django.contrib.auth.forms import UserCreationForm
     
 class UserProfileForm(ModelForm):
-    first_name = forms.CharField(label="姓名", max_length=30, required=True)
+    first_name = forms.CharField(label="first_name", max_length=30, required=True)
     
     def __init__(self, *args, **kw):
         super(UserProfileForm, self).__init__(*args, **kw)

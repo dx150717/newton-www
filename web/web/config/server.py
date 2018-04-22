@@ -63,3 +63,5 @@ CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
 CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
 CELERYD_HIJACK_ROOT_LOGGER = False
 CELERY_IMPORTS = ('subscription.task')
+
+CHINA_COUNTRY_CALLING_CODE = '86'

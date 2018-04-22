@@ -6,15 +6,12 @@ __version__ = '$Rev$'
 __doc__ = """  """
 
 import logging
-from django.shortcuts import render_to_response, redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 from utils import http
 from django.contrib.auth.models import User
-from course import models as course_models
-from user import forms as user_forms
-from like import services as like_services
-from wish import services as wish_services
+from user import models as user_model
 from config import codes
 
 
@@ -44,23 +41,29 @@ def user_view(request, user_id=None):
 
 @login_required
 def user_edit_profile_view(request):
-    form = user_forms.UserProfileForm(instance=request.user.userprofile)
-    can_edit_account = request.user.userprofile.user_from == UserFrom.DIRECT_REGISTER.value
-    return render_to_response("user/user_edit.html", RequestContext(request, locals()))
+    return render(request, "user/user_edit.html", locals())
 
 @login_required
 def user_edit_profile_submit_view(request):
-    form = user_forms.UserProfileForm(request.POST, instance=request.user.userprofile)
-    if form.is_valid():
+    if request.method == "POST":
         try:
-            first_name = form.cleaned_data['first_name']
-            user_profile = form.save()
-            request.user.first_name = first_name
-            request.user.userprofile = user_profile
-            request.user.save()
-            return http.JsonSuccessResponse()
+            # homepage = request.POST['homepage']
+            # country_code = request.POST['country_code']
+            # gender = request.POST['gender']
+            # print("gender? %s" %gender)
+            # cellphone = request.POST['cellphone']
+            # job_status = request.POST['job_status']
+            # construction_mode = request.POST['construction_mode']
+            # newton_channel = request.POST['newton_channel']
+            # #validate data
+            # profile = user_model.UserProfile(user=request.user,homepage=homepage,
+            # country_code=country_code,gender=int(gender.encode("utf-8")),cellphone=cellphone,
+            # job_status=int(job_status.encode("utf-8")),construction_mode=int(construction_mode.encode("utf-8")),channel="test"
+            # )
+            # profile.save()
+            return redirect("/")
         except Exception, inst:
-            logging.error(str(inst))
+            print("error: %s" %str(inst))
     return http.JsonErrorResponse()
 
 @login_required

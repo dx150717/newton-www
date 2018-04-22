@@ -18,9 +18,9 @@ User._meta.get_field_by_name('username')[0].max_length = 128
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
     user_from = models.IntegerField(default=codes.UserFrom.DIRECT_REGISTER.value, db_index=True)
-    user_type = models.IntegerField()
+    user_type = models.IntegerField(default=codes.UserType.NORMAL.value)
     # cellphone
-    cellphone = models.CharField(max_length=128, db_index=True)
+    cellphone = models.CharField(max_length=128, db_index=True, default='')
     country_code = models.CharField(max_length=4, db_index=True, default=settings.CHINA_COUNTRY_CALLING_CODE)
     language_code = models.CharField(max_length=10, default=settings.USER_DEFAULT_LANGUAGE_CODE)
     # detail
@@ -37,7 +37,6 @@ class UserProfile(models.Model):
     city_id = models.IntegerField(default=0)
     location = models.CharField(max_length=1024, blank=True, null=True)
     # verified status
-    email_address = models.CharField(max_length=1024,default='')
     is_email_verified = models.BooleanField(default=False)
     # social
     weibo = models.CharField(max_length=1024, default='', blank=True)
@@ -53,7 +52,7 @@ class UserProfile(models.Model):
     tall = models.IntegerField(max_length=4, null=True)
     weight = models.IntegerField(max_length=4, null=True)
     newton_channel = models.IntegerField(default=0)
-    job_status = models.IntegerField(default=0)
+    job_status = models.IntegerField(default=codes.JobType.UNKNOWN.value)
     construction_mode = models.IntegerField(default=0)
 
     class Meta:

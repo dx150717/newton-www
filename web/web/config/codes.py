@@ -50,6 +50,9 @@ class UserFrom(Enum):
     WEIBO = 3
     WEIXIN = 4
 
+class UserType(Enum):
+    NORMAL = 1
+
 class Gender(Enum):
     MALE = 1
     FEMALE = 2
@@ -59,3 +62,10 @@ class MembershipType(Enum):
     NORMAL = 1
     GOLD = 2
     PT = 3
+
+class JobType(Enum):
+    UNKNOWN = 1
+
+class EmailType(Enum):
+    REGISTER = 1
+    RESET = 2

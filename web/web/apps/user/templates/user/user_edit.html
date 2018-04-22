@@ -2,25 +2,98 @@
 {% load i18n %}
 {% load utils %}
 
-{% block title %}{% trans "帐号" %}{% endblock %}
+{% block title %}
+{% trans "user" %}
+{% endblock %}
 
 {% block content %}
-<div class="container user">
-    <div class="row">
-        <div class="col-md-2">
-            {% include "user/menu.html" %}
+<section id="register" class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "user profile" %}</p>
         </div>
-
-        <div class="col-md-10">
-            {% if request.view_name == "user.views.user_edit_profile_view" %}
-            {% include "user/user_edit_fragment_profile.html" %}
-            {% endif %}
-
-            {% if request.view_name == "user.views.user_edit_account_view" %}
-            {% include "user/user_edit_fragment_account.html" %}
-            {% endif %}
+    </div>
+    <div class="container">
+        <div class="container">
+            <div class="raw">
+                <div class="col-md-4 col-lg-4"></div>
+                <div class="col-md-4 col-lg-4" style="padding: 30px;">
+                    <form class="form-horizontal" action="{% url 'user:submitprofile' %}" method="POST">
+                        {% csrf_token %}
+                        <input style="display:none;" name="id" value={{ id }}>
+                        <div class="form-group">
+                            <label for="username">{% trans "username" %}</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="username" value="test">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">{% trans "Location" %}</label>
+                            <input type="text" class="form-control" id="location" name="location" placeholder="location" value="beijing">
+                        </div>
+                        <div class="form-group">
+                            <label for="homepage">{% trans "Homepage" %}</label>
+                            <input type="text" class="form-control" id="homepage" name="homepage" placeholder="homepage" value="WXF468907066">
+                        </div>
+                        <div class="form-group">
+                            <p><label for="gender">{% trans "Gender" %}</label></p>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="male" value="1"><span>{% trans "male" %}</span>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="female" value="2"><span>{% trans "female" %}</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">{% trans "Age" %}</label>
+                            <input type="text" class="form-control" id="age" name="age" placeholder="age" value="24">
+                        </div>
+                        <div class="form-group">
+                            <label for="country_code">{% trans "Country Code" %}</label>
+                            <input type="text" class="form-control" id="country_code" name="country_code" placeholder="country_code" value="86">
+                        </div>
+                        <div class="form-group">
+                            <label for="cellphone">{% trans "Cellphone" %}</label>
+                            <input type="text" class="form-control" id="cellphone" name="cellphone" placeholder="cellphone" value="18811438890">
+                        </div>
+                        <div class="form-group">
+                            <label for="job_status">{% trans "Job Status" %}</label>
+                            <select class="form-control" name="job_status">
+                                <option value="1">{% trans "在职" %}</option>
+                                <option value="2">{% trans "高中生" %}</option>
+                                <option value="3">{% trans "在读本科" %}</option>
+                                <option value="4">{% trans "在读研究生" %}</option>
+                                <option value="5">{% trans "在读博士" %}</option>
+                                <option value="7">{% trans "待业" %}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="construction_mode">{% trans "Construction Mode" %}</label>
+                            <select class="form-control" name="construction_mode">
+                                <option value="1">{% trans "社区建设" %}</option>
+                                <option value="2">{% trans "技术开发" %}</option>
+                                <option value="3">{% trans "UX设计" %}</option>
+                                <option value="4">{% trans "经济模式设计" %}</option>
+                                <option value="5">{% trans "测试" %}</option>
+                                <option value="7">{% trans "翻译" %}</option>
+                                <option value="7">{% trans "商户" %}</option>
+                                <option value="7">{% trans "用户体验" %}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="self_introduction">{% trans "Self Introduction" %}</label>
+                            <textarea class="form-control" rows="5" id="self_introduction" name="self_introduction" placeholder="self_introduction" value="我是一个好孩子"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="newton_channel">{% trans "Newton Channel" %}</label>
+                            <input type="text" class="form-control" id="newton_channel" name="newton_channel" placeholder="newton_channel" value="社区">
+                        </div>
+                        <p><input class="subscription-button" type="submit" value="submit"></p>
+                    </form>
+                </div>
+                <div class="col-md-4 col-lg-4"></div>
+            </div>
         </div>
-
     </div>
 </div>
+</section>
 {% endblock %}
+
