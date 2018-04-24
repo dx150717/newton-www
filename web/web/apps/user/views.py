@@ -18,7 +18,6 @@ from forms import UserProfileForm
 logger = logging.getLogger(__name__)
 
 
-@login_required
 def user_view(request, user_id=None):
     id = request.user.id
     print("user id :%s" %(str(id)) )
@@ -27,13 +26,11 @@ def user_view(request, user_id=None):
     return render(request, "user/index.html", locals()) 
 
 
-@login_required
 def user_edit_profile_view(request):
     form = UserProfileForm()
     id = request.user.id
     return render(request, "user/user_edit2.html", locals())
 
-@login_required
 def user_edit_profile_submit_view(request):
     return redirect("/")
     if request.method == "POST":
@@ -54,11 +51,9 @@ def user_edit_profile_submit_view(request):
             print("error:%s" %str(inst))
             return redirect("/")
 
-@login_required
 def user_edit_account_view(request):
     can_edit_account = request.user.userprofile.user_from == UserFrom.DIRECT_REGISTER.value
     return render_to_response("user/user_edit.html", locals())
 
-@login_required
 def kyc_view(request):
     return render(request, "user/kyc.html", locals())
