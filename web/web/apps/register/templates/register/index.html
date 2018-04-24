@@ -22,12 +22,10 @@
         </div>
         
         <div class="text-center" style="padding: 30px;">
-            <form action="/register/editpassword/" method="POST">
 				{% csrf_token %}
 				<label for="email">邮箱：</label>
                 <input class="email_add" type="text" placeholder="Please input your email"><br/>
-                <input class="subscription-button" type="submit"></a>
-			</form>
+                <input class="subscription-button" type="submit">
 			<p style="padding-top:30px;">点击 “注册” 即表示您同意并愿意遵守<br/> Newton
 				的<a href="/terms-of-use/">使用条款</a>和<a href="/privacy/">隐私政策 </a>。</p>
         </div>
@@ -47,40 +45,43 @@ var MAINTAIN = 5
 var UPGRADE = 6
 var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
 
-$(".subscription-butto").click(function () {
+$(".subscription-button").click(function () {
 	if ($(".subscription-height")[0]) {
 		return;
 	}
 	var email_address = $("input[type='text']").val();
-	if(email_address.length > 0){
-		if(emailReg.test(email_address)){
-			$.post("/register/postemail/", { "email": email_address }, function (ret) {
-				if (ret.error_code === FAIL) {
-					var content = ret.error_message;
-					var alertType = "alert-danger";
-					showSubscriptionResult(content, alertType);
-				} else {
-					if (ret.result) {
-						var content = ret.result.msg;
-						var alertType = "alert-success";
-						showSubscriptionResult(content, alertType);
-					}else{
-                        var content = "{% trans 'Subscribed Failed!' %}";
-                        var alertType = "alert-danger";
-                        showSubscriptionResult(content, alertType);
-                    }
-				}
-			});
-		}else{
-			var content = "{% trans 'Invalid Email Address!' %}";
-			var alertType = "alert-danger";
-			showSubscriptionResult(content, alertType);
-		}
-	}else{
-		var content = "{% trans 'Please Input Email Address!' %}";
-		var alertType = "alert-danger";
-		showSubscriptionResult(content, alertType);
-	}
+	var content = "邮件已经发送到您的邮箱" + email_address + ",请查收";
+	var alertType = "alert-success";
+	showSubscriptionResult(content, alertType);
+	// if(email_address.length > 0){
+	// 	if(emailReg.test(email_address)){
+	// 		$.post("/register/postemail/", { "email": email_address }, function (ret) {
+	// 			if (ret.error_code === FAIL) {
+	// 				var content = ret.error_message;
+	// 				var alertType = "alert-danger";
+	// 				showSubscriptionResult(content, alertType);
+	// 			} else {
+	// 				if (ret.result) {
+	// 					var content = ret.result.msg;
+	// 					var alertType = "alert-success";
+	// 					showSubscriptionResult(content, alertType);
+	// 				}else{
+    //                     var content = "{% trans 'Subscribed Failed!' %}";
+    //                     var alertType = "alert-danger";
+    //                     showSubscriptionResult(content, alertType);
+    //                 }
+	// 			}
+	// 		});
+	// 	}else{
+	// 		var content = "{% trans 'Invalid Email Address!' %}";
+	// 		var alertType = "alert-danger";
+	// 		showSubscriptionResult(content, alertType);
+	// 	}
+	// }else{
+	// 	var content = "{% trans 'Please Input Email Address!' %}";
+	// 	var alertType = "alert-danger";
+	// 	showSubscriptionResult(content, alertType);
+	// }
 })
 
 /**

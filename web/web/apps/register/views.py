@@ -60,6 +60,7 @@ def postemail(request):
 def show_verify_view(request):
     try:
         id = request.GET['uuid']
+        return redirect("/register/editpassword/?id=%s" %(id))
         user = User.objects.filter(id=id).first()
         if user is None:
             return redirect("/register/")

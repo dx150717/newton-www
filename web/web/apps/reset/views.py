@@ -32,6 +32,7 @@ def show_repassword_view(request):
 
 
 def show_edit_password_view(request):
+    return render(request,'reset/edit_password.html', locals())
     try:
         if request.method == "POST":
             id = request.POST.get("id",None)

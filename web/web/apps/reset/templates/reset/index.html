@@ -49,35 +49,39 @@ $(".subscription-button").click(function () {
 		return;
 	}
 	var email_address = $("input[type='text']").val();
-	if(email_address.length > 0){
-		if(emailReg.test(email_address)){
-			$.post("/reset/", { "email": email_address }, function (ret) {
-				if (ret.error_code === FAIL) {
-					var content = ret.error_message;
-					var alertType = "alert-danger";
-					showSubscriptionResult(content, alertType);
-				} else {
-					if (ret.result) {
-						var content = ret.result.msg;
-						var alertType = "alert-success";
-						showSubscriptionResult(content, alertType);
-					}else{
-                        var content = "{% trans 'Subscribed Failed!' %}";
-                        var alertType = "alert-danger";
-                        showSubscriptionResult(content, alertType);
-                    }
-				}
-			});
-		}else{
-			var content = "{% trans 'Invalid Email Address!' %}";
-			var alertType = "alert-danger";
-			showSubscriptionResult(content, alertType);
-		}
-	}else{
-		var content = "{% trans 'Please Input Email Address!' %}";
-		var alertType = "alert-danger";
-		showSubscriptionResult(content, alertType);
-	}
+	var email_address = $("input[type='text']").val();
+	var content = "邮件已经发送到您的邮箱" + email_address + ",请查收";
+	var alertType = "alert-success";
+	showSubscriptionResult(content, alertType);
+	// if(email_address.length > 0){
+	// 	if(emailReg.test(email_address)){
+	// 		$.post("/reset/", { "email": email_address }, function (ret) {
+	// 			if (ret.error_code === FAIL) {
+	// 				var content = ret.error_message;
+	// 				var alertType = "alert-danger";
+	// 				showSubscriptionResult(content, alertType);
+	// 			} else {
+	// 				if (ret.result) {
+	// 					var content = ret.result.msg;
+	// 					var alertType = "alert-success";
+	// 					showSubscriptionResult(content, alertType);
+	// 				}else{
+    //                     var content = "{% trans 'Subscribed Failed!' %}";
+    //                     var alertType = "alert-danger";
+    //                     showSubscriptionResult(content, alertType);
+    //                 }
+	// 			}
+	// 		});
+	// 	}else{
+	// 		var content = "{% trans 'Invalid Email Address!' %}";
+	// 		var alertType = "alert-danger";
+	// 		showSubscriptionResult(content, alertType);
+	// 	}
+	// }else{
+	// 	var content = "{% trans 'Please Input Email Address!' %}";
+	// 	var alertType = "alert-danger";
+	// 	showSubscriptionResult(content, alertType);
+	// }
 })
 
 /**

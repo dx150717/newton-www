@@ -35,6 +35,7 @@ def user_edit_profile_view(request):
 
 @login_required
 def user_edit_profile_submit_view(request):
+    return redirect("/")
     if request.method == "POST":
         try:
             user_id = request.POST['id']
