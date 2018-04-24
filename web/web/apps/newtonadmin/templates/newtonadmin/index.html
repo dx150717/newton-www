@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "NewtonAdmin" %}
+{% endblock %}
+
+{% block content %}
+<section id="newtonadmin" class="section-list">
+    {{ form }}
+</section>
+
+{% endblock %}

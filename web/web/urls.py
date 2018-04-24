@@ -43,6 +43,7 @@ urlpatterns = patterns('',
                        url(r'^reset/',include('reset.urls', namespace="reset")),
                        url(r'^login/',include('login.urls', namespace="login")),
                        url(r'^user/',include('user.urls', namespace="user")),
+                       url(r'^newtonadmin/',include('newtonadmin.urls', namespace="newtonadmin")),
                        #url(r'^whitepaper/', 'welcome.views.show_whitepaper_view'),
                        #url(r'^docs/', include('sphinxdoc.urls')),
                        # admin

@@ -76,6 +76,7 @@ INSTALLED_APPS = (
     'register',
     'reset',
     'verification',
+    'newtonadmin',
 )
 
 MIDDLEWARE_CLASSES = (
