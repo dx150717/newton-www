@@ -22,11 +22,11 @@
         </div>
         
         <div class="text-center" style="padding: 30px;">
-            <form>
+            <form action="/register/editpassword/" method="POST">
 				{% csrf_token %}
 				<label for="email">邮箱：</label>
                 <input class="email_add" type="text" placeholder="Please input your email"><br/>
-                <a class="subscription-button">{% trans "Register" %}</a>
+                <input class="subscription-button" type="submit"></a>
 			</form>
 			<p style="padding-top:30px;">点击 “注册” 即表示您同意并愿意遵守<br/> Newton
 				的<a href="/terms-of-use/">使用条款</a>和<a href="/privacy/">隐私政策 </a>。</p>
@@ -47,7 +47,7 @@ var MAINTAIN = 5
 var UPGRADE = 6
 var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
 
-$(".subscription-button").click(function () {
+$(".subscription-butto").click(function () {
 	if ($(".subscription-height")[0]) {
 		return;
 	}

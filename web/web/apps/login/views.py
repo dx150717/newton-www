@@ -10,6 +10,7 @@ def show_login_view(request):
     return render(request, 'login/index.html', locals())
 
 def login_post(request):
+    return redirect("/")
     try:
         if request.method == "POST":
             email = request.POST.get("email",None)

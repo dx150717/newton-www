@@ -74,13 +74,14 @@ def show_verify_view(request):
 
 
 def show_editpassword_view(request):
-    id = request.GET['id']
+    #id = request.GET['id']
     template_name = 'register/register-form.html'
     return render(request, template_name, locals())
 
 
 
 def postpassword(request):
+    return redirect("/user/edit/")
     try:
         if request.method == 'POST':
             password = request.POST['password']
