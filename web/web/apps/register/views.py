@@ -108,6 +108,8 @@ def postpassword(request):
         return http.JsonErrorResponse(error_message = _("error"))
 
 
+def notify(request):
+    return render(request, "register/notify.html", locals())
 
 # valid email
 def do_send_mail(user,request):

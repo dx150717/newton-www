@@ -9,4 +9,5 @@ urlpatterns = patterns('',
                     url(r'^verify/', views.show_verify_view, name="verify"),
                     url(r'^editpassword/', views.show_editpassword_view, name="editpassword"),
                     url(r'^postpassword/', views.postpassword, name="postpassword"),
+                    url(r'^notify/', views.notify, name="notify"),
 )
