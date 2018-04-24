@@ -19,10 +19,10 @@ logger = logging.getLogger(__name__)
 
 
 def user_view(request, user_id=None):
-    id = request.user.id
-    print("user id :%s" %(str(id)) )
-    profile_instance = user_model.UserProfile.objects.filter(user_id=int(id)).first()
-    form = UserProfileForm(instance=profile_instance)
+    # id = request.user.id
+    # print("user id :%s" %(str(id)) )
+    # profile_instance = user_model.UserProfile.objects.filter(user_id=int(id)).first()
+    form = UserProfileForm()
     return render(request, "user/index.html", locals()) 
 
 
@@ -32,7 +32,8 @@ def user_edit_profile_view(request):
     return render(request, "user/user_edit2.html", locals())
 
 def user_edit_profile_submit_view(request):
-    return redirect("/")
+    form = UserProfileForm()
+    return render(request, "user/index.html", locals()) 
     if request.method == "POST":
         try:
             user_id = request.POST['id']
