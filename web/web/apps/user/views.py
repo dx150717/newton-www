@@ -58,3 +58,6 @@ def user_edit_account_view(request):
 
 def kyc_view(request):
     return render(request, "user/kyc.html", locals())
+
+def kyc_notify_view(request):
+    return render(request, 'user/kycresult.html', locals())

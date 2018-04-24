@@ -8,4 +8,5 @@ urlpatterns = patterns('user.views',
     url(r'^edit/profile/profile-submit/$', 'user_edit_profile_submit_view',name='submitprofile'),
     url(r'^edit/account/$', 'user_edit_account_view'),
     url(r'^kyc/$', 'kyc_view', name="kyc"),
+    url(r'kyc/notify','kyc_notify_view', name='notify')
 )
