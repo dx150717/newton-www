@@ -65,7 +65,14 @@ class MembershipType(Enum):
 
 class JobType(Enum):
     UNKNOWN = 1
+    WORKING = 2
+    NOWORK = 3
 
 class EmailType(Enum):
     REGISTER = 1
     RESET = 2
+
+class ConstructionType(Enum):
+    UNKNOWN = 1
+    UI = 2
+    PROGRAM = 3

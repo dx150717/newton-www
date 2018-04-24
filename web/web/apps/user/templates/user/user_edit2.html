@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "user" %}
+{% endblock %}
+
+{% block content %}
+<section id="register" class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "user profile" %}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="raw">
+            <div class="col-md-4 col-lg-4"></div>
+            <div class="col-md-4 col-lg-4" style="padding: 30px;">
+            <form class="form-horizontal" action="{% url 'user:submitprofile' %}" method="POST">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <input style="display:none;" name="id" value={{ id }}>
+                {% for field in form %}
+                <div class="form-group">
+                        {{ field.errors }}
+                        {{ field.label_tag }} {{ field }}
+                </div>
+                {% endfor %}
+                <input type="submit" value="Submit" />
+            </form>
+            </div>
+            <div class="col-md-4 col-lg-4"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

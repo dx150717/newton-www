@@ -15,7 +15,7 @@
 		</div>
         <div class="container">
             <div class="text-center" style="padding: 30px;">
-                <form action="/login/" method="POST">
+                <form action="/login/post/" method="POST">
                     {% csrf_token %}
                     <p><label for="email">{% trans "Email" %}:&nbsp;&nbsp;</label>
                         <input name="email" placeholder="Email"></p>

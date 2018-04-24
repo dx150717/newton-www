@@ -51,12 +51,15 @@ class UserProfile(models.Model):
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
     tall = models.IntegerField(max_length=4, null=True)
     weight = models.IntegerField(max_length=4, null=True)
-    newton_channel = models.IntegerField(default=0)
-    job_status = models.IntegerField(default=codes.JobType.UNKNOWN.value)
-    construction_mode = models.IntegerField(default=0)
+    channel = models.CharField(max_length=1024,default='')
+    job_status = models.IntegerField(default=codes.JobType.UNKNOWN.value, choices=settings.JOB_LABEL)
+    construction_mode = models.IntegerField(default=codes.ConstructionType.UNKNOWN.value, choices=settings.CONSTRUCTION_LABEL)
 
     class Meta:
         unique_together = ('cellphone', 'country_code')
+
+    def __unicode__(self):
+        return self.user.id
 
     def get_first_name(self):
         return self.user.first_name

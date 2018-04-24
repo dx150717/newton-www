@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <p><label for="gender">{% trans "Gender" %}</label></p>
                             <label class="radio-inline">
-                                <input type="radio" name="gender" id="male" value="1"><span>{% trans "male" %}</span>
+                                <input type="radio" name="gender" id="male" value="1" checked="true"><span>{% trans "male" %}</span>
                             </label>
                             <label class="radio-inline">
                                 <input type="radio" name="gender" id="female" value="2"><span>{% trans "female" %}</span>
@@ -83,8 +83,8 @@
                             <textarea class="form-control" rows="5" id="self_introduction" name="self_introduction" placeholder="self_introduction" value="我是一个好孩子"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="newton_channel">{% trans "Newton Channel" %}</label>
-                            <input type="text" class="form-control" id="newton_channel" name="newton_channel" placeholder="newton_channel" value="社区">
+                            <label for="channel">{% trans "Channel" %}</label>
+                            <input type="text" class="form-control" id="channel" name="channel" placeholder="channel" value="社区">
                         </div>
                         <p><input class="subscription-button" type="submit" value="submit"></p>
                     </form>

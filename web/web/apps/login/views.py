@@ -7,26 +7,23 @@ from user import models as user_model
 
 
 def show_login_view(request):
-    if request.method == "POST":
-        try:
-            print("post")
+    return render(request, 'login/index.html', locals())
+
+def login_post(request):
+    try:
+        if request.method == "POST":
             email = request.POST.get("email",None)
-            print(email)
             password = request.POST.get("password",None)
-            print(password)
             user = User.objects.get(email=email)
             if user is not None:
                 authed_user = authenticate(username=user.username,password=password)
                 if authed_user is not None:
                     login(request, authed_user)
-                    return redirect("/")
+                    return redirect("/user/edit/")
                 else:
                     return http.JsonErrorResponse(error_message = _("Password error"))
             else:
-                return http.JsonErrorResponse(error_message = _("Email not exist !"))
-        except Exception,inst:
-            print("error auth:%s" %(str(inst)))
-            return http.JsonErrorResponse(error_message = _("error")) 
-    else:
-        print("get")
-        return render(request, 'login/index.html', locals())
+                return http.JsonErrorResponse(error_message = _("Email not exist !"))                   
+    except Exception,inst:
+        print("error auth:%s" %(str(inst)))
+        return http.JsonErrorResponse(error_message = _("error")) 

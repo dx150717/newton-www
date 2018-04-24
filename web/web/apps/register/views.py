@@ -44,7 +44,7 @@ def postemail(request):
                     if send_flag:
                         result = http.JsonSuccessResponse(data = {"msg": _("we've sent you a confirming e-mail,please check your email box.")})
                     else:
-                        result = http.JsonErrorResponse(error_message = _("Subscribe Failed!"))
+                        result = http.JsonErrorResponse(error_message = _("Register Failed!"))
             else:
                 result = http.JsonErrorResponse(error_message = _("You can only send email once per minute."))
             return result
@@ -59,7 +59,7 @@ def postemail(request):
 
 def show_verify_view(request):
     try:
-        id = request.GET['u']
+        id = request.GET['uuid']
         user = User.objects.filter(id=id).first()
         if user is None:
             return redirect("/register/")
@@ -90,11 +90,10 @@ def postpassword(request):
             user = User.objects.filter(id=id).first()
             user.set_password(password)
             user.save()
-            print("username %s" %(user.username))
-            print("password %s" %(user.password))
             authed_user = authenticate(username = user.username, password = password)
             if authed_user is not None:
                 login(request, authed_user)
+                #TODO set session
                 return redirect("/user/edit/")
             else:
                 print("user authed_user is null")
@@ -111,7 +110,7 @@ def postpassword(request):
 # valid email
 def do_send_mail(user,request):
     subject = _("NewtonProject Notifications: Please Register")
-    targetUrl = "http://localhost:8000" + "/register/verify/?u=" + str(user.id)
+    targetUrl = "http://localhost:8000" + "/register/verify/?uuid=" + str(user.id)
     try:
         template = loader.get_template("register/register-letter.html")
         context = Context({"targetUrl":targetUrl,"request":request})

@@ -5,4 +5,5 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
                     url(r'^$', views.show_login_view),
+                    url(r'^post/', views.login_post, name="loginpost")
 )
