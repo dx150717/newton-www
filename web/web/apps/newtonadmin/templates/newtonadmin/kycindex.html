@@ -1,0 +1,58 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="faq" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            {% if update_info %}
+            <div class='alert alert-success alert-dismissible' role='alert'>
+                <button type='button' class='close tf10' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                <strong>{{ update_info }}</strong>
+            </div>
+            {% endif %}
+            <table class="table">
+                <caption class="text-center">KYC Admin</caption>
+                <thead>
+                    <tr class="success">
+                        <th><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;All</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Email Address</th>
+                        <th>Boolean Pass KYC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <th><input type="checkbox"> check </th>
+                            <th><a href="/newtonadmin/kyc/detail/">my test</a></th>
+                            <th><a href="/newtonadmin/kyc/detail/">China</a></th>
+                            <th><a href="/newtonadmin/kyc/detail/">test@test.com</a></th>
+                            <th><a href="/newtonadmin/kyc/detail/">False</a></th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"> check </th>
+                            <th><a href="/newtonadmin/kyc/detail/">my test</a></th>
+                            <th><a href="/newtonadmin/kyc/detail/">China</a></th>
+                            <th><a href="/newtonadmin/kyc/detail/">test@test.com</a></th>
+                            <th><a href="/newtonadmin/kyc/detail/">False</a></th>
+                        </tr>
+                </tbody>
+            </table>
+            <div class="bottom-button">
+                <a href="/newtonadmin/kyc/send-email/" class="btn btn-success">Send Email</a>
+                <a href="/newtonadmin/kyc/export-csv/" class="btn btn-success">Export CSV</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

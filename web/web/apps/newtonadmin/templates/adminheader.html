@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load utils %}
+
+<header>
+    <nav class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+        <div class="container">
+            <div class="admin-header">
+                <div class="navbar-header">
+                    <a class="navbar-brand nav-logo page-scroll" href="/">
+                        <img class="logo-pc" src="{% version "images/logo_newton.svg" %}" alt="Newton"/>
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" onclick="changeToggle()">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="iconfont toggle-nav"></i>
+                    </button>
+                    
+                </div>
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle list-btn" id="adminDropdown" data-toggle="dropdown">Admin
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="adminDropdown">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/kyc/">KYC</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/blog/">BLOG</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">FAQ</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">PRESS</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-btn">
+                    <a class="btn" type="button" value="Logout" href="/newtonadmin/logout/">LogOut</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header><!-- end -->

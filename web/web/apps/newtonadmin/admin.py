@@ -8,16 +8,16 @@ sys.setdefaultencoding('utf8')
 class NewtonAdmin(admin.ModelAdmin):
     fields = ('first_name', 'last_name','country', 'location', 'country_code', 'cellphone', 'email', 'id_card',
         'investment_btc', 'investment_ela', 'how_to_contribute', 'what_is_newton', 'btc_address', 'ela_address',
-        'btc_amount', 'ela_amount', 'pass_kyc', 'status')
+        'btc_amount', 'ela_amount', 'pass_kyc', 'status', 'uuid')
     list_display = ('first_name', 'last_name', 'email', 'pass_kyc')
     search_fields = ['email']
-    actions = ['send_email', 'export_cvs']
+    actions = ['send_email', 'export_csv']
 
     def send_email(self, request, queryset):
         print(request)
         print(queryset[0].email)
     
-    def export_cvs(self, request, queryset):
+    def export_csv(self, request, queryset):
         return ""
 
 
