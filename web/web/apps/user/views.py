@@ -12,5 +12,8 @@ from config import codes
 
 logger = logging.getLogger(__name__)
 
-def show_user_index_view(request, user_id=None):
+def show_user_index_view(request):
     return render(request, "user/index.html", locals()) 
+
+def show_user_profile_view(request):
+	return render(request, "user/profile.html", locals())
