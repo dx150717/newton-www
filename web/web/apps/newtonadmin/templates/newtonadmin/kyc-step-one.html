@@ -20,7 +20,7 @@
                                 <strong>{{ update_info }}</strong>
                             </div>
                             {% endif %}
-                        <form class="form-horizontal" action="/newtonadmin/kyc/update/" method="POST">
+                        <form class="form-horizontal" action="/newtonadmin/kyc/step-two/" method="POST">
                             {% csrf_token %}
                             <input style="display:none;" name="uuid" value={{ id }}>
                             <div class="form-group">
@@ -60,23 +60,6 @@
                                 <input type="text" class="form-control" id="investment_ela" name="investment_ela" placeholder="investment_ela" value="investment_ela">
                             </div>
                             <div class="form-group">
-                                <label for="btc_address">{% trans "btc_address" %}</label>
-                                <input type="text" class="form-control" id="btc_address" name="btc_address" placeholder="btc_address" value="btc_address">
-                            </div>
-                            <div class="form-group">
-                                <label for="ela_address">{% trans "ela_address" %}</label>
-                                <input type="text" class="form-control" id="ela_address" name="ela_address" placeholder="ela_address" value="ela_address">
-                            </div>
-                            <div class="form-group">
-                                <label for="btc_amount">{% trans "btc_amount" %}</label>
-                                <input type="text" class="form-control" id="btc_amount" name="btc_amount" placeholder="btc_amount" value="btc_amount">
-                            </div>
-                            <div class="form-group">
-                                <label for="ela_amount">{% trans "ela_amount" %}</label>
-                                <input type="text" class="form-control" id="ela_amount" name="ela_amount" placeholder="ela_amount" value="ela_amount">
-                            </div>                                    
-                            
-                            <div class="form-group">
                                 <label for="self_introduction">{% trans "how_to_contribute" %}</label>
                                 <textarea class="form-control" rows="5" cols="12" id="self_introduction" name="self_introduction" placeholder="how_to_contribute" value="我是一个好孩子"></textarea>
                             </div>
@@ -93,7 +76,7 @@
                             </div>
                             
                             <div class="from-group" style="padding-top:60px;">
-                                <p><input class="subscription-button" type="submit" value="submit"></p>
+                                <p><input class="subscription-button" type="submit" value="Next >"></p>
                             </div>
                             
                         </form>
@@ -107,9 +90,4 @@
 {% endblock %}
 
 {% block inline_js %}
-<script>
-    function gotokyc(){
-        window.location.href("/newtonadmin/kyc/")
-    }
-</script>
 {% endblock %}

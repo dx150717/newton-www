@@ -15,12 +15,22 @@ def index(request):
 def kyc_admin(request):
     return render(request, "newtonadmin/kycindex.html", locals())
 
-def kyc_detail(request):
-    return render(request, "newtonadmin/kycdetail.html", locals())
+def kyc_step_one(request):
+    return render(request, "newtonadmin/kyc-step-one.html", locals())
+
+def kyc_step_two(request):
+    return render(request, "newtonadmin/kyc-step-two.html", locals())
+
+def kyc_step_three(request):
+    return render(request, "newtonadmin/kyc-step-three.html", locals())
 
 def kyc_update(request):
     update_info = "Update Successed!"
     return render(request, "newtonadmin/kycdetail.html", locals());
+
+def kyc_send_one_email(request):
+    update_info = "Send Successed!"    
+    return render(request, "newtonadmin/kyc-step-three.html", locals());
 
 def kyc_send_email(request):
     update_info = "Send Successed!"    
