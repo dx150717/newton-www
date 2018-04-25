@@ -1,7 +1,5 @@
-from django.shortcuts import render,redirect
-from . import models as kycmodels
-from forms import KycForm
-# Create your views here.
+from django.shortcuts import render, redirect
+
 def show_login_view(request):
     return render(request, "login.html", locals())
 
