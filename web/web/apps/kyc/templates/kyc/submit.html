@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC" %}
+{% endblock %}
+
+{% block content %}
+<section id="token" class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Token Sale" %}</p>
+        </div>
+    </div>
+    <div class="container token-content">
+        <div class="raw">
+            <h1 class="text-center">NEW TOKEN SALE</h1>
+            <div class="container info">
+                <div class="col-12 text-center" style="padding:20px;">
+                    <p>区块链代币交换的过程不是融资过程，是团队组建的过程。</p>
+                </div>
+                <div class="col-12 col-sm-6 text-center item">
+                    <div>
+                        <p>New 总发行量：100亿，此次公募50,000,000$</p>
+                        <p>接受数字货币类型有 BTC,ELA.</p>
+                        <p>截止日期：2018.9.9</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 text-center item">
+                    <div>
+                        <p>BTC,ELA,NEW 兑换比例如下：</p>
+                        <p>1 BTC = 100,000 NEW</p>
+                        <P>1 ELA = 100 NEW</P>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-top:60px;padding-left:200px;">
+                <p>风险评估</p>
+                <p>KYC 要点和进度，规则等</p>
+                <p>如果要参与公募，请认真填写以下信息：</p>
+            </div>
+            <div class="container">
+                <div class="raw">
+                    <div class="col-md-2 col-lg-2"></div>
+                    <div class="col-md-8 col-lg-8" style="padding: 30px;">
+                    <form class="form-horizontal" action="/kyc/post/" method="POST">
+                        <div class="form-group">
+                            <label for="id_firstname">FirstName:</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="firstname">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_lastname">LastName:</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_country">Country:</label>
+                            <input type="text" id="country" name="country" placeholder="country">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_location">Location:</label>
+                            <input type="text" id="location" name="location" placeholder="location">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_country_code">Country_code:</label>
+                            <input type="text" id="country_code" name="country_code" placeholder="country_code">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_cellphone">Cellphone:</label>
+                            <input type="text" id="cellphone" name="cellphone" placeholder="cellphone">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_country">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_idcard">ID Card:</label>
+                            <input id="idcard" name="idcard" type="file" placeholder="ID Card">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_Investment_amount_btc">Investment amount BTC:</label>
+                            <input id="Investment_amount" type="number" name="Investment_amount" placeholder="Investment amount">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_Investment_amount_ELA">Investment amount ELA:</label>
+                            <input id="Investment_amount" type="number" name="Investment_amount" placeholder="Investment amount">
+                        </div>
+                        <div class="form-group">
+                            <p><label for="id_contribute">How To Contribute For Newton:</label></p>
+                            <textarea id="contribute" rows="5" cols="120"  name="contribute" placeholder="how to contribute for newton"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <p><label for="id_what">How to understand Newton project?</label></p>
+                            <textarea id="what" rows="5" cols="120" name="what" placeholder="How to understand Newton project?"></textarea>
+                        </div>
+                        <input type="submit" value="Submit">
+                    </form>
+                    </div>
+                    <div class="col-md-2 col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
