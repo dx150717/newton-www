@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="login" class="section-list">
+		<div class="page-title">
+			<div class="container">
+				<p>{% trans "Login Newton Admin" %}</p>
+			</div>
+		</div>
+        <div class="container">
+            <div class="text-center" style="padding: 30px;">
+                <form action="/newtonadmin/login/post/" method="POST">
+                    {% csrf_token %}
+                    <p><label for="email">{% trans "Email" %}:&nbsp;&nbsp;</label>
+                        <input name="email" placeholder="Email"></p>
+                    <p><label for="password">{% trans "Password" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</label>
+                        <input name="password" pl   aceholder="Password"></p>
+                    <a><input class="subscription-button" type="submit" value="Login"></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

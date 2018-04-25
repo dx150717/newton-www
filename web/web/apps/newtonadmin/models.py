@@ -3,7 +3,7 @@ from config import codes
 import settings
 # Create your modelss here.
 def upload_to(instance, filename):
-        return "/".join([settings.MEDIA_ROOT, instance.last_name, filename])
+    return "/".join([settings.MEDIA_ROOT, instance.last_name, filename])
         
 class KycModel(models.Model):
     first_name = models.CharField(default='', max_length=100)
@@ -26,7 +26,8 @@ class KycModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
-
+    uuid = models.CharField(default='1',db_index=True, max_length="200")
+    
     def __unicode__(self):
         return self.first_name + " " + self.last_name
     

@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="faq" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <div class="raw">
+                <div class="col-md-2 col-lg-2"></div>   
+                <div class="col-md-8 col-lg-8" style="padding: 30px;">
+                    {% if update_info %}
+                    <div class='alert alert-success alert-dismissible' role='alert'>
+                        <button type='button' class='close tf10' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                        <strong>{{ update_info }}</strong>
+                    </div>
+                    {% endif %}
+
+                    <p>Linda 通过了 KYC 验证，btc 地址：xxxxxxx; ela address:Exdxlfdfasfdiaosfdsaf</p>   
+                    <p>给Linda 分配的 btc 额度为：1btc ， ELA 额度为100 ELA。马上给 Linda 发送通知邮件？</p> 
+                    <a class="btn" href="/newtonadmin/kyc/send-one-email/">马上发送邮件</a>   
+                    <a class="btn" href="/newtonadmin/kyc/">继续处理信息，稍后发送</a>                    
+                </div>
+                <div class="col-md-2 col-lg-2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+
+{% endblock %}

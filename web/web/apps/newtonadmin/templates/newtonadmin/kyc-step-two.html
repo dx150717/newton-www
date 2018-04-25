@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="faq" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <div class="raw">
+                <div class="col-md-2 col-lg-2"></div>   
+                <div class="col-md-8 col-lg-8" style="padding: 30px;">
+                    <a class="btn btn-success" href="/newtonadmin/kyc/step-one/">< Back</a>
+                    {% if update_info %}
+                    <div class='alert alert-success alert-dismissible' role='alert'>
+                        <button type='button' class='close tf10' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                        <strong>{{ update_info }}</strong>
+                    </div>
+                    {% endif %}
+                    <form class="form-horizontal" action="/newtonadmin/kyc/step-three/" method="POST">
+                        {% csrf_token %}
+                        <input style="display:none;" name="uuid" value={{ id }}>
+                        <div class="form-group">
+                            <label for="btc_address">{% trans "btc_address" %}</label>
+                            <input type="text" class="form-control" id="btc_address" name="btc_address" placeholder="btc_address" value="btc_address">
+                        </div>
+                        <div class="form-group">
+                            <label for="ela_address">{% trans "ela_address" %}</label>
+                            <input type="text" class="form-control" id="ela_address" name="ela_address" placeholder="ela_address" value="ela_address">
+                        </div>
+                        <div class="form-group">
+                            <label for="btc_amount">{% trans "btc_amount" %}</label>
+                            <input type="text" class="form-control" id="btc_amount" name="btc_amount" placeholder="btc_amount" value="btc_amount">
+                        </div>
+                        <div class="form-group">
+                            <label for="ela_amount">{% trans "ela_amount" %}</label>
+                            <input type="text" class="form-control" id="ela_amount" name="ela_amount" placeholder="ela_amount" value="ela_amount">
+                        </div>                                    
+                        <div class="from-group" style="padding-top:60px;">
+                            <p><input class="subscription-button" type="submit" value="Next"></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2 col-lg-2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load utils %}
+
+<header>
+    <nav class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+        <div class="container">
+            <div class="admin-header">
+                <div class="navbar-header">
+                    <a class="navbar-brand nav-logo page-scroll" href="/">
+                        <img class="logo-pc" src="{% version "images/logo_newton.svg" %}" alt="Newton"/>
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" onclick="changeToggle()">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="iconfont toggle-nav"></i>
+                    </button>
+                    
+                </div>
+                <div class="dropdown">
+                    <a type="button" class="btn list-btn" href="/newtonadmin/kyc/">KYC
+                    </a>
+                    
+                </div>
+                <div class="list-btn">
+                    <a class="btn" type="button" value="Logout" href="/newtonadmin/logout/">LogOut</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header><!-- end -->
