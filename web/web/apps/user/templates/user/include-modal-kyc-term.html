@@ -1,0 +1,53 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">KYC 须知</h4>
+            </div>
+            <div class="modal-body">
+                <div id="terms-and-conditions-text" class="scrollable-content">
+                    <div class="SectionAgreement">
+                        <div class="sections">
+                            TBD
+                        </div>
+                    </div>
+                    <div class="token-check-condition">
+                        <div class="raw">
+                            <div class="col-12 col-sm-6">
+                                <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
+                                    <label for="buy-token-checkbox0">
+                                        <span>点击这个表示你所在国家支持购买数字货币</span>
+                                    </label>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
+                                    <label for="buy-token-checkbox0">
+                                        <span>点击这个表示您已经购买数字货币的风险与收益</span>
+                                    </label>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
+                                    <label for="buy-token-checkbox0">
+                                        <span>点击这个表示您十分熟悉New 的估值</span>
+                                    </label>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
+                                    <label for="buy-token-checkbox0">
+                                        <span>点击这个表示您熟悉我们的服务条款和隐私协议</span>
+                                    </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <a type="button" class="btn btn-primary" href="/kyc/">Go To KYC </a>
+                </div>
+            </div>
+        </div>
+    </div>

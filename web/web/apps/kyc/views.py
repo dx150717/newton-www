@@ -12,5 +12,11 @@ from config import codes
 
 logger = logging.getLogger(__name__)
 
-def show_user_index_view(request, user_id=None):
-    return render(request, "user/index.html", locals()) 
+def show_kyc_information_view(request):
+    return render(request, "kyc/index.html", locals()) 
+
+def post_kyc_information(request):
+    return redirect('/kyc/wait-audit/')
+
+def show_wait_audit_view(request):
+    return render(request, "kyc/wait-audit.html", locals())

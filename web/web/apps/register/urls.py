@@ -4,10 +4,11 @@ from . import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                    url(r'^$', views.show_register_view, name="index"),
-                    url(r'^postemail/', views.postemail, name="postemail"),
-                    url(r'^verify/', views.show_verify_view, name="verify"),
-                    url(r'^editpassword/', views.show_editpassword_view, name="editpassword"),
-                    url(r'^postpassword/', views.postpassword, name="postpassword"),
-                    url(r'^notify/', views.notify, name="notify"),
+                       url(r'^$', views.show_register_view, name="index"),
+                       url(r'^post-email/', views.submit_email, name="submit_email"),
+                       url(r'^post-success/', views.show_post_email_success_view, name="show_post_email_success_view"),
+                       url(r'^post-fail/', views.show_post_email_fail_view, name="show_post_email_fail_view"),
+                       url(r'^verify/', views.verify_email_link, name="verify_email_link"),
+                       url(r'^password/', views.show_password_view, name="show_password_view"),
+                       url(r'^password/submit/', views.submit_password, name="submit_password"),
 )
