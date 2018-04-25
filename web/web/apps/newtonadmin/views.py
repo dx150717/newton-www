@@ -57,7 +57,7 @@ def kyc_send_email(request):
     return render(request, "newtonadmin/kycindex.html", locals());
 
 def kyc_export_csv(request):
-    update_info = "Export Successed!"    
+    update_info = "Export Successed!"
     return render(request, "newtonadmin/kycindex.html", locals());
 
 def blog_admin(request):
