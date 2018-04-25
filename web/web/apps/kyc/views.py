@@ -12,5 +12,5 @@ from config import codes
 
 logger = logging.getLogger(__name__)
 
-def show_user_index_view(request, user_id=None):
-    return render(request, "user/index.html", locals()) 
+def show_kyc_information_view(request):
+    return render(request, "kyc/index.html", locals()) 
