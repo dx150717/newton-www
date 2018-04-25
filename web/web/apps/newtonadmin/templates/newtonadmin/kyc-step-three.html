@@ -10,6 +10,7 @@
 <section id="faq" class="section-list">
     <div class="container">
         <div class="raw table-responsive content">
+            <a class="btn btn-success" href="/newtonadmin/kyc/step-one/">< Back</a>
             <div class="raw">
                 <div class="col-md-2 col-lg-2"></div>   
                 <div class="col-md-8 col-lg-8" style="padding: 30px;">
@@ -19,11 +20,76 @@
                         <strong>{{ update_info }}</strong>
                     </div>
                     {% endif %}
-
+                    {% csrf_token %}
+                    <input style="display:none;" name="uuid" value={{ id }}>
+                    <div class="form-group">
+                        <label for="firstname">{% trans "firstname" %}: firstname</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">{% trans "lastname" %}: lastname</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">{% trans "country" %}: country</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">{% trans "Location" %}: location</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="country_code">{% trans "Country Code" %}:86</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="cellphone">{% trans "Cellphone" %}: 18811438506</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">{% trans "Email" %}:weixuefeng@lubangame.com</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="investment_btc">{% trans "investment_btc" %}:10 BTC</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="investment_ela">{% trans "investment_ela" %}: 5ELA</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="self_introduction">{% trans "how_to_contribute" %}: UNKNOW</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="self_introduction">{% trans "What is Newton" %}: NEWTON IS NEWTON</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="idcard">{% trans "ID card" %}</label>
+                        <img>
+                    </div>
+                    <div class="form-group">
+                        <p><label for="gender">{% trans "通过了KYC" %}</label></p>
+                    </div>
+                <div class="form-group">
+                    <label for="id_level">{% trans "额度评级" %}：4</label>
+                </div>
+                <div class="form-group">
+                    <label for="btc_address">{% trans "btc_address" %}:1eadflk2l3kjdlkf3lsfdlsafkj</label>
+                </div>
+                <div class="form-group">
+                    <label for="ela_address">{% trans "ela_address" %}:Edlskf23rlk4jl43fk23fl23kf2</label>
+                </div>
+                <div class="form-group">
+                    <label for="btc_amount">{% trans "btc_amount" %}:0.6 BTC</label>
+                </div>
+                <div class="form-group">
+                    <label for="ela_amount">{% trans "ela_amount" %}:60 ELA</label>
+                </div>   
+                <div class="from-group">
+                    <p>确认过额度信息</p>
+                </div>                                
+                <div class="form-group">
                     <p>Linda 通过了 KYC 验证，btc 地址：xxxxxxx; ela address:Exdxlfdfasfdiaosfdsaf</p>   
                     <p>给Linda 分配的 btc 额度为：1btc ， ELA 额度为100 ELA。马上给 Linda 发送通知邮件？</p> 
-                    <a class="btn" href="/newtonadmin/kyc/send-one-email/">马上发送邮件</a>   
-                    <a class="btn" href="/newtonadmin/kyc/">继续处理信息，稍后发送</a>                    
+
+                    
+                    <div class="from-group" style="padding-top:60px;">
+                        <p><a class="subscription-button btn" type="submit" href="/newtonadmin/kyc/update-email/">发送邮件</a></p>
+                        <p><a class="subscription-button btn" type="button" value="Next" href="/newtonadmin/kyc/step-three/">Next</a></p>
+                    </div>
+                </div>                   
                 </div>
                 <div class="col-md-2 col-lg-2"></div>
             </div>
