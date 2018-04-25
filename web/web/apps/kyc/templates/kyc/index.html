@@ -6,40 +6,48 @@
 {% trans "KYC" %}
 {% endblock %}
 
+{% block header %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
 {% block content %}
-<div class="container">
-    <h4 class="modal-title" id="myModalLabel">KYC 须知</h4>
-    <p>
+<div class="container sub-level-page">
+    <h4 class="modal-title text-center" id="myModalLabel">KYC 须知</h4>
+    <pre style="height:400px;">
         TBD
-    </p>
+    </pre>
     <div class="token-check-condition">
         <div class="raw">
             <div class="col-12 col-sm-6">
                 <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
                     <label for="buy-token-checkbox0">
-                        <span>点击这个表示你所在国家支持购买数字货币</span>
+                        <span>你所在国家支持购买数字货币</span>
                     </label>
             </div>
             <div class="col-12 col-sm-6">
                 <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
                     <label for="buy-token-checkbox0">
-                        <span>点击这个表示您已经购买数字货币的风险与收益</span>
+                        <span>您已经了解购买数字货币的风险与收益</span>
                     </label>
             </div>
             <div class="col-12 col-sm-6">
                 <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
                     <label for="buy-token-checkbox0">
-                        <span>点击这个表示您十分熟悉New 的估值</span>
+                        <span>您十分熟悉NEW的价值</span>
                     </label>
             </div>
             <div class="col-12 col-sm-6">
                 <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
                     <label for="buy-token-checkbox0">
-                        <span>点击这个表示您熟悉我们的服务条款和隐私协议</span>
+                        <span>您接受我们的服务条款和隐私协议</span>
                     </label>
             </div>
         </div>
-        <a type="button" class="btn btn-primary" href="/kyc/join/">Go To KYC </a>
+        <p class="text-center">
+            <a type="button" class="btn btn-primary" href="/kyc/join/">Go To KYC </a>
+        </p>
     </div>
 </div>
 {% endblock %}
