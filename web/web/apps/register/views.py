@@ -13,7 +13,7 @@ from django.template import Template, Context, loader
 from config import codes
 from utils import http, security
 from user import models as user_models
-import forms
+from . import forms
 
 logger = logging.getLogger(__name__)
 
