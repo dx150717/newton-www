@@ -65,3 +65,6 @@ CELERYD_HIJACK_ROOT_LOGGER = False
 CELERY_IMPORTS = ('subscription.task')
 
 CHINA_COUNTRY_CALLING_CODE = '86'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'upload/')
+MEDIA_URL = '/upload/'

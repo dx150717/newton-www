@@ -1,6 +1,10 @@
 from django.db import models
 from config import codes
+import settings
 # Create your modelss here.
+def upload_to(instance, filename):
+        return "/".join([settings.MEDIA_ROOT, instance.last_name, filename])
+        
 class KycModel(models.Model):
     first_name = models.CharField(default='', max_length=100)
     last_name = models.CharField(max_length=100, default='')
@@ -9,6 +13,7 @@ class KycModel(models.Model):
     country_code = models.CharField(max_length=100, default='')
     cellphone = models.CharField(max_length=100, default='')
     email = models.EmailField()
+    id_card = models.ImageField(upload_to='avatar/%Y/%m/%d/')
     investment_btc = models.IntegerField()
     investment_ela = models.IntegerField()
     how_to_contribute = models.TextField()
@@ -24,4 +29,6 @@ class KycModel(models.Model):
 
     def __unicode__(self):
         return self.first_name + " " + self.last_name
+    
+    
     
