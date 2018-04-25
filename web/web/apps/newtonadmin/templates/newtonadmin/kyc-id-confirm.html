@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="faq" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <table class="table">
+                <caption class="text-center">KYC Admin ID-Confirm</caption>
+                <thead>
+                    <tr class="success">
+                        <th><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;All</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Email Address</th>
+                        <th>Boolean Pass KYC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <th><input type="checkbox"> check </th>
+                            <th><a href="/newtonadmin/kyc/step-one/">my test</a></th>
+                            <th><a href="/newtonadmin/kyc/step-one/">China</a></th>
+                            <th><a href="/newtonadmin/kyc/step-one/">test@test.com</a></th>
+                            <th><a href="/newtonadmin/kyc/step-one/">False</a></th>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox"> check </th>
+                            <th><a href="/newtonadmin/kyc/step-one/">my test</a></th>
+                            <th><a href="/newtonadmin/kyc/step-one/">China</a></th>
+                            <th><a href="/newtonadmin/kyc/step-one/">test@test.com</a></th>
+                            <th><a href="/newtonadmin/kyc/step-one/">False</a></th>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}
