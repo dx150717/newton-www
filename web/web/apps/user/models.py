@@ -53,7 +53,9 @@ class UserProfile(models.Model):
     weight = models.IntegerField(max_length=4, null=True)
     channel = models.CharField(max_length=1024,default='')
     job_status = models.IntegerField(default=codes.JobType.UNKNOWN.value, choices=settings.JOB_LABEL)
-    construction_mode = models.IntegerField(default=codes.ConstructionType.UNKNOWN.value, choices=settings.CONSTRUCTION_LABEL)
+    major = models.CharField(default='', max_length=128)
+    google_authenticator_private_key = models.CharField(default='', max_length=100)
+    is_google_authenticator = models.BooleanField(default=False)
 
     class Meta:
         unique_together = ('cellphone', 'country_code')
