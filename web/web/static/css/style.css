@@ -847,7 +847,9 @@ canvas { display: block; vertical-align: top; }
 #register #dialog{padding-top: 30px;}
 
 /* login */
-#login p input{padding: 5px; width: 300px;}
+#login .container input{padding: 5px; width: 264px; height: 32px;}
+#login .container .form-group{display: flex; margin-bottom: 20px;}
+#login .container label{font-size: 18px; font-weight: 200; color: #292929;padding-right: 20px;}
 
 #user .user{ display:flex; float: left; padding-top: 60px; padding-bottom: 60px;}
 #user .user .left{ padding-right: 30px;}
