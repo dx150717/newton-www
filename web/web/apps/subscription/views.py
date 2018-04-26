@@ -3,18 +3,20 @@ from django.shortcuts import render
 import json
 import re
 import logging
+
 from django.http import HttpResponse
-from django.template import Template,Context,loader
+from django.template import Template, Context, loader
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext as _
 from django.views.decorators.http import require_http_methods
+from django.conf import settings
+
 from ratelimit.decorators import ratelimit
 from subscription import models as subscription_model
 from config import codes
-from utils import http,security
-from django.conf import settings
-import task as subscription_task
+from utils import http, security
+from verification import task as subscription_task
 
 logger = logging.getLogger(__name__)
 

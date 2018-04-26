@@ -2,9 +2,7 @@ from django.db import models
 from config import codes
 from django.conf import settings
 # Create your modelss here.
-def upload_to(instance, filename):
-    return "/".join([settings.MEDIA_ROOT, instance.last_name, filename])
-        
+
 class KycModel(models.Model):
     first_name = models.CharField(default='', max_length=100)
     last_name = models.CharField(max_length=100, default='')
