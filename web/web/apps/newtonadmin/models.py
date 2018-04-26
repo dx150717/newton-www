@@ -1,6 +1,6 @@
 from django.db import models
 from config import codes
-import settings
+from django.conf import settings
 # Create your modelss here.
 def upload_to(instance, filename):
     return "/".join([settings.MEDIA_ROOT, instance.last_name, filename])
