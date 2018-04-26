@@ -82,114 +82,12 @@ class UserProfile(models.Model):
         return age
 
     def has_head_image(self):
-        if self.head_image and self.head_image.name != 'image/6/f/0/6f0e2562cde513f2caa97b4ffd5d4443.jpg':
+        if self.head_image:
             return True
         return False 
 
     def is_active(self):
         return self.user.is_active
 
-    def last_login(self):
-        login_user = UserLog.objects.filter(username=self.user.username).order_by("-lastlogin")
-        if login_user:
-            return login_user.first().lastlogin
-        else:
-            return None
-
     def get_user_city(self):
         return self.city_id
-
-
-class UserConnector(models.Model):
-    user = models.ForeignKey(User)
-    user_from = models.IntegerField(default=codes.UserFrom.DIRECT_REGISTER.value, db_index=True)
-    access_token = models.CharField(max_length=1024, blank=True, null=True)
-    remind_in = models.IntegerField(default=0)
-    expires_in = models.DateTimeField(auto_now_add=False)
-    uid = models.CharField(max_length=1024, blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
-
-
-def handler_fetch_3rd_profile(sender, instance, signal, *args, **kwargs):
-    try:
-        from user import services as user_services
-        user = instance.user
-        if not user.userprofile.head_image and user.userprofile.head_image_url:
-            user_services.user_fetch_3rd_head_image(user)
-        user_services.user_fetch_3rd_profile(user, user_from=instance.user_from)
-        user_services.user_fetch_3rd_follow_list(user, user_from=instance.user_from)
-        user_services.user_fetch_3rd_friend_list(user, user_from=instance.user_from)
-        user_services.user_fetch_3rd_favorite_list(user, user_from=instance.user_from)
-        user_services.user_fetch_3rd_post_list(user, user_from=instance.user_from)
-        # todo: follow
-        if settings.CAN_3RD_FOLLOW:
-            user_services.user_follow_3rd_user(user, user_from=instance.user_from, uid=settings.WEIBO_UID)
-        # todo: post weibo
-        if settings.CAN_3RD_POST:
-            user_services.user_post_3rd_weibo(user, settings.POST_CONTENT_3RD, user_from=instance.user_from)
-    except Exception, inst:
-        print inst
-        logger.error('fail to fetch 3rd head image: %s' % str(inst))
-
-signals.post_save.connect(handler_fetch_3rd_profile, sender=UserConnector)
-
-
-class User3rdFollow(models.Model):
-    user = models.ForeignKey(User)
-    user_from = models.IntegerField(default=codes.UserFrom.DIRECT_REGISTER.value, db_index=True)
-    uid = models.CharField(max_length=1024, blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
-
-
-class User3rdFriend(models.Model):
-    user = models.ForeignKey(User)
-    user_from = models.IntegerField(default=codes.UserFrom.DIRECT_REGISTER.value, db_index=True)
-    uid = models.CharField(max_length=1024, blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
-
-
-class User3rdFavorite(models.Model):
-    user = models.ForeignKey(User)
-    user_from = models.IntegerField(default=codes.UserFrom.DIRECT_REGISTER.value, db_index=True)
-    entry_id = models.CharField(max_length=128, db_index=True)
-    content = models.TextField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
-
-
-class User3rdPost(models.Model):
-    user = models.ForeignKey(User)
-    user_from = models.IntegerField(default=codes.UserFrom.DIRECT_REGISTER.value, db_index=True)
-    entry_id = models.CharField(max_length=128, db_index=True)
-    content = models.TextField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
-
-
-class User3rdProfile(models.Model):
-    user = models.ForeignKey(User)
-    user_from = models.IntegerField(default=codes.UserFrom.DIRECT_REGISTER.value, db_index=True)
-    gender = models.IntegerField(default=codes.Gender.MALE.value, choices=settings.GENDER_LABEL)
-    # geo
-    country_id = models.IntegerField(default=0)
-    province_id = models.IntegerField(default=0)
-    city_id = models.IntegerField(default=0)
-    location = models.CharField(max_length=1024, blank=True, null=True)
-    followers_count = models.IntegerField(default=0)
-    friends_count = models.IntegerField(default=0)
-    statuses_count = models.IntegerField(default=0),
-    favourites_count = models.IntegerField(default=0)
-    bi_followers_count = models.IntegerField(default=0)
-    verified = models.BooleanField(default=False)
-    content = models.TextField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
