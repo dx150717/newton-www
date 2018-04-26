@@ -101,3 +101,4 @@ BASE_NAME = 'newtonproject'
 
 # User Default Preferred Language Code
 USER_DEFAULT_LANGUAGE_CODE = 'zh-CN'
+CHINA_COUNTRY_CALLING_CODE = '86'
