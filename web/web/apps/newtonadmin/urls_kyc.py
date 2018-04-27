@@ -8,7 +8,6 @@ admin.autodiscover()
 urlpatterns = patterns('',
                     url(r'^$', views_kyc.show_filter_id_list_view),
                     url(r'^filter-id-list/$', views_kyc.show_filter_id_list_view),
-                    url(r'^filter-id-detail/(?P<user_id>[0-9]+)/', views_kyc.show_filter_id_detail_view),
                     url(r'^confirm-id/(?P<user_id>[0-9]+)/', views_kyc.confirm_id),
 
                     url(r'^filter-amount-list/$', views_kyc.show_filter_amount_list_view),
