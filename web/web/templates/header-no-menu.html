@@ -1,0 +1,36 @@
+{% load i18n %}
+{% load utils %}
+
+<header>
+    <nav class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+        <div class="container">
+
+            <div class="navbar-header">
+                <a class="navbar-brand nav-logo page-scroll" href="/">
+                    <img class="logo-pc" src="{% version "images/logo_newton.svg" %}" alt="Newton"/>
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" onclick="changeToggle()">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="iconfont toggle-nav"></i>
+                </button>
+                
+            </div><!-- /.logo -->
+
+            <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
+
+                <ul class="nav navbar-nav  navbar-right">
+                    <li class="{{ request.path|menu_active:"register" }}">
+                        <a href="/register/">{% trans "Register" %}</a>
+                    </li>
+                    <li class="{{ request.path|menu_active:"login" }}">
+                        <a href="/login/">{% trans "Login" %}</a>
+                    </li>
+                    <li class="{{ request.path|menu_active:"user" }}">
+                        <a href="/user/">{% trans "User" %}</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar -->
+
+        </div>
+    </nav>
+</header><!-- end -->
