@@ -8,10 +8,13 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
 from utils import http, security
+from . import forms
 
 logger = logging.getLogger(__name__)
 
 def show_login_view(request):
+    form = forms.LoginForm()
+    print(form)
     return render(request, 'login/index.html', locals())
 
 def post_login(request):
