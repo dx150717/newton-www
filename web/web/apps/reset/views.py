@@ -8,10 +8,12 @@ from django.conf import settings
 from utils import http,security
 from config import codes
 from tasks import task_email
+from . import forms
 
 logger = logging.getLogger(__name__)
 
 def show_reset_view(request):
+    form = forms.EmailForm()
     return render(request,'reset/index.html', locals())
 
 def post_email(request):

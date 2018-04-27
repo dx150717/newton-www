@@ -850,20 +850,34 @@ canvas { display: block; vertical-align: top; }
 
 
 #login .login-title,
+#reset .reset-title,
 #register .login-title{padding-top: 140px;}
+
 #login .login-title h2,
+#reset .reset-title h2,
 #register .login-title h2{margin-bottom: 68px; font-size: 24px; font-weight: normal; color: #292929;}
+
 #login .container input,
+#reset .container input,
 #register .container input{padding: 5px; width: 264px; height: 32px;}
+
 #login .container .form,
+#reset .container .form,
 #register .container .form{margin-left: -50px;}
+
 #login .container .raw,
+#reset .container .raw,
 #register .container .raw{display: flex;}
+
 #login .container .form-group,
+#reset .container .form-group,
 #register .container .form-group{display: flex; margin-bottom: 20px;}
+
 #login .container .register{font-size: 16px; color: #292929}
 #login .container .reset{font-size: 16px; color: #b7b7b7;}
+
 #login .container label,
+#reset .container label,
 #register .container label{font-size: 18px; font-weight: 200; color: #292929;padding-right: 20px; text-align: right;}
 #login .container .space-between{display: flex; justify-content: space-between; width: 264px; padding-top: 20px;}
 #user .user{ display:flex; float: left; padding-top: 60px; padding-bottom: 60px;}
