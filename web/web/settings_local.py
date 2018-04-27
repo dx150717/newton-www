@@ -41,3 +41,6 @@ BASE_NAME = 'newtonproject'
 
 # verification default expire time s
 VERIFICATION_DEFAULT_EXPIRE_TIME = 300
+
+# authenticate settings
+AUTHENTICATION_BACKENDS = ('backends.auth.EmailAuthBackend', )
