@@ -8,20 +8,20 @@
 
 {% block content %}
 <section id="login" class="section-list">
-		<div class="page-title">
-			<div class="container">
-				<p>{% trans "Login Newton Admin" %}</p>
-			</div>
-		</div>
-        <div class="container">
-            <div class="text-center" style="padding: 30px;">
-                <form action="/newtonadmin/login/post/" method="POST">
-                    {% csrf_token %}
-                    {% include "form.html" %}
-                    <a><input class="subscription-button" type="submit" value="Login"></a>
-                </form>
+    <div class="login-title container text-center">
+        <h2>{% trans "Login" %}</h2>
+    </div>
+    <div class="container">
+        <form class="form" action="/newtonadmin/login/post/" method="POST">
+            {% csrf_token %}
+            {% include "form.html" %}
+            <div class="raw">
+                <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+                <div>
+                    <button class="form-button" type="submit">{% trans "Login" %}</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </section>
 {% endblock %}
