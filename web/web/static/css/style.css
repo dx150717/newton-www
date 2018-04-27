@@ -851,7 +851,8 @@ canvas { display: block; vertical-align: top; }
 /* login */
 .form-button{ display:inline-block; width: 264px; height: 48px; border-radius: 4px; font-size:14px; background-color: #292929; text-align:center; color:#fff; line-height:48px;}
 
-
+.error .alert{width: 300px; height: 60px;}
+.error .alert strong{line-height: 30px;}
 #login .login-title,
 #reset .reset-title,
 #register .login-title{padding-top: 140px;}
