@@ -15,7 +15,7 @@
                     </button>
                     
                 </div>
-                {% if request.user.is_authenticated %}
+                {% if request.user.is_staff %}
                 <div class="dropdown">
                     <button type="button" class="btn dropdown-toggle list-btn" id="adminDropdown" data-toggle="dropdown">KYC
                             <span class="caret"></span>

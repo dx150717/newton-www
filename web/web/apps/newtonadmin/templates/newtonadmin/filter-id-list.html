@@ -15,27 +15,22 @@
                 <thead>
                     <tr class="success">
                         <th><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;All</th>
-                        <th>Name</th>
+                        <th>姓名</th>
                         <th>Country</th>
                         <th>Email Address</th>
                         <th>Boolean Pass KYC</th>
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                            <th><input type="checkbox"> check </th>
-                            <th><a href="/newtonadmin/kyc/step-one/">my test</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">China</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">test@test.com</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">False</a></th>
-                        </tr>
-                        <tr>
-                            <th><input type="checkbox"> check </th>
-                            <th><a href="/newtonadmin/kyc/step-one/">my test</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">China</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">test@test.com</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">False</a></th>
-                        </tr>
+                    {% for item in id_list %}
+                    <tr>
+                        <th><input type="checkbox"> check </th>
+                        <th><a href="/newtonadmin/kyc/filter-id-detail/{{ item.user.id }}/">{{ item.first_name }}&nbsp;{{ item.last_name }}</a></th>
+                        <th><a href="/newtonadmin/kyc/filter-id-detail/{{ item.user.id }}/">China</a></th>
+                        <th><a href="/newtonadmin/kyc/filter-id-detail/{{ item.user.id }}/">test@test.com</a></th>
+                        <th><a href="/newtonadmin/kyc/filter-id-detail/{{ item.user.id }}/">False</a></th>
+                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

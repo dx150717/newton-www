@@ -25,5 +25,5 @@ class KYCInfo(models.Model):
     min_ela_limit = models.FloatField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
+    status = models.IntegerField(default=codes.KYCStatus.CANDIDATE.value, db_index=True)
 

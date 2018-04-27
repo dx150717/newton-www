@@ -76,3 +76,10 @@ class ConstructionType(Enum):
     UNKNOWN = 1
     UI = 2
     PROGRAM = 3
+
+class KYCStatus(Enum):
+    CANDIDATE = 1
+    CONFIRM = 2
+    CANCEL = 3
+    DISTRIBUTE = 4
+    SEND = 5
