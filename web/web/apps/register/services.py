@@ -2,22 +2,26 @@
 """
 import logging
 
-from tasks import task_email
 from django.conf import settings
 from django.template import Template, Context, loader
 
 from verification import services
-
+from tasks import task_email
 from config import codes
+
 logger = logging.getLogger(__name__)
 
 
 def send_register_validate_email(email, request):
+    """Send the validate email for user register
+    """
     try:
         # build the email body
         email_type = codes.EmailType.REGISTER.value
         verification = services.generate_verification_uuid(email, email_type)
-        target_url = settings.BASE_URL + "/register/verify/?uuid=" + str(verification.uuid)
+        if not verification:
+            return False
+        target_url = "%s/register/verify/?uuid=%s" % (settings.BASE_URL, str(verification.uuid))
         subject = "NewtonProject Notifications: Please Register Newton:"
         template = loader.get_template("register/register-letter.html")
         context = Context({"targetUrl":target_url,"request":request})
@@ -31,6 +35,8 @@ def send_register_validate_email(email, request):
         return False
         
 def get_register_verification_by_uuid(uuid):
+    """Get the verification object of register by uuid
+    """
     return services.get_verification_by_uuid(uuid)
     
     
