@@ -12,7 +12,7 @@
 		<h2>{% trans "Reset" %}</h2>
 	</div>
 	<div class="container">
-		<form class="form" action="/reset/post_email/" method="POST">
+		<form class="form" action="/reset/post-email/" method="POST">
 			{% csrf_token %}
 			{% include "form.html" %}
 			<div class="raw">
@@ -97,5 +97,6 @@ function showSubscriptionResult(content, alertType) {
 		$(".raw").removeClass("subscription-height")
 	}, 3000);
 }
+$("#normal").addClass("display-none");
 </script>
 {% endblock %}
