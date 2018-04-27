@@ -29,6 +29,11 @@ LOGGING = {
             'filename': '/tmp/web.log',
             'formatter': 'verbose'
         },
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'verbose'
+        }
     },
     'loggers': {
         '': {
@@ -36,7 +41,7 @@ LOGGING = {
             'level': 'DEBUG',
         },
         'django': {
-            'handlers': ['file'],
+            'handlers': ['file','console'],
             'propagate': True,
             'level': 'DEBUG',
         },

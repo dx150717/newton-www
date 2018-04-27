@@ -17,6 +17,7 @@ from subscription import models as subscription_model
 from config import codes
 from utils import http, security
 from verification import task as subscription_task
+from verification import service as subscription_service
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +56,7 @@ def subscribe(request):
     except ValidationError:
         return http.JsonErrorResponse(error_message=_("Invalid Email Address!"))
     except Exception, inst:
-        logger.exception("fail to subscribe: %s" % str(inst))
+        logger.error("fail to subscribe: %s" % str(inst))
         return http.JsonErrorResponse()
 
 
@@ -80,14 +81,7 @@ def subscribed_confirm(request):
 def do_send_mail(subscribed_email, request):
     subject = _("NewtonProject Notifications: Please Confirm Subscription")
     targetUrl = settings.BASE_URL + "/subscribe/confirmed/?uuid=" + str(subscribed_email.uuid)
-    try:
-        template = loader.get_template("subscription/subscription-letter.html")
-        context = Context({"targetUrl":targetUrl,"request":request})
-        html_content = template.render(context)
-        to_email = subscribed_email.email_address
-        from_email = settings.FROM_EMAIL
-        subscription_task.send_email.delay(subject, html_content, from_email, [to_email])
-        return True
-    except Exception,inst:
-        logger.error("fail to send email: %s" % str(inst))
-        return False
+    template_html = "subscription/subscription-letter.html"
+    to_email = subscribed_email.email_address
+    return subscription_service.do_send_mail(subject,to_email, targetUrl, template_html, request)
+

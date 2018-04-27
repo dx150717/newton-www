@@ -11,10 +11,11 @@
 	<h1 class="text-center">{% trans "Register" %}</h1>
         
     <div class="text-center" style="padding: 30px;">
-		{% csrf_token %}
-		<label for="email">邮箱：</label>
-        <input class="email_add" type="text" placeholder="Please input your email"/><br/>
-        <input class="subscription-button" type="button" onclick="javascript:location.href='/register/post-email/';" value="提交"/>
+        {% csrf_token %}
+        <form action="/register/post-email/" method="POST">
+            {% include "form.html" %}
+            <button class="subscription-button" type="submit">{% trans "Submit" %}</button>
+        </form>
 		<p style="padding-top:30px;">点击 “注册” 即表示您同意并愿意遵守<br/> Newton的<a href="/terms-of-use/">使用条款</a>和<a href="/privacy/">隐私政策 </a>。</p>
     </div>    
 </div>
