@@ -19,15 +19,18 @@
             <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
 
                 <ul class="nav navbar-nav  navbar-right">
-                    <li class="{{ request.path|menu_active:"register" }}">
-                        <a href="/register/">{% trans "Register" %}</a>
-                    </li>
-                    <li class="{{ request.path|menu_active:"login" }}">
-                        <a href="/login/">{% trans "Login" %}</a>
-                    </li>
-                    <li class="{{ request.path|menu_active:"user" }}">
+                    {% if request.user %}
+                    <li>
                         <a href="/user/">{% trans "User" %}</a>
                     </li>
+                    {% else %}
+                    <li>
+                        <a href="/register/">{% trans "Register" %}</a>
+                    </li>
+                    <li>
+                        <a href="/login/">{% trans "Login" %}</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div><!-- /.navbar -->
 
