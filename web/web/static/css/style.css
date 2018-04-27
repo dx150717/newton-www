@@ -887,9 +887,14 @@ canvas { display: block; vertical-align: top; }
 #user .col-12{display: flex;}
 #user .token-check-condition input{margin-right: 10px;}
 
+#token .token-title{padding-top: 80px; font-size: 16px; color: #292929;}
+#token .token-summary{ padding-top: 60px;}
+#token .token-title h2{ font-size:48px; font-weight: normal; color: #292929;}
 #token .info p{font-size: 20px;}
 #token .item{ border: solid 1px #f7f7f7;padding: 10px;}
-#token .token-content{padding-top: 60px;padding-bottom: 60px;}
+#token .token-content{padding-top: 120px;padding-bottom: 60px;}
+#token .token-form{padding-bottom: 80px; padding-top: 80px;}
+#token label{width: 100%; padding-left: 0px; font-size: 18px; color: #292929;}
 
 /*
  * kyc

@@ -16,52 +16,57 @@
 
 {% block content %}
 <section id="token" class="section-list">
-    <div class="page-title">
-        <div class="container">
-            <p>{% trans "Token Sale" %}</p>
-        </div>
+    <div class="token-title container text-center">
+        <h2>{% trans "Newton Token Sale" %}</h2>
+        <p class="token-summary">区块链代币交换的过程不是融资过程，是团队组建的过程。</p>
     </div>
     <div class="container token-content">
         <div class="raw">
-            <h1 class="text-center">NEW TOKEN SALE</h1>
-            <div class="container info">
-                <div class="col-12 text-center" style="padding:20px;">
-                    <p>区块链代币交换的过程不是融资过程，是团队组建的过程。</p>
-                </div>
-                <div class="col-12 col-sm-6 text-center item">
-                    <div>
-                        <p>New 总发行量：100亿，此次公募50,000,000$</p>
-                        <p>接受数字货币类型有 BTC,ELA.</p>
-                        <p>截止日期：2018.9.9</p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 text-center item">
-                    <div>
-                        <p>BTC,ELA,NEW 兑换比例如下：</p>
-                        <p>1 BTC = 100,000 NEW</p>
-                        <P>1 ELA = 100 NEW</P>
-                    </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 text-left item">
+                <div>
+                    <p>New 总发行量：100亿，此次公募50,000,000$</p>
+                    <p>接受数字货币类型有 BTC,ELA.</p>
+                    <p>截止日期：2018.9.9</p>
                 </div>
             </div>
-            <div style="padding-top:60px;padding-left:200px;">
+            <div class="col-sm-4 text-left item">
+                <div>
+                    <p>BTC,ELA,NEW 兑换比例如下：</p>
+                    <p>1 BTC = 100,000 NEW</p>
+                    <P>1 ELA = 100 NEW</P>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="raw">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
                 <p>风险评估</p>
                 <p>KYC 要点和进度，规则等</p>
                 <p>如果要参与公募，请认真填写以下信息：</p>
             </div>
-            <div class="container">
-                <div class="raw">
-                    <div class="col-md-2 col-lg-2"></div>
-                    <div class="col-md-8 col-lg-8" style="padding: 30px;">
-                        <form class="form-horizontal" action="/kyc/post/" method="POST">
-                            {% include "form.html" %}
-                            <div class="form-group">
-                                <input type="submit" value="Submit" />
-                            </div>
-                        </form>
+            <div class="col-sm-2"></div>
+        </div>
+        
+    </div>
+    <div class="container token-form">
+        <div class="raw">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <form class="form" action="/kyc/post/" method="POST">
+                    {% include "form.html" %}
+                    <div class="raw">
+                        <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+                        <div>
+                            <button class="form-button" type="submit">{% trans "Submit" %}</button>
+                        </div>
                     </div>
-                    <div class="col-md-2 col-lg-2"></div>
-                </div>
+                </form>
             </div>
+            <div class="col-sm-2"></div>
         </div>
     </div>
 </section>
