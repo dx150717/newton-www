@@ -11,6 +11,8 @@ from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
 from django.template import Template, Context, loader
 from django.contrib.auth.decorators import login_required
+from django.utils.timezone import utc
+from django.forms.forms import NON_FIELD_ERRORS
 
 import decorators
 from config import codes
@@ -38,7 +40,8 @@ def submit_email(request):
         email = form.cleaned_data['email']
         user = User.objects.filter(email=email).first()            
         if user:
-            return http.JsonErrorResponse(error_message=_("Email had Register!"))
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Email already existed')])
+            return render(request, 'register/index.html', locals())
         is_send_success = services.send_register_validate_email(email, request)
         if not is_send_success:
             return http.HttpResponseRedirect('/register/post-fail/')
@@ -54,7 +57,6 @@ def show_post_email_success_view(request):
 def show_post_email_fail_view(request):
     return render(request, 'register/post-fail.html', locals())
 
-@decorators.http_get_required
 def verify_email_link(request):
     try:
         uuid = request.GET['uuid']
@@ -63,13 +65,15 @@ def verify_email_link(request):
             return http.HttpResponseRedirect('/register/invalid-link/')
         email = verification.email_address
         expire_time = verification.expire_time
-        now = datetime.datetime.now()
+        now = datetime.datetime.utcnow().replace(tzinfo=utc)
         # check whether the given link is expired
         if now > expire_time:
             return http.HttpResponseRedirect('/register/invalid-link/')
         # create user
         username = security.generate_uuid()
-        user = User.objects.create_user(username, email, password=username)
+        user = User.objects.create_user(username, email)
+        user.set_password(username)
+        user.save()
         user_profile = user_models.UserProfile.objects.create(user=user)
         user = authenticate(username=email, password=username)
         login(request, user)
