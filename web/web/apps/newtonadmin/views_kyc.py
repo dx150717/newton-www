@@ -39,22 +39,22 @@ def kyc_step_three(request):
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def kyc_update_id(request):
     update_info = "Update Successed!"
-    return render(request, "newtonadmin/kyc-step-one.html", locals());
+    return render(request, "newtonadmin/kyc-step-one.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def kyc_update_amount(request):
     update_info = "Update Successed!"
-    return render(request, "newtonadmin/kyc-step-two.html", locals());
+    return render(request, "newtonadmin/kyc-step-two.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def kyc_update_email(request):
     update_info = "Send Successed!"
-    return render(request, "newtonadmin/kyc-step-three.html", locals());
+    return render(request, "newtonadmin/kyc-step-three.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def kyc_send_one_email(request):
     update_info = "Send Successed!"    
-    return render(request, "newtonadmin/kyc-step-three.html", locals());
+    return render(request, "newtonadmin/kyc-step-three.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def kyc_send_email(request):
