@@ -7,30 +7,6 @@
 {% endblock %}
 
 {% block content %}
-<section id="register" class="section-list">
-		<div class="page-title">
-			<div class="container">
-				<p>{% trans "Repassword" %}</p>
-			</div>
-		</div>
-        <div class="raw">
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-0"></div>
-            <div id="dialog" class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-        
-            </div>  
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-0"></div>
-        </div>
-        
-        <div class="text-center" style="padding: 30px;">
-            <form>
-                {% csrf_token %}
-                <input class="email_add" type="text" value="weixuefeng@lubangame.com"><br/>
-                <a class="subscription-button">{% trans "Repassword" %}</a>
-            </form>
-        </div>
-    </div>
-</section>
-
 <section id="reset" class="section-list">
 	<div class="reset-title container text-center">
 		<h2>{% trans "Reset" %}</h2>
