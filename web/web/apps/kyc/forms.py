@@ -15,5 +15,7 @@ class KYCInfoForm(ModelForm):
             'expect_ela',
             'how_to_contribute',
             'what_is_newton',
+            'btc_address',
+            'ela_address',
         ]
 

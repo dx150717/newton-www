@@ -44,57 +44,12 @@
                 <div class="raw">
                     <div class="col-md-2 col-lg-2"></div>
                     <div class="col-md-8 col-lg-8" style="padding: 30px;">
-                    <form class="form-horizontal" action="/kyc/post/" method="POST">
-                        <div class="form-group">
-                            <label for="id_firstname">FirstName:</label>
-                            <input type="text" id="firstname" name="firstname" placeholder="firstname">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_lastname">LastName:</label>
-                            <input type="text" id="lastname" name="lastname" placeholder="lastname">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_country">Country:</label>
-                            <input type="text" id="country" name="country" placeholder="country">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_location">Location:</label>
-                            <input type="text" id="location" name="location" placeholder="location">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_country_code">Country_code:</label>
-                            <input type="text" id="country_code" name="country_code" placeholder="country_code">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_cellphone">Cellphone:</label>
-                            <input type="text" id="cellphone" name="cellphone" placeholder="cellphone">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_country">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_idcard">ID Card:</label>
-                            <input id="idcard" name="idcard" type="file" placeholder="ID Card">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_Investment_amount_btc">Investment amount BTC:</label>
-                            <input id="Investment_amount" type="number" name="Investment_amount" placeholder="Investment amount">
-                        </div>
-                        <div class="form-group">
-                            <label for="id_Investment_amount_ELA">Investment amount ELA:</label>
-                            <input id="Investment_amount" type="number" name="Investment_amount" placeholder="Investment amount">
-                        </div>
-                        <div class="form-group">
-                            <p><label for="id_contribute">How To Contribute For Newton:</label></p>
-                            <textarea id="contribute" rows="5" cols="120"  name="contribute" placeholder="how to contribute for newton"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <p><label for="id_what">How to understand Newton project?</label></p>
-                            <textarea id="what" rows="5" cols="120" name="what" placeholder="How to understand Newton project?"></textarea>
-                        </div>
-                        <input type="submit" value="Submit">
-                    </form>
+                        <form class="form-horizontal" action="/kyc/post/" method="POST">
+                            {% include "form.html" %}
+                            <div class="form-group">
+                                <input type="submit" value="Submit" />
+                            </div>
+                        </form>
                     </div>
                     <div class="col-md-2 col-lg-2"></div>
                 </div>

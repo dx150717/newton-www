@@ -4,7 +4,7 @@ from django.utils.translation import ugettext as _
 from utils import http,security
 from django.template import Template,Context,loader
 from config import codes
-from subscription import task as repassword_task
+from tasks import task_email
 import settings
 import logging
 logger = logging.getLogger(__name__)
@@ -79,7 +79,7 @@ def do_send_mail(user,request):
         html_content = template.render(context)
         to_email = user.email
         from_email = settings.FROM_EMAIL
-        repassword_task.send_email.delay(subject,html_content,from_email,[to_email])
+        task_email.send_email.delay(subject,html_content,from_email,[to_email])
         return True
     except Exception,inst:
         print("fail to send email: %s" % str(inst))

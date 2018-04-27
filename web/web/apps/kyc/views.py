@@ -9,6 +9,7 @@ from django.contrib.auth.models import User
 
 from utils import http
 from config import codes
+from . import forms
 
 logger = logging.getLogger(__name__)
 
@@ -16,6 +17,7 @@ def show_kyc_index_view(request):
     return render(request, "kyc/index.html", locals()) 
 
 def show_join_kyc_view(request):
+    form = forms.KYCInfoForm()
     return render(request, "kyc/submit.html", locals()) 
 
 def post_kyc_information(request):
