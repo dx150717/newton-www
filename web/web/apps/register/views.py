@@ -13,7 +13,9 @@ from django.template import Template, Context, loader
 from verification import service as register_email_service
 
 from config import codes
-from utils import http, security
+import decorators
+from utils import http
+from utils import security
 from user import models as user_models
 from . import forms
 
@@ -23,29 +25,21 @@ def show_register_view(request):
     form = forms.EmailForm()
     return render(request, 'register/index.html', locals())
 
+@decorators.http_post_required
 def submit_email(request):
+    """Submit email to user's inbox
+    """
     try:
-        if request.method == "POST":
-            form = forms.EmailForm(request.POST)
-            if form.is_valid():
-                email = form.cleaned_data['email']
-                # validate email is exist
-                user = User.objects.filter(email=email)
-                # validate user's status 
-                if user:
-                    return http.JsonErrorResponse(error_message=_('Email Has Exist!'))
-                user = User.objects.create_user(email=email, username=security.generate_uuid())
-                profile = user_models.UserProfile(user=user)
-                profile.save()
-                subject = _("NewtonProject Notifications: Please Confirm Subscription")
-                targetUrl = settings.BASE_URL + "/subscribe/confirmed/?uuid=" + str(subscribed_email.uuid)
-                template_html = "subscription/subscription-letter.html"
-                to_email = subscribed_email.email_address
-                email = form.cleaned_data['email']
-
+        form = forms.EmailForm(request.POST)
+        if not form.is_valid():
+            return render(request, 'register/index.html', locals())
+        # check the availablity of email address
+        # send email
+        return http.HttpResponseRedirect('/register/post-success/')
     except Exception, inst:
-        logger.error("file to submit email %s" %str(inst))
-    return http.HttpResponseRedirect('/register/post-success/')
+        logger.exception('fail to submit email: %s' % str(inst))
+        return http.HttpResponseServerError()
+
 
 def show_post_email_success_view(request):
     return render(request, 'register/post-success.html', locals())
