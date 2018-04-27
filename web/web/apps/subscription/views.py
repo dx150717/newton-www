@@ -16,12 +16,9 @@ from ratelimit.decorators import ratelimit
 from subscription import models as subscription_model
 from config import codes
 from utils import http, security
-<<<<<<< HEAD
-from verification import task as subscription_task
-from verification import service as subscription_service
-=======
+
 from tasks import task_email
->>>>>>> 9c418f257ff58b32e567410c597b7d30b6639803
+
 
 logger = logging.getLogger(__name__)
 

@@ -10,14 +10,14 @@ from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
 from django.template import Template, Context, loader
 
-from verification import service as register_email_service
+import decorators
 
 from config import codes
-import decorators
 from utils import http
 from utils import security
 from user import models as user_models
 from . import forms
+from . import services
 
 logger = logging.getLogger(__name__)
 
@@ -34,12 +34,15 @@ def submit_email(request):
         if not form.is_valid():
             return render(request, 'register/index.html', locals())
         # check the availablity of email address
-        # send email
-        return http.HttpResponseRedirect('/register/post-success/')
+        email = form.cleaned_data['email']
+        user = User.objects.filter(email=email).first()            
+        if user:
+            return http.JsonErrorResponse(error_message=_("Email had Register!"))
+        services.send_register_validate_email()
     except Exception, inst:
+        print(str(inst))
         logger.exception('fail to submit email: %s' % str(inst))
         return http.HttpResponseServerError()
-
 
 def show_post_email_success_view(request):
     return render(request, 'register/post-success.html', locals())

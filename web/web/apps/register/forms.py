@@ -2,7 +2,7 @@
 from django import forms
 
 class EmailForm(forms.Form):
-    email = forms.PasswordInput()
+    email = forms.EmailField()
 
 class PasswordForm(forms.Form):
     password = forms.PasswordInput()
