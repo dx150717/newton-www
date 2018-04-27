@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from config import codes
 from django.utils.translation import ugettext_lazy as _
@@ -9,6 +10,7 @@ class EmailVerification(models.Model):
     email_address = models.CharField(max_length=200)
     email_type = models.IntegerField() 
     uuid = models.CharField(max_length=200)
+    expire_time = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)

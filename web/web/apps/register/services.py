@@ -6,22 +6,28 @@ from tasks import task_email
 from django.conf import settings
 from django.template import Template, Context, loader
 
-from verification import service
+from verification import services
+
+from config import codes
 logger = logging.getLogger(__name__)
 
 
-def send_register_validate_email():
+def send_register_validate_email(email):
     try:
         # build the email body
-        # send
+        email_type = codes.EmailType.REGISTER.value
+        verification = services.generate_verification_uuid(email,email_type)
+        target_url = settings.BASE_URL + "/register/verify/?uuid=" + str(verification.uuid)
         subject = "NewtonProject Notifications: Please Register Newton:"
         template = loader.get_template("register/register-letter.html")
-        context = Context({"targetUrl":url,"request":request})
+        context = Context({"targetUrl":target_url,"request":request})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
+        # send
         task_email.send_email.delay(subject, html_content, from_email, to_emails)
         return True
     except Exception, inst:
+        print(str(inst))
         logger.exception("fail to send the register validate email:%s" % str(inst))
         return False
     

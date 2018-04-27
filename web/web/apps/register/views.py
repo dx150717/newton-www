@@ -38,7 +38,11 @@ def submit_email(request):
         user = User.objects.filter(email=email).first()            
         if user:
             return http.JsonErrorResponse(error_message=_("Email had Register!"))
-        services.send_register_validate_email()
+        is_send_success = services.send_register_validate_email(email)
+        if not is_send_success:
+            return http.HttpResponseServerError()
+        else:
+            return http.HttpResponseRedirect('/register/post-success/')
     except Exception, inst:
         print(str(inst))
         logger.exception('fail to submit email: %s' % str(inst))

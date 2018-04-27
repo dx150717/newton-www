@@ -1,19 +1,36 @@
+"""Service Implementation of verification module
 
-from django.template import Template, Context, loader
-from django.conf import settings
-from . import task 
+"""
+import logging
+import datetime
 
-def do_send_mail(subject, to_email, target_url, html_template, request):
-    subject = subject
-    targetUrl = target_url
+from utils import security
+from . import models
+
+logger = logging.getLogger(__name__)
+
+def generate_verification_uuid(email, email_type):
+    """
+    """
     try:
-        template = loader.get_template(html_template)
-        context = Context({"targetUrl":targetUrl,"request":request})
-        html_content = template.render(context)
-        to_email = to_email
-        from_email = settings.FROM_EMAIL
-        task.send_email.delay(subject, html_content, from_email, [to_email])
-        return True
-    except Exception,inst:
-        logger.error("fail to send email: %s" % str(inst))
-        return False
+        # genreate uuid
+        uuid = security.generate_uuid()
+        # save db
+        verification = models.EmailVerification(email_address=email, uuid=uuid, email_type=email_type, expire_time=datetime.now())
+        verification.save()
+        # return result
+        return verification
+    except Exception, inst:
+        print(str(inst))
+        return None
+
+def get_verification_by_uuid(uuid):
+    """
+    """
+    try:
+        # query
+        verification = models.EmailVerification.objects.get(uuid=uuid)
+        # return result
+        return verification
+    except Exception, inst:
+        return None
