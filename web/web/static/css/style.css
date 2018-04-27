@@ -843,22 +843,28 @@ canvas { display: block; vertical-align: top; }
 
 /* register */
 #register .email_add{ border:1px solid #ebebeb; width:338px; padding-left:12px; margin-bottom: 30px; height: 40px; border-radius: 4px;}
-#register .raw{min-height: 100px;}
 #register #dialog{padding-top: 30px;}
 
 /* login */
 .form-button{ display:inline-block; width: 264px; height: 48px; border-radius: 4px; font-size:14px; background-color: #292929; text-align:center; color:#fff; line-height:48px;}
 
 
-#login .login-title{padding-top: 140px;}
-#login .login-title h2{margin-bottom: 68px; font-size: 24px; font-weight: normal; color: #292929;}
-#login .container input{padding: 5px; width: 264px; height: 32px;}
-#login .container .form{margin-left: -50px;}
-#login .container .raw{display: flex;}
-#login .container .form-group{display: flex; margin-bottom: 20px;}
+#login .login-title,
+#register .login-title{padding-top: 140px;}
+#login .login-title h2,
+#register .login-title h2{margin-bottom: 68px; font-size: 24px; font-weight: normal; color: #292929;}
+#login .container input,
+#register .container input{padding: 5px; width: 264px; height: 32px;}
+#login .container .form,
+#register .container .form{margin-left: -50px;}
+#login .container .raw,
+#register .container .raw{display: flex;}
+#login .container .form-group,
+#register .container .form-group{display: flex; margin-bottom: 20px;}
 #login .container .register{font-size: 16px; color: #292929}
 #login .container .reset{font-size: 16px; color: #b7b7b7;}
-#login .container label{font-size: 18px; font-weight: 200; color: #292929;padding-right: 20px; text-align: right;}
+#login .container label,
+#register .container label{font-size: 18px; font-weight: 200; color: #292929;padding-right: 20px; text-align: right;}
 #login .container .space-between{display: flex; justify-content: space-between; width: 264px; padding-top: 20px;}
 #user .user{ display:flex; float: left; padding-top: 60px; padding-bottom: 60px;}
 #user .user .left{ padding-right: 30px;}

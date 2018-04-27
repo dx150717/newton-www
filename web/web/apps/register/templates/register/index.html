@@ -7,16 +7,27 @@
 {% endblock %}
 
 {% block content %}
-<div class="container sub-level-page">
-	<h1 class="text-center">{% trans "Register" %}</h1>
-        
-    <div class="text-center" style="padding: 30px;">
-        {% csrf_token %}
-        <form action="/register/post-email/" method="POST">
-            {% include "form.html" %}
-            <button class="subscription-button" type="submit">{% trans "Submit" %}</button>
-        </form>
-		<p style="padding-top:30px;">点击 “注册” 即表示您同意并愿意遵守<br/> Newton的<a href="/terms-of-use/">使用条款</a>和<a href="/privacy/">隐私政策 </a>。</p>
-    </div>    
-</div>
+<section id="register" class="section-list">
+        <div class="login-title container text-center">
+            <h2>{% trans "Register" %}</h2>
+        </div>
+        <div class="container">
+            <form class="form" action="/register/post-email/" method="POST">
+                {% csrf_token %}
+                {% include "form.html" %}
+                <div class="raw">
+                    <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+                    <div>
+                        <button class="form-button" type="submit">{% trans "Register" %}</button>
+                    </div>
+                </div>
+                <div class="raw">
+                    <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+                    <div class="space-between">
+                        <p style="padding-top:30px;">点击 “注册” 即表示您同意并愿意遵守<br/> Newton的<a href="/terms-of-use/">使用条款</a>和<a href="/privacy/">隐私政策 </a>。</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 {% endblock %}
