@@ -836,13 +836,6 @@ canvas { display: block; vertical-align: top; }
 #faq .content .faq-question{padding-bottom: 5px; font-size: 16px; line-height: 24px; color: #605c6d; word-wrap: break-word;}
 #faq .content .faq-answer{font-size: 16px; line-height: 24px; color: #605c6d; word-wrap: break-word;}
 
-/*
- * sub-level page
- */
-.sub-level-page {
-    margin-top:100px;
-}
-
 
 /* register */
 #register .email_add{ border:1px solid #ebebeb; width:338px; padding-left:12px; margin-bottom: 30px; height: 40px; border-radius: 4px;}
@@ -897,3 +890,14 @@ canvas { display: block; vertical-align: top; }
 #token .info p{font-size: 20px;}
 #token .item{ border: solid 1px #f7f7f7;padding: 10px;}
 #token .token-content{padding-top: 60px;padding-bottom: 60px;}
+
+/*
+ * kyc
+ */
+#kyc {margin-top: 80px}
+#kyc h4{ font-size: 20px; font-weight: normal; color: #292929}
+#kyc pre{ background-color: #fff; margin-bottom: 20px;}
+#kyc .col-sm-6{padding-left: 0px;}
+#kyc input[type=checkbox], input[type=radio]{width: 22px; height: 22px;;}
+#kyc .token-check-condition label span{font-size: 16px; color: #292929;}
+
