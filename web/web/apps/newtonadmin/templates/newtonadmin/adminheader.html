@@ -15,6 +15,7 @@
                     </button>
                     
                 </div>
+                {% if request.user.is_authenticated %}
                 <div class="dropdown">
                     <button type="button" class="btn dropdown-toggle list-btn" id="adminDropdown" data-toggle="dropdown">KYC
                             <span class="caret"></span>
@@ -40,6 +41,7 @@
                 <div class="list-btn logout">
                     <a class="btn" type="button" value="Logout" href="/newtonadmin/logout/">LogOut</a>
                 </div>
+                {% endif %}
             </div>
         </div>
     </nav>

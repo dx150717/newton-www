@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "newtonadmin/base.html" %}
 {% load i18n %}
 {% load utils %}
 
@@ -17,10 +17,7 @@
             <div class="text-center" style="padding: 30px;">
                 <form action="/newtonadmin/login/post/" method="POST">
                     {% csrf_token %}
-                    <p><label for="email">{% trans "Email" %}:&nbsp;&nbsp;</label>
-                        <input name="email" placeholder="Email"></p>
-                    <p><label for="password">{% trans "Password" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;</label>
-                        <input name="password" pl   aceholder="Password"></p>
+                    {% include "form.html" %}
                     <a><input class="subscription-button" type="submit" value="Login"></a>
                 </form>
             </div>

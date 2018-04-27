@@ -25,7 +25,7 @@ def show_join_kyc_view(request):
 @decorators.http_post_required
 def post_kyc_information(request):
 	try:
-		form = forms.KYCInfoForm()
+		form = forms.KYCInfoForm(request.POST)
 		if not form.is_valid():
 			return render(request, "kyc/submit.html", locals()) 
 		instance = form.save(commit=False)

@@ -19,7 +19,7 @@
             <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
 
                 <ul class="nav navbar-nav  navbar-right">
-                    {% if request.user %}
+                    {% if request.user.is_authenticated %}
                     <li>
                         <a href="/user/">{% trans "User" %}</a>
                     </li>

@@ -48,3 +48,6 @@ AUTHENTICATION_BACKENDS = ('backends.auth.EmailAuthBackend', )
 # google recaptcha verification url
 GOOGLE_VERIFICATION_URL = "https://www.google.com/recaptcha/api/siteverify"
 GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
+
+# global authenticate
+LOGIN_URL = '/login/'
