@@ -89,7 +89,6 @@ def submit_password(request):
     try:
         # check uuid
         uuid = request.POST['uuid']
-        print(uuid)
         verification = services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/invalid-link/')
