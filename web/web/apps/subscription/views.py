@@ -16,7 +16,7 @@ from ratelimit.decorators import ratelimit
 from subscription import models as subscription_model
 from config import codes
 from utils import http, security
-from verification import task as subscription_task
+from tasks import task_email
 
 logger = logging.getLogger(__name__)
 
@@ -86,7 +86,7 @@ def do_send_mail(subscribed_email, request):
         html_content = template.render(context)
         to_email = subscribed_email.email_address
         from_email = settings.FROM_EMAIL
-        subscription_task.send_email.delay(subject, html_content, from_email, [to_email])
+        task_email.send_email.delay(subject, html_content, from_email, [to_email])
         return True
     except Exception,inst:
         logger.error("fail to send email: %s" % str(inst))
