@@ -16,8 +16,12 @@ from ratelimit.decorators import ratelimit
 from subscription import models as subscription_model
 from config import codes
 from utils import http, security
+<<<<<<< HEAD
 from verification import task as subscription_task
 from verification import service as subscription_service
+=======
+from tasks import task_email
+>>>>>>> 9c418f257ff58b32e567410c597b7d30b6639803
 
 logger = logging.getLogger(__name__)
 
@@ -81,7 +85,14 @@ def subscribed_confirm(request):
 def do_send_mail(subscribed_email, request):
     subject = _("NewtonProject Notifications: Please Confirm Subscription")
     targetUrl = settings.BASE_URL + "/subscribe/confirmed/?uuid=" + str(subscribed_email.uuid)
-    template_html = "subscription/subscription-letter.html"
-    to_email = subscribed_email.email_address
-    return subscription_service.do_send_mail(subject,to_email, targetUrl, template_html, request)
-
+    try:
+        template = loader.get_template("subscription/subscription-letter.html")
+        context = Context({"targetUrl":targetUrl,"request":request})
+        html_content = template.render(context)
+        to_email = subscribed_email.email_address
+        from_email = settings.FROM_EMAIL
+        task_email.send_email.delay(subject, html_content, from_email, [to_email])
+        return True
+    except Exception,inst:
+        logger.error("fail to send email: %s" % str(inst))
+        return False
