@@ -7,33 +7,36 @@
 {% endblock %}
 
 {% block content %}
-<section id="login" class="section-list" style="padding-top:240px;">
-        <div class="container">
+<section id="login" class="section-list">
+    <div class="login-title container text-center">
+        <h2>{% trans "Login" %}</h2>
+    </div>
+    <div class="container">
+        <form class="form" action="/login/post/" method="POST">
+            {% csrf_token %}
+            {% include "form.html" %}
             <div class="raw">
-                <div class="col-md-4 col-lg-4"></div>
-                <div class="col-md-4 col-lg-4" style="padding: 30px;">
-                    <form action="/login/post/" method="POST">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <label for="email">{% trans "Email" %}</label>
-                            <input name="email" placeholder="Email" autocomplete="email">
-                        </div>
-                        <div class="form-group" style="margin-left:-35px;">
-                            <label for="password">{% trans "Password" %}</label>
-                            <input name="password" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <div class="google-recaptcha">
-                                <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv"></div>
-                            </div>
-                        </div>
-                        <a><input class="subscription-button" type="submit" value="Login"></a>
-                        <p style="padding-top:20px;"><a href="/reset/" >{% trans "重置密码" %}</a></p>
-                    </form>
+                <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+                <div class="form-group">
+                    <div class="google-recaptcha">
+                        <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv"></div>
+                    </div>
                 </div>
-                <div class="col-md-4 col-lg-4"></div>
             </div>
-        </div>
+            <div class="raw">
+                <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+                <div>
+                    <button class="form-button" type="submit">{% trans "Login" %}</button>
+                </div>
+            </div>
+            <div class="raw">
+                <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+                <div class="space-between">
+                    <a class="register" href="/register/">{% trans "Register" %}</a>
+                    <a class="reset" href="/reset/">{% trans "Forget Password" %}</a>
+                </div>
+            </div>
+        </form>
     </div>
 </section>
 {% endblock %}

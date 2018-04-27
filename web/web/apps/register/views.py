@@ -61,11 +61,11 @@ def verify_email_link(request):
         verification = services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/post-fail/')
-        email = verification['email_address']
-        expire_time = verification['expire_time']
+        email = verification.email_address
+        expire_time = verification.expire_time
         now = datetime.datetime.now()
         # check expire time TODO return expire time html
-        if now > expire_time:
+        if delta_time.total_seconds() < 0:
             return http.HttpResponseRedirect('/register/post-fail/')
         # create user
         user = User.objects.create_user(username=uuid, email=email)
@@ -73,7 +73,6 @@ def verify_email_link(request):
         profile.save()
         return http.HttpResponseRedirect('/register/password/')
     except Exception, inst:
-        print(str(inst))
         logger.exception('fail to verify email link: %s' % str(inst))
         return http.HttpResponseServerError()
     
