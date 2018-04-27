@@ -11,7 +11,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'newton',
-        'USER': 'newton',
+        'USER': 'root',
         'PASSWORD': ''
     }
 }

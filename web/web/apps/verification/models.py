@@ -7,8 +7,9 @@ class EmailVerification(models.Model):
     Entry of VerificationModel.
     """
     email_address = models.CharField(max_length=200)
-    email_type = models.IntegerField(default=codes.EmailType.REGISTER.value) 
-    uuid = models.CharField(max_length=200,default='')
+    email_type = models.IntegerField() 
+    uuid = models.CharField(max_length=200)
+    expire_time = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
