@@ -11,17 +11,32 @@ from django.core.exceptions import ValidationError
 from django.template import Template, Context, loader
 
 from config import codes
-from utils import http, security
+import decorators
+from utils import http
+from utils import security
 from user import models as user_models
 from . import forms
 
 logger = logging.getLogger(__name__)
 
 def show_register_view(request):
+    form = forms.EmailForm()
     return render(request, 'register/index.html', locals())
 
+@decorators.http_post_required
 def submit_email(request):
-    return http.HttpResponseRedirect('/register/post-success/')
+    """Submit email to user's inbox
+    """
+    try:
+        form = forms.EmailForm(request.POST)
+        if not form.is_valid():
+            return render(request, 'register/index.html', locals())
+        # check the availablity of email address
+        # send email
+        return http.HttpResponseRedirect('/register/post-success/')
+    except Exception, inst:
+        logger.exception('fail to submit email: %s' % str(inst))
+        return http.HttpResponseServerError()
 
 def show_post_email_success_view(request):
     return render(request, 'register/post-success.html', locals())
