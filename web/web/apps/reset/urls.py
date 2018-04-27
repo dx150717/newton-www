@@ -4,6 +4,8 @@ from . import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                    url(r'^$', views.show_repassword_view),
-                    url(r'^edit_password/', views.show_edit_password_view),
+                    url(r'^$', views.show_reset_view),
+                    url(r'^post_email/', views.post_email),
+                    url(r'^reset_password/', views.show_reset_password_view),
+                    url(r'^post_password/', views.post_password),
 )

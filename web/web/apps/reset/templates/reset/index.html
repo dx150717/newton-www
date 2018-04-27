@@ -29,7 +29,26 @@
             </form>
         </div>
     </div>
-</section><!-- end -->
+</section>
+
+<section id="reset" class="section-list">
+	<div class="reset-title container text-center">
+		<h2>{% trans "Reset" %}</h2>
+	</div>
+	<div class="container">
+		<form class="form" action="/reset/post_email/" method="POST">
+			{% csrf_token %}
+			{% include "form.html" %}
+			<div class="raw">
+				<div class="col-lg-5 col-sm-5 col-xs-5"></div>
+				<div>
+					<button class="form-button" type="submit">{% trans "Reset" %}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+
 {% endblock %}
 {% block js %}
 <script>
