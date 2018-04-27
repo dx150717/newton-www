@@ -15,27 +15,45 @@
                 <thead>
                     <tr class="success">
                         <th><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;All</th>
-                        <th>Name</th>
-                        <th>Country</th>
-                        <th>Email Address</th>
-                        <th>Boolean Pass KYC</th>
+                        <th>姓名</th>
+                        <th>ID</th>
+                        <th>How</th>
+                        <th>What</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                            <th><input type="checkbox"> check </th>
-                            <th><a href="/newtonadmin/kyc/step-one/">my test</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">China</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">test@test.com</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">False</a></th>
-                        </tr>
-                        <tr>
-                            <th><input type="checkbox"> check </th>
-                            <th><a href="/newtonadmin/kyc/step-one/">my test</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">China</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">test@test.com</a></th>
-                            <th><a href="/newtonadmin/kyc/step-one/">False</a></th>
-                        </tr>
+                    {% for item in id_list %}
+                    <tr>
+                        <td>
+                            <input type="checkbox" /> check
+                        </td>
+                        <td>
+                            {{ item.first_name }}&nbsp;{{ item.last_name }}
+                        </td>
+                        <td>
+                            <img src=""/>
+                        </td>
+                        
+                        <td>
+                            {{ item.how_to_contribute }}
+                        </td>
+                        
+                        <td>
+                            {{ item.what_is_newton }}
+                        </td>
+
+                        <td>
+                            <p>
+                                <a class="btn btn-default" href="/newtonadmin/kyc/confirm-id/{{ item.user.id }}/?pass_kyc=1">通过</a>
+                            </p>
+                            
+                            <p>
+                                <a class="btn btn-default" href="/newtonadmin/kyc/confirm-id/{{ item.user.id }}/?pass_kyc=0">拒绝</a>
+                            </p>
+                        </td>
+                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
