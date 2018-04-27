@@ -22,10 +22,6 @@ from django.forms.models import model_to_dict
 from utils import security
 from utils import http
 from config import codes
-from auth import services as auth_services
-from pusher import services as pusher_services
-from operation import services as operation_services
-from upgrade.models import Upgrade
 from config import settings_label
 
 logger = logging.getLogger(__name__)
@@ -81,75 +77,6 @@ def auth_required(func):
         return http.JsonErrorResponse(codes.ErrorCode.UNAUTH.value)
     return _decorator
 
-def company_auth_required(func):
-    def _decorator(request, *args, **kwargs):
-        auth_token = request.POST.get('auth_token')
-        user = auth_services.check_auth_token(auth_token)
-        request.user = user
-        if user:
-            if hasattr(request.user, 'userprofile'):
-                if request.user.userprofile.user_type == codes.UserType.COMPANY.value:
-                    try:
-                        request.user = User.objects.get(id=user.id)
-                        if request.user.is_active == True:
-                            return func(request, *args, **kwargs)
-                    except Exception, e:
-                        logger.error(str(e))
-                else:
-                    return http.JsonErrorResponse(error_message=u'您未注册企业。')
-        return HttpResponse('Unauthorized', status=401)
-    return _decorator
-
-def company_login_required(func):
-    def _decorator(request, *args, **kwargs):
-        from company import models as company_models
-        if hasattr(request.user, 'userprofile') and request.user.userprofile.user_type == codes.UserType.COMPANY.value:
-            try:
-                company = company_models.Company.objects.filter(administrator=request.user).first()
-                if not company:
-                    if not request.path.startswith('/company/register/profile'):
-                        return redirect('/company/register/profile/')
-                else:
-                    if company.status == codes.StatusCode.BLOCK.value:
-                        return redirect('/company/block/')
-                    if company.status == codes.StatusCode.REJECT.value:
-                        return redirect('/company/register/profile/')
-                    elif company.status != codes.StatusCode.RELEASE.value:
-                        return redirect('/company/register/waiting/')
-                    company_ukey = kwargs.get('company_ukey', None)
-                    if company_ukey:
-                        if str(company.ukey) != company_ukey:
-                            return redirect('/company/')
-                    request.user.company = company
-            except Exception, inst:
-                return redirect("/company/login/")
-            return func(request, *args, **kwargs)
-        return redirect(settings.COMPANY_LOGIN_URL)
-    return _decorator
-
-def worker_login_required(func):
-    def _decorator(request, *args, **kwargs):
-        from user import models as user_models
-        if hasattr(request.user, 'userprofile') and request.user.userprofile.user_type == codes.UserType.PERSONAL.value:
-            try:
-                worker = user_models.UserProfile.objects.filter(user=request.user).first()
-                if not worker:
-                    return redirect('/worker/register/')
-                else:
-                    if worker.status == codes.StatusCode.BLOCK.value:
-                        return redirect('/worker/block/')
-                    username = kwargs.get('username', None)
-                    if username:
-                        if str(worker.user.username) != username:
-                            return redirect('/worker/')
-                    request.user.userprofile = worker
-            except Exception, inst:
-                return redirect("/worker/login/")
-            return func(request, *args, **kwargs)
-        return redirect(settings.WORKER_LOGIN_URL)
-    return _decorator
-
-
 def admin_user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIELD_NAME):
     """
     Decorator for views that checks that the user passes the given test,
@@ -195,58 +122,3 @@ def admin_permission_required(perm, login_url=None, raise_exception=False):
         # As the last resort, show the login form
         return False
     return admin_user_passes_test(check_perms)
-
-def log_require(func):
-    def _decorator(request, *args, **kwargs):
-        try:
-            version = request.POST.get('version')
-            channel_id = request.POST.get("channel_id")
-            device_id = request.POST.get('device_id')
-            device_info = request.POST.get('device_info')
-            os_type = request.POST.get('os')
-            ios_device_token = request.POST.get('device_token')
-            channel_type = request.REQUEST.get('channel_type', codes.PusherProvider.GETUI.value)
-            auth_token = request.POST.get('auth_token')
-            if not auth_token:
-                user = None
-            else:
-                user = auth_services.check_auth_token(auth_token)
-            pusher_services.store_pusher_data(os_type, device_id, user, channel_id, version, ios_device_token=ios_device_token, channel_type=channel_type, device_info=device_info)
-        except Exception, e:
-            logger.exception("log require error: %s" % str(e))
-        return func(request, *args, **kwargs)
-    return _decorator
-
-
-def check_upgrade(func):
-    def decorator(request, *args, **kwargs):
-        try:
-            os_type = request.POST['os']
-            version = request.POST['version']
-            is_valid_platform = True
-            if os_type == 'ios':
-                platform_type = codes.AppPlatform.IOS.value
-            elif os_type == 'android':
-                platform_type = codes.AppPlatform.ANDROID.value
-            else:
-                is_valid_platform = False
-                logger.error('check_upgrade: invalid platform type %s' % os_type)
-            if is_valid_platform:
-                cache_key = '%s-%s' % (settings.CACHE_KEY_CHECK_UPGRADE, platform_type)
-                upgrade_cache = cache.get(cache_key)
-                if not upgrade_cache:
-                    upgrade = Upgrade.objects.filter(status=codes.StatusCode.AVAILABLE.value, is_show=True,
-                                                 platform_type = platform_type).order_by('-created_at').first()
-                    if upgrade:
-                        upgrade_cache = model_to_dict(upgrade, fields=['version_code', 'download_url', ])
-                        upgrade_cache['version'] = upgrade.version_name
-                        upgrade_cache['is_force_upgrade'] = upgrade.is_force
-                        upgrade_cache['is_show'] = upgrade.is_show
-                        upgrade_cache['message'] = str(upgrade.description)
-                        cache.set(cache_key, upgrade_cache)
-                if upgrade_cache and upgrade_cache.get('is_show') and upgrade_cache.get('version') and upgrade_cache.get('version') > version and upgrade_cache.get('is_force_upgrade'):
-                    return http.JsonErrorResponse(codes.ErrorCode.UPGRADE.value, data=upgrade_cache)
-        except Exception, inst:
-            logger.error("force upgrade required: %s", inst)
-        return func(request, *args, **kwargs)
-    return decorator
