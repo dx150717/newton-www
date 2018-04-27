@@ -69,15 +69,7 @@ def verify_email_link(request):
         # check whether the given link is expired
         if now > expire_time:
             return http.HttpResponseRedirect('/register/invalid-link/')
-        # create user
-        username = security.generate_uuid()
-        user = User.objects.create_user(username, email)
-        user.set_password(username)
-        user.save()
-        user_profile = user_models.UserProfile.objects.create(user=user)
-        user = authenticate(username=email, password=username)
-        login(request, user)
-        return http.HttpResponseRedirect('/register/password/')
+        return http.HttpResponseRedirect('/register/password/?uuid=%s' %str(uuid))
     except Exception, inst:
         logger.exception('fail to verify email link: %s' % str(inst))
         return http.HttpResponseServerError()
@@ -85,22 +77,40 @@ def verify_email_link(request):
 def show_invalid_link_view(request):
     return render(request, 'register/invalid-link.html', locals())    
 
-@login_required
+
 def show_password_view(request):
     form = forms.PasswordForm()
+    uuid = request.GET['uuid']
     return render(request, 'register/password.html', locals())
 
-@login_required
+
 @decorators.http_post_required
 def submit_password(request):
     try:
+        # check uuid
+        uuid = request.POST['uuid']
+        verification = services.get_register_verification_by_uuid(uuid)
+        if not verification:
+            return http.HttpResponseRedirect('/register/invalid-link/')
+        email = verification.email_address
+        # check form
         form = forms.PasswordForm(request.POST)
         if not form.is_valid():
             return render(request, 'resiter/password.html', locals())
-        user = request.user
         password = form.cleaned_data['password']
+        repassword = form.cleaned_data['repassword']
+        # check password
+        if password != repassword:
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords differ')])
+            return render(request, 'register/password.html', locals())
+        # create user
+        username = security.generate_uuid()
+        user = User.objects.create_user(username, email)
         user.set_password(password)
         user.save()
+        user_profile = user_models.UserProfile.objects.create(user=user)
+        user = authenticate(username=email, password=password)
+        login(request, user)
         return http.HttpResponseRedirect('/user/')
     except Exception, inst:
         logger.exception("fail to submit password: %s" % str(inst))

@@ -10,6 +10,6 @@ urlpatterns = patterns('',
                        url(r'^post-fail/', views.show_post_email_fail_view, name="show_post_email_fail_view"),
                        url(r'^verify/', views.verify_email_link, name="verify_email_link"),
                        url(r'^invalid-link/', views.show_invalid_link_view, name="show_invalid_link_view"),
-                       url(r'^password/', views.show_password_view, name="show_password_view"),
+                       url(r'^password/$', views.show_password_view, name="show_password_view"),
                        url(r'^password/submit/', views.submit_password, name="submit_password"),
 )

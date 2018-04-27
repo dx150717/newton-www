@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 from django.utils.timezone import utc
 from django.conf import settings
+from django.forms.forms import NON_FIELD_ERRORS
 
 from utils import http
 from utils import security
@@ -31,8 +32,8 @@ def post_email(request):
         email = form.cleaned_data['email']
         user = User.objects.filter(email=email).first()
         if not user:
-            # no user TODO tips: 
-            return http.HttpResponseRedirect('/reset/post-fail/')
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Email not existed')])
+            return render(request,'reset/index.html', locals())
         is_send_success = services.send_reset_validate_email(email, request)
         if not is_send_success:
             return http.HttpResponseRedirect('/reset/post-fail/')
@@ -63,7 +64,7 @@ def verify_email_link(request):
         user = User.objects.filter(email=email).first()
         if not user:
             return http.HttpResponseRedirect('/reset/invalid-link/')
-        return http.HttpResponseRedirect('/reset/reset-password/')
+        return http.HttpResponseRedirect('/reset/reset-password/?uuid=%s' %str(uuid))
     except Exception, inst:
         logger.exception("fail to verify reset link: %s" % str(inst))
         return http.HttpResponseRedirect('/reset/invalid-link/')
@@ -73,22 +74,32 @@ def show_invalid_link_view(request):
 
 def show_reset_password_view(request):
     form = forms.PasswordForm()
+    uuid = request.GET['uuid']
     return render(request,'reset/edit_password.html', locals())
 
 @decorators.http_post_required
 def post_password(request):
     try:
+        uuid = request.POST['uuid']
+        # check verification
+        verification = services.get_reset_verification_by_uuid(uuid)
+        if not verification:
+            return http.HttpResponseRedirect('/reset/invalid-link/')
+        email = verification.email_address
+        # check user
+        user = User.objects.filter(email=email).first()
+        if not user:
+            return http.HttpResponseRedirect('/reset/invalid-link/')
+        #check form
         form = forms.PasswordForm(request.POST)
         if not form.is_valid():
             return render(request,'reset/edit_password.html', locals()) 
         password = form.cleaned_data['password']
         repassword = form.cleaned_data['repassword']
+        #check password
         if password != repassword:
-            return http.HttpResponseRedirect('/reset/post-fail/')
-        id = request.user.id
-        user = User.objects.filter(id=id).first()
-        if not user:
-            return http.HttpResponseRedirect('/reset/post-fail/')
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords differ')])
+            return render(request,'reset/edit_password.html', locals())
         user.set_password(password)
         user.save()
         return http.HttpResponseRedirect('/login/')
