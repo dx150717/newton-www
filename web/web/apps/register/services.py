@@ -31,6 +31,6 @@ def send_register_validate_email(email, request):
         return False
         
 def get_register_verification_by_uuid(uuid):
-    return services.generate_verification_uuid(uuid)
+    return services.get_verification_by_uuid(uuid)
     
     
