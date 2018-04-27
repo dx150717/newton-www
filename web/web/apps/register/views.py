@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
+import datetime
 
 from django.conf import settings
 from django.shortcuts import render,redirect
@@ -38,13 +39,12 @@ def submit_email(request):
         user = User.objects.filter(email=email).first()            
         if user:
             return http.JsonErrorResponse(error_message=_("Email had Register!"))
-        is_send_success = services.send_register_validate_email(email)
+        is_send_success = services.send_register_validate_email(email, request)
         if not is_send_success:
-            return http.HttpResponseServerError()
+            return http.HttpResponseRedirect('/register/post-fail/')
         else:
             return http.HttpResponseRedirect('/register/post-success/')
     except Exception, inst:
-        print(str(inst))
         logger.exception('fail to submit email: %s' % str(inst))
         return http.HttpResponseServerError()
 
@@ -54,8 +54,29 @@ def show_post_email_success_view(request):
 def show_post_email_fail_view(request):
     return render(request, 'register/post-fail.html', locals())
 
+@decorators.http_get_required
 def verify_email_link(request):
-    return http.HttpResponseRedirect('/register/password/')
+    try:
+        uuid = request.GET['uuid']
+        verification = services.get_register_verification_by_uuid(uuid)
+        if not verification:
+            return http.HttpResponseRedirect('/register/post-fail/')
+        email = verification['email_address']
+        expire_time = verification['expire_time']
+        now = datetime.datetime.now()
+        # check expire time TODO return expire time html
+        if now > expire_time:
+            return http.HttpResponseRedirect('/register/post-fail/')
+        # create user
+        user = User.objects.create_user(username=uuid, email=email)
+        profile = user_models.UserProfile(user=user)
+        profile.save()
+        return http.HttpResponseRedirect('/register/password/')
+    except Exception, inst:
+        print(str(inst))
+        logger.exception('fail to verify email link: %s' % str(inst))
+        return http.HttpResponseServerError()
+    
 
 def show_password_view(request):
     return render(request, 'register/password.html', locals())

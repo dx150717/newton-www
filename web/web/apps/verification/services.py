@@ -2,8 +2,10 @@
 
 """
 import logging
-import datetime
+from datetime import datetime
+from datetime import timedelta
 
+from django.conf import settings
 from utils import security
 from . import models
 
@@ -16,7 +18,12 @@ def generate_verification_uuid(email, email_type):
         # genreate uuid
         uuid = security.generate_uuid()
         # save db
-        verification = models.EmailVerification(email_address=email, uuid=uuid, email_type=email_type, expire_time=datetime.now())
+        expire_time = datetime.now() + timedelta(seconds=settings.VERIFICATION_DEFAULT_EXPIRE_TIME)
+        verification = models.EmailVerification()
+        verification.email_address = email
+        verification.uuid = uuid
+        verification.email_type = email_type
+        verification.expire_time = expire_time
         verification.save()
         # return result
         return verification

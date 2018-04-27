@@ -38,3 +38,6 @@ CART_CACHE_TIME = 3600 * 24 * 30
 
 # website meta
 BASE_NAME = 'newtonproject'
+
+# verification default expire time s
+VERIFICATION_DEFAULT_EXPIRE_TIME = 300
