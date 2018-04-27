@@ -10,9 +10,9 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
 from django.template import Template, Context, loader
+from django.contrib.auth.decorators import login_required
 
 import decorators
-
 from config import codes
 from utils import http
 from utils import security
@@ -60,26 +60,45 @@ def verify_email_link(request):
         uuid = request.GET['uuid']
         verification = services.get_register_verification_by_uuid(uuid)
         if not verification:
-            return http.HttpResponseRedirect('/register/post-fail/')
+            return http.HttpResponseRedirect('/register/invalid-link/')
         email = verification.email_address
         expire_time = verification.expire_time
         now = datetime.datetime.now()
-        # check expire time TODO return expire time html
-        if delta_time.total_seconds() < 0:
-            return http.HttpResponseRedirect('/register/post-fail/')
+        # check whether the given link is expired
+        if now > expire_time:
+            return http.HttpResponseRedirect('/register/invalid-link/')
         # create user
-        user = User.objects.create_user(username=uuid, email=email)
-        profile = user_models.UserProfile(user=user)
-        profile.save()
+        username = security.generate_uuid()
+        user = User.objects.create_user(username, email, password=username)
+        user_profile = user_models.UserProfile.objects.create(user=user)
+        user = authenticate(username=email, password=username)
+        login(request, user)
         return http.HttpResponseRedirect('/register/password/')
     except Exception, inst:
         logger.exception('fail to verify email link: %s' % str(inst))
         return http.HttpResponseServerError()
-    
 
+def show_invalid_link_view(request):
+    return render(request, 'register/invalid-link.html', locals())    
+
+@login_required
 def show_password_view(request):
+    form = forms.PasswordForm()
     return render(request, 'register/password.html', locals())
 
+@login_required
+@decorators.http_post_required
 def submit_password(request):
-    return http.HttpResponseRedirect('/user/')
+    try:
+        form = forms.PasswordForm(request.POST)
+        if not form.is_valid():
+            return render(request, 'resiter/password.html', locals())
+        user = request.user
+        password = form.cleaned_data['password']
+        user.set_password(password)
+        user.save()
+        return http.HttpResponseRedirect('/user/')
+    except Exception, inst:
+        logger.exception("fail to submit password: %s" % str(inst))
+        return http.HttpResponseServerError()
  

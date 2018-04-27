@@ -37,7 +37,8 @@ LOGGING = {
     },
     'loggers': {
         '': {
-            'handlers': ['file'],
+            'handlers': ['file', 'console'],
+            'propagate': True,
             'level': 'DEBUG',
         },
         'django': {
