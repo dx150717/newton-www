@@ -9,60 +9,55 @@ def kyc_admin(request):
     return render(request, "newtonadmin/kycindex.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_id_confirm(request):
-    return render(request, "newtonadmin/kyc-id-confirm.html", locals())
+def show_filter_id_list_view(request):
+    return render(request, "newtonadmin/filter-id-list.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_amount_confirm(request):
-    return render(request, "newtonadmin/kyc-amount-confirm.html", locals())
+def show_filter_amount_list_view(request):
+    return render(request, "newtonadmin/filter-amount-list.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_email_confirm(request):
-    return render(request, "newtonadmin/kyc-email-confirm.html", locals())
+def show_filter_email_list_view(request):
+    return render(request, "newtonadmin/filter-email-list.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_email_list(request):
-    return render(request, "newtonadmin/kyc-email-list.html", locals())
+def show_email_list_view(request):
+    return render(request, "newtonadmin/email-list.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_step_one(request):
-    return render(request, "newtonadmin/kyc-step-one.html", locals())
+def show_filter_id_detail_view(request):
+    return render(request, "newtonadmin/filter-id-detail.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_step_two(request):
-    return render(request, "newtonadmin/kyc-step-two.html", locals())
+def show_filter_amount_detail_view(request):
+    return render(request, "newtonadmin/filter-amount-detail.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_step_three(request):
-    return render(request, "newtonadmin/kyc-step-three.html", locals())
+def show_filter_email_detail_view(request):
+    return render(request, "newtonadmin/filter-email-detail.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_update_id(request):
+def comfirm_id(request):
     update_info = "Update Successed!"
-    return render(request, "newtonadmin/kyc-step-one.html", locals())
+    return render(request, "newtonadmin/filter-id-detail.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_update_amount(request):
+def comfirm_amount(request):
     update_info = "Update Successed!"
-    return render(request, "newtonadmin/kyc-step-two.html", locals())
+    return render(request, "newtonadmin/filter-amount-detail.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_update_email(request):
+def comfirm_email(request):
     update_info = "Send Successed!"
-    return render(request, "newtonadmin/kyc-step-three.html", locals())
+    return render(request, "newtonadmin/filter-email-detail.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_send_one_email(request):
+def send_batch_email(request):
     update_info = "Send Successed!"    
-    return render(request, "newtonadmin/kyc-step-three.html", locals())
+    return render(request, "newtonadmin/kycindex.html", locals())
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_send_email(request):
-    update_info = "Send Successed!"    
-    return render(request, "newtonadmin/kycindex.html", locals());
-
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def kyc_export_csv(request):
+def export_csv(request):
     update_info = "Export Successed!"
     return render(request, "newtonadmin/kycindex.html", locals());
 
