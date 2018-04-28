@@ -20,9 +20,8 @@ def show_user_index_view(request):
     id = request.user.id
     profile = models.UserProfile.objects.filter(user_id=id).first()
     if not profile:
-        return render(request, "/login/", locals())
+        return http.HttpResponseRedirect("/login/")
     form = forms.UserProfileForm(instance=profile)
-    print(str(form.as_table()))
     return render(request, "user/index.html", locals()) 
 
 @login_required
