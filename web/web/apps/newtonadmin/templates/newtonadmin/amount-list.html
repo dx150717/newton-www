@@ -1,0 +1,89 @@
+{% extends "newtonadmin/base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="faq" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <table class="table">
+                <caption class="text-center">确定额度</caption>
+                <thead>
+                    <tr class="success">
+                        <th><input type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;All</th>
+                        <th>姓名</th>
+                        <th>介绍</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            <input type="checkbox" /> check
+                        </td>
+                        <td>
+                            <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
+                            <p>{{ item.user.email }}</p>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">分配额度</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="amount_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">分配额度</h4>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="/newtonadmin/kyc/amount/confirm/" id="amount_form">
+                    <p>
+                        <label>BTC额度</label>
+                        <input type="number" name="min_btc_limit" value="" placeholder="最小限额" />&nbsp;-&nbsp;
+                        <input type="number" name="max_btc_limit" value="" placeholder="最大限额" />
+                    </p>
+                    
+                    <p>
+                        <label>ELA额度</label>
+                        <input type="number" name="min_ela_limit" value="" placeholder="最小限额"/>&nbsp;-&nbsp;
+                        <input type="number" name="max_ela_limit" value="" placeholder="最大限额"/>
+                    </p>
+                    
+                    <p>
+                        <input type="hidden" id="user_id" name="user_id" value=""/>
+                        <button class="btn btn-default" type="button" id="confirm_button">确定</button>
+                    </p>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->             
+
+{% endblock %}
+
+{% block inline_js %}
+<script language="javascript">
+function popupWindow(user_id) {
+  $('#user_id').val(user_id);
+  $('#amount_modal').modal('show');
+  $('#confirm_button').click(function(event){
+    event.preventDefault();
+    $('#amount_form').submit();
+  });
+}
+</script>
+{% endblock %}

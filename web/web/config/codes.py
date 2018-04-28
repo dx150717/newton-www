@@ -83,3 +83,7 @@ class KYCStatus(Enum):
     CANCEL = 3
     DISTRIBUTE = 4
     SEND = 5
+
+class FundPhase(Enum):
+    PRIVATE = 1
+    PUBLIC = 2

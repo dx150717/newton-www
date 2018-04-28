@@ -11,31 +11,37 @@
     <div class="container">
         <div class="raw table-responsive content">
             <table class="table">
-                <caption class="text-center">KYC Admin Email-List</caption>
+                <caption class="text-center">发送额度邮件</caption>
                 <thead>
                     <tr class="success">
                         <th><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;All</th>
-                        <th>Name</th>
-                        <th>Country</th>
-                        <th>Email Address</th>
-                        <th>Boolean Pass KYC</th>
+                        <th>姓名</th>
+                        <th>介绍</th>
+                        <th>分配收币地址</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                            <th><input type="checkbox"> check </th>
-                            <th><a href="/newtonadmin/kyc/step-three/">my test</a></th>
-                            <th><a href="/newtonadmin/kyc/step-three/">China</a></th>
-                            <th><a href="/newtonadmin/kyc/step-three/">test@test.com</a></th>
-                            <th><a href="/newtonadmin/kyc/step-three/">False</a></th>
-                        </tr>
-                        <tr>
-                            <th><input type="checkbox"> check </th>
-                            <th><a href="/newtonadmin/kyc/step-three/">my test</a></th>
-                            <th><a href="/newtonadmin/kyc/step-three/">China</a></th>
-                            <th><a href="/newtonadmin/kyc/step-three/">test@test.com</a></th>
-                            <th><a href="/newtonadmin/kyc/step-three/">False</a></th>
-                        </tr>
+                    {% for item in items %}
+                    <tr>
+                        <td><input type="checkbox"> check </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <p>
+                                <label>BTC:</label>{{ item.receive_btc_address }}
+                            </p>
+                            <p>
+                                <label>ELA:</label>{{ item.receive_ela_address }}
+                            </p>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-default" onclick="javascript:send_email({{ item.user.id }});">发送</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
