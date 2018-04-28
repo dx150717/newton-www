@@ -71,6 +71,9 @@ class JobType(Enum):
 class EmailType(Enum):
     REGISTER = 1
     RESET = 2
+    KYC_ID_CONFIRM = 3
+    KYC_LIMIT_CONFIRM = 4
+    KYC_RECEIVE_AMOUNT_CONFIRM = 5
 
 class ConstructionType(Enum):
     UNKNOWN = 1
