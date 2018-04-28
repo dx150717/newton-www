@@ -8,7 +8,8 @@ from utils import storage
 from config import codes
 
 class KYCInfo(models.Model):
-    user = models.OneToOneField(User)
+    user = models.ForeignKey(User)
+    phase_id = models.IntegerField(default=codes.FundPhase.PRIVATE.value)
     first_name = models.CharField(max_length=200, verbose_name=_('First Name'))
     last_name = models.CharField(max_length=200, verbose_name=_('Last Name'))
     location = models.CharField(max_length=1000, verbose_name=_('Address'))
@@ -19,11 +20,19 @@ class KYCInfo(models.Model):
     what_is_newton = models.TextField(verbose_name=_('Tell us your understanding about Newton'))
     btc_address = models.CharField(max_length=200, verbose_name=_('Original Address - The BTC address you are contributing from'))
     ela_address = models.CharField(max_length=200, verbose_name=_('Original Address - The ELA address you are contributing from'))
-    max_btc_limit = models.FloatField(default=0)
-    max_ela_limit = models.FloatField(default=0)
-    min_btc_limit = models.FloatField(default=0)
-    min_ela_limit = models.FloatField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.KYCStatus.CANDIDATE.value, db_index=True)
 
+class DistributionInfo(models.Model):
+    user = models.ForeignKey(User)
+    phase_id = models.IntegerField(default=codes.FundPhase.PRIVATE.value)
+    max_btc_limit = models.FloatField(default=0)
+    max_ela_limit = models.FloatField(default=0)
+    min_btc_limit = models.FloatField(default=0)
+    min_ela_limit = models.FloatField(default=0)
+    receive_btc_address = models.CharField(max_length=128, unique=True)
+    receive_ela_address = models.CharField(max_length=128, unique=True)    
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)

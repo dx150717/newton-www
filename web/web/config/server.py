@@ -65,3 +65,6 @@ CELERYD_HIJACK_ROOT_LOGGER = False
 CELERY_IMPORTS = ('tasks.task_email')
 
 CHINA_COUNTRY_CALLING_CODE = '86'
+# wallet settings
+BTC_WALLET_ADDRESS_FILE = 'btc-wallet.txt'
+ELA_WALLET_ADDRESS_FILE = 'ela-wallet.txt'
