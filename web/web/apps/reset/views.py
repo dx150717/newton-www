@@ -55,6 +55,10 @@ def verify_email_link(request):
         verification = services.get_reset_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/reset/invalid-link/')
+        #check link status
+        verification_status = verification.status
+        if verification_status != codes.StatusCode.AVAILABLE.value:
+            return http.HttpResponseRedirect('/reset/invalid-link/')
         email = verification.email_address
         expire_time = verification.expire_time
         now = datetime.datetime.utcnow().replace(tzinfo=utc)
@@ -85,6 +89,10 @@ def post_password(request):
         verification = services.get_reset_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/reset/invalid-link/')
+            #check link status
+        verification_status = verification.status
+        if verification_status != codes.StatusCode.AVAILABLE.value:
+            return http.HttpResponseRedirect('/reset/invalid-link/')
         email = verification.email_address
         # check user
         user = User.objects.filter(email=email).first()
@@ -102,6 +110,9 @@ def post_password(request):
             return render(request,'reset/edit_password.html', locals())
         user.set_password(password)
         user.save()
+        # set link valid
+        verification.status = codes.StatusCode.CLOSE.value
+        verification.save()
         return http.HttpResponseRedirect('/login/')
     except Exception, inst:
         logger.exception("fail to reset password: %s" %str(inst))

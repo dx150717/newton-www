@@ -63,6 +63,10 @@ def verify_email_link(request):
         verification = services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/invalid-link/')
+            #check link status
+        verification_status = verification.status
+        if verification_status != codes.StatusCode.AVAILABLE.value:
+            return http.HttpResponseRedirect('/register/invalid-link/')
         email = verification.email_address
         expire_time = verification.expire_time
         now = datetime.datetime.utcnow().replace(tzinfo=utc)
