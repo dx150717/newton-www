@@ -1,4 +1,4 @@
-{% extends "user/user-base.html" %}
+{% extends "base.html" %}
 {% load i18n %}
 {% load utils %}
 
@@ -6,14 +6,55 @@
 {% trans "user" %}
 {% endblock %}
 
-{% block left_content %}
+{% block content %}
 <section id="user" class="section-list">
-    <div class="panel panel-default" style="border-color: #ddd;">
-        <div class="panel-body">
-            <p class="text-center">
-                <a href="/kyc/" class="btn btn-button">购买NEW</a>
-            </p>
+    <div class="page-title">
+        <div class="container header">
+            <img class="header" src="{% version "images/default_avator.png" %}" alt="{% trans "Han Feng" %}"/>
+            <div class="name">
+                <p>hanfeng</p>
+            </div>
+            <div class="location">
+                <p><img src="{% version "images/location-icon.png" %}"/>山西</p>
+            </div>
         </div>
-    </div>     
-</section> 
+    </div>
+    <dvi class="bg-gray">
+        <div class="container">
+            <div class="sub-title">
+                <div class="sub-title-nav">
+                    <p><span>资料</span></p>
+                </div>
+            </div>
+        </div>
+    </dvi>
+    <div class="bg-gray-user">
+        <div class="container">
+            <div class="user-content bg-gray">
+                <div class="container">
+                    <div class="raw user-detail-content">
+                        <div class="col-md-8 user-info">
+                            <table>
+                                <thead>
+                                    <tr><td>基本信息</td></tr>
+                                </thead>
+                                <tbody>
+                                    {% for field in form %}
+                                    <tr>
+                                        <td>{{ field.label_tag }}</td>
+                                        <td class="gray td-value">{{ field.value }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="form-button" href="/user/profile/">修改</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

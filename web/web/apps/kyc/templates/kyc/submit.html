@@ -57,11 +57,10 @@
         <div class="raw">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                <form class="form" action="/kyc/post/" method="POST">
+                <form id="user_kyc_form" class="form" action="/kyc/post/" method="POST">
                     {% include "form.html" %}
                     <div class="raw">
-                        <div class="col-lg-5 col-sm-5 col-xs-5"></div>
-                        <div>
+                        <div class="text-center">
                             <button class="form-button" type="submit">{% trans "Submit" %}</button>
                         </div>
                     </div>

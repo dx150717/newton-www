@@ -9,8 +9,7 @@ from user.models import UserProfile
 from django.contrib.auth.forms import UserCreationForm
     
 class UserProfileForm(ModelForm):
-
-        
+    
     class Meta:
         model = UserProfile
-        fields = ['gender', 'homepage', 'location', 'country_code', 'cellphone', 'job_status', 'construction_mode', 'self_introduction', 'channel', 'birth_date']
+        fields = ['gender', 'homepage', 'location', 'country_code', 'cellphone', 'job_status', 'major', 'self_introduction', 'channel', 'birth_date']
