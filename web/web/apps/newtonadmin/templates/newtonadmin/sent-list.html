@@ -11,14 +11,14 @@
     <div class="container">
         <div class="raw table-responsive content">
             <table class="table">
-                <caption class="text-center">待发送额度邮件</caption>
+                <caption class="text-center">已发送额度邮件</caption>
                 <thead>
                     <tr class="success">
                         <th><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;All</th>
                         <th>姓名</th>
                         <th>介绍</th>
                         <th>分配收币地址</th>
-                        <th>操作</th>
+                        <th>发送时间</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,7 +38,7 @@
                             </p>
                         </td>
                         <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:sendMail({{ item.user.id }});">发送</a>
+                            {{ item.updated_at|date:"Y-m-d H:i:s"}}
                         </td>
                     </tr>
                     {% endfor %}
@@ -51,20 +51,4 @@
 {% endblock %}
 
 {% block inline_js %}
-<script language="javascript">
-  function sendMail(user_id) {
-    var data = {};
-    data.user_id = user_id;
-    $.post('/newtonadmin/kyc/email/confirm/', 
-           data, 
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-  }
-</script>
 {% endblock %}

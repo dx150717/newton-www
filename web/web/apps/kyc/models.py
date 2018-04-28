@@ -20,19 +20,14 @@ class KYCInfo(models.Model):
     what_is_newton = models.TextField(verbose_name=_('Tell us your understanding about Newton'))
     btc_address = models.CharField(max_length=200, verbose_name=_('Original Address - The BTC address you are contributing from'))
     ela_address = models.CharField(max_length=200, verbose_name=_('Original Address - The ELA address you are contributing from'))
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.KYCStatus.CANDIDATE.value, db_index=True)
-
-class DistributionInfo(models.Model):
-    user = models.ForeignKey(User)
-    phase_id = models.IntegerField(default=codes.FundPhase.PRIVATE.value)
+    # receive related information
     max_btc_limit = models.FloatField(default=0)
     max_ela_limit = models.FloatField(default=0)
     min_btc_limit = models.FloatField(default=0)
     min_ela_limit = models.FloatField(default=0)
     receive_btc_address = models.CharField(max_length=128, unique=True)
     receive_ela_address = models.CharField(max_length=128, unique=True)    
+    # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
+    status = models.IntegerField(default=codes.KYCStatus.CANDIDATE.value, db_index=True)

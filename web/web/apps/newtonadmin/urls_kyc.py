@@ -14,7 +14,7 @@ urlpatterns = patterns('',
                     url(r'^amount/confirm/', views_kyc.confirm_amount),
 
                     url(r'^email/$', views_kyc.show_email_list_view),
-                    url(r'^email/(?P<user_id>[0-9]+)/confirm/', views_kyc.confirm_email),
+                    url(r'^email/confirm/', views_kyc.confirm_email),
 
                     url(r'^sent/$', views_kyc.show_sent_list_view),                    
                     

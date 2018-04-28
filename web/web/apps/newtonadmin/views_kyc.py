@@ -67,7 +67,7 @@ def confirm_amount(request):
     
     """
     try:
-        form = forms.AmountForm(request.POST)
+        form = forms_kyc.AmountForm(request.POST)
         if not form.is_valid():
             return http.HttpResponseServerError()
         user_id = int(form.cleaned_data['user_id'])
@@ -80,21 +80,15 @@ def confirm_amount(request):
         ela_address = services_kyc.allocate_ela_address()
         if not btc_address or not ela_address:
             return http.HttpResponseServerError()
-        distribute_item = kyc_models.DistributionInfo.objects.filter(user__id=user_id, phase_id=settings.CURRENT_FUND_PHASE).first()
-        if not distribute_item:
-            distribute_item = kyc_models.DistributionInfo()
-            distribute_item.user_id = user_id
-            distribute_item.phase_id = settings.CURRENT_FUND_PHASE
-        distribute_item.min_btc_limit = min_btc_limit
-        distribute_item.max_btc_limit = max_btc_limit
-        distribute_item.min_ela_limit = min_ela_limit
-        distribute_item.max_ela_limit = max_ela_limit
-        distribute_item.receive_btc_address = btc_address
-        distribute_item.receive_ela_address = ela_address
-        distribute_item.save()
         # save status
         item = kyc_models.KYCInfo.objects.get(user__id=user_id, status=codes.KYCStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
         item.status = codes.KYCStatus.DISTRIBUTE.value
+        item.min_btc_limit = min_btc_limit
+        item.max_btc_limit = max_btc_limit
+        item.min_ela_limit = min_ela_limit
+        item.max_ela_limit = max_ela_limit
+        item.receive_btc_address = btc_address
+        item.receive_ela_address = ela_address
         item.save()
         return redirect('/newtonadmin/kyc/amount/')
     except Exception, inst:
@@ -106,25 +100,45 @@ def show_email_list_view(request):
     """Show the investor list which we don't send the final email to
     
     """
-    return render(request, "newtonadmin/email-list.html", locals())
+    try:
+        items = kyc_models.KYCInfo.objects.filter(status=codes.KYCStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE)
+        return render(request, "newtonadmin/email-list.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show email list:%s" % str(inst))
+        return http.HttpResponseServerError()    
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def confirm_email(request, user_id):
+def confirm_email(request):
     """Determine whether send email to investor
     
     """
     try:
-        pass
+        user_id = int(request.POST['user_id'])
+        item = kyc_models.KYCInfo.objects.filter(user__id=user_id, status=codes.KYCStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE).first()
+        if not item:
+            logger.error("item is not found.")
+            return http.HttpResponseServerError()
+        if services_kyc.send_distribution_letter(item.user):
+            item.status = codes.KYCStatus.SENT.value
+            item.save()
+            return http.JsonSuccessResponse()
+        else:
+            return http.JsonErrorResponse()
     except Exception, inst:
         logger.exception("fail to confirm email:%s" % str(inst))
-        return http.HttpResponseServerError()
+        return http.JsonErrorResponse()
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def show_sent_list_view(request):
     """Show the investor list which we have already sent the final email to
     
     """
-    return render(request, "newtonadmin/email-list.html", locals())
+    try:
+        items = kyc_models.KYCInfo.objects.filter(status=codes.KYCStatus.SENT.value, phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
+        return render(request, "newtonadmin/sent-list.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show sent list:%s" % str(inst))
+        return http.HttpResponseServerError()    
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def export_file(request):
