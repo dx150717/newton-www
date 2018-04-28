@@ -63,6 +63,10 @@ def verify_email_link(request):
         verification = services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/invalid-link/')
+            #check link status
+        verification_status = verification.status
+        if verification_status != codes.StatusCode.AVAILABLE.value:
+            return http.HttpResponseRedirect('/register/invalid-link/')
         email = verification.email_address
         expire_time = verification.expire_time
         now = datetime.datetime.utcnow().replace(tzinfo=utc)
@@ -92,6 +96,10 @@ def submit_password(request):
         verification = services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/invalid-link/')
+        #check link status
+        verification_status = verification.status
+        if verification_status != codes.StatusCode.AVAILABLE.value:
+            return http.HttpResponseRedirect('/register/invalid-link/')
         email = verification.email_address
         # check form
         form = forms.PasswordForm(request.POST)
@@ -111,7 +119,10 @@ def submit_password(request):
         user_profile = user_models.UserProfile.objects.create(user=user)
         user = authenticate(username=email, password=password)
         login(request, user)
-        return http.HttpResponseRedirect('/user/')
+        # set link valid
+        verification.status = codes.StatusCode.CLOSE.value
+        verification.save()
+        return http.HttpResponseRedirect('/user/profile/')
     except Exception, inst:
         logger.exception("fail to submit password: %s" % str(inst))
         return http.HttpResponseServerError()

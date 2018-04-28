@@ -83,6 +83,8 @@ h6, .f12 { font-size: 12px; }
 .section-list{ padding-top: 44px;}
 .color-3 { color: #000; }
 .bg-gray{ background-color: #f7f7f7}
+.bg-gray-user{background-color: #eeeeed;}
+.bg-white{ background-color: #fff;}
 /* Header and nav --------------------------------------------------- */
 .page-title{ height: 260px; background: #585858; text-align: center;}
 .page-title p {
@@ -104,6 +106,7 @@ h6, .f12 { font-size: 12px; }
 #copyright .page-title{background-color: #828282}
 #terms .page-title{background-color: #828282}
 #privacy .page-title{background-color: #828282}
+#user .page-title{background-color: #433e53;height: 344px;}
 #announcement .page-title{background-color:rgb(240, 211, 109);}
 #announcementdetail .page-title{background-color:rgb(240, 211, 109);}
 #faq .page-title{background-color: #5c8dbd;}
@@ -881,29 +884,254 @@ canvas { display: block; vertical-align: top; }
 #user .user .left{ padding-right: 30px;}
 #user .user .divider-vertical{width: 1px; height: 500px; background-color: #524e4e;margin-left: 30px; margin-right: 30px;}
 #user .user .left .item{padding: 10px; border-bottom: solid 1px #333;}
-
 #user .scrollable-content{height: 175px;overflow-y: auto; overflow-x: hidden; padding: 5px 10px; background-color: #f8f9fa; border: 1px solid #e8ebf0; margin-bottom: 21px;}
 #user .token-check-condition{height: 200px;}
 #user .col-12{display: flex;}
 #user .token-check-condition input{margin-right: 10px;}
-
+#user .header img{
+    margin-top: 260px;
+    width: 150px;
+    border-radius: 150px;
+}
+#user .header .name p{font-size: 24px; color: #282929; line-height: 24px; padding-top: 20px;}
+#user .header .location p{font-size: 18px; color: #282929; line-height: 18px; padding-top: 20px;}
+#user .header .location img{ width: 22px;margin-top: -5px; padding: 0;}
+#user .sub-title{height: 344px;}
+#user .sub-title .sub-title-nav{padding-top: 315px; text-align: center;}
+#user .sub-title .sub-title-nav p span{font-size: 20px; color: #282929; margin: 0; border-bottom: solid 2px #282929;}
+#user .user-content{ margin-top: 36px; margin-bottom: 80px;}
+#user .user-detail-content{padding: 34px 60px 60px 60px;}
+#user .user-detail-content table>thead>tr>td{font-size: 24px;color: #282929; padding-bottom: 32px;}
+#user .user-detail-content table>tbody>tr>td{font-size: 18px;color: #282929; padding-bottom: 32px;}
+#user .user-detail-content .gray{color: #b7b7b7;}
+#user .td-value{padding-left: 20px;}
+#user .user-info{margin-bottom: 60px;}
+#user .profile-title{padding-top: 80px;}
 #token .token-title{padding-top: 80px; font-size: 16px; color: #292929;}
 #token .token-summary{ padding-top: 60px;}
 #token .token-title h2{ font-size:48px; font-weight: normal; color: #292929;}
 #token .info p{font-size: 20px;}
 #token .item{ border: solid 1px #f7f7f7;padding: 10px;}
+#token .tr{ font-size: 24px; color: #292929; }
+#token .td{ font-size: 24px; color: #6c7f88; }
 #token .token-content{padding-top: 120px;padding-bottom: 60px;}
 #token .token-form{padding-bottom: 80px; padding-top: 80px;}
-#token label{width: 100%; padding-left: 0px; font-size: 18px; color: #292929;}
+#user_kyc_form label{width: 100%; padding-left: 0px; font-size: 18px; color: #292929; font-weight: 350;}
+#user_kyc_form input{border: unset; border-bottom: solid 1px #282929;-webkit-box-shadow: none; border-radius: 0;font-size: 16px; height: 43px; padding-left: 0;}
 
 /*
  * kyc
  */
 .sub-level-page{padding-top: 120px;}
+#user-header .user .active{display: none;}
 #kyc {margin-top: 80px}
 #kyc h4{ font-size: 20px; font-weight: normal; color: #292929}
 #kyc pre{ background-color: #fff; margin-bottom: 20px;}
 #kyc .col-sm-6{padding-left: 0px;}
 #kyc input[type=checkbox], input[type=radio]{width: 22px; height: 22px;;}
 #kyc .token-check-condition label span{font-size: 16px; color: #292929;}
+
+/*
+ *
+ */
+.field{
+--uiFieldPaddingTop: var(--fieldPaddingTop, 0px);
+--uiFieldPaddingRight: var(--fieldPaddingRight, 0px);
+--uiFieldPaddingBottom: var(--fieldPaddingBottom, 0px);
+--uiFieldPaddingLeft: var(--fieldPaddingLeft, 0px);
+
+--uiFieldBorderColor: var(--fieldBorderColor, transpatent);
+--uiFieldBorderTop: var(--fieldBorderTop, 0px);
+--uiFieldBorderRight: var(--fieldBorderRight, 0px);
+--uiFieldBorderBottom: var(--fieldBorderBottom, 0px);
+--uiFieldBorderLeft: var(--fieldBorderLeft, 0px);
+
+--uiFieldBgColor: var(--fieldBgColor, transpatent);
+--uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+--uiFieldAnimationDuration: var(--fieldAnimationDuration, .3s);
+--uiFieldFonstSize: var(--fieldFontSize, 16px);
+position: relative;  
+}
+.field__input{
+width: 100%;
+box-sizing: border-box;
+background-color: var(--uiFieldBgColor);
+
+/* for iOS */
+-webkit-appearance: none;
+    -moz-appearance: none;
+        appearance: none;
+border-radius: 0;
+border-style: solid;
+border-color: var(--uiFieldBorderColor);
+border-top-width: var(--uiFieldBorderTop);
+border-right-width: var(--uiFieldBorderRight);
+border-bottom-width: var(--uiFieldBorderBottom);
+border-left-width: var(--uiFieldBorderLeft);
+padding-top: var(--uiFieldPaddingTop);
+padding-right: var(--uiFieldPaddingRight);
+padding-bottom: var(--uiFieldPaddingBottom);
+padding-left: var(--uiFieldPaddingLeft);
+font-family: inherit;
+font-size: 100%;
+color: inherit;
+}
+
+.field__input::-webkit-input-placeholder{ 
+color: var(--uiFieldPlaceholderColor);
+opacity: 0;
+}
+
+.field__input::-moz-placeholder{ 
+color: var(--uiFieldPlaceholderColor);
+opacity: 0;
+}
+
+.field__input:focus{
+outline: none;  
+}
+
+.field__input:focus::-webkit-input-placeholder{ 
+-webkit-transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration); 
+transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration);
+opacity: 1;
+}
+
+.field__input:focus::-moz-placeholder{ 
+-webkit-transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration); 
+transition: opacity var(--uiFieldAnimationDuration) ease-out var(--uiFieldAnimationDuration);
+opacity: 1;
+}
+
+.field__label{
+position: absolute;
+top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
+left: calc(0px + var(--uiFieldPaddingLeft) + var(--uiFieldBorderLeft));
+
+pointer-events: none;
+font-size: .9em;
+
+-webkit-transition: top var(--uiFieldAnimationDuration) cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-out;
+
+transition: top var(--uiFieldAnimationDuration) cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity var(--uiFieldAnimationDuration) ease-out;
+will-change: top, opacity;
+}
+
+.field__input:not(:placeholder-shown) ~ .field__label{
+opacity: 0;
+top: calc(0px + var(--uiFieldPaddingTop) + var(--uiFieldBorderTop));
+}
+
+.field__input:focus ~ .field__label{
+opacity: 1;
+top: calc(-1 * calc(var(--uiFieldPaddingTop) + var(--uiFieldBorderTop) + 15px));
+}
+
+/* type1 */
+.field_type1{
+--uiFieldPaddingTop: var(--fieldPaddingTop, 15px);
+--uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+--uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
+--uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);
+
+--uiFieldBorderTop: var(--fieldBorderTop, 2px);
+--uiFieldBorderRight: var(--fieldBorderRight, 2px);
+--uiFieldBorderBottom: var(--fieldBorderBottom, 2px);
+--uiFieldBorderLeft: var(--fieldBorderLeft, 2px);  
+}
+
+.field_type1 .field__input{  
+-webkit-transition: border-color var(--uiFieldAnimationDuration) ease-out;  
+transition: border-color var(--uiFieldAnimationDuration) ease-out;
+will-change: border-color;
+}
+
+.field_type1 .field__input:focus{
+--uiFieldBorderColor: var(--fieldBorderColorActive);
+}
+
+/* type 2 */
+
+.field_type2{
+--uiFieldBorderBottom: var(--fieldBorderBottom, 2px);
+--uiFieldPaddingTop: var(--fieldPaddingTop, 5px);
+--uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+--uiFieldPaddingBottom: var(--fieldPaddingBottom, 10px);
+--uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);  
+}
+
+.field_type2 .field__line{
+    width: 0;
+    height: var(--uiFieldBorderBottom);
+    background-color: var(--fieldBorderColorActive);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    will-change: width;
+    -webkit-transition: width var(--uiFieldAnimationDuration) ease-out;
+    transition: width var(--uiFieldAnimationDuration) ease-out;
+}
+
+.field_type2 .field__input:focus ~ .field__line{
+    width: 100%;
+}
+
+/* type 3 */
+
+.field_type3{
+    --uiFieldBorderBottom: var(--fieldBorderBottom, 2px);
+    --uiFieldPaddingTop: var(--fieldPaddingTop, 5px);
+    --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+    --uiFieldPaddingBottom: var(--fieldPaddingBottom, 10px);
+    --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);  
+}
+
+.field_type3 .field__line{
+    width: 100%;
+    height: var(--uiFieldBorderBottom);
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.field_type3 .field__line:before, .field_type3 .field__line:after{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: var(--fieldBorderColorActive);
+    position: absolute;
+    bottom: 0;
+    will-change: width;
+    -webkit-transition: width var(--uiFieldAnimationDuration) ease-out;
+    transition: width var(--uiFieldAnimationDuration) ease-out;
+}
+
+.field_type3 .field__line:before{
+    left: 50%;
+}
+
+.field_type3 .field__line:after{
+    right: 50%;
+}
+
+.field_type3 .field__input:focus ~ .field__line:before,
+.field_type3 .field__input:focus ~ .field__line:after{
+    width: 50%;
+}
+
+/*
+* demo styles
+*/
+.field{
+    --fieldBorderColor: #fff;
+    --fieldBorderColorActive: #fbc2eb;
+    --fieldPlaceholderColor: #fff;
+    display: block;
+    color: #fff;
+}
+.field_type1{
+}
 
