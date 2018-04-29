@@ -27,7 +27,7 @@ def show_join_tokensale_view(request):
 def post_kyc_information(request):
     try:
         # TODO twice submit tokensale info need check.
-        form = forms.KYCInfoForm(request.POST)
+        form = forms.KYCInfoForm(request.POST, request.FILES)
         if not form.is_valid():
             return render(request, "tokensale/submit.html", locals())
         instance = form.save(commit=False)

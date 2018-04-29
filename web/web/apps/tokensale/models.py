@@ -13,7 +13,7 @@ class KYCInfo(models.Model):
     first_name = models.CharField(max_length=200, verbose_name=_('First Name'))
     last_name = models.CharField(max_length=200, verbose_name=_('Last Name'))
     location = models.CharField(max_length=1000, verbose_name=_('Address'))
-    id_card = models.ImageField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='idcard'), verbose_name=_('ID'))
+    id_card = models.ImageField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name=_('ID'))
     expect_btc = models.FloatField(default=0, verbose_name=_('How much do you want to contribute in BTC'))
     expect_ela = models.FloatField(default=0, verbose_name=_('How much do you want to contribute in ELA'))
     how_to_contribute = models.TextField(verbose_name=_('Describe yourself & how you can help as a community member'))
