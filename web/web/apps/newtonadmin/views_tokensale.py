@@ -35,7 +35,7 @@ def confirm_id(request):
         if not form.is_valid():
             return http.HttpResponseServerError()
         user_id = int(form.cleaned_data['user_id'])
-        pass_tokensale = int(form.cleaned_data['pass_tokensale'])
+        pass_tokensale = int(form.cleaned_data['pass_kyc'])
         level = int(form.cleaned_data['level'])
         item = tokensale_models.KYCInfo.objects.get(user__id=user_id, status=codes.KYCStatus.CANDIDATE.value, phase_id=settings.CURRENT_FUND_PHASE)
         if pass_tokensale:
@@ -44,10 +44,10 @@ def confirm_id(request):
         else:
             item.status = codes.KYCStatus.CANCEL.value
         item.save()
-        return redirect('/newtonadmin/tokensale/id/')
+        return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to confirm id:%s" % str(inst))
-        return http.HttpResponseNotFound()        
+        return http.JsonErrorResponse()        
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def show_amount_list_view(request):
@@ -69,7 +69,7 @@ def confirm_amount(request):
     try:
         form = forms_tokensale.AmountForm(request.POST)
         if not form.is_valid():
-            return http.HttpResponseServerError()
+            return http.JsonErrorResponse()
         user_id = int(form.cleaned_data['user_id'])
         min_btc_limit = int(form.cleaned_data['min_btc_limit'])
         max_btc_limit = int(form.cleaned_data['min_btc_limit'])
@@ -79,7 +79,7 @@ def confirm_amount(request):
         btc_address = services_tokensale.allocate_btc_address()
         ela_address = services_tokensale.allocate_ela_address()
         if not btc_address or not ela_address:
-            return http.HttpResponseServerError()
+            return http.JsonErrorResponse()
         # save status
         item = tokensale_models.KYCInfo.objects.get(user__id=user_id, status=codes.KYCStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
         item.status = codes.KYCStatus.DISTRIBUTE.value
@@ -90,10 +90,10 @@ def confirm_amount(request):
         item.receive_btc_address = btc_address
         item.receive_ela_address = ela_address
         item.save()
-        return redirect('/newtonadmin/tokensale/amount/')
+        return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to confirm amount:%s" % str(inst))
-        return http.HttpResponseServerError()    
+        return http.JsonErrorResponse()    
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def show_email_list_view(request):
@@ -117,7 +117,7 @@ def confirm_email(request):
         item = tokensale_models.KYCInfo.objects.filter(user__id=user_id, status=codes.KYCStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE).first()
         if not item:
             logger.error("item is not found.")
-            return http.HttpResponseServerError()
+            return http.JsonErrorResponse()
         if services_tokensale.send_distribution_letter(item.user):
             item.status = codes.KYCStatus.SENT.value
             item.save()

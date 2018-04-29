@@ -14,7 +14,6 @@
                 <caption class="text-center">确定额度</caption>
                 <thead>
                     <tr class="success">
-                        <th><input type="checkbox" />&nbsp;&nbsp;&nbsp;&nbsp;All</th>
                         <th>姓名</th>
                         <th>介绍</th>
                         <th>操作</th>
@@ -24,13 +23,20 @@
                     {% for item in items %}
                     <tr>
                         <td>
-                            <input type="checkbox" /> check
-                        </td>
-                        <td>
                             <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
                             <p>{{ item.user.email }}</p>
                         </td>
-                        <td></td>
+                        <td>
+                            <p>
+                                <img src="{{ item.id_card.url }}"/>
+                            </p>
+                            <p>
+                                {{ item.how_to_contribute }}                                
+                            </p>
+                            <p>
+                                {{ item.what_is_newton }}
+                            </p>
+                        </td>
                         <td>
                             <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">分配额度</a>
                         </td>
@@ -50,17 +56,17 @@
                 <h4 class="modal-title">分配额度</h4>
             </div>
             <div class="modal-body">
-                <form method="POST" action="/newtonadmin/tokensale/amount/confirm/" id="amount_form">
+                <form method="POST" action="#" id="amount_form">
                     <p>
                         <label>BTC额度</label>
-                        <input type="number" name="min_btc_limit" value="" placeholder="最小限额" />&nbsp;-&nbsp;
-                        <input type="number" name="max_btc_limit" value="" placeholder="最大限额" />
+                        <input type="number" name="min_btc_limit" id="min_btc_limit" value="0" placeholder="最小限额" />&nbsp;-&nbsp;
+                        <input type="number" name="max_btc_limit"id="max_btc_limit"  value="0" placeholder="最大限额" />
                     </p>
                     
                     <p>
                         <label>ELA额度</label>
-                        <input type="number" name="min_ela_limit" value="" placeholder="最小限额"/>&nbsp;-&nbsp;
-                        <input type="number" name="max_ela_limit" value="" placeholder="最大限额"/>
+                        <input type="number" name="min_ela_limit" id="min_ela_limit" value="0" placeholder="最小限额"/>&nbsp;-&nbsp;
+                        <input type="number" name="max_ela_limit" id="max_ela_limit" value="0" placeholder="最大限额"/>
                     </p>
                     
                     <p>
@@ -82,7 +88,22 @@ function popupWindow(user_id) {
   $('#amount_modal').modal('show');
   $('#confirm_button').click(function(event){
     event.preventDefault();
-    $('#amount_form').submit();
+    var data = {};
+    data.min_btc_limit = $('#min_btc_limit').val();
+    data.max_btc_limit = $('#max_btc_limit').val();
+    data.min_ela_limit = $('#min_ela_limit').val();
+    data.max_ela_limit = $('#max_ela_limit').val();
+    data.user_id = user_id;
+    $.post('/newtonadmin/tokensale/amount/confirm/', 
+           data, 
+           function(json){
+             if (json['error_code'] == 1) {
+               alert('success');
+               location.reload();
+             } else {
+               alert(json['error_message']);
+             }
+           });
   });
 }
 </script>
