@@ -90,3 +90,7 @@ class KYCStatus(Enum):
 class FundPhase(Enum):
     PRIVATE = 1
     PUBLIC = 2
+
+class CurrencyType(Enum):
+    BTC = 1
+    ELA = 2
