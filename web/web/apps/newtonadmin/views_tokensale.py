@@ -149,6 +149,6 @@ def show_receive_list_view(request):
         items = tokensale_models.AddressTransaction.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
         return render(request, "newtonadmin/receive-list.html", locals())
     except Exception, inst:
-        logger.exception("fail to show sent list:%s" % str(inst))
+        logger.exception("fail to show receive list:%s" % str(inst))
         return http.HttpResponseServerError()    
 

@@ -51,3 +51,14 @@ def post_kyc_information(request):
 @login_required
 def show_wait_audit_view(request):
     return render(request, "tokensale/wait-audit.html", locals())
+
+@login_required
+def show_receive_address_view(request, username):
+    try:
+        user = User.objects.get(username=username)
+        item = tokensale_models.KYCInfo.objects.get(phase_id=settings.CURRENT_FUND_PHASE, user=user)
+        return render(request, "tokensale/receive-address.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show receive address:%s" % str(inst))
+        return http.HttpResponseServerError()
+ 
