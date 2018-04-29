@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-26 16:23+0800\n"
+"POT-Creation-Date: 2018-04-29 21:09+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -644,43 +644,57 @@ msgstr "邮件："
 msgid ""
 "WhitePager : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
-msgstr "白皮书 ：<a href='mailto:newton-whitepaper@newtonproject.org'>newton-whitepaper@newtonproject.org</a>"
+msgstr ""
+"白皮书 ：<a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
+"whitepaper@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:25
 msgid ""
 "Global Community : <a href='mailto:newton-community@newtonproject."
 "org'>newton-community@newtonproject.org</a>"
-msgstr "全球社区 ：<a href='mailto:newton-community@newtonproject.org'>newton-community@newtonproject.org</a>"
+msgstr ""
+"全球社区 ：<a href='mailto:newton-community@newtonproject.org'>newton-"
+"community@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:26
 msgid ""
 "Newton Token Exchange : <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
-msgstr "牛顿通证（Newton Token）交换：<a href='mailto:newton-ir@newtonproject.org'>newton-ir@newtonproject.org</a>"
+msgstr ""
+"牛顿通证（Newton Token）交换：<a href='mailto:newton-ir@newtonproject."
+"org'>newton-ir@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:27
 msgid ""
 "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
-msgstr "公共关系 ：<a href='mailto:newton-pr@newtonproject.org'>newton-pr@newtonproject.org</a>"
+msgstr ""
+"公共关系 ：<a href='mailto:newton-pr@newtonproject.org'>newton-"
+"pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:28
 msgid ""
 "Newton Fund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
-msgstr "牛顿资本 ：<a href='mailto:newton-fund@newtonproject.org'>newton-fund@newtonproject.org</a>"
+msgstr ""
+"牛顿资本 ：<a href='mailto:newton-fund@newtonproject.org'>newton-"
+"fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:29
 msgid ""
 "Council : <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
-msgstr "理事会 ：<a href='mailto:newton-council@newtonproject.org'>newton-council@newtonproject.org</a>"
+msgstr ""
+"理事会 ：<a href='mailto:newton-council@newtonproject.org'>newton-"
+"council@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:30
 msgid ""
 "Other Contacts : <a href='mailto:contact@newtonproject."
 "org'>contact@newtonproject.org</a>"
-msgstr "其他 ：<a href='mailto:contact@newtonproject.org'>contact@newtonproject.org</a>"
+msgstr ""
+"其他 ：<a href='mailto:contact@newtonproject.org'>contact@newtonproject.org</"
+"a>"
 
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
@@ -1532,7 +1546,7 @@ msgstr "职位描述："
 
 #: web/apps/welcome/templates/welcome/joinus.html:61
 msgid "Being responsible for the design and development of the Newton system."
-msgstr "负责牛顿系统的设计与研发工作;"
+msgstr "负责Newton系统的设计与研发工作;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:62
 msgid ""
@@ -1557,13 +1571,13 @@ msgid ""
 msgstr "大学本科以上学历.，计算机科学或相关专业毕业;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:67
-msgid "More than 5 years of system development experience."
-msgstr "5年以上系统研发工作经验;"
+msgid "More than 5 years of software development experience."
+msgstr "5年以上软件研发工作经验;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:68
 msgid ""
-"Skilled in a variety of programming languages (C#, Java, Go, C++, Kotlin)."
-msgstr "熟练使用多种编程语言（C#，Java，Go，C++，Kotlin);"
+"Skilled in a variety of programming languages (Java，Go，C++，Rust，Kotlin)."
+msgstr "熟练使用多种编程语言（Java，Go，C++，Rust，Kotlin);"
 
 #: web/apps/welcome/templates/welcome/joinus.html:69
 msgid ""
@@ -1593,8 +1607,8 @@ msgid "Distributed network system development experience."
 msgstr "有分布式网络系统研发经验。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:77
-msgid "Recruitment number: 2 people "
-msgstr "招聘人数：2人 "
+msgid "Recruitment number: 5 people "
+msgstr "招聘人数：5人 "
 
 #: web/apps/welcome/templates/welcome/joinus.html:78
 #: web/apps/welcome/templates/welcome/joinus.html:120
@@ -1617,14 +1631,17 @@ msgid "Payments: Salary to be discussed"
 msgstr "薪酬范围：面议"
 
 #: web/apps/welcome/templates/welcome/joinus.html:80
-#: web/apps/welcome/templates/welcome/joinus.html:122
 #: web/apps/welcome/templates/welcome/joinus.html:162
 #: web/apps/welcome/templates/welcome/joinus.html:197
 #: web/apps/welcome/templates/welcome/joinus.html:235
 #: web/apps/welcome/templates/welcome/joinus.html:276
 #: web/apps/welcome/templates/welcome/joinus.html:314
-msgid "Contact:<a>newton-hr@newtonproject.org</a>"
-msgstr "联系方式：<a>newton-hr@newtonproject.org</a>"
+msgid ""
+"Contact:<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject."
+"org</a>"
+msgstr ""
+"联系我们 ：<a href='mailto:newton-pr@newtonproject.org'>newton-"
+"pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/joinus.html:91
 msgid "Blockchain Engineer"
@@ -1673,6 +1690,10 @@ msgstr "一年及以上工作经验，有低延迟项目经历者优先;"
 #: web/apps/welcome/templates/welcome/joinus.html:113
 msgid "Computer Science or related degree."
 msgstr "计算机相关专业;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:122
+msgid "Contact:<a>newton-hr@newtonproject.org</a>"
+msgstr "联系方式：<a>newton-hr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/joinus.html:134
 msgid "Fullstack Web Developer"
