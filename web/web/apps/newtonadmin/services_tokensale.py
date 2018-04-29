@@ -5,7 +5,7 @@ import logging
 
 from django.conf import settings
 
-from kyc import models as kyc_models
+from tokensale import models as tokensale_models
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +23,7 @@ def allocate_btc_address():
     """
     try:
         all_address = __load_address_from_file(settings.BTC_WALLET_ADDRESS_FILE)
-        allocated_address = kyc_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_btc_address', flat=True)
+        allocated_address = tokensale_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_btc_address', flat=True)
         avaiable_address = list(set(all_address).difference(set(allocated_address)))
         if not avaiable_address:
             logger.error("not available BTC address")
@@ -38,7 +38,7 @@ def allocate_ela_address():
     """
     try:
         all_address = __load_address_from_file(settings.ELA_WALLET_ADDRESS_FILE)
-        allocated_address = kyc_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_ela_address', flat=True)
+        allocated_address = tokensale_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_ela_address', flat=True)
         avaiable_address = list(set(all_address).difference(set(allocated_address)))
         if not avaiable_address:
             logger.error("not available ELA address")

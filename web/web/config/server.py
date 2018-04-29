@@ -69,7 +69,7 @@ from datetime import timedelta
 CELERYBEAT_SCHEDULE = {
     'report-task-free-resource': {
         'task': 'tasks.task_blockchain.sync_blockchain_data',
-        'schedule': crontab(minute=60),        
+        'schedule': crontab(minute=30),        
     },
 }
 

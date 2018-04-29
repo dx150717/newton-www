@@ -10,5 +10,5 @@ urlpatterns = patterns('',
                     url(r'^login/$', views.show_login_view),
                     url(r'^login/post/$', views.post_login),
                     url(r'^logout/$', views.show_logout_view),
-                    url(r'^kyc/', include('newtonadmin.urls_kyc')),
+                    url(r'^tokensale/', include('newtonadmin.urls_tokensale')),
 )
