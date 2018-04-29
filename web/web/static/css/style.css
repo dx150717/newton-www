@@ -893,6 +893,7 @@ canvas { display: block; vertical-align: top; }
     width: 150px;
     border-radius: 150px;
 }
+
 #user .header .name p{font-size: 24px; color: #282929; line-height: 24px; padding-top: 20px;}
 #user .header .location p{font-size: 18px; color: #282929; line-height: 18px; padding-top: 20px;}
 #user .header .location img{ width: 22px;margin-top: -5px; padding: 0;}
@@ -922,6 +923,7 @@ canvas { display: block; vertical-align: top; }
 #user_kyc_form label{width: 100%; padding-left: 0px; font-size: 18px; color: #292929; font-weight: 350;}
 #user_kyc_form input{border: unset; border-bottom: solid 1px #282929;-webkit-box-shadow: none; border-radius: 0;font-size: 16px; height: 43px; padding-left: 0;}
 #user_kyc_form select{width: 30%;}
+#user_kyc_form #id_birth_date{width: 50%;}
 /*
  * kyc
  */
