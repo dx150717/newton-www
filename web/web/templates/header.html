@@ -37,8 +37,15 @@
 
                 <ul class="nav navbar-nav  navbar-right">
                     {% if request.user.is_authenticated %}
-                    <li>
-                        <a href="/user/">{% trans "User" %}</a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
+                            <span class="caret"></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="/user/profile/">{% trans "Edit Profile" %}</a></li>
+                            <li><a href="/logout/">{% trans "LogOut" %}</a></li>
+                            <li><a href="/user/settings/">{% trans "Settings" %}</a></li>
+                        </ul>
                     </li>
                     {% else %}
                     <li>

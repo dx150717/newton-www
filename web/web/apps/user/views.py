@@ -45,3 +45,9 @@ def post_profile(request):
     except Exception, inst:
         logger.exception("fail to post profile %s" %str(inst))
         return http.HttpResponseServerError()
+
+def show_settings_view(request):
+    return render(request, "user/settings.html", locals())
+
+def post_settings(request):
+    return render(request, "user/settings.html", locals())
