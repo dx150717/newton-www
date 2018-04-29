@@ -1,0 +1,55 @@
+{% extends "newtonadmin/base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="faq" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <table class="table">
+                <caption class="text-center">收币确认列表<span class="">(每30分钟自动查询一次)<span></caption>
+                <thead>
+                    <tr class="success">
+                        <th>姓名</th>
+                        <th>收币地址</th>
+                        <th>币种</th>
+                        <th>数量</th>
+                        <th>时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            {{ item.first_name }} &nbsp; {{ item.last_name }}
+                        </td>
+                        <td>
+                            {{ item.address }}
+                        </td>
+                        <td>
+                            {% ifequal item.address_type  1 %}
+                            BTC &nbsp;&nbsp;<a href="https://blockchain.info/address/{{ item.address }}">查询</a>
+                            {% endifequal %}
+                            {% ifequal item.address_type  2 %}
+                            BTC &nbsp;&nbsp;<a href="https://blockchain.elastos.org/address/{{ item.address }}">查询</a>
+                            {% endifequal %}
+                        </td>
+                        <td>
+                            {{ item.updated_at|date:"Y-m-d H:i:s"}}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

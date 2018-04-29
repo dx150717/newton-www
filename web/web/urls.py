@@ -45,7 +45,7 @@ urlpatterns = patterns('',
                        url(r'^login/',include('login.urls')),
                        url(r'^logout/',include('logout.urls')),
                        url(r'^user/',include('user.urls')),
-                       url(r'^kyc/',include('kyc.urls')),
+                       url(r'^tokensale/',include('tokensale.urls')),
                        url(r'^newtonadmin/',include('newtonadmin.urls')),
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),

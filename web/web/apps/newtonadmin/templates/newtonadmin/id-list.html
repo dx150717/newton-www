@@ -14,11 +14,8 @@
                 <caption class="text-center">审核身份</caption>
                 <thead>
                     <tr class="success">
-                        <th><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;All</th>
                         <th>姓名</th>
-                        <th>ID</th>
-                        <th>How</th>
-                        <th>What</th>
+                        <th>介绍</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -26,23 +23,21 @@
                     {% for item in items %}
                     <tr>
                         <td>
-                            <input type="checkbox" /> check
+                            <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
+                            <p>{{ item.user.email }}</p>
                         </td>
                         <td>
-                            {{ item.first_name }}&nbsp;{{ item.last_name }}
-                        </td>
-                        <td>
-                            <img src=""/>
+                            <p>
+                                <img src="{{ item.id_card.url }}"/>
+                            </p>
+                            <p>
+                                {{ item.how_to_contribute }}                                
+                            </p>
+                            <p>
+                                {{ item.what_is_newton }}
+                            </p>
                         </td>
                         
-                        <td>
-                            {{ item.how_to_contribute }}
-                        </td>
-                        
-                        <td>
-                            {{ item.what_is_newton }}
-                        </td>
-
                         <td>
                             <p>
                                 <a class="btn btn-default" href="#" onclick="javascript:popupWindow({{ item.user.id }})">审核</a>
@@ -64,10 +59,10 @@
                 <h4 class="modal-title">ID审核</h4>
             </div>
             <div class="modal-body">
-                <form method="POST" action="/newtonadmin/kyc/id/confirm/" id="id_form">
+                <form method="POST" action="#" id="id_form">
                     <p>
                         <label>评级</label>
-                        <select name="level">
+                        <select name="level" id="level">
                             <option value="1">普通</option>
                             <option value="2">良好</option>
                             <option value="3">优秀</option>
@@ -75,8 +70,6 @@
                     </p>
                     
                     <p>
-                        <input type="hidden" id="pass_kyc" name="pass_kyc" value=""/>
-                        <input type="hidden" id="user_id" name="user_id" value=""/>
                         <button class="btn btn-default" type="button" id="pass_button">通过</button>
                         <button class="btn btn-default" type="button" id="reject_button">拒绝</button>
                     </p>
@@ -95,13 +88,37 @@ function popupWindow(user_id) {
   $('#id-modal').modal('show');
   $('#pass_button').click(function(event){
     event.preventDefault();
-    $('#pass_kyc').val("1");
-    $('#id_form').submit();
+    var data = {};
+    data.pass_kyc = "1";
+    data.user_id = user_id;
+    data.level = $('#level').val();
+    $.post('/newtonadmin/tokensale/id/confirm/', 
+           data, 
+           function(json){
+             if (json['error_code'] == 1) {
+               alert('success');
+               location.reload();
+             } else {
+               alert(json['error_message']);
+             }
+           });
   });
   $('#reject_button').click(function(event){
     event.preventDefault();
-    $('#pass_kyc').val("0");
-    $('#id_form').submit();
+    var data = {};
+    data.pass_kyc = "0";
+    data.user_id = user_id;
+    data.level = $('#level').val();
+    $.post('/newtonadmin/tokensale/id/confirm/', 
+           data, 
+           function(json){
+             if (json['error_code'] == 1) {
+               alert('success');
+               location.reload();
+             } else {
+               alert(json['error_message']);
+             }
+           });
   });
 }
 </script>

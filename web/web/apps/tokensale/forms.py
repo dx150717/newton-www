@@ -2,11 +2,11 @@
 from django import forms
 from django.forms import ModelForm
 
-from kyc import models as kyc_models
+from tokensale import models as tokensale_models
 
 class KYCInfoForm(ModelForm):
     class Meta:
-        model = kyc_models.KYCInfo
+        model = tokensale_models.KYCInfo
         fields = [
             'first_name',
             'last_name',

@@ -22,7 +22,7 @@ def send_kyc_confirm_email(email, request):
         if not verification:
             return False
         subject = "NewtonProject Notifications: Please Confirm Newton KYC:"
-        template = loader.get_template("kyc/kyc-letter.html")
+        template = loader.get_template("tokensale/kyc-letter.html")
         context = Context({"request":request})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
