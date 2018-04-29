@@ -18,7 +18,10 @@ logger = logging.getLogger(__name__)
 @login_required
 def show_user_index_view(request):
     id = request.user.id
-    profile = models.UserProfile.objects.filter(user_id=id).first()
+    user = User.objects.filter(id=id).first()
+    if not user:
+        return http.HttpResponseRedirect("/login/")
+    profile = models.UserProfile.objects.filter(user=user).first()
     if not profile:
         return http.HttpResponseRedirect("/login/")
     form = forms.UserProfileForm(instance=profile)
