@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-21 20:53+0800\n"
+"POT-Creation-Date: 2018-04-29 13:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,9 +197,201 @@ msgstr "下一页"
 msgid "No FAQ"
 msgstr "暂无FAQ"
 
+#: web/apps/login/views.py:37
+msgid "No captcha"
+msgstr ""
+
+#: web/apps/login/views.py:44 web/apps/newtonadmin/views.py:42
+msgid "Email or Password don't match"
+msgstr ""
+
+#: web/apps/login/templates/login/index.html:6
+#: web/apps/login/templates/login/index.html:12
+#: web/apps/login/templates/login/index.html:29
+#: web/apps/newtonadmin/templates/newtonadmin/login.html:12
+#: web/apps/newtonadmin/templates/newtonadmin/login.html:21
+#: web/apps/zinnia/templates/zinnia/login.html:34
+#: web/templates/header-no-menu.html:31 web/templates/header.html:48
+msgid "Login"
+msgstr ""
+
+#: web/apps/login/templates/login/index.html:35
+#: web/apps/register/templates/register/index.html:6
+#: web/apps/register/templates/register/index.html:12
+#: web/apps/register/templates/register/index.html:21
+#: web/apps/register/templates/register/invalid-link.html:6
+#: web/apps/register/templates/register/post-fail.html:6
+#: web/apps/register/templates/register/post-success.html:6
+#: web/apps/register/templates/register/register-letter.html:46
+#: web/apps/reset/templates/reset/invalid-link.html:6
+#: web/apps/reset/templates/reset/reset-fail.html:6
+#: web/apps/reset/templates/reset/reset-success.html:6
+#: web/apps/tokensale/templates/tokensale/wait-audit.html:6
+#: web/templates/header-no-menu.html:28 web/templates/header.html:45
+msgid "Register"
+msgstr ""
+
+#: web/apps/login/templates/login/index.html:36
+msgid "Forget Password"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/kycindex.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/login.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/sent-list.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/welcome.html:6
+msgid "KYC Admin"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/base.html:11
+#: web/templates/base.html:10
+msgid ""
+"Newton-Infrastructure of protocol-based economy,We are committed to creating "
+"a decentralized protocol standards and development tool chains that can be "
+"used in the entire business process, including supply chain, marketing, "
+"payment, transaction, credit, finance and so on, thereby building a highly "
+"collaborative, fair and reasonable, highly automated business environment "
+"with lower cost and fewer conflicts."
+msgstr ""
+"牛顿-协议经济基础设施，牛顿致力于打造高效协作、低成本、高度自动化的商业基础协"
+"议生态系统。涵盖供应链、营销、支付、交易、信用、金融等商业全流程。"
+
+#: web/apps/newtonadmin/templates/newtonadmin/base.html:13
+#: web/templates/base.html:12
+msgid ""
+"Newton,NewtonProject,newtonproject.org,NewChain,NewNet,Protocol-based "
+"Economy,Atom Hashing,NewIOT,DAI,Hyper Exchange Protocol,Automatic finance,"
+"NNIO,Reliable physical tunnel,Digital Marketing,Supply Chain,Blockchain,"
+"Intelligent Contract,Open Source Community,Digital Assets,token"
+msgstr ""
+"牛顿，牛顿项目，newton,newtonproject.org，NewChain,NewNet,协议经济，原子哈希,"
+"NewIOT,DAI,超级交换协议，自金融，NNIO，可信物理通道，数字营销，供应链，区块"
+"链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
+
+#: web/apps/newtonadmin/templates/newtonadmin/base.html:14
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
+msgid "Newton"
+msgstr "牛顿"
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:44
+#, fuzzy
+msgid "Welcome! Please Confirm Your Register"
+msgstr "牛顿欢迎您！请确认您的订阅"
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:45
+msgid "Yes,I'll register newton"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:46
+#, fuzzy
+msgid "If you received this email by mistake, simply delete it."
+msgstr ""
+"如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
+"阅。"
+
 #: web/apps/press/models.py:21
 msgid "press"
 msgstr "媒体报道"
+
+#: web/apps/register/views.py:43
+#, fuzzy
+msgid "Email already existed"
+msgstr "邮箱已经存在！"
+
+#: web/apps/register/views.py:112 web/apps/reset/views.py:109
+msgid "Entered passwords differ"
+msgstr ""
+
+#: web/apps/register/templates/register/password.html:6
+#: web/apps/reset/templates/reset/edit_password.html:6
+#: web/apps/reset/templates/reset/index.html:6
+msgid "Repassword"
+msgstr ""
+
+#: web/apps/register/templates/register/password.html:12
+msgid "Set Password"
+msgstr ""
+
+#: web/apps/register/templates/register/password.html:22
+#: web/apps/tokensale/templates/tokensale/submit.html:62
+#: web/apps/user/templates/user/profile.html:23
+msgid "Submit"
+msgstr ""
+
+#: web/apps/register/templates/register/register-letter.html:38
+#, fuzzy
+msgid "Welcome! Please Register Newton!"
+msgstr "牛顿欢迎您！请确认您的订阅"
+
+#: web/apps/register/templates/register/register-letter.html:43
+#: web/apps/reset/templates/reset/reset-letter.html:43
+msgid "尊敬的用户："
+msgstr ""
+
+#: web/apps/register/templates/register/register-letter.html:44
+msgid ""
+"您好！这是一封来自 <a class='main-color' href='https://www.newtonproject."
+"org'>https://www.newtonproject.org</a> 的邮件，帮助您注册成为 Newton 会员，点"
+"击下方按钮进行下一步操作。"
+msgstr ""
+
+#: web/apps/register/templates/register/register-letter.html:47
+#: web/apps/reset/templates/reset/reset-letter.html:47
+msgid "如果您意外收到了这封邮件，请删除它。"
+msgstr ""
+
+#: web/apps/register/templates/register/register-letter.html:50
+#: web/apps/reset/templates/reset/reset-letter.html:50
+msgid "牛顿团队"
+msgstr ""
+
+#: web/apps/reset/views.py:35
+#, fuzzy
+msgid "Email not existed"
+msgstr "邮箱已经存在！"
+
+#: web/apps/reset/templates/reset/edit_password.html:12
+#: web/apps/reset/templates/reset/edit_password.html:22
+#: web/apps/reset/templates/reset/index.html:12
+#: web/apps/reset/templates/reset/index.html:21
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
+msgid "Reset"
+msgstr ""
+
+#: web/apps/reset/templates/reset/index.html:64
+#: web/apps/subscription/templates/subscription/include-subscription.html:63
+msgid "Subscribed Failed!"
+msgstr "订阅失败"
+
+#: web/apps/reset/templates/reset/index.html:71
+#: web/apps/subscription/views.py:58
+#: web/apps/subscription/templates/subscription/include-subscription.html:70
+msgid "Invalid Email Address!"
+msgstr "无效的邮箱地址！"
+
+#: web/apps/reset/templates/reset/index.html:76
+#: web/apps/subscription/templates/subscription/include-subscription.html:75
+msgid "Please Input Email Address!"
+msgstr "请输入邮箱地址！"
+
+#: web/apps/reset/templates/reset/reset-letter.html:38
+#, fuzzy
+msgid "Welcome! Please Reset Your Password!"
+msgstr "请输入邮箱地址！"
+
+#: web/apps/reset/templates/reset/reset-letter.html:44
+msgid ""
+"您好！这是一封来自 <a href='https://www.newtonproject.org'>https://www."
+"newtonproject.org</a> 的邮件，帮助您重置您的账户密码，点击下方按钮进行下一步"
+"操作。"
+msgstr ""
+
+#: web/apps/reset/templates/reset/reset-letter.html:46
+msgid "重置密码"
+msgstr ""
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -289,32 +481,27 @@ msgstr ""
 msgid "Subscribed emails"
 msgstr "订阅邮箱"
 
-#: web/apps/subscription/views.py:31
+#: web/apps/subscription/views.py:35
 msgid "You can only subscribe once per minute."
 msgstr "每分钟只能订阅一次。"
 
-#: web/apps/subscription/views.py:37
+#: web/apps/subscription/views.py:41
 msgid "Email Has Exist!"
 msgstr "邮箱已经存在！"
 
-#: web/apps/subscription/views.py:41 web/apps/subscription/views.py:50
+#: web/apps/subscription/views.py:45 web/apps/subscription/views.py:54
 msgid "we've sent you a confirming e-mail,please check your email box."
 msgstr "确认邮件已经发送到您的邮箱，请注意查收。"
 
-#: web/apps/subscription/views.py:43 web/apps/subscription/views.py:52
+#: web/apps/subscription/views.py:47 web/apps/subscription/views.py:56
 msgid "Subscribe Failed!"
 msgstr "订阅失败"
 
-#: web/apps/subscription/views.py:54
-#: web/apps/subscription/templates/subscription/include-subscription.html:70
-msgid "Invalid Email Address!"
-msgstr "无效的邮箱地址！"
-
-#: web/apps/subscription/views.py:72
+#: web/apps/subscription/views.py:76
 msgid "Links expire or invalid pages."
 msgstr "链接过期或者无效页面"
 
-#: web/apps/subscription/views.py:79
+#: web/apps/subscription/views.py:83
 msgid "NewtonProject Notifications: Please Confirm Subscription"
 msgstr "牛顿提醒：请确认您的订阅"
 
@@ -354,14 +541,6 @@ msgstr "订阅"
 msgid "We won't share your email address or send you any spam."
 msgstr "我们不会分享您的电子邮件地址或发送任何垃圾邮件。"
 
-#: web/apps/subscription/templates/subscription/include-subscription.html:63
-msgid "Subscribed Failed!"
-msgstr "订阅失败"
-
-#: web/apps/subscription/templates/subscription/include-subscription.html:75
-msgid "Please Input Email Address!"
-msgstr "请输入邮箱地址！"
-
 #: web/apps/subscription/templates/subscription/subscription-letter.html:44
 msgid "Welcome! Please Confirm Your Subscription"
 msgstr "牛顿欢迎您！请确认您的订阅"
@@ -378,95 +557,82 @@ msgstr ""
 "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
 "阅。"
 
-#: web/apps/user/templates/user/index.html:25
-msgid "全部课程"
+#: web/apps/tokensale/models.py:13
+msgid "First Name"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:28
-msgid "计划学习"
+#: web/apps/tokensale/models.py:14
+msgid "Last Name"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:31
-msgid "喜欢"
+#: web/apps/tokensale/models.py:15
+#, fuzzy
+msgid "Address"
+msgstr "邮箱地址"
+
+#: web/apps/tokensale/models.py:16
+#, fuzzy
+msgid "ID"
+msgstr "DAI"
+
+#: web/apps/tokensale/models.py:17
+msgid "How much do you want to contribute in BTC"
 msgstr ""
 
-#: web/apps/user/templates/user/menu.html:10
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:5
-msgid "个人简介"
+#: web/apps/tokensale/models.py:18
+msgid "How much do you want to contribute in ELA"
 msgstr ""
 
-#: web/apps/user/templates/user/menu.html:12
-#: web/apps/user/templates/user/user_edit_fragment_account.html:5
-msgid "账户"
+#: web/apps/tokensale/models.py:19
+msgid "Describe yourself & how you can help as a community member"
 msgstr ""
 
-#: web/apps/user/templates/user/user_edit.html:5
-msgid "帐号"
+#: web/apps/tokensale/models.py:20
+msgid "Tell us your understanding about Newton"
 msgstr ""
 
-#: web/apps/user/templates/user/user_edit_fragment_account.html:9
-msgid "电子邮件"
+#: web/apps/tokensale/models.py:21
+msgid "Original Address - The BTC address you are contributing from"
 msgstr ""
 
-#: web/apps/user/templates/user/user_edit_fragment_account.html:13
-msgid "输入电子邮件地址"
+#: web/apps/tokensale/models.py:22
+msgid "Original Address - The ELA address you are contributing from"
 msgstr ""
 
-#: web/apps/user/templates/user/user_edit_fragment_account.html:17
-msgid "密码"
+#: web/apps/tokensale/templates/tokensale/index.html:6
+#: web/apps/tokensale/templates/tokensale/submit.html:6
+msgid "KYC"
 msgstr ""
 
-#: web/apps/user/templates/user/user_edit_fragment_account.html:21
-msgid "输入当前密码"
+#: web/apps/tokensale/templates/tokensale/kyc-letter.html:44
+msgid "Welcome! Thank you for join Newon KYC"
 msgstr ""
 
-#: web/apps/user/templates/user/user_edit_fragment_account.html:25
-msgid "输入新密码"
+#: web/apps/tokensale/templates/tokensale/submit.html:20
+#, fuzzy
+msgid "Newton Token Sale"
+msgstr "牛顿团队"
+
+#: web/apps/user/templates/user/index.html:6
+#: web/apps/user/templates/user/profile.html:6
+#: web/apps/user/templates/user/user-base.html:6
+msgid "user"
 msgstr ""
 
-#: web/apps/user/templates/user/user_edit_fragment_account.html:29
-msgid "重复输入新密码"
-msgstr ""
+#: web/apps/user/templates/user/index.html:13
+#: web/apps/welcome/templates/welcome/include-advisor.html:19
+#: web/apps/welcome/templates/welcome/include-advisor.html:21
+#: web/apps/welcome/templates/welcome/include-investor.html:70
+#: web/apps/welcome/templates/welcome/include-investor.html:72
+msgid "Han Feng"
+msgstr "韩锋"
 
-#: web/apps/user/templates/user/user_edit_fragment_account.html:33
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:41
-msgid "保存"
-msgstr ""
+#: web/apps/user/templates/user/profile.html:13
+msgid "Edit Profile"
+msgstr "修改个人资料"
 
-#: web/apps/user/templates/user/user_edit_fragment_account.html:34
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:42
-msgid "取消"
-msgstr ""
-
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:11
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:12
-msgid "姓名"
-msgstr ""
-
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:16
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:17
-msgid "自我介绍"
-msgstr ""
-
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:21
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:22
-msgid "个人网站"
-msgstr ""
-
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:26
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:27
-#: web/templates/dialog.html:14
-msgid "QQ"
-msgstr ""
-
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:31
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:32
-msgid "微信"
-msgstr ""
-
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:36
-#: web/apps/user/templates/user/user_edit_fragment_profile.html:37
-msgid "微博"
+#: web/apps/verification/models.py:22
+msgid "Verification emails"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:6
@@ -870,13 +1036,6 @@ msgstr "基金会"
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
 msgid "ADVISOR"
 msgstr "顾问"
-
-#: web/apps/welcome/templates/welcome/include-advisor.html:19
-#: web/apps/welcome/templates/welcome/include-advisor.html:21
-#: web/apps/welcome/templates/welcome/include-investor.html:70
-#: web/apps/welcome/templates/welcome/include-investor.html:72
-msgid "Han Feng"
-msgstr "韩锋"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:23
 #: web/apps/welcome/templates/welcome/include-investor.html:74
@@ -1370,7 +1529,11 @@ msgstr ""
 msgid "Everyone should benefit directly from economic growth"
 msgstr "每一个人都应该在经济增长中受益"
 
-#: web/apps/welcome/templates/welcome/index.html:45
+#: web/apps/welcome/templates/welcome/index.html:17
+msgid "CountDown >>"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/index.html:48
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -1913,7 +2076,7 @@ msgid "支持超小额度支付；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:40
-msgid "极快的交易确认速度；"
+msgid "极快的交易确认速度。"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:50
@@ -1945,7 +2108,7 @@ msgid "支持内置应用购买；"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:65
-msgid "内置应用开发工具支持；"
+msgid "内置应用开发工具支持。"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/partner.html:6
@@ -4081,10 +4244,6 @@ msgstr ""
 msgid "Save as draft"
 msgstr ""
 
-#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
-msgid "Reset"
-msgstr ""
-
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:35
 msgid "Publish"
 msgstr ""
@@ -4470,10 +4629,6 @@ msgstr ""
 msgid "You need to be connected to view this entry."
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/login.html:34
-msgid "Login"
-msgstr ""
-
 #: web/apps/zinnia/templates/zinnia/password.html:4
 #: web/apps/zinnia/templates/zinnia/password.html:9
 msgid "Password required"
@@ -4513,10 +4668,6 @@ msgstr ""
 #: web/apps/zinnia/templates/zinnia/sitemap.html:23
 msgid "comment"
 msgstr ""
-
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
-msgid "Newton"
-msgstr "牛顿"
 
 #: web/apps/zinnia/templates/zinnia/skeleton.html:12
 msgid "Just another Zinnia weblog."
@@ -4828,29 +4979,6 @@ msgstr ""
 msgid "System Error."
 msgstr "系统错误"
 
-#: web/templates/base.html:10
-msgid ""
-"Newton-Infrastructure of protocol-based economy,We are committed to creating "
-"a decentralized protocol standards and development tool chains that can be "
-"used in the entire business process, including supply chain, marketing, "
-"payment, transaction, credit, finance and so on, thereby building a highly "
-"collaborative, fair and reasonable, highly automated business environment "
-"with lower cost and fewer conflicts."
-msgstr ""
-"牛顿-协议经济基础设施，牛顿致力于打造高效协作、低成本、高度自动化的商业基础协"
-"议生态系统。涵盖供应链、营销、支付、交易、信用、金融等商业全流程。"
-
-#: web/templates/base.html:12
-msgid ""
-"Newton,NewtonProject,newtonproject.org,NewChain,NewNet,Protocol-based "
-"Economy,Atom Hashing,NewIOT,DAI,Hyper Exchange Protocol,Automatic finance,"
-"NNIO,Reliable physical tunnel,Digital Marketing,Supply Chain,Blockchain,"
-"Intelligent Contract,Open Source Community,Digital Assets,token"
-msgstr ""
-"牛顿，牛顿项目，newton,newtonproject.org，NewChain,NewNet,协议经济，原子哈希,"
-"NewIOT,DAI,超级交换协议，自金融，NNIO，可信物理通道，数字营销，供应链，区块"
-"链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
-
 #: web/templates/dialog.html:8
 msgid "关闭"
 msgstr ""
@@ -4861,6 +4989,10 @@ msgstr ""
 
 #: web/templates/dialog.html:13
 msgid "新浪微博"
+msgstr ""
+
+#: web/templates/dialog.html:14
+msgid "QQ"
 msgstr ""
 
 #: web/templates/footer.html:8
@@ -4874,6 +5006,10 @@ msgstr "社区治理"
 #: web/templates/footer.html:47
 msgid "Service Terms"
 msgstr "服务条款"
+
+#: web/templates/header-no-menu.html:24 web/templates/header.html:41
+msgid "User"
+msgstr ""
 
 #: web/templates/header.html:22
 msgid "HEP"
@@ -4916,14 +5052,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "NewtonProject Notifications: Please Register"
 #~ msgstr "牛顿提醒：请确认您的订阅"
-
-#, fuzzy
-#~ msgid "Please Input your password"
-#~ msgstr "请输入邮箱地址！"
-
-#, fuzzy
-#~ msgid "DID"
-#~ msgstr "DAI"
 
 #~ msgid "Mission and Vision Statement"
 #~ msgstr "愿景"
