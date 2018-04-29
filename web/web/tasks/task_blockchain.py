@@ -20,12 +20,26 @@ def sync_blockchain_data():
             if item.receive_btc_address:
                 txs = __get_btc_transactions(item.receive_btc_address)
                 for txid, value in txs:
-                    pass
+                    if not kyc_models.AddressTransaction.objects.filter(txid=txid).first():
+                        instance = kyc_models.AddressTransaction()
+                        instance.user = item.user
+                        instance.phase_id = settings.CURRENT_FUND_PHASE
+                        instance.address = item.receive_btc_address
+                        instance.address_type = codes.CurrencyType.BTC.value
+                        instance.txid = txid
+                        instance.save()
             # ela
             if item.receive_ela_address:
                 txs = __get_ela_transactions(item.receive_ela_address)
                 for txid, value in txs:
-                    pass
+                    if not kyc_models.AddressTransaction.objects.filter(txid=txid).first():
+                        instance = kyc_models.AddressTransaction()
+                        instance.user = item.user
+                        instance.phase_id = settings.CURRENT_FUND_PHASE
+                        instance.address = item.receive_ela_address
+                        instance.address_type = codes.CurrencyType.ELA.value
+                        instance.txid = txid
+                        instance.save()
     except Exception, inst:
         logger.error("fail to sync blockchain data: %s" % str(inst))
 

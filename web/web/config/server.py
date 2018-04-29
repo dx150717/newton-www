@@ -62,7 +62,16 @@ BROKER_URL = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
 CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
 CELERYD_HIJACK_ROOT_LOGGER = False
-CELERY_IMPORTS = ('tasks.task_email')
+CELERY_IMPORTS = ('tasks.task_email', 'tasks.task_blockchain')
+
+from celery.schedules import crontab
+from datetime import timedelta
+CELERYBEAT_SCHEDULE = {
+    'report-task-free-resource': {
+        'task': 'tasks.task_blockchain.sync_blockchain_data',
+        'schedule': crontab(minute=60),        
+    },
+}
 
 CHINA_COUNTRY_CALLING_CODE = '86'
 # wallet settings
