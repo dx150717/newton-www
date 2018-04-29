@@ -37,7 +37,7 @@ def post_kyc_information(request):
             return render(request, "tokensale/submit.html", locals())
         # check whether user is submit kyc info
         instance = tokensale_models.KYCInfo.objects.filter(user=request.user, phase_id=settings.CURRENT_FUND_PHASE).first()
-        instance = form.save(commit=False, instance=instance)
+        instance = form.save(commit=False)
         instance.phase_id = settings.CURRENT_FUND_PHASE
         instance.user = request.user
         instance.save()

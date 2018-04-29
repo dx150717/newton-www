@@ -179,10 +179,11 @@ h6, .f12 { font-size: 12px; }
 .navbar-nav li { padding: 15px 0 15px 0;}
 .sticky-navigation.NavBg .navbar-header a{ margin-top: 9px;}
 .sticky-navigation.NavBg .navbar-nav li { padding: 6px 0 6px;}
-.sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li{ padding: 5px;}
+.sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li{ margin: 5px;}
 .sticky-navigation.NavBg .navbar-nav li a { color: #333; }
-.sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li a { color: #000; padding: 5px;}
+.sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li a { color: #000; margin: 5px;}
 .sticky-navigation.NavBg .iconfont{ color: #333; }
+.divider{background: #e5e5e5; height: 1px; padding: 0 !important;}
 .nav-logo { padding: 0px 10px; height: 30px; overflow: hidden; }
 .nav-logo:focus { outline: none; }
 .navbar { margin-bottom: 0px; }
@@ -909,7 +910,8 @@ canvas { display: block; vertical-align: top; }
 #user .user-edit-btn{padding: 60px;}
 #user .td-value{padding-left: 20px;}
 #user .user-info{margin-bottom: 60px;}
-#user .profile-title{padding-top: 80px;}
+#user .profile-title,
+#settings .profile-title{padding-top: 80px;}
 #token .token-title{padding-top: 80px; font-size: 16px; color: #292929;}
 #token .token-summary{ padding-top: 60px;}
 #token .token-title h2{ font-size:48px; font-weight: normal; color: #292929;}

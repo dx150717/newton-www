@@ -25,9 +25,10 @@
                             <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
                             <span class="caret"></span>
                         <ul class="dropdown-menu">
-                            <li><a href="/user/profile/">{% trans "Edit Profile" %}</a></li>
-                            <li><a href="/user/logout/">{% trans "LogOut" %}</a></li>
+                            <li><a href="/user/">{% trans "User Center" %}</a></li>
                             <li><a href="/user/settings/">{% trans "Settings" %}</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/user/logout/">{% trans "LogOut" %}</a></li>
                         </ul>
                     </li>
                     {% else %}
