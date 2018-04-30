@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC" %}
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="token" class="section-list">
+    <div class="token-title container text-center">
+        <h2>{% trans "Newton Token Sale" %}</h2>
+        <p class="token-summary">区块链代币交换的过程不是融资过程，是团队组建的过程。</p>
+    </div>
+    {% include "form.html" %}
+</section>
+{% endblock %}

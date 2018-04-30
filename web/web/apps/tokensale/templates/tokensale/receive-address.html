@@ -7,11 +7,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <p>比特币钱包地址：{{ item.receive_btc_address }}</p>
-    <p>比特币额度：{{ item.min_btc_limit }} - {{ item.max_btc_limit }}</p>
-</div>
+<section id="token" class="section-list">
+    <div class="token-title container text-center">
+            <p>比特币地址：{{ item.receive_btc_address }}</p>
+            <p>比特币额度：{{ item.min_btc_limit }} - {{ item.max_btc_limit }}</p>
+            <p>亦来币地址：{{ item.receive_ela_address }}</p>
+            <p>亦来币额度：{{ item.min_ela_limit }} - {{ item.max_ela_limit }}</p>
+    </div>
+</section>
 {% endblock %}
-
 {% block js %}
 {% endblock %}
