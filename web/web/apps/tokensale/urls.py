@@ -7,7 +7,6 @@ urlpatterns = patterns('',
 	url(r'^join/$', views.show_join_tokensale_view),
 	url(r'^post/$', views.post_kyc_information),
 	url(r'^wait-audit/$', views.show_wait_audit_view),
-	url(r'^verify/$', views.verify_email_link),
-	url(r'^limit-address/$', views.show_limit_and_address_view),
 	url(r'^invalid-link/$', views.show_invalid_link),
+	url(r'^(?P<username>[0-9a-z]+)/$', views.show_receive_address_view),
 )

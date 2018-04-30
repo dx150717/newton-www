@@ -98,3 +98,14 @@ def show_limit_and_address_view(request):
 
 def show_invalid_link(request):
     return render(request, "tokensale/invalid-link.html", locals())
+    
+@login_required
+def show_receive_address_view(request, username):
+    try:
+        user = User.objects.get(username=username)
+        item = tokensale_models.KYCInfo.objects.get(phase_id=settings.CURRENT_FUND_PHASE, user=user)
+        return render(request, "tokensale/receive-address.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show receive address:%s" % str(inst))
+        return http.HttpResponseServerError()
+ 
