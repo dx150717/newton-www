@@ -10,9 +10,6 @@
     background-color: #edf2fc;
     background: url("{% version 'images/mail_background.png' %}") no-repeat;
   }
-  @media (max-width:768px){
-    .mail{width: 100%;}
-  }
   .title{text-align: center; padding-top: 196px;}
   .title h1{color: #ffffff; margin: 0; font-size: 2em;}
   .content{margin-top: 144px;}
@@ -22,6 +19,9 @@
   .end{ text-align: right;}
   .main-color{ color: #6a80b6;}
   .form-button{ display:inline-block; width: 264px; height: 48px; border-radius: 20px; font-size:14px; background-color: #6a80b6; text-align:center; color:#fff; line-height:48px;}
+  @media (max-width:768px){
+    .mail{width: 100%;}
+  }
 </style>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -43,14 +43,14 @@
     </div>
     <div class="content">
       <div class="container">
-        <p class="main-color">{% trans "尊敬的用户：" %}</p>
-        <p class="main-color">{% trans "您好！这是一封来自 <a href='https://www.newtonproject.org'>https://www.newtonproject.org</a> 的邮件，帮助您重置您的账户密码，点击下方按钮进行下一步操作。" %}</p>
+        <p class="main-color">{% trans "Dear:" %}</p>
+        <p class="main-color">{% trans "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your newton password, click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>" %}</p>
         <div class="link-button">
-          <a class="form-button" href="{{ targetUrl }}">{% trans "重置密码" %}</a>
-          <p class="link-warn">{% trans "如果您意外收到了这封邮件，请删除它。" %}</p>
+          <a class="form-button" href="{{ targetUrl }}">{% trans "Reset" %}</a>
+          <p class="link-warn">{% trans "If you received this email by mistake, simply delete it." %}</p>
         </div>
         <div class="end">
-          <p class="main-color">{% trans "牛顿团队" %}</p>
+          <p class="main-color">{% trans "Newton" %}</p>
         </div>
       </div>
     </div>
