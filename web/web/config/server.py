@@ -4,6 +4,8 @@ __version__ = '$Rev$'
 __doc__ = """  """
 
 import os
+import datetime
+from . import codes
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # database
@@ -77,3 +79,8 @@ CHINA_COUNTRY_CALLING_CODE = '86'
 # wallet settings
 BTC_WALLET_ADDRESS_FILE = 'btc-wallet.txt'
 ELA_WALLET_ADDRESS_FILE = 'ela-wallet.txt'
+
+# fund settings
+CURRENT_FUND_PHASE = codes.FundPhase.PRIVATE.value
+FUND_START_DATE = datetime.datetime(2018, 4, 29, 0, 0)
+FUND_END_DATE = datetime.datetime(2018, 4, 30, 0, 0)
