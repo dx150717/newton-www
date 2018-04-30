@@ -4,8 +4,12 @@
 import logging
 
 from django.conf import settings
+from django.template import Template, Context, loader
 
+from verification import services
+from tasks import task_email
 from tokensale import models as tokensale_models
+from config import codes
 
 logger = logging.getLogger(__name__)
 
@@ -48,9 +52,25 @@ def allocate_ela_address():
         logger.exception("fail to allocate ELA address:%s" % str(inst))
         return None
 
-def send_distribution_letter(user):
+def send_distribution_letter(email, request):
     try:
-        
+        # build the email body
+        email_type = codes.EmailType.KYC_EMAIL_CONFIRM.value
+        verification = services.generate_verification_uuid(email, email_type)
+        if not verification:
+            return False
+        target_url = "%s/tokensale/verify/?uuid=%s" % (settings.BASE_URL, str(verification.uuid))
+        subject = "NewtonProject Notifications: KYC information is confirmed:"
+        template = loader.get_template("tokensale/tokensale-letter.html")
+        context = Context({"targetUrl":target_url,"request":request})
+        html_content = template.render(context)
+        from_email = settings.FROM_EMAIL
+        # send
+        task_email.send_email.delay(subject, html_content, from_email, [email])
+        return True
+    except Exception, inst:
+        logger.exception("fail to send the register validate email:%s" % str(inst))
+        return False
         return True
     except Exception, inst:
         logger.exception("fail to send distribution letter:%s" % str(inst))

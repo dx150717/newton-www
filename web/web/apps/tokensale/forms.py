@@ -17,3 +17,12 @@ class KYCInfoForm(ModelForm):
             'what_is_newton',
         ]
 
+class KYCAddressForm(ModelForm):
+    class Meta:
+        model = tokensale_models.KYCInfo
+        fields = [
+            'max_btc_limit',
+            'max_ela_limit',
+            'receive_btc_address',
+            'receive_ela_address',
+        ]

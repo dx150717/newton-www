@@ -118,7 +118,7 @@ def confirm_email(request):
         if not item:
             logger.error("item is not found.")
             return http.JsonErrorResponse()
-        if services_tokensale.send_distribution_letter(item.user):
+        if services_tokensale.send_distribution_letter(item.user.email, request):
             item.status = codes.KYCStatus.SENT.value
             item.save()
             return http.JsonSuccessResponse()
