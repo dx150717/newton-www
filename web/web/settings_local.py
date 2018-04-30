@@ -52,9 +52,6 @@ GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
 # global authenticate
 LOGIN_URL = '/login/'
 
-# fund settings
-CURRENT_FUND_PHASE = codes.FundPhase.PRIVATE.value
-
 # chain settings of digital currency
 USE_TESTNET = False
 
