@@ -45,7 +45,10 @@ def sync_blockchain_data():
 
 def __get_btc_transactions(address):
     try:
-        btc_url = 'https://blockchain.info/rawaddr/%s'
+        if not settings.USE_TESTNET:
+            btc_url = 'https://blockchain.info/rawaddr/%s'
+        else:
+            btc_url = 'https://testnet.blockchain.info/rawaddr/%s'
         response = requests.get(btc_url % address)
         data = json.loads(response.text)
         if data['total_received'] <= 0:
