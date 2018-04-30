@@ -9,6 +9,7 @@ SESSION_COOKIE_DOMAIN = None
 MEDIA_URL = 'http://localhost:8000/filestorage/'
 MEDIA_ROOT = BASE_DIR
 BASE_URL = "http://localhost:8000"
+USE_TESTNET=True
 
 # LOGGING
 LOGGING = {

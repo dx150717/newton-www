@@ -10,3 +10,4 @@ SESSION_COOKIE_DOMAIN = None
 MEDIA_URL = 'http://web.newtonproject.beta.diynova.com/filestorage/'
 
 LOGGING_API_REQUEST = True
+USE_TESTNET = True
