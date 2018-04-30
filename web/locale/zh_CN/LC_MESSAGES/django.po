@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-29 13:20+0000\n"
+"POT-Creation-Date: 2018-04-30 02:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -208,10 +208,9 @@ msgstr ""
 #: web/apps/login/templates/login/index.html:6
 #: web/apps/login/templates/login/index.html:12
 #: web/apps/login/templates/login/index.html:29
-#: web/apps/newtonadmin/templates/newtonadmin/login.html:12
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
-#: web/templates/header-no-menu.html:31 web/templates/header.html:48
+#: web/templates/header-no-menu.html:39 web/templates/header.html:57
 msgid "Login"
 msgstr ""
 
@@ -226,8 +225,10 @@ msgstr ""
 #: web/apps/reset/templates/reset/invalid-link.html:6
 #: web/apps/reset/templates/reset/reset-fail.html:6
 #: web/apps/reset/templates/reset/reset-success.html:6
+#: web/apps/tokensale/templates/tokensale/invalid-link.html:6
+#: web/apps/tokensale/templates/tokensale/receive-address.html:6
 #: web/apps/tokensale/templates/tokensale/wait-audit.html:6
-#: web/templates/header-no-menu.html:28 web/templates/header.html:45
+#: web/templates/header-no-menu.html:36 web/templates/header.html:54
 msgid "Register"
 msgstr ""
 
@@ -271,87 +272,92 @@ msgstr ""
 "NewIOT,DAI,超级交换协议，自金融，NNIO，可信物理通道，数字营销，供应链，区块"
 "链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
 
-#: web/apps/newtonadmin/templates/newtonadmin/base.html:14
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
-msgid "Newton"
-msgstr "牛顿"
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:38
+#: web/templates/letter-template.html:38
+msgid "Welcome! Thank You for join Newton KYC!"
+msgstr "牛顿欢迎您！感谢你参加牛顿KYC!"
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:43
+#: web/apps/register/templates/register/register-letter.html:43
+#: web/apps/reset/templates/reset/reset-letter.html:43
+#: web/templates/letter-template.html:43
+msgid "Dear:"
+msgstr "尊敬的用户："
 
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:44
-#, fuzzy
-msgid "Welcome! Please Confirm Your Register"
-msgstr "牛顿欢迎您！请确认您的订阅"
-
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:45
-msgid "Yes,I'll register newton"
+msgid "Hello! This e-mail comes from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. Your KYC information has passed  verification. Click the button below to check your currency address and quota on  the  official website. For all enquiries, problems or suggestions regarding this service, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>."
 msgstr ""
+"您好！这是一封来自 <a class='main-color' href='https://www.newtonproject."
+"org'>https://www.newtonproject.org</a> 的邮件，您的 KYC 信息已经通过审核，点"
+"击下方按钮可以到官网查看您的打币地址和额度。如有疑问，请联系我们<a "
+"href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>"
 
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:46
-#, fuzzy
+#: web/templates/letter-template.html:46
+msgid "Lookup Address"
+msgstr "前往查看"
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:47
+#: web/apps/register/templates/register/register-letter.html:47
+#: web/apps/reset/templates/reset/reset-letter.html:47
+#: web/templates/letter-template.html:47
 msgid "If you received this email by mistake, simply delete it."
+msgstr "如果您意外收到了这封邮件，请删除它。"
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:50
+#: web/apps/register/templates/register/register-letter.html:50
+#: web/apps/reset/templates/reset/reset-letter.html:50
+#: web/templates/letter-template.html:50
+msgid "Newton"
+msgstr "牛顿团队"
+
+#: web/apps/newtonadmin/templates/newtonadmin/login.html:12
+msgid "Admin Login"
 msgstr ""
-"如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
-"阅。"
 
 #: web/apps/press/models.py:21
 msgid "press"
 msgstr "媒体报道"
 
 #: web/apps/register/views.py:43
-#, fuzzy
 msgid "Email already existed"
 msgstr "邮箱已经存在！"
 
 #: web/apps/register/views.py:112 web/apps/reset/views.py:109
 msgid "Entered passwords differ"
-msgstr ""
+msgstr "两次输入密码不一致"
 
 #: web/apps/register/templates/register/password.html:6
 #: web/apps/reset/templates/reset/edit_password.html:6
 #: web/apps/reset/templates/reset/index.html:6
 msgid "Repassword"
-msgstr ""
+msgstr "重复密码"
 
 #: web/apps/register/templates/register/password.html:12
 msgid "Set Password"
-msgstr ""
+msgstr "设置密码"
 
 #: web/apps/register/templates/register/password.html:22
 #: web/apps/tokensale/templates/tokensale/submit.html:62
 #: web/apps/user/templates/user/profile.html:23
 msgid "Submit"
-msgstr ""
+msgstr "提交"
 
 #: web/apps/register/templates/register/register-letter.html:38
-#, fuzzy
 msgid "Welcome! Please Register Newton!"
-msgstr "牛顿欢迎您！请确认您的订阅"
-
-#: web/apps/register/templates/register/register-letter.html:43
-#: web/apps/reset/templates/reset/reset-letter.html:43
-msgid "尊敬的用户："
-msgstr ""
+msgstr "牛顿欢迎您！请注册成为Newton会员"
 
 #: web/apps/register/templates/register/register-letter.html:44
-msgid ""
+msgid "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To register as a Newton member, please  click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>"
+msgstr ""
 "您好！这是一封来自 <a class='main-color' href='https://www.newtonproject."
 "org'>https://www.newtonproject.org</a> 的邮件，帮助您注册成为 Newton 会员，点"
 "击下方按钮进行下一步操作。"
-msgstr ""
-
-#: web/apps/register/templates/register/register-letter.html:47
-#: web/apps/reset/templates/reset/reset-letter.html:47
-msgid "如果您意外收到了这封邮件，请删除它。"
-msgstr ""
-
-#: web/apps/register/templates/register/register-letter.html:50
-#: web/apps/reset/templates/reset/reset-letter.html:50
-msgid "牛顿团队"
-msgstr ""
 
 #: web/apps/reset/views.py:35
-#, fuzzy
 msgid "Email not existed"
-msgstr "邮箱已经存在！"
+msgstr "邮箱不存在！"
 
 #: web/apps/reset/templates/reset/edit_password.html:12
 #: web/apps/reset/templates/reset/edit_password.html:22
@@ -378,16 +384,15 @@ msgid "Please Input Email Address!"
 msgstr "请输入邮箱地址！"
 
 #: web/apps/reset/templates/reset/reset-letter.html:38
-#, fuzzy
 msgid "Welcome! Please Reset Your Password!"
-msgstr "请输入邮箱地址！"
+msgstr "牛顿欢迎您！请重置您的密码"
 
 #: web/apps/reset/templates/reset/reset-letter.html:44
 msgid ""
 "您好！这是一封来自 <a href='https://www.newtonproject.org'>https://www."
 "newtonproject.org</a> 的邮件，帮助您重置您的账户密码，点击下方按钮进行下一步"
 "操作。"
-msgstr ""
+msgstr "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your newton password, click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>"
 
 #: web/apps/reset/templates/reset/reset-letter.html:46
 msgid "重置密码"
@@ -566,30 +571,28 @@ msgid "Last Name"
 msgstr ""
 
 #: web/apps/tokensale/models.py:15
-#, fuzzy
 msgid "Address"
-msgstr "邮箱地址"
+msgstr "地址"
 
 #: web/apps/tokensale/models.py:16
-#, fuzzy
 msgid "ID"
-msgstr "DAI"
+msgstr "身份"
 
 #: web/apps/tokensale/models.py:17
 msgid "How much do you want to contribute in BTC"
-msgstr ""
+msgstr "您期望投资的BTC额度"
 
 #: web/apps/tokensale/models.py:18
 msgid "How much do you want to contribute in ELA"
-msgstr ""
+msgstr "您期望投资的ELA"
 
 #: web/apps/tokensale/models.py:19
 msgid "Describe yourself & how you can help as a community member"
-msgstr ""
+msgstr "介绍一下自己，作为社区成员可以为牛顿做什么"
 
 #: web/apps/tokensale/models.py:20
 msgid "Tell us your understanding about Newton"
-msgstr ""
+msgstr "你如何理解牛顿"
 
 #: web/apps/tokensale/models.py:21
 msgid "Original Address - The BTC address you are contributing from"
@@ -600,21 +603,190 @@ msgid "Original Address - The ELA address you are contributing from"
 msgstr ""
 
 #: web/apps/tokensale/templates/tokensale/index.html:6
+#: web/apps/tokensale/templates/tokensale/limit-address.html:6
 #: web/apps/tokensale/templates/tokensale/submit.html:6
 msgid "KYC"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:22
+msgid "NEWTON TM TOKENS"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:23
+msgid ""
+"请阅读NEW购买协议，使用条款和Newtonproject.org技术白皮书，并在下面的复选框中"
+"确认以便继续。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:25
+msgid "NEW TOKEN购买须知"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:28
+msgid ""
+"本NEW TOKEN购买协议（本“ 协议 ”）包含了您使用NEWTON使用条款（https://www."
+"newtonproject.org/terms-of-use/）以及NEWTON隐私政策（https://www."
+"newtonproject.org/privacy/）的条款和条件。因此，考虑到本协议的相关保证和条"
+"款，以及其他价值考量， NEWTON TOKEN的购买者须遵循如下条款。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:29
+msgid "请仔细阅读本协议："
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:30
+msgid "买方承认，理解并同意以下内容："
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:31
+msgid "1.购买国家和地区"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:32
+msgid ""
+"NEWTOKEN不会提供或分发给美国和中国用户，如果您是美国或中国公民，请遵循当地法"
+"律，请勿购买或试图购买NEWTOKEN。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:33
+msgid ""
+"2.购买的NEWTON可能没有任何价值，且不可退款，您需要承担因为购买NEWTON可能带来"
+"的经济损失。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:34
+msgid "3.白皮书"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:35
+msgid ""
+"NEWTON白皮书已公布至牛顿基金会官网（https://www.newtomproject.org），白皮书描"
+"述了NEWTON的相关事宜，白皮书随时可能会修改，作为参考，买方已阅读并理解白皮书"
+"及相关内容。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:36
+msgid ""
+"4.NEWTON没有明示或暗示的权利、用途、目的、属性以及功能、特性。尽管NEWTON可能"
+"被交易，但是NEWTON不是投资、货币、证券、商品或其他金融工具。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:37
+msgid ""
+"5.在NEWTON销售期间，买方承认并了解购买NEWTON的相关程序，NEWTON不会提供给美国"
+"或中国用户。如果美国或中国用户未经授权或以欺诈的方式购买NEWTON，本协议视为无"
+"效，牛顿基金会可自行采取一切必要或适当的行动使本协议失效，包括向有关当局提供"
+"信息。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:38
+msgid ""
+"6.在您购买NEWTON之前，须知NEWTON的虚拟数字货币属性，且不能用于投资目的，不受"
+"具体的金融法律条款保护。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:39
+msgid ""
+"7.NEWTON不适合投机行为。买方承认并同意买方购买NEWTON不会用于投资或套利策略，"
+"以及其他转售等金融目的。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:40
+msgid ""
+"8.知识产权。牛顿基金会保留所有的NEWTON知识产权的所有权及利益，包括但不限于发"
+"明、创意、概念、代码、发现、流程、标志、方法、软件、公式、技术、信息以及数"
+"据，无论是商标中的专利版权保护以及基于NEWTON的任何商标、版权或专利，未经牛顿"
+"基金会事先同意，买方不得以任何理由使用牛顿基金会的任何知识产权。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:41
+msgid "9.安全及数据隐私："
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:42
+msgid ""
+"在购买NEW之前您需要确认您购买NEWTON的任何设备的安全性；您的数字货币钱包和账户"
+"的私钥的安全性；您用于注册NEWTON的用户名、密码的安全性；"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:43
+msgid ""
+"10.根据KYC要求，您须向牛顿基金会提供个人信息以及资料，牛顿基金会可自行决定认"
+"为必要或适合遵循任何法律、法规、规则或协议，包括但不限于司法程序。这些文件包"
+"括不限于护照、驾驶执照、个人照片、身份证件、承诺声明。买方同意向牛顿基金会披"
+"露这些信息和文件，以遵循法律、法规、规则或协议。您承认牛顿基金会可能决绝销售"
+"NEWTON给买方，直到买方提供了购买NEWTON的必要信息。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:44
+msgid ""
+"11.附件条款：您理解并同意：您有纳税的义务，牛顿基金会对买方的任何税收问题不承"
+"担任何责任和义务。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:45
+msgid "12.如果您是个人，您必须年满18周岁，方可具有购买NEWTON的权利；"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:46
+msgid "13.如果您是法人，您需要依据你所辖区的相关法律，并具有良好的信誉。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:47
+msgid ""
+"14.您应充分理解区块链和虚拟数字货币资产的风险和特点，并能够承担风险，包括支付"
+"购买NEWTON TOKEN的损失、NEWTON丢失，以及当事方的不当责任所造成的损失，以便做"
+"出明智的决定购买NEWTON TOKEN。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:48
+msgid ""
+"15.您用于购买NEWTON TOKEN的资金（包括虚拟数字货币或加密货币）不是来自或涉及任"
+"何非法活动，包括但不限于洗钱、恐怖融资、支持非法活动。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:49
+msgid "16.反洗钱：在法律要求的范围内，买方遵守所有的反洗钱和反恐融资要求。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:50
+msgid "17.您明确承认，理解并同意使用NEWTON销售合同。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:51
+msgid ""
+"18.不可抗力。您理解并同意，牛顿基金会对任何不可抗力事件不承担任何责任。包括但"
+"不限于地震、风暴以及其他自然事件、封锁、禁运、政府行为或政策、恐怖主义及战"
+"争。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:52
+msgid ""
+"19.争议解决。本协议任何有关争议、索赔、适用性、违约、终止、有效性、可执行性。"
+"如果双方90天内未通过有效途径解决争议，须最终通过仲裁予以解决，仲裁所在地及法"
+"定地点为：新加坡。仲裁裁决是最终裁决，对双方均具有约束力。双方承诺毫不拖延地"
+"执行任何裁决，并放弃其有权采取任何形式的追索权。裁决的判决可由任何有管辖权的"
+"法院或对相关方或其资产具有管辖权的法院进行。牛顿基金会和买方将分别支付各自的"
+"律师费和开支。尽管有上述规定，牛顿基金会保留自行决定对仲裁的任何或全部费用承"
+"担责任的权利。"
+msgstr ""
+
+#: web/apps/tokensale/templates/tokensale/index.html:53
+msgid "20.NEWTON TOKEN分配比例见牛顿官网（www.newtonproject.org）"
 msgstr ""
 
 #: web/apps/tokensale/templates/tokensale/kyc-letter.html:44
 msgid "Welcome! Thank you for join Newon KYC"
 msgstr ""
 
+#: web/apps/tokensale/templates/tokensale/limit-address.html:20
 #: web/apps/tokensale/templates/tokensale/submit.html:20
-#, fuzzy
 msgid "Newton Token Sale"
-msgstr "牛顿团队"
+msgstr "牛顿 Token 预售"
 
 #: web/apps/user/templates/user/index.html:6
 #: web/apps/user/templates/user/profile.html:6
+#: web/apps/user/templates/user/settings.html:6
 #: web/apps/user/templates/user/user-base.html:6
 msgid "user"
 msgstr ""
@@ -630,6 +802,11 @@ msgstr "韩锋"
 #: web/apps/user/templates/user/profile.html:13
 msgid "Edit Profile"
 msgstr "修改个人资料"
+
+#: web/apps/user/templates/user/settings.html:13
+#: web/templates/header-no-menu.html:29 web/templates/header.html:46
+msgid "Settings"
+msgstr "设置"
 
 #: web/apps/verification/models.py:22
 msgid "Verification emails"
@@ -5007,8 +5184,12 @@ msgstr "社区治理"
 msgid "Service Terms"
 msgstr "服务条款"
 
-#: web/templates/header-no-menu.html:24 web/templates/header.html:41
-msgid "User"
+#: web/templates/header-no-menu.html:28 web/templates/header.html:45
+msgid "User Center"
+msgstr ""
+
+#: web/templates/header-no-menu.html:31 web/templates/header.html:48
+msgid "LogOut"
 msgstr ""
 
 #: web/templates/header.html:22
@@ -5018,6 +5199,10 @@ msgstr "超级交换协议"
 #: web/templates/header.html:25
 msgid "Technology"
 msgstr "技术"
+
+#: web/templates/letter-template.html:44
+msgid "您好！这是一封来自 <a style="
+msgstr ""
 
 #: web/templates/admin/change_form.html:33
 msgid "History"
@@ -5046,148 +5231,3 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#~ msgid "Error"
-#~ msgstr "错误"
-
-#, fuzzy
-#~ msgid "NewtonProject Notifications: Please Register"
-#~ msgstr "牛顿提醒：请确认您的订阅"
-
-#~ msgid "Mission and Vision Statement"
-#~ msgstr "愿景"
-
-#~ msgid ""
-#~ "The Newton Foundation’s mission is to promote and support research, "
-#~ "development and education to bring decentralized protocols and tools to "
-#~ "the world that empower developers to produce next generation "
-#~ "decentralized applications (dapps), and together build a more globally "
-#~ "accessible, more free and more trustworthy Internet."
-#~ msgstr ""
-#~ "牛顿基金会的使命是促进和支持研究、开发和教育，将分散的协议和工具引入世界，"
-#~ "使开发者能够生产下一代分散应用程序(dapps)，并共同构建一个更全球化、更自"
-#~ "由、更值得信赖的互联网。"
-
-#~ msgid ""
-#~ "Skilled in a variety of programming languages (C#, Java, Go, C++, Kotlin);"
-#~ msgstr "熟练使用多种编程语言（C#，Java，Go，C++，Kotlin);"
-
-#~ msgid ""
-#~ "Our team is looking for a passionate Full Stack Developer to join our "
-#~ "team. The Full Stack developer will be responsible for designing, coding "
-#~ "and modifying websites and services, from layout to function and "
-#~ "according to developer’s assigned project specifications."
-#~ msgstr "负责设计、编码、修改网站和服务，包括从页面布局到功能实现的全过程。"
-
-#~ msgid "Integrate data from various back-end services and databases;"
-#~ msgstr "对来自后端服务与数据库的数据进行整合；"
-
-#~ msgid ""
-#~ "Gather and refine specifications and requirements based on technical "
-#~ "needs;"
-#~ msgstr "基于技术需求进行项目改进；"
-
-#~ msgid "Aggressive problem diagnosis and creative problem-solving skills;"
-#~ msgstr "能够积极的诊断问题，并创造性的解决问题；"
-
-#~ msgid ""
-#~ "To cope with our massive expansion, we are inviting high calibre "
-#~ "candidate to join our team. As a Communication Specialist, you will "
-#~ "report to the Customer Service Manager, you will be responsible for "
-#~ "handling tier 1 customer support, ensuring excellent service standards "
-#~ "and maintaining high user satisfaction."
-#~ msgstr ""
-#~ "作为沟通专家，您将向客户服务经理进行汇报并负责与一级客户进行沟通，确保卓越"
-#~ "的服务标准以及较高的用户满意度。"
-
-#~ msgid "5-day work week with shift mode from 08:00-01:00 (8-hour work day)."
-#~ msgstr ""
-#~ "一周工作5天，从8：00-01：00这时间段内，（每天8小时工作）可自由安排时间。"
-
-#~ msgid ""
-#~ "Identify content and process improvements through analytics and feedback "
-#~ "loop;"
-#~ msgstr "通过分析和反馈回路识别内容和流程改进；"
-
-#~ msgid ""
-#~ "Champion our products in person and online by presenting at conferences, "
-#~ "workshops,  blogging, videos and other similar activities."
-#~ msgstr ""
-#~ "通过在会议，研讨会，博客，视频和其他类似活动中对我们的产品提供个人和在线支"
-#~ "持。"
-
-#~ msgid ""
-#~ "Facilitate the client’s product vision by researching, conceiving, "
-#~ "sketching, prototyping and user-testing experiences for digital products;"
-#~ msgstr ""
-#~ "通过研究，构思，草图，原型和用户测试数字产品体验，实现客户的产品愿景；"
-
-#~ msgid ""
-#~ "Design and deliver wireframes, user stories, user journeys, and mockups "
-#~ "optimized for a wide range of devices and interfaces;"
-#~ msgstr ""
-#~ "设计并提供针对各种设备和接口进行优化的线框，用户故事，用户历程和模型；"
-
-#~ msgid ""
-#~ "Make strategic design and user-experience decisions related to core, and "
-#~ "new, features;"
-#~ msgstr "制定与核心和新功能相关的战略设计和用户体验决策；"
-
-#~ msgid "Ask smart questions, take risks and champion new ideas;"
-#~ msgstr "提出明智的问题，并倡导新的想法；"
-
-#~ msgid "Cooperate with developers to match visual design intent."
-#~ msgstr "与开发人员合作以配合视觉设计意图。"
-
-#~ msgid ""
-#~ "Ability to iterate designs and solutions efficiently and intelligently;"
-#~ msgstr "能够有效且智能地​​迭代设计和解决方案；"
-
-#~ msgid ""
-#~ "Ability to work effectively in a team setting including synthesizing "
-#~ "abstract ideas into concrete design implications;"
-#~ msgstr "能够在团队设置中有效地工作，包括将抽象概念综合到具体的设计影响中；"
-
-#~ msgid ""
-#~ "Be excited about collaborating and communicating closely with teams and "
-#~ "other stakeholders via a distributed model, to regularly deliver design "
-#~ "solutions for approval;"
-#~ msgstr ""
-#~ "欣然接受通过分布式模型与团队和其他利益相关者密切合作，定期提供设计解决方案"
-#~ "以供批准；"
-
-#~ msgid "faq_question"
-#~ msgstr "问题"
-
-#~ msgid "faq_answer"
-#~ msgstr "答案"
-
-#~ msgid "Familiarity with blockchain a plus, but not required."
-#~ msgstr "区块链项目开发经历可以优先考虑。"
-
-#, fuzzy
-#~ msgid "Active"
-#~ msgstr "活动公告"
-
-#, fuzzy
-#~ msgid "is protected"
-#~ msgstr "隐私保护"
-
-#, fuzzy
-#~ msgid "Frequently asked questions"
-#~ msgstr "开放职位"
-
-#~ msgid "Newton Project"
-#~ msgstr "牛顿"
-
-#~ msgid "Founder of 5ipush.cn"
-#~ msgstr "五洲在线创始人"
-
-#~ msgid ""
-#~ "Confirm that the email has been sent to your mailbox. Please check it!"
-#~ msgstr "确认邮件已经发送到您的邮箱，请注意查收！"
-
-#~ msgid "Online Communities"
-#~ msgstr "在线社区"
-
-#~ msgid "Team Introduction"
-#~ msgstr "团队介绍"
