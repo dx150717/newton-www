@@ -9,10 +9,14 @@
 {% block content %}
 <section id="token" class="section-list">
     <div class="token-title container text-center">
+        {% if item %}
             <p>比特币地址：{{ item.receive_btc_address }}</p>
             <p>比特币额度：{{ item.min_btc_limit }} - {{ item.max_btc_limit }}</p>
             <p>亦来币地址：{{ item.receive_ela_address }}</p>
             <p>亦来币额度：{{ item.min_ela_limit }} - {{ item.max_ela_limit }}</p>
+        {% else %}
+            <p><a href="/tokensale/">{% trans "Go To KYC " %}</a></p>
+        {% endif %}
     </div>
 </section>
 {% endblock %}

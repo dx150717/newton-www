@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-30 04:42+0000\n"
+"POT-Creation-Date: 2018-04-30 05:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -210,7 +210,7 @@ msgstr "邮箱和密码不匹配"
 #: web/apps/login/templates/login/index.html:29
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
-#: web/templates/header-no-menu.html:39 web/templates/header.html:57
+#: web/templates/header-no-menu.html:40 web/templates/header.html:57
 msgid "Login"
 msgstr "登录"
 
@@ -230,7 +230,7 @@ msgstr "登录"
 #: web/apps/tokensale/templates/tokensale/pending.html:6
 #: web/apps/tokensale/templates/tokensale/receive-address.html:6
 #: web/apps/tokensale/templates/tokensale/wait-audit.html:6
-#: web/templates/header-no-menu.html:36 web/templates/header.html:54
+#: web/templates/header-no-menu.html:37 web/templates/header.html:54
 msgid "Register"
 msgstr "注册"
 
@@ -796,6 +796,10 @@ msgstr "牛顿欢迎您！感谢您参加Newton KYC"
 #: web/apps/tokensale/templates/tokensale/submit.html:20
 msgid "Newton Token Sale"
 msgstr "牛顿 Token 预售"
+
+#: web/apps/tokensale/templates/tokensale/receive-address.html:18
+msgid "Go To KYC "
+msgstr "参加KYC"
 
 #: web/apps/user/models.py:30
 msgid "Self Introduction"
@@ -5231,11 +5235,15 @@ msgstr "服务条款"
 
 #: web/templates/header-no-menu.html:28 web/templates/header.html:45
 msgid "User Center"
-msgstr ""
+msgstr "用户中心"
 
-#: web/templates/header-no-menu.html:31 web/templates/header.html:48
+#: web/templates/header-no-menu.html:30
+msgid "Crowdfunding"
+msgstr "众筹"
+
+#: web/templates/header-no-menu.html:32 web/templates/header.html:48
 msgid "LogOut"
-msgstr ""
+msgstr "退出"
 
 #: web/templates/header.html:22
 msgid "HEP"
