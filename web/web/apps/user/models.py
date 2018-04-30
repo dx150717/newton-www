@@ -7,6 +7,8 @@ from django.db import models
 from django.db.models import signals
 from django.db.models import Q
 from django.contrib.auth.models import User
+from django.utils.translation import ugettext_lazy as _
+
 from config import codes
 from utils import storage
 
@@ -25,17 +27,17 @@ class UserProfile(models.Model):
     language_code = models.CharField(max_length=10, default=settings.USER_DEFAULT_LANGUAGE_CODE)
     # detail
     title = models.CharField(max_length=128, default='', blank=True)
-    self_introduction = models.TextField(max_length=1024, default='', blank=True)
-    homepage = models.CharField(max_length=1024, default='', blank=True)
+    self_introduction = models.TextField(max_length=1024, default='', blank=True, verbose_name=_('Self Introduction'))
+    homepage = models.CharField(max_length=1024, default='', blank=True, verbose_name=_('Homepage'))
     head_image = models.ImageField(upload_to=storage.hashfile_upload_to('head_image', path_prefix='image'), blank=True, null=True)
     head_image_url = models.CharField(max_length=1024, blank=True, null=True)
-    gender = models.IntegerField(default=codes.Gender.UNKNOWN.value, choices=settings.GENDER_LABEL)
-    birth_date = models.DateField(blank=True, null=True)
+    gender = models.IntegerField(default=codes.Gender.UNKNOWN.value, choices=settings.GENDER_LABEL, verbose_name=_('Gender'))
+    birth_date = models.DateField(blank=True, null=True, verbose_name=_('Birth Date'))
     # geo
     country_id = models.IntegerField(default=0)
     province_id = models.IntegerField(default=0)
     city_id = models.IntegerField(default=0)
-    location = models.CharField(max_length=1024, blank=True, null=True)
+    location = models.CharField(max_length=1024, blank=True, null=True, verbose_name=_('Location'))
     # verified status
     is_email_verified = models.BooleanField(default=False)
     # social
@@ -45,15 +47,15 @@ class UserProfile(models.Model):
     # can sync from 3rd login
     can_sync_profile = models.BooleanField(default=True)
     # third party channel
-    channel = models.CharField(max_length=128, db_index=True, blank=True, null=True)
+    channel = models.CharField(max_length=128, db_index=True, blank=True, null=True, verbose_name=_('Channel'))
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
     tall = models.IntegerField(max_length=4, null=True)
     weight = models.IntegerField(max_length=4, null=True)
     channel = models.CharField(max_length=1024,default='')
-    job_status = models.IntegerField(default=codes.JobType.UNKNOWN.value, choices=settings.JOB_LABEL)
-    major = models.CharField(default='', max_length=128)
+    job_status = models.IntegerField(default=codes.JobType.UNKNOWN.value, choices=settings.JOB_LABEL, verbose_name=_('Job Status'))
+    major = models.CharField(default='', max_length=128, verbose_name=_('Major'))
     google_authenticator_private_key = models.CharField(default='', max_length=100)
     is_google_authenticator = models.BooleanField(default=False)
 

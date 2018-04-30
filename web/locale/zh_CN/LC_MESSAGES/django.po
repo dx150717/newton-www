@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-30 02:15+0000\n"
+"POT-Creation-Date: 2018-04-30 04:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -203,7 +203,7 @@ msgstr ""
 
 #: web/apps/login/views.py:44 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
-msgstr ""
+msgstr "邮箱和密码不匹配"
 
 #: web/apps/login/templates/login/index.html:6
 #: web/apps/login/templates/login/index.html:12
@@ -212,7 +212,7 @@ msgstr ""
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:39 web/templates/header.html:57
 msgid "Login"
-msgstr ""
+msgstr "登录"
 
 #: web/apps/login/templates/login/index.html:35
 #: web/apps/register/templates/register/index.html:6
@@ -221,20 +221,22 @@ msgstr ""
 #: web/apps/register/templates/register/invalid-link.html:6
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
-#: web/apps/register/templates/register/register-letter.html:46
+#: web/apps/register/templates/register/register-letter.html:49
 #: web/apps/reset/templates/reset/invalid-link.html:6
 #: web/apps/reset/templates/reset/reset-fail.html:6
 #: web/apps/reset/templates/reset/reset-success.html:6
+#: web/apps/tokensale/templates/tokensale/end.html:6
 #: web/apps/tokensale/templates/tokensale/invalid-link.html:6
+#: web/apps/tokensale/templates/tokensale/pending.html:6
 #: web/apps/tokensale/templates/tokensale/receive-address.html:6
 #: web/apps/tokensale/templates/tokensale/wait-audit.html:6
 #: web/templates/header-no-menu.html:36 web/templates/header.html:54
 msgid "Register"
-msgstr ""
+msgstr "注册"
 
 #: web/apps/login/templates/login/index.html:36
 msgid "Forget Password"
-msgstr ""
+msgstr "忘记密码"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
@@ -272,45 +274,49 @@ msgstr ""
 "NewIOT,DAI,超级交换协议，自金融，NNIO，可信物理通道，数字营销，供应链，区块"
 "链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
 
+#: web/apps/newtonadmin/templates/newtonadmin/base.html:14
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:53
+#: web/apps/register/templates/register/register-letter.html:53
+#: web/apps/reset/templates/reset/reset-letter.html:53
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
+msgid "Newton"
+msgstr "牛顿团队"
 
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:38
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:41
 #: web/templates/letter-template.html:38
 msgid "Welcome! Thank You for join Newton KYC!"
 msgstr "牛顿欢迎您！感谢你参加牛顿KYC!"
 
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:43
-#: web/apps/register/templates/register/register-letter.html:43
-#: web/apps/reset/templates/reset/reset-letter.html:43
-#: web/templates/letter-template.html:43
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:46
+#: web/apps/register/templates/register/register-letter.html:46
+#: web/apps/reset/templates/reset/reset-letter.html:46
 msgid "Dear:"
 msgstr "尊敬的用户："
 
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:44
-msgid "Hello! This e-mail comes from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. Your KYC information has passed  verification. Click the button below to check your currency address and quota on  the  official website. For all enquiries, problems or suggestions regarding this service, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>."
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:47
+msgid ""
+"Hello! This e-mail comes from <a class='main-color' href='https://www."
+"newtonproject.org'>https://www.newtonproject.org</a>. Your KYC information "
+"has passed  verification. Click the button below to check your currency "
+"address and quota on  the  official website. For all enquiries, problems or "
+"suggestions regarding this service, please contact us <a href='mailto:"
+"contact@newtonproject.org'> contact@newtonproject.org</a>."
 msgstr ""
 "您好！这是一封来自 <a class='main-color' href='https://www.newtonproject."
 "org'>https://www.newtonproject.org</a> 的邮件，您的 KYC 信息已经通过审核，点"
 "击下方按钮可以到官网查看您的打币地址和额度。如有疑问，请联系我们<a "
 "href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>"
 
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:46
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:49
 #: web/templates/letter-template.html:46
 msgid "Lookup Address"
 msgstr "前往查看"
 
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:47
-#: web/apps/register/templates/register/register-letter.html:47
-#: web/apps/reset/templates/reset/reset-letter.html:47
-#: web/templates/letter-template.html:47
-msgid "If you received this email by mistake, simply delete it."
-msgstr "如果您意外收到了这封邮件，请删除它。"
-
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:50
 #: web/apps/register/templates/register/register-letter.html:50
 #: web/apps/reset/templates/reset/reset-letter.html:50
-#: web/templates/letter-template.html:50
-msgid "Newton"
-msgstr "牛顿团队"
+msgid "If you received this email by mistake, simply delete it."
+msgstr "如果您意外收到了这封邮件，请删除它。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:12
 msgid "Admin Login"
@@ -344,12 +350,17 @@ msgstr "设置密码"
 msgid "Submit"
 msgstr "提交"
 
-#: web/apps/register/templates/register/register-letter.html:38
+#: web/apps/register/templates/register/register-letter.html:41
 msgid "Welcome! Please Register Newton!"
 msgstr "牛顿欢迎您！请注册成为Newton会员"
 
-#: web/apps/register/templates/register/register-letter.html:44
-msgid "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To register as a Newton member, please  click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>"
+#: web/apps/register/templates/register/register-letter.html:47
+msgid ""
+"Hello! This is an email from <a class='main-color' href='https://www."
+"newtonproject.org'>https://www.newtonproject.org</a>. To register as a "
+"Newton member, please  click the button below to proceed to the next step. "
+"If you have any questions, please contact us <a href='mailto:"
+"contact@newtonproject.org'> contact@newtonproject.org</a>"
 msgstr ""
 "您好！这是一封来自 <a class='main-color' href='https://www.newtonproject."
 "org'>https://www.newtonproject.org</a> 的邮件，帮助您注册成为 Newton 会员，点"
@@ -363,9 +374,10 @@ msgstr "邮箱不存在！"
 #: web/apps/reset/templates/reset/edit_password.html:22
 #: web/apps/reset/templates/reset/index.html:12
 #: web/apps/reset/templates/reset/index.html:21
+#: web/apps/reset/templates/reset/reset-letter.html:49
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
 msgid "Reset"
-msgstr ""
+msgstr "重置密码"
 
 #: web/apps/reset/templates/reset/index.html:64
 #: web/apps/subscription/templates/subscription/include-subscription.html:63
@@ -383,20 +395,21 @@ msgstr "无效的邮箱地址！"
 msgid "Please Input Email Address!"
 msgstr "请输入邮箱地址！"
 
-#: web/apps/reset/templates/reset/reset-letter.html:38
+#: web/apps/reset/templates/reset/reset-letter.html:41
 msgid "Welcome! Please Reset Your Password!"
 msgstr "牛顿欢迎您！请重置您的密码"
 
-#: web/apps/reset/templates/reset/reset-letter.html:44
-msgid "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your newton password, click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>"
+#: web/apps/reset/templates/reset/reset-letter.html:47
+msgid ""
+"Hello! This is an email from <a class='main-color' href='https://www."
+"newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your "
+"newton password, click the button below to proceed to the next step. If you "
+"have any questions, please contact us <a href='mailto:contact@newtonproject."
+"org'> contact@newtonproject.org</a>"
 msgstr ""
 "您好！这是一封来自 <a href='https://www.newtonproject.org'>https://www."
 "newtonproject.org</a> 的邮件，帮助您重置您的账户密码，点击下方按钮进行下一步"
 "操作。"
-
-#: web/apps/reset/templates/reset/reset-letter.html:46
-msgid "重置密码"
-msgstr ""
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -564,11 +577,11 @@ msgstr ""
 
 #: web/apps/tokensale/models.py:13
 msgid "First Name"
-msgstr ""
+msgstr "姓"
 
 #: web/apps/tokensale/models.py:14
 msgid "Last Name"
-msgstr ""
+msgstr "名"
 
 #: web/apps/tokensale/models.py:15
 msgid "Address"
@@ -777,12 +790,44 @@ msgstr ""
 
 #: web/apps/tokensale/templates/tokensale/kyc-letter.html:44
 msgid "Welcome! Thank you for join Newon KYC"
-msgstr ""
+msgstr "牛顿欢迎您！感谢您参加Newton KYC"
 
 #: web/apps/tokensale/templates/tokensale/limit-address.html:20
 #: web/apps/tokensale/templates/tokensale/submit.html:20
 msgid "Newton Token Sale"
 msgstr "牛顿 Token 预售"
+
+#: web/apps/user/models.py:30
+msgid "Self Introduction"
+msgstr "自我介绍"
+
+#: web/apps/user/models.py:31
+msgid "Homepage"
+msgstr "个人主页"
+
+#: web/apps/user/models.py:34
+msgid "Gender"
+msgstr "性别"
+
+#: web/apps/user/models.py:35
+msgid "Birth Date"
+msgstr "生日"
+
+#: web/apps/user/models.py:40
+msgid "Location"
+msgstr "位置"
+
+#: web/apps/user/models.py:50
+msgid "Channel"
+msgstr "了解牛顿的渠道"
+
+#: web/apps/user/models.py:57
+msgid "Job Status"
+msgstr "工作状态"
+
+#: web/apps/user/models.py:58
+msgid "Major"
+msgstr "专业"
 
 #: web/apps/user/templates/user/index.html:6
 #: web/apps/user/templates/user/profile.html:6
@@ -5200,8 +5245,20 @@ msgstr "超级交换协议"
 msgid "Technology"
 msgstr "技术"
 
+#: web/templates/letter-template.html:43
+msgid "尊敬的用户："
+msgstr ""
+
 #: web/templates/letter-template.html:44
 msgid "您好！这是一封来自 <a style="
+msgstr ""
+
+#: web/templates/letter-template.html:47
+msgid "如果您意外收到了这封邮件，请删除它。"
+msgstr ""
+
+#: web/templates/letter-template.html:50
+msgid "牛顿团队"
 msgstr ""
 
 #: web/templates/admin/change_form.html:33
@@ -5230,4 +5287,3 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
-
