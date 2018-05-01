@@ -83,7 +83,7 @@ def confirm_amount(request):
         if not btc_address or not ela_address:
             return http.JsonErrorResponse()
         # save status
-        item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
+        item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=settings.CURRENT_FUND_PHASE)
         item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
         item.min_btc_limit = min_btc_limit
         item.max_btc_limit = max_btc_limit
@@ -104,7 +104,7 @@ def show_email_list_view(request):
     
     """
     try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE)
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.CONFIRM_DISTRIBUTION.value, phase_id=settings.CURRENT_FUND_PHASE)
         return render(request, "newtonadmin/email-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show email list:%s" % str(inst))
@@ -117,7 +117,7 @@ def confirm_email(request):
     """
     try:
         user_id = int(request.POST['user_id'])
-        item = tokenexchange_models.KYCInfo.objects.filter(user__id=user_id, status=codes.TokenExchangeStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE).first()
+        item = tokenexchange_models.KYCInfo.objects.filter(user__id=user_id, status=codes.TokenExchangeStatus.CONFIRM_DISTRIBUTION.value, phase_id=settings.CURRENT_FUND_PHASE).first()
         if not item:
             logger.error("item is not found.")
             return http.JsonErrorResponse()
@@ -137,7 +137,7 @@ def show_sent_list_view(request):
     
     """
     try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.SENT.value, phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.NOTIFY_TRANSFER.value, phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
         return render(request, "newtonadmin/sent-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show sent list:%s" % str(inst))

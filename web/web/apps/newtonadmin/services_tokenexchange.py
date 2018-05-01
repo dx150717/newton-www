@@ -83,7 +83,7 @@ def send_apply_amount_notify(user, request):
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        target_url = "%s/tokenexchange/%s/" % (settings.BASE_URL, str(user.username))
+        target_url = "%s/tokenexchange/apply/" % (settings.BASE_URL)
         subject = "NewtonProject Notifications: Apply the amount:"
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
         context = Context({"target_url":target_url,"request":request})
