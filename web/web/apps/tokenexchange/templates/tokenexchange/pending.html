@@ -44,7 +44,6 @@
 <script type="text/javascript">
 $(function(){
     totalSeconds = delta_time;
-    console.log(totalSeconds);
     var days =0, hours=0, minutes=0,seconds=0,temp;
     var countdown = document.getElementById("tiles")
     if(countdown==null){return;}
@@ -54,7 +53,8 @@ $(function(){
     var id = setInterval(function(){ getCountdown();}, 1000);
     function getCountdown(){
         if(totalSeconds < 0){
-            // open link go to kyc
+            $(".buy-token-button")[0].setAttribute("href","/tokenexchange/")
+            return;
         }
         days = formatTime(parseInt(totalSeconds / 86400));
         temp = totalSeconds % 86400;
