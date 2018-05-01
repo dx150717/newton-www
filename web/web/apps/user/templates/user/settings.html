@@ -5,13 +5,38 @@
 {% block title %}
 {% trans "user" %}
 {% endblock %}
-
+{% block require_js %}
+<script src="{% version "js/qrcode.min.js" %}"></script>
+{% endblock %}
 {% block content %}
 <section id="settings" class="section-list">
     <div class="container">
         <div class="profile-title text-center">
             <h1>{% trans "Settings" %}</h1>
         </div>
+        <div class="container">
+            <div class="google-auth">
+                <div class="form-group">
+                    <label id="id-google-auth">
+                            <input type="checkbox" id="google-auth" onchange="googleAuthChanged()"/>
+                            是否启用谷歌身份验证器
+                    </label>
+                </div>
+                <div id="code"></div> 
+                
+                <input type="submit" value="Submit"/>
+                
+            </div>
+        </div>
     </div>
 </section>
+{% endblock %}
+{% block inline_js %}
+<script type="text/javascript">
+    new QRCode(document.getElementById("code"), "");
+    function googleAuthChanged(){
+        var isOpenGoogleAuth = $("#google-auth")[0].checked
+        console.log(isOpenGoogleAuth);
+    }
+</script>
 {% endblock %}
