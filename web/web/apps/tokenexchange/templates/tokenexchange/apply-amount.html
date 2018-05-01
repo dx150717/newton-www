@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC" %}
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<h2>{% trans "Fill out your amount of token exchange" %}</h2>
+<div class="container">
+    <div class="raw">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <form id="user_kyc_form" class="form" action="/tokenexchange/apply/post/" method="POST">
+                {% include "form.html" %}
+                <div class="raw">
+                    <div class="text-center token-btn">
+                        <button class="form-button" type="submit">{% trans "Submit" %}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+{% endblock %}

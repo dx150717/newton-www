@@ -1,0 +1,14 @@
+{% extends "email-template.html" %}
+{% load i18n %}
+{% load utils %}
+
+
+{% block title %}
+<h2>{% trans "You are passed the Newton KYC." %}</h2>
+{% endblock %}
+
+{% block content %}
+<div class="link-button">
+    <a class="form-button" href="{{ target_url }}">{% trans "Fill out the expect amount" %}</a>
+</div>
+{% endblock %}

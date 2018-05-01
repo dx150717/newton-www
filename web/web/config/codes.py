@@ -71,9 +71,11 @@ class JobType(Enum):
 class EmailType(Enum):
     REGISTER = 1
     RESET = 2
-    KYC_ID_CONFIRM = 3
-    KYC_EMAIL_CONFIRM = 4
-    KYC_RECEIVE_AMOUNT_CONFIRM = 5
+    TEXCHANGE_CONFIRM_KYC = 3
+    TEXCHANGE_APPLY_AMOUNT = 4
+    TEXCHANGE_DISTRIBUTE_AMOUNT_NOTIFY = 5
+    TEXCHANGE_TRANSFER_NOTIFY = 6
+    TEXCHANGE_RECEIVE_NOTIFY = 7
 
 class ConstructionType(Enum):
     UNKNOWN = 1
@@ -82,10 +84,13 @@ class ConstructionType(Enum):
 
 class TokenExchangeStatus(Enum):
     CANDIDATE = 1
-    CONFIRM = 2
-    CANCEL = 3
-    DISTRIBUTE = 4
-    SENT = 5
+    PASS_KYC = 2
+    REJECT = 3
+    APPLY_AMOUNT = 4
+    DISTRIBUTE_AMOUNT = 5
+    CONFIRM_DISTRIBUTION = 6
+    NOTIFY_TRANSFER = 7
+    RECEIVE_AMOUNT = 8
 
 class FundPhase(Enum):
     PRIVATE = 1
