@@ -7,9 +7,9 @@ from django.conf import settings
 
 from utils import http
 from config import codes
-from tokensale import models as tokensale_models
-from . import forms_tokensale
-from . import services_tokensale
+from tokenexchange import models as tokenexchange_models
+from . import forms_tokenexchange
+from . import services_tokenexchange
 
 logger = logging.getLogger(__name__)
 
@@ -19,7 +19,7 @@ def show_id_list_view(request):
     
     """
     try:
-        items = tokensale_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.CANDIDATE.value, phase_id=settings.CURRENT_FUND_PHASE)
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.CANDIDATE.value, phase_id=settings.CURRENT_FUND_PHASE)
         return render(request, "newtonadmin/id-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show id list:%s" % str(inst))
@@ -31,14 +31,14 @@ def confirm_id(request):
     
     """
     try:
-        form = forms_tokensale.ConfirmKYCForm(request.POST)
+        form = forms_tokenexchange.ConfirmKYCForm(request.POST)
         if not form.is_valid():
             return http.HttpResponseServerError()
         user_id = int(form.cleaned_data['user_id'])
-        pass_tokensale = int(form.cleaned_data['pass_kyc'])
+        pass_tokenexchange = int(form.cleaned_data['pass_kyc'])
         level = int(form.cleaned_data['level'])
-        item = tokensale_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.CANDIDATE.value, phase_id=settings.CURRENT_FUND_PHASE)
-        if pass_tokensale:
+        item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.CANDIDATE.value, phase_id=settings.CURRENT_FUND_PHASE)
+        if pass_tokenexchange:
             item.status = codes.TokenExchangeStatus.CONFIRM.value
             item.level = level
         else:
@@ -55,7 +55,7 @@ def show_amount_list_view(request):
     
     """
     try:
-        items = tokensale_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
         return render(request, "newtonadmin/amount-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show amount list:%s" % str(inst))
@@ -67,7 +67,7 @@ def confirm_amount(request):
     
     """
     try:
-        form = forms_tokensale.AmountForm(request.POST)
+        form = forms_tokenexchange.AmountForm(request.POST)
         if not form.is_valid():
             return http.JsonErrorResponse()
         user_id = int(form.cleaned_data['user_id'])
@@ -76,12 +76,12 @@ def confirm_amount(request):
         min_ela_limit = int(form.cleaned_data['min_ela_limit'])
         max_ela_limit = int(form.cleaned_data['min_ela_limit'])
         # Query the available address
-        btc_address = services_tokensale.allocate_btc_address()
-        ela_address = services_tokensale.allocate_ela_address()
+        btc_address = services_tokenexchange.allocate_btc_address()
+        ela_address = services_tokenexchange.allocate_ela_address()
         if not btc_address or not ela_address:
             return http.JsonErrorResponse()
         # save status
-        item = tokensale_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
+        item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
         item.status = codes.TokenExchangeStatus.DISTRIBUTE.value
         item.min_btc_limit = min_btc_limit
         item.max_btc_limit = max_btc_limit
@@ -101,7 +101,7 @@ def show_email_list_view(request):
     
     """
     try:
-        items = tokensale_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE)
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE)
         return render(request, "newtonadmin/email-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show email list:%s" % str(inst))
@@ -114,11 +114,11 @@ def confirm_email(request):
     """
     try:
         user_id = int(request.POST['user_id'])
-        item = tokensale_models.KYCInfo.objects.filter(user__id=user_id, status=codes.TokenExchangeStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE).first()
+        item = tokenexchange_models.KYCInfo.objects.filter(user__id=user_id, status=codes.TokenExchangeStatus.DISTRIBUTE.value, phase_id=settings.CURRENT_FUND_PHASE).first()
         if not item:
             logger.error("item is not found.")
             return http.JsonErrorResponse()
-        if services_tokensale.send_distribution_letter(item.user, request):
+        if services_tokenexchange.send_distribution_letter(item.user, request):
             item.status = codes.TokenExchangeStatus.SENT.value
             item.save()
             return http.JsonSuccessResponse()
@@ -134,7 +134,7 @@ def show_sent_list_view(request):
     
     """
     try:
-        items = tokensale_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.SENT.value, phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.SENT.value, phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
         return render(request, "newtonadmin/sent-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show sent list:%s" % str(inst))
@@ -146,7 +146,7 @@ def show_receive_list_view(request):
     
     """
     try:
-        items = tokensale_models.AddressTransaction.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
+        items = tokenexchange_models.AddressTransaction.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
         return render(request, "newtonadmin/receive-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show receive list:%s" % str(inst))

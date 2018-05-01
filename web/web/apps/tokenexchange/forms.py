@@ -2,11 +2,11 @@
 from django import forms
 from django.forms import ModelForm
 
-from tokensale import models as tokensale_models
+from tokenexchange import models as tokenexchange_models
 
 class KYCInfoForm(ModelForm):
     class Meta:
-        model = tokensale_models.KYCInfo
+        model = tokenexchange_models.KYCInfo
         fields = [
             'first_name',
             'last_name',
@@ -19,7 +19,7 @@ class KYCInfoForm(ModelForm):
 
 class KYCAddressForm(ModelForm):
     class Meta:
-        model = tokensale_models.KYCInfo
+        model = tokenexchange_models.KYCInfo
         fields = [
             'max_btc_limit',
             'max_ela_limit',

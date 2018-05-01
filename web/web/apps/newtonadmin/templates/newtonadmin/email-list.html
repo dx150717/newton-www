@@ -66,7 +66,7 @@
   function sendMail(user_id) {
     var data = {};
     data.user_id = user_id;
-    $.post('/newtonadmin/tokensale/email/confirm/', 
+    $.post('/newtonadmin/tokenexchange/email/confirm/', 
            data, 
            function(json){
              if (json['error_code'] == 1) {

@@ -94,7 +94,7 @@ function popupWindow(user_id) {
     data.min_ela_limit = $('#min_ela_limit').val();
     data.max_ela_limit = $('#max_ela_limit').val();
     data.user_id = user_id;
-    $.post('/newtonadmin/tokensale/amount/confirm/', 
+    $.post('/newtonadmin/tokenexchange/amount/confirm/', 
            data, 
            function(json){
              if (json['error_code'] == 1) {

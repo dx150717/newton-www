@@ -6,7 +6,7 @@ import json
 from django.conf import settings
 
 from config import codes
-from tokensale import models as tokensale_models
+from tokenexchange import models as tokenexchange_models
 
 logger = logging.getLogger(__name__)
 
@@ -15,7 +15,7 @@ def sync_blockchain_data():
     """Sync the blockchain data
     """
     try:
-        for item in tokensale_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, status=codes.TokenExchangeStatus.SENT.value):
+        for item in tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, status=codes.TokenExchangeStatus.SENT.value):
             # btc
             if item.receive_btc_address:
                 txs = __get_btc_transactions(item.receive_btc_address)
