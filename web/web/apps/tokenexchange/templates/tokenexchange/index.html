@@ -56,25 +56,25 @@
         <div class="token-check-condition container">
             <div class="raw">
                 <div class="col-12 col-sm-6">
-                    <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
+                    <input type="checkbox" onchange="check()" id="buy-token-checkboxo" class="accept" value="on">
                         <label for="buy-token-checkbox0">
                             <span>你所在国家支持购买数字货币</span>
                         </label>
                 </div>
                 <div class="col-12 col-sm-6">
-                    <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
+                    <input type="checkbox" onchange="check()" id="buy-token-checkboxo" class="accept" value="on">
                         <label for="buy-token-checkbox0">
                             <span>您已经了解购买数字货币的风险与收益</span>
                         </label>
                 </div>
                 <div class="col-12 col-sm-6">
-                    <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
+                    <input type="checkbox" onchange="check()" id="buy-token-checkboxo" class="accept" value="on">
                         <label for="buy-token-checkbox0">
                             <span>您十分熟悉NEW的价值</span>
                         </label>
                 </div>
                 <div class="col-12 col-sm-6">
-                    <input type="checkbox" id="buy-token-checkboxo" class="accept" value="on">
+                    <input type="checkbox" onchange="check()" id="buy-token-checkboxo" class="accept" value="on">
                         <label for="buy-token-checkbox0">
                             <span>您接受我们的服务条款和隐私协议</span>
                         </label>
@@ -82,9 +82,28 @@
             </div>
         </div>
         <div class="text-center kyc-btn">
-            <a type="button" class="form-button" href="/tokenexchange/join/">Go To KYC </a>
+            <button id="gotokyc-btn" disabled="true" type="button" onclick="gotokyc()" class="btn btn-default btn-lg">Go To KYC </button>
         </div>
     </div>
 </section>
-
+{% endblock %}
+{% block inline_js %}
+<script type="text/javascript">
+    var checkboxes = $(".accept")
+    function check(){
+        for(var i = 0; i < checkboxes.length; i++){
+            var status = checkboxes[i].checked
+            if (status === false){
+                $("#gotokyc-btn")[0].setAttribute("disabled", true)
+                return;
+            } 
+            if (i == (checkboxes.length-1)){
+                $("#gotokyc-btn")[0].removeAttribute("disabled")
+            }
+        }
+    }
+    function gotokyc(){
+        location.href = ("/tokenexchange/join/");
+    }
+</script>
 {% endblock %}

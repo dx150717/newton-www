@@ -41,6 +41,12 @@ def post_profile(request):
         if not form.is_valid():
             return render(request, "user/profile.html", locals())
         form.save()
+        cellphone_group = form.cleaned_data['cellphone_group']
+        country_code = cellphone_group[0]
+        cellphone = cellphone_group[1]
+        profile.country_code = country_code
+        profile.cellphone = cellphone
+        profile.save()
         return http.HttpResponseRedirect("/user/")
     except Exception, inst:
         logger.exception("fail to post profile %s" %str(inst))
