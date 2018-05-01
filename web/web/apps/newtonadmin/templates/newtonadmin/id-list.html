@@ -92,7 +92,7 @@ function popupWindow(user_id) {
     data.pass_kyc = "1";
     data.user_id = user_id;
     data.level = $('#level').val();
-    $.post('/newtonadmin/tokensale/id/confirm/', 
+    $.post('/newtonadmin/tokenexchange/id/confirm/', 
            data, 
            function(json){
              if (json['error_code'] == 1) {
@@ -109,7 +109,7 @@ function popupWindow(user_id) {
     data.pass_kyc = "0";
     data.user_id = user_id;
     data.level = $('#level').val();
-    $.post('/newtonadmin/tokensale/id/confirm/', 
+    $.post('/newtonadmin/tokenexchange/id/confirm/', 
            data, 
            function(json){
              if (json['error_code'] == 1) {

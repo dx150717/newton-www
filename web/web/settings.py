@@ -76,7 +76,7 @@ INSTALLED_APPS = (
     'register',
     'reset',
     'verification',
-    'tokensale',
+    'tokenexchange',
     # new admin
     'newtonadmin',
 )

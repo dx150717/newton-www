@@ -8,7 +8,7 @@ from django.template import Template, Context, loader
 
 from verification import services
 from tasks import task_email
-from tokensale import models as tokensale_models
+from tokenexchange import models as tokenexchange_models
 from config import codes
 
 logger = logging.getLogger(__name__)
@@ -27,7 +27,7 @@ def allocate_btc_address():
     """
     try:
         all_address = __load_address_from_file(settings.BTC_WALLET_ADDRESS_FILE)
-        allocated_address = tokensale_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_btc_address', flat=True)
+        allocated_address = tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_btc_address', flat=True)
         avaiable_address = list(set(all_address).difference(set(allocated_address)))
         if not avaiable_address:
             logger.error("not available BTC address")
@@ -42,7 +42,7 @@ def allocate_ela_address():
     """
     try:
         all_address = __load_address_from_file(settings.ELA_WALLET_ADDRESS_FILE)
-        allocated_address = tokensale_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_ela_address', flat=True)
+        allocated_address = tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_ela_address', flat=True)
         avaiable_address = list(set(all_address).difference(set(allocated_address)))
         if not avaiable_address:
             logger.error("not available ELA address")
@@ -60,7 +60,7 @@ def send_distribution_letter(user, request):
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        target_url = "%s/tokensale/%s/" % (settings.BASE_URL, str(user.username))
+        target_url = "%s/tokenexchange/%s/" % (settings.BASE_URL, str(user.username))
         subject = "NewtonProject Notifications: KYC information is confirmed:"
         template = loader.get_template("newtonadmin/distribution-letter.html")
         context = Context({"targetUrl":target_url,"request":request})

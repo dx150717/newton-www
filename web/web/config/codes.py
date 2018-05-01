@@ -80,7 +80,7 @@ class ConstructionType(Enum):
     UI = 2
     PROGRAM = 3
 
-class KYCStatus(Enum):
+class TokenExchangeStatus(Enum):
     CANDIDATE = 1
     CONFIRM = 2
     CANCEL = 3
