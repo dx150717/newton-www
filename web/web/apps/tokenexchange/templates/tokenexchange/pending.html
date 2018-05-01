@@ -15,11 +15,14 @@
         <div class="token-subtitle">
             <h3>How to sale tokens and start crowdfunding via iCoin Offeting?</h3>
         </div>
+        <script>
+        var delta_time = {{ delta_time|safe}}
+        </script>
         <div id="tiles">
-            <div id="time"><p>2</p></div>
-            <div id="time"><p>2</p></div>
-            <div id="time"><p>2</p></div>
-            <div id="time"><p>222</p></div>
+            <div id="time"><p>0</p></div>
+            <div id="time"><p>0</p></div>
+            <div id="time"><p>0</p></div>
+            <div id="time"><p>0</p></div>
         </div>
         <div id="labels">
             <div id="time-label"><p>DAY</p></div>
@@ -38,4 +41,35 @@
 {% endblock %}
 
 {% block js %}
+<script type="text/javascript">
+$(function(){
+    totalSeconds = delta_time;
+    console.log(totalSeconds);
+    var days =0, hours=0, minutes=0,seconds=0,temp;
+    var countdown = document.getElementById("tiles")
+    if(countdown==null){return;}
+    var html_pre = "<div id='time'><p>"
+    var html_suffix = "</p></div>"
+    getCountdown();
+    var id = setInterval(function(){ getCountdown();}, 1000);
+    function getCountdown(){
+        if(totalSeconds < 0){
+            // open link go to kyc
+        }
+        days = formatTime(parseInt(totalSeconds / 86400));
+        temp = totalSeconds % 86400;
+        hours = formatTime(parseInt(temp/3600));
+        temp = temp % 3600;
+        minutes = formatTime(parseInt(temp/60));
+        seconds = formatTime(parseInt(temp%60));
+        countdown.innerHTML = html_pre+days+html_suffix+html_pre+hours+html_suffix+html_pre+minutes+html_suffix+html_pre+seconds+html_suffix;
+        totalSeconds = totalSeconds - 1;
+    }
+
+    function formatTime(n){
+        return (n < 10 ? '0': '') + n;
+    }
+
+});
+</script>
 {% endblock %}
