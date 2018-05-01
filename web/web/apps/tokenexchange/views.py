@@ -127,6 +127,9 @@ def show_receive_address_view(request, username):
         return http.HttpResponseServerError()
  
 def show_pending_view(request):
+    now = datetime.datetime.now()
+    delta_time = settings.FUND_START_DATE - now
+    delta_time = delta_time.total_seconds()
     return render(request, "tokenexchange/pending.html", locals())
 
 def show_end_view(request):
