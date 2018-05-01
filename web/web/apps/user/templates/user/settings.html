@@ -18,12 +18,14 @@
             <div class="google-auth">
                 <div class="form-group">
                     <label id="id-google-auth">
-                            <input type="checkbox" id="google-auth" onchange="googleAuthChanged()"/>
+                        {{ is_google_authenticator }}
+                        <script>var toggle = {{ toggle }}</script>
+                            <input type="checkbox" name="google-auth" id="google-auth" onchange="googleAuthChanged()"/>
                             是否启用谷歌身份验证器
                     </label>
                 </div>
                 <div id="code"></div> 
-                
+                <div id="key"></div>
                 <input type="submit" value="Submit"/>
                 
             </div>
@@ -33,10 +35,23 @@
 {% endblock %}
 {% block inline_js %}
 <script type="text/javascript">
-    new QRCode(document.getElementById("code"), "");
+    $("input[name='google-auth']").prop("checked",toggle);
     function googleAuthChanged(){
         var isOpenGoogleAuth = $("#google-auth")[0].checked
-        console.log(isOpenGoogleAuth);
+        if(isOpenGoogleAuth){
+            //get qrcode
+            $.get("/user/getqrcode/",function(ret){
+                if(ret.result){
+                    var uri = ret.result.uri;
+                    var gtoken = ret.result.gtoken;
+                    new QRCode(document.getElementById("code"), uri);
+                    $("#key")[0].innerHTML = "<span>"+gtoken+"</span>"
+                }
+            })
+        }else{
+            $("#code").empty();
+            $("#key").empty();
+        }
     }
 </script>
 {% endblock %}

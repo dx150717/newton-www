@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^post-profile', views.post_profile),
     url(r'^settings/$', views.show_settings_view),
     url(r'^post-settings/$', views.post_settings),
+    url(r'^getqrcode/', views.get_qrcode),
 )

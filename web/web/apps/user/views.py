@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 from django.db.models import Q, F
 from django.contrib.auth.models import User
+import pyotp
 
 from utils import http
 from config import codes
@@ -52,8 +53,20 @@ def post_profile(request):
         logger.exception("fail to post profile %s" %str(inst))
         return http.HttpResponseServerError()
 
+@login_required
 def show_settings_view(request):
+    profile = models.UserProfile.objects.filter(user=request.user).first()
+    if profile.is_google_authenticator:
+        toggle = "true"
+    else:
+        toggle = "false"
     return render(request, "user/settings.html", locals())
+
+@login_required
+def get_qrcode(request):
+    gtoken = pyotp.random_base32()
+    uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+    return http.JsonSuccessResponse(data={"gtoken":gtoken,"uri":uri})
 
 def post_settings(request):
     return render(request, "user/settings.html", locals())
