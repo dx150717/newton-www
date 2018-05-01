@@ -140,7 +140,7 @@ def post_apply_amount(request):
     """ Post the amount of apply
     """
     try:
-        item = tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, user=user).first()
+        item = tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, user=request.user).first()
         if not item:
             return http.HttpResponseServerError()
         if request.method == 'POST':
@@ -163,17 +163,23 @@ def confirm_distribution(request):
     """ Confirm the distribution of amount
     """
     try:
-        item = tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, user=user).first()
+        item = tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, user=request.user).first()
         if not item:
             return http.HttpResponseServerError()
         if request.method == 'POST':
-            form = forms.ApplyAmountForm(request.POST)
+            form = forms.AcceptDistributionForm(request.POST)
             if form.is_valid():
+                accept_btc = form.cleaned_data['accept_btc']
+                accept_ela = form.cleaned_data['accept_ela']
+                item.accept_btc = accept_btc
+                item.accept_ela = accept_ela
                 item.status = codes.TokenExchangeStatus.CONFIRM_DISTRIBUTION.value
                 item.save()
                 return render(request, "tokenexchange/confirm-distribution-success.html", locals())
         else:
-            form = forms.ApplyAmountForm()
+            form = forms.AcceptDistributionForm()
+            form.fields['accept_btc'].initial = item.max_btc_limit
+            form.fields['accept_ela'].initial = item.max_ela_limit
         return render(request, "tokenexchange/confirm-distribution.html", locals())
     except Exception, inst:
         logger.exception("fail to confirm distribution:%s" % str(inst))

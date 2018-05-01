@@ -24,9 +24,12 @@
             {% trans "Your ELA amount is " %}: {{ item.min_ela_limit }} &nbsp;-&nbsp;{{ item.max_ela_limit }}
         </p>
 
-        <p>
-        	<a href="/tokenexchange/">{% trans "Confirm" %}</a>
-        </p>
+        <form method="POST" action="/tokenexchange/confirm/">
+            {% include "form.html" %}
+            <p>
+        	    <button type="submit">{% trans "Confirm" %}</button>
+            </p>
+        </form>
     </div>
 </div>
 {% endblock %}
