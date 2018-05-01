@@ -15,7 +15,7 @@ def sync_blockchain_data():
     """Sync the blockchain data
     """
     try:
-        for item in tokensale_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, status=codes.KYCStatus.SENT.value):
+        for item in tokensale_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, status=codes.TokenExchangeStatus.SENT.value):
             # btc
             if item.receive_btc_address:
                 txs = __get_btc_transactions(item.receive_btc_address)

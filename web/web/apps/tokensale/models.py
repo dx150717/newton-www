@@ -30,7 +30,7 @@ class KYCInfo(models.Model):
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.KYCStatus.CANDIDATE.value, db_index=True)
+    status = models.IntegerField(default=codes.TokenExchangeStatus.CANDIDATE.value, db_index=True)
 
 class AddressTransaction(models.Model):
     user = models.ForeignKey(User)
@@ -41,5 +41,5 @@ class AddressTransaction(models.Model):
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.KYCStatus.CANDIDATE.value, db_index=True)
+    status = models.IntegerField(default=codes.TokenExchangeStatus.CANDIDATE.value, db_index=True)
     
