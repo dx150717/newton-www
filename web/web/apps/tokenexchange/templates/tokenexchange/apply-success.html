@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC" %}
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="raw">
+        <p>
+            {% trans "Apply success" %}
+        </p>
+    </div>
+</div>
+{% endblock %}

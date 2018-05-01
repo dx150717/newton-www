@@ -17,12 +17,12 @@ def send_kyc_confirm_email(email, request):
     """
     try:
         # build the email body
-        email_type = codes.EmailType.KYC_ID_CONFIRM.value
+        email_type = codes.EmailType.TEXCHANGE_CONFIRM_KYC.value
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
         subject = "NewtonProject Notifications: Please Confirm Newton KYC:"
-        template = loader.get_template("tokenexchange/kyc-letter.html")
+        template = loader.get_template("tokenexchange/confirm-kyc-notify-letter.html")
         context = Context({"request":request})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL

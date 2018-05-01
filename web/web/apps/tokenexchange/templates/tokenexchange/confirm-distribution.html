@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC" %}
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="raw">
+        <p>
+            {% trans "Your BTC amount is " %}: {{ item.min_btc_limit }} &nbsp;-&nbsp;{{ item.max_btc_limit }}
+        </p>
+		<p>
+            {% trans "Your ELA amount is " %}: {{ item.min_ela_limit }} &nbsp;-&nbsp;{{ item.max_ela_limit }}
+        </p>
+
+        <p>
+        	<a href="/tokenexchange/">{% trans "Confirm" %}</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

@@ -56,7 +56,7 @@ def send_distribution_letter(user, request):
     try:
         # build the email body
         email = user.email
-        email_type = codes.EmailType.KYC_EMAIL_CONFIRM.value
+        email_type = codes.EmailType.TEXCHANGE_DISTRIBUTE_AMOUNT_NOTIFY.value
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
@@ -71,4 +71,50 @@ def send_distribution_letter(user, request):
         return True
     except Exception, inst:
         logger.exception("fail to send distribution letter:%s" % str(inst))
+        return False
+
+def send_apply_amount_notify(user, request):
+    """Send the email letter for apply amount
+    """
+    try:
+        # build the email body
+        email = user.email
+        email_type = codes.EmailType.TEXCHANGE_APPLY_AMOUNT.value
+        verification = services.generate_verification_uuid(email, email_type)
+        if not verification:
+            return False
+        target_url = "%s/tokenexchange/%s/" % (settings.BASE_URL, str(user.username))
+        subject = "NewtonProject Notifications: Apply the amount:"
+        template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
+        context = Context({"target_url":target_url,"request":request})
+        html_content = template.render(context)
+        from_email = settings.FROM_EMAIL
+        # send
+        task_email.send_email.delay(subject, html_content, from_email, [email])
+        return True
+    except Exception, inst:
+        logger.exception("fail to send the apply amout notify:%s" % str(inst))        
+        return False
+
+def send_confirm_distribution_notify(item, request):
+    """Send the email letter for confirm distribution
+    """
+    try:
+        # build the email body
+        email = item.user.email
+        email_type = codes.EmailType.TEXCHANGE_DISTRIBUTE_AMOUNT_NOTIFY.value
+        verification = services.generate_verification_uuid(email, email_type)
+        if not verification:
+            return False
+        target_url = "%s/tokenexchange/confirm/" % (settings.BASE_URL)
+        subject = "NewtonProject Notifications: Confirm the distribution:"
+        template = loader.get_template("newtonadmin/confirm-distribution-notify-letter.html")
+        context = Context({"target_url":target_url,"request":request, "item":item})
+        html_content = template.render(context)
+        from_email = settings.FROM_EMAIL
+        # send
+        task_email.send_email.delay(subject, html_content, from_email, [email])
+        return True
+    except Exception, inst:
+        logger.exception("fail to send the confirm distribution notify:%s" % str(inst))        
         return False

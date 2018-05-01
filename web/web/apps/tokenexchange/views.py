@@ -19,7 +19,7 @@ from . import models as tokenexchange_models
 
 logger = logging.getLogger(__name__)
 
-def kyc_valid_required(func):
+def exchange_valid_required(func):
     """
     """
     def _decorator(request, *args, **kwargs):
@@ -32,19 +32,19 @@ def kyc_valid_required(func):
             return func(request, *args, **kwargs)
     return _decorator
 
-@kyc_valid_required
+@exchange_valid_required
 @login_required
 def show_tokenexchange_index_view(request):
     return render(request, "tokenexchange/index.html", locals()) 
 
-@kyc_valid_required
+@exchange_valid_required
 @login_required
 def show_join_tokenexchange_view(request):
     instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user, phase_id=settings.CURRENT_FUND_PHASE).first()
     form = forms.KYCInfoForm(instance=instance)
     return render(request, "tokenexchange/submit.html", locals()) 
 
-@kyc_valid_required
+@exchange_valid_required
 @login_required
 @decorators.http_post_required
 def post_kyc_information(request):
@@ -66,7 +66,7 @@ def post_kyc_information(request):
         logger.exception("fail to post kyc information:%s" % str(inst))
         return http.HttpResponseServerError()
 
-@kyc_valid_required
+@exchange_valid_required
 @login_required
 def show_wait_audit_view(request):
     return render(request, "tokenexchange/wait-audit.html", locals())
@@ -131,3 +131,47 @@ def show_pending_view(request):
 
 def show_end_view(request):
     return render(request, "tokenexchange/end.html", locals())
+
+@login_required
+def post_apply_amount(request):
+    """ Post the amount of apply
+    """
+    try:
+        item = tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, user=user).first()
+        if not item:
+            return http.HttpResponseServerError()
+        if request.method == 'POST':
+            form = forms.ApplyAmountForm(request.POST)
+            if form.is_valid():
+                item.expect_btc = form.cleaned_data['expect_btc']
+                item.expect_ela = form.cleaned_data['expect_ela']
+                item.status = codes.TokenExchangeStatus.APPLY_AMOUNT.value
+                item.save()
+                return render(request, "tokenexchange/apply-success.html", locals())
+        else:
+            form = forms.ApplyAmountForm()
+        return render(request, "tokenexchange/apply-amount.html", locals())
+    except Exception, inst:
+        logger.exception("fail to post the apply amount:%s" % str(inst))
+        return http.HttpResponseServerError()
+
+@login_required
+def confirm_distribution(request):
+    """ Confirm the distribution of amount
+    """
+    try:
+        item = tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, user=user).first()
+        if not item:
+            return http.HttpResponseServerError()
+        if request.method == 'POST':
+            form = forms.ApplyAmountForm(request.POST)
+            if form.is_valid():
+                item.status = codes.TokenExchangeStatus.CONFIRM_DISTRIBUTION.value
+                item.save()
+                return render(request, "tokenexchange/confirm-distribution-success.html", locals())
+        else:
+            form = forms.ApplyAmountForm()
+        return render(request, "tokenexchange/confirm-distribution.html", locals())
+    except Exception, inst:
+        logger.exception("fail to confirm distribution:%s" % str(inst))
+        return http.HttpResponseServerError()

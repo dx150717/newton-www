@@ -11,18 +11,14 @@ class KYCInfoForm(ModelForm):
             'first_name',
             'last_name',
             'id_card',
-            'expect_btc',
-            'expect_ela',
             'how_to_contribute',
             'what_is_newton',
         ]
 
-class KYCAddressForm(ModelForm):
+class ApplyAmountForm(ModelForm):
     class Meta:
         model = tokenexchange_models.KYCInfo
         fields = [
-            'max_btc_limit',
-            'max_ela_limit',
-            'receive_btc_address',
-            'receive_ela_address',
+            'expect_btc',
+            'expect_ela',
         ]

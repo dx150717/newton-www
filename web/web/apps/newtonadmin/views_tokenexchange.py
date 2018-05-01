@@ -39,11 +39,13 @@ def confirm_id(request):
         level = int(form.cleaned_data['level'])
         item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.CANDIDATE.value, phase_id=settings.CURRENT_FUND_PHASE)
         if pass_tokenexchange:
-            item.status = codes.TokenExchangeStatus.CONFIRM.value
+            item.status = codes.TokenExchangeStatus.PASS_KYC.value
             item.level = level
         else:
-            item.status = codes.TokenExchangeStatus.CANCEL.value
+            item.status = codes.TokenExchangeStatus.REJECT.value
         item.save()
+        # notify the investor to fill out the expect amount
+        services_tokenexchange.send_apply_amount_notify(item.user, request)
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to confirm id:%s" % str(inst))
@@ -51,11 +53,11 @@ def confirm_id(request):
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def show_amount_list_view(request):
-    """Show the investor list which we don't set the invest amount
+    """Show the investor list which we pass KYC
     
     """
     try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=settings.CURRENT_FUND_PHASE)
         return render(request, "newtonadmin/amount-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show amount list:%s" % str(inst))
@@ -82,7 +84,7 @@ def confirm_amount(request):
             return http.JsonErrorResponse()
         # save status
         item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.CONFIRM.value, phase_id=settings.CURRENT_FUND_PHASE)
-        item.status = codes.TokenExchangeStatus.DISTRIBUTE.value
+        item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
         item.min_btc_limit = min_btc_limit
         item.max_btc_limit = max_btc_limit
         item.min_ela_limit = min_ela_limit
@@ -90,6 +92,7 @@ def confirm_amount(request):
         item.receive_btc_address = btc_address
         item.receive_ela_address = ela_address
         item.save()
+        services_tokenexchange.send_confirm_distribution_notify(item, request)
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to confirm amount:%s" % str(inst))
@@ -119,7 +122,7 @@ def confirm_email(request):
             logger.error("item is not found.")
             return http.JsonErrorResponse()
         if services_tokenexchange.send_distribution_letter(item.user, request):
-            item.status = codes.TokenExchangeStatus.SENT.value
+            item.status = codes.TokenExchangeStatus.NOTIFY_TRANSFER.value
             item.save()
             return http.JsonSuccessResponse()
         else:

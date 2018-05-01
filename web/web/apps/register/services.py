@@ -24,7 +24,7 @@ def send_register_validate_email(email, request):
         target_url = "%s/register/verify/?uuid=%s" % (settings.BASE_URL, str(verification.uuid))
         subject = "NewtonProject Notifications: Please Register Newton:"
         template = loader.get_template("register/register-letter.html")
-        context = Context({"targetUrl":target_url,"request":request})
+        context = Context({"target_url":target_url,"request":request})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
