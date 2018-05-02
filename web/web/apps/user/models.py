@@ -59,9 +59,6 @@ class UserProfile(models.Model):
     google_authenticator_private_key = models.CharField(default='', max_length=100)
     is_google_authenticator = models.BooleanField(default=False)
 
-    class Meta:
-        unique_together = ('cellphone', 'country_code')
-
     def __unicode__(self):
         return self.user.id
 

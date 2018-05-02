@@ -3,15 +3,16 @@
 {% load utils %}
 
 {% block title %}
-{% trans "Register" %}
 {% endblock %}
 
 {% block content %}
-<section id="register" class="section-list">
-    <div class="container text-center" style="padding-top:300px;">
-        <p>邮件已经发送到您的邮箱，请注意查收...</p>
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <img src="{% version "images/global/success.png" %}"/>
+        <p class="title">{% trans "Submit Success!" %}</p>
+        <p class="content">{% trans "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。" %}</p>
     </div>
-</section><!-- end -->
+</section>
 {% endblock %}
 {% block js %}
 

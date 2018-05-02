@@ -940,6 +940,7 @@ canvas { display: block; vertical-align: top; }
 #kyc .token-check-condition label span{font-size: 16px; color: #292929;font-weight: 350;}
 #kyc .kyc-btn{padding: 60px;}
 #kyc .kyc-btn .form-button{ line-height: unset;}
+#kyc .kyc-btn button:disabled{background-color: #939393;}
 
 .user-avator{ width: 30px; border-radius: 15px; margin-top: -5px;}
 
@@ -955,7 +956,8 @@ canvas { display: block; vertical-align: top; }
 #countdown #labels #time-label p{font-size: 24px; color: #7590c1;}
 #countdown #button-group{display: flex; justify-content: center;}
 #countdown #button-group{margin-top: 24px;}
-#countdown #button-group .buy-token-button{display: inline-block; background: url("../images/tokensale/buytoken_button.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-right: 14px;}
+#countdown #button-group .buy-token-button-disable{display: inline-block; background: url("../images/tokensale/countdown_button_disable.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-right: 14px;}
+#countdown #button-group .buy-token-button-enable{display: inline-block; background: url("../images/tokensale/countdown_button_enable.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-right: 14px;}
 #countdown #button-group .white-page{display: inline-block; background: url("../images/tokensale/whilepage_button.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-left: 14px;}
 @media (max-width:768px){
     #countdown .token-title{padding-top: 100px;}
@@ -971,3 +973,8 @@ canvas { display: block; vertical-align: top; }
     #countdown #button-group{margin-top: 24px;}
     #countdown #button-group .button-container{display: flex; justify-content: space-between;}
 }
+
+#success .container{padding-top: 200px;}
+#success .container img{ width: 59px;}
+#success .title{ font-size: 30px; color: #0c0c0c; padding: 0; margin-bottom: 20px;padding-top: 40px;}
+#success .content{ font-size: 18px; color: #6f6f6f;}

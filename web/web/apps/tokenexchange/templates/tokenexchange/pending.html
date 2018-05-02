@@ -32,7 +32,7 @@
         </div>
         <div id="button-group">
             <div class="button-container">
-                <a class="buy-token-button">EXCHANGE TOKEN</a>
+                <a id="buy-token-button" class="buy-token-button-disable">EXCHANGE TOKEN</a>
             </div>
         </div>
     </div>
@@ -52,7 +52,8 @@ $(function(){
     var id = setInterval(function(){ getCountdown();}, 1000);
     function getCountdown(){
         if(totalSeconds < 0){
-            $(".buy-token-button")[0].setAttribute("href","/tokenexchange/")
+            $("#buy-token-button").addClass("buy-token-button-enable")
+            $("#buy-token-button")[0].setAttribute("href","/tokenexchange/")
             return;
         }
         days = formatTime(parseInt(totalSeconds / 86400));

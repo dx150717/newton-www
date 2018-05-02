@@ -120,7 +120,7 @@ def submit_password(request):
         # set link valid
         verification.status = codes.StatusCode.CLOSE.value
         verification.save()
-        return http.HttpResponseRedirect('/user/profile/')
+        return http.HttpResponseRedirect('/login/')
     except Exception, inst:
         logger.exception("fail to submit password: %s" % str(inst))
         return http.HttpResponseServerError()
