@@ -8,7 +8,19 @@
 
 {% block content %}
 <section id="token" class="section-list">
-    <div class="token-title container text-center">
+    <div class="token-title container text-center contract">
+        <p>Hello Wei:</p>
+        <p>{% trans "Congratulations on being approved for the Elastos Token Sale. Below are important details and instructions for Token Sale participation, please review each item carefully." %}</p>
+        <p>{% trans "The Whitelist is now complete. If you are receiving this email, you have been added as an approved participant in the Token Sale. This is the ONLY OFFICIAL ELASTOS EMAIL that you will receive regarding this Token Sale. Please DO NOT respond to any subsequent or fraudulent emails, or transfer BTC or ELA to any other addresses." %}</p>
+        <p>{% trans "" %}</p>
+        <p>{% trans "" %}</p>
+        <p>{% trans "" %}</p>
+        <p>{% trans "" %}</p>
+        <p>{% trans "" %}</p>
+        <p>{% trans "" %}</p>
+        <p>{% trans "" %}</p>
+
+        <div class="title"></div>
         {% if item %}
             <p>比特币地址：{{ item.receive_btc_address }}</p>
             <p>比特币额度：{{ item.min_btc_limit }} - {{ item.max_btc_limit }}</p>
