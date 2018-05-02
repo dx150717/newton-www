@@ -25,18 +25,18 @@
                             <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
                             <span class="caret"></span>
                         <ul class="dropdown-menu">
-                            <li><a href="/user/">{% trans "User Center" %}</a></li>
-                            <li><a href="/user/settings/">{% trans "Settings" %}</a></li>
+                            <li><a href="{{ settings.NEWON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+                            <li><a href="{{ settings.NEWON_HOME_URL }}/user/settings/">{% trans "Settings" %}</a></li>
                             <li class="divider"></li>
-                            <li><a href="/user/logout/">{% trans "LogOut" %}</a></li>
+                            <li><a href="{{ settings.NEWON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
                         </ul>
                     </li>
                     {% else %}
                     <li class="{{ request.path|menu_active:"/register/" }}" >
-                        <a href="/register/">{% trans "Register" %}</a>
+                        <a href="{{ settings.NEWON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
                     <li class="{{ request.path|menu_active:"/login/" }}">
-                        <a href="/login/">{% trans "Login" %}</a>
+                        <a href="{{ settings.NEWON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
                     {% endif %}
                 </ul>
