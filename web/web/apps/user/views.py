@@ -56,6 +56,8 @@ def post_profile(request):
 @login_required
 def show_settings_view(request):
     profile = models.UserProfile.objects.filter(user=request.user).first()
+    if not profile:
+        return http.HttpResponseRedirect("/user/profile/")
     if profile.is_google_authenticator:
         toggle = "true"
     else:
