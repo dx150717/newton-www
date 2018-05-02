@@ -3,17 +3,24 @@
 {% load utils %}
 
 {% block title %}
-{% trans "Register" %}
+{% trans "tokenexchange" %}
 {% endblock %}
 
 {% block content %}
-<section id="register" class="section-list">
-    <div class="container text-center" style="padding-top:300px;">
-        <h1>提交成功！</h1>
-        <p>正在审核中，请耐心等待...</p>
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <img src="{% version "images/global/success.png" %}"/>
+        <p class="title">{% trans "Submit Success!" %}</p>
+        <p class="content">{% trans "您的KYC信息正在审核，请耐心等待。" %}</p>
     </div>
-</section><!-- end -->
+</section>
+{% endblock %}
+{% block js %}
+
 {% endblock %}
 
-{% block js %}
+{% block inline_js %}
+<script type="text/javascript">
+    $("#normal").addClass("display-none");
+</script>
 {% endblock %}

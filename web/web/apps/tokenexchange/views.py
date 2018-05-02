@@ -8,7 +8,8 @@ from django.template import RequestContext
 from django.db.models import Q, F
 from django.contrib.auth.models import User
 from django.conf import settings
-from django.utils.timezone import utc
+from django.utils.translation import ugettext_lazy as _
+from django.forms.forms import NON_FIELD_ERRORS
 
 import decorators
 from utils import http
@@ -49,12 +50,14 @@ def show_join_tokenexchange_view(request):
 @decorators.http_post_required
 def post_kyc_information(request):
     try:
-        # TODO twice submit tokenexchange info need check.
         form = forms.KYCInfoForm(request.POST, request.FILES)
         if not form.is_valid():
             return render(request, "tokenexchange/submit.html", locals())
         # check whether user is submit kyc info
         instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user, phase_id=settings.CURRENT_FUND_PHASE).first()
+        if instance:
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('You had submited kyc info')])
+            return render(request, "tokenexchange/submit.html", locals())
         instance = form.save(commit=False)
         instance.phase_id = settings.CURRENT_FUND_PHASE
         instance.user = request.user
