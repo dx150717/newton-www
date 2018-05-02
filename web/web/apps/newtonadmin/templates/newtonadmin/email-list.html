@@ -75,7 +75,7 @@
            data, 
            function(json){
              if (json['error_code'] == 1) {
-               alert('success');
+               alert('success,we had send address to user.');
                location.reload();
              } else {
                alert(json['error_message']);

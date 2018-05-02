@@ -96,7 +96,7 @@ function popupWindow(user_id) {
            data, 
            function(json){
              if (json['error_code'] == 1) {
-               alert('success');
+               alert('success,we had send a email to user');
                location.reload();
              } else {
                alert(json['error_message']);
@@ -113,7 +113,7 @@ function popupWindow(user_id) {
            data, 
            function(json){
              if (json['error_code'] == 1) {
-               alert('success');
+               alert('success, we had reject user');
                location.reload();
              } else {
                alert(json['error_message']);

@@ -9,22 +9,55 @@
 {% block content %}
 <section id="token" class="section-list">
     <div class="token-title container text-center contract">
-        <p>{% trans "Caps and BTC/ELA Transfers" %}</p>
-        <p>{% trans "There are 75 organizations and 5702 individuals that were KYC approved, for a total token sale hard cap of 2500 Bitcoins. The total allocation of NEW is 2,000,000. The new individual cap range for both participation levels is included below:   " %}</p>
-        <p><img src="{% version "images/tokensale/a.png" %}"/></p>
-        <p>{% trans "There are 5702 individuals that were KYC approved and you are one of them. Your allocation is between 0.1- 0.30691 BTC (including 0.1 and 0.30691) or the ELA equivalent as listed above. We have locked ELA vs BTC Price at 1 ELA = 0.0132 BTC. You can either transfer ELA or BTC, or even both if the total amount does not exceed the given cap above. Please also remember that you will need to take care of the transactions fees of either/both BTC and ELA." %}</p>
-        <p><small>{% trans "BTC-ELA conversion rate was calculated based upon the lowest exchange rate found in a review of 7 commonly used exchanges: Binance, Huobi, Bittrex, Bitfinex, Kucoin, Exrates, Cryptopia. The rates were reviewed at 6 PM Pacific Time, January 17." %}</small></p>
-        <p>{% trans "For your security, we've provided a unique BTC/ELA address that was exclusively generated for you to transfer BTC or ELA respectively. Using this unique transfer address, we are able to track your participation level and subsequently transfer the correct amount of NEW token to your NEW wallet. If you are uncertain, please contact us at contact@newtonproject.org ." %}</p>
-        <p class="warn">{% trans "Your Unique Contribution Address: " %}</p>
-        {% if item %}
-        <p class="warn">{% trans "比特币地址" %}: {{ item.receive_btc_address }}</p>
-        <p class="warn">{% trans "比特币额度" %}: {{ item.min_btc_limit }} - {{ item.max_btc_limit }}  BTC</p>
-        <p class="warn">{% trans "亦来币地址" %}: {{ item.receive_ela_address }}</p>
-        <p class="warn">{% trans "亦来币额度" %}: {{ item.min_ela_limit }} - {{ item.max_ela_limit }}  ELA</p>
-        {% else %}
-        <p><a href="/tokenexchange/">{% trans "Go To KYC " %}</a></p>
-        {% endif %}
-        <p class="dead-time">{% trans "**Please transfer your BTC/ELA before 4 PM Pacific Time, January 22, 2019.**" %}</p>
+        <div><h1>Newton Token Exchange</h1></div>
+        <div class="container item">
+            <div><p>First Exchange</p></div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr class="text-left success">
+                            <td>Token Exchange Information</td>
+                            <td>My Token Exchange Info</td>
+                            <td>My New</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><p>参加时间：<br/>2018-5-2</p></td>
+                            <td><p>My Send BTC Address:<br/> 1b3dkfuen238slxml31123m</p></td>
+                            <td>
+                                <p>Exchanged ELA:<br/> 1 ELA</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p>Exchange Target:<br/> 2000 BTC</p></td>
+                            <td><p>My Send ELA Address:<br/> E1idlkjdfoiweflndkIJAFSKl</p></td>
+                            <td>
+                                <p>Exchanged BTC:<br/> 1 BTC</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Token Exchange Rate:<br/> 1 BTC = 500 New<br/>1 ELA = 20 New</p>
+                            </td>
+                            <td>
+                                <p>My BTC Limit:<br/> 2 BTC </p>
+                            </td>
+                            <td>
+                                <p>My New:<br/> 520 New</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p>My ELA Limit:<br/> 3000 ELA</p></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
