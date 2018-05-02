@@ -9,11 +9,7 @@
 {% block content %}
 <section id="token" class="section-list">
     <div class="token-title container text-center contract">
-        <p>Hello Wei:</p>
-        <p>{% trans "Congratulations on being approved for the Newton Token Sale. Below are important details and instructions for Token Sale participation, please review each item carefully." %}</p>
-        <p>{% trans "The Whitelist is now complete. If you are receiving this email, you have been added as an approved participant in the Token Sale. This is the ONLY OFFICIAL Newton EMAIL that you will receive regarding this Token Sale. Please DO NOT respond to any subsequent or fraudulent emails, or transfer BTC or ELA to any other addresses." %}</p>
-        <div class="divider"></div>
-        <p>{% trans "Caps and BTC/NEO Transfers" %}</p>
+        <p>{% trans "Caps and BTC/ELA Transfers" %}</p>
         <p>{% trans "There are 75 organizations and 5702 individuals that were KYC approved, for a total token sale hard cap of 2500 Bitcoins. The total allocation of NEW is 2,000,000. The new individual cap range for both participation levels is included below:   " %}</p>
         <p><img src="{% version "images/tokensale/a.png" %}"/></p>
         <p>{% trans "There are 5702 individuals that were KYC approved and you are one of them. Your allocation is between 0.1- 0.30691 BTC (including 0.1 and 0.30691) or the ELA equivalent as listed above. We have locked ELA vs BTC Price at 1 ELA = 0.0132 BTC. You can either transfer ELA or BTC, or even both if the total amount does not exceed the given cap above. Please also remember that you will need to take care of the transactions fees of either/both BTC and ELA." %}</p>
@@ -28,18 +24,7 @@
         {% else %}
         <p><a href="/tokenexchange/">{% trans "Go To KYC " %}</a></p>
         {% endif %}
-        <p>{% trans "**Please transfer your BTC/ELA before 4 PM Pacific Time, January 22, 2019.**" %}</p>
-        <div class="divider"></div>
-        <p>{% trans "Post-Transfer Instructions" %}</p>
-        <p>{% trans "Our finance team will distribute NEW tokens before February 1, 2019. The instructions for receiving your ELA Tokens are as follows:" %}</p>
-        <p>{% trans "" %}</p>
-        <p>{% trans "" %}</p>
-        <p>{% trans "" %}</p>
-        <p>{% trans "" %}</p>
-        <p>{% trans "" %}</p>
-        <p>{% trans "" %}</p>
-        <p>{% trans "" %}</p>
-        <p>{% trans "" %}</p>
+        <p class="dead-time">{% trans "**Please transfer your BTC/ELA before 4 PM Pacific Time, January 22, 2019.**" %}</p>
     </div>
 </section>
 {% endblock %}
