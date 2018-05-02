@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 def show_login_view(request):
     form = forms.LoginForm()
-    next = request.GET.get('next')
+    next = request.GET.get('next', '')
     return render(request, 'login/index.html', locals())
 
 @decorators.http_post_required
