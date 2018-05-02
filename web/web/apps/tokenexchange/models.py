@@ -27,8 +27,8 @@ class KYCInfo(models.Model):
     min_ela_limit = models.FloatField(default=0)
     accept_btc = models.FloatField(default=0)
     accept_ela = models.FloatField(default=0)
-    receive_btc_address = models.CharField(max_length=128, unique=True)
-    receive_ela_address = models.CharField(max_length=128, unique=True)    
+    receive_btc_address = models.CharField(max_length=128, unique=True, blank=True, null=True)
+    receive_ela_address = models.CharField(max_length=128, unique=True, blank=True, null=True)    
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
