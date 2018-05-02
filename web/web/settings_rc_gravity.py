@@ -1,4 +1,4 @@
-from settings import *
+from settings_rc import *
 
 STATIC_URL = 'http://gravity.rc.newtonproject.org/static/'
 DOMAIN = 'gravity.rc.newtonproject.org'

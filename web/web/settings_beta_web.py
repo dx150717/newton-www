@@ -1,4 +1,4 @@
-from settings import *
+from settings_beta import *
 
 DEBUG = False
 TEMPLATE_DEBUG = False
