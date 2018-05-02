@@ -6,7 +6,6 @@ from django.views.static import serve as serve_static
 from django.views.decorators.cache import never_cache
 from django.views.generic import TemplateView, RedirectView
 
-from welcome import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
