@@ -1,11 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load utils %}
-
-{% block title %}
-{% trans "KYC" %}
-{% endblock %}
-
 {% block header %}
 {% include "header-no-menu.html" %}
 {% endblock %}
@@ -13,13 +8,24 @@
 {% block footer %}
 {% include "footer-simple.html" %}
 {% endblock %}
+{% block title %}
+{% trans "Notify" %}
+{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="raw">
-        <p>
-            {% trans "Distribution confirm" %}
-        </p>
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <img src="{% version "images/global/success.png" %}"/>
+        <p class="title">{% trans "Distribution confirm" %}</p>
     </div>
-</div>
+</section>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    $("#normal").addClass("display-none");
+</script>
 {% endblock %}

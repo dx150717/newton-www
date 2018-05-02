@@ -15,21 +15,27 @@
 {% endblock %}
 
 {% block content %}
-<h2>{% trans "Fill out your amount of token exchange" %}</h2>
-<div class="container">
-    <div class="raw">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
-            <form id="user_kyc_form" class="form" action="/tokenexchange/apply/" method="POST">
-                {% include "form.html" %}
-                <div class="raw">
-                    <div class="text-center token-btn">
-                        <button class="form-button" type="submit">{% trans "Submit" %}</button>
-                    </div>
+<section id="newtonadmin" class="section-list">
+    <div class="container text-center">
+        <div class="title">
+            <h2>{% trans "Fill out your amount of token exchange" %}</h2>
+        </div>  
+        <div class="container">
+            <div class="raw">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <form id="user_kyc_form" class="form" action="/tokenexchange/apply/" method="POST">
+                        {% include "form.html" %}
+                        <div class="raw">
+                            <div class="text-center token-btn">
+                                <button class="form-button" type="submit">{% trans "Submit" %}</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+                <div class="col-sm-2"></div>
+            </div>
         </div>
-        <div class="col-sm-2"></div>
     </div>
-</div>
+</section>
 {% endblock %}

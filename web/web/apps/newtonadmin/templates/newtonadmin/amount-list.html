@@ -13,9 +13,10 @@
             <table class="table">
                 <caption class="text-center">确定额度</caption>
                 <thead>
-                    <tr class="success">
+                    <tr>
                         <th>姓名</th>
                         <th>介绍</th>
+                        <th>期望额度</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -36,6 +37,10 @@
                             <p>
                                 {{ item.what_is_newton }}
                             </p>
+                        </td>
+                        <td>
+                            <p>{{ item.expect_ela }} ELA</p>
+                            <p>{{ item.expect_btc }} BTC</p>
                         </td>
                         <td>
                             <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">分配额度</a>
@@ -94,6 +99,7 @@ function popupWindow(user_id) {
     data.min_ela_limit = $('#min_ela_limit').val();
     data.max_ela_limit = $('#max_ela_limit').val();
     data.user_id = user_id;
+    console.log(data)
     $.post('/newtonadmin/tokenexchange/amount/confirm/', 
            data, 
            function(json){
