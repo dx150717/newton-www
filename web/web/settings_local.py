@@ -29,12 +29,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-SESSION_COOKIE_AGE = 3600 * 24 * 365 * 10
+SESSION_COOKIE_AGE = 60 * 10
 SESSION_COOKIE_DOMAIN = '.newtonproject.org'
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
-CART_CACHE_TIME = 3600 * 24 * 30
 
 # website meta
 BASE_NAME = 'newtonproject'

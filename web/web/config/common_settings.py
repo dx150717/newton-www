@@ -75,7 +75,6 @@ SESSION_COOKIE_NAME = 'xsid'
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "session"
-CART_CACHE_TIME = 3600 * 24 * 30
 ACCESS_TOKEN_CACHE_TIME = 0
 
 # Proxy settings
