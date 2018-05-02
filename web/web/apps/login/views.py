@@ -49,7 +49,7 @@ def post_login(request):
         next = request.POST.get('next')
         if next:
             result = urlparse.urlparse(next)
-            if not result.netloc:
+            if result and not result.netloc:
                 return redirect(next)
         return redirect('/user/')
     except Exception, inst:
