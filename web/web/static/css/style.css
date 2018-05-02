@@ -927,6 +927,16 @@ canvas { display: block; vertical-align: top; }
 #user_kyc_form select{width: 30%;}
 #user_kyc_form #id_birth_date{width: 50%;}
 #newtonadmin .table img{ width: 350px;}
+#newtonadmin .table>thead>tr{background-color: #282828; color: #fff;}
+#newtonadmin .table>thead>tr>th{font-size: 18px;font-weight: 350;height: 48px;}
+#newtonadmin .table>tbody>td>p{color: #282929;}
+#newtonadmin .container .title{padding-top: 150px;}
+#newtonadmin #user_kyc_form label{text-align: left;}
+#newtonadmin .form-button{margin-top: 60px;}
+@media(min-width:1200px){
+    #newtonadmin .container{width: 1400px;}
+}
+
 /*
  * kyc
  */

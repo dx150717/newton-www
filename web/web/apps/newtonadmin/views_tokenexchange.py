@@ -74,9 +74,9 @@ def confirm_amount(request):
             return http.JsonErrorResponse()
         user_id = int(form.cleaned_data['user_id'])
         min_btc_limit = int(form.cleaned_data['min_btc_limit'])
-        max_btc_limit = int(form.cleaned_data['min_btc_limit'])
+        max_btc_limit = int(form.cleaned_data['max_btc_limit'])
         min_ela_limit = int(form.cleaned_data['min_ela_limit'])
-        max_ela_limit = int(form.cleaned_data['min_ela_limit'])
+        max_ela_limit = int(form.cleaned_data['max_ela_limit'])
         # Query the available address
         btc_address = services_tokenexchange.allocate_btc_address()
         ela_address = services_tokenexchange.allocate_ela_address()

@@ -13,10 +13,11 @@
             <table class="table">
                 <caption class="text-center">待发送额度邮件</caption>
                 <thead>
-                    <tr class="success">
+                    <tr>
                         <th>姓名</th>
                         <th>介绍</th>
                         <th>分配收币地址</th>
+                        <th>具体额度</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -47,6 +48,10 @@
                             <p>
                                 <label>ELA:</label>{{ item.receive_ela_address }}
                             </p>
+                        </td>
+                        <td>
+                            <p>{{ item.accept_btc}} BTC</p>
+                            <p>{{ item.accept_ela}} ELA</p>
                         </td>
                         <td>
                             <a href="#" class="btn btn-default" onclick="javascript:sendMail({{ item.user.id }});">发送</a>
