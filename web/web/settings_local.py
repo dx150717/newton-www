@@ -54,3 +54,7 @@ LOGIN_URL = '/login/'
 # chain settings of digital currency
 USE_TESTNET = False
 
+# multiple domain
+NEWON_WEB_URL = 'https://www.newtonproject.org'
+NEWON_HOME_URL = 'https://home.newtonproject.org'
+NEWON_GRAVITY_URL = 'https://gravity.newtonproject.org'
