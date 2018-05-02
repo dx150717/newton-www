@@ -117,8 +117,6 @@ def submit_password(request):
         user.set_password(password)
         user.save()
         user_profile = user_models.UserProfile.objects.create(user=user)
-        user = authenticate(username=email, password=password)
-        login(request, user)
         # set link valid
         verification.status = codes.StatusCode.CLOSE.value
         verification.save()
