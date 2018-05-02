@@ -2,6 +2,7 @@
 import logging
 import requests
 import json
+import urlparse
 
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
@@ -21,6 +22,7 @@ logger = logging.getLogger(__name__)
 
 def show_login_view(request):
     form = forms.LoginForm()
+    next = request.GET.get('next')
     return render(request, 'login/index.html', locals())
 
 @decorators.http_post_required
@@ -44,6 +46,11 @@ def post_login(request):
             form._errors[NON_FIELD_ERRORS] = form.error_class([_("Email or Password don't match")])
             return render(request, 'login/index.html', locals())
         login(request, user)
+        next = request.POST.get('next')
+        if next:
+            result = urlparse.urlparse(next)
+            if not result.netloc:
+                return redirect(next)
         return redirect('/user/')
     except Exception, inst:
         logger.exception("fail to post login:%s" % str(inst))
