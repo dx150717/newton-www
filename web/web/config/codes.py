@@ -82,15 +82,17 @@ class ConstructionType(Enum):
     UI = 2
     PROGRAM = 3
 
-class TokenExchangeStatus(Enum):
+class KYCStatus(Enum):
     CANDIDATE = 1
     PASS_KYC = 2
     REJECT = 3
-    APPLY_AMOUNT = 4
-    DISTRIBUTE_AMOUNT = 5
-    CONFIRM_DISTRIBUTION = 6
-    NOTIFY_TRANSFER = 7
-    RECEIVE_AMOUNT = 8
+
+class TokenExchangeStatus(Enum):
+    APPLY_AMOUNT = 1
+    DISTRIBUTE_AMOUNT = 2
+    CONFIRM_DISTRIBUTION = 3
+    NOTIFY_TRANSFER = 4
+    RECEIVE_AMOUNT = 5
 
 class FundPhase(Enum):
     PRIVATE = 1
