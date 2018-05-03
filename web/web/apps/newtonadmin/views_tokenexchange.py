@@ -122,7 +122,7 @@ def confirm_email(request):
             logger.error("item is not found.")
             return http.JsonErrorResponse()
         if services_tokenexchange.send_distribution_letter(item.user, request):
-            item.status = codes.TokenExchangeStatus.NOTIFY_TRANSFER.value
+            item.status = codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value
             item.save()
             return http.JsonSuccessResponse()
         else:
@@ -137,7 +137,7 @@ def show_sent_list_view(request):
     
     """
     try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.NOTIFY_TRANSFER.value, phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value, phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
         return render(request, "newtonadmin/sent-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show sent list:%s" % str(inst))
