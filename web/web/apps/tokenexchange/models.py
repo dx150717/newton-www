@@ -9,26 +9,20 @@ from config import codes
 
 class KYCInfo(models.Model):
     user = models.ForeignKey(User)
-    phase_id = models.IntegerField(default=codes.FundPhase.PRIVATE.value)
     first_name = models.CharField(max_length=200, verbose_name=_('First Name'))
     last_name = models.CharField(max_length=200, verbose_name=_('Last Name'))
+    cellphone = models.CharField(max_length=128, db_index=True, default='')
+    country_code = models.CharField(max_length=4, db_index=True, default=settings.CHINA_COUNTRY_CALLING_CODE)
+    id_number = models.CharField(max_length=200, verbose_name=_('ID Number'))
+    id_card = models.ImageField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name=_('ID Card'))
+    emergency_contact_first_name = models.CharField(max_length=200, verbose_name=_('Emergency Contact First Name'))
+    emergency_contact_last_name = models.CharField(max_length=200, verbose_name=_('Emergency Contact Last Name'))
+    emergency_contact_cellphone = models.CharField(max_length=128, db_index=True, default='')
+    emergency_contact_country_code = models.CharField(max_length=4, db_index=True, default=settings.CHINA_COUNTRY_CALLING_CODE)
+    relationships_with_emergency_contacts = models.CharField(max_length=200)
     location = models.CharField(max_length=1000, verbose_name=_('Address'))
-    id_card = models.ImageField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name=_('ID'))
-    expect_btc = models.FloatField(blank=True, null=True, verbose_name=_('How much do you want to contribute in BTC'))
-    expect_ela = models.FloatField(blank=True, null=True, verbose_name=_('How much do you want to contribute in ELA'))
     how_to_contribute = models.TextField(verbose_name=_('Describe yourself & how you can help as a community member'))
     what_is_newton = models.TextField(verbose_name=_('Tell us your understanding about Newton'))
-    btc_address = models.CharField(max_length=200, verbose_name=_('Original Address - The BTC address you are contributing from'))
-    ela_address = models.CharField(max_length=200, verbose_name=_('Original Address - The ELA address you are contributing from'))
-    # receive related information
-    max_btc_limit = models.FloatField(default=0)
-    max_ela_limit = models.FloatField(default=0)
-    min_btc_limit = models.FloatField(default=0)
-    min_ela_limit = models.FloatField(default=0)
-    accept_btc = models.FloatField(default=0)
-    accept_ela = models.FloatField(default=0)
-    receive_btc_address = models.CharField(max_length=128, unique=True, blank=True, null=True)
-    receive_ela_address = models.CharField(max_length=128, unique=True, blank=True, null=True)    
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -44,4 +38,28 @@ class AddressTransaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.TokenExchangeStatus.CANDIDATE.value, db_index=True)
+    
+class KYCAudit(models.Model):
+    user = models.ForeignKey(User)
+    is_pass = models.BooleanField()
+    comment = = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(default=codes.TokenExchangeStatus.CANDIDATE.value, db_index=True)
+
+
+
+class InvestInvite(models.Model):
+    user = models.ForeignKey(User)
+    phase_id = models.IntegerField()
+    round_id = models.IntegerField(default=1)
+    expect_btc = models.FloatField(blank=True, null=True, verbose_name=_('How much do you want to contribute in BTC'))
+    expect_ela = models.FloatField(blank=True, null=True, verbose_name=_('How much do you want to contribute in ELA'))
+    assign_btc = models.FloatField(blank=True, null=True)
+    assign_ela = models.FloatField(blank=True, null=True)
+    receive_btc_address = models.CharField(max_length=128, unique=True, blank=True, null=True)
+    receive_ela_address = models.CharField(max_length=128, unique=True, blank=True, null=True)
+    status = models.IntegerField(default=codes.TokenExchangeStatus.INVITE_AMOUNT.value, db_index=True) 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
