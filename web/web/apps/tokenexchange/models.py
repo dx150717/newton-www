@@ -42,7 +42,7 @@ class AddressTransaction(models.Model):
 class KYCAudit(models.Model):
     user = models.ForeignKey(User)
     is_pass = models.BooleanField()
-    comment = = models.CharField(max_length=200)
+    comment = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.TokenExchangeStatus.CANDIDATE.value, db_index=True)
