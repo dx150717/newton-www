@@ -40,28 +40,31 @@ def show_tokenexchange_index_view(request):
 
 @exchange_valid_required
 @login_required
-def show_join_tokenexchange_view(request):
-    instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
-    form = forms.KYCInfoForm(instance=instance)
-    return render(request, "tokenexchange/submit.html", locals()) 
-
-@exchange_valid_required
-@login_required
-@decorators.http_post_required
 def post_kyc_information(request):
     try:
-        form = forms.KYCInfoForm(request.POST, request.FILES)
-        if not form.is_valid():
-            return render(request, "tokenexchange/submit.html", locals())
-        # check whether user is submit kyc info
-        instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
-        instance = form.save(commit=False)
-        instance.phase_id = settings.CURRENT_FUND_PHASE
-        instance.user = request.user
-        instance.save()
-        email = request.user.email
-        services.send_kyc_confirm_email(email, request)
-        return redirect('/tokenexchange/wait-audit/')
+        if request.method == 'POST':
+            # check whether user is submit kyc info
+            instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
+            if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
+                form._errors[NON_FIELD_ERRORS] = form.error_class([_('You had submited kyc info')])
+                return render(request, "tokenexchange/submit.html", locals())
+            form = forms.KYCInfoForm(request.POST, request.FILES, instance=instance)
+            if not form.is_valid():
+                return render(request, "tokenexchange/submit.html", locals())
+            instance = form.save(commit=False)
+            country_code, cellphone = form.cleaned_data['cellphone_group']
+            instance.country_code = country_code
+            instance.cellphone = cellphone
+            instance.phase_id = settings.CURRENT_FUND_PHASE
+            instance.user = request.user
+            instance.save()
+            email = request.user.email
+            services.send_kyc_confirm_email(email, request)
+            return redirect('/tokenexchange/wait-audit/')
+        else:
+            instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
+            form = forms.KYCInfoForm(instance=instance)
+            return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
         logger.exception("fail to post kyc information:%s" % str(inst))
         return http.HttpResponseServerError()

@@ -14,6 +14,10 @@ NEWON_WEB_URL = 'http://localhost:8000'
 NEWON_HOME_URL = 'http://localhost:8000'
 NEWON_GRAVITY_URL = 'http://localhost:8000'
 
+NEWON_WEB_URL = 'http://localhost:8000'
+NEWON_HOME_URL = 'http://localhost:8000'
+NEWON_GRAVITY_URL = 'http://localhost:8000'
+
 # LOGGING
 LOGGING = {
     'version': 1,
