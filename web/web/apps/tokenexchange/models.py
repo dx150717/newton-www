@@ -26,7 +26,7 @@ class KYCInfo(models.Model):
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.TokenExchangeStatus.CANDIDATE.value, db_index=True)
+    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
 
 class AddressTransaction(models.Model):
     user = models.ForeignKey(User)
@@ -37,7 +37,7 @@ class AddressTransaction(models.Model):
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.TokenExchangeStatus.CANDIDATE.value, db_index=True)
+    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
     
 class KYCAudit(models.Model):
     user = models.ForeignKey(User)
@@ -45,7 +45,7 @@ class KYCAudit(models.Model):
     comment = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    status = models.IntegerField(default=codes.TokenExchangeStatus.CANDIDATE.value, db_index=True)
+    status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
 
 
 
@@ -59,7 +59,7 @@ class InvestInvite(models.Model):
     assign_ela = models.FloatField(blank=True, null=True)
     receive_btc_address = models.CharField(max_length=128, unique=True, blank=True, null=True)
     receive_ela_address = models.CharField(max_length=128, unique=True, blank=True, null=True)
-    status = models.IntegerField(default=codes.TokenExchangeStatus.INVITE_AMOUNT.value, db_index=True) 
+    status = models.IntegerField(default=codes.TokenExchangeStatus.INVITE.value, db_index=True) 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     

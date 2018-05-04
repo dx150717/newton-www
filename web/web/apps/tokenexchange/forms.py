@@ -18,7 +18,7 @@ class KYCInfoForm(ModelForm):
 
 class ApplyAmountForm(ModelForm):
     class Meta:
-        model = tokenexchange_models.KYCInfo
+        model = tokenexchange_models.InvestInvite
         fields = [
             'expect_btc',
             'expect_ela',
