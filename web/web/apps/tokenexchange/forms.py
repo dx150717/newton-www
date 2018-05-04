@@ -4,23 +4,30 @@ from django.forms import ModelForm
 from django.utils.translation import ugettext as _
 
 from tokenexchange import models as tokenexchange_models
+from user import forms as user_forms
 
 class KYCInfoForm(ModelForm):
+    cellphone_group = user_forms.CellphoneGroupField(label=_('cellphone'),required=True, widget=user_forms.CellphoneGroupWidget)
+    def __init__(self, *args, **kw):
+        super(KYCInfoForm, self).__init__(*args, **kw)
+        self.fields.keyOrder = ['first_name',
+                                'last_name',
+                                'id_number',
+                                'id_card',
+                                'cellphone_group',
+                                'location',
+                                'how_to_contribute',
+                                'what_is_newton',
+        ]
+
     class Meta:
         model = tokenexchange_models.KYCInfo
         fields = [
             'first_name',
             'last_name',
             'location',
-            'cellphone',
-            'country_code',
             'id_number',
             'id_card',
-            'emergency_contact_last_name',
-            'emergency_contact_last_name',
-            'emergency_contact_country_code',
-            'emergency_contact_cellphone',
-            'relationships_with_emergency_contacts',
             'how_to_contribute',
             'what_is_newton',
         ]
