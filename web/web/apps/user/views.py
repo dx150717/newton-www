@@ -13,6 +13,7 @@ from config import codes
 from . import forms
 from . import models
 import decorators
+from tokenexchange import models as tokenexchange_models
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +25,8 @@ def show_user_index_view(request):
         return http.HttpResponseRedirect("/login/")
     profile = models.UserProfile.objects.filter(user=user).first()
     form = forms.UserProfileForm(instance=profile)
-    return render(request, "user/index.html", locals()) 
+    kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
+    return render(request, "user/index.html", locals())
 
 @login_required
 @decorators.http_get_required

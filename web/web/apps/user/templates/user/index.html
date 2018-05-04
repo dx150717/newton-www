@@ -22,33 +22,74 @@
         <div class="container">
             <div class="sub-title">
                 <div class="sub-title-nav">
-                    <p><span>资料</span></p>
+                    <ul id="user-tab" class="nav nav-tabs">
+                        <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Resource" %}</a></li>
+                        <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </dvi>
-    <div class="bg-gray-user">
-        <div class="container">
-            <div class="user-content bg-gray">
-                <div class="container">
-                    <div class="raw user-detail-content">
-                        <div class="col-md-8 user-info">
-                            <table>
-                                <thead>
-                                    <tr><td>基本信息</td></tr>
-                                </thead>
-                                <tbody>
-                                    {% for field in form %}
-                                    <tr>
-                                        <td>{{ field.label_tag }}</td>
-                                        <td class="gray td-value">{{ field.value }}</td>
-                                    </tr>
-                                    {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-md-4">
-                            <a class="form-button user-btn" href="/user/profile/">修改</a>
+    <div id="tab-content" class="tab-content">
+        <div id="basic-info" class="tab-pane fade in active user-content bg-gray">
+            <div class="container">
+                <div class="raw user-detail-content">
+                    <div class="col-md-8 user-info">
+                        <table>
+                            <thead>
+                                <tr><td>基本信息</td></tr>
+                            </thead>
+                            <tbody>
+                                {% for field in form %}
+                                <tr>
+                                    <td>{{ field.label_tag }}</td>
+                                    <td class="gray td-value">{{ field.value }}</td>
+                                </tr>
+                                {% endfor %}
+                                <tr>
+                                    <td><label for="id_kycinfo">{% trans "KYC Info" %}:</label></td>
+                                    {% if kycinfo %}
+                                        {% if kycaudit %}
+                                            {% if kycaudit.is_pass %}
+                                            <td class="gray td-value">{% trans "已通过" %}</td>
+                                            {% else %}
+                                            <td class="gray td-value">{% trans "已拒绝，拒绝原因" %}:{{ kycaudit.comment }}</td>
+                                            {% endif %}
+                                        {% endif %}
+                                    <td class="gray td-value">{% trans "已填写 KYC 信息,正在审核中。" %}</td>
+                                    {% else %}
+                                    <td class="gray td-value">{% trans "尚未填写 KYC 信息，<a href='/tokenexchange/'>前往填写</a>" %}</td>
+                                    {% endif %}
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="form-button user-btn" href="/user/profile/">修改</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="token-exchange" class="tab-pane fade user-content bg-gray">
+            <div class="container">
+                <div class="raw user-detail-content">
+                    <div class="col-md-8 user-info">
+                        <div class="item">
+                            <div class="item-title"><p>{% trans "First Token Exchange" %}</p></div>
+                            <div class="item-content">
+                                <ul>
+                                    <li>兑换比例：x BTC = xx NEW, x ELA = xx NEW</li>
+                                    <li>开始时间：xxxx.xx.xx</li>
+                                    <li>我期望的额度：x BTC</li>
+                                    <li>我期望的额度：x ELA</li>
+                                    <li>我的发币地址 BTC：1LKJ2JINBLAFOSFALSKDLF32N3</li>
+                                    <li>我的发币地址 ELA：ELKJ2JINBLAFOSFALSKDLF32N3</li>
+                                    <li>分配给我的额度： x BTC</li>
+                                    <li>分配给我的额度： x ELA</li>
+                                    <li>我的 New：xx NEW</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,4 +97,12 @@
         </div>
     </div>
 </section>
+{% endblock %}
+{% block inline_js %}
+<script type="text/javascript">
+    $("#user-tab a").click(function(e){
+        e.preventDefault()
+        $(this).tab("show")
+    })
+</script>
 {% endblock %}

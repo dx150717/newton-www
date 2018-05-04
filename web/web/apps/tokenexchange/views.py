@@ -41,7 +41,7 @@ def show_tokenexchange_index_view(request):
 @exchange_valid_required
 @login_required
 def show_join_tokenexchange_view(request):
-    instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user, phase_id=settings.CURRENT_FUND_PHASE).first()
+    instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
     form = forms.KYCInfoForm(instance=instance)
     return render(request, "tokenexchange/submit.html", locals()) 
 
@@ -54,10 +54,7 @@ def post_kyc_information(request):
         if not form.is_valid():
             return render(request, "tokenexchange/submit.html", locals())
         # check whether user is submit kyc info
-        instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user, phase_id=settings.CURRENT_FUND_PHASE).first()
-        if instance:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_('You had submited kyc info')])
-            return render(request, "tokenexchange/submit.html", locals())
+        instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
         instance = form.save(commit=False)
         instance.phase_id = settings.CURRENT_FUND_PHASE
         instance.user = request.user

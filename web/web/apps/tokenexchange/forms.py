@@ -11,7 +11,16 @@ class KYCInfoForm(ModelForm):
         fields = [
             'first_name',
             'last_name',
+            'location',
+            'cellphone',
+            'country_code',
+            'id_number',
             'id_card',
+            'emergency_contact_last_name',
+            'emergency_contact_last_name',
+            'emergency_contact_country_code',
+            'emergency_contact_cellphone',
+            'relationships_with_emergency_contacts',
             'how_to_contribute',
             'what_is_newton',
         ]
