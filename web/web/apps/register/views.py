@@ -13,6 +13,7 @@ from django.template import Template, Context, loader
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import utc
 from django.forms.forms import NON_FIELD_ERRORS
+from django.utils import translation
 import pyotp
 
 import decorators
