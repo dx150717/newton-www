@@ -5,7 +5,9 @@
 {% trans "Login" %} 
 {% endblock %} 
 {% block require_js %}
-<script src='https://www.google.com/recaptcha/api.js' async defer></script> {% endblock %} {% block content %}
+<script src='https://www.google.com/recaptcha/api.js' async defer></script> 
+{% endblock %} 
+{% block content %}
 <section id="login" class="section-list">
     <div class="login-title container text-center">
         <h2>{% trans "Login" %}</h2>
@@ -60,7 +62,8 @@
         </div>
     </div>
 </section>
-{% endblock %} {% block inline_js %}
+{% endblock %}
+{% block inline_js %}
 <script type="text/javascript">
     $("#normal").addClass("display-none");
     var email;
@@ -69,15 +72,15 @@
     var next;
     function login() {
         var data = {};
-        email = $("input[name='email']").val()
-        password = $("input[name='password']").val()
+        email = $("input[name='email']").val();
+        password = $("input[name='password']").val();
         next = $("input[name='next']").val();
         data.email = email;
         data.password = password;
         //data['g-recaptcha-response'] = $()
         $.post("/login/post/", data, function (ret) {
             if (ret.error_message) {
-                $("#error").append("<p>" + ret.error_message + "</p>")
+                $("#error").append("<p>" + ret.error_message + "</p>");
                 return;
             }
             if (ret.result) {
@@ -97,7 +100,7 @@
         var next = $("input[name='next']").val();
         $.post("/login/post-google-authenticator/", data, function (ret) {
             if (ret.error_message) {
-                $("#error").append("<p>" + ret.error_message + "</p>")
+                $("#error").append("<p>" + ret.error_message + "</p>");
                 return;
             }
             if (ret.result) {
@@ -106,4 +109,5 @@
             }
         });
     });
-</script> {% endblock %}
+</script> 
+{% endblock %}

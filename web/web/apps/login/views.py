@@ -40,7 +40,7 @@ def post_login(request):
         if not res['success']:
             form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
             return render(request, 'login/index.html', locals())
-            # start authenticate
+        # start authenticate
         username = form.cleaned_data['email']
         password = form.cleaned_data['password']
         user = authenticate(username=username, password=password)

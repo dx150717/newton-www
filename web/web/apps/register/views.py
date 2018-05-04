@@ -134,6 +134,7 @@ def submit_password(request):
         user_profile = user_models.UserProfile.objects.create(user=user)
         user_profile.is_google_authenticator = True
         user_profile.google_authenticator_private_key = gtoken
+        user_profile.language_code = translation.get_language()
         user_profile.save()
         # set link valid
         verification.status = codes.StatusCode.CLOSE.value
