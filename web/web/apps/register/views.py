@@ -13,6 +13,7 @@ from django.template import Template, Context, loader
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import utc
 from django.forms.forms import NON_FIELD_ERRORS
+import pyotp
 
 import decorators
 from config import codes
@@ -85,6 +86,8 @@ def show_invalid_link_view(request):
 def show_password_view(request):
     form = forms.PasswordForm()
     uuid = request.GET['uuid']
+    gtoken = pyotp.random_base32()
+    gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
     return render(request, 'register/password.html', locals())
 
 
@@ -102,26 +105,45 @@ def submit_password(request):
             return http.HttpResponseRedirect('/register/invalid-link/')
         email = verification.email_address
         # check form
+        gtoken = request.POST['gtoken']
         form = forms.PasswordForm(request.POST)
         if not form.is_valid():
+            gtoken = gtoken
+            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
             return render(request, 'resiter/password.html', locals())
         password = form.cleaned_data['password']
         repassword = form.cleaned_data['repassword']
         # check password
         if password != repassword:
+            gtoken = gtoken
+            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords differ')])
             return render(request, 'register/password.html', locals())
-        # create user
+        # check google authenticator
+        gtoken_code = form.cleaned_data['gtoken_code']
+        is_pass_google_auth = pyotp.TOTP(gtoken).verify(gtoken_code)
+        if not is_pass_google_auth:
+            gtoken = gtoken
+            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Auth Code Error')])
+            return render(request, 'register/password.html', locals())
         username = security.generate_uuid()
         user = User.objects.create_user(username, email)
         user.set_password(password)
         user.save()
         user_profile = user_models.UserProfile.objects.create(user=user)
+        user_profile.is_google_authenticator = True
+        user_profile.google_authenticator_private_key = gtoken
+        user_profile.save()
         # set link valid
         verification.status = codes.StatusCode.CLOSE.value
         verification.save()
-        return http.HttpResponseRedirect('/login/')
+        return http.HttpResponseRedirect('/register/register-success/')
     except Exception, inst:
         logger.exception("fail to submit password: %s" % str(inst))
         return http.HttpResponseServerError()
+
+
+def show_register_success_view(request):
+    return render(request, "register/register-success.html", locals())
  

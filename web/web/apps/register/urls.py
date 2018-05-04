@@ -12,4 +12,5 @@ urlpatterns = patterns('',
                        url(r'^invalid-link/', views.show_invalid_link_view, name="show_invalid_link_view"),
                        url(r'^password/$', views.show_password_view, name="show_password_view"),
                        url(r'^password/submit/', views.submit_password, name="submit_password"),
+                       url(r'^register-success/$', views.show_register_success_view),
 )
