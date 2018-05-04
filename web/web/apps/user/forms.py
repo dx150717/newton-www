@@ -9,6 +9,8 @@ from django.forms import MultiWidget
 from django.conf import settings
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth.models import User
+
 from user.models import UserProfile
 
 class CellphoneGroupWidget(MultiWidget):
@@ -44,21 +46,8 @@ class CellphoneGroupField(forms.MultiValueField):
         return data_list
 
 
-class UserProfileForm(ModelForm):
-    cellphone_group = CellphoneGroupField(label=_('cellphone'),required=True, widget=CellphoneGroupWidget)
+class UserForm(ModelForm):
 
-    def __init__(self, *args, **kwargs):
-        super(UserProfileForm, self).__init__(*args, **kwargs)
-        country_code_widget = self.fields['cellphone_group'].widget.widgets[0]
-        cellphone_widget = self.fields['cellphone_group'].widget.widgets[1]
-        instance = kwargs['instance'] if kwargs.has_key('instance') else None
-        if instance:
-            country_code = instance.country_code
-            cellphone = instance.cellphone
-            self.fields['cellphone_group'].initial = [country_code, cellphone]
-        
-        
     class Meta:
-        model = UserProfile
-        fields = ['gender', 'homepage','location', 'cellphone_group', 'job_status', 'major', 'self_introduction', 'channel', 'birth_date']
-        widgets = {'birth_date': forms.TextInput(attrs={'type':'date'})}
+        model = User
+        fields = ['email']

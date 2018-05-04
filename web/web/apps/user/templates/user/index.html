@@ -46,6 +46,14 @@
                                     <td class="gray td-value">{{ field.value }}</td>
                                 </tr>
                                 {% endfor %}
+                            </tbody>
+                        </table>
+                        <div class="info-divider"></div>
+                        <table>
+                            <thead>
+                                <tr><td>KYC Info</td></tr>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td><label for="id_kycinfo">{% trans "KYC Info" %}:</label></td>
                                     {% if kycinfo %}

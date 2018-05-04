@@ -20,8 +20,7 @@ logger = logging.getLogger(__name__)
 @login_required
 def show_user_index_view(request):
     user = request.user
-    profile = models.UserProfile.objects.filter(user=user).first()
-    form = forms.UserProfileForm(instance=profile)
+    form = forms.UserForm(instance=user)
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
     kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
     invest_invite = tokenexchange_models.InvestInvite.objects.filter(user=user).first()
