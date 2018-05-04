@@ -33,14 +33,14 @@ def post_login(request):
         form = forms.LoginForm(request.POST)
         if not form.is_valid():
             return render(request, 'login/index.html', locals())
-        # g_recaptcha_response = request.POST.get('g-recaptcha-response')
-        # post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
-        # res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
-        # res = json.loads(res.text)
-        # if not res['success']:
-        #     form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
-        #     return render(request, 'login/index.html', locals())
-        #     # start authenticate
+        g_recaptcha_response = request.POST.get('g-recaptcha-response')
+        post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
+        res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
+        res = json.loads(res.text)
+        if not res['success']:
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
+            return render(request, 'login/index.html', locals())
+            # start authenticate
         username = form.cleaned_data['email']
         password = form.cleaned_data['password']
         user = authenticate(username=username, password=password)
@@ -83,6 +83,5 @@ def post_google_authenticator(request):
         else:
             return http.JsonUnauthErrorResponse()
     except Exception, inst:
-        print("error is :%s" %str(inst))
         logger.exception("fail to post google authedticator:%s" % str(inst))
         return http.HttpResponseServerError()
