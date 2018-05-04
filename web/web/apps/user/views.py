@@ -26,6 +26,8 @@ def show_user_index_view(request):
     profile = models.UserProfile.objects.filter(user=user).first()
     form = forms.UserProfileForm(instance=profile)
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
+    kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
+    invest_invite = tokenexchange_models.InvestInvite.objects.filter(user=user).first()
     return render(request, "user/index.html", locals())
 
 @login_required
