@@ -1,53 +1,109 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 {% load i18n %}
-{% load utils %}
-
-{% block title %}
-{% trans "Login" %}
-{% endblock %}
-
+{% load utils %} 
+{% block title %} 
+{% trans "Login" %} 
+{% endblock %} 
 {% block require_js %}
-<script src='https://www.google.com/recaptcha/api.js' async defer></script>
-{% endblock %}
-
-{% block content %}
+<script src='https://www.google.com/recaptcha/api.js' async defer></script> {% endblock %} {% block content %}
 <section id="login" class="section-list">
     <div class="login-title container text-center">
         <h2>{% trans "Login" %}</h2>
     </div>
     <div class="container">
-        <form class="form" action="/login/post/" method="POST">
-            {% csrf_token %}
-            {% include "form.html" %}
-            <div class="raw">
-                <div class="col-lg-5 col-sm-5 col-xs-5"></div>
-                <div class="form-group">
-                    <div class="google-recaptcha">
-                        <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv"></div>
+        {% csrf_token %}
+        <div id="error"></div>
+        {% include "form.html" %}
+        <div class="raw">
+            <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+            <div class="form-group">
+                <div class="google-recaptcha">
+                    <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv"></div>
+                </div>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+            <div>
+                <input type="hidden" name="next" value="{{ next }}" />
+                <button class="form-button" type="submit" onclick="login()">{% trans "Login" %}</button>
+            </div>
+        </div>
+        <div class="raw">
+            <div class="col-lg-5 col-sm-5 col-xs-5"></div>
+            <div class="space-between">
+                <a class="register" href="/register/">{% trans "Register" %}</a>
+                <a class="reset" href="/reset/">{% trans "Forget Password" %}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="code-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">填写google authenticator 验证码</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="gtoken-code" id="id-gtoken-code-label">请输入验证码</label>
+                        <input id="id-gtoken" name="gtoken" />
+                    </div>
+                    <div>
+                        <button id="gtoken-submit-button" class="form-button" value="{% trans 'Submit' %}"></button>
                     </div>
                 </div>
             </div>
-            <div class="raw">
-                <div class="col-lg-5 col-sm-5 col-xs-5"></div>
-                <div>
-                    <input type="hidden" name="next" value="{{ next }}" />
-                    <button class="form-button" type="submit">{% trans "Login" %}</button>
-                </div>
-            </div>
-            <div class="raw">
-                <div class="col-lg-5 col-sm-5 col-xs-5"></div>
-                <div class="space-between">
-                    <a class="register" href="/register/">{% trans "Register" %}</a>
-                    <a class="reset" href="/reset/">{% trans "Forget Password" %}</a>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
 </section>
-{% endblock %}
-
-{% block inline_js %}
+{% endblock %} {% block inline_js %}
 <script type="text/javascript">
     $("#normal").addClass("display-none");
-</script>
-{% endblock %}
+    var email;
+    var password;
+    var auth_token;
+    var next;
+    function login() {
+        var data = {};
+        email = $("input[name='email']").val()
+        password = $("input[name='password']").val()
+        next = $("input[name='next']").val();
+        data.email = email;
+        data.password = password;
+        //data['g-recaptcha-response'] = $()
+        $.post("/login/post/", data, function (ret) {
+            if (ret.error_message) {
+                $("#error").append("<p>" + ret.error_message + "</p>")
+                return;
+            }
+            if (ret.result) {
+                $('#code-modal').modal('show');
+                auth_token = ret.result.auth_token;
+            };
+        });
+    };
+
+    $("#gtoken-submit-button").click(function () {
+        var gtoken_code = $("input[name='gtoken']").val();
+        data = {};
+        data.gtoken_code = gtoken_code;
+        data.email = email;
+        data.password = password;
+        data.auth_token = auth_token;
+        var next = $("input[name='next']").val();
+        $.post("/login/post-google-authenticator/", data, function (ret) {
+            if (ret.error_message) {
+                $("#error").append("<p>" + ret.error_message + "</p>")
+                return;
+            }
+            if (ret.result) {
+                var next = ret.result.msg;
+                location.href = next;
+            }
+        });
+    });
+</script> {% endblock %}

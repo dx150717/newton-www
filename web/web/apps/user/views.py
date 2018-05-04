@@ -19,10 +19,7 @@ logger = logging.getLogger(__name__)
 
 @login_required
 def show_user_index_view(request):
-    id = request.user.id
-    user = User.objects.filter(id=id).first()
-    if not user:
-        return http.HttpResponseRedirect("/login/")
+    user = request.user
     profile = models.UserProfile.objects.filter(user=user).first()
     form = forms.UserProfileForm(instance=profile)
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()

@@ -7,5 +7,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
                     url(r'^$', views.show_login_view),
-                    url(r'^post/', views.post_login, name="post_login")
+                    url(r'^post/', views.post_login, name="post_login"),
+                    url(r'^post-google-authenticator/', views.post_google_authenticator)
 )
