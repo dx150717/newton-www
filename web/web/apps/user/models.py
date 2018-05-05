@@ -23,7 +23,7 @@ class UserProfile(models.Model):
     user_type = models.IntegerField(default=codes.UserType.NORMAL.value)
     # cellphone
     cellphone = models.CharField(max_length=128, db_index=True, default='')
-    country_code = models.CharField(max_length=4, db_index=True, default=settings.CHINA_COUNTRY_CALLING_CODE)
+    country_code = models.CharField(max_length=4, db_index=True)
     language_code = models.CharField(max_length=10, default=settings.USER_DEFAULT_LANGUAGE_CODE)
     # detail
     title = models.CharField(max_length=128, default='', blank=True)
