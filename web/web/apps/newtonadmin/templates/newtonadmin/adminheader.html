@@ -15,14 +15,29 @@
                     </button>
                     
                 </div>
+
                 {% if request.user.is_staff %}
                 <div class="dropdown">
                     <button type="button" class="btn dropdown-toggle list-btn" id="adminDropdown" data-toggle="dropdown">
-                        代币销售<span class="caret"></span>
+                        KYC<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="adminDropdown">
                         <li role="presentation">
-                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/id/">身份信息确认</a>
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/id/">待确认</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/id/pass/">已确认</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle list-btn" id="adminDropdown" data-toggle="dropdown">
+                        通证交换(私募)<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="adminDropdown">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/invite/{{ codes.FUNDPHASE_PRIVATE_VALUE }}/">待邀请</a>
                         </li>
                         <li role="presentation" class="divider"></li>
                         <li role="presentation">
@@ -41,9 +56,36 @@
                         <li role="presentation">
                             <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/receive/">收币确认</a>
                         </li>
-
                     </ul>
                 </div>
+
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle list-btn" id="adminDropdown" data-toggle="dropdown">
+                        通证交换(公募)<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="adminDropdown">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/invite/">待邀请</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/amount/">分配额度</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/email/">待发送邮件</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/sent/">已发送邮件</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="/newtonadmin/tokenexchange/receive/">收币确认</a>
+                        </li>
+                    </ul>
+                </div>
+
                 <div class="list-btn logout">
                     <a class="btn" type="button" value="Logout" href="/newtonadmin/logout/">退出</a>
                 </div>

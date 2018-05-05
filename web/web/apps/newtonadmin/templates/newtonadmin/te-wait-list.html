@@ -1,0 +1,57 @@
+{% extends "newtonadmin/base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="newtonadmin" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <table class="table">
+                <caption class="text-center">确定额度</caption>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>介绍</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
+                            <p>{{ item.user.email }}</p>
+                        </td>
+                        <td>
+                            <p>
+                                <img src="{{ item.id_card.url }}"/>
+                            </p>
+                            <p>
+                                {{ item.how_to_contribute }}                                
+                            </p>
+                            <p>
+                                {{ item.what_is_newton }}
+                            </p>
+                        </td>
+                        <td>
+                            <p>{{ item.expect_ela }} ELA</p>
+                            <p>{{ item.expect_btc }} BTC</p>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">分配额度</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

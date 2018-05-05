@@ -1,0 +1,15 @@
+{% extends "email-template.html" %}
+{% load i18n %}
+{% load utils %}
+
+
+{% block title %}
+<h2>{% trans "You are passed the Newton KYC." %}</h2>
+{% endblock %}
+
+{% block content %}
+<p>{% trans "Dear" %} {{ kyc_info.first_name }},</p>
+<p>
+    {% trans "You are passed the Newton KYC. We will notify you later for more information." %}
+</p>
+{% endblock %}
