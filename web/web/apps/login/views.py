@@ -32,7 +32,7 @@ def post_login(request):
     try:
         form = forms.LoginForm(request.POST)
         if not form.is_valid():
-            return http.JsonErrorResponse(error_message=_("Error Form"))
+            return http.JsonErrorResponse(error_message=_("Form Error"))
         g_recaptcha_response = request.POST.get('g-recaptcha-response')
         post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
         res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
@@ -52,7 +52,7 @@ def post_login(request):
         return http.JsonSuccessResponse(data={"auth_token":auth_token})
     except Exception, inst:
         logger.exception("fail to post login:%s" % str(inst))
-        return http.HttpResponseServerError()
+        return http.JsonErrorResponse(error_message=_("Request Time Out"))
 
 @decorators.http_post_required
 def post_google_authenticator(request):
