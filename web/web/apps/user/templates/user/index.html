@@ -24,7 +24,9 @@
                 <div class="sub-title-nav">
                     <ul id="user-tab" class="nav nav-tabs">
                         <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Resource" %}</a></li>
+                        {% if kycinfo %}
                         <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -71,9 +73,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="col-md-4">
-                        <a class="form-button user-btn" href="/user/profile/">修改</a>
                     </div>
                 </div>
             </div>

@@ -32,14 +32,14 @@ def post_login(request):
     try:
         form = forms.LoginForm(request.POST)
         if not form.is_valid():
-            return render(request, 'login/index.html', locals())
+            return http.JsonErrorResponse(error_message=_("Error Form"))
         g_recaptcha_response = request.POST.get('g-recaptcha-response')
         post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
         res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
         res = json.loads(res.text)
         if not res['success']:
             form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
-            return render(request, 'login/index.html', locals())
+            return http.JsonErrorResponse(error_message=_("Auth Recaptcha Error"))
         # start authenticate
         username = form.cleaned_data['email']
         password = form.cleaned_data['password']
