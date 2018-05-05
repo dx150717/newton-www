@@ -8,10 +8,8 @@ class ConfirmKYCForm(forms.Form):
 
 class AmountForm(forms.Form):
     user_id = forms.IntegerField(required=True)
-    min_btc_limit = forms.FloatField(required=True)
-    max_btc_limit = forms.FloatField(required=True)
-    min_ela_limit = forms.FloatField(required=True)
-    max_ela_limit = forms.FloatField(required=True)
+    assign_btc = forms.FloatField(required=True)
+    assign_ela = forms.FloatField(required=True)
 
 class PostInviteForm(forms.Form):
     user_id = forms.IntegerField(required=True)

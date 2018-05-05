@@ -131,96 +131,48 @@ def send_invite_email(request, phase_id):
         return http.JsonErrorResponse()
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_amount_list_view(request):
+def show_amount_list_view(request, phase_id):
     """Show the investor list which we pass KYC
     
     """
     try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=settings.CURRENT_FUND_PHASE)
+        phase_id = int(phase_id)
+        items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
         return render(request, "newtonadmin/amount-list.html", locals())
     except Exception, inst:
-        logger.exception("fail to show amount list:%s" % str(inst))
+        logger.exception("fail to show the amount list:%s" % str(inst))
         return http.HttpResponseServerError()    
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def confirm_amount(request):
-    """Show the investor list which we don't set the invest amount
+def post_amount(request, phase_id):
+    """submit the distribution amount
     
     """
     try:
         form = forms_tokenexchange.AmountForm(request.POST)
         if not form.is_valid():
             return http.JsonErrorResponse()
+        phase_id = int(phase_id)
         user_id = int(form.cleaned_data['user_id'])
-        min_btc_limit = int(form.cleaned_data['min_btc_limit'])
-        max_btc_limit = int(form.cleaned_data['max_btc_limit'])
-        min_ela_limit = int(form.cleaned_data['min_ela_limit'])
-        max_ela_limit = int(form.cleaned_data['max_ela_limit'])
+        assign_btc = int(form.cleaned_data['assign_btc'])
+        assign_ela = int(form.cleaned_data['assign_ela'])
         # Query the available address
         btc_address = services_tokenexchange.allocate_btc_address()
         ela_address = services_tokenexchange.allocate_ela_address()
         if not btc_address or not ela_address:
             return http.JsonErrorResponse()
         # save status
-        item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=settings.CURRENT_FUND_PHASE)
+        item = tokenexchange_models.InvestInvite.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
         item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
-        item.min_btc_limit = min_btc_limit
-        item.max_btc_limit = max_btc_limit
-        item.min_ela_limit = min_ela_limit
-        item.max_ela_limit = max_ela_limit
+        item.assign_ela = assign_btc
+        item.assign_btc = assign_btc
         item.receive_btc_address = btc_address
         item.receive_ela_address = ela_address
         item.save()
-        services_tokenexchange.send_confirm_distribution_notify(item, request)
         return http.JsonSuccessResponse()
     except Exception, inst:
-        logger.exception("fail to confirm amount:%s" % str(inst))
+        logger.exception("fail to post amount:%s" % str(inst))
         return http.JsonErrorResponse()    
-
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_email_list_view(request):
-    """Show the investor list which we don't send the final email to
-    
-    """
-    try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.CONFIRM_DISTRIBUTION.value, phase_id=settings.CURRENT_FUND_PHASE)
-        return render(request, "newtonadmin/email-list.html", locals())
-    except Exception, inst:
-        logger.exception("fail to show email list:%s" % str(inst))
-        return http.HttpResponseServerError()    
-
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def confirm_email(request):
-    """Determine whether send email to investor
-    
-    """
-    try:
-        user_id = int(request.POST['user_id'])
-        item = tokenexchange_models.KYCInfo.objects.filter(user__id=user_id, status=codes.TokenExchangeStatus.CONFIRM_DISTRIBUTION.value, phase_id=settings.CURRENT_FUND_PHASE).first()
-        if not item:
-            logger.error("item is not found.")
-            return http.JsonErrorResponse()
-        if services_tokenexchange.send_distribution_letter(item.user, request):
-            item.status = codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value
-            item.save()
-            return http.JsonSuccessResponse()
-        else:
-            return http.JsonErrorResponse()
-    except Exception, inst:
-        logger.exception("fail to confirm email:%s" % str(inst))
-        return http.JsonErrorResponse()
-
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_sent_list_view(request):
-    """Show the investor list which we have already sent the final email to
-    
-    """
-    try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value, phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
-        return render(request, "newtonadmin/sent-list.html", locals())
-    except Exception, inst:
-        logger.exception("fail to show sent list:%s" % str(inst))
-        return http.HttpResponseServerError()    
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def show_receive_list_view(request):
