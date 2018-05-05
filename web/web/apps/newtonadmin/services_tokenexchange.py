@@ -5,6 +5,7 @@ import logging
 
 from django.conf import settings
 from django.template import Template, Context, loader
+from django.utils.translation import ugettext as _
 
 from verification import services
 from tasks import task_email
@@ -71,6 +72,29 @@ def send_distribution_letter(user, request):
         return True
     except Exception, inst:
         logger.exception("fail to send distribution letter:%s" % str(inst))
+        return False
+
+def send_kyc_pass_notify(kyc_info, request):
+    """Send the email letter for kyc pass
+    """
+    try:
+        # build the email body
+        email = user.email
+        email_type = codes.EmailType.TEXCHANGE_CONFIRM_KYC.value
+        verification = services.generate_verification_uuid(email, email_type)
+        if not verification:
+            return False
+        target_url = ""
+        subject = _("Newton Notifications: You are passed the Newton KYC")
+        template = loader.get_template("newtonadmin/kyc-success-notify-letter.html")
+        context = Context({"target_url":target_url,"request":request, "kyc_info": kyc_info})
+        html_content = template.render(context)
+        from_email = settings.FROM_EMAIL
+        # send
+        task_email.send_email.delay(subject, html_content, from_email, [email])
+        return True
+    except Exception, inst:
+        logger.exception("fail to send the apply amout notify:%s" % str(inst))        
         return False
 
 def send_apply_amount_notify(user, request):

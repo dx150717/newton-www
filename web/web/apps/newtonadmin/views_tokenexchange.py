@@ -19,7 +19,19 @@ def show_id_list_view(request):
     
     """
     try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.TokenExchangeStatus.CANDIDATE.value, phase_id=settings.CURRENT_FUND_PHASE)
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
+        return render(request, "newtonadmin/id-list.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show id list:%s" % str(inst))
+        return http.HttpResponseServerError()    
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def show_pass_id_list_view(request):
+    """Show the pass ID list
+    
+    """
+    try:
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
         return render(request, "newtonadmin/id-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show id list:%s" % str(inst))
@@ -33,23 +45,35 @@ def confirm_id(request):
     try:
         form = forms_tokenexchange.ConfirmKYCForm(request.POST)
         if not form.is_valid():
-            return http.HttpResponseServerError()
+            return http.JsonErrorResponse()
         user_id = int(form.cleaned_data['user_id'])
         pass_tokenexchange = int(form.cleaned_data['pass_kyc'])
         level = int(form.cleaned_data['level'])
-        item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.CANDIDATE.value, phase_id=settings.CURRENT_FUND_PHASE)
+        item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.KYCStatus.CANDIDATE.value)
         if pass_tokenexchange:
-            item.status = codes.TokenExchangeStatus.PASS_KYC.value
+            item.status = codes.KYCStatus.PASS_KYC.value
             item.level = level
         else:
-            item.status = codes.TokenExchangeStatus.REJECT.value
+            item.status = codes.KYCStatus.REJECT.value
         item.save()
-        # notify the investor to fill out the expect amount
-        services_tokenexchange.send_apply_amount_notify(item.user, request)
+        # send the kyc pass notify
+        services_tokenexchange.send_kyc_pass_notify(item, request)
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to confirm id:%s" % str(inst))
         return http.JsonErrorResponse()        
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def show_invite_view(request, phase_id):
+    """Show the investor list which is waiting for invite
+    
+    """
+    try:
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+        return render(request, "newtonadmin/te-wait-list.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show the te wait list:%s" % str(inst))
+        return http.HttpResponseServerError()    
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def show_amount_list_view(request):

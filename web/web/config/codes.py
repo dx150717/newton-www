@@ -99,6 +99,9 @@ class FundPhase(Enum):
     PRIVATE = 1
     PUBLIC = 2
 
+FUNDPHASE_PRIVATE_VALUE = FundPhase.PRIVATE.value
+FUNDPHASE_PUBLIC_VALUE = FundPhase.PUBLIC.value
+
 class CurrencyType(Enum):
     BTC = 1
     ELA = 2
