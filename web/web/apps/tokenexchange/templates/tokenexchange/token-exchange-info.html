@@ -1,0 +1,80 @@
+{% load i18n %}
+{% load utils %}
+{% if item.phase_id == 1 %}
+<div class="container">
+    <div class="raw">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table text-left">
+                <thead>
+                    <tr>
+                        <td>{% trans "First Token Exchange Info" %}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>开始时间</td>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <td>结束时间</td>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <td>BTC 兑换比例</td>
+                        <td>x BTC = xx NEW</td>
+                    </tr>
+                    <tr>
+                        <td>ELA 兑换比例</td>
+                        <td>x ELA = xx NEW</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+{% endif %}
+{% if item.phase_id == 2 %}
+<div class="container">
+    <div class="raw">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <table class="table text-left">
+                <thead>
+                    <tr>
+                        <td>{% trans "Second Token Exchange Info" %}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>开始时间</td>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <td>结束时间</td>
+                        <td>xxx</td>
+                    </tr>
+                    <tr>
+                        <td>BTC 兑换比例</td>
+                        <td>x BTC = xx NEW</td>
+                    </tr>
+                    <tr>
+                        <td>ELA 兑换比例</td>
+                        <td>x ELA = xx NEW</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+{% endif %}

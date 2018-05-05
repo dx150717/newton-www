@@ -15,11 +15,12 @@
 {% endblock %}
 
 {% block content %}
-<section id="newtonadmin" class="section-list">
+<section id="token-exchange" class="section-list">
     <div class="container text-center">
         <div class="title">
             <h2>{% trans "Fill out your amount of token exchange" %}</h2>
         </div>  
+        {% include "tokenexchange/token-exchange-info.html" %}
         <div class="container">
             <div class="raw">
                 <div class="col-sm-2"></div>

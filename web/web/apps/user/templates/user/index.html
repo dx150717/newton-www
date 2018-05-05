@@ -10,7 +10,7 @@
 <section id="user" class="section-list">
     <div class="page-title">
         <div class="container header">
-            <img class="header" src="{% version "images/default_avator.png" %}" alt="{% trans "Han Feng" %}"/>
+            <img class="header" src="{% version "images/default_avator.png" %}"/>
             <div class="name">
             </div>
             <div class="location">
@@ -23,25 +23,23 @@
             <div class="sub-title">
                 <div class="sub-title-nav">
                     <ul id="user-tab" class="nav nav-tabs">
-                        <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Resource" %}</a></li>
-                        {% if invest_invite %}
+                        <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Profile" %}</a></li>
                         <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
-                        {% endif %}
                     </ul>
                 </div>
             </div>
         </div>
     </dvi>
     <div id="tab-content" class="tab-content">
-        <div id="basic-info" class="tab-pane fade in active user-content bg-gray">
+        <div id="basic-info" class="tab-pane fade in active user-content">
             <div class="container">
                 <div class="raw user-detail-content">
-                    <div class="col-md-8 user-info">
+                    <div class="col-md-12 user-info">
                         <table>
                             <thead>
                                 <tr><td>基本信息</td></tr>
                             </thead>
-                            <tbody>
+                            <tbody class="bg-gray">
                                 {% for field in form %}
                                 <tr>
                                     <td>{{ field.label_tag }}</td>
@@ -50,18 +48,17 @@
                                 {% endfor %}
                             </tbody>
                         </table>
-                        <div class="info-divider"></div>
-                        <table>
+                        <table style="margin-top:32px;">
                             <thead>
-                                <tr><td>KYC Info</td></tr>
+                                <tr><td>KYC</td></tr>
                             </thead>
-                            <tbody>
+                            <tbody class="bg-gray">
                                 <tr>
-                                    <td><label for="id_kycinfo">{% trans "KYC Info" %}:</label></td>
+                                    <td><label for="id_kycinfo">{% trans "Status" %}:</label></td>
                                     {% if kycinfo %}
                                         {% if kycaudit %}
                                             {% if kycaudit.is_pass %}
-                                            <td class="gray td-value">{% trans "已通过" %}</td>
+                                            <td class="gray td-value ">{% trans "已通过" %}</td>
                                             {% else %}
                                             <td class="gray td-value">{% trans "已拒绝，拒绝原因" %}:{{ kycaudit.comment }}</td>
                                             {% endif %}
@@ -79,10 +76,11 @@
             </div>
         </div>
 
-        <div id="token-exchange" class="tab-pane fade user-content bg-gray">
+        <div id="token-exchange" class="tab-pane fade user-content">
             <div class="container">
                 <div class="raw user-detail-content">
                     <div class="col-md-8 user-info">
+                        {% if invest_invite %}
                         <div class="item">
                             <div class="item-title"><p>{% trans "First Token Exchange" %}</p></div>
                             <div class="item-content">
@@ -110,6 +108,11 @@
                                 </ul>
                             </div>
                         </div>
+                        {% else %}
+                        <div class="item">
+                            <p>暂无token交换信息</p>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

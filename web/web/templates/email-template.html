@@ -45,12 +45,10 @@
     <div class="content">
       <div class="container">
           {% block content %}{% endblock %}
-          <p class="text-right">
-              {% trans "Newton Team" %}
-          </p>
-          <p class="text-right">
-              {% trans "Everyone participate, everyone benefit." %}
-          </p>          
+          <div class="end">
+            <p class="main-color">{% trans "Newton" %}</p>
+            <p class="main-color">{% trans "Everyone contribute, everyone benefit." %}</p>
+          </div>
       </div>
     </div>
   </div>

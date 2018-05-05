@@ -25,7 +25,7 @@ class CellphoneGroupWidget(MultiWidget):
     def decompress(self, value):
         if value:
             return [value.country_code, value.cellphone]
-        return [settings.CHINA_COUNTRY_CALLING_CODE, None]
+        return [None, None]
 
     def format_output(self, rendered_widgets):
         return ('''
@@ -39,7 +39,7 @@ class CellphoneGroupField(forms.MultiValueField):
     widget = CellphoneGroupWidget
 
     def __init__(self, *args, **kwargs):
-        fields = (forms.CharField(), forms.CharField())
+        fields = (forms.CharField(label=_("Country Code")), forms.CharField(label=_("Cellphone")))
         super(CellphoneGroupField, self).__init__(fields, *args, **kwargs)
 
     def compress(self, data_list):
