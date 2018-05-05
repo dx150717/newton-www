@@ -52,7 +52,7 @@ def post_login(request):
         return http.JsonSuccessResponse(data={"auth_token":auth_token})
     except Exception, inst:
         logger.exception("fail to post login:%s" % str(inst))
-        return http.HttpResponseServerError()
+        return http.JsonErrorResponse(error_message=_("time out "))
 
 @decorators.http_post_required
 def post_google_authenticator(request):
