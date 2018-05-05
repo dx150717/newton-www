@@ -58,8 +58,7 @@ def post_kyc_information(request):
             instance.phase_id = settings.CURRENT_FUND_PHASE
             instance.user = request.user
             instance.save()
-            email = request.user.email
-            services.send_kyc_confirm_email(email, request)
+            services.send_kyc_confirm_email(instance, request)
             return redirect('/tokenexchange/wait-audit/')
         else:
             instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()

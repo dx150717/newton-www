@@ -79,15 +79,14 @@ def send_kyc_pass_notify(kyc_info, request):
     """
     try:
         # build the email body
-        email = user.email
+        email = kyc_info.user.email
         email_type = codes.EmailType.TEXCHANGE_CONFIRM_KYC.value
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        target_url = ""
         subject = _("Newton Notifications: You are passed the Newton KYC")
         template = loader.get_template("newtonadmin/kyc-success-notify-letter.html")
-        context = Context({"target_url":target_url,"request":request, "kyc_info": kyc_info})
+        context = Context({"request":request, "kyc_info": kyc_info})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
@@ -97,20 +96,20 @@ def send_kyc_pass_notify(kyc_info, request):
         logger.exception("fail to send the apply amout notify:%s" % str(inst))        
         return False
 
-def send_apply_amount_notify(user, request):
+def send_apply_amount_notify(invite_info, request):
     """Send the email letter for apply amount
     """
     try:
         # build the email body
-        email = user.email
-        email_type = codes.EmailType.TEXCHANGE_APPLY_AMOUNT.value
+        email = invite_info.user.email
+        email_type = codes.EmailType.TEXCHANGE_INVITE_NOTIFY.value
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        target_url = "%s/tokenexchange/apply/" % (settings.BASE_URL)
-        subject = "NewtonProject Notifications: Apply the amount:"
+        target_url = "%s/tokenexchange/invite/%s/" % (settings.BASE_URL, invite_info.id)
+        subject = _("Newton notification: Fillout your expect amount")
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
-        context = Context({"target_url":target_url,"request":request})
+        context = Context({"target_url": target_url,"request": request, "invite_info": invite_info})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send

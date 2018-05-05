@@ -16,8 +16,7 @@
                     <tr>
                         <th>姓名</th>
                         <th>介绍</th>
-                        <th>申请时间</th>
-                        <th>操作</th>
+                        <th>审核时间</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,13 +43,6 @@
                                 {{ item.updated_at|date:"Y-m-d H:i:s"}}
                             </p>                            
                         </td>
-
-                        <td>
-                            <p>
-                                <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">审核</a>
-                            </p>
-                        </td>
-                        
                     </tr>
                     {% endfor %}
                 </tbody>

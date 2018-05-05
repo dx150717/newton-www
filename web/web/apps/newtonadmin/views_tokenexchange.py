@@ -32,7 +32,7 @@ def show_pass_id_list_view(request):
     """
     try:
         items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
-        return render(request, "newtonadmin/id-list.html", locals())
+        return render(request, "newtonadmin/pass-id-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show id list:%s" % str(inst))
         return http.HttpResponseServerError()    
@@ -69,11 +69,66 @@ def show_invite_view(request, phase_id):
     
     """
     try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
-        return render(request, "newtonadmin/te-wait-list.html", locals())
+        phase_id = int(phase_id)
+        s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user', flat=True))
+        s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user', flat=True))
+        d = s1.difference(s2)
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user__id__in=d)
+        return render(request, "newtonadmin/te-waiting-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show the te wait list:%s" % str(inst))
+        return http.HttpResponseServerError()
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def post_invite(request, phase_id):
+    try:
+        form = forms_tokenexchange.PostInviteForm(request.POST)
+        if not form.is_valid():
+            return http.JsonErrorResponse()
+        user_id = int(form.cleaned_data['user_id'])
+        invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=user_id).first()
+        if not invite:
+            invite = tokenexchange_models.InvestInvite()
+            invite.user_id = user_id
+            invite.phase_id = int(phase_id)
+        invite.status = codes.TokenExchangeStatus.INVITE.value
+        invite.save()
+        return http.JsonSuccessResponse()
+    except Exception, inst:
+        logger.exception("fail to post invite:%s" % str(inst))
+        return http.JsonErrorResponse()
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def show_completed_invite_view(request, phase_id):
+    """Show the investor list which is completed for invite
+    
+    """
+    try:
+        phase_id = int(phase_id)
+        items = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).order_by('-created_at')
+        return render(request, "newtonadmin/te-completed-list.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show the te completed list:%s" % str(inst))
         return http.HttpResponseServerError()    
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def send_invite_email(request, phase_id):
+    try:
+        form = forms_tokenexchange.PostInviteForm(request.POST)
+        if not form.is_valid():
+            return http.JsonErrorResponse()
+        user_id = int(form.cleaned_data['user_id'])
+        phase_id = int(phase_id)
+        invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=user_id).first()
+        if not invite:
+            return http.JsonErrorResponse()
+        if services_tokenexchange.send_apply_amount_notify(invite, request):
+            invite.status = codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value
+            invite.save()
+        return http.JsonSuccessResponse()
+    except Exception, inst:
+        logger.exception("fail to send the invite email:%s" % str(inst))
+        return http.JsonErrorResponse()
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def show_amount_list_view(request):

@@ -11,11 +11,10 @@
     <div class="container">
         <div class="raw table-responsive content">
             <table class="table">
-                <caption class="text-center">确定额度</caption>
+                <caption class="text-center">已邀请列表</caption>
                 <thead>
                     <tr>
                         <th>姓名</th>
-                        <th>介绍</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -27,22 +26,7 @@
                             <p>{{ item.user.email }}</p>
                         </td>
                         <td>
-                            <p>
-                                <img src="{{ item.id_card.url }}"/>
-                            </p>
-                            <p>
-                                {{ item.how_to_contribute }}                                
-                            </p>
-                            <p>
-                                {{ item.what_is_newton }}
-                            </p>
-                        </td>
-                        <td>
-                            <p>{{ item.expect_ela }} ELA</p>
-                            <p>{{ item.expect_btc }} BTC</p>
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">分配额度</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">发送邀请邮件</a>
                         </td>
                     </tr>
                     {% endfor %}
@@ -54,4 +38,20 @@
 {% endblock %}
 
 {% block inline_js %}
+<script language="javascript">
+function popupWindow(user_id) {
+  var data = {};
+  data.user_id = user_id;
+  $.post('/newtonadmin/tokenexchange/invite/{{ phase_id }}/post/', 
+         data, 
+         function(json){
+           if (json['error_code'] == 1) {
+             alert('success');
+             location.reload();
+           } else {
+             alert(json['error_message']);
+           }
+         });
+}
+</script>
 {% endblock %}
