@@ -5,6 +5,7 @@ __doc__ = """  """
 
 import os
 import datetime
+from django.utils.translation import ugettext as _
 from . import codes
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -86,17 +87,21 @@ FUND_START_DATE = datetime.datetime(2018, 4, 29, 0, 0)
 FUND_END_DATE = datetime.datetime(2018, 5, 30, 0, 0)
 FUND_CONFIG = {
     codes.FundPhase.PRIVATE.value: {
-        'start_date': '',
-        'end_date': '',
-        'ela_ratio': '',
-        'btc_ratio': '',
+        'label': _('First Round of Newton Token Exchange'),
+        'start_date': '2018-05-07',
+        'end_date': '2018-05-20',
+        'ela_ratio': '1000',
+        'min_ela': '100'
+        'btc_ratio': '100000',
+        'min_btc': '1',
     },
     codes.FundPhase.PUBLIC.value: {
-        'start_date': '',
-        'end_date': '',
-        'ela_ratio': '',
-        'min_ela': ''
-        'btc_ratio': '',
-        'min_btc': '',
+        'label': _('Second Round of Newton Token Exchange'),
+        'start_date': '2018-06-01',
+        'end_date': '2018-06-10',
+        'ela_ratio': '1000',
+        'min_ela': '100'
+        'btc_ratio': '100000',
+        'min_btc': '1',
     },
 }
