@@ -39,7 +39,3 @@ class ApplyAmountForm(ModelForm):
             'expect_btc',
             'expect_ela',
         ]
-
-class AcceptDistributionForm(forms.Form):
-    accept_btc = forms.FloatField(label=_('Amount of BTC'), required=True, widget=forms.NumberInput(attrs={'step':0.01}))
-    accept_ela = forms.FloatField(label=_('Amount of ELA'), required=True, widget=forms.NumberInput(attrs={'step':1}))

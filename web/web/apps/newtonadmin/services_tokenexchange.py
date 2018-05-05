@@ -106,10 +106,10 @@ def send_apply_amount_notify(invite_info, request):
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        target_url = "%s/tokenexchange/invite/%s/" % (settings.BASE_URL, invite_info.id)
+        target_url = "%s/tokenexchange/invite/%s/post/" % (settings.BASE_URL, invite_info.id)
         subject = _("Newton notification: Fillout your expect amount")
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
-        context = Context({"target_url": target_url,"request": request, "invite_info": invite_info})
+        context = Context({"target_url": target_url, "request": request, "invite_info": invite_info})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send

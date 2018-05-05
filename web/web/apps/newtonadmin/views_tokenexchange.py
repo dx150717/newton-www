@@ -105,7 +105,7 @@ def show_completed_invite_view(request, phase_id):
     """
     try:
         phase_id = int(phase_id)
-        items = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).order_by('-created_at')
+        items = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value]).order_by('-created_at')
         return render(request, "newtonadmin/te-completed-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show the te completed list:%s" % str(inst))

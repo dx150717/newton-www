@@ -15,6 +15,7 @@
                 <thead>
                     <tr>
                         <th>姓名</th>
+                        <th>是否能发送邮件</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -24,6 +25,13 @@
                         <td>
                             <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
                             <p>{{ item.user.email }}</p>
+                        </td>
+                        <td>
+                            {% ifequal item.status codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE %}
+                            是
+                            {% else %}
+                            否
+                            {% endifequal %}
                         </td>
                         <td>
                             <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">发送邀请邮件</a>
@@ -42,7 +50,7 @@
 function popupWindow(user_id) {
   var data = {};
   data.user_id = user_id;
-  $.post('/newtonadmin/tokenexchange/invite/{{ phase_id }}/post/', 
+  $.post('/newtonadmin/tokenexchange/invite/{{ phase_id }}/send/', 
          data, 
          function(json){
            if (json['error_code'] == 1) {

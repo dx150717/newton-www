@@ -4,11 +4,15 @@
 
 
 {% block title %}
-<h2>{% trans "You are passed the Newton KYC." %}</h2>
+<h2>{% trans "Fillout your expect amount." %}</h2>
 {% endblock %}
 
 {% block content %}
+<p>{% trans "Dear" %} {{ kyc_info.first_name }},</p>
+<p>
+    {% trans "Please click the following button to fillout your expect amount." %}
+</p>
 <div class="link-button">
-    <a class="form-button" href="{{ target_url }}">{% trans "Fill out the expect amount" %}</a>
+    <a class="form-button" href="{{ target_url }}">{% trans "Fillout" %}</a>
 </div>
 {% endblock %}
