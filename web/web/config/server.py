@@ -84,3 +84,19 @@ ELA_WALLET_ADDRESS_FILE = 'ela-wallet.txt'
 CURRENT_FUND_PHASE = codes.FundPhase.PRIVATE.value
 FUND_START_DATE = datetime.datetime(2018, 4, 29, 0, 0)
 FUND_END_DATE = datetime.datetime(2018, 5, 30, 0, 0)
+FUND_CONFIG = {
+    codes.FundPhase.PRIVATE.value: {
+        'start_date': '',
+        'end_date': '',
+        'ela_ratio': '',
+        'btc_ratio': '',
+    },
+    codes.FundPhase.PUBLIC.value: {
+        'start_date': '',
+        'end_date': '',
+        'ela_ratio': '',
+        'min_ela': ''
+        'btc_ratio': '',
+        'min_btc': '',
+    },
+}
