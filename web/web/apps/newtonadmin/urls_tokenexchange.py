@@ -15,11 +15,8 @@ urlpatterns = patterns('',
                        url(r'^invite/(?P<phase_id>[0-9]+)/completed/$', views_tokenexchange.show_completed_invite_view),
                        url(r'^invite/(?P<phase_id>[0-9]+)/send/$', views_tokenexchange.send_invite_email),
                        
-                       url(r'^amount/$', views_tokenexchange.show_amount_list_view),
-                       url(r'^amount/confirm/', views_tokenexchange.confirm_amount),
+                       url(r'^amount/(?P<phase_id>[0-9]+)/$', views_tokenexchange.show_amount_list_view),
+                       url(r'^amount/(?P<phase_id>[0-9]+)/post/$', views_tokenexchange.post_amount),
                        
-                       url(r'^email/$', views_tokenexchange.show_email_list_view),
-                       url(r'^email/confirm/', views_tokenexchange.confirm_email),
-                       url(r'^sent/$', views_tokenexchange.show_sent_list_view),
                        url(r'^receive/$', views_tokenexchange.show_receive_list_view),                    
 )
