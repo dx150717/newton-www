@@ -24,7 +24,7 @@
                 <div class="sub-title-nav">
                     <ul id="user-tab" class="nav nav-tabs">
                         <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Resource" %}</a></li>
-                        {% if kycinfo %}
+                        {% if invest_invite %}
                         <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
                         {% endif %}
                     </ul>
@@ -65,8 +65,9 @@
                                             {% else %}
                                             <td class="gray td-value">{% trans "已拒绝，拒绝原因" %}:{{ kycaudit.comment }}</td>
                                             {% endif %}
+                                        {% else %}
+                                        <td class="gray td-value">{% trans "已填写 KYC 信息,正在审核中。" %}</td>
                                         {% endif %}
-                                    <td class="gray td-value">{% trans "已填写 KYC 信息,正在审核中。" %}</td>
                                     {% else %}
                                     <td class="gray td-value">{% trans "尚未填写 KYC 信息，<a href='/tokenexchange/'>前往填写</a>" %}</td>
                                     {% endif %}
