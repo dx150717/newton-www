@@ -15,17 +15,6 @@
     <div class="container">
         <form action="#" method="POST" id="login_form">
             {% csrf_token %}
-            <div class="container ajax-error hidden">
-                <div class="raw">
-                    <div class="col-sm-5 col-lg-5 col-xs-5"></div>
-                    <div class="alert alert-danger alert-dismissible">
-                        <button type="button" class="close" onclick="hiddenError()">
-                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                        </button>
-                        <strong id="error-content"></strong>
-                    </div>
-                </div>
-            </div>
             {% include "form.html" %}
             <div class="raw">
                 <div class="col-lg-5 col-sm-5 col-xs-5"></div>

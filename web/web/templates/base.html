@@ -19,6 +19,8 @@
         <link rel="shortcut icon" href="{% version "images/favicon.ico" %}" type="image/x-icon" />
     	<!--==== style css ====-->
         <link href="{% version "css/bootstrap.min.css" %}" rel="stylesheet" />
+        <link href="{% version "css/libs/nsprogress/nsprogress.css" %}" rel="stylesheet" />
+        
         <link href="{% version "css/style.css" %}" rel="stylesheet" />
         
         <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
@@ -56,11 +58,14 @@
          {% include "footer.html" %}
          {% endblock %}
 
+         <div id="id_loading"></div>
+         
          <!-- jquery lib -->
          <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
          <script src="{% version "js/jquery-validate.js" %}"></script>
          <script src="{% version "js/jquery-validate-messages.zh.js" %}"></script>
          <script src="{% version "js/jquery-validate-additional-methods.js" %}"></script>
+         <script src="{% version "js/nsprogress.js" %}"></script>
          {% block thirdparty_js %}{% endblock %}
 
          <!-- bootstrap lib -->

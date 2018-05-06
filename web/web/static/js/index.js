@@ -157,3 +157,65 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'UA-116218760-1');
 
+
+// global progress
+function initGlobalToolkit()
+{
+  $('#id_loading').nsProgress({img_path: '/static/images/libs/nsprogress'});
+}
+initGlobalToolkit();
+
+function showLoading()
+{
+  $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Loading...', 'black');
+}
+
+function showWaiting()
+{
+  $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Waiting...', 'black');
+}
+
+function showSuccess(msg)
+{
+  if (!msg) {
+    msg = '操作成功';
+  }
+  $('#id_loading').nsProgress('showSuccessWithStatusAndMaskType', msg, 'black');
+  dismiss();
+}
+
+function showFail(msg)
+{
+  $('#id_loading').nsProgress('showErrorWithStatusAndMaskType', msg, 'black');
+  dismiss();
+}
+
+function dismiss()
+{
+  $('#id_loading').nsProgress('dismiss');
+}
+
+var SUCCESS = 1;
+
+function isSuccess(json)
+{
+  var error_code = json.error_code;
+  if (error_code == SUCCESS) {
+    return true;
+  }
+  return false;
+}
+
+function getData(json)
+{
+  return json.result;
+}
+
+function getErrorMessage(json)
+{
+  return json.error_message;
+}
+
+
+
+
