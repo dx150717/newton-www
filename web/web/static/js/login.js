@@ -28,7 +28,6 @@ $('#login_form').submit(function(event){
   $.post("/login/post/",
          data,
          function (response) {
-           dismiss();
            if (isSuccess(response)) {
              $('#code-modal').modal('show');
              var result = getData(response);
@@ -64,7 +63,6 @@ $("#gtoken-submit-button").click(function () {
   $.post("/login/post-google-authenticator/",
          data,
          function (response) {
-           dismiss();
            if (isSuccess(response)) {
              var result = getData(response);
              var next = result.msg;

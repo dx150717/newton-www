@@ -163,20 +163,22 @@ function initGlobalToolkit()
 {
   $('#id_loading').nsProgress({img_path: '/static/images/libs/nsprogress'});
 }
-initGlobalToolkit();
 
 function showLoading()
 {
+  initGlobalToolkit();
   $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Loading...', 'black');
 }
 
 function showWaiting()
 {
+  initGlobalToolkit();
   $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Waiting...', 'black');
 }
 
 function showSuccess(msg)
 {
+  initGlobalToolkit();
   if (!msg) {
     msg = '操作成功';
   }
@@ -186,13 +188,16 @@ function showSuccess(msg)
 
 function showFail(msg)
 {
+  initGlobalToolkit();
   $('#id_loading').nsProgress('showErrorWithStatusAndMaskType', msg, 'black');
   dismiss();
 }
 
 function dismiss()
 {
-  $('#id_loading').nsProgress('dismiss');
+  setTimeout(function() {
+    $('#id_loading').nsProgress('dismiss');
+  }, 2000);
 }
 
 var SUCCESS = 1;
