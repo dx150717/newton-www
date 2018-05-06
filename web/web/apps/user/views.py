@@ -83,4 +83,14 @@ def show_token_exchange_progress_view(request):
     item = tokenexchange_models.InvestInvite.objects.filter(user=user).first()
     if item:
         token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+        btc_address = item.receive_btc_address
+        ela_address = item.receive_ela_address
+        print btc_address
+        print ela_address
+        if btc_address:
+            btc_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=btc_address,address_type=codes.CurrencyType.BTC.value).first()
+            print btc_transaction.value
+        if ela_address:
+            ela_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=ela_address,address_type=codes.CurrencyType.ELA.value).first()
+            print ela_transaction.value
     return render(request, "user/token-exchange-progress.html", locals())

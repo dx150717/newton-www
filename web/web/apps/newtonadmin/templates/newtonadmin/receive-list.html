@@ -35,7 +35,17 @@
                             BTC &nbsp;&nbsp;<a href="https://blockchain.info/address/{{ item.address }}">查询</a>
                             {% endifequal %}
                             {% ifequal item.address_type  2 %}
-                            BTC &nbsp;&nbsp;<a href="https://blockchain.elastos.org/address/{{ item.address }}">查询</a>
+                            ELA &nbsp;&nbsp;<a href="https://blockchain.elastos.org/address/{{ item.address }}">查询</a>
+                            {% endifequal %}
+                        </td>
+                        <td>
+                            {{ item.value }}
+                            {% ifequal item.address_type  1 %}
+                            BTC
+                            {% endifequal %}
+
+                            {% ifequal item.address_type  2 %} 
+                            ELA
                             {% endifequal %}
                         </td>
                         <td>

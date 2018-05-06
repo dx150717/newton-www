@@ -4,41 +4,48 @@ from celery import task
 import requests
 import json
 from django.conf import settings
+import decimal
 
 from config import codes
 from tokenexchange import models as tokenexchange_models
 
 logger = logging.getLogger(__name__)
 
+DECIMAL_SATOSHI = decimal.Decimal("100000000")
+
 @task()
 def sync_blockchain_data():
     """Sync the blockchain data
     """
+    logger.debug("sync_blockchain_data:")
     try:
         for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=settings.CURRENT_FUND_PHASE):
             # btc
             if item.receive_btc_address:
                 txs = __get_btc_transactions(item.receive_btc_address)
+                logger.debug(txs)
                 for txid, value in txs:
-                    if not kyc_models.AddressTransaction.objects.filter(txid=txid).first():
-                        instance = kyc_models.AddressTransaction()
+                    if not tokenexchange_models.AddressTransaction.objects.filter(txid=txid).first():
+                        instance = tokenexchange_models.AddressTransaction()
                         instance.user = item.user
                         instance.phase_id = item.phase_id
                         instance.address = item.receive_btc_address
                         instance.address_type = codes.CurrencyType.BTC.value
                         instance.txid = txid
+                        instance.value = float(decimal.Decimal(str(value)) / DECIMAL_SATOSHI)
                         instance.save()
             # ela
             if item.receive_ela_address:
                 txs = __get_ela_transactions(item.receive_ela_address)
                 for txid, value in txs:
-                    if not kyc_models.AddressTransaction.objects.filter(txid=txid).first():
-                        instance = kyc_models.AddressTransaction()
+                    if not tokenexchange_models.AddressTransaction.objects.filter(txid=txid).first():
+                        instance = tokenexchange_models.AddressTransaction()
                         instance.user = item.user
                         instance.phase_id = item.phase_id
                         instance.address = item.receive_ela_address
                         instance.address_type = codes.CurrencyType.ELA.value
                         instance.txid = txid
+                        instance.value = float(decimal.Decimal(str(value)) / DECIMAL_SATOSHI)
                         instance.save()
     except Exception, inst:
         logger.error("fail to sync blockchain data: %s" % str(inst))

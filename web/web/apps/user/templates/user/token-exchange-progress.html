@@ -81,10 +81,20 @@
                                                 {% endif %}
                                             </tr>
                                             {% endif %}
-                                            {% if item.status == 8 %}
+                                            {% if btc_transaction.value or ela_transaction.value %}
                                             <tr>
-                                                <td>折合兑换 NEW</td>
+                                                <td>我成功打币金额</td>
+                                                {% if btc_transaction.value %}
+                                                <td>{{ btc_transaction.value }} BTC</td>
+                                                {% else %}
                                                 <td>-</td>
+                                                {% endif %}
+
+                                                {% if ela_transaction.value %}
+                                                <td>{{ ela_transaction.value }} ELA</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
                                             </tr>
                                             {% endif %}
                                         </tbody>
