@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    <dvi class="bg-gray">
+    <div class="bg-gray">
         <div class="container">
             <div class="sub-title">
                 <div class="sub-title-nav">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-    </dvi>
+    </div>
     <div id="tab-content" class="tab-content">
         <div id="basic-info" class="tab-pane fade in active user-content">
             <div class="container">
@@ -80,36 +80,12 @@
             <div class="container">
                 <div class="raw user-detail-content">
                     <div class="col-md-8 user-info">
-                        {% if invest_invite %}
+                        {% if item %}
                         <div class="item">
-                            <div class="item-title"><p>{% trans "First Token Exchange" %}</p></div>
                             <div class="item-content">
-                                <ul>
-                                    <li>兑换比例：x BTC = xx NEW, x ELA = xx NEW</li>
-                                    <li>开始时间：xxxx.xx.xx</li>
-                                    {% if invest_invite.expect_btc %}
-                                    <li>我期望的额度：{{ invest_invite.expect_btc }} BTC</li>
-                                    {% endif %}
-                                    {% if invest_invite.expect_ela %}
-                                    <li>我期望的额度：{{ invest_invite.expect_ela }} ELA</li>
-                                    {% endif %}
-                                    {% if invest_invite.receive_btc_address %}
-                                    <li>我的发币地址 BTC：{{ invest_invite.receive_btc_address }}</li>
-                                    {% endif %}
-                                    {% if invest_invite.receive_ela_address %}
-                                    <li>我的发币地址 ELA：{{ invest_invite.receive_ela_address }}</li>
-                                    {% endif %}
-                                    {% if invest_invite.assign_btc %}
-                                    <li>分配给我的额度： {{ invest_invite.assign_btc }} BTC</li>
-                                    {% endif %}
-                                    {% if invest_invite.assign_ela %}
-                                    <li>分配给我的额度： {{ invest_invite.assign_ela }} ELA</li>
-                                    {% endif %}
-                                    {% if invest_invite.status == 8 %}
-
-                                    <li>已经确认收币<br/>我兑换到的 NEW ： {{ invest_invite.assign_ela }} NEW</li>
-                                    {% endif %}
-                                </ul>
+                            {% include "tokenexchange/token-exchange-info.html" %}
+                            <div class="text-center">
+                                <a class="form-button" href="/user/token-exchange-progress/"> 前往查看进度 >></a>
                             </div>
                         </div>
                         {% else %}

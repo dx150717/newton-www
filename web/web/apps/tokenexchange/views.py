@@ -153,6 +153,7 @@ def post_apply_amount(request, invite_id):
                 item.expect_ela = form.cleaned_data['expect_ela']
                 item.status = codes.TokenExchangeStatus.APPLY_AMOUNT.value
                 item.save()
+                token_exchange_info = settings.FUND_CONFIG[item.phase_id]
                 return render(request, "tokenexchange/apply-success.html", locals())
         else:
             form = forms.ApplyAmountForm()

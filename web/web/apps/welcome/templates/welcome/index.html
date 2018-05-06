@@ -13,9 +13,6 @@
         <div class="col-md-12 text-center">
           <h1>{% trans "Everyone should benefit directly from economic growth" %}</h1>
           <p class="sty1">{% trans "Infrastructure of protocol-based economy" %}</p>
-          {% if request.user.is_authenticated %}
-          <p class="sty1"><a href="/tokenexchange/">{% trans "CountDown >>" %}</a></p>
-          {% endif %}
           {% comment %}
           <div class="more"> 
             <a href="/#/" target="_self"><span class="f20">{% trans "Whitepaper" %}</span></a> 
