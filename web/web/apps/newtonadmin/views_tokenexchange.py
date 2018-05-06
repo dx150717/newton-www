@@ -185,14 +185,20 @@ def post_amount(request, phase_id):
         assign_btc = int(form.cleaned_data['assign_btc'])
         assign_ela = int(form.cleaned_data['assign_ela'])
         # Query the available address
-        btc_address = services_tokenexchange.allocate_btc_address()
-        ela_address = services_tokenexchange.allocate_ela_address()
-        if not btc_address or not ela_address:
+        if assign_btc != 0:
+            btc_address = services_tokenexchange.allocate_btc_address()
+        else:
+            btc_address = None
+        if assign_ela == 0:
+            ela_address = None
+        else:
+            ela_address = services_tokenexchange.allocate_ela_address()
+        if not btc_address and not ela_address:
             return http.JsonErrorResponse()
         # save status
         item = tokenexchange_models.InvestInvite.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
         item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
-        item.assign_ela = assign_btc
+        item.assign_ela = assign_ela
         item.assign_btc = assign_btc
         item.receive_btc_address = btc_address
         item.receive_ela_address = ela_address

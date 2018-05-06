@@ -13,20 +13,15 @@
             <img class="header" src="{% version "images/default_avator.png" %}"/>
             <div class="name">
             </div>
-            <div class="location">
-                <p><img src="{% version "images/location-icon.png" %}"/>{{ form.field.location }}</p>
-            </div>
         </div>
     </div>
-    <div class="bg-gray">
-        <div class="container">
-            <div class="sub-title">
-                <div class="sub-title-nav">
-                    <ul id="user-tab" class="nav nav-tabs">
-                        <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Profile" %}</a></li>
-                        <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="sub-title">
+            <div class="sub-title-nav">
+                <ul id="user-tab" class="nav nav-tabs">
+                    <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Profile" %}</a></li>
+                    <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -84,9 +79,11 @@
                         <div class="item">
                             <div class="item-content">
                             {% include "tokenexchange/token-exchange-info.html" %}
+                            {% if item.status != 1 %}
                             <div class="text-center">
                                 <a class="form-button" href="/user/token-exchange-progress/"> 前往查看进度 >></a>
                             </div>
+                            {% endif %}
                         </div>
                         {% else %}
                         <div class="item">

@@ -58,7 +58,6 @@ def post_kyc_information(request):
             instance.phase_id = settings.CURRENT_FUND_PHASE
             instance.user = request.user
             instance.save()
-            services.send_kyc_confirm_email(instance, request)
             return redirect('/tokenexchange/wait-audit/')
         else:
             instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
@@ -146,6 +145,8 @@ def post_apply_amount(request, invite_id):
         item = tokenexchange_models.InvestInvite.objects.filter(user=request.user, id=invite_id).first()
         if not item:
             return http.HttpResponseServerError()
+        if item.expect_btc or item.expect_ela:
+            return render(request, "tokenexchange/invalid-link.html")
         if request.method == 'POST':
             form = forms.ApplyAmountForm(request.POST)
             if form.is_valid():
@@ -156,6 +157,7 @@ def post_apply_amount(request, invite_id):
                 token_exchange_info = settings.FUND_CONFIG[item.phase_id]
                 return render(request, "tokenexchange/apply-success.html", locals())
         else:
+            token_exchange_info = settings.FUND_CONFIG[item.phase_id]
             form = forms.ApplyAmountForm()
         return render(request, "tokenexchange/apply-amount.html", locals())
     except Exception, inst:
