@@ -27,11 +27,11 @@
                     <div class="item">
                         <div class="item-content">
                             <ul>
-                                {% if item.expect_btc %}
+                                {% if item.expect_btc or item.except_ela %}
                                 <li>我期望的额度：{{ item.expect_btc }} BTC</li>
-                                {% endif %}
-                                {% if item.expect_ela %}
                                 <li>我期望的额度：{{ item.expect_ela }} ELA</li>
+                                {% else %}
+                                <a class="form-button" href="/tokenexchange/invite/{{ item.phase_id }}/post/">{% trans "前往填写期望额度" %}</a>
                                 {% endif %}
                                 {% if item.receive_btc_address %}
                                 <li>我的发币地址 BTC：{{ item.receive_btc_address }}</li>
