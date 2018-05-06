@@ -88,22 +88,26 @@
                                     <li>兑换比例：x BTC = xx NEW, x ELA = xx NEW</li>
                                     <li>开始时间：xxxx.xx.xx</li>
                                     {% if invest_invite.expect_btc %}
-                                    <li>我期望的额度：x BTC</li>
+                                    <li>我期望的额度：{{ invest_invite.expect_btc }} BTC</li>
                                     {% endif %}
                                     {% if invest_invite.expect_ela %}
-                                    <li>我期望的额度：x ELA</li>
+                                    <li>我期望的额度：{{ invest_invite.expect_ela }} ELA</li>
                                     {% endif %}
                                     {% if invest_invite.receive_btc_address %}
-                                    <li>我的发币地址 BTC：1LKJ2JINBLAFOSFALSKDLF32N3</li>
+                                    <li>我的发币地址 BTC：{{ invest_invite.receive_btc_address }}</li>
                                     {% endif %}
                                     {% if invest_invite.receive_ela_address %}
-                                    <li>我的发币地址 ELA：ELKJ2JINBLAFOSFALSKDLF32N3</li>
+                                    <li>我的发币地址 ELA：{{ invest_invite.receive_ela_address }}</li>
                                     {% endif %}
                                     {% if invest_invite.assign_btc %}
-                                    <li>分配给我的额度： x BTC</li>
+                                    <li>分配给我的额度： {{ invest_invite.assign_btc }} BTC</li>
                                     {% endif %}
                                     {% if invest_invite.assign_ela %}
-                                    <li>分配给我的额度： x ELA</li>
+                                    <li>分配给我的额度： {{ invest_invite.assign_ela }} ELA</li>
+                                    {% endif %}
+                                    {% if invest_invite.status == 8 %}
+
+                                    <li>已经确认收币<br/>我兑换到的 NEW ： {{ invest_invite.assign_ela }} NEW</li>
                                     {% endif %}
                                 </ul>
                             </div>

@@ -56,13 +56,17 @@ def confirm_id(request):
             item.status = codes.KYCStatus.PASS_KYC.value
             item.level = level
             action_id = codes.AdminActionType.PASS_KYC.value
+            is_pass = True
         else:
             item.status = codes.KYCStatus.REJECT.value
             action_id = codes.AdminActionType.REJECT_KYC.value
+            is_pass = False
         item.save()
-        # add audit log
-        audit_log = tokenexchange_models.KYCAudit
         target_user = User.objects.filter(id=user_id).first()
+        # add kyc audit
+        kyc_audit = tokenexchange_models.KYCAudit(user=target_user,is_pass=is_pass,comment='')
+        kyc_audit.save()
+        # add audit log
         audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id,comment='')
         audit_log.save()
         # send the kyc pass notify
@@ -147,6 +151,7 @@ def show_amount_list_view(request, phase_id):
     try:
         phase_id = int(phase_id)
         items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+        form = forms_tokenexchange.AmountForm()
         return render(request, "newtonadmin/amount-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show the amount list:%s" % str(inst))

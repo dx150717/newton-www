@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 from django.db.models import Q, F
 from django.contrib.auth.models import User
+from django.conf import settings
 import pyotp
 
 from utils import http

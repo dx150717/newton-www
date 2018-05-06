@@ -43,7 +43,7 @@
                             <p>{{ item.expect_btc }} BTC</p>
                         </td>
                         <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">分配额度</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }}, {{ phase_id }});">分配额度</a>
                         </td>
                     </tr>
                     {% endfor %}
@@ -64,18 +64,16 @@
                 <form method="POST" action="#" id="amount_form">
                     <p>
                         <label>BTC额度</label>
-                        <input type="number" name="min_btc_limit" id="min_btc_limit" value="0" placeholder="最小限额" />&nbsp;-&nbsp;
-                        <input type="number" name="max_btc_limit"id="max_btc_limit"  value="0" placeholder="最大限额" />
+                        <input type="number" name="assign_btc" id="assign_btc" value="1" placeholder="BTC 额度" />
                     </p>
                     
                     <p>
                         <label>ELA额度</label>
-                        <input type="number" name="min_ela_limit" id="min_ela_limit" value="0" placeholder="最小限额"/>&nbsp;-&nbsp;
-                        <input type="number" name="max_ela_limit" id="max_ela_limit" value="0" placeholder="最大限额"/>
+                        <input type="number" name="assign_ela" id="assign_ela" value="10" placeholder="ELA 额度"/>
                     </p>
-                    
                     <p>
                         <input type="hidden" id="user_id" name="user_id" value=""/>
+                        <input type="hidden" id="phase_id" name="phase_id" value="">
                         <button class="btn btn-default" type="button" id="confirm_button">确定</button>
                     </p>
                 </form>
@@ -88,19 +86,19 @@
 
 {% block inline_js %}
 <script language="javascript">
-function popupWindow(user_id) {
+function popupWindow(user_id, phase_id) {
   $('#user_id').val(user_id);
+  $('#phase_id').val(phase_id)
   $('#amount_modal').modal('show');
   $('#confirm_button').click(function(event){
     event.preventDefault();
     var data = {};
-    data.min_btc_limit = $('#min_btc_limit').val();
-    data.max_btc_limit = $('#max_btc_limit').val();
-    data.min_ela_limit = $('#min_ela_limit').val();
-    data.max_ela_limit = $('#max_ela_limit').val();
+    data.assign_btc = $('#assign_btc').val();
+    data.assign_ela = $('#assign_ela').val();
     data.user_id = user_id;
+    data.phase_id = phase_id;
     console.log(data)
-    $.post('/newtonadmin/tokenexchange/amount/confirm/', 
+    $.post('/newtonadmin/tokenexchange/amount/'+phase_id+'/post/', 
            data, 
            function(json){
              if (json['error_code'] == 1) {
