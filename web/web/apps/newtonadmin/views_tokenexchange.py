@@ -155,7 +155,21 @@ def show_amount_list_view(request, phase_id):
         return render(request, "newtonadmin/amount-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show the amount list:%s" % str(inst))
-        return http.HttpResponseServerError()    
+        return http.HttpResponseServerError()
+
+def show_completed_amount_list_view(request, phase_id):
+    """Show the investor list which are assigned the invest amount
+    
+    """
+    try:
+        is_completed = True
+        phase_id = int(phase_id)
+        items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+        form = forms_tokenexchange.AmountForm()
+        return render(request, "newtonadmin/amount-list.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show the completed amount list:%s" % str(inst))
+        return http.HttpResponseServerError()
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def post_amount(request, phase_id):

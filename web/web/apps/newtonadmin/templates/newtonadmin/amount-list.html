@@ -17,6 +17,9 @@
                         <th>姓名</th>
                         <th>介绍</th>
                         <th>期望额度</th>
+                        {% if is_completed %}
+                        <th>分配额度</th>
+                        {% endif %}
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -42,8 +45,16 @@
                             <p>{{ item.expect_ela }} ELA</p>
                             <p>{{ item.expect_btc }} BTC</p>
                         </td>
+                        {% if is_completed %}
                         <td>
+                            <p>{{ item.assign_ela }} ELA</p>
+                            <p>{{ item.assign_btc }} BTC</p>
+                        </td>                        
+                        {% endif %}
+                        <td>
+                            {% if not is_completed %}
                             <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }}, {{ phase_id }});">分配额度</a>
+                            {% endif %}
                         </td>
                     </tr>
                     {% endfor %}
