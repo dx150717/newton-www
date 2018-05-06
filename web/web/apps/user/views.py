@@ -24,9 +24,9 @@ def show_user_index_view(request):
     form = forms.UserForm(instance=user)
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
     kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
-    item = tokenexchange_models.InvestInvite.objects.filter(user=user).first()
-    if item:
-        token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+    items = tokenexchange_models.InvestInvite.objects.filter(user=user)
+    for item in items:
+        item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]
     return render(request, "user/index.html", locals())
 
 @login_required
@@ -76,21 +76,22 @@ def get_qrcode(request):
 def post_settings(request):
     return render(request, "user/settings.html", locals())
 
-def show_token_exchange_progress_view(request):
-    user = request.user
-    kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
-    kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
-    item = tokenexchange_models.InvestInvite.objects.filter(user=user).first()
-    if item:
-        token_exchange_info = settings.FUND_CONFIG[item.phase_id]
-        btc_address = item.receive_btc_address
-        ela_address = item.receive_ela_address
-        print btc_address
-        print ela_address
-        if btc_address:
-            btc_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=btc_address,address_type=codes.CurrencyType.BTC.value).first()
-            print btc_transaction.value
-        if ela_address:
-            ela_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=ela_address,address_type=codes.CurrencyType.ELA.value).first()
-            print ela_transaction.value
-    return render(request, "user/token-exchange-progress.html", locals())
+def show_token_exchange_progress_view(request, phase_id):
+    try:
+        user = request.user
+        kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
+        kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
+        item = tokenexchange_models.InvestInvite.objects.filter(user=user, phase_id=phase_id).first()
+        if item:
+            token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+            btc_address = item.receive_btc_address
+            ela_address = item.receive_ela_address
+            if btc_address:
+                btc_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=btc_address,address_type=codes.CurrencyType.BTC.value).first()
+            if ela_address:
+                ela_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=ela_address,address_type=codes.CurrencyType.ELA.value).first()
+        return render(request, "user/token-exchange-progress.html", locals())
+    except Exception,inst:
+        logger.exception("error show progress %s" %str(inst))
+        return http.HttpResponseServerError()
+    

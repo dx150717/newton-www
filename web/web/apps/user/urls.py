@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     url(r'^settings/$', views.show_settings_view),
     url(r'^post-settings/$', views.post_settings),
     url(r'^getqrcode/', views.get_qrcode),
-    url(r'^token-exchange-progress/', views.show_token_exchange_progress_view),
+    url(r'^token-exchange-progress/(?P<phase_id>[0-9]+)/', views.show_token_exchange_progress_view),
 )

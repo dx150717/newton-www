@@ -75,16 +75,18 @@
             <div class="container">
                 <div class="raw user-detail-content">
                     <div class="col-md-8 user-info">
-                        {% if item %}
+                        {% if items %}
+                        {% for item in items %}
                         <div class="item">
                             <div class="item-content">
-                            {% include "tokenexchange/token-exchange-info.html" %}
+                            {% include "tokenexchange/token-exchange-info.html" with token_exchange_info=item.token_exchange_info %}
                             {% if item.status != 1 %}
                             <div class="text-center">
-                                <a class="form-button" href="/user/token-exchange-progress/"> 前往查看进度 >></a>
+                                <a class="form-button" href="/user/token-exchange-progress/{{ item.phase_id }}/"> 前往查看进度 >></a>
                             </div>
                             {% endif %}
                         </div>
+                        {% endfor %}
                         {% else %}
                         <div class="item">
                             <p>暂无token交换信息</p>
