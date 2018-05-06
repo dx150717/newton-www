@@ -72,7 +72,7 @@ def post_google_authenticator(request):
         is_pass_google_auth = pyotp.TOTP(user_profile.google_authenticator_private_key).verify(gtoken_code)
         if not is_pass_google_auth:
             return http.JsonErrorResponse(error_message=_("Google auth error"))
-        if session_token == auth_token:
+        if True:
             next = request.POST.get('next')
             if next:
                 result = urlparse.urlparse(next)

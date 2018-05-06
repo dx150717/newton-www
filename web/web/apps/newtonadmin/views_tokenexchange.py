@@ -4,10 +4,12 @@ import logging
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import user_passes_test
 from django.conf import settings
+from django.contrib.auth.models import User
 
 from utils import http
 from config import codes
 from tokenexchange import models as tokenexchange_models
+from newtonadmin import models as newtonadmin_models
 from . import forms_tokenexchange
 from . import services_tokenexchange
 
@@ -53,9 +55,16 @@ def confirm_id(request):
         if pass_tokenexchange:
             item.status = codes.KYCStatus.PASS_KYC.value
             item.level = level
+            action_id = codes.AdminActionType.PASS_KYC.value
         else:
             item.status = codes.KYCStatus.REJECT.value
+            action_id = codes.AdminActionType.REJECT_KYC.value
         item.save()
+        # add audit log
+        audit_log = tokenexchange_models.KYCAudit
+        target_user = User.objects.filter(id=user_id).first()
+        audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id,comment='')
+        audit_log.save()
         # send the kyc pass notify
         services_tokenexchange.send_kyc_pass_notify(item, request)
         return http.JsonSuccessResponse()

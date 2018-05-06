@@ -112,3 +112,14 @@ FUNDPHASE_PUBLIC_VALUE = FundPhase.PUBLIC.value
 class CurrencyType(Enum):
     BTC = 1
     ELA = 2
+
+class AdminActionType(Enum):
+    PASS_KYC = 1
+    REJECT_KYC = 2
+    SEND_KYC_EMAIL = 3
+    INVITE = 4
+    SEND_INVITE = 5
+    ASSIGN_AMOUNT = 6
+    SEND_ASSIGN_AMOUNT = 7
+    CONFIRM_RECEIVE_COIN = 8
+    SEND_CONFIRM_EMAIL = 9
