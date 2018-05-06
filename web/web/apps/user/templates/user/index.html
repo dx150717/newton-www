@@ -79,9 +79,11 @@
                         <div class="item">
                             <div class="item-content">
                             {% include "tokenexchange/token-exchange-info.html" %}
+                            {% if item.status != 1 %}
                             <div class="text-center">
                                 <a class="form-button" href="/user/token-exchange-progress/"> 前往查看进度 >></a>
                             </div>
+                            {% endif %}
                         </div>
                         {% else %}
                         <div class="item">

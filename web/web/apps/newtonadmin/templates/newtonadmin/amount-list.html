@@ -42,8 +42,12 @@
                             </p>
                         </td>
                         <td>
+                            {% if item.expect_ela %}
                             <p>{{ item.expect_ela }} ELA</p>
+                            {% endif %}
+                            {% if item.expect_btc %}
                             <p>{{ item.expect_btc }} BTC</p>
+                            {% endif %}
                         </td>
                         {% if is_completed %}
                         <td>
@@ -53,7 +57,7 @@
                         {% endif %}
                         <td>
                             {% if not is_completed %}
-                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }}, {{ phase_id }});">分配额度</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">分配额度</a>
                             {% endif %}
                         </td>
                     </tr>
@@ -73,12 +77,12 @@
             </div>
             <div class="modal-body">
                 <form method="POST" action="#" id="amount_form">
-                    <p>
+                    <p id="btc-limit">
                         <label>BTC额度</label>
                         <input type="number" name="assign_btc" id="assign_btc" value="0" placeholder="BTC 额度" />
                     </p>
                     
-                    <p>
+                    <p id="ela-limit">
                         <label>ELA额度</label>
                         <input type="number" name="assign_ela" id="assign_ela" value="0" placeholder="ELA 额度"/>
                     </p>
@@ -97,9 +101,19 @@
 
 {% block inline_js %}
 <script language="javascript">
-function popupWindow(user_id, phase_id) {
+function popupWindow(user_id, phase_id, expect_ela, expect_btc) {
   $('#user_id').val(user_id);
   $('#phase_id').val(phase_id)
+  if(expect_ela===0){
+    $("#ela-limit").addClass("hide")
+  }else{
+    $("#ela-limit").removeClass("hide")
+  }
+  if(expect_btc===0){
+    $("#btc-limit").addClass("hide")
+  }else{
+    $("#btc-limit").removeClass("hide")
+  }
   $('#amount_modal').modal('show');
   $('#confirm_button').click(function(event){
     event.preventDefault();
@@ -108,7 +122,6 @@ function popupWindow(user_id, phase_id) {
     data.assign_ela = $('#assign_ela').val();
     data.user_id = user_id;
     data.phase_id = phase_id;
-    console.log(data)
     $.post('/newtonadmin/tokenexchange/amount/'+phase_id+'/post/', 
            data, 
            function(json){
