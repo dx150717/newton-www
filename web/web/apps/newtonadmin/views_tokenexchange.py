@@ -189,12 +189,13 @@ def post_amount(request, phase_id):
         return http.JsonErrorResponse()    
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_receive_list_view(request):
+def show_receive_list_view(request, phase_id):
     """Show the investor list who send money to newton foundation
     
     """
     try:
-        items = tokenexchange_models.AddressTransaction.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).order_by('-created_at')
+        phase_id = int(phase_id)
+        items = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id).order_by('-created_at')
         return render(request, "newtonadmin/receive-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show receive list:%s" % str(inst))

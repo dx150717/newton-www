@@ -15,7 +15,7 @@ def sync_blockchain_data():
     """Sync the blockchain data
     """
     try:
-        for item in tokenexchange_models.KYCInfo.objects.filter(phase_id=settings.CURRENT_FUND_PHASE, status=codes.TokenExchangeStatus.SENT.value):
+        for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=settings.CURRENT_FUND_PHASE):
             # btc
             if item.receive_btc_address:
                 txs = __get_btc_transactions(item.receive_btc_address)
@@ -23,7 +23,7 @@ def sync_blockchain_data():
                     if not kyc_models.AddressTransaction.objects.filter(txid=txid).first():
                         instance = kyc_models.AddressTransaction()
                         instance.user = item.user
-                        instance.phase_id = settings.CURRENT_FUND_PHASE
+                        instance.phase_id = item.phase_id
                         instance.address = item.receive_btc_address
                         instance.address_type = codes.CurrencyType.BTC.value
                         instance.txid = txid
@@ -35,7 +35,7 @@ def sync_blockchain_data():
                     if not kyc_models.AddressTransaction.objects.filter(txid=txid).first():
                         instance = kyc_models.AddressTransaction()
                         instance.user = item.user
-                        instance.phase_id = settings.CURRENT_FUND_PHASE
+                        instance.phase_id = item.phase_id
                         instance.address = item.receive_ela_address
                         instance.address_type = codes.CurrencyType.ELA.value
                         instance.txid = txid
