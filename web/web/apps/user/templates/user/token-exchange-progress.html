@@ -26,59 +26,70 @@
                     {% include "tokenexchange/token-exchange-info.html" %}
                     <div class="item">
                         <div class="item-content">
+                                <div class="col-md-2"></div>
                                 {% if item.expect_btc or item.except_ela %}
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <td></td>
-                                            <td>BTC</td>
-                                            <td>ELA</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>我的期望额度</td>
-                                            <td>{{ item.expect_btc }} BTC</td>
-                                            <td>{{ item.expect_ela }} ELA</td>
-                                        </tr>
-                                        {% if item.assign_btc or item.assign_ela %}
-                                        <tr>
-                                            <td>我的分配额度</td>
-                                            {% if item.assign_btc %}
-                                            <td>{{ item.assign_btc }} BTC</td>
-                                            {% else %}
-                                            <td>-</td>
+                                <div class="col-md-8">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td></td>
+                                                <td>BTC</td>
+                                                <td>ELA</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>我的期望额度</td>
+                                                {% if item.expect_btc %}
+                                                <td>{{ item.expect_btc }} BTC</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
+                                                {% if item.expect_ela %}
+                                                <td>{{ item.expect_ela }} ELA</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% if item.assign_btc or item.assign_ela %}
+                                            <tr>
+                                                <td>我的分配额度</td>
+                                                {% if item.assign_btc %}
+                                                <td>{{ item.assign_btc }} BTC</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
+                                                {% if item.assign_ela %}
+                                                <td>{{ item.assign_ela }} ELA</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
+                                            </tr>
                                             {% endif %}
-                                            {% if item.assign_ela %}
-                                            <td>{{ item.assign_ela }} ELA</td>
-                                            {% else %}
-                                            <td>-</td>
+                                            {% if item.receive_btc_address or item.receive_ela_address %}
+                                            <tr>
+                                                <td>我的分配地址</td>
+                                                {% if item.receive_btc_address %}
+                                                <td>{{ item.receive_btc_address }}</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
+                                                {% if item.receive_ela_address %}
+                                                <td>{{ item.receive_ela_address }}</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
+                                            </tr>
                                             {% endif %}
-                                        </tr>
-                                        {% endif %}
-                                        {% if item.receive_btc_address or item.receive_ela_address %}
-                                        <tr>
-                                            <td>我的分配地址</td>
-                                            {% if item.receive_btc_address %}
-                                            <td>{{ item.receive_btc_address }}</td>
-                                            {% else %}
-                                            <td>-</td>
+                                            {% if item.status == 8 %}
+                                            <tr>
+                                                <td>折合兑换 NEW</td>
+                                                <td>-</td>
+                                            </tr>
                                             {% endif %}
-                                            {% if item.receive_ela_address %}
-                                            <td>{{ item.receive_ela_address }}</td>
-                                            {% else %}
-                                            <td>-</td>
-                                            {% endif %}
-                                        </tr>
-                                        {% endif %}
-                                        {% if item.status == 8 %}
-                                        <tr>
-                                            <td>折合兑换 NEW</td>
-                                            <td>-</td>
-                                        </tr>
-                                        {% endif %}
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 {% else %}
                                 <a class="form-button" href="/tokenexchange/invite/{{ item.phase_id }}/post/">{% trans "前往填写期望额度" %}</a>
                                 {% endif %}
