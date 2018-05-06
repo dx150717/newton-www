@@ -24,7 +24,9 @@ def show_user_index_view(request):
     form = forms.UserForm(instance=user)
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
     kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
-    invest_invite = tokenexchange_models.InvestInvite.objects.filter(user=user).first()
+    item = tokenexchange_models.InvestInvite.objects.filter(user=user).first()
+    if item:
+        token_exchange_info = settings.FUND_CONFIG[item.phase_id]
     return render(request, "user/index.html", locals())
 
 @login_required
@@ -73,3 +75,12 @@ def get_qrcode(request):
 
 def post_settings(request):
     return render(request, "user/settings.html", locals())
+
+def show_token_exchange_progress_view(request):
+    user = request.user
+    kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
+    kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
+    item = tokenexchange_models.InvestInvite.objects.filter(user=user).first()
+    if item:
+        token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+    return render(request, "user/token-exchange-progress.html", locals())

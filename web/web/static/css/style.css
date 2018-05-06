@@ -917,6 +917,8 @@ canvas { display: block; vertical-align: top; }
 #user .user-detail-content{padding: 34px 60px 60px 60px;}
 #user .user-detail-content table>thead>tr>td{font-size: 24px;color: #282929; padding-bottom: 32px;}
 #user .user-detail-content table>tbody>tr>td{font-size: 18px;color: #282929; padding: 32px;}
+#user .user-detail-content .token-exchange-info table>tbody>tr>td{padding: 8px;}
+#user .user-detail-content .col-md-2{width: 0;}
 #user .user-detail-content .gray{color: #b7b7b7;}
 #user .user-detail-content .user-btn{width: 160px; background: #433e53;}
 #user .user-edit-btn{padding: 60px;}
@@ -948,6 +950,8 @@ canvas { display: block; vertical-align: top; }
 #user_kyc_form select{width: 30%;}
 #user_kyc_form .token-btn{padding-top: 60px;}
 #user_kyc_form #id_birth_date{width: 50%;}
+
+
 #newtonadmin .table img{ width: 350px;}
 #newtonadmin .table>thead>tr{background-color: #282828; color: #fff;}
 #newtonadmin .table>thead>tr>th{font-size: 18px;font-weight: 350;height: 48px;}

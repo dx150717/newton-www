@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "user" %}
+{% endblock %}
+
+{% block content %}
+<section id="user" class="section-list">
+    <div class="page-title">
+        <div class="container header">
+            <img class="header" src="{% version "images/default_avator.png" %}"/>
+            <div class="name">
+            </div>
+            <div class="location">
+            </div>
+        </div>
+    </div>
+    
+    <div id="token-exchange" class="user-content">
+        <div class="container">
+            <div class="raw user-detail-content">
+                <div class="col-md-8 user-info">
+                    {% if item %}
+                    {% include "tokenexchange/token-exchange-info.html" %}
+                    <div class="item">
+                        <div class="item-content">
+                            <ul>
+                                {% if item.expect_btc %}
+                                <li>我期望的额度：{{ item.expect_btc }} BTC</li>
+                                {% endif %}
+                                {% if item.expect_ela %}
+                                <li>我期望的额度：{{ item.expect_ela }} ELA</li>
+                                {% endif %}
+                                {% if item.receive_btc_address %}
+                                <li>我的发币地址 BTC：{{ item.receive_btc_address }}</li>
+                                {% endif %}
+                                {% if item.receive_ela_address %}
+                                <li>我的发币地址 ELA：{{ item.receive_ela_address }}</li>
+                                {% endif %}
+                                {% if item.assign_btc %}
+                                <li>分配给我的额度： {{ item.assign_btc }} BTC</li>
+                                {% endif %}
+                                {% if item.assign_ela %}
+                                <li>分配给我的额度： {{ item.assign_ela }} ELA</li>
+                                {% endif %}
+                                {% if item.status == 8 %}
+                                <li>已经确认收币<br/>我兑换到的 NEW ： {{ item.assign_ela }} NEW</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="item">
+                        <p>暂无token交换信息</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block inline_js %}
+{% endblock %}
