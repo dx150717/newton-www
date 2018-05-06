@@ -6,7 +6,12 @@
 {% endblock %} 
 {% block require_js %}
 <script src='https://www.google.com/recaptcha/api.js' async defer></script> 
-{% endblock %} 
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
 {% block content %}
 <section id="login" class="section-list">
     <div class="login-title container text-center">
