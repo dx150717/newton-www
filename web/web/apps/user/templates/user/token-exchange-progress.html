@@ -26,29 +26,62 @@
                     {% include "tokenexchange/token-exchange-info.html" %}
                     <div class="item">
                         <div class="item-content">
-                            <ul>
                                 {% if item.expect_btc or item.except_ela %}
-                                <li>我期望的额度：{{ item.expect_btc }} BTC</li>
-                                <li>我期望的额度：{{ item.expect_ela }} ELA</li>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td></td>
+                                            <td>BTC</td>
+                                            <td>ELA</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>我的期望额度</td>
+                                            <td>{{ item.expect_btc }} BTC</td>
+                                            <td>{{ item.expect_ela }} ELA</td>
+                                        </tr>
+                                        {% if item.assign_btc or item.assign_ela %}
+                                        <tr>
+                                            <td>我的分配额度</td>
+                                            {% if item.assign_btc %}
+                                            <td>{{ item.assign_btc }} BTC</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                            {% if item.assign_ela %}
+                                            <td>{{ item.assign_ela }} ELA</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                        </tr>
+                                        {% endif %}
+                                        {% if item.receive_btc_address or item.receive_ela_address %}
+                                        <tr>
+                                            <td>我的分配地址</td>
+                                            {% if item.receive_btc_address %}
+                                            <td>{{ item.receive_btc_address }}</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                            {% if item.receive_ela_address %}
+                                            <td>{{ item.receive_ela_address }}</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                        </tr>
+                                        {% endif %}
+                                        {% if item.status == 8 %}
+                                        <tr>
+                                            <td>折合兑换 NEW</td>
+                                            <td>-</td>
+                                        </tr>
+                                        {% endif %}
+                                    </tbody>
+                                </table>
                                 {% else %}
                                 <a class="form-button" href="/tokenexchange/invite/{{ item.phase_id }}/post/">{% trans "前往填写期望额度" %}</a>
                                 {% endif %}
-                                {% if item.receive_btc_address %}
-                                <li>我的发币地址 BTC：{{ item.receive_btc_address }}</li>
-                                {% endif %}
-                                {% if item.receive_ela_address %}
-                                <li>我的发币地址 ELA：{{ item.receive_ela_address }}</li>
-                                {% endif %}
-                                {% if item.assign_btc %}
-                                <li>分配给我的额度： {{ item.assign_btc }} BTC</li>
-                                {% endif %}
-                                {% if item.assign_ela %}
-                                <li>分配给我的额度： {{ item.assign_ela }} ELA</li>
-                                {% endif %}
-                                {% if item.status == 8 %}
-                                <li>已经确认收币<br/>我兑换到的 NEW ： {{ item.assign_ela }} NEW</li>
-                                {% endif %}
-                            </ul>
                         </div>
                     </div>
                     {% else %}

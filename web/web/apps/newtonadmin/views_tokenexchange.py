@@ -192,7 +192,7 @@ def post_amount(request, phase_id):
         # save status
         item = tokenexchange_models.InvestInvite.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
         item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
-        item.assign_ela = assign_btc
+        item.assign_ela = assign_ela
         item.assign_btc = assign_btc
         item.receive_btc_address = btc_address
         item.receive_ela_address = ela_address
