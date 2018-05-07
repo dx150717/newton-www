@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     # third party lib
     'djcelery',
     'email_log',
+    'django_countries',
     #'haystack',
     #'sphinxdoc',
     # main entry
