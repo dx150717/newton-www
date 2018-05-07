@@ -118,3 +118,25 @@ def send_apply_amount_notify(invite_info, request):
     except Exception, inst:
         logger.exception("fail to send the apply amout notify:%s" % str(inst))        
         return False
+
+def send_receive_confirm_notify(request, receive_info):
+    """Send the email letter for receive amount.
+    """
+    try:
+        # build the email body
+        email = receive_info.user.email
+        email_type = codes.EmailType.TEXCHANGE_RECEIVE_NOTIFY.value
+        verification = services.generate_verification_uuid(email,email_type)
+        if not verification:
+            return False
+        subject = _("Newton notification: Receive Amount Notification!")
+        template = loader.get_template("newtonadmin/receive-amount-notify-letter.html")
+        context = Context({"request":request, "receive_info":receive_info})
+        html_content = template.render(context)
+        from_email = settings.FROM_EMAIL
+        # send
+        task_email.send_email.delay(subject, html_content, from_email, [email])
+        return True
+    except Exception, inst:
+        logger.exception("fail to send the receive amout notify:%s" %str(inst))
+        return False

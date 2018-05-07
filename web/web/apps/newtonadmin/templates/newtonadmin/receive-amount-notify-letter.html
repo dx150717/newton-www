@@ -1,0 +1,20 @@
+{% extends "email-template.html" %}
+{% load i18n %}
+{% load utils %}
+
+
+{% block title %}
+<h2>{% trans "We have received your invest." %}</h2>
+{% endblock %}
+
+{% block content %}
+<p>{% trans "Dear" %} {{ kyc_info.first_name }},</p>
+<p>
+    {% if receive_info.address_type == 1 %}
+    {% trans "we had received" %} {{ receive_info.value }} BTC {% trans "thanks very much!" %}
+    {% endif %}
+    {% if receive_info.address_type == 2 %}
+    {% trans "we had received" %} {{ receive_info.value }} ELA {% trans "thanks very much!" %}
+    {% endif %}
+</p>
+{% endblock %}

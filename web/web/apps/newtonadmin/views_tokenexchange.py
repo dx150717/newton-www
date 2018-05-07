@@ -219,5 +219,25 @@ def show_receive_list_view(request, phase_id):
         return render(request, "newtonadmin/receive-list.html", locals())
     except Exception, inst:
         logger.exception("fail to show receive list:%s" % str(inst))
-        return http.HttpResponseServerError()    
+        return http.HttpResponseServerError()
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def send_receive_email(request, phase_id):
+    """Send email to investor for notifing them that we have recevied coin.
+    """
+    try:
+        phase_id = int(phase_id)
+        address = request.POST['address']
+        item = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, address=address).first()
+        invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=item.user_id).first()
+        if services_tokenexchange.send_receive_confirm_notify(request, item):
+            invite.status = codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
+            invite.save()
+            return http.JsonSuccessResponse()
+        else:
+            return http.JsonErrorResponse(error_message="send Error")
+    except Exception, inst:
+        logger.exception("fail to post email to investor:%s" % str(inst))
+        return http.JsonErrorResponse()
+
 
