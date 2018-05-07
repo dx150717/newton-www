@@ -103,7 +103,9 @@ function popupWindow(user_id) {
     data.pass_kyc = "1";
     data.user_id = user_id;
     data.level = $('#level').val();
-    data.comment = $('#id_comment').val();
+    var comment = $('#id_comment').val();
+    comment = " " + comment;
+    data.comment = comment;
     $.post('/newtonadmin/tokenexchange/id/confirm/', 
            data, 
            function(json){

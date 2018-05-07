@@ -108,6 +108,10 @@ def post_invite(request, phase_id):
             invite.phase_id = int(phase_id)
         invite.status = codes.TokenExchangeStatus.INVITE.value
         invite.save()
+        action_id = codes.AdminActionType.INVITE.value
+        target_user = User.objects.filter(id=user_id).first()
+        audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
+        audit_log.save()
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post invite:%s" % str(inst))
@@ -140,6 +144,10 @@ def send_invite_email(request, phase_id):
         if services_tokenexchange.send_apply_amount_notify(invite, request):
             invite.status = codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value
             invite.save()
+        action_id = codes.AdminActionType.SEND_INVITE.value
+        target_user = User.objects.filter(id=user_id).first()
+        audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
+        audit_log.save()
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to send the invite email:%s" % str(inst))
@@ -205,6 +213,10 @@ def post_amount(request, phase_id):
         item.receive_btc_address = btc_address
         item.receive_ela_address = ela_address
         item.save()
+        action_id = codes.AdminActionType.ASSIGN_AMOUNT.value
+        target_user = User.objects.filter(id=user_id).first()
+        audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
+        audit_log.save()
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post amount:%s" % str(inst))
@@ -235,6 +247,10 @@ def send_receive_email(request, phase_id):
         if services_tokenexchange.send_receive_confirm_notify(request, item):
             invite.status = codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
             invite.save()
+            action_id = codes.AdminActionType.SEND_CONFIRM_EMAIL.value
+            target_user = User.objects.filter(id=item.user_id).first()
+            audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
+            audit_log.save()
             return http.JsonSuccessResponse()
         else:
             return http.JsonErrorResponse(error_message="send Error")
