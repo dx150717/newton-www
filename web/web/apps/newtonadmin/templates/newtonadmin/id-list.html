@@ -76,7 +76,10 @@
                             <option value="3">优秀</option>
                         </select>
                     </p>
-                    
+                    <p>
+                        <label>注释</label>
+                        <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
+                    </p>
                     <p>
                         <button class="btn btn-default" type="button" id="pass_button">通过</button>
                         <button class="btn btn-default" type="button" id="reject_button">拒绝</button>
@@ -100,6 +103,7 @@ function popupWindow(user_id) {
     data.pass_kyc = "1";
     data.user_id = user_id;
     data.level = $('#level').val();
+    data.comment = $('#id_comment').val();
     $.post('/newtonadmin/tokenexchange/id/confirm/', 
            data, 
            function(json){
@@ -116,6 +120,7 @@ function popupWindow(user_id) {
     var data = {};
     data.pass_kyc = "0";
     data.user_id = user_id;
+    data.comment = $('#id_comment').val();
     data.level = $('#level').val();
     $.post('/newtonadmin/tokenexchange/id/confirm/', 
            data, 

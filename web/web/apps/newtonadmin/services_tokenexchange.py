@@ -74,8 +74,8 @@ def send_distribution_letter(user, request):
         logger.exception("fail to send distribution letter:%s" % str(inst))
         return False
 
-def send_kyc_pass_notify(kyc_info, request):
-    """Send the email letter for kyc pass
+def send_kycinfo_notify(kyc_info, request):
+    """Send the email letter for kyc pass info
     """
     try:
         # build the email body
@@ -84,8 +84,11 @@ def send_kyc_pass_notify(kyc_info, request):
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        subject = _("Newton Notifications: You are passed the Newton KYC")
-        template = loader.get_template("newtonadmin/kyc-success-notify-letter.html")
+        if kyc_info.kyc_audit.is_pass:
+            subject = _("Newton Notifications: You are passed the Newton KYC")
+        else:
+            subject = _("Newton Notifications: You are not passed the Newton KYC")
+        template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
         context = Context({"request":request, "kyc_info": kyc_info})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL

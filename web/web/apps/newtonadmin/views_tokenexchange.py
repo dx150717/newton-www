@@ -51,6 +51,7 @@ def confirm_id(request):
         user_id = int(form.cleaned_data['user_id'])
         pass_tokenexchange = int(form.cleaned_data['pass_kyc'])
         level = int(form.cleaned_data['level'])
+        comment = form.cleaned_data['comment']
         item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.KYCStatus.CANDIDATE.value)
         if pass_tokenexchange:
             item.status = codes.KYCStatus.PASS_KYC.value
@@ -64,13 +65,14 @@ def confirm_id(request):
         item.save()
         target_user = User.objects.filter(id=user_id).first()
         # add kyc audit
-        kyc_audit = tokenexchange_models.KYCAudit(user=target_user,is_pass=is_pass,comment='')
+        kyc_audit = tokenexchange_models.KYCAudit(user=target_user,is_pass=is_pass,comment=comment)
         kyc_audit.save()
         # add audit log
-        audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id,comment='')
+        audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id,comment=comment)
         audit_log.save()
         # send the kyc pass notify
-        services_tokenexchange.send_kyc_pass_notify(item, request)
+        item.kyc_audit = kyc_audit
+        services_tokenexchange.send_kycinfo_notify(item, request)
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to confirm id:%s" % str(inst))
