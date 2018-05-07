@@ -17,22 +17,22 @@
             <h2>{% trans "Register" %}</h2>
         </div>
         <div class="container">
-            <form id="register-form" class="form" action="/register/post-email/" method="POST">
-                {% csrf_token %}
-                {% include "form.html" %}
-                <div class="raw">
-                    <div class="col-lg-5 col-sm-5 col-xs-5"></div>
-                    <div>
-                        <button id="register-btn" class="form-button" type="submit">{% trans "Register" %}</button>
+            <div class="form-container">
+                <form id="register-form" class="form" action="/register/post-email/" method="POST">
+                    {% csrf_token %}
+                    {% include "form.html" %}
+                    <div class="raw">
+                        <div>
+                            <button id="register-btn" class="form-button" type="submit">{% trans "Register" %}</button>
+                        </div>
                     </div>
-                </div>
-                <div class="raw">
-                    <div class="col-lg-5 col-sm-5 col-xs-5"></div>
-                    <div class="space-between">
-                        <p style="padding-top:30px;">点击 “注册” 即表示您同意并愿意遵守<br/> Newton的<a href="/terms-of-use/">使用条款</a>和<a href="/privacy/">隐私政策 </a>。</p>
+                    <div class="raw">
+                        <div class="space-between">
+                            <p style="padding-top:30px;">点击 “注册” 即表示您同意并愿意遵守<br/> Newton的<a href="/terms-of-use/">使用条款</a>和<a href="/privacy/">隐私政策 </a>。</p>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 {% endblock %}

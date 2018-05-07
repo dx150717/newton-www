@@ -866,18 +866,23 @@ canvas { display: block; vertical-align: top; }
 #reset .container input,
 #register .container input{padding: 5px; width: 264px; height: 32px;}
 
-#login .container .form,
-#reset .container .form,
-#register .container .form{margin-left: -50px;}
-
 #login .container .raw,
 #reset .container .raw,
-#register .container .raw{display: flex;}
+#register .container .raw{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
 
 #login .container .form-group,
 #reset .container .form-group,
-#register .container .form-group{display: flex; margin-bottom: 20px;}
-
+#register .container .form-group{display: table; margin-bottom: 20px;}
+.form-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.form-group .alert{margin-bottom: -15px;width: 264px;line-height: 40px;}
 #login .container .register{font-size: 16px; color: #292929}
 #login .container .reset{font-size: 16px; color: #b7b7b7;}
 
