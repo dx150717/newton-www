@@ -14,7 +14,7 @@ APPEND_SLASH = False
 
 LOGGING_API_REQUEST = True
 
-STATIC_DEFAULT_VERSION = 131
+STATIC_DEFAULT_VERSION = 132
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
@@ -39,7 +39,7 @@ SESSION_CACHE_ALIAS = "default"
 BASE_NAME = 'newtonproject'
 
 # verification default expire time s
-VERIFICATION_DEFAULT_EXPIRE_TIME = 300
+VERIFICATION_DEFAULT_EXPIRE_TIME = 30000
 
 # authenticate settings
 AUTHENTICATION_BACKENDS = ('backends.auth.EmailAuthBackend', )
