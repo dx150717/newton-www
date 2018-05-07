@@ -3,6 +3,9 @@ __author__ = 'xiawu@zeuux.org'
 __version__ = '$Rev$'
 __doc__ = """  """
 
+import copy
+import re
+
 from django import forms
 from django.forms import ModelForm
 from django.forms import MultiWidget
@@ -14,7 +17,6 @@ from django.contrib.auth.models import User
 from user.models import UserProfile
 
 class CellphoneGroupWidget(MultiWidget):
-    
     def __init__(self, attrs=None):
         widgets = [
             forms.TextInput(attrs=attrs),
@@ -28,18 +30,23 @@ class CellphoneGroupWidget(MultiWidget):
         return [None, None]
 
     def format_output(self, rendered_widgets):
+        pattern = re.compile('placeholder="*"', re.IGNORECASE)
+        w1 = str(rendered_widgets[0])
+        w1 = pattern.sub('placeholder="%s"' % unicode(_("Area Code")), w1)
+        w2 = str(rendered_widgets[1])
+        w2 = pattern.sub('placeholder="%s"' % unicode(_("Phone Number")), w2)
+        new_widgets = [w1, w2]
         return ('''
         <div class="form-inline">
             <label>%s %s</label>
-        </div>''') % tuple(rendered_widgets)
-        
+        </div>''') % tuple(new_widgets)
 
 
 class CellphoneGroupField(forms.MultiValueField):
     widget = CellphoneGroupWidget
 
     def __init__(self, *args, **kwargs):
-        fields = (forms.CharField(label=_("Country Code")), forms.CharField(label=_("Cellphone")))
+        fields = (forms.CharField(), forms.CharField())
         super(CellphoneGroupField, self).__init__(fields, *args, **kwargs)
 
     def compress(self, data_list):
