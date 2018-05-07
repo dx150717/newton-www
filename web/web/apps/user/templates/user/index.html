@@ -55,7 +55,7 @@
                                             {% if kycaudit.is_pass %}
                                             <td class="gray td-value ">{% trans "已通过" %}</td>
                                             {% else %}
-                                            <td class="gray td-value">{% trans "已拒绝，拒绝原因" %}:{{ kycaudit.comment }}</td>
+                                            <td class="gray td-value">{% trans "已拒绝，拒绝原因" %}:{{ kycaudit.comment }} <a href="/tokenexchange/">前往重新填写</a></td>
                                             {% endif %}
                                         {% else %}
                                         <td class="gray td-value">{% trans "已填写 KYC 信息,正在审核中。" %}</td>
