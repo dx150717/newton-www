@@ -5,6 +5,7 @@ class ConfirmKYCForm(forms.Form):
     level = forms.IntegerField(required=True)
     user_id = forms.IntegerField(required=True)
     pass_kyc = forms.IntegerField(required=True)
+    comment = forms.CharField(max_length=1000)
 
 class AmountForm(forms.Form):
     user_id = forms.IntegerField(required=True)
