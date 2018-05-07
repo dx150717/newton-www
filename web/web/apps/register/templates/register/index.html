@@ -23,7 +23,7 @@
                 <div class="raw">
                     <div class="col-lg-5 col-sm-5 col-xs-5"></div>
                     <div>
-                        <button class="form-button" type="submit">{% trans "Register" %}</button>
+                        <button id="register-btn" class="form-button" type="submit">{% trans "Register" %}</button>
                     </div>
                 </div>
                 <div class="raw">
@@ -38,7 +38,9 @@
 {% endblock %}
 
 {% block inline_js %}
-<script type="text/javascript">
-    $("#normal").addClass("display-none");
-</script>
 {% endblock %}
+
+{% block js %}
+<script src="{% version "js/register.js" %}"></script>
+{% endblock %}
+

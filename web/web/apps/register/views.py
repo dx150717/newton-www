@@ -111,7 +111,7 @@ def submit_password(request):
         if not form.is_valid():
             gtoken = gtoken
             gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
-            return render(request, 'resiter/password.html', locals())
+            return render(request, 'register/password.html', locals())
         password = form.cleaned_data['password']
         repassword = form.cleaned_data['repassword']
         # check password
