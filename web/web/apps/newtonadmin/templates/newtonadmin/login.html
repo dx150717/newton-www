@@ -12,16 +12,17 @@
         <h2>{% trans "Admin Login" %}</h2>
     </div>
     <div class="container">
-        <form class="form" action="/newtonadmin/login/post/" method="POST">
-            {% csrf_token %}
-            {% include "form.html" %}
-            <div class="raw">
-                <div class="col-lg-5 col-sm-5 col-xs-5"></div>
-                <div>
-                    <button class="form-button" type="submit">{% trans "Login" %}</button>
+        <div class="form-container">
+            <form class="form" action="/newtonadmin/login/post/" method="POST">
+                {% csrf_token %}
+                {% include "form.html" %}
+                <div class="raw">
+                    <div>
+                        <button class="form-button" type="submit">{% trans "Login" %}</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </section>
 {% endblock %}
