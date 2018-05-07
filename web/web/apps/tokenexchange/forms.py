@@ -13,6 +13,7 @@ class KYCInfoForm(ModelForm):
         super(KYCInfoForm, self).__init__(*args, **kw)
         self.fields.keyOrder = ['first_name',
                                 'last_name',
+                                'country',
                                 'id_number',
                                 'id_card',
                                 'cellphone_group',
@@ -29,6 +30,7 @@ class KYCInfoForm(ModelForm):
         fields = [
             'first_name',
             'last_name',
+            'country',
             'location',
             'id_number',
             'id_card',

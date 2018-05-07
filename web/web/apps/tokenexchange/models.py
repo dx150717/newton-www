@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
 from django.utils.translation import ugettext as _
+from django_countries.fields import CountryField
 
 from utils import storage
 from config import codes
@@ -12,6 +13,7 @@ class KYCInfo(models.Model):
     first_name = models.CharField(max_length=128, verbose_name=_('First Name'))
     last_name = models.CharField(max_length=128, verbose_name=_('Last Name'))
     cellphone = models.CharField(max_length=128, db_index=True)
+    country = CountryField(blank_label=_("Select country or region"), verbose_name=_('Country or Region'))
     country_code = models.CharField(max_length=12, db_index=True)
     id_number = models.CharField(max_length=128, verbose_name=_('ID Number'))
     id_card = models.ImageField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name=_('ID Card'))
