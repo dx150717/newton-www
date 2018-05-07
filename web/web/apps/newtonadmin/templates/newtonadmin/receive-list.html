@@ -19,13 +19,14 @@
                         <th>币种</th>
                         <th>数量</th>
                         <th>时间</th>
+                        <th>发送收币确认邮件</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for item in items %}
                     <tr>
                         <td>
-                            {{ item.first_name }} &nbsp; {{ item.last_name }}
+                            {{ item.user }}
                         </td>
                         <td>
                             {{ item.address }}
@@ -51,6 +52,9 @@
                         <td>
                             {{ item.updated_at|date:"Y-m-d H:i:s"}}
                         </td>
+                        <td>
+                            <a href="#" class="btn btn-default" onclick="javascript:sendMail('{{ item.address }}');">发送</a>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -62,4 +66,20 @@
 {% endblock %}
 
 {% block inline_js %}
+<script language="javascript">
+  function sendMail(address) {
+    var data = {};
+    data.address = address;
+    $.post('/newtonadmin/tokenexchange/receive/{{ phase_id }}/send/', 
+           data,
+           function(json){
+             if (json['error_code'] == 1) {
+               alert('success,we had send address to user.');
+               location.reload();
+             } else {
+               alert(json['error_message']);
+             }
+           });
+    } 
+</script>
 {% endblock %}
