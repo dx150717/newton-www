@@ -168,6 +168,8 @@ h6, .f12 { font-size: 12px; }
 #terms .page-title .container,
 #newpay .page-title .container,
 #privacy .page-title .container{ background-size:50%; background-position: 20px bottom}
+#user .page-title{ height: 200px;}
+#user .header img{ width: 80px !important;}
 }
 
 .page-title a {color: #fff;}
@@ -937,6 +939,19 @@ canvas { display: block; vertical-align: top; }
 #user #tab-content .info-divider{padding: 0; background-color: #b7b7b7; height: 1px; margin-bottom: 20px;}
 #user .profile-title,
 #settings .profile-title{padding-top: 80px;}
+@media(max-width:768px){
+    #user .user-detail-content{padding: 10px 0 0 0;}
+    #user .user-detail-content table>thead>tr>td{font-size: 20px;color: #282929; padding-bottom: 20px;}
+    #user .user-detail-content table>tbody>tr>td{font-size: 16px;color: #282929; padding: 10px;}
+    #user .user-detail-content .token-exchange-info table>tbody>tr>td{padding: 8px;}
+    #user .user-detail-content .col-md-2{width: 0;}
+    #user .user-detail-content .gray{color: #b7b7b7;}
+    #user .user-detail-content .user-btn{width: 160px; background: #433e53;}
+    #user .user-edit-btn{padding: 60px;}
+    .nav>li>a{padding: 5px 5px;}
+    #user .sub-title .sub-title-nav ul>li{font-size: 18px;}
+    #kyc{margin-top: 40px;}
+}
 #token .token-title{padding-top: 80px; font-size: 16px; color: #292929;}
 #token .token-summary{ padding-top: 60px;}
 #token .token-title h2{ font-size:48px; font-weight: normal; color: #292929;}
