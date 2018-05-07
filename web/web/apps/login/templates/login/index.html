@@ -57,13 +57,15 @@
                     <h4 class="modal-title text-center">{% trans "Google Authenticator Code" %}</h4>
                 </div>
                 <div class="modal-body text-center">
-                    <div class="form-group">
-                        <label for="gtoken-code" id="id-gtoken-code-label">{% trans "Google Authenticator Code" %}</label>
-                        <input id="id-gtoken" name="gtoken" />
-                    </div>
-                    <div>
-                        <button id="gtoken-submit-button" style="color:#fff;" class="form-button" value="{% trans 'Submit' %}">{% trans "Submit" %}</button>
-                    </div>
+                    <form id="google-auth-form" action="#">
+                        <div class="form-group">
+                            <label for="gtoken-code" id="id-gtoken-code-label">{% trans "Google Authenticator Code" %}</label>
+                            <input id="id-gtoken" name="gtoken" />
+                        </div>
+                        <div>
+                            <button id="gtoken-submit-button" type="submit" style="color:#fff;" class="form-button" value="{% trans 'Submit' %}">{% trans "Submit" %}</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

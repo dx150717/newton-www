@@ -1,7 +1,18 @@
+/**
+ * login.js for valid login form and get response from google api.
+ */
+
+/**
+ * 
+ * @param {string} ret google recaptcha response.
+ */
 function googleCallback(ret){
   document.getElementById("id-google-recaptcha").value = ret;
 };
 
+/**
+ * valid login form and ajax post params for login.
+ */
 $('#login_form').submit(function(event){
   event.preventDefault();
   var data = {};
@@ -21,8 +32,8 @@ $('#login_form').submit(function(event){
   $.post("/login/post/",
           data,
           function (response) {
-            dismiss();
             if (isSuccess(response)) {
+              dismiss();
               $('#code-modal').modal('show');
               var result = getData(response);
               auth_token = result.auth_token;             
@@ -43,7 +54,11 @@ $('#login_form').submit(function(event){
   }
 });
 
-$("#gtoken-submit-button").click(function () {
+/**
+ * valid google-auth form
+ */
+$("#google-auth-form").submit(function(event){
+  event.preventDefault();
   var gtoken_code = $("input[name='gtoken']").val();
   data = {};
   data.gtoken_code = gtoken_code;
@@ -51,7 +66,6 @@ $("#gtoken-submit-button").click(function () {
   data.password = document.getElementById("id_password").value;
   data.auth_token = auth_token;
   var next = $("input[name='next']").val();
-  showWaiting();
   $.post("/login/post-google-authenticator/",
           data,
           function (response) {
@@ -64,4 +78,15 @@ $("#gtoken-submit-button").click(function () {
               showFail(getErrorMessage(response));
             }
           });
+}).validate({
+  ignore: [],
+  errorElement: "div",
+  errorClass: "alert alert-danger",
+  rules: {
+    gtoken: {required: true, minlength: 4}
+  },
+  errorPlacement: function(error,element) {
+    return true;
+  }
 });
+

@@ -190,16 +190,20 @@ function showFail(msg)
 {
   initGlobalToolkit();
   $('#id_loading').nsProgress('showErrorWithStatusAndMaskType', msg, 'black');
-  dismiss();
+  dismissDelay();
 }
 
 function dismiss()
 {
-  setTimeout(function() {
-    $('#id_loading').nsProgress('dismiss');
-  }, 2000);
+	$('#id_loading').nsProgress('dismiss');
 }
 
+function dismissDelay()
+{
+	setTimeout(() => {
+		$('#id_loading').nsProgress('dismiss');
+	}, 2000);
+}
 var SUCCESS = 1;
 
 function isSuccess(json)
