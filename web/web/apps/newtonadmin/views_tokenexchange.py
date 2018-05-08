@@ -117,6 +117,93 @@ class CompletedInviteListView(generic.ListView):
             return None
 
 
+class AmountListView(generic.ListView):
+    template_name = "newtonadmin/amount-list.html"
+    context_object_name = "items"
+    paginate_by = 1
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(AmountListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(AmountListView, self).get_context_data(**kwargs)
+        context['phase_id'] = int(self.request.path.split("/")[4])
+        context['form'] = forms_tokenexchange.AmountForm()
+        return context
+
+    def get_queryset(self):
+        try:
+            phase_id = self.request.path.split("/")[4]
+            phase_id = int(phase_id)
+            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show the amount list:%s" % str(inst))
+            return None
+
+class CompletedAmountListView(generic.ListView):
+    template_name = "newtonadmin/amount-list.html"
+    context_object_name = "items"
+    paginate_by = 1
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(CompletedAmountListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(CompletedAmountListView, self).get_context_data(**kwargs)
+        context['phase_id'] = int(self.request.path.split("/")[4])
+        context['form'] = forms_tokenexchange.AmountForm()
+        context['is_completed'] = True
+        return context
+
+    def get_queryset(self):
+        try:
+            phase_id = self.request.path.split("/")[4]
+            phase_id = int(phase_id)
+            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show the te completed amount list:%s" % str(inst))
+            return None
+
+
+class ReceiveListView(generic.ListView):
+    template_name = "newtonadmin/receive-list.html"
+    context_object_name = "items"
+    paginate_by = 1
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(ReceiveListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(ReceiveListView, self).get_context_data(**kwargs)
+        context['phase_id'] = int(self.request.path.split("/")[4])
+        return context
+
+    def get_queryset(self):
+        try:
+            phase_id = self.request.path.split("/")[4]
+            phase_id = int(phase_id)
+            items = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id).order_by('-created_at')
+            return items
+        except Exception, inst:
+            logger.exception("fail to show receive list:%s" % str(inst))
+            return None
+
+
+
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def confirm_id(request):
     """Confirm whether ID is valid
@@ -273,18 +360,7 @@ def post_amount(request, phase_id):
         logger.exception("fail to post amount:%s" % str(inst))
         return http.JsonErrorResponse()    
 
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_receive_list_view(request, phase_id):
-    """Show the investor list who send money to newton foundation
-    
-    """
-    try:
-        phase_id = int(phase_id)
-        items = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id).order_by('-created_at')
-        return render(request, "newtonadmin/receive-list.html", locals())
-    except Exception, inst:
-        logger.exception("fail to show receive list:%s" % str(inst))
-        return http.HttpResponseServerError()
+
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def send_receive_email(request, phase_id):
@@ -296,6 +372,8 @@ def send_receive_email(request, phase_id):
         item = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, address=address).first()
         invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=item.user_id).first()
         if services_tokenexchange.send_receive_confirm_notify(request, item):
+            item.status = codes.StatusCode.RELEASE.value
+            item.save()
             invite.status = codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
             invite.save()
             action_id = codes.AdminActionType.SEND_CONFIRM_EMAIL.value

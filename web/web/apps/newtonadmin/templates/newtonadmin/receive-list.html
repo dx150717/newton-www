@@ -20,13 +20,13 @@
                         <th>数量</th>
                         <th>时间</th>
                         <th>发送收币确认邮件</th>
+                        <th>是否已经发送邮件</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for item in items %}
                     <tr>
                         <td>
-                            {{ item.user }}
                         </td>
                         <td>
                             {{ item.address }}
@@ -55,10 +55,30 @@
                         <td>
                             <a href="#" class="btn btn-default" onclick="javascript:sendMail('{{ item.address }}');">发送</a>
                         </td>
+                         <td>
+                             {% if item.status == 3 %}
+                             已发送
+                             {% else %}
+                             未发送
+                             {% endif %}
+                         </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+            <div class="form-container">
+                {% if is_paginated %}
+                <div class="pagination-simple">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+                {% endif %}
+                <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+                {% endif %}
+                </div>
+                {% endif %}
+            </div>
         </div>
     </div>
 </section>
