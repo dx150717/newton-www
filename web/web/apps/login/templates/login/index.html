@@ -5,7 +5,7 @@
 {% trans "Login" %} 
 {% endblock %} 
 {% block require_js %}
-<script src='https://www.google.com/recaptcha/api.js' async defer></script> 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
 {% endblock %}
 
 {% block header %}
@@ -18,6 +18,9 @@
         <h2>{% trans "Login" %}</h2>
     </div>
     <div class="container">
+        <div class="alert alert-warning">
+            {% trans "Tip:To login success, Ensure you can access the google recaptcha service." %}
+        </div>
         <div class="form-container">
             <form action="#" method="POST" id="login_form">
                 {% csrf_token %}

@@ -89,4 +89,3 @@ $("#google-auth-form").submit(function(event){
     return true;
   }
 });
-

@@ -72,9 +72,8 @@
          <script src="{% version "js/bootstrap.min.js" %}"></script>
          <script src="{% version "js/index.js" %}"></script>
          
+         {% block js %}{% endblock %}
          {% block inline_js %}{% endblock %}
 
-         {% block js %}{% endblock %}
-         
     </body>
 </html>
