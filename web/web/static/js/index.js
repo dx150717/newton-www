@@ -183,7 +183,7 @@ function showSuccess(msg)
     msg = '操作成功';
   }
   $('#id_loading').nsProgress('showSuccessWithStatusAndMaskType', msg, 'black');
-  dismiss();
+  dismissDelay();
 }
 
 function showFail(msg)
