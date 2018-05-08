@@ -145,6 +145,7 @@ class AmountListView(generic.ListView):
             logger.exception("fail to show the amount list:%s" % str(inst))
             return None
 
+
 class CompletedAmountListView(generic.ListView):
     template_name = "newtonadmin/amount-list.html"
     context_object_name = "items"
