@@ -31,9 +31,9 @@ $('#login_form').submit(function(event){
   showWaiting();
   $.post("/login/post/",
           data,
-          function (response) {
+         function (response) {
+           dismiss();
             if (isSuccess(response)) {
-              dismiss();
               $('#code-modal').modal('show');
               var result = getData(response);
               auth_token = result.auth_token;             
