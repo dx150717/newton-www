@@ -6,9 +6,9 @@ from . import views_tokenexchange
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                       url(r'^$', views_tokenexchange.show_id_list_view),
-                       url(r'^id/$', views_tokenexchange.show_id_list_view),
-                       url(r'^id/pass/', views_tokenexchange.show_pass_id_list_view),
+                       url(r'^$', views_tokenexchange.IdListView.as_view()),
+                       url(r'^id/$', views_tokenexchange.IdListView.as_view()),
+                       url(r'^id/pass/', views_tokenexchange.PassIdListView.as_view()),
                        url(r'^id/confirm/', views_tokenexchange.confirm_id),
                        url(r'^invite/(?P<phase_id>[0-9]+)/$', views_tokenexchange.show_invite_view),
                        url(r'^invite/(?P<phase_id>[0-9]+)/post/$', views_tokenexchange.post_invite),

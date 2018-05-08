@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import user_passes_test
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.views import generic
 
 from utils import http
 from config import codes
@@ -15,29 +16,85 @@ from . import services_tokenexchange
 
 logger = logging.getLogger(__name__)
 
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_id_list_view(request):
-    """Show the candiate ID list
+class IdListView(generic.ListView):
+    template_name = "newtonadmin/id-list.html"
+    context_object_name = "items"
+    paginate_by = 20
     
-    """
-    try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
-        return render(request, "newtonadmin/id-list.html", locals())
-    except Exception, inst:
-        logger.exception("fail to show id list:%s" % str(inst))
-        return http.HttpResponseServerError()    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(IdListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_queryset(self):
+        try:
+            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show id list:%s" % str(inst))
+            return None
+
+
+class PassIdListView(generic.ListView):
+    template_name = "newtonadmin/pass-id-list.html"
+    context_object_name = "items"
+    paginate_by = 20
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(IdListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_queryset(self):
+        try:
+            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show pass id list:%s" % str(inst))
+            return None
+
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_pass_id_list_view(request):
-    """Show the pass ID list
+def show_invite_view(request, phase_id):
+    """Show the investor list which is waiting for invite
     
     """
     try:
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
-        return render(request, "newtonadmin/pass-id-list.html", locals())
+        phase_id = int(phase_id)
+        s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user', flat=True))
+        s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user', flat=True))
+        d = s1.difference(s2)
+        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user__id__in=d)
+        return render(request, "newtonadmin/te-waiting-list.html", locals())
     except Exception, inst:
-        logger.exception("fail to show id list:%s" % str(inst))
-        return http.HttpResponseServerError()    
+        logger.exception("fail to show the te wait list:%s" % str(inst))
+        return http.HttpResponseServerError()
+
+
+class InviteListView(generic.ListView):
+    template_name = "newtonadmin/te-waiting-list.html"
+    context_object_name = "items"
+    paginate_by = 20
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(IdListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_queryset(self):
+        try:
+            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show pass id list:%s" % str(inst))
+            return None
+  
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def confirm_id(request):
@@ -78,21 +135,6 @@ def confirm_id(request):
         logger.exception("fail to confirm id:%s" % str(inst))
         return http.JsonErrorResponse()        
 
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_invite_view(request, phase_id):
-    """Show the investor list which is waiting for invite
-    
-    """
-    try:
-        phase_id = int(phase_id)
-        s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user', flat=True))
-        s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user', flat=True))
-        d = s1.difference(s2)
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user__id__in=d)
-        return render(request, "newtonadmin/te-waiting-list.html", locals())
-    except Exception, inst:
-        logger.exception("fail to show the te wait list:%s" % str(inst))
-        return http.HttpResponseServerError()
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def post_invite(request, phase_id):
