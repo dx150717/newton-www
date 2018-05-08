@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 class IdListView(generic.ListView):
     template_name = "newtonadmin/id-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = 1
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
@@ -40,11 +40,11 @@ class IdListView(generic.ListView):
 class PassIdListView(generic.ListView):
     template_name = "newtonadmin/pass-id-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = 1
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
-            response = super(IdListView, self).get(request, *args, **kwargs)
+            response = super(PassIdListView, self).get(request, *args, **kwargs)
             return response
         else:
             return redirect("/newtonadmin/login/")
@@ -56,45 +56,66 @@ class PassIdListView(generic.ListView):
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
             return None
-
-
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_invite_view(request, phase_id):
-    """Show the investor list which is waiting for invite
-    
-    """
-    try:
-        phase_id = int(phase_id)
-        s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user', flat=True))
-        s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user', flat=True))
-        d = s1.difference(s2)
-        items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user__id__in=d)
-        return render(request, "newtonadmin/te-waiting-list.html", locals())
-    except Exception, inst:
-        logger.exception("fail to show the te wait list:%s" % str(inst))
-        return http.HttpResponseServerError()
 
 
 class InviteListView(generic.ListView):
     template_name = "newtonadmin/te-waiting-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = 1
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
-            response = super(IdListView, self).get(request, *args, **kwargs)
+            response = super(InviteListView, self).get(request, *args, **kwargs)
             return response
         else:
             return redirect("/newtonadmin/login/")
 
+    def get_context_data(self, **kwargs):
+        context = super(InviteListView, self).get_context_data(**kwargs)
+        context['phase_id'] = int(self.request.path.split("/")[4])
+        return context
+
     def get_queryset(self):
         try:
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+            phase_id = self.request.path.split("/")[4]
+            phase_id = int(phase_id)
+            s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user', flat=True))
+            s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user', flat=True))
+            d = s1.difference(s2)
+            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user__id__in=d)
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
             return None
-  
+    
+
+class CompletedInviteListView(generic.ListView):
+    template_name = "newtonadmin/te-completed-list.html"
+    context_object_name = "items"
+    paginate_by = 1
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(CompletedInviteListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(CompletedInviteListView, self).get_context_data(**kwargs)
+        context['phase_id'] = int(self.request.path.split("/")[4])
+        return context
+
+    def get_queryset(self):
+        try:
+            phase_id = self.request.path.split("/")[4]
+            phase_id = int(phase_id)
+            items = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value]).order_by('-created_at')
+            return items
+        except Exception, inst:
+            logger.exception("fail to show the te completed list:%s" % str(inst))
+            return None
+
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def confirm_id(request):
@@ -159,18 +180,6 @@ def post_invite(request, phase_id):
         logger.exception("fail to post invite:%s" % str(inst))
         return http.JsonErrorResponse()
 
-@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
-def show_completed_invite_view(request, phase_id):
-    """Show the investor list which is completed for invite
-    
-    """
-    try:
-        phase_id = int(phase_id)
-        items = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value]).order_by('-created_at')
-        return render(request, "newtonadmin/te-completed-list.html", locals())
-    except Exception, inst:
-        logger.exception("fail to show the te completed list:%s" % str(inst))
-        return http.HttpResponseServerError()    
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def send_invite_email(request, phase_id):
