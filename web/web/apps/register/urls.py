@@ -5,6 +5,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
                        url(r'^$', views.show_register_view, name="index"),
+                       url(r'^gtoken/', views.show_gtoken_view),
+                       url(r'^post-gtoken/', views.submit_gtoken),
                        url(r'^post-email/', views.submit_email, name="submit_email"),
                        url(r'^post-success/', views.show_post_email_success_view, name="show_post_email_success_view"),
                        url(r'^post-fail/', views.show_post_email_fail_view, name="show_post_email_fail_view"),

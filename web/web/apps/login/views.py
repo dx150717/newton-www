@@ -65,6 +65,8 @@ def post_google_authenticator(request):
         # clear the session
         if session_token:
             del request.session['auth_token']
+        if auth_token != session_token:
+            return http.JsonErrorResponse(error_message=_("no auth_token"))
         user = authenticate(username=email, password=passwrod)
         if not user or user.is_staff:
             return http.JsonErrorResponse(error_message=_("no user"))

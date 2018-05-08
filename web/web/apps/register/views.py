@@ -85,12 +85,93 @@ def show_invalid_link_view(request):
 
 
 def show_password_view(request):
-    form = forms.PasswordForm()
-    uuid = request.GET['uuid']
-    gtoken = pyotp.random_base32()
-    gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
-    return render(request, 'register/password.html', locals())
+    try:
+        form = forms.PasswordForm()
+        uuid = request.GET['uuid']
+        return render(request, 'register/password.html', locals())
+    except Exception, inst:
+        logger.exception("fail to show gtoken view:%s" %str(inst))
+        return http.HttpResponseServerError()
 
+
+def show_gtoken_view(request):
+    try:
+        email = request.session.get('email')
+        password = request.session.get('password')
+        auth_token = request.session.get('auth_token')
+        uuid = request.session.get('uuid')
+        gtoken = pyotp.random_base32()
+        gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+        form = forms.GtokenForm()
+        return render(request, 'register/gtoken.html', locals())
+    except Exception, inst:
+        logger.exception("fail to show gtoken view:%s" %str(inst))
+        return http.HttpResponseServerError()
+
+@decorators.http_post_required
+def submit_gtoken(request):
+    try:
+        form = forms.GtokenForm(request.POST)
+        if not form.is_valid():
+            gtoken = request.POST.get('gtoken')
+            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+            return render(request, 'register/gtoken.html', locals())
+        uuid = request.POST.get('uuid')
+        # check uuid
+        verification = services.get_register_verification_by_uuid(uuid)
+        if not verification:
+            return http.HttpResponseRedirect('/register/invalid-link/')
+        # get post params
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        gtoken = request.POST.get('gtoken')
+        auth_token = request.POST.get('auth_token')
+        gtoken_code = form.cleaned_data['gtoken_code']
+        # check google auth
+        is_pass_google_auth = pyotp.TOTP(gtoken).verify(gtoken_code)
+        if not is_pass_google_auth:
+            gtoken = gtoken
+            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Auth Code Error')])
+            return render(request, 'register/gtoken.html', locals())
+        # clear session
+        session_email = request.session.get('email')
+        session_password = request.session.get('password')
+        session_token = request.session.get('auth_token')
+        session_uuid = request.session.get('uuid')
+        if session_token:
+            del request.session['auth_token']
+        if session_email:
+            del request.session['email']
+        if session_password:
+            del request.session['password']
+        if session_uuid:
+            del request.session['uuid']
+        if session_email != email:
+            return http.HttpResponseServerError()
+        if session_password != password:
+            return http.HttpResponseServerError()
+        if session_token != auth_token:
+            return http.HttpResponseServerError()
+        if session_uuid != uuid:
+            return http.HttpResponseServerError()
+        #create user
+        username = security.generate_uuid()
+        user = User.objects.create_user(username, email)
+        user.set_password(password)
+        user.save()
+        user_profile = user_models.UserProfile.objects.create(user=user)
+        user_profile.is_google_authenticator = True
+        user_profile.google_authenticator_private_key = gtoken
+        user_profile.language_code = translation.get_language()
+        user_profile.save()
+        # set link valid
+        verification.status = codes.StatusCode.CLOSE.value
+        verification.save()
+        return http.HttpResponseRedirect('/register/register-success/')
+    except Exception,inst:
+        logger.exception("fail to post gtoken:%s" %str(inst))
+        return http.HttpResponseServerError()
 
 @decorators.http_post_required
 def submit_password(request):
@@ -105,44 +186,23 @@ def submit_password(request):
         if verification_status != codes.StatusCode.AVAILABLE.value:
             return http.HttpResponseRedirect('/register/invalid-link/')
         email = verification.email_address
-        # check form
-        gtoken = request.POST['gtoken']
+        # check form 
         form = forms.PasswordForm(request.POST)
         if not form.is_valid():
-            gtoken = gtoken
-            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
             return render(request, 'register/password.html', locals())
+        # check password
         password = form.cleaned_data['password']
         repassword = form.cleaned_data['repassword']
-        # check password
         if password != repassword:
-            gtoken = gtoken
-            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords differ')])
             return render(request, 'register/password.html', locals())
-        # check google authenticator
-        gtoken_code = form.cleaned_data['gtoken_code']
-        is_pass_google_auth = pyotp.TOTP(gtoken).verify(gtoken_code)
-        if not is_pass_google_auth:
-            gtoken = gtoken
-            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Auth Code Error')])
-            return render(request, 'register/password.html', locals())
-        username = security.generate_uuid()
-        user = User.objects.create_user(username, email)
-        user.set_password(password)
-        user.save()
-        user_profile = user_models.UserProfile.objects.create(user=user)
-        user_profile.is_google_authenticator = True
-        user_profile.google_authenticator_private_key = gtoken
-        user_profile.language_code = translation.get_language()
-        user_profile.save()
-        # set link valid
-        verification.status = codes.StatusCode.CLOSE.value
-        verification.save()
-        return http.HttpResponseRedirect('/register/register-success/')
-    except Exception, inst:
-        logger.exception("fail to submit password: %s" % str(inst))
+        request.session['email'] = email
+        request.session['password'] = password
+        request.session['auth_token'] = security.generate_uuid()
+        request.session['uuid'] = uuid
+        return http.HttpResponseRedirect("/register/gtoken/")
+    except Exception,inst:
+        logger.exception("fail to post password:%s" %str(inst))
         return http.HttpResponseServerError()
 
 

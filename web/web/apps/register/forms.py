@@ -9,6 +9,8 @@ class EmailForm(forms.Form):
 class PasswordForm(forms.Form):
     password = forms.CharField(widget=forms.PasswordInput())
     repassword = forms.CharField(widget=forms.PasswordInput())
-    gtoken_code = forms.CharField(max_length=10)
 
+class GtokenForm(forms.Form):
+    gtoken_code = forms.CharField(max_length=100)
+    
 

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Add Google Authenticator" %}
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="reset" class="section-list">
+    <div class="reset-title container text-center">
+        <h2>{% trans "Add Google Authenticator" %}</h2>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <form id="set-gtoken-form" class="form" action="/register/post-gtoken/" method="POST">
+                {% csrf_token %}
+                <input id="email" name="email" type="hidden" value="{{ email }}"/>
+                <input id="password" name="password" type="hidden" value="{{ password }}"/>
+                <input id="uuid" name="uuid" type="hidden" value="{{ uuid }}"/>
+                <input id="gtoken" name="gtoken" type="hidden" value="{{ gtoken }}"/>
+                <input id="auth_token" name="auth_token" type="hidden" value="{{ auth_token }}"/>
+                <div class="form-group">
+                    <label for="id_gtoken" class="control-label">手动添加谷歌身份验证器</label>
+                    <div id="key">{{ gtoken }}</div>
+                </div>
+                <div class="form-group">
+                    <label for="id_gtoken" class="control-label">或者扫描二维码添加谷歌身份验证器</label>
+                    <div id="code"></div> 
+                </div>
+                {% include "form.html" %}
+                <div class="form-group">
+                    <button class="form-button" type="submit">{% trans "Submit" %}</button>
+                </div>
+            </form>
+        </div>        
+    </div>
+</section>
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    new QRCode(document.getElementById("code"), "{{ gtoken_uri }}");
+</script>
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/register.js" %}"></script>
+{% endblock %}
