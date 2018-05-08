@@ -14,7 +14,7 @@
                 <caption class="text-center">待邀请投资者列表</caption>
                 <thead>
                     <tr>
-                        <th><input id="all-check" name="all-check" type="checkbox"/>&nbsp;&nbsp;全选</th>
+                        <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
                         <th>姓名</th>
                         <th>介绍</th>
                         <th>操作</th>
@@ -40,12 +40,12 @@
                             </p>
                         </td>
                         <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">发送邀请</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:preInviteUser({{ item.user.id }});">发送邀请</a>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td><button class="form-button" onclick="inviteChecked();">邀请选中</button></td>
+                        <td><button class="form-button" onclick="preInviteSelectedUser();">邀请选中</button></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -69,64 +69,11 @@
 {% endblock %}
 
 {% block inline_js %}
-<script language="javascript">
-function popupWindow(user_id) {
-    var data = {};
-    var user_list = [user_id];
-    user_list = user_list.join(",");
-    data.user_list = user_list;
-    $.post('/newtonadmin/tokenexchange/invite/{{ phase_id }}/post/', 
-        data, 
-        function(json){
-        if (json['error_code'] == 1) {
-            alert('success');
-            location.reload();
-        } else {
-            alert(json['error_message']);
-        }
-    });
-}
-
-$("#all-check").change(function(){
-    var isAllCheck = $("#all-check")[0].checked;
-    if(isAllCheck){
-        // all Check
-        var checkboxes = $("input[type='checkbox']")
-        for(var i = 0; i < checkboxes.length; i++){
-            checkboxes[i].checked = true;
-        }
-    }else{
-        // cancel all check
-        var checkboxes = $("input[type='checkbox']")
-        for(var i = 0; i < checkboxes.length; i++){
-            checkboxes[i].checked = false;
-        }
-    }
-});
-function inviteChecked(){
-    var user_list = [];
-    var checkboxes = $("input[type='checkbox']")
-    for(var i = 0; i < checkboxes.length; i++){
-        var checkbox = checkboxes[i]
-        if(checkbox.checked){
-            var value = checkbox.value
-            if(value != "on"){
-                user_list.push(value);
-            }
-        }
-    }
-    user_list = user_list.join(",");
-    var data = {}
-    data.user_list = user_list;
-    $.post("/newtonadmin/tokenexchange/invite/{{ phase_id }}/post/",data,function(json){
-        if (json['error_code'] == 1) {  
-            alert('success');
-            location.reload();
-        } else {
-            alert(json['error_message']);
-        }
-    });
-    
-}
+<script type="text/javascript">
+var phase_id = {{ phase_id }};
 </script>
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/newtonadmin.js" %}"></script>
 {% endblock %}

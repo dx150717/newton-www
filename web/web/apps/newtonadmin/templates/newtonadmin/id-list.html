@@ -47,7 +47,7 @@
 
                         <td>
                             <p>
-                                <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">审核</a>
+                                <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user.id }});">审核</a>
                             </p>
                         </td>
                         
@@ -105,50 +105,7 @@
 {% endblock %}
 
 {% block inline_js %}
-<script language="javascript">
-function popupWindow(user_id) {
-  $('#user_id').val(user_id);
-  $('#id-modal').modal('show');
-  $('#pass_button').click(function(event){
-    event.preventDefault();
-    var data = {};
-    data.pass_kyc = "1";
-    data.user_id = user_id;
-    data.level = $('#level').val();
-    var comment = $('#id_comment').val();
-    comment = " " + comment;
-    data.comment = comment;
-    $.post('/newtonadmin/tokenexchange/id/confirm/', 
-           data, 
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success,we had send a email to user');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-  });
-  $('#reject_button').click(function(event){
-    event.preventDefault();
-    var data = {};
-    data.pass_kyc = "0";
-    data.user_id = user_id;
-    var comment = $('#id_comment').val();
-    comment = " " + comment;
-    data.comment = comment;
-    data.level = $('#level').val();
-    $.post('/newtonadmin/tokenexchange/id/confirm/', 
-           data, 
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success, we had reject user');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-  });
-}
-</script>
+{% endblock %}
+{% block js %}
+<script src="{% version "js/newtonadmin.js" %}"></script>
 {% endblock %}

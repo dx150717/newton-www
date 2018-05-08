@@ -14,7 +14,7 @@
                 <caption class="text-center">收币确认列表<span class="">(每30分钟自动查询一次)<span></caption>
                 <thead>
                     <tr>
-                        <th><input id="all-check" name="all-check" type="checkbox"/>&nbsp;&nbsp;全选</th>
+                        <th><input id="all-check-receive-coin" name="all-check-receive-coin" type="checkbox"/>&nbsp;&nbsp;全选</th>
                         <th>姓名</th>
                         <th>收币地址</th>
                         <th>币种</th>
@@ -54,7 +54,7 @@
                             {{ item.updated_at|date:"Y-m-d H:i:s"}}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:sendMail('{{ item.address }}');">发送</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:sendPerEmail('{{ item.address }}');">发送</a>
                         </td>
                          <td>
                              {% if item.status == 3 %}
@@ -66,7 +66,7 @@
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td><button class="form-button" onclick="inviteChecked();">邀请选中</button></td>
+                        <td><button class="form-button" onclick="sendEmailForReceivedCoin();">批量发送</button></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -96,67 +96,13 @@
 </section>
 
 {% endblock %}
-
 {% block inline_js %}
-<script language="javascript">
-  function sendMail(address) {
-    var data = {};
-    var address_list = [address];
-    address_list = address_list.join(",");
-    data.address_list = address_list;
-    $.post('/newtonadmin/tokenexchange/receive/{{ phase_id }}/send/', 
-           data,
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success,we had send address to user.');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-    }
-
-
-    $("#all-check").change(function(){
-        var isAllCheck = $("#all-check")[0].checked;
-        if(isAllCheck){
-            // all Check
-            var checkboxes = $("input[type='checkbox']")
-            for(var i = 0; i < checkboxes.length; i++){
-                checkboxes[i].checked = true;
-            }
-        }else{
-            // cancel all check
-            var checkboxes = $("input[type='checkbox']")
-            for(var i = 0; i < checkboxes.length; i++){
-                checkboxes[i].checked = false;
-            }
-        }
-    });
-    function inviteChecked(){
-        var address_list = [];
-        var checkboxes = $("input[type='checkbox']")
-        for(var i = 0; i < checkboxes.length; i++){
-            var checkbox = checkboxes[i]
-            if(checkbox.checked){
-                var value = checkbox.value
-                if(value != "on"){
-                    address_list.push(value);
-                }
-            }
-        }
-        address_list = address_list.join(",");
-        var data = {}
-        data.address_list = address_list;
-        $.post("/newtonadmin/tokenexchange/receive/{{ phase_id }}/send/",data,function(json){
-            if (json['error_code'] == 1) {  
-                alert('success');
-                location.reload();
-            } else {
-                alert(json['error_message']);
-            }
-        });
-        
-    }
+<script type="text/javascript">
+    var phase_id = {{ phase_id }};
 </script>
 {% endblock %}
+
+{% block js %}
+<script src="{% version "js/newtonadmin.js" %}"></script>
+{% endblock %}
+
