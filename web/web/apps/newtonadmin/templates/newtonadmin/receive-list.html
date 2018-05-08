@@ -8,12 +8,13 @@
 
 {% block content %}
 <section id="faq" class="section-list">
-    <div class="container">
+    <div class="container" style="width:100%;">
         <div class="raw table-responsive content">
             <table class="table">
                 <caption class="text-center">收币确认列表<span class="">(每30分钟自动查询一次)<span></caption>
                 <thead>
                     <tr>
+                        <th><input id="all-check" name="all-check" type="checkbox"/>&nbsp;&nbsp;全选</th>
                         <th>姓名</th>
                         <th>收币地址</th>
                         <th>币种</th>
@@ -26,8 +27,8 @@
                 <tbody>
                     {% for item in items %}
                     <tr>
-                        <td>
-                        </td>
+                        <td><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.address }}"/>&nbsp;&nbsp;选择</td>
+                        <td></td>
                         <td>
                             {{ item.address }}
                         </td>
@@ -64,6 +65,17 @@
                          </td>
                     </tr>
                     {% endfor %}
+                    <tr>
+                        <td><button class="form-button" onclick="inviteChecked();">邀请选中</button></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-container">
@@ -89,7 +101,9 @@
 <script language="javascript">
   function sendMail(address) {
     var data = {};
-    data.address = address;
+    var address_list = [address];
+    address_list = address_list.join(",");
+    data.address_list = address_list;
     $.post('/newtonadmin/tokenexchange/receive/{{ phase_id }}/send/', 
            data,
            function(json){
@@ -100,6 +114,49 @@
                alert(json['error_message']);
              }
            });
-    } 
+    }
+
+
+    $("#all-check").change(function(){
+        var isAllCheck = $("#all-check")[0].checked;
+        if(isAllCheck){
+            // all Check
+            var checkboxes = $("input[type='checkbox']")
+            for(var i = 0; i < checkboxes.length; i++){
+                checkboxes[i].checked = true;
+            }
+        }else{
+            // cancel all check
+            var checkboxes = $("input[type='checkbox']")
+            for(var i = 0; i < checkboxes.length; i++){
+                checkboxes[i].checked = false;
+            }
+        }
+    });
+    function inviteChecked(){
+        var address_list = [];
+        var checkboxes = $("input[type='checkbox']")
+        for(var i = 0; i < checkboxes.length; i++){
+            var checkbox = checkboxes[i]
+            if(checkbox.checked){
+                var value = checkbox.value
+                if(value != "on"){
+                    address_list.push(value);
+                }
+            }
+        }
+        address_list = address_list.join(",");
+        var data = {}
+        data.address_list = address_list;
+        $.post("/newtonadmin/tokenexchange/receive/{{ phase_id }}/send/",data,function(json){
+            if (json['error_code'] == 1) {  
+                alert('success');
+                location.reload();
+            } else {
+                alert(json['error_message']);
+            }
+        });
+        
+    }
 </script>
 {% endblock %}
