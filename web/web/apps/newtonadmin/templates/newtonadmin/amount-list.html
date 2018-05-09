@@ -57,7 +57,7 @@
                         {% endif %}
                         <td>
                             {% if not is_completed %}
-                            <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">分配额度</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user.id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">分配额度</a>
                             {% endif %}
                         </td>
                     </tr>
@@ -109,41 +109,10 @@
 </div><!-- /.modal -->             
 
 {% endblock %}
-
 {% block inline_js %}
-<script language="javascript">
-function popupWindow(user_id, phase_id, expect_ela, expect_btc) {
-  $('#user_id').val(user_id);
-  $('#phase_id').val(phase_id)
-  if(expect_ela===0){
-    $("#ela-limit").addClass("hide")
-  }else{
-    $("#ela-limit").removeClass("hide")
-  }
-  if(expect_btc===0){
-    $("#btc-limit").addClass("hide")
-  }else{
-    $("#btc-limit").removeClass("hide")
-  }
-  $('#amount_modal').modal('show');
-  $('#confirm_button').click(function(event){
-    event.preventDefault();
-    var data = {};
-    data.assign_btc = $('#assign_btc').val();
-    data.assign_ela = $('#assign_ela').val();
-    data.user_id = user_id;
-    data.phase_id = phase_id;
-    $.post('/newtonadmin/tokenexchange/amount/'+phase_id+'/post/', 
-           data, 
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success,we had send an email to user.');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-  });
-}
-</script>
 {% endblock %}
+
+{% block js %}
+<script src="{% version "js/newtonadmin.js" %}"></script>
+{% endblock %}
+

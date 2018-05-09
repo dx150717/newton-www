@@ -29,88 +29,177 @@
     <div id="token-exchange" class="user-content">
         <div class="container">
             <div class="raw user-detail-content">
-                <div class="col-md-8 user-info">
+                <div class="user-info">
                     {% if item %}
                     {% include "tokenexchange/token-exchange-info.html" %}
                     <div class="item">
                         <div class="item-content">
-                                <div class="col-md-2"></div>
-                                {% if item.expect_btc or item.except_ela %}
-                                <div class="col-md-8">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <td></td>
-                                                <td>BTC</td>
-                                                <td>ELA</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>申请额度</td>
-                                                {% if item.expect_btc %}
-                                                <td>{{ item.expect_btc }} BTC</td>
-                                                {% else %}
-                                                <td>-</td>
-                                                {% endif %}
-                                                {% if item.expect_ela %}
-                                                <td>{{ item.expect_ela }} ELA</td>
-                                                {% else %}
-                                                <td>-</td>
-                                                {% endif %}
-                                            </tr>
-                                            {% if item.assign_btc or item.assign_ela %}
-                                            <tr>
-                                                <td>分配额度</td>
-                                                {% if item.assign_btc %}
-                                                <td>{{ item.assign_btc }} BTC</td>
-                                                {% else %}
-                                                <td>-</td>
-                                                {% endif %}
-                                                {% if item.assign_ela %}
-                                                <td>{{ item.assign_ela }} ELA</td>
-                                                {% else %}
-                                                <td>-</td>
-                                                {% endif %}
-                                            </tr>
-                                            {% endif %}
-                                            {% if item.receive_btc_address or item.receive_ela_address %}
-                                            <tr>
-                                                <td>分配地址</td>
-                                                {% if item.receive_btc_address %}
-                                                <td>{{ item.receive_btc_address }}</td>
-                                                {% else %}
-                                                <td>-</td>
-                                                {% endif %}
-                                                {% if item.receive_ela_address %}
-                                                <td>{{ item.receive_ela_address }}</td>
-                                                {% else %}
-                                                <td>-</td>
-                                                {% endif %}
-                                            </tr>
-                                            {% endif %}
-                                            {% if btc_transaction.value or ela_transaction.value %}
-                                            <tr>
-                                                <td>成功打币金额</td>
-                                                {% if btc_transaction.value %}
-                                                <td>{{ btc_transaction.value }} BTC</td>
-                                                {% else %}
-                                                <td>-</td>
-                                                {% endif %}
-
-                                                {% if ela_transaction.value %}
-                                                <td>{{ ela_transaction.value }} ELA</td>
-                                                {% else %}
-                                                <td>-</td>
-                                                {% endif %}
-                                            </tr>
-                                            {% endif %}
-                                        </tbody>
-                                    </table>
+                            <div id="timeline">
+                                <div class="timeline-lg wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                                    <div class="entry-lg">
+                                        <div class="date-lg">
+                                            <dl class="date-top">
+                                                <dd>{% trans "通过KYC验证" %}</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="entry-lg">
+                                        <div id="apply-amount-container" class="delay">
+                                            <div class="date-lg">
+                                                <dl class="date-bottom">
+                                                    <dd>{% trans "填写期望投资额度" %}</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="entry-lg">
+                                        <div id="send-amount-container" class="delay">
+                                            <div class="date-lg">
+                                                <dl class="date-top">
+                                                    <dd>{% trans "转币到Newton" %}</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="entry-lg">
+                                        <div class="delay">
+                                            <div class="date-lg">
+                                                <dl class="date-bottom">
+                                                    <dd>{% trans "填写 New 钱包地址" %}</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="entry-lg">
+                                        <div class="delay">
+                                            <div class="date-lg">
+                                                <dl class="date-top">
+                                                    <dd>{% trans "确认收到New" %}</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                {% else %}
-                                <a class="form-button" href="/tokenexchange/invite/{{ item.id }}/post/">{% trans "前往填写期望额度" %}</a>
-                                {% endif %}
+                                    <!-- end -->
+                                <div class="timeline">
+                                    <div class="entry">
+                                        <div class="date"></div>
+                                        <div class="body">
+                                            <dd>{% trans "通过KYC验证" %}</dd>
+                                        </div>
+                                    </div>
+                                    <div class="entry">
+                                        <div id="apply-amount-container-mobile" class="delay">
+                                            <div class="date"></div>
+                                            <div class="body">
+                                                <dd>{% trans "填写期望投资额度" %}</dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="entry">
+                                        <div id="send-amount-container-mobile" class="delay">
+                                            <div class="date"></div>
+                                            <div class="body">
+                                                <dd>{% trans "转币到 Newton" %}</dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="entry">
+                                        <div class="delay">
+                                            <div class="date"></div>
+                                            <div class="body">
+                                                <dd>{% trans "填写 New 钱包地址" %}</dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="entry">
+                                        <div class="delay">
+                                            <div class="date"></div>
+                                            <div class="body">
+                                                <dd>{% trans "确认收到 New" %}</dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if item.expect_btc or item.except_ela %}
+                            <script>var hasExpect = true;</script>
+                            <div class="auto-table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td></td>
+                                            <td>BTC</td>
+                                            <td>ELA</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>申请额度</td>
+                                            {% if item.expect_btc %}
+                                            <td>{{ item.expect_btc }} BTC</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                            {% if item.expect_ela %}
+                                            <td>{{ item.expect_ela }} ELA</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                        </tr>
+                                        {% if item.assign_btc or item.assign_ela %}
+                                        <tr>
+                                            <td>分配额度</td>
+                                            {% if item.assign_btc %}
+                                            <td>{{ item.assign_btc }} BTC</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                            {% if item.assign_ela %}
+                                            <td>{{ item.assign_ela }} ELA</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                        </tr>
+                                        {% endif %}
+                                        {% if item.receive_btc_address or item.receive_ela_address %}
+                                        <tr>
+                                            <td>分配地址</td>
+                                            {% if item.receive_btc_address %}
+                                            <td>{{ item.receive_btc_address }}</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                            {% if item.receive_ela_address %}
+                                            <td>{{ item.receive_ela_address }}</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                        </tr>
+                                        {% endif %}
+                                        {% if btc_transaction.value or ela_transaction.value %}
+                                        <script>var hasSendAmount = true;</script>
+                                        <tr>
+                                            <td>成功打币金额</td>
+                                            {% if btc_transaction.value %}
+                                            <td>{{ btc_transaction.value }} BTC</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+
+                                            {% if ela_transaction.value %}
+                                            <td>{{ ela_transaction.value }} ELA</td>
+                                            {% else %}
+                                            <td>-</td>
+                                            {% endif %}
+                                        </tr>
+                                        {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                            {% else %}
+                            <a class="form-button" href="/tokenexchange/invite/{{ item.id }}/post/">{% trans "前往填写期望额度" %}</a>
+                            {% endif %}
                         </div>
                     </div>
                     {% else %}
@@ -125,4 +214,14 @@
 </section>
 {% endblock %}
 {% block inline_js %}
+<script type="text/javascript">
+    if(hasExpect){
+        $("#apply-amount-container").removeClass("delay");
+        $("#apply-amount-container-mobile").removeClass("delay");
+    }
+    if(hasSendAmount){
+        $("#send-amount-container").removeClass("delay");
+        $("#send-amount-container-mobile").removeClass("delay");
+    }
+</script>
 {% endblock %}

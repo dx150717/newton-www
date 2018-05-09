@@ -66,16 +66,16 @@ def post_google_authenticator(request):
         if session_token:
             del request.session['auth_token']
         if auth_token != session_token:
-            return http.JsonErrorResponse(error_message=_("no auth_token"))
+            return http.JsonErrorResponse(error_message=_("No Auth_token"))
         user = authenticate(username=email, password=passwrod)
         if not user or user.is_staff:
-            return http.JsonErrorResponse(error_message=_("no user"))
+            return http.JsonErrorResponse(error_message=_("No User"))
         user_profile = user_models.UserProfile.objects.filter(user=user).first()
         if not user_profile:
-            return http.JsonErrorResponse(error_message=_("no user profile"))
+            return http.JsonErrorResponse(error_message=_("No User Profile"))
         is_pass_google_auth = pyotp.TOTP(user_profile.google_authenticator_private_key).verify(gtoken_code)
         if not is_pass_google_auth:
-            return http.JsonErrorResponse(error_message=_("Google auth error"))
+            return http.JsonErrorResponse(error_message=_("Incorrect Google Authenticator Code"))
         if True:
             next = request.POST.get('next')
             if next:

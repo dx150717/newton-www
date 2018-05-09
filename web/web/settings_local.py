@@ -39,7 +39,7 @@ SESSION_CACHE_ALIAS = "default"
 BASE_NAME = 'newtonproject'
 
 # verification default expire time s
-VERIFICATION_DEFAULT_EXPIRE_TIME = 30000
+VERIFICATION_DEFAULT_EXPIRE_TIME = 7200
 
 # authenticate settings
 AUTHENTICATION_BACKENDS = ('backends.auth.EmailAuthBackend', )

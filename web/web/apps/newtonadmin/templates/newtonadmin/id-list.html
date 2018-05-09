@@ -24,18 +24,19 @@
                     {% for item in items %}
                     <tr>
                         <td>
-                            <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
-                            <p>{{ item.user.email }}</p>
+                            <p>{% trans "Name" %} : {{ item.first_name }} &nbsp; {{ item.last_name }}</p>
+                            <p>{% trans "Email" %} :  {{ item.user.email }}</p>
+                            <p>{% trans "Cellphone" %}: +{{ item.country_code }} {{ item.cellphone }}</p>
+                            <p>{% trans "Country" %}:{{ item.country }}</p>
+                            <p>{% trans "Emergency Contact Name" %}:{{ item.emergency_contact_first_name }}{{ item.emergency_contact_last_name }}</p>
+                            <p>{% trans "Emergency Contact Cellphone" %}:+{{ item.emergency_contact_country_code }} {{ item.emergency_contact_cellphone }}</p>
+                            <p>{% trans "RelationShip" %}:{{ item.relationships_with_emergency_contacts }}</p>
+                            <p>{% trans "Describe yourself & how you can help as a community member" %}:{{ item.how_to_contribute }}</p>
+                            <p>{% trans "Tell us your understanding about Newton" %}:{{ item.what_is_newton }}</p>
                         </td>
                         <td>
                             <p>
                                 <img src="{{ item.id_card.url }}"/>
-                            </p>
-                            <p>
-                                {{ item.how_to_contribute }}                                
-                            </p>
-                            <p>
-                                {{ item.what_is_newton }}
                             </p>
                         </td>
                         
@@ -47,7 +48,7 @@
 
                         <td>
                             <p>
-                                <a href="#" class="btn btn-default" onclick="javascript:popupWindow({{ item.user.id }});">审核</a>
+                                <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user.id }});">审核</a>
                             </p>
                         </td>
                         
@@ -105,50 +106,7 @@
 {% endblock %}
 
 {% block inline_js %}
-<script language="javascript">
-function popupWindow(user_id) {
-  $('#user_id').val(user_id);
-  $('#id-modal').modal('show');
-  $('#pass_button').click(function(event){
-    event.preventDefault();
-    var data = {};
-    data.pass_kyc = "1";
-    data.user_id = user_id;
-    data.level = $('#level').val();
-    var comment = $('#id_comment').val();
-    comment = " " + comment;
-    data.comment = comment;
-    $.post('/newtonadmin/tokenexchange/id/confirm/', 
-           data, 
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success,we had send a email to user');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-  });
-  $('#reject_button').click(function(event){
-    event.preventDefault();
-    var data = {};
-    data.pass_kyc = "0";
-    data.user_id = user_id;
-    var comment = $('#id_comment').val();
-    comment = " " + comment;
-    data.comment = comment;
-    data.level = $('#level').val();
-    $.post('/newtonadmin/tokenexchange/id/confirm/', 
-           data, 
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success, we had reject user');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-  });
-}
-</script>
+{% endblock %}
+{% block js %}
+<script src="{% version "js/newtonadmin.js" %}"></script>
 {% endblock %}

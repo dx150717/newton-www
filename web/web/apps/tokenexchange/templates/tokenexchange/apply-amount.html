@@ -23,8 +23,7 @@
         {% include "tokenexchange/token-exchange-info.html" %}
         <div class="container">
             <div class="raw">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8">
+                <div>
                     <form id="user_kyc_form" class="form" action="/tokenexchange/invite/{{ invite_id }}/post/" method="POST">
                         {% include "form.html" %}
                         <div class="raw">
@@ -34,9 +33,11 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-sm-2"></div>
             </div>
         </div>
     </div>
 </section>
+{% endblock %}
+{% block js %}
+<script src="{% version "js/tokenexchange.js" %}"></script>
 {% endblock %}

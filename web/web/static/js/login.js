@@ -47,10 +47,10 @@ $('#login_form').submit(function(event){
   errorClass: "alert alert-danger",
   rules: {
     email: {required: true, email:true},
-    password: {required: true, minlength: 4}
+    password: {required: true, minlength: 6, maxlength:16}
   },
   errorPlacement: function(error,element) {
-    return true;
+    error.appendTo(element.parent());  
   }
 });
 
@@ -86,6 +86,6 @@ $("#google-auth-form").submit(function(event){
     gtoken: {required: true, minlength: 4}
   },
   errorPlacement: function(error,element) {
-    return true;
+    error.appendTo(element.parent()); 
   }
 });

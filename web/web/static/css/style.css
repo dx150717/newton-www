@@ -885,7 +885,20 @@ canvas { display: block; vertical-align: top; }
     justify-content: center;
     width: 100%;
 }
-.form-group .alert{margin-bottom: -15px;width: 264px;line-height: 40px;}
+.modal-form-container{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+@media(max-width:768px){ 
+    .modal-form-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+.form-group .alert{width: 264px;}
 #login .container .register{font-size: 16px; color: #292929}
 #login .container .reset{font-size: 16px; color: #b7b7b7;}
 
@@ -937,6 +950,8 @@ canvas { display: block; vertical-align: top; }
 #user #token-exchange .item-content ul>li{font-size: 18px;}
 #user #token-exchange .item-content table>thead>tr>td{font-size: 18px;color: #282929;padding: 8px;}
 #user #token-exchange .item-content table>tbody>tr>td{font-size: 18px;color: #282929;padding: 8px;white-space: nowrap;}
+#user #token-exchange #timeline{padding-top: 60px;padding-bottom: 60px;}
+#user #token-exchange .item{padding-top: 30px;padding-bottom: 30px;}
 #user #tab-content .info-divider{padding: 0; background-color: #b7b7b7; height: 1px; margin-bottom: 20px;}
 #user .profile-title,
 #settings .profile-title{padding-top: 80px;}
@@ -973,10 +988,10 @@ canvas { display: block; vertical-align: top; }
 #user_kyc_form label{width: 100%; padding-left: 0px; font-size: 18px; color: #292929; font-weight: 350; text-align: left;}
 #user_kyc_form input{border: unset; border-bottom: solid 1px #282929;-webkit-box-shadow: none; border-radius: 0;font-size: 16px; height: 43px; padding-left: 0;}
 #user_kyc_form select{width: 30%;}
-#user_kyc_form .token-btn{padding-top: 60px;}
+#user_kyc_form .token-btn{padding-top: 60px; margin-bottom: 60px;}
 #user_kyc_form #id_birth_date{width: 50%;}
 
-
+.auto-table{overflow-x: auto;}
 #newtonadmin .table img{ width: 350px;}
 #newtonadmin .table>thead>tr{background-color: #282828; color: #fff;}
 #newtonadmin .table>thead>tr>th{font-size: 18px;font-weight: 350;height: 48px;}

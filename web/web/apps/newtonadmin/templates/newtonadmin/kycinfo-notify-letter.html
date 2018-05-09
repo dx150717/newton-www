@@ -15,7 +15,7 @@
 <p>{% trans "Dear" %} {{ kyc_info.first_name }},</p>
 <p>
     {% if kyc_info.kyc_audit.is_pass %}
-    {% trans "You are passed the Newton KYC. We will notify you later for more information." %}
+    {% trans "You have passed the Newton KYC. We will notify you later for more information." %}
     {% else %}
     {% trans "You are not passed the Newton KYC. There has some comment for you:" %}
     {{ kyc_info.kyc_audit.comment }}

@@ -23,21 +23,21 @@
                     {% for item in items %}
                     <tr>
                         <td>
-                            <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
-                            <p>{{ item.user.email }}</p>
+                            <p>{% trans "Name" %} : {{ item.first_name }} &nbsp; {{ item.last_name }}</p>
+                            <p>{% trans "Email" %} :  {{ item.user.email }}</p>
+                            <p>{% trans "Cellphone" %}: +{{ item.country_code }} {{ item.cellphone }}</p>
+                            <p>{% trans "Country" %}:{{ item.country }}</p>
+                            <p>{% trans "Emergency Contact Name" %}:{{ item.emergency_contact_first_name }}{{ item.emergency_contact_last_name }}</p>
+                            <p>{% trans "Emergency Contact Cellphone" %}:+{{ item.emergency_contact_country_code }} {{ item.emergency_contact_cellphone }}</p>
+                            <p>{% trans "RelationShip" %}:{{ item.relationships_with_emergency_contacts }}</p>
+                            <p>{% trans "Describe yourself & how you can help as a community member" %}:{{ item.how_to_contribute }}</p>
+                            <p>{% trans "Tell us your understanding about Newton" %}:{{ item.what_is_newton }}</p>
                         </td>
                         <td>
                             <p>
                                 <img src="{{ item.id_card.url }}"/>
                             </p>
-                            <p>
-                                {{ item.how_to_contribute }}                                
-                            </p>
-                            <p>
-                                {{ item.what_is_newton }}
-                            </p>
                         </td>
-                        
                         <td>
                             <p>
                                 {{ item.updated_at|date:"Y-m-d H:i:s"}}
@@ -61,76 +61,4 @@
         </div>
     </div>
 </section>
-
-<div class="modal fade" tabindex="-1" role="dialog" id="id-modal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">ID审核</h4>
-            </div>
-            <div class="modal-body">
-                <form method="POST" action="#" id="id_form">
-                    <p>
-                        <label>评级</label>
-                        <select name="level" id="level">
-                            <option value="1">普通</option>
-                            <option value="2">良好</option>
-                            <option value="3">优秀</option>
-                        </select>
-                    </p>
-                    
-                    <p>
-                        <button class="btn btn-default" type="button" id="pass_button">通过</button>
-                        <button class="btn btn-default" type="button" id="reject_button">拒绝</button>
-                    </p>
-                </form>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->             
-
-{% endblock %}
-
-{% block inline_js %}
-<script language="javascript">
-function popupWindow(user_id) {
-  $('#user_id').val(user_id);
-  $('#id-modal').modal('show');
-  $('#pass_button').click(function(event){
-    event.preventDefault();
-    var data = {};
-    data.pass_kyc = "1";
-    data.user_id = user_id;
-    data.level = $('#level').val();
-    $.post('/newtonadmin/tokenexchange/id/confirm/', 
-           data, 
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success,we had send a email to user');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-  });
-  $('#reject_button').click(function(event){
-    event.preventDefault();
-    var data = {};
-    data.pass_kyc = "0";
-    data.user_id = user_id;
-    data.level = $('#level').val();
-    $.post('/newtonadmin/tokenexchange/id/confirm/', 
-           data, 
-           function(json){
-             if (json['error_code'] == 1) {
-               alert('success, we had reject user');
-               location.reload();
-             } else {
-               alert(json['error_message']);
-             }
-           });
-  });
-}
-</script>
 {% endblock %}

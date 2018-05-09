@@ -20,7 +20,7 @@ $("#reset-email-form").submit(function(event){
         email: {required: true, email:true}
     },
     errorPlacement: function(error,element) {
-        return true;
+        error.appendTo(element.parent());
     }
 });
 
@@ -39,10 +39,10 @@ $("#reset-password-form").submit(function(event){
     errorElement: "div",
     errorClass: "alert alert-danger",
     rules: {
-        password: {required: true, minlength:4},
-        repassword: {required: true, minlength: 4},
+        password: {required: true, minlength:6, maxlength:16, password:true},
+        repassword: {required: true, minlength:6, maxlength:16, equalTo:"#id_password", password:true},
     },
     errorPlacement: function(error,element) {
-      return true;
+        error.appendTo(element.parent());
     }
 });

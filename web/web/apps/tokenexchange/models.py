@@ -21,7 +21,7 @@ class KYCInfo(models.Model):
     emergency_contact_last_name = models.CharField(max_length=128, verbose_name=_('Last Name of Emergency Contact'))
     emergency_contact_cellphone = models.CharField(max_length=128, db_index=True, default='', verbose_name=_('Cellphone of Emergency Contact'))
     emergency_contact_country_code = models.CharField(max_length=4, db_index=True, verbose_name=_('Country Code of Emergency Contact'))
-    relationships_with_emergency_contacts = models.CharField(max_length=128)
+    relationships_with_emergency_contacts = models.CharField(max_length=128, verbose_name=_('Relationships with emergency contacts'))
     location = models.CharField(max_length=1024, verbose_name=_('Address'))
     how_to_contribute = models.TextField(verbose_name=_('Describe yourself & how you can help as a community member'), max_length=10240)
     what_is_newton = models.TextField(verbose_name=_('Tell us your understanding about Newton'), max_length=10240)
