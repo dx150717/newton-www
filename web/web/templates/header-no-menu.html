@@ -21,13 +21,13 @@
                 <ul class="nav navbar-nav  navbar-right user">
                     {% if request.user.is_authenticated %}
                     <li class="dropdown">
-                        <a class="dropdown-toggle text-right"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
                             <span class="caret arrow-only-pc"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ settings.NEWON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                            <li><a href="{{ settings.NEWON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
+                            <li><a style="color:black;" href="{{ settings.NEWON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+                            <li><a style="color:black;" href="{{ settings.NEWON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
                         </ul>
                     </li>
                     {% else %}

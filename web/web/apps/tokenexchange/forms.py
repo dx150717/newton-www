@@ -23,6 +23,7 @@ class KYCInfoForm(ModelForm):
                                 'emergency_contact_first_name',
                                 'emergency_contact_last_name',
                                 'cellphone_of_emergency_contact',
+                                'relationships_with_emergency_contacts'
         ]
 
     class Meta:
@@ -39,6 +40,7 @@ class KYCInfoForm(ModelForm):
             'emergency_contact_first_name',
             'emergency_contact_last_name',
             'cellphone_of_emergency_contact',
+            'relationships_with_emergency_contacts'
         ]
 
 class ApplyAmountForm(ModelForm):

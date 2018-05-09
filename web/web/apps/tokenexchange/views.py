@@ -55,6 +55,9 @@ def post_kyc_information(request):
             country_code, cellphone = form.cleaned_data['cellphone_group']
             instance.country_code = country_code
             instance.cellphone = cellphone
+            emergency_contact_country_code, emergency_contact_cellphone = form.cleaned_data['cellphone_of_emergency_contact']
+            instance.emergency_contact_country_code = emergency_contact_country_code
+            instance.emergency_contact_cellphone = emergency_contact_cellphone
             instance.phase_id = settings.CURRENT_FUND_PHASE
             instance.user = request.user
             instance.save()
