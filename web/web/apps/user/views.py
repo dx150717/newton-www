@@ -81,7 +81,7 @@ def show_token_exchange_progress_view(request, phase_id):
         user = request.user
         kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
         kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
-        item = tokenexchange_models.InvestInvite.objects.filter(user=user, phase_id=phase_id, status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE).first()
+        item = tokenexchange_models.InvestInvite.objects.filter(user=user, phase_id=phase_id).first()
         if item:
             token_exchange_info = settings.FUND_CONFIG[item.phase_id]
             btc_address = item.receive_btc_address
