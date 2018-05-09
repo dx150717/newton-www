@@ -33,7 +33,10 @@
                     <div id="key">{{ gtoken }}</div>
                 </div>
                 <div class="form-group">
-                    <label for="id_gtoken" class="control-label">或者扫描二维码添加谷歌身份验证器</label>
+                    <label>{% trans "Or"  %}</label>
+                </div>
+                <div class="form-group">
+                    <label for="id_gtoken" class="control-label">扫描二维码添加谷歌身份验证器</label>
                     <div id="code"></div> 
                 </div>
                 {% include "form.html" %}
