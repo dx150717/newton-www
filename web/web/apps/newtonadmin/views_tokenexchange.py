@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 class IdListView(generic.ListView):
     template_name = "newtonadmin/id-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = settings.PAGE_SIZE
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
@@ -40,7 +40,7 @@ class IdListView(generic.ListView):
 class PassIdListView(generic.ListView):
     template_name = "newtonadmin/pass-id-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = settings.PAGE_SIZE
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
@@ -61,7 +61,7 @@ class PassIdListView(generic.ListView):
 class InviteListView(generic.ListView):
     template_name = "newtonadmin/te-waiting-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = settings.PAGE_SIZE
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
@@ -92,7 +92,7 @@ class InviteListView(generic.ListView):
 class CompletedInviteListView(generic.ListView):
     template_name = "newtonadmin/te-completed-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = settings.PAGE_SIZE
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
@@ -120,7 +120,7 @@ class CompletedInviteListView(generic.ListView):
 class AmountListView(generic.ListView):
     template_name = "newtonadmin/amount-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = settings.PAGE_SIZE
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
@@ -149,7 +149,7 @@ class AmountListView(generic.ListView):
 class CompletedAmountListView(generic.ListView):
     template_name = "newtonadmin/amount-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = settings.PAGE_SIZE
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
@@ -179,7 +179,7 @@ class CompletedAmountListView(generic.ListView):
 class ReceiveListView(generic.ListView):
     template_name = "newtonadmin/receive-list.html"
     context_object_name = "items"
-    paginate_by = 20
+    paginate_by = settings.PAGE_SIZE
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:

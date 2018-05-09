@@ -82,12 +82,12 @@ def post_google_authenticator(request):
         if session_key:
             sso.delete_session(session_key)
         # redirect to expect target url
+        login(request, user)
         next = request.POST.get('next')
         if next:
             result = urlparse.urlparse(next)
             if result and not result.netloc and result.path:
                 return http.JsonSuccessResponse(data={"msg":next})
-        login(request, user)
         return http.JsonSuccessResponse(data={"msg":"/user/"})
     except Exception, inst:
         logger.exception("fail to post google authedticator:%s" % str(inst))

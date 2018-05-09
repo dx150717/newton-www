@@ -4,15 +4,16 @@
 
 
 {% block title %}
-<h2>{% trans "Fillout your expect amount." %}</h2>
+<h1>{% trans "Fillout your expect amount." %}</h1>
 {% endblock %}
 
 {% block content %}
-<p>{% trans "Dear" %} {{ kyc_info.first_name }},</p>
-<p>
+<p class="main-color">{% trans "Dear" %} {{ kyc_info.first_name }},</p>
+<p class="main-color">
     {% trans "Please click the following button to fillout your expect amount." %}
 </p>
 <div class="link-button">
     <a class="form-button" href="{{ target_url }}">{% trans "Fillout" %}</a>
+    <p class="link-warn">{% trans "If you received this email by mistake, simply delete it." %}</p>
 </div>
 {% endblock %}

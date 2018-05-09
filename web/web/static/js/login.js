@@ -66,6 +66,10 @@ $("#google-auth-form").submit(function(event){
   data.password = document.getElementById("id_password").value;
   data.auth_token = auth_token;
   var next = $("input[name='next']").val();
+  var form = this;
+  if (!$(form).valid()) {
+    return false;
+  }
   $.post("/login/post-google-authenticator/",
           data,
           function (response) {
@@ -87,5 +91,6 @@ $("#google-auth-form").submit(function(event){
   },
   errorPlacement: function(error,element) {
     error.appendTo(element.parent()); 
+    return true;
   }
 });
