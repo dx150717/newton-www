@@ -85,7 +85,7 @@ def send_kycinfo_notify(kyc_info, request):
         if not verification:
             return False
         if kyc_info.kyc_audit.is_pass:
-            subject = _("Newton Notifications: You are passed the Newton KYC")
+            subject = _("Newton Notifications: You have passed the Newton KYC")
         else:
             subject = _("Newton Notifications: You are not passed the Newton KYC")
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
