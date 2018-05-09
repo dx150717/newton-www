@@ -76,16 +76,14 @@ def post_google_authenticator(request):
         is_pass_google_auth = pyotp.TOTP(user_profile.google_authenticator_private_key).verify(gtoken_code)
         if not is_pass_google_auth:
             return http.JsonErrorResponse(error_message=_("Incorrect Google Authenticator Code"))
-        if True:
-            next = request.POST.get('next')
-            if next:
-                result = urlparse.urlparse(next)
-                if result and not result.netloc and result.path:
-                    return http.JsonSuccessResponse(data={"msg":next})
-            login(request, user)
-            return http.JsonSuccessResponse(data={"msg":"/user/"})
+        login(request, user)
+        next = request.POST.get('next')
+        if next:
+            result = urlparse.urlparse(next)
+            if result and not result.netloc and result.path:
+                return http.JsonSuccessResponse(data={"msg":next})
         else:
-            return http.JsonUnauthErrorResponse()
+            return http.JsonSuccessResponse(data={"msg":"/user/"})
     except Exception, inst:
         logger.exception("fail to post google authedticator:%s" % str(inst))
         return http.HttpResponseServerError()
