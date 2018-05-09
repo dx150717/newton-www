@@ -60,6 +60,7 @@ def post_kyc_information(request):
             instance.emergency_contact_cellphone = emergency_contact_cellphone
             instance.phase_id = settings.CURRENT_FUND_PHASE
             instance.user = request.user
+            instance.status = codes.KYCStatus.CANDIDATE.value
             instance.save()
             return redirect('/tokenexchange/wait-audit/')
         else:
