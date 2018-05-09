@@ -54,6 +54,9 @@ LOGIN_URL = '/login/'
 # chain settings of digital currency
 USE_TESTNET = False
 
+# page size
+PAGE_SIZE = 20
+
 # multiple domain
 NEWON_WEB_URL = 'https://www.newtonproject.org'
 NEWON_HOME_URL = 'https://home.newtonproject.org'
