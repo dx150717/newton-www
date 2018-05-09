@@ -27,6 +27,7 @@ $("#user_kyc_form").submit(function(event){
         emergency_contact_last_name: {required:true, minlength:1, maxlength:100},
         cellphone_of_emergency_contact_0: {required:true, minlength:1, maxlength:10, number:true},
         cellphone_of_emergency_contact_1: {required:true, minlength:1, maxlength:20, number:true},
+        relationships_with_emergency_contacts: {required:true},
         expect_btc:{number:true, min:1},
         expect_ela:{number:true, min:100}
     },
