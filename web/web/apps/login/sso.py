@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import os
-from enum import Enum
-import hashlib
+import logging
+from importlib import import_module
+
 from django.conf import settings
 from django.core.cache import cache
+from django.contrib.sessions.models import Session
 
 logger = logging.getLogger(__name__)
 SSO_KEY = 'sso-key'
@@ -22,26 +24,26 @@ def get_session(user_id):
         logger.exception("fail to get session:%s" % str(inst))
         return None
 
-def delete_session(session_key):
+def delete_session(session_key, user_id):
     """Delete session by user ID
 
     """
-    try:
+    try:        
         key = '%s-%s' % (SSO_KEY, user_id)
         cache.delete(key)
-
-        SessionStore = import_module(settings.SESSION_ENGINE).SessionStore
-        s = SessionStore(session_key=session_key)
-        s.delete()
+        engine = import_module(settings.SESSION_ENGINE)
+        SessionStore = engine.SessionStore
+        session = SessionStore(session_key)
+        session.flush()
     except Exception, inst:
         logger.exception("fail to delete session:%s" % str(inst))
 
-def save_session(user_id, session_id):
-    """Save the mapping relation between session_id and user_id
+def save_session(user_id, session_key):
+    """Save the mapping relation between session_key and user_id
 
     """
     try:
         key = '%s-%s' % (SSO_KEY, user_id)
-        cache.set(key, session_id, settings.SESSION_COOKIE_AGE)
+        cache.set(key, session_key, settings.SESSION_COOKIE_AGE)
     except Exception, inst:
         logger.exception("fail to save session:%s" % str(inst))
