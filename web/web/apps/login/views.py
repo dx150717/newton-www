@@ -19,6 +19,7 @@ from utils import http
 from utils import security
 from . import forms
 from user import models as user_models
+from . import sso
 
 logger = logging.getLogger(__name__)
 
@@ -76,16 +77,18 @@ def post_google_authenticator(request):
         is_pass_google_auth = pyotp.TOTP(user_profile.google_authenticator_private_key).verify(gtoken_code)
         if not is_pass_google_auth:
             return http.JsonErrorResponse(error_message=_("Incorrect Google Authenticator Code"))
-        if True:
-            next = request.POST.get('next')
-            if next:
-                result = urlparse.urlparse(next)
-                if result and not result.netloc and result.path:
-                    return http.JsonSuccessResponse(data={"msg":next})
-            login(request, user)
-            return http.JsonSuccessResponse(data={"msg":"/user/"})
-        else:
-            return http.JsonUnauthErrorResponse()
+        # ensure SSO
+        session_key = sso.get_session(user.id)
+        if session_key:
+            sso.delete_session(session_key)
+        # redirect to expect target url
+        next = request.POST.get('next')
+        if next:
+            result = urlparse.urlparse(next)
+            if result and not result.netloc and result.path:
+                return http.JsonSuccessResponse(data={"msg":next})
+        login(request, user)
+        return http.JsonSuccessResponse(data={"msg":"/user/"})
     except Exception, inst:
         logger.exception("fail to post google authedticator:%s" % str(inst))
         return http.HttpResponseServerError()
