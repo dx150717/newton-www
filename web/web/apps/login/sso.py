@@ -31,10 +31,6 @@ def delete_session(session_key, user_id):
     try:        
         key = '%s-%s' % (SSO_KEY, user_id)
         cache.delete(key)
-        engine = import_module(settings.SESSION_ENGINE)
-        SessionStore = engine.SessionStore
-        session = SessionStore(session_key)
-        session.flush()
     except Exception, inst:
         logger.exception("fail to delete session:%s" % str(inst))
 
