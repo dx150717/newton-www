@@ -36,7 +36,7 @@ $("#set-password-form").submit(function(event){
     errorClass: "alert alert-danger",
     rules: {
         password: {required: true, minlength:6, maxlength:16},
-        repassword: {required: true, minlength: 6, maxlength:16, equalTo:"#password"},
+        repassword: {required: true, minlength: 6, maxlength:16, equalTo:"#id_password"},
     },
     errorPlacement: function(error,element) {
         error.appendTo(element.parent());

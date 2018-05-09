@@ -1,0 +1,60 @@
+{% load i18n %}
+{% load utils %}
+{% if item.phase_id == 1 %}
+<div class="token-exchange-info">
+    <div class="raw">
+        <div>
+            <table class="table text-left">
+                <thead>
+                    <tr>
+                        <td>{% trans "First Token Exchange Info" %}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>开始时间</td>
+                        <td>{{ token_exchange_info.start_date }}</td>
+                    </tr>
+                    <tr>
+                        <td>结束时间</td>
+                        <td>{{ token_exchange_info.end_date }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% if item.phase_id == 2 %}
+<div class="container">
+    <div class="raw">
+        <div>
+            <table class="table text-left">
+                <thead>
+                    <tr>
+                        <td>{% trans "Second Token Exchange Info" %}</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>开始时间</td>
+                        <td>{{ token_exchange_info.start_date }}</td>
+                    </tr>
+                    <tr>
+                        <td>结束时间</td>
+                        <td>{{ token_exchange_info.end_date }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
