@@ -5,7 +5,7 @@ import logging
 
 from django.conf import settings
 from django.template import Template, Context, loader
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 from verification import services
 from tasks import task_email

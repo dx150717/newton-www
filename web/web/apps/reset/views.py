@@ -3,7 +3,7 @@ import datetime
 
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import utc
 from django.conf import settings
 from django.forms.forms import NON_FIELD_ERRORS

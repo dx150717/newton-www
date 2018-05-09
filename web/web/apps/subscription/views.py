@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.template import Template, Context, loader
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.http import require_http_methods
 from django.conf import settings
 

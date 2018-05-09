@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from django.forms import ModelForm
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 
 from tokenexchange import models as tokenexchange_models
 from user import forms as user_forms

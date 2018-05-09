@@ -6,7 +6,7 @@ from django.conf import settings
 from django.contrib.auth import login, authenticate
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.template import Template, Context, loader
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import utc
