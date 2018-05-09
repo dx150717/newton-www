@@ -615,3 +615,7 @@ jQuery.validator.addMethod("extension", function(value, element, param) {
 	param = typeof param === "string" ? param.replace(/,/g, '|') : "png|jpe?g|gif";
 	return this.optional(element) || value.match(new RegExp(".(" + param + ")$", "i"));
 }, jQuery.format("Please enter a value with a valid extension."));
+
+jQuery.validator.addMethod("password", function(value, element, param){
+	return this.optional(element) || /^(?:(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])).{6,16}$/.test(value)
+}, jQuery.format("Password must contain a-z A-Z number."))
