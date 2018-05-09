@@ -29,6 +29,6 @@ $("#user_kyc_form").submit(function(event){
         cellphone_of_emergency_contact_1: {required:true, minlength:1, maxlength:20, number:true}
     },
     errorPlacement: function(error,element) {
-        return true;
+        error.appendTo(element.parent());
     }
 });
