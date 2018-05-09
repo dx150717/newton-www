@@ -79,8 +79,10 @@ def post_google_authenticator(request):
             return http.JsonErrorResponse(error_message=_("Incorrect Google Authenticator Code"))
         # ensure SSO
         session_key = sso.get_session(user.id)
+        print session_key
         if session_key:
-            sso.delete_session(session_key)
+            sso.delete_session(session_key, user.id)
+        sso.save_session(user.id, request.session.session_key)
         # redirect to expect target url
         login(request, user)
         next = request.POST.get('next')
