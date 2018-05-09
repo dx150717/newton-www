@@ -61,7 +61,7 @@ def send_distribution_letter(user, request):
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        target_url = "%s/tokenexchange/%s/" % (settings.BASE_URL, str(user.username))
+        target_url = "%s/tokenexchange/%s/" % (settings.NEWON_HOME_URL, str(user.username))
         subject = "NewtonProject Notifications: KYC information is confirmed:"
         template = loader.get_template("newtonadmin/distribution-letter.html")
         context = Context({"targetUrl":target_url,"request":request})
@@ -109,7 +109,7 @@ def send_apply_amount_notify(invite_info, request):
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        target_url = "%s/tokenexchange/invite/%s/post/" % (settings.BASE_URL, invite_info.id)
+        target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWON_HOME_URL, invite_info.id)
         subject = _("Newton notification: Fillout your expect amount")
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
         context = Context({"target_url": target_url, "request": request, "invite_info": invite_info})
