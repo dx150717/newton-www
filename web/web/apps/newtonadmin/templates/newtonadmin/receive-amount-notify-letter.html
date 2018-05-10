@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block content %}
-<p class="main-color">{% trans "Dear" %} {{ kyc_info.first_name }},</p>
+<p class="main-color">{% trans "Dear" %} {{ receive_info.kyc_info.first_name }},</p>
 <p class="main-color">
     {% if receive_info.address_type == 1 %}
     {% trans "we had received" %} {{ receive_info.value }} BTC {% trans "thanks very much!" %}

@@ -4,11 +4,21 @@
 
 
 {% block title %}
-<h1>{% trans "Fillout your expect amount." %}</h1>
+<h1>{% trans "牛顿通证交换邀请" %}</h1>
 {% endblock %}
 
 {% block content %}
-<p class="main-color">{% trans "Dear" %} {{ kyc_info.first_name }},</p>
+<p class="main-color">{% trans "Dear" %} {{ invite_info.kyc_info.first_name }}:</p>
+<p class="main-color">这是一封来自 <a class='main-color' href='https://www.newtonproject.org'>牛顿官网</a> 的邮件,邀请您参加牛顿的第一轮通证交换，
+    以下是这一轮通证交换的信息：</p>
+<p class="main-color">{% trans "本轮通证交换从" %}{{ invite_info.tokenexchange_info.start_date }} {% trans "开始，持续到" %}{{ invite_info.tokenexchange_info.end_date }}</p>
+<p class="main-color">{% trans "本轮通证交换只接受 BTC 和 ELA,具体兑换比例如下：" %}</p>
+<p class="main-color">1 BTC = {{ invite_info.tokenexchange_info.btc_ratio }} NEW</p>
+<p class="main-color">1 ELA = {{ invite_info.tokenexchange_info.ela_ratio }} NEW</p>
+<p class="main-color">{% trans "本轮通证交换接受的最小额度为：" %}{{ invite_info.tokenexchange_info.min_btc }} BTC {% trans "Or" %} {{ invite_info.tokenexchange_info.min_ela }} ELA,{% trans "请不要填写小于最低额度的BTC和ELA。" %}</p>
+<p class="main-color">
+    {% trans "在您填写期望额度之后，我们将根据您的额度和本轮募集的具体情况为您分配额度，请在牛顿官方网站中的您的个人中心页面中，点击通证交换选项卡以查看状态，当我们为您分配额度之后，您的通证交换选项卡下的通证交换状态会增加为您分配的BTC额度和ELA额度，并且分别对BTC和ELA生成了一个转币地址，请使用数字货币钱包转与您被分配额度相同BTC币和ELA币的数量。我们将在之后推出牛顿币NEW专属的钱包NewPay，届时您可以获得相对应的牛顿币。" %}
+</p>
 <p class="main-color">
     {% trans "Please click the following button to fillout your expect amount." %}
 </p>
@@ -16,4 +26,5 @@
     <a class="form-button" href="{{ target_url }}">{% trans "Fillout" %}</a>
     <p class="link-warn">{% trans "If you received this email by mistake, simply delete it." %}</p>
 </div>
+
 {% endblock %}

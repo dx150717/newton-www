@@ -286,6 +286,9 @@ def send_invite_email(request, phase_id):
             invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=user_id).first()
             if not invite:
                 return http.JsonErrorResponse()
+            kyc_info = tokenexchange_models.KYCInfo.objects.filter(user__id=user_id).first()
+            invite.kyc_info = kyc_info
+            invite.tokenexchange_info = settings.FUND_CONFIG[invite.phase_id]
             if services_tokenexchange.send_apply_amount_notify(invite, request):
                 invite.status = codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value
                 invite.save()
@@ -352,6 +355,8 @@ def send_receive_email(request, phase_id):
         for address in address_list:
             item = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, address=address).first()
             invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=item.user_id).first()
+            kyc_info = tokenexchange_models.KYCInfo.objects.filter(user__id=item.user_id).first()
+            item.kyc_info = kyc_info
             if services_tokenexchange.send_receive_confirm_notify(request, item):
                 item.status = codes.StatusCode.RELEASE.value
                 item.save()
