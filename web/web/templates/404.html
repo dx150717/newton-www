@@ -2,6 +2,14 @@
 {% load i18n %}
 {% load utils %}
 
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
 {% block content %}
 <div class="container page">
 	<div>
