@@ -10,11 +10,14 @@
 {% block content %}
 <p class="main-color">{% trans "Dear" %} {{ receive_info.kyc_info.first_name }},</p>
 <p class="main-color">
-    {% if receive_info.address_type == 1 %}
-    {% trans "we had received" %} {{ receive_info.value }} BTC {% trans "thanks very much!" %}
-    {% endif %}
-    {% if receive_info.address_type == 2 %}
-    {% trans "we had received" %} {{ receive_info.value }} ELA {% trans "thanks very much!" %}
-    {% endif %}
+{% trans "Newton foundation has received your" %}
+{% if receive_info.btc_value %}
+{{ receive_info.btc_value }} BTC
+{% endif %}
+{% if receive_info.ela_value %}
+{% trans "and" %} {{ receive_info.ela_value }} ELA
+{% endif %}
+,{% trans "we show sincere gratitude to contribution you have made in Newton community." %}
 </p>
+<p class="main-color">{% trans "You can join in our communities in other medias by go to the 'community' page through the navigator bar of Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>)." %}</p>
 {% endblock %}

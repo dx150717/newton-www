@@ -236,14 +236,14 @@ function amountPopupWindow(user_id, phase_id, expect_ela, expect_btc) {
 /**
  * sendemail button in receive-list.html.
  * send email to notify user that newton have received coin.
- * @param {string} address 
+ * @param {string} user_id 
  */
 
-function sendPerEmail(address) {
+function sendPerEmail(user_id) {
     var data = {};
-    var address_list = [address];
-    address_list = address_list.join(",");
-    data.address_list = address_list;
+    var user_list = [user_id];
+    user_list = user_list.join(",");
+    data.user_list = user_list;
     $.post('/newtonadmin/tokenexchange/receive/' + phase_id + '/send/', 
         data,
         function(json){
@@ -282,20 +282,20 @@ $("#all-check-receive-coin").change(function(){
  * send selected email which to notify user that newton have received coin.
  */
 function sendEmailForReceivedCoin(){
-    var address_list = [];
+    var user_list = [];
     var checkboxes = $("input[type='checkbox']")
     for(var i = 0; i < checkboxes.length; i++){
         var checkbox = checkboxes[i]
         if(checkbox.checked){
             var value = checkbox.value
             if(value != "on"){
-                address_list.push(value);
+                user_list.push(value);
             }
         }
     }
-    address_list = address_list.join(",");
+    user_list = user_list.join(",");
     var data = {}
-    data.address_list = address_list;
+    data.user_list = user_list;
     $.post('/newtonadmin/tokenexchange/receive/' + phase_id + '/send/',data,function(json){
         if (json['error_code'] == 1) {  
             alert('success');

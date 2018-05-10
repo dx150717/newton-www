@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import user_passes_test
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.views import generic
+from django.db.models import Sum
 
 from utils import http
 from config import codes
@@ -204,6 +205,47 @@ class ReceiveListView(generic.ListView):
             return None
 
 
+class UserReceiveListView(generic.ListView):
+    template_name = "newtonadmin/user-receive-list.html"
+    context_object_name = "items"
+    paginate_by = settings.PAGE_SIZE
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(UserReceiveListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(UserReceiveListView, self).get_context_data(**kwargs)
+        context['phase_id'] = int(self.request.path.split("/")[4])
+        return context
+
+    def get_queryset(self):
+        try:
+            phase_id = self.request.path.split("/")[4]
+            phase_id = int(phase_id)
+            items = []
+            for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
+                queryset = tokenexchange_models.AddressTransaction.objects.filter(user=item.user)
+                btc_set = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value)
+                ela_set = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value)
+                if btc_set:
+                    item.btc_value = 0
+                    for btc_itme in btc_set:
+                        item.btc_value = item.btc_value + btc_itme.value
+                if ela_set:
+                    item.ela_value = 0
+                    for ela_item in ela_set:
+                        item.ela_value = item.ela_value + ela_item.value
+                if item.btc_value or item.ela_value:
+                    items.append(item)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show receive list:%s" % str(inst))
+            return None
+
 
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def confirm_id(request):
@@ -351,17 +393,25 @@ def send_receive_email(request, phase_id):
     """
     try:
         phase_id = int(phase_id)
-        address_list = [item for item in request.POST['address_list'].split(",")]
-        for address in address_list:
-            item = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, address=address).first()
-            invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=item.user_id).first()
-            kyc_info = tokenexchange_models.KYCInfo.objects.filter(user__id=item.user_id).first()
+        user_list = [int(item) for item in request.POST['user_list'].split(",")]
+        for user_id in user_list:
+            item = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=user_id).first()
+            kyc_info = tokenexchange_models.KYCInfo.objects.filter(user__id=user_id).first()
+            queryset = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, user__id=user_id)
+            btc_set = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value)
+            ela_set = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value)
+            if btc_set:
+                item.btc_value = 0
+                for btc_itme in btc_set:
+                    item.btc_value = item.btc_value + btc_itme.value
+            if ela_set:
+                item.ela_value = 0
+                for ela_item in ela_set:
+                    item.ela_value = item.ela_value + ela_item.value
             item.kyc_info = kyc_info
             if services_tokenexchange.send_receive_confirm_notify(request, item):
-                item.status = codes.StatusCode.RELEASE.value
+                item.status = codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
                 item.save()
-                invite.status = codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
-                invite.save()
                 action_id = codes.AdminActionType.SEND_CONFIRM_EMAIL.value
                 target_user = User.objects.filter(id=item.user_id).first()
                 audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)

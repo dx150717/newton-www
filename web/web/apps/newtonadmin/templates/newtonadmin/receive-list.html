@@ -14,21 +14,17 @@
                 <caption class="text-center">收币确认列表<span class="">(每30分钟自动查询一次)<span></caption>
                 <thead>
                     <tr>
-                        <th><input id="all-check-receive-coin" name="all-check-receive-coin" type="checkbox"/>&nbsp;&nbsp;全选</th>
-                        <th>姓名</th>
+                        <th>电子邮箱</th>
                         <th>收币地址</th>
                         <th>币种</th>
                         <th>数量</th>
                         <th>时间</th>
-                        <th>发送收币确认邮件</th>
-                        <th>是否已经发送邮件</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for item in items %}
                     <tr>
-                        <td><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.address }}"/>&nbsp;&nbsp;选择</td>
-                        <td></td>
+                        <td>{{ item.user.email }}</td>
                         <td>
                             {{ item.address }}
                         </td>
@@ -53,29 +49,8 @@
                         <td>
                             {{ item.updated_at|date:"Y-m-d H:i:s"}}
                         </td>
-                        <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:sendPerEmail('{{ item.address }}');">发送</a>
-                        </td>
-                         <td>
-                             {% if item.status == 3 %}
-                             已发送
-                             {% else %}
-                             未发送
-                             {% endif %}
-                         </td>
                     </tr>
                     {% endfor %}
-                    <tr>
-                        <td><button class="form-button" onclick="sendEmailForReceivedCoin();">批量发送</button></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </tbody>
             </table>
             <div class="form-container">
@@ -97,12 +72,4 @@
 
 {% endblock %}
 {% block inline_js %}
-<script type="text/javascript">
-    var phase_id = {{ phase_id }};
-</script>
 {% endblock %}
-
-{% block js %}
-<script src="{% version "js/newtonadmin.js" %}"></script>
-{% endblock %}
-

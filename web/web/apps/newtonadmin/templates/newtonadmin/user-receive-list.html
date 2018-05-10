@@ -1,0 +1,95 @@
+{% extends "newtonadmin/base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="faq" class="section-list">
+    <div class="container" style="width:100%;">
+        <div class="raw table-responsive content">
+            <table class="table">
+                <caption class="text-center">用户打币列表<span class=""><span></caption>
+                <thead>
+                    <tr>
+                        <th><input id="all-check-receive-coin" name="all-check-receive-coin" type="checkbox"/>&nbsp;&nbsp;全选</th>
+                        <th>姓名</th>
+                        <th>收币地址及数量</th>
+                        <th>时间</th>
+                        <th>发送收币确认邮件</th>
+                        <th>是否已经发送邮件</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user.id }}"/>&nbsp;&nbsp;选择</td>
+                        <td>
+                            {{ item.user.email }}
+                        </td>
+                        <td>
+                            {% if item.btc_value %}
+                            <p>{{ item.receive_btc_address }} : {{ item.btc_value }} BTC</p>
+                            {% endif %}
+                            {% if item.ela_value %}
+                            <p>{{ item.receive_ela_address }} : {{ item.ela_value }} ELA</p>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {{ item.updated_at|date:"Y-m-d H:i:s"}}
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-default" onclick="javascript:sendPerEmail('{{ item.user.id }}');">发送</a>
+                        </td>
+                         <td>
+                             {% if item.status == 7 %}
+                             已发送
+                             {% else %}
+                             未发送
+                             {% endif %}
+                         </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td><button class="form-button" onclick="sendEmailForReceivedCoin();">批量发送</button></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-container">
+                {% if is_paginated %}
+                <div class="pagination-simple">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+                {% endif %}
+                <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+                {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+{% block inline_js %}
+<script type="text/javascript">
+    var phase_id = {{ phase_id }};
+</script>
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/newtonadmin.js" %}"></script>
+{% endblock %}
+
