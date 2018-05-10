@@ -135,7 +135,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>申请额度</td>
+                                            <td>{% trans "申请额度" %}</td>
                                             {% if item.expect_btc %}
                                             <td>{{ item.expect_btc }} BTC</td>
                                             {% else %}
@@ -149,7 +149,7 @@
                                         </tr>
                                         {% if item.assign_btc or item.assign_ela %}
                                         <tr>
-                                            <td>分配额度</td>
+                                            <td>{% trans "分配额度" %}</td>
                                             {% if item.assign_btc %}
                                             <td>{{ item.assign_btc }} BTC</td>
                                             {% else %}
@@ -164,7 +164,7 @@
                                         {% endif %}
                                         {% if item.receive_btc_address or item.receive_ela_address %}
                                         <tr>
-                                            <td>分配地址</td>
+                                            <td>{% trans "分配地址" %}</td>
                                             {% if item.receive_btc_address %}
                                             <td>{{ item.receive_btc_address }}</td>
                                             {% else %}
@@ -180,7 +180,7 @@
                                         {% if btc_transaction.value or ela_transaction.value %}
                                         <script>var hasSendAmount = true;</script>
                                         <tr>
-                                            <td>成功打币金额</td>
+                                            <td>{% trans "成功打币金额" %}</td>
                                             {% if btc_transaction.value %}
                                             <td>{{ btc_transaction.value }} BTC</td>
                                             {% else %}
