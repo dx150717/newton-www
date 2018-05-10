@@ -79,9 +79,9 @@ def post_settings(request):
 def show_token_exchange_progress_view(request, phase_id):
     try:
         user = request.user
-        kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
-        kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
-        item = tokenexchange_models.InvestInvite.objects.filter(user=user, phase_id=phase_id).first()
+        kycinfo = tokenexchange_models.KYCInfo.objects.filter(user__id=user.id).first()
+        kycaudit = tokenexchange_models.KYCAudit.objects.filter(user__id=user.id).first()
+        item = tokenexchange_models.InvestInvite.objects.filter(user__id=user.id, phase_id=phase_id).first()
         if item:
             token_exchange_info = settings.FUND_CONFIG[item.phase_id]
             btc_address = item.receive_btc_address
