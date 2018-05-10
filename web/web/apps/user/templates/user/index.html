@@ -40,7 +40,7 @@
                     <div class="col-md-12 user-info">
                         <table>
                             <thead>
-                                <tr><td>基本信息</td></tr>
+                                <tr><td>{% trans "基本信息" %}</td></tr>
                             </thead>
                             <tbody class="bg-gray">
                                 {% for field in form %}
@@ -63,7 +63,7 @@
                                             {% if kycaudit.is_pass %}
                                             <td class="gray td-value ">{% trans "已通过" %}</td>
                                             {% else %}
-                                            <td class="gray td-value">{% trans "已拒绝，拒绝原因" %}:{{ kycaudit.comment }} <a href="/tokenexchange/">前往重新填写</a></td>
+                                            <td class="gray td-value">{% trans "已拒绝，拒绝原因" %}:{{ kycaudit.comment }} <a href="/tokenexchange/">{% trans "前往重新填写" %}</a></td>
                                             {% endif %}
                                         {% else %}
                                         <td class="gray td-value">{% trans "已填写 KYC 信息,正在审核中。" %}</td>
@@ -89,14 +89,14 @@
                             <div class="item-content">
                                 {% include "tokenexchange/token-exchange-info-summary.html" with token_exchange_info=item.token_exchange_info %}
                                 <div class="text-left">
-                                    <a class="form-button" href="/user/token-exchange-progress/{{ item.phase_id }}/"> 前往查看详细信息 >></a>
+                                    <a class="form-button" href="/user/token-exchange-progress/{{ item.phase_id }}/"> {% trans "前往查看详细信息" %} >></a>
                                 </div>
                             </div>
                         </div>
                         {% endfor %}
                         {% else %}
                         <div class="item">
-                            <p>暂无token交换信息</p>
+                            <p>{% trans "暂无token交换信息" %}</p>
                         </div>
                         {% endif %}
                     </div>

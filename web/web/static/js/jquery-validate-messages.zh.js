@@ -13,7 +13,7 @@
 		number: "请输入正确的数字",
 		digits: "只可输入数字",
 		creditcard: "请输入有效的信用卡号码",
-		equalTo: "你的输入不相同",
+		equalTo: "两次输入不一致",
 		extension: "请输入有效的后缀",
 		maxlength: $.validator.format("最多 {0} 个字"),
 		minlength: $.validator.format("最少 {0} 个字"),
@@ -21,6 +21,6 @@
 		range: $.validator.format("请输入 {0} 至 {1} 之间的数值"),
 		max: $.validator.format("请输入不大于 {0} 的数值"),
 		min: $.validator.format("请输入不小于 {0} 的数值"),
-		password:"请输入6~16个字符，必须包含大小写字母，数字."
+		password:"请输入6~16个字符，必须包含大小写字母和数字"
 	});
 }(jQuery));

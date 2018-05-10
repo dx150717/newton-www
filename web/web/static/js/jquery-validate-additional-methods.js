@@ -618,4 +618,4 @@ jQuery.validator.addMethod("extension", function(value, element, param) {
 
 jQuery.validator.addMethod("password", function(value, element, param){
 	return this.optional(element) || /^(?:(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])).{6,16}$/.test(value)
-}, jQuery.format("Please Input 6~16 words contain a-z A-Z number."))
+}, jQuery.format("Please input 6～16 characters，must contain upper-case, lower-case letters and numbers."))

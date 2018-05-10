@@ -29,14 +29,14 @@
                 <input id="gtoken" name="gtoken" type="hidden" value="{{ gtoken }}"/>
                 <input id="auth_token" name="auth_token" type="hidden" value="{{ auth_token }}"/>
                 <div class="form-group">
-                    <label for="id_gtoken" class="control-label">手动添加谷歌身份验证器</label>
+                    <label for="id_gtoken" class="control-label">{% trans "手动添加谷歌身份验证器" %}</label>
                     <div id="key">{{ gtoken }}</div>
                 </div>
                 <div class="form-group">
                     <label>{% trans "Or"  %}</label>
                 </div>
                 <div class="form-group">
-                    <label for="id_gtoken" class="control-label">扫描二维码添加谷歌身份验证器</label>
+                    <label for="id_gtoken" class="control-label">{% trans "扫描二维码添加谷歌身份验证器" %}</label>
                     <div id="code"></div> 
                 </div>
                 {% include "form.html" %}
