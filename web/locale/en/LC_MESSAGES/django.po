@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-10 05:15+0000\n"
+"POT-Creation-Date: 2018-05-10 10:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -182,9 +182,10 @@ msgstr ""
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:70
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:63
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:53
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:85
+#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:54
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:58
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:72
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
 #: web/apps/welcome/templates/welcome/announcement.html:72
 #: web/apps/welcome/templates/welcome/press.html:38
@@ -195,9 +196,10 @@ msgstr ""
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:74
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:67
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:57
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:89
+#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:58
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:62
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:76
 #: web/apps/welcome/templates/welcome/announcement-detail.html:50
 #: web/apps/welcome/templates/welcome/announcement.html:76
 #: web/apps/welcome/templates/welcome/press.html:42
@@ -323,12 +325,13 @@ msgstr ""
 #: web/apps/newtonadmin/templates/newtonadmin/sent-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/welcome.html:6
 msgid "KYC Admin"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:7
-msgid "Fillout your expect amount."
+msgid "牛顿通证交换邀请"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:11
@@ -338,8 +341,23 @@ msgstr ""
 msgid "Dear"
 msgstr ""
 
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:12
+msgid ""
+"Congratulation，you can participate in Newton first round Token Exchange, "
+"please read the detail on Newton Token Exchange carefully in Newton official "
+"website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) "
+"before filling in the expected amount."
+msgstr ""
+
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:13
-msgid "Please click the following button to fillout your expect amount."
+msgid ""
+"Newton only issues the announcement and notification though Newton official "
+"website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
+"a>), please ignore messages from any other medias."
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:14
+msgid "Click the following button to fill in expected amount"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:16
@@ -490,14 +508,24 @@ msgstr ""
 msgid "We have received your invest."
 msgstr ""
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:14
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:17
-msgid "we had received"
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:13
+msgid "Newton foundation has received your"
 msgstr ""
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:14
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:17
-msgid "thanks very much!"
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:18
+msgid "and"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:20
+msgid ""
+"we show sincere gratitude to contribution you have made in Newton community."
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:22
+msgid ""
+"You can join in our communities in other medias by go to the 'community' "
+"page through the navigator bar of Newton official website (<a href='https://"
+"www.newtonproject.org/'>www.newtonproject.org</a>)."
 msgstr ""
 
 #: web/apps/press/models.py:21
@@ -1072,6 +1100,10 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:20
 msgid "KYC Information"
 msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:27
+msgid "请认真填写以下信息"
+msgstr "Please fill in the following information carefully"
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:10
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:10
