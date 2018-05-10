@@ -28,7 +28,8 @@
             <div class="sub-title-nav">
                 <ul id="user-tab" class="nav nav-tabs">
                     <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Profile" %}</a></li>
-                    <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
+                    <li><a href="#kyc">KYC</a></li>
+                    <li><a href="#token-exchange">Token Exchange</a></li>
                 </ul>
             </div>
         </div>
@@ -51,7 +52,17 @@
                                 {% endfor %}
                             </tbody>
                         </table>
-                        <table style="margin-top:32px;">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="kyc" class="tab-pane fade user-content">
+            <div class="container">
+                <div class="raw user-detail-content">
+                    <div class="col-md-12 user-info">
+                        <table>
                             <thead>
                                 <tr><td>KYC</td></tr>
                             </thead>
