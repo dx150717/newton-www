@@ -63,10 +63,10 @@
          <!-- jquery lib -->
          <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
          <script src="{% version "js/jquery-validate.js" %}"></script>
-         <script src="{% version "js/jquery-validate-messages.zh.js" %}"></script>
          <script src="{% version "js/jquery-validate-additional-methods.js" %}"></script>
          <script src="{% version "js/nsprogress.js" %}"></script>
          {% block thirdparty_js %}{% endblock %}
+         <script>var zhMessages = "{% version "js/jquery-validate-messages.zh.js" %}"</script>
 
          <!-- bootstrap lib -->
          <script src="{% version "js/bootstrap.min.js" %}"></script>

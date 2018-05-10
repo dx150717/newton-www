@@ -618,4 +618,4 @@ jQuery.validator.addMethod("extension", function(value, element, param) {
 
 jQuery.validator.addMethod("password", function(value, element, param){
 	return this.optional(element) || /^(?:(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])).{6,16}$/.test(value)
-}, jQuery.format("请输入6~16个字符，必须包含大小写字母，数字."))
+}, jQuery.format("Please Input 6~16 words contain a-z A-Z number."))

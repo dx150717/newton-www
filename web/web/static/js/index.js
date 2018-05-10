@@ -1,3 +1,4 @@
+initLanguage();
 $(function () {
 	var bottomNavToggle = function (event) {
 		$(event.target).next().slideToggle(300, function () {
@@ -68,7 +69,13 @@ function setLanguage(language) {
 	if(locationHref.startsWith("\/announcement")){
 		location.replace("/announcement/");
 	}
-	
+}
+
+function initLanguage(){
+	var language = document.cookie.split("language=")[1];
+	if(language!=null && language!=undefined && language.startsWith("zh")){
+		$.getScript(zhMessages);
+	}
 }
 
 // language's dropdown menu.
