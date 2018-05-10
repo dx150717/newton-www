@@ -101,7 +101,7 @@ def show_gtoken_view(request):
         auth_token = request.session.get('auth_token')
         uuid = request.session.get('uuid')
         gtoken = pyotp.random_base32()
-        gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+        gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
         form = forms.GtokenForm()
         return render(request, 'register/gtoken.html', locals())
     except Exception, inst:
@@ -114,7 +114,7 @@ def submit_gtoken(request):
         form = forms.GtokenForm(request.POST)
         if not form.is_valid():
             gtoken = request.POST.get('gtoken')
-            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
             return render(request, 'register/gtoken.html', locals())
         uuid = request.POST.get('uuid')
         # check uuid
@@ -131,7 +131,7 @@ def submit_gtoken(request):
         is_pass_google_auth = pyotp.TOTP(gtoken).verify(gtoken_code)
         if not is_pass_google_auth:
             gtoken = gtoken
-            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Auth Code Error')])
             return render(request, 'register/gtoken.html', locals())
         # clear session
