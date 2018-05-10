@@ -73,6 +73,12 @@
                                         {% if kycaudit %}
                                             {% if kycaudit.is_pass %}
                                             <td class="gray td-value ">{% trans "已通过" %}</td>
+                                            {% for field in kyc_form %}
+                                            <tr>
+                                                <td>{{ field.label_tag }}</td>
+                                                <td class="gray td-value">{{ field.value }}</td>
+                                            </tr>
+                                            {% endfor %}
                                             {% else %}
                                             <td class="gray td-value">{% trans "已拒绝，拒绝原因" %}:{{ kycaudit.comment }} <a href="/tokenexchange/">{% trans "前往重新填写" %}</a></td>
                                             {% endif %}

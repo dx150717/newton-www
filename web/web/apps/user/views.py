@@ -14,6 +14,7 @@ from config import codes
 from . import forms
 from . import models
 import decorators
+from tokenexchange import forms as token_exchange_forms
 from tokenexchange import models as tokenexchange_models
 
 logger = logging.getLogger(__name__)
@@ -23,6 +24,7 @@ def show_user_index_view(request):
     user = request.user
     form = forms.UserForm(instance=user)
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
+    kyc_form = token_exchange_forms.KYCInfoForm(instance=kycinfo)
     kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).first()
     items = tokenexchange_models.InvestInvite.objects.filter(user=user,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
     for item in items:
