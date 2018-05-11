@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-10 10:45+0000\n"
+"POT-Creation-Date: 2018-05-11 02:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -271,7 +271,7 @@ msgstr ""
 #: web/apps/register/templates/register/index.html:29
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
-#: web/apps/register/templates/register/register-letter.html:14
+#: web/apps/register/templates/register/register-letter.html:13
 #: web/apps/register/templates/register/register-success.html:6
 #: web/apps/reset/templates/reset/invalid-link.html:6
 #: web/apps/reset/templates/reset/reset-fail.html:6
@@ -291,7 +291,7 @@ msgid "Google Authenticator Code"
 msgstr ""
 
 #: web/apps/login/templates/login/index.html:72
-#: web/apps/register/templates/register/gtoken.html:44
+#: web/apps/register/templates/register/gtoken.html:48
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:31
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:35
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:40
@@ -366,7 +366,7 @@ msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:17
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:50
-#: web/apps/register/templates/register/register-letter.html:15
+#: web/apps/register/templates/register/register-letter.html:14
 #: web/apps/reset/templates/reset/reset-letter.html:50
 msgid "If you received this email by mistake, simply delete it."
 msgstr ""
@@ -420,7 +420,6 @@ msgid "Welcome! Thank You for join Newton KYC!"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:46
-#: web/apps/register/templates/register/register-letter.html:10
 #: web/apps/reset/templates/reset/reset-letter.html:46
 msgid "Dear:"
 msgstr ""
@@ -556,21 +555,31 @@ msgid "Add Google Authenticator"
 msgstr ""
 
 #: web/apps/register/templates/register/gtoken.html:32
+msgid "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
+msgstr "Scan the QR code or Enter the  code manually into your GA app"
+
+#: web/apps/register/templates/register/gtoken.html:33
+msgid "请务必保管好密钥或者二维码，以免丢失造成不便"
+msgstr "Please be sure to keep the key or qr code to avoid any inconvenience."
+
+#: web/apps/register/templates/register/gtoken.html:36
 msgid "手动添加谷歌身份验证器"
 msgstr "Enter the  code manually into your GA app"
 
-#: web/apps/register/templates/register/gtoken.html:36
+#: web/apps/register/templates/register/gtoken.html:40
 msgid "Or"
 msgstr ""
 
-#: web/apps/register/templates/register/gtoken.html:39
+#: web/apps/register/templates/register/gtoken.html:43
 msgid "扫描二维码添加谷歌身份验证器"
 msgstr "Use the GA app to scan the QR code"
 
 #: web/apps/register/templates/register/index.html:37
+#, fuzzy
 msgid ""
-"点击注册按钮即表示您同意并愿意遵守<br/> Newton的<a href='/terms-of-use/'>使用"
-"条款</a>和<a href='/privacy/'>隐私政策 </a>。"
+"点击注册按钮即表示您同意并愿意遵守<br/> Newton的<a href='{{ settings."
+"NEWON_WEB_URL }}/terms-of-use/'>使用条款</a>和<a href='{{ settings."
+"NEWON_WEB_URL }}/privacy/'>隐私政策 </a>。"
 msgstr ""
 "Clicking register button means you agree and abide by<br/> Newton <a href='/"
 "terms-of-user'>User Agreement</a> and <a href='/pricacy/'>Privacy Policy</a>"
@@ -1203,44 +1212,40 @@ msgstr ""
 msgid "Profile"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:31
-msgid "Token Exchange"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:43
+#: web/apps/user/templates/user/index.html:44
 msgid "基本信息"
 msgstr "Basic information"
 
-#: web/apps/user/templates/user/index.html:60
+#: web/apps/user/templates/user/index.html:71
 msgid "Status"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:64
+#: web/apps/user/templates/user/index.html:75
 msgid "已通过"
 msgstr "You have passed KYC"
 
-#: web/apps/user/templates/user/index.html:66
+#: web/apps/user/templates/user/index.html:83
 msgid "已拒绝，拒绝原因"
 msgstr "You have not passed KYC"
 
-#: web/apps/user/templates/user/index.html:66
+#: web/apps/user/templates/user/index.html:83
 msgid "前往重新填写"
 msgstr "Rewrite KYC information"
 
-#: web/apps/user/templates/user/index.html:69
+#: web/apps/user/templates/user/index.html:86
 msgid "已填写 KYC 信息,正在审核中。"
 msgstr "You have summit KYC information"
 
-#: web/apps/user/templates/user/index.html:72
+#: web/apps/user/templates/user/index.html:89
 msgid "尚未填写 KYC 信息，<a href='/tokenexchange/'>前往填写</a>"
 msgstr ""
 "You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>"
 
-#: web/apps/user/templates/user/index.html:92
+#: web/apps/user/templates/user/index.html:109
 msgid "前往查看详细信息"
 msgstr "Details"
 
-#: web/apps/user/templates/user/index.html:99
+#: web/apps/user/templates/user/index.html:116
 msgid "暂无token交换信息"
 msgstr "There is no token exchange information"
 
@@ -5366,11 +5371,11 @@ msgstr ""
 msgid "Your account has been locked, please contact customer service"
 msgstr ""
 
-#: web/templates/404.html:8
+#: web/templates/404.html:16
 msgid "You enter the blackhole."
 msgstr ""
 
-#: web/templates/500.html:8
+#: web/templates/500.html:17
 msgid "System Error."
 msgstr ""
 
