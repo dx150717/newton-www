@@ -7,8 +7,8 @@ from tokenexchange import models as tokenexchange_models
 from user import forms as user_forms
 
 class KYCInfoForm(ModelForm):
-    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_("Cellphone"))
-    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_("Emergency Cellphone"))
+    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="Cellphone")
+    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="Emergency Cellphone")
     def __init__(self, *args, **kw):
         super(KYCInfoForm, self).__init__(*args, **kw)
         self.fields.keyOrder = ['first_name',

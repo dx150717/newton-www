@@ -39,7 +39,7 @@
                                     <div class="entry-lg">
                                         <div class="date-lg">
                                             <dl class="date-top">
-                                                <dd>{% trans "通过KYC验证" %}</dd>
+                                                <dd>{% trans "Passed KYC" %}</dd>
                                             </dl>
                                         </div>
                                     </div>
@@ -47,7 +47,7 @@
                                         <div id="apply-amount-container" class="delay">
                                             <div class="date-lg">
                                                 <dl class="date-bottom">
-                                                    <dd>{% trans "填写期望投资额度" %}</dd>
+                                                    <dd>{% trans "Fill in the expected investment quota" %}</dd>
                                                 </dl>
                                             </div>
                                         </div>
@@ -56,7 +56,7 @@
                                         <div id="send-amount-container" class="delay">
                                             <div class="date-lg">
                                                 <dl class="date-top">
-                                                    <dd>{% trans "转币到Newton" %}</dd>
+                                                    <dd>{% trans "Turn money to Newton" %}</dd>
                                                 </dl>
                                             </div>
                                         </div>
@@ -65,7 +65,7 @@
                                         <div class="delay">
                                             <div class="date-lg">
                                                 <dl class="date-bottom">
-                                                    <dd>{% trans "填写 New 钱包地址" %}</dd>
+                                                    <dd>{% trans "Fill in the New wallet address" %}</dd>
                                                 </dl>
                                             </div>
                                         </div>
@@ -74,7 +74,7 @@
                                         <div class="delay">
                                             <div class="date-lg">
                                                 <dl class="date-top">
-                                                    <dd>{% trans "确认收到New" %}</dd>
+                                                    <dd>{% trans "Confirm receipt of New" %}</dd>
                                                 </dl>
                                             </div>
                                         </div>
@@ -85,14 +85,14 @@
                                     <div class="entry">
                                         <div class="date"></div>
                                         <div class="body">
-                                            <dd>{% trans "通过KYC验证" %}</dd>
+                                            <dd>{% trans "Passed KYC" %}</dd>
                                         </div>
                                     </div>
                                     <div class="entry">
                                         <div id="apply-amount-container-mobile" class="delay">
                                             <div class="date"></div>
                                             <div class="body">
-                                                <dd>{% trans "填写期望投资额度" %}</dd>
+                                                <dd>{% trans "Fill in the expected investment quota" %}</dd>
                                             </div>
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@
                                         <div id="send-amount-container-mobile" class="delay">
                                             <div class="date"></div>
                                             <div class="body">
-                                                <dd>{% trans "转币到 Newton" %}</dd>
+                                                <dd>{% trans "Turn money to Newton" %}</dd>
                                             </div>
                                         </div>
                                     </div>
@@ -108,7 +108,7 @@
                                         <div class="delay">
                                             <div class="date"></div>
                                             <div class="body">
-                                                <dd>{% trans "填写 New 钱包地址" %}</dd>
+                                                <dd>{% trans "Fill in the New wallet address" %}</dd>
                                             </div>
                                         </div>
                                     </div>
@@ -116,7 +116,7 @@
                                         <div class="delay">
                                             <div class="date"></div>
                                             <div class="body">
-                                                <dd>{% trans "确认收到 New" %}</dd>
+                                                <dd>{% trans "Confirm receipt of New" %}</dd>
                                             </div>
                                         </div>
                                     </div>
@@ -135,7 +135,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>{% trans "申请额度" %}</td>
+                                            <td>{% trans "Apply Amount" %}</td>
                                             {% if item.expect_btc %}
                                             <td>{{ item.expect_btc }} BTC</td>
                                             {% else %}
@@ -149,7 +149,7 @@
                                         </tr>
                                         {% if item.assign_btc or item.assign_ela %}
                                         <tr>
-                                            <td>{% trans "分配额度" %}</td>
+                                            <td>{% trans "Distribution Amount" %}</td>
                                             {% if item.assign_btc %}
                                             <td>{{ item.assign_btc }} BTC</td>
                                             {% else %}
@@ -164,7 +164,7 @@
                                         {% endif %}
                                         {% if item.receive_btc_address or item.receive_ela_address %}
                                         <tr>
-                                            <td>{% trans "分配地址" %}</td>
+                                            <td>{% trans "Distribution Address" %}</td>
                                             {% if item.receive_btc_address %}
                                             <td>{{ item.receive_btc_address }}</td>
                                             {% else %}
@@ -180,7 +180,7 @@
                                         {% if btc_transaction.value or ela_transaction.value %}
                                         <script>var hasSendAmount = true;</script>
                                         <tr>
-                                            <td>{% trans "成功打币金额" %}</td>
+                                            <td>{% trans "Sended Amount" %}</td>
                                             {% if btc_transaction.value %}
                                             <td>{{ btc_transaction.value }} BTC</td>
                                             {% else %}
@@ -198,7 +198,7 @@
                                 </table>
                             </div>
                             {% else %}
-                            <a class="form-button" href="/tokenexchange/invite/{{ item.id }}/post/">{% trans "前往填写期望额度" %}</a>
+                            <a class="form-button" href="/tokenexchange/invite/{{ item.id }}/post/">{% trans "Fill in the expected investment quota " %}</a>
                             {% endif %}
                         </div>
                     </div>

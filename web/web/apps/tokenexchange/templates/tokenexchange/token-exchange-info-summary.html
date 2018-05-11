@@ -4,24 +4,21 @@
 <div class="token-exchange-info">
     <div class="raw">
         <div>
-            <table class="table text-left">
+            <table class="table text-left table-bordered table-striped">
                 <thead>
                     <tr>
-                        <td>{% trans "First Token Exchange Info" %}</td>
+                        <th class="text-nowrap col-lg-2" scope="row" style="font-size:18px">{% trans "First Token Exchange Info" %}</th>
+                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{% trans "开始时间" %}</td>
+                        <th class="text-nowrap" scope="row">{% trans "Start Time" %}</th>
                         <td>{{ token_exchange_info.start_date }}</td>
                     </tr>
                     <tr>
-                        <td>{% trans "结束时间" %}</td>
+                        <th class="text-nowrap" scope="row">{% trans "End Time" %}</th>
                         <td>{{ token_exchange_info.end_date }}</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
                     </tr>
                 </tbody>
             </table>
@@ -36,21 +33,17 @@
             <table class="table text-left">
                 <thead>
                     <tr>
-                        <td>{% trans "Second Token Exchange Info" %}</td>
+                        <th class="text-nowrap" scope="row">{% trans "Second Token Exchange Info" %}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{% trans "开始时间" %}</td>
+                        <th class="text-nowrap" scope="row">{% trans "Start Time" %}</th>
                         <td>{{ token_exchange_info.start_date }}</td>
                     </tr>
                     <tr>
-                        <td>{% trans "结束时间" %}</td>
+                        <th class="text-nowrap" scope="row">{% trans "End Time" %}</th>
                         <td>{{ token_exchange_info.end_date }}</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
                     </tr>
                 </tbody>
             </table>
