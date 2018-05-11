@@ -10,9 +10,9 @@ MEDIA_URL = 'http://localhost:8000/filestorage/'
 MEDIA_ROOT = BASE_DIR
 BASE_URL = "http://localhost:8000"
 USE_TESTNET=True
-NEWON_WEB_URL = 'http://localhost:8000'
-NEWON_HOME_URL = 'http://localhost:8000'
-NEWON_GRAVITY_URL = 'http://localhost:8000'
+NEWTON_WEB_URL = 'http://localhost:8000'
+NEWTON_HOME_URL = 'http://localhost:8000'
+NEWTON_GRAVITY_URL = 'http://localhost:8000'
 
 SESSION_COOKIE_AGE = 60 * 1000
 # LOGGING
