@@ -1,9 +1,11 @@
+#-*- coding: utf-8 -*-
 """Service Implementation of register module
 """
 import logging
 
 from django.conf import settings
 from django.template import Template, Context, loader
+from django.utils.translation import ugettext_lazy as _
 
 from verification import services
 from tasks import task_email
@@ -22,7 +24,7 @@ def send_register_validate_email(email, request):
         if not verification:
             return False
         target_url = "%s/register/verify/?uuid=%s" % (settings.NEWON_HOME_URL, str(verification.uuid))
-        subject = "NewtonProject Notifications: Please Register Newton:"
+        subject = _("Newton Notification: Please complete the register process of Newton")
         template = loader.get_template("register/register-letter.html")
         context = Context({"target_url":target_url,"request":request})
         html_content = template.render(context)

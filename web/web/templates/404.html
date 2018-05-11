@@ -11,13 +11,13 @@
 {% endblock %}
 
 {% block content %}
-<div class="container page">
-	<div>
-        {% trans "You enter the blackhole." %}
+<section id="error-404" class="section-list">
+    <div class="container text-center" style="padding-top:50px;">
+            {% trans "You enter the blackhole." %}
+        </div>
     </div>
-</div>
+</section>
 <script language="javascript">
     setTimeout(function(){location.href='/';}, 2000);
 </script>
 {% endblock %}
-

@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 """Service Implementation of verification module
 
 """
