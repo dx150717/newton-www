@@ -24,7 +24,21 @@ def show_user_index_view(request):
     user = request.user
     form = forms.UserForm(instance=user)
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
-    kyc_form = token_exchange_forms.KYCInfoForm(instance=kycinfo)
+    data = {}
+    data['first_name'] = kycinfo.first_name
+    data['last_name'] = kycinfo.last_name
+    data['country'] = kycinfo.country
+    data['id_number'] = kycinfo.id_number
+    data['id_card'] = kycinfo.id_card
+    data['cellphone_group'] = kycinfo.country_code + kycinfo.cellphone
+    data['location'] = kycinfo.location
+    data['how_to_contribute'] = kycinfo.how_to_contribute
+    data['what_is_newton'] = kycinfo.what_is_newton
+    data['emergency_contact_first_name'] = kycinfo.emergency_contact_first_name
+    data['emergency_contact_last_name'] = kycinfo.emergency_contact_last_name
+    data['cellphone_of_emergency_contact'] = kycinfo.emergency_contact_country_code + kycinfo.emergency_contact_cellphone
+    data['relationships_with_emergency_contacts'] = kycinfo.relationships_with_emergency_contacts
+    kyc_form = token_exchange_forms.KYCInfoForm(initial=data)
     kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).last()
     items = tokenexchange_models.InvestInvite.objects.filter(user=user,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
     for item in items:
