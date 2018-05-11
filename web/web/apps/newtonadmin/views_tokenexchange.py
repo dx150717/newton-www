@@ -134,6 +134,7 @@ class AmountListView(generic.ListView):
         context = super(AmountListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
         context['form'] = forms_tokenexchange.AmountForm()
+        context['token_exchange_info'] = settings.FUND_CONFIG[context['phase_id']]
         return context
 
     def get_queryset(self):
