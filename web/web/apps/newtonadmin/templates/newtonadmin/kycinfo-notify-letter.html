@@ -1,23 +1,23 @@
-{% extends "email-template.html" %}
+{% extends "email-template.html
 {% load i18n %}
 {% load utils %}
 
 
 {% block title %}
 {% if kyc_info.kyc_audit.is_pass %}
-<h1>{% trans "You are passed the Newton KYC." %}</h1>
+<h1>You are passed the Newton KYC.</h1>
 {% else %}
-<h1>{% trans "You are not passed the Newton KYC." %}</h1>
+<h1>You are not passed the Newton KYC.</h1>
 {% endif %}
 {% endblock %}
 
 {% block content %}
-<p class="main-color">{% trans "Dear" %} {{ kyc_info.first_name }},</p>
+<p class="main-color">Dear {{ kyc_info.first_name }},</p>
 <p class="main-color">
     {% if kyc_info.kyc_audit.is_pass %}
-    {% trans "You have passed the Newton KYC. We will notify you later for more information." %}
+    You have passed the Newton KYC. We will notify you later for more information.
     {% else %}
-    {% trans "You are not passed the Newton KYC. There has some comment for you:" %}
+    You are not passed the Newton KYC. There has some comment for you:
     {{ kyc_info.kyc_audit.comment }}
     {% endif %}
 </p>
