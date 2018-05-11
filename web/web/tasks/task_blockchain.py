@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 import logging
+import datetime
 from celery import task
 import requests
 import json
-from django.conf import settings
 import decimal
+
+from django.conf import settings
 
 from config import codes
 from tokenexchange import models as tokenexchange_models
@@ -62,9 +64,14 @@ def __get_btc_transactions(address):
             return []
         txs = data['txs']
         result = []
+        now = datetime.datetime.now()
         for item in txs:
             out = item['out']
             txid = item['hash']
+            dt = datetime.datetime.fromtimestamp(item['time'])
+            # Ensure more than 6 confirmations
+            if now > (dt + datetime.timedelta(hours=1)):
+                continue
             value = 0
             for tmp_item in out:
                 if tmp_item.get('addr') == address: # found it
@@ -83,9 +90,14 @@ def __get_ela_transactions(address):
         data = json.loads(response.text)
         txs = data['txs']
         result = []
+        now = datetime.datetime.now()
         for item in txs:
             out = item['vout']
             txid = item['txid']
+            dt = datetime.datetime.fromtimestamp(item['time'])
+            # Ensure more than 6 confirmations
+            if now > (dt + datetime.timedelta(minutes=12)):
+                continue
             value = 0
             for tmp_item in out:
                 addresses = tmp_item['scriptPubKey']['addresses']
