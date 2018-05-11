@@ -4,12 +4,12 @@
 
 
 {% block title %}
-<h1>{% trans "Received your KYC information" %}</h1>
+<h1>Received your KYC information</h1>
 {% endblock %}
 
 {% block content %}
-<p class="main-color">{% trans "Dear" %} {{ kyc_info.first_name }},</p>
+<p class="main-color">Dear {{ kyc_info.first_name }},</p>
 <p class="main-color">
-    {% trans "We have received your KYC information. We will review it.If the audit process is completed, we will notify you immediately." %}
+    We have received your KYC information. We will review it.If the audit process is completed, we will notify you immediately.
 </p>
 {% endblock %}
