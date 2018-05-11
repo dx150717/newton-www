@@ -9,9 +9,9 @@ BASE_URL = 'http://web.newtonproject.beta.diynova.com'
 SESSION_COOKIE_DOMAIN = '.newtonproject.beta.diynova.com'
 MEDIA_URL = 'http://web.newtonproject.beta.diynova.com/filestorage/'
 
-NEWON_WEB_URL = 'http://web.newtonproject.beta.diynova.com'
-NEWON_HOME_URL = 'http://home.newtonproject.beta.diynova.com'
-NEWON_GRAVITY_URL = 'http://gravity.newtonproject.beta.diynova.com'
+NEWTON_WEB_URL = 'http://web.newtonproject.beta.diynova.com'
+NEWTON_HOME_URL = 'http://home.newtonproject.beta.diynova.com'
+NEWTON_GRAVITY_URL = 'http://gravity.newtonproject.beta.diynova.com'
 
 LOGGING_API_REQUEST = True
 USE_TESTNET = True

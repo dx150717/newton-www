@@ -6,7 +6,7 @@
         <div class="container">
 
             <div class="navbar-header">
-                <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWON_WEB_URL }}">
+                <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
                     <img class="logo-pc" src="{% version "images/logo_newton.svg" %}" alt="Newton"/>
                 </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" onclick="changeToggle()">
@@ -42,16 +42,16 @@
                             <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
                             <span class="caret arrow-only-pc"></span>
                         <ul class="dropdown-menu">
-                            <li><a style="color:black;" href="{{ settings.NEWON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                            <li><a style="color:black;" href="{{ settings.NEWON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
+                            <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+                            <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
                         </ul>
                     </li>
                     {% else %}
                     <li>
-                        <a href="{{ settings.NEWON_HOME_URL }}/register/">{% trans "Register" %}</a>
+                        <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
                     <li>
-                        <a href="{{ settings.NEWON_HOME_URL }}/login/">{% trans "Login" %}</a>
+                        <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
                     {% endif %}
                 </ul>

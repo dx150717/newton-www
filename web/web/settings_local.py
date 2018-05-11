@@ -58,6 +58,6 @@ USE_TESTNET = False
 PAGE_SIZE = 20
 
 # multiple domain
-NEWON_WEB_URL = 'https://www.newtonproject.org'
-NEWON_HOME_URL = 'https://home.newtonproject.org'
-NEWON_GRAVITY_URL = 'https://gravity.newtonproject.org'
+NEWTON_WEB_URL = 'https://www.newtonproject.org'
+NEWTON_HOME_URL = 'https://home.newtonproject.org'
+NEWTON_GRAVITY_URL = 'https://gravity.newtonproject.org'
