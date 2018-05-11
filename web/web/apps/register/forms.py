@@ -1,4 +1,9 @@
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
+""" forms of register.
+    1. EmailForm for register index.
+    2. PasswordForm for set password.
+    3. GtokenForm for set google authenticator
+"""
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
