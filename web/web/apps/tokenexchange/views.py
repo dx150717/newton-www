@@ -45,10 +45,10 @@ def post_kyc_information(request):
         if request.method == 'POST':
             # check whether user is submit kyc info
             instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
+            form = forms.KYCInfoForm(request.POST, request.FILES, instance=instance)
             if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
                 form._errors[NON_FIELD_ERRORS] = form.error_class([_('You had submited kyc info')])
                 return render(request, "tokenexchange/submit.html", locals())
-            form = forms.KYCInfoForm(request.POST, request.FILES, instance=instance)
             if not form.is_valid():
                 return render(request, "tokenexchange/submit.html", locals())
             instance = form.save(commit=False)
