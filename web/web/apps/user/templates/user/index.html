@@ -75,8 +75,13 @@
                                             <td class="gray td-value ">{% trans "已通过" %}</td>
                                             {% for field in kyc_form %}
                                             <tr>
+                                                {% if forloop.counter == 5 %}
+                                                <td>{{ field.label_tag }}</td>
+                                                <td class="gray td-value"><img style="width:300px;" src="{{ kycinfo.id_card.url }}"/></td>
+                                                {% else %}
                                                 <td>{{ field.label_tag }}</td>
                                                 <td class="gray td-value">{{ field.value }}</td>
+                                                {% endif %}
                                             </tr>
                                             {% endfor %}
                                             {% else %}
