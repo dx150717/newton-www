@@ -29,18 +29,27 @@ $('#login_form').submit(function(event){
   data['g-recaptcha-response'] = $("input[name='google-recaptcha-name']").val();
   
   showWaiting();
-  $.post("/login/post/",
-          data,
-         function (response) {
-           dismiss();
-            if (isSuccess(response)) {
-              $('#code-modal').modal('show');
-              var result = getData(response);
-              auth_token = result.auth_token;             
-            } else {
-              showFail(getErrorMessage(response));
-            }
-          });
+  $.ajax({
+    url:'/login/post/',
+    timeout: 15000,
+    type: 'post',
+    data: data,
+    success: function(response){
+      if (isSuccess(response)) {
+        $('#code-modal').modal('show');
+        var result = getData(response);
+        auth_token = result.auth_token;             
+      } else {
+        showFail(getErrorMessage(response));
+      }
+    },
+    complete: function(request, status){
+      dismiss();
+      if(status == 'timeout'){
+        alert("timeout")
+      }
+    }
+  })
 }).validate({
   ignore: [],
   errorElement: "div",
