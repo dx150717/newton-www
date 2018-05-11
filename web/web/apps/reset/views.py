@@ -113,10 +113,13 @@ def post_password(request):
         # set link valid
         verification.status = codes.StatusCode.CLOSE.value
         verification.save()
-        return http.HttpResponseRedirect('/login/')
+        return http.HttpResponseRedirect('/reset/complete/')
     except Exception, inst:
         logger.exception("fail to reset password: %s" %str(inst))
         return render(request,'reset/edit_password.html', locals())
+
+def show_reset_complete_view(request):
+    return render(request, "reset/reset-complete.html", locals())
     
     
         

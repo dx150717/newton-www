@@ -12,4 +12,5 @@ urlpatterns = patterns('',
                     url(r'^invalid-link/', views.show_invalid_link_view),
                     url(r'^reset-password/', views.show_reset_password_view),
                     url(r'^post-password/', views.post_password),
+                    url(r'^complete/', views.show_reset_complete_view)
 )
