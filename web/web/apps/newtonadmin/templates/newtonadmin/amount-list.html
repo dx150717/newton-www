@@ -90,11 +90,13 @@
                 <form method="POST" action="#" id="amount_form">
                     <p id="btc-limit">
                         <label>BTC额度</label>
+                        <script>var btcLimit = {{ token_exchange_info.min_btc }}</script>
                         <input type="number" name="assign_btc" id="assign_btc" value="0" placeholder="BTC 额度" />
                     </p>
                     
                     <p id="ela-limit">
                         <label>ELA额度</label>
+                        <script>var elaLimit = {{ token_exchange_info.min_ela }}</script>
                         <input type="number" name="assign_ela" id="assign_ela" value="0" placeholder="ELA 额度"/>
                     </p>
                     <p>

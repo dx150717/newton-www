@@ -220,6 +220,14 @@ function amountPopupWindow(user_id, phase_id, expect_ela, expect_btc) {
         data.assign_ela = $('#assign_ela').val();
         data.user_id = user_id;
         data.phase_id = phase_id;
+        if(data.assign_btc != 0 && data.assign_btc < btcLimit){
+            alert("btc 额度大于等于"+btcLimit);
+            return;
+        }
+        if(data.assign_ela != 0 && data.assign_ela < elaLimit){
+            alert("ela 额度需要大于等于"+elaLimit);
+            return;
+        }
         $.post('/newtonadmin/tokenexchange/amount/'+phase_id+'/post/', 
             data, 
             function(json){
