@@ -5,7 +5,7 @@
 
 {% block title %}
 {% if kyc_info.kyc_audit.is_pass %}
-<h1>You are passed the Newton KYC.</h1>
+<h1>KYC verification success</h1>
 {% else %}
 <h1>You are not passed the Newton KYC.</h1>
 {% endif %}
@@ -15,7 +15,8 @@
 <p class="main-color">Dear {{ kyc_info.first_name }},</p>
 <p class="main-color">
     {% if kyc_info.kyc_audit.is_pass %}
-    You have passed the Newton KYC. We will notify you later for more information.
+    Congratulation you have passed Newton KYC verification. Please pay attention to our subsequent notification later on.Best regard
+    Newton team
     {% else %}
     You are not passed the Newton KYC. There has some comment for you:
     {{ kyc_info.kyc_audit.comment }}
