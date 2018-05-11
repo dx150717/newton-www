@@ -66,6 +66,7 @@ $("#google-auth-form").submit(function(event){
   data.password = document.getElementById("id_password").value;
   data.auth_token = auth_token;
   var next = $("input[name='next']").val();
+  data.next = next;
   var form = this;
   if (!$(form).valid()) {
     return false;
