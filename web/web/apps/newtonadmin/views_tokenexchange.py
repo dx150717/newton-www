@@ -285,8 +285,11 @@ def confirm_id(request):
         audit_log.save()
         # send the kyc pass notify
         item.kyc_audit = kyc_audit
-        services_tokenexchange.send_kycinfo_notify(item, request)
-        return http.JsonSuccessResponse()
+        is_send_success = services_tokenexchange.send_kycinfo_notify(item, request)
+        if is_send_success:
+            return http.JsonSuccessResponse()
+        else:
+            return http.JsonErrorResponse(error_message="send fail")
     except Exception, inst:
         logger.exception("fail to confirm id:%s" % str(inst))
         return http.JsonErrorResponse()        
