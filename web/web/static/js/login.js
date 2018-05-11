@@ -35,6 +35,7 @@ $('#login_form').submit(function(event){
     type: 'post',
     data: data,
     success: function(response){
+      dismiss();
       if (isSuccess(response)) {
         $('#code-modal').modal('show');
         var result = getData(response);
@@ -44,9 +45,9 @@ $('#login_form').submit(function(event){
       }
     },
     complete: function(request, status){
-      dismiss();
       if(status == 'timeout'){
-        alert("timeout")
+        dismiss();
+        showFail("Time Out");
       }
     }
   })
