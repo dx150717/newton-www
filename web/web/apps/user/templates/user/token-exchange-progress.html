@@ -177,18 +177,17 @@
                                             {% endif %}
                                         </tr>
                                         {% endif %}
-                                        {% if btc_transaction.value or ela_transaction.value %}
+                                        {% if item.ela_final_balance or item.btc_final_balance %}
                                         <script>var hasSendAmount = true;</script>
                                         <tr>
                                             <td>{% trans "Sended Amount" %}</td>
-                                            {% if btc_transaction.value %}
-                                            <td>{{ btc_transaction.value }} BTC</td>
+                                            {% if item.btc_final_balance %}
+                                            <td>{{ item.btc_final_balance }} BTC</td>
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}
-
-                                            {% if ela_transaction.value %}
-                                            <td>{{ ela_transaction.value }} ELA</td>
+                                            {% if item.ela_final_balance %}
+                                            <td>{{ item.ela_final_balance }} ELA</td>
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}

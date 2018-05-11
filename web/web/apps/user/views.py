@@ -84,14 +84,24 @@ def show_token_exchange_progress_view(request, phase_id):
         kycinfo = tokenexchange_models.KYCInfo.objects.filter(user__id=user.id).first()
         kycaudit = tokenexchange_models.KYCAudit.objects.filter(user__id=user.id).first()
         item = tokenexchange_models.InvestInvite.objects.filter(user__id=user.id, phase_id=phase_id).first()
+        btc_final_balance = 0
+        ela_final_balance = 0
         if item:
             token_exchange_info = settings.FUND_CONFIG[item.phase_id]
-            btc_address = item.receive_btc_address
-            ela_address = item.receive_ela_address
-            if btc_address:
-                btc_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=btc_address,address_type=codes.CurrencyType.BTC.value).first()
-            if ela_address:
-                ela_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=ela_address,address_type=codes.CurrencyType.ELA.value).first()
+            if item.receive_btc_address:
+                btc_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value)
+                if btc_transaction:
+                    for t in btc_transaction:
+                        btc_final_balance = btc_final_balance + float(t.value)
+            if item.receive_ela_address:
+                ela_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value)
+                if ela_transaction:
+                    for t in ela_transaction:
+                        ela_final_balance = ela_final_balance + float(t.value)
+        if btc_final_balance != 0:
+            item.btc_final_balance = btc_final_balance
+        if ela_final_balance != 0:
+            item.ela_final_balance = ela_final_balance
         return render(request, "user/token-exchange-progress.html", locals())
     except Exception,inst:
         logger.exception("error show progress %s" %str(inst))

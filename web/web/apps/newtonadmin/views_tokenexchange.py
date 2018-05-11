@@ -231,15 +231,19 @@ class UserReceiveListView(generic.ListView):
                 queryset = tokenexchange_models.AddressTransaction.objects.filter(user=item.user)
                 btc_set = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value)
                 ela_set = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value)
+                btc_final_balance = 0
+                ela_final_balance = 0
                 if btc_set:
-                    item.btc_value = 0
-                    for btc_itme in btc_set:
-                        item.btc_value = item.btc_value + btc_itme.value
+                    for item_btc in btc_set:
+                        btc_final_balance = btc_final_balance + item_btc.value
                 if ela_set:
-                    item.ela_value = 0
-                    for ela_item in ela_set:
-                        item.ela_value = item.ela_value + ela_item.value
-                if item.btc_value or item.ela_value:
+                    for item_ela in ela_set:
+                        ela_final_balance = ela_final_balance + item_ela.value
+                if btc_final_balance != 0:
+                    item.btc_value = btc_final_balance
+                if ela_final_balance != 0:
+                    item.ela_value = ela_final_balance
+                if item.btc_value != 0 or item.ela_value !=0:
                     items.append(item)
             return items
         except Exception, inst:
@@ -400,14 +404,18 @@ def send_receive_email(request, phase_id):
             queryset = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, user__id=user_id)
             btc_set = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value)
             ela_set = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value)
+            btc_final_balance = 0
+            ela_final_balance = 0
             if btc_set:
-                item.btc_value = 0
-                for btc_itme in btc_set:
-                    item.btc_value = item.btc_value + btc_itme.value
+                for item_btc in btc_set:
+                    btc_final_balance = btc_final_balance + item_btc.value
             if ela_set:
-                item.ela_value = 0
-                for ela_item in ela_set:
-                    item.ela_value = item.ela_value + ela_item.value
+                for item_ela in ela_set:
+                    ela_final_balance = ela_final_balance + item_ela.value
+            if btc_final_balance != 0:
+                item.btc_value = btc_final_balance
+            if ela_final_balance != 0:
+                item.ela_value = ela_final_balance
             item.kyc_info = kyc_info
             if services_tokenexchange.send_receive_confirm_notify(request, item):
                 item.status = codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
