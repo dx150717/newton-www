@@ -3,7 +3,7 @@
 {% load utils %}
 
 {% block title %}
-{% trans "KYC" %}
+KYC
 {% endblock %}
 
 {% block header %}
@@ -18,17 +18,17 @@
 <section id="token-exchange" class="section-list">
     <div class="container text-center">
         <div class="title">
-            <h2>{% trans "Fill out your amount of token exchange" %}</h2>
+            <h2>Fill out your amount of token exchange</h2>
         </div>  
         {% include "tokenexchange/token-exchange-info.html" %}
-        <div class="container">
+        <div class="container amount">
             <div class="raw">
                 <div>
                     <form id="user_kyc_form" class="form" action="/tokenexchange/invite/{{ invite_id }}/post/" method="POST">
                         {% include "form.html" %}
                         <div class="raw">
                             <div class="text-center token-btn">
-                                <button class="form-button" type="submit">{% trans "Submit" %}</button>
+                                <button class="form-button" type="submit">Submit</button>
                             </div>
                         </div>
                     </form>

@@ -13,7 +13,7 @@ class KYCInfo(models.Model):
     first_name = models.CharField(max_length=128, verbose_name='First Name')
     last_name = models.CharField(max_length=128, verbose_name='Last Name')
     cellphone = models.CharField(max_length=128, db_index=True)
-    country = CountryField(blank_label=_("Select country or region"), verbose_name='Country or Region')
+    country = CountryField(blank_label="Select country or region", verbose_name='Country or Region')
     country_code = models.CharField(max_length=12, db_index=True)
     id_number = models.CharField(max_length=128, verbose_name='ID Number')
     id_card = models.FileField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name='ID Card')

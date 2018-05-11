@@ -156,6 +156,9 @@ def post_apply_amount(request, invite_id):
             if form.is_valid():
                 item.expect_btc = form.cleaned_data['expect_btc']
                 item.expect_ela = form.cleaned_data['expect_ela']
+                if not item.expect_btc and not item.expect_ela:
+                    form._errors[NON_FIELD_ERRORS] = form.error_class(['You must fill in at least one.'])
+                    return render(request, "tokenexchange/apply-amount.html", locals())
                 item.status = codes.TokenExchangeStatus.APPLY_AMOUNT.value
                 item.save()
                 token_exchange_info = settings.FUND_CONFIG[item.phase_id]
