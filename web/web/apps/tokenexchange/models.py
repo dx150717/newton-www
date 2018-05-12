@@ -9,7 +9,7 @@ from utils import storage
 from config import codes
 
 class KYCInfo(models.Model):
-    user = models.ForeignKey(User)
+    user_id = models.IntegerField()
     first_name = models.CharField(max_length=128, verbose_name='First Name')
     last_name = models.CharField(max_length=128, verbose_name='Last Name')
     cellphone = models.CharField(max_length=128, db_index=True)
@@ -31,7 +31,7 @@ class KYCInfo(models.Model):
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
 
 class AddressTransaction(models.Model):
-    user = models.ForeignKey(User)
+    user_id = models.IntegerField()
     phase_id = models.IntegerField(default=codes.FundPhase.PRIVATE.value)
     txid = models.CharField(max_length=128, unique=True)
     address = models.CharField(max_length=128)
@@ -43,7 +43,7 @@ class AddressTransaction(models.Model):
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
     
 class KYCAudit(models.Model):
-    user = models.ForeignKey(User)
+    user_id = models.IntegerField()
     is_pass = models.BooleanField()
     comment = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -53,7 +53,7 @@ class KYCAudit(models.Model):
 
 
 class InvestInvite(models.Model):
-    user = models.ForeignKey(User)
+    user_id = models.IntegerField()
     phase_id = models.IntegerField()
     round_id = models.IntegerField(default=1)
     expect_btc = models.FloatField(blank=True, null=True, verbose_name='How much do you want to contribute in BTC')
