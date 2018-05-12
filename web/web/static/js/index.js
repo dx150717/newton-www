@@ -207,7 +207,7 @@ function dismiss()
 
 function dismissDelay()
 {
-	setTimeout(() => {
+	var task = setTimeout(function(){
 		$('#id_loading').nsProgress('dismiss');
 	}, 2000);
 }
