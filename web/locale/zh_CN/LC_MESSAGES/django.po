@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-12 12:44+0000\n"
+"POT-Creation-Date: 2018-05-12 13:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -357,7 +357,6 @@ msgstr ""
 "链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:14
-#: web/apps/reset/templates/reset/reset-letter.html:53
 #: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
 #: web/templates/email-template.html:49
 msgid "Newton"
@@ -512,6 +511,7 @@ msgid "Complete the register process of Newton"
 msgstr "完成注册流程"
 
 #: web/apps/register/templates/register/register-letter.html:10
+#: web/apps/reset/templates/reset/reset-letter.html:9
 msgid "Dear"
 msgstr "尊敬的用户："
 
@@ -524,7 +524,7 @@ msgid "Click the button below to proceed to the next step."
 msgstr "点击下方按钮完成注册。"
 
 #: web/apps/register/templates/register/register-letter.html:14
-#: web/apps/reset/templates/reset/reset-letter.html:50
+#: web/apps/reset/templates/reset/reset-letter.html:13
 msgid "If you received this email by mistake, simply delete it."
 msgstr "如果您意外收到了这封邮件，请删除它。"
 
@@ -544,7 +544,7 @@ msgstr "邮箱不存在！"
 #: web/apps/reset/templates/reset/edit_password.html:28
 #: web/apps/reset/templates/reset/index.html:18
 #: web/apps/reset/templates/reset/index.html:27
-#: web/apps/reset/templates/reset/reset-letter.html:49
+#: web/apps/reset/templates/reset/reset-letter.html:12
 #: web/apps/reset/templates/reset/reset-success.html:6
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
 msgid "Reset"
@@ -558,15 +558,11 @@ msgstr "重置密码成功"
 msgid "您已经重置密码成功，请<a href='/login/'>登录</a>"
 msgstr ""
 
-#: web/apps/reset/templates/reset/reset-letter.html:41
+#: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Welcome! Please Reset Your Password!"
 msgstr "牛顿欢迎您！请重置您的密码"
 
-#: web/apps/reset/templates/reset/reset-letter.html:46
-msgid "Dear:"
-msgstr "尊敬的用户："
-
-#: web/apps/reset/templates/reset/reset-letter.html:47
+#: web/apps/reset/templates/reset/reset-letter.html:10
 msgid ""
 "Hello! This is an email from <a class='main-color' href='https://www."
 "newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your "
@@ -1078,39 +1074,37 @@ msgstr ""
 msgid "Profile"
 msgstr "用户信息"
 
-#: web/apps/user/templates/user/index.html:47
-msgid "基本信息"
+#: web/apps/user/templates/user/index.html:45
+msgid "Basic information"
+msgstr "基本信息"
+
+#: web/apps/user/templates/user/index.html:76
+msgid "You have summit KYC information"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:77
-#, fuzzy
-msgid "You have summit KYC information"
-msgstr "接收到了您的KYC信息"
-
 #: web/apps/user/templates/user/index.html:81
-#, fuzzy
 msgid "Passed"
-msgstr "密码"
+msgstr ""
 
-#: web/apps/user/templates/user/index.html:95
+#: web/apps/user/templates/user/index.html:84
 msgid "Reject:"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:95
+#: web/apps/user/templates/user/index.html:84
 msgid "Rewrite"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:99
+#: web/apps/user/templates/user/index.html:88
 msgid ""
 "You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:119
+#: web/apps/user/templates/user/index.html:125
 #, fuzzy
 msgid "Details "
 msgstr "详情"
 
-#: web/apps/user/templates/user/index.html:126
+#: web/apps/user/templates/user/index.html:132
 msgid "There is no token exchange information"
 msgstr ""
 
@@ -5580,6 +5574,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Dear:"
+#~ msgstr "尊敬的用户："
 
 #~ msgid "Confirm the amount."
 #~ msgstr "确认额度"

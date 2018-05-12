@@ -1019,7 +1019,14 @@ canvas { display: block; vertical-align: top; }
 #kyc .kyc-btn{padding: 60px;}
 #kyc .kyc-btn .form-button{ line-height: unset;}
 #kyc .kyc-btn button:disabled{background-color: #939393;}
-
+#kyc .item,#basic-info .item {padding:12px;}
+#kyc .item label,#basic-info .item label{font-size: 18px; color: #282929;}
+#kyc .item .value, #basic-info .item .value{font-size: 18px;}
+#kyc .item-title .title, #basic-info .item-title .title {padding: 10px; font-size: 24px; color: #282929}
+@media(max-width:768px){
+    #kyc .item, #basic-info .item {padding:10px;}  
+    #kyc .item-title .title,#basic-info .item-title .title {padding: 10px; font-size: 20px; color: #282929}
+}
 .user-avator{ width: 30px; border-radius: 15px; margin-top: -5px;}
 
 #countdown{background: url("../images/tokensale/tokensale_background.png") no-repeat; height: 720px; background-size: 100% 720px;}
