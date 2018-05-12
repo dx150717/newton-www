@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 def show_user_index_view(request):
     user = request.user
     form = forms.UserForm(instance=user)
-    kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
+    kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()
     if kycinfo:
         data = {}
         data['first_name'] = kycinfo.first_name
@@ -40,8 +40,8 @@ def show_user_index_view(request):
         data['cellphone_of_emergency_contact'] = kycinfo.emergency_contact_country_code + kycinfo.emergency_contact_cellphone
         data['relationships_with_emergency_contacts'] = kycinfo.relationships_with_emergency_contacts
         kyc_form = token_exchange_forms.KYCInfoForm(initial=data)
-    kycaudit = tokenexchange_models.KYCAudit.objects.filter(user=user).last()
-    items = tokenexchange_models.InvestInvite.objects.filter(user=user,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
+    kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).last()
+    items = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
     for item in items:
         item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]
     return render(request, "user/index.html", locals())
@@ -96,9 +96,9 @@ def post_settings(request):
 def show_token_exchange_progress_view(request, phase_id):
     try:
         user = request.user
-        kycinfo = tokenexchange_models.KYCInfo.objects.filter(user__id=user.id).first()
-        kycaudit = tokenexchange_models.KYCAudit.objects.filter(user__id=user.id).first()
-        item = tokenexchange_models.InvestInvite.objects.filter(user__id=user.id, phase_id=phase_id).first()
+        kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()
+        kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).first()
+        item = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id, phase_id=phase_id).first()
         btc_final_balance = 0
         ela_final_balance = 0
         if item:

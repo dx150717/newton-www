@@ -80,10 +80,13 @@ class InviteListView(generic.ListView):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user', flat=True))
-            s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user', flat=True))
+            s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user_id', flat=True))
+            s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user_id', flat=True))
             d = s1.difference(s2)
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user__id__in=d)
+            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user_id__in=d)
+            if items:
+                for item in items:
+                    item.user = User.objects.filter(id=item.user_id).first()
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
@@ -112,6 +115,10 @@ class CompletedInviteListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             items = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value]).order_by('-created_at')
+            if items:
+                for item in items:
+                    item.user = User.objects.filter(id=item.user_id).first()
+                    item.kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=item.user_id).first()
             return items
         except Exception, inst:
             logger.exception("fail to show the te completed list:%s" % str(inst))
@@ -142,6 +149,10 @@ class AmountListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+            if items:
+                for item in items:
+                    item.user = User.objects.filter(id=item.user_id).first()
+                    item.kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=item.user_id).first()
             return items
         except Exception, inst:
             logger.exception("fail to show the amount list:%s" % str(inst))
@@ -172,6 +183,10 @@ class CompletedAmountListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+            if items:
+                for item in items:
+                    item.user = User.objects.filter(id=item.user_id).first()
+                    item.kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=item.user_id).first()
             return items
         except Exception, inst:
             logger.exception("fail to show the te completed amount list:%s" % str(inst))
@@ -200,6 +215,10 @@ class ReceiveListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             items = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id).order_by('-created_at')
+            if items:
+                for item in items:
+                    item.user = User.objects.filter(id=item.user_id).first()
+                    item.kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=item.user_id).first()
             return items
         except Exception, inst:
             logger.exception("fail to show receive list:%s" % str(inst))
@@ -229,7 +248,7 @@ class UserReceiveListView(generic.ListView):
             phase_id = int(phase_id)
             items = []
             for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
-                queryset = tokenexchange_models.AddressTransaction.objects.filter(user=item.user)
+                queryset = tokenexchange_models.AddressTransaction.objects.filter(user_id=item.user_id)
                 btc_set = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value)
                 ela_set = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value)
                 btc_final_balance = 0
@@ -244,8 +263,12 @@ class UserReceiveListView(generic.ListView):
                     item.btc_value = btc_final_balance
                 if ela_final_balance != 0:
                     item.ela_value = ela_final_balance
-                if item.btc_value != 0 or item.ela_value !=0:
+                if btc_final_balance != 0 or ela_final_balance !=0:
                     items.append(item)
+            if items:
+                for item in items:
+                    item.user = User.objects.filter(id=item.user_id).first()
+                    item.kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=item.user_id).first()
             return items
         except Exception, inst:
             logger.exception("fail to show receive list:%s" % str(inst))
@@ -265,7 +288,7 @@ def confirm_id(request):
         pass_tokenexchange = int(form.cleaned_data['pass_kyc'])
         level = int(form.cleaned_data['level'])
         comment = form.cleaned_data['comment']
-        item = tokenexchange_models.KYCInfo.objects.get(user__id=user_id, status=codes.KYCStatus.CANDIDATE.value)
+        item = tokenexchange_models.KYCInfo.objects.get(user_id=user_id, status=codes.KYCStatus.CANDIDATE.value)
         if pass_tokenexchange:
             item.status = codes.KYCStatus.PASS_KYC.value
             item.level = level
@@ -275,16 +298,18 @@ def confirm_id(request):
             item.status = codes.KYCStatus.REJECT.value
             action_id = codes.AdminActionType.REJECT_KYC.value
             is_pass = False
-        item.save()
         target_user = User.objects.filter(id=user_id).first()
+        
+        item.save()
         # add kyc audit
-        kyc_audit = tokenexchange_models.KYCAudit(user=target_user,is_pass=is_pass,comment=comment)
+        kyc_audit = tokenexchange_models.KYCAudit(user_id=target_user.id,is_pass=is_pass,comment=comment)
         kyc_audit.save()
         # add audit log
         audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id,comment=comment)
         audit_log.save()
         # send the kyc pass notify
         item.kyc_audit = kyc_audit
+        item.user = target_user
         is_send_success = services_tokenexchange.send_kycinfo_notify(item, request)
         if is_send_success:
             return http.JsonSuccessResponse()
@@ -305,7 +330,7 @@ def post_invite(request, phase_id):
             if not form.is_valid():
                 return http.JsonErrorResponse()
             user_id = int(form.cleaned_data['user_id'])
-            invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=user_id).first()
+            invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user_id=user_id).first()
             if not invite:
                 invite = tokenexchange_models.InvestInvite()
                 invite.user_id = user_id
@@ -332,18 +357,21 @@ def send_invite_email(request, phase_id):
             if not form.is_valid():
                 return http.JsonErrorResponse()
             user_id = int(form.cleaned_data['user_id'])
+            target_user = User.objects.filter(id=user_id).first()
             phase_id = int(phase_id)
-            invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=user_id).first()
+            invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user_id=user_id).first()
             if not invite:
                 return http.JsonErrorResponse()
-            kyc_info = tokenexchange_models.KYCInfo.objects.filter(user__id=user_id).first()
+            kyc_info = tokenexchange_models.KYCInfo.objects.filter(user_id=user_id).first()
             invite.kyc_info = kyc_info
             invite.tokenexchange_info = settings.FUND_CONFIG[invite.phase_id]
-            if services_tokenexchange.send_apply_amount_notify(invite, request):
+            invite.user = target_user
+            if not services_tokenexchange.send_apply_amount_notify(invite, request):
+                return http.JsonErrorResponse(error_message="send fail")
+            else:
                 invite.status = codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value
                 invite.save()
             action_id = codes.AdminActionType.SEND_INVITE.value
-            target_user = User.objects.filter(id=user_id).first()
             audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
             audit_log.save()
         return http.JsonSuccessResponse()
@@ -377,7 +405,7 @@ def post_amount(request, phase_id):
         if not btc_address and not ela_address:
             return http.JsonErrorResponse()
         # save status
-        item = tokenexchange_models.InvestInvite.objects.get(user__id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+        item = tokenexchange_models.InvestInvite.objects.get(user_id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
         item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
         item.assign_ela = assign_ela
         item.assign_btc = assign_btc
@@ -403,9 +431,11 @@ def send_receive_email(request, phase_id):
         phase_id = int(phase_id)
         user_list = [int(item) for item in request.POST['user_list'].split(",")]
         for user_id in user_list:
-            item = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user__id=user_id).first()
-            kyc_info = tokenexchange_models.KYCInfo.objects.filter(user__id=user_id).first()
-            queryset = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, user__id=user_id)
+            item = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user_id=user_id).first()
+            user = User.objects.filter(id=item.user_id).first()
+            item.user = user
+            kyc_info = tokenexchange_models.KYCInfo.objects.filter(user_id=user_id).first()
+            queryset = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, user_id=user_id)
             btc_set = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value)
             ela_set = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value)
             btc_final_balance = 0

@@ -30,6 +30,9 @@ class KYCInfo(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
 
+    class Meta:
+        app_label = "tokenexchange"
+
 class AddressTransaction(models.Model):
     user_id = models.IntegerField()
     phase_id = models.IntegerField(default=codes.FundPhase.PRIVATE.value)
@@ -42,6 +45,9 @@ class AddressTransaction(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
     
+    class Meta:
+        app_label = "tokenexchange"
+
 class KYCAudit(models.Model):
     user_id = models.IntegerField()
     is_pass = models.BooleanField()
@@ -50,6 +56,8 @@ class KYCAudit(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
 
+    class Meta:
+        app_label = "tokenexchange"
 
 
 class InvestInvite(models.Model):
@@ -66,3 +74,5 @@ class InvestInvite(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
+    class Meta:
+        app_label = "tokenexchange"

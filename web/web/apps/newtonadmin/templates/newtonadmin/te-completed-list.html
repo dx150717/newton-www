@@ -23,9 +23,9 @@
                 <tbody>
                     {% for item in items %}
                     <tr>
-                        <td><p><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user.id }}"/>&nbsp;&nbsp;选择</p></td>
+                        <td><p><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择</p></td>
                         <td>
-                            <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
+                            <p>{{ item.kycinfo.first_name }} &nbsp; {{ item.kycinfo.last_name }}</p>
                             <p>{{ item.user.email }}</p>
                         </td>
                         <td>
@@ -36,7 +36,7 @@
                             {% endifequal %}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:sendPerInviteEmail({{ item.user.id }});">发送邀请邮件</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:sendPerInviteEmail({{ item.user_id }});">发送邀请邮件</a>
                         </td>
                     </tr>
                     {% endfor %}

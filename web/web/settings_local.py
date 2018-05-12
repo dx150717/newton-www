@@ -61,3 +61,10 @@ PAGE_SIZE = 20
 NEWTON_WEB_URL = 'https://www.newtonproject.org'
 NEWTON_HOME_URL = 'https://home.newtonproject.org'
 NEWTON_GRAVITY_URL = 'https://gravity.newtonproject.org'
+
+# database router
+DATABASE_ROUTERS = ['web.database_router.NewtonRouter']
+# database mapping
+DATABASE_APPS_MAPPING = {
+    "tokenexchange":"tokenexchange",
+}

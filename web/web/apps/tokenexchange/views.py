@@ -44,7 +44,7 @@ def post_kyc_information(request):
     try:
         if request.method == 'POST':
             # check whether user is submit kyc info
-            instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
+            instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             form = forms.KYCInfoForm(request.POST, request.FILES, instance=instance)
             if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
                 form._errors[NON_FIELD_ERRORS] = form.error_class([_('You had submited kyc info')])
@@ -59,12 +59,12 @@ def post_kyc_information(request):
             instance.emergency_contact_country_code = emergency_contact_country_code
             instance.emergency_contact_cellphone = emergency_contact_cellphone
             instance.phase_id = settings.CURRENT_FUND_PHASE
-            instance.user = request.user
+            instance.user_id = request.user.id
             instance.status = codes.KYCStatus.CANDIDATE.value
             instance.save()
             return redirect('/tokenexchange/wait-audit/')
         else:
-            instance = tokenexchange_models.KYCInfo.objects.filter(user=request.user).first()
+            instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             form = forms.KYCInfoForm(instance=instance)
             return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
@@ -146,7 +146,7 @@ def post_apply_amount(request, invite_id):
     """
     try:
         invite_id = int(invite_id)
-        item = tokenexchange_models.InvestInvite.objects.filter(user=request.user, id=invite_id).first()
+        item = tokenexchange_models.InvestInvite.objects.filter(user_id=request.user.id, id=invite_id).first()
         if not item:
             return http.HttpResponseServerError()
         if item.expect_btc or item.expect_ela:

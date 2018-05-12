@@ -29,7 +29,7 @@ def sync_blockchain_data():
                 for txid, value in txs:
                     if not tokenexchange_models.AddressTransaction.objects.filter(txid=txid).first():
                         instance = tokenexchange_models.AddressTransaction()
-                        instance.user = item.user
+                        instance.user_id = item.user_id
                         instance.phase_id = item.phase_id
                         instance.address = item.receive_btc_address
                         instance.address_type = codes.CurrencyType.BTC.value
@@ -42,7 +42,7 @@ def sync_blockchain_data():
                 for txid, value in txs:
                     if not tokenexchange_models.AddressTransaction.objects.filter(txid=txid).first():
                         instance = tokenexchange_models.AddressTransaction()
-                        instance.user = item.user
+                        instance.user_id = item.user_id
                         instance.phase_id = item.phase_id
                         instance.address = item.receive_ela_address
                         instance.address_type = codes.CurrencyType.ELA.value
@@ -70,7 +70,7 @@ def __get_btc_transactions(address):
             txid = item['hash']
             dt = datetime.datetime.fromtimestamp(item['time'])
             # Ensure more than 6 confirmations
-            if now > (dt + datetime.timedelta(hours=1)):
+            if not settings.DEBUG and now > (dt + datetime.timedelta(hours=1)):
                 continue
             value = 0
             for tmp_item in out:

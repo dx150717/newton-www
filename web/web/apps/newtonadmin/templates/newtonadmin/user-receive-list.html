@@ -25,7 +25,7 @@
                 <tbody>
                     {% for item in items %}
                     <tr>
-                        <td><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user.id }}"/>&nbsp;&nbsp;选择</td>
+                        <td><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择</td>
                         <td>
                             {{ item.user.email }}
                         </td>
@@ -41,7 +41,7 @@
                             {{ item.updated_at|date:"Y-m-d H:i:s"}}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:sendPerEmail('{{ item.user.id }}');">发送</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:sendPerEmail('{{ item.user_id }}');">发送</a>
                         </td>
                          <td>
                              {% if item.status == 7 %}

@@ -71,7 +71,11 @@
                                     <td class="text-nowrap"><label for="id_kycinfo">Status :</label></td>
                                     {% if kycinfo %}
                                         {% if kycaudit %}
-                                            {% if kycaudit.is_pass %}
+                                            {% if kycinfo.status == 1 %}
+                                            <td class="gray td-value">{% trans "You have summit KYC information" %}</td>
+                                            {% endif %}
+
+                                            {% if kycinfo.status == 2 %}
                                             <td class="gray td-value ">{% trans "Passed" %}</td>
                                             {% for field in kyc_form %}
                                             <tr>
@@ -84,11 +88,11 @@
                                                 {% endif %}
                                             </tr>
                                             {% endfor %}
-                                            {% else %}
+                                            {% endif %}
+
+                                            {% if kycinfo.status == 3 %}
                                             <td class="gray td-value">{% trans "Reject:" %}{{ kycaudit.comment }} <a href="/tokenexchange/">{% trans "Rewrite" %}</a></td>
                                             {% endif %}
-                                        {% else %}
-                                        <td class="gray td-value">{% trans "You have summit KYC information" %}</td>
                                         {% endif %}
                                     {% else %}
                                     <td class="gray td-value">{% trans "You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>" %}</td>
