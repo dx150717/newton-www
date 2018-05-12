@@ -33,12 +33,12 @@ def exchange_valid_required(func):
             return func(request, *args, **kwargs)
     return _decorator
 
-@exchange_valid_required
+#@exchange_valid_required
 @login_required
 def show_tokenexchange_index_view(request):
     return render(request, "tokenexchange/index.html", locals()) 
 
-@exchange_valid_required
+#@exchange_valid_required
 @login_required
 def post_kyc_information(request):
     try:
@@ -71,7 +71,7 @@ def post_kyc_information(request):
         logger.exception("fail to post kyc information:%s" % str(inst))
         return http.HttpResponseServerError()
 
-@exchange_valid_required
+#@exchange_valid_required
 @login_required
 def show_wait_audit_view(request):
     return render(request, "tokenexchange/wait-audit.html", locals())

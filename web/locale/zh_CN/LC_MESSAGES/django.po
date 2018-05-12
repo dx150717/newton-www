@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-11 12:43+0000\n"
+"POT-Creation-Date: 2018-05-12 10:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -214,12 +214,12 @@ msgstr "暂无FAQ"
 #: web/apps/login/forms.py:6
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:28
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:27
-#: web/apps/register/forms.py:7 web/apps/reset/forms.py:6
+#: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
 msgstr "电子邮箱"
 
-#: web/apps/login/forms.py:7 web/apps/register/forms.py:10
+#: web/apps/login/forms.py:7 web/apps/register/forms.py:15
 #: web/apps/reset/forms.py:9 web/apps/zinnia/templates/zinnia/password.html:24
 msgid "Password"
 msgstr "密码"
@@ -227,14 +227,6 @@ msgstr "密码"
 #: web/apps/login/views.py:36
 msgid "Form Error"
 msgstr "表单填写错误"
-
-#: web/apps/login/views.py:42
-msgid "No captcha"
-msgstr ""
-
-#: web/apps/login/views.py:43
-msgid "Auth Recaptcha Error"
-msgstr ""
 
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
@@ -296,7 +288,7 @@ msgid "Forget Password"
 msgstr "忘记密码"
 
 #: web/apps/login/templates/login/index.html:61
-#: web/apps/login/templates/login/index.html:68 web/apps/register/forms.py:14
+#: web/apps/login/templates/login/index.html:68 web/apps/register/forms.py:19
 msgid "Google Authenticator Code"
 msgstr "填写谷歌身份验证码"
 
@@ -419,7 +411,7 @@ msgstr ""
 msgid "press"
 msgstr "媒体报道"
 
-#: web/apps/register/forms.py:11 web/apps/reset/forms.py:10
+#: web/apps/register/forms.py:16 web/apps/reset/forms.py:10
 #: web/apps/reset/templates/reset/edit_password.html:6
 #: web/apps/reset/templates/reset/index.html:6
 msgid "Repassword"
@@ -437,7 +429,7 @@ msgstr "邮箱已经存在！"
 msgid "Google Auth Code Error"
 msgstr "谷歌身份验证码错误"
 
-#: web/apps/register/views.py:197 web/apps/reset/views.py:109
+#: web/apps/register/views.py:197 web/apps/reset/views.py:110
 msgid "Entered passwords differ"
 msgstr "两次输入密码不一致"
 
@@ -473,11 +465,24 @@ msgid "扫描二维码添加谷歌身份验证器"
 msgstr ""
 
 #: web/apps/register/templates/register/index.html:37
-msgid ""
-"点击注册按钮即表示您同意并愿意遵守<br/> Newton的<a href='{{ settings."
-"NEWTON_WEB_URL }}/terms-of-use/'>使用条款</a>和<a href='{{ settings."
-"NEWTON_WEB_URL }}/privacy/'>隐私政策 </a>。"
-msgstr ""
+msgid "Clicking register button means you agree and abide by<br/> Newton"
+msgstr "点击注册按钮即表示您同意并愿意遵守<br/> Newton的"
+
+#: web/apps/register/templates/register/index.html:37
+msgid "User Agreement"
+msgstr "使用条款"
+
+#: web/apps/register/templates/register/index.html:37
+msgid "and"
+msgstr "和"
+
+#: web/apps/register/templates/register/index.html:37
+#: web/apps/welcome/templates/welcome/privacy.html:6
+#: web/apps/welcome/templates/welcome/privacy.html:13
+#: web/apps/welcome/templates/welcome/privacy.html:19
+#: web/templates/footer.html:51
+msgid "Privacy Policy"
+msgstr "隐私政策"
 
 #: web/apps/register/templates/register/invalid-link.html:6
 msgid "Invalid-link"
@@ -515,7 +520,7 @@ msgstr "注册"
 msgid "您已经注册成功，请<a href='/login/'>登录</a>"
 msgstr ""
 
-#: web/apps/reset/views.py:35
+#: web/apps/reset/views.py:36
 msgid "Email not existed"
 msgstr "邮箱不存在！"
 
@@ -1058,39 +1063,39 @@ msgstr ""
 msgid "Profile"
 msgstr "用户信息"
 
-#: web/apps/user/templates/user/index.html:44
+#: web/apps/user/templates/user/index.html:47
 msgid "基本信息"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:75
-#, fuzzy
-msgid "Passed"
-msgstr "密码"
-
-#: web/apps/user/templates/user/index.html:88
-msgid "Reject:"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:88
-msgid "Rewrite"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:91
+#: web/apps/user/templates/user/index.html:77
 #, fuzzy
 msgid "You have summit KYC information"
 msgstr "接收到了您的KYC信息"
 
-#: web/apps/user/templates/user/index.html:94
+#: web/apps/user/templates/user/index.html:81
+#, fuzzy
+msgid "Passed"
+msgstr "密码"
+
+#: web/apps/user/templates/user/index.html:95
+msgid "Reject:"
+msgstr ""
+
+#: web/apps/user/templates/user/index.html:95
+msgid "Rewrite"
+msgstr ""
+
+#: web/apps/user/templates/user/index.html:99
 msgid ""
 "You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:114
+#: web/apps/user/templates/user/index.html:119
 #, fuzzy
 msgid "Details "
 msgstr "详情"
 
-#: web/apps/user/templates/user/index.html:121
+#: web/apps/user/templates/user/index.html:126
 msgid "There is no token exchange information"
 msgstr ""
 
@@ -2651,13 +2656,6 @@ msgstr "详情"
 #: web/apps/welcome/templates/welcome/press.html:47
 msgid "No presss"
 msgstr "暂无媒体报道"
-
-#: web/apps/welcome/templates/welcome/privacy.html:6
-#: web/apps/welcome/templates/welcome/privacy.html:13
-#: web/apps/welcome/templates/welcome/privacy.html:19
-#: web/templates/footer.html:51
-msgid "Privacy Policy"
-msgstr "隐私政策"
 
 #: web/apps/welcome/templates/welcome/privacy.html:20
 msgid ""
@@ -5622,9 +5620,6 @@ msgstr ""
 
 #~ msgid "Newton foundation has received your"
 #~ msgstr "牛顿基金会已经收到您的"
-
-#~ msgid "and"
-#~ msgstr "和"
 
 #~ msgid ""
 #~ "we show sincere gratitude to contribution you have made in Newton "
