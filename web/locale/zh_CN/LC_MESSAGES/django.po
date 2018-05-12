@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-12 10:35+0000\n"
+"POT-Creation-Date: 2018-05-12 10:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -517,8 +517,8 @@ msgid "Register Success!"
 msgstr "注册"
 
 #: web/apps/register/templates/register/register-success.html:21
-msgid "您已经注册成功，请<a href='/login/'>登录</a>"
-msgstr ""
+msgid "<a href='/login/'>Login</a>"
+msgstr "前往<a href='/login/'>登录</a>"
 
 #: web/apps/reset/views.py:36
 msgid "Email not existed"
