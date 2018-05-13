@@ -80,7 +80,7 @@
                                             {% trans "Passed" %}
                                             {% endif %}
                                             {% if kycinfo.status == 3 %}
-                                            {% trans "Reject:" %}{{ kycaudit.comment }} <a href="/tokenexchange/">{% trans "Rewrite" %}</a>
+                                            {% trans "Rejected:" %} {{ kycaudit.comment }} <a href="/tokenexchange/">{% trans "Rewrite" %}</a>
                                             {% endif %}
                                         {% endif %}
                                     {% else %}
