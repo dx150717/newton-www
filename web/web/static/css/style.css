@@ -861,6 +861,11 @@ canvas { display: block; vertical-align: top; }
 #reset .reset-title,
 #register .login-title{padding-top: 140px;}
 
+@media(max-width:768px){
+    #login .login-title,
+    #reset .reset-title,
+    #register .login-title{padding-top: 60px;}
+}
 #login .login-title h2,
 #reset .reset-title h2,
 #register .login-title h2{margin-bottom: 68px; font-size: 24px; font-weight: normal; color: #292929;}
