@@ -73,6 +73,9 @@ function setLanguage(language) {
 
 function initLanguage(){
 	var language = document.cookie.split("language=")[1];
+	if(language == null || language == undefined){
+		language = navigator.language;
+	}
 	if(language!=null && language!=undefined && language.startsWith("zh")){
 		$.getScript(zhMessages);
 	}
