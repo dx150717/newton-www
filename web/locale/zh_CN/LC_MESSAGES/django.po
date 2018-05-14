@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-13 07:31+0000\n"
+"POT-Creation-Date: 2018-05-14 04:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -228,6 +228,14 @@ msgstr "密码"
 msgid "Form Error"
 msgstr "表单填写错误"
 
+#: web/apps/login/views.py:42
+msgid "No captcha"
+msgstr ""
+
+#: web/apps/login/views.py:43
+msgid "Auth Recaptcha Error"
+msgstr ""
+
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
 msgstr "邮箱和密码不匹配"
@@ -253,20 +261,24 @@ msgid "Incorrect Google Authenticator Code"
 msgstr "谷歌身份验证码不正确"
 
 #: web/apps/login/templates/login/index.html:5
-#: web/apps/login/templates/login/index.html:18
-#: web/apps/login/templates/login/index.html:41
+#: web/apps/login/templates/login/index.html:19
+#: web/apps/login/templates/login/index.html:42
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:38 web/templates/header.html:54
 msgid "Login"
 msgstr "登录"
 
-#: web/apps/login/templates/login/index.html:23
+#: web/apps/login/templates/login/index.html:5
+msgid "Newton Community"
+msgstr "牛顿社区"
+
+#: web/apps/login/templates/login/index.html:24
 msgid ""
 "Tip:To login success, Ensure you can access the google recaptcha service."
 msgstr "小贴士:请确保你可以使用的谷歌验证码服务，以便成功登录。"
 
-#: web/apps/login/templates/login/index.html:46
+#: web/apps/login/templates/login/index.html:47
 #: web/apps/register/templates/register/index.html:6
 #: web/apps/register/templates/register/index.html:20
 #: web/apps/register/templates/register/index.html:29
@@ -283,16 +295,16 @@ msgstr "小贴士:请确保你可以使用的谷歌验证码服务，以便成�
 msgid "Register"
 msgstr "注册"
 
-#: web/apps/login/templates/login/index.html:47
+#: web/apps/login/templates/login/index.html:48
 msgid "Forget Password"
 msgstr "忘记密码"
 
-#: web/apps/login/templates/login/index.html:61
-#: web/apps/login/templates/login/index.html:68 web/apps/register/forms.py:19
+#: web/apps/login/templates/login/index.html:62
+#: web/apps/login/templates/login/index.html:69 web/apps/register/forms.py:19
 msgid "Google Authenticator Code"
 msgstr "填写谷歌身份验证码"
 
-#: web/apps/login/templates/login/index.html:72
+#: web/apps/login/templates/login/index.html:73
 #: web/apps/register/templates/register/gtoken.html:56
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:35
 #: web/apps/user/templates/user/profile.html:31
@@ -356,7 +368,7 @@ msgstr ""
 "链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:14
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:14
 msgid "Newton"
 msgstr "牛顿团队"
 
