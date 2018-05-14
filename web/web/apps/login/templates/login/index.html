@@ -28,26 +28,20 @@
             <form action="#" method="POST" id="login_form">
                 {% csrf_token %}
                 {% include "form.html" %}
-                <div class="raw">
                     <div class="form-group">
                         <div class="google-recaptcha" id="google-recaptcha">
                             <input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
                             <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
                         </div>
                     </div>
-                </div>
-                <div class="raw">
                     <div>
                         <input type="hidden" name="next" value="{{ next }}" />
                         <button class="form-button" style="color:#fff;" type="submit">{% trans "Login" %}</button>
                     </div>
-                </div>
-                <div class="raw">
                     <div class="space-between">
                         <a class="register" href="/register/">{% trans "Register" %}</a>
                         <a class="reset" href="/reset/">{% trans "Forget Password" %}</a>
                     </div>
-                </div>
             </form>
         </div>
     </div>

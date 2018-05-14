@@ -313,6 +313,7 @@ canvas { display: block; vertical-align: top; }
 .footer { text-align: center; padding: 40px 0 0 0; font-size: 12px; background-color: #f7f7f7; }
 .footer-simple{text-align: center;padding: 0; margin: 40px 0 0 0; font-size: 12px; background-color: #f7f7f7;}
 .footer .pc-line{ position:relative; border-top:1px #e4e4e4 solid; height:50px; line-height:50px; margin-top:30px; color: #595959; text-align:left}
+.footer-simple .pc-line{position:relative; border-top:1px #e4e4e4 solid; height:50px; line-height:50px; margin-top:0px; color: #595959; text-align:left}
 .footer .line span { position:absolute; right:0;}
 .footer .line span a{ display:inline-block; margin-left:20px; padding-top: 0;}
 .footer span a img{ display:inline-block; margin-right:3px; width:15px; height:15px;}
@@ -853,7 +854,7 @@ canvas { display: block; vertical-align: top; }
 #register #dialog{padding-top: 30px;}
 
 /* login */
-.form-button{ display:inline-block; width: 264px; height: 48px; border-radius: 4px; font-size:14px; background-color: #292929; text-align:center; color:#fff; line-height:48px;}
+.form-button{ display:inline-block; width: 304px; height: 48px; border-radius: 4px; font-size:14px; background-color: #292929; text-align:center; color:#fff; line-height:48px;}
 
 .error .alert{width: 300px; height: 60px;}
 .error .alert strong{line-height: 30px;}
@@ -874,7 +875,7 @@ canvas { display: block; vertical-align: top; }
 
 #login .container input,
 #reset .container input,
-#register .container input{padding: 5px; width: 264px; height: 32px;}
+#register .container input{padding: 5px; width: 304px; height: 32px;}
 
 #login .container .raw,
 #reset .container .raw,
@@ -905,7 +906,7 @@ canvas { display: block; vertical-align: top; }
         width: 100%;
     }
 }
-.form-group .alert{width: 264px;}
+.form-group .alert{width: 304px;}
 #token .form-group .alert{width: 100%;}
 #login .container .register{font-size: 16px; color: #292929}
 #login .container .reset{font-size: 16px; color: #b7b7b7;}
@@ -913,7 +914,7 @@ canvas { display: block; vertical-align: top; }
 #login .container label,
 #reset .container label,
 #register .container label{font-size: 18px; font-weight: 200; color: #292929;padding-right: 20px; text-align: right;}
-#login .container .space-between{display: flex; justify-content: space-between; width: 264px; padding-top: 20px;}
+#login .container .space-between{display: flex; justify-content: space-between; width: 304px; padding-top: 20px;}
 #login .modal-content{ min-height: 300px;}
 #login .modal-body{ padding-top: 60px;}
 
