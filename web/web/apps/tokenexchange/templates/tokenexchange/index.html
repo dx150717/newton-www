@@ -3,7 +3,7 @@
 {% load utils %}
 
 {% block require_title %}
-<title>{% trans "KYC" %} | Newton Community</title>
+<title>{% trans "KYC" %} | Newton Community </title>
 {% endblock %}
 
 {% block header %}
@@ -59,11 +59,11 @@
         
         <div class="token-check-condition container">
             <div class="raw">
-                <div class="col-sm-12 text-left">
-                    <input type="checkbox" onchange="check()" id="buy-token-checkboxo" class="accept" value="on">
-                        <label for="buy-token-checkbox0">
-                            <span>I have readed the NEWTON TOKEN EXCHANGE AGREEMENT.</span>
-                        </label>
+                <div class="col-sm-12 text-left flex readed">
+                    <input type="checkbox" onchange="check()" id="buy-token-checkboxo" class="accept" value="on"/>
+                    <label for="buy-token-checkbox0">
+                        <span>I have readed the NEWTON TOKEN EXCHANGE AGREEMENT.</span>
+                    </label>
                 </div>
             </div>
         </div>
