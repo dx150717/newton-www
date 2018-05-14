@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-14 16:18+0800\n"
+"POT-Creation-Date: 2018-05-14 16:57+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1063,7 +1063,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature.html:37
 msgid "Smarter"
-msgstr ""
+msgstr "更智能"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:38
 msgid ""
@@ -1072,6 +1072,9 @@ msgid ""
 "interventions and facilitate the coordination between people, between "
 "machines and between people and machines."
 msgstr ""
+"在没有权威中介的前提下，以自由开放的方式自动化生产信用，这会让人与人之间，机"
+"器与机器之间，人与机器之间更好地协作，降低人为干预的因素，更加自动化和智能"
+"化。"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:49
 msgid "More effective incentive mechanism"
@@ -1084,13 +1087,14 @@ msgid ""
 "in the transactions, such as service providers, consumers and other "
 "participants connected by the value-based Internet. "
 msgstr ""
+"使用技术协议取代商业中介，通过价值互联网服务供应商、消费者等各种角色直接连接"
+"在一起，通过技术手段将服务商的交易成本直接分配给相应的贡献者。"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:60
 msgid "New organizational structure and cooperation mode"
 msgstr "新的组织形态和协作方式"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:61
-#, fuzzy
 msgid ""
 "The community economy managed by non-profit foundations will replace the "
 "monopoly intermediary platforms managed by traditional profitable companies. "
@@ -1214,7 +1218,7 @@ msgstr "数字身份与信用"
 #: web/apps/welcome/templates/welcome/include-protocol.html:25
 msgid ""
 "With digital identities, users can easily manage their own digital assets."
-msgstr ""
+msgstr "运用数字身份，用户可以方便管理自己的数字资产"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:34
 #: web/apps/welcome/templates/welcome/protocol.html:35
@@ -1222,13 +1226,11 @@ msgid "Supply Chain"
 msgstr "供应链"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:36
-#, fuzzy
 msgid ""
 "By using techniques such as 'atom hashing', we can create a unique digital "
 "identity for commodities of the whole network."
 msgstr ""
-"通过运用原子哈希等技术，我们可以为商品建立全网唯一数字身份。通过该数字身份，"
-"可以随时查阅商品的相关信息。"
+"通过运用原子哈希等技术为商品建立全网唯一数字身份。"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:44
 #: web/apps/welcome/templates/welcome/protocol.html:50
@@ -1236,13 +1238,11 @@ msgid "Digital Marketing"
 msgstr "数字营销"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:46
-#, fuzzy
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system."
 msgstr ""
-"广告主通过系统内置的各种营销类智能合约模版设定营销方案，包括激励模式、结算模"
-"式，动态价格调整规则等。"
+"广告主通过系统内置的各种营销类智能合约模版设定营销方案。。"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:54
 #: web/apps/welcome/templates/welcome/protocol.html:64
@@ -1255,7 +1255,7 @@ msgid ""
 "We support cross-border transactions, ultra-small payments, lightning "
 "settlement, etc., and provide comprehensive online and offline payment tools."
 msgstr ""
-"我们支持跨境交易、超小额支付、闪电结算等，同时提供完善的线上、线下支付工具。"
+"支持跨境交易、超小额支付、闪电结算等，同时提供完善的线上、线下支付工具。"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:9
 msgid "ROADMAP"
@@ -1421,6 +1421,8 @@ msgid ""
 "assets transactions between the main chain and sub-chains, sub-chains and "
 "sub-chains."
 msgstr ""
+"采用主链、子链设计方案，子链支持多种共识机制和数据结构，主链与子链之间，子链"
+"与子链之间可以进行资产交换。"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:34
 #: web/apps/welcome/templates/welcome/tech.html:45
@@ -1431,7 +1433,7 @@ msgstr "原子哈希"
 msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning "
 "technology, the hashing ID is generated."
-msgstr ""
+msgstr "原子哈希应用放射性定年、PCA、机器视觉、深度学习等技术生成数字哈希。"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:45
 #: web/apps/welcome/templates/welcome/tech.html:32
@@ -1440,7 +1442,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-technology.html:47
 msgid "NewNet, which consists of a large number of nodes, is an open network."
-msgstr ""
+msgstr "由大量节点组成的开放式云计算网络。"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:55
 #: web/apps/welcome/templates/welcome/tech.html:58
@@ -1448,22 +1450,19 @@ msgid "NewIOT"
 msgstr "NewIOT"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:57
-#, fuzzy
 msgid ""
 "Blockchain fog computing, communication protocols between IoT devices and "
 "gateways, and NewChain IoT devices development specifications."
 msgstr ""
-"NewIOT是一系列技术的总称，包括:区块链雾计算关，物联设备与网关间的通讯协议， "
-"NewChain物联网设备开发规范等。"
+"区块链雾计算关，物联设备与网关间的通讯协议， NewChain物联网设备开发规范。"
 
 #: web/apps/welcome/templates/welcome/index.html:14
 msgid "Everyone should benefit directly from economic growth"
 msgstr "每一个人都应该从经济增长中受益"
 
 #: web/apps/welcome/templates/welcome/index.html:15
-#, fuzzy
-msgid "Infrastructure for protocol-based economy"
-msgstr "协议经济基础设施"
+msgid "Newton: The infrastructure for a protocol-based economy"
+msgstr "牛顿：协议经济基础设施"
 
 #: web/apps/welcome/templates/welcome/index.html:45
 msgid ""
@@ -2033,79 +2032,76 @@ msgid "NewPay"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:23
-#, fuzzy
 msgid "Digital Identity"
 msgstr "数字身份与信用"
 
 #: web/apps/welcome/templates/welcome/newpay.html:24
 msgid "Create and manage the DID (Decentralized ID);"
-msgstr ""
+msgstr "创建和管理DID(Decentralized ID)；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:25
 msgid "Set privacy mode for personal information;"
-msgstr ""
+msgstr "设置个人信息隐私模式；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:26
-#, fuzzy
 msgid "Trading information management;"
-msgstr "交易和支付"
+msgstr "交易信息管理；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:27
 msgid "Trading information pricing and benefit from sharing;"
-msgstr ""
+msgstr "交易信息共享定价及收益；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:28
 msgid "Digital asset management, including NEW, BTC, ETH, etc."
-msgstr ""
+msgstr "数字资产管理，包括NEW、BTC、ETH等。"
 
 #: web/apps/welcome/templates/welcome/newpay.html:37
 msgid "Payment"
-msgstr ""
+msgstr "支付"
 
 #: web/apps/welcome/templates/welcome/newpay.html:38
 msgid "Support cross-border trades;"
-msgstr ""
+msgstr "支持跨境交易；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:39
 msgid "Support micro-payment;"
-msgstr ""
+msgstr "支持超小额度支付；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:40
 msgid "Rapid trade confirmation."
-msgstr ""
+msgstr "极快的交易确认速度。"
 
 #: web/apps/welcome/templates/welcome/newpay.html:50
 msgid "Joint Login"
-msgstr ""
+msgstr "联合登录"
 
 #: web/apps/welcome/templates/welcome/newpay.html:51
 msgid "Log in multiple Dapps using a unified identity;"
-msgstr ""
+msgstr "使用统一身份登录多个Dapp；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:52
 msgid "Dapp management and permission control;"
-msgstr ""
+msgstr "Dapp管理和权限控制；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:53
 msgid "Safety audit."
-msgstr ""
+msgstr "安全审计。"
 
 #: web/apps/welcome/templates/welcome/newpay.html:62
-#, fuzzy
 msgid "Built-in applications"
-msgstr "应用"
+msgstr "内置应用"
 
 #: web/apps/welcome/templates/welcome/newpay.html:63
 msgid "Support built-in applications published by the free and open source;"
-msgstr ""
+msgstr "支持采用自由开源方式发布的内置应用；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:64
 msgid "Support built-in applications purchase;"
-msgstr ""
+msgstr "支持内置应用购买；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:65
 msgid "Support built-in applications development tools."
-msgstr ""
+msgstr "内置应用开发工具支持。"
 
 #: web/apps/welcome/templates/welcome/partner.html:6
 #: web/apps/welcome/templates/welcome/partner.html:13
@@ -2470,15 +2466,18 @@ msgid ""
 "digital identity. Digital assets including cryptocurrency, privacy data, "
 "personal credit and so on."
 msgstr ""
+"运用数字身份，用户可以方便管理自己的数字资产，如:加密货币、隐私数据、个人信用"
+"等，以及对数字资产进行访问控制。"
 
 #: web/apps/welcome/templates/welcome/protocol.html:24
 msgid ""
 "User can control and set different privacy modes for corresponding digital "
 "assets, and price the digital assets."
 msgstr ""
+"针对不同类型数字资产，用户可以设置相应的隐私模式，也可以为付费模式的数字资产"
+"直接定价。"
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
-#, fuzzy
 msgid ""
 "By using techniques named as “Atom Hashing”, we can create a unique digital "
 "identity for commodities over the whole network. Through this digital "
@@ -2498,7 +2497,6 @@ msgstr ""
 "改。 "
 
 #: web/apps/welcome/templates/welcome/protocol.html:39
-#, fuzzy
 msgid ""
 "Through smart contract, we can pre-set commercial exchanging rules to "
 "realize automatic insurance claims and property rights transfers. This will "
@@ -2508,7 +2506,6 @@ msgstr ""
 "少交易摩擦，促进合作。"
 
 #: web/apps/welcome/templates/welcome/protocol.html:52
-#, fuzzy
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system, including incentive modes, settlement "
@@ -2555,7 +2552,6 @@ msgid "Automatic finance"
 msgstr "自金融"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
-#, fuzzy
 msgid ""
 "Developers can define smart financial contracts based on the built-in smart "
 "contract templates on insurance, lending and investment, including digital "
@@ -2599,7 +2595,6 @@ msgid "TECH"
 msgstr "技术"
 
 #: web/apps/welcome/templates/welcome/tech.html:22
-#, fuzzy
 msgid ""
 "NewChain will have a main chain and sub-chains structure. The main chain "
 "will support account management, Newton token management, sub-chain "
@@ -2617,7 +2612,6 @@ msgstr ""
 "的通证。 "
 
 #: web/apps/welcome/templates/welcome/tech.html:23
-#, fuzzy
 msgid ""
 "NewVM is compatible with the Webassembly standard, supporting the general "
 "programming languages such as C/C++, Java, Python, TypeScript, etc. The "
@@ -2635,7 +2629,6 @@ msgid ""
 msgstr "NewChain采用Ring-LWE抗量子加密算法，确保链上数字资产的安全。"
 
 #: web/apps/welcome/templates/welcome/tech.html:36
-#, fuzzy
 msgid ""
 "NewNet, consisting of a large number of nodes, is an open network that "
 "provides reliable storage services, supporting a full SQL database and "
@@ -2653,7 +2646,6 @@ msgstr ""
 "到相应的激励。通过区块链技术实现去中化的网络域名服务，增加NewNet的易用性。"
 
 #: web/apps/welcome/templates/welcome/tech.html:49
-#, fuzzy
 msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning "
 "technology, we can quickly extract multiple characteristics of a certain "
@@ -2669,7 +2661,6 @@ msgstr ""
 "与其本身直接相关的标识和确权结果。这个过程有较好的容错性，可重复，可验证。"
 
 #: web/apps/welcome/templates/welcome/tech.html:62
-#, fuzzy
 msgid ""
 "NewIOT is a general conception for a series of technologies, including "
 "blockchain fog computing, communication protocols between IoT devices and "
@@ -2679,7 +2670,6 @@ msgstr ""
 "NewChain物联网设备开发规范等。"
 
 #: web/apps/welcome/templates/welcome/tech.html:63
-#, fuzzy
 msgid ""
 "The gateway has powerful computing and storage capabilities with built-in "
 "blockchain nodes, supporting multiple Internet accessing methods, including: "
@@ -2707,7 +2697,6 @@ msgstr ""
 "起。 "
 
 #: web/apps/welcome/templates/welcome/tech.html:77
-#, fuzzy
 msgid ""
 "DAI provides authorized data standards for accessing users and data "
 "suppliers, including multidimensional data formats, data fragmentation, data "
@@ -5051,195 +5040,3 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
-
-#~ msgid "More intelligence"
-#~ msgstr "更智能"
-
-#~ msgid ""
-#~ "Automatic credit production of credit in a free and open manner can "
-#~ "facilitate better coordination between people and people, people and "
-#~ "machines, machines and machines without the authoritative intermediary "
-#~ "and can reduce the disturbing factors so that to promote automation and "
-#~ "intelligence. "
-#~ msgstr ""
-#~ "在没有权威中介的前提下， 以自由开放的方式自动化生产信用，这会让人与人之"
-#~ "间，机器与机器之间，人与机器之间更好地协作，降低人为干预的因素， 更加自动"
-#~ "化和智能化。"
-
-#~ msgid ""
-#~ "Replacing business intermediaries with technology protocols, connecting "
-#~ "service providers, consumers and other roles through the value-based "
-#~ "Internet, the transaction costs of service providers will be directly "
-#~ "assigned to the corresponding contributors. "
-#~ msgstr ""
-#~ "使用技术协议取代商业中介，通过价值互联网服务供应商、消费者等各种角色直接连"
-#~ "接在一起，通过技术手段将服务商的交易成本直接分配给相应的贡献者。 "
-
-#~ msgid ""
-#~ "With digital identities, users can easily manage their own digital "
-#~ "assets, such as: cryptocurrency, privacy data, personal credit, etc., and "
-#~ "control the access to digital assets."
-#~ msgstr ""
-#~ "运用数字身份，用户可以方便管理自己的数字资产，如:加密货币、隐私数据、个人"
-#~ "信用等，以及对数字资产进行访问控制。"
-
-#~ msgid ""
-#~ "For different types of digital assets, users can set corresponding "
-#~ "privacy modes, and set pricing digital assets for payment mode."
-#~ msgstr ""
-#~ "针对不同类型数字资产，用户可以设置相应的隐私模式，也可以为付费模式的数字资"
-#~ "产直接定价。"
-
-#~ msgid "Error"
-#~ msgstr "错误"
-
-#, fuzzy
-#~ msgid "NewtonProject Notifications: Please Register"
-#~ msgstr "牛顿提醒：请确认您的订阅"
-
-#, fuzzy
-#~ msgid "Please Input your password"
-#~ msgstr "请输入邮箱地址！"
-
-#, fuzzy
-#~ msgid "DID"
-#~ msgstr "DAI"
-
-#~ msgid "Mission and Vision Statement"
-#~ msgstr "愿景"
-
-#~ msgid ""
-#~ "The Newton Foundation’s mission is to promote and support research, "
-#~ "development and education to bring decentralized protocols and tools to "
-#~ "the world that empower developers to produce next generation "
-#~ "decentralized applications (dapps), and together build a more globally "
-#~ "accessible, more free and more trustworthy Internet."
-#~ msgstr ""
-#~ "牛顿基金会的使命是促进和支持研究、开发和教育，将分散的协议和工具引入世界，"
-#~ "使开发者能够生产下一代分散应用程序(dapps)，并共同构建一个更全球化、更自"
-#~ "由、更值得信赖的互联网。"
-
-#~ msgid ""
-#~ "Skilled in a variety of programming languages (C#, Java, Go, C++, Kotlin);"
-#~ msgstr "熟练使用多种编程语言（C#，Java，Go，C++，Kotlin);"
-
-#~ msgid ""
-#~ "Our team is looking for a passionate Full Stack Developer to join our "
-#~ "team. The Full Stack developer will be responsible for designing, coding "
-#~ "and modifying websites and services, from layout to function and "
-#~ "according to developer’s assigned project specifications."
-#~ msgstr "负责设计、编码、修改网站和服务，包括从页面布局到功能实现的全过程。"
-
-#~ msgid "Integrate data from various back-end services and databases;"
-#~ msgstr "对来自后端服务与数据库的数据进行整合；"
-
-#~ msgid ""
-#~ "Gather and refine specifications and requirements based on technical "
-#~ "needs;"
-#~ msgstr "基于技术需求进行项目改进；"
-
-#~ msgid "Aggressive problem diagnosis and creative problem-solving skills;"
-#~ msgstr "能够积极的诊断问题，并创造性的解决问题；"
-
-#~ msgid ""
-#~ "To cope with our massive expansion, we are inviting high calibre "
-#~ "candidate to join our team. As a Communication Specialist, you will "
-#~ "report to the Customer Service Manager, you will be responsible for "
-#~ "handling tier 1 customer support, ensuring excellent service standards "
-#~ "and maintaining high user satisfaction."
-#~ msgstr ""
-#~ "作为沟通专家，您将向客户服务经理进行汇报并负责与一级客户进行沟通，确保卓越"
-#~ "的服务标准以及较高的用户满意度。"
-
-#~ msgid "5-day work week with shift mode from 08:00-01:00 (8-hour work day)."
-#~ msgstr ""
-#~ "一周工作5天，从8：00-01：00这时间段内，（每天8小时工作）可自由安排时间。"
-
-#~ msgid ""
-#~ "Identify content and process improvements through analytics and feedback "
-#~ "loop;"
-#~ msgstr "通过分析和反馈回路识别内容和流程改进；"
-
-#~ msgid ""
-#~ "Champion our products in person and online by presenting at conferences, "
-#~ "workshops,  blogging, videos and other similar activities."
-#~ msgstr ""
-#~ "通过在会议，研讨会，博客，视频和其他类似活动中对我们的产品提供个人和在线支"
-#~ "持。"
-
-#~ msgid ""
-#~ "Facilitate the client’s product vision by researching, conceiving, "
-#~ "sketching, prototyping and user-testing experiences for digital products;"
-#~ msgstr ""
-#~ "通过研究，构思，草图，原型和用户测试数字产品体验，实现客户的产品愿景；"
-
-#~ msgid ""
-#~ "Design and deliver wireframes, user stories, user journeys, and mockups "
-#~ "optimized for a wide range of devices and interfaces;"
-#~ msgstr ""
-#~ "设计并提供针对各种设备和接口进行优化的线框，用户故事，用户历程和模型；"
-
-#~ msgid ""
-#~ "Make strategic design and user-experience decisions related to core, and "
-#~ "new, features;"
-#~ msgstr "制定与核心和新功能相关的战略设计和用户体验决策；"
-
-#~ msgid "Ask smart questions, take risks and champion new ideas;"
-#~ msgstr "提出明智的问题，并倡导新的想法；"
-
-#~ msgid "Cooperate with developers to match visual design intent."
-#~ msgstr "与开发人员合作以配合视觉设计意图。"
-
-#~ msgid ""
-#~ "Ability to iterate designs and solutions efficiently and intelligently;"
-#~ msgstr "能够有效且智能地​​迭代设计和解决方案；"
-
-#~ msgid ""
-#~ "Ability to work effectively in a team setting including synthesizing "
-#~ "abstract ideas into concrete design implications;"
-#~ msgstr "能够在团队设置中有效地工作，包括将抽象概念综合到具体的设计影响中；"
-
-#~ msgid ""
-#~ "Be excited about collaborating and communicating closely with teams and "
-#~ "other stakeholders via a distributed model, to regularly deliver design "
-#~ "solutions for approval;"
-#~ msgstr ""
-#~ "欣然接受通过分布式模型与团队和其他利益相关者密切合作，定期提供设计解决方案"
-#~ "以供批准；"
-
-#~ msgid "faq_question"
-#~ msgstr "问题"
-
-#~ msgid "faq_answer"
-#~ msgstr "答案"
-
-#~ msgid "Familiarity with blockchain a plus, but not required."
-#~ msgstr "区块链项目开发经历可以优先考虑。"
-
-#, fuzzy
-#~ msgid "Active"
-#~ msgstr "活动公告"
-
-#, fuzzy
-#~ msgid "is protected"
-#~ msgstr "隐私保护"
-
-#, fuzzy
-#~ msgid "Frequently asked questions"
-#~ msgstr "开放职位"
-
-#~ msgid "Newton Project"
-#~ msgstr "牛顿"
-
-#~ msgid "Founder of 5ipush.cn"
-#~ msgstr "五洲在线创始人"
-
-#~ msgid ""
-#~ "Confirm that the email has been sent to your mailbox. Please check it!"
-#~ msgstr "确认邮件已经发送到您的邮箱，请注意查收！"
-
-#~ msgid "Online Communities"
-#~ msgstr "在线社区"
-
-#~ msgid "Team Introduction"
-#~ msgstr "团队介绍"
