@@ -612,10 +612,20 @@ jQuery.validator.addMethod("accept", function(value, element, param) {
 
 // Older "accept" file extension method. Old docs: http://docs.jquery.com/Plugins/Validation/Methods/accept
 jQuery.validator.addMethod("extension", function(value, element, param) {
-	param = typeof param === "string" ? param.replace(/,/g, '|') : "png|jpe?g|gif";
+	param = typeof param === "string" ? param.replace(/,/g, '|') : "png|jpe?g|jpg|pdf";
 	return this.optional(element) || value.match(new RegExp(".(" + param + ")$", "i"));
 }, jQuery.format("Please enter a value with a valid extension."));
 
 jQuery.validator.addMethod("password", function(value, element, param){
 	return this.optional(element) || /^(?:(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])).{6,16}$/.test(value)
 }, jQuery.format("Please input 6～16 characters，must contain upper-case, lower-case letters and numbers."))
+
+jQuery.validator.addMethod("checkPicSize", function(value,element) {
+    var fileSize=element.files[0].size;
+    var maxSize = 5*1024*1024;
+    if(fileSize > maxSize){
+        return false;
+    }else{
+        return true;
+    }
+}, "Please upload a picture below 5M.");
