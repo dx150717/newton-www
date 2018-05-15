@@ -11,6 +11,7 @@ from django.db.models import Sum
 from utils import http
 from config import codes
 from tokenexchange import models as tokenexchange_models
+from tracker import models as tracker_models
 from newtonadmin import models as newtonadmin_models
 from . import forms_tokenexchange
 from . import services_tokenexchange
@@ -214,7 +215,7 @@ class ReceiveListView(generic.ListView):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id).order_by('-created_at')
+            items = tracker_models.AddressTransaction.objects.filter(phase_id=phase_id).order_by('-created_at')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
@@ -248,7 +249,7 @@ class UserReceiveListView(generic.ListView):
             phase_id = int(phase_id)
             items = []
             for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
-                queryset = tokenexchange_models.AddressTransaction.objects.filter(user_id=item.user_id)
+                queryset = tracker_models.AddressTransaction.objects.filter(user_id=item.user_id)
                 btc_final_balance = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value).aggregate(Sum("value"))
                 ela_final_balance = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value).aggregate(Sum("value"))
                 btc_final_balance = btc_final_balance.get("value__sum")
@@ -429,7 +430,7 @@ def send_receive_email(request, phase_id):
             user = User.objects.filter(id=item.user_id).first()
             item.user = user
             kyc_info = tokenexchange_models.KYCInfo.objects.filter(user_id=user_id).first()
-            queryset = tokenexchange_models.AddressTransaction.objects.filter(phase_id=phase_id, user_id=user_id)
+            queryset = tracker_models.AddressTransaction.objects.filter(phase_id=phase_id, user_id=user_id)
             btc_set = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value)
             ela_set = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value)
             btc_final_balance = 0

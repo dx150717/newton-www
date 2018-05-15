@@ -17,6 +17,7 @@ from . import models
 import decorators
 from tokenexchange import forms as token_exchange_forms
 from tokenexchange import models as tokenexchange_models
+from tracker import models as tracker_models
 
 logger = logging.getLogger(__name__)
 
@@ -65,10 +66,10 @@ def show_token_exchange_progress_view(request, phase_id):
         if item:
             token_exchange_info = settings.FUND_CONFIG[item.phase_id]
             if item.receive_btc_address:
-                btc_final_balance = tokenexchange_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value).aggregate(Sum('value'))
+                btc_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value).aggregate(Sum('value'))
                 btc_final_balance =  btc_final_balance.get("value__sum")
             if item.receive_ela_address:
-                ela_final_balance = tokenexchange_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value).aggregate(Sum('value'))
+                ela_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value).aggregate(Sum('value'))
                 ela_final_balance = ela_final_balance.get("value__sum")
         if btc_final_balance and btc_final_balance != 0:
             item.btc_final_balance = btc_final_balance
