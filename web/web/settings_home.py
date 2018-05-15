@@ -1,4 +1,4 @@
-from settings_rc import *
+from settings import *
 
 STATIC_URL = 'https://home.newtonproject.org/static/'
 DOMAIN = 'home.newtonproject.org'

@@ -38,6 +38,9 @@ urlpatterns = patterns('',
                        url(r'^subscribe/',include('subscription.urls')),
                        url(r'^press/',include('press.urls')),
                        url(r'^faq/',include('faq.urls')),
+                       # admin
+                       url(r'^admin/tools/', include('admin_tools.urls')),
+                       url(r'^admin/', include(admin.site.urls)),
 )
 
 handler404 = 'welcome.views.show_404_page'
