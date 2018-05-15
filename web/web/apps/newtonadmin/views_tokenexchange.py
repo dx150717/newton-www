@@ -249,21 +249,15 @@ class UserReceiveListView(generic.ListView):
             items = []
             for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
                 queryset = tokenexchange_models.AddressTransaction.objects.filter(user_id=item.user_id)
-                btc_set = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value)
-                ela_set = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value)
-                btc_final_balance = 0
-                ela_final_balance = 0
-                if btc_set:
-                    for item_btc in btc_set:
-                        btc_final_balance = btc_final_balance + item_btc.value
-                if ela_set:
-                    for item_ela in ela_set:
-                        ela_final_balance = ela_final_balance + item_ela.value
-                if btc_final_balance != 0:
+                btc_final_balance = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value).aggregate(Sum("value"))
+                ela_final_balance = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value).aggregate(Sum("value"))
+                btc_final_balance = btc_final_balance.get("value__sum")
+                ela_final_balance = ela_final_balance.get("value__sum")
+                if btc_final_balance and btc_final_balance != 0:
                     item.btc_value = btc_final_balance
-                if ela_final_balance != 0:
+                if ela_final_balance and ela_final_balance != 0:
                     item.ela_value = ela_final_balance
-                if btc_final_balance != 0 or ela_final_balance !=0:
+                if btc_final_balance and btc_final_balance != 0 or ela_final_balance and ela_final_balance !=0:
                     items.append(item)
             if items:
                 for item in items:
