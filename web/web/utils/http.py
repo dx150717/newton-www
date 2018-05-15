@@ -8,7 +8,7 @@ try:
 except ImportError:
     from django.utils.functional import wraps  # Python 2.3, 2.4 fallback.
 
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseServerError
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseServerError, HttpResponseRedirect
 import coder
 import json as simplejson
 from django.conf import settings

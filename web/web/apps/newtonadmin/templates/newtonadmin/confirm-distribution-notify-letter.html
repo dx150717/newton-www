@@ -1,0 +1,22 @@
+{% extends "email-template.html" %}
+{% load i18n %}
+{% load utils %}
+
+
+{% block title %}
+<h2>Confirm the amount.</h2>
+{% endblock %}
+
+{% block content %}
+<p>
+	Your BTC amount is : {{ item.min_btc_limit}} - {{ item.max_btc_limit }}
+</p>
+
+<p>
+	Your ELA amount is : {{ item.min_ela_limit}} - {{ item.max_ela_limit }}
+</p>
+
+<div class="link-button">
+    <a class="form-button" href="{{ target_url }}">Confirm</a>
+</div>
+{% endblock %}

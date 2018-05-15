@@ -7,16 +7,6 @@ from enum import Enum
 from config import codes
 from server import *
 
-# Internationalization
-# https://docs.djangoproject.com/en/1.6/topics/i18n/
-
-LANGUAGE_CODE = 'zh-CN'
-TIME_ZONE = 'Asia/Shanghai'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATIC_URL = 'https://www.newtonproject.org/static/'
@@ -85,7 +75,6 @@ SESSION_COOKIE_NAME = 'xsid'
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "session"
-CART_CACHE_TIME = 3600 * 24 * 30
 ACCESS_TOKEN_CACHE_TIME = 0
 
 # Proxy settings
@@ -101,3 +90,4 @@ BASE_NAME = 'newtonproject'
 
 # User Default Preferred Language Code
 USER_DEFAULT_LANGUAGE_CODE = 'zh-CN'
+CHINA_COUNTRY_CALLING_CODE = '86'

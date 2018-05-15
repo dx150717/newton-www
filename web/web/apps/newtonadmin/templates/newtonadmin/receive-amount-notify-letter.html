@@ -1,0 +1,23 @@
+{% extends "email-template.html" %}
+{% load i18n %}
+{% load utils %}
+
+
+{% block title %}
+<h1>We have received your invest.</h1>
+{% endblock %}
+
+{% block content %}
+<p class="main-color">Dear {{ receive_info.kyc_info.first_name }},</p>
+<p class="main-color">
+Newton foundation has received your
+{% if receive_info.btc_value %}
+{{ receive_info.btc_value }} BTC
+{% endif %}
+{% if receive_info.ela_value %}
+and {{ receive_info.ela_value }} ELA
+{% endif %}
+,we show sincere gratitude to contribution you have made in Newton community.
+</p>
+<p class="main-color">You can join in our communities in other medias by go to the 'community' page through the navigator bar of Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>).</p>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "newtonadmin/base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="newtonadmin" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <table class="table">
+                <caption class="text-center">待发送额度邮件</caption>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>介绍</th>
+                        <th>分配收币地址</th>
+                        <th>具体额度</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            <p>{{ item.user.first_name }} &nbsp; {{ item.user.last_name }}</p>
+                            <p>{{ item.user.email }}</p>
+                        </td>
+                        
+                        <td>
+                            <p>
+                                <img src="{{ item.id_card.url }}"/>
+                            </p>
+                            <p>
+                                {{ item.how_to_contribute }}                                
+                            </p>
+                            <p>
+                                {{ item.what_is_newton }}
+                            </p>
+                        </td>
+                        
+                        <td>
+                            <p>
+                                <label>BTC:</label>{{ item.receive_btc_address }}
+                            </p>
+                            <p>
+                                <label>ELA:</label>{{ item.receive_ela_address }}
+                            </p>
+                        </td>
+                        <td>
+                            <p>{{ item.accept_btc}} BTC</p>
+                            <p>{{ item.accept_ela}} ELA</p>
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-default" onclick="javascript:sendMail({{ item.user.id }});">发送</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+<script language="javascript">
+  function sendMail(user_id) {
+    var data = {};
+    data.user_id = user_id;
+    $.post('/newtonadmin/tokenexchange/email/confirm/', 
+           data, 
+           function(json){
+             if (json['error_code'] == 1) {
+               alert('success,we had send address to user.');
+               location.reload();
+             } else {
+               alert(json['error_message']);
+             }
+           });
+  }
+</script>
+{% endblock %}

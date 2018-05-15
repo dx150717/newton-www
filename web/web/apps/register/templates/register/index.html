@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "Register" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="register" class="section-list">
+        <div class="login-title container text-center">
+            <h2>{% trans "Register" %}</h2>
+        </div>
+        <div class="container">
+            <div class="form-container">
+                <form id="register-form" class="form" action="/register/post-email/" method="POST">
+                    {% csrf_token %}
+                    {% include "form.html" %}
+                    <div class="raw">
+                        <div>
+                            <button id="register-btn" class="form-button" type="submit">{% trans "Register" %}</button>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="raw">
+                <div>
+                    <p style="padding-top:30px;">{% trans "Clicking register button means you agree and abide by<br/> Newton" %} <a href='{{ settings.NEWTON_WEB_URL }}/terms-of-use/'/>{% trans "User Agreement" %}</a> {% trans "and" %} <a href='{{ settings.NEWTON_WEB_URL }}/privacy/'>{% trans "Privacy Policy" %}</a>。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/register.js" %}"></script>
+{% endblock %}
+

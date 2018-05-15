@@ -1,69 +1,124 @@
 # -*- coding: utf-8 -*-
-from django.db.models import Q, F
-
-__author__ = 'xiawu@zeuux.org'
-__version__ = '$Rev$'
-__doc__ = """  """
-
 import logging
-from django.shortcuts import render_to_response, redirect
+
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
-from utils import http
+from django.db.models import Q, F
 from django.contrib.auth.models import User
-from course import models as course_models
-from user import forms as user_forms
-from like import services as like_services
-from wish import services as wish_services
-from config import codes
+from django.conf import settings
+import pyotp
 
+from utils import http
+from config import codes
+from . import forms
+from . import models
+import decorators
+from tokenexchange import forms as token_exchange_forms
+from tokenexchange import models as tokenexchange_models
 
 logger = logging.getLogger(__name__)
 
+@login_required
+def show_user_index_view(request):
+    user = request.user
+    form = forms.UserForm(instance=user)
+    kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()
+    if kycinfo:
+        data = {}
+        data['first_name'] = kycinfo.first_name
+        data['last_name'] = kycinfo.last_name
+        data['country'] = kycinfo.country
+        data['id_number'] = kycinfo.id_number
+        data['id_card'] = kycinfo.id_card
+        data['cellphone_group'] = kycinfo.country_code + kycinfo.cellphone
+        data['location'] = kycinfo.location
+        data['how_to_contribute'] = kycinfo.how_to_contribute
+        data['what_is_newton'] = kycinfo.what_is_newton
+        data['emergency_contact_first_name'] = kycinfo.emergency_contact_first_name
+        data['emergency_contact_last_name'] = kycinfo.emergency_contact_last_name
+        data['cellphone_of_emergency_contact'] = kycinfo.emergency_contact_country_code + kycinfo.emergency_contact_cellphone
+        data['relationships_with_emergency_contacts'] = kycinfo.relationships_with_emergency_contacts
+        kyc_form = token_exchange_forms.KYCInfoForm(initial=data)
+    kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).last()
+    items = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
+    for item in items:
+        item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+    return render(request, "user/index.html", locals())
 
-def user_view(request, user_id=None):
-    if user_id:
-        user_id = int(user_id)
-        user = User.objects.get(id=user_id)
+@login_required
+@decorators.http_get_required
+def show_user_profile_view(request):
+    profile = models.UserProfile.objects.filter(user=request.user).first()
+    form = forms.UserProfileForm(instance=profile)
+    return render(request, "user/profile.html", locals())
+
+@login_required
+@decorators.http_post_required
+def post_profile(request):
+    try:
+        profile = models.UserProfile.objects.filter(user=request.user).first()
+        form = forms.UserProfileForm(request.POST,instance=profile)
+        if not form.is_valid():
+            return render(request, "user/profile.html", locals())
+        form.save()
+        cellphone_group = form.cleaned_data['cellphone_group']
+        country_code = cellphone_group[0]
+        cellphone = cellphone_group[1]
+        profile.country_code = country_code
+        profile.cellphone = cellphone
+        profile.save()
+        return http.HttpResponseRedirect("/user/")
+    except Exception, inst:
+        logger.exception("fail to post profile %s" %str(inst))
+        return http.HttpResponseServerError()
+
+@login_required
+def show_settings_view(request):
+    profile = models.UserProfile.objects.filter(user=request.user).first()
+    if not profile:
+        return http.HttpResponseRedirect("/user/profile/")
+    if profile.is_google_authenticator:
+        toggle = "true"
     else:
+        toggle = "false"
+    return render(request, "user/settings.html", locals())
+
+@login_required
+def get_qrcode(request):
+    gtoken = pyotp.random_base32()
+    uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newton",issuer_name="newton")
+    return http.JsonSuccessResponse(data={"gtoken":gtoken,"uri":uri})
+
+def post_settings(request):
+    return render(request, "user/settings.html", locals())
+
+def show_token_exchange_progress_view(request, phase_id):
+    try:
         user = request.user
-        if not user.is_authenticated():
-            return redirect('/login/')
-    all_courses = []
-    resource_ids = like_services.get_like_resource_ids(user, codes.ResourceType.COURSE.value)
-    like_courses = course_models.Course.objects.filter(id__in=resource_ids, status=codes.StatusCode.AVAILABLE.value)
-    if like_courses:
-        all_courses.extend(like_courses)
-    resource_ids = wish_services.get_wish_resource_ids(user, codes.ResourceType.COURSE.value)
-    wish_courses = course_models.Course.objects.filter(id__in=resource_ids, status=codes.StatusCode.AVAILABLE.value)
-    if wish_courses:
-        all_courses.extend(wish_courses)
-    all_courses = list(set(all_courses))
-    return render_to_response("user/index.html", locals())
-
-
-@login_required
-def user_edit_profile_view(request):
-    form = user_forms.UserProfileForm(instance=request.user.userprofile)
-    can_edit_account = request.user.userprofile.user_from == UserFrom.DIRECT_REGISTER.value
-    return render_to_response("user/user_edit.html", RequestContext(request, locals()))
-
-@login_required
-def user_edit_profile_submit_view(request):
-    form = user_forms.UserProfileForm(request.POST, instance=request.user.userprofile)
-    if form.is_valid():
-        try:
-            first_name = form.cleaned_data['first_name']
-            user_profile = form.save()
-            request.user.first_name = first_name
-            request.user.userprofile = user_profile
-            request.user.save()
-            return http.JsonSuccessResponse()
-        except Exception, inst:
-            logging.error(str(inst))
-    return http.JsonErrorResponse()
-
-@login_required
-def user_edit_account_view(request):
-    can_edit_account = request.user.userprofile.user_from == UserFrom.DIRECT_REGISTER.value
-    return render_to_response("user/user_edit.html", locals())
+        kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()
+        kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).first()
+        item = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id, phase_id=phase_id).first()
+        btc_final_balance = 0
+        ela_final_balance = 0
+        if item:
+            token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+            if item.receive_btc_address:
+                btc_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value)
+                if btc_transaction:
+                    for t in btc_transaction:
+                        btc_final_balance = btc_final_balance + float(t.value)
+            if item.receive_ela_address:
+                ela_transaction = tokenexchange_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value)
+                if ela_transaction:
+                    for t in ela_transaction:
+                        ela_final_balance = ela_final_balance + float(t.value)
+        if btc_final_balance != 0:
+            item.btc_final_balance = btc_final_balance
+        if ela_final_balance != 0:
+            item.ela_final_balance = ela_final_balance
+        return render(request, "user/token-exchange-progress.html", locals())
+    except Exception,inst:
+        logger.exception("error show progress %s" %str(inst))
+        return http.HttpResponseServerError()
+    

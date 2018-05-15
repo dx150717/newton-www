@@ -8,7 +8,13 @@ DOMAIN = 'localhost:8000'
 SESSION_COOKIE_DOMAIN = None
 MEDIA_URL = 'http://localhost:8000/filestorage/'
 MEDIA_ROOT = BASE_DIR
+BASE_URL = "http://localhost:8000"
+USE_TESTNET=True
+NEWTON_WEB_URL = 'http://localhost:8000'
+NEWTON_HOME_URL = 'http://localhost:8000'
+NEWTON_GRAVITY_URL = 'http://localhost:8000'
 
+SESSION_COOKIE_AGE = 60 * 1000
 # LOGGING
 LOGGING = {
     'version': 1,
@@ -29,14 +35,20 @@ LOGGING = {
             'filename': '/tmp/web.log',
             'formatter': 'verbose'
         },
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'verbose'
+        }
     },
     'loggers': {
         '': {
-            'handlers': ['file'],
+            'handlers': ['file', 'console'],
+            'propagate': True,
             'level': 'DEBUG',
         },
         'django': {
-            'handlers': ['file'],
+            'handlers': ['file','console'],
             'propagate': True,
             'level': 'DEBUG',
         },

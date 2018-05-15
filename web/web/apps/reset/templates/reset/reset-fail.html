@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "Reset" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="register" class="section-list">
+    <div class="container text-center" style="padding-top:300px;">
+        <p>邮件发送失败</p>
+    </div>
+</section><!-- end -->
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    $("#normal").addClass("display-none");
+</script>
+{% endblock %}

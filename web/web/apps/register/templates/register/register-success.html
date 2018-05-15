@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "Register" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <p class="title">{% trans "Register Success!" %}</p>
+        <p class="content">{% trans "Go to <a href='/login/'>Login</a>" %}</p>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    $("#normal").addClass("display-none");
+    setTimeout(function(){location.href='/login/';}, 3000);
+</script>
+{% endblock %}

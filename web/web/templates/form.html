@@ -1,17 +1,21 @@
 {% load utils %}
 
 {% if form.non_field_errors %}
-<div class="alert alert-danger alert-dismissible">
-    <button type="button" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-    </button>
-    <strong>{{ form.non_field_errors.0 }}</strong>
+<div class="form-group">
+    <div class="raw">
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+            </button>
+            <strong>{{ form.non_field_errors.0 }}</strong>
+        </div>
+    </div>
 </div>
 {% endif %}
 {% for field in form %}
 <div class="form-group">
-    <label for="id_{{ field.name }}" class="col-sm-2 control-label">{{ field.label }}</label>
-    <div class="col-sm-10">
+    <p><label for="id_{{ field.name }}" class="control-label">{{ field.label }}</label></p>
+    <div>
         {{ field|addcss:"form-control" }}
         {% if field.errors %}
         <div class="alert alert-danger">

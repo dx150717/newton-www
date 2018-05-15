@@ -23,3 +23,13 @@ GENDER_LABEL = (
     (codes.Gender.FEMALE.value, u'女'),
     (codes.Gender.UNKNOWN.value, u'未知'),
 )
+JOB_LABEL = (
+    (codes.JobType.UNKNOWN.value,u'Unknown'),
+    (codes.JobType.WORKING.value,u'Working'),
+    (codes.JobType.NOWORK.value,u"NoWork"),
+)
+CONSTRUCTION_LABEL = (
+    (codes.ConstructionType.UNKNOWN.value, u'Unknown'),
+    (codes.ConstructionType.UI.value, u'UI'),
+    (codes.ConstructionType.PROGRAM.value, u'Program'),
+)

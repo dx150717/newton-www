@@ -1,0 +1,120 @@
+{% extends "newtonadmin/base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="newtonadmin" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <table class="table">
+                <caption class="text-center">确定额度</caption>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>介绍</th>
+                        <th>期望额度</th>
+                        {% if is_completed %}
+                        <th>分配额度</th>
+                        {% endif %}
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            <p>{{ item.kycinfo.first_name }} &nbsp; {{ item.kycinfo.last_name }}</p>
+                            <p>{{ item.user.email }}</p>
+                        </td>
+                        <td>
+                            <p>
+                                <img src="{{ item.kycinfo.id_card.url }}"/>
+                            </p>
+                            <p>
+                                {{ item.how_to_contribute }}                                
+                            </p>
+                            <p>
+                                {{ item.what_is_newton }}
+                            </p>
+                        </td>
+                        <td>
+                            {% if item.expect_ela %}
+                            <p>{{ item.expect_ela }} ELA</p>
+                            {% endif %}
+                            {% if item.expect_btc %}
+                            <p>{{ item.expect_btc }} BTC</p>
+                            {% endif %}
+                        </td>
+                        {% if is_completed %}
+                        <td>
+                            <p>{{ item.assign_ela }} ELA</p>
+                            <p>{{ item.assign_btc }} BTC</p>
+                        </td>                        
+                        {% endif %}
+                        <td>
+                            {% if not is_completed %}
+                            <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">分配额度</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>    
+            {% if is_paginated %}
+            <div class="pagination-simple">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+            {% endif %}
+            <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+            {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="amount_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">分配额度</h4>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="#" id="amount_form">
+                    <p id="btc-limit">
+                        <label>BTC额度</label>
+                        <script>var btcLimit = {{ token_exchange_info.min_btc }}</script>
+                        <input type="number" name="assign_btc" id="assign_btc" value="0" placeholder="BTC 额度" />
+                    </p>
+                    
+                    <p id="ela-limit">
+                        <label>ELA额度</label>
+                        <script>var elaLimit = {{ token_exchange_info.min_ela }}</script>
+                        <input type="number" name="assign_ela" id="assign_ela" value="0" placeholder="ELA 额度"/>
+                    </p>
+                    <p>
+                        <input type="hidden" id="user_id" name="user_id" value=""/>
+                        <input type="hidden" id="phase_id" name="phase_id" value="">
+                        <button class="btn btn-default" type="button" id="confirm_button">确定</button>
+                    </p>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->             
+
+{% endblock %}
+{% block inline_js %}
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/newtonadmin.js" %}"></script>
+{% endblock %}
+

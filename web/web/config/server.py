@@ -4,6 +4,8 @@ __version__ = '$Rev$'
 __doc__ = """  """
 
 import os
+import datetime
+from . import codes
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # database
@@ -11,7 +13,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'newton',
-        'USER': 'newton',
+        'USER': 'root',
+        'PASSWORD': ''
+    },
+    'tokenexchange': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tokenexchange',
+        'USER': 'root',
         'PASSWORD': ''
     }
 }
@@ -26,7 +34,6 @@ REDIS_CACHE_PORT = 6379
 REDIS_CACHE_URL = 'redis://%s:%s' % (REDIS_CACHE_HOST, REDIS_CACHE_PORT)
 REDIS_WORKER_URL = 'redis://127.0.0.1:6379'
 REDIS_LOCAL_GAME_URL = 'redis://127.0.0.1:6379'
-
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
@@ -62,4 +69,41 @@ BROKER_URL = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
 CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
 CELERYD_HIJACK_ROOT_LOGGER = False
-CELERY_IMPORTS = ('subscription.task')
+CELERY_IMPORTS = ('tasks.task_email', 'tasks.task_blockchain')
+
+from celery.schedules import crontab
+from datetime import timedelta
+CELERYBEAT_SCHEDULE = {
+    'report-task-free-resource': {
+        'task': 'tasks.task_blockchain.sync_blockchain_data',
+        'schedule': crontab(minute='*/30'),
+    },
+}
+
+CHINA_COUNTRY_CALLING_CODE = '86'
+# wallet settings
+BTC_WALLET_ADDRESS_FILE = 'btc-wallet.txt'
+ELA_WALLET_ADDRESS_FILE = 'ela-wallet.txt'
+
+# fund settings
+CURRENT_FUND_PHASE = codes.FundPhase.PRIVATE.value
+FUND_START_DATE = datetime.datetime(2018, 4, 29, 0, 0)
+FUND_END_DATE = datetime.datetime(2018, 5, 30, 0, 0)
+FUND_CONFIG = {
+    codes.FundPhase.PRIVATE.value: {
+        'start_date': '2018-05-07',
+        'end_date': '2018-05-20',
+        'ela_ratio': '1000',
+        'min_ela': '100',
+        'btc_ratio': '100000',
+        'min_btc': '1',
+    },
+    codes.FundPhase.PUBLIC.value: {
+        'start_date': '2018-06-01',
+        'end_date': '2018-06-10',
+        'ela_ratio': '1000',
+        'min_ela': '100',
+        'btc_ratio': '100000',
+        'min_btc': '1',
+    },
+}

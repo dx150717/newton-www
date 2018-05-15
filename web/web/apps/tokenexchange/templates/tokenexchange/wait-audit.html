@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "KYC" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <p class="title">{% trans "Submit Success!" %}</p>
+        <p class="content">{% trans "您的KYC信息正在审核，请耐心等待。" %}</p>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    $("#normal").addClass("display-none");
+</script>
+{% endblock %}

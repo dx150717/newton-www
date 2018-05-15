@@ -2,68 +2,147 @@
 {% load i18n %}
 {% load utils %}
 
-{% block title %}{{ request.user.first_name }}{% endblock %}
+{% block require_title %}
+<title>{% trans "user" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
 
 {% block content %}
-<div class="banner banner-4">
+<section id="user" class="section-list">
+    <div class="page-title">
+        <div class="container header">
+            <img class="header" src="{% version "images/default_avator.png" %}"/>
+            <div class="name">
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <div class="row clearfix">
-            <div class="col-md-12 column">
-                <ul class="title-user list-unstyled text-center">
-                    <li><div class="pic-wrap"><img class="img-circle" src="{{ request.user.userprofile.head_image_url }}" alt="{{ request.user.first_name }}" /></div></li>
-                    <li class="h3">{{ request.user.first_name }}</li>
+        <div class="sub-title">
+            <div class="sub-title-nav">
+                <ul id="user-tab" class="nav nav-tabs">
+                    <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Profile" %}</a></li>
+                    <li><a href="#kyc">KYC</a></li>
+                    {% comment %}
+                    <li><a href="#token-exchange">Token Exchange</a></li>
+                    {% endcomment %}
                 </ul>
             </div>
         </div>
     </div>
-</div>
-
-<div class="container user">
-    <!-- TAB -->
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#id_all_tab" role="tab" data-toggle="tab">{% trans "全部课程" %}</a>
-        </li>
-        <li>
-            <a href="#id_wish_tab" role="tab" data-toggle="tab">{% trans "计划学习" %}</a>
-        </li>
-        <li>
-            <a href="#id_like_tab" role="tab" data-toggle="tab">{% trans "喜欢" %}</a>
-        </li>
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content">
-
-        <div class="tab-pane active" id="id_all_tab">
-            <div class="row">
-                {% for course in all_courses %}
-                <div class="col-md-4">
-                    {% include "course/snippet-course-grid-item.html" %}
+    <div id="tab-content" class="tab-content">
+        <div id="basic-info" class="tab-pane fade in active user-content">
+            <div class="container">
+                <div class="user-info">
+                    <div class="item-title container">
+                        <p class="title">{% trans "Basic information" %}</p>
+                    </div>
+                    <div class="container">
+                        <div class="bg-gray">
+                            {% for field in form %}
+                                <div class="item">
+                                    <div>
+                                        {{ field.label_tag }}
+                                    </div>
+                                    <div class="value">{{ field.value }}</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
-                {% endfor %}
-            </div>
-        </div>
-        
-        <div class="tab-pane" id="id_wish_tab">
-            <div class="row">
-                {% for course in wish_courses %}
-                <div class="col-md-4">
-                    {% include "course/snippet-course-grid-item.html" %}
-                </div>
-                {% endfor %}
             </div>
         </div>
 
-        <div class="tab-pane" id="id_like_tab">
-            <div class="row">
-                {% for course in like_courses %}
-                <div class="col-md-4">
-                    {% include "course/snippet-course-grid-item.html" %}
+        <div id="kyc" class="tab-pane fade user-content">
+            <div class="container">
+                <div class="user-info">
+                    <div class="item-title container">
+                        <p class="title">KYC</p>
+                    </div>
+                    <div class="container">
+                        <div class="bg-gray">
+                            <div class="item">
+                                <div class="text-nowrap"><label for="status">Status:</label></div>
+                                <div class="value">
+                                    {% if kycinfo %}
+                                        {% if kycinfo.status == 1 %}
+                                        {% trans "You have summit KYC information" %}
+                                        {% endif %}
+
+                                        {% if kycaudit %}
+                                            {% if kycinfo.status == 2 %}
+                                            {% trans "Passed" %}
+                                            {% endif %}
+                                            {% if kycinfo.status == 3 %}
+                                            {% trans "Rejected:" %} {{ kycaudit.comment }} <a href="/tokenexchange/">{% trans "Rewrite" %}</a>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% else %}
+                                    {% trans "You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>" %}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% if kycinfo.status == 2 %}
+                            {% for field in kyc_form %}
+                                <div class="item">
+                                {% if forloop.counter == 5 %}
+                                <div class="">
+                                    {{ field.label_tag }}
+                                </div>
+                                <div class="value"><img style="width:300px;" src="{{ kycinfo.id_card.url }}"/></div>
+                                {% else %}
+                                <div class="">
+                                    {{ field.label_tag }}
+                                </div>
+                                <div class="value">{{ field.value }}</div>
+                                {% endif %}
+                                </div>
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
-                {% endfor %}
+            </div>
+        </div>
+
+        <div id="token-exchange" class="tab-pane fade user-content">
+            <div class="container">
+                <div class="raw user-detail-content">
+                    <div class="user-info">
+                        {% if items %}
+                        {% for item in items %}
+                        <div class="item">
+                            <div class="item-content">
+                                {% include "tokenexchange/token-exchange-info-summary.html" with token_exchange_info=item.token_exchange_info %}
+                                <div class="text-left">
+                                    <a class="form-button" href="/user/token-exchange-progress/{{ item.phase_id }}/"> {% trans "Details " %} >></a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        {% else %}
+                        <div class="item">
+                            <p>{% trans "There is no token exchange information" %}</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+{% endblock %}
+{% block inline_js %}
+<script type="text/javascript">
+    $("#user-tab a").click(function(e){
+        e.preventDefault()
+        $(this).tab("show")
+    })
+</script>
 {% endblock %}

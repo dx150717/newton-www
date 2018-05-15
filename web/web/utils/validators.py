@@ -38,3 +38,20 @@ def is_valid_language_code(lc):
     except LookupError:
         return False
     return True
+
+def validate_file_extension(value):
+    import os
+    from django.core.exceptions import ValidationError
+    print value
+    ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
+    valid_extensions = ['.pdf', '.jpg', '.png', '.jpeg']
+    if not ext.lower() in valid_extensions:
+        raise ValidationError(u'Unsupported file extension.')
+
+def file_size(value):
+    from django.core.exceptions import ValidationError
+    limit = 5 * 1024 * 1024
+    if value.size > limit:
+        raise ValidationError(u'File too large,Size should not exceed 5M')
+
+

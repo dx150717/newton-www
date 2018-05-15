@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "KYC" %} | Newton Community</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="token" class="section-list">
+    <div class="token-title container text-center">
+        <h2>{% trans "KYC Information" %}</h2>
+    </div>
+    
+    <div class="container">
+        <div class="raw">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <p class="text-center"><span class="tr">Please fill in the following information carefully</span></p>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+    <div class="container token-form">
+        <div class="raw">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <form id="user_kyc_form" class="form" action="/tokenexchange/post/" method="POST" enctype="multipart/form-data">
+                    {% include "form.html" %}
+                    <div class="raw">
+                        <div class="text-center token-btn">
+                            <button class="form-button" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+<script src="{% version "js/tokenexchange.js" %}"></script>
+{% endblock %}

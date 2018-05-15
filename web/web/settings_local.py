@@ -14,7 +14,7 @@ APPEND_SLASH = False
 
 LOGGING_API_REQUEST = True
 
-STATIC_DEFAULT_VERSION = 141
+STATIC_DEFAULT_VERSION = 146
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
@@ -29,12 +29,42 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-SESSION_COOKIE_AGE = 3600 * 24 * 365 * 10
+SESSION_COOKIE_AGE = 60 * 10
 SESSION_COOKIE_DOMAIN = '.newtonproject.org'
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
-CART_CACHE_TIME = 3600 * 24 * 30
 
 # website meta
 BASE_NAME = 'newtonproject'
+
+# verification default expire time s
+VERIFICATION_DEFAULT_EXPIRE_TIME = 7200
+
+# authenticate settings
+AUTHENTICATION_BACKENDS = ('backends.auth.EmailAuthBackend', )
+
+# google recaptcha verification url
+GOOGLE_VERIFICATION_URL = "https://www.google.com/recaptcha/api/siteverify"
+GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
+
+# global authenticate
+LOGIN_URL = '/login/'
+
+# chain settings of digital currency
+USE_TESTNET = False
+
+# page size
+PAGE_SIZE = 20
+
+# multiple domain
+NEWTON_WEB_URL = 'https://www.newtonproject.org'
+NEWTON_HOME_URL = 'https://home.newtonproject.org'
+NEWTON_GRAVITY_URL = 'https://gravity.newtonproject.org'
+
+# database router
+DATABASE_ROUTERS = ['web.database_router.NewtonRouter']
+# database mapping
+DATABASE_APPS_MAPPING = {
+    "tokenexchange":"tokenexchange",
+}
