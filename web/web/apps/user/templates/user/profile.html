@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "user" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="user" class="section-list">
+    <div class="container">
+        <div class="profile-title text-center">
+            <h1>{% trans "Edit Profile" %}</h1>
+        </div>
+        <div class="raw">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <form id="user_kyc_form" class="form" action="/user/post-profile/" method="POST">
+                    {% csrf_token %}
+                    {% include "form.html" %}
+                    <div class="raw">
+                        <div class="text-center user-edit-btn">
+                            <button class="form-button" type="submit">{% trans "Submit" %}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

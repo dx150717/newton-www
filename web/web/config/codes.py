@@ -50,6 +50,9 @@ class UserFrom(Enum):
     WEIBO = 3
     WEIXIN = 4
 
+class UserType(Enum):
+    NORMAL = 1
+
 class Gender(Enum):
     MALE = 1
     FEMALE = 2
@@ -59,3 +62,63 @@ class MembershipType(Enum):
     NORMAL = 1
     GOLD = 2
     PT = 3
+
+class JobType(Enum):
+    UNKNOWN = 1
+    WORKING = 2
+    NOWORK = 3
+
+class EmailType(Enum):
+    REGISTER = 1
+    RESET = 2
+    TEXCHANGE_CONFIRM_KYC = 3
+    TEXCHANGE_REJECT_KYC = 4
+    TEXCHANGE_INVITE_NOTIFY = 5
+    TEXCHANGE_DISTRIBUTE_AMOUNT_NOTIFY = 6
+    TEXCHANGE_RECEIVE_NOTIFY = 7
+
+class ConstructionType(Enum):
+    UNKNOWN = 1
+    UI = 2
+    PROGRAM = 3
+
+class KYCStatus(Enum):
+    CANDIDATE = 1
+    PASS_KYC = 2
+    REJECT = 3
+
+class TokenExchangeStatus(Enum): 
+    INVITE = 1  
+    SEND_INVITE_NOTIFY = 2
+    APPLY_AMOUNT = 3
+    DISTRIBUTE_AMOUNT = 4
+    SEND_TRANSFER_NOTIFY = 5
+    RECEIVE_AMOUNT = 6
+    SEND_RECEIVE_AMOUNT_NOTIFY = 7
+
+TOKEN_EXCHANGE_STATUS_INVITE_VALUE = TokenExchangeStatus.INVITE.value
+TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE = TokenExchangeStatus.SEND_INVITE_NOTIFY.value
+TOKEN_EXCHANGE_STATUS_APPLY_AMOUNT_VALUE = TokenExchangeStatus.APPLY_AMOUNT.value
+TOKEN_EXCHANGE_STATUS_DISTRIBUTE_AMOUNT_VALUE = TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
+TOKEN_EXCHANGE_STATUS_SEND_TRANSFER_NOTIFY_VALUE = TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value
+TOKEN_EXCHANGE_STATUS_RECEIVE_AMOUNT_VALUE = TokenExchangeStatus.RECEIVE_AMOUNT.value
+TOKEN_EXCHANGE_STATUS_SEND_RECEIVE_AMOUNT_NOTIFY_VALUE = TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
+    
+class FundPhase(Enum):
+    PRIVATE = 1
+    PUBLIC = 2
+
+FUNDPHASE_PRIVATE_VALUE = FundPhase.PRIVATE.value
+FUNDPHASE_PUBLIC_VALUE = FundPhase.PUBLIC.value
+
+class CurrencyType(Enum):
+    BTC = 1
+    ELA = 2
+
+class AdminActionType(Enum):
+    PASS_KYC = 1
+    REJECT_KYC = 2
+    INVITE = 3
+    SEND_INVITE = 4
+    ASSIGN_AMOUNT = 5
+    SEND_CONFIRM_EMAIL = 6

@@ -1,0 +1,20 @@
+{% extends "email-template.html" %}
+{% load i18n %}
+{% load utils %}
+
+
+{% block title %}
+<h1>Newton Token Exchange Invite</h1>
+{% endblock %}
+
+{% block content %}
+<p class="main-color">Dear {{ invite_info.kyc_info.first_name }}:</p>
+<p class="main-color">Congratulation，you can participate in Newton first round Token Exchange, please read the detail on Newton Token Exchange carefully in Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) before filling in the expected amount.</p>
+<p class="main-color">Newton only issues the announcement and notification though Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>), please ignore messages from any other medias.</p>
+<p class="main-color">Click the following button to fill in expected amount</p>
+<div class="link-button">
+    <a class="form-button" href="{{ target_url }}">Fillout</a>
+    <p class="link-warn">If you received this email by mistake, simply delete it.</p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "user" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container sub-level-page">
+    <div class="row">
+        <div class="col-md-8">
+          {% block left_content %}  
+          {% endblock %}
+        </div>
+        <div class="col-md-4">
+          {% block right_content %}
+          <ul class="list-group">
+            <li class="list-group-item">
+              <a href="/user/profile/">修改个人资料</a>
+            </li>
+            <li class="list-group-item">
+              <a href="/logout/">退出</a>
+            </li>
+          </ul>
+          {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

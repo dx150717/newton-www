@@ -1,0 +1,54 @@
+{% load i18n %}
+{% load utils %}
+{% if item.phase_id == 1 %}
+<div class="token-exchange-info">
+    <div class="raw">
+        <div>
+            <table class="table text-left table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-nowrap col-lg-2" scope="row" style="font-size:18px">{% trans "First Token Exchange Info" %}</th>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="text-nowrap" scope="row">{% trans "Start Time" %}</th>
+                        <td>{{ token_exchange_info.start_date }}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-nowrap" scope="row">{% trans "End Time" %}</th>
+                        <td>{{ token_exchange_info.end_date }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% if item.phase_id == 2 %}
+<div class="token-exchange-info">
+    <div class="raw">
+        <div>
+            <table class="table text-left table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-nowrap col-lg-2" scope="row">{% trans "Second Token Exchange Info" %}</th>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="text-nowrap" scope="row">{% trans "Start Time" %}</th>
+                        <td>{{ token_exchange_info.start_date }}</td>
+                    </tr>
+                    <tr>
+                        <th class="text-nowrap" scope="row">{% trans "End Time" %}</th>
+                        <td>{{ token_exchange_info.end_date }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}

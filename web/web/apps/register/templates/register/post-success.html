@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "Register" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <p class="title">{% trans "Submit Success!" %}</p>
+        <p class="content">{% trans "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。" %}</p>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    $("#normal").addClass("display-none");
+</script>
+{% endblock %}

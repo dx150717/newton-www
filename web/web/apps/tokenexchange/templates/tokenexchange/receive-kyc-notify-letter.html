@@ -1,0 +1,15 @@
+{% extends "email-template.html" %}
+{% load i18n %}
+{% load utils %}
+
+
+{% block title %}
+<h1>Received your KYC information</h1>
+{% endblock %}
+
+{% block content %}
+<p class="main-color">Dear {{ kyc_info.first_name }},</p>
+<p class="main-color">
+    We have received your KYC information. We will review it.If the audit process is completed, we will notify you immediately.
+</p>
+{% endblock %}

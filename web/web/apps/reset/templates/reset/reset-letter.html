@@ -1,0 +1,15 @@
+{% extends "email-template.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+<h1>{% trans "Welcome! Please Reset Your Password!" %}</h1>
+{% endblock %}
+{% block content %}
+<p class="main-color">{% trans "Dear" %}</p>
+<p class="main-color">{% trans "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your newton password, click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>" %}</p>
+<div class="link-button">
+    <a class="form-button" href="{{ target_url }}">{% trans "Reset" %}</a>
+    <p class="link-warn">{% trans "If you received this email by mistake, simply delete it." %}</p>
+</div>
+{% endblock %}

@@ -1,3 +1,4 @@
+initLanguage();
 $(function () {
 	var bottomNavToggle = function (event) {
 		$(event.target).next().slideToggle(300, function () {
@@ -68,7 +69,16 @@ function setLanguage(language) {
 	if(locationHref.startsWith("\/announcement")){
 		location.replace("/announcement/");
 	}
-	
+}
+
+function initLanguage(){
+	var language = document.cookie.split("language=")[1];
+	if(language == null || language == undefined){
+		language = navigator.language;
+	}
+	if(language!=null && language!=undefined && language.startsWith("zh")){
+		$.getScript(zhMessages);
+	}
 }
 
 // language's dropdown menu.
@@ -156,4 +166,75 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'UA-116218760-1');
+
+
+// global progress
+function initGlobalToolkit()
+{
+  $('#id_loading').nsProgress({img_path: '/static/images/libs/nsprogress'});
+}
+
+function showLoading()
+{
+  initGlobalToolkit();
+  $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Loading...', 'black');
+}
+
+function showWaiting()
+{
+  initGlobalToolkit();
+  $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Waiting...', 'black');
+}
+
+function showSuccess(msg)
+{
+  initGlobalToolkit();
+  if (!msg) {
+    msg = '操作成功';
+  }
+  $('#id_loading').nsProgress('showSuccessWithStatusAndMaskType', msg, 'black');
+  dismissDelay();
+}
+
+function showFail(msg)
+{
+  initGlobalToolkit();
+  $('#id_loading').nsProgress('showErrorWithStatusAndMaskType', msg, 'black');
+  dismissDelay();
+}
+
+function dismiss()
+{
+	$('#id_loading').nsProgress('dismiss');
+}
+
+function dismissDelay()
+{
+	var task = setTimeout(function(){
+		$('#id_loading').nsProgress('dismiss');
+	}, 2000);
+}
+var SUCCESS = 1;
+
+function isSuccess(json)
+{
+  var error_code = json.error_code;
+  if (error_code == SUCCESS) {
+    return true;
+  }
+  return false;
+}
+
+function getData(json)
+{
+  return json.result;
+}
+
+function getErrorMessage(json)
+{
+  return json.error_message;
+}
+
+
+
 

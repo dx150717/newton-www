@@ -3,18 +3,22 @@ from django.shortcuts import render
 import json
 import re
 import logging
+
 from django.http import HttpResponse
-from django.template import Template,Context,loader
+from django.template import Template, Context, loader
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.views.decorators.http import require_http_methods
+from django.conf import settings
+
 from ratelimit.decorators import ratelimit
 from subscription import models as subscription_model
 from config import codes
-from utils import http,security
-from django.conf import settings
-import task as subscription_task
+from utils import http, security
+
+from tasks import task_email
+
 
 logger = logging.getLogger(__name__)
 
@@ -53,7 +57,7 @@ def subscribe(request):
     except ValidationError:
         return http.JsonErrorResponse(error_message=_("Invalid Email Address!"))
     except Exception, inst:
-        logger.exception("fail to subscribe: %s" % str(inst))
+        logger.error("fail to subscribe: %s" % str(inst))
         return http.JsonErrorResponse()
 
 
@@ -84,7 +88,7 @@ def do_send_mail(subscribed_email, request):
         html_content = template.render(context)
         to_email = subscribed_email.email_address
         from_email = settings.FROM_EMAIL
-        subscription_task.send_email.delay(subject, html_content, from_email, [to_email])
+        task_email.send_email.delay(subject, html_content, from_email, [to_email])
         return True
     except Exception,inst:
         logger.error("fail to send email: %s" % str(inst))

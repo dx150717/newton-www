@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+{% block require_title %}
+<title>{% trans "KYC" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+
+{% block content %}
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <p class="title">{% trans "Apply Success!" %}</p>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    $("#normal").addClass("display-none");
+</script>
+{% endblock %}

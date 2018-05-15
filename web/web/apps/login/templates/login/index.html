@@ -1,0 +1,89 @@
+{% extends "base.html" %} 
+{% load i18n %}
+{% load utils %} 
+{% block require_title %}
+<title>{% trans "Login" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block require_js %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="login" class="section-list">
+    <div class="login-title container text-center">
+        <h2>{% trans "Login" %}</h2>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <div class="alert alert-warning">
+                {% trans "Tip:To login success, Ensure you can access the google recaptcha service." %}
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="#" method="POST" id="login_form">
+                {% csrf_token %}
+                {% include "form.html" %}
+                    <div class="form-group">
+                        <div class="google-recaptcha" id="google-recaptcha">
+                            <input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
+                            <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="hidden" name="next" value="{{ next }}" />
+                        <button class="form-button" style="color:#fff;" type="submit">{% trans "Login" %}</button>
+                    </div>
+                    <div class="space-between">
+                        <a class="register" href="/register/">{% trans "Register" %}</a>
+                        <a class="reset" href="/reset/">{% trans "Forget Password" %}</a>
+                    </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="code-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title text-center">{% trans "Google Authenticator Code" %}</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="modal-form-container">
+                            <form id="google-auth-form" action="#">
+                                <div class="form-group">
+                                    <p><label for="gtoken-code" id="id-gtoken-code-label">{% trans "Google Authenticator Code" %}</label></p>
+                                    <input id="id-gtoken" name="gtoken" />
+                                </div>
+                                <div>
+                                    <button id="gtoken-submit-button" type="submit" style="color:#fff;" class="form-button" value="{% trans 'Submit' %}">{% trans "Submit" %}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/login.js" %}"></script>
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+

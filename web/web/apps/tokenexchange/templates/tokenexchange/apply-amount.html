@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "KYC" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="token-exchange" class="section-list">
+    <div class="container text-center">
+        <div class="title">
+            <h2>Fill out your amount of token exchange</h2>
+        </div>  
+        {% include "tokenexchange/token-exchange-info.html" %}
+        <div class="container amount">
+            <div class="raw">
+                <div>
+                    <form id="user_kyc_form" class="form" action="/tokenexchange/invite/{{ invite_id }}/post/" method="POST">
+                        {% include "form.html" %}
+                        <div class="raw">
+                            <div class="text-center token-btn">
+                                <button class="form-button" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+<script src="{% version "js/tokenexchange.js" %}"></script>
+{% endblock %}

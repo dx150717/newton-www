@@ -1,0 +1,76 @@
+{% extends "newtonadmin/base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "KYC Admin" %}
+{% endblock %}
+
+{% block content %}
+<section id="newtonadmin" class="section-list">
+    <div class="container">
+        <div class="raw table-responsive content">
+            <table class="table">
+                <caption class="text-center">已邀请列表</caption>
+                <thead>
+                    <tr>
+                        <th><input id="all-check-invite" name="all-check-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
+                        <th>姓名</th>
+                        <th>是否已发送邮件</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td><p><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择</p></td>
+                        <td>
+                            <p>{{ item.kycinfo.first_name }} &nbsp; {{ item.kycinfo.last_name }}</p>
+                            <p>{{ item.user.email }}</p>
+                        </td>
+                        <td>
+                            {% ifequal item.status codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE %}
+                            是
+                            {% else %}
+                            否
+                            {% endifequal %}
+                        </td>
+                        <td>
+                            <a href="#" class="btn btn-default" onclick="javascript:sendPerInviteEmail({{ item.user_id }});">发送邀请邮件</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td><button class="form-button" onclick="sendSelectedEmailForInvite();">邀请选中</button></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            {% if is_paginated %}
+            <div class="pagination-simple">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+            {% endif %}
+            <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+            {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block inline_js %}
+<script type="text/javascript">
+    var phase_id = {{ phase_id }};
+</script>
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/newtonadmin.js" %}"></script>
+{% endblock %}
+
+
