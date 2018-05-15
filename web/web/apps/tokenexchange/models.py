@@ -6,6 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 from django_countries.fields import CountryField
 
 from utils import storage
+from utils import validators
 from config import codes
 
 class KYCInfo(models.Model):
@@ -16,7 +17,7 @@ class KYCInfo(models.Model):
     country = CountryField(blank_label="Select country or region", verbose_name='Country or Region')
     country_code = models.CharField(max_length=12, db_index=True)
     id_number = models.CharField(max_length=128, verbose_name='ID Number')
-    id_card = models.FileField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name='ID Card')
+    id_card = models.FileField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name='ID Photo', validators=[validators.validate_file_extension,validators.file_size])
     emergency_contact_first_name = models.CharField(max_length=128, verbose_name='First Name of Emergency Contact')
     emergency_contact_last_name = models.CharField(max_length=128, verbose_name='Last Name of Emergency Contact')
     emergency_contact_cellphone = models.CharField(max_length=128, db_index=True, default='', verbose_name='Cellphone of Emergency Contact')
