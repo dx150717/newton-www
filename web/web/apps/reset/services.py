@@ -25,7 +25,7 @@ def send_reset_validate_email(email, request):
         target_url = "%s/reset/verify/?uuid=%s" % (settings.NEWTON_HOME_URL, str(verification.uuid))
         subject = "NewtonProject Notifications: Please Reset password:"
         template = loader.get_template("reset/reset-letter.html")
-        context = Context({"targetUrl":target_url,"request":request})
+        context = Context({"target_url":target_url,"request":request})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
