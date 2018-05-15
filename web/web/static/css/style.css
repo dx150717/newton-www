@@ -310,7 +310,7 @@ canvas { display: block; vertical-align: top; }
 .us { background-image: url("../images/languages/us.png")}
 .footer span a{font-size: 12px;padding-top: 20px; padding-left: 20px;}
 /* Footer ----------------------------------------------------------- */
-.footer { text-align: center; padding: 40px 0 0 0; font-size: 12px; background-color: #f7f7f7; }
+.footer { text-align: center; padding: 40px 0 0 0; font-size: 12px; background-color: #f7f7f7; position: absolute; bottom: 0; width: 100%;}
 .footer-simple{text-align: center;padding: 0; margin: 40px 0 0 0; font-size: 12px; background-color: #f7f7f7;}
 .footer .pc-line{ position:relative; border-top:1px #e4e4e4 solid; height:50px; line-height:50px; margin-top:30px; color: #595959; text-align:left}
 .footer-simple .pc-line{position:relative; border-top:1px #e4e4e4 solid; height:50px; line-height:50px; margin-top:0px; color: #595959; text-align:left}
