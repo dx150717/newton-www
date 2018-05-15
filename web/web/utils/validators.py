@@ -4,7 +4,9 @@ __version__ = '$Rev$'
 __doc__ = """  """
 
 import re
+import os
 from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.utils.translation.trans_real import get_supported_language_variant
 
 GLOBAL_PHONE_PATTERN = re.compile(r'^\d{6,15}$')
@@ -40,16 +42,18 @@ def is_valid_language_code(lc):
     return True
 
 def validate_file_extension(value):
-    import os
-    from django.core.exceptions import ValidationError
-    print value
+    """
+    Validate file's type by value which input is file's name.
+    """
     ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
     valid_extensions = ['.pdf', '.jpg', '.png', '.jpeg']
     if not ext.lower() in valid_extensions:
         raise ValidationError(u'Unsupported file extension.')
 
-def file_size(value):
-    from django.core.exceptions import ValidationError
+def validate_file_size_of_id_photo(value):
+    """
+    Validate file's size by value which input is file's size.
+    """
     limit = 5 * 1024 * 1024
     if value.size > limit:
         raise ValidationError(u'File too large,Size should not exceed 5M')
