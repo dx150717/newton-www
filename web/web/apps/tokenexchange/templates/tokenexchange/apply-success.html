@@ -4,12 +4,13 @@
 {% block header %}
 {% include "header-no-menu.html" %}
 {% endblock %}
-
+{% block require_title %}
+<title>{% trans "KYC" %} | {% trans "Newton Community" %}</title>
+{% endblock %}
 {% block footer %}
 {% include "footer-simple.html" %}
 {% endblock %}
-{% block title %}
-{% endblock %}
+
 
 {% block content %}
 <section id="success" class="section-list">

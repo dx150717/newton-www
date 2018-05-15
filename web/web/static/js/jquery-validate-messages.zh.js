@@ -14,7 +14,7 @@
 		digits: "只可输入数字",
 		creditcard: "请输入有效的信用卡号码",
 		equalTo: "两次输入不一致",
-		extension: "请输入有效的后缀",
+		extension: "Please enter a value with a valid extension.",
 		maxlength: $.validator.format("最多 {0} 个字"),
 		minlength: $.validator.format("最少 {0} 个字"),
 		rangelength: $.validator.format("请输入长度为 {0} 至 {1} 之間的字串"),

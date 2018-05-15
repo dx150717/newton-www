@@ -2,8 +2,8 @@
 {% load i18n %}
 {% load utils %}
 
-{% block title %}
-{% trans "Register" %}
+{% block require_title %}
+<title>{% trans "Register" %} | {% trans "Newton Community" %}</title>
 {% endblock %}
 
 {% block header %}
@@ -18,7 +18,7 @@
 <section id="success" class="section-list">
     <div class="container text-center">
         <p class="title">{% trans "Register Success!" %}</p>
-        <p class="content">{% trans "<a href='/login/'>Login</a>" %}</p>
+        <p class="content">{% trans "Go to <a href='/login/'>Login</a>" %}</p>
     </div>
 </section>
 {% endblock %}

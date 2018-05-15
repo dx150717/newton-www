@@ -71,6 +71,7 @@ h3, .f24 { font-size: 24px; }
 h4 { font-size: 16px; }
 h5 { font-size: 14px; }
 h6, .f12 { font-size: 12px; }
+.flex{display: flex;}
 .title { padding: 40px 0 30px; font-weight: bold;}
 #partners .title{text-align: center;}
 .title strong { font-size: 24px; display: block; color: #000; line-height: 1; }
@@ -216,7 +217,7 @@ h6, .f12 { font-size: 12px; }
 .active{ color: #888; }
 /* main */
 #main {
-    min-height: 750px;
+    min-height: 800px;
 }
 /* Intro ---------------------------------------------------------------- */
 canvas { display: block; vertical-align: top; }
@@ -310,7 +311,9 @@ canvas { display: block; vertical-align: top; }
 .footer span a{font-size: 12px;padding-top: 20px; padding-left: 20px;}
 /* Footer ----------------------------------------------------------- */
 .footer { text-align: center; padding: 40px 0 0 0; font-size: 12px; background-color: #f7f7f7; }
+.footer-simple{text-align: center;padding: 0; margin: 40px 0 0 0; font-size: 12px; background-color: #f7f7f7;}
 .footer .pc-line{ position:relative; border-top:1px #e4e4e4 solid; height:50px; line-height:50px; margin-top:30px; color: #595959; text-align:left}
+.footer-simple .pc-line{position:relative; border-top:1px #e4e4e4 solid; height:50px; line-height:50px; margin-top:0px; color: #595959; text-align:left}
 .footer .line span { position:absolute; right:0;}
 .footer .line span a{ display:inline-block; margin-left:20px; padding-top: 0;}
 .footer span a img{ display:inline-block; margin-right:3px; width:15px; height:15px;}
@@ -851,7 +854,7 @@ canvas { display: block; vertical-align: top; }
 #register #dialog{padding-top: 30px;}
 
 /* login */
-.form-button{ display:inline-block; width: 264px; height: 48px; border-radius: 4px; font-size:14px; background-color: #292929; text-align:center; color:#fff; line-height:48px;}
+.form-button{ display:inline-block; width: 304px; height: 48px; border-radius: 4px; font-size:14px; background-color: #292929; text-align:center; color:#fff; line-height:48px;}
 
 .error .alert{width: 300px; height: 60px;}
 .error .alert strong{line-height: 30px;}
@@ -861,13 +864,18 @@ canvas { display: block; vertical-align: top; }
 #reset .reset-title,
 #register .login-title{padding-top: 140px;}
 
+@media(max-width:768px){
+    #login .login-title,
+    #reset .reset-title,
+    #register .login-title{padding-top: 60px;}
+}
 #login .login-title h2,
 #reset .reset-title h2,
 #register .login-title h2{margin-bottom: 68px; font-size: 24px; font-weight: normal; color: #292929;}
 
 #login .container input,
 #reset .container input,
-#register .container input{padding: 5px; width: 264px; height: 32px;}
+#register .container input{padding: 5px; width: 304px; height: 32px;}
 
 #login .container .raw,
 #reset .container .raw,
@@ -898,7 +906,7 @@ canvas { display: block; vertical-align: top; }
         width: 100%;
     }
 }
-.form-group .alert{width: 264px;}
+.form-group .alert{width: 304px;}
 #token .form-group .alert{width: 100%;}
 #login .container .register{font-size: 16px; color: #292929}
 #login .container .reset{font-size: 16px; color: #b7b7b7;}
@@ -906,7 +914,7 @@ canvas { display: block; vertical-align: top; }
 #login .container label,
 #reset .container label,
 #register .container label{font-size: 18px; font-weight: 200; color: #292929;padding-right: 20px; text-align: right;}
-#login .container .space-between{display: flex; justify-content: space-between; width: 264px; padding-top: 20px;}
+#login .container .space-between{display: flex; justify-content: space-between; width: 304px; padding-top: 20px;}
 #login .modal-content{ min-height: 300px;}
 #login .modal-body{ padding-top: 60px;}
 
@@ -980,7 +988,7 @@ canvas { display: block; vertical-align: top; }
 #token .td{ font-size: 18px; color: #6c7f88; }
 #token .token-content{padding-top: 120px;padding-bottom: 60px;}
 #token .token-form{padding-bottom: 80px; padding-top: 80px;}
-#token .token-btn{padding: 60px;}
+#token .token-btn{padding-top: 60px;}
 #token .contract p{text-align: left;}
 #token .token-title .divider{margin-bottom: 10px; margin-top: 10px;}
 #token .token-title img{width: 100%;}
@@ -1014,12 +1022,21 @@ canvas { display: block; vertical-align: top; }
 #kyc h4{ font-size: 20px; font-weight: normal; color: #292929}
 #kyc pre{ background-color: #fff; margin-bottom: 20px;}
 #kyc .col-sm-6{padding-left: 0px;}
-#kyc input[type=checkbox], input[type=radio]{width: 22px; height: 22px;;}
+#kyc input[type=checkbox], input[type=radio]{width: 22px; height: 22px; margin: 3px;}
+#kyc .readed{padding-top: 20px;}
 #kyc .token-check-condition label span{font-size: 16px; color: #292929;font-weight: 350;}
-#kyc .kyc-btn{padding: 60px;}
+#kyc .kyc-btn{padding-top: 40px;}
 #kyc .kyc-btn .form-button{ line-height: unset;}
 #kyc .kyc-btn button:disabled{background-color: #939393;}
-
+#kyc .item,#basic-info .item {padding:12px;}
+#kyc .item label,#basic-info .item label{font-size: 18px; color: #282929;}
+#kyc .item .value, #basic-info .item .value{font-size: 18px;}
+#kyc .item-title .title, #basic-info .item-title .title {padding: 10px; font-size: 24px; color: #282929}
+@media(max-width:768px){
+    #kyc .item, #basic-info .item {padding:10px;}  
+    #kyc .item-title .title,#basic-info .item-title .title {padding: 10px; font-size: 20px; color: #282929}
+}
+#kyc .kyc-content{height:400px;overflow:scroll;border:1px solid #eee; padding: 20px;}
 .user-avator{ width: 30px; border-radius: 15px; margin-top: -5px;}
 
 #countdown{background: url("../images/tokensale/tokensale_background.png") no-repeat; height: 720px; background-size: 100% 720px;}
