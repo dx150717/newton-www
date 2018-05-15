@@ -41,7 +41,7 @@ def is_valid_language_code(lc):
         return False
     return True
 
-def validate_file_extension(value):
+def validate_file_extension_of_id_photo(value):
     """
     Validate file's type by value which input is file's name.
     """
