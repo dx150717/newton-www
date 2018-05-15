@@ -34,6 +34,9 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
             # Add Spanish
             if language.find('es') >= 0:
                 return 'es'
+            # Add Korean
+            if language.find('ko') >= 0:
+                return 'ko'
             return 'en'
         except Exception, inst:
             logger.exception('fail to get user language:%s' % str(inst))
