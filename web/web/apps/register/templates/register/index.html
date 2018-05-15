@@ -14,6 +14,10 @@
 {% include "footer-simple.html" %}
 {% endblock %}
 
+{% block require_js %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+{% endblock %}
+
 {% block content %}
 <section id="register" class="section-list">
         <div class="login-title container text-center">
@@ -24,6 +28,12 @@
                 <form id="register-form" class="form" action="/register/post-email/" method="POST">
                     {% csrf_token %}
                     {% include "form.html" %}
+                    <div class="form-group">
+                        <div class="google-recaptcha" id="google-recaptcha">
+                            <input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
+                            <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
+                        </div>
+                    </div>
                     <div class="raw">
                         <div>
                             <button id="register-btn" class="form-button" type="submit">{% trans "Register" %}</button>
