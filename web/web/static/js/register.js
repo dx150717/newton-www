@@ -1,4 +1,15 @@
 /**
+ * register.js for valid register form and get response from google api.
+ */
+
+/**
+ * 
+ * @param {string} ret google recaptcha response.
+ */
+function googleCallback(ret){
+    document.getElementById("id-google-recaptcha").value = ret;
+};
+/**
  * register.js for valid register form.
  */
 $("#register-form").submit(function(event){

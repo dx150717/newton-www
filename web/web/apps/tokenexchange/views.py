@@ -36,11 +36,17 @@ def exchange_valid_required(func):
 #@exchange_valid_required
 @login_required
 def show_tokenexchange_index_view(request):
+    """
+    Show kyc agreement.
+    """
     return render(request, "tokenexchange/index.html", locals()) 
 
 #@exchange_valid_required
 @login_required
 def post_kyc_information(request):
+    """
+    Receive user's kyc information, and save them.
+    """
     try:
         if request.method == 'POST':
             # check whether user is submit kyc info
@@ -75,48 +81,6 @@ def post_kyc_information(request):
 @login_required
 def show_wait_audit_view(request):
     return render(request, "tokenexchange/wait-audit.html", locals())
-
-def verify_email_link(request):
-    try:
-        uuid = request.GET['uuid']
-        verification = services.get_kyc_verification_by_uuid(uuid)
-        if not verification:
-            return http.HttpResponseRedirect('/tokenexchange/invalid-link/')
-            #check link status
-        verification_status = verification.status
-        if verification_status != codes.StatusCode.AVAILABLE.value:
-            return http.HttpResponseRedirect('/tokenexchange/invalid-link/')
-        email = verification.email_address
-        expire_time = verification.expire_time
-        now = datetime.datetime.utcnow().replace(tzinfo=utc)
-        # don't check whether the given link is expired
-        #if now > expire_time:
-            #return http.HttpResponseRedirect('/tokenexchange/invalid-link/')
-        return http.HttpResponseRedirect('/tokenexchange/limit-address/?uuid=%s' %str(uuid))
-    except Exception, inst:
-        logger.exception('fail to verify email link: %s' % str(inst))
-        return http.HttpResponseServerError()
-        
-    return render(request, "tokenexchange/wait-audit.html", locals())
-
-def show_limit_and_address_view(request):
-    uuid = request.GET['uuid']
-    verification = services.get_kyc_verification_by_uuid(uuid)
-    if not verification:
-        return http.HttpResponseRedirect('/tokenexchange/invalid-link/')
-        #check link status
-    verification_status = verification.status
-    if verification_status != codes.StatusCode.AVAILABLE.value:
-        return http.HttpResponseRedirect('/tokenexchange/invalid-link/')
-    email = verification.email_address
-    user = User.objects.filter(email=email).first()
-    if not user:
-        return http.HttpResponseRedirect('/tokenexchange/invalid-link/')
-    kycinfo = tokenexchange_models.KYCInfo.objects.filter(user=user).first()
-    if not kycinfo:
-        return http.HttpResponseRedirect('/tokenexchange/invalid-link/')
-    form = forms.KYCAddressForm(instance=kycinfo)
-    return render(request, "tokenexchange/limit-address.html", locals())
 
 def show_invalid_link(request):
     return render(request, "tokenexchange/invalid-link.html", locals())

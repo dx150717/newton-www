@@ -1,6 +1,8 @@
 #-*- coding: utf-8 -*-
 import logging
 import datetime
+import requests
+import json
 
 from django.conf import settings
 from django.shortcuts import render,redirect
@@ -37,6 +39,17 @@ def submit_email(request):
     try:
         form = forms.EmailForm(request.POST)
         if not form.is_valid():
+            return render(request, 'register/index.html', locals())
+        # check robot 
+        g_recaptcha_response = request.POST.get('g-recaptcha-response')
+        if not g_recaptcha_response:
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
+            return render(request, 'register/index.html', locals())
+        post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
+        res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
+        res = json.loads(res.text)
+        if not res['success']:
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
             return render(request, 'register/index.html', locals())
         # check the availablity of email address
         email = form.cleaned_data['email']

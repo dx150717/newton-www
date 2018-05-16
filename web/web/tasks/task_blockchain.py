@@ -10,6 +10,7 @@ from django.conf import settings
 
 from config import codes
 from tokenexchange import models as tokenexchange_models
+from tracker import models as tracker_models
 
 logger = logging.getLogger(__name__)
 
@@ -27,8 +28,8 @@ def sync_blockchain_data():
                 txs = __get_btc_transactions(item.receive_btc_address)
                 logger.debug(txs)
                 for txid, value in txs:
-                    if not tokenexchange_models.AddressTransaction.objects.filter(txid=txid).first():
-                        instance = tokenexchange_models.AddressTransaction()
+                    if not tracker_models.AddressTransaction.objects.filter(txid=txid).first():
+                        instance = tracker_models.AddressTransaction()
                         instance.user_id = item.user_id
                         instance.phase_id = item.phase_id
                         instance.address = item.receive_btc_address
@@ -40,8 +41,8 @@ def sync_blockchain_data():
             if item.receive_ela_address:
                 txs = __get_ela_transactions(item.receive_ela_address)
                 for txid, value in txs:
-                    if not tokenexchange_models.AddressTransaction.objects.filter(txid=txid).first():
-                        instance = tokenexchange_models.AddressTransaction()
+                    if not tracker_models.AddressTransaction.objects.filter(txid=txid).first():
+                        instance = tracker_models.AddressTransaction()
                         instance.user_id = item.user_id
                         instance.phase_id = item.phase_id
                         instance.address = item.receive_ela_address
