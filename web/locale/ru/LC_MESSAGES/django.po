@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 13:46+0000\n"
+"POT-Creation-Date: 2018-05-15 13:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: web/apps/admin_tools/dashboard/dashboards.py:86
 #: web/apps/admin_tools/menu/menus.py:100
@@ -177,7 +178,7 @@ msgstr ""
 #: web/apps/faq/templates/faq/faq.html:6 web/apps/faq/templates/faq/faq.html:13
 #: web/templates/footer.html:24
 msgid "FAQ"
-msgstr ""
+msgstr "ЧаВо"
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:70
@@ -429,9 +430,8 @@ msgid "Tell us your understanding about Newton"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:12
-#, fuzzy
 msgid "Admin Login"
-msgstr "통합 로그인"
+msgstr ""
 
 #: web/apps/press/models.py:21
 msgid "press"
@@ -506,7 +506,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/privacy.html:19
 #: web/templates/footer.html:48
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Политика конфиденциальности"
 
 #: web/apps/register/templates/register/invalid-link.html:6
 msgid "Invalid-link"
@@ -745,11 +745,11 @@ msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:10
 msgid "SUBSCRIBE TO US"
-msgstr "뉴스레터 구독하기"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:14
 msgid "Subscribe to Newton updates, or miss the juiciest bits!"
-msgstr "뉴턴의 새로운 업데이트를 구독하세요! "
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:25
 msgid "Email Address"
@@ -757,11 +757,11 @@ msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:26
 msgid "SUBSCRIBE"
-msgstr "구독하기"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:29
 msgid "We won't share your email address or send you any spam."
-msgstr "우리는 귀하의 메일주소를 공유하거나 스팸 메일을 보내지 않습니다."
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:63
 msgid "Subscribed Failed!"
@@ -1341,7 +1341,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/about.html:13
 #: web/templates/footer.html:34
 msgid "ABOUT"
-msgstr ""
+msgstr "О ПРОЕКТЕ"
 
 #: web/apps/welcome/templates/welcome/about.html:19
 msgid "Infrastructure of protocol-based economy"
@@ -1416,7 +1416,7 @@ msgstr ""
 #: web/apps/zinnia/models/category.py:26
 #: web/apps/zinnia/models_bases/entry.py:59 web/templates/footer.html:23
 msgid "Announcement"
-msgstr ""
+msgstr "Новости"
 
 #: web/apps/welcome/templates/welcome/announcement-detail.html:55
 #: web/apps/welcome/templates/welcome/announcement.html:81
@@ -1449,7 +1449,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/wechat.html:13
 #: web/templates/header.html:31
 msgid "Community"
-msgstr ""
+msgstr "Сообщество"
 
 #: web/apps/welcome/templates/welcome/community.html:18
 msgid "Socail Network"
@@ -1487,7 +1487,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/contact.html:19
 #: web/templates/footer.html:38
 msgid "Contact Us"
-msgstr ""
+msgstr "Свяжитесь с нами"
 
 #: web/apps/welcome/templates/welcome/contact.html:21
 msgid ""
@@ -1545,7 +1545,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/copyright.html:13
 #: web/templates/footer.html:46
 msgid "Copyright"
-msgstr ""
+msgstr "Авторское право"
 
 #: web/apps/welcome/templates/welcome/copyright.html:20
 msgid ""
@@ -1737,7 +1737,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/economy.html:13
 #: web/templates/header.html:34
 msgid "Economy"
-msgstr ""
+msgstr "Организация"
 
 #: web/apps/welcome/templates/welcome/economy.html:23
 #: web/apps/welcome/templates/welcome/include-partner.html:27
@@ -1857,11 +1857,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
-msgstr "뉴턴 프로토콜 기반 경제"
+msgstr "Основанная на протоколах экономика Ньютона"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:23
 msgid "Users own the data "
-msgstr "사용자가 소유하는 데이터"
+msgstr "Пользователи владеют данными"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:25
 msgid ""
@@ -1869,13 +1869,13 @@ msgid ""
 "then manage their personal credit. Users share the profit produced by data "
 "in a pre-agreed manner."
 msgstr ""
-"사용자는 암호화 기술을 통해 자신만의 데이터를 확장하고 컨트롤 하며, 최종적으"
-"로는 개인의 신용도를 형성하게 됩니다. 사용자는 사전 합의된 방식으로 데이터를 "
-"통해 만들어진 수익을 공유합니다."
+"Пользователи накапливают свои личные данные, контролируют данные путем "
+"шифрования и создают личный кредит доверия. Пользователи делят прибыль, "
+"полученную данными, предварительно согласованным образом."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:37
 msgid "Smarter"
-msgstr "더 지능적인"
+msgstr "Более умный"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:38
 msgid ""
@@ -1884,13 +1884,14 @@ msgid ""
 "interventions and facilitate the coordination between people, between "
 "machines and between people and machines."
 msgstr ""
-"신용은 어떠한 중개 없이 자유 개방적으로 자동 생성됩니다. 이런 지능적인 방식"
-"은 사람의 개입을 줄이고, 사람과 사람, 기계와 기계, 사람과 기계 간의 협력을 가"
-"능하게 합니다."
+"Личный кредит доверия может автоматически создаваться свободным и открытым "
+"способом без авторитетных посредников. Этот более умный способ уменьшит "
+"вмешательство человека и облегчит координацию между людьми, между машинами, "
+"а также между людьми и машинами."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:49
 msgid "More effective incentive mechanism"
-msgstr "더 효과적인 인센티브 메커니즘"
+msgstr "Более эффективный механизм стимулирования"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:50
 msgid ""
@@ -1899,13 +1900,14 @@ msgid ""
 "in the transactions, such as service providers, consumers and other "
 "participants connected by the value-based Internet. "
 msgstr ""
-"기술 프로토콜을 통해 전통 비즈니스의 중개인을 대체하고, 가치 기반 인터넷으로 "
-"서비스 제공자, 소비자와 기타 참여자를 연결할 수 있습니다. 또한, 거래 비용이 "
-"절약되고 분배가 됩니다."
+"Заменяя традиционных бизнес посредников технологическими протоколами, "
+"транзакционные издержки будут сохраняться и распределяться на каждого из "
+"участников транзакций, таким как поставщики услуг, потребители и другие "
+"участники, связанные с интернетом основанным на ценностях."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:60
 msgid "New organizational structure and cooperation mode"
-msgstr "새로운 조직 구조 및 협력 방식"
+msgstr "Новая организационная структура и механизмы сотрудничества"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:61
 msgid ""
@@ -1914,9 +1916,11 @@ msgid ""
 "Based on the open, fair and rational rules, every contributor will benefit "
 "from the economy and become one part of the economy."
 msgstr ""
-"비영리재단이 운영하는 커뮤니티 경제는 전통 영리 기업이 관리하는 독점 플랫폼"
-"을 대체할 것입니다. 모든 기여자는 공평, 합리적, 투명한 원칙을 통해 이익을 얻"
-"을 것이고, 경제의 한 부분이 될 것입니다."
+"Экономика сообщества, управляемая некоммерческими организациями, заменит "
+"платформы монопольного посредничества, управляемые традиционными компаниями "
+"основанные на прибыли. Основываясь на открытых, справедливых и правильных "
+"правилах, каждый вкладчик получит выгоду от экономики и станет частью "
+"экономики."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:9
 msgid "ANGEL INVESTOR"
@@ -2022,48 +2026,50 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-protocol.html:10
 #: web/apps/welcome/templates/welcome/protocol.html:13
 msgid "Hyper Exchange Protocol"
-msgstr "하이퍼 교환 프로토콜"
+msgstr "Протокол Hyper Exchange"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:23
 #: web/apps/welcome/templates/welcome/protocol.html:21
 msgid "Digital Identity and Credit"
-msgstr "디지털 신원 및 신용"
+msgstr "Цифровая идентификация и кредит доверия"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:25
 msgid ""
 "With digital identities, users can easily manage their own digital assets."
-msgstr "사용자는 디지털 신원을 사용해 자신의 디지털 자산을 관리할 수 있습니다."
+msgstr ""
+"Пользователь может управлять и контролировать доступ к своим цифровым активам с помощью."
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:34
 #: web/apps/welcome/templates/welcome/protocol.html:35
 msgid "Supply Chain"
-msgstr "서플라이 체인"
+msgstr "Цепочка поставок"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:36
 msgid ""
 "By using techniques such as 'atom hashing', we can create a unique digital "
 "identity for commodities of the whole network."
 msgstr ""
-"“아톰 해싱”이라는 기술을 사용해, 전체 네트워크에서 상품을 위한 고유 디지털 신"
-"원을 만들 수 있습니다."
+"Используя методы, известные как «Атом-Хеширования», Благодаря этому "
+"цифровому удостоверению вы можете в любой момент проверить соответствующую "
+"информацию о товаре."
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:44
 #: web/apps/welcome/templates/welcome/protocol.html:50
 msgid "Digital Marketing"
-msgstr "디지털 마케팅"
+msgstr "Цифровой маркетинг"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:46
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system."
 msgstr ""
-"광고주는 시스템에 내장된 다양한 마케팅 스마트 계약 템플릿을 통해 마케팅 계획"
-"을 세울 수 있습니다."
+"Рекламодатели могут устанавливать маркетинговые планы через множество "
+"встроенных шаблон Смарт-контрактов в системе."
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:54
 #: web/apps/welcome/templates/welcome/protocol.html:64
 msgid "Trading and payment"
-msgstr "거래 및 지불"
+msgstr "Торговля и оплата"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:56
 #: web/apps/welcome/templates/welcome/protocol.html:67
@@ -2071,32 +2077,33 @@ msgid ""
 "We support cross-border transactions, ultra-small payments, lightning "
 "settlement, etc., and provide comprehensive online and offline payment tools."
 msgstr ""
-"국경 간 거래, 최소액 지불, 라이트닝 정산 등을 지원하며, 온라인 및 오프라인 결"
-"제 도구 또한 제공합니다."
+"Мы поддерживаем трансграничные транзакции, сверхмалые платежи, молниеносные "
+"расчеты и т. д., а также предоставляем комплексные онлайн- и офлайн- "
+"платежные инструменты."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:9
 msgid "ROADMAP"
-msgstr "로드맵"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:21
 #: web/apps/welcome/templates/welcome/include-roadmap.html:61
 msgid "Newton project officially begins."
-msgstr "뉴턴 프로젝트 정식 시작."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:29
 #: web/apps/welcome/templates/welcome/include-roadmap.html:68
 msgid "Newton website officially released."
-msgstr "뉴턴 웹사이트 정식 오픈."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
 #: web/apps/welcome/templates/welcome/include-roadmap.html:76
 msgid "The Newton main chain and wallet officially released."
-msgstr "뉴턴 메인 체인 및 지갑 정식 배포"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:48
 #: web/apps/welcome/templates/welcome/include-roadmap.html:85
 msgid "The NewMall officially released."
-msgstr "뉴턴몰 정식 오픈"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:9
 #: web/apps/welcome/templates/welcome/team.html:13
@@ -2222,7 +2229,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-technology.html:10
 #: web/apps/welcome/templates/welcome/tech.html:13
 msgid "TECHNOLOGY"
-msgstr ""
+msgstr "ТЕХНОЛОГИЯ"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:24
 #: web/apps/welcome/templates/welcome/tech.html:18
@@ -2235,9 +2242,7 @@ msgid ""
 "supports multiple consensus mechanisms and data structures, ensures the "
 "assets transactions between the main chain and sub-chains, and between sub-"
 "chains."
-msgstr ""
-"뉴체인은 메인 체인과 서브 체인 구조를 채택했습니다. 메인 체인은 계정관리와 뉴"
-"턴 토큰 관리, 서브체인, 네트워크 거버넌스 등을 관리하게 됩니다. "
+msgstr "NewChain будет состоять из основной и вспомогательных цепей. Основная цепь будет поддерживать управление учетными записями, управление Newton токеном, управление вспомогательной цепью, управление сетью и т. д.."
 
 #: web/apps/welcome/templates/welcome/include-technology.html:34
 #: web/apps/welcome/templates/welcome/tech.html:45
@@ -2248,9 +2253,7 @@ msgstr ""
 msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning "
 "technology, the hashing ID is generated."
-msgstr ""
-"방사선 측정, PCA, 머신 비전 및 딥 러닝 기술을 사용해 여러 자산의 특성을 추출"
-"할 수 있습니다."
+msgstr "Используя радиометрическое датирование, PCA, машинное зрение и технологию глубокого обучения, мы можем быстро извлечь несколько характеристик определенного материального актива."
 
 #: web/apps/welcome/templates/welcome/include-technology.html:45
 #: web/apps/welcome/templates/welcome/tech.html:32
@@ -2261,9 +2264,7 @@ msgstr ""
 msgid ""
 "NewNet, which consists of a large number of nodes, is an open cloud "
 "computing network."
-msgstr ""
-"뉴넷은 많은 수의 노드로 구성되어 있으며, 안정적인 스토리지 서비스를 제공하는 "
-"개방형 네트워크입니다."
+msgstr "NewNet, состоит из большого количества узлов и представляет собой открытую сеть, которая обеспечивает надежные службы хранения"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:55
 #: web/apps/welcome/templates/welcome/tech.html:58
@@ -2274,25 +2275,22 @@ msgstr ""
 msgid ""
 "Blockchain fog computing, communication protocols between IoT devices and "
 "gateways, and NewChain IoT devices development specifications."
-msgstr ""
-"NewIOT는 블록체인 포그 컴퓨팅, IoT장치와 게이트웨이 간의 통신 프로토콜 "
-"NewChain IoT 장치 개발 사양 등을 포함한 기술에 대한 일반적인 개념입니다"
+msgstr "NewIOT - это основная концепция для ряда технологий, включая вычисления Blockchain FOG, протоколы связи между IоT устройствами и шлюзами, и разработкой технических характеристик для устройств NewChain IoT."
 
 #: web/apps/welcome/templates/welcome/index.html:14
 msgid "Everyone should benefit directly from economic growth"
-msgstr "모든 사람들은 경제 활동을 통해 수입을 얻습니다"
+msgstr ""
+"Каждый человек должен извлечь выгоду непосредственно из экономического роста"
 
 #: web/apps/welcome/templates/welcome/index.html:15
 msgid "Newton: The infrastructure for a protocol-based economy"
-msgstr "프로토콜 기반의 경제 인프라"
+msgstr "Инфраструктура, основанная на протоколах экономики"
 
 #: web/apps/welcome/templates/welcome/index.html:45
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
 msgstr ""
-"우리의 삶에 영향을 미친 가장 위대한 과학자 중 한명인 아이작 뉴턴 경에게 경의"
-"를 표합니다."
 
 #: web/apps/welcome/templates/welcome/joinus.html:6
 msgid "Jobs"
@@ -2301,31 +2299,27 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:14
 #: web/templates/footer.html:37
 msgid "Join Us"
-msgstr ""
+msgstr "Присоединяйтесь к нам"
 
 #: web/apps/welcome/templates/welcome/joinus.html:20
 msgid "About Newton Project"
-msgstr "뉴턴 프로젝트 소개"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:22
 msgid ""
 "We are committed to building an efficient, collaborative, low-cost, highly "
 "automated business infrastructure ecosystem."
 msgstr ""
-"우리는 효율적이고 협업적이며, 저비용, 자동화된 비즈니스 인프라 생태계를 구축"
-"하기 위해 노력하고 있습니다."
 
 #: web/apps/welcome/templates/welcome/joinus.html:25
 msgid "OUR CULTURE"
-msgstr "뉴턴 문화"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:27
 msgid ""
 "We believe in the free, open and inclusive culture advocated by the liberal "
 "open source philosophy. Decentralization is the core of our values."
 msgstr ""
-"우리는 자유주의 오픈소스 철학이 지지하는 자유롭고 개방적이고 포괄적인 문화를 "
-"믿습니다. 탈중앙화는 우리 가치의 핵심입니다."
 
 #: web/apps/welcome/templates/welcome/joinus.html:30
 msgid ""
@@ -2334,21 +2328,16 @@ msgid ""
 "commerce, finance, media, etc. And we are sincerely inviting more "
 "outstanding talents to join us."
 msgstr ""
-"현재, 뉴턴 프로젝트 팀은 전자 상거래, 금융, 미디어 등 자유 오픈 소스 소프트웨"
-"어 커뮤니티에서 많은 재능 있는 인재들을 끌어 모았습니다. 그리고 우리는 더 많"
-"은 인재들을 초대합니다. "
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
 msgid ""
 "In addition, developers around the world can join us by telecommuting. The "
 "space constraint will not hinder our cooperation ."
 msgstr ""
-"또한, 전세계의 개발자들 또한 재택 근무로 우리와 함께 할 수 있습니다. 공간의 "
-"제약은 더 이상 우리를 막지 못합니다."
 
 #: web/apps/welcome/templates/welcome/joinus.html:35
 msgid "WHO WE ARE LOOKING FOR"
-msgstr "인재상"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:37
 msgid ""
@@ -2358,26 +2347,18 @@ msgid ""
 "economic models, asset management, and financial innovation. We welcome "
 "volunteers and enthusiasts in all fields."
 msgstr ""
-"분산 시스템, 운영체제, 암호화 알고리즘, 블록체인, 모바일 개발, 제품 디자인 "
-"및 기타 분야에서 기술적 인재가 필요합니다. 또한, 통화 이론, 경제 모델, 자산 "
-"관리 및 금융 혁신 분야의 전문가가 필요합니다. 자원봉사자, 뉴턴의 지지자분들"
-"도 환영합니다."
 
 #: web/apps/welcome/templates/welcome/joinus.html:40
 msgid ""
 "We need every talent to be passionate and believe in decentralized business, "
 "because Newton is closely related to everyone’s life."
 msgstr ""
-"뉴턴은 모든 사람들의 삶과 밀접한 관계에 있기 때문에, 열정적이고 탈중앙화를 믿"
-"는 인재가 필요합니다."
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
 msgid ""
 "In addition, we will use NEW to pay part of the salary, which is a condition "
 "that must be accepted."
 msgstr ""
-"또한, 우리는 NEW를 급여로 지불할 것이며, 이것은 반드시 받아들여야 하는 사항입"
-"니다."
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
 msgid "Currently open positions"
@@ -2847,7 +2828,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/templates/footer.html:39
 msgid "Media Kit"
-msgstr ""
+msgstr "Media набор"
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
 #: web/templates/header.html:28
@@ -2856,81 +2837,81 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:23
 msgid "Digital Identity"
-msgstr "디지털 ID"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:24
 msgid "Create and manage the DID (Decentralized ID);"
-msgstr "DID(탈중앙화 ID) 생성 및 관리"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:25
 msgid "Set privacy mode for personal information;"
-msgstr "개인정보 보호모드"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:26
 msgid "Trading information management;"
-msgstr "트레이딩 정보 관리"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:27
 msgid "Trading information pricing and benefit from sharing;"
-msgstr "트레이징 정보 가격 책정 및 수익 창출"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:28
 msgid "Digital asset management, including NEW, BTC, ETH, etc."
-msgstr "NEW, BTC, ETH 등 디지털 자산 관리"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:37
 msgid "Payment"
-msgstr "지불"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:38
 msgid "Support cross-border trades;"
-msgstr "국가간 거래 지원"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:39
 msgid "Support micro-payment;"
-msgstr "최소액 지불 지원"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:40
 msgid "Rapid trade confirmation."
-msgstr "신속한 거래 컨펌"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:50
 msgid "Joint Login"
-msgstr "통합 로그인"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:51
 msgid "Log in multiple Dapps using a unified identity;"
-msgstr "통합ID로 여러 Dapps로그인"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:52
 msgid "Dapp management and permission control;"
-msgstr "Dapp 관리 및 권한 제어"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:53
 msgid "Safety audit."
-msgstr "안전 감사(audit)"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:62
 msgid "Built-in applications"
-msgstr "내장 애플리케이션"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:63
 msgid "Support built-in applications published by the free and open source;"
-msgstr "무료 및 오픈소스로 배포된 내장 애플리케이션 지원"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:64
 msgid "Support built-in applications purchase;"
-msgstr "내장 애플리케이션 구매 지원"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:65
 msgid "Support built-in applications development tools."
-msgstr "내장 애플리케이션 개발 도구 지원"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/partner.html:6
 #: web/apps/welcome/templates/welcome/partner.html:13
 #: web/templates/footer.html:15
 msgid "Partner"
-msgstr ""
+msgstr "Партнеры"
 
 #: web/apps/welcome/templates/welcome/press.html:6
 #: web/apps/welcome/templates/welcome/press.html:13
@@ -3239,16 +3220,18 @@ msgid ""
 "digital identity. Digital assets including cryptocurrency, privacy data, "
 "personal credit and so on."
 msgstr ""
-"사용자는 디지털 신원을 사용해 자신의 디지털 자산을 관리할 수 있습니다. 예: 암"
-"호화폐, 개인정보, 개인신용 등."
+"Пользователь может управлять и контролировать доступ к своим цифровым "
+"активам с помощью цифровой идентификации. Цифровые активы, включая "
+"криптовалюты, данные о конфиденциальности, личный кредит доверия и  т. д."
 
 #: web/apps/welcome/templates/welcome/protocol.html:24
 msgid ""
 "User can control and set different privacy modes for corresponding digital "
 "assets, and price the digital assets."
 msgstr ""
-"사용자는 각 디지털 자산에 대해 다른 프라이버시 모드를 설정할 수 있으며, 디지"
-"털 자산에 대해 가격을 책정할 수 있습니다. "
+"Пользователь может контролировать и устанавливать различные режимы "
+"конфиденциальности для соответствующих цифровых активов и оценивать цифровые "
+"активы."
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
 msgid ""
@@ -3257,9 +3240,10 @@ msgid ""
 "identity, you can check the relevant information on the commodity at any "
 "time."
 msgstr ""
-"“아톰 해싱”이라는 기술을 사용해, 전체 네트워크에서 상품을 위한 고유 디지털 신"
-"원을 만들 수 있습니다. 디지털 신원을 통해 상품과 관련한 정보를 언제든지 확인"
-"할 수 있습니다."
+"Используя методы, известные как «Атом-Хеширования», мы можем создать "
+"уникальный цифровой идентификатор для сырьевых товаров по всей сети. "
+"Благодаря этому цифровому удостоверению вы можете в любой момент проверить "
+"соответствующую информацию о товаре."
 
 #: web/apps/welcome/templates/welcome/protocol.html:38
 msgid ""
@@ -3267,8 +3251,8 @@ msgid ""
 "product will be stored on the blockchain to ensure that the data will not be "
 "tampered."
 msgstr ""
-"전체 서플라이 체인에서, 각 제품의 작동 정보는 데이터 변조를 막기 위해 블록체"
-"인에 저장됩니다."
+"Во всей цепочке поставок основная информация о каждой операции продукта "
+"будет храниться в блокчейн, и гарантировать, что данные не будут подделаны."
 
 #: web/apps/welcome/templates/welcome/protocol.html:39
 msgid ""
@@ -3276,9 +3260,9 @@ msgid ""
 "realize automatic insurance claims and property rights transfers. This will "
 "reduce the transaction costs and promote cooperation efficiency."
 msgstr ""
-"스마트 계약 통한 자동 보험 청구, 재산권 양도 등을 실현하기 위한 상거래 규칙"
-"을 사전에 정할 수 있습니다. 이를 통해 거래 비용 절감 및 협력 효율성이 증가합"
-"니다."
+"Благодаря смарт-контракту мы можем заранее установить правила коммерческого "
+"обмена для реализации автоматизированных страховых требований, чтобы "
+"сократить транзакционные издержки и повысить эффективность сотрудничества."
 
 #: web/apps/welcome/templates/welcome/protocol.html:52
 msgid ""
@@ -3286,8 +3270,9 @@ msgid ""
 "contract templates in the system, including incentive modes, settlement "
 "modes, and dynamic price adjusting rules."
 msgstr ""
-"광고주는 시스템에 내장된 다양한 마케팅 스마트 계약 템플릿을 통해 인센티브 모"
-"드, 정산 모드 및 동적 가격 조정 등 마케팅 계획을 세울 수 있습니다."
+"Рекламодатели могут устанавливать маркетинговые планы через множество "
+"встроенных шаблон Смарт-контрактов в системе, включая режимы стимулирования, "
+"расчетные режимы и динамические правила корректировки цен. "
 
 #: web/apps/welcome/templates/welcome/protocol.html:53
 msgid ""
@@ -3295,9 +3280,10 @@ msgid ""
 "out the DAI system, you can conduct market research before marketing "
 "activities, and analyze the results after the marketing activities."
 msgstr ""
-"광고주는 진행 중이거나 완료된 마케팅 계약을 감사할 수 있습니다. DAI 시스템을 "
-"통해 마케팅을 시작하기 전에 시장조사를 실시하고, 마케팅 활동 종료 후 결과를 "
-"분석할 수 있습니다."
+"Рекламодатели могут проверять отчетность настоящих и завершенных "
+"маркетинговых контрактов. Через систему DAI вы можете проводить исследования "
+"рынка прежде, чем совершать какой-либо маркетинг, а также анализировать ваши "
+"результаты уже после маркетинговой деятельности."
 
 #: web/apps/welcome/templates/welcome/protocol.html:66
 msgid ""
@@ -3306,13 +3292,14 @@ msgid ""
 "settlement rules, smart insurance contracts, smart financial contracts, and "
 "external chain service."
 msgstr ""
-"내장된 스마트 계약 템플릿과 규칙 엔진을 사용해 트랜잭션을 정의합니다. 복합적"
-"인 비즈니스 규칙, 정산 규칙, 스마트 보험 계약, 스마트 금융 계약 및 외부 체인 "
-"서비스 등을 기반으로 하는 다중 트랜잭션 기반을 나타냅니다."
+"Определение транзакций, используя встроенные шаблоны смарт-контрактов и "
+"правил механизмов, включая многопартийные транзакции, основанные на "
+"комплексе бизнес-правил, правил расчета, умных договоров страхования, умных "
+"финансовых контрактов и внешнего обслуживания цепи."
 
 #: web/apps/welcome/templates/welcome/protocol.html:79
 msgid "Reliable physical tunnel"
-msgstr "신뢰성있는 물리적 터널"
+msgstr "Надежный физический туннель"
 
 #: web/apps/welcome/templates/welcome/protocol.html:81
 msgid ""
@@ -3321,13 +3308,15 @@ msgid ""
 "equipment. Any third party can manufacture safety equipment according to the "
 "protocol specification."
 msgstr ""
-"NewChain과 NowIOT 기술 기반으로, 믿을 수 있는 물리적 터널 프로토콜을 설계하"
-"고 관련 장비의 제조 표준을 정의했습니다. 제3자 누구나 프로토콜 규격에 맞춰 안"
-"전한 장비를 제조할 수 있습니다."
+"Основываясь на NewChain и NewIOT технологиях, мы разработали надежный "
+"протокол физического туннеля и обозначили технические характеристики "
+"соответствующего оборудования. Любая третья сторона может производить "
+"оборудования для обеспечения безопасности, в соответствии со спецификацией "
+"протокола."
 
 #: web/apps/welcome/templates/welcome/protocol.html:93
 msgid "Automatic finance"
-msgstr "자동금융"
+msgstr "Автоматическое финансирование"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
 msgid ""
@@ -3337,10 +3326,12 @@ msgid ""
 "contract rules and external chain service. The system will automatically "
 "match smart financial contracts and completes transaction matching."
 msgstr ""
-"개발자는 내장된 스마트 계약 템플릿을 기반으로 보험, 대출 및 투자 및 디지털 신"
-"원 및 신용, KYC 정보, 뉴턴 토큰 락업 주소, 계약 규칙 및 외부 체인 서비스에 대"
-"한 스마트 금융 계약을 정의할 수 있습니다. 시스템은 자동으로 스마트 금융 계약"
-"을 일치시키고, 트랜잭션 매칭을 완료합니다."
+"Разработчики могут определять умные финансовые контракты, основанные на "
+"встроенных шаблонах смарт- контрактов для страхования, кредитования и "
+"инвестиций, включая цифровую идентификацию и доверие, KYC информацию, "
+"контроль транзакций  Newton адреса, правила контракта и внешнее обслуживание "
+"цепи. Система будет автоматически сочетать умные финансовые контракты и "
+"завершит сопоставление транзакций."
 
 #: web/apps/welcome/templates/welcome/protocol.html:107
 msgid "NNIO"
@@ -3351,16 +3342,17 @@ msgid ""
 "Developers can access NewNet through the NNIO (NewNet IO) protocol, using "
 "storage service, computing service, and domain names."
 msgstr ""
-"개발자는NNIO(NewNet IO) 프로토콜을 통해 NewNet에 액세스해, 스토리지, 계산, 도"
-"메인 서비스를 사용할 수 있습니다."
+"Разработчики могут получить доступ к NewNet через NNIO (NewNetIO) протокол, "
+"используя услуги хранения, вычислительные услуги и названия доменов."
 
 #: web/apps/welcome/templates/welcome/protocol.html:110
 msgid ""
 "Through smart storage contracts, smart computing contracts, smart domain "
 "name contracts, developers can quickly and innovatively develop applications."
 msgstr ""
-"스마트 스토리지 계약, 스마트 컴퓨팅 계약, 스마트 도메인 이름 계약을 통해 개발"
-"자는 빠르고 혁신적으로 애플리케이션을 개발할 수 있습니다."
+"Через умные контракты хранения, умные вычислительные контракты, умные "
+"контракты названия доменов, разработчики могут быстро и инновационно "
+"развивать приложения."
 
 #: web/apps/welcome/templates/welcome/roadmap.html:6
 msgid "Roadmap"
@@ -3368,7 +3360,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
 msgid "Team"
-msgstr ""
+msgstr "Команда"
 
 #: web/apps/welcome/templates/welcome/tech.html:6
 msgid "TECH"
@@ -3384,13 +3376,7 @@ msgid ""
 "between the main chain and sub-chains, and between sub-chains. After A third-"
 "party developer can create a new sub-chain after staking a certain amount of "
 "Newton tokens and passing the verification."
-msgstr ""
-"뉴체인은 메인 체인과 서브 체인 구조를 채택했습니다. 메인 체인은 계정관리와 뉴"
-"턴 토큰 관리, 서브체인, 네트워크 거버넌스 등을 관리하게 됩니다. 서브 체인은 "
-"하이퍼 교환 프로토콜 같은 특정 서비스 시스템과 다중 컨센서스 메커니즘, 데이"
-"터 구조, 메인 체인과 서브 체인 및 서브 체인간의 자산 트랜잭션을 보장합니다. "
-"서드파티 개발자는 일정한 양의 뉴턴 토큰을 보유하고 리뷰를 통과해야, 새로운 서"
-"브 체인과 토큰을 발행할 수 있습니다."
+msgstr "NewChain будет состоять из основной и вспомогательных цепей. Основная цепь будет поддерживать управление учетными записями, управление Newton токеном, управление вспомогательной цепью, управление сетью и т. д.. Вспомогательная цепь будет поддерживать определенные системы обслуживания, такие как протокол hyper-exchange, а также многочисленные консенсусные механизмы и структуры данных, обеспечивающие транзакции активов между основной и вспомогательной цепями, и между вспомогательными цепями. После того, как сторонний разработчик профинансировал определенное количество токенов и прошел обзор, он сможет создать новую вспомогательную цепь и создать новые токены."
 
 #: web/apps/welcome/templates/welcome/tech.html:23
 msgid ""
@@ -3398,17 +3384,13 @@ msgid ""
 "programming languages such as C/C++, Java, Python, TypeScript, etc. The "
 "system provides some built-in smart contract templates for the hyper "
 "exchange protocols so that to make the application development work simpler."
-msgstr ""
-"NewVM은 웹 어셈블리 표준과 호환되기 때문에, C/C++, Java, Python, TypeScript"
-"와 같은 프로그래밍 언어를 지원합니다. 시스템은 하이퍼 교환 프로토콜을 위한 내"
-"장된 스마트 계약 템플릿을 제공하므로 애플리케이션 개발을 쉽게 할 수 있습니다."
+msgstr "NewVM совместим со стандартом Webassembly, поддерживающим общие языки программирования, такие как C / C ++, Java, Python, TypeScript и т. д. Система предоставляет некоторые встроенные шаблоны смарт-контрактов для протоколов hyper exchange, чтобы сделать работу по разработке приложений намного проще."
 
 #: web/apps/welcome/templates/welcome/tech.html:24
 msgid ""
 "NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure the "
 "security of the assets."
-msgstr ""
-"뉴체인은 Ring_LWE 반 양자 암호 알고리즘을 사용해 자산의 보안을 보장합니다."
+msgstr "Для обеспечения безопасности активов NewChain использует алгоритм анти-квантового шифрования Ring-LWE."
 
 #: web/apps/welcome/templates/welcome/tech.html:36
 msgid ""
@@ -3420,13 +3402,7 @@ msgid ""
 "computing power, then get the corresponding incentive rewards. Decentralized "
 "DNS(Domain Name Service) will be achieved through the blockchain technology, "
 "increasing the ease of using NewNet."
-msgstr ""
-"뉴넷은 많은 수의 노드로 구성되어 있으며, 안정적인 스토리지 서비스를 제공하는 "
-"개방형 네트워크입니다. 풀 SQL 데이터베이스와 다양한 프로그래밍 언어를 지원합"
-"니다. 대부분의 웹 서비스는 뉴넷에서 다이렉트로 호스팅이 가능합니다. 개발자는 "
-"계산 태스크를 배포하고, 노드는 자체 계산 능력에 따라 해당 계산 태스크를 선택 "
-"후, 결과에 따라 해당 인센티브를 받을 수 있습니다. 블록체인 기술을 통해 탈중앙"
-"화 네트워크 DNS를 실현하고, 뉴넷의 사용도가 증가할 것입니다."
+msgstr "NewNet, состоит из большого количества узлов и представляет собой открытую сеть, которая обеспечивает надежные службы хранения, поддерживая полную базу данных SQL и различные общие языки программирования. Большинство веб-сервисов можно размещать непосредственно в сети NewNet. Разработчики могут создать задачу вычисления, а узлы смогут выбрать соответствующую задачу расчета в соответствии с их собственными возможностями, затем получить соответствующую награду после завершения. Децентрализованные службы доменных имен сети могут быть достигнуты, а простота использования NewNet будет возрастать благодаря технологии blockchain."
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
@@ -3438,21 +3414,14 @@ msgid ""
 "using algorithms to create a unique identification and authentic right for "
 "digital asset. The whole process is repeatable, verifiable and fault-"
 "tolerant."
-msgstr ""
-"방사선 측정, PCA, 머신 비전 및 딥 러닝 기술을 사용해 무게, 볼륨, 사이즈, 형"
-"태, 감촉, 광학적 특성, 방사능 특성, 열역학 특성 및 다양한 형태의 특성을 포함"
-"한 여러 자산의 특성을 쉽게 추출할 수 있습니다. 그리고 다음과 같은 특성 데이터"
-"를 기반으로, 알고리즘을 사용해 고유 소유권 인증 결과를 계산하고 생성할 수 있"
-"습니다. 전체 프로세스는 반복적이고, 검증 가능하며 오류 허용성이 있습니다."
+msgstr "Используя радиометрическое датирование, PCA, машинное зрение и технологию глубокого обучения, мы можем быстро извлечь несколько характеристик определенного материального актива, в том числе: вес, объем, размер, форму, текстуру, оптические свойства, радиоактивные свойства, термодинамические свойства и множество настраиваемых случайных функций. Затем, основываясь на этих характеристических данных, мы можем использовать алгоритмы для вычисления и создания уникального результата проверки собственности. Весь процесс является повторяющимся, проверяемым и отказоустойчивым."
 
 #: web/apps/welcome/templates/welcome/tech.html:62
 msgid ""
 "NewIOT is a general conception for a series of technologies, including "
 "blockchain fog computing, communication protocols between IoT devices and "
 "gateways, and NewChain IoT devices developing specifications."
-msgstr ""
-"NewIOT는 블록체인 포그 컴퓨팅, IoT장치와 게이트웨이 간의 통신 프로토콜 "
-"NewChain IoT 장치 개발 사양 등을 포함한 기술에 대한 일반적인 개념입니다"
+msgstr "NewIOT - это основная концепция для ряда технологий, включая вычисления Blockchain FOG, протоколы связи между IоT устройствами и шлюзами, и разработкой технических характеристик для устройств NewChain IoT."
 
 #: web/apps/welcome/templates/welcome/tech.html:63
 msgid ""
@@ -3461,11 +3430,7 @@ msgid ""
 "Ethernet/fiber, 3G/4G/5G, NB-IoT, etc., and IoT communication protocol such "
 "as BLE, Wi-Fi, ZigBee, etc. The IoT device stores the collected information "
 "into NewChain through the gateway."
-msgstr ""
-"게이트웨이는 블록체인 노드가 내장된 강력한 컴퓨팅 및 스토리지 기능을 갖고 있"
-"으며, 여러 종류의 인터넷 접속 방법을 지원합니다. 예: Ethernet/fiber, "
-"3G/4G/5G, NB-IoT 등. IoT 통신 프로토콜에는 BLE, Wi-Fi, ZigBee 등이 있으며, "
-"IoT 장치는 수집된 정보를 게이트웨이를 통해 NewChain으로 저장합니다."
+msgstr "Шлюз имеет мощные возможности вычисления и хранения со встроенными блокчейн узлами, поддерживающие несколько способов доступа в интернет, включая Ethernet/fiber, 3G/4G/5G, NB-IoT, и так далее. Протоколы связи IoT, такие как BLE, Wi-Fi, ZigBee и т. д. IoT устройство хранит и собирает информацию в NewChain через шлюз."
 
 #: web/apps/welcome/templates/welcome/tech.html:72
 msgid "DAI"
@@ -3477,10 +3442,7 @@ msgid ""
 "from three aspects: data, algorithm model, execution engine, thereby closely "
 "connecting the data suppliers, algorithm model developers and operating "
 "environment providers together."
-msgstr ""
-"DAI(분산형 AI)는 데이터, 알고리즘 모델, 실행 엔진 등 3가지 측면에서 AI 개발"
-"을 촉진해 데이터 공급자, 알고리즘 모델 개발자 및 운영 환경 공급자를 연결합니"
-"다."
+msgstr "DAI – это распределенный искусственный интеллект, который способствует развитию искусственного интеллекта по трем аспектам: данные, модель алгоритма и механизм выполнения, тем самым тесно связывая поставщиков данных, разработчиков моделей алгоритма и поставщиков операционной среды вместе."
 
 #: web/apps/welcome/templates/welcome/tech.html:77
 msgid ""
@@ -3488,27 +3450,20 @@ msgid ""
 "suppliers, including multidimensional data formats, data fragmentation, data "
 "compression, data encryption, etc. User private data safety will be "
 "protected by the k-anonymity, ε--differential privacy and other methods."
-msgstr ""
-"DAI는 다차원 데이터 포맷, 데이터 조각화, 데이터 압축, 데이터 암호화 등을 포함"
-"해 사용자와 데이터 공급자에 액세스할 수 있는 승인된 데이터 표준을 제공합니"
-"다. 사용자의 개인 데이터는 k-anonymity(차등 사생활 및 기타 기술)로 보호됩니"
-"다."
+msgstr "DAI предоставляет утвержденные стандарты данных для доступа пользователей и поставщиков данных, включая многомерные форматы данных, фрагментацию данных, сжатие данных, шифрование данных и т.д. Безопасность личных данных пользователей защищена с помощью k-анонимностью, ε-дифференциальной конфиденциальностью и других методов."
 
 #: web/apps/welcome/templates/welcome/tech.html:78
 msgid ""
 "DAI uses docker container to run artificial intelligence computing software "
 "such as Tensorflow, Caffe. It encourages data suppliers to provide long-term "
 "service through multi-factor weighting profit distribution method."
-msgstr ""
-"DAI는 Docker Container를 통해 Tensorflow, Caffe 같은 인공지능 컴퓨팅 소프트웨"
-"어를 실행합니다. 데이터 공급자가 다중 요소 가중치 수익 배분 방식을 통해 장기"
-"적인 서비스를 제공하도록 장려하고 있습니다."
+msgstr "DAI, использует контейнер докеров для запуска программного обеспечения для искусственного интеллекта, такого как Tensorflow, Caffe. Это призывает поставщиков данных предоставлять долгосрочное обслуживание, используя метод распределения многофакторных весовых коэффициентов."
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
 #: web/templates/footer.html:47
 msgid "Terms of Use"
-msgstr ""
+msgstr "Условия пользования"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:20
 msgid "PLEASE READ THESE TERMS OF USE BEFORE USING THE WEBSITE."
@@ -5626,15 +5581,15 @@ msgstr ""
 
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
-msgstr ""
+msgstr "РАЗВИТИЕ"
 
 #: web/templates/footer.html:20
 msgid "COMMUNITY"
-msgstr ""
+msgstr "СООБЩЕСТВО"
 
 #: web/templates/footer.html:44
 msgid "Service Terms"
-msgstr ""
+msgstr "Условия обслуживания"
 
 #: web/templates/header-no-menu.html:29 web/templates/header.html:45
 msgid "User Center"
@@ -5650,7 +5605,7 @@ msgstr ""
 
 #: web/templates/header.html:25
 msgid "Technology"
-msgstr ""
+msgstr "Технология"
 
 #: web/templates/admin/change_form.html:33
 msgid "History"

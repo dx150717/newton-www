@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 18:46+0800\n"
+"POT-Creation-Date: 2018-05-15 13:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -227,6 +227,14 @@ msgstr "密码"
 #: web/apps/login/views.py:36
 msgid "Form Error"
 msgstr "表单填写错误"
+
+#: web/apps/login/views.py:42
+msgid "No captcha"
+msgstr ""
+
+#: web/apps/login/views.py:43
+msgid "Auth Recaptcha Error"
+msgstr ""
 
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
@@ -500,7 +508,7 @@ msgstr "和"
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
-#: web/templates/footer.html:51
+#: web/templates/footer.html:48
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
@@ -2292,8 +2300,8 @@ msgstr ""
 msgid ""
 "NewChain adopts a main chain and sub-chain design scheme. The sub-chain "
 "supports multiple consensus mechanisms and data structures, ensures the "
-"assets transactions between the main chain and sub-chains, sub-chains and "
-"sub-chains."
+"assets transactions between the main chain and sub-chains, and between sub-"
+"chains."
 msgstr ""
 "采用主链、子链设计方案，子链支持多种共识机制和数据结构，主链与子链之间，子链"
 "与子链之间可以进行资产交换。"
@@ -2856,7 +2864,8 @@ msgstr "深入了解行业发展、客户需求，形成产品需求文档；"
 msgid ""
 "Design product UE by requirements document, clearly and accurately "
 "communicate demands with developing engineers;"
-msgstr "根据产品需求文档，进行产品UE设计，并向开发工程师清晰准确的传达产品需求；"
+msgstr ""
+"根据产品需求文档，进行产品UE设计，并向开发工程师清晰准确的传达产品需求；"
 
 #: web/apps/welcome/templates/welcome/joinus.html:298
 msgid "Manage product demand changes during product development;"
