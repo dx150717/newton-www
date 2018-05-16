@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 13:43+0000\n"
+"POT-Creation-Date: 2018-05-16 09:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -228,7 +228,8 @@ msgstr "密码"
 msgid "Form Error"
 msgstr "表单填写错误"
 
-#: web/apps/login/views.py:42
+#: web/apps/login/views.py:42 web/apps/register/views.py:46
+#: web/apps/register/views.py:52
 msgid "No captcha"
 msgstr ""
 
@@ -265,7 +266,7 @@ msgstr "谷歌身份验证码不正确"
 #: web/apps/login/templates/login/index.html:39
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
-#: web/templates/header-no-menu.html:38 web/templates/header.html:54
+#: web/templates/header-no-menu.html:38 web/templates/header.html:53
 msgid "Login"
 msgstr "登录"
 
@@ -306,13 +307,13 @@ msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成�
 
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/register/templates/register/index.html:6
-#: web/apps/register/templates/register/index.html:20
-#: web/apps/register/templates/register/index.html:29
+#: web/apps/register/templates/register/index.html:24
+#: web/apps/register/templates/register/index.html:44
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
 #: web/apps/register/templates/register/register-success.html:6
-#: web/templates/header-no-menu.html:35 web/templates/header.html:51
+#: web/templates/header-no-menu.html:35 web/templates/header.html:50
 msgid "Register"
 msgstr "注册"
 
@@ -331,22 +332,6 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/user/templates/user/profile.html:31
 msgid "Submit"
 msgstr "提交"
-
-#: web/apps/newtonadmin/services_tokenexchange.py:88
-msgid "Newton Notifications: You have passed the Newton KYC"
-msgstr "牛顿通知：你已经通过了牛顿KYC审核"
-
-#: web/apps/newtonadmin/services_tokenexchange.py:90
-msgid "Newton Notifications: You are not passed the Newton KYC"
-msgstr "牛顿通知：你没有通过牛顿KYC审核"
-
-#: web/apps/newtonadmin/services_tokenexchange.py:113
-msgid "Newton notification: Fillout your expect amount"
-msgstr "牛顿通知：请填写您的期望投资额度"
-
-#: web/apps/newtonadmin/services_tokenexchange.py:135
-msgid "Newton notification: Receive Amount Notification!"
-msgstr "牛顿通知：我们接收到了您的投资！"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
@@ -449,15 +434,15 @@ msgstr "重复密码"
 msgid "Newton Notification: Please complete the register process of Newton"
 msgstr "牛顿通知：请完成牛顿注册"
 
-#: web/apps/register/views.py:45
+#: web/apps/register/views.py:58
 msgid "Email already existed"
 msgstr "邮箱已经存在！"
 
-#: web/apps/register/views.py:135
+#: web/apps/register/views.py:148
 msgid "Google Auth Code Error"
 msgstr "谷歌身份验证码错误"
 
-#: web/apps/register/views.py:197 web/apps/reset/views.py:110
+#: web/apps/register/views.py:210 web/apps/reset/views.py:110
 msgid "Entered passwords differ"
 msgstr "两次输入密码不一致"
 
@@ -492,19 +477,24 @@ msgstr "或者"
 msgid "扫描二维码添加谷歌身份验证器"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:29
+msgid ""
+"Tip:To register success, Ensure you can access the google recaptcha service."
+msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
+
+#: web/apps/register/templates/register/index.html:52
 msgid "Clicking register button means you agree and abide by<br/> Newton"
 msgstr "点击注册按钮即表示您同意并愿意遵守<br/> Newton的"
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:52
 msgid "User Agreement"
 msgstr "使用条款"
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:52
 msgid "and"
 msgstr "和"
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:52
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -798,7 +788,7 @@ msgstr ""
 msgid "Newton notification: Received your KYC information"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
 
-#: web/apps/tokenexchange/views.py:50
+#: web/apps/tokenexchange/views.py:56
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
@@ -834,6 +824,11 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:30
 msgid "Your ELA amount is "
 msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/end.html:6
+#, fuzzy
+msgid "Token Exchange"
+msgstr "牛顿 Token 预售"
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:20
 msgid "NEWTON TOKEN EXCHANGE AGREEMENT"
@@ -5848,11 +5843,11 @@ msgstr "社区治理"
 msgid "Service Terms"
 msgstr "服务条款"
 
-#: web/templates/header-no-menu.html:29 web/templates/header.html:45
+#: web/templates/header-no-menu.html:29 web/templates/header.html:44
 msgid "User Center"
 msgstr "用户中心"
 
-#: web/templates/header-no-menu.html:30 web/templates/header.html:46
+#: web/templates/header-no-menu.html:30 web/templates/header.html:45
 msgid "LogOut"
 msgstr "退出"
 
@@ -5890,3 +5885,15 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Newton Notifications: You have passed the Newton KYC"
+#~ msgstr "牛顿通知：你已经通过了牛顿KYC审核"
+
+#~ msgid "Newton Notifications: You are not passed the Newton KYC"
+#~ msgstr "牛顿通知：你没有通过牛顿KYC审核"
+
+#~ msgid "Newton notification: Fillout your expect amount"
+#~ msgstr "牛顿通知：请填写您的期望投资额度"
+
+#~ msgid "Newton notification: Receive Amount Notification!"
+#~ msgstr "牛顿通知：我们接收到了您的投资！"
