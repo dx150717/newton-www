@@ -103,7 +103,7 @@ class AnnouncementView(generic.ListView):
         elif language.startswith('en'):
             language = ENGLISH
         else:
-            language = CHINESE
+            language = ENGLISH
             
         entry = EntryDetail()
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language)
@@ -125,7 +125,7 @@ class AnnouncementSubView(generic.ListView):
         elif language.startswith('en'):
             language = ENGLISH
         else:
-            language = CHINESE
+            language = ENGLISH
             
         entry = EntryDetail()
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,entry_sub_type=entry_sub_type)
