@@ -24,7 +24,8 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
             if not language:
                 language = request.META.get('HTTP_ACCEPT_LANGUAGE')
                 # Adapt browser language
-                language = language.split(',')[0]
+                if not language:
+                    language = language.split(',')[0]
             if not language:
                 language = request.POST.get("language", None)
             if not language:
