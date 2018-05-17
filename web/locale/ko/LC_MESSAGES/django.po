@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 13:46+0000\n"
+"POT-Creation-Date: 2018-05-17 03:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -217,7 +217,7 @@ msgstr ""
 #: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
-msgstr ""
+msgstr "홈페이지"
 
 #: web/apps/login/forms.py:7 web/apps/register/forms.py:15
 #: web/apps/reset/forms.py:9 web/apps/zinnia/templates/zinnia/password.html:24
@@ -228,7 +228,8 @@ msgstr ""
 msgid "Form Error"
 msgstr ""
 
-#: web/apps/login/views.py:42
+#: web/apps/login/views.py:42 web/apps/register/views.py:46
+#: web/apps/register/views.py:52
 msgid "No captcha"
 msgstr ""
 
@@ -306,8 +307,8 @@ msgstr ""
 
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/register/templates/register/index.html:6
-#: web/apps/register/templates/register/index.html:20
-#: web/apps/register/templates/register/index.html:29
+#: web/apps/register/templates/register/index.html:24
+#: web/apps/register/templates/register/index.html:39
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
@@ -330,22 +331,6 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:35
 #: web/apps/user/templates/user/profile.html:31
 msgid "Submit"
-msgstr ""
-
-#: web/apps/newtonadmin/services_tokenexchange.py:88
-msgid "Newton Notifications: You have passed the Newton KYC"
-msgstr ""
-
-#: web/apps/newtonadmin/services_tokenexchange.py:90
-msgid "Newton Notifications: You are not passed the Newton KYC"
-msgstr ""
-
-#: web/apps/newtonadmin/services_tokenexchange.py:113
-msgid "Newton notification: Fillout your expect amount"
-msgstr ""
-
-#: web/apps/newtonadmin/services_tokenexchange.py:135
-msgid "Newton notification: Receive Amount Notification!"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
@@ -445,15 +430,15 @@ msgstr ""
 msgid "Newton Notification: Please complete the register process of Newton"
 msgstr ""
 
-#: web/apps/register/views.py:45
+#: web/apps/register/views.py:58
 msgid "Email already existed"
 msgstr ""
 
-#: web/apps/register/views.py:135
+#: web/apps/register/views.py:148
 msgid "Google Auth Code Error"
 msgstr ""
 
-#: web/apps/register/views.py:197 web/apps/reset/views.py:110
+#: web/apps/register/views.py:210 web/apps/reset/views.py:110
 msgid "Entered passwords differ"
 msgstr ""
 
@@ -488,19 +473,19 @@ msgstr ""
 msgid "扫描二维码添加谷歌身份验证器"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "Clicking register button means you agree and abide by<br/> Newton"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "User Agreement"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "and"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -753,7 +738,7 @@ msgstr "뉴턴의 새로운 업데이트를 구독하세요! "
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:25
 msgid "Email Address"
-msgstr ""
+msgstr "이메일"
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:26
 msgid "SUBSCRIBE"
@@ -789,7 +774,7 @@ msgstr ""
 msgid "Newton notification: Received your KYC information"
 msgstr ""
 
-#: web/apps/tokenexchange/views.py:50
+#: web/apps/tokenexchange/views.py:56
 msgid "You had submited kyc info"
 msgstr ""
 
@@ -1425,22 +1410,22 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:24
 msgid "All"
-msgstr ""
+msgstr "모두보기"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
 #: web/apps/zinnia/models_bases/entry.py:64
 msgid "Operation"
-msgstr ""
+msgstr "운영"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
 #: web/apps/zinnia/models_bases/entry.py:65
 msgid "Weekly"
-msgstr ""
+msgstr "위클리"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
 #: web/apps/zinnia/models_bases/entry.py:63
 msgid "Activity"
-msgstr ""
+msgstr "활동"
 
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
@@ -1453,7 +1438,7 @@ msgstr "커뮤니티"
 
 #: web/apps/welcome/templates/welcome/community.html:18
 msgid "Socail Network"
-msgstr "SNS"
+msgstr "소셜 네트워크"
 
 #: web/apps/welcome/templates/welcome/community.html:27
 #: web/apps/welcome/templates/welcome/wechat.html:20
@@ -1462,7 +1447,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:34
 msgid "Email-list"
-msgstr "이메일"
+msgstr "이메일 목록"
 
 #: web/apps/welcome/templates/welcome/community.html:51
 msgid "English"
@@ -1474,13 +1459,13 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:68
 msgid "Press"
-msgstr "언론보도"
+msgstr "언론"
 
 #: web/apps/welcome/templates/welcome/community.html:74
-#: web/apps/welcome/templates/welcome/include-protocol.html:64
+#: web/apps/welcome/templates/welcome/include-protocol.html:65
 #: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
-msgstr ""
+msgstr "더보기"
 
 #: web/apps/welcome/templates/welcome/contact.html:6
 #: web/apps/welcome/templates/welcome/contact.html:13
@@ -1493,7 +1478,8 @@ msgstr "연락처"
 msgid ""
 "Web Site: <a href='https://www.newtonproject.org' target='_blank'>https://"
 "www.newtonproject.org"
-msgstr "웹사이트 : <a href='https://www.newtonproject.org' target='_blank'>https://"
+msgstr ""
+"홈페이지: <a href='https://www.newtonproject.org' target='_blank'>https://"
 "www.newtonproject.org"
 
 #: web/apps/welcome/templates/welcome/contact.html:22
@@ -1505,7 +1491,7 @@ msgid ""
 "WhitePager : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
 msgstr ""
-"백서 : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
+"백서: <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:25
@@ -1513,15 +1499,15 @@ msgid ""
 "Global Community : <a href='mailto:newton-community@newtonproject."
 "org'>newton-community@newtonproject.org</a>"
 msgstr ""
-"글로벌 커뮤니티 : <a href='mailto:newton-community@newtonproject."
-"org'>newton-community@newtonproject.org</a>"
+"글로벌 커뮤니티: <a href='mailto:newton-community@newtonproject.org'>newton-"
+"community@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:26
 msgid ""
 "Newton Token Exchange : <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
 msgstr ""
-"뉴튼 토큰 익스체인지 : <a href='mailto:newton-ir@newtonproject.org'>newton-"
+"뉴턴 토큰 익스체인지: <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:27
@@ -1529,15 +1515,15 @@ msgid ""
 "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
 msgstr ""
-"PR : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-"pr@newtonproject.org</a>"
+"PR: <a href='mailto:newton-pr@newtonproject.org'>newton-pr@newtonproject."
+"org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:28
 msgid ""
 "Newton Fund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
 msgstr ""
-"뉴턴 펀드 : <a href='mailto:newton-fund@newtonproject.org'>newton-"
+"뉴턴 펀드: <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:29
@@ -1545,7 +1531,7 @@ msgid ""
 "Council : <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
 msgstr ""
-"이사회 : <a href='mailto:newton-council@newtonproject.org'>newton-"
+"이사회: <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:30
@@ -1553,8 +1539,8 @@ msgid ""
 "Other Contacts : <a href='mailto:contact@newtonproject."
 "org'>contact@newtonproject.org</a>"
 msgstr ""
-"기타 : <a href='mailto:contact@newtonproject."
-"org'>contact@newtonproject.org</a>"
+"기타: <a href='mailto:contact@newtonproject.org'>contact@newtonproject.org</"
+"a>"
 
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
@@ -1752,12 +1738,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/economy.html:13
 #: web/templates/header.html:34
 msgid "Economy"
-msgstr ""
+msgstr "경제"
 
 #: web/apps/welcome/templates/welcome/economy.html:23
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
-msgstr "공동 비즈니스 기구"
+msgstr "공동 비즈니스 기업"
 
 #: web/apps/welcome/templates/welcome/foundation.html:6
 msgid "Foundation"
@@ -1778,17 +1764,17 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:74
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Co-founder of Elastos"
-msgstr ""
+msgstr "Elastos 공동 창립자"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:24
 #: web/apps/welcome/templates/welcome/include-investor.html:75
 msgid "Visiting Scholar & Research Associate at Columbia University"
-msgstr ""
+msgstr "콜롬비아 대학교 방문연구원 및 RA"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:25
 #: web/apps/welcome/templates/welcome/include-investor.html:76
 msgid "Advisor at Huawei Central Institute"
-msgstr ""
+msgstr "Huawei 중앙 연구소 어드바이저"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:34
 #: web/apps/welcome/templates/welcome/include-advisor.html:36
@@ -1800,12 +1786,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:38
 #: web/apps/welcome/templates/welcome/include-investor.html:60
 msgid "SVP of Cheetah(NASDAQ:CMCM)"
-msgstr ""
+msgstr "Cheetah(NASDAQ:CMCM) SVP"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:39
 #: web/apps/welcome/templates/welcome/include-investor.html:61
 msgid "Founder of quwan.com"
-msgstr ""
+msgstr "Quwan.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:49
 #: web/apps/welcome/templates/welcome/include-advisor.html:51
@@ -1817,12 +1803,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:53
 #: web/apps/welcome/templates/welcome/include-investor.html:89
 msgid "Former CTO of Sina(NASDAQ: SINA)"
-msgstr ""
+msgstr "전 Sina (NASDAQ: SINA) CTO"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:54
 #: web/apps/welcome/templates/welcome/include-investor.html:90
 msgid "Partner of DFJ Venture Capital"
-msgstr ""
+msgstr "DFJ 벤처 캐피탈 파트너"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:64
 #: web/apps/welcome/templates/welcome/include-advisor.html:66
@@ -1834,12 +1820,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
 #: web/apps/welcome/templates/welcome/include-investor.html:127
 msgid "Chairman of elastos ecosystem board"
-msgstr ""
+msgstr "Elastos 생태계 건설 위원회 주임"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
 #: web/apps/welcome/templates/welcome/include-investor.html:127
 msgid "Previous President of Chongqing Lifan"
-msgstr ""
+msgstr "전 Chongqing LIfan 대표"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:75
 #: web/apps/welcome/templates/welcome/include-advisor.html:77
@@ -1851,12 +1837,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:79
 #: web/apps/welcome/templates/welcome/include-investor.html:103
 msgid "Professor at Tsinghua University"
-msgstr ""
+msgstr "Tsinghua 대학교 교수"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:80
 #: web/apps/welcome/templates/welcome/include-investor.html:104
 msgid "Director of International Relations at iCenter"
-msgstr ""
+msgstr "Tsinghua iCenter IR 주임"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:89
 #: web/apps/welcome/templates/welcome/include-advisor.html:91
@@ -1868,7 +1854,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:92
 #: web/apps/welcome/templates/welcome/include-investor.html:139
 msgid "Bitcoin Ambassador"
-msgstr ""
+msgstr "비트코인 대사"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
@@ -1935,7 +1921,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:9
 msgid "ANGEL INVESTOR"
-msgstr "엔젤투자자"
+msgstr "엔젤 투자자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:19
 #: web/apps/welcome/templates/welcome/include-investor.html:21
@@ -1944,7 +1930,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:22
 msgid "Co-Founder of Lightinthebox(NYSE:LITB)"
-msgstr ""
+msgstr "Lightinthebox(NYSE:LITB) 공동 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:30
 #: web/apps/welcome/templates/welcome/include-investor.html:32
@@ -1953,7 +1939,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:33
 msgid "Founder of kela.cn"
-msgstr ""
+msgstr "kela.cn 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:41
 #: web/apps/welcome/templates/welcome/include-investor.html:43
@@ -1962,11 +1948,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:45
 msgid "Founder of meilishuo.com"
-msgstr ""
+msgstr "meilishuo.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:46
 msgid "CEO of HIGO"
-msgstr ""
+msgstr "HIGO CEO"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:113
 #: web/apps/welcome/templates/welcome/include-investor.html:115
@@ -1975,7 +1961,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:116
 msgid "Founder of mbaobao.com"
-msgstr ""
+msgstr "mbaobao.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:148
 #: web/apps/welcome/templates/welcome/include-investor.html:150
@@ -1984,11 +1970,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:152
 msgid "Founder of linekong.com"
-msgstr ""
+msgstr "linekong.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:153
 msgid "Founder of huoxing24.com"
-msgstr ""
+msgstr "huoxing24.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:163
 #: web/apps/welcome/templates/welcome/include-investor.html:165
@@ -1997,7 +1983,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:167
 msgid "Founder and CEO of Distributed Credit Chain"
-msgstr ""
+msgstr "Distributed Credit Chain 창립자 겸 CEO"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:177
 #: web/apps/welcome/templates/welcome/include-investor.html:179
@@ -2008,7 +1994,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:181
 msgid "Founder of Innoangel Fund"
-msgstr ""
+msgstr "Iinnoangel fund 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:192
 msgid "Shi Junchao"
@@ -2016,11 +2002,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:194
 msgid "Senior gem jade appraiser."
-msgstr ""
+msgstr "선임 보석 감정사"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:195
 msgid "Deputy secretary general of xinjiang hetian jade industry association."
-msgstr ""
+msgstr "xinjiang hetian 보석 산업협회 비서장"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:206
 msgid "Guo Hongchi"
@@ -2028,7 +2014,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:208
 msgid "Founder of xijie.com"
-msgstr ""
+msgstr "xijie.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "Joint Ecological Construction"
@@ -2062,12 +2048,12 @@ msgstr ""
 "“아톰 해싱”이라는 기술을 사용해, 전체 네트워크에서 상품을 위한 고유 디지털 신"
 "원을 만들 수 있습니다."
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:44
+#: web/apps/welcome/templates/welcome/include-protocol.html:45
 #: web/apps/welcome/templates/welcome/protocol.html:50
 msgid "Digital Marketing"
 msgstr "디지털 마케팅"
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:46
+#: web/apps/welcome/templates/welcome/include-protocol.html:47
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system."
@@ -2075,12 +2061,12 @@ msgstr ""
 "광고주는 시스템에 내장된 다양한 마케팅 스마트 계약 템플릿을 통해 마케팅 계획"
 "을 세울 수 있습니다."
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:54
+#: web/apps/welcome/templates/welcome/include-protocol.html:55
 #: web/apps/welcome/templates/welcome/protocol.html:64
 msgid "Trading and payment"
 msgstr "거래 및 지불"
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:56
+#: web/apps/welcome/templates/welcome/include-protocol.html:57
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
 "We support cross-border transactions, ultra-small payments, lightning "
@@ -2101,7 +2087,7 @@ msgstr "뉴턴 프로젝트 정식 시작."
 #: web/apps/welcome/templates/welcome/include-roadmap.html:29
 #: web/apps/welcome/templates/welcome/include-roadmap.html:68
 msgid "Newton website officially released."
-msgstr "뉴턴 웹사이트 정식 오픈."
+msgstr "뉴턴 홈페이지 공식 오픈."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
 #: web/apps/welcome/templates/welcome/include-roadmap.html:76
@@ -2125,11 +2111,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Founder"
-msgstr ""
+msgstr "창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Founder of Zeuux (A Community for Free Software Usage)"
-msgstr ""
+msgstr "Zeuux(무료 소프트웨어 커뮤니티) 창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:30
 #: web/apps/welcome/templates/welcome/include-team.html:32
@@ -2138,11 +2124,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:33
 msgid "Co-founder"
-msgstr ""
+msgstr "공동 창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:33
 msgid "Founder and CEO of OKbuy"
-msgstr ""
+msgstr "OKbuy 창립자 겸 CEO"
 
 #: web/apps/welcome/templates/welcome/include-team.html:42
 #: web/apps/welcome/templates/welcome/include-team.html:44
@@ -2152,11 +2138,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-team.html:45
 #: web/apps/welcome/templates/welcome/include-team.html:57
 msgid "Joint Chief Architect"
-msgstr ""
+msgstr "공동 수석 설계사"
 
 #: web/apps/welcome/templates/welcome/include-team.html:45
 msgid "Co-founder of Zeuux (A Community for Free Software Usage)"
-msgstr ""
+msgstr "Zeuux(무료 소프트웨어 커뮤니티)  공동 창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:54
 #: web/apps/welcome/templates/welcome/include-team.html:56
@@ -2170,11 +2156,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Marketing Specialist"
-msgstr ""
+msgstr "마케팅 스페셜리스트"
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Founder of WuZhou Online"
-msgstr ""
+msgstr "Wuzhou Online 창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:78
 #: web/apps/welcome/templates/welcome/include-team.html:80
@@ -2183,11 +2169,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:81
 msgid "Product Specialist"
-msgstr ""
+msgstr "프로덕트 스페셜리스트"
 
 #: web/apps/welcome/templates/welcome/include-team.html:81
 msgid "Previous Product Director of xs.cn"
-msgstr ""
+msgstr "전 xs.cn 프로덕트 디렉터"
 
 #: web/apps/welcome/templates/welcome/include-tech-chain.html:10
 msgid "Multiple Blockchain"
@@ -2396,7 +2382,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
 msgid "Currently open positions"
-msgstr ""
+msgstr "현재 지원 가능 포지션"
 
 #: web/apps/welcome/templates/welcome/joinus.html:52
 msgid "Senior R&D Engineer"
@@ -3245,7 +3231,8 @@ msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-msgid "PROTOCOL"
+#: web/templates/header.html:22
+msgid "HEP"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
@@ -3342,7 +3329,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:93
 msgid "Automatic finance"
-msgstr "자동금융"
+msgstr "금융 자동화"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
 msgid ""
@@ -3383,7 +3370,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
 msgid "Team"
-msgstr ""
+msgstr "팀원"
 
 #: web/apps/welcome/templates/welcome/tech.html:6
 msgid "TECH"
@@ -4433,7 +4420,7 @@ msgstr ""
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
-msgstr ""
+msgstr "블로그"
 
 #: web/apps/zinnia/models/category.py:33
 #: web/apps/zinnia/models_bases/entry.py:72
@@ -5645,7 +5632,7 @@ msgstr ""
 
 #: web/templates/footer.html:20
 msgid "COMMUNITY"
-msgstr ""
+msgstr "커뮤니티"
 
 #: web/templates/footer.html:44
 msgid "Service Terms"
@@ -5657,10 +5644,6 @@ msgstr ""
 
 #: web/templates/header-no-menu.html:30 web/templates/header.html:46
 msgid "LogOut"
-msgstr ""
-
-#: web/templates/header.html:22
-msgid "HEP"
 msgstr ""
 
 #: web/templates/header.html:25
