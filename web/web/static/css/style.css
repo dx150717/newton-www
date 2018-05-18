@@ -1117,13 +1117,15 @@ canvas { display: block; vertical-align: top; }
 #news .content .bigimg{float: left; width: 50%; height: 500px; margin: 10px; background-repeat: no-repeat; background-size: 100% 100%; position: relative;}
 #news .content .big-image img{width: 500px;}
 #news .content .small-image img{width: 200px;}
+#news .content .shadow{background-color: #000;width: 100%;height: 100%; opacity: 0.3;}
+#news .content .shadow:hover{opacity: 0;}
 #news .content p{text-align: center; font-size: 22px; color:#fff;}
 #news .content a{color: #fff; font-size: 22px; padding: 5px}
-.bigimg p{position: absolute; bottom: 0}
-.smallimg p{position: absolute; bottom: 0}
+#news .content .announcement-title{color: #fff;position: absolute; bottom: 0;padding: 5px;}
+#news .content .time{position: absolute; top: 0;padding: 5px;}
 @media(max-width:768px){ 
     #news .content{display: block;}
-    #news .content .bigimg{width: 100%; margin: 0 0 2px 0;background-size: 100%, 100%; height: 400px;}
+    #news .content .bigimg{width: 100%; margin: 0 0 2px 0;background-size: cover; height: 400px;}
     #news .content .small-content{width: 100%; float: left; height: unset;}
-    #news .content .smallimg{width: 100%; margin: 0 0 2px 0;background-size: 100%, 100%; height: 400px;}
+    #news .content .smallimg{width: 100%; margin: 0 0 2px 0;background-size: cover; height: 400px;}
 }
