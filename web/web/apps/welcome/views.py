@@ -29,8 +29,6 @@ def show_home_view(request):
         
     entry = EntryDetail()
     entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,show_in_home=True)[0:5]
-    print "---->"
-    print len(entries)
     for entry in entries:
         url = entry.get_absolute_url().replace('/blog/','/announcement/')
         entry.urls = url

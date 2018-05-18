@@ -18,10 +18,12 @@
                     {% if forloop.counter == 1 %}
                         {% if entry.image %}
                             <a class="bigimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
+                                <span>{{ entry.last_update|date:"Y-m-d" }}</span>
                                 <p>{{ entry.title }}</p>
                             </a>
                         {% else %}
                         <a class="bigimg" href="{{ entry.urls }}">
+                            <span>{{ entry.last_update|date:"Y-m-d" }}</span>
                             <p>{{ entry.title }}</p>
                         </a>
                         {% endif %}
@@ -29,10 +31,12 @@
                     {% else %}
                         {% if entry.image %}
                         <a class="smallimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
+                            <span>{{ entry.last_update|date:"Y-m-d" }}</span>
                             <p>{{ entry.title }}</p>
                         </a>
                         {% else %}
                         <a class="smallimg" href="{{ entry.urls }}">
+                            <span>{{ entry.last_update|date:"Y-m-d" }}</span>
                             <p>{{ entry.title }}</p>
                         </a>
                         {% endif %}
@@ -45,25 +49,3 @@
 </section>
 <!-- end -->
 <!--end
-
-<div class="row">
-            <div class="bigimg" style="float: left; width: 50%; height: 500px; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
-                <span>这是大图标题</span>
-            </div>
-            <div style="float: right; width: 50%; height: 500px;" >
-                <div class="smallimg" style="width: 40%; height: 50%; float: left; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
-                    <span>这是小图标题</span>
-                </div>
-                <div class="smallimg" style="width: 40%; height: 50%; float: right; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
-                    <span>这是小图标题</span>
-                </div>
-                <div class="smallimg" style="width: 40%; height: 50%; float: left; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
-                    <span>这是小图标题</span>
-                </div>
-                <div class="smallimg" style="width: 40%; height: 50%; float: right; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
-                    <span>这是小图标题</span>
-                </div>
-            </div>
-            <div></div>
-        </div>
--->
