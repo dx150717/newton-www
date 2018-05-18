@@ -46,7 +46,7 @@ class EntryAdmin(admin.ModelAdmin):
         (_('Metadatas'), {
             'fields': ('featured', 'excerpt', 'authors', 'related'),
             'classes': ('collapse', 'collapse-closed')}),
-        (None, {'fields': ('categories', 'tags', 'slug', 'language','entry_type','entry_sub_type')}))
+        (None, {'fields': ('categories', 'tags', 'slug', 'language','entry_type','entry_sub_type','show_in_home')}))
     list_filter = (CategoryListFilter, AuthorListFilter, 'status', 'featured',
                    'login_required', 'comment_enabled', 'pingback_enabled',
                    'trackback_enabled', 'creation_date', 'start_publication',

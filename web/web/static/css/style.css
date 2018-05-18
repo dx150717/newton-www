@@ -1108,3 +1108,10 @@ canvas { display: block; vertical-align: top; }
 
 #reset{padding-bottom: 60px;}
 .amount .form-group .alert{width: 100%;}
+
+#news .content{display: flex;overflow-x: auto;}
+#news .content .small-content{float: right; width: 50%; height: 500px;}
+#news .content .smallimg{width: 40%; height: 40%; float: left; margin: 10px; background-repeat: no-repeat; background-size: 100% 100%;}
+#news .content .bigimg{float: left; width: 50%; height: 500px; padding: 10px; background-repeat: no-repeat; background-size: 100% 100%;}
+#news .content .big-image img{width: 500px;}
+#news .content .small-image img{width: 200px;}

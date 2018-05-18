@@ -1,0 +1,69 @@
+{% load i18n %} 
+{% load utils %}
+
+<section id="news" class="section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "NEWS" %}</strong>
+                    <span></span>
+                </h2>
+            </div>
+        </div>
+        <div class="content">
+            {% if entries %}
+                {% for entry in entries%}
+                    {% if forloop.counter == 1 %}
+                        {% if entry.image %}
+                            <a class="bigimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
+                                <p>{{ entry.title }}</p>
+                            </a>
+                        {% else %}
+                        <a class="bigimg" href="{{ entry.urls }}">
+                            <p>{{ entry.title }}</p>
+                        </a>
+                        {% endif %}
+                        <div class="small-content">
+                    {% else %}
+                        {% if entry.image %}
+                        <a class="smallimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
+                            <p>{{ entry.title }}</p>
+                        </a>
+                        {% else %}
+                        <a class="smallimg" href="{{ entry.urls }}">
+                            <p>{{ entry.title }}</p>
+                        </a>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<!-- end -->
+<!--end
+
+<div class="row">
+            <div class="bigimg" style="float: left; width: 50%; height: 500px; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
+                <span>这是大图标题</span>
+            </div>
+            <div style="float: right; width: 50%; height: 500px;" >
+                <div class="smallimg" style="width: 40%; height: 50%; float: left; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <span>这是小图标题</span>
+                </div>
+                <div class="smallimg" style="width: 40%; height: 50%; float: right; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <span>这是小图标题</span>
+                </div>
+                <div class="smallimg" style="width: 40%; height: 50%; float: left; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <span>这是小图标题</span>
+                </div>
+                <div class="smallimg" style="width: 40%; height: 50%; float: right; padding: 10px; background-image: url(../../static/images/background.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <span>这是小图标题</span>
+                </div>
+            </div>
+            <div></div>
+        </div>
+-->

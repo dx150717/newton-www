@@ -122,6 +122,13 @@ class CoreEntry(models.Model):
         help_text=('Entry sub type')
     )
 
+    show_in_home = models.BooleanField(
+        _('show_in_home'),
+        default=True,
+        db_index=True,
+        help_text=('Show in home')
+    )
+
     objects = models.Manager()
     published = EntryPublishedManager()
 
