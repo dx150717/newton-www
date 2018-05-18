@@ -40,6 +40,7 @@ h3, .f24 { font-size: 24px; }
 .only-pc { display: block;}
 .only-mobile {display: none; }
 .arrow-only-pc{ display: inline-flex;}
+#normal{ position: relative;}
 @font-face {
     font-family: 'iconfont';
     src: url('../fonts/iconfont.eot'); /* IE9*/
@@ -316,6 +317,7 @@ canvas { display: block; vertical-align: top; }
 .entry .body dl dd { font-size: 14px; }
 .bdshare-button-style0-32{ position: fixed; left: 250px; bottom: 200px; width: 40px;}
 .fr { float: right;}
+.fl { float: left;}
 /* Contact ---------------------------------------------------------------- */
 .contact-item { margin-bottom: 20px; }
 .contact-item .contact-item-wrap { padding: 0; -webkit-transition: all .45s ease-in-out; -moz-transition: all .45s ease-in-out; -o-transition: all .45s ease-in-out; -ms-transition: all .45s ease-in-out; transition: all .45s ease-in-out; }
@@ -398,10 +400,20 @@ canvas { display: block; vertical-align: top; }
 
 /* Notice ----------------------------------------------------------------- */
 
-.Notice{ background-color:#222; height:50px; line-height:50px; text-align:center;}
-.Notice .container{ text-align:left; color:#fff; }
-
-
+.Notice{ background-color:#333333; height:50px; }
+.Notice .container{ color:#fff; height: 50px; justify-content: space-between; display: flex; width: 100%}
+.Notice p{height: 25px; font-size: 11px; margin: 0; text-align: center; line-height: 25px}
+.Notice span{font-size: 25px; line-height: 50px; text-align: center}
+.notice_title{width:60%; text-align: center;}
+.Notice a{color:#fff}
+@media (max-width: 768px){
+    #hide {display: none}
+    .Notice{height: 100px;}
+    .Notice .container{height: 100px; width: 100%;  display: block; padding-top: 3px}
+    .notice_title{width: 100%}
+    .Notice p{height: 18px; font-size: 12px; line-height: 18px;}
+    .Notice span{line-height: 40px;}    
+}
 /* Responsive ----------------------------------------------------------------- */
 .feature-item-img{text-align:center;}
 .feature-item-img span{ width:109px; height:109px; margin:0 auto; display:block; background:url(../images/features/icon-1.svg) no-repeat center center;}

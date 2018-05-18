@@ -42,11 +42,25 @@
         <div style="margin:0 auto; width:0px;height:0px;overflow:hidden;">
             <img src="{% version "images/pic300.jpg" %}">
         </div>
-        {% comment %}
         <div class="Notice">
-            <div class="container">Notice：...</div>
+            <div class="container">
+                <div>
+                    <p id="hide">Newton Meetup Beijing</p>
+                    <p id="hide">牛顿线下见面会</p>
+                    <p class="display: none">Newton Meetup Beijing 牛顿线下见面会</p>
+                    <p class="display: none">北京站邀您参加</p>
+                </div>
+                <div class="notice_title">
+                    <span>
+                        <a href="">重塑经济时代商业法则</a>  
+                    </span>
+                </div>
+                <div>
+                    <p>2018－05-19 下午 14:00～18:00</p>
+                    <p id="hide">北京站邀您参加</p>
+                </div>
+            </div>
         </div>
-        {% endcomment %}
         
         {% block header %}
         {% include "header.html" %}
