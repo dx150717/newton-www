@@ -44,7 +44,7 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
             return 'en'
         except Exception, inst:
             logger.exception('fail to get user language:%s' % str(inst))
-            return ''
+            return 'en'
 
     def process_request(self, request):
         # check the langage in cookie
