@@ -42,8 +42,9 @@ BASE_NAME = 'newtonproject'
 VERIFICATION_DEFAULT_EXPIRE_TIME = 7200
 
 # authenticate settings
-AUTHENTICATION_BACKENDS = ('backends.auth.EmailAuthBackend', )
-
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'backends.auth.EmailAuthBackend', )
 # google recaptcha verification url
 GOOGLE_VERIFICATION_URL = "https://www.google.com/recaptcha/api/siteverify"
 GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
