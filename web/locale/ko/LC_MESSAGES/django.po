@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-17 10:00+0000\n"
+"POT-Creation-Date: 2018-05-18 13:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,8 +165,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:105
-#: web/apps/zinnia/models_bases/entry.py:108
+#: web/apps/zinnia/models_bases/entry.py:107
+#: web/apps/zinnia/models_bases/entry.py:110
 msgid "Language"
 msgstr ""
 
@@ -226,16 +226,7 @@ msgstr ""
 
 #: web/apps/login/views.py:36
 msgid "Form Error"
-msgstr ""
-
-#: web/apps/login/views.py:42 web/apps/register/views.py:46
-#: web/apps/register/views.py:52
-msgid "No captcha"
-msgstr ""
-
-#: web/apps/login/views.py:43
-msgid "Auth Recaptcha Error"
-msgstr ""
+msgstr "서식 에러"
 
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
@@ -243,7 +234,7 @@ msgstr ""
 
 #: web/apps/login/views.py:56
 msgid "Request Time Out"
-msgstr ""
+msgstr "제한시간이 초과했습니다"
 
 #: web/apps/login/views.py:70
 msgid "No Auth_token"
@@ -255,11 +246,11 @@ msgstr ""
 
 #: web/apps/login/views.py:76
 msgid "No User Profile"
-msgstr ""
+msgstr "유저 프로필 없음"
 
 #: web/apps/login/views.py:79
 msgid "Incorrect Google Authenticator Code"
-msgstr ""
+msgstr "코드가 올바르지 않습니다"
 
 #: web/apps/login/templates/login/index.html:5
 #: web/apps/login/templates/login/index.html:19
@@ -303,7 +294,7 @@ msgstr ""
 #: web/apps/login/templates/login/index.html:24
 msgid ""
 "Tip:To login success, Ensure you can access the google recaptcha service."
-msgstr ""
+msgstr "팁: 로그인을 하기 위해서는 구글 reCAPTCHA를 입력해야 합니다."
 
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/register/templates/register/index.html:6
@@ -315,23 +306,23 @@ msgstr ""
 #: web/apps/register/templates/register/register-success.html:6
 #: web/templates/header-no-menu.html:35 web/templates/header.html:51
 msgid "Register"
-msgstr "가입"
+msgstr "가입하기"
 
 #: web/apps/login/templates/login/index.html:43
 msgid "Forget Password"
-msgstr ""
+msgstr "비밀번호 분실"
 
 #: web/apps/login/templates/login/index.html:56
 #: web/apps/login/templates/login/index.html:63 web/apps/register/forms.py:19
 msgid "Google Authenticator Code"
-msgstr ""
+msgstr "코드"
 
 #: web/apps/login/templates/login/index.html:67
 #: web/apps/register/templates/register/gtoken.html:56
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:35
 #: web/apps/user/templates/user/profile.html:31
 msgid "Submit"
-msgstr ""
+msgstr "제출하기"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
@@ -436,46 +427,47 @@ msgstr ""
 
 #: web/apps/register/views.py:148
 msgid "Google Auth Code Error"
-msgstr ""
+msgstr "구글 인증 코드 에러"
 
 #: web/apps/register/views.py:210 web/apps/reset/views.py:110
 msgid "Entered passwords differ"
-msgstr ""
+msgstr "비밀번호를 다르게 설정해주세요"
 
 #: web/apps/register/templates/register/gtoken.html:6
 #: web/apps/register/templates/register/gtoken.html:20
 msgid "Add Google Authenticator"
-msgstr ""
+msgstr "추가하기"
 
 #: web/apps/register/templates/register/gtoken.html:25
-msgid "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
+msgid "Scan the QR code or Enter the  code manually into your GA app"
 msgstr ""
+"코드를 스캔하거나 코드를 수동으로 Google Authenticator앱에 입력해주세요"
 
 #: web/apps/register/templates/register/gtoken.html:28
 msgid ""
-"苹果用户推荐在App Store中下载Authenticator,安卓用户推荐到Google Play下载谷歌"
-"身份验证器"
-msgstr ""
+"Apple users recommend to download the Authenticator in the App Store, and "
+"android users recommend the Google Authenticator to Google Play."
+msgstr "앱스토어 혹은 구글플레이에서 Google Authenticato를 다운로드 받으세요"
 
 #: web/apps/register/templates/register/gtoken.html:31
-msgid "请务必保管好密钥或者二维码，以免丢失造成不便"
-msgstr ""
+msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
+msgstr "분실에 대비해 키 혹은 QR코드를 반드시 보관하세요"
 
 #: web/apps/register/templates/register/gtoken.html:44
-msgid "手动添加谷歌身份验证器"
-msgstr ""
+msgid "Enter the  code manually into your GA app"
+msgstr "GA앱에 코드를 수동으로 입력해주세요"
 
 #: web/apps/register/templates/register/gtoken.html:48
 msgid "Or"
-msgstr ""
+msgstr "혹은"
 
 #: web/apps/register/templates/register/gtoken.html:51
-msgid "扫描二维码添加谷歌身份验证器"
-msgstr ""
+msgid "Use the GA app to scan the QR code"
+msgstr "GA앱을 사용해 QR코드를 스캔해주세요"
 
 #: web/apps/register/templates/register/index.html:47
 msgid "Clicking register button means you agree and abide by<br/> Newton"
-msgstr ""
+msgstr "가입 버튼을 누르면 뉴턴에 동의하고 규정을 따르는 것으로 간주됩니다."
 
 #: web/apps/register/templates/register/index.html:47
 msgid "User Agreement"
@@ -504,17 +496,21 @@ msgstr ""
 
 #: web/apps/register/templates/register/password.html:29
 msgid "Next"
-msgstr ""
+msgstr "다음"
 
 #: web/apps/register/templates/register/post-success.html:20
 #: web/apps/reset/templates/reset/reset-success.html:18
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:20
 msgid "Submit Success!"
-msgstr ""
+msgstr "변경에 성공했습니다!"
 
 #: web/apps/register/templates/register/post-success.html:21
-msgid "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
+msgid ""
+"We have sent you an email to your registered email, please check out to "
+"finish signing up。"
 msgstr ""
+"가입하신 이메일 주소로 메일을 전송했습니다. 메일을 확인해 비밀번호 초기화 절"
+"차를 완료해주세요."
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Complete the register process of Newton"
@@ -548,7 +544,7 @@ msgstr ""
 
 #: web/apps/reset/views.py:36
 msgid "Email not existed"
-msgstr ""
+msgstr "존재하지 않는 이메일입니다."
 
 #: web/apps/reset/templates/reset/edit_password.html:6
 #: web/apps/reset/templates/reset/edit_password.html:18
@@ -562,11 +558,11 @@ msgstr ""
 #: web/apps/reset/templates/reset/reset-success.html:6
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
 msgid "Reset"
-msgstr ""
+msgstr "리셋"
 
 #: web/apps/reset/templates/reset/index.html:6
 msgid "ReSet"
-msgstr ""
+msgstr "리셋"
 
 #: web/apps/reset/templates/reset/reset-complete.html:20
 msgid "Reset Success!"
@@ -594,6 +590,8 @@ msgid ""
 "We sent an email to your registered email address, please go to check and "
 "complete the reset password process."
 msgstr ""
+"가입하신 이메일 주소로 메일을 전송했습니다. 메일을 확인해 비밀번호 초기화 절"
+"차를 완료해주세요."
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -1119,7 +1117,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
 msgid "Invalid Link"
-msgstr ""
+msgstr "링크 에러"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 msgid "TOKENEXCHANGE"
@@ -1399,7 +1397,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:59 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:61 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "공지사항"
 
@@ -1413,17 +1411,17 @@ msgid "All"
 msgstr "모두보기"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:64
+#: web/apps/zinnia/models_bases/entry.py:66
 msgid "Operation"
 msgstr "운영"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:65
+#: web/apps/zinnia/models_bases/entry.py:67
 msgid "Weekly"
 msgstr "위클리"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:63
+#: web/apps/zinnia/models_bases/entry.py:65
 msgid "Activity"
 msgstr "활동"
 
@@ -2045,8 +2043,8 @@ msgid ""
 "By using techniques such as 'atom hashing', we can create a unique digital "
 "identity for commodities of the whole network."
 msgstr ""
-"“아톰 해싱” 기술을 사용해, 전체 네트워크에서 상품을 위한 고유 디지털 신"
-"원을 만들 수 있습니다."
+"“아톰 해싱” 기술을 사용해, 전체 네트워크에서 상품을 위한 고유 디지털 신원을 "
+"만들 수 있습니다."
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:45
 #: web/apps/welcome/templates/welcome/protocol.html:50
@@ -2437,7 +2435,8 @@ msgstr "Java，Go，C++，Rust，Kotlin등 다양한 프로그래밍 언어 개�
 msgid ""
 "Being familiar with the principle of software security, can apply security "
 "standards to research and development."
-msgstr "소프트웨어 보안 규칙 표준을 이해해, 이를 리서치 및 개발에 적용할 수 있는 분."
+msgstr ""
+"소프트웨어 보안 규칙 표준을 이해해, 이를 리서치 및 개발에 적용할 수 있는 분."
 
 #: web/apps/welcome/templates/welcome/joinus.html:70
 msgid ""
@@ -2582,7 +2581,9 @@ msgstr "디자이너와 협력해 시각적 디자인 일치."
 msgid ""
 "Proven experience working with React or other modern Frontend Javascript "
 "Framework;"
-msgstr "React 및 기타 프론트 엔드 자바스크립트 프레임워크 업무 경험 입증 가능 하신 분;"
+msgstr ""
+"React 및 기타 프론트 엔드 자바스크립트 프레임워크 업무 경험 입증 가능 하신 "
+"분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:152
 msgid "Experience with Python/Django/Node.js;"
@@ -2600,13 +2601,16 @@ msgstr "높은 프로그래밍 스킬 및 최신 HTML/CSS 이해도 높으신 �
 msgid ""
 "A solid understanding of how web applications work including security, "
 "session management, and best development practices;"
-msgstr "보안, 세션 관리 및 최상의 개발 방법 포함, 웹 응용 프로그램의 작동 방식에 대해 확실히 이해하시는 분;"
+msgstr ""
+"보안, 세션 관리 및 최상의 개발 방법 포함, 웹 응용 프로그램의 작동 방식에 대"
+"해 확실히 이해하시는 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:156
 msgid ""
 "Strong organizational skills to juggle multiple tasks within the constraints "
 "of timelines and budgets with business acumen;"
-msgstr "비즈니스 감각과 함께 시간 제약 속에서 여러 업무 조율 및 처리하는 능력 우대;"
+msgstr ""
+"비즈니스 감각과 함께 시간 제약 속에서 여러 업무 조율 및 처리하는 능력 우대;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:157
 msgid ""
@@ -2659,7 +2663,9 @@ msgstr "2년 이상의 CS 업무 경험 선호;"
 msgid ""
 "MUST speak fluent using english and written English and Chinese with good "
 "presentation, communication and computer skills;"
-msgstr "영어 말하기 및 쓰기 능력 최상 필수. 중국어 프레젠테이션, 커뮤니케이션 및 컴퓨터 능력;"
+msgstr ""
+"영어 말하기 및 쓰기 능력 최상 필수. 중국어 프레젠테이션, 커뮤니케이션 및 컴퓨"
+"터 능력;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:193
 msgid "Self-motivated and able to work independently;"
@@ -2673,7 +2679,9 @@ msgstr "개발자 관계 변호인"
 msgid ""
 "Content creation and distribution and analytics – tutorials, developer "
 "guides, newsletters, sample apps, client libraries;"
-msgstr "콘텐츠 제작 및 배포 및 분석 - 자습서, 개발자 가이드, 뉴스 레터, 샘플 애플리케이션, 클라이언트 라이브러리;"
+msgstr ""
+"콘텐츠 제작 및 배포 및 분석 - 자습서, 개발자 가이드, 뉴스 레터, 샘플 애플리케"
+"이션, 클라이언트 라이브러리;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:218
 msgid ""
@@ -2727,7 +2735,9 @@ msgstr "선임 UX 디자이너"
 msgid ""
 "Translate concepts into user flows, wireframes, mockups and prototypes that "
 "lead to intuitive user experiences;"
-msgstr "콘셉트를 사용자 흐름, 와이어 프레임, 목업 및 프로토 타입으로 변환 후 직관적인 UE 유도;"
+msgstr ""
+"콘셉트를 사용자 흐름, 와이어 프레임, 목업 및 프로토 타입으로 변환 후 직관적"
+"인 UE 유도;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:258
 msgid "Identify design problems and devise elegant solutions;"
@@ -2748,38 +2758,51 @@ msgid ""
 "Three or more years of UX design experience. Preference will be given to "
 "candidates who have experience designing complex solutions for complete "
 "digital environments;"
-msgstr "3년 이상의 UX 디자인 경험. 디지털 환경을 위한 복잡한 디자인 설계 경험 있는 분 우대;"
+msgstr ""
+"3년 이상의 UX 디자인 경험. 디지털 환경을 위한 복잡한 디자인 설계 경험 있는 "
+"분 우대;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:265
 msgid ""
 "Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
-msgstr "Sketch, InVision, UXPin, Framer, or Marvel App 등의 UX 소프트웨어 전문지식 보유. React, SCSS, 및 JavaScript 가능하신 분 우대;"
+msgstr ""
+"Sketch, InVision, UXPin, Framer, or Marvel App 등의 UX 소프트웨어 전문지식 보"
+"유. React, SCSS, 및 JavaScript 가능하신 분 우대;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:266
 msgid ""
 "Ability to work with clients to understand detailed requirements and design "
 "complete user experiences that meet client needs and vision;"
-msgstr "클라이언트의 상세한 요구사항 이해 및 클라이언트의 니즈와 비전에 맞는 UE 디자인 구현 가능하신 분;"
+msgstr ""
+"클라이언트의 상세한 요구사항 이해 및 클라이언트의 니즈와 비전에 맞는 UE 디자"
+"인 구현 가능하신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
 msgid ""
 "Extensive experience in using UX design best practices to design solutions, "
 "and a deep understanding of mobile-first and responsive design;"
-msgstr "UX 디자인 모범사례를 통한 솔루션 디자인, 모바일 우선 및 반응형 디자인에 이해도 높으신 분;"
+msgstr ""
+"UX 디자인 모범사례를 통한 솔루션 디자인, 모바일 우선 및 반응형 디자인에 이해"
+"도 높으신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:268
 msgid ""
 "A solid grasp of user-centered design (UCD), planning and conducting user "
 "research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
 "usability and accessibility concerns;"
-msgstr "UCD(user-centered design), 기획 및 사용자 리서치 실행, 사용자 테스트, A/B 테스트, 빠른 프로토 타입, 휴리스틱 분석, 유용성 및 접근 가능성 문제에 대한 확실한 이해;"
+msgstr ""
+"UCD(user-centered design), 기획 및 사용자 리서치 실행, 사용자 테스트, A/B 테"
+"스트, 빠른 프로토 타입, 휴리스틱 분석, 유용성 및 접근 가능성 문제에 대한 확실"
+"한 이해;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:269
 msgid ""
 "Ability to clearly and effectively communicate design processes, ideas, and "
 "solutions to teams and clients;"
-msgstr "팀과 고객에게 디자인 프로세스, 아이디어 및 솔루션을 명확하고 효과적으로 전달할 수 있는 능력;"
+msgstr ""
+"팀과 고객에게 디자인 프로세스, 아이디어 및 솔루션을 명확하고 효과적으로 전달"
+"할 수 있는 능력;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:270
 msgid "Be open to receiving feedback and constructive criticism;"
@@ -4268,7 +4291,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:69
+#: web/apps/zinnia/models_bases/entry.py:71
 msgid "title"
 msgstr ""
 
@@ -4405,7 +4428,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:483
+#: web/apps/zinnia/models_bases/entry.py:485
 msgid "categories"
 msgstr ""
 
@@ -4418,14 +4441,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:58
+#: web/apps/zinnia/models_bases/entry.py:60
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr "블로그"
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:72
+#: web/apps/zinnia/models_bases/entry.py:74
 msgid "slug"
 msgstr ""
 
@@ -4446,7 +4469,7 @@ msgid "language"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:115
+#: web/apps/zinnia/models_bases/entry.py:117
 msgid "Entry type"
 msgstr ""
 
@@ -4466,169 +4489,169 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:74
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:76
+#: web/apps/zinnia/models_bases/entry.py:101
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:77
+#: web/apps/zinnia/models_bases/entry.py:79
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:81
+#: web/apps/zinnia/models_bases/entry.py:83
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:85
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:88
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:88
+#: web/apps/zinnia/models_bases/entry.py:90
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:93
+#: web/apps/zinnia/models_bases/entry.py:95
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:94
+#: web/apps/zinnia/models_bases/entry.py:96
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:97
+#: web/apps/zinnia/models_bases/entry.py:99
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:102
+#: web/apps/zinnia/models_bases/entry.py:104
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:112
+#: web/apps/zinnia/models_bases/entry.py:114
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:119
+#: web/apps/zinnia/models_bases/entry.py:121
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:234
+#: web/apps/zinnia/models_bases/entry.py:236
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:235
+#: web/apps/zinnia/models_bases/entry.py:237
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:249
+#: web/apps/zinnia/models_bases/entry.py:251
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:291
+#: web/apps/zinnia/models_bases/entry.py:293
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:292
+#: web/apps/zinnia/models_bases/entry.py:294
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:294
+#: web/apps/zinnia/models_bases/entry.py:296
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:295
+#: web/apps/zinnia/models_bases/entry.py:297
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:297
+#: web/apps/zinnia/models_bases/entry.py:299
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:298
+#: web/apps/zinnia/models_bases/entry.py:300
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:301
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:305
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:305
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:389
+#: web/apps/zinnia/models_bases/entry.py:391
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:407
+#: web/apps/zinnia/models_bases/entry.py:409
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:408
+#: web/apps/zinnia/models_bases/entry.py:410
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:441
+#: web/apps/zinnia/models_bases/entry.py:443
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:443
+#: web/apps/zinnia/models_bases/entry.py:445
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:454
+#: web/apps/zinnia/models_bases/entry.py:456
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:469
+#: web/apps/zinnia/models_bases/entry.py:471
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:493
+#: web/apps/zinnia/models_bases/entry.py:495
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:512
+#: web/apps/zinnia/models_bases/entry.py:514
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:513
+#: web/apps/zinnia/models_bases/entry.py:515
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:525
+#: web/apps/zinnia/models_bases/entry.py:527
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:526
+#: web/apps/zinnia/models_bases/entry.py:528
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:538
+#: web/apps/zinnia/models_bases/entry.py:540
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:540
-#: web/apps/zinnia/models_bases/entry.py:556
+#: web/apps/zinnia/models_bases/entry.py:542
+#: web/apps/zinnia/models_bases/entry.py:558
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:542
+#: web/apps/zinnia/models_bases/entry.py:544
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:554
+#: web/apps/zinnia/models_bases/entry.py:556
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:558
+#: web/apps/zinnia/models_bases/entry.py:560
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5678,3 +5701,6 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Auth Recaptcha Error"
+#~ msgstr "인증 에러"

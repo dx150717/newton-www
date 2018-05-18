@@ -22,13 +22,13 @@
     
     <div class="container text-center">
         <div>
-            <p>{% trans "扫描二维码或者手动填写密钥绑定谷歌身份验证器" %}</p>
+            <p>{% trans "Scan the QR code or Enter the  code manually into your GA app" %}</p>
         </div>
         <div>
-            <p>{% trans "苹果用户推荐在App Store中下载Authenticator,安卓用户推荐到Google Play下载谷歌身份验证器" %}</p>
+            <p>{% trans "Apple users recommend to download the Authenticator in the App Store, and android users recommend the Google Authenticator to Google Play." %}</p>
         </div>
         <div>
-            <p>{% trans "请务必保管好密钥或者二维码，以免丢失造成不便" %}</p>
+            <p>{% trans "Please be sure to keep the key or qr code to avoid any inconvenience." %}</p>
         </div>
     </div>
     <div class="container">
@@ -41,14 +41,14 @@
                 <input id="gtoken" name="gtoken" type="hidden" value="{{ gtoken }}"/>
                 <input id="auth_token" name="auth_token" type="hidden" value="{{ auth_token }}"/>
                 <div class="form-group">
-                    <label for="id_gtoken" class="control-label">{% trans "手动添加谷歌身份验证器" %}</label>
+                    <label for="id_gtoken" class="control-label">{% trans "Enter the  code manually into your GA app" %}</label>
                     <div id="key">{{ gtoken }}</div>
                 </div>
                 <div class="form-group">
                     <label>{% trans "Or"  %}</label>
                 </div>
                 <div class="form-group">
-                    <label for="id_gtoken" class="control-label">{% trans "扫描二维码添加谷歌身份验证器" %}</label>
+                    <label for="id_gtoken" class="control-label">{% trans "Use the GA app to scan the QR code" %}</label>
                     <div id="code"></div> 
                 </div>
                 {% include "form.html" %}
