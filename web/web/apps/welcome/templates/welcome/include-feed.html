@@ -19,14 +19,14 @@
                     {% if entry.image %}
                         <a class="bigimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
                             <div class="shadow"></div>
-                            <p class="time">{{ entry.last_update|date:"Y-m-d" }}</p>
+                            <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
                             <p class="announcement-title">{{ entry.title }}</p>
                         </a>
 
                     {% else %}
                     <a class="bigimg" href="{{ entry.urls }}">
                         <div class="shadow"></div>
-                        <p class="time">{{ entry.last_update|date:"Y-m-d" }}</p>
+                        <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
                         <p class="announcement-title">{{ entry.title }}</p>
                     </a>
                     {% endif %}
@@ -35,13 +35,13 @@
                     {% if entry.image %}
                     <a class="smallimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
                         <div class="shadow"></div>
-                        <p class="time">{{ entry.last_update|date:"Y-m-d" }}</p>
+                        <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
                         <p class="announcement-title">{{ entry.title }}</p>
                     </a>
                     {% else %}
                     <a class="smallimg" href="{{ entry.urls }}">
                         <div class="shadow"></div>
-                        <p class="time">{{ entry.last_update|date:"Y-m-d" }}</p>
+                        <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
                         <p class="announcement-title">{{ entry.title }}</p>
                     </a>
                     {% endif %}
