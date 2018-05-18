@@ -39,14 +39,15 @@
 {% include "welcome/include-roadmap.html" %}
 
 {% include "welcome/include-partner.html" %}
-<section id="sir" class="section">
+{% include "welcome/include-feed.html" %}
+<section id="sir" class="section bg-gray">
   <div class="container"><img class="img-1" src="{% version "images/partners/bitmap.png" %}" width="200">
       <p class="sty1">{% trans "Tribute to one of the greatest scientists ever to impact our lives, Sir Isaac Newton." %}</p>
     <!-- end --> 
   </div>
 </section>
 {% include "subscription/include-subscription.html" %}
-{% include "welcome/include-news.html" %}
+
 {% endblock %}
 
 {% block inline_js %}

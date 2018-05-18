@@ -406,13 +406,15 @@ canvas { display: block; vertical-align: top; }
 .Notice span{font-size: 25px; line-height: 50px; text-align: center}
 .notice_title{width:60%; text-align: center;}
 .Notice a{color:#fff}
+.Notice .only-pc-center{line-height: 50px;}
 @media (max-width: 768px){
     #hide {display: none}
-    .Notice{height: 100px;}
+    .Notice{height: 100px;padding-top: 10px;}
     .Notice .container{height: 100px; width: 100%;  display: block; padding-top: 3px}
     .notice_title{width: 100%}
     .Notice p{height: 18px; font-size: 12px; line-height: 18px;}
-    .Notice span{line-height: 40px;}    
+    .Notice span{line-height: 20px; font-size: 15px;}    
+    .Notice .only-pc-center{line-height: 20px;}
 }
 /* Responsive ----------------------------------------------------------------- */
 .feature-item-img{text-align:center;}
