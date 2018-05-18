@@ -14,7 +14,7 @@
         </div>
         <div class="content">
             {% if entries %}
-                {% for entry in entries%}
+                {% for entry in entries %}
                     {% if forloop.counter == 1 %}
                         {% if entry.image %}
                             <a class="bigimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
