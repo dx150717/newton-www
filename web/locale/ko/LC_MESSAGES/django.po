@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-18 13:10+0000\n"
+"POT-Creation-Date: 2018-05-18 13:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -228,6 +228,15 @@ msgstr ""
 msgid "Form Error"
 msgstr "서식 에러"
 
+#: web/apps/login/views.py:42 web/apps/register/views.py:46
+#: web/apps/register/views.py:52
+msgid "No captcha"
+msgstr ""
+
+#: web/apps/login/views.py:43
+msgid "Auth Recaptcha Error"
+msgstr "인증 에러"
+
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
 msgstr ""
@@ -415,7 +424,7 @@ msgstr ""
 
 #: web/apps/register/forms.py:16 web/apps/reset/forms.py:10
 msgid "Repassword"
-msgstr ""
+msgstr "다시 입력"
 
 #: web/apps/register/services.py:27
 msgid "Newton Notification: Please complete the register process of Newton"
@@ -566,11 +575,13 @@ msgstr "리셋"
 
 #: web/apps/reset/templates/reset/reset-complete.html:20
 msgid "Reset Success!"
-msgstr ""
+msgstr "재설정 성공!"
 
 #: web/apps/reset/templates/reset/reset-complete.html:21
-msgid "您已经重置密码成功，请<a href='/login/'>登录</a>"
-msgstr ""
+msgid ""
+"You have reset your password successfully, please <a href='/login/'> login</"
+"a>"
+msgstr "비밀번호를 재설정했습니다. <a href='/login/'>로그인</a> 하십시오"
 
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Welcome! Please Reset Your Password!"
@@ -5701,6 +5712,3 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
-
-#~ msgid "Auth Recaptcha Error"
-#~ msgstr "인증 에러"

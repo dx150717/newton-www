@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 13:43+0000\n"
+"POT-Creation-Date: 2018-05-18 13:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,8 +165,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:105
-#: web/apps/zinnia/models_bases/entry.py:108
+#: web/apps/zinnia/models_bases/entry.py:107
+#: web/apps/zinnia/models_bases/entry.py:110
 msgid "Language"
 msgstr "语言"
 
@@ -228,7 +228,8 @@ msgstr "密码"
 msgid "Form Error"
 msgstr "表单填写错误"
 
-#: web/apps/login/views.py:42
+#: web/apps/login/views.py:42 web/apps/register/views.py:46
+#: web/apps/register/views.py:52
 msgid "No captcha"
 msgstr ""
 
@@ -306,8 +307,8 @@ msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成�
 
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/register/templates/register/index.html:6
-#: web/apps/register/templates/register/index.html:20
-#: web/apps/register/templates/register/index.html:29
+#: web/apps/register/templates/register/index.html:24
+#: web/apps/register/templates/register/index.html:39
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
@@ -331,22 +332,6 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/user/templates/user/profile.html:31
 msgid "Submit"
 msgstr "提交"
-
-#: web/apps/newtonadmin/services_tokenexchange.py:88
-msgid "Newton Notifications: You have passed the Newton KYC"
-msgstr "牛顿通知：你已经通过了牛顿KYC审核"
-
-#: web/apps/newtonadmin/services_tokenexchange.py:90
-msgid "Newton Notifications: You are not passed the Newton KYC"
-msgstr "牛顿通知：你没有通过牛顿KYC审核"
-
-#: web/apps/newtonadmin/services_tokenexchange.py:113
-msgid "Newton notification: Fillout your expect amount"
-msgstr "牛顿通知：请填写您的期望投资额度"
-
-#: web/apps/newtonadmin/services_tokenexchange.py:135
-msgid "Newton notification: Receive Amount Notification!"
-msgstr "牛顿通知：我们接收到了您的投资！"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
@@ -449,15 +434,15 @@ msgstr "重复密码"
 msgid "Newton Notification: Please complete the register process of Newton"
 msgstr "牛顿通知：请完成牛顿注册"
 
-#: web/apps/register/views.py:45
+#: web/apps/register/views.py:58
 msgid "Email already existed"
 msgstr "邮箱已经存在！"
 
-#: web/apps/register/views.py:135
+#: web/apps/register/views.py:148
 msgid "Google Auth Code Error"
 msgstr "谷歌身份验证码错误"
 
-#: web/apps/register/views.py:197 web/apps/reset/views.py:110
+#: web/apps/register/views.py:210 web/apps/reset/views.py:110
 msgid "Entered passwords differ"
 msgstr "两次输入密码不一致"
 
@@ -467,44 +452,46 @@ msgid "Add Google Authenticator"
 msgstr "添加谷歌身份验证器"
 
 #: web/apps/register/templates/register/gtoken.html:25
-msgid "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
-msgstr ""
+msgid "Scan the QR code or Enter the  code manually into your GA app"
+msgstr "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
 
 #: web/apps/register/templates/register/gtoken.html:28
 msgid ""
+"Apple users recommend to download the Authenticator in the App Store, and "
+"android users recommend the Google Authenticator to Google Play."
+msgstr ""
 "苹果用户推荐在App Store中下载Authenticator,安卓用户推荐到Google Play下载谷歌"
 "身份验证器"
-msgstr ""
 
 #: web/apps/register/templates/register/gtoken.html:31
-msgid "请务必保管好密钥或者二维码，以免丢失造成不便"
-msgstr ""
+msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
+msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
 
 #: web/apps/register/templates/register/gtoken.html:44
-msgid "手动添加谷歌身份验证器"
-msgstr ""
+msgid "Enter the  code manually into your GA app"
+msgstr "手动添加谷歌身份验证器"
 
 #: web/apps/register/templates/register/gtoken.html:48
 msgid "Or"
 msgstr "或者"
 
 #: web/apps/register/templates/register/gtoken.html:51
-msgid "扫描二维码添加谷歌身份验证器"
-msgstr ""
+msgid "Use the GA app to scan the QR code"
+msgstr "扫描二维码添加谷歌身份验证器"
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "Clicking register button means you agree and abide by<br/> Newton"
 msgstr "点击注册按钮即表示您同意并愿意遵守<br/> Newton的"
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "User Agreement"
 msgstr "使用条款"
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "and"
 msgstr "和"
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -532,8 +519,11 @@ msgid "Submit Success!"
 msgstr "提交成功！"
 
 #: web/apps/register/templates/register/post-success.html:21
-msgid "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
-msgstr ""
+#, fuzzy
+msgid ""
+"We have sent you an email to your registered email, please check out to "
+"finish signing up。"
+msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Complete the register process of Newton"
@@ -592,8 +582,10 @@ msgid "Reset Success!"
 msgstr "重置密码成功"
 
 #: web/apps/reset/templates/reset/reset-complete.html:21
-msgid "您已经重置密码成功，请<a href='/login/'>登录</a>"
-msgstr ""
+msgid ""
+"You have reset your password successfully, please <a href='/login/'> login</"
+"a>"
+msgstr "密码重置成功，请<a href='/login/'>登录</a>"
 
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Welcome! Please Reset Your Password!"
@@ -798,7 +790,7 @@ msgstr ""
 msgid "Newton notification: Received your KYC information"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
 
-#: web/apps/tokenexchange/views.py:50
+#: web/apps/tokenexchange/views.py:56
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
@@ -1436,7 +1428,7 @@ msgstr "技术、商业、经济或其他问题，联系"
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:59 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:61 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "公告"
 
@@ -1450,17 +1442,17 @@ msgid "All"
 msgstr "全部公告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:64
+#: web/apps/zinnia/models_bases/entry.py:66
 msgid "Operation"
 msgstr "运营公告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:65
+#: web/apps/zinnia/models_bases/entry.py:67
 msgid "Weekly"
 msgstr "周报"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:63
+#: web/apps/zinnia/models_bases/entry.py:65
 msgid "Activity"
 msgstr "活动公告"
 
@@ -1499,7 +1491,7 @@ msgid "Press"
 msgstr "媒体报道"
 
 #: web/apps/welcome/templates/welcome/community.html:74
-#: web/apps/welcome/templates/welcome/include-protocol.html:64
+#: web/apps/welcome/templates/welcome/include-protocol.html:65
 #: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
 msgstr "更多"
@@ -2115,23 +2107,23 @@ msgid ""
 "identity for commodities of the whole network."
 msgstr "通过运用原子哈希等技术为商品建立全网唯一数字身份。"
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:44
+#: web/apps/welcome/templates/welcome/include-protocol.html:45
 #: web/apps/welcome/templates/welcome/protocol.html:50
 msgid "Digital Marketing"
 msgstr "数字营销"
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:46
+#: web/apps/welcome/templates/welcome/include-protocol.html:47
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system."
 msgstr "广告主通过系统内置的各种营销类智能合约模版设定营销方案。"
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:54
+#: web/apps/welcome/templates/welcome/include-protocol.html:55
 #: web/apps/welcome/templates/welcome/protocol.html:64
 msgid "Trading and payment"
 msgstr "交易和支付"
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:56
+#: web/apps/welcome/templates/welcome/include-protocol.html:57
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
 "We support cross-border transactions, ultra-small payments, lightning "
@@ -3338,8 +3330,9 @@ msgid "Last modified: April 2018"
 msgstr "修改时间：2018年4月"
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-msgid "PROTOCOL"
-msgstr "协议"
+#: web/templates/header.html:22
+msgid "HEP"
+msgstr "超级交换协议"
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
@@ -4476,7 +4469,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:69
+#: web/apps/zinnia/models_bases/entry.py:71
 msgid "title"
 msgstr ""
 
@@ -4613,7 +4606,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:483
+#: web/apps/zinnia/models_bases/entry.py:485
 msgid "categories"
 msgstr ""
 
@@ -4626,14 +4619,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:58
+#: web/apps/zinnia/models_bases/entry.py:60
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:72
+#: web/apps/zinnia/models_bases/entry.py:74
 msgid "slug"
 msgstr ""
 
@@ -4654,7 +4647,7 @@ msgid "language"
 msgstr "语言"
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:115
+#: web/apps/zinnia/models_bases/entry.py:117
 msgid "Entry type"
 msgstr "文章类型"
 
@@ -4674,169 +4667,169 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:74
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:76
+#: web/apps/zinnia/models_bases/entry.py:101
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:77
+#: web/apps/zinnia/models_bases/entry.py:79
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:81
+#: web/apps/zinnia/models_bases/entry.py:83
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:85
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:88
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:88
+#: web/apps/zinnia/models_bases/entry.py:90
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:93
+#: web/apps/zinnia/models_bases/entry.py:95
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:94
+#: web/apps/zinnia/models_bases/entry.py:96
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:97
+#: web/apps/zinnia/models_bases/entry.py:99
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:102
+#: web/apps/zinnia/models_bases/entry.py:104
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:112
+#: web/apps/zinnia/models_bases/entry.py:114
 msgid "entry type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:119
+#: web/apps/zinnia/models_bases/entry.py:121
 msgid "entry_sub_type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:234
+#: web/apps/zinnia/models_bases/entry.py:236
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:235
+#: web/apps/zinnia/models_bases/entry.py:237
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:249
+#: web/apps/zinnia/models_bases/entry.py:251
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:291
+#: web/apps/zinnia/models_bases/entry.py:293
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:292
+#: web/apps/zinnia/models_bases/entry.py:294
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:294
+#: web/apps/zinnia/models_bases/entry.py:296
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:295
+#: web/apps/zinnia/models_bases/entry.py:297
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:297
+#: web/apps/zinnia/models_bases/entry.py:299
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:298
+#: web/apps/zinnia/models_bases/entry.py:300
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:301
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:305
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:305
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:389
+#: web/apps/zinnia/models_bases/entry.py:391
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:407
+#: web/apps/zinnia/models_bases/entry.py:409
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:408
+#: web/apps/zinnia/models_bases/entry.py:410
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:441
+#: web/apps/zinnia/models_bases/entry.py:443
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:443
+#: web/apps/zinnia/models_bases/entry.py:445
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:454
+#: web/apps/zinnia/models_bases/entry.py:456
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:469
+#: web/apps/zinnia/models_bases/entry.py:471
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:493
+#: web/apps/zinnia/models_bases/entry.py:495
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:512
+#: web/apps/zinnia/models_bases/entry.py:514
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:513
+#: web/apps/zinnia/models_bases/entry.py:515
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:525
+#: web/apps/zinnia/models_bases/entry.py:527
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:526
+#: web/apps/zinnia/models_bases/entry.py:528
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:538
+#: web/apps/zinnia/models_bases/entry.py:540
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:540
-#: web/apps/zinnia/models_bases/entry.py:556
+#: web/apps/zinnia/models_bases/entry.py:542
+#: web/apps/zinnia/models_bases/entry.py:558
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:542
+#: web/apps/zinnia/models_bases/entry.py:544
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:554
+#: web/apps/zinnia/models_bases/entry.py:556
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:558
+#: web/apps/zinnia/models_bases/entry.py:560
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5856,10 +5849,6 @@ msgstr "用户中心"
 msgid "LogOut"
 msgstr "退出"
 
-#: web/templates/header.html:22
-msgid "HEP"
-msgstr "超级交换协议"
-
 #: web/templates/header.html:25
 msgid "Technology"
 msgstr "技术"
@@ -5890,3 +5879,18 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Newton Notifications: You have passed the Newton KYC"
+#~ msgstr "牛顿通知：你已经通过了牛顿KYC审核"
+
+#~ msgid "Newton Notifications: You are not passed the Newton KYC"
+#~ msgstr "牛顿通知：你没有通过牛顿KYC审核"
+
+#~ msgid "Newton notification: Fillout your expect amount"
+#~ msgstr "牛顿通知：请填写您的期望投资额度"
+
+#~ msgid "Newton notification: Receive Amount Notification!"
+#~ msgstr "牛顿通知：我们接收到了您的投资！"
+
+#~ msgid "PROTOCOL"
+#~ msgstr "协议"
