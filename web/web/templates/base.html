@@ -43,21 +43,21 @@
             <img src="{% version "images/pic300.jpg" %}">
         </div>
         <div class="Notice">
-            <div class="container">
-                <div>
-                    <p class="only-pc-center">{% trans "Newton Meetup Beijing" %}</p>
-                    <p class="hide">{% trans "Invite you" %}</p>
+            <a href="{% trans "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-defining-business-order-new-economy-era-sincerely-invites-you-join-us/" %}">
+                <div class="container">
+                    <div>
+                        <p class="only-pc-center">{% trans "Newton Meetup Beijing" %}</p>
+                        <p class="hide">{% trans "Invite you" %}</p>
+                    </div>
+                    <div class="notice_title">
+                        <span>{% trans "Re-defining the Business Order of the New Economy Era" %}</span>
+                    </div>
+                    <div>
+                        <p>2018－05-19  14:00～18:00</p>
+                        <p id="hide">{% trans "Invite you" %}</p>
+                    </div>
                 </div>
-                <div class="notice_title">
-                    <span>
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-defining-business-order-new-economy-era-sincerely-invites-you-join-us/" %}">{% trans "Re-defining the Business Order of the New Economy Era" %}</a>  
-                    </span>
-                </div>
-                <div>
-                    <p>2018－05-19  14:00～18:00</p>
-                    <p id="hide">{% trans "Invite you" %}</p>
-                </div>
-            </div>
+            </a>
         </div>
         
         {% block header %}
