@@ -9,6 +9,8 @@ PUBLISHED = 2
 
 CHINESE = 0
 ENGLISH = 1
+# Add languages to admin
+KOREAN = 2
 
 TYPE_BLOG = 0
 TYPE_ANNOUNCEMENT = 1
@@ -39,6 +41,9 @@ def entries_published(queryset):
         language = CHINESE
     elif language.startswith('en'):
         language = ENGLISH
+    # Add korean
+    elif language.startswith('ko'):
+        language = KOREAN
     else:
         language = ENGLISH
         

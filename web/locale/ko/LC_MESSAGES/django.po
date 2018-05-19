@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-15 13:46+0000\n"
+"POT-Creation-Date: 2018-05-18 13:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,8 +165,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:105
-#: web/apps/zinnia/models_bases/entry.py:108
+#: web/apps/zinnia/models_bases/entry.py:107
+#: web/apps/zinnia/models_bases/entry.py:110
 msgid "Language"
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 #: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
-msgstr ""
+msgstr "홈페이지"
 
 #: web/apps/login/forms.py:7 web/apps/register/forms.py:15
 #: web/apps/reset/forms.py:9 web/apps/zinnia/templates/zinnia/password.html:24
@@ -226,15 +226,16 @@ msgstr ""
 
 #: web/apps/login/views.py:36
 msgid "Form Error"
-msgstr ""
+msgstr "서식 에러"
 
-#: web/apps/login/views.py:42
+#: web/apps/login/views.py:42 web/apps/register/views.py:46
+#: web/apps/register/views.py:52
 msgid "No captcha"
 msgstr ""
 
 #: web/apps/login/views.py:43
 msgid "Auth Recaptcha Error"
-msgstr ""
+msgstr "인증 에러"
 
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
@@ -242,7 +243,7 @@ msgstr ""
 
 #: web/apps/login/views.py:56
 msgid "Request Time Out"
-msgstr ""
+msgstr "제한시간이 초과했습니다"
 
 #: web/apps/login/views.py:70
 msgid "No Auth_token"
@@ -254,11 +255,11 @@ msgstr ""
 
 #: web/apps/login/views.py:76
 msgid "No User Profile"
-msgstr ""
+msgstr "유저 프로필 없음"
 
 #: web/apps/login/views.py:79
 msgid "Incorrect Google Authenticator Code"
-msgstr ""
+msgstr "코드가 올바르지 않습니다"
 
 #: web/apps/login/templates/login/index.html:5
 #: web/apps/login/templates/login/index.html:19
@@ -267,7 +268,7 @@ msgstr ""
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:38 web/templates/header.html:54
 msgid "Login"
-msgstr ""
+msgstr "로그인"
 
 #: web/apps/login/templates/login/index.html:5
 #: web/apps/register/templates/register/gtoken.html:6
@@ -302,51 +303,35 @@ msgstr ""
 #: web/apps/login/templates/login/index.html:24
 msgid ""
 "Tip:To login success, Ensure you can access the google recaptcha service."
-msgstr ""
+msgstr "팁: 로그인을 하기 위해서는 구글 reCAPTCHA를 입력해야 합니다."
 
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/register/templates/register/index.html:6
-#: web/apps/register/templates/register/index.html:20
-#: web/apps/register/templates/register/index.html:29
+#: web/apps/register/templates/register/index.html:24
+#: web/apps/register/templates/register/index.html:39
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
 #: web/apps/register/templates/register/register-success.html:6
 #: web/templates/header-no-menu.html:35 web/templates/header.html:51
 msgid "Register"
-msgstr ""
+msgstr "회원가입"
 
 #: web/apps/login/templates/login/index.html:43
 msgid "Forget Password"
-msgstr ""
+msgstr "비밀번호 분실"
 
 #: web/apps/login/templates/login/index.html:56
 #: web/apps/login/templates/login/index.html:63 web/apps/register/forms.py:19
 msgid "Google Authenticator Code"
-msgstr ""
+msgstr "코드"
 
 #: web/apps/login/templates/login/index.html:67
 #: web/apps/register/templates/register/gtoken.html:56
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:35
 #: web/apps/user/templates/user/profile.html:31
 msgid "Submit"
-msgstr ""
-
-#: web/apps/newtonadmin/services_tokenexchange.py:88
-msgid "Newton Notifications: You have passed the Newton KYC"
-msgstr ""
-
-#: web/apps/newtonadmin/services_tokenexchange.py:90
-msgid "Newton Notifications: You are not passed the Newton KYC"
-msgstr ""
-
-#: web/apps/newtonadmin/services_tokenexchange.py:113
-msgid "Newton notification: Fillout your expect amount"
-msgstr ""
-
-#: web/apps/newtonadmin/services_tokenexchange.py:135
-msgid "Newton notification: Receive Amount Notification!"
-msgstr ""
+msgstr "제출하기"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
@@ -439,74 +424,75 @@ msgstr ""
 
 #: web/apps/register/forms.py:16 web/apps/reset/forms.py:10
 msgid "Repassword"
-msgstr ""
+msgstr "다시 입력"
 
 #: web/apps/register/services.py:27
 msgid "Newton Notification: Please complete the register process of Newton"
 msgstr ""
 
-#: web/apps/register/views.py:45
+#: web/apps/register/views.py:58
 msgid "Email already existed"
 msgstr ""
 
-#: web/apps/register/views.py:135
+#: web/apps/register/views.py:148
 msgid "Google Auth Code Error"
-msgstr ""
+msgstr "구글 인증 코드 에러"
 
-#: web/apps/register/views.py:197 web/apps/reset/views.py:110
+#: web/apps/register/views.py:210 web/apps/reset/views.py:110
 msgid "Entered passwords differ"
-msgstr ""
+msgstr "비밀번호를 다르게 설정해주세요"
 
 #: web/apps/register/templates/register/gtoken.html:6
 #: web/apps/register/templates/register/gtoken.html:20
 msgid "Add Google Authenticator"
-msgstr ""
+msgstr "추가하기"
 
 #: web/apps/register/templates/register/gtoken.html:25
-msgid "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
+msgid "Scan the QR code or Enter the  code manually into your GA app"
 msgstr ""
+"코드를 스캔하거나 코드를 수동으로 Google Authenticator앱에 입력해주세요"
 
 #: web/apps/register/templates/register/gtoken.html:28
 msgid ""
-"苹果用户推荐在App Store中下载Authenticator,安卓用户推荐到Google Play下载谷歌"
-"身份验证器"
-msgstr ""
+"Apple users recommend to download the Authenticator in the App Store, and "
+"android users recommend the Google Authenticator to Google Play."
+msgstr "앱스토어 혹은 구글플레이에서 Google Authenticato를 다운로드 받으세요"
 
 #: web/apps/register/templates/register/gtoken.html:31
-msgid "请务必保管好密钥或者二维码，以免丢失造成不便"
-msgstr ""
+msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
+msgstr "분실에 대비해 키 혹은 QR코드를 반드시 보관하세요"
 
 #: web/apps/register/templates/register/gtoken.html:44
-msgid "手动添加谷歌身份验证器"
-msgstr ""
+msgid "Enter the  code manually into your GA app"
+msgstr "GA앱에 코드를 수동으로 입력해주세요"
 
 #: web/apps/register/templates/register/gtoken.html:48
 msgid "Or"
-msgstr ""
+msgstr "혹은"
 
 #: web/apps/register/templates/register/gtoken.html:51
-msgid "扫描二维码添加谷歌身份验证器"
-msgstr ""
+msgid "Use the GA app to scan the QR code"
+msgstr "GA앱을 사용해 QR코드를 스캔해주세요"
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "Clicking register button means you agree and abide by<br/> Newton"
-msgstr ""
+msgstr "가입 버튼을 누르면 뉴턴에 동의하고 규정을 따르는 것으로 간주됩니다."
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "User Agreement"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 msgid "and"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:37
+#: web/apps/register/templates/register/index.html:47
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
 #: web/templates/footer.html:48
 msgid "Privacy Policy"
-msgstr ""
+msgstr "프라이버시 정책"
 
 #: web/apps/register/templates/register/invalid-link.html:6
 msgid "Invalid-link"
@@ -519,17 +505,21 @@ msgstr ""
 
 #: web/apps/register/templates/register/password.html:29
 msgid "Next"
-msgstr ""
+msgstr "다음"
 
 #: web/apps/register/templates/register/post-success.html:20
 #: web/apps/reset/templates/reset/reset-success.html:18
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:20
 msgid "Submit Success!"
-msgstr ""
+msgstr "변경에 성공했습니다!"
 
 #: web/apps/register/templates/register/post-success.html:21
-msgid "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
+msgid ""
+"We have sent you an email to your registered email, please check out to "
+"finish signing up。"
 msgstr ""
+"가입하신 이메일 주소로 메일을 전송했습니다. 메일을 확인해 비밀번호 초기화 절"
+"차를 완료해주세요."
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Complete the register process of Newton"
@@ -563,7 +553,7 @@ msgstr ""
 
 #: web/apps/reset/views.py:36
 msgid "Email not existed"
-msgstr ""
+msgstr "존재하지 않는 이메일입니다."
 
 #: web/apps/reset/templates/reset/edit_password.html:6
 #: web/apps/reset/templates/reset/edit_password.html:18
@@ -577,19 +567,21 @@ msgstr ""
 #: web/apps/reset/templates/reset/reset-success.html:6
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
 msgid "Reset"
-msgstr ""
+msgstr "리셋"
 
 #: web/apps/reset/templates/reset/index.html:6
 msgid "ReSet"
-msgstr ""
+msgstr "리셋"
 
 #: web/apps/reset/templates/reset/reset-complete.html:20
 msgid "Reset Success!"
-msgstr ""
+msgstr "재설정 성공!"
 
 #: web/apps/reset/templates/reset/reset-complete.html:21
-msgid "您已经重置密码成功，请<a href='/login/'>登录</a>"
-msgstr ""
+msgid ""
+"You have reset your password successfully, please <a href='/login/'> login</"
+"a>"
+msgstr "비밀번호를 재설정했습니다. <a href='/login/'>로그인</a> 하십시오"
 
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Welcome! Please Reset Your Password!"
@@ -609,6 +601,8 @@ msgid ""
 "We sent an email to your registered email address, please go to check and "
 "complete the reset password process."
 msgstr ""
+"가입하신 이메일 주소로 메일을 전송했습니다. 메일을 확인해 비밀번호 초기화 절"
+"차를 완료해주세요."
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -753,7 +747,7 @@ msgstr "뉴턴의 새로운 업데이트를 구독하세요! "
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:25
 msgid "Email Address"
-msgstr ""
+msgstr "이메일"
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:26
 msgid "SUBSCRIBE"
@@ -789,7 +783,7 @@ msgstr ""
 msgid "Newton notification: Received your KYC information"
 msgstr ""
 
-#: web/apps/tokenexchange/views.py:50
+#: web/apps/tokenexchange/views.py:56
 msgid "You had submited kyc info"
 msgstr ""
 
@@ -1134,7 +1128,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
 msgid "Invalid Link"
-msgstr ""
+msgstr "링크 에러"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 msgid "TOKENEXCHANGE"
@@ -1341,7 +1335,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/about.html:13
 #: web/templates/footer.html:34
 msgid "ABOUT"
-msgstr ""
+msgstr "소개"
 
 #: web/apps/welcome/templates/welcome/about.html:19
 msgid "Infrastructure of protocol-based economy"
@@ -1414,9 +1408,9 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:59 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:61 web/templates/footer.html:23
 msgid "Announcement"
-msgstr ""
+msgstr "공지사항"
 
 #: web/apps/welcome/templates/welcome/announcement-detail.html:55
 #: web/apps/welcome/templates/welcome/announcement.html:81
@@ -1425,22 +1419,22 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:24
 msgid "All"
-msgstr ""
+msgstr "모두보기"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:64
+#: web/apps/zinnia/models_bases/entry.py:66
 msgid "Operation"
-msgstr ""
+msgstr "운영"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:65
+#: web/apps/zinnia/models_bases/entry.py:67
 msgid "Weekly"
-msgstr ""
+msgstr "위클리"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:63
+#: web/apps/zinnia/models_bases/entry.py:65
 msgid "Activity"
-msgstr ""
+msgstr "활동"
 
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
@@ -1449,11 +1443,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/wechat.html:13
 #: web/templates/header.html:31
 msgid "Community"
-msgstr ""
+msgstr "커뮤니티"
 
 #: web/apps/welcome/templates/welcome/community.html:18
 msgid "Socail Network"
-msgstr ""
+msgstr "소셜 네트워크"
 
 #: web/apps/welcome/templates/welcome/community.html:27
 #: web/apps/welcome/templates/welcome/wechat.html:20
@@ -1462,7 +1456,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:34
 msgid "Email-list"
-msgstr ""
+msgstr "이메일 목록"
 
 #: web/apps/welcome/templates/welcome/community.html:51
 msgid "English"
@@ -1474,78 +1468,94 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:68
 msgid "Press"
-msgstr ""
+msgstr "언론"
 
 #: web/apps/welcome/templates/welcome/community.html:74
-#: web/apps/welcome/templates/welcome/include-protocol.html:64
+#: web/apps/welcome/templates/welcome/include-protocol.html:65
 #: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
-msgstr ""
+msgstr "더보기"
 
 #: web/apps/welcome/templates/welcome/contact.html:6
 #: web/apps/welcome/templates/welcome/contact.html:13
 #: web/apps/welcome/templates/welcome/contact.html:19
 #: web/templates/footer.html:38
 msgid "Contact Us"
-msgstr ""
+msgstr "연락처"
 
 #: web/apps/welcome/templates/welcome/contact.html:21
 msgid ""
 "Web Site: <a href='https://www.newtonproject.org' target='_blank'>https://"
 "www.newtonproject.org"
 msgstr ""
+"홈페이지: <a href='https://www.newtonproject.org' target='_blank'>https://"
+"www.newtonproject.org"
 
 #: web/apps/welcome/templates/welcome/contact.html:22
 msgid "Email:"
-msgstr ""
+msgstr "이메일:"
 
 #: web/apps/welcome/templates/welcome/contact.html:24
 msgid ""
 "WhitePager : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
 msgstr ""
+"백서: <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
+"whitepaper@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:25
 msgid ""
 "Global Community : <a href='mailto:newton-community@newtonproject."
 "org'>newton-community@newtonproject.org</a>"
 msgstr ""
+"글로벌 커뮤니티: <a href='mailto:newton-community@newtonproject.org'>newton-"
+"community@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:26
 msgid ""
 "Newton Token Exchange : <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
 msgstr ""
+"뉴턴 토큰 익스체인지: <a href='mailto:newton-ir@newtonproject.org'>newton-"
+"ir@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:27
 msgid ""
 "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
 msgstr ""
+"PR: <a href='mailto:newton-pr@newtonproject.org'>newton-pr@newtonproject."
+"org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:28
 msgid ""
 "Newton Fund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
 msgstr ""
+"뉴턴 펀드: <a href='mailto:newton-fund@newtonproject.org'>newton-"
+"fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:29
 msgid ""
 "Council : <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
 msgstr ""
+"이사회: <a href='mailto:newton-council@newtonproject.org'>newton-"
+"council@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:30
 msgid ""
 "Other Contacts : <a href='mailto:contact@newtonproject."
 "org'>contact@newtonproject.org</a>"
 msgstr ""
+"기타: <a href='mailto:contact@newtonproject.org'>contact@newtonproject.org</"
+"a>"
 
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
 #: web/templates/footer.html:46
 msgid "Copyright"
-msgstr ""
+msgstr "저작권"
 
 #: web/apps/welcome/templates/welcome/copyright.html:20
 msgid ""
@@ -1737,12 +1747,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/economy.html:13
 #: web/templates/header.html:34
 msgid "Economy"
-msgstr ""
+msgstr "이코노미"
 
 #: web/apps/welcome/templates/welcome/economy.html:23
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
-msgstr ""
+msgstr "공동 비즈니스 기업"
 
 #: web/apps/welcome/templates/welcome/foundation.html:6
 msgid "Foundation"
@@ -1750,7 +1760,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
 msgid "ADVISOR"
-msgstr ""
+msgstr "어드바이저"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:19
 #: web/apps/welcome/templates/welcome/include-advisor.html:21
@@ -1763,17 +1773,17 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:74
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Co-founder of Elastos"
-msgstr ""
+msgstr "Elastos 공동 창립자"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:24
 #: web/apps/welcome/templates/welcome/include-investor.html:75
 msgid "Visiting Scholar & Research Associate at Columbia University"
-msgstr ""
+msgstr "콜롬비아 대학교 방문연구원 및 RA"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:25
 #: web/apps/welcome/templates/welcome/include-investor.html:76
 msgid "Advisor at Huawei Central Institute"
-msgstr ""
+msgstr "Huawei 중앙 연구소 어드바이저"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:34
 #: web/apps/welcome/templates/welcome/include-advisor.html:36
@@ -1785,12 +1795,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:38
 #: web/apps/welcome/templates/welcome/include-investor.html:60
 msgid "SVP of Cheetah(NASDAQ:CMCM)"
-msgstr ""
+msgstr "Cheetah(NASDAQ:CMCM) SVP"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:39
 #: web/apps/welcome/templates/welcome/include-investor.html:61
 msgid "Founder of quwan.com"
-msgstr ""
+msgstr "Quwan.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:49
 #: web/apps/welcome/templates/welcome/include-advisor.html:51
@@ -1802,12 +1812,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:53
 #: web/apps/welcome/templates/welcome/include-investor.html:89
 msgid "Former CTO of Sina(NASDAQ: SINA)"
-msgstr ""
+msgstr "전 Sina (NASDAQ: SINA) CTO"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:54
 #: web/apps/welcome/templates/welcome/include-investor.html:90
 msgid "Partner of DFJ Venture Capital"
-msgstr ""
+msgstr "DFJ 벤처 캐피탈 파트너"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:64
 #: web/apps/welcome/templates/welcome/include-advisor.html:66
@@ -1819,12 +1829,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
 #: web/apps/welcome/templates/welcome/include-investor.html:127
 msgid "Chairman of Elastos ecosystem board"
-msgstr ""
+msgstr "Elastos 생태계 건설 위원회 주임"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
 #: web/apps/welcome/templates/welcome/include-investor.html:127
 msgid "Previous President of Chongqing Lifan"
-msgstr ""
+msgstr "전 Chongqing LIfan 대표"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:75
 #: web/apps/welcome/templates/welcome/include-advisor.html:77
@@ -1836,12 +1846,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:79
 #: web/apps/welcome/templates/welcome/include-investor.html:103
 msgid "Professor at Tsinghua University"
-msgstr ""
+msgstr "Tsinghua 대학교 교수"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:80
 #: web/apps/welcome/templates/welcome/include-investor.html:104
 msgid "Director of International Relations at iCenter"
-msgstr ""
+msgstr "Tsinghua iCenter IR 주임"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:89
 #: web/apps/welcome/templates/welcome/include-advisor.html:91
@@ -1853,7 +1863,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:92
 #: web/apps/welcome/templates/welcome/include-investor.html:139
 msgid "Bitcoin Ambassador"
-msgstr ""
+msgstr "비트코인 대사"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
@@ -1920,7 +1930,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:9
 msgid "ANGEL INVESTORS"
-msgstr ""
+msgstr "엔젤 투자자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:19
 #: web/apps/welcome/templates/welcome/include-investor.html:21
@@ -1929,7 +1939,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:22
 msgid "Co-Founder of Lightinthebox(NYSE:LITB)"
-msgstr ""
+msgstr "Lightinthebox(NYSE:LITB) 공동 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:30
 #: web/apps/welcome/templates/welcome/include-investor.html:32
@@ -1938,7 +1948,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:33
 msgid "Founder of kela.cn"
-msgstr ""
+msgstr "kela.cn 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:41
 #: web/apps/welcome/templates/welcome/include-investor.html:43
@@ -1947,11 +1957,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:45
 msgid "Founder of meilishuo.com"
-msgstr ""
+msgstr "meilishuo.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:46
 msgid "CEO of HIGO"
-msgstr ""
+msgstr "HIGO CEO"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:113
 #: web/apps/welcome/templates/welcome/include-investor.html:115
@@ -1960,7 +1970,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:116
 msgid "Founder of mbaobao.com"
-msgstr ""
+msgstr "mbaobao.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:148
 #: web/apps/welcome/templates/welcome/include-investor.html:150
@@ -1969,11 +1979,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:152
 msgid "Founder of linekong.com"
-msgstr ""
+msgstr "linekong.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:153
 msgid "Founder of huoxing24.com"
-msgstr ""
+msgstr "huoxing24.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:163
 #: web/apps/welcome/templates/welcome/include-investor.html:165
@@ -1982,7 +1992,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:167
 msgid "Founder and CEO of Distributed Credit Chain"
-msgstr ""
+msgstr "Distributed Credit Chain 창립자 겸 CEO"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:177
 #: web/apps/welcome/templates/welcome/include-investor.html:179
@@ -1993,7 +2003,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:181
 msgid "Founder of Innoangel Fund"
-msgstr ""
+msgstr "Iinnoangel fund 창립자"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:192
 msgid "Shi Junchao"
@@ -2001,11 +2011,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:194
 msgid "Senior gem jade appraiser."
-msgstr ""
+msgstr "선임 보석 감정사"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:195
 msgid "Deputy secretary general of xinjiang hetian jade industry association."
-msgstr ""
+msgstr "xinjiang hetian 보석 산업협회 비서장"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:206
 msgid "Guo Hongchi"
@@ -2013,16 +2023,16 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:208
 msgid "Founder of xijie.com"
-msgstr ""
+msgstr "xijie.com 창립자"
 
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "Joint Ecological Construction"
-msgstr ""
+msgstr "공동 생태계 건설"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:10
 #: web/apps/welcome/templates/welcome/protocol.html:13
 msgid "Hyper Exchange Protocol"
-msgstr "하이퍼 교환 프로토콜"
+msgstr "하이퍼 익스체인지 프로토콜"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:23
 #: web/apps/welcome/templates/welcome/protocol.html:21
@@ -2044,15 +2054,15 @@ msgid ""
 "By using techniques such as 'atom hashing', we can create a unique digital "
 "identity for commodities of the whole network."
 msgstr ""
-"“아톰 해싱”이라는 기술을 사용해, 전체 네트워크에서 상품을 위한 고유 디지털 신"
-"원을 만들 수 있습니다."
+"“아톰 해싱” 기술을 사용해, 전체 네트워크에서 상품을 위한 고유 디지털 신원을 "
+"만들 수 있습니다."
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:44
+#: web/apps/welcome/templates/welcome/include-protocol.html:45
 #: web/apps/welcome/templates/welcome/protocol.html:50
 msgid "Digital Marketing"
 msgstr "디지털 마케팅"
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:46
+#: web/apps/welcome/templates/welcome/include-protocol.html:47
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system."
@@ -2060,12 +2070,12 @@ msgstr ""
 "광고주는 시스템에 내장된 다양한 마케팅 스마트 계약 템플릿을 통해 마케팅 계획"
 "을 세울 수 있습니다."
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:54
+#: web/apps/welcome/templates/welcome/include-protocol.html:55
 #: web/apps/welcome/templates/welcome/protocol.html:64
 msgid "Trading and payment"
 msgstr "거래 및 지불"
 
-#: web/apps/welcome/templates/welcome/include-protocol.html:56
+#: web/apps/welcome/templates/welcome/include-protocol.html:57
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
 "We support cross-border transactions, ultra-small payments, lightning "
@@ -2086,7 +2096,7 @@ msgstr "뉴턴 프로젝트 정식 시작."
 #: web/apps/welcome/templates/welcome/include-roadmap.html:29
 #: web/apps/welcome/templates/welcome/include-roadmap.html:68
 msgid "Newton website officially released."
-msgstr "뉴턴 웹사이트 정식 오픈."
+msgstr "뉴턴 홈페이지 공식 오픈."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
 #: web/apps/welcome/templates/welcome/include-roadmap.html:76
@@ -2101,7 +2111,7 @@ msgstr "뉴턴몰 정식 오픈"
 #: web/apps/welcome/templates/welcome/include-team.html:9
 #: web/apps/welcome/templates/welcome/team.html:13
 msgid "TEAM"
-msgstr ""
+msgstr "팀원"
 
 #: web/apps/welcome/templates/welcome/include-team.html:19
 #: web/apps/welcome/templates/welcome/include-team.html:21
@@ -2110,11 +2120,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Founder"
-msgstr ""
+msgstr "창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Founder of Zeuux (A Community for Free Software Usage)"
-msgstr ""
+msgstr "Zeuux(무료 소프트웨어 커뮤니티) 창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:30
 #: web/apps/welcome/templates/welcome/include-team.html:32
@@ -2123,11 +2133,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:33
 msgid "Co-founder"
-msgstr ""
+msgstr "공동 창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:33
 msgid "Founder and CEO of OKbuy"
-msgstr ""
+msgstr "OKbuy 창립자 겸 CEO"
 
 #: web/apps/welcome/templates/welcome/include-team.html:42
 #: web/apps/welcome/templates/welcome/include-team.html:44
@@ -2137,11 +2147,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-team.html:45
 #: web/apps/welcome/templates/welcome/include-team.html:57
 msgid "Joint Chief Architect"
-msgstr ""
+msgstr "공동 수석 설계사"
 
 #: web/apps/welcome/templates/welcome/include-team.html:45
 msgid "Co-founder of Zeuux (A Community for Free Software Usage)"
-msgstr ""
+msgstr "Zeuux(무료 소프트웨어 커뮤니티)  공동 창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:54
 #: web/apps/welcome/templates/welcome/include-team.html:56
@@ -2155,11 +2165,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Marketing Specialist"
-msgstr ""
+msgstr "마케팅 스페셜리스트"
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Founder of WuZhou Online"
-msgstr ""
+msgstr "Wuzhou Online 창립자"
 
 #: web/apps/welcome/templates/welcome/include-team.html:78
 #: web/apps/welcome/templates/welcome/include-team.html:80
@@ -2168,11 +2178,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:81
 msgid "Product Specialist"
-msgstr ""
+msgstr "프로덕트 스페셜리스트"
 
 #: web/apps/welcome/templates/welcome/include-team.html:81
 msgid "Previous Product Director of xs.cn"
-msgstr ""
+msgstr "전 xs.cn 프로덕트 디렉터"
 
 #: web/apps/welcome/templates/welcome/include-tech-chain.html:10
 msgid "Multiple Blockchain"
@@ -2222,7 +2232,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-technology.html:10
 #: web/apps/welcome/templates/welcome/tech.html:13
 msgid "TECHNOLOGY"
-msgstr ""
+msgstr "기술"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:24
 #: web/apps/welcome/templates/welcome/tech.html:18
@@ -2301,7 +2311,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:14
 #: web/templates/footer.html:37
 msgid "Join Us"
-msgstr ""
+msgstr "입사 지원"
 
 #: web/apps/welcome/templates/welcome/joinus.html:20
 msgid "About Newton Project"
@@ -2381,11 +2391,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
 msgid "Currently open positions"
-msgstr ""
+msgstr "현재 지원 가능 포지션"
 
 #: web/apps/welcome/templates/welcome/joinus.html:52
 msgid "Senior R&D Engineer"
-msgstr ""
+msgstr "시니어 R&D 엔지니어"
 
 #: web/apps/welcome/templates/welcome/joinus.html:59
 #: web/apps/welcome/templates/welcome/joinus.html:98
@@ -2395,17 +2405,17 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:255
 #: web/apps/welcome/templates/welcome/joinus.html:294
 msgid "Job description:"
-msgstr ""
+msgstr "담당업무"
 
 #: web/apps/welcome/templates/welcome/joinus.html:61
 msgid "Being responsible for the design and development of the Newton system."
-msgstr ""
+msgstr "뉴턴 시스템 개발 및 디자인."
 
 #: web/apps/welcome/templates/welcome/joinus.html:62
 msgid ""
 "Being responsible for researching the latest technologies in the industry "
 "and applying them to Newtonian system improvements."
-msgstr ""
+msgstr "업계 최신 기술 리서치 및 뉴턴 시스템 개선에 적용."
 
 #: web/apps/welcome/templates/welcome/joinus.html:64
 #: web/apps/welcome/templates/welcome/joinus.html:109
@@ -2415,53 +2425,54 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:262
 #: web/apps/welcome/templates/welcome/joinus.html:302
 msgid "Qualifications:"
-msgstr ""
+msgstr "자격요건"
 
 #: web/apps/welcome/templates/welcome/joinus.html:66
 msgid ""
 "Bachelor degree or above, applicants major in computer science or related "
 "professions shall be prioritized."
-msgstr ""
+msgstr "대졸 이상(4년), 컴퓨터 공학 및 관련 전공 우대."
 
 #: web/apps/welcome/templates/welcome/joinus.html:67
 msgid "More than 5 years of software development experience."
-msgstr ""
+msgstr "5년이상의 소프트웨어 개발 경험."
 
 #: web/apps/welcome/templates/welcome/joinus.html:68
 msgid ""
 "Skilled in a variety of programming languages (Java，Go，C++，Rust，Kotlin)."
-msgstr ""
+msgstr "Java，Go，C++，Rust，Kotlin등 다양한 프로그래밍 언어 개발 경험자."
 
 #: web/apps/welcome/templates/welcome/joinus.html:69
 msgid ""
 "Being familiar with the principle of software security, can apply security "
 "standards to research and development."
 msgstr ""
+"소프트웨어 보안 규칙 표준을 이해해, 이를 리서치 및 개발에 적용할 수 있는 분."
 
 #: web/apps/welcome/templates/welcome/joinus.html:70
 msgid ""
 "Good English reading ability, able to read English technical documents "
 "smoothly."
-msgstr ""
+msgstr "영어 읽기 능력 능통 및 기술적 문서 독해 가능하시는 분."
 
 #: web/apps/welcome/templates/welcome/joinus.html:72
 #: web/apps/welcome/templates/welcome/joinus.html:115
 msgid "Priority recruitment conditions:"
-msgstr ""
+msgstr "우대사항"
 
 #: web/apps/welcome/templates/welcome/joinus.html:74
 #: web/apps/welcome/templates/welcome/joinus.html:117
 msgid "Blockchain related system R&D experience."
-msgstr ""
+msgstr "블록체인 관련 시스템 R&D 경험."
 
 #: web/apps/welcome/templates/welcome/joinus.html:75
 #: web/apps/welcome/templates/welcome/joinus.html:118
 msgid "Distributed network system development experience."
-msgstr ""
+msgstr "분산 네트워크 시스템 개발 경험."
 
 #: web/apps/welcome/templates/welcome/joinus.html:77
 msgid "Recruitment number: 5 people "
-msgstr ""
+msgstr "채용 인원: 5명"
 
 #: web/apps/welcome/templates/welcome/joinus.html:78
 #: web/apps/welcome/templates/welcome/joinus.html:120
@@ -2471,7 +2482,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:274
 #: web/apps/welcome/templates/welcome/joinus.html:312
 msgid "Working Location: Beijing - Chaoyang District"
-msgstr ""
+msgstr "근무지: Beijing Chaoyang district"
 
 #: web/apps/welcome/templates/welcome/joinus.html:79
 #: web/apps/welcome/templates/welcome/joinus.html:121
@@ -2481,7 +2492,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:275
 #: web/apps/welcome/templates/welcome/joinus.html:313
 msgid "Payments: Salary to be discussed"
-msgstr ""
+msgstr "급여: 협의"
 
 #: web/apps/welcome/templates/welcome/joinus.html:80
 #: web/apps/welcome/templates/welcome/joinus.html:162
@@ -2493,6 +2504,8 @@ msgid ""
 "Contact:<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject."
 "org</a>"
 msgstr ""
+"연락처:<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject."
+"org</a>"
 
 #: web/apps/welcome/templates/welcome/joinus.html:91
 msgid "Blockchain Engineer"
@@ -2548,197 +2561,208 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:134
 msgid "Fullstack Web Developer"
-msgstr ""
+msgstr "풀 스택 웹 개발자"
 
 #: web/apps/welcome/templates/welcome/joinus.html:143
 msgid ""
 "Write well designed, testable, efficient code by using best software "
 "development practices;"
-msgstr ""
+msgstr "최고 소프트웨어로 설계, 테스트, 효율적인 코드 작성;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:144
 msgid ""
 "Create website layout/user interface by using standard HTML/CSS practices;"
-msgstr ""
+msgstr "표준 HTML/CSS 방식으로 웹사이트 레이아웃 및 유저 인터페이스 개발;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:145
 msgid "Build web based backends and micro-services;"
-msgstr ""
+msgstr "웹 기반의 백엔드 및 마이크로 서비스 구축;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:146
 msgid ""
 "Stay plugged into emerging technologies/industry trends and apply them into "
 "operations and activities;"
-msgstr ""
+msgstr "신생 기술 및 업계 트렌드 파악, 업무에 운영 및 적용;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:147
 msgid "Cooperate with designers to match visual design intent."
-msgstr ""
+msgstr "디자이너와 협력해 시각적 디자인 일치."
 
 #: web/apps/welcome/templates/welcome/joinus.html:151
 msgid ""
 "Proven experience working with React or other modern Frontend Javascript "
 "Framework;"
 msgstr ""
+"React 및 기타 프론트 엔드 자바스크립트 프레임워크 업무 경험 입증 가능 하신 "
+"분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:152
 msgid "Experience with Python/Django/Node.js;"
-msgstr ""
+msgstr "Python/Django/Node.js 경험 있으신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:153
 msgid "Experience writing frontend and backend unit and integration tests;"
-msgstr ""
+msgstr "프론트 엔드 및 백엔드 유닛 및 통합 테스트 작성 경험;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:154
 msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
-msgstr ""
+msgstr "높은 프로그래밍 스킬 및 최신 HTML/CSS 이해도 높으신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:155
 msgid ""
 "A solid understanding of how web applications work including security, "
 "session management, and best development practices;"
 msgstr ""
+"보안, 세션 관리 및 최상의 개발 방법 포함, 웹 응용 프로그램의 작동 방식에 대"
+"해 확실히 이해하시는 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:156
 msgid ""
 "Strong organizational skills to juggle multiple tasks within the constraints "
 "of timelines and budgets with business acumen;"
 msgstr ""
+"비즈니스 감각과 함께 시간 제약 속에서 여러 업무 조율 및 처리하는 능력 우대;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:157
 msgid ""
 "Ability to work and thrive in a fast-paced environment, learn rapidly and "
 "master diverse web technologies and techniques;"
-msgstr ""
+msgstr "빠르게 변하는 업무 환경에서 다양한 웹 기술을 배울 수 있으신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:158
 msgid "Bachelor or masters degree in computer science or relevant experience;"
-msgstr ""
+msgstr "대졸 이상(4년) 컴퓨터 공학 및 관련 전공자 우대;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:173
 msgid "Communication Specialist"
-msgstr ""
+msgstr "커뮤니케이션 스페셜리스트"
 
 #: web/apps/welcome/templates/welcome/joinus.html:182
 msgid ""
 "Deliver customer service and technical support on email/facebook/twitter;"
-msgstr ""
+msgstr "이메일/페이스북/트위터에 대한 고객 서비스 기술적 지원 제공;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:183
 msgid "Communicate customer feedback and process suggestions;"
-msgstr ""
+msgstr "고객 피드백 및 절차 제안;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:184
 msgid ""
 "Identifying cause of dissatisfactions, and provide ways for improvement;"
-msgstr ""
+msgstr "불만족원인 확인 및 해결 방안 제시;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:185
 msgid "Prepare reports on enquiries summary and improvement area;"
-msgstr ""
+msgstr "문서 요약 및 개선 방안 보고;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:186
 msgid ""
 "Ensure that all enquiries at the social media channel in compliance with all "
 "internal and external regulations, policies and guideline;"
-msgstr ""
+msgstr "내외부 규정 및 정책, 가이드라인에 따른 SNS 채널 문의 준수;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:190
 #: web/apps/welcome/templates/welcome/joinus.html:304
 msgid "Bachelor degree or above;"
-msgstr ""
+msgstr "대졸 이상(4년);"
 
 #: web/apps/welcome/templates/welcome/joinus.html:191
 msgid "Preferably with 2 years of working experience in customer support role;"
-msgstr ""
+msgstr "2년 이상의 CS 업무 경험 선호;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:192
 msgid ""
 "MUST speak fluent using english and written English and Chinese with good "
 "presentation, communication and computer skills;"
 msgstr ""
+"영어 말하기 및 쓰기 능력 최상 필수. 중국어 프레젠테이션, 커뮤니케이션 및 컴퓨"
+"터 능력;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:193
 msgid "Self-motivated and able to work independently;"
-msgstr ""
+msgstr "자기 주도적이며, 스스로 일할 줄 아시는 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:208
 msgid "Developer Relations Advocate"
-msgstr ""
+msgstr "개발자 관계 변호인"
 
 #: web/apps/welcome/templates/welcome/joinus.html:217
 msgid ""
 "Content creation and distribution and analytics – tutorials, developer "
 "guides, newsletters, sample apps, client libraries;"
 msgstr ""
+"콘텐츠 제작 및 배포 및 분석 - 자습서, 개발자 가이드, 뉴스 레터, 샘플 애플리케"
+"이션, 클라이언트 라이브러리;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:218
 msgid ""
 "Creating and implementing detailed annual, monthly & weekly plans for "
 "advocacy/engagement activities;"
-msgstr ""
+msgstr "변호 및 참여 활동을 위한 연간, 월간 및 주간 계획 수립, 실행;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:219
 msgid ""
 "Organize and coordinating marketing engagement activities including social "
 "media campaigns, youtube broadcasts, progress reports;"
-msgstr ""
+msgstr "SNS 캠페인, 유튜브 방송, 진행 보고서 등 마케팅 참여 활동 조직 및 조정;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:220
 msgid "Content sourcing from 3rd parties, distribution and analytics;"
-msgstr ""
+msgstr "서드 파티, 유통 및 분석 콘텐츠 소싱;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:221
 msgid "Engage with and provide support to community meetup organizers;"
-msgstr ""
+msgstr "커뮤니티 밋업 주최자 지원;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:226
 msgid ""
 "MUST speak fluent and written English with good presentation, communication "
 "and computer skills;"
-msgstr ""
+msgstr "최상의 영어 말하기, 쓰기 및 프레젠테이션, 커뮤니케이션 및 컴퓨터 능력;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:227
 msgid "Experience writing tutorials, guides, API docs, sample apps;"
-msgstr ""
+msgstr "튜토리얼, 가이드, API 문서, 샘플 애플리케이션 작성 경험;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:228
 msgid "Experience writing code in C++/JavaScript;"
-msgstr ""
+msgstr "C++/JavaScript 작성 경험;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:229
 msgid ""
 "Preferably with 2 years of working experience in IT industry customer "
 "support role;"
-msgstr ""
+msgstr "2년 이상의 IT 업계 CS 업무 경험 선호;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:230
 msgid "Self-motivated and able to work independently."
-msgstr ""
+msgstr "자기 주도적이며, 스스로 일할 줄 아시는 분"
 
 #: web/apps/welcome/templates/welcome/joinus.html:248
 msgid "Senior UX Designer"
-msgstr ""
+msgstr "선임 UX 디자이너"
 
 #: web/apps/welcome/templates/welcome/joinus.html:257
 msgid ""
 "Translate concepts into user flows, wireframes, mockups and prototypes that "
 "lead to intuitive user experiences;"
 msgstr ""
+"콘셉트를 사용자 흐름, 와이어 프레임, 목업 및 프로토 타입으로 변환 후 직관적"
+"인 UE 유도;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:258
 msgid "Identify design problems and devise elegant solutions;"
-msgstr ""
+msgstr "디자인 문제 파악 및 해결방안 고안;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:259
 msgid ""
 "Take a user-centered design approach and rapidly test and iterate your "
 "designs;"
-msgstr ""
+msgstr "사용자 중심의 디자인 방식 채용, 신속한 테스트 및 교체 작업;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:260
 msgid "Collaborate with other team members and stakeholders;"
-msgstr ""
+msgstr "다른 부서 팀원 혹은 기타 관계자와 협업;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:264
 msgid ""
@@ -2746,24 +2770,32 @@ msgid ""
 "candidates who have experience designing complex solutions for complete "
 "digital environments;"
 msgstr ""
+"3년 이상의 UX 디자인 경험. 디지털 환경을 위한 복잡한 디자인 설계 경험 있는 "
+"분 우대;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:265
 msgid ""
 "Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
 msgstr ""
+"Sketch, InVision, UXPin, Framer, or Marvel App 등의 UX 소프트웨어 전문지식 보"
+"유. React, SCSS, 및 JavaScript 가능하신 분 우대;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:266
 msgid ""
 "Ability to work with clients to understand detailed requirements and design "
 "complete user experiences that meet client needs and vision;"
 msgstr ""
+"클라이언트의 상세한 요구사항 이해 및 클라이언트의 니즈와 비전에 맞는 UE 디자"
+"인 구현 가능하신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
 msgid ""
 "Extensive experience in using UX design best practices to design solutions, "
 "and a deep understanding of mobile-first and responsive design;"
 msgstr ""
+"UX 디자인 모범사례를 통한 솔루션 디자인, 모바일 우선 및 반응형 디자인에 이해"
+"도 높으신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:268
 msgid ""
@@ -2771,71 +2803,76 @@ msgid ""
 "research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
 "usability and accessibility concerns;"
 msgstr ""
+"UCD(user-centered design), 기획 및 사용자 리서치 실행, 사용자 테스트, A/B 테"
+"스트, 빠른 프로토 타입, 휴리스틱 분석, 유용성 및 접근 가능성 문제에 대한 확실"
+"한 이해;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:269
 msgid ""
 "Ability to clearly and effectively communicate design processes, ideas, and "
 "solutions to teams and clients;"
 msgstr ""
+"팀과 고객에게 디자인 프로세스, 아이디어 및 솔루션을 명확하고 효과적으로 전달"
+"할 수 있는 능력;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:270
 msgid "Be open to receiving feedback and constructive criticism;"
-msgstr ""
+msgstr "피드백 및 건설적 의견 수용 가능 하신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:271
 msgid "Be passionate about resolving user pain points through great design."
-msgstr ""
+msgstr "훌륭한 디자인으로 사용자의 문제점 해결할 수 있는 열정을 보유하신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:287
 msgid "Product Manager"
-msgstr ""
+msgstr "프로덕트 매니저"
 
 #: web/apps/welcome/templates/welcome/joinus.html:296
 msgid ""
 "understand development of industry and customer requirements, form product "
 "need specification;"
-msgstr ""
+msgstr "산업 및 고객 요구 사항 개발, 제품 요구 사항 이해;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:297
 msgid ""
 "Design product UE by requirements document, clearly and accurately "
 "communicate demands with developing engineers;"
-msgstr ""
+msgstr "요구 사항에 대한 제품 UE 디자인, 개발 엔지니어에게 명확한 의사 전달;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:298
 msgid "Manage product demand changes during product development;"
-msgstr ""
+msgstr "제품 개발 중 제품 요구 사항 변경 관리;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:299
 msgid "Confirm product needs fulfillment during product testing;"
-msgstr ""
+msgstr "제품 테스트 중 제품 필요 사항 충족 확인;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:300
 msgid ""
 "After the product is released, track customers' usage and timely find "
 "problems."
-msgstr ""
+msgstr "제품 출시 후, 고객 사용 현황 및 문제 발견시 관리."
 
 #: web/apps/welcome/templates/welcome/joinus.html:305
 msgid "3+ years of e-commerce industry product design experience;"
-msgstr ""
+msgstr "3년 이상의 전자상거래 제품 디자인 경험;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:306
 msgid "Proficient with product prototype design tools;"
-msgstr ""
+msgstr "제품 프로토타입 디자인 툴 사용 능숙하신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:307
 msgid "Familiar mobile UX design;"
-msgstr ""
+msgstr "모바일 UX 디자인에 능숙하신 분;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:308
 msgid ""
 "Good technical background with creating rich user experience by technology;"
-msgstr ""
+msgstr "기술적 풍부한 사용자 경험을 제공하는 우수한 기술 백그라운드;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:309
 msgid "Good English level, read English documents fluently."
-msgstr ""
+msgstr "우수한 영어 실력, 영어 문서를 유창하게 읽기 가능하신 분."
 
 #: web/apps/welcome/templates/welcome/legal.html:6
 #: web/apps/welcome/templates/welcome/legal.html:13
@@ -2847,7 +2884,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/templates/footer.html:39
 msgid "Media Kit"
-msgstr ""
+msgstr "미디어 키트"
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
 #: web/templates/header.html:28
@@ -2930,7 +2967,7 @@ msgstr "내장 애플리케이션 개발 도구 지원"
 #: web/apps/welcome/templates/welcome/partner.html:13
 #: web/templates/footer.html:15
 msgid "Partner"
-msgstr ""
+msgstr "파트너"
 
 #: web/apps/welcome/templates/welcome/press.html:6
 #: web/apps/welcome/templates/welcome/press.html:13
@@ -3230,7 +3267,8 @@ msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-msgid "PROTOCOL"
+#: web/templates/header.html:22
+msgid "HEP"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
@@ -3312,7 +3350,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:79
 msgid "Reliable physical tunnel"
-msgstr "신뢰성있는 물리적 터널"
+msgstr "신뢰도 높은 물리적 터널"
 
 #: web/apps/welcome/templates/welcome/protocol.html:81
 msgid ""
@@ -3327,7 +3365,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:93
 msgid "Automatic finance"
-msgstr "자동금융"
+msgstr "금융 자동화"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
 msgid ""
@@ -3368,11 +3406,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
 msgid "Team"
-msgstr ""
+msgstr "팀원"
 
 #: web/apps/welcome/templates/welcome/tech.html:6
 msgid "TECH"
-msgstr ""
+msgstr "기술"
 
 #: web/apps/welcome/templates/welcome/tech.html:22
 msgid ""
@@ -3508,7 +3546,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
 #: web/templates/footer.html:47
 msgid "Terms of Use"
-msgstr ""
+msgstr "이용 약관"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:20
 msgid "PLEASE READ THESE TERMS OF USE BEFORE USING THE WEBSITE."
@@ -4264,7 +4302,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:69
+#: web/apps/zinnia/models_bases/entry.py:71
 msgid "title"
 msgstr ""
 
@@ -4401,7 +4439,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:483
+#: web/apps/zinnia/models_bases/entry.py:485
 msgid "categories"
 msgstr ""
 
@@ -4414,14 +4452,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:58
+#: web/apps/zinnia/models_bases/entry.py:60
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
-msgstr ""
+msgstr "블로그"
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:72
+#: web/apps/zinnia/models_bases/entry.py:74
 msgid "slug"
 msgstr ""
 
@@ -4442,7 +4480,7 @@ msgid "language"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:115
+#: web/apps/zinnia/models_bases/entry.py:117
 msgid "Entry type"
 msgstr ""
 
@@ -4462,169 +4500,169 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:74
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:76
+#: web/apps/zinnia/models_bases/entry.py:101
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:77
+#: web/apps/zinnia/models_bases/entry.py:79
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:81
+#: web/apps/zinnia/models_bases/entry.py:83
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:85
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:88
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:88
+#: web/apps/zinnia/models_bases/entry.py:90
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:93
+#: web/apps/zinnia/models_bases/entry.py:95
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:94
+#: web/apps/zinnia/models_bases/entry.py:96
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:97
+#: web/apps/zinnia/models_bases/entry.py:99
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:102
+#: web/apps/zinnia/models_bases/entry.py:104
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:112
+#: web/apps/zinnia/models_bases/entry.py:114
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:119
+#: web/apps/zinnia/models_bases/entry.py:121
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:234
+#: web/apps/zinnia/models_bases/entry.py:236
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:235
+#: web/apps/zinnia/models_bases/entry.py:237
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:249
+#: web/apps/zinnia/models_bases/entry.py:251
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:291
+#: web/apps/zinnia/models_bases/entry.py:293
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:292
+#: web/apps/zinnia/models_bases/entry.py:294
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:294
+#: web/apps/zinnia/models_bases/entry.py:296
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:295
+#: web/apps/zinnia/models_bases/entry.py:297
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:297
+#: web/apps/zinnia/models_bases/entry.py:299
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:298
+#: web/apps/zinnia/models_bases/entry.py:300
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:301
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:305
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:305
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:389
+#: web/apps/zinnia/models_bases/entry.py:391
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:407
+#: web/apps/zinnia/models_bases/entry.py:409
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:408
+#: web/apps/zinnia/models_bases/entry.py:410
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:441
+#: web/apps/zinnia/models_bases/entry.py:443
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:443
+#: web/apps/zinnia/models_bases/entry.py:445
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:454
+#: web/apps/zinnia/models_bases/entry.py:456
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:469
+#: web/apps/zinnia/models_bases/entry.py:471
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:493
+#: web/apps/zinnia/models_bases/entry.py:495
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:512
+#: web/apps/zinnia/models_bases/entry.py:514
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:513
+#: web/apps/zinnia/models_bases/entry.py:515
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:525
+#: web/apps/zinnia/models_bases/entry.py:527
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:526
+#: web/apps/zinnia/models_bases/entry.py:528
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:538
+#: web/apps/zinnia/models_bases/entry.py:540
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:540
-#: web/apps/zinnia/models_bases/entry.py:556
+#: web/apps/zinnia/models_bases/entry.py:542
+#: web/apps/zinnia/models_bases/entry.py:558
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:542
+#: web/apps/zinnia/models_bases/entry.py:544
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:554
+#: web/apps/zinnia/models_bases/entry.py:556
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:558
+#: web/apps/zinnia/models_bases/entry.py:560
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5626,15 +5664,15 @@ msgstr ""
 
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
-msgstr ""
+msgstr "개발"
 
 #: web/templates/footer.html:20
 msgid "COMMUNITY"
-msgstr ""
+msgstr "커뮤니티"
 
 #: web/templates/footer.html:44
 msgid "Service Terms"
-msgstr ""
+msgstr "서비스 약관"
 
 #: web/templates/header-no-menu.html:29 web/templates/header.html:45
 msgid "User Center"
@@ -5644,13 +5682,9 @@ msgstr ""
 msgid "LogOut"
 msgstr ""
 
-#: web/templates/header.html:22
-msgid "HEP"
-msgstr ""
-
 #: web/templates/header.html:25
 msgid "Technology"
-msgstr ""
+msgstr "기술"
 
 #: web/templates/admin/change_form.html:33
 msgid "History"
