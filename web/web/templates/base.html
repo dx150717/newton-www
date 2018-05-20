@@ -39,6 +39,7 @@
             <![endif]-->
     </head>
     <body>
+        {% comment %}
         <div style="margin:0 auto; width:0px;height:0px;overflow:hidden;">
             <img src="{% version "images/pic300.jpg" %}">
         </div>
@@ -59,6 +60,7 @@
                 </div>
             </a>
         </div>
+        {% endcomment %}
         
         {% block header %}
         {% include "header.html" %}
