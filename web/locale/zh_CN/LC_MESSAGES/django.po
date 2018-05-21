@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-18 13:33+0000\n"
+"POT-Creation-Date: 2018-05-21 14:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1892,6 +1892,7 @@ msgid "Hu Dinghe"
 msgstr "胡定核"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
+#: web/apps/welcome/templates/welcome/include-investor.html:127
 msgid "Chairman of Elastos ecosystem board"
 msgstr "亦来云生态建设委员会主任"
 
@@ -1989,7 +1990,7 @@ msgstr ""
 "由非盈利基金会管理的社区经济体取代由传统盈利公司管理的垄断平台。每一个贡献者"
 "按照公平、合理、透明的原则，获得经济体的权益，成为经济体的一部分。"
 
-#: web/apps/welcome/templates/welcome/include-feed.html:10
+#: web/apps/welcome/templates/welcome/include-feed.html:11
 msgid "FEED"
 msgstr "动态"
 
@@ -2036,11 +2037,6 @@ msgstr "叶海峰"
 #: web/apps/welcome/templates/welcome/include-investor.html:116
 msgid "Founder of mbaobao.com"
 msgstr "麦包包创始人"
-
-#: web/apps/welcome/templates/welcome/include-investor.html:127
-#, fuzzy
-msgid "Chairman of elastos ecosystem board"
-msgstr "亦来云生态建设委员会主任"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:148
 #: web/apps/welcome/templates/welcome/include-investor.html:150
@@ -2358,7 +2354,7 @@ msgstr "每一个人都应该从经济增长中受益"
 msgid "Newton: The infrastructure for a protocol-based economy"
 msgstr "牛顿：协议经济基础设施"
 
-#: web/apps/welcome/templates/welcome/index.html:46
+#: web/apps/welcome/templates/welcome/index.html:47
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -2438,8 +2434,7 @@ msgstr ""
 "相关。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
-msgid ""
-"In addition, we will use NEW to pay part of the salary."
+msgid "In addition, we will use NEW to pay part of the salary."
 msgstr "另外，我们将会使用 NEW 支付部分工资。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
@@ -2533,7 +2528,8 @@ msgstr "招聘人数：5人 "
 #: web/apps/welcome/templates/welcome/joinus.html:233
 #: web/apps/welcome/templates/welcome/joinus.html:274
 #: web/apps/welcome/templates/welcome/joinus.html:312
-msgid "Working Location: Beijing - Chaoyang District - Sanlitun SOHO"
+#, fuzzy
+msgid "Working Location: Beijing - Chaoyang District"
 msgstr "工作地点：北京-朝阳区-三里屯SOHO"
 
 #: web/apps/welcome/templates/welcome/joinus.html:79
@@ -4623,7 +4619,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:490
+#: web/apps/zinnia/models_bases/entry.py:492
 msgid "categories"
 msgstr ""
 
@@ -4733,124 +4729,124 @@ msgstr "文章类型"
 msgid "entry_sub_type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:126
+#: web/apps/zinnia/models_bases/entry.py:128
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:241
+#: web/apps/zinnia/models_bases/entry.py:243
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:242
+#: web/apps/zinnia/models_bases/entry.py:244
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:256
+#: web/apps/zinnia/models_bases/entry.py:258
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:298
+#: web/apps/zinnia/models_bases/entry.py:300
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:299
+#: web/apps/zinnia/models_bases/entry.py:301
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:301
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:302
+#: web/apps/zinnia/models_bases/entry.py:304
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:304
+#: web/apps/zinnia/models_bases/entry.py:306
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:305
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:308
+#: web/apps/zinnia/models_bases/entry.py:310
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:312
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:312
+#: web/apps/zinnia/models_bases/entry.py:314
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:396
+#: web/apps/zinnia/models_bases/entry.py:398
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:414
+#: web/apps/zinnia/models_bases/entry.py:416
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:415
+#: web/apps/zinnia/models_bases/entry.py:417
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:448
+#: web/apps/zinnia/models_bases/entry.py:450
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:450
+#: web/apps/zinnia/models_bases/entry.py:452
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:461
+#: web/apps/zinnia/models_bases/entry.py:463
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:476
+#: web/apps/zinnia/models_bases/entry.py:478
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:500
+#: web/apps/zinnia/models_bases/entry.py:502
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:519
+#: web/apps/zinnia/models_bases/entry.py:521
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:520
+#: web/apps/zinnia/models_bases/entry.py:522
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:532
+#: web/apps/zinnia/models_bases/entry.py:534
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:533
+#: web/apps/zinnia/models_bases/entry.py:535
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:545
+#: web/apps/zinnia/models_bases/entry.py:547
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:547
-#: web/apps/zinnia/models_bases/entry.py:563
+#: web/apps/zinnia/models_bases/entry.py:549
+#: web/apps/zinnia/models_bases/entry.py:565
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:549
+#: web/apps/zinnia/models_bases/entry.py:551
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:561
+#: web/apps/zinnia/models_bases/entry.py:563
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:565
+#: web/apps/zinnia/models_bases/entry.py:567
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5834,23 +5830,9 @@ msgstr ""
 msgid "System Error."
 msgstr "系统错误"
 
-#: web/templates/base.html:48
-msgid "Newton Meetup Beijing"
-msgstr "北京线下见面会"
-
-#: web/templates/base.html:49 web/templates/base.html.py:58
-msgid "Invite you"
-msgstr "北京站邀请您"
-
-#: web/templates/base.html:53
-msgid ""
-"https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-"
-"defining-business-order-new-economy-era-sincerely-invites-you-join-us/"
-msgstr "https://www.newtonproject.org/announcement/2018/05/18/newton-meetup-beijing-518/"
-
-#: web/templates/base.html:53
-msgid "Re-defining the Business Order of the New Economy Era"
-msgstr "重塑新经济时代商业法则"
+#: web/templates/base.html:69
+msgid "Join us and change the world together"
+msgstr "加入牛顿，和我们一起改变世界"
 
 #: web/templates/dialog.html:8
 msgid "关闭"
@@ -5918,3 +5900,23 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Chairman of elastos ecosystem board"
+#~ msgstr "亦来云生态建设委员会主任"
+
+#~ msgid "Newton Meetup Beijing"
+#~ msgstr "北京线下见面会"
+
+#~ msgid "Invite you"
+#~ msgstr "北京站邀请您"
+
+#~ msgid ""
+#~ "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-"
+#~ "re-defining-business-order-new-economy-era-sincerely-invites-you-join-us/"
+#~ msgstr ""
+#~ "https://www.newtonproject.org/announcement/2018/05/18/newton-meetup-"
+#~ "beijing-518/"
+
+#~ msgid "Re-defining the Business Order of the New Economy Era"
+#~ msgstr "重塑新经济时代商业法则"
