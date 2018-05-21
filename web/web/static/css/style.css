@@ -1140,19 +1140,17 @@ canvas { display: block; vertical-align: top; }
 
 .ad{ background:#083356; position:relative;}
 .ad a{text-align: center;}
-.ad span{ color: #f6fcfd; font-size: 44px; vertical-align: middle; text-align:center}
-.ad .container div{position: relative;}
+.ad span{ color: #f6fcfd; font-size: 30px; vertical-align: middle; text-align:center}
+.ad .container div{position: relative; padding: 10px 0 10px 0}
 .ad .container img{height: 100%; display: block; position: absolute; right: 0; bottom: 0}
 
-@media(min-width:1200px){
 
-}
-@media(min-width:992px) and (max-width:1199px){
-.ad .container span{ font-size:40px;}
+@media(max-width:992px){
+.ad .container span{ font-size:25px;}
 }
 
 @media(max-width:991px) and (min-width: 768px){
-.ad .container span{ font-size:30px;}
+.ad .container span{ font-size:20px;}
 }
 
 @media(max-width:767px) and (min-width: 320px) {
