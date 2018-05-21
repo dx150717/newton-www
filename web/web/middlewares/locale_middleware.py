@@ -38,8 +38,8 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
             if language.find('ko') >= 0:
                 return 'ko'
             # # Add Russian
-            # if language.find('ru') >= 0:
-            #     return 'ru'
+            if language.find('ru') >= 0:
+                return 'ru'
             # # Add Dutch
             # if language.find('nl') >= 0:
             #     return 'nl'
