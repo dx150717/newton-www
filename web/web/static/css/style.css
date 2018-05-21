@@ -1129,3 +1129,37 @@ canvas { display: block; vertical-align: top; }
     #news .content .small-content{width: 100%; float: left; height: unset;}
     #news .content .smallimg{width: 100%; margin: 0 0 2px 0;background-size: cover; height: 400px;}
 }
+
+
+.joinus{height: 90px; width: 100%; background-image: url(../../static/images/joinus-bgr.png)}
+.joinus a{display: block; color: #fff; text-align: center; line-height: 90px;font-size: 45px;}
+@media(max-width:768px){
+    .joinus a{font-size: 22px}
+    .joinus a img{display: none;}
+}
+
+.ad{ background:#083356; position:relative;}
+.ad a{text-align: center;}
+.ad span{ color: #f6fcfd; font-size: 44px; vertical-align: middle; text-align:center}
+.ad .container div{position: relative;}
+.ad .container img{height: 100%; display: block; position: absolute; right: 0; bottom: 0}
+
+@media(min-width:1200px){
+
+}
+@media(min-width:992px) and (max-width:1199px){
+.ad .container span{ font-size:40px;}
+}
+
+@media(max-width:991px) and (min-width: 768px){
+.ad .container span{ font-size:30px;}
+}
+
+@media(max-width:767px) and (min-width: 320px) {
+.ad .container span{ font-size:18px;}
+}
+
+@media only screen and (max-width : 320px) {
+.ad .container span{ font-size:12px;}
+
+}
