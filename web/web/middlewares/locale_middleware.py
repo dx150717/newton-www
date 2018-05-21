@@ -24,16 +24,14 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
             if not language:
                 language = request.META.get('HTTP_ACCEPT_LANGUAGE')
                 # Adapt browser language
-                language = language.split(',')[0]
+                if language:
+                    language = language.split(',')[0]
             if not language:
                 language = request.POST.get("language", None)
             if not language:
                 return settings.LANGUAGE_CODE
             if language.find('zh') >= 0:
                 return 'zh_CN'
-            # Add Spanish
-            if language.find('es') >= 0:
-                return 'es'
             # Add Korean
             if language.find('ko') >= 0:
                 return 'ko'
@@ -46,7 +44,7 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
             return 'en'
         except Exception, inst:
             logger.exception('fail to get user language:%s' % str(inst))
-            return ''
+            return 'en'
 
     def process_request(self, request):
         # check the langage in cookie

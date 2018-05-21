@@ -19,6 +19,19 @@ from press.models import PressModel
 from django.views import generic
 
 def show_home_view(request):
+    language = translation.get_language()
+    if language.startswith('zh'):
+        language = CHINESE
+    elif language.startswith('en'):
+        language = ENGLISH
+    else:
+        language = ENGLISH
+        
+    entry = EntryDetail()
+    entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT, language=language, show_in_home=True).order_by('-creation_date')[0:5]
+    for entry in entries:
+        url = entry.get_absolute_url().replace('/blog/','/announcement/')
+        entry.urls = url
     return render(request, 'welcome/index.html', locals())
 
 def show_tech_view(request):
