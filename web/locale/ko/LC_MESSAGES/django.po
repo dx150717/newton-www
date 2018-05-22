@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-18 13:24+0000\n"
+"POT-Creation-Date: 2018-05-22 12:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -266,7 +266,7 @@ msgstr "코드가 올바르지 않습니다"
 #: web/apps/login/templates/login/index.html:39
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
-#: web/templates/header-no-menu.html:38 web/templates/header.html:54
+#: web/templates/header-no-menu.html:38
 msgid "Login"
 msgstr "로그인"
 
@@ -308,12 +308,12 @@ msgstr "팁: 로그인을 하기 위해서는 구글 reCAPTCHA를 입력해야 �
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/register/templates/register/index.html:6
 #: web/apps/register/templates/register/index.html:24
-#: web/apps/register/templates/register/index.html:39
+#: web/apps/register/templates/register/index.html:44
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
 #: web/apps/register/templates/register/register-success.html:6
-#: web/templates/header-no-menu.html:35 web/templates/header.html:51
+#: web/templates/header-no-menu.html:35
 msgid "Register"
 msgstr "회원가입"
 
@@ -474,19 +474,25 @@ msgstr "혹은"
 msgid "Use the GA app to scan the QR code"
 msgstr "GA앱을 사용해 QR코드를 스캔해주세요"
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:29
+#, fuzzy
+msgid ""
+"Tip:To register success, Ensure you can access the google recaptcha service."
+msgstr "팁: 로그인을 하기 위해서는 구글 reCAPTCHA를 입력해야 합니다."
+
+#: web/apps/register/templates/register/index.html:52
 msgid "Clicking register button means you agree and abide by<br/> Newton"
 msgstr "가입 버튼을 누르면 뉴턴에 동의하고 규정을 따르는 것으로 간주됩니다."
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:52
 msgid "User Agreement"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:52
 msgid "and"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:52
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -818,6 +824,10 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:30
 msgid "Your ELA amount is "
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/end.html:6
+msgid "Token Exchange"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:20
@@ -1928,6 +1938,10 @@ msgstr ""
 "을 대체할 것입니다. 모든 기여자는 공평, 합리적, 투명한 원칙을 통해 이익을 얻"
 "을 것이고, 경제의 한 부분이 될 것입니다."
 
+#: web/apps/welcome/templates/welcome/include-feed.html:11
+msgid "FEED"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-investor.html:9
 msgid "ANGEL INVESTORS"
 msgstr "엔젤 투자자"
@@ -2171,19 +2185,6 @@ msgstr "마케팅 스페셜리스트"
 msgid "Founder of WuZhou Online"
 msgstr "Wuzhou Online 창립자"
 
-#: web/apps/welcome/templates/welcome/include-team.html:78
-#: web/apps/welcome/templates/welcome/include-team.html:80
-msgid "Jiang Yu"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-team.html:81
-msgid "Product Specialist"
-msgstr "프로덕트 스페셜리스트"
-
-#: web/apps/welcome/templates/welcome/include-team.html:81
-msgid "Previous Product Director of xs.cn"
-msgstr "전 xs.cn 프로덕트 디렉터"
-
 #: web/apps/welcome/templates/welcome/include-tech-chain.html:10
 msgid "Multiple Blockchain"
 msgstr ""
@@ -2296,7 +2297,7 @@ msgstr "모든 사람들은 경제 활동을 통해 수입을 얻습니다"
 msgid "Newton: The infrastructure for a protocol-based economy"
 msgstr "프로토콜 기반의 경제 인프라"
 
-#: web/apps/welcome/templates/welcome/index.html:45
+#: web/apps/welcome/templates/welcome/index.html:47
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -2308,16 +2309,16 @@ msgstr ""
 msgid "Jobs"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:14
+#: web/apps/welcome/templates/welcome/joinus.html:17
 #: web/templates/footer.html:37
 msgid "Join Us"
 msgstr "입사 지원"
 
-#: web/apps/welcome/templates/welcome/joinus.html:20
+#: web/apps/welcome/templates/welcome/joinus.html:23
 msgid "About Newton Project"
 msgstr "뉴턴 프로젝트 소개"
 
-#: web/apps/welcome/templates/welcome/joinus.html:22
+#: web/apps/welcome/templates/welcome/joinus.html:25
 msgid ""
 "We are committed to building an efficient, collaborative, low-cost, highly "
 "automated business infrastructure ecosystem."
@@ -2325,11 +2326,11 @@ msgstr ""
 "우리는 효율적이고 협업적이며, 저비용, 자동화된 비즈니스 인프라 생태계를 구축"
 "하기 위해 노력하고 있습니다."
 
-#: web/apps/welcome/templates/welcome/joinus.html:25
+#: web/apps/welcome/templates/welcome/joinus.html:28
 msgid "OUR CULTURE"
 msgstr "뉴턴 문화"
 
-#: web/apps/welcome/templates/welcome/joinus.html:27
+#: web/apps/welcome/templates/welcome/joinus.html:30
 msgid ""
 "We believe in the free, open and inclusive culture advocated by the liberal "
 "open source philosophy. Decentralization is the core of our values."
@@ -2337,7 +2338,7 @@ msgstr ""
 "우리는 자유주의 오픈소스 철학이 지지하는 자유롭고 개방적이고 포괄적인 문화를 "
 "믿습니다. 탈중앙화는 우리 가치의 핵심입니다."
 
-#: web/apps/welcome/templates/welcome/joinus.html:30
+#: web/apps/welcome/templates/welcome/joinus.html:33
 msgid ""
 "Currently, Newton project team has attracted many professional talents from "
 "the free and open source software community, covering the field of e-"
@@ -2348,7 +2349,7 @@ msgstr ""
 "어 커뮤니티에서 많은 재능 있는 인재들을 끌어 모았습니다. 그리고 우리는 더 많"
 "은 인재들을 초대합니다. "
 
-#: web/apps/welcome/templates/welcome/joinus.html:33
+#: web/apps/welcome/templates/welcome/joinus.html:36
 msgid ""
 "In addition, developers around the world can join us by telecommuting. The "
 "space constraint will not hinder our cooperation ."
@@ -2356,11 +2357,11 @@ msgstr ""
 "또한, 전세계의 개발자들 또한 재택 근무로 우리와 함께 할 수 있습니다. 공간의 "
 "제약은 더 이상 우리를 막지 못합니다."
 
-#: web/apps/welcome/templates/welcome/joinus.html:35
+#: web/apps/welcome/templates/welcome/joinus.html:38
 msgid "WHO WE ARE LOOKING FOR"
 msgstr "인재상"
 
-#: web/apps/welcome/templates/welcome/joinus.html:37
+#: web/apps/welcome/templates/welcome/joinus.html:40
 msgid ""
 "We need technical talents in distributed systems, operating systems, "
 "encryption algorithms, blockchains, mobile development, product design, and "
@@ -2373,7 +2374,7 @@ msgstr ""
 "관리 및 금융 혁신 분야의 전문가가 필요합니다. 자원봉사자, 뉴턴의 지지자분들"
 "도 환영합니다."
 
-#: web/apps/welcome/templates/welcome/joinus.html:40
+#: web/apps/welcome/templates/welcome/joinus.html:43
 msgid ""
 "We need every talent to be passionate and believe in decentralized business, "
 "because Newton is closely related to everyone’s life."
@@ -2381,7 +2382,7 @@ msgstr ""
 "뉴턴은 모든 사람들의 삶과 밀접한 관계에 있기 때문에, 열정적이고 탈중앙화를 믿"
 "는 인재가 필요합니다."
 
-#: web/apps/welcome/templates/welcome/joinus.html:43
+#: web/apps/welcome/templates/welcome/joinus.html:46
 msgid ""
 "In addition, we will use NEW to pay part of the salary, which is a condition "
 "that must be accepted."
@@ -2389,117 +2390,140 @@ msgstr ""
 "또한, 우리는 NEW를 급여로 지불할 것이며, 이것은 반드시 받아들여야 하는 사항입"
 "니다."
 
-#: web/apps/welcome/templates/welcome/joinus.html:46
+#: web/apps/welcome/templates/welcome/joinus.html:49
+msgid ""
+"We currently open the following positions. If you are interested, please "
+"send your resume to the email: <a href='mailto:newton-hr@newtonproject."
+"org'>newton-hr@newtonproject.org</a>"
+msgstr ""
+"현재 여러 포지션을 채용 중입니다. 관심이 있으실 경우, 이력서를 메일로 보내주시기 바랍니다: <a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject.org</a>"
+
+#: web/apps/welcome/templates/welcome/joinus.html:52
 msgid "Currently open positions"
 msgstr "현재 지원 가능 포지션"
 
-#: web/apps/welcome/templates/welcome/joinus.html:52
+#: web/apps/welcome/templates/welcome/joinus.html:58
 msgid "Senior R&D Engineer"
 msgstr "시니어 R&D 엔지니어"
 
-#: web/apps/welcome/templates/welcome/joinus.html:59
-#: web/apps/welcome/templates/welcome/joinus.html:98
-#: web/apps/welcome/templates/welcome/joinus.html:141
-#: web/apps/welcome/templates/welcome/joinus.html:180
-#: web/apps/welcome/templates/welcome/joinus.html:215
-#: web/apps/welcome/templates/welcome/joinus.html:255
-#: web/apps/welcome/templates/welcome/joinus.html:294
+#: web/apps/welcome/templates/welcome/joinus.html:65
+#: web/apps/welcome/templates/welcome/joinus.html:104
+#: web/apps/welcome/templates/welcome/joinus.html:147
+#: web/apps/welcome/templates/welcome/joinus.html:186
+#: web/apps/welcome/templates/welcome/joinus.html:221
+#: web/apps/welcome/templates/welcome/joinus.html:261
+#: web/apps/welcome/templates/welcome/joinus.html:300
+#: web/apps/welcome/templates/welcome/joinus.html:338
+#: web/apps/welcome/templates/welcome/joinus.html:379
+#: web/apps/welcome/templates/welcome/joinus.html:418
 msgid "Job description:"
 msgstr "담당업무"
 
-#: web/apps/welcome/templates/welcome/joinus.html:61
+#: web/apps/welcome/templates/welcome/joinus.html:67
 msgid "Being responsible for the design and development of the Newton system."
 msgstr "뉴턴 시스템 개발 및 디자인."
 
-#: web/apps/welcome/templates/welcome/joinus.html:62
+#: web/apps/welcome/templates/welcome/joinus.html:68
 msgid ""
 "Being responsible for researching the latest technologies in the industry "
 "and applying them to Newtonian system improvements."
 msgstr "업계 최신 기술 리서치 및 뉴턴 시스템 개선에 적용."
 
-#: web/apps/welcome/templates/welcome/joinus.html:64
-#: web/apps/welcome/templates/welcome/joinus.html:109
-#: web/apps/welcome/templates/welcome/joinus.html:149
-#: web/apps/welcome/templates/welcome/joinus.html:188
-#: web/apps/welcome/templates/welcome/joinus.html:224
-#: web/apps/welcome/templates/welcome/joinus.html:262
-#: web/apps/welcome/templates/welcome/joinus.html:302
+#: web/apps/welcome/templates/welcome/joinus.html:70
+#: web/apps/welcome/templates/welcome/joinus.html:115
+#: web/apps/welcome/templates/welcome/joinus.html:155
+#: web/apps/welcome/templates/welcome/joinus.html:194
+#: web/apps/welcome/templates/welcome/joinus.html:230
+#: web/apps/welcome/templates/welcome/joinus.html:268
+#: web/apps/welcome/templates/welcome/joinus.html:308
+#: web/apps/welcome/templates/welcome/joinus.html:344
+#: web/apps/welcome/templates/welcome/joinus.html:387
+#: web/apps/welcome/templates/welcome/joinus.html:426
 msgid "Qualifications:"
 msgstr "자격요건"
 
-#: web/apps/welcome/templates/welcome/joinus.html:66
+#: web/apps/welcome/templates/welcome/joinus.html:72
 msgid ""
 "Bachelor degree or above, applicants major in computer science or related "
 "professions shall be prioritized."
 msgstr "대졸 이상(4년), 컴퓨터 공학 및 관련 전공 우대."
 
-#: web/apps/welcome/templates/welcome/joinus.html:67
+#: web/apps/welcome/templates/welcome/joinus.html:73
 msgid "More than 5 years of software development experience."
 msgstr "5년이상의 소프트웨어 개발 경험."
 
-#: web/apps/welcome/templates/welcome/joinus.html:68
+#: web/apps/welcome/templates/welcome/joinus.html:74
 msgid ""
 "Skilled in a variety of programming languages (Java，Go，C++，Rust，Kotlin)."
 msgstr "Java，Go，C++，Rust，Kotlin등 다양한 프로그래밍 언어 개발 경험자."
 
-#: web/apps/welcome/templates/welcome/joinus.html:69
+#: web/apps/welcome/templates/welcome/joinus.html:75
 msgid ""
 "Being familiar with the principle of software security, can apply security "
 "standards to research and development."
 msgstr ""
 "소프트웨어 보안 규칙 표준을 이해해, 이를 리서치 및 개발에 적용할 수 있는 분."
 
-#: web/apps/welcome/templates/welcome/joinus.html:70
+#: web/apps/welcome/templates/welcome/joinus.html:76
 msgid ""
 "Good English reading ability, able to read English technical documents "
 "smoothly."
 msgstr "영어 읽기 능력 능통 및 기술적 문서 독해 가능하시는 분."
 
-#: web/apps/welcome/templates/welcome/joinus.html:72
-#: web/apps/welcome/templates/welcome/joinus.html:115
+#: web/apps/welcome/templates/welcome/joinus.html:78
+#: web/apps/welcome/templates/welcome/joinus.html:121
 msgid "Priority recruitment conditions:"
 msgstr "우대사항"
 
-#: web/apps/welcome/templates/welcome/joinus.html:74
-#: web/apps/welcome/templates/welcome/joinus.html:117
+#: web/apps/welcome/templates/welcome/joinus.html:80
+#: web/apps/welcome/templates/welcome/joinus.html:123
 msgid "Blockchain related system R&D experience."
 msgstr "블록체인 관련 시스템 R&D 경험."
 
-#: web/apps/welcome/templates/welcome/joinus.html:75
-#: web/apps/welcome/templates/welcome/joinus.html:118
+#: web/apps/welcome/templates/welcome/joinus.html:81
+#: web/apps/welcome/templates/welcome/joinus.html:124
 msgid "Distributed network system development experience."
 msgstr "분산 네트워크 시스템 개발 경험."
 
-#: web/apps/welcome/templates/welcome/joinus.html:77
+#: web/apps/welcome/templates/welcome/joinus.html:83
 msgid "Recruitment number: 5 people "
 msgstr "채용 인원: 5명"
 
-#: web/apps/welcome/templates/welcome/joinus.html:78
-#: web/apps/welcome/templates/welcome/joinus.html:120
-#: web/apps/welcome/templates/welcome/joinus.html:160
-#: web/apps/welcome/templates/welcome/joinus.html:195
-#: web/apps/welcome/templates/welcome/joinus.html:233
-#: web/apps/welcome/templates/welcome/joinus.html:274
-#: web/apps/welcome/templates/welcome/joinus.html:312
-msgid "Working Location: Beijing - Chaoyang District"
-msgstr "근무지: Beijing Chaoyang district"
+#: web/apps/welcome/templates/welcome/joinus.html:84
+#: web/apps/welcome/templates/welcome/joinus.html:126
+#: web/apps/welcome/templates/welcome/joinus.html:166
+#: web/apps/welcome/templates/welcome/joinus.html:201
+#: web/apps/welcome/templates/welcome/joinus.html:239
+#: web/apps/welcome/templates/welcome/joinus.html:280
+#: web/apps/welcome/templates/welcome/joinus.html:318
+#: web/apps/welcome/templates/welcome/joinus.html:359
+#: web/apps/welcome/templates/welcome/joinus.html:398
+#: web/apps/welcome/templates/welcome/joinus.html:438
+msgid "Working Location: Beijing - Chaoyang District Sanlitun SOHO"
+msgstr "근무지: Beijing – Chaoyang district – sanlitun soho"
 
-#: web/apps/welcome/templates/welcome/joinus.html:79
-#: web/apps/welcome/templates/welcome/joinus.html:121
-#: web/apps/welcome/templates/welcome/joinus.html:161
-#: web/apps/welcome/templates/welcome/joinus.html:196
-#: web/apps/welcome/templates/welcome/joinus.html:234
-#: web/apps/welcome/templates/welcome/joinus.html:275
-#: web/apps/welcome/templates/welcome/joinus.html:313
+#: web/apps/welcome/templates/welcome/joinus.html:85
+#: web/apps/welcome/templates/welcome/joinus.html:127
+#: web/apps/welcome/templates/welcome/joinus.html:167
+#: web/apps/welcome/templates/welcome/joinus.html:202
+#: web/apps/welcome/templates/welcome/joinus.html:240
+#: web/apps/welcome/templates/welcome/joinus.html:281
+#: web/apps/welcome/templates/welcome/joinus.html:319
+#: web/apps/welcome/templates/welcome/joinus.html:360
+#: web/apps/welcome/templates/welcome/joinus.html:399
+#: web/apps/welcome/templates/welcome/joinus.html:439
 msgid "Payments: Salary to be discussed"
 msgstr "급여: 협의"
 
-#: web/apps/welcome/templates/welcome/joinus.html:80
-#: web/apps/welcome/templates/welcome/joinus.html:162
-#: web/apps/welcome/templates/welcome/joinus.html:197
-#: web/apps/welcome/templates/welcome/joinus.html:235
-#: web/apps/welcome/templates/welcome/joinus.html:276
-#: web/apps/welcome/templates/welcome/joinus.html:314
+#: web/apps/welcome/templates/welcome/joinus.html:86
+#: web/apps/welcome/templates/welcome/joinus.html:168
+#: web/apps/welcome/templates/welcome/joinus.html:203
+#: web/apps/welcome/templates/welcome/joinus.html:241
+#: web/apps/welcome/templates/welcome/joinus.html:282
+#: web/apps/welcome/templates/welcome/joinus.html:320
+#: web/apps/welcome/templates/welcome/joinus.html:361
+#: web/apps/welcome/templates/welcome/joinus.html:400
+#: web/apps/welcome/templates/welcome/joinus.html:440
 msgid ""
 "Contact:<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject."
 "org</a>"
@@ -2507,88 +2531,88 @@ msgstr ""
 "연락처:<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject."
 "org</a>"
 
-#: web/apps/welcome/templates/welcome/joinus.html:91
+#: web/apps/welcome/templates/welcome/joinus.html:97
 msgid "Blockchain Engineer"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:100
+#: web/apps/welcome/templates/welcome/joinus.html:106
 msgid ""
 "Design and develop Newton software, related decentralized applications and "
 "cooperate with the rest of the team working on various layers of "
 "infrastructure;"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:102
+#: web/apps/welcome/templates/welcome/joinus.html:108
 msgid "Job Responsibilities:"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:104
+#: web/apps/welcome/templates/welcome/joinus.html:110
 msgid ""
 "Design, build, and maintain efficient, reusable, and reliable C++/Go code."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:105
+#: web/apps/welcome/templates/welcome/joinus.html:111
 msgid ""
 "Develop blockchain solutions and provide support for blockchain development."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:106
+#: web/apps/welcome/templates/welcome/joinus.html:112
 msgid "Implement performance and quality modules."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:107
+#: web/apps/welcome/templates/welcome/joinus.html:113
 msgid "Able to work independently with minimal guidance on tasks."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:111
+#: web/apps/welcome/templates/welcome/joinus.html:117
 msgid ""
 "Strong proficiency in C++/Go, with solid knowledge of language specification."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:112
+#: web/apps/welcome/templates/welcome/joinus.html:118
 msgid ""
 "1+ years of experience, preferably in an environment where latency and speed "
 "are factors (e.g., finance)."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:113
+#: web/apps/welcome/templates/welcome/joinus.html:119
 msgid "Computer Science or related degree."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:122
+#: web/apps/welcome/templates/welcome/joinus.html:128
 msgid "Contact:<a>newton-hr@newtonproject.org</a>"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:134
+#: web/apps/welcome/templates/welcome/joinus.html:140
 msgid "Fullstack Web Developer"
 msgstr "풀 스택 웹 개발자"
 
-#: web/apps/welcome/templates/welcome/joinus.html:143
+#: web/apps/welcome/templates/welcome/joinus.html:149
 msgid ""
 "Write well designed, testable, efficient code by using best software "
 "development practices;"
 msgstr "최고 소프트웨어로 설계, 테스트, 효율적인 코드 작성;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:144
+#: web/apps/welcome/templates/welcome/joinus.html:150
 msgid ""
 "Create website layout/user interface by using standard HTML/CSS practices;"
 msgstr "표준 HTML/CSS 방식으로 웹사이트 레이아웃 및 유저 인터페이스 개발;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:145
+#: web/apps/welcome/templates/welcome/joinus.html:151
 msgid "Build web based backends and micro-services;"
 msgstr "웹 기반의 백엔드 및 마이크로 서비스 구축;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:146
+#: web/apps/welcome/templates/welcome/joinus.html:152
 msgid ""
 "Stay plugged into emerging technologies/industry trends and apply them into "
 "operations and activities;"
 msgstr "신생 기술 및 업계 트렌드 파악, 업무에 운영 및 적용;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:147
+#: web/apps/welcome/templates/welcome/joinus.html:153
 msgid "Cooperate with designers to match visual design intent."
 msgstr "디자이너와 협력해 시각적 디자인 일치."
 
-#: web/apps/welcome/templates/welcome/joinus.html:151
+#: web/apps/welcome/templates/welcome/joinus.html:157
 msgid ""
 "Proven experience working with React or other modern Frontend Javascript "
 "Framework;"
@@ -2596,19 +2620,19 @@ msgstr ""
 "React 및 기타 프론트 엔드 자바스크립트 프레임워크 업무 경험 입증 가능 하신 "
 "분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:152
+#: web/apps/welcome/templates/welcome/joinus.html:158
 msgid "Experience with Python/Django/Node.js;"
 msgstr "Python/Django/Node.js 경험 있으신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:153
+#: web/apps/welcome/templates/welcome/joinus.html:159
 msgid "Experience writing frontend and backend unit and integration tests;"
 msgstr "프론트 엔드 및 백엔드 유닛 및 통합 테스트 작성 경험;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:154
+#: web/apps/welcome/templates/welcome/joinus.html:160
 msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
 msgstr "높은 프로그래밍 스킬 및 최신 HTML/CSS 이해도 높으신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:155
+#: web/apps/welcome/templates/welcome/joinus.html:161
 msgid ""
 "A solid understanding of how web applications work including security, "
 "session management, and best development practices;"
@@ -2616,61 +2640,61 @@ msgstr ""
 "보안, 세션 관리 및 최상의 개발 방법 포함, 웹 응용 프로그램의 작동 방식에 대"
 "해 확실히 이해하시는 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:156
+#: web/apps/welcome/templates/welcome/joinus.html:162
 msgid ""
 "Strong organizational skills to juggle multiple tasks within the constraints "
 "of timelines and budgets with business acumen;"
 msgstr ""
 "비즈니스 감각과 함께 시간 제약 속에서 여러 업무 조율 및 처리하는 능력 우대;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:157
+#: web/apps/welcome/templates/welcome/joinus.html:163
 msgid ""
 "Ability to work and thrive in a fast-paced environment, learn rapidly and "
 "master diverse web technologies and techniques;"
 msgstr "빠르게 변하는 업무 환경에서 다양한 웹 기술을 배울 수 있으신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:158
+#: web/apps/welcome/templates/welcome/joinus.html:164
 msgid "Bachelor or masters degree in computer science or relevant experience;"
 msgstr "대졸 이상(4년) 컴퓨터 공학 및 관련 전공자 우대;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:173
+#: web/apps/welcome/templates/welcome/joinus.html:179
 msgid "Communication Specialist"
 msgstr "커뮤니케이션 스페셜리스트"
 
-#: web/apps/welcome/templates/welcome/joinus.html:182
+#: web/apps/welcome/templates/welcome/joinus.html:188
 msgid ""
 "Deliver customer service and technical support on email/facebook/twitter;"
 msgstr "이메일/페이스북/트위터에 대한 고객 서비스 기술적 지원 제공;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:183
+#: web/apps/welcome/templates/welcome/joinus.html:189
 msgid "Communicate customer feedback and process suggestions;"
 msgstr "고객 피드백 및 절차 제안;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:184
+#: web/apps/welcome/templates/welcome/joinus.html:190
 msgid ""
 "Identifying cause of dissatisfactions, and provide ways for improvement;"
 msgstr "불만족원인 확인 및 해결 방안 제시;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:185
+#: web/apps/welcome/templates/welcome/joinus.html:191
 msgid "Prepare reports on enquiries summary and improvement area;"
 msgstr "문서 요약 및 개선 방안 보고;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:186
+#: web/apps/welcome/templates/welcome/joinus.html:192
 msgid ""
 "Ensure that all enquiries at the social media channel in compliance with all "
 "internal and external regulations, policies and guideline;"
 msgstr "내외부 규정 및 정책, 가이드라인에 따른 SNS 채널 문의 준수;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:190
-#: web/apps/welcome/templates/welcome/joinus.html:304
+#: web/apps/welcome/templates/welcome/joinus.html:196
+#: web/apps/welcome/templates/welcome/joinus.html:310
 msgid "Bachelor degree or above;"
 msgstr "대졸 이상(4년);"
 
-#: web/apps/welcome/templates/welcome/joinus.html:191
+#: web/apps/welcome/templates/welcome/joinus.html:197
 msgid "Preferably with 2 years of working experience in customer support role;"
 msgstr "2년 이상의 CS 업무 경험 선호;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:192
+#: web/apps/welcome/templates/welcome/joinus.html:198
 msgid ""
 "MUST speak fluent using english and written English and Chinese with good "
 "presentation, communication and computer skills;"
@@ -2678,15 +2702,15 @@ msgstr ""
 "영어 말하기 및 쓰기 능력 최상 필수. 중국어 프레젠테이션, 커뮤니케이션 및 컴퓨"
 "터 능력;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:193
+#: web/apps/welcome/templates/welcome/joinus.html:199
 msgid "Self-motivated and able to work independently;"
 msgstr "자기 주도적이며, 스스로 일할 줄 아시는 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:208
+#: web/apps/welcome/templates/welcome/joinus.html:214
 msgid "Developer Relations Advocate"
 msgstr "개발자 관계 변호인"
 
-#: web/apps/welcome/templates/welcome/joinus.html:217
+#: web/apps/welcome/templates/welcome/joinus.html:223
 msgid ""
 "Content creation and distribution and analytics – tutorials, developer "
 "guides, newsletters, sample apps, client libraries;"
@@ -2694,55 +2718,55 @@ msgstr ""
 "콘텐츠 제작 및 배포 및 분석 - 자습서, 개발자 가이드, 뉴스 레터, 샘플 애플리케"
 "이션, 클라이언트 라이브러리;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:218
+#: web/apps/welcome/templates/welcome/joinus.html:224
 msgid ""
 "Creating and implementing detailed annual, monthly & weekly plans for "
 "advocacy/engagement activities;"
 msgstr "변호 및 참여 활동을 위한 연간, 월간 및 주간 계획 수립, 실행;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:219
+#: web/apps/welcome/templates/welcome/joinus.html:225
 msgid ""
 "Organize and coordinating marketing engagement activities including social "
 "media campaigns, youtube broadcasts, progress reports;"
 msgstr "SNS 캠페인, 유튜브 방송, 진행 보고서 등 마케팅 참여 활동 조직 및 조정;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:220
+#: web/apps/welcome/templates/welcome/joinus.html:226
 msgid "Content sourcing from 3rd parties, distribution and analytics;"
 msgstr "서드 파티, 유통 및 분석 콘텐츠 소싱;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:221
+#: web/apps/welcome/templates/welcome/joinus.html:227
 msgid "Engage with and provide support to community meetup organizers;"
 msgstr "커뮤니티 밋업 주최자 지원;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:226
+#: web/apps/welcome/templates/welcome/joinus.html:232
 msgid ""
 "MUST speak fluent and written English with good presentation, communication "
 "and computer skills;"
 msgstr "최상의 영어 말하기, 쓰기 및 프레젠테이션, 커뮤니케이션 및 컴퓨터 능력;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:227
+#: web/apps/welcome/templates/welcome/joinus.html:233
 msgid "Experience writing tutorials, guides, API docs, sample apps;"
 msgstr "튜토리얼, 가이드, API 문서, 샘플 애플리케이션 작성 경험;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:228
+#: web/apps/welcome/templates/welcome/joinus.html:234
 msgid "Experience writing code in C++/JavaScript;"
 msgstr "C++/JavaScript 작성 경험;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:229
+#: web/apps/welcome/templates/welcome/joinus.html:235
 msgid ""
 "Preferably with 2 years of working experience in IT industry customer "
 "support role;"
 msgstr "2년 이상의 IT 업계 CS 업무 경험 선호;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:230
+#: web/apps/welcome/templates/welcome/joinus.html:236
 msgid "Self-motivated and able to work independently."
 msgstr "자기 주도적이며, 스스로 일할 줄 아시는 분"
 
-#: web/apps/welcome/templates/welcome/joinus.html:248
+#: web/apps/welcome/templates/welcome/joinus.html:254
 msgid "Senior UX Designer"
 msgstr "선임 UX 디자이너"
 
-#: web/apps/welcome/templates/welcome/joinus.html:257
+#: web/apps/welcome/templates/welcome/joinus.html:263
 msgid ""
 "Translate concepts into user flows, wireframes, mockups and prototypes that "
 "lead to intuitive user experiences;"
@@ -2750,21 +2774,21 @@ msgstr ""
 "콘셉트를 사용자 흐름, 와이어 프레임, 목업 및 프로토 타입으로 변환 후 직관적"
 "인 UE 유도;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:258
+#: web/apps/welcome/templates/welcome/joinus.html:264
 msgid "Identify design problems and devise elegant solutions;"
 msgstr "디자인 문제 파악 및 해결방안 고안;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:259
+#: web/apps/welcome/templates/welcome/joinus.html:265
 msgid ""
 "Take a user-centered design approach and rapidly test and iterate your "
 "designs;"
 msgstr "사용자 중심의 디자인 방식 채용, 신속한 테스트 및 교체 작업;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:260
+#: web/apps/welcome/templates/welcome/joinus.html:266
 msgid "Collaborate with other team members and stakeholders;"
 msgstr "다른 부서 팀원 혹은 기타 관계자와 협업;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:264
+#: web/apps/welcome/templates/welcome/joinus.html:270
 msgid ""
 "Three or more years of UX design experience. Preference will be given to "
 "candidates who have experience designing complex solutions for complete "
@@ -2773,7 +2797,7 @@ msgstr ""
 "3년 이상의 UX 디자인 경험. 디지털 환경을 위한 복잡한 디자인 설계 경험 있는 "
 "분 우대;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:265
+#: web/apps/welcome/templates/welcome/joinus.html:271
 msgid ""
 "Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
@@ -2781,7 +2805,7 @@ msgstr ""
 "Sketch, InVision, UXPin, Framer, or Marvel App 등의 UX 소프트웨어 전문지식 보"
 "유. React, SCSS, 및 JavaScript 가능하신 분 우대;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:266
+#: web/apps/welcome/templates/welcome/joinus.html:272
 msgid ""
 "Ability to work with clients to understand detailed requirements and design "
 "complete user experiences that meet client needs and vision;"
@@ -2789,7 +2813,7 @@ msgstr ""
 "클라이언트의 상세한 요구사항 이해 및 클라이언트의 니즈와 비전에 맞는 UE 디자"
 "인 구현 가능하신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:267
+#: web/apps/welcome/templates/welcome/joinus.html:273
 msgid ""
 "Extensive experience in using UX design best practices to design solutions, "
 "and a deep understanding of mobile-first and responsive design;"
@@ -2797,7 +2821,7 @@ msgstr ""
 "UX 디자인 모범사례를 통한 솔루션 디자인, 모바일 우선 및 반응형 디자인에 이해"
 "도 높으신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:268
+#: web/apps/welcome/templates/welcome/joinus.html:274
 msgid ""
 "A solid grasp of user-centered design (UCD), planning and conducting user "
 "research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
@@ -2807,7 +2831,7 @@ msgstr ""
 "스트, 빠른 프로토 타입, 휴리스틱 분석, 유용성 및 접근 가능성 문제에 대한 확실"
 "한 이해;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:269
+#: web/apps/welcome/templates/welcome/joinus.html:275
 msgid ""
 "Ability to clearly and effectively communicate design processes, ideas, and "
 "solutions to teams and clients;"
@@ -2815,64 +2839,299 @@ msgstr ""
 "팀과 고객에게 디자인 프로세스, 아이디어 및 솔루션을 명확하고 효과적으로 전달"
 "할 수 있는 능력;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:270
+#: web/apps/welcome/templates/welcome/joinus.html:276
 msgid "Be open to receiving feedback and constructive criticism;"
 msgstr "피드백 및 건설적 의견 수용 가능 하신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:271
+#: web/apps/welcome/templates/welcome/joinus.html:277
 msgid "Be passionate about resolving user pain points through great design."
 msgstr "훌륭한 디자인으로 사용자의 문제점 해결할 수 있는 열정을 보유하신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:287
+#: web/apps/welcome/templates/welcome/joinus.html:293
 msgid "Product Manager"
 msgstr "프로덕트 매니저"
 
-#: web/apps/welcome/templates/welcome/joinus.html:296
+#: web/apps/welcome/templates/welcome/joinus.html:302
 msgid ""
 "understand development of industry and customer requirements, form product "
 "need specification;"
 msgstr "산업 및 고객 요구 사항 개발, 제품 요구 사항 이해;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:297
+#: web/apps/welcome/templates/welcome/joinus.html:303
 msgid ""
 "Design product UE by requirements document, clearly and accurately "
 "communicate demands with developing engineers;"
 msgstr "요구 사항에 대한 제품 UE 디자인, 개발 엔지니어에게 명확한 의사 전달;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:298
+#: web/apps/welcome/templates/welcome/joinus.html:304
 msgid "Manage product demand changes during product development;"
 msgstr "제품 개발 중 제품 요구 사항 변경 관리;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:299
+#: web/apps/welcome/templates/welcome/joinus.html:305
 msgid "Confirm product needs fulfillment during product testing;"
 msgstr "제품 테스트 중 제품 필요 사항 충족 확인;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:300
+#: web/apps/welcome/templates/welcome/joinus.html:306
 msgid ""
 "After the product is released, track customers' usage and timely find "
 "problems."
 msgstr "제품 출시 후, 고객 사용 현황 및 문제 발견시 관리."
 
-#: web/apps/welcome/templates/welcome/joinus.html:305
+#: web/apps/welcome/templates/welcome/joinus.html:311
 msgid "3+ years of e-commerce industry product design experience;"
 msgstr "3년 이상의 전자상거래 제품 디자인 경험;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:306
+#: web/apps/welcome/templates/welcome/joinus.html:312
 msgid "Proficient with product prototype design tools;"
 msgstr "제품 프로토타입 디자인 툴 사용 능숙하신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:307
+#: web/apps/welcome/templates/welcome/joinus.html:313
 msgid "Familiar mobile UX design;"
 msgstr "모바일 UX 디자인에 능숙하신 분;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:308
+#: web/apps/welcome/templates/welcome/joinus.html:314
 msgid ""
 "Good technical background with creating rich user experience by technology;"
 msgstr "기술적 풍부한 사용자 경험을 제공하는 우수한 기술 백그라운드;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:309
+#: web/apps/welcome/templates/welcome/joinus.html:315
 msgid "Good English level, read English documents fluently."
 msgstr "우수한 영어 실력, 영어 문서를 유창하게 읽기 가능하신 분."
+
+#: web/apps/welcome/templates/welcome/joinus.html:331
+msgid "Android R&D Engineer"
+msgstr "Android 개발 엔지니어"
+
+#: web/apps/welcome/templates/welcome/joinus.html:340
+msgid ""
+"Responsible for the development of Android client product, help other "
+"developers grow and make progress;"
+msgstr "Android 제품 클라이언트 개발 책임, 다른 엔지니어들과 함께 발전;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:341
+msgid ""
+"Participate in the analysis and design of products based on client "
+"requirements, cooperate with UI designers to complete initial testing based "
+"on product design;"
+msgstr "클라이언트 분석 및 디자인 참여, 프로덕트 디자인 및 UI 디자이너와 협업;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:342
+msgid ""
+"Responsible for the development of subsequent iteration versions of the "
+"product, and continuously optimize the quality, performance, and user "
+"experience of products."
+msgstr "프로덕트 지속 개발. 퀄리티, 기능, UE 업데이트."
+
+#: web/apps/welcome/templates/welcome/joinus.html:346
+msgid ""
+"3+ years experience in professional Java development; More than 2 years "
+"experience in Practical Android development experience; Familiar with "
+"characteristics and development features of Android mobile terminals; Able "
+"to solve common problems;"
+msgstr ""
+"3년이상의 Java 개발 경력. 최소 2년 이상의 Android 개발 경력, Android 모바일 "
+"터미널 및 개발 특징 능숙. Android 플랫폼에서 나타나는 문제 해결 능력 보유;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:347
+msgid ""
+"Familiar with Android components and session; Be able to reasonably allocate "
+"resources in the available session;"
+msgstr "Android 모듈 및 사이클 능숙. 사이클에 따른 업무 분배 능력 보유;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:348
+msgid ""
+"Familiar with common controls & custom controls, event mechanisms and "
+"gesture operations;"
+msgstr ""
+"일반 컨트롤 및 커스텀 컨트톨, 이벤트 메커니즘 및 제스처 컨트롤 능숙, 상황에 "
+"맞는 대처능력 보유;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:349
+msgid ""
+"Proficient in Android performance & memory optimization; good at solving "
+"system crashes & compatibility, memory leaks & overflow;"
+msgstr ""
+"Android 성능 및 메모리 최적화, 시스템 충돌, 메모리 누수, 메모리 오버 플로우 "
+"및 호환성 문제 해결에 능숙;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:350
+msgid "Familiar with Android network communication mechanism, Json analysis;"
+msgstr "Android 네트워크 통신 메커니즘 및 Json 분석 능숙;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:351
+msgid "Familiar with Android common layout, animation and effect;"
+msgstr "레이아웃, Android 의 애니메이션 및 효과 능숙;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:352
+msgid ""
+"Familiar with Android platform screen adaptation and version compatibility;"
+msgstr "Android 플랫폼 화면 비율 및 버전 별 호환 능숙;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:353
+msgid ""
+"Competent to work independently; Experienced in analyzing & re-writing "
+"Android source code;"
+msgstr ""
+"독립적으로 프로젝트 완료할 수 있는 분, 분석 및 Android 소스 코드 작성 경험 있"
+"으신 분 우대;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:354
+msgid ""
+"Excellent communication skills with team work spirit, work seriously and "
+"actively, rigorous and responsible;"
+msgstr "원활한 소통, 우수한 엔지니어 자격, 팀워크 및 일에 책임감 확실하신 분;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:355
+msgid "Experienced in the application of open source framework is preferred;"
+msgstr "오픈 소스 프레임 사용 경험자 우대, 뉴스 등 읽기 종류 개발 경험자 우대;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:356
+msgid ""
+"Familiar with Android testing tools & process, experienced in cross "
+"application coding test."
+msgstr ""
+"Android 테스트 도구, 테스트 프로세스 능숙하신 분 우대, 크로스 애플리케이션 코"
+"드 작성 경험자 우대."
+
+#: web/apps/welcome/templates/welcome/joinus.html:372
+msgid "IOS Developer"
+msgstr "IOS 개발 엔지니어"
+
+#: web/apps/welcome/templates/welcome/joinus.html:381
+msgid ""
+"Assist the product manager to analyze and organize the customer's need, and "
+"make the product requirements document;"
+msgstr "PM과 고객 피드백 분석 및 정리, 제품 피드백 문서 작성;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:382
+msgid ""
+"Depending on the product requirements document, design iOS App system "
+"architecture;"
+msgstr "제품 피드백 문서에 따른 iOS APP 시스템 아키텍처 설계;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:383
+msgid ""
+"Depending on the system architecture design, conduct iOS App-related program "
+"development;"
+msgstr "시스템 아키텍처에 따른 iOS APP 관련 프로그램 개발;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:384
+msgid ""
+"Depending on the product requirements document, conduct an overall test on "
+"the iOS app;"
+msgstr "제품 피드백 문서에 따른, 개발 완료 된 iOS APP 테스트;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:385
+msgid ""
+"According to customers’ feedback, continuously revised and improved iOS app."
+msgstr "고객 피드백 반영, iOS APP 업데이트."
+
+#: web/apps/welcome/templates/welcome/joinus.html:389
+#: web/apps/welcome/templates/welcome/joinus.html:428
+msgid ""
+"Bachelor degree or above, graduated in computer science or related major;"
+msgstr "대졸 이상(4년), 컴퓨터 공학 및 관련 전공 우대;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:390
+msgid ""
+"2+ years working experience in computer software, or more than 1 years "
+"working experience in iOS App development;"
+msgstr "2년 이상의 소프트웨어 개발 경력, 1년 이상의 iOS APP 개발 경력;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:391
+msgid "Familiar with Swift or Objective C programming language;"
+msgstr "Swift 및 objective C언어 개발 능숙;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:392
+msgid ""
+"Familiar with the iOS's platform software development model and system "
+"architecture;"
+msgstr "iOS 플랫폼 개발 및 시스템 아키텍처 능숙;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:393
+msgid ""
+"Familiar with common data structures and algorithms, has a persistent "
+"pursuit of new technologies;"
+msgstr "데이터 구조 및 알고리즘 이해도 및 신규 트렌드를 빨리 이해하시는 분;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:394
+msgid "Good at using technology to create a good user experience;"
+msgstr "높은 UE 완성도 만들어 낼 수 있는 분;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:395
+msgid "Good English level, able to read English technical documents smoothly."
+msgstr "영문 기술 문서 독해 가능하신 영어 실력 우수하신 분."
+
+#: web/apps/welcome/templates/welcome/joinus.html:411
+msgid "Front-end web developer"
+msgstr "웹사이트 프론트 엔드 엔지니어"
+
+#: web/apps/welcome/templates/welcome/joinus.html:420
+msgid ""
+"Assist the product manager, analyze and organize the customer's need, and "
+"make the product requirements document;"
+msgstr "PM 보조, 고객 피드백 분석 및 정리, 피드백 문서 작성;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:421
+msgid ""
+"Depending on the product requirements document, design the architecture of "
+"the website front-end;"
+msgstr "피드백 반영, 웹사이트 프론트 엔드 아키텍처 설계;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:422
+msgid ""
+"Depending on the design draft provided by the UI designer, complete the "
+"production of the website page;"
+msgstr "UI 디자이너의 디자인 초안 반영, 웹사이트 페이지 제작;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:423
+msgid ""
+"According to the product requirements document, complete the development of "
+"the site front-end interactive part of the program;"
+msgstr "피드백 반영, 웹사이트 프론트 엔드 프로그램 개발 완성;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:424
+msgid ""
+"According to consumer’s feedback, correct the front end issues of the "
+"website."
+msgstr "고객 피드백 반영, 웹사이트 프론트 엔드 문제 개선."
+
+#: web/apps/welcome/templates/welcome/joinus.html:429
+msgid ""
+"2+ years working experience in computer software, more than 1 year "
+"experience in front end development of the website;"
+msgstr ""
+"2년 이상의 소프트웨어 관련 업무 경력, 1년 이상의 웹 프론트 엔드 개발 경력;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:430
+msgid ""
+"Familiar with AI and Photoshop software, can create web pages based on UI "
+"design drafts;"
+msgstr "AI 및 포토샵 능숙, UI 디자인 초안 기반의 웹페이지 제작;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:431
+msgid "Familiar with HTML5, CSS, Javascript programming language;"
+msgstr "HTML5, CSS, Javascript 프로그래밍 언어 능숙;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:432
+msgid ""
+"Familiar with website front-end development framework such as jQuery and "
+"Bootstrap;"
+msgstr "Jquery, bootstrap 등 웹 프론트 엔드 개발 프레임 워크 능숙;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:433
+msgid ""
+"Familiar with the principle of responsive Web design, with practical "
+"experience;"
+msgstr "반응형 Web 설계 원리 이해 및 관련 경험;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:434
+msgid "Skillfully use existing technology to set up the best user experience;"
+msgstr "현재 기술을 바탕으로 최고의 사용자 경험 만들 수 있으신 분;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:435
+msgid "Good English level, able to read English technical documents."
+msgstr "영문 기술 문서 독해 가능하신 영어 실력 우수하신 분."
 
 #: web/apps/welcome/templates/welcome/legal.html:6
 #: web/apps/welcome/templates/welcome/legal.html:13
@@ -4439,7 +4698,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:485
+#: web/apps/zinnia/models_bases/entry.py:492
 msgid "categories"
 msgstr ""
 
@@ -4549,120 +4808,124 @@ msgstr ""
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:236
+#: web/apps/zinnia/models_bases/entry.py:128
+msgid "show_in_home"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:243
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:237
+#: web/apps/zinnia/models_bases/entry.py:244
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:251
+#: web/apps/zinnia/models_bases/entry.py:258
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:293
+#: web/apps/zinnia/models_bases/entry.py:300
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:294
+#: web/apps/zinnia/models_bases/entry.py:301
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:296
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:297
+#: web/apps/zinnia/models_bases/entry.py:304
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:299
+#: web/apps/zinnia/models_bases/entry.py:306
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:300
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:310
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:305
+#: web/apps/zinnia/models_bases/entry.py:312
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:314
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:391
+#: web/apps/zinnia/models_bases/entry.py:398
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:409
+#: web/apps/zinnia/models_bases/entry.py:416
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:410
+#: web/apps/zinnia/models_bases/entry.py:417
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:443
+#: web/apps/zinnia/models_bases/entry.py:450
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:445
+#: web/apps/zinnia/models_bases/entry.py:452
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:456
+#: web/apps/zinnia/models_bases/entry.py:463
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:471
+#: web/apps/zinnia/models_bases/entry.py:478
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:495
+#: web/apps/zinnia/models_bases/entry.py:502
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:514
+#: web/apps/zinnia/models_bases/entry.py:521
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:515
+#: web/apps/zinnia/models_bases/entry.py:522
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:527
+#: web/apps/zinnia/models_bases/entry.py:534
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:528
+#: web/apps/zinnia/models_bases/entry.py:535
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:540
+#: web/apps/zinnia/models_bases/entry.py:547
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:542
-#: web/apps/zinnia/models_bases/entry.py:558
+#: web/apps/zinnia/models_bases/entry.py:549
+#: web/apps/zinnia/models_bases/entry.py:565
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:544
+#: web/apps/zinnia/models_bases/entry.py:551
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:556
+#: web/apps/zinnia/models_bases/entry.py:563
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:560
+#: web/apps/zinnia/models_bases/entry.py:567
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5646,6 +5909,10 @@ msgstr ""
 msgid "System Error."
 msgstr ""
 
+#: web/templates/base.html:71
+msgid "Join us for changing the world"
+msgstr ""
+
 #: web/templates/dialog.html:8
 msgid "关闭"
 msgstr ""
@@ -5674,11 +5941,11 @@ msgstr "커뮤니티"
 msgid "Service Terms"
 msgstr "서비스 약관"
 
-#: web/templates/header-no-menu.html:29 web/templates/header.html:45
+#: web/templates/header-no-menu.html:29
 msgid "User Center"
 msgstr ""
 
-#: web/templates/header-no-menu.html:30 web/templates/header.html:46
+#: web/templates/header-no-menu.html:30
 msgid "LogOut"
 msgstr ""
 
@@ -5712,3 +5979,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Product Specialist"
+#~ msgstr "프로덕트 스페셜리스트"
+
+#~ msgid "Previous Product Director of xs.cn"
+#~ msgstr "전 xs.cn 프로덕트 디렉터"
