@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-21 03:09+0000\n"
+"POT-Creation-Date: 2018-05-23 03:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -304,12 +304,14 @@ msgstr ""
 #: web/apps/login/templates/login/index.html:24
 msgid ""
 "Tip:To login success, Ensure you can access the google recaptcha service."
-msgstr "Совет: Чтобы войти в систему, убедитесь, что вы можете получить доступ к сервису google recaptcha."
+msgstr ""
+"Совет: Чтобы войти в систему, убедитесь, что вы можете получить доступ к "
+"сервису google recaptcha."
 
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/register/templates/register/index.html:6
 #: web/apps/register/templates/register/index.html:24
-#: web/apps/register/templates/register/index.html:39
+#: web/apps/register/templates/register/index.html:44
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
@@ -455,11 +457,14 @@ msgstr "Сканируйте QR-код или введите код вручну
 msgid ""
 "Apple users recommend to download the Authenticator in the App Store, and "
 "android users recommend the Google Authenticator to Google Play."
-msgstr "Пользователям Apple рекомендуем загружать Authenticator из App Store, а пользователям Android рекомендуем Google Authenticator из Google Play."
+msgstr ""
+"Пользователям Apple рекомендуем загружать Authenticator из App Store, а "
+"пользователям Android рекомендуем Google Authenticator из Google Play."
 
 #: web/apps/register/templates/register/gtoken.html:31
 msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
-msgstr "Обязательно сохраните ключ или код qr, чтобы избежать каких-либо неудобств."
+msgstr ""
+"Обязательно сохраните ключ или код qr, чтобы избежать каких-либо неудобств."
 
 #: web/apps/register/templates/register/gtoken.html:44
 msgid "Enter the  code manually into your GA app"
@@ -473,19 +478,29 @@ msgstr "Или"
 msgid "Use the GA app to scan the QR code"
 msgstr "Используйте приложение GA для сканирования QR-кода"
 
-#: web/apps/register/templates/register/index.html:47
-msgid "Clicking register button means you agree and abide by<br/> Newton"
-msgstr "Нажатие кнопки регистрации означает, что вы согласны и выполняете <br/> Newton"
+#: web/apps/register/templates/register/index.html:29
+#, fuzzy
+msgid ""
+"Tip:To register success, Ensure you can access the google recaptcha service."
+msgstr ""
+"Совет: Чтобы войти в систему, убедитесь, что вы можете получить доступ к "
+"сервису google recaptcha."
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:52
+msgid "Clicking register button means you agree and abide by<br/> Newton"
+msgstr ""
+"Нажатие кнопки регистрации означает, что вы согласны и выполняете <br/> "
+"Newton"
+
+#: web/apps/register/templates/register/index.html:52
 msgid "User Agreement"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:52
 msgid "and"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:52
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -579,8 +594,8 @@ msgid ""
 "You have reset your password successfully, please <a href='/login/'> login</"
 "a>"
 msgstr ""
-"Вы успешно сбросили свой пароль, пожалуйста, войдите в систему <a href='/login/'> login</"
-"a>"
+"Вы успешно сбросили свой пароль, пожалуйста, войдите в систему <a href='/"
+"login/'> login</a>"
 
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Welcome! Please Reset Your Password!"
@@ -599,7 +614,9 @@ msgstr ""
 msgid ""
 "We sent an email to your registered email address, please go to check and "
 "complete the reset password process."
-msgstr "Мы отправили электронное письмо на ваш зарегистрированный адрес электронной почты, пожалуйста, проверьте и завершите процесс восстановления пароля."
+msgstr ""
+"Мы отправили электронное письмо на ваш зарегистрированный адрес электронной "
+"почты, пожалуйста, проверьте и завершите процесс восстановления пароля."
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -816,6 +833,10 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:30
 msgid "Your ELA amount is "
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/end.html:6
+msgid "Token Exchange"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:20
@@ -1750,7 +1771,7 @@ msgstr "Организация"
 #: web/apps/welcome/templates/welcome/economy.html:23
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
-msgstr "Совместная бизнес-организация"
+msgstr "Наши бизнес партнеры"
 
 #: web/apps/welcome/templates/welcome/foundation.html:6
 msgid "Foundation"
@@ -1758,7 +1779,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
 msgid "ADVISORS"
-msgstr "СОВЕТНИК"
+msgstr "СОВЕТНИКИ"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:19
 #: web/apps/welcome/templates/welcome/include-advisor.html:21
@@ -1776,7 +1797,8 @@ msgstr "Соучредитель Elastos"
 #: web/apps/welcome/templates/welcome/include-advisor.html:24
 #: web/apps/welcome/templates/welcome/include-investor.html:75
 msgid "Visiting Scholar & Research Associate at Columbia University"
-msgstr "Приглашенный научный сотрудник и научный сотрудник Колумбийского университета"
+msgstr ""
+"Приглашенный научный сотрудник и научный сотрудник Колумбийского университета"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:25
 #: web/apps/welcome/templates/welcome/include-investor.html:76
@@ -1810,7 +1832,7 @@ msgstr "Ли Сонгбо"
 #: web/apps/welcome/templates/welcome/include-advisor.html:53
 #: web/apps/welcome/templates/welcome/include-investor.html:89
 msgid "Former CTO of Sina(NASDAQ: SINA)"
-msgstr "директор Sina (NASDAQ: SINA)"
+msgstr "Бывший технический директор Sina (NASDAQ: SINA)"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:54
 #: web/apps/welcome/templates/welcome/include-investor.html:90
@@ -1925,10 +1947,14 @@ msgid ""
 "from the economy and become one part of the economy."
 msgstr ""
 "Экономика сообщества, управляемая некоммерческими организациями, заменит "
-"платформы монопольного посредничества, управляемые традиционными компаниями "
-"основанные на прибыли. Основываясь на открытых, справедливых и правильных "
+"платформы монопольного посредничества, управляемые традиционными компаниями, "
+"основанными на прибыли. Основываясь на открытых, справедливых и правильных "
 "правилах, каждый вкладчик получит выгоду от экономики и станет частью "
-"экономики."
+"экономики"
+
+#: web/apps/welcome/templates/welcome/include-feed.html:11
+msgid "FEED"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:9
 msgid "ANGEL INVESTORS"
@@ -2017,7 +2043,9 @@ msgstr "Старший оценщик драгоценных камней."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:195
 msgid "Deputy secretary general of xinjiang hetian jade industry association."
-msgstr "Заместитель генерального секретаря ассоциации промышленности Хinjiang Hetian Jade."
+msgstr ""
+"Заместитель генерального секретаря ассоциации промышленности Хinjiang Hetian "
+"Jade."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:206
 msgid "Guo Hongchi"
@@ -2025,7 +2053,7 @@ msgstr "Гуо Хонгчи"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:208
 msgid "Founder of xijie.com"
-msgstr "основатель xijie.com"
+msgstr "Основатель xijie.com"
 
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "Joint Ecological Construction"
@@ -2102,7 +2130,7 @@ msgstr "Официальный старт проекта Newton"
 #: web/apps/welcome/templates/welcome/include-roadmap.html:29
 #: web/apps/welcome/templates/welcome/include-roadmap.html:68
 msgid "Newton website officially released."
-msgstr "Официальный запуск сайта Ньютона."
+msgstr "Официальный запуск веб-сайта Newton"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
 #: web/apps/welcome/templates/welcome/include-roadmap.html:76
@@ -2130,7 +2158,9 @@ msgstr "Oснователь"
 
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Founder of Zeuux (A Community for Free Software Usage)"
-msgstr "Основатель Zeuux (сообщество для бесплатного использования программного обеспечения)"
+msgstr ""
+"Основатель Zeuux (сообщество для бесплатного использования программного "
+"обеспечения)"
 
 #: web/apps/welcome/templates/welcome/include-team.html:30
 #: web/apps/welcome/templates/welcome/include-team.html:32
@@ -2157,7 +2187,9 @@ msgstr "Главный общий архитектор"
 
 #: web/apps/welcome/templates/welcome/include-team.html:45
 msgid "Co-founder of Zeuux (A Community for Free Software Usage)"
-msgstr "Соучредитель Zeuux (Сообщество для бесплатного использования программного обеспечения)"
+msgstr ""
+"Соучредитель Zeuux (Сообщество для бесплатного использования программного "
+"обеспечения)"
 
 #: web/apps/welcome/templates/welcome/include-team.html:54
 #: web/apps/welcome/templates/welcome/include-team.html:56
@@ -2253,7 +2285,7 @@ msgid ""
 "chains."
 msgstr ""
 "NewChain использует разработанную схему основной цепи и вспомогательной. "
-"Вспомогательная цепь поддерживает ногочисленные консенсусные механизмы и "
+"Вспомогательная цепь поддерживает многочисленные консенсусные механизмы и "
 "структуры данных, обеспечивающие транзакции активов между основной и "
 "вспомогательной цепями, и между вспомогательными цепями."
 
@@ -2306,7 +2338,7 @@ msgstr ""
 msgid "Newton: The infrastructure for a protocol-based economy"
 msgstr "Инфраструктура, основанная на протоколах экономики"
 
-#: web/apps/welcome/templates/welcome/index.html:45
+#: web/apps/welcome/templates/welcome/index.html:46
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -2318,16 +2350,16 @@ msgstr ""
 msgid "Jobs"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:14
+#: web/apps/welcome/templates/welcome/joinus.html:17
 #: web/templates/footer.html:37
 msgid "Join Us"
 msgstr "Присоединяйтесь к нам"
 
-#: web/apps/welcome/templates/welcome/joinus.html:20
+#: web/apps/welcome/templates/welcome/joinus.html:23
 msgid "About Newton Project"
 msgstr "О проекте Newton"
 
-#: web/apps/welcome/templates/welcome/joinus.html:22
+#: web/apps/welcome/templates/welcome/joinus.html:25
 msgid ""
 "We are committed to building an efficient, collaborative, low-cost, highly "
 "automated business infrastructure ecosystem."
@@ -2335,11 +2367,11 @@ msgstr ""
 "Мы стремимся создать эффективную, совместную, недорогую, "
 "высокоавтоматизированную экосистему бизнес инфраструктуры."
 
-#: web/apps/welcome/templates/welcome/joinus.html:25
+#: web/apps/welcome/templates/welcome/joinus.html:28
 msgid "OUR CULTURE"
 msgstr "НАША КУЛЬТУРА"
 
-#: web/apps/welcome/templates/welcome/joinus.html:27
+#: web/apps/welcome/templates/welcome/joinus.html:30
 msgid ""
 "We believe in the free, open and inclusive culture advocated by the liberal "
 "open source philosophy. Decentralization is the core of our values."
@@ -2348,7 +2380,7 @@ msgstr ""
 "либеральной философией открытого программного обеспечения. Децентрализация "
 "является основой наших ценностей."
 
-#: web/apps/welcome/templates/welcome/joinus.html:30
+#: web/apps/welcome/templates/welcome/joinus.html:33
 msgid ""
 "Currently, Newton project team has attracted many professional talents from "
 "the free and open source software community, covering the field of e-"
@@ -2361,7 +2393,7 @@ msgstr ""
 "электронной коммерции, финансов, средств массовой информации и т. д.  Мы "
 "рады еще пригласить к сотрудничеству выдающихся талантов."
 
-#: web/apps/welcome/templates/welcome/joinus.html:33
+#: web/apps/welcome/templates/welcome/joinus.html:36
 msgid ""
 "In addition, developers around the world can join us by telecommuting. The "
 "space constraint will not hinder our cooperation ."
@@ -2370,11 +2402,11 @@ msgstr ""
 "дистанционном режиме. Расстояние не будет препятствовать нашему "
 "сотрудничеству."
 
-#: web/apps/welcome/templates/welcome/joinus.html:35
+#: web/apps/welcome/templates/welcome/joinus.html:38
 msgid "WHO WE ARE LOOKING FOR"
 msgstr "КОГО МЫ ИЩЕМ"
 
-#: web/apps/welcome/templates/welcome/joinus.html:37
+#: web/apps/welcome/templates/welcome/joinus.html:40
 msgid ""
 "We need technical talents in distributed systems, operating systems, "
 "encryption algorithms, blockchains, mobile development, product design, and "
@@ -2388,7 +2420,7 @@ msgstr ""
 "теории валют, экономических моделей, управления активами и финансовых "
 "инноваций. Мы приветствуем добровольцев и энтузиастов во всех областях."
 
-#: web/apps/welcome/templates/welcome/joinus.html:40
+#: web/apps/welcome/templates/welcome/joinus.html:43
 msgid ""
 "We need every talent to be passionate and believe in decentralized business, "
 "because Newton is closely related to everyone’s life."
@@ -2396,7 +2428,7 @@ msgstr ""
 "Нам нужны таланты, увлеченные и верящие в децентрализованный бизнес, потому "
 "что проект Ньютон тесно связан с жизнью каждого."
 
-#: web/apps/welcome/templates/welcome/joinus.html:43
+#: web/apps/welcome/templates/welcome/joinus.html:46
 msgid ""
 "In addition, we will use NEW to pay part of the salary, which is a condition "
 "that must be accepted."
@@ -2404,465 +2436,850 @@ msgstr ""
 "Кроме того, мы будем использовать цифровой актив - NEW, для частичной "
 "выплаты  заработной платы, что является условием, которое необходимо принять."
 
-#: web/apps/welcome/templates/welcome/joinus.html:46
+#: web/apps/welcome/templates/welcome/joinus.html:49
 msgid "Currently open positions"
 msgstr "В настоящее время открыты позиции:"
 
-#: web/apps/welcome/templates/welcome/joinus.html:52
+#: web/apps/welcome/templates/welcome/joinus.html:51
+msgid ""
+"We currently open the following positions. If you are interested, please "
+"send your resume to the email: <a href='mailto:newton-hr@newtonproject."
+"org'>newton-hr@newtonproject.org</a>"
+msgstr ""
+"В настоящее время мы открываем следующие позиции. Если вам интересно, "
+"пожалуйста, отправьте свое резюме по электронной почте: <a href='mailto:"
+"newton-hr@newtonproject.org'>newton-hr@newtonproject.org</a>"
+
+#: web/apps/welcome/templates/welcome/joinus.html:58
 msgid "Senior R&D Engineer"
 msgstr "Старший инженер по R&D (НИКОР)"
 
-#: web/apps/welcome/templates/welcome/joinus.html:59
-#: web/apps/welcome/templates/welcome/joinus.html:98
-#: web/apps/welcome/templates/welcome/joinus.html:141
-#: web/apps/welcome/templates/welcome/joinus.html:180
-#: web/apps/welcome/templates/welcome/joinus.html:215
-#: web/apps/welcome/templates/welcome/joinus.html:255
-#: web/apps/welcome/templates/welcome/joinus.html:294
+#: web/apps/welcome/templates/welcome/joinus.html:65
+#: web/apps/welcome/templates/welcome/joinus.html:103
+#: web/apps/welcome/templates/welcome/joinus.html:146
+#: web/apps/welcome/templates/welcome/joinus.html:184
+#: web/apps/welcome/templates/welcome/joinus.html:218
+#: web/apps/welcome/templates/welcome/joinus.html:257
+#: web/apps/welcome/templates/welcome/joinus.html:295
+#: web/apps/welcome/templates/welcome/joinus.html:332
+#: web/apps/welcome/templates/welcome/joinus.html:372
+#: web/apps/welcome/templates/welcome/joinus.html:410
 msgid "Job description:"
 msgstr "Описание вакансии:"
 
-#: web/apps/welcome/templates/welcome/joinus.html:61
+#: web/apps/welcome/templates/welcome/joinus.html:67
 msgid "Being responsible for the design and development of the Newton system."
 msgstr "Ответственность за проектирование и развитие системы Ньютона."
 
-#: web/apps/welcome/templates/welcome/joinus.html:62
+#: web/apps/welcome/templates/welcome/joinus.html:68
 msgid ""
 "Being responsible for researching the latest technologies in the industry "
 "and applying them to Newtonian system improvements."
-msgstr "Ответственность за исследование новейших технологий в отрасли и их применение для совершенствования системы Ньютона."
+msgstr ""
+"Ответственность за исследование новейших технологий в отрасли и их "
+"применение для совершенствования системы Ньютона."
 
-#: web/apps/welcome/templates/welcome/joinus.html:64
-#: web/apps/welcome/templates/welcome/joinus.html:109
-#: web/apps/welcome/templates/welcome/joinus.html:149
-#: web/apps/welcome/templates/welcome/joinus.html:188
-#: web/apps/welcome/templates/welcome/joinus.html:224
-#: web/apps/welcome/templates/welcome/joinus.html:262
-#: web/apps/welcome/templates/welcome/joinus.html:302
+#: web/apps/welcome/templates/welcome/joinus.html:70
+#: web/apps/welcome/templates/welcome/joinus.html:114
+#: web/apps/welcome/templates/welcome/joinus.html:154
+#: web/apps/welcome/templates/welcome/joinus.html:192
+#: web/apps/welcome/templates/welcome/joinus.html:227
+#: web/apps/welcome/templates/welcome/joinus.html:264
+#: web/apps/welcome/templates/welcome/joinus.html:303
+#: web/apps/welcome/templates/welcome/joinus.html:338
+#: web/apps/welcome/templates/welcome/joinus.html:380
+#: web/apps/welcome/templates/welcome/joinus.html:418
 msgid "Qualifications:"
 msgstr "Квалификация:"
 
-#: web/apps/welcome/templates/welcome/joinus.html:66
+#: web/apps/welcome/templates/welcome/joinus.html:72
 msgid ""
 "Bachelor degree or above, applicants major in computer science or related "
 "professions shall be prioritized."
-msgstr "Степень бакалавра или выше, кандидаты, занимающиеся информатикой или смежными профессиями, находятся в приоритете."
+msgstr ""
+"Степень бакалавра или выше, кандидаты, занимающиеся информатикой или "
+"смежными профессиями, находятся в приоритете."
 
-#: web/apps/welcome/templates/welcome/joinus.html:67
+#: web/apps/welcome/templates/welcome/joinus.html:73
 msgid "More than 5 years of software development experience."
 msgstr "Более 5 лет опыта разработки программного обеспечения."
 
-#: web/apps/welcome/templates/welcome/joinus.html:68
+#: web/apps/welcome/templates/welcome/joinus.html:74
 msgid ""
 "Skilled in a variety of programming languages (Java，Go，C++，Rust，Kotlin)."
-msgstr "Иметь опыт в различных языках программирования (Java, Go, C ++, Rust, Kotlin)."
+msgstr ""
+"Иметь опыт в различных языках программирования (Java, Go, C ++, Rust, "
+"Kotlin)."
 
-#: web/apps/welcome/templates/welcome/joinus.html:69
+#: web/apps/welcome/templates/welcome/joinus.html:75
 msgid ""
 "Being familiar with the principle of software security, can apply security "
 "standards to research and development."
-msgstr "Быть знакомым с принципом безопасности программного обеспечения и уметь  применять стандарты безопасности для исследований и разработок."
+msgstr ""
+"Быть знакомым с принципом безопасности программного обеспечения и уметь  "
+"применять стандарты безопасности для исследований и разработок."
 
-#: web/apps/welcome/templates/welcome/joinus.html:70
+#: web/apps/welcome/templates/welcome/joinus.html:76
 msgid ""
 "Good English reading ability, able to read English technical documents "
 "smoothly."
-msgstr "Хорошая способность чтения на английском языке, а также способность чтения технических документов без затруднений."
-
-#: web/apps/welcome/templates/welcome/joinus.html:72
-#: web/apps/welcome/templates/welcome/joinus.html:115
-msgid "Priority recruitment conditions:"
-msgstr "Приоритетные условия найма:"
-
-#: web/apps/welcome/templates/welcome/joinus.html:74
-#: web/apps/welcome/templates/welcome/joinus.html:117
-msgid "Blockchain related system R&D experience."
-msgstr "Опыт работы R&D (НИКОР) связанный с технологией блокчейн. "
-
-#: web/apps/welcome/templates/welcome/joinus.html:75
-#: web/apps/welcome/templates/welcome/joinus.html:118
-msgid "Distributed network system development experience."
-msgstr "Опыт в разработке распределенной сетевой системы."
-
-#: web/apps/welcome/templates/welcome/joinus.html:77
-msgid "Recruitment number: 5 people "
-msgstr "Набор персонала: 5 человек"
+msgstr ""
+"Хорошая способность чтения на английском языке, а также способность чтения "
+"технических документов без затруднений."
 
 #: web/apps/welcome/templates/welcome/joinus.html:78
 #: web/apps/welcome/templates/welcome/joinus.html:120
-#: web/apps/welcome/templates/welcome/joinus.html:160
-#: web/apps/welcome/templates/welcome/joinus.html:195
-#: web/apps/welcome/templates/welcome/joinus.html:233
-#: web/apps/welcome/templates/welcome/joinus.html:274
-#: web/apps/welcome/templates/welcome/joinus.html:312
-msgid "Working Location: Beijing - Chaoyang District"
-msgstr "Место работы: Пекин - район Чаоян (Beijing - Chaoyang District)"
+msgid "Priority recruitment conditions:"
+msgstr "Приоритетные условия найма:"
 
-#: web/apps/welcome/templates/welcome/joinus.html:79
-#: web/apps/welcome/templates/welcome/joinus.html:121
-#: web/apps/welcome/templates/welcome/joinus.html:161
-#: web/apps/welcome/templates/welcome/joinus.html:196
-#: web/apps/welcome/templates/welcome/joinus.html:234
-#: web/apps/welcome/templates/welcome/joinus.html:275
+#: web/apps/welcome/templates/welcome/joinus.html:80
+#: web/apps/welcome/templates/welcome/joinus.html:122
+msgid "Blockchain related system R&D experience."
+msgstr "Опыт работы R&D (НИКОР) связанный с технологией блокчейн. "
+
+#: web/apps/welcome/templates/welcome/joinus.html:81
+#: web/apps/welcome/templates/welcome/joinus.html:123
+msgid "Distributed network system development experience."
+msgstr "Опыт в разработке распределенной сетевой системы."
+
+#: web/apps/welcome/templates/welcome/joinus.html:83
+msgid "Recruitment number: 5 people "
+msgstr "Набор персонала: 5 человек"
+
+#: web/apps/welcome/templates/welcome/joinus.html:84
+#: web/apps/welcome/templates/welcome/joinus.html:125
+#: web/apps/welcome/templates/welcome/joinus.html:165
+#: web/apps/welcome/templates/welcome/joinus.html:199
+#: web/apps/welcome/templates/welcome/joinus.html:236
+#: web/apps/welcome/templates/welcome/joinus.html:276
 #: web/apps/welcome/templates/welcome/joinus.html:313
+#: web/apps/welcome/templates/welcome/joinus.html:353
+#: web/apps/welcome/templates/welcome/joinus.html:391
+#: web/apps/welcome/templates/welcome/joinus.html:430
+msgid "Working Location: Beijing - Chaoyang District Sanlitun SOHO"
+msgstr ""
+"Местонахождение: Пекин - Район Чаоян (Beijing - Chaoyang District Sanlitun "
+"SOHO)"
+
+#: web/apps/welcome/templates/welcome/joinus.html:85
+#: web/apps/welcome/templates/welcome/joinus.html:126
+#: web/apps/welcome/templates/welcome/joinus.html:166
+#: web/apps/welcome/templates/welcome/joinus.html:200
+#: web/apps/welcome/templates/welcome/joinus.html:237
+#: web/apps/welcome/templates/welcome/joinus.html:277
+#: web/apps/welcome/templates/welcome/joinus.html:314
+#: web/apps/welcome/templates/welcome/joinus.html:354
+#: web/apps/welcome/templates/welcome/joinus.html:392
+#: web/apps/welcome/templates/welcome/joinus.html:431
 msgid "Payments: Salary to be discussed"
 msgstr "Платежи: зарплата будет обсуждаться"
 
-#: web/apps/welcome/templates/welcome/joinus.html:80
-#: web/apps/welcome/templates/welcome/joinus.html:162
-#: web/apps/welcome/templates/welcome/joinus.html:197
-#: web/apps/welcome/templates/welcome/joinus.html:235
-#: web/apps/welcome/templates/welcome/joinus.html:276
-#: web/apps/welcome/templates/welcome/joinus.html:314
-msgid ""
-"Contact:<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject."
-"org</a>"
-msgstr ""
-"Контакт:<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject."
-"org</a>"
-
-#: web/apps/welcome/templates/welcome/joinus.html:91
+#: web/apps/welcome/templates/welcome/joinus.html:96
 msgid "Blockchain Engineer"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:100
+#: web/apps/welcome/templates/welcome/joinus.html:105
 msgid ""
 "Design and develop Newton software, related decentralized applications and "
 "cooperate with the rest of the team working on various layers of "
 "infrastructure;"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:102
+#: web/apps/welcome/templates/welcome/joinus.html:107
 msgid "Job Responsibilities:"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:104
+#: web/apps/welcome/templates/welcome/joinus.html:109
 msgid ""
 "Design, build, and maintain efficient, reusable, and reliable C++/Go code."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:105
+#: web/apps/welcome/templates/welcome/joinus.html:110
 msgid ""
 "Develop blockchain solutions and provide support for blockchain development."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:106
+#: web/apps/welcome/templates/welcome/joinus.html:111
 msgid "Implement performance and quality modules."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:107
+#: web/apps/welcome/templates/welcome/joinus.html:112
 msgid "Able to work independently with minimal guidance on tasks."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:111
+#: web/apps/welcome/templates/welcome/joinus.html:116
 msgid ""
 "Strong proficiency in C++/Go, with solid knowledge of language specification."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:112
+#: web/apps/welcome/templates/welcome/joinus.html:117
 msgid ""
 "1+ years of experience, preferably in an environment where latency and speed "
 "are factors (e.g., finance)."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:113
+#: web/apps/welcome/templates/welcome/joinus.html:118
 msgid "Computer Science or related degree."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:122
+#: web/apps/welcome/templates/welcome/joinus.html:127
 msgid "Contact:<a>newton-hr@newtonproject.org</a>"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:134
+#: web/apps/welcome/templates/welcome/joinus.html:139
 msgid "Fullstack Web Developer"
 msgstr "Full Stack веб-разработчик"
 
-#: web/apps/welcome/templates/welcome/joinus.html:143
+#: web/apps/welcome/templates/welcome/joinus.html:148
 msgid ""
 "Write well designed, testable, efficient code by using best software "
 "development practices;"
-msgstr "Написание хорошо продуманного, проверяемого, эффективного кода, используя лучшие методы разработки программного обеспечения;"
+msgstr ""
+"Написание хорошо продуманного, проверяемого, эффективного кода, используя "
+"лучшие методы разработки программного обеспечения;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:144
+#: web/apps/welcome/templates/welcome/joinus.html:149
 msgid ""
 "Create website layout/user interface by using standard HTML/CSS practices;"
-msgstr "Создание макет сайта/пользовательского интерфейса, используя стандартные методы HTML/CSS;"
+msgstr ""
+"Создание макет сайта/пользовательского интерфейса, используя стандартные "
+"методы HTML/CSS;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:145
+#: web/apps/welcome/templates/welcome/joinus.html:150
 msgid "Build web based backends and micro-services;"
 msgstr "Создание сетевых расширений и микро-услуг;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:146
+#: web/apps/welcome/templates/welcome/joinus.html:151
 msgid ""
 "Stay plugged into emerging technologies/industry trends and apply them into "
 "operations and activities;"
-msgstr "Быть в курсе новых технологий / отраслевых тенденций и применять их в операциям и деятельности;"
-
-#: web/apps/welcome/templates/welcome/joinus.html:147
-msgid "Cooperate with designers to match visual design intent."
-msgstr "Сотрудничать с дизайнерами, чтобы соответствовать проекции визуального дизайна."
-
-#: web/apps/welcome/templates/welcome/joinus.html:151
-msgid ""
-"Proven experience working with React or other modern Frontend Javascript "
-"Framework;"
-msgstr "Настоящий опыт работы с React или другой современной Frontend Javascript Framework;"
+msgstr ""
+"Быть в курсе новых технологий / отраслевых тенденций и применять их в "
+"операциям и деятельности;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:152
-msgid "Experience with Python/Django/Node.js;"
-msgstr "Опыт работы с Python/Django/Node.js;"
-
-#: web/apps/welcome/templates/welcome/joinus.html:153
-msgid "Experience writing frontend and backend unit and integration tests;"
-msgstr "Опыт написания интерфейсов и бэкэнд-модулей и интеграционных тестов;"
-
-#: web/apps/welcome/templates/welcome/joinus.html:154
-msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
-msgstr "Первоклассные навыки программирования и глубокие знания современного HTML/CSS;"
-
-#: web/apps/welcome/templates/welcome/joinus.html:155
-msgid ""
-"A solid understanding of how web applications work including security, "
-"session management, and best development practices;"
-msgstr "Четкое понимание того, как работают веб-приложения, включая безопасность, управление сессиями и лучшие методы разработки;"
+msgid "Cooperate with designers to match visual design intent."
+msgstr ""
+"Сотрудничать с дизайнерами, чтобы соответствовать проекции визуального "
+"дизайна."
 
 #: web/apps/welcome/templates/welcome/joinus.html:156
 msgid ""
-"Strong organizational skills to juggle multiple tasks within the constraints "
-"of timelines and budgets with business acumen;"
-msgstr "Иметь сильные организационные навыки и деловую хватку для совмещения нескольких задач в рамках, ограниченных временем и бюджетом;"
+"Proven experience working with React or other modern Frontend Javascript "
+"Framework;"
+msgstr ""
+"Настоящий опыт работы с React или другой современной Frontend Javascript "
+"Framework;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:157
+msgid "Experience with Python/Django/Node.js;"
+msgstr "Опыт работы с Python/Django/Node.js;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:158
+msgid "Experience writing frontend and backend unit and integration tests;"
+msgstr "Опыт написания интерфейсов и бэкэнд-модулей и интеграционных тестов;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:159
+msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
+msgstr ""
+"Первоклассные навыки программирования и глубокие знания современного HTML/"
+"CSS;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:160
+msgid ""
+"A solid understanding of how web applications work including security, "
+"session management, and best development practices;"
+msgstr ""
+"Четкое понимание того, как работают веб-приложения, включая безопасность, "
+"управление сессиями и лучшие методы разработки;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:161
+msgid ""
+"Strong organizational skills to juggle multiple tasks within the constraints "
+"of timelines and budgets with business acumen;"
+msgstr ""
+"Иметь сильные организационные навыки и деловую хватку для совмещения "
+"нескольких задач в рамках, ограниченных временем и бюджетом;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:162
 msgid ""
 "Ability to work and thrive in a fast-paced environment, learn rapidly and "
 "master diverse web technologies and techniques;"
-msgstr "Способность работать и преуспевать в быстро меняющейся среде, быстро учиться и овладевать разнообразными веб-технологиями и методами;"
+msgstr ""
+"Способность работать и преуспевать в быстро меняющейся среде, быстро учиться "
+"и овладевать разнообразными веб-технологиями и методами;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:158
+#: web/apps/welcome/templates/welcome/joinus.html:163
 msgid "Bachelor or masters degree in computer science or relevant experience;"
 msgstr "Бакалавр или магистр по информатике или соответствующий опыт;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:173
+#: web/apps/welcome/templates/welcome/joinus.html:177
 msgid "Communication Specialist"
 msgstr "Специалист по связям"
 
-#: web/apps/welcome/templates/welcome/joinus.html:182
+#: web/apps/welcome/templates/welcome/joinus.html:186
 msgid ""
 "Deliver customer service and technical support on email/facebook/twitter;"
-msgstr "Предоставлять обслуживание клиентов и техническую поддержку по электронной почте / facebook / twitter;"
+msgstr ""
+"Предоставлять обслуживание клиентов и техническую поддержку по электронной "
+"почте / facebook / twitter;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:183
+#: web/apps/welcome/templates/welcome/joinus.html:187
 msgid "Communicate customer feedback and process suggestions;"
 msgstr "Сообщать отзывы клиентов и предложения по процессу;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:184
+#: web/apps/welcome/templates/welcome/joinus.html:188
 msgid ""
 "Identifying cause of dissatisfactions, and provide ways for improvement;"
 msgstr "Определять причины неудовлетворенности и обеспечивать пути улучшения;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:185
+#: web/apps/welcome/templates/welcome/joinus.html:189
 msgid "Prepare reports on enquiries summary and improvement area;"
 msgstr "Подготавливать отчеты резюме по запросам и модернизации;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:186
+#: web/apps/welcome/templates/welcome/joinus.html:190
 msgid ""
 "Ensure that all enquiries at the social media channel in compliance with all "
 "internal and external regulations, policies and guideline;"
-msgstr "Обеспечить, чтобы все запросы на канале социальной сети соответствовали всем внутренним и внешним правилам, политике и руководящим принципам;"
+msgstr ""
+"Обеспечить, чтобы все запросы на канале социальной сети соответствовали всем "
+"внутренним и внешним правилам, политике и руководящим принципам;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:190
-#: web/apps/welcome/templates/welcome/joinus.html:304
+#: web/apps/welcome/templates/welcome/joinus.html:194
+#: web/apps/welcome/templates/welcome/joinus.html:305
 msgid "Bachelor degree or above;"
 msgstr "Степень бакалавра или выше;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:191
+#: web/apps/welcome/templates/welcome/joinus.html:195
 msgid "Preferably with 2 years of working experience in customer support role;"
 msgstr "Желательно с 2-летним опытом работы в сфере поддержки клиентов;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:192
+#: web/apps/welcome/templates/welcome/joinus.html:196
 msgid ""
 "MUST speak fluent using english and written English and Chinese with good "
 "presentation, communication and computer skills;"
-msgstr "ДОЛЖЕН свободно владеть разговорным и письменным английским языком, а также с хорошим китайским языком на уровне общения и работы с компьютером;"
+msgstr ""
+"ДОЛЖЕН свободно владеть разговорным и письменным английским языком, а также "
+"с хорошим китайским языком на уровне общения и работы с компьютером;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:193
+#: web/apps/welcome/templates/welcome/joinus.html:197
 msgid "Self-motivated and able to work independently;"
 msgstr "Самомотивированный и способный работать самостоятельно;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:208
+#: web/apps/welcome/templates/welcome/joinus.html:211
 msgid "Developer Relations Advocate"
 msgstr "Технический евангелист"
 
-#: web/apps/welcome/templates/welcome/joinus.html:217
+#: web/apps/welcome/templates/welcome/joinus.html:220
 msgid ""
 "Content creation and distribution and analytics – tutorials, developer "
 "guides, newsletters, sample apps, client libraries;"
-msgstr "Создание и распространение контента и аналитика -учебных пособий, руководства для разработчиков, информационные бюллетени, примеры приложений и клиентских библиотек;"
+msgstr ""
+"Создание и распространение контента и аналитика -учебных пособий, "
+"руководства для разработчиков, информационные бюллетени, примеры приложений "
+"и клиентских библиотек;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:218
+#: web/apps/welcome/templates/welcome/joinus.html:221
 msgid ""
 "Creating and implementing detailed annual, monthly & weekly plans for "
 "advocacy/engagement activities;"
-msgstr "Создание и реализация подробных годовых, ежемесячных и еженедельных планов деятельности по информационно-пропагандистской деятельности;"
+msgstr ""
+"Создание и реализация подробных годовых, ежемесячных и еженедельных планов "
+"деятельности по информационно-пропагандистской деятельности;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:219
+#: web/apps/welcome/templates/welcome/joinus.html:222
 msgid ""
 "Organize and coordinating marketing engagement activities including social "
 "media campaigns, youtube broadcasts, progress reports;"
-msgstr "Организовыванная и координированая деятельность по маркетингу, включая кампании в социальных сетях, трансляции на YouTube и отчеты о ходе работы;"
+msgstr ""
+"Организовыванная и координированая деятельность по маркетингу, включая "
+"кампании в социальных сетях, трансляции на YouTube и отчеты о ходе работы;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:220
+#: web/apps/welcome/templates/welcome/joinus.html:223
 msgid "Content sourcing from 3rd parties, distribution and analytics;"
 msgstr "Подбор контента от третьей стороны, распространение и аналитика;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:221
+#: web/apps/welcome/templates/welcome/joinus.html:224
 msgid "Engage with and provide support to community meetup organizers;"
 msgstr "Участие и поддержка организаторов сообщества на проводимых встречах;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:226
+#: web/apps/welcome/templates/welcome/joinus.html:229
 msgid ""
 "MUST speak fluent and written English with good presentation, communication "
 "and computer skills;"
-msgstr "ДОЛЖЕН свободно владеть разговорным и письменным английским языком, уметь хорошо проводить презентации, быть коммуникабельным и обладать навыками работы с компьютером;"
+msgstr ""
+"ДОЛЖЕН свободно владеть разговорным и письменным английским языком, уметь "
+"хорошо проводить презентации, быть коммуникабельным и обладать навыками "
+"работы с компьютером;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:227
+#: web/apps/welcome/templates/welcome/joinus.html:230
 msgid "Experience writing tutorials, guides, API docs, sample apps;"
-msgstr "Иметь опыт написания учебных пособий, руководств, API-документов, примеров приложений;"
+msgstr ""
+"Иметь опыт написания учебных пособий, руководств, API-документов, примеров "
+"приложений;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:228
+#: web/apps/welcome/templates/welcome/joinus.html:231
 msgid "Experience writing code in C++/JavaScript;"
 msgstr "Иметь опыт написания кода в C ++ / JavaScript;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:229
+#: web/apps/welcome/templates/welcome/joinus.html:232
 msgid ""
 "Preferably with 2 years of working experience in IT industry customer "
 "support role;"
 msgstr "Желательно с 2-летним опытом работы в сфере поддержки ИТ-индустрии;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:230
+#: web/apps/welcome/templates/welcome/joinus.html:233
 msgid "Self-motivated and able to work independently."
 msgstr "Самомотивированный и способный работать самостоятельно."
 
-#: web/apps/welcome/templates/welcome/joinus.html:248
+#: web/apps/welcome/templates/welcome/joinus.html:250
 msgid "Senior UX Designer"
 msgstr "Старший UX дизайнер"
 
-#: web/apps/welcome/templates/welcome/joinus.html:257
+#: web/apps/welcome/templates/welcome/joinus.html:259
 msgid ""
 "Translate concepts into user flows, wireframes, mockups and prototypes that "
 "lead to intuitive user experiences;"
-msgstr "Такие концепции как каркасы, макеты и прототипы необходимо переводить в интуитивно понятный для пользователя образ;"
+msgstr ""
+"Такие концепции как каркасы, макеты и прототипы необходимо переводить в "
+"интуитивно понятный для пользователя образ;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:258
+#: web/apps/welcome/templates/welcome/joinus.html:260
 msgid "Identify design problems and devise elegant solutions;"
 msgstr "Определять проблемы проектирования и разрабатывать элегантные решения;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:259
+#: web/apps/welcome/templates/welcome/joinus.html:261
 msgid ""
 "Take a user-centered design approach and rapidly test and iterate your "
 "designs;"
-msgstr "Выработать подход к проектированию, ориентированный на пользователя, быстро проверять и убеждаться в своем дизайне;"
+msgstr ""
+"Выработать подход к проектированию, ориентированный на пользователя, быстро "
+"проверять и убеждаться в своем дизайне;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:260
+#: web/apps/welcome/templates/welcome/joinus.html:262
 msgid "Collaborate with other team members and stakeholders;"
 msgstr "Сотрудничать с другими членами команды и заинтересованными сторонами;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:264
+#: web/apps/welcome/templates/welcome/joinus.html:266
 msgid ""
 "Three or more years of UX design experience. Preference will be given to "
 "candidates who have experience designing complex solutions for complete "
 "digital environments;"
-msgstr "Три или более лет опыта UX дизайна. Предпочтение будет отдаваться кандидатам, имеющим опыт разработки сложных решений для полной цифровой среды;"
-
-#: web/apps/welcome/templates/welcome/joinus.html:265
-msgid ""
-"Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
-"App. Basic React, SCSS, or JavaScript skills are a plus;"
-msgstr "Опыт работы с программным обеспечением UX, таким как Sketch, InVision, UXPin, Framer или Marvel App. Basic React, SCSS или JavaScript будет большим подспорьем;"
-
-#: web/apps/welcome/templates/welcome/joinus.html:266
-msgid ""
-"Ability to work with clients to understand detailed requirements and design "
-"complete user experiences that meet client needs and vision;"
-msgstr "Способность работать с клиентами и понимать их подробные требования, четкое видение дизайна с пользовательской стороны, который отвечает потребностям и видению клиента;"
+msgstr ""
+"Три или более лет опыта UX дизайна. Предпочтение будет отдаваться "
+"кандидатам, имеющим опыт разработки сложных решений для полной цифровой "
+"среды;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
 msgid ""
-"Extensive experience in using UX design best practices to design solutions, "
-"and a deep understanding of mobile-first and responsive design;"
-msgstr "Иметь обширный опыт использования лучших рекомендаций в UX дизайне для проектирования решений и глубокое понимание мобильного и отзывчивого дизайна;"
+"Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
+"App. Basic React, SCSS, or JavaScript skills are a plus;"
+msgstr ""
+"Опыт работы с программным обеспечением UX, таким как Sketch, InVision, "
+"UXPin, Framer или Marvel App. Basic React, SCSS или JavaScript будет большим "
+"подспорьем;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:268
+msgid ""
+"Ability to work with clients to understand detailed requirements and design "
+"complete user experiences that meet client needs and vision;"
+msgstr ""
+"Способность работать с клиентами и понимать их подробные требования, четкое "
+"видение дизайна с пользовательской стороны, который отвечает потребностям и "
+"видению клиента;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:269
+msgid ""
+"Extensive experience in using UX design best practices to design solutions, "
+"and a deep understanding of mobile-first and responsive design;"
+msgstr ""
+"Иметь обширный опыт использования лучших рекомендаций в UX дизайне для "
+"проектирования решений и глубокое понимание мобильного и отзывчивого дизайна;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:270
 msgid ""
 "A solid grasp of user-centered design (UCD), planning and conducting user "
 "research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
 "usability and accessibility concerns;"
-msgstr "Твердое понимание дизайна, ориентированного на пользователя (UCD), планирование и проведение исследований пользователей, тестирование пользователей, тестирование A / B, быстрое прототипирование, эвристический анализ, удобство использования и доступность;"
+msgstr ""
+"Твердое понимание дизайна, ориентированного на пользователя (UCD), "
+"планирование и проведение исследований пользователей, тестирование "
+"пользователей, тестирование A / B, быстрое прототипирование, эвристический "
+"анализ, удобство использования и доступность;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:269
+#: web/apps/welcome/templates/welcome/joinus.html:271
 msgid ""
 "Ability to clearly and effectively communicate design processes, ideas, and "
 "solutions to teams and clients;"
-msgstr "Способность четко и эффективно сообщать о процессах проектирования, идеях и решениях команде и клиентам;"
+msgstr ""
+"Способность четко и эффективно сообщать о процессах проектирования, идеях и "
+"решениях команде и клиентам;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:270
+#: web/apps/welcome/templates/welcome/joinus.html:272
 msgid "Be open to receiving feedback and constructive criticism;"
 msgstr "Быть открытым для получения обратной связи и конструктивной критики;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:271
+#: web/apps/welcome/templates/welcome/joinus.html:273
 msgid "Be passionate about resolving user pain points through great design."
-msgstr "Быть увлеченным в реализации пользовательских предпочтений путем создания отличного дизайна."
+msgstr ""
+"Быть увлеченным в реализации пользовательских предпочтений путем создания "
+"отличного дизайна."
 
-#: web/apps/welcome/templates/welcome/joinus.html:287
+#: web/apps/welcome/templates/welcome/joinus.html:288
 msgid "Product Manager"
 msgstr "Менеджер по продукту"
 
-#: web/apps/welcome/templates/welcome/joinus.html:296
+#: web/apps/welcome/templates/welcome/joinus.html:297
 msgid ""
 "understand development of industry and customer requirements, form product "
 "need specification;"
-msgstr "Понимать развитие отрасли и требований клиентов, формировать спецификацию продукта;"
+msgstr ""
+"Понимать развитие отрасли и требований клиентов, формировать спецификацию "
+"продукта;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:297
+#: web/apps/welcome/templates/welcome/joinus.html:298
 msgid ""
 "Design product UE by requirements document, clearly and accurately "
 "communicate demands with developing engineers;"
-msgstr "Проектировать продукт UE по документу требований, четко и точно сообщать требования для инженеров разработчиков;"
+msgstr ""
+"Проектировать продукт UE по документу требований, четко и точно сообщать "
+"требования для инженеров разработчиков;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:298
+#: web/apps/welcome/templates/welcome/joinus.html:299
 msgid "Manage product demand changes during product development;"
 msgstr "Управление изменениями спроса на продукт во время разработки продукта;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:299
-msgid "Confirm product needs fulfillment during product testing;"
-msgstr "Подтверждение исполнения требований к продукту во время тестирования продукта;"
-
 #: web/apps/welcome/templates/welcome/joinus.html:300
+msgid "Confirm product needs fulfillment during product testing;"
+msgstr ""
+"Подтверждение исполнения требований к продукту во время тестирования "
+"продукта;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:301
 msgid ""
 "After the product is released, track customers' usage and timely find "
 "problems."
-msgstr "После выпуска продукта, отслеживать его использования клиентом и своевременно находить проблемы."
-
-#: web/apps/welcome/templates/welcome/joinus.html:305
-msgid "3+ years of e-commerce industry product design experience;"
-msgstr "3+ года опыта в разработке продуктов для индустрии электронной коммерции;"
+msgstr ""
+"После выпуска продукта, отслеживать его использования клиентом и "
+"своевременно находить проблемы."
 
 #: web/apps/welcome/templates/welcome/joinus.html:306
+msgid "3+ years of e-commerce industry product design experience;"
+msgstr ""
+"3+ года опыта в разработке продуктов для индустрии электронной коммерции;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:307
 msgid "Proficient with product prototype design tools;"
 msgstr "Опыт работы с инструментами проектирования прототипов продуктов;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:307
+#: web/apps/welcome/templates/welcome/joinus.html:308
 msgid "Familiar mobile UX design;"
 msgstr "Быть знакомым с мобильным UX дизайном;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:308
+#: web/apps/welcome/templates/welcome/joinus.html:309
 msgid ""
 "Good technical background with creating rich user experience by technology;"
-msgstr "Хорошее техническое образование для создания богатого пользовательского опыта по технологиям;"
+msgstr ""
+"Хорошее техническое образование для создания богатого пользовательского "
+"опыта по технологиям;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:309
+#: web/apps/welcome/templates/welcome/joinus.html:310
 msgid "Good English level, read English documents fluently."
-msgstr "Хороший уровень английского языка, свободно читать и понимать документы на английском языке."
+msgstr ""
+"Хороший уровень английского языка, свободно читать и понимать документы на "
+"английском языке."
+
+#: web/apps/welcome/templates/welcome/joinus.html:325
+msgid "Android R&D Engineer"
+msgstr "Android R&D Engineer"
+
+#: web/apps/welcome/templates/welcome/joinus.html:334
+msgid ""
+"Responsible for the development of Android client product, help other "
+"developers grow and make progress;"
+msgstr ""
+"Отвечает за разработку продукта Android client, помогает другим "
+"разработчикам расти и продвигаться вперед;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:335
+msgid ""
+"Participate in the analysis and design of products based on client "
+"requirements, cooperate with UI designers to complete initial testing based "
+"on product design;"
+msgstr ""
+"Участвует в анализе и разработке продуктов на основе требований клиентов, "
+"сотрудничает с UI дизайнерами для завершения первоначального тестирования на "
+"основе дизайна продукта;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:336
+msgid ""
+"Responsible for the development of subsequent iteration versions of the "
+"product, and continuously optimize the quality, performance, and user "
+"experience of products."
+msgstr ""
+"Отвечает за разработку последующих версий, итераций продукта и постоянно "
+"оптимизирует качество, производительность и пользовательский опыт продуктa."
+
+#: web/apps/welcome/templates/welcome/joinus.html:340
+msgid ""
+"3+ years experience in professional Java development; More than 2 years "
+"experience in Practical Android development experience; Familiar with "
+"characteristics and development features of Android mobile terminals; Able "
+"to solve common problems;"
+msgstr ""
+"Более чем 3-летний опыт профессиональной разработки Java; Более 2-х лет "
+"опыта работы в области практического развития Android; Знакомый с "
+"характеристиками и возможностями разработки мобильных терминалов Android; "
+"Способный решать общие проблемы."
+
+#: web/apps/welcome/templates/welcome/joinus.html:341
+msgid ""
+"Familiar with Android components and session; Be able to reasonably allocate "
+"resources in the available session;"
+msgstr ""
+"Знакомый с компонентами и сессиями Android; Уметь разумно распределять "
+"ресурсы в доступной сессии;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:342
+msgid ""
+"Familiar with common controls & custom controls, event mechanisms and "
+"gesture operations;"
+msgstr ""
+"Знакомый с обычными элементами управления и пользовательскими элементами "
+"управления, механизмами событий и пошаговыми действиями;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:343
+msgid ""
+"Proficient in Android performance & memory optimization; good at solving "
+"system crashes & compatibility, memory leaks & overflow;"
+msgstr ""
+"Иметь большой опыт работы с производительностью и оптимизацией памяти "
+"Android; хорошо справляться с системными сбоями и совместимостью, утечками "
+"памяти и переполнением;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:344
+msgid "Familiar with Android network communication mechanism, Json analysis;"
+msgstr "Знакомый с коммуникационным механизмом сети Android, анализ Json;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:345
+msgid "Familiar with Android common layout, animation and effect;"
+msgstr "Знакомый с распространенными макетами Android, анимацией и эффектом;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:346
+msgid ""
+"Familiar with Android platform screen adaptation and version compatibility;"
+msgstr ""
+"Знакомый с адаптированием экрана платформы Android и совместимостью версий;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:347
+msgid ""
+"Competent to work independently; Experienced in analyzing & re-writing "
+"Android source code;"
+msgstr ""
+"Уметь работать самостоятельно; Иметь опыт в анализе и переписывании "
+"исходного кода Android;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:348
+msgid ""
+"Excellent communication skills with team work spirit, work seriously and "
+"actively, rigorous and responsible;"
+msgstr ""
+"Иметь отличные навыки общения с коллективом, работать серьезно и активно, "
+"быть тщательным и ответственным;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:349
+msgid "Experienced in the application of open source framework is preferred;"
+msgstr ""
+"Предпочтительно иметь опыт с приложениями структуры открытого исходного кода;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:350
+msgid ""
+"Familiar with Android testing tools & process, experienced in cross "
+"application coding test."
+msgstr ""
+"Знакомый с инструментами и процессами тестирования Android, опыт "
+"тестирования кодировки кросс-приложений."
+
+#: web/apps/welcome/templates/welcome/joinus.html:365
+msgid "IOS Developer"
+msgstr "Разработчик  IOS"
+
+#: web/apps/welcome/templates/welcome/joinus.html:374
+msgid ""
+"Assist the product manager to analyze and organize the customer's need, and "
+"make the product requirements document;"
+msgstr ""
+"Помогать менеджеру по продукту, анализировать и систематизировать "
+"потребности клиента, подготавливать документ о требованиях к продукту;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:375
+msgid ""
+"Depending on the product requirements document, design iOS App system "
+"architecture;"
+msgstr ""
+"В зависимости от документа требований к продукту, проектировать архитектуру "
+"системы приложения iOS;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:376
+msgid ""
+"Depending on the system architecture design, conduct iOS App-related program "
+"development;"
+msgstr ""
+"В зависимости от архитектуры системы, проводить разработку программы, "
+"связанной с приложением iOS;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:377
+msgid ""
+"Depending on the product requirements document, conduct an overall test on "
+"the iOS app;"
+msgstr ""
+"В зависимости от документа требований к продукции выполнять общий тест "
+"приложения iOS;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:378
+msgid ""
+"According to customers’ feedback, continuously revised and improved iOS app."
+msgstr ""
+"Согласно отзывам клиентов, постоянно корректировать и улучшать приложение "
+"iOS."
+
+#: web/apps/welcome/templates/welcome/joinus.html:382
+#: web/apps/welcome/templates/welcome/joinus.html:420
+msgid ""
+"Bachelor degree or above, graduated in computer science or related major;"
+msgstr ""
+"Степень бакалавра или выше, кандидаты, занимающиеся информатикой или "
+"смежными профессиями, находятся в приоритете;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:383
+msgid ""
+"2+ years working experience in computer software, or more than 1 years "
+"working experience in iOS App development;"
+msgstr ""
+"Более 2 лет опыта работы в области компьютерного программного обеспечения "
+"или более 1 года работы в области разработки приложений для iOS;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:384
+msgid "Familiar with Swift or Objective C programming language;"
+msgstr "Знакомый с языками программирования Swift или Objective C;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:385
+msgid ""
+"Familiar with the iOS's platform software development model and system "
+"architecture;"
+msgstr ""
+"Знакомый с моделью разработки программного обеспечения и системной "
+"архитектурой платформы iOS;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:386
+msgid ""
+"Familiar with common data structures and algorithms, has a persistent "
+"pursuit of new technologies;"
+msgstr ""
+"Знакомый с общими структурами данных и алгоритмами, иметь постоянное "
+"стремление к новым технологиям;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:387
+msgid "Good at using technology to create a good user experience;"
+msgstr ""
+"Уметь хорошо использовать технологию для создания хорошего пользовательского "
+"интерфейса"
+
+#: web/apps/welcome/templates/welcome/joinus.html:388
+msgid "Good English level, able to read English technical documents smoothly."
+msgstr ""
+"Хороший уровень английского языка, способность чтения технических документов "
+"без затруднений"
+
+#: web/apps/welcome/templates/welcome/joinus.html:403
+msgid "Front-end web developer"
+msgstr "Фронтенд веб-разработчик"
+
+#: web/apps/welcome/templates/welcome/joinus.html:412
+msgid ""
+"Assist the product manager, analyze and organize the customer's need, and "
+"make the product requirements document;"
+msgstr ""
+"Помогать менеджеру по продукту, анализировать и систематизировать "
+"потребности клиента, подготавливать документ о требованиях к продукту;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:413
+msgid ""
+"Depending on the product requirements document, design the architecture of "
+"the website front-end;"
+msgstr ""
+"В зависимости от документа требований к продукту, создавать фронтенд "
+"архитектуру веб-сайта;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:414
+msgid ""
+"Depending on the design draft provided by the UI designer, complete the "
+"production of the website page;"
+msgstr ""
+"В зависимости от дизайна проекта, предоставленного UI дизайнером, завершать "
+"создание страниц веб-сайта;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:415
+msgid ""
+"According to the product requirements document, complete the development of "
+"the site front-end interactive part of the program;"
+msgstr ""
+"В соответствии с документом о требованиях к продукту завершать разработку "
+"интерактивной части интерфейса сайта;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:416
+msgid ""
+"According to consumer’s feedback, correct the front end issues of the "
+"website."
+msgstr ""
+"В соответствии с отзывами потребителей, вносить исправления, связанные с "
+"фронтенд интерфейсом веб-сайта."
+
+#: web/apps/welcome/templates/welcome/joinus.html:421
+msgid ""
+"2+ years working experience in computer software, more than 1 year "
+"experience in front end development of the website;"
+msgstr ""
+"Более 2 лет опыта работы в компьютерном программном обеспечении, более 1 "
+"года опыта в разработке пользовательского интерфейса веб-сайта."
+
+#: web/apps/welcome/templates/welcome/joinus.html:422
+msgid ""
+"Familiar with AI and Photoshop software, can create web pages based on UI "
+"design drafts;"
+msgstr ""
+"Знакомый с программным обеспечением AI и Photoshop, уметь создавать веб-"
+"страницы на основе прототипов UI дизайна;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:423
+msgid "Familiar with HTML5, CSS, Javascript programming language;"
+msgstr "Знакомый с HTML5, CSS и языком программирования Javascript;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:424
+msgid ""
+"Familiar with website front-end development framework such as jQuery and "
+"Bootstrap;"
+msgstr ""
+"Знакомый с программными платформами для разработки пользовательского "
+"интерфейса веб-сайта, такими как jQuery и Bootstrap;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:425
+msgid ""
+"Familiar with the principle of responsive Web design, with practical "
+"experience;"
+msgstr "Знакомый с принципом отзывчивого веб-дизайна и с практическим опытом;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:426
+msgid "Skillfully use existing technology to set up the best user experience;"
+msgstr ""
+"Умело использовать существующие технологии, для улучшения настройки "
+"пользовательского интерфейса;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:427
+msgid "Good English level, able to read English technical documents."
+msgstr ""
+"Хороший уровень английского языка, способность чтения технических документов "
+"без затруднений."
 
 #: web/apps/welcome/templates/welcome/legal.html:6
 #: web/apps/welcome/templates/welcome/legal.html:13
@@ -3290,7 +3707,7 @@ msgid ""
 "identity, you can check the relevant information on the commodity at any "
 "time."
 msgstr ""
-"Используя методы, известные как «Атом-Хеширования», мы можем создать "
+"Используя методы, известные как «Атом-Хеширование», мы можем создать "
 "уникальный цифровой идентификатор для сырьевых товаров по всей сети. "
 "Благодаря этому цифровому удостоверению вы можете в любой момент проверить "
 "соответствующую информацию о товаре."
@@ -3342,9 +3759,9 @@ msgid ""
 "settlement rules, smart insurance contracts, smart financial contracts, and "
 "external chain service."
 msgstr ""
-"Определение транзакций, используя встроенные шаблоны смарт-контрактов и "
-"правил механизмов, включая многопартийные транзакции, основанные на "
-"комплексе бизнес-правил, правил расчета, умных договоров страхования, умных "
+"Для определения транзакций, используются встроенные шаблоны смарт-контрактов "
+"и правила механизмов, включая многопартийные транзакции, основанные на "
+"комплексе бизнес-правил, правил расчета, смарт-договоров страхования, умных "
 "финансовых контрактов и внешнего обслуживания цепи."
 
 #: web/apps/welcome/templates/welcome/protocol.html:79
@@ -3379,9 +3796,9 @@ msgstr ""
 "Разработчики могут определять умные финансовые контракты, основанные на "
 "встроенных шаблонах смарт- контрактов для страхования, кредитования и "
 "инвестиций, включая цифровую идентификацию и доверие, KYC информацию, "
-"контроль транзакций  Newton адреса, правила контракта и внешнее обслуживание "
-"цепи. Система будет автоматически сочетать умные финансовые контракты и "
-"завершит сопоставление транзакций."
+"блокировка и контроль Newton адреса, правила контракта и внешнее "
+"обслуживание цепи. Система будет автоматически сочетать умные финансовые "
+"контракты и завершит сопоставление транзакций."
 
 #: web/apps/welcome/templates/welcome/protocol.html:107
 msgid "NNIO"
@@ -3423,7 +3840,7 @@ msgid ""
 "management, and network governance and so on. The sub-chain will support "
 "specific service systems such as the hyper-exchange protocol, and multiple "
 "consensus mechanisms and data structures, ensuring the assets transactions "
-"between the main chain and sub-chains, and between sub-chains. After A third-"
+"between the main chain and sub-chains, and between sub-chains. After a third-"
 "party developer can create a new sub-chain after staking a certain amount of "
 "Newton tokens and passing the verification."
 msgstr ""
@@ -3434,9 +3851,8 @@ msgstr ""
 "протокол hyper-exchange, а также многочисленные консенсусные механизмы и "
 "структуры данных, обеспечивающие транзакции активов между основной и "
 "вспомогательной цепями, и между вспомогательными цепями. После того, как "
-"сторонний разработчик профинансировал определенное количество токенов и "
-"прошел обзор, он сможет создать новую вспомогательную цепь и создать новые "
-"токены."
+"сторонний разработчик завершит POS-майнинг определенного количества токенов "
+"и пройдет проверку, он сможет создать новую вспомогательную цепь."
 
 #: web/apps/welcome/templates/welcome/tech.html:23
 msgid ""
@@ -3471,14 +3887,14 @@ msgid ""
 "increasing the ease of using NewNet."
 msgstr ""
 "NewNet, состоит из большого количества узлов и представляет собой открытую "
-"сеть, которая обеспечивает надежные службы хранения, поддерживая полную базу "
-"данных SQL и различные общие языки программирования. Большинство веб-"
-"сервисов можно размещать непосредственно в сети NewNet. Разработчики могут "
-"создать задачу вычисления, а узлы смогут выбрать соответствующую задачу "
-"расчета в соответствии с их собственными возможностями, затем получить "
-"соответствующую награду после завершения. Децентрализованные службы доменных "
-"имен сети могут быть достигнуты, а простота использования NewNet будет "
-"возрастать благодаря технологии blockchain."
+"облачную вычислительную сеть, которая обеспечивает надежные службы хранения, "
+"поддерживая полную базу данных SQL и различные общие языки программирования. "
+"NewNet может разместить множество веб-сервисов. После того, как разработчики "
+"создают задачу вычисления, узлы выбирают соответствующую задачу расчета для "
+"решения, в соответствии с их собственной вычислительной мощностью и затем "
+"получают соответствующую награду после завершения. Децентрализованные службы "
+"доменных имен сети  (DNS) будут достигнуты благодаря технологии блокчейн, "
+"что сильно упростит использование NewNet."
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
@@ -3563,7 +3979,7 @@ msgstr ""
 "DAI, использует контейнер докеров для запуска программного обеспечения для "
 "искусственного интеллекта, такого как Tensorflow, Caffe. Это призывает "
 "поставщиков данных предоставлять долгосрочное обслуживание, используя метод "
-"распределения многофакторных весовых коэффициентов."
+"распределения многофакторно-взвешенной прибыли."
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
@@ -4462,7 +4878,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:485
+#: web/apps/zinnia/models_bases/entry.py:492
 msgid "categories"
 msgstr ""
 
@@ -4572,120 +4988,124 @@ msgstr ""
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:236
+#: web/apps/zinnia/models_bases/entry.py:128
+msgid "show_in_home"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:243
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:237
+#: web/apps/zinnia/models_bases/entry.py:244
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:251
+#: web/apps/zinnia/models_bases/entry.py:258
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:293
+#: web/apps/zinnia/models_bases/entry.py:300
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:294
+#: web/apps/zinnia/models_bases/entry.py:301
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:296
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:297
+#: web/apps/zinnia/models_bases/entry.py:304
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:299
+#: web/apps/zinnia/models_bases/entry.py:306
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:300
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:310
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:305
+#: web/apps/zinnia/models_bases/entry.py:312
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:314
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:391
+#: web/apps/zinnia/models_bases/entry.py:398
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:409
+#: web/apps/zinnia/models_bases/entry.py:416
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:410
+#: web/apps/zinnia/models_bases/entry.py:417
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:443
+#: web/apps/zinnia/models_bases/entry.py:450
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:445
+#: web/apps/zinnia/models_bases/entry.py:452
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:456
+#: web/apps/zinnia/models_bases/entry.py:463
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:471
+#: web/apps/zinnia/models_bases/entry.py:478
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:495
+#: web/apps/zinnia/models_bases/entry.py:502
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:514
+#: web/apps/zinnia/models_bases/entry.py:521
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:515
+#: web/apps/zinnia/models_bases/entry.py:522
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:527
+#: web/apps/zinnia/models_bases/entry.py:534
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:528
+#: web/apps/zinnia/models_bases/entry.py:535
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:540
+#: web/apps/zinnia/models_bases/entry.py:547
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:542
-#: web/apps/zinnia/models_bases/entry.py:558
+#: web/apps/zinnia/models_bases/entry.py:549
+#: web/apps/zinnia/models_bases/entry.py:565
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:544
+#: web/apps/zinnia/models_bases/entry.py:551
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:556
+#: web/apps/zinnia/models_bases/entry.py:563
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:560
+#: web/apps/zinnia/models_bases/entry.py:567
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5735,3 +6155,6 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+msgid "Join us for changing the world"
+msgstr "Присоединяйтесь к нам, чтобы изменить мир"
