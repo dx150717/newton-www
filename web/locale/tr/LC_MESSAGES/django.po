@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-22 12:22+0000\n"
+"POT-Creation-Date: 2018-05-25 05:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,20 +16,20 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: web/apps/admin_tools/dashboard/dashboards.py:86
 #: web/apps/admin_tools/menu/menus.py:100
 msgid "Dashboard"
-msgstr "控制面板"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/dashboards.py:229
 msgid "Quick links"
-msgstr "快捷方式"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/dashboards.py:235
 msgid "Return to site"
-msgstr "返回"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/dashboards.py:236
 #: web/apps/admin_tools/theming/templates/admin/base.html:46
@@ -40,28 +40,28 @@ msgstr ""
 #: web/apps/admin_tools/theming/templates/admin/base.html:53
 #: web/apps/zinnia/templates/comments/zinnia/entry/form.html:26
 msgid "Log out"
-msgstr "退出"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/dashboards.py:244
 #: web/apps/admin_tools/dashboard/modules.py:424
 #: web/apps/admin_tools/menu/menus.py:103
 msgid "Applications"
-msgstr "应用"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/dashboards.py:250
 #: web/apps/admin_tools/menu/menus.py:107
 msgid "Administration"
-msgstr "管理"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/dashboards.py:255
 #: web/apps/admin_tools/dashboard/dashboards.py:310
 #: web/apps/admin_tools/dashboard/modules.py:592
 msgid "Recent Actions"
-msgstr "最近操作"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/modules.py:343
 msgid "Links"
-msgstr "链接"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/modules.py:645
 msgid "No recent actions."
@@ -78,7 +78,7 @@ msgstr ""
 #: web/templates/admin/change_form.html:18
 #: web/templates/admin/change_list.html:40
 msgid "Home"
-msgstr "首页"
+msgstr ""
 
 #: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/dashboard.html:62
 msgid "Modules"
@@ -168,7 +168,7 @@ msgstr ""
 #: web/apps/zinnia/models_bases/entry.py:107
 #: web/apps/zinnia/models_bases/entry.py:110
 msgid "Language"
-msgstr "语言"
+msgstr ""
 
 #: web/apps/faq/models.py:33
 msgid "faq"
@@ -177,7 +177,7 @@ msgstr ""
 #: web/apps/faq/templates/faq/faq.html:6 web/apps/faq/templates/faq/faq.html:13
 #: web/templates/footer.html:24
 msgid "FAQ"
-msgstr ""
+msgstr "SSS"
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:70
@@ -191,7 +191,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:72
 #: web/apps/welcome/templates/welcome/press.html:38
 msgid "previous"
-msgstr "上一页"
+msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:37
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:74
@@ -205,11 +205,11 @@ msgstr "上一页"
 #: web/apps/welcome/templates/welcome/announcement.html:76
 #: web/apps/welcome/templates/welcome/press.html:42
 msgid "next"
-msgstr "下一页"
+msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:42
 msgid "No FAQ"
-msgstr "暂无FAQ"
+msgstr ""
 
 #: web/apps/login/forms.py:6
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:28
@@ -217,49 +217,49 @@ msgstr "暂无FAQ"
 #: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
-msgstr "电子邮箱"
+msgstr ""
 
 #: web/apps/login/forms.py:7 web/apps/register/forms.py:15
 #: web/apps/reset/forms.py:9 web/apps/zinnia/templates/zinnia/password.html:24
 msgid "Password"
-msgstr "密码"
+msgstr ""
 
 #: web/apps/login/views.py:36
 msgid "Form Error"
-msgstr "表单填写错误"
+msgstr "Form hatası"
 
 #: web/apps/login/views.py:42 web/apps/register/views.py:46
 #: web/apps/register/views.py:52
 msgid "No captcha"
-msgstr ""
+msgstr "Captcha yok"
 
 #: web/apps/login/views.py:43
 msgid "Auth Recaptcha Error"
-msgstr ""
+msgstr "Captcha hatalı"
 
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
-msgstr "邮箱和密码不匹配"
+msgstr "E-posta yada şifre yanlış"
 
 #: web/apps/login/views.py:56
 msgid "Request Time Out"
-msgstr "请求超时"
+msgstr "İstek zaman aşımına uğradı"
 
 #: web/apps/login/views.py:70
 msgid "No Auth_token"
-msgstr "请重新登录"
+msgstr ""
 
 #: web/apps/login/views.py:73
 msgid "No User"
-msgstr "请重新登录"
+msgstr ""
 
 #: web/apps/login/views.py:76
 msgid "No User Profile"
-msgstr "请重新登录"
+msgstr "Kullanıcı bulunamadı"
 
 #: web/apps/login/views.py:79
 msgid "Incorrect Google Authenticator Code"
-msgstr "谷歌身份验证码不正确"
+msgstr "Yanlış Google Authenticator Kodu"
 
 #: web/apps/login/templates/login/index.html:5
 #: web/apps/login/templates/login/index.html:19
@@ -268,7 +268,7 @@ msgstr "谷歌身份验证码不正确"
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:38
 msgid "Login"
-msgstr "登录"
+msgstr "​Giriş yap"
 
 #: web/apps/login/templates/login/index.html:5
 #: web/apps/register/templates/register/gtoken.html:6
@@ -298,12 +298,12 @@ msgstr "登录"
 #: web/apps/user/templates/user/token-exchange-progress.html:6
 #: web/apps/user/templates/user/user-base.html:6
 msgid "Newton Community"
-msgstr "牛顿社区"
+msgstr ""
 
 #: web/apps/login/templates/login/index.html:24
 msgid ""
 "Tip:To login success, Ensure you can access the google recaptcha service."
-msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功登录。"
+msgstr "İpucu: To login success, Ensure you can access the google recaptcha service."
 
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/register/templates/register/index.html:6
@@ -315,23 +315,23 @@ msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成�
 #: web/apps/register/templates/register/register-success.html:6
 #: web/templates/header-no-menu.html:35
 msgid "Register"
-msgstr "注册"
+msgstr "Kayıt ol"
 
 #: web/apps/login/templates/login/index.html:43
 msgid "Forget Password"
-msgstr "忘记密码"
+msgstr "Şifremi Unuttum"
 
 #: web/apps/login/templates/login/index.html:56
 #: web/apps/login/templates/login/index.html:63 web/apps/register/forms.py:19
 msgid "Google Authenticator Code"
-msgstr "填写谷歌身份验证码"
+msgstr "Google Authenticator Kodu"
 
 #: web/apps/login/templates/login/index.html:67
 #: web/apps/register/templates/register/gtoken.html:56
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:35
 #: web/apps/user/templates/user/profile.html:31
 msgid "Submit"
-msgstr "提交"
+msgstr "Gönder"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
@@ -358,8 +358,6 @@ msgid ""
 "collaborative, fair and reasonable, highly automated business environment "
 "with lower cost and fewer conflicts."
 msgstr ""
-"牛顿-协议经济基础设施，牛顿致力于打造高效协作、低成本、高度自动化的商业基础协"
-"议生态系统。涵盖供应链、营销、支付、交易、信用、金融等商业全流程。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:13
 #: web/templates/base.html:12
@@ -369,54 +367,51 @@ msgid ""
 "NNIO,Reliable physical tunnel,Digital Marketing,Supply Chain,Blockchain,"
 "Intelligent Contract,Open Source Community,Digital Assets,token"
 msgstr ""
-"牛顿，牛顿项目，newton,newtonproject.org，NewChain,NewNET,协议经济，原子哈希,"
-"NewIoT,DAI,超级交换协议，自金融，NNIO，可信物理通道，数字营销，供应链，区块"
-"链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:14
 #: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:14
 msgid "Newton"
-msgstr "牛顿"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:27
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:26
 msgid "Name"
-msgstr "名字"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:29
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:28
 msgid "Cellphone"
-msgstr "手机号"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:30
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:29
 msgid "Country"
-msgstr "国家"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:31
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:30
 msgid "Emergency Contact Name"
-msgstr "紧急联系人姓名"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:32
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:31
 msgid "Emergency Contact Cellphone"
-msgstr "紧急联系人的手机号"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:33
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:32
 msgid "RelationShip"
-msgstr "与紧急联系人的关系"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:34
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:33
 msgid "Describe yourself & how you can help as a community member"
-msgstr "介绍一下自己，作为社区成员可以为牛顿做什么"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:35
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:34
 msgid "Tell us your understanding about Newton"
-msgstr "你如何理解牛顿"
+msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:12
 msgid "Admin Login"
@@ -424,77 +419,75 @@ msgstr ""
 
 #: web/apps/press/models.py:21
 msgid "press"
-msgstr "媒体报道"
+msgstr ""
 
 #: web/apps/register/forms.py:16 web/apps/reset/forms.py:10
 msgid "Repassword"
-msgstr "重复密码"
+msgstr ""
 
 #: web/apps/register/services.py:27
 msgid "Newton Notification: Please complete the register process of Newton"
-msgstr "牛顿通知：请完成牛顿注册"
+msgstr ""
 
 #: web/apps/register/views.py:58
 msgid "Email already existed"
-msgstr "邮箱已经存在！"
+msgstr ""
 
 #: web/apps/register/views.py:148
 msgid "Google Auth Code Error"
-msgstr "谷歌身份验证码错误"
+msgstr "Google Kimlik Doğrulama Hatası"
 
 #: web/apps/register/views.py:210 web/apps/reset/views.py:110
 msgid "Entered passwords differ"
-msgstr "两次输入密码不一致"
+msgstr "Girilen şifreler farklıdır"
 
 #: web/apps/register/templates/register/gtoken.html:6
 #: web/apps/register/templates/register/gtoken.html:20
 msgid "Add Google Authenticator"
-msgstr "添加谷歌身份验证器"
+msgstr "Google Authenticator'ı ekle"
 
 #: web/apps/register/templates/register/gtoken.html:25
 msgid "Scan the QR code or Enter the  code manually into your GA app"
-msgstr "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
+msgstr "QR kodunu tarayın veya kodu manuel olarak GA uygulamanıza girin"
 
 #: web/apps/register/templates/register/gtoken.html:28
 msgid ""
 "Apple users recommend to download the Authenticator in the App Store, and "
 "android users recommend the Google Authenticator to Google Play."
-msgstr ""
-"苹果用户推荐在App Store中下载Authenticator,安卓用户推荐到Google Play下载谷歌"
-"身份验证器"
+msgstr "Apple kullanıcılarına App Store'da Authenticator'ı indirmeyi önerir ve Android kullanıcıları Google Authenticator'ı Google Play'e önermektedir."
 
 #: web/apps/register/templates/register/gtoken.html:31
 msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
-msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
+msgstr "herhangi bir rahatsızlık önlemek için anahtar veya qr kodunu tutmak için emin olun."
 
 #: web/apps/register/templates/register/gtoken.html:44
 msgid "Enter the  code manually into your GA app"
-msgstr "手动添加谷歌身份验证器"
+msgstr "Kodu, GA uygulamanıza manuel olarak girin"
 
 #: web/apps/register/templates/register/gtoken.html:48
 msgid "Or"
-msgstr "或者"
+msgstr "Veya"
 
 #: web/apps/register/templates/register/gtoken.html:51
 msgid "Use the GA app to scan the QR code"
-msgstr "扫描二维码添加谷歌身份验证器"
+msgstr "QR kodunu taramak için GA uygulamasını kullanın"
 
 #: web/apps/register/templates/register/index.html:29
 msgid ""
 "Tip:To register success, Ensure you can access the google recaptcha service."
-msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
+msgstr "İpucu: Başarılı bir şekilde kayıt olmak için, google recaptcha hizmetine erişebildiğinizden emin olun."
 
 #: web/apps/register/templates/register/index.html:52
 msgid "Clicking register button means you agree and abide by<br/> Newton"
-msgstr "点击注册按钮即表示您同意并愿意遵守<br/> Newton的"
+msgstr "Kayıt düğmesine tıklamak, şartlara kabul ettiğiniz anlamına gelir. <br/> Newton"
 
 #: web/apps/register/templates/register/index.html:52
 msgid "User Agreement"
-msgstr "使用条款"
+msgstr ""
 
 #: web/apps/register/templates/register/index.html:52
 msgid "and"
-msgstr "和"
+msgstr ""
 
 #: web/apps/register/templates/register/index.html:52
 #: web/apps/welcome/templates/welcome/privacy.html:6
@@ -502,66 +495,66 @@ msgstr "和"
 #: web/apps/welcome/templates/welcome/privacy.html:19
 #: web/templates/footer.html:48
 msgid "Privacy Policy"
-msgstr "隐私政策"
+msgstr "Gizlilik Politikasi"
 
 #: web/apps/register/templates/register/invalid-link.html:6
 msgid "Invalid-link"
-msgstr "无效链接"
+msgstr ""
 
 #: web/apps/register/templates/register/password.html:6
 #: web/apps/register/templates/register/password.html:20
 msgid "Set Password"
-msgstr "设置密码"
+msgstr ""
 
 #: web/apps/register/templates/register/password.html:29
 msgid "Next"
-msgstr "下一步"
+msgstr "Sonraki"
 
 #: web/apps/register/templates/register/post-success.html:20
 #: web/apps/reset/templates/reset/reset-success.html:18
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:20
 msgid "Submit Success!"
-msgstr "提交成功！"
+msgstr "Başarıyı Gönderin!"
 
 #: web/apps/register/templates/register/post-success.html:21
 msgid ""
 "We have sent you an email to your registered email, please check out to "
 "finish signing up。"
-msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
+msgstr ""
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Complete the register process of Newton"
-msgstr "完成注册流程"
+msgstr ""
 
 #: web/apps/register/templates/register/register-letter.html:10
 #: web/apps/reset/templates/reset/reset-letter.html:9
 msgid "Dear"
-msgstr "尊敬的用户："
+msgstr ""
 
 #: web/apps/register/templates/register/register-letter.html:11
 msgid "This is an email from"
-msgstr "这封邮件来自"
+msgstr ""
 
 #: web/apps/register/templates/register/register-letter.html:11
 msgid "Click the button below to proceed to the next step."
-msgstr "点击下方<注册>按钮完成注册。"
+msgstr ""
 
 #: web/apps/register/templates/register/register-letter.html:14
 #: web/apps/reset/templates/reset/reset-letter.html:13
 msgid "If you received this email by mistake, simply delete it."
-msgstr "如果您意外收到了这封邮件，请删除它。"
+msgstr ""
 
 #: web/apps/register/templates/register/register-success.html:20
 msgid "Register Success!"
-msgstr "注册成功！"
+msgstr ""
 
 #: web/apps/register/templates/register/register-success.html:21
 msgid "Go to <a href='/login/'>Login</a>"
-msgstr "请前往<a href='/login/'>登录</a>"
+msgstr ""
 
 #: web/apps/reset/views.py:36
 msgid "Email not existed"
-msgstr "邮箱不存在！"
+msgstr "E-posta mevcut değil"
 
 #: web/apps/reset/templates/reset/edit_password.html:6
 #: web/apps/reset/templates/reset/edit_password.html:18
@@ -575,25 +568,26 @@ msgstr "邮箱不存在！"
 #: web/apps/reset/templates/reset/reset-success.html:6
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
 msgid "Reset"
-msgstr "重置密码"
+msgstr "Sıfırla"
 
 #: web/apps/reset/templates/reset/index.html:6
 msgid "ReSet"
-msgstr ""
+msgstr "Sıfırla"
 
 #: web/apps/reset/templates/reset/reset-complete.html:20
 msgid "Reset Success!"
-msgstr "重置密码成功"
+msgstr "İşlem başarılı!"
 
 #: web/apps/reset/templates/reset/reset-complete.html:21
 msgid ""
 "You have reset your password successfully, please <a href='/login/'> login</"
 "a>"
-msgstr "密码重置成功，请<a href='/login/'>登录</a>"
+msgstr "Şifrenizi başarıyla sıfırladınız, lütfen giriş yapın <a href='/login/'> login</"
+"a>"
 
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Welcome! Please Reset Your Password!"
-msgstr "牛顿欢迎您！请重置您的密码"
+msgstr "Şifrenizi sıfırlayın"
 
 #: web/apps/reset/templates/reset/reset-letter.html:10
 msgid ""
@@ -603,15 +597,12 @@ msgid ""
 "have any questions, please contact us <a href='mailto:contact@newtonproject."
 "org'> contact@newtonproject.org</a>"
 msgstr ""
-"您好！这是一封来自 <a href='https://www.newtonproject.org'>https://www."
-"newtonproject.org</a> 的邮件，帮助您重置您的账户密码，点击下方按钮进行下一步"
-"操作。"
 
 #: web/apps/reset/templates/reset/reset-success.html:19
 msgid ""
 "We sent an email to your registered email address, please go to check and "
 "complete the reset password process."
-msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
+msgstr "Kayıtlı e-posta adresinize bir e-posta gönderdik, lütfen şifre sıfırlama işlemini tamamlamak için mail adresinizi kontrol edin."
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -699,104 +690,102 @@ msgstr ""
 
 #: web/apps/subscription/models.py:19
 msgid "Subscribed emails"
-msgstr "订阅邮箱"
+msgstr ""
 
 #: web/apps/subscription/views.py:35
 msgid "You can only subscribe once per minute."
-msgstr "每分钟只能订阅一次。"
+msgstr ""
 
 #: web/apps/subscription/views.py:41
 msgid "Email Has Exist!"
-msgstr "邮箱已经存在！"
+msgstr ""
 
 #: web/apps/subscription/views.py:45 web/apps/subscription/views.py:54
 msgid "we've sent you a confirming e-mail,please check your email box."
-msgstr "确认邮件已经发送到您的邮箱，请注意查收。"
+msgstr ""
 
 #: web/apps/subscription/views.py:47 web/apps/subscription/views.py:56
 msgid "Subscribe Failed!"
-msgstr "订阅失败"
+msgstr ""
 
 #: web/apps/subscription/views.py:58
 #: web/apps/subscription/templates/subscription/include-subscription.html:70
 msgid "Invalid Email Address!"
-msgstr "无效的邮箱地址！"
+msgstr ""
 
 #: web/apps/subscription/views.py:76
 msgid "Links expire or invalid pages."
-msgstr "链接过期或者无效页面"
+msgstr ""
 
 #: web/apps/subscription/views.py:83
 msgid "NewtonProject Notifications: Please Confirm Subscription"
-msgstr "牛顿提醒：请确认您的订阅"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/confirm.html:6
 msgid "Subscription Confirmation"
-msgstr "订阅确认"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/confirm.html:17
 msgid "Subscribe Successed!"
-msgstr "订阅成功！"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/confirm.html:18
 msgid "Your subscription to our list has been confirmed."
-msgstr "您的订阅已经确认"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/confirm.html:19
 msgid "Thank you for subscribing!"
-msgstr "感谢您的订阅！"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:10
 msgid "SUBSCRIBE TO US"
-msgstr "订阅"
+msgstr "UYE OLUN"
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:14
 msgid "Subscribe to Newton updates, or miss the juiciest bits!"
-msgstr "订阅牛顿邮件更新，您不会错过任何重要的信息。"
+msgstr "Newton hakkında gelişmeleri kaçırmamak için üye olun!"
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:25
 msgid "Email Address"
-msgstr "邮箱地址"
+msgstr "E-Mail Adresi"
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:26
 msgid "SUBSCRIBE"
-msgstr "订阅"
+msgstr "UYE OLUN"
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:29
 msgid "We won't share your email address or send you any spam."
-msgstr "我们不会分享您的电子邮件地址或发送任何垃圾邮件。"
+msgstr "E-Mail adresiniz gizli tutulacak ve spam gönderilmeyecektir."
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:63
 msgid "Subscribed Failed!"
-msgstr "订阅失败"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:75
 msgid "Please Input Email Address!"
-msgstr "请输入邮箱地址！"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/subscription-letter.html:44
 msgid "Welcome! Please Confirm Your Subscription"
-msgstr "牛顿欢迎您！请确认您的订阅"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/subscription-letter.html:45
 msgid "Yes,subscribe me to this list."
-msgstr "是的，确认订阅。"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/subscription-letter.html:46
 msgid ""
 "If you received this email by mistake, simply delete it. You won't be "
 "subscribed if you don't click the confirmation link above."
 msgstr ""
-"如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
-"阅。"
 
 #: web/apps/tokenexchange/services.py:26
 msgid "Newton notification: Received your KYC information"
-msgstr "牛顿提醒：我们收到了您的KYC信息"
+msgstr ""
 
 #: web/apps/tokenexchange/views.py:56
 msgid "You had submited kyc info"
-msgstr "你已经提交了KYC信息"
+msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:8
@@ -809,7 +798,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:18
 msgid "Apply Success!"
-msgstr "申请成功！"
+msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:12
 msgid "NOTIFY"
@@ -817,7 +806,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:18
 msgid "Distribution confirm"
-msgstr "确认分配"
+msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:21
 msgid "Confrm your amount of token exchange"
@@ -832,9 +821,8 @@ msgid "Your ELA amount is "
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:6
-#, fuzzy
 msgid "Token Exchange"
-msgstr "牛顿 Token 预售"
+msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:20
 msgid "NEWTON TOKEN EXCHANGE AGREEMENT"
@@ -1143,9 +1131,8 @@ msgid ""
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
-#, fuzzy
 msgid "Invalid Link"
-msgstr "无效链接"
+msgstr "Geçersiz Bağlantı"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 msgid "TOKENEXCHANGE"
@@ -1153,13 +1140,12 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:20
 msgid "Newton Token Sale"
-msgstr "牛顿 Token 预售"
+msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/pending.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/receive-address.html:6
-#, fuzzy
 msgid "Tokensale"
-msgstr "牛顿 Token 预售"
+msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:20
 msgid "KYC Information"
@@ -1200,9 +1186,8 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:36
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:73
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:77
-#, fuzzy
 msgid "Subscription Ratio"
-msgstr "订阅确认"
+msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:21
 msgid "您的KYC信息正在审核，请耐心等待。"
@@ -1218,35 +1203,35 @@ msgstr ""
 
 #: web/apps/user/models.py:30
 msgid "Self Introduction"
-msgstr "自我介绍"
+msgstr ""
 
 #: web/apps/user/models.py:31
 msgid "Homepage"
-msgstr "个人主页"
+msgstr ""
 
 #: web/apps/user/models.py:34
 msgid "Gender"
-msgstr "性别"
+msgstr ""
 
 #: web/apps/user/models.py:35
 msgid "Birth Date"
-msgstr "生日"
+msgstr ""
 
 #: web/apps/user/models.py:40
 msgid "Location"
-msgstr "位置"
+msgstr ""
 
 #: web/apps/user/models.py:50
 msgid "Channel"
-msgstr "了解牛顿的渠道"
+msgstr ""
 
 #: web/apps/user/models.py:57
 msgid "Job Status"
-msgstr "工作状态"
+msgstr ""
 
 #: web/apps/user/models.py:58
 msgid "Major"
-msgstr "专业"
+msgstr ""
 
 #: web/apps/user/templates/user/index.html:6
 #: web/apps/user/templates/user/profile.html:6
@@ -1258,11 +1243,11 @@ msgstr ""
 
 #: web/apps/user/templates/user/index.html:30
 msgid "Profile"
-msgstr "用户信息"
+msgstr ""
 
 #: web/apps/user/templates/user/index.html:45
 msgid "Basic information"
-msgstr "基本信息"
+msgstr ""
 
 #: web/apps/user/templates/user/index.html:76
 msgid "You have summit KYC information"
@@ -1286,9 +1271,8 @@ msgid ""
 msgstr ""
 
 #: web/apps/user/templates/user/index.html:125
-#, fuzzy
 msgid "Details "
-msgstr "详情"
+msgstr ""
 
 #: web/apps/user/templates/user/index.html:132
 msgid "There is no token exchange information"
@@ -1296,17 +1280,16 @@ msgstr ""
 
 #: web/apps/user/templates/user/profile.html:21
 msgid "Edit Profile"
-msgstr "修改个人资料"
+msgstr ""
 
 #: web/apps/user/templates/user/settings.html:15
 msgid "Settings"
-msgstr "设置"
+msgstr ""
 
 #: web/apps/user/templates/user/token-exchange-progress.html:42
 #: web/apps/user/templates/user/token-exchange-progress.html:88
-#, fuzzy
 msgid "Passed KYC"
-msgstr "密码"
+msgstr ""
 
 #: web/apps/user/templates/user/token-exchange-progress.html:50
 #: web/apps/user/templates/user/token-exchange-progress.html:95
@@ -1333,14 +1316,12 @@ msgid "Apply Amount"
 msgstr ""
 
 #: web/apps/user/templates/user/token-exchange-progress.html:152
-#, fuzzy
 msgid "Distribution Amount"
-msgstr "确认分配"
+msgstr ""
 
 #: web/apps/user/templates/user/token-exchange-progress.html:167
-#, fuzzy
 msgid "Distribution Address"
-msgstr "确认分配"
+msgstr ""
 
 #: web/apps/user/templates/user/token-exchange-progress.html:183
 msgid "Sended Amount"
@@ -1358,11 +1339,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/about.html:13
 #: web/templates/footer.html:34
 msgid "ABOUT"
-msgstr "关于"
+msgstr "HAKKIMIZDA"
 
 #: web/apps/welcome/templates/welcome/about.html:19
 msgid "Infrastructure of protocol-based economy"
-msgstr "协议经济基础设施"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:21
 msgid ""
@@ -1374,17 +1355,14 @@ msgid ""
 "thereby building a highly collaborative, fair and reasonable, highly "
 "automated business environment with lower cost and fewer conflicts."
 msgstr ""
-"在开放和可编程的价值互联网中，协议经济基础设施是应用运行的基石。我们致力于打"
-"造供应链、营销、支付、交易、信用、金融等商业全流程的协议标准和开发工具链，构"
-"建高效协作、低成本和小摩擦、公平合理、高度自动化的商业环境。"
 
 #: web/apps/welcome/templates/welcome/about.html:24
 msgid "Newton Team"
-msgstr "牛顿团队"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:27
 msgid "Global Free and Open Source Software Community"
-msgstr "全球化的自由开源软件社区"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:29
 msgid ""
@@ -1396,41 +1374,38 @@ msgid ""
 "volunteers, creative workers, scientists, engineers, economists, and "
 "business people."
 msgstr ""
-"自由开源软件社区近四十年来的发展证明自由、开放、全球化能创造一流的软件系统，"
-"并且收益。Newton秉承自由开源软件的哲学和精神，建立全球化开发社区，将志愿者、"
-"创意工作者、科学家、工程师、经济学家、商业人士等紧密连接在一起。"
 
 #: web/apps/welcome/templates/welcome/about.html:32
 msgid "For developers, you can subscribe"
-msgstr "开发者可以订阅"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:33
 msgid "Newton Mail List"
-msgstr "牛顿邮件列表"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:33
 #: web/apps/welcome/templates/welcome/about.html:41
 msgid "."
-msgstr "。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:36
 msgid ""
 "If you are looking for a better job opportunity, don't hesitate to contact "
 "us!"
-msgstr "您正在找工作机会吗？"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:36
 msgid "Join us!"
-msgstr "马上加入我们！"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:39
 msgid "Need help?Have Ideas?"
-msgstr "需要帮助？有新的想法？"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:41
 msgid ""
 "For technical, business, governance, economic or general questions, contact"
-msgstr "技术、商业、经济或其他问题，联系"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement-detail.html:9
 #: web/apps/welcome/templates/welcome/announcement-detail.html:17
@@ -1439,31 +1414,31 @@ msgstr "技术、商业、经济或其他问题，联系"
 #: web/apps/zinnia/models/category.py:26
 #: web/apps/zinnia/models_bases/entry.py:61 web/templates/footer.html:23
 msgid "Announcement"
-msgstr "公告"
+msgstr "Duyuru"
 
 #: web/apps/welcome/templates/welcome/announcement-detail.html:55
 #: web/apps/welcome/templates/welcome/announcement.html:81
 msgid "No entrys"
-msgstr "暂无公告"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:24
 msgid "All"
-msgstr "全部公告"
+msgstr "Tümü"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
 #: web/apps/zinnia/models_bases/entry.py:66
 msgid "Operation"
-msgstr "运营公告"
+msgstr "Operasyon"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
 #: web/apps/zinnia/models_bases/entry.py:67
 msgid "Weekly"
-msgstr "周报"
+msgstr "Haftalık"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
 #: web/apps/zinnia/models_bases/entry.py:65
 msgid "Activity"
-msgstr "活动公告"
+msgstr "Aktivite"
 
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
@@ -1472,64 +1447,64 @@ msgstr "活动公告"
 #: web/apps/welcome/templates/welcome/wechat.html:13
 #: web/templates/header.html:31
 msgid "Community"
-msgstr "社区"
+msgstr "Topluluk"
 
 #: web/apps/welcome/templates/welcome/community.html:18
 msgid "Socail Network"
-msgstr "社交网络"
+msgstr "Sosyal Medya"
 
 #: web/apps/welcome/templates/welcome/community.html:27
 #: web/apps/welcome/templates/welcome/wechat.html:20
 msgid "Scan QR Code to join us"
-msgstr "扫描二维码关注微信公众号"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:34
 msgid "Email-list"
-msgstr "邮件列表"
+msgstr "E-Mail Listesi"
 
 #: web/apps/welcome/templates/welcome/community.html:51
 msgid "English"
-msgstr "英文"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:54
 msgid "Chinese"
-msgstr "中文"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:68
 msgid "Press"
-msgstr "媒体报道"
+msgstr "Basın"
 
 #: web/apps/welcome/templates/welcome/community.html:74
 #: web/apps/welcome/templates/welcome/include-protocol.html:65
 #: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
-msgstr "更多"
+msgstr "DAHA FAZLA"
 
 #: web/apps/welcome/templates/welcome/contact.html:6
 #: web/apps/welcome/templates/welcome/contact.html:13
 #: web/apps/welcome/templates/welcome/contact.html:19
 #: web/templates/footer.html:38
 msgid "Contact Us"
-msgstr "联系我们"
+msgstr "Bize Ulasın"
 
 #: web/apps/welcome/templates/welcome/contact.html:21
 msgid ""
 "Web Site: <a href='https://www.newtonproject.org' target='_blank'>https://"
 "www.newtonproject.org"
 msgstr ""
-"网站：<a href='https://www.newtonproject.org' target='_blank'>https://www."
-"newtonproject.org"
+"Web Sayfası: <a href='https://www.newtonproject.org' target='_blank'>https://"
+"www.newtonproject.org"
 
 #: web/apps/welcome/templates/welcome/contact.html:22
 msgid "Email:"
-msgstr "邮件："
+msgstr "E-Mail:"
 
 #: web/apps/welcome/templates/welcome/contact.html:24
 msgid ""
 "WhitePager : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
 msgstr ""
-"白皮书 ：<a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
+"Teknik Bülten: <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:25
@@ -1537,23 +1512,23 @@ msgid ""
 "Global Community : <a href='mailto:newton-community@newtonproject."
 "org'>newton-community@newtonproject.org</a>"
 msgstr ""
-"全球社区 ：<a href='mailto:newton-community@newtonproject.org'>newton-"
-"community@newtonproject.org</a>"
+"Uluslararası Topluluk: <a href='mailto:newton-community@newtonproject."
+"org'>newton-community@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:26
 msgid ""
 "Newton Token Exchange : <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
 msgstr ""
-"牛顿通证（Newton Token）交换：<a href='mailto:newton-ir@newtonproject."
-"org'>newton-ir@newtonproject.org</a>"
+"Newton token değişimi <a href='mailto:newton-ir@newtonproject.org'>newton-"
+"ir@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:27
 msgid ""
 "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
 msgstr ""
-"公共关系 ：<a href='mailto:newton-pr@newtonproject.org'>newton-"
+"Halkla İlişkiler: <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:28
@@ -1561,7 +1536,7 @@ msgid ""
 "Newton Fund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
 msgstr ""
-"牛顿资本 ：<a href='mailto:newton-fund@newtonproject.org'>newton-"
+"Newton Fonu: <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:29
@@ -1569,7 +1544,7 @@ msgid ""
 "Council : <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
 msgstr ""
-"理事会 ：<a href='mailto:newton-council@newtonproject.org'>newton-"
+"Konsey: <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:30
@@ -1577,24 +1552,24 @@ msgid ""
 "Other Contacts : <a href='mailto:contact@newtonproject."
 "org'>contact@newtonproject.org</a>"
 msgstr ""
-"其他 ：<a href='mailto:contact@newtonproject.org'>contact@newtonproject.org</"
-"a>"
+"Diğer: <a href='mailto:contact@newtonproject."
+"org'>contact@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
 #: web/templates/footer.html:46
 msgid "Copyright"
-msgstr "版权声明"
+msgstr "Telif"
 
 #: web/apps/welcome/templates/welcome/copyright.html:20
 msgid ""
 "This copyright policy applies to content posted on Newton forums and "
 "websites."
-msgstr "本版权声明适用于Newton论坛和网站。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:22
 msgid "DO YOU HAVE RIGHTS IN A COPYRIGHTED WORK?"
-msgstr "您在版权作品中有权利吗?"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:23
 msgid ""
@@ -1605,25 +1580,22 @@ msgid ""
 "check with an attorney before submitting a copyright notice or counter-"
 "notice to us."
 msgstr ""
-"请在向我们发送版权通知或反通知之前慎重考虑，因为Newton对欺诈或恶意举报追究法"
-"律和财务责任。 如果您不确定您是否是实际的版权所有者，或者您是否有权代表权利持"
-"有人采取行动，请在向我们提交版权声明前咨询律师。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:25
 msgid "HOW TO SUBMIT A COPYRIGHT NOTICE"
-msgstr "如何提交版权声明"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:26
 msgid ""
 "To send us a notice concerning copyright infringement on a Newton site, "
 "you’ll need to provide the following information:"
-msgstr "如果您要在Newton网站提交有关侵犯版权的通知，需要提供以下信息："
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:28
 msgid ""
 "A physical or electronic signature of the copyright owner or a person "
 "authorized to act on their behalf (typing your full name will do);"
-msgstr "版权所有者或授权代人的手写或电子签名（输入您的全名即可）；"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:29
 msgid ""
@@ -1631,8 +1603,6 @@ msgid ""
 "a copy of or link to your original work or clear description of the "
 "materials allegedly being infringed);"
 msgstr ""
-"确定被侵权的版权作品的识别（例如，您的原始作品的副本或链接，或明确描述涉嫌侵"
-"权的材料）；"
 
 #: web/apps/welcome/templates/welcome/copyright.html:30
 msgid ""
@@ -1640,14 +1610,12 @@ msgid ""
 "sufficient to permit us to locate the material on our services (e.g., a link "
 "to the allegedly infringing material on our site);"
 msgstr ""
-"侵权材料和信息的识别足以让我们在我们的服务上定位材料（例如，在我们网站上涉嫌"
-"侵权的材料的链接）；"
 
 #: web/apps/welcome/templates/welcome/copyright.html:31
 msgid ""
 "Your contact information, including your address, telephone number, and an "
 "email address;"
-msgstr "您的联系方式，包括您的地址，电话号码，和邮件地址；"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:32
 msgid ""
@@ -1655,7 +1623,6 @@ msgid ""
 "in the manner asserted is not authorized by the copyright owner, its agent, "
 "or the law;"
 msgstr ""
-"您确信以所声明的方式使用该材料没有被版权所有者，其代理人或法律授权的声明；"
 
 #: web/apps/welcome/templates/welcome/copyright.html:33
 msgid ""
@@ -1663,18 +1630,16 @@ msgid ""
 "penalty of perjury, that you are authorized to act on behalf of the "
 "copyright owner."
 msgstr ""
-"声明该通知中的信息是准确的，并且由于做伪证会受到处罚，您有权代表版权持有者。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:35
 msgid ""
 "You can report alleged copyright infringement by emailing the above "
 "information to contact@newtonproject.org."
 msgstr ""
-"您可以通过邮件发送上述信息到 contact@newtonproject.org 举报涉嫌侵犯版权行为"
 
 #: web/apps/welcome/templates/welcome/copyright.html:37
 msgid "HOW NEWTON RESPONDS TO COPYRIGHT CLAIMS"
-msgstr "Newton如何回应版权声明"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:38
 msgid ""
@@ -1685,13 +1650,10 @@ msgid ""
 "the situation, including a copy of the takedown notice and instructions for "
 "filing a counter-notice."
 msgstr ""
-"我们对侵犯版权声明的回应包括删除或限制对涉嫌侵权的材料的访问。 如果我们采取这"
-"些行动来回应版权声明，我们将作出诚挚的努力与受影响的信息提供者联系，提供有关"
-"情况的信息，包括删除通知的副本和提交反通知的说明。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:40
 msgid "WHEN YOU RECEIVE WORD OF A NEWTON NOTICE"
-msgstr "当您收到Newton通知"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:41
 msgid ""
@@ -1699,8 +1661,6 @@ msgid ""
 "content identified in the notice has been removed from our site or access to "
 "the content has been restricted."
 msgstr ""
-"如果您收到我们有关Newton投诉的消息，则表示通知中确定的内容已从我们的网站删"
-"除，或访问内容已经被限制。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:42
 msgid ""
@@ -1708,12 +1668,10 @@ msgid ""
 "the copyright notice we received and instructions about how to file a "
 "counter-notice."
 msgstr ""
-"请仔细阅读我们的消息，因为它将包括有关我们收到的版权声明的信息以及如何提交反"
-"通知的说明。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:44
 msgid "HOW TO FILE A COUNTER-NOTICE"
-msgstr "如何提交反通知文件"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:45
 msgid ""
@@ -1721,12 +1679,10 @@ msgid ""
 "believe that material was misidentified or removed in error, you can file a "
 "counter-notice by sending us the following information:"
 msgstr ""
-"如果您收到有关您发布内容的Newton通知，并认为您的内容被错误识别或误删，您可以"
-"通过向我们发送以下信息提交反通知："
 
 #: web/apps/welcome/templates/welcome/copyright.html:47
 msgid "A physical or electronic signature (typing your full name will do);"
-msgstr "手写或电子签名(输入您的全名即可)；"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:48
 msgid ""
@@ -1735,8 +1691,6 @@ msgid ""
 "removed or access to it was disabled (the description from the Newton notice "
 "is enough);"
 msgstr ""
-"识别已被删除或已禁用访问的资料以及资料在删除或被禁止访问之前出现的位置"
-"（Newton 通知中的描述已经足够）;"
 
 #: web/apps/welcome/templates/welcome/copyright.html:49
 msgid ""
@@ -1744,8 +1698,6 @@ msgid ""
 "the material was removed or disabled as a result of mistake or "
 "misidentification of the material to be removed or disabled;"
 msgstr ""
-"在伪证被处罚的声明下您确信被移除或禁用的材料是由于被移除或禁用的材料的错误或"
-"误认造成的；"
 
 #: web/apps/welcome/templates/welcome/copyright.html:50
 msgid ""
@@ -1756,9 +1708,6 @@ msgid ""
 "that you will accept service of process from the person who provided the "
 "copyright notification or an agent of such person."
 msgstr ""
-"您的姓名，地址和电话号码以及您同意在联邦地方法院管辖您所在司法区域的声明，或"
-"者您的地址不在美国境内的Newton所造任何司法区域 ，您愿意接受提供版权通知的人或"
-"该人的代理人的流程服务。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:52
 msgid ""
@@ -1766,8 +1715,6 @@ msgid ""
 "know about the removal, and include the above information in the body of "
 "your reply."
 msgstr ""
-"如要提交反通知，请回复我们通知您有关删除的原始邮件，并将上述信息包含在您的回"
-"复正文中。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:53
 msgid ""
@@ -1776,12 +1723,10 @@ msgid ""
 "removed in error, please consider filing a counter-notice instead of re-"
 "posting the material."
 msgstr ""
-"注意：如果您针对 Newton 的通知重新发布资料，我们可能会永久注销您的论坛帐户。 "
-"如果您认为内容被误删，请考虑提交反通知而不是重新发布资料。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:55
 msgid "AFTER YOU SUBMIT A COUNTER-NOTICE"
-msgstr "在提交反通知之后"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:56
 msgid ""
@@ -1791,164 +1736,157 @@ msgid ""
 "further infringement of the material, we may replace or cease disabling "
 "access to the material that was removed."
 msgstr ""
-"当我们收到有效的反通知时，我们会尽快转发一份给我们给发给我们版权声明的人。 如"
-"果我们在10个工作日内没有被告知版权持有者寻求法院命令以防止进一步侵权，我们可"
-"能会更换或停止对被删除的材料的访问。"
 
 #: web/apps/welcome/templates/welcome/copyright.html:58
 msgid "REPEAT INFRINGER POLICY"
-msgstr "重复侵权者政策"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:59
 msgid ""
 "Where appropriate, Newton may warn and suspend repeat infringers. In more "
 "serious cases, we may permanently terminate user accounts on our forum."
 msgstr ""
-"在适当情况下，Newton 可能警告和暂停重复侵权者。 在更严重的情况下，我们可能会"
-"永久终止论坛上侵权者的帐号。"
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
 #: web/templates/header.html:34
 msgid "Economy"
-msgstr "经济体"
+msgstr "Ekonomi"
 
 #: web/apps/welcome/templates/welcome/economy.html:23
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
-msgstr "联合商业组织"
+msgstr "Ortak İş Organizasyonu"
 
 #: web/apps/welcome/templates/welcome/foundation.html:6
 msgid "Foundation"
-msgstr "基金会"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
 msgid "ADVISORS"
-msgstr "顾问"
+msgstr "DANIŞMAN"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:19
 #: web/apps/welcome/templates/welcome/include-advisor.html:21
 #: web/apps/welcome/templates/welcome/include-investor.html:70
 #: web/apps/welcome/templates/welcome/include-investor.html:72
 msgid "Han Feng"
-msgstr "韩锋"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:23
 #: web/apps/welcome/templates/welcome/include-investor.html:74
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Co-founder of Elastos"
-msgstr "亦来云联合创始人"
+msgstr "Elastos Kurucularından"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:24
 #: web/apps/welcome/templates/welcome/include-investor.html:75
 msgid "Visiting Scholar & Research Associate at Columbia University"
-msgstr "哥伦比亚大学访问研究员"
+msgstr "Columbia Üniversitesi Araştırma Üyesi"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:25
 #: web/apps/welcome/templates/welcome/include-investor.html:76
 msgid "Advisor at Huawei Central Institute"
-msgstr "华为中央研究院区块链顾问"
+msgstr "Huawei Enstitüsünde Danışman"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:34
 #: web/apps/welcome/templates/welcome/include-advisor.html:36
 #: web/apps/welcome/templates/welcome/include-investor.html:56
 #: web/apps/welcome/templates/welcome/include-investor.html:58
 msgid "Zhou Pin"
-msgstr "周品"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:38
 #: web/apps/welcome/templates/welcome/include-investor.html:60
 msgid "SVP of Cheetah(NASDAQ:CMCM)"
-msgstr "猎豹移动(NASDAQ:CMCM)高级副总裁"
+msgstr "Cheetah Başkan Yardımcısı (NASDAQ: CMCM)"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:39
 #: web/apps/welcome/templates/welcome/include-investor.html:61
 msgid "Founder of quwan.com"
-msgstr "趣玩网创始人"
+msgstr "quwan.com Kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:49
 #: web/apps/welcome/templates/welcome/include-advisor.html:51
 #: web/apps/welcome/templates/welcome/include-investor.html:85
 #: web/apps/welcome/templates/welcome/include-investor.html:87
 msgid "Li Songbo"
-msgstr "李嵩波"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:53
 #: web/apps/welcome/templates/welcome/include-investor.html:89
 msgid "Former CTO of Sina(NASDAQ: SINA)"
-msgstr "前新浪网(NASDAQ: SINA)CTO"
+msgstr "Sina eski CTO’su. (NASDAQ: SINA)"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:54
 #: web/apps/welcome/templates/welcome/include-investor.html:90
 msgid "Partner of DFJ Venture Capital"
-msgstr "德丰杰风险投资合伙人"
+msgstr "DFJ Yatırım Partneri"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:64
 #: web/apps/welcome/templates/welcome/include-advisor.html:66
 #: web/apps/welcome/templates/welcome/include-investor.html:124
 #: web/apps/welcome/templates/welcome/include-investor.html:126
 msgid "Hu Dinghe"
-msgstr "胡定核"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
 #: web/apps/welcome/templates/welcome/include-investor.html:127
 msgid "Chairman of Elastos ecosystem board"
-msgstr "亦来云生态建设委员会主任"
+msgstr "Elastos Ekosistemi Başkanı"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:67
 #: web/apps/welcome/templates/welcome/include-investor.html:127
 msgid "Previous President of Chongqing Lifan"
-msgstr "前重庆力帆总裁"
+msgstr "Chongqing Lifan Eski Başkanı"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:75
 #: web/apps/welcome/templates/welcome/include-advisor.html:77
 #: web/apps/welcome/templates/welcome/include-investor.html:99
 #: web/apps/welcome/templates/welcome/include-investor.html:101
 msgid "Gu Xueyong"
-msgstr "顾学雍"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:79
 #: web/apps/welcome/templates/welcome/include-investor.html:103
 msgid "Professor at Tsinghua University"
-msgstr "清华大学教授"
+msgstr "Tsinghua Üniversitesi Profesorü"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:80
 #: web/apps/welcome/templates/welcome/include-investor.html:104
 msgid "Director of International Relations at iCenter"
-msgstr "iCenter 国际交流部主任"
+msgstr "iCenter’da Uluslararası İlişkiler Direktörü"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:89
 #: web/apps/welcome/templates/welcome/include-advisor.html:91
 #: web/apps/welcome/templates/welcome/include-investor.html:136
 #: web/apps/welcome/templates/welcome/include-investor.html:138
 msgid "Lee Willson"
-msgstr "Lee Willson"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:92
 #: web/apps/welcome/templates/welcome/include-investor.html:139
 msgid "Bitcoin Ambassador"
-msgstr "比特币大使"
+msgstr "Bitcoin Elçisi"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
-msgstr "牛顿协议经济"
+msgstr "Newton’un protokol temelli ekonomisi"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:23
 msgid "Users own the data "
-msgstr "用户拥有数据"
+msgstr "Kullanıcılar verilerin sahibidir"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:25
 msgid ""
 "Users secure and control their personal data through cryptography, and can "
 "then manage their personal credit. Users share the profit produced by data "
 "in a pre-agreed manner."
-msgstr ""
-"用户丰富自己的个人数据，通过密码学技术完整掌控个人数据，最终形成个人信用。通"
-"过用户数据创造的价值，需要以事先约定的方式向用户付费。"
+msgstr "Kullanıcılar kisisel verilerini kriptografi ile zenginlestirip kontrol ederek kendi kişisel kredilerini yaratırlar. Kullanıcılar, veriler tarafından üretilen karı önceden kararlastırılan şekilde paylaşırlar."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:37
 msgid "Smarter"
-msgstr "更智能"
+msgstr "Daha Akilli"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:38
 msgid ""
@@ -1956,14 +1894,11 @@ msgid ""
 "without authoritative intermediaries. This smarter manner will reduce human "
 "interventions and facilitate the coordination between people, between "
 "machines and between people and machines."
-msgstr ""
-"在没有权威中介的前提下，以自由开放的方式自动化生产信用，这会让人与人之间，机"
-"器与机器之间，人与机器之间更好地协作，降低人为干预的因素，更加自动化和智能"
-"化。"
+msgstr "Kişisel kredi, yetkili aracılar olmadan özgur ve serbest bir şekilde otomatik olarak oluşturulabilir. Bu akıllı davranış, insan müdahalesini azaltıp, insanlar arası, makineler arası ve insan-makine arası koordinasyonu sağlayacaktır."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:49
 msgid "More effective incentive mechanism"
-msgstr "更有效的激励方式"
+msgstr "Daha etkili tesvik mekanizmasi"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:50
 msgid ""
@@ -1971,13 +1906,11 @@ msgid ""
 "transactional cost will be saved and distributed to each one who contributed "
 "in the transactions, such as service providers, consumers and other "
 "participants connected by the value-based Internet. "
-msgstr ""
-"使用技术协议取代商业中介，通过价值互联网服务供应商、消费者等各种角色直接连接"
-"在一起，通过技术手段将服务商的交易成本直接分配给相应的贡献者。"
+msgstr "Geleneksel iş aracılarını teknoloji protokolleri ile değiştirmek suretiyle işlem maliyetinden kısmak mumkun. Bu kısılan miktar, hizmet sağlayıcılar, tüketiciler ve değer tabanlı internet'e bağlı diğer katılımcılara katkıda bulunacak şekilde dağıtılacaktır."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:60
 msgid "New organizational structure and cooperation mode"
-msgstr "新的组织形态和协作方式"
+msgstr "Yeni organizasyon yapısı ve iş birliği modu"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:61
 msgid ""
@@ -1985,70 +1918,68 @@ msgid ""
 "monopoly intermediary platforms managed by traditional profitable companies. "
 "Based on the open, fair and rational rules, every contributor will benefit "
 "from the economy and become one part of the economy."
-msgstr ""
-"由非盈利基金会管理的社区经济体取代由传统盈利公司管理的垄断平台。每一个贡献者"
-"按照公平、合理、透明的原则，获得经济体的权益，成为经济体的一部分。"
+msgstr "Kâr amacı gütmeyen vakıflar tarafından yönetilen toplum ekonomisi, geleneksel kâr amacı güden şirketler tarafından yönetilen tekel aracı platformların yerini alacaktır. Açık, adil ve rasyonel kurallara dayanarak, her katılımcı ekonomiden faydalanacak ve ekonominin bir parçası olacaktır."
 
 #: web/apps/welcome/templates/welcome/include-feed.html:11
 msgid "FEED"
-msgstr "动态"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:9
 msgid "ANGEL INVESTORS"
-msgstr "天使投资人"
+msgstr "MELEK YATIRIMCI"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:19
 #: web/apps/welcome/templates/welcome/include-investor.html:21
 msgid "Liu Jun"
-msgstr "刘俊"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:22
 msgid "Co-Founder of Lightinthebox(NYSE:LITB)"
-msgstr "兰亭集势(NYSE:LITB)联合创始人"
+msgstr "Lightinthebox kurucularından (NYSE: LITB)"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:30
 #: web/apps/welcome/templates/welcome/include-investor.html:32
 msgid "Guo Feng"
-msgstr "郭峰"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:33
 msgid "Founder of kela.cn"
-msgstr "珂兰钻石创始人"
+msgstr "Kela.cn kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:41
 #: web/apps/welcome/templates/welcome/include-investor.html:43
 msgid "Xu Yirong"
-msgstr "徐易容"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:45
 msgid "Founder of meilishuo.com"
-msgstr "美丽说创始人"
+msgstr "Meilishuo.com kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:46
 msgid "CEO of HIGO"
-msgstr "HIGO创始人"
+msgstr "HIGO CEO’su"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:113
 #: web/apps/welcome/templates/welcome/include-investor.html:115
 msgid "Ye Haifeng"
-msgstr "叶海峰"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:116
 msgid "Founder of mbaobao.com"
-msgstr "麦包包创始人"
+msgstr "Mbaobao.com kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:148
 #: web/apps/welcome/templates/welcome/include-investor.html:150
 msgid "Wang Feng"
-msgstr "王峰"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:152
 msgid "Founder of linekong.com"
-msgstr "蓝港互动集团创始人"
+msgstr "Linekong.com kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:153
 msgid "Founder of huoxing24.com"
-msgstr "火星财经创始人"
+msgstr "Huoxing24.com kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:163
 #: web/apps/welcome/templates/welcome/include-investor.html:165
@@ -2057,231 +1988,228 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:167
 msgid "Founder and CEO of Distributed Credit Chain"
-msgstr "DCC创始人、CEO"
+msgstr "Distributed Credit Chain kurucusu ve CEO’su"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:177
 #: web/apps/welcome/templates/welcome/include-investor.html:179
 #: web/apps/welcome/templates/welcome/include-investor.html:190
 #: web/apps/welcome/templates/welcome/include-investor.html:204
 msgid "Li Zhu"
-msgstr "李竹"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:181
 msgid "Founder of Innoangel Fund"
-msgstr "英诺天使基金创始人"
+msgstr "Innoangel Fon kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:192
 msgid "Shi Junchao"
-msgstr "师俊超"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:194
 msgid "Senior gem jade appraiser."
-msgstr "资深珠宝玉石鉴定师"
+msgstr "Kıdemli mücevher uzmanı"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:195
 msgid "Deputy secretary general of xinjiang hetian jade industry association."
-msgstr "新疆和田玉行业协会副秘书长"
+msgstr "Xinjian hetian genel sekreteri Jade Industry Association"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:206
 msgid "Guo Hongchi"
-msgstr "郭洪驰"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:208
 msgid "Founder of xijie.com"
-msgstr "西街网创始人"
+msgstr "Xijie.com kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "Joint Ecological Construction"
-msgstr "联合生态建设"
+msgstr "Ortak Ekolojik Yapı"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:10
 #: web/apps/welcome/templates/welcome/protocol.html:13
 msgid "Hyper Exchange Protocol"
-msgstr "超级交换协议"
+msgstr "Hiper Değişim Protokolü"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:23
 #: web/apps/welcome/templates/welcome/protocol.html:21
 msgid "Digital Identity and Credit"
-msgstr "数字身份与信用"
+msgstr "Dijital kimlik ve kredi"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:25
 msgid ""
 "With digital identities, users can easily manage their own digital assets."
-msgstr "运用数字身份，用户可以方便管理自己的数字资产。"
+msgstr "Kullanıcılar kendi dijital varlıklarını dijital kimliklerini kullanarak yonetebilir ve kontrol edebilir."
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:34
 #: web/apps/welcome/templates/welcome/protocol.html:35
 msgid "Supply Chain"
-msgstr "供应链"
+msgstr "Tedarik Zinciri"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:36
 msgid ""
 "By using techniques such as 'atom hashing', we can create a unique digital "
 "identity for commodities of the whole network."
-msgstr "通过运用原子哈希等技术为商品建立全网唯一数字身份。"
+msgstr "“Atom Hashing” adı verilen teknikleri kullanarak, emtialar için tüm ağ üzerinden benzersiz bir dijital kimlik oluşturabiliriz."
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:45
 #: web/apps/welcome/templates/welcome/protocol.html:50
 msgid "Digital Marketing"
-msgstr "数字营销"
+msgstr "Dijital Pazarlama"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:47
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system."
-msgstr "广告主通过系统内置的各种营销类智能合约模版设定营销方案。"
+msgstr "Reklamcilar, teşvik planları, ödeme modları ve dinamik fiyat ayarlama kuralları dahil olmak üzere."
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:55
 #: web/apps/welcome/templates/welcome/protocol.html:64
 msgid "Trading and payment"
-msgstr "交易和支付"
+msgstr "Ticaret ve ödeme"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:57
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
 "We support cross-border transactions, ultra-small payments, lightning "
 "settlement, etc., and provide comprehensive online and offline payment tools."
-msgstr ""
-"支持跨境交易、超小额支付、闪电结算等，同时提供完善的线上、线下支付工具。"
+msgstr "Sınırlar ötesi islemleri, cok düşük miktardaki ödemeleri, lightning yerlesimi vb. Konulari destekliyoruz. Online ve Offline ödeme araçları da sunuyoruz."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:9
 msgid "ROADMAP"
-msgstr "路线图"
+msgstr "YOL HARITASI"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:21
 #: web/apps/welcome/templates/welcome/include-roadmap.html:61
 msgid "Newton project officially begins."
-msgstr "牛顿项目正式启动"
+msgstr "Newton projesi resmi başlangıcı."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:29
 #: web/apps/welcome/templates/welcome/include-roadmap.html:68
 msgid "Newton website officially released."
-msgstr "牛顿官网正式发布"
+msgstr "Newton web sayfası yayınlandı."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
 #: web/apps/welcome/templates/welcome/include-roadmap.html:76
 msgid "The Newton main chain and wallet officially released."
-msgstr "牛顿主链和钱包正式上线"
+msgstr "Newton ana zinciri ve cüzdanı yayınlanacak."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:48
 #: web/apps/welcome/templates/welcome/include-roadmap.html:85
 msgid "The NewMall officially released."
-msgstr "NewMall 正式上线"
+msgstr "NewMail yayınlanacak."
 
 #: web/apps/welcome/templates/welcome/include-team.html:9
 #: web/apps/welcome/templates/welcome/team.html:13
 msgid "TEAM"
-msgstr "团队"
+msgstr "TAKIM"
 
 #: web/apps/welcome/templates/welcome/include-team.html:19
 #: web/apps/welcome/templates/welcome/include-team.html:21
 msgid "Xu Jizhe"
-msgstr "徐继哲"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Founder"
-msgstr "创始人"
+msgstr "Kurucumuz"
 
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Founder of Zeuux (A Community for Free Software Usage)"
-msgstr "哲思社区创始人"
+msgstr "Zeuux kurucusu (Ücretsiz yazılım kullanımı üzerine bir topluluk)"
 
 #: web/apps/welcome/templates/welcome/include-team.html:30
 #: web/apps/welcome/templates/welcome/include-team.html:32
 msgid "Li Shubin"
-msgstr "李树斌"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:33
 msgid "Co-founder"
-msgstr "联合创始人"
+msgstr "Kurucularımızdan"
 
 #: web/apps/welcome/templates/welcome/include-team.html:33
 msgid "Founder and CEO of OKbuy"
-msgstr "好乐买创始人、CEO"
+msgstr "OKbuy CEO’su ve kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-team.html:42
 #: web/apps/welcome/templates/welcome/include-team.html:44
 msgid "Xia Wu"
-msgstr "夏武"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:45
 #: web/apps/welcome/templates/welcome/include-team.html:57
 msgid "Joint Chief Architect"
-msgstr "联席首席架构师"
+msgstr "Baş Mimar"
 
 #: web/apps/welcome/templates/welcome/include-team.html:45
 msgid "Co-founder of Zeuux (A Community for Free Software Usage)"
-msgstr "哲思社区联合创始人"
+msgstr "Zeuux kurucusu (Ücretsiz yazılım kullanımı üzerine bir topluluk)"
 
 #: web/apps/welcome/templates/welcome/include-team.html:54
 #: web/apps/welcome/templates/welcome/include-team.html:56
 msgid "Meng Guang"
-msgstr "孟光"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:66
 #: web/apps/welcome/templates/welcome/include-team.html:68
 msgid "Zhang Yu"
-msgstr "张羽"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Marketing Specialist"
-msgstr "营销专家"
+msgstr "Pazarlama Uzmanı"
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Founder of WuZhou Online"
-msgstr "五洲在线创始人"
+msgstr "WuZhou Online’ın Kurucusu"
 
 #: web/apps/welcome/templates/welcome/include-tech-chain.html:10
 msgid "Multiple Blockchain"
-msgstr "并行区块链"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:10
 msgid "Distributed Artificial Intelligence"
-msgstr "分布式人工智能"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:25
 msgid "Privacy protection"
-msgstr "隐私保护"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:27
 msgid "User's privacy data is protected by Newton privacy technology."
-msgstr "通过Newton隐私保护技术，保障用户隐私的绝对安全。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:33
 msgid "Profit"
-msgstr "收益"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:35
 msgid ""
 "Using the computing power and storage of idle computers to make profits for "
 "participants."
-msgstr "利用空闲计算机的算力和存储，参与者可以获得收益。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:44
 msgid "AI Software"
-msgstr "AI软件"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:46
 msgid ""
 "Run large amounts of AI software by using Docker-based container technology."
 msgstr ""
-"使用基于Docker容器技术运行大量AI软件。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-"&nbsp;&nbsp;&nbsp;&nbsp"
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:52
 msgid "Algorithm Model Market"
-msgstr "算法模型市场"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-tech-dai.html:54
 msgid ""
 "Algorithmic models developed by scientists and researchers can be freely "
 "traded with demanders."
-msgstr "科学家和研究者开发的算法模型可以非常方便地和需求者进行自由交易。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-technology.html:10
 #: web/apps/welcome/templates/welcome/tech.html:13
 msgid "TECHNOLOGY"
-msgstr "技术"
+msgstr "TEKNOLOJI"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:24
 #: web/apps/welcome/templates/welcome/tech.html:18
@@ -2294,20 +2222,18 @@ msgid ""
 "supports multiple consensus mechanisms and data structures, ensures the "
 "assets transactions between the main chain and sub-chains, and between sub-"
 "chains."
-msgstr ""
-"采用主链、子链设计方案，子链支持多种共识机制和数据结构，主链与子链之间，子链"
-"与子链之间可以进行资产交换。"
+msgstr "NewChain bir adet ana zincir ve coklu alt zincir yapisina sahip olacaktir. Ana zincir; hesap yonetimi, Newton tokeni yonetimi, alt zincir yonetimi, ag yonetisimi ve benzerlerini destekleyecektir. Alt zincir ise, ana zincir ve alt zincirler arasinda ve alt zincirlerin kendi arasindaki varlik islemlerinin yapilmasini saglayan hyper degisim protokolu ve coklu fikir birligi mekanizmalari ve veri yapilari gibi belirli hizmet sistemlerini destekleyecektir."
 
 #: web/apps/welcome/templates/welcome/include-technology.html:34
 #: web/apps/welcome/templates/welcome/tech.html:45
 msgid "Atom Hashing"
-msgstr "原子哈希"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-technology.html:36
 msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning "
 "technology, the hashing ID is generated."
-msgstr "原子哈希应用放射性定年、PCA、机器视觉、深度学习等技术生成数字哈希。"
+msgstr "Radyometrik tarihleme, PCA, makine görü ve derin öğrenme teknolojilerini kullanarak bir materyalin, hacmini, kütlesini, boyutunu, şeklini, dokusunu, optik özelliklerini, radyoaktif özelliklerini, termodinamik özelliklerini ve diğer ozelliklerini hizli bir sekilde ortaya çıkarabiliriz"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:45
 #: web/apps/welcome/templates/welcome/tech.html:32
@@ -2318,64 +2244,61 @@ msgstr ""
 msgid ""
 "NewNET, which consists of a large number of nodes, is an open cloud "
 "computing network."
-msgstr "由大量节点组成的开放式云计算网络。"
+msgstr "Çok sayıda düğümden (node) olusan NewNet, eksiksiz bir SQL veritabanı ve yaygın programlama dillerini destekleyen."
 
 #: web/apps/welcome/templates/welcome/include-technology.html:55
 #: web/apps/welcome/templates/welcome/tech.html:58
 msgid "NewIoT"
-msgstr "NewIoT"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-technology.html:57
 msgid ""
 "Blockchain fog computing, communication protocols between IoT devices and "
 "gateways, and NewChain IoT devices development specifications."
-msgstr ""
-"区块链雾计算关，物联设备与网关间的通讯协议， NewChain物联网设备开发规范。"
+msgstr "Blok zincirli sis bilişim, IoT cihaz ve geçitler arası iletişim protokolu ve NewChain IoT cihaz geliştirme özelliklerini içeren genel bir teknoloji serisi kavramıdır."
 
 #: web/apps/welcome/templates/welcome/index.html:14
 msgid "Everyone should benefit directly from economic growth"
-msgstr "每一个人都应该从经济增长中受益"
+msgstr "Herkes ekonomik büyümeden direkt olarak faydalanabilmeli."
 
 #: web/apps/welcome/templates/welcome/index.html:15
 msgid "Newton: The infrastructure for a protocol-based economy"
-msgstr "牛顿：协议经济基础设施"
+msgstr "Newton: Protokol temelli ekonominin altyapısı"
 
 #: web/apps/welcome/templates/welcome/index.html:47
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
-msgstr "向伟大的科学家、铸币先驱<br/>艾萨克•牛顿 爵士<br/>致敬！"
+msgstr "Hayatlarımızı derinden etkilemiş, gelmis geçmis en büyük bilim insanlarından biri olan Sir Isaac Newton’a saygılarımızla."
 
 #: web/apps/welcome/templates/welcome/joinus.html:6
 msgid "Jobs"
-msgstr "招聘"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:17
 #: web/templates/footer.html:37
 msgid "Join Us"
-msgstr "加入我们"
+msgstr "Bize Katılın"
 
 #: web/apps/welcome/templates/welcome/joinus.html:23
 msgid "About Newton Project"
-msgstr "关于牛顿"
+msgstr "Newton Projesi Hakkında"
 
 #: web/apps/welcome/templates/welcome/joinus.html:25
 msgid ""
 "We are committed to building an efficient, collaborative, low-cost, highly "
 "automated business infrastructure ecosystem."
-msgstr "我们致力于打造高效协作、低成本、高度自动化的商业基础协议生态系统。"
+msgstr "Kendimizi, verimli, paylaşımlı, düşük maliyetli ve yüksek otomasyon seviyeli bir iş altyapısı ekosistemi oluşturmaya adadık."
 
 #: web/apps/welcome/templates/welcome/joinus.html:28
 msgid "OUR CULTURE"
-msgstr "我们的文化"
+msgstr "KÜLTÜRÜMÜZ"
 
 #: web/apps/welcome/templates/welcome/joinus.html:30
 msgid ""
 "We believe in the free, open and inclusive culture advocated by the liberal "
 "open source philosophy. Decentralization is the core of our values."
-msgstr ""
-"我们信仰自由开源哲学所倡导的自由、开放、包容文化。去中心化是我们价值观的核"
-"心。"
+msgstr "Liberal açık kaynak felsefesi tarafından savunulan özgür, açık ve kapsayıcı kültürlere inanıyoruz. Desantralizasyon (merkeziyetsizlik) degerlerimizin özüdür."
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
 msgid ""
@@ -2383,21 +2306,17 @@ msgid ""
 "the free and open source software community, covering the field of e-"
 "commerce, finance, media, etc. And we are sincerely inviting more "
 "outstanding talents to join us."
-msgstr ""
-"现在的牛顿由来自自由开源软件社区、电子商务、金融、媒体等方面的顶级人才组成，"
-"我们希望更多领域和专业的人才的加入。"
+msgstr "Şu anda, Newton proje ekibi, e-ticaret, finans, medya, vb. alanları kapsayan özgür ve açık kaynak yazılım topluluğundan birçok profesyonel yeteneği bünyesine katmıştır. Bize katılmak icin siz yetenekli dostlarımızı da içtenlikle davet ediyoruz."
 
 #: web/apps/welcome/templates/welcome/joinus.html:36
 msgid ""
 "In addition, developers around the world can join us by telecommuting. The "
 "space constraint will not hinder our cooperation ."
-msgstr ""
-"另外，世界各地的开发者可以通过远程办公方式为牛顿添砖加瓦，您不必为空间的限制"
-"而烦恼。"
+msgstr "Buna ek olarak dünyanin her yerinden yazılımcılar evden calışarak bize katılabilir. Alan kısıtlaması iş birliğimize engel olamaz."
 
 #: web/apps/welcome/templates/welcome/joinus.html:38
 msgid "WHO WE ARE LOOKING FOR"
-msgstr "我们需要的人才"
+msgstr "KİMLERI İHTIYACIMIZ VAR"
 
 #: web/apps/welcome/templates/welcome/joinus.html:40
 msgid ""
@@ -2406,760 +2325,722 @@ msgid ""
 "other fields. We also need professionals in the fields of currency theory, "
 "economic models, asset management, and financial innovation. We welcome "
 "volunteers and enthusiasts in all fields."
-msgstr ""
-"我们需要在分布式系统、操作系统、加密算法、区块链、移动开发、产品设计等领域的"
-"技术人才，需要在货币理论、经济模型、资产管理、金融创新等方面的专业人士，同时"
-"包括各个领域的志愿者和爱好者。"
+msgstr "Dağıtık sistemler, işletim sistemleri, şifreleme algoritmaları, blok zincirleri, mobil geliştirme, ürün tasarımı vb. Alanlarda yeteneklere ihtiyacimiz var. Ayrıca döviz teorisi, ekonomik modeller, varlık yönetimi ve finansal inovasyonlar alanlarında profesyonellere de ihtiyacimiz var. Gönüllüler ve ilgilenenlere kucak açıyoruz."
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
 msgid ""
 "We need every talent to be passionate and believe in decentralized business, "
 "because Newton is closely related to everyone’s life."
-msgstr ""
-"我们需要每位人才都对去中心商业充满热情和信仰，因为牛顿于每个人的生活都会息息"
-"相关。"
+msgstr "Bize katılan herkesin merkeziyetsizliğe inanmasını ve bu konuda tutkuyla çalışmasını istiyoruz. Newton projesi hepimizin hayatiyla yakından ilgili."
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
 msgid ""
 "In addition, we will use NEW to pay part of the salary, which is a condition "
 "that must be accepted."
-msgstr "另外，我们将会使用 NEW 支付部分工资，这是必须接受的条件。"
+msgstr "Maaşlarin bir kısmını NEW tokenını kullanarak ödeyeceğiz. Bu on koşulu kabul etmeniz gerekmektedir."
 
 #: web/apps/welcome/templates/welcome/joinus.html:49
+msgid "Currently open positions"
+msgstr "Su an mevcut açık iş ilanlari"
+
+#: web/apps/welcome/templates/welcome/joinus.html:51
 msgid ""
 "We currently open the following positions. If you are interested, please "
 "send your resume to the email: <a href='mailto:newton-hr@newtonproject."
 "org'>newton-hr@newtonproject.org</a>"
 msgstr ""
-"我们目前开放了以下职位，若有意向，请将简历投递到邮箱：<a href='mailto:newton-hr@newtonproject."
-"org'>newton-hr@newtonproject.org</a>"
-
-#: web/apps/welcome/templates/welcome/joinus.html:52
-msgid "Currently open positions"
-msgstr "开放职位"
+"Şu anda ilgili pozisyonları açıyoruz. Eğer ilgileniyorsanız, lütfen özgeçmişinizi e-posta ile gönderin:: <a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/joinus.html:58
 msgid "Senior R&D Engineer"
-msgstr "高级研发工程师"
+msgstr "Kıdemli Arge Mühendisi"
 
 #: web/apps/welcome/templates/welcome/joinus.html:65
-#: web/apps/welcome/templates/welcome/joinus.html:104
-#: web/apps/welcome/templates/welcome/joinus.html:147
-#: web/apps/welcome/templates/welcome/joinus.html:186
-#: web/apps/welcome/templates/welcome/joinus.html:221
-#: web/apps/welcome/templates/welcome/joinus.html:261
-#: web/apps/welcome/templates/welcome/joinus.html:300
-#: web/apps/welcome/templates/welcome/joinus.html:338
-#: web/apps/welcome/templates/welcome/joinus.html:379
-#: web/apps/welcome/templates/welcome/joinus.html:418
+#: web/apps/welcome/templates/welcome/joinus.html:103
+#: web/apps/welcome/templates/welcome/joinus.html:146
+#: web/apps/welcome/templates/welcome/joinus.html:184
+#: web/apps/welcome/templates/welcome/joinus.html:218
+#: web/apps/welcome/templates/welcome/joinus.html:257
+#: web/apps/welcome/templates/welcome/joinus.html:295
+#: web/apps/welcome/templates/welcome/joinus.html:332
+#: web/apps/welcome/templates/welcome/joinus.html:372
+#: web/apps/welcome/templates/welcome/joinus.html:410
 msgid "Job description:"
-msgstr "职位描述："
+msgstr "İş Tanımı:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:67
 msgid "Being responsible for the design and development of the Newton system."
-msgstr "负责Newton系统的设计与研发工作;"
+msgstr "Newton sisteminin tasarımı ve geliştirilmesinden sorumlu olmak."
 
 #: web/apps/welcome/templates/welcome/joinus.html:68
 msgid ""
 "Being responsible for researching the latest technologies in the industry "
 "and applying them to Newtonian system improvements."
-msgstr "负责研究行业最新技术，并将其应用于牛顿系统的改进。"
+msgstr "Sektördeki en yeni teknolojileri araştırmak ve bunları Newton sistem geliştirmelerine uygulamaktan sorumlu olmak."
 
 #: web/apps/welcome/templates/welcome/joinus.html:70
-#: web/apps/welcome/templates/welcome/joinus.html:115
-#: web/apps/welcome/templates/welcome/joinus.html:155
-#: web/apps/welcome/templates/welcome/joinus.html:194
-#: web/apps/welcome/templates/welcome/joinus.html:230
-#: web/apps/welcome/templates/welcome/joinus.html:268
-#: web/apps/welcome/templates/welcome/joinus.html:308
-#: web/apps/welcome/templates/welcome/joinus.html:344
-#: web/apps/welcome/templates/welcome/joinus.html:387
-#: web/apps/welcome/templates/welcome/joinus.html:426
+#: web/apps/welcome/templates/welcome/joinus.html:114
+#: web/apps/welcome/templates/welcome/joinus.html:154
+#: web/apps/welcome/templates/welcome/joinus.html:192
+#: web/apps/welcome/templates/welcome/joinus.html:227
+#: web/apps/welcome/templates/welcome/joinus.html:264
+#: web/apps/welcome/templates/welcome/joinus.html:303
+#: web/apps/welcome/templates/welcome/joinus.html:338
+#: web/apps/welcome/templates/welcome/joinus.html:380
+#: web/apps/welcome/templates/welcome/joinus.html:418
 msgid "Qualifications:"
-msgstr "任职资格："
+msgstr "Nitelikler:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:72
 msgid ""
 "Bachelor degree or above, applicants major in computer science or related "
 "professions shall be prioritized."
-msgstr "大学本科以上学历.，计算机科学或相关专业毕业;"
+msgstr "Lisans derecesi veya üzeri, bilgisayar bilimleri veya ilgili mesleklerde tecrübeli adaylara öncelik verilmelidir."
 
 #: web/apps/welcome/templates/welcome/joinus.html:73
 msgid "More than 5 years of software development experience."
-msgstr "5年以上软件研发工作经验;"
+msgstr "5 yıldan fazla yazılım geliştirme deneyimi."
 
 #: web/apps/welcome/templates/welcome/joinus.html:74
 msgid ""
 "Skilled in a variety of programming languages (Java，Go，C++，Rust，Kotlin)."
-msgstr "熟练使用多种编程语言（Java，Go，C++，Rust，Kotlin);"
+msgstr "Çeşitli programlama dillerinde yetenekli (Java , Go , C ++ , Rust , Kotlin)."
 
 #: web/apps/welcome/templates/welcome/joinus.html:75
 msgid ""
 "Being familiar with the principle of software security, can apply security "
 "standards to research and development."
-msgstr "熟悉软件安全原理，能够将安全规范应用于研发工作之中;"
+msgstr "Yazılım güvenliği ilkesine aşina olmak, güvenlik standartlarını uygun araştırma ve geliştirme yapabilmek."
 
 #: web/apps/welcome/templates/welcome/joinus.html:76
 msgid ""
 "Good English reading ability, able to read English technical documents "
 "smoothly."
-msgstr "良好的英文阅读能力，能够顺畅阅读英文技术文档。"
+msgstr "İyi İngilizce okuma yeteneği, İngilizce teknik belgeleri düzgün bir şekilde okuyabilme."
 
 #: web/apps/welcome/templates/welcome/joinus.html:78
-#: web/apps/welcome/templates/welcome/joinus.html:121
+#: web/apps/welcome/templates/welcome/joinus.html:120
 msgid "Priority recruitment conditions:"
-msgstr "优先录用条件："
+msgstr "Öncelikli işe alım koşulları:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:80
-#: web/apps/welcome/templates/welcome/joinus.html:123
+#: web/apps/welcome/templates/welcome/joinus.html:122
 msgid "Blockchain related system R&D experience."
-msgstr "有区块链相关系统研发经验。"
+msgstr "Blockchain ile ilgili sistem Ar-Ge deneyimi."
 
 #: web/apps/welcome/templates/welcome/joinus.html:81
-#: web/apps/welcome/templates/welcome/joinus.html:124
+#: web/apps/welcome/templates/welcome/joinus.html:123
 msgid "Distributed network system development experience."
-msgstr "有分布式网络系统研发经验。"
+msgstr "Dağıtılmış ağ sistemi geliştirme deneyimi."
 
 #: web/apps/welcome/templates/welcome/joinus.html:83
 msgid "Recruitment number: 5 people "
-msgstr "招聘人数：5人 "
+msgstr "Pozisyon sayısı : 5 kişi"
 
 #: web/apps/welcome/templates/welcome/joinus.html:84
-#: web/apps/welcome/templates/welcome/joinus.html:126
-#: web/apps/welcome/templates/welcome/joinus.html:166
-#: web/apps/welcome/templates/welcome/joinus.html:201
-#: web/apps/welcome/templates/welcome/joinus.html:239
-#: web/apps/welcome/templates/welcome/joinus.html:280
-#: web/apps/welcome/templates/welcome/joinus.html:318
-#: web/apps/welcome/templates/welcome/joinus.html:359
-#: web/apps/welcome/templates/welcome/joinus.html:398
-#: web/apps/welcome/templates/welcome/joinus.html:438
+#: web/apps/welcome/templates/welcome/joinus.html:125
+#: web/apps/welcome/templates/welcome/joinus.html:165
+#: web/apps/welcome/templates/welcome/joinus.html:199
+#: web/apps/welcome/templates/welcome/joinus.html:236
+#: web/apps/welcome/templates/welcome/joinus.html:276
+#: web/apps/welcome/templates/welcome/joinus.html:313
+#: web/apps/welcome/templates/welcome/joinus.html:353
+#: web/apps/welcome/templates/welcome/joinus.html:391
+#: web/apps/welcome/templates/welcome/joinus.html:430
 msgid "Working Location: Beijing - Chaoyang District Sanlitun SOHO"
-msgstr "工作地点：北京-朝阳区-三里屯SOHO"
+msgstr "Yer: Pekin - Chaoyang Bölgesi Sanlitun SOHO"
 
 #: web/apps/welcome/templates/welcome/joinus.html:85
-#: web/apps/welcome/templates/welcome/joinus.html:127
-#: web/apps/welcome/templates/welcome/joinus.html:167
-#: web/apps/welcome/templates/welcome/joinus.html:202
-#: web/apps/welcome/templates/welcome/joinus.html:240
-#: web/apps/welcome/templates/welcome/joinus.html:281
-#: web/apps/welcome/templates/welcome/joinus.html:319
-#: web/apps/welcome/templates/welcome/joinus.html:360
-#: web/apps/welcome/templates/welcome/joinus.html:399
-#: web/apps/welcome/templates/welcome/joinus.html:439
+#: web/apps/welcome/templates/welcome/joinus.html:126
+#: web/apps/welcome/templates/welcome/joinus.html:166
+#: web/apps/welcome/templates/welcome/joinus.html:200
+#: web/apps/welcome/templates/welcome/joinus.html:237
+#: web/apps/welcome/templates/welcome/joinus.html:277
+#: web/apps/welcome/templates/welcome/joinus.html:314
+#: web/apps/welcome/templates/welcome/joinus.html:354
+#: web/apps/welcome/templates/welcome/joinus.html:392
+#: web/apps/welcome/templates/welcome/joinus.html:431
 msgid "Payments: Salary to be discussed"
-msgstr "薪酬范围：面议"
+msgstr "Ödemeler: Konuşulacak"
 
-#: web/apps/welcome/templates/welcome/joinus.html:86
-#: web/apps/welcome/templates/welcome/joinus.html:168
-#: web/apps/welcome/templates/welcome/joinus.html:203
-#: web/apps/welcome/templates/welcome/joinus.html:241
-#: web/apps/welcome/templates/welcome/joinus.html:282
-#: web/apps/welcome/templates/welcome/joinus.html:320
-#: web/apps/welcome/templates/welcome/joinus.html:361
-#: web/apps/welcome/templates/welcome/joinus.html:400
-#: web/apps/welcome/templates/welcome/joinus.html:440
-msgid ""
-"Contact:<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject."
-"org</a>"
-msgstr ""
-"联系我们 ：<a href='mailto:newton-pr@newtonproject.org'>newton-"
-"pr@newtonproject.org</a>"
-
-#: web/apps/welcome/templates/welcome/joinus.html:97
+#: web/apps/welcome/templates/welcome/joinus.html:96
 msgid "Blockchain Engineer"
-msgstr "区块链工程师"
+msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:106
+#: web/apps/welcome/templates/welcome/joinus.html:105
 msgid ""
 "Design and develop Newton software, related decentralized applications and "
 "cooperate with the rest of the team working on various layers of "
 "infrastructure;"
-msgstr "设计和开发Newton区块链及相关去中心化应用;"
+msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:108
+#: web/apps/welcome/templates/welcome/joinus.html:107
 msgid "Job Responsibilities:"
-msgstr "岗位职责:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:109
+msgid ""
+"Design, build, and maintain efficient, reusable, and reliable C++/Go code."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:110
 msgid ""
-"Design, build, and maintain efficient, reusable, and reliable C++/Go code."
-msgstr "设计、构建、维护高效、可重用的C++/Go代码;"
+"Develop blockchain solutions and provide support for blockchain development."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:111
-msgid ""
-"Develop blockchain solutions and provide support for blockchain development."
-msgstr "开发区块链解决方案和开发工具支持;"
+msgid "Implement performance and quality modules."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:112
-msgid "Implement performance and quality modules."
-msgstr "能对系统进行性能优化;"
-
-#: web/apps/welcome/templates/welcome/joinus.html:113
 msgid "Able to work independently with minimal guidance on tasks."
-msgstr "独立工作能力和解决问题能力。"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/joinus.html:116
+msgid ""
+"Strong proficiency in C++/Go, with solid knowledge of language specification."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:117
 msgid ""
-"Strong proficiency in C++/Go, with solid knowledge of language specification."
-msgstr "熟练使用C++/Go并规范化编程;"
-
-#: web/apps/welcome/templates/welcome/joinus.html:118
-msgid ""
 "1+ years of experience, preferably in an environment where latency and speed "
 "are factors (e.g., finance)."
-msgstr "一年及以上工作经验，有低延迟项目经历者优先;"
+msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:119
+#: web/apps/welcome/templates/welcome/joinus.html:118
 msgid "Computer Science or related degree."
-msgstr "计算机相关专业;"
+msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:128
+#: web/apps/welcome/templates/welcome/joinus.html:127
 msgid "Contact:<a>newton-hr@newtonproject.org</a>"
-msgstr "联系方式：<a>newton-hr@newtonproject.org</a>"
+msgstr ""
 
-#: web/apps/welcome/templates/welcome/joinus.html:140
+#: web/apps/welcome/templates/welcome/joinus.html:139
 msgid "Fullstack Web Developer"
-msgstr "全栈WEB开发工程师"
+msgstr "Fullstack Web Geliştiricisi"
 
-#: web/apps/welcome/templates/welcome/joinus.html:149
+#: web/apps/welcome/templates/welcome/joinus.html:148
 msgid ""
 "Write well designed, testable, efficient code by using best software "
 "development practices;"
-msgstr "运用最佳软件开发实践编写设计良好，可测试，高效的代码；"
+msgstr "En iyi yazılım geliştirme öğretilerini kullanarak iyi tasarlanmış, test edilebilir, verimli bir kod yazmak;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:150
+#: web/apps/welcome/templates/welcome/joinus.html:149
 msgid ""
 "Create website layout/user interface by using standard HTML/CSS practices;"
-msgstr "使用HTML / CSS创建网站布局/用户界面；"
+msgstr "Standart HTML / CSS uygulamalarını kullanarak web sitesi düzeni / kullanıcı ara yüzü oluşturmak;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:150
+msgid "Build web based backends and micro-services;"
+msgstr "Web tabanlı arka planlar ve mikro hizmetler oluşturmak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:151
-msgid "Build web based backends and micro-services;"
-msgstr "构建基于Web的后端和微服务；"
-
-#: web/apps/welcome/templates/welcome/joinus.html:152
 msgid ""
 "Stay plugged into emerging technologies/industry trends and apply them into "
 "operations and activities;"
-msgstr "研究新兴技术和行业趋势，并将其应用到系统设计和实现中；"
+msgstr "Gelişmekte olan teknolojiler / endüstri trendlerini takip etmek ve bunları uygulamak."
 
-#: web/apps/welcome/templates/welcome/joinus.html:153
+#: web/apps/welcome/templates/welcome/joinus.html:152
 msgid "Cooperate with designers to match visual design intent."
-msgstr "与设计师合作实现视觉设计意图。"
+msgstr "Görsel tasarım amacına uygun tasarımcılar ile işbirliği yapmak."
 
-#: web/apps/welcome/templates/welcome/joinus.html:157
+#: web/apps/welcome/templates/welcome/joinus.html:156
 msgid ""
 "Proven experience working with React or other modern Frontend Javascript "
 "Framework;"
-msgstr "熟练使用React/AngularJS框架；"
+msgstr "React veya diğer modern Frontend Javascript Framework ile çalışan örnek projeler geliştirmiş olmak;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:157
+msgid "Experience with Python/Django/Node.js;"
+msgstr "Python / Django / Node.js ile deneyim;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:158
-msgid "Experience with Python/Django/Node.js;"
-msgstr "具有Python/Django/Node.js开发经验；"
+msgid "Experience writing frontend and backend unit and integration tests;"
+msgstr "Deney frontend ve backend entegrasyon testleri yapabilmek;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:159
-msgid "Experience writing frontend and backend unit and integration tests;"
-msgstr "具有编写前端和后端单元以及集成测试的经验；"
+msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
+msgstr "Üst düzey programlama becerileri ve modern HTML / CSS hakkında derinlemesine bilgi;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:160
-msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
-msgstr "深入了解HTML / CSS浏览器兼容性问题；"
-
-#: web/apps/welcome/templates/welcome/joinus.html:161
 msgid ""
 "A solid understanding of how web applications work including security, "
 "session management, and best development practices;"
-msgstr "深入了解Web应用程序的工作方式，包括安全性，会话管理和最佳开发实践；"
+msgstr "Güvenlik, oturum yönetimi ve en iyi geliştirme uygulamaları dahil olmak üzere web uygulamalarının nasıl çalıştığı hakkında iyi seviyede bilgi;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:162
+#: web/apps/welcome/templates/welcome/joinus.html:161
 msgid ""
 "Strong organizational skills to juggle multiple tasks within the constraints "
 "of timelines and budgets with business acumen;"
-msgstr "具备较强的组织能力，能够在时间和预算有限条件下兼顾多项任务；"
+msgstr "Kısıtlı zaman ve bütçe içerisinde birden fazla görevi güçlü organizasyon becerileri ile yapabilme;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:163
+#: web/apps/welcome/templates/welcome/joinus.html:162
 msgid ""
 "Ability to work and thrive in a fast-paced environment, learn rapidly and "
 "master diverse web technologies and techniques;"
-msgstr "能够在快节奏的环境中工作，快速学习并掌握各种技术；"
+msgstr "Hızlı tempolu bir ortamda çalışabilme ve gelişebilme, hızla öğrenebilme ve çeşitli web teknolojilerini ve tekniklerini yönetebilme becerisi;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:164
+#: web/apps/welcome/templates/welcome/joinus.html:163
 msgid "Bachelor or masters degree in computer science or relevant experience;"
-msgstr "计算机科学或相关专业本科及以上学历。"
+msgstr "Bilgisayar bilimleri veya ilgili deneyime lisans veya yüksek lisans derecesi;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:179
+#: web/apps/welcome/templates/welcome/joinus.html:177
 msgid "Communication Specialist"
-msgstr "社区运营专员"
+msgstr "İletişim Uzmanı"
+
+#: web/apps/welcome/templates/welcome/joinus.html:186
+msgid ""
+"Deliver customer service and technical support on email/facebook/twitter;"
+msgstr "e-posta / facebook / twitter müşteri hizmetleri ve teknik destek sunmak;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:187
+msgid "Communicate customer feedback and process suggestions;"
+msgstr "Müşteri geri bildirimlerini ve süreç önerilerini iletmek;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:188
 msgid ""
-"Deliver customer service and technical support on email/facebook/twitter;"
-msgstr "在telegram/facebook/twitter上提供客户服务和技术支持；"
+"Identifying cause of dissatisfactions, and provide ways for improvement;"
+msgstr "Tatminsizliklerin nedenini belirleme ve iyileştirme yollarını sağlamak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:189
-msgid "Communicate customer feedback and process suggestions;"
-msgstr "处理客户反馈和建议；"
+msgid "Prepare reports on enquiries summary and improvement area;"
+msgstr "Araştırmaların özeti ve iyileştirme alanı hakkında raporlar hazırlamak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:190
 msgid ""
-"Identifying cause of dissatisfactions, and provide ways for improvement;"
-msgstr "找出令客户不满意的原因，并提出改进方案；"
-
-#: web/apps/welcome/templates/welcome/joinus.html:191
-msgid "Prepare reports on enquiries summary and improvement area;"
-msgstr "整理有关客户问询的总结报告和改进报告；"
-
-#: web/apps/welcome/templates/welcome/joinus.html:192
-msgid ""
 "Ensure that all enquiries at the social media channel in compliance with all "
 "internal and external regulations, policies and guideline;"
-msgstr "确保所有社交媒体渠道的调查符合所有内部和外部法规，政策。"
+msgstr "Sosyal medyadaki tüm soruların, tüm iç ve dış yönetmeliklere, politikalara ve kılavuzlara uygun olarak yapılmasını sağlamak;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:194
+#: web/apps/welcome/templates/welcome/joinus.html:305
+msgid "Bachelor degree or above;"
+msgstr "Lisans derecesi veya üstü;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:195
+msgid "Preferably with 2 years of working experience in customer support role;"
+msgstr "Tercihen müşteri desteği rolünde 2 yıllık tecrübe;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:196
-#: web/apps/welcome/templates/welcome/joinus.html:310
-msgid "Bachelor degree or above;"
-msgstr "本科学历及以上；"
-
-#: web/apps/welcome/templates/welcome/joinus.html:197
-msgid "Preferably with 2 years of working experience in customer support role;"
-msgstr "最好有2年以上的客户支持工作经验；"
-
-#: web/apps/welcome/templates/welcome/joinus.html:198
 msgid ""
 "MUST speak fluent using english and written English and Chinese with good "
 "presentation, communication and computer skills;"
-msgstr ""
-"具备较强的中文写作和流利英语口语能力，具有良好的演讲，沟通和计算机技能；"
+msgstr "iyi sunum, iletişim ve bilgisayar becerileri ile ingilizce ve yazılı İngilizce ve Çince kullanarak akıcı konuşmak (ZORUNLU);"
 
-#: web/apps/welcome/templates/welcome/joinus.html:199
+#: web/apps/welcome/templates/welcome/joinus.html:197
 msgid "Self-motivated and able to work independently;"
-msgstr "主观能动性强，能够独立工作；"
+msgstr "Kendinden motive ve bağımsız çalışabilme;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:214
+#: web/apps/welcome/templates/welcome/joinus.html:211
 msgid "Developer Relations Advocate"
-msgstr "开发者社区布道师"
+msgstr "Programcı İlişkileri Savunucuları"
 
-#: web/apps/welcome/templates/welcome/joinus.html:223
+#: web/apps/welcome/templates/welcome/joinus.html:220
 msgid ""
 "Content creation and distribution and analytics – tutorials, developer "
 "guides, newsletters, sample apps, client libraries;"
-msgstr ""
-"负责内容创建、分发、分析。内容范围包括教程，开发人员指南，简报，示例应用程"
-"序，客户端类库；"
+msgstr "İçerik oluşturma, dağıtım ve analiz - eğitimler, geliştirici kılavuzları, bültenler, örnek uygulamalar, istemci kütüphaneleri;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:224
+#: web/apps/welcome/templates/welcome/joinus.html:221
 msgid ""
 "Creating and implementing detailed annual, monthly & weekly plans for "
 "advocacy/engagement activities;"
-msgstr "制定详细的年度、月度和周度活动计划；"
+msgstr "Savunuculuk / katılım faaliyetleri için yıllık, aylık ve haftalık detaylı planların oluşturulması ve uygulanması;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:225
+#: web/apps/welcome/templates/welcome/joinus.html:222
 msgid ""
 "Organize and coordinating marketing engagement activities including social "
 "media campaigns, youtube broadcasts, progress reports;"
-msgstr "组织和协调营销活动，包括社交媒体活动，youtube直播，进度报告；"
+msgstr "Sosyal medya kampanyaları, youtube yayınları, ilerleme raporları dahil olmak üzere pazarlama katılım faaliyetlerini düzenlemek ve koordine etmek;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:226
+#: web/apps/welcome/templates/welcome/joinus.html:223
 msgid "Content sourcing from 3rd parties, distribution and analytics;"
-msgstr "对来自第三方的内容进行采集，分发和分析；"
+msgstr "3. taraflardan içerik kullanımı, dağıtım ve analizi;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:227
+#: web/apps/welcome/templates/welcome/joinus.html:224
 msgid "Engage with and provide support to community meetup organizers;"
-msgstr "负责向社区聚会组织者提供相关支持；"
+msgstr "Topluluk buluşma organizasyonlarına katılın ve organizatörlere destek verin;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:232
+#: web/apps/welcome/templates/welcome/joinus.html:229
 msgid ""
 "MUST speak fluent and written English with good presentation, communication "
 "and computer skills;"
-msgstr "必须有流利英语口语和写作能力，具有良好的演讲，沟通和计算机技能；"
+msgstr "İyi sunum, iletişim ve bilgisayar becerileri ile akıcı ve yazılı İngilizce konuşmalıdır;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:233
+#: web/apps/welcome/templates/welcome/joinus.html:230
 msgid "Experience writing tutorials, guides, API docs, sample apps;"
-msgstr "能够编写教程，指南，API文档，示例应用程序；"
+msgstr "Eğitim programı yazmada, yönlendirme yazmada, API dokümanları ve örnek uygulamaları deneyimli;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:234
+#: web/apps/welcome/templates/welcome/joinus.html:231
 msgid "Experience writing code in C++/JavaScript;"
-msgstr "具有C ++ /Go/JavaScript编程经验；"
+msgstr "C++/JavaScript'te deneyimli;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:235
+#: web/apps/welcome/templates/welcome/joinus.html:232
 msgid ""
 "Preferably with 2 years of working experience in IT industry customer "
 "support role;"
-msgstr "具有2年及以上IT行业客户支持方面的工作经验；"
+msgstr "Tercihen, bilişim sektöründe müşteri desteği rolünde 2 yıllık çalışma deneyimi;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:236
+#: web/apps/welcome/templates/welcome/joinus.html:233
 msgid "Self-motivated and able to work independently."
-msgstr "主观能动性强，能够独立工作。"
+msgstr "Kendinden motive ve bağımsız çalışabilme."
 
-#: web/apps/welcome/templates/welcome/joinus.html:254
+#: web/apps/welcome/templates/welcome/joinus.html:250
 msgid "Senior UX Designer"
-msgstr "高级UX设计师"
+msgstr "Kıdemli UX Tasarımcısı"
 
-#: web/apps/welcome/templates/welcome/joinus.html:263
+#: web/apps/welcome/templates/welcome/joinus.html:259
 msgid ""
 "Translate concepts into user flows, wireframes, mockups and prototypes that "
 "lead to intuitive user experiences;"
-msgstr "将概念转化为用户流程，线框，模型和原型，从而实现直观的用户体验；"
+msgstr "Sezgisel kullanıcı deneyimlerine yol açan kavramları kullanıcı akışları,şablonlar, örnekler ve prototiplere dönüştürme;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:264
+#: web/apps/welcome/templates/welcome/joinus.html:260
 msgid "Identify design problems and devise elegant solutions;"
-msgstr "发现设计问题并给出优雅的解决方案；"
+msgstr "Tasarım problemlerini tanımlamak ve zarif çözümler tasarlamak;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:265
+#: web/apps/welcome/templates/welcome/joinus.html:261
 msgid ""
 "Take a user-centered design approach and rapidly test and iterate your "
 "designs;"
-msgstr "采用以用户为中心的设计方法，并快速测试和迭代设计；"
+msgstr "Kullanıcı merkezli bir tasarım yaklaşımı edinin ve tasarımlarınızı hızlı bir şekilde test edin ve yineleyin;"
+
+#: web/apps/welcome/templates/welcome/joinus.html:262
+msgid "Collaborate with other team members and stakeholders;"
+msgstr "Diğer takım üyeleri ve paydaşlar ile işbirliği yapın;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:266
-msgid "Collaborate with other team members and stakeholders;"
-msgstr "与其他团队成员和利益相关者合作；"
-
-#: web/apps/welcome/templates/welcome/joinus.html:270
 msgid ""
 "Three or more years of UX design experience. Preference will be given to "
 "candidates who have experience designing complex solutions for complete "
 "digital environments;"
-msgstr "三年以上的用户体验设计经验;"
+msgstr "Üç veya daha fazla yıl UX tasarım deneyimi. Tam dijital ortamlar için karmaşık çözümler tasarlama deneyimi olan adaylar tercih edilecek;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:271
+#: web/apps/welcome/templates/welcome/joinus.html:267
 msgid ""
 "Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
-msgstr ""
-"熟练使用UX软件，如Sketch，InVision，UXPin，Framer或Marvel App。基本的React，"
-"SCSS或JavaScript技能是加分项；"
+msgstr "Sketch, InVision, UXPin, Framer veya Marvel App gibi UX yazılımlarında uzmanlık. Basic React, SCSS veya JavaScript becerileri bir artıdır;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:272
+#: web/apps/welcome/templates/welcome/joinus.html:268
 msgid ""
 "Ability to work with clients to understand detailed requirements and design "
 "complete user experiences that meet client needs and vision;"
-msgstr "能够与客户合作，了解详细的需求并设计满足客户需求和愿景的完整用户体验；"
+msgstr "Detaylı gereksinimleri anlamak ve müşteri ihtiyaçlarını ve vizyonunu karşılayan eksiksiz kullanıcı deneyimleri tasarlamak için müşterilerle çalışabilme yeteneği;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:273
+#: web/apps/welcome/templates/welcome/joinus.html:269
 msgid ""
 "Extensive experience in using UX design best practices to design solutions, "
 "and a deep understanding of mobile-first and responsive design;"
-msgstr ""
-"在使用UX设计解决方案方面，拥有丰富的经验，深入了解移动优先和响应式设计；"
+msgstr "UX tasarımının en iyi uygulama çözümlerini tasarlamada kapsamlı deneyim ve mobil-ilk ve duyarlı tasarımın derin bir anlayışı;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:274
+#: web/apps/welcome/templates/welcome/joinus.html:270
 msgid ""
 "A solid grasp of user-centered design (UCD), planning and conducting user "
 "research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
 "usability and accessibility concerns;"
-msgstr ""
-"掌握以用户为中心的设计（UCD），规划和执行用户研究，用户测试，A / B测试，快速"
-"原型设计，启发式分析，可用性分析；"
+msgstr "Kullanıcı odaklı tasarımın (UCD) sağlam bir şekilde kavranması, kullanıcı araştırması, kullanıcı testi, A/B testi, hızlı prototipleme, sezgisel analiz, kullanılabilirlik ve erişilebilirlik konularının planlanması ve yürütülmesi;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:275
+#: web/apps/welcome/templates/welcome/joinus.html:271
 msgid ""
 "Ability to clearly and effectively communicate design processes, ideas, and "
 "solutions to teams and clients;"
-msgstr "能够清晰有效地向团队和客户传达设计流程，想法和解决方案；"
+msgstr "Tasarım süreçlerini, fikirleri ve çözümleri takımlara ve müşterilere açık ve etkili bir şekilde iletme becerisi;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:276
+#: web/apps/welcome/templates/welcome/joinus.html:272
 msgid "Be open to receiving feedback and constructive criticism;"
-msgstr "愿意接受反馈和建设性的批评；"
+msgstr "Geri bildirim ve yapıcı eleştiri almaya açık olma;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:277
+#: web/apps/welcome/templates/welcome/joinus.html:273
 msgid "Be passionate about resolving user pain points through great design."
-msgstr "能通过优秀的设计解决用户痛点。"
+msgstr "kullanıcı stres noktalarını mükemmel tasarımla çözme konusunda tutkulu olma."
 
-#: web/apps/welcome/templates/welcome/joinus.html:293
+#: web/apps/welcome/templates/welcome/joinus.html:288
 msgid "Product Manager"
-msgstr "产品经理"
+msgstr "Ürün Müdürü"
 
-#: web/apps/welcome/templates/welcome/joinus.html:302
+#: web/apps/welcome/templates/welcome/joinus.html:297
 msgid ""
 "understand development of industry and customer requirements, form product "
 "need specification;"
-msgstr "深入了解行业发展、客户需求，形成产品需求文档；"
+msgstr "endüstri ve müşteri gereksinimlerinin gelişimini anlamak, ürün detayları şartnamesi oluşturmak;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:303
+#: web/apps/welcome/templates/welcome/joinus.html:298
 msgid ""
 "Design product UE by requirements document, clearly and accurately "
 "communicate demands with developing engineers;"
-msgstr ""
-"根据产品需求文档，进行产品UE设计，并向开发工程师清晰准确的传达产品需求；"
+msgstr "Şartname belgesine göre ürün tasarımı UE, mühendisler ile talepleri açıkça ve doğru bir şekilde iletmek;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:304
+#: web/apps/welcome/templates/welcome/joinus.html:299
 msgid "Manage product demand changes during product development;"
-msgstr "在产品开发期间，管理产品需求变更；"
+msgstr "Ürün geliştirme sırasında ürün talebi değişikliklerini yönetmek;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:305
+#: web/apps/welcome/templates/welcome/joinus.html:300
 msgid "Confirm product needs fulfillment during product testing;"
-msgstr "在产品测试期间，确认产品需求的完成情况；"
+msgstr "Ürün testi sırasında ürün ihtiyaçlarının karşılanmasını sağlamak;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:306
+#: web/apps/welcome/templates/welcome/joinus.html:301
 msgid ""
 "After the product is released, track customers' usage and timely find "
 "problems."
-msgstr "在产品上线发布后，追踪客户使用情况，及时发现产品问题。"
+msgstr "Ürün piyasaya sürüldükten sonra, müşterilerin kullanımını izleyin ve sorunları zamanında bulmak."
 
-#: web/apps/welcome/templates/welcome/joinus.html:311
+#: web/apps/welcome/templates/welcome/joinus.html:306
 msgid "3+ years of e-commerce industry product design experience;"
-msgstr "3年以上的电子商务行业产品设计经验；"
+msgstr "3 yıllık e-ticaret endüstrisi ürün tasarımı deneyimi;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:312
+#: web/apps/welcome/templates/welcome/joinus.html:307
 msgid "Proficient with product prototype design tools;"
-msgstr "熟练使用产品原型设计工具；"
+msgstr "Ürün prototip tasarım araçları ile deneyimli;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:313
+#: web/apps/welcome/templates/welcome/joinus.html:308
 msgid "Familiar mobile UX design;"
-msgstr "熟悉移动端应用的产品设计；"
+msgstr "bilindik mobil UX tasarımı;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:314
+#: web/apps/welcome/templates/welcome/joinus.html:309
 msgid ""
 "Good technical background with creating rich user experience by technology;"
-msgstr "良好的技术背景，理解如何运用技术创造优秀的用户体验；"
+msgstr "Teknolojiyle zengin kullanıcı deneyimi yaratan iyi teknik altyapı;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:315
+#: web/apps/welcome/templates/welcome/joinus.html:310
 msgid "Good English level, read English documents fluently."
-msgstr "良好的英文阅读能力，能够顺畅阅读英文技术文档。"
+msgstr "İyi İngilizce seviyesi, İngilizce belgeleri akıcı bir şekilde okuyun."
 
-#: web/apps/welcome/templates/welcome/joinus.html:331
+#: web/apps/welcome/templates/welcome/joinus.html:325
 msgid "Android R&D Engineer"
-msgstr "Android研发工程师"
+msgstr "Android Ar-Ge Mühendisi"
 
-#: web/apps/welcome/templates/welcome/joinus.html:340
+#: web/apps/welcome/templates/welcome/joinus.html:334
 msgid ""
 "Responsible for the development of Android client product, help other "
 "developers grow and make progress;"
-msgstr "负责Android产品客户端的开发，帮助其他开发人员成长进步；"
+msgstr "Android client ürününün geliştirilmesinden sorumlu, diğer geliştiricilerin büyümesine ve ilerlemesine yardımcı olmak;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:341
+#: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
 "Participate in the analysis and design of products based on client "
 "requirements, cooperate with UI designers to complete initial testing based "
 "on product design;"
-msgstr ""
-"参与客户端产品的需求分析与设计，配合产品的设计及UI设计人员完成初步的测试工"
-"作；"
+msgstr "Müşteri gereksinimlerine dayalı ürünlerin analizi ve tasarımına katılmak, ürün tasarımına dayanan ilk testleri tamamlamak için kullanıcı arayüz tasarımcılarıyla işbirliği yapmak;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:342
+#: web/apps/welcome/templates/welcome/joinus.html:336
 msgid ""
 "Responsible for the development of subsequent iteration versions of the "
 "product, and continuously optimize the quality, performance, and user "
 "experience of products."
-msgstr "负责产品后续迭代版本开发，不断优化相关产品的质量、性能、用户体验。"
+msgstr "Ürünün sonraki yineleme sürümlerinin geliştirilmesinden sorumludur ve ürünlerin kalite, performans ve kullanıcı deneyimini sürekli olarak optimize eder."
 
-#: web/apps/welcome/templates/welcome/joinus.html:346
+#: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
 "3+ years experience in professional Java development; More than 2 years "
 "experience in Practical Android development experience; Familiar with "
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
-msgstr ""
-"扎实的java基础，具有3年以上java开发经验，至少2年以上Android实际开发经验，熟悉"
-"Android移动终端特性与开发特点，具备应对Android平台各类常见问题的能力；"
+msgstr "Profesyonel Java geliştirmede 3 yıldan fazla deneyim; En az 2 yıl Pratik Android geliştirme deneyimi; Android mobil terminallerin özellikleri ve geliştirme özelliklerine hakim; Sık karşılaşılan problemleri çözebilme."
 
-#: web/apps/welcome/templates/welcome/joinus.html:347
+#: web/apps/welcome/templates/welcome/joinus.html:341
 msgid ""
 "Familiar with Android components and session; Be able to reasonably allocate "
 "resources in the available session;"
-msgstr "熟悉Android各组件及其生命周期，并能在周期中合理的分配资源；"
+msgstr "Android bileşenlerine hakim; Mevcut sistem kaynaklarını makul bir şekilde kullanabilme."
 
-#: web/apps/welcome/templates/welcome/joinus.html:348
+#: web/apps/welcome/templates/welcome/joinus.html:342
 msgid ""
 "Familiar with common controls & custom controls, event mechanisms and "
 "gesture operations;"
-msgstr ""
-"熟悉常用控件及自定义控件、事件机制和手势操作，能够针对应用熟练的选择解决方"
-"案；"
+msgstr "Ortak kontroller ve özel kontroller ve olay mekanizmaları hakkında bilgi sahibi olmak;"
 
-#: web/apps/welcome/templates/welcome/joinus.html:349
+#: web/apps/welcome/templates/welcome/joinus.html:343
 msgid ""
 "Proficient in Android performance & memory optimization; good at solving "
 "system crashes & compatibility, memory leaks & overflow;"
-msgstr ""
-"精通Android性能和内存优化，善于解决系统崩溃、内存泄漏、内存溢出和兼容性问题；"
+msgstr "Android performans ve hafıza optimizasyonunda uzman; sistem çökmelerine ve uyumluluğuna, bellek sızıntılarına ve taşmaya karşı iyi bilgiye sahip."
 
-#: web/apps/welcome/templates/welcome/joinus.html:350
+#: web/apps/welcome/templates/welcome/joinus.html:344
 msgid "Familiar with Android network communication mechanism, Json analysis;"
-msgstr "熟悉Android下网络通信机制，熟悉Json解析；"
+msgstr "Android ağ iletişim mekanizması, Json analizini bilen."
 
-#: web/apps/welcome/templates/welcome/joinus.html:351
+#: web/apps/welcome/templates/welcome/joinus.html:345
 msgid "Familiar with Android common layout, animation and effect;"
-msgstr "熟悉常用布局，熟悉Android下的动画及效果；"
+msgstr "Android ortak düzeni, animasyon ve etkisi ile ilgili bilgi sahibi."
 
-#: web/apps/welcome/templates/welcome/joinus.html:352
+#: web/apps/welcome/templates/welcome/joinus.html:346
 msgid ""
 "Familiar with Android platform screen adaptation and version compatibility;"
-msgstr "熟悉android平台下屏幕适配和版本兼容；"
+msgstr "Android platform ekran uyarlaması ve sürüm uyumluluğu ile tanıdık."
 
-#: web/apps/welcome/templates/welcome/joinus.html:353
+#: web/apps/welcome/templates/welcome/joinus.html:347
 msgid ""
 "Competent to work independently; Experienced in analyzing & re-writing "
 "Android source code;"
-msgstr "能够独立完成项目者，有分析、改写android源代码经历者优先；"
+msgstr "Bağımsız çalışma yetkinliği; Android kaynak kodunu analiz etme ve yeniden yazma konusunda deneyimli."
 
-#: web/apps/welcome/templates/welcome/joinus.html:354
+#: web/apps/welcome/templates/welcome/joinus.html:348
 msgid ""
 "Excellent communication skills with team work spirit, work seriously and "
 "actively, rigorous and responsible;"
-msgstr "良好的沟通能力，良好的职业素质和团队合作精神，对工作认真负责；"
+msgstr "Takım çalışması ruhu ile mükemmel iletişim becerileri, ciddi ve aktif, titiz ve sorumluluk sahibi."
 
-#: web/apps/welcome/templates/welcome/joinus.html:355
+#: web/apps/welcome/templates/welcome/joinus.html:349
 msgid "Experienced in the application of open source framework is preferred;"
-msgstr "有丰富的开源框架使用经验者优先；"
+msgstr "Açık kaynak yığınların uygulanmasında deneyim aranmaktadır."
 
-#: web/apps/welcome/templates/welcome/joinus.html:356
+#: web/apps/welcome/templates/welcome/joinus.html:350
 msgid ""
 "Familiar with Android testing tools & process, experienced in cross "
 "application coding test."
-msgstr "熟悉Android测试工具、测试流程者优先，有编写跨应用测试代码经验者优先。"
+msgstr "Çapraz uygulama kodlama testinde deneyimli, Android test araçları ve süreci ile tanıdık."
 
-#: web/apps/welcome/templates/welcome/joinus.html:372
+#: web/apps/welcome/templates/welcome/joinus.html:365
 msgid "IOS Developer"
-msgstr "IOS开发工程师"
+msgstr "IOS Geliştirici"
 
-#: web/apps/welcome/templates/welcome/joinus.html:381
+#: web/apps/welcome/templates/welcome/joinus.html:374
 msgid ""
 "Assist the product manager to analyze and organize the customer's need, and "
 "make the product requirements document;"
-msgstr "协助产品经理，对客户的需求进行分析和整理，形成产品需求文档；"
+msgstr "Ürün yöneticisine, müşterinin ihtiyacını analiz ve organize etmesinde yol göstermek. Ürün gereksinimlerini belgelemek."
 
-#: web/apps/welcome/templates/welcome/joinus.html:382
+#: web/apps/welcome/templates/welcome/joinus.html:375
 msgid ""
 "Depending on the product requirements document, design iOS App system "
 "architecture;"
-msgstr "根据产品需求文档，设计iOS App的系统架构；"
+msgstr "Ürün gereksinimleri belgesine bağlı olarak, iOS App sistem mimarisini tasarlama."
 
-#: web/apps/welcome/templates/welcome/joinus.html:383
+#: web/apps/welcome/templates/welcome/joinus.html:376
 msgid ""
 "Depending on the system architecture design, conduct iOS App-related program "
 "development;"
-msgstr "根据系统架构设计，进行iOS App相关的程序开发；"
+msgstr "Sistem mimarisi tasarımına bağlı olarak iOS App ile ilgili program geliştirme."
 
-#: web/apps/welcome/templates/welcome/joinus.html:384
+#: web/apps/welcome/templates/welcome/joinus.html:377
 msgid ""
 "Depending on the product requirements document, conduct an overall test on "
 "the iOS app;"
-msgstr "根据产品需求文档，对已经开发完成的iOS App进行整体测试；"
+msgstr "Ürün gereksinimleri belgesine bağlı olarak, iOS uygulamasında genel bir test yapma."
 
-#: web/apps/welcome/templates/welcome/joinus.html:385
+#: web/apps/welcome/templates/welcome/joinus.html:378
 msgid ""
 "According to customers’ feedback, continuously revised and improved iOS app."
-msgstr "根据客户反馈，对iOS App进行修正。"
+msgstr "Müşterilerin geri bildirimlerine göre, sürekli olarak IOS uygulamasını gözden geçirip geliştirmek."
 
-#: web/apps/welcome/templates/welcome/joinus.html:389
-#: web/apps/welcome/templates/welcome/joinus.html:428
+#: web/apps/welcome/templates/welcome/joinus.html:382
+#: web/apps/welcome/templates/welcome/joinus.html:420
 msgid ""
 "Bachelor degree or above, graduated in computer science or related major;"
-msgstr "大学本科以上学历，计算机科学或相关专业毕业；"
+msgstr "Lisans derecesi veya üstü, bilgisayar bilimi veya ilgili ana dal mezunu."
 
-#: web/apps/welcome/templates/welcome/joinus.html:390
+#: web/apps/welcome/templates/welcome/joinus.html:383
 msgid ""
 "2+ years working experience in computer software, or more than 1 years "
 "working experience in iOS App development;"
-msgstr "2年以上计算机软件相关工作经验，1年以上的iOS App开发经验；"
+msgstr "Bilgisayar yazılımında 2 yıldan fazla iş deneyimi veya IOS Uygulama geliştirmede 1 yıldan fazla çalışma deneyimi."
 
-#: web/apps/welcome/templates/welcome/joinus.html:391
+#: web/apps/welcome/templates/welcome/joinus.html:384
 msgid "Familiar with Swift or Objective C programming language;"
-msgstr "熟悉Swift或Objective C编程语言；"
+msgstr "Swift veya Objective C programlama dillerine hakim."
 
-#: web/apps/welcome/templates/welcome/joinus.html:392
+#: web/apps/welcome/templates/welcome/joinus.html:385
 msgid ""
 "Familiar with the iOS's platform software development model and system "
 "architecture;"
-msgstr "熟悉iOS平台软件开发模式以及系统架构；"
+msgstr "IOS'un platform yazılım geliştirme modeli ve sistem mimarisine hakim."
 
-#: web/apps/welcome/templates/welcome/joinus.html:393
+#: web/apps/welcome/templates/welcome/joinus.html:386
 msgid ""
 "Familiar with common data structures and algorithms, has a persistent "
 "pursuit of new technologies;"
-msgstr "熟悉常用数据结构与算法，对新技术有着执著的追求；"
+msgstr "Ortak veri yapıları ve algoritmalarını bilme, yeni teknolojilerin sürekli takip etme."
 
-#: web/apps/welcome/templates/welcome/joinus.html:394
+#: web/apps/welcome/templates/welcome/joinus.html:387
 msgid "Good at using technology to create a good user experience;"
-msgstr "善于运用技术创造好的用户体验；"
+msgstr "İyi bir kullanıcı deneyimi yaratmak için teknolojiye hakim."
 
-#: web/apps/welcome/templates/welcome/joinus.html:395
+#: web/apps/welcome/templates/welcome/joinus.html:388
 msgid "Good English level, able to read English technical documents smoothly."
-msgstr "良好的英文阅读能力，能够顺畅阅读英文技术文档。"
+msgstr "İyi İngilizce seviyesi, İngilizce teknik belgeleri okuyup anlayabilme."
 
-#: web/apps/welcome/templates/welcome/joinus.html:411
+#: web/apps/welcome/templates/welcome/joinus.html:403
 msgid "Front-end Web Developer"
-msgstr "网站前端工程师"
+msgstr "Ara yüz web geliştiricisi"
 
-#: web/apps/welcome/templates/welcome/joinus.html:420
+#: web/apps/welcome/templates/welcome/joinus.html:412
 msgid ""
 "Assist the product manager, analyze and organize the customer's need, and "
 "make the product requirements document;"
-msgstr "协助产品经理，对客户的需求进行分析和整理，形成产品需求文档；"
+msgstr "Ürün yöneticisine yardımcı olun, müşterinin ihtiyacını analiz etme ve düzenleme ve ürün gereksinimlerini belgeleleme."
 
-#: web/apps/welcome/templates/welcome/joinus.html:421
+#: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
 "Depending on the product requirements document, design the architecture of "
 "the website front-end;"
-msgstr "根据产品需求文档，设计网站前端的架构；"
+msgstr "Ürün gereksinimleri belgesine bağlı olarak, web sitesinin ara yüz mimarisini tasarlama."
 
-#: web/apps/welcome/templates/welcome/joinus.html:422
+#: web/apps/welcome/templates/welcome/joinus.html:414
 msgid ""
 "Depending on the design draft provided by the UI designer, complete the "
 "production of the website page;"
-msgstr "根据UI设计师提供的设计稿，完成网站页面的制作；"
+msgstr "UI tasarımcısı tarafından sağlanan tasarım taslağına bağlı olarak, web sitesi sayfasının üretimini tamamlama."
 
-#: web/apps/welcome/templates/welcome/joinus.html:423
+#: web/apps/welcome/templates/welcome/joinus.html:415
 msgid ""
 "According to the product requirements document, complete the development of "
 "the site front-end interactive part of the program;"
-msgstr "根据产品需求文档，完成网站前端交互部分程序的开发；"
+msgstr "Ürün gereksinimleri belgesine göre, programın ön uç etkileşimli bölümünün geliştirilmesini tamamlama."
 
-#: web/apps/welcome/templates/welcome/joinus.html:424
+#: web/apps/welcome/templates/welcome/joinus.html:416
 msgid ""
 "According to consumer’s feedback, correct the front end issues of the "
 "website."
-msgstr "根据客户反馈，对网站前端的问题进行修正。"
+msgstr "Tüketicinin geri bildirimlerine göre, web sitesinin ön uç sorunlarını düzeltme."
 
-#: web/apps/welcome/templates/welcome/joinus.html:429
+#: web/apps/welcome/templates/welcome/joinus.html:421
 msgid ""
 "2+ years working experience in computer software, more than 1 year "
 "experience in front end development of the website;"
-msgstr "2年以上计算机软件相关工作经验，1年以上的网站前端开发经验；"
+msgstr "Bilgisayar yazılımında 2 yıldan fazla çalışma deneyimi, web sitesinin ön geliştirmesinde 1 yıldan fazla deneyim."
 
-#: web/apps/welcome/templates/welcome/joinus.html:430
+#: web/apps/welcome/templates/welcome/joinus.html:422
 msgid ""
 "Familiar with AI and Photoshop software, can create web pages based on UI "
 "design drafts;"
-msgstr "熟悉AI和Photoshop软件，能够根据UI设计稿制作网页；"
+msgstr "AI ve Photoshop yazılımı hakkında bilgi sahibi olmak, UI tasarım taslaklarına dayanan web sayfaları oluşturabilmek."
 
-#: web/apps/welcome/templates/welcome/joinus.html:431
+#: web/apps/welcome/templates/welcome/joinus.html:423
 msgid "Familiar with HTML5, CSS, Javascript programming language;"
-msgstr "熟悉HTML5，CSS，Javascript编程语言；"
+msgstr "HTML5, CSS, Javascript programlama dillerine hakim."
 
-#: web/apps/welcome/templates/welcome/joinus.html:432
+#: web/apps/welcome/templates/welcome/joinus.html:424
 msgid ""
 "Familiar with website front-end development framework such as jQuery and "
 "Bootstrap;"
-msgstr "熟悉jQuery，Bootstrap等网站前端开发框架；"
+msgstr "jQuery ve Bootstrap gibi web sitesi ara yüz geliştirme yapılarına hakim."
 
-#: web/apps/welcome/templates/welcome/joinus.html:433
+#: web/apps/welcome/templates/welcome/joinus.html:425
 msgid ""
 "Familiar with the principle of responsive Web design, with practical "
 "experience;"
-msgstr "熟悉响应式Web设计原理，具备实践经验；"
+msgstr "Pratik deneyime sahip, responsive Web tasarımı ilkelerine aşina."
 
-#: web/apps/welcome/templates/welcome/joinus.html:434
+#: web/apps/welcome/templates/welcome/joinus.html:426
 msgid "Skillfully use existing technology to set up the best user experience;"
-msgstr "能够熟练运用现有的技术，创造最佳的用户体验；"
+msgstr "En iyi kullanıcı deneyimini kurmak için mevcut teknolojilere hakim."
 
-#: web/apps/welcome/templates/welcome/joinus.html:435
+#: web/apps/welcome/templates/welcome/joinus.html:427
 msgid "Good English level, able to read English technical documents."
-msgstr "良好的英文阅读能力，能够顺畅阅读英文技术文档。"
+msgstr "İyi İngilizce seviyesi, İngilizce teknik belgeleri okuyabilme."
 
 #: web/apps/welcome/templates/welcome/legal.html:6
 #: web/apps/welcome/templates/welcome/legal.html:13
 msgid "Legal Information"
-msgstr "法律信息"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:6
 #: web/apps/welcome/templates/welcome/mediakit.html:13
 #: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/templates/footer.html:39
 msgid "Media Kit"
-msgstr "品牌资源"
+msgstr "Medya Kiti"
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
 #: web/templates/header.html:28
@@ -3168,99 +3049,99 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:23
 msgid "Digital Identity"
-msgstr "数字身份与信用"
+msgstr "Dijital Kimlik"
 
 #: web/apps/welcome/templates/welcome/newpay.html:24
 msgid "Create and manage the DID (Decentralized ID);"
-msgstr "创建和管理DID(Decentralized ID)；"
+msgstr "DID yaratma ve yönetme (DID: Merkezi olmayan kimlik);"
 
 #: web/apps/welcome/templates/welcome/newpay.html:25
 msgid "Set privacy mode for personal information;"
-msgstr "设置个人信息隐私模式；"
+msgstr "Kişisel bilgiler icin gizlilik modu ayarlama;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:26
 msgid "Trading information management;"
-msgstr "交易信息管理；"
+msgstr "Trading bilgisi yönetimi;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:27
 msgid "Trading information pricing and benefit from sharing;"
-msgstr "交易信息共享定价及收益；"
+msgstr "Trading bilgisi fiyatlandırması ve paylaşım faydası;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:28
 msgid "Digital asset management, including NEW, BTC, ETH, etc."
-msgstr "数字资产管理，包括NEW、BTC、ETH等。"
+msgstr "Dijital varlık yönetimi, NEW, BTC, ETH vb."
 
 #: web/apps/welcome/templates/welcome/newpay.html:37
 msgid "Payment"
-msgstr "支付"
+msgstr "Ödeme"
 
 #: web/apps/welcome/templates/welcome/newpay.html:38
 msgid "Support cross-border trades;"
-msgstr "支持跨境交易；"
+msgstr "Sınır ötesi ödeme ve ticaret desteği;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:39
 msgid "Support micro-payment;"
-msgstr "支持超小额度支付；"
+msgstr "Mikro ödeme desteği;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:40
 msgid "Rapid trade confirmation."
-msgstr "极快的交易确认速度。"
+msgstr "Hızlı işlem onayı."
 
 #: web/apps/welcome/templates/welcome/newpay.html:50
 msgid "Joint Login"
-msgstr "联合登录"
+msgstr "Ortak Giris"
 
 #: web/apps/welcome/templates/welcome/newpay.html:51
 msgid "Log in multiple Dapps using a unified identity;"
-msgstr "使用统一身份登录多个Dapp；"
+msgstr "Birden fazla dağıtık uygulamaya birleşik kimlik ile giriş;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:52
 msgid "Dapp management and permission control;"
-msgstr "Dapp管理和权限控制；"
+msgstr "Dağıtık uygulama yönetimi ve izin kontrolü;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:53
 msgid "Safety audit."
-msgstr "安全审计。"
+msgstr "Güvenlik denetimi."
 
 #: web/apps/welcome/templates/welcome/newpay.html:62
 msgid "Built-in applications"
-msgstr "内置应用"
+msgstr "Yerlesik Uygulamalar"
 
 #: web/apps/welcome/templates/welcome/newpay.html:63
 msgid "Support built-in applications published by the free and open source;"
-msgstr "支持采用自由开源方式发布的内置应用；"
+msgstr "Ücretsiz ve açık kaynaklı yayınlanan yerleşik uygulama desteği;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:64
 msgid "Support built-in applications purchase;"
-msgstr "支持内置应用购买；"
+msgstr "Yerleşik uygulama satın alma desteği;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:65
 msgid "Support built-in applications development tools."
-msgstr "内置应用开发工具支持。"
+msgstr "Yerleşik uygulama geliştirme araçlari desteği;"
 
 #: web/apps/welcome/templates/welcome/partner.html:6
 #: web/apps/welcome/templates/welcome/partner.html:13
 #: web/templates/footer.html:15
 msgid "Partner"
-msgstr "合作伙伴"
+msgstr "Ortak"
 
 #: web/apps/welcome/templates/welcome/press.html:6
 #: web/apps/welcome/templates/welcome/press.html:13
 msgid "PRESS"
-msgstr "媒体报道"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/press.html:29
 msgid "Details"
-msgstr "详情"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/press.html:47
 msgid "No presss"
-msgstr "暂无媒体报道"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:20
 msgid ""
 "Newton Foundation is committed to protecting and respecting your privacy."
-msgstr "牛顿基金会致力于保护和尊重您的隐私。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:21
 msgid ""
@@ -3270,21 +3151,18 @@ msgid ""
 "carefully to understand our views and practices regarding your personal data "
 "and how we will treat it. "
 msgstr ""
-"本政策(连同我们的使用条款和任何其他文件)列出了我们向您收集的任何个人资料，或"
-"您提供给我们的任何个人资料，将由我们处理。请仔细阅读以下内容，了解我们对您个"
-"人资料的看法和做法，以及我们将如何处理。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:23
 msgid "INFORMATION WE COLLECT FROM YOU"
-msgstr "我们收集的信息"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:24
 msgid "We will collect and process the following data about you:"
-msgstr "我们将收集和处理以下关于您的数据:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:26
 msgid "Information you give us."
-msgstr "您提交的信息"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:26
 msgid ""
@@ -3299,22 +3177,17 @@ msgid ""
 "phone number, web site Uniform Resource Locator (URL), financial and credit "
 "card information, personal description, and free-form text."
 msgstr ""
-"这是您给我们的信息，你通过填写我们的网站newtonproject.org(每个网站，我们的“网"
-"站”)或通过电话、电子邮件或其他方式与我们联系。您提供的信息来源如：网站注册,购"
-"物车添加产品或服务,参与论坛或其他社交媒体功能,在网站报告一个问题等。您提供的"
-"信息可能包括您的姓名、地址、电子邮件地址、电话号码、网站统一资源定位器(URL)、"
-"金融和信用卡信息、个人描述和自由格式文本。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:27
 #: web/apps/welcome/templates/welcome/privacy.html:49
 msgid "Information we collect about you."
-msgstr "我们收集到的信息。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:27
 msgid ""
 "With regard to each of your visits to our sites we will automatically "
 "collect the following information:"
-msgstr "您每次访问我网站的时候，我们将自动收集以下信息:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:29
 msgid ""
@@ -3322,8 +3195,6 @@ msgid ""
 "connect your computer to the Internet, browser type and version, time zone "
 "setting, browser plug-in types and versions, operating system, and platform."
 msgstr ""
-"技术信息，包括Internet协议(IP)地址，用于连接您的计算机到Internet、浏览器类型"
-"和版本、时区设置、浏览器插件类型和版本、操作系统和平台。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:30
 msgid ""
@@ -3331,8 +3202,6 @@ msgid ""
 "(URL), products you added to your shopping cart, download errors, length of "
 "visits to certain pages."
 msgstr ""
-"关于您访问的信息，包括完全统一的资源定位器(URL)，您添加到购物车的产品，下载错"
-"误，跳转到特定页面的访问时间。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:36
 msgid "COOKIES"
@@ -3346,26 +3215,23 @@ msgid ""
 "information on the cookies we use and the purposes for which we use them, "
 "see our Cookie Policy."
 msgstr ""
-"我们的网站使用cookie来区分你和我们网站的其他用户。这可以帮助我们在浏览我们的"
-"网站时提供良好的体验，同时也能让我们改进网站。有关我们使用的Cookie的详细信息"
-"以及我们使用它们的目的，请参阅我们的Cookie策略。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:39
 msgid "USES MADE OF THE INFORMATION"
-msgstr "信息的使用"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:40
 msgid "We use information held about you in the following ways:"
-msgstr "我们会在以下情形使用您的信息："
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:42
 msgid "Information you give to us. "
-msgstr "您提交给我们的信息"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:42
 #: web/apps/welcome/templates/welcome/privacy.html:49
 msgid "We will use this information:"
-msgstr "我们将使用您的信息："
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:44
 msgid ""
@@ -3373,18 +3239,16 @@ msgid ""
 "you and us, and to provide you with the information, products and services "
 "that you request from us;"
 msgstr ""
-"履行您与我们之间签订的任何合同所产生的义务，并向你提供你所要求的信息、产品和"
-"服务;"
 
 #: web/apps/welcome/templates/welcome/privacy.html:45
 msgid "to notify you about changes to our service;"
-msgstr "通知您有关我们服务的改变;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:46
 msgid ""
 "to ensure that content from our sites is presented in the most effective "
 "manner for you and for your computer."
-msgstr "确保我们网站的内容以最有效的方式呈现给您。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:51
 msgid ""
@@ -3392,27 +3256,26 @@ msgid ""
 "troubleshooting, data analysis, testing, research, statistical and survey "
 "purposes;"
 msgstr ""
-"管理我们的网站和内部运作，包括故障排除、数据分析、测试、研究、统计和调查;"
 
 #: web/apps/welcome/templates/welcome/privacy.html:52
 msgid ""
 "to improve our site to ensure that content is presented in the most "
 "effective manner for you and for your computer;"
-msgstr "改善我们的网站以确保内容以最有效的方式呈现给您;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:53
 msgid ""
 "to allow you to participate in interactive features of our service, when you "
 "choose to do so;"
-msgstr "让您可以参与我们服务的互动功能；"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:54
 msgid "as part of our efforts to keep our site safe and secure;"
-msgstr "使我们的网站安全;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:57
 msgid "Information we receive from other sources."
-msgstr "从其他渠道获取的信息。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:57
 msgid ""
@@ -3420,45 +3283,43 @@ msgid ""
 "information we collect about you. We will use this information and the "
 "combined information for the purposes set out above (depending on the types "
 "of information we receive)."
-msgstr "我们将使用这些信息，达到上述目的(取决于所接收的信息类型)。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:60
 msgid "DISCLOSURE OF YOUR INFORMATION"
-msgstr "公开您的信息"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:61
 msgid ""
 "You agree that we have the right to share your personal information with:"
-msgstr "您需要授权给我们分享您的个人信息:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:63
 msgid "Selected third parties including:"
-msgstr "选择第三方包括:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:65
 msgid ""
 "Analytics and search engine providers that assist us in the improvement and "
 "optimisation of our site;"
-msgstr "分析和搜索引擎供应商，帮助我们改进和优化我们的网站;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:66
 msgid ""
 "E-commerce providers such as payment solution providers to assist us in the "
 "processing of your online purchases, donations and other payments."
 msgstr ""
-"电子商务提供商，例如支付解决方案提供商，帮助我们处理您的在线购买、捐赠和其他"
-"支付。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:70
 msgid "We will disclose your personal information to third parties:"
-msgstr "我们将向第三方披露您的个人信息:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:72
 msgid ""
 "In the event that we sell or buy any business or assets, in which case we "
 "will disclose your personal data to the prospective seller or buyer of such "
 "business or assets."
-msgstr "当我们出售或购买任何业务，我们将向潜在的卖方或买方披露您的个人资料。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:73
 msgid ""
@@ -3466,8 +3327,6 @@ msgid ""
 "party, in which case personal data held by it about its customers will be "
 "one of the transferred assets."
 msgstr ""
-"如果公司或实质上全部资产都是由第三方获得的，其客户持有的个人数据将成为其可转"
-"移的资产。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:74
 msgid ""
@@ -3478,13 +3337,10 @@ msgid ""
 "includes exchanging information with other companies and organisations for "
 "the purposes of fraud protection and credit risk reduction."
 msgstr ""
-"我们需要分享您的个人资料，以遵守有些法律义务，或为了执行我们的使用条款，或其"
-"他协议;或者为了保护公司或其他公司的权利、财产或安全。这包括与其他公司和组织交"
-"换信息，以防止欺诈和降低信用风险。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:77
 msgid "WHERE WE STORE YOUR PERSONAL DATA"
-msgstr "我们在哪里储存你的个人信息?"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:78
 msgid ""
@@ -3498,17 +3354,12 @@ msgid ""
 "necessary to ensure that your data is treated securely and in accordance "
 "with this privacy policy."
 msgstr ""
-"我们收集的数据将被转移到欧洲经济区(EEA)。它将由为我们工作的EEA以外的工作人员"
-"处理。通过您提交的个人数据，我们会提供订单处理，处理付款细节等服务。我们将采"
-"取一切合理必要的步骤，以确保您的数据得到安全的处理，并符合本隐私政策。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:79
 msgid ""
 "All information you provide to us is stored on our secure servers. Any web-"
 "based payment transactions will be encrypted using SSL technology."
 msgstr ""
-"您提供给我们的所有信息都存储在我们的安全服务器上。任何基于web的支付交易都将使"
-"用SSL技术进行加密。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:80
 msgid ""
@@ -3519,14 +3370,10 @@ msgid ""
 "information, we will use strict procedures and security features to try to "
 "prevent unauthorised access."
 msgstr ""
-"不幸的是，通过互联网传输信息并不是完全安全的。虽然我们会尽力保护你的个人资"
-"料，但我们不能保证你的资料安全传送到我们的网站;在任何信息传输您都有一定的风"
-"险。一旦我们收到您的信息，我们将使用严格的程序和安全特性来防止未经授权的访"
-"问。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:82
 msgid "YOUR RIGHTS"
-msgstr "您的权利"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:83
 msgid ""
@@ -3538,10 +3385,6 @@ msgid ""
 "use to collect your data. You can also exercise the right at any time by "
 "contacting us at contact@newtonproject.org."
 msgstr ""
-"您有权要求我们不要为了营销目的而使用您的个人资料。我们通常会在收集您的资料前"
-"通知你，如果我们打算使用您的资料作此用途，或我们打算向任何第三者披露您的资"
-"料。您可以通过检查我们用来收集您的数据的地方来行使您的权利。你也可以通过 "
-"contact@newtonproject.org 与我们联系来行使你的权利。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:84
 msgid ""
@@ -3552,13 +3395,10 @@ msgid ""
 "policies. Please check these policies before you submit any personal data to "
 "these websites."
 msgstr ""
-"我们的网站可能不时地添加我们的合作伙伴、赞助商和附属公司的网站的链接。如果你"
-"跟随这些网站的链接，请注意这些网站有他们自己的隐私政策，我们不接受这些政策的"
-"任何责任。在向这些网站提交个人资料之前，请检查他们的隐私政策。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:86
 msgid "CHANGES TO OUR PRIVACY POLICY"
-msgstr "更新我们的隐私政策"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:87
 msgid ""
@@ -3567,44 +3407,38 @@ msgid ""
 "mail. Please check back frequently to see any updates or changes to our "
 "privacy policy."
 msgstr ""
-"我们在未来对我们的隐私政策作出的任何改变都将在本页上公布，并在适当的情况下通"
-"过电子邮件通知您。请经常查看我们的隐私政策的更新。"
 
 #: web/apps/welcome/templates/welcome/privacy.html:89
 msgid "CONTACT"
-msgstr "联系我们"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:90
 msgid ""
 "Questions, comments and requests regarding this privacy policy should be "
 "addressed to contact@newtonproject.org."
-msgstr "有关本隐私政策的问题、讨论和要求，应提交给 contact@newtonproject.org。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:91
 msgid "Last modified: April 2018"
-msgstr "修改时间：2018年4月"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
 #: web/templates/header.html:22
 msgid "HEP"
-msgstr "超级交换协议"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
 "User can manage and control the access to his/her digital assets by using "
 "digital identity. Digital assets including cryptocurrency, privacy data, "
 "personal credit and so on."
-msgstr ""
-"运用数字身份，用户可以方便管理自己的数字资产，如:加密货币、隐私数据、个人信用"
-"等，以及对数字资产进行访问控制。"
+msgstr "Kullanıcılar kendi dijital varlıklarını dijital kimliklerini kullanarak yonetebilir ve kontrol edebilir. Dijital varlıklar; kripto paralar, gizli veriler, kişisel krediler vb."
 
 #: web/apps/welcome/templates/welcome/protocol.html:24
 msgid ""
 "User can control and set different privacy modes for corresponding digital "
 "assets, and price the digital assets."
-msgstr ""
-"针对不同类型数字资产，用户可以设置相应的隐私模式，也可以为付费模式的数字资产"
-"直接定价。"
+msgstr "Kullanıcılar birçok gizlilik modu arasından seçim yapabilir ve dijital varliklarina deger biçip kontrol edebilir."
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
 msgid ""
@@ -3612,45 +3446,35 @@ msgid ""
 "identity for commodities over the whole network. Through this digital "
 "identity, you can check the relevant information on the commodity at any "
 "time."
-msgstr ""
-"通过运用原子哈希等技术，我们可以为商品建立全网唯一数字身份。通过该数字身份，"
-"可以随时查阅商品的相关信息。"
+msgstr "“Atom Hashing” adı verilen teknikleri kullanarak, emtialar için tüm ağ üzerinden benzersiz bir dijital kimlik oluşturabiliriz. Bu dijital kimlik sayesinde, emtiaya ilişkin bilgileri istediğiniz zaman kontrol edebilirsiniz."
 
 #: web/apps/welcome/templates/welcome/protocol.html:38
 msgid ""
 "In the whole supply chain, the basic information on each operation of the "
 "product will be stored on the blockchain to ensure that the data will not be "
 "tampered."
-msgstr ""
-"在供应链全流程，针对商品每次操作的基础信息都将存储到区块链上，确保数据不可篡"
-"改。 "
+msgstr "Tüm tedarik zincirinde, ürünün her işlemiyle ilgili temel bilgiler, verilerin değiştirilmesini önlemek için blok zincirinde saklanır."
 
 #: web/apps/welcome/templates/welcome/protocol.html:39
 msgid ""
 "Through smart contract, we can pre-set commercial exchanging rules to "
 "realize automatic insurance claims and property rights transfers. This will "
 "reduce the transaction costs and promote cooperation efficiency."
-msgstr ""
-"通过智能合约技术，可以根据预先设定的商业规则实现自动保险理赔、物权转移等，减"
-"少交易摩擦，促进合作。"
+msgstr "Akıllı sözleşme ile, otomatik sigorta taleplerini gerçekleştirmek için ticari değis tokuş kurallarını önceden belirleyebiliriz, böylece işlem maliyetlerini düşürür ve işbirliği verimliliğini arttırırız."
 
 #: web/apps/welcome/templates/welcome/protocol.html:52
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system, including incentive modes, settlement "
 "modes, and dynamic price adjusting rules."
-msgstr ""
-"广告主通过系统内置的各种营销类智能合约模版设定营销方案，包括激励模式、结算模"
-"式，动态价格调整规则等。"
+msgstr "Reklamcilar, teşvik planları, ödeme modları ve dinamik fiyat ayarlama kuralları dahil olmak üzere, sistemdeki çeşitli ön tanımlı akıllı pazarlama sözleşmesi şablonlarını kullanarak pazarlama planlarını belirleyebilirler."
 
 #: web/apps/welcome/templates/welcome/protocol.html:53
 msgid ""
 "Advertisers can audit ongoing and completed marketing contracts. By calling "
 "out the DAI system, you can conduct market research before marketing "
 "activities, and analyze the results after the marketing activities."
-msgstr ""
-"广告主可审计进行中和已完成投放的营销合约。通过调用DAI系统，可以在营销活动前进"
-"行市场调研，以及营销结束后分析投放效果。"
+msgstr "Reklamcılar, devam eden ve bitmiş pazarlama sözleşmelerini denetleyebilirler. DAI sistemini çağırarak pazarlama faaliyetlerinden önce pazar araştırması yapabilir ve pazarlama faaliyetlerinden sonra sonuçları analiz edebilirsiniz."
 
 #: web/apps/welcome/templates/welcome/protocol.html:66
 msgid ""
@@ -3658,13 +3482,11 @@ msgid ""
 "engines, including multi-party transactions based on complex business rules, "
 "settlement rules, smart insurance contracts, smart financial contracts, and "
 "external chain service."
-msgstr ""
-"通过使用内建的智能合约模版和规则引擎定义交易，包括基于复杂业务规则的多方交"
-"易、结算规则、关联智能保险合约、关联智能金融合约、关联链外服务等。"
+msgstr "Karmaşık iş kurallarını, anlaşma kurallarını, akıllı sigorta sözleşmelerini, akıllı finans sözleşmelerini ve dış zincir hizmetini de içeren, çok taraflı işlemler de dahil olmak üzere, sisteme entegre olmuş akıllı sözleşme şablonları ve kural motorlarını kullanarak işlemlerin tanımlanması."
 
 #: web/apps/welcome/templates/welcome/protocol.html:79
 msgid "Reliable physical tunnel"
-msgstr "可信物理通道"
+msgstr "Güvenilir fiziksel tunel"
 
 #: web/apps/welcome/templates/welcome/protocol.html:81
 msgid ""
@@ -3672,13 +3494,11 @@ msgid ""
 "tunnel protocol and defined manufacturing specifications of related "
 "equipment. Any third party can manufacture safety equipment according to the "
 "protocol specification."
-msgstr ""
-"基于NewChain、NewIoT等技术，我们设计了可信物理通道协议，并定义相关设备制造规"
-"范，任何第三方都可以根据协议规范制造出安全设备。"
+msgstr "NewChain ve NewIOT teknolojilerine dayanarak, güvenilir bir fiziksel tünel protokolü tasarladık ve ilgili ekipmanın üretim özelliklerini belirledik. Herhangi bir üçüncü taraf, protokol şartnamesine göre güvenlik ekipmanı üretebilir."
 
 #: web/apps/welcome/templates/welcome/protocol.html:93
 msgid "Automatic finance"
-msgstr "自金融"
+msgstr "Otomatik finans"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
 msgid ""
@@ -3687,41 +3507,35 @@ msgid ""
 "identity and credit, KYC information, staking the Newton token address, "
 "contract rules and external chain service. The system will automatically "
 "match smart financial contracts and completes transaction matching."
-msgstr ""
-"基于系统内建的保险、借贷、投资等智能合约模版定义智能金融合约, 包括:数字身份与"
-"信用、KYC信息、锁定牛顿通证地址、合约规则、关联链外服务等。系统自动匹配智能金"
-"融合约，完成交易匹配。"
+msgstr "Yazılımcılar, dijital kimlik ve kredi, KYC bilgisi, Newton tokeni stake etme, sözleşme kuralları ve dış zincir hizmeti dahil olmak üzere sigorta, borç verme ve yatırımla ilgili sisteme entegre edilmiş akıllı sözleşme şablonlarıyla akıllı finansal sözleşmeleri tanımlayabilirler. Sistem akıllı finansal sözleşmeleri otomatik olarak eşleştirecek ve işlem eşleştirmesini tamamlayacaktır."
 
 #: web/apps/welcome/templates/welcome/protocol.html:107
 msgid "NNIO"
-msgstr "NNIO"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:109
 msgid ""
 "Developers can access NewNET through the NNIO (NewNET IO) protocol, using "
 "storage service, computing service, and domain names."
-msgstr ""
-"开发者可通过NNIO(NewNET IO)协议访问NewNET，使用存储、计算、域名等服务。 "
+msgstr "Yazilimcilar NewNet’e NNIO (NewNet IO) protokolu aracılığylayla depolama hizmetlerini,bilgi işlem  hizmetlerini ve alan adı isimlerini kullanarak erişebilirler."
 
 #: web/apps/welcome/templates/welcome/protocol.html:110
 msgid ""
 "Through smart storage contracts, smart computing contracts, smart domain "
 "name contracts, developers can quickly and innovatively develop applications."
-msgstr ""
-"通过智能存储合约、智能计算合约、智能域名合约等，开发者可以快速、低成本开发创"
-"新应用。"
+msgstr "Akıllı depolama sözleşmeleri, akıllı bilgi işlem sözleşmeleri, akıllı alan adı sözleşmeleri sayesinde, geliştiriciler hızlı ve yenilikçi bir şekilde uygulamalar geliştirebilirler."
 
 #: web/apps/welcome/templates/welcome/roadmap.html:6
 msgid "Roadmap"
-msgstr "路线图"
+msgstr "YOL HARITASI"
 
 #: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
 msgid "Team"
-msgstr "团队"
+msgstr "Takim"
 
 #: web/apps/welcome/templates/welcome/tech.html:6
 msgid "TECH"
-msgstr "技术"
+msgstr "Teknoloji"
 
 #: web/apps/welcome/templates/welcome/tech.html:22
 msgid ""
@@ -3733,12 +3547,7 @@ msgid ""
 "between the main chain and sub-chains, and between sub-chains. After a third-"
 "party developer can create a new sub-chain after staking a certain amount of "
 "Newton tokens and passing the verification."
-msgstr ""
-"NewChain采用主链、子链设计方案，主链负责账户管理、 牛顿通证管理 、 子链管"
-"理 、 网络治理等。子链支撑具体业务系统，如超级交换协议。子链支持多种共识机制"
-"和数据结构，主链与子链之间，子链与子链之间可以进行资产交换。第三方开发者在锁"
-"定一定数量牛顿通证 (Newton Token)并通过审核后，可以创建新的子链，子链可发行新"
-"的通证。 "
+msgstr "NewChain bir adet ana zincir ve coklu alt zincir yapisina sahip olacaktir. Ana zincir; hesap yonetimi, Newton tokeni yonetimi, alt zincir yonetimi, ag yonetisimi ve benzerlerini destekleyecektir. Alt zincir ise, ana zincir ve alt zincirler arasinda ve alt zincirlerin kendi arasindaki varlik islemlerinin yapilmasini saglayan hyper degisim protokolu ve coklu fikir birligi mekanizmalari ve veri yapilari gibi belirli hizmet sistemlerini destekleyecektir. Ucuncu sahis bir yazilimci, belirli bir sayidaki Newton tokenini stake edip, incelemeyi basariyla gectikten sonra, yeni bir alt zincir olusturabilir ve yeni tokenlar yayinlayabilir."
 
 #: web/apps/welcome/templates/welcome/tech.html:23
 msgid ""
@@ -3746,16 +3555,13 @@ msgid ""
 "programming languages such as C/C++, Java, Python, TypeScript, etc. The "
 "system provides some built-in smart contract templates for the hyper "
 "exchange protocols so that to make the application development work simpler."
-msgstr ""
-" NewVM兼容WebAssembly标准，支持C/C++、Java、Python、TypeScript等主流编程语言"
-"开发智能合约。系统为超级交换协议提供一些内置的智能合约模版，简化应用开发工"
-"作。"
+msgstr "NewVM, C / C ++, Java, Python, TypeScript vb. gibi yaygin programlama dillerini destekleyen Webassembly standardi ile uyumludur. Sistem, aplikasyon gelistirmeyi kolaylastirmak icin, hiper degisim protokollerine ozel olan bazı yerlesik akilli sozlesme sablonlari sunar."
 
 #: web/apps/welcome/templates/welcome/tech.html:24
 msgid ""
 "NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure the "
 "security of the assets."
-msgstr "NewChain采用Ring-LWE抗量子加密算法，确保链上数字资产的安全。"
+msgstr "NewChain varliklarin guvenligini saglamak icin Ring-LWE anti-kuantum sifreleme algoritmasini kullanir."
 
 #: web/apps/welcome/templates/welcome/tech.html:36
 msgid ""
@@ -3767,11 +3573,7 @@ msgid ""
 "computing power, then get the corresponding incentive rewards. Decentralized "
 "DNS(Domain Name Service) will be achieved through the blockchain technology, "
 "increasing the ease of using NewNET."
-msgstr ""
-"由大量的节点组成的NewNET是一个开放式网络，提供安全可靠的存储服务，支持完整的"
-"SQL数据库，多种主流编程语言。大多数网络服务都可直接托管于NewNET之上。开发者可"
-"以发布计算任务，节点可以根据自己的计算能力，选择对应的计算任务，完成计算并得"
-"到相应的激励。通过区块链技术实现去中化的网络域名服务，增加NewNET的易用性。"
+msgstr "Çok sayıda düğümden (node) olusan NewNet, eksiksiz bir SQL veritabanı ve yaygın programlama dillerini destekleyen, güvenilir depolama hizmetleri saglayan açık bir ağdır. Coğu web servisi direkt olarak NewNet’te barındırılabilir. Yazılımcılar hesaplama görevini serbest bırakabilir ve düğümler (nodelar) kendi hesaplama kabiliyetlerine göre ilgili hesaplama görevini seçebilir, tamamlandiktan sonra ilgili teşvikleri elde edebilirler. Merkezi olmayan ağ alan adlari hizmetleri saglanabilir ve NewNet’in kullanım kolaylığı blockchain teknolojisiyle artacaktır."
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
@@ -3783,20 +3585,14 @@ msgid ""
 "using algorithms to create a unique identification and authentic right for "
 "digital asset. The whole process is repeatable, verifiable and fault-"
 "tolerant."
-msgstr ""
-"原子哈希应用放射性定年、PCA、机器视觉、深度学习等技术，首先提取非数字资产的多"
-"种特征，包括重量、体积、尺寸、形状、纹、光学特性、放射性特性、热学特性以及多"
-"种自定义的随机特征等，然后根据这些特征数据，运用算法对数字资产计算，进而产生"
-"与其本身直接相关的标识和确权结果。这个过程有较好的容错性，可重复，可验证。"
+msgstr "Radyometrik tarihleme, PCA, makine görü ve derin öğrenme teknolojilerini kullanarak bir materyalin, hacmini, kütlesini, boyutunu, şeklini, dokusunu, optik özelliklerini, radyoaktif özelliklerini, termodinamik özelliklerini ve diğer ozelliklerini hizli bir sekilde ortaya çıkarabiliriz. Daha sonra, bu karakteristik verilere dayanarak ve algoritmalar kullanarak benzersiz bir aidiyet verifikasyon sonucu yaratabiliriz. Tüm bu proses tekrarlanabilir, doğrulanabilir ve hatalara karşı dayanıklıdır. "
 
 #: web/apps/welcome/templates/welcome/tech.html:62
 msgid ""
 "NewIoT is a general conception for a series of technologies, including "
 "blockchain fog computing, communication protocols between IoT devices and "
 "gateways, and NewChain IoT devices developing specifications."
-msgstr ""
-"NewIoT是一系列技术的总称，包括:区块链雾计算关，物联设备与网关间的通讯协议， "
-"NewChain物联网设备开发规范等。"
+msgstr "NewIOT, blok zincirli sis bilişim, IoT cihaz ve geçitler arası iletişim protokolu ve NewChain IoT cihaz geliştirme özelliklerini içeren genel bir teknoloji serisi kavramıdır."
 
 #: web/apps/welcome/templates/welcome/tech.html:63
 msgid ""
@@ -3805,14 +3601,11 @@ msgid ""
 "Ethernet/fiber, 3G/4G/5G, NB-IoT, etc., and IoT communication protocol such "
 "as BLE, Wi-Fi, ZigBee, etc. The IoT device stores the collected information "
 "into NewChain through the gateway."
-msgstr ""
-"网关具有强大的计算和存储能力，内置区块链节点，支持多种互联网接入方式，包括:以"
-"太网/光纤、3G/4G/5G、NB-IoT等，支持BLE，Wi-Fi，ZigBee等物联网通讯协议，物联网"
-"设备通过网关将采集的信息存储到NewChain中。 "
+msgstr "Geçitlerin, sisteme entegre blok zinciri düğümleri ile birlikte guclu bilgi islem ve depolama kapasiteleri mevcuttur. Bu gecitler çoklu internet erişim metodlarina sahiptir. Örnek; Ethernet/fiber, 3G/4G/5G, NB-IoT ve BLE, Wi-Fi, Zigbee gibi IoT iletisim protokolleri.IoT cihazlari toplanan tüm bilgiyi gecitler ile NewChain’e depolar."
 
 #: web/apps/welcome/templates/welcome/tech.html:72
 msgid "DAI"
-msgstr "DAI"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:76
 msgid ""
@@ -3820,10 +3613,7 @@ msgid ""
 "from three aspects: data, algorithm model, execution engine, thereby closely "
 "connecting the data suppliers, algorithm model developers and operating "
 "environment providers together."
-msgstr ""
-"DAI（Distributed Artificial Intelligence）将从数据、算法模型、执行引擎等三个"
-"方面推动AI的发展，将数据提供者、算法模型开发者、运行环境提供者无缝地连在一"
-"起。 "
+msgstr "DAI (Dagitik Yapay Zeka), yapay zekanın gelişimini 3 şekilde destekler: Veri, Algoritma modeli ve Yürütme motoru. Bu sayede veri sağlayıcılarını, algoritma model yazılımcılarını ve işletim sistemi sağlayıcılarını birbirine bağlar."
 
 #: web/apps/welcome/templates/welcome/tech.html:77
 msgid ""
@@ -3831,29 +3621,24 @@ msgid ""
 "suppliers, including multidimensional data formats, data fragmentation, data "
 "compression, data encryption, etc. User private data safety will be "
 "protected by the k-anonymity, ε--differential privacy and other methods."
-msgstr ""
-"DAI提供访问用户授权数据和数据提供商数据的规范，包括多维数据格式、数据分片、数"
-"据压缩、数据加密等，并且通过k-匿名化(k-anonymity)、差分隐私(ε-differential "
-"privacy)等方法保证用户隐私数据的安全。"
+msgstr "DAI, cok boyutlu veri formatları, veri parçalanması, veri sıkıştırma, veri şifreleme, vb. dahil olmak üzere, kullanıcılara ve veri tedarikçilerine erişim için yetkili veri standartlarını sağlar. Kullanıcının özel veri güvenliği, k-anonimlik, ε - diferensiyel gizlilik ve diğer yöntemlerle korunacaktır."
 
 #: web/apps/welcome/templates/welcome/tech.html:78
 msgid ""
 "DAI uses docker container to run artificial intelligence computing software "
 "such as Tensorflow, Caffe. It encourages data suppliers to provide long-term "
 "service through multi-factor weighting profit distribution method."
-msgstr ""
-"DAI中采用docker容器技术运行Tensorflow、caffe等人工智能计算软件，基于多因子加"
-"权的收益分配方法鼓励算力提供者提供长期服务。"
+msgstr "DAI, Tensorflow, Caffe gibi yapay zeka hesaplama yazılımlarını çalıştırmak için docker container kullanır. Çok faktörlü ağırlıklandırma kar dağıtım yöntemi ile veri tedarikçilerini uzun vadeli hizmet sağlamaya teşvik etmektedir."
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
 #: web/templates/footer.html:47
 msgid "Terms of Use"
-msgstr "使用条款"
+msgstr "Kullanım Kosulları"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:20
 msgid "PLEASE READ THESE TERMS OF USE BEFORE USING THE WEBSITE."
-msgstr "请在使用本网站之前阅读使用条款。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:21
 msgid ""
@@ -3864,9 +3649,6 @@ msgid ""
 "access to and use of newtonproject.org, including any content, functionality "
 "and services offered on or through newtonproject.org."
 msgstr ""
-"接受您和牛顿基金会(“公司”、“我们”)之间的使用条款。下面的条款和条件，连同它们"
-"明确纳入的任何文件(统称为“使用条款”)，管理您对newtonproject.org的访问和使用，"
-"包括通过newtonproject.org提供的任何内容、功能和服务。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:23
 msgid ""
@@ -3875,12 +3657,10 @@ msgid ""
 "when this option is made available to you, you accept and agree to be bound "
 "and abide by these Terms of Use in addition to"
 msgstr ""
-"在开始使用网站之前，请仔细阅读使用条款。通过使用本网站并同意提供给您的使用条"
-"款，您接受并遵守这些使用条款。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:25
 msgid "Who May Use the Website"
-msgstr "谁可以使用网站"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:26
 msgid ""
@@ -3892,14 +3672,10 @@ msgid ""
 "the Website only for your own personal use. If you do not meet these "
 "requirements, you must not access or use the Website."
 msgstr ""
-"本网站提供给13岁以上的用户，仅供个人使用，不用于商业用途。该网站不是为13岁以"
-"下的儿童设计的。使用本网站，你代表并保证你(i)年满13岁，(ii)不被禁止在任何适用"
-"法律下使用该网站，(iii)仅供你个人使用。如果您不满足这些要求，您不能访问或使用"
-"网站。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:28
 msgid "Changes to the Terms of Use"
-msgstr "使用条款变更"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:29
 msgid ""
@@ -3910,13 +3686,10 @@ msgid ""
 "this page frequently so you are aware of any changes, as they are binding on "
 "you."
 msgstr ""
-"我们可以更新这些使用条款。所有的修改在我们发布后立即生效。您继续使用该网站"
-"后，意味着您接受并同意变更后的使用条款。您应该经常检查这个页面，以便您知道任"
-"何更改，因为它们对您有约束力。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:31
 msgid "Accessing the Website and Account Security"
-msgstr "访问网站和帐户安全。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:32
 msgid ""
@@ -3928,24 +3701,21 @@ msgid ""
 "time to time, we may restrict access to some parts of the Website, or the "
 "entire Website, to users."
 msgstr ""
-"我们有权撤销或修改本网站，包括我们在网站上提供的任何服务和资料。我们不保证网"
-"站总是可用的。如因任何原因，造成本网站不可用，我们概不负责。有时，我们可能会"
-"限制访问网站的某些部分，或整个网站。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:33
 msgid "You are responsible for:"
-msgstr "您需要负责："
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:35
 msgid ""
 "Making all arrangements necessary for you to have access to the Website."
-msgstr "为您提供访问网站所需的一切安排。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:36
 msgid ""
 "Ensuring that all persons who access the Website through your internet "
 "connection are aware of these Terms of Use and comply with them."
-msgstr "确保所有访问该网站的人都知道这些使用条款并遵守。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:39
 msgid ""
@@ -3958,9 +3728,6 @@ msgid ""
 "our Privacy Policy, and you consent to all actions we take with respect to "
 "your information consistent with our Privacy Policy."
 msgstr ""
-"要访问网站或者其他网站提供的资源时，您可能会被要求提供某些信息。你在网站上提"
-"供的所有信息确保都是实时正确的。您确保您提供的所有信息都要受我们的隐私政策的"
-"约束，您同意我们对您的信息采取的所有行动与我们的隐私政策一致。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:40
 msgid ""
@@ -3968,12 +3735,10 @@ msgid ""
 "the Website on a public or shared computer so that others are not able to "
 "view or record your personal information."
 msgstr ""
-"当你在公共电脑上输入个人信息时，应该特别小心，这样其他人就不能查看或记录你的"
-"个人信息。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:44
 msgid "Intellectual Property Rights"
-msgstr "知识产权"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:45
 msgid ""
@@ -3984,9 +3749,6 @@ msgid ""
 "protected by copyright, trademark, patent, trade secret and other "
 "intellectual property or proprietary rights laws."
 msgstr ""
-"网站和它的全部内容,特性和功能(包括但不限于所有信息、软件、文本、显示器,图像,"
-"视频和音频,以及设计、选择和安排),属于公司,授权人专有或其他供应商的材料和受到"
-"版权的保护,商标、专利、商业秘密等知识产权或专有权利的法律。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:46
 msgid ""
@@ -3996,20 +3758,18 @@ msgid ""
 "download, store or transmit any of the material on our Website, except as "
 "follows:"
 msgstr ""
-"这些使用条款允许您只使用你个人的，非商业用途的网站。您不得复制、分发、修改、"
-"创建、公开展示、转载、下载、储存或传送本网站的任何资料，除非如下:"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:48
 msgid ""
 "Your computer may temporarily store copies of such materials in RAM "
 "incidental to your accessing and viewing those materials."
-msgstr "您的电脑可能会暂时把这些材料的副本储存在您查看这些资料的RAM中。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:49
 msgid ""
 "You may store files that are automatically cached by your Web browser for "
 "display enhancement purposes."
-msgstr "您可以使用Web浏览器自动缓存技术存储文件以增强显示功能。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:50
 msgid ""
@@ -4017,8 +3777,6 @@ msgid ""
 "Website for your own personal, non-commercial use and not for further "
 "reproduction, publication or distribution."
 msgstr ""
-"您可以打印或下载合理数量的网站页面，供您个人使用，而非商业用途，不得用于进一"
-"步复制、出版或发行。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:51
 msgid ""
@@ -4027,29 +3785,26 @@ msgid ""
 "personal, non-commercial use, provided you agree to be bound by our end user "
 "license agreement for such applications."
 msgstr ""
-"如果我们提供桌面、移动或其他下载应用程序，您可以下载一份拷贝到您的电脑或移动"
-"设备上，仅供您个人使用，而非商业用途，前提是您同意受我们最终用户许可协议的约"
-"束。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:53
 msgid "You must not:"
-msgstr "禁止行为"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:55
 msgid "Modify copies of any materials from this site."
-msgstr "修改本网站任何资料的副本。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:56
 msgid ""
 "Delete or alter any copyright, trademark or other proprietary rights notices "
 "from copies of materials from this site."
-msgstr "从本网站删除或更改任何版权、商标或其他版权声明。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:58
 msgid ""
 "You must not access or use for any commercial purposes any part of the "
 "Website or any services or materials available through the Website."
-msgstr "您不得使用网站的内容或服务进行商业活动。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:59
 msgid ""
@@ -4057,8 +3812,6 @@ msgid ""
 "out in this section, please address your request to: contact@newtonproject."
 "org."
 msgstr ""
-"如果您希望在本节以外的网站上使用其他材料，请将您的请求发送到: "
-"contact@newtonproject.org。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:60
 msgid ""
@@ -4072,14 +3825,10 @@ msgid ""
 "of Use is a breach of these Terms of Use and may violate copyright, "
 "trademark and other laws."
 msgstr ""
-"如果你打印、复制、修改、下载或以其他方式为他人提供服务时违反了使用条款,你有权"
-"立即对该网站停止访问,你必须销毁任何副本的材料。网站上的任何内容都没有转让给"
-"您，未明确授予的所有权利均由公司保留。本网站未明确允许使用本网站的任何内容，"
-"均违反本使用条款，并可能侵犯版权、商标及其他法律。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:62
 msgid "Trademarks"
-msgstr "商标"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:63
 msgid ""
@@ -4090,18 +3839,16 @@ msgid ""
 "and service names, designs and slogans on this Website are the trademarks of "
 "their respective owners."
 msgstr ""
-"公司名称，公司标志及所有相关名称、标识、产品及服务名称、设计、口号均为本公司"
-"或其关联公司或许可方的商标。未经本公司事先书面许可，不得使用此等标志。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:65
 msgid "Prohibited Uses"
-msgstr "禁止条款"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:66
 msgid ""
 "You may use the Website only for lawful purposes and in accordance with "
 "these Terms of Use. You agree not to use the Website:"
-msgstr "你可以在法律允许范围内使用该网站，不包括以下情形："
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:68
 msgid ""
@@ -4110,8 +3857,6 @@ msgid ""
 "regarding the export of data or software to and from the US or other "
 "countries)."
 msgstr ""
-"以任何方式违反任何适用的联邦，州，地方或国际法律或法规（包括但不限于有关向美"
-"国或其他国家出口数据或软件的任何法律）。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:69
 msgid ""
@@ -4119,14 +3864,12 @@ msgid ""
 "minors in any way by exposing them to inappropriate content, asking for "
 "personally identifiable information or otherwise."
 msgstr ""
-"以任何方式利用，伤害未成年人，将其暴露给不适当的内容，要求提供个人身份信息或"
-"其他方式。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:70
 msgid ""
 "To send, knowingly receive, upload, download, use or re-use any material "
 "which does not comply with these Terms of Use."
-msgstr "发送，接收，上传，下载，使用任何不符合这些使用条款的内容。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:71
 msgid ""
@@ -4134,8 +3877,6 @@ msgid ""
 "material without our prior written consent, including any 'junk mail', "
 "'chain letter' or 'spam' or any other similar solicitation."
 msgstr ""
-"未经我们事先书面同意，包括任何'垃圾邮件'，或任何其他类似的请求，不能转发或发"
-"送任何广告或宣传材料。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:72
 msgid ""
@@ -4144,8 +3885,6 @@ msgid ""
 "by using e-mail addresses or screen names associated with any of the "
 "foregoing)."
 msgstr ""
-"假冒公司，公司员工，其他用户或任何其他人员或实体（包括但不限于使用与上述任何"
-"相关的电子邮件地址或屏幕名称）。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:73
 msgid ""
@@ -4153,12 +3892,10 @@ msgid ""
 "enjoyment of the Website, or which, as determined by us, may harm the "
 "Company or users of the Website or expose them to liability."
 msgstr ""
-"由我们确定了可能损害本公司或本网站用户的人，禁止访问本网站，或使其承担责任的"
-"行为。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:75
 msgid "Additionally, you agree not to:"
-msgstr "此外，您同意不会："
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:77
 msgid ""
@@ -4167,8 +3904,6 @@ msgid ""
 "including their ability to engage in real time activities through the "
 "Website."
 msgstr ""
-"以任何可能使网站失效，过载，损坏或干扰等任何其他方式使用本网站，包括通过本网"
-"站从事实时活动的能力。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:78
 msgid ""
@@ -4176,27 +3911,24 @@ msgid ""
 "the Website for any purpose, including monitoring or copying any of the "
 "material on the Website."
 msgstr ""
-"使用任何机器人，爬虫或其他自动设备访问本网站，监控或复制网站上的任何资料。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:79
 msgid ""
 "Use any manual process to monitor or copy any of the material on the Website "
 "or for any other unauthorized purpose without our prior written consent."
 msgstr ""
-"未经我们事先书面同意，使用任何手动流程来监控或复制网站上的任何资料用于任何其"
-"他未经授权的目的。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:80
 msgid ""
 "Use any device, software or routine that interferes with the proper working "
 "of the Website."
-msgstr "使用任何干扰本网站正常运行的设备，软件或程序。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:81
 msgid ""
 "Introduce any viruses, trojan horses, worms, logic bombs or other material "
 "which is malicious or technologically harmful."
-msgstr "引入任何病毒，特洛伊木马，蠕虫，逻辑炸弹或其他恶意或技术有害的内容。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:82
 msgid ""
@@ -4204,22 +3936,20 @@ msgid ""
 "any parts of the Website, the server on which the Website is stored, or any "
 "server, computer or database connected to the Website."
 msgstr ""
-"尝试获得未经授权的访问，干扰，破坏网站的任何部分，存储网站的服务器或连接到本"
-"网站的任何服务器，计算机或数据库。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:83
 msgid ""
 "Attack the Website via a denial-of-service attack or a distributed denial-of-"
 "service attack."
-msgstr "通过拒绝服务攻击或分布式拒绝服务攻击攻击网站。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:84
 msgid "Otherwise attempt to interfere with the proper working of the Website."
-msgstr "其他干预网站正常工作的内容。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:88
 msgid "Reliance on Information Posted"
-msgstr "信息依赖发布"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:89
 msgid ""
@@ -4231,9 +3961,6 @@ msgid ""
 "any other visitor to the Website, or by anyone who may be informed of any of "
 "its contents."
 msgstr ""
-"本网站上呈现的信息仅供一般信息用。我们不保证此信息的准确性，完整性或实用性。"
-"您对这些信息的任何依赖都是由您自己承担风险。我们不承担由您或任何其他访问者对"
-"网站或任何可能被告知其内容的任何人依赖这些材料而引起的责任。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:90
 msgid ""
@@ -4247,15 +3974,10 @@ msgid ""
 "the Company. We are not responsible, or liable to you or any third party, "
 "for the content or accuracy of any materials provided by any third parties."
 msgstr ""
-"本网站包含由第三方提供的内容，包括由其他用户，博主和第三方许可人提供的材料，"
-"服务。在这些材料中表达的所有声明/意见，以及除本公司提供的内容之外的所有文章和"
-"对问题和其他内容的回应仅仅是提供这些材料的个人或实体的意见和责任。这些材料不"
-"一定反映公司的意见。我们不对任何第三方提供的任何材料的内容或准确性负责，也不"
-"对您或任何第三方承担责任。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:92
 msgid "Changes to the Website"
-msgstr "对网站的更改"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:93
 msgid ""
@@ -4264,12 +3986,10 @@ msgid ""
 "Website may be out of date at any given time, and we are under no obligation "
 "to update such material."
 msgstr ""
-"我们可能不时更新本网站上的内容，但其内容不一定完整或最新。网站上的任何资料可"
-"能会在任何特定时间过期，我们没有义务更新此类资料。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:96
 msgid "Information About You and Your Visits to the Website"
-msgstr "关于您和您访问网站的信息"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:97
 msgid ""
@@ -4278,13 +3998,10 @@ msgid ""
 "privacy/</a>. By using the Website, you consent to all actions taken by us "
 "with respect to your information in compliance with the Privacy Policy."
 msgstr ""
-"我们在本网站上收集的所有信息均以我们的 <a href='https://www.newtonproject."
-"org/privacy/'>https://www.newtonproject.org/privacy/</a>为准。通过使用本网"
-"站，您同意我们根据隐私政策就您的信息采取的所有行动。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:100
 msgid "Online Purchases and Other Terms and Conditions"
-msgstr "在线购买和其他条款"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:101
 msgid ""
@@ -4296,12 +4013,10 @@ msgid ""
 "terms of conditions for the registration or sponsorship of a conference "
 "event, the terms and conditions for the event shall control."
 msgstr ""
-"附加条款也可能适用于本网站的特定部分，包括会议活动的注册和赞助。如果这些使用"
-"条款与注册或赞助会议事件的条款直接冲突，则应以该事件的条款为准。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:104
 msgid "Linking to the Website and Social Media Features"
-msgstr "链接到网站和社交媒体功能"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:105
 msgid ""
@@ -4311,12 +4026,10 @@ msgid ""
 "association, approval or endorsement on our part without our express written "
 "consent."
 msgstr ""
-"您可以链接到我们的主页，但前提是您必须公正合法，不会损害我们的声誉。未经我们"
-"明确的书面同意下，您不得以建立任何形式的关联。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:107
 msgid "Links from the Website"
-msgstr "来自网站的链接"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:108
 msgid ""
@@ -4330,15 +4043,10 @@ msgid ""
 "risk and subject to the terms and conditions of use for such websites. We "
 "reserve the right to withdraw linking permission without notice."
 msgstr ""
-"如果网站包含第三方提供的其他网站和资源的链接，这些链接仅供您使用。这包括广告"
-"中的链接，横幅广告和赞助商链接。我们无法控制这些网站或资源的内容，也不承担任"
-"何责任，也不对您使用这些网站或资源可能导致的任何损失负责。如果您决定访问链接"
-"到本网站的任何第三方网站，您完全承担您的风险并受此类网站的使用条款和条件的约"
-"束。我们保留取消链接权限的权利，恕不另行通知。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:110
 msgid "Disclaimer of Warranties"
-msgstr "免责声明"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:111
 msgid ""
@@ -4355,10 +4063,6 @@ msgid ""
 "WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE OR TO YOUR "
 "DOWNLOADING OF ANY MATERIAL POSTED ON IT, OR ON ANY WEBSITE LINKED TO IT."
 msgstr ""
-"您了解我们不能也不保证网站下载的文件不含病毒或其他破坏性代码。您有责任进行足"
-"够多的检查，以满足您对电脑的防护。对于由于您使用本网站而可能感染您的计算机设"
-"备，计算机程序，数据或其他分布式拒绝服务攻击，病毒或其他技术上有害信息导致的"
-"任何损失，我们概不负责。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:112
 msgid ""
@@ -4377,19 +4081,13 @@ msgid ""
 "COMPONENTS OR THAT THE WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE "
 "WEBSITE WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS."
 msgstr ""
-"您使用本网站以及通过本网站获得的任何服务均由您自担风险。本网站以及通过本网站"
-"获得的任何服务均按“原样”和“可用”提供基础服务，没有任何明示或暗示的担保。本公"
-"司或与本公司有关的任何人均不就本网站的完整性，安全性，可靠性，质量，准确性或"
-"可用性做出任何担保或陈述。在不限制上述规定的前提下，本公司或与本公司有关联的"
-"任何人均不表示本网站，其内容或通过本网站获得的任何服务或项目将准确无误，可"
-"靠，无错误或不中断。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:113
 msgid ""
 "THE COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR "
 "IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES "
 "OF MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR PARTICULAR PURPOSE."
-msgstr "本公司特此否认所有形式的保证，无论明示或暗示，法定或其他形式。"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:114
 msgid ""
@@ -4398,12 +4096,10 @@ msgid ""
 "YOU IN THEIR ENTIRETIES, BUT WILL APPLY TO THE MAXIMUM EXTENT PERMITTED BY "
 "APPLICABLE LAW."
 msgstr ""
-"某些司法管辖区不允许排除对暗示保证期限的保证或限制，因此上述免责声明可能不适"
-"用于您的所有情况，但将适用于适用法律允许的最大范围。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:116
 msgid "Limitation on Liability"
-msgstr "责任限制"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:117
 msgid ""
@@ -4421,18 +4117,10 @@ msgid ""
 "FORESEEABLE. THE FOREGOING DOES NOT AFFECT ANY LIABILITY WHICH CANNOT BE "
 "EXCLUDED OR LIMITED UNDER APPLICABLE LAW WHICH MAY INCLUDE FRAUD."
 msgstr ""
-"在任何情况下，本公司，其关联公司及其许可方，服务提供商，员工，代理商，官员或"
-"董事均不对任何类型的损害承担任何法律责任，因使用本网站或与其相关的任何网站，"
-"本网站或其他网站上的任何内容或通过本网站或此类其他网站获得的任何服务或项目，"
-"包括任何直接，间接，特殊，附带，间接或惩罚性的损害赔偿，包括但不限于包括但不"
-"限于个人伤害，不适，情绪低落，收入损失，利润损失，业务损失或预期存款损失，使"
-"用损失，商誉损失，数据丢失以及是否由于侵权行为（包括疏忽） ，违反合同或其他方"
-"面，即使可预见。上述内容不影响任何可能包含欺诈行为在适用法律下不能排除或限制"
-"的责任。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:119
 msgid "Indemnification"
-msgstr "保障"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:120
 msgid ""
@@ -4447,15 +4135,10 @@ msgid ""
 "authorized in these Terms of Use or your use of any information obtained "
 "from the Website."
 msgstr ""
-"您同意捍卫本公司及其附属公司及其授权人和服务提供商及其各自的管理人员，董事，"
-"雇员，承包商，代理人，许可人，供应商，继承人和受让人免受任何索赔，债务， （包"
-"括合理的律师费用）造成的损失，损害，判断，奖励，损失，成本，费用或费用（包括"
-"合理的律师费用），包括但不限于任何使用本网站的内容，服务和产品以外的使用条款"
-"明确授权或您使用从本网站获得的任何信息。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:122
 msgid "Governing Law and Jurisdiction"
-msgstr "治理法律和管辖区"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:123
 msgid ""
@@ -4466,10 +4149,6 @@ msgid ""
 "choice or conflict of law provision or rule (whether of Singapore or any "
 "other jurisdiction)."
 msgstr ""
-"与本网站和本使用条款相关的所有事宜以及由此产生的或与此有关的任何争议或索赔"
-"（在每种情况下，包括非合同纠纷或索赔）均应受新加坡国内法律管辖并根据其内部法"
-"律解释使法律规定或规则（无论是新加坡还是其他任何司法管辖区）的任何选择或冲突"
-"生效。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:124
 msgid ""
@@ -4480,14 +4159,10 @@ msgid ""
 "other relevant country. You waive any and all objections to the exercise of "
 "jurisdiction over you by such courts and to venue in such courts."
 msgstr ""
-"由于本使用条款或网站引起或与之有关的任何法律诉讼，诉讼应仅在新加坡境内提起，"
-"尽管我们保留对您提起任何诉讼，诉讼或诉讼的权利，在您居住的国家或任何其他相关"
-"国家违反这些使用条款。您放弃对这些法院对您行使管辖权以及在此类法院举行审判的"
-"任何和所有异议。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:126
 msgid "Waiver and Severability"
-msgstr "弃权和可分割性"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:127
 msgid ""
@@ -4497,9 +4172,6 @@ msgid ""
 "Company to assert a right or provision under these Terms of Use shall not "
 "constitute a waiver of such right or provision."
 msgstr ""
-"公司不放弃本使用条款中规定的任何条款或条件，应视为该条款或条件的进一步或持续"
-"放弃或放弃任何其他条款或条件，以及公司未能声明本使用条款下的权利或条款不构成"
-"对此权利或条款的放弃。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:128
 msgid ""
@@ -4509,12 +4181,10 @@ msgid ""
 "such that the remaining provisions of the Terms of Use will continue in full "
 "force and effect."
 msgstr ""
-"如果本“使用条款”的任何条款由法院或其他有管辖权的仲裁庭以任何理由无效，非法或"
-"无法执行，则应取消或限制此类条款，以使“条款”中的其他条款使用将继续完全有效。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:130
 msgid "Entire Agreement"
-msgstr "整个协议"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:131
 msgid ""
@@ -4524,12 +4194,10 @@ msgid ""
 "prior and contemporaneous understandings, agreements, representations and "
 "warranties, both written and oral, with respect to the Website."
 msgstr ""
-"本使用条款，我们的隐私政策和事件注册条款构成您与牛顿基金会之间就本网站的唯一"
-"和完整的协议，并取代所有之前和同期的谅解，协议，陈述和保证。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:133
 msgid "Your Comments and Concerns"
-msgstr "你的意见和顾虑"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:134
 msgid ""
@@ -4538,16 +4206,14 @@ msgid ""
 "Website should be directed to: contact@newtonproject.org. Last modified: "
 "April, 2018"
 msgstr ""
-"本网站由本公司运营。所有其他反馈，意见，技术支持请求和其他与本网站相关的通信"
-"应该直接发送到：contact@newtonproject.org。最后修改日期：2018年4月"
 
 #: web/apps/welcome/templates/welcome/whitepaper.html:13
 msgid "Whitepaper"
-msgstr "白皮书"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/whitepaper.html:20
 msgid "Newton Whitepaper"
-msgstr "牛顿白皮书"
+msgstr ""
 
 #: web/apps/zinnia/breadcrumbs.py:68 web/apps/zinnia/admin/forms.py:66
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:25
@@ -4899,12 +4565,12 @@ msgstr ""
 
 #: web/apps/zinnia/models/category.py:46
 msgid "language"
-msgstr "语言"
+msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
 #: web/apps/zinnia/models_bases/entry.py:117
 msgid "Entry type"
-msgstr "文章类型"
+msgstr ""
 
 #: web/apps/zinnia/models/category.py:97
 msgid "category"
@@ -4965,11 +4631,11 @@ msgstr ""
 
 #: web/apps/zinnia/models_bases/entry.py:114
 msgid "entry type"
-msgstr "文章类型"
+msgstr ""
 
 #: web/apps/zinnia/models_bases/entry.py:121
 msgid "entry_sub_type"
-msgstr "文章类型"
+msgstr ""
 
 #: web/apps/zinnia/models_bases/entry.py:128
 msgid "show_in_home"
@@ -5768,7 +5434,7 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/skeleton.html:40
 msgid "BLOG"
-msgstr "博客"
+msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/skeleton.html:47
 msgid "Useful links"
@@ -6070,11 +5736,11 @@ msgstr ""
 
 #: web/templates/500.html:18
 msgid "System Error."
-msgstr "系统错误"
+msgstr ""
 
 #: web/templates/base.html:71
 msgid "Join us for changing the world"
-msgstr "加入牛顿，和我们一起改变世界"
+msgstr "Dünyayı değiştirmek için bize katılın"
 
 #: web/templates/dialog.html:8
 msgid "关闭"
@@ -6094,27 +5760,27 @@ msgstr ""
 
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
-msgstr "发展规划"
+msgstr "GELISME"
 
 #: web/templates/footer.html:20
 msgid "COMMUNITY"
-msgstr "社区治理"
+msgstr "TOPLULUK"
 
 #: web/templates/footer.html:44
 msgid "Service Terms"
-msgstr "服务条款"
+msgstr "Hizmet Sartlari"
 
 #: web/templates/header-no-menu.html:29
 msgid "User Center"
-msgstr "用户中心"
+msgstr ""
 
 #: web/templates/header-no-menu.html:30
 msgid "LogOut"
-msgstr "退出"
+msgstr ""
 
 #: web/templates/header.html:25
 msgid "Technology"
-msgstr "技术"
+msgstr "Teknoloji"
 
 #: web/templates/admin/change_form.html:33
 msgid "History"
