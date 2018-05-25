@@ -82,6 +82,7 @@
 
          <div role="main" id="main" class="main">
              {% block content %}{% endblock %}
+             <img id="gotoTop" src="{% version 'images/top.jpeg' %}" alt="">
          </div>
 	     {% block footer %}
          {% include "footer.html" %}
@@ -95,11 +96,11 @@
          <script src="{% version "js/jquery-validate-additional-methods.js" %}"></script>
          <script src="{% version "js/nsprogress.js" %}"></script>
          {% block thirdparty_js %}{% endblock %}
-         <script>var zhMessages = "{% version "js/jquery-validate-messages.zh.js" %}"</script>
+         <script>var zhMessages = "{% version 'js/jquery-validate-messages.zh.js' %}"</script>
 
          <!-- bootstrap lib -->
-         <script src="{% version "js/bootstrap.min.js" %}"></script>
-         <script src="{% version "js/index.js" %}"></script>
+         <script src="{% version 'js/bootstrap.min.js' %}"></script>
+         <script src="{% version 'js/index.js' %}"></script>
          
          {% block js %}{% endblock %}
          {% block inline_js %}{% endblock %}

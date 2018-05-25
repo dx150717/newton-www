@@ -1159,5 +1159,8 @@ canvas { display: block; vertical-align: top; }
 
 @media only screen and (max-width : 320px) {
 .ad .container span{ font-size:12px;}
-
 }
+
+/* go top */
+#gotoTop{display:none; position:fixed; top:75%; right: 0; cursor:pointer; text-align:center; border:1px solid #e0e0e0; z-index: 999; opacity: 0.3;}
+#gotoTop.hover{background:#5CB542;color:#fff;text-decoration:none;}
