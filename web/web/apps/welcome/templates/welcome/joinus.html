@@ -450,6 +450,7 @@
         var parent = "#heading" + index;
         if($(parent).hasClass("collapsed")){
             $(label).addClass("arrow-trans");
+            $(".arrow-trans").not(label).removeClass("arrow-trans");
         }else{
             $(label).removeClass("arrow-trans");
         }
