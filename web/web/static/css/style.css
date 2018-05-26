@@ -1129,9 +1129,9 @@ canvas { display: block; vertical-align: top; }
 #news .content .time{position: absolute; top: 0;padding: 5px;font-size: 14px;}
 @media(max-width:768px){ 
     #news .content{display: block;}
-    #news .content .bigimg{width: 100%; margin: 0 0 2px 0;background-size: cover; height: 400px;}
+    #news .content .bigimg{width: 100%; margin: 0 0 2px 0;background-size: 100% 100%; height: 400px;}
     #news .content .small-content{width: 100%; float: left; height: unset;}
-    #news .content .smallimg{width: 100%; margin: 0 0 2px 0;background-size: cover; height: 400px;}
+    #news .content .smallimg{width: 100%; margin: 0 0 2px 0;background-size: 100% 100%; height: 400px;}
 }
 
 
