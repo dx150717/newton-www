@@ -89,6 +89,7 @@
         
           {% block entry-body %}
           <div class="entry-body">
+            {% comment %}
             {% block entry-image %}
             {% if object.image %}
             <div class="entry-image">
@@ -104,6 +105,7 @@
             </div>
             {% endif %}
             {% endblock entry-image %}
+            {% endcomment %}
             {% block entry-content %}
             <div class="entry-content">
               <dd>
