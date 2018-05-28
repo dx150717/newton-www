@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-27 03:14+0000\n"
+"POT-Creation-Date: 2018-05-28 06:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -226,7 +226,7 @@ msgstr ""
 
 #: web/apps/login/views.py:36
 msgid "Form Error"
-msgstr ""
+msgstr "フォームエラー"
 
 #: web/apps/login/views.py:42 web/apps/register/views.py:46
 #: web/apps/register/views.py:52
@@ -235,15 +235,15 @@ msgstr ""
 
 #: web/apps/login/views.py:43
 msgid "Auth Recaptcha Error"
-msgstr ""
+msgstr "Auth Recaptcha エラー"
 
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
-msgstr ""
+msgstr "Eメールorパスワードが異なります"
 
 #: web/apps/login/views.py:56
 msgid "Request Time Out"
-msgstr ""
+msgstr "通信タイムアウト"
 
 #: web/apps/login/views.py:70
 msgid "No Auth_token"
@@ -255,20 +255,20 @@ msgstr ""
 
 #: web/apps/login/views.py:76
 msgid "No User Profile"
-msgstr ""
+msgstr "ユーザープロフィールがありません"
 
 #: web/apps/login/views.py:79
 msgid "Incorrect Google Authenticator Code"
-msgstr ""
+msgstr "不正確なGoogle Authenticator Code"
 
 #: web/apps/login/templates/login/index.html:5
 #: web/apps/login/templates/login/index.html:22
 #: web/apps/login/templates/login/index.html:42
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
-#: web/templates/header-no-menu.html:38
+#: web/templates/header-no-menu.html:38 web/templates/header.html:54
 msgid "Login"
-msgstr ""
+msgstr "ログイン"
 
 #: web/apps/login/templates/login/index.html:5
 #: web/apps/register/templates/register/gtoken.html:6
@@ -303,7 +303,7 @@ msgstr ""
 #: web/apps/login/templates/login/index.html:27
 msgid ""
 "Tip:To login success, Ensure you can access the google recaptcha service."
-msgstr ""
+msgstr "ヒント:ログインを成功させるために、google recaptchaサービスにアクセスしていることを確認してください。"
 
 #: web/apps/login/templates/login/index.html:45
 #: web/apps/register/templates/register/index.html:6
@@ -313,25 +313,25 @@ msgstr ""
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
 #: web/apps/register/templates/register/register-success.html:6
-#: web/templates/header-no-menu.html:35
+#: web/templates/header-no-menu.html:35 web/templates/header.html:51
 msgid "Register"
-msgstr ""
+msgstr "登録"
 
 #: web/apps/login/templates/login/index.html:46
 msgid "Forget Password"
-msgstr ""
+msgstr "パスワードを忘れた場合"
 
 #: web/apps/login/templates/login/index.html:59
 #: web/apps/login/templates/login/index.html:66 web/apps/register/forms.py:19
 msgid "Google Authenticator Code"
-msgstr ""
+msgstr "Google Authコード"
 
 #: web/apps/login/templates/login/index.html:70
 #: web/apps/register/templates/register/gtoken.html:59
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:38
 #: web/apps/user/templates/user/profile.html:34
 msgid "Submit"
-msgstr ""
+msgstr "提出"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
@@ -423,7 +423,7 @@ msgstr ""
 
 #: web/apps/register/forms.py:16 web/apps/reset/forms.py:10
 msgid "Repassword"
-msgstr ""
+msgstr "新たなパスワード"
 
 #: web/apps/register/services.py:27
 msgid "Newton Notification: Please complete the register process of Newton"
@@ -439,47 +439,47 @@ msgstr ""
 
 #: web/apps/register/views.py:210 web/apps/reset/views.py:110
 msgid "Entered passwords differ"
-msgstr ""
+msgstr "入力したキーワードが合いません"
 
 #: web/apps/register/templates/register/gtoken.html:6
 #: web/apps/register/templates/register/gtoken.html:23
 msgid "Add Google Authenticator"
-msgstr ""
+msgstr "Google Authenticatorを追加する"
 
 #: web/apps/register/templates/register/gtoken.html:28
 msgid "Scan the QR code or Enter the  code manually into your GA app"
-msgstr ""
+msgstr "QRコードをスキャンするか、コードを手動でGA appに入力します"
 
 #: web/apps/register/templates/register/gtoken.html:31
 msgid ""
 "Apple users recommend to download the Authenticator in the App Store, and "
 "android users recommend the Google Authenticator to Google Play."
-msgstr ""
+msgstr "AppleユーザーはApp StoreにてAuthenticatorをダウンロードし、また、androidユーザーはGoogle PlayにてGoogle Authenticatorをダウンロードすることをオススメします。"
 
 #: web/apps/register/templates/register/gtoken.html:34
 msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
-msgstr ""
+msgstr "不都合を避けるために必ずキーコード、または、QRコードを保管してください。"
 
 #: web/apps/register/templates/register/gtoken.html:47
 msgid "Enter the  code manually into your GA app"
-msgstr ""
+msgstr "コードをGA appに手動で入力します"
 
 #: web/apps/register/templates/register/gtoken.html:51
 msgid "Or"
-msgstr ""
+msgstr "あるいは"
 
 #: web/apps/register/templates/register/gtoken.html:54
 msgid "Use the GA app to scan the QR code"
-msgstr ""
+msgstr "GA appを使用してQRコードをスキャンします"
 
 #: web/apps/register/templates/register/index.html:32
 msgid ""
 "Tip:To register success, Ensure you can access the google recaptcha service."
-msgstr ""
+msgstr "ヒント:登録を成功させるために、google recaptchaサービスにアクセスしていることを確認してください。"
 
 #: web/apps/register/templates/register/index.html:55
 msgid "Clicking register button means you agree and abide by<br/> Newton"
-msgstr ""
+msgstr "登録ボタンをクリックすると、Newtonに同意したこととなります。"
 
 #: web/apps/register/templates/register/index.html:55
 msgid "User Agreement"
@@ -508,13 +508,13 @@ msgstr ""
 
 #: web/apps/register/templates/register/password.html:32
 msgid "Next"
-msgstr ""
+msgstr "次"
 
 #: web/apps/register/templates/register/post-success.html:23
 #: web/apps/reset/templates/reset/reset-success.html:21
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
 msgid "Submit Success!"
-msgstr ""
+msgstr "提出完了！"
 
 #: web/apps/register/templates/register/post-success.html:24
 msgid ""
@@ -554,7 +554,7 @@ msgstr ""
 
 #: web/apps/reset/views.py:36
 msgid "Email not existed"
-msgstr ""
+msgstr "Eメールが存在しません"
 
 #: web/apps/reset/templates/reset/edit_password.html:6
 #: web/apps/reset/templates/reset/edit_password.html:21
@@ -568,25 +568,25 @@ msgstr ""
 #: web/apps/reset/templates/reset/reset-success.html:6
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
 msgid "Reset"
-msgstr ""
+msgstr "リセット"
 
 #: web/apps/reset/templates/reset/index.html:6
 msgid "ReSet"
-msgstr ""
+msgstr "リセット"
 
 #: web/apps/reset/templates/reset/reset-complete.html:23
 msgid "Reset Success!"
-msgstr ""
+msgstr "リセット完了"
 
 #: web/apps/reset/templates/reset/reset-complete.html:24
 msgid ""
 "You have reset your password successfully, please <a href='/login/'> login</"
 "a>"
-msgstr ""
+msgstr "パスワードのリセットに成功しました。ログインしてください。<a href='/login/'> ログイン</a>"
 
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Welcome! Please Reset Your Password!"
-msgstr ""
+msgstr "パスワードをリセットします"
 
 #: web/apps/reset/templates/reset/reset-letter.html:10
 msgid ""
@@ -601,7 +601,7 @@ msgstr ""
 msgid ""
 "We sent an email to your registered email address, please go to check and "
 "complete the reset password process."
-msgstr ""
+msgstr "登録したメールアドレスにEメールを送信しました。確認してパスワードのリセットプロセスを完了してください。"
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -1135,7 +1135,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
 msgid "Invalid Link"
-msgstr ""
+msgstr "無効なリンク"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 msgid "TOKENEXCHANGE"
@@ -2400,7 +2400,10 @@ msgid ""
 "We currently open the following positions. If you are interested, please "
 "send your resume to the email: <a href='mailto:newton-hr@newtonproject."
 "org'>newton-hr@newtonproject.org</a>"
-msgstr "私たちは現在、以下のポジションを開いています。興味がある場合は、あなたの履歴書を電子メールに送ってください：<a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject.org</a>"
+msgstr ""
+"私たちは現在、以下のポジションを開いています。興味がある場合は、あなたの履歴"
+"書を電子メールに送ってください：<a href='mailto:newton-hr@newtonproject."
+"org'>newton-hr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/joinus.html:58
 msgid "Senior R&D Engineer"
@@ -2917,21 +2920,26 @@ msgstr "Android R&D エンジニア"
 msgid ""
 "Responsible for the development of Android client product, help other "
 "developers grow and make progress;"
-msgstr "Androidクライアント製品の開発を担当し、他の開発者の成長や進歩を支援します。"
+msgstr ""
+"Androidクライアント製品の開発を担当し、他の開発者の成長や進歩を支援します。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
 "Participate in the analysis and design of products based on client "
 "requirements, cooperate with UI designers to complete initial testing based "
 "on product design;"
-msgstr "クライアントの要件に基づく製品分析と設計に参加し、UI設計者と協力して製品設計に基づく初期テストを完了します。"
+msgstr ""
+"クライアントの要件に基づく製品分析と設計に参加し、UI設計者と協力して製品設計"
+"に基づく初期テストを完了します。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:336
 msgid ""
 "Responsible for the development of subsequent iteration versions of the "
 "product, and continuously optimize the quality, performance, and user "
 "experience of products."
-msgstr "継続して更新される製品のバージョンの開発を担当し、製品の品質、パフォーマンス、ユーザーエクスペリエンスを継続的に最適化します"
+msgstr ""
+"継続して更新される製品のバージョンの開発を担当し、製品の品質、パフォーマン"
+"ス、ユーザーエクスペリエンスを継続的に最適化します"
 
 #: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
@@ -2939,25 +2947,34 @@ msgid ""
 "experience in Practical Android development experience; Familiar with "
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
-msgstr "プロのJava開発において3年以上の経験を有し、実用的なAndroid開発の経験で2年以上の経験を有する方。Android携帯端末の特徴と開発機能をよく知っており、一般的な問題を解決することができること。"
+msgstr ""
+"プロのJava開発において3年以上の経験を有し、実用的なAndroid開発の経験で2年以上"
+"の経験を有する方。Android携帯端末の特徴と開発機能をよく知っており、一般的な問"
+"題を解決することができること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:341
 msgid ""
 "Familiar with Android components and session; Be able to reasonably allocate "
 "resources in the available session;"
-msgstr "Androidのコンポーネントとセッションに精通している方。利用可能なセッションでリソースを合理的に割り当てることができること。"
+msgstr ""
+"Androidのコンポーネントとセッションに精通している方。利用可能なセッションでリ"
+"ソースを合理的に割り当てることができること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:342
 msgid ""
 "Familiar with common controls & custom controls, event mechanisms and "
 "gesture operations;"
-msgstr "一般的なコントロールとカスタムコントロール、イベントメカニズム、ジェスチャー操作に精通していること。"
+msgstr ""
+"一般的なコントロールとカスタムコントロール、イベントメカニズム、ジェスチャー"
+"操作に精通していること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:343
 msgid ""
 "Proficient in Android performance & memory optimization; good at solving "
 "system crashes & compatibility, memory leaks & overflow;"
-msgstr "Androidのパフォーマンスとメモリの最適化に精通している方。システムのクラッシュと互換性、メモリリーク＆オーバーフローを解決することができること。"
+msgstr ""
+"Androidのパフォーマンスとメモリの最適化に精通している方。システムのクラッシュ"
+"と互換性、メモリリーク＆オーバーフローを解決することができること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:344
 msgid "Familiar with Android network communication mechanism, Json analysis;"
@@ -2970,29 +2987,37 @@ msgstr "Androidの一般的なレイアウト、アニメーション、効果�
 #: web/apps/welcome/templates/welcome/joinus.html:346
 msgid ""
 "Familiar with Android platform screen adaptation and version compatibility;"
-msgstr "Androidのプラットフォーム画面の適応とバージョンの互換性に精通している方。"
+msgstr ""
+"Androidのプラットフォーム画面の適応とバージョンの互換性に精通している方。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:347
 msgid ""
 "Competent to work independently; Experienced in analyzing & re-writing "
 "Android source code;"
-msgstr "独立して働く能力がある方。 Androidソースコードの分析と再作成を経験していること。"
+msgstr ""
+"独立して働く能力がある方。 Androidソースコードの分析と再作成を経験しているこ"
+"と。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:348
 msgid ""
 "Excellent communication skills with team work spirit, work seriously and "
 "actively, rigorous and responsible;"
-msgstr "チームワーク精神や真剣かつ積極的、厳格かつ責任のある仕事において優れたコミュニケーションスキルを発揮できる方"
+msgstr ""
+"チームワーク精神や真剣かつ積極的、厳格かつ責任のある仕事において優れたコミュ"
+"ニケーションスキルを発揮できる方"
 
 #: web/apps/welcome/templates/welcome/joinus.html:349
 msgid "Experienced in the application of open source framework is preferred;"
-msgstr "オープンソースのフレームワークのアプリケーションの経験を有することが望まし。"
+msgstr ""
+"オープンソースのフレームワークのアプリケーションの経験を有することが望まし。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:350
 msgid ""
 "Familiar with Android testing tools & process, experienced in cross "
 "application coding test."
-msgstr "Androidアプリケーションのテストツールとプロセスに精通し、クロスアプリケーションコーディングテストに精通している方。"
+msgstr ""
+"Androidアプリケーションのテストツールとプロセスに精通し、クロスアプリケーショ"
+"ンコーディングテストに精通している方。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:365
 msgid "IOS Developer"
@@ -3002,7 +3027,9 @@ msgstr "IOSデベロッパー"
 msgid ""
 "Assist the product manager to analyze and organize the customer's need, and "
 "make the product requirements document;"
-msgstr "製品マネージャーが顧客ニーズを分析および整理、また、製品要件文書を作成するのを支援します。"
+msgstr ""
+"製品マネージャーが顧客ニーズを分析および整理、また、製品要件文書を作成するの"
+"を支援します。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:375
 msgid ""
@@ -3014,7 +3041,8 @@ msgstr "製品要件文書に応じて、iOS Appシステムのアーキテク�
 msgid ""
 "Depending on the system architecture design, conduct iOS App-related program "
 "development;"
-msgstr "システムアーキテクチャの設計に応じて、iOS App関連のプログラム開発を行います"
+msgstr ""
+"システムアーキテクチャの設計に応じて、iOS App関連のプログラム開発を行います"
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
 msgid ""
@@ -3025,7 +3053,9 @@ msgstr "製品要件文書に応じて、iOSアプリケーションの全体的
 #: web/apps/welcome/templates/welcome/joinus.html:378
 msgid ""
 "According to customers’ feedback, continuously revised and improved iOS app."
-msgstr "顧客のフィードバックに応じて、継続的に改訂され、iOSアプリを継続的に改訂、改善します"
+msgstr ""
+"顧客のフィードバックに応じて、継続的に改訂され、iOSアプリを継続的に改訂、改善"
+"します"
 
 #: web/apps/welcome/templates/welcome/joinus.html:382
 #: web/apps/welcome/templates/welcome/joinus.html:420
@@ -3037,7 +3067,9 @@ msgstr "学士号以上、コンピュータサイエンスまたは関連専攻
 msgid ""
 "2+ years working experience in computer software, or more than 1 years "
 "working experience in iOS App development;"
-msgstr "コンピュータソフトウェアの2年以上の実務経験、またはiOSアプリケーション開発における1年以上の実務経験を有する方。"
+msgstr ""
+"コンピュータソフトウェアの2年以上の実務経験、またはiOSアプリケーション開発に"
+"おける1年以上の実務経験を有する方。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:384
 msgid "Familiar with Swift or Objective C programming language;"
@@ -3047,17 +3079,23 @@ msgstr "SwiftまたはObjective Cプログラミング言語に精通してい�
 msgid ""
 "Familiar with the iOS's platform software development model and system "
 "architecture;"
-msgstr "iOSのプラットフォームソフトウェア開発モデルとシステムアーキテクチャに精通していること。"
+msgstr ""
+"iOSのプラットフォームソフトウェア開発モデルとシステムアーキテクチャに精通して"
+"いること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:386
 msgid ""
 "Familiar with common data structures and algorithms, has a persistent "
 "pursuit of new technologies;"
-msgstr "一般的なデータ構造とアルゴリズムに精通しており、新しいテクノロジを絶えず追求している方。"
+msgstr ""
+"一般的なデータ構造とアルゴリズムに精通しており、新しいテクノロジを絶えず追求"
+"している方。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:387
 msgid "Good at using technology to create a good user experience;"
-msgstr "優れたユーザーエクスペリエンスを生み出すためにテクノロジーを使用することが得意な方。"
+msgstr ""
+"優れたユーザーエクスペリエンスを生み出すためにテクノロジーを使用することが得"
+"意な方。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:388
 msgid "Good English level, able to read English technical documents smoothly."
@@ -3071,43 +3109,56 @@ msgstr "フロントエンドwebデベロッパー"
 msgid ""
 "Assist the product manager, analyze and organize the customer's need, and "
 "make the product requirements document;"
-msgstr "製品マネージャーを支援し、顧客のニーズを分析して整理し、製品要件文書を作成します。"
+msgstr ""
+"製品マネージャーを支援し、顧客のニーズを分析して整理し、製品要件文書を作成し"
+"ます。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
 "Depending on the product requirements document, design the architecture of "
 "the website front-end;"
-msgstr "製品要件文書に応じて、ウェブサイトのフロントエンドのアーキテクチャを設計します。"
+msgstr ""
+"製品要件文書に応じて、ウェブサイトのフロントエンドのアーキテクチャを設計しま"
+"す。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:414
 msgid ""
 "Depending on the design draft provided by the UI designer, complete the "
 "production of the website page;"
-msgstr "UIデザイナーによって提供されたデザインドラフトに応じて、Webサイトページの制作を完成させます。"
+msgstr ""
+"UIデザイナーによって提供されたデザインドラフトに応じて、Webサイトページの制作"
+"を完成させます。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
 msgid ""
 "According to the product requirements document, complete the development of "
 "the site front-end interactive part of the program;"
-msgstr "製品要件の文書に応じて、プログラムのサイトフロントエンドの対話部分の開発を完成させます。"
+msgstr ""
+"製品要件の文書に応じて、プログラムのサイトフロントエンドの対話部分の開発を完"
+"成させます。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:416
 msgid ""
 "According to consumer’s feedback, correct the front end issues of the "
 "website."
-msgstr "顧客のフィードバックに応じて、ウェブサイトのフロントエンドの問題を修正します"
+msgstr ""
+"顧客のフィードバックに応じて、ウェブサイトのフロントエンドの問題を修正します"
 
 #: web/apps/welcome/templates/welcome/joinus.html:421
 msgid ""
 "2+ years working experience in computer software, more than 1 year "
 "experience in front end development of the website;"
-msgstr "コンピュータソフトウェアの2年以上の実務経験を有し、ウェブサイトのフロントエンド開発における1年以上の経験を有する方"
+msgstr ""
+"コンピュータソフトウェアの2年以上の実務経験を有し、ウェブサイトのフロントエン"
+"ド開発における1年以上の経験を有する方"
 
 #: web/apps/welcome/templates/welcome/joinus.html:422
 msgid ""
 "Familiar with AI and Photoshop software, can create web pages based on UI "
 "design drafts;"
-msgstr "AIやPhotoshopソフトウェアに精通し、UIデザインドラフトに基づいてWebページを作成できること。"
+msgstr ""
+"AIやPhotoshopソフトウェアに精通し、UIデザインドラフトに基づいてWebページを作"
+"成できること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:423
 msgid "Familiar with HTML5, CSS, Javascript programming language;"
@@ -3117,17 +3168,21 @@ msgstr "HTML5、CSS、Javascriptプログラミング言語に精通している
 msgid ""
 "Familiar with website front-end development framework such as jQuery and "
 "Bootstrap;"
-msgstr "jQueryやBootstrapなどのWebサイトフロントエンド開発フレームワークに精通していること。"
+msgstr ""
+"jQueryやBootstrapなどのWebサイトフロントエンド開発フレームワークに精通してい"
+"ること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:425
 msgid ""
 "Familiar with the principle of responsive Web design, with practical "
 "experience;"
-msgstr "実用的な経験を備えた、即座に反応するWebデザインの原則に精通していること。"
+msgstr ""
+"実用的な経験を備えた、即座に反応するWebデザインの原則に精通していること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:426
 msgid "Skillfully use existing technology to set up the best user experience;"
-msgstr "既存の技術を巧みに使い、最高のユーザーエクスペリエンスを設定できること。"
+msgstr ""
+"既存の技術を巧みに使い、最高のユーザーエクスペリエンスを設定できること。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:427
 msgid "Good English level, able to read English technical documents."
@@ -5951,13 +6006,13 @@ msgstr "コミュニティ"
 msgid "Service Terms"
 msgstr "サービス規約"
 
-#: web/templates/header-no-menu.html:29
+#: web/templates/header-no-menu.html:29 web/templates/header.html:45
 msgid "User Center"
-msgstr ""
+msgstr "ユーザーセンター"
 
-#: web/templates/header-no-menu.html:30
+#: web/templates/header-no-menu.html:30 web/templates/header.html:46
 msgid "LogOut"
-msgstr ""
+msgstr "ログアウト"
 
 #: web/templates/header.html:25
 msgid "Technology"
