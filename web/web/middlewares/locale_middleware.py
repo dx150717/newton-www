@@ -41,7 +41,9 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
             # Add turkish
             if language.find('tr') >= 0:
                 return 'tr'
-
+            # Add Japanese
+            if language.find('ja') >= 0:
+                return 'ja'
             # Add Dutch
             # if language.find('nl') >= 0:
             #     return 'nl'
