@@ -1149,14 +1149,14 @@ canvas { display: block; vertical-align: top; }
 #news .content .big-image img{width: 500px;}
 #news .content .small-image img{width: 200px;}
 #news .content .shadow{background-color: #000;width: 100%;height: 0; padding-bottom: 100%; opacity: 0.3;}
-#news .content p{text-align: center; font-size: 22px; color:#fff;}
-#news .content a{color: #fff; font-size: 22px;}
+#news .content p{text-align: center; font-size: 22px; color:#fff; word-break: break-word}
+#news .content a{color: #fff; font-size: 22px; overflow: hidden;}
 #news .content .announcement-title{color: #fff;position: absolute; bottom: 0;padding: 5px;font-size: 16px;}
 #news .content .time{position: absolute; top: 0;padding: 5px;font-size: 14px;}
 @media(max-width:768px){ 
     #news .content{display: block;}
     #news .content .bigimg{width: 100%; margin: 0 0 2px 0;background-size: 100% 100%; height: 0; padding-bottom: 100%}
-    #news .content .small-content{width: 100%; float: left; height: unset; margin: 0}
+    #news .content .small-content{width: 100%; float: left; height: unset; margin: 0; padding: 0}
     #news .content .smallimg{width: 100%; margin: 0 0 2px 0;background-size: 100% 100%; height: 0; padding-bottom: 100%}
 }
 
