@@ -9,8 +9,10 @@ PUBLISHED = 2
 
 CHINESE = 0
 ENGLISH = 1
-# Add languages to admin
 KOREAN = 2
+JAPANESE = 3
+RUSSIAN = 4
+TURKISH = 5
 
 TYPE_BLOG = 0
 TYPE_ANNOUNCEMENT = 1
@@ -41,9 +43,14 @@ def entries_published(queryset):
         language = CHINESE
     elif language.startswith('en'):
         language = ENGLISH
-    # Add korean
     elif language.startswith('ko'):
         language = KOREAN
+    elif language.startswith('ja'):
+        language = JAPANESE
+    elif language.startswith('ru'):
+        language = RUSSIAN
+    elif language.startswith('tr'):
+        language = TURKISH
     else:
         language = ENGLISH
         

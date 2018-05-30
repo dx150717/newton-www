@@ -13,7 +13,7 @@ from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN
+from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH
 from press.models import PressModel
 
 from django.views import generic
@@ -24,6 +24,14 @@ def show_home_view(request):
         language = CHINESE
     elif language.startswith('en'):
         language = ENGLISH
+    elif language.startswith('ko'):
+        language = KOREAN
+    elif language.startswith('ja'):
+        language = JAPANESE
+    elif language.startswith('ru'):
+        language = RUSSIAN
+    elif language.startswith('tr'):
+        language = TURKISH
     else:
         language = ENGLISH
         
@@ -118,9 +126,14 @@ class AnnouncementView(generic.ListView):
             language = CHINESE
         elif language.startswith('en'):
             language = ENGLISH
-        # Add korean
         elif language.startswith('ko'):
             language = KOREAN
+        elif language.startswith('ja'):
+            language = JAPANESE
+        elif language.startswith('ru'):
+            language = RUSSIAN
+        elif language.startswith('tr'):
+            language = TURKISH
         else:
             language = ENGLISH
             
@@ -143,9 +156,14 @@ class AnnouncementSubView(generic.ListView):
             language = CHINESE
         elif language.startswith('en'):
             language = ENGLISH
-        # Add korean
         elif language.startswith('ko'):
             language = KOREAN
+        elif language.startswith('ja'):
+            language = JAPANESE
+        elif language.startswith('ru'):
+            language = RUSSIAN
+        elif language.startswith('tr'):
+            language = TURKISH
         else:
             language = ENGLISH
             
