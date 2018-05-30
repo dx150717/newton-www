@@ -234,7 +234,7 @@ msgid "No captcha"
 msgstr "Captcha yok"
 
 #: web/apps/login/views.py:43
-msgid "Auth Recaptcha Error"
+msgid "Authenticator Recaptcha Error"
 msgstr "Captcha hatalı"
 
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
@@ -302,7 +302,7 @@ msgstr ""
 
 #: web/apps/login/templates/login/index.html:27
 msgid ""
-"Tip:To login success, Ensure you can access the google recaptcha service."
+"Tip: To login successfully, ensure that you can access the google recaptcha service."
 msgstr ""
 "İpucu: Başarılı bir giriş için Google recaptcha servisine erişebilir olun."
 
@@ -319,7 +319,7 @@ msgid "Register"
 msgstr "Kayıt ol"
 
 #: web/apps/login/templates/login/index.html:46
-msgid "Forget Password"
+msgid "Forgot Password"
 msgstr "Şifremi Unuttum"
 
 #: web/apps/login/templates/login/index.html:59
@@ -435,11 +435,11 @@ msgid "Email already existed"
 msgstr ""
 
 #: web/apps/register/views.py:148
-msgid "Google Auth Code Error"
+msgid "Google Authenticator Code Error"
 msgstr "Google Kimlik Doğrulama Hatası"
 
 #: web/apps/register/views.py:210 web/apps/reset/views.py:110
-msgid "Entered passwords differ"
+msgid "Entered passwords do not match"
 msgstr "Girilen şifreler farklıdır"
 
 #: web/apps/register/templates/register/gtoken.html:6
@@ -448,13 +448,12 @@ msgid "Add Google Authenticator"
 msgstr "Google Authenticator'ı ekle"
 
 #: web/apps/register/templates/register/gtoken.html:28
-msgid "Scan the QR code or Enter the  code manually into your GA app"
+msgid "Scan the QR code or enter the code manually into your GA app"
 msgstr "QR kodunu tarayın veya kodu manuel olarak GA uygulamanıza girin"
 
 #: web/apps/register/templates/register/gtoken.html:31
 msgid ""
-"Apple users recommend to download the Authenticator in the App Store, and "
-"android users recommend the Google Authenticator to Google Play."
+"Apple users are recommended to download Google Authenticator directly from the App Store and android users are recommended to download Google Authenticator from Google Play."
 msgstr ""
 "Apple kullanıcılarına App Store'dan Authenticator'ı indirmeyi öneririz ve "
 "Android kullanıcılarına ise Google Authenticator'ı Google Play’den indirmeyi "
@@ -480,13 +479,13 @@ msgstr "QR kodunu taramak için GA uygulamasını kullanın"
 
 #: web/apps/register/templates/register/index.html:32
 msgid ""
-"Tip:To register success, Ensure you can access the google recaptcha service."
+"Tip: To register successfully, ensure you can access the google recaptcha service."
 msgstr ""
 "İpucu: Başarılı bir şekilde kayıt olmak için, google recaptcha hizmetine "
 "erişebildiğinizden emin olun."
 
 #: web/apps/register/templates/register/index.html:55
-msgid "Clicking register button means you agree and abide by<br/> Newton"
+msgid "By clicking on the register button you agree and abide by<br/> Newton"
 msgstr ""
 "Kayıt düğmesine tıklamak, şartlara kabul ettiğiniz anlamına gelir. <br/> "
 "Newton"
@@ -528,9 +527,8 @@ msgstr "Gönderim başarılı!"
 
 #: web/apps/register/templates/register/post-success.html:24
 msgid ""
-"We have sent you an email to your registered email, please check out to "
-"finish signing up。"
-msgstr ""
+"We have sent you an email to your registered email, please check out to finish signing up."
+msgstr "Kayıtlı e-postanıza bir e-posta gönderdik, lütfen kaydolmayı bitirmek için kontrol edin."
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Complete the register process of Newton"
@@ -563,7 +561,7 @@ msgid "Go to <a href='/login/'>Login</a>"
 msgstr ""
 
 #: web/apps/reset/views.py:36
-msgid "Email not existed"
+msgid "Email address does not exist"
 msgstr "E-posta mevcut değil"
 
 #: web/apps/reset/templates/reset/edit_password.html:6
@@ -590,7 +588,7 @@ msgstr "İşlem başarılı!"
 
 #: web/apps/reset/templates/reset/reset-complete.html:24
 msgid ""
-"You have reset your password successfully, please <a href='/login/'> login</"
+"You have successfully reset your password, please <a href='/login/'> login</"
 "a>"
 msgstr ""
 "Şifrenizi başarıyla sıfırladınız, lütfen giriş yapın <a href='/login/'> "
@@ -611,8 +609,7 @@ msgstr ""
 
 #: web/apps/reset/templates/reset/reset-success.html:22
 msgid ""
-"We sent an email to your registered email address, please go to check and "
-"complete the reset password process."
+"We have sent an email to your registered email address to complete the password reset procedure."
 msgstr ""
 "Kayıtlı e-posta adresinize bir e-posta gönderdik, lütfen şifre sıfırlama "
 "işlemini tamamlamak için mail adresinizi kontrol edin."
@@ -3008,7 +3005,7 @@ msgstr "Android Ar-Ge Mühendisi"
 
 #: web/apps/welcome/templates/welcome/joinus.html:334
 msgid ""
-"Responsible for the development of Android client product, help other "
+"Responsible for the development of Android client product, helping other "
 "developers grow and make progress;"
 msgstr ""
 "Android client ürününün geliştirilmesinden sorumlu, diğer geliştiricilerin "
@@ -3016,8 +3013,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
-"Participate in the analysis and design of products based on client "
-"requirements, cooperate with UI designers to complete initial testing based "
+"Participating in the analysis and design of products based on client "
+"requirements, cooperating with UI designers to complete initial testing based "
 "on product design;"
 msgstr ""
 "Müşteri gereksinimlerine dayalı ürünlerin analizi ve tasarımına katılmak, "
@@ -3027,7 +3024,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:336
 msgid ""
 "Responsible for the development of subsequent iteration versions of the "
-"product, and continuously optimize the quality, performance, and user "
+"product, and continuously optimizing the quality, performance, and user "
 "experience of products."
 msgstr ""
 "Ürünün sonraki yineleme sürümlerinin geliştirilmesinden sorumludur ve "
@@ -3036,7 +3033,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
-"3+ years experience in professional Java development; More than 2 years "
+"At least 3 years experience in professional Java development; At least 2 years "
 "experience in Practical Android development experience; Familiar with "
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
@@ -3116,7 +3113,7 @@ msgstr "IOS Geliştirici"
 
 #: web/apps/welcome/templates/welcome/joinus.html:374
 msgid ""
-"Assist the product manager to analyze and organize the customer's need, and "
+"Assisting the product manager to analyze and organize the customer's need, and "
 "make the product requirements document;"
 msgstr ""
 "Ürün yöneticisine, müşterinin ihtiyacını analiz ve organize etmesinde yol "
@@ -3124,7 +3121,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:375
 msgid ""
-"Depending on the product requirements document, design iOS App system "
+"Depending on the product requirements document, designing an iOS App system  "
 "architecture;"
 msgstr ""
 "Ürün gereksinimleri belgesine bağlı olarak, iOS App sistem mimarisini "
@@ -3132,7 +3129,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:376
 msgid ""
-"Depending on the system architecture design, conduct iOS App-related program "
+"Depending on the system architecture design, conducting iOS App-related program  "
 "development;"
 msgstr ""
 "Sistem mimarisi tasarımına bağlı olarak iOS App ile ilgili program "
@@ -3140,7 +3137,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
 msgid ""
-"Depending on the product requirements document, conduct an overall test on "
+"Depending on the product requirements document, conducting an overall test on  "
 "the iOS app;"
 msgstr ""
 "Ürün gereksinimleri belgesine bağlı olarak, iOS uygulamasında genel bir test "
@@ -3148,7 +3145,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:378
 msgid ""
-"According to customers’ feedback, continuously revised and improved iOS app."
+"According to customers’ feedback, continuously revising and improving the iOS app."
 msgstr ""
 "Müşterilerin geri bildirimlerine göre, sürekli olarak IOS uygulamasını "
 "gözden geçirip geliştirmek."
@@ -3157,13 +3154,13 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:420
 
 msgid ""
-"Bachelor’s degree or above, graduated in computer science or related major;"
+"Bachelors’ degree or above, graduated in computer science or related major;"
 msgstr ""
 "Lisans derecesi veya üstü, bilgisayar bilimi veya ilgili ana dal mezunu;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:383
 msgid ""
-"2+ years working experience in computer software, or more than 1 years "
+"At least 2 years working experience in computer software, or more than 1 year "
 "working experience in iOS App development;"
 msgstr ""
 "Bilgisayar yazılımında 2 yıldan fazla iş deneyimi veya IOS Uygulama "
@@ -3201,15 +3198,14 @@ msgstr "Ara yüz web geliştiricisi"
 
 #: web/apps/welcome/templates/welcome/joinus.html:412
 msgid ""
-"Assist the product manager, analyze and organize the customer's need, and "
-"make the product requirements document;"
+"Assisting the product manager, analyzing and organizing the customer's need, and making the product requirements document;"
 msgstr ""
 "Ürün yöneticisine yardımcı olun, müşterinin ihtiyacını analiz etme ve "
 "düzenleme ve ürün gereksinimlerini belgeleme;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
-"Depending on the product requirements document, design the architecture of "
+"Depending on the product requirements document, designing the architecture of "
 "the website front-end;"
 msgstr ""
 "Ürün gereksinimleri belgesine bağlı olarak, web sitesinin ara yüz mimarisini "
@@ -3217,7 +3213,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:414
 msgid ""
-"Depending on the design draft provided by the UI designer, complete the "
+"Depending on the design draft provided by the UI designer, completing the "
 "production of the website page;"
 msgstr ""
 "UI tasarımcısı tarafından sağlanan tasarım taslağına bağlı olarak, web "
@@ -3225,15 +3221,15 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
 msgid ""
-"According to the product requirements document, complete the development of "
-"the site front-end interactive part of the program;"
+"According to the product requirements document, completing the development of "
+"the sites’ front-end interactive part of the program;"
 msgstr ""
 "Ürün gereksinimleri belgesine göre, programın ön uç etkileşimli bölümünün "
 "geliştirilmesini tamamlama;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:416
 msgid ""
-"According to consumer’s feedback, correct the front end issues of the "
+"According to consumer’s feedback, correcting the front end issues of the "
 "website."
 msgstr ""
 "Tüketicinin geri bildirimlerine göre, web sitesinin ön uç sorunlarını "
@@ -3268,7 +3264,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:425
 msgid ""
-"Familiar with the principle of responsive Web design, with practical "
+"Familiar with the principles of responsive Web design, with practical "
 "experience;"
 msgstr "Pratik deneyime sahip, responsive Web tasarımı ilkelerine aşina;"
 
@@ -6052,7 +6048,7 @@ msgid "System Error."
 msgstr ""
 
 #: web/templates/base.html:71
-msgid "Join us for changing the world"
+msgid "Join us to change the world"
 msgstr "Dünyayı değiştirmek için bize katılın"
 
 #: web/templates/dialog.html:8

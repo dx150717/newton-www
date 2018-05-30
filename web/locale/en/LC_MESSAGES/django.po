@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -232,7 +232,7 @@ msgid "No captcha"
 msgstr ""
 
 #: web/apps/login/views.py:43
-msgid "Auth Recaptcha Error"
+msgid "Authenticator Recaptcha Error"
 msgstr ""
 
 #: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
@@ -270,7 +270,7 @@ msgstr ""
 
 #: web/apps/login/templates/login/index.html:23
 msgid ""
-"Tip:To login success, Ensure you can access the google recaptcha service."
+"Tip: To login successfully, ensure that you can access the google recaptcha service."
 msgstr ""
 
 #: web/apps/login/templates/login/index.html:46
@@ -291,7 +291,7 @@ msgid "Register"
 msgstr ""
 
 #: web/apps/login/templates/login/index.html:47
-msgid "Forget Password"
+msgid "Forgot Password"
 msgstr ""
 
 #: web/apps/login/templates/login/index.html:61
@@ -428,11 +428,11 @@ msgid "Email already existed"
 msgstr ""
 
 #: web/apps/register/views.py:135
-msgid "Google Auth Code Error"
+msgid "Google Authenticator Code Error"
 msgstr ""
 
 #: web/apps/register/views.py:197 web/apps/reset/views.py:109
-msgid "Entered passwords differ"
+msgid "Entered passwords do not match"
 msgstr ""
 
 #: web/apps/register/templates/register/gtoken.html:6
@@ -442,13 +442,13 @@ msgstr ""
 
 #: web/apps/register/templates/register/gtoken.html:25
 msgid "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
-msgstr "Scan the QR code or Enter the  code manually into your GA app"
+msgstr "Scan the QR code or enter the code manually into your GA app"
 
 #: web/apps/register/templates/register/gtoken.html:28
 msgid ""
 "苹果用户推荐在App Store中下载Authenticator,安卓用户推荐到Google Play下载谷歌"
 "身份验证器"
-msgstr "Apple users recommend to download the Authenticator in the App Store, and android users recommend the Google Authenticator to Google Play."
+msgstr "Apple users are recommended to download Google Authenticator directly from the App Store and android users are recommended to download Google Authenticator from Google Play."
 
 #: web/apps/register/templates/register/gtoken.html:31
 msgid "请务必保管好密钥或者二维码，以免丢失造成不便"
@@ -472,7 +472,7 @@ msgid ""
 "NEWTON_WEB_URL }}/terms-of-use/'>使用条款</a>和<a href='{{ settings."
 "NEWTON_WEB_URL }}/privacy/'>隐私政策 </a>。"
 msgstr ""
-"Clicking register button means you agree and abide by<br/> Newton <a href='/"
+"By clicking on the register button you agree and abide by<br/> Newton <a href='/"
 "terms-of-user'>User Agreement</a> and <a href='/pricacy/'>Privacy Policy</a>"
 
 #: web/apps/register/templates/register/invalid-link.html:6
@@ -497,8 +497,7 @@ msgstr ""
 #: web/apps/register/templates/register/post-success.html:21
 msgid "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
 msgstr ""
-"We have sent you an email to your registered email, please check out to "
-"finish signing up"
+"We have sent you an email to your registered email, please check out to finish signing up."
 
 #: web/apps/register/templates/register/register-letter.html:14
 #: web/apps/reset/templates/reset/reset-letter.html:50
@@ -514,7 +513,7 @@ msgid "您已经注册成功，请<a href='/login/'>登录</a>"
 msgstr ""
 
 #: web/apps/reset/views.py:35
-msgid "Email not existed"
+msgid "Email address does not exist"
 msgstr ""
 
 #: web/apps/reset/templates/reset/edit_password.html:18

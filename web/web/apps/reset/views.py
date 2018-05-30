@@ -33,7 +33,7 @@ def post_email(request):
         email = form.cleaned_data['email']
         user = User.objects.filter(email=email).first()
         if not user:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Email not existed')])
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Email address does not exist')])
             return render(request,'reset/index.html', locals())
         is_send_success = services.send_reset_validate_email(email, request)
         if not is_send_success:
@@ -107,7 +107,7 @@ def post_password(request):
         repassword = form.cleaned_data['repassword']
         #check password
         if password != repassword:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords differ')])
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords do not match')])
             return render(request,'reset/edit_password.html', locals())
         user.set_password(password)
         user.save()

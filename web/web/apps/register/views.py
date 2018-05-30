@@ -145,7 +145,7 @@ def submit_gtoken(request):
         if not is_pass_google_auth:
             gtoken = gtoken
             gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Auth Code Error')])
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Authenticator Code Error')])
             return render(request, 'register/gtoken.html', locals())
         # clear session
         session_email = request.session.get('email')
@@ -207,7 +207,7 @@ def submit_password(request):
         password = form.cleaned_data['password']
         repassword = form.cleaned_data['repassword']
         if password != repassword:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords differ')])
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords do not match')])
             return render(request, 'register/password.html', locals())
         request.session['email'] = email
         request.session['password'] = password
