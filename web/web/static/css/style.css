@@ -40,7 +40,6 @@ h3, .f24 { font-size: 24px; }
 .only-pc { display: block;}
 .only-mobile {display: none; }
 .arrow-only-pc{ display: inline-flex;}
-#normal{ position: relative;}
 @font-face {
     font-family: 'iconfont';
     src: url('../fonts/iconfont.eot'); /* IE9*/
@@ -179,7 +178,7 @@ h6, .f12 { font-size: 12px; }
 .nav-logo img { max-width: 100%; display: inline-block; margin-right: 8px; height: 100%; }
 .nav-logo .logo-pc { display: inline-block; }
 .nav-logo .logo-mobile { display: none; }
-.sticky-navigation.NavBg { position: absolute; right: 0; left: 0; z-index: 1030 ; top: 0; background: #f7f7f7; }
+.sticky-navigation.NavBg {right: 0; left: 0; z-index: 1030 ; top: 0; background: #f7f7f7; }
 .navbar-header a{ margin-top: 13px;}
 .navbar-nav li { padding: 15px 0 15px 0;}
 .sticky-navigation.NavBg .navbar-header a{ margin-top: 9px;}
@@ -1194,3 +1193,6 @@ canvas { display: block; vertical-align: top; }
 /* go top */
 #gotoTop{display:none; position:fixed; top:75%; right: 0; cursor:pointer; text-align:center; border:1px solid #e0e0e0; z-index: 999; opacity: 0.3;}
 #gotoTop.hover{background:#5CB542;color:#fff;text-decoration:none;}
+
+
+.navFixed{position: fixed}

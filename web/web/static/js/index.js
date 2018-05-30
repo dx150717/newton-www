@@ -255,3 +255,12 @@ function gotoTop(min_height){
 };
 gotoTop();
 
+$(window).scroll(function(){
+	var height = document.getElementsByClassName("ad")[0].offsetHeight
+	var s = $(window).scrollTop();
+	if( s > height){
+		$(".NavBg").addClass("navFixed");
+	}else{
+		$(".NavBg").removeClass("navFixed");
+	};
+});
