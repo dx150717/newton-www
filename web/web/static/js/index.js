@@ -256,11 +256,16 @@ function gotoTop(min_height){
 gotoTop();
 
 $(window).scroll(function(){
-	var height = document.getElementsByClassName("ad")[0].offsetHeight
+	var height
 	var s = $(window).scrollTop();
-	if( s > height){
+	if (!document.getElementsByClassName("ad").length){
 		$(".NavBg").addClass("navFixed");
 	}else{
-		$(".NavBg").removeClass("navFixed");
+		height = document.getElementsByClassName("ad")[0].offsetHeight;
+		if( s > height){
+			$(".NavBg").addClass("navFixed");
+		}else{
+			$(".NavBg").removeClass("navFixed");
+		};
 	};
 });
