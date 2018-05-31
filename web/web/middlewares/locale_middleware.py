@@ -48,8 +48,8 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
             # if language.find('nl') >= 0:
             #     return 'nl'
             # Add Spain
-            # if language.find('es') >= 0:
-            #     return 'es'
+            if language.find('es') >= 0:
+                return 'es'
             return 'en'
         except Exception, inst:
             logger.exception('fail to get user language:%s' % str(inst))
