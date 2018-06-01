@@ -667,7 +667,10 @@ canvas { display: block; vertical-align: top; }
 .download_list{text-align:center; padding-top: 50px;}
 .download-but{ margin-top:0; margin-bottom: 100px}
 .download-but a{ font-weight:400; width: 200px; height: 50px; border-radius: 25px; border: solid 2px #000000; font-size:16px; line-height:47px; display:inline-block; margin:0 15px; color:#000}
-
+#mediakit .download_list img{width: 512px}
+@media(max-width:591px){
+    #mediakit .download_list img{width: 100%}
+}
 
 /** job */
 .panel{ box-shadow: unset;}
