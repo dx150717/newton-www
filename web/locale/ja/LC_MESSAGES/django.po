@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-28 13:20+0000\n"
+"POT-Creation-Date: 2018-06-02 09:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,8 +164,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:107
-#: web/apps/zinnia/models_bases/entry.py:110
+#: web/apps/zinnia/models_bases/entry.py:109
+#: web/apps/zinnia/models_bases/entry.py:112
 msgid "Language"
 msgstr ""
 
@@ -302,7 +301,8 @@ msgstr ""
 
 #: web/apps/login/templates/login/index.html:27
 msgid ""
-"Tip: To login successfully, ensure that you can access the google recaptcha service."
+"Tip: To login successfully, ensure that you can access the google recaptcha "
+"service."
 msgstr ""
 "ヒント:ログインを成功させるために、google recaptchaサービスにアクセスしている"
 "ことを確認してください。"
@@ -454,7 +454,9 @@ msgstr "QRコードをスキャンするか、コードを手動でGA appに入�
 
 #: web/apps/register/templates/register/gtoken.html:31
 msgid ""
-"Apple users are recommended to download Google Authenticator directly from the App Store and android users are recommended to download Google Authenticator from Google Play."
+"Apple users are recommended to download Google Authenticator directly from "
+"the App Store and android users are recommended to download Google "
+"Authenticator from Google Play."
 msgstr ""
 "AppleユーザーはApp StoreにてAuthenticatorをダウンロードし、また、androidユー"
 "ザーはGoogle PlayにてGoogle Authenticatorをダウンロードすることをオススメしま"
@@ -479,7 +481,8 @@ msgstr "GA appを使用してQRコードをスキャンします"
 
 #: web/apps/register/templates/register/index.html:32
 msgid ""
-"Tip: To register successfully, ensure you can access the google recaptcha service."
+"Tip: To register successfully, ensure you can access the google recaptcha "
+"service."
 msgstr ""
 "ヒント:登録を成功させるために、google recaptchaサービスにアクセスしていること"
 "を確認してください。"
@@ -525,8 +528,11 @@ msgstr "提出完了！"
 
 #: web/apps/register/templates/register/post-success.html:24
 msgid ""
-"We have sent you an email to your registered email, please check out to finish signing up."
-msgstr "登録済みのメールアドレス宛てにメールをお送りしました。チェックアウトして登録を完了してください。"
+"We have sent you an email to your registered email, please check out to "
+"finish signing up."
+msgstr ""
+"登録済みのメールアドレス宛てにメールをお送りしました。チェックアウトして登録"
+"を完了してください。"
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Complete the register process of Newton"
@@ -607,7 +613,8 @@ msgstr ""
 
 #: web/apps/reset/templates/reset/reset-success.html:22
 msgid ""
-"We have sent an email to your registered email address to complete the password reset procedure."
+"We have sent an email to your registered email address to complete the "
+"password reset procedure."
 msgstr ""
 "登録したメールアドレスにEメールを送信しました。確認してパスワードのリセットプ"
 "ロセスを完了してください。"
@@ -663,7 +670,7 @@ msgstr ""
 
 #: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:66
 #: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:68
-#: web/apps/zinnia/templates/zinnia/skeleton.html:62
+#: web/apps/zinnia/templates/zinnia/skeleton.html:72
 msgid "Search"
 msgstr ""
 
@@ -1424,7 +1431,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:61 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:63 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "発表"
 
@@ -1438,17 +1445,17 @@ msgid "All"
 msgstr "全て"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:66
+#: web/apps/zinnia/models_bases/entry.py:68
 msgid "Operation"
 msgstr "運営報告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:67
+#: web/apps/zinnia/models_bases/entry.py:69
 msgid "Weekly"
 msgstr "週間レポート"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:65
+#: web/apps/zinnia/models_bases/entry.py:67
 msgid "Activity"
 msgstr "​活動報告"
 
@@ -1457,7 +1464,7 @@ msgstr "​活動報告"
 #: web/apps/welcome/templates/welcome/community.html:45
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:31
+#: web/templates/header.html:32
 msgid "Community"
 msgstr "コミュニティ"
 
@@ -1471,7 +1478,6 @@ msgid "Scan QR Code to join us"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:34
-
 msgid "Email List"
 msgstr "​Eメールリスト"
 
@@ -1517,7 +1523,6 @@ msgid "Email:"
 msgstr "Eメール :"
 
 #: web/apps/welcome/templates/welcome/contact.html:24
-
 msgid ""
 "Whitepaper : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
@@ -1767,7 +1772,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
-#: web/templates/header.html:34
+#: web/templates/header.html:35
 msgid "Economy"
 msgstr "エコノミー"
 
@@ -1816,7 +1821,6 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:38
 #: web/apps/welcome/templates/welcome/include-investor.html:60
-
 msgid "SVP of Cheetah (NASDAQ:CMCM)"
 msgstr "Cheetah SVP(NASDAQ:CMCM)"
 
@@ -1834,7 +1838,6 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:53
 #: web/apps/welcome/templates/welcome/include-investor.html:89
-
 msgid "Former CTO of Sina (NASDAQ: SINA)"
 msgstr "Sina(NASDAQ:SINA) 前CTO"
 
@@ -1913,7 +1916,10 @@ msgstr "よりインテリジェンスに"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:38
 msgid ""
-"Personal credit can be automatically created in a free and open manner without authoritative intermediaries. This methodology will reduce human intervention and facilitate the coordination between people, between machines and between people and machines."
+"Personal credit can be automatically created in a free and open manner "
+"without authoritative intermediaries. This methodology will reduce human "
+"intervention and facilitate the coordination between people, between "
+"machines and between people and machines."
 msgstr ""
 "自由かつ公正な方法で信用力を自動的にクレジット化することで、信頼における仲介"
 "者がいなくても、人同士、機械同士、人と機械のよりよい調整を容易にすることがで"
@@ -1926,7 +1932,10 @@ msgstr "より効果的なインセンティブメカニズム"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:50
 msgid ""
-"Replacing traditional business intermediaries by technology protocols will reduce the transactional cost and reward each who contributed in the transaction; such as service providers, consumers and other participants connected by the value-based Internet."
+"Replacing traditional business intermediaries by technology protocols will "
+"reduce the transactional cost and reward each who contributed in the "
+"transaction; such as service providers, consumers and other participants "
+"connected by the value-based Internet."
 msgstr ""
 "従来のビジネス仲介業者をテクノロジープロトコルに置き換えることによって取引コ"
 "ストは削減され、また、価値を創造するインターネットに接続するサービスプロバイ"
@@ -1939,7 +1948,10 @@ msgstr "新たな組織体制と協力形態"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:61
 msgid ""
-"The community economy managed by non-profit foundations will replace the monopoly of intermediary platforms managed by traditional for-profit organizations. Based on open, fair, and rational rules every contributor will benefit from the economy and become a part of the economy."
+"The community economy managed by non-profit foundations will replace the "
+"monopoly of intermediary platforms managed by traditional for-profit "
+"organizations. Based on open, fair, and rational rules every contributor "
+"will benefit from the economy and become a part of the economy."
 msgstr ""
 "非営利団体によって管理されるコミュニティ経済は、従来の営利企業が管理する独占"
 "的な仲介プラットフォームに取って代わるでしょう。オープンで公正かつ合理的な"
@@ -1959,7 +1971,6 @@ msgid "Liu Jun"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:22
-
 msgid "Co-Founder of Lightinthebox (NYSE:LITB)"
 msgstr "Lightinthebox（NYSE：LITB） 共同創設者"
 
@@ -2082,12 +2093,6 @@ msgstr ""
 "「Atom Hashing」を使用することで、ネットワーク全体にわたって商品に個別のデジ"
 "タルIDを作成できます。"
 
-msgid ""
-"By using such techniques as “Atom Hashing” we can create a unique digital identity for commodities over the whole network. Through this digital identity a user can check the relevant information on any commodity at any time."
-msgstr ""
-"「Atom Hashing」を使用することで、ネットワーク全体にわたって商品に個別のデジ"
-"タルIDを作成できます。"
-
 #: web/apps/welcome/templates/welcome/include-protocol.html:45
 #: web/apps/welcome/templates/welcome/protocol.html:50
 msgid "Digital Marketing"
@@ -2109,13 +2114,9 @@ msgstr "取引および支払い"
 #: web/apps/welcome/templates/welcome/include-protocol.html:57
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
-"We support cross-border transactions, micro payments, lightning "
-"settlement, etc., and provide comprehensive online and offline payment tools."
-msgstr ""
-"クロスボーダー取引、超少額決済、瞬間決済などをサポートし、オンラインとオフラ"
-"インの総合的な支払いツールを提供します。"
-
-msgid "Newton supports cross-border transactions, micro payments, lightning settlements and more to provide comprehensive online and offline payment tools."
+"Newton supports cross-border transactions, micro payments, lightning "
+"settlements and more to provide comprehensive online and offline payment "
+"tools."
 msgstr ""
 "クロスボーダー取引、超少額決済、瞬間決済などをサポートし、オンラインとオフラ"
 "インの総合的な支払いツールを提供します。"
@@ -2269,7 +2270,9 @@ msgid ""
 "assets transactions between the main chain and sub-chains, and between sub-"
 "chains."
 msgstr ""
-"NewChainはメインチェーンとサブチェーンの設計スキームを採用しており、サブチェーンは複数のコンセンサスメカニズムとデータ構造をサポートし、メインチェーンとサブチェーン、サブチェーンとサブチェーン間の資産取引を保証します。"
+"NewChainはメインチェーンとサブチェーンの設計スキームを採用しており、サブ"
+"チェーンは複数のコンセンサスメカニズムとデータ構造をサポートし、メインチェー"
+"ンとサブチェーン、サブチェーンとサブチェーン間の資産取引を保証します。"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:34
 #: web/apps/welcome/templates/welcome/tech.html:45
@@ -2281,7 +2284,8 @@ msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning "
 "technology, the hashing ID is generated."
 msgstr ""
-"放射年代測定、PCA、マシンビジョン、ディープラーニング技術を使用することにより、ハッシュされたIDを生成します。"
+"放射年代測定、PCA、マシンビジョン、ディープラーニング技術を使用することによ"
+"り、ハッシュされたIDを生成します。"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:45
 #: web/apps/welcome/templates/welcome/tech.html:32
@@ -2304,7 +2308,8 @@ msgid ""
 "Blockchain fog computing, communication protocols between IoT devices and "
 "gateways, and NewChain IoT devices development specifications."
 msgstr ""
-"ブロックチェーン・フォグ・コンピューティング、IoTデバイスとゲートウェイ間の通信プロトコル、使用を開発するNewChain IoTデバイスを指します。"
+"ブロックチェーン・フォグ・コンピューティング、IoTデバイスとゲートウェイ間の通"
+"信プロトコル、使用を開発するNewChain IoTデバイスを指します。"
 
 #: web/apps/welcome/templates/welcome/index.html:14
 msgid "Everyone should benefit directly from economic growth"
@@ -2348,38 +2353,39 @@ msgid "OUR CULTURE"
 msgstr "私達の文化"
 
 #: web/apps/welcome/templates/welcome/joinus.html:30
-
 msgid ""
 "We believe in the free, open and inclusive culture advocated by the "
 "philosophy of free and open source. Decentralization is the core of our "
 "values."
 msgstr ""
-"私達は自由でオープンソースの哲学を支持する、自由でオープンで包括的な文化を信じています。"
+"私達は自由でオープンソースの哲学を支持する、自由でオープンで包括的な文化を信"
+"じています。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
-
 msgid ""
 "Currently, Newton consists of top talents from the free and open source "
 "software community. We work with professionals in the fields of e-commerce, "
 "finance, media, etc. We hope that in the future more talents and "
 "professionals will join us."
 msgstr ""
-"現在、Newtonは自由でオープンソースなソフトウェアコミュニティに属するトップの才能を持つ人材から成っており、eコマース、金融、メディアなどの分野の専門家と仕事をしています。将来的にはより多くの才能を持つ人材や専門家が参加することを願っています。"
+"現在、Newtonは自由でオープンソースなソフトウェアコミュニティに属するトップの"
+"才能を持つ人材から成っており、eコマース、金融、メディアなどの分野の専門家と仕"
+"事をしています。将来的にはより多くの才能を持つ人材や専門家が参加することを"
+"願っています。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:36
-
 msgid ""
 "In addition, developers around the world can join Newton through remote "
 "office. You don't have to worry about space limitations."
 msgstr ""
-"加えて、世界中の開発者は遠隔地のオフィスを通じてNewtonを構築することができます。職場スペースの制限を心配する必要はありません。"
+"加えて、世界中の開発者は遠隔地のオフィスを通じてNewtonを構築することができま"
+"す。職場スペースの制限を心配する必要はありません。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:38
 msgid "WHO WE ARE LOOKING FOR"
 msgstr "私達が探している人材"
 
 #: web/apps/welcome/templates/welcome/joinus.html:40
-
 msgid ""
 "We need technical talents in distributed systems, operating systems, "
 "encryption algorithms, blockchain, mobile development, product design, etc. "
@@ -2387,15 +2393,17 @@ msgid ""
 "models, asset management, financial innovation, etc. We are happy to work "
 "with volunteers and enthusiasts specialized in any field."
 msgstr ""
-"分散システム、オペレーティングシステム、暗号化アルゴリズム、ブロックチェーン、モバイル開発、製品設計などの技術的な才能が必要です。あらゆる分野に特化したボランティアと愛好家が参加することをうれしく思います。"
+"分散システム、オペレーティングシステム、暗号化アルゴリズム、ブロックチェー"
+"ン、モバイル開発、製品設計などの技術的な才能が必要です。あらゆる分野に特化し"
+"たボランティアと愛好家が参加することをうれしく思います。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
-
 msgid ""
 "We need everyone to be passionate and confident in decentralized business, "
 "because Newton has a close impact on everyone’s life."
 msgstr ""
-"Newtonは全員の人生に強烈な衝撃を与えるため、分散化されたビジネスにおいて全員が情熱的で自信を持つ必要があります。"
+"Newtonは全員の人生に強烈な衝撃を与えるため、分散化されたビジネスにおいて全員"
+"が情熱的で自信を持つ必要があります。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
 msgid ""
@@ -2460,7 +2468,6 @@ msgid "Qualifications:"
 msgstr "資格要件:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:72
-
 msgid ""
 "Bachelor’s degree or above, applicants majored in computer science or "
 "related professions will be prioritized."
@@ -2479,7 +2486,6 @@ msgstr ""
 "さまざまなプログラミング言語を習得していること(Java，Go，C++，Rust，Kotlin)"
 
 #: web/apps/welcome/templates/welcome/joinus.html:75
-
 msgid ""
 "Being familiar with the principles of software security, can apply security "
 "standards to research and development."
@@ -2488,7 +2494,6 @@ msgstr ""
 "できること"
 
 #: web/apps/welcome/templates/welcome/joinus.html:76
-
 msgid ""
 "Good English reading ability, being able to read English technical documents "
 "smoothly."
@@ -2523,7 +2528,6 @@ msgstr "募集人数: 5名"
 #: web/apps/welcome/templates/welcome/joinus.html:353
 #: web/apps/welcome/templates/welcome/joinus.html:391
 #: web/apps/welcome/templates/welcome/joinus.html:430
-
 msgid "Working Location: Shanlituan SOHO, Chaoyang District, Beijing"
 msgstr "場所：北京 - 朝陽区三里屯SOHO"
 
@@ -2593,19 +2597,16 @@ msgid "Contact:<a>newton-hr@newtonproject.org</a>"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:139
-
 msgid "Full-stack Web Developer"
 msgstr "フルスタックウェブデベロッパー"
 
 #: web/apps/welcome/templates/welcome/joinus.html:148
-
 msgid ""
 "Writing well-designed, testable, efficient code by using best software "
 "development practices;"
 msgstr "最適なソフトウェアを使用し、設計やテスト、効率的なコードの記述"
 
 #: web/apps/welcome/templates/welcome/joinus.html:149
-
 msgid ""
 "Creating website layout/user interface by using standard HTML/CSS practices;"
 msgstr ""
@@ -2613,12 +2614,10 @@ msgstr ""
 "ターフェースの作成"
 
 #: web/apps/welcome/templates/welcome/joinus.html:150
-
 msgid "Building web-based backends and micro-services;"
 msgstr "ウェブベースのバックエンドとマイクロサービスを構築"
 
 #: web/apps/welcome/templates/welcome/joinus.html:151
-
 msgid ""
 "Staying up-to-date with emerging technologies/industry trends and apply them "
 "into operations and activities;"
@@ -2626,12 +2625,10 @@ msgstr ""
 "新興テクノロジー/業界動向を把握し、それらをオペレーションや業務活動に適用"
 
 #: web/apps/welcome/templates/welcome/joinus.html:152
-
 msgid "Cooperation with designers to create intended visual design. "
 msgstr "意図したビジュアルデザインに合わせるためデザイナーと協力"
 
 #: web/apps/welcome/templates/welcome/joinus.html:156
-
 msgid ""
 "Proven work experience with React or other modern Frontend Javascript "
 "Framework;"
@@ -2644,7 +2641,6 @@ msgid "Experience with Python/Django/Node.js;"
 msgstr "Python/Django/Node.jsの経験を有すること"
 
 #: web/apps/welcome/templates/welcome/joinus.html:158
-
 msgid "Experience in writing frontend and backend unit and integration tests;"
 msgstr ""
 "フロントエンドとバックエンドユニット、統合テストを記述する経験を有すること"
@@ -2678,7 +2674,6 @@ msgstr ""
 "力を有すること"
 
 #: web/apps/welcome/templates/welcome/joinus.html:163
-
 msgid ""
 "Bachelor’s or master’s degree in computer science or relevant experience;"
 msgstr "コンピューターサイエンスもしくは関連する経験を有する学士または修士号"
@@ -2688,7 +2683,6 @@ msgid "Communication Specialist"
 msgstr "コミュニケーションスペシャリスト"
 
 #: web/apps/welcome/templates/welcome/joinus.html:186
-
 msgid ""
 "Delivering customer service and technical support on email/Facebook/Twitter;"
 msgstr ""
@@ -2696,23 +2690,19 @@ msgstr ""
 "供"
 
 #: web/apps/welcome/templates/welcome/joinus.html:187
-
 msgid "Communicating feedback and process suggestions of customers;"
 msgstr "顧客からのフィードバックとプロセス提案を運営に伝える"
 
 #: web/apps/welcome/templates/welcome/joinus.html:188
-
 msgid ""
 "Identifying causes of dissatisfaction, and providing ways for improvement;"
 msgstr "不満の原因を特定し改善方法を提供する"
 
 #: web/apps/welcome/templates/welcome/joinus.html:189
-
 msgid "Filling reports on enquiry summaries and improvement areas;"
 msgstr "お問い合わせの要約と改善箇所に関するレポートを準備する"
 
 #: web/apps/welcome/templates/welcome/joinus.html:190
-
 msgid ""
 "Ensure that all enquiries on social media are in compliance with all "
 "internal and external regulations, policies and guidelines;"
@@ -2722,17 +2712,14 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:194
 #: web/apps/welcome/templates/welcome/joinus.html:305
-
 msgid "Bachelor’s degree or above;"
 msgstr "学士号以上"
 
 #: web/apps/welcome/templates/welcome/joinus.html:195
-
 msgid "Preferably with 2 years of work experience in customer service;"
 msgstr "顧客サポート担当の職務経験を2年程度有することが好ましい"
 
 #: web/apps/welcome/templates/welcome/joinus.html:196
-
 msgid ""
 "Must speak and write fluent English and Chinese with good presentation, "
 "communication and computer skills;"
@@ -2749,7 +2736,6 @@ msgid "Developer Relations Advocate"
 msgstr "開発関係支持者"
 
 #: web/apps/welcome/templates/welcome/joinus.html:220
-
 msgid ""
 "Content creation, distribution and analysis tutorials, developer guides, "
 "newsletters, sample apps, client libraries;"
@@ -2758,14 +2744,12 @@ msgstr ""
 "クライアントライブラリなどのコンテンツ作成および配布、分析"
 
 #: web/apps/welcome/templates/welcome/joinus.html:221
-
 msgid ""
 "Creating and implementing detailed annual, monthly and weekly plans for "
 "promotion/engagement activities;"
 msgstr "提唱/取り決められた活動の年次、月次＆週次計画を作成し、実施"
 
 #: web/apps/welcome/templates/welcome/joinus.html:222
-
 msgid ""
 "Organizing and coordinating marketing  engagement activities including "
 "social media campaigns, youtube broadcasts, progress reports;"
@@ -2782,7 +2766,6 @@ msgid "Provide help and support to the organizers of community meetups;"
 msgstr "コミュニティのミーとアップ主催者交流し、サポート提供に従事する"
 
 #: web/apps/welcome/templates/welcome/joinus.html:229
-
 msgid ""
 "Must be fluent in both spoken and written English with good presentation, "
 "communication and computer skills;"
@@ -2791,14 +2774,12 @@ msgstr ""
 "暢に英語を読み書きできることが絶対条件"
 
 #: web/apps/welcome/templates/welcome/joinus.html:230
-
 msgid "Experience in writing tutorials, guides, API docs and sample apps;"
 msgstr ""
 "チュートリアル、ガイド、APIドキュメント、サンプルアプリケーションの作成を経験"
 "していること"
 
 #: web/apps/welcome/templates/welcome/joinus.html:231
-
 msgid "Experience in writing code in C++/JavaScript;"
 msgstr "C++/JavaScriptのコード記述を経験していること"
 
@@ -2817,7 +2798,6 @@ msgid "Senior UX Designer"
 msgstr "シニアUXデザイナー"
 
 #: web/apps/welcome/templates/welcome/joinus.html:259
-
 msgid ""
 "Translating concepts into user flows, wireframes, mockups and prototypes "
 "that lead to intuitive user experiences;"
@@ -2826,19 +2806,16 @@ msgstr ""
 "モックアップ、プロトタイプにコンセプトを変換する"
 
 #: web/apps/welcome/templates/welcome/joinus.html:260
-
 msgid "Identifying design problems and devise elegant solutions;"
 msgstr "設計上の問題を特定し、洗練された解決策を考案する"
 
 #: web/apps/welcome/templates/welcome/joinus.html:261
-
 msgid ""
 "Taking a user-centered design approach and rapidly test and iterate your "
 "designs;"
 msgstr "ユーザー中心の設計アプローチを採用し、設計を早急に繰り返しテストする"
 
 #: web/apps/welcome/templates/welcome/joinus.html:262
-
 msgid "Collaborating with other team members and stakeholders;"
 msgstr "他のチームメンバーやステークホルダーと協力する"
 
@@ -2852,7 +2829,6 @@ msgstr ""
 "した経験のある候補者を優先する。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
-
 msgid ""
 "Expertise in UX softwares such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
@@ -2861,7 +2837,6 @@ msgstr ""
 "する。Basic ReactやSCSS,JavaScriptのスキルはプラス。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:268
-
 msgid ""
 "Ability to work with clients, understand their specifications and design "
 "complete user experiences that fulfills their needs and vision;"
@@ -2909,14 +2884,12 @@ msgid "Product Manager"
 msgstr "プロダクトマネージャー"
 
 #: web/apps/welcome/templates/welcome/joinus.html:297
-
 msgid ""
 "Understanding the development of the industry and its customer requirements, "
 "form product need specification;"
 msgstr "業界および顧客が要求する開発に対して理解し、製品ニーズ仕様を作成する"
 
 #: web/apps/welcome/templates/welcome/joinus.html:298
-
 msgid ""
 "Designing product UE from requirements document, clearly and accurately "
 "communicate demands to developing engineers;"
@@ -2925,17 +2898,14 @@ msgstr ""
 "つ、性格に伝える"
 
 #: web/apps/welcome/templates/welcome/joinus.html:299
-
 msgid "Managing changes in product demand during product development;"
 msgstr "製品開発中の製品需要の変化を管理する"
 
 #: web/apps/welcome/templates/welcome/joinus.html:300
-
 msgid "Confirming the product satisfies all needs during product testing;"
 msgstr "製品テスト中に製品のニーズが満たされていることを確認する"
 
 #: web/apps/welcome/templates/welcome/joinus.html:301
-
 msgid ""
 "After releasing the product, tracking customers' usage and timely find "
 "problems."
@@ -2948,17 +2918,14 @@ msgid ""
 msgstr "3年以上のe-コマース業界製品の設計経験を有すること"
 
 #: web/apps/welcome/templates/welcome/joinus.html:307
-
 msgid "Proficient with product prototype designing tools;"
 msgstr "製品プロﾄタイプ設計ツールに詳しいこと"
 
 #: web/apps/welcome/templates/welcome/joinus.html:308
-
 msgid "Familiar with mobile UX design;"
 msgstr "モバイルUX設計に精通していること"
 
 #: web/apps/welcome/templates/welcome/joinus.html:309
-
 msgid ""
 "Good technical background in creating rich user experience through "
 "technology;"
@@ -2967,7 +2934,6 @@ msgstr ""
 "すること"
 
 #: web/apps/welcome/templates/welcome/joinus.html:310
-
 msgid "Good level of English, fluent in reading English documents."
 msgstr "十分な英語力を有し、流暢に英語文書を読めること"
 
@@ -2985,8 +2951,8 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
 "Participating in the analysis and design of products based on client "
-"requirements, cooperating with UI designers to complete initial testing based "
-"on product design;"
+"requirements, cooperating with UI designers to complete initial testing "
+"based on product design;"
 msgstr ""
 "クライアントの要件に基づく製品分析と設計に参加し、UI設計者と協力して製品設計"
 "に基づく初期テストを完了します。"
@@ -3002,8 +2968,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
-"At least 3 years experience in professional Java development; At least 2 years "
-"experience in Practical Android development experience; Familiar with "
+"At least 3 years experience in professional Java development; At least 2 "
+"years experience in Practical Android development experience; Familiar with "
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
 msgstr ""
@@ -3084,8 +3050,8 @@ msgstr "IOSデベロッパー"
 
 #: web/apps/welcome/templates/welcome/joinus.html:374
 msgid ""
-"Assisting the product manager to analyze and organize the customer's need, and "
-"make the product requirements document;"
+"Assisting the product manager to analyze and organize the customer's need, "
+"and make the product requirements document;"
 msgstr ""
 "製品マネージャーが顧客ニーズを分析および整理、また、製品要件文書を作成するの"
 "を支援します。"
@@ -3098,35 +3064,35 @@ msgstr "製品要件文書に応じて、iOS Appシステムのアーキテク�
 
 #: web/apps/welcome/templates/welcome/joinus.html:376
 msgid ""
-"Depending on the system architecture design, conducting iOS App-related program  "
-"development;"
+"Depending on the system architecture design, conducting iOS App-related "
+"program  development;"
 msgstr ""
 "システムアーキテクチャの設計に応じて、iOS App関連のプログラム開発を行います"
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
 msgid ""
-"Depending on the product requirements document, conducting an overall test on  "
-"the iOS app;"
+"Depending on the product requirements document, conducting an overall test "
+"on  the iOS app;"
 msgstr "製品要件文書に応じて、iOSアプリケーションの全体的なテストを行います"
 
 #: web/apps/welcome/templates/welcome/joinus.html:378
 msgid ""
-"According to customers’ feedback, continuously revising and improving the iOS app."
+"According to customers’ feedback, continuously revising and improving the "
+"iOS app."
 msgstr ""
 "顧客のフィードバックに応じて、継続的に改訂され、iOSアプリを継続的に改訂、改善"
 "します"
 
 #: web/apps/welcome/templates/welcome/joinus.html:382
 #: web/apps/welcome/templates/welcome/joinus.html:420
-
 msgid ""
 "Bachelors’ degree or above, graduated in computer science or related major;"
 msgstr "学士号以上、コンピュータサイエンスまたは関連専攻を卒業している方。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:383
 msgid ""
-"At least 2 years working experience in computer software, or more than 1 year "
-"working experience in iOS App development;"
+"At least 2 years working experience in computer software, or more than 1 "
+"year working experience in iOS App development;"
 msgstr ""
 "コンピュータソフトウェアの2年以上の実務経験、またはiOSアプリケーション開発に"
 "おける1年以上の実務経験を有する方。"
@@ -3167,15 +3133,16 @@ msgstr "フロントエンドwebデベロッパー"
 
 #: web/apps/welcome/templates/welcome/joinus.html:412
 msgid ""
-"Assisting the product manager, analyzing and organizing the customer's need, and making the product requirements document;"
+"Assisting the product manager, analyzing and organizing the customer's need, "
+"and making the product requirements document;"
 msgstr ""
 "製品マネージャーを支援し、顧客のニーズを分析して整理し、製品要件文書を作成し"
 "ます。"
 
 #: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
-"Depending on the product requirements document, designing the architecture of "
-"the website front-end;"
+"Depending on the product requirements document, designing the architecture "
+"of the website front-end;"
 msgstr ""
 "製品要件文書に応じて、ウェブサイトのフロントエンドのアーキテクチャを設計しま"
 "す。"
@@ -3190,8 +3157,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
 msgid ""
-"According to the product requirements document, completing the development of "
-"the sites’ front-end interactive part of the program;"
+"According to the product requirements document, completing the development "
+"of the sites’ front-end interactive part of the program;"
 msgstr ""
 "製品要件の文書に応じて、プログラムのサイトフロントエンドの対話部分の開発を完"
 "成させます。"
@@ -3259,13 +3226,27 @@ msgstr ""
 msgid "Media Kit"
 msgstr "メディアキット"
 
+#: web/apps/welcome/templates/welcome/mediakit.html:23
+msgid ""
+"Newton logo is a combination of calculus symbol and zigzag side of coin. "
+"This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
+"symbolizing the perfect integration of finance and technology."
+msgstr "Newtonのロゴは、積分記号とコインの側面のジグザグ模様を組み合わせたものです。 このロゴは、財務と技術の完璧な統合を象徴しており、偉大な科学者かつ金本位制の生みの親であるアイザック・ニュートン卿を称えるものです。"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:28
+msgid "Download Logo"
+msgstr "ロゴをダウンロード"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:31
+msgid "Download Poster"
+msgstr "ポスターをダウンロード"
+
 #: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/templates/header.html:28
+#: web/templates/header.html:29
 msgid "NewPay"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:24
-
 msgid "Create and manage DID (Decentralized ID);"
 msgstr "DID（分散化ID）を作成し管理する"
 
@@ -3274,12 +3255,10 @@ msgid "Set privacy mode for personal information;"
 msgstr "個人情報のプライバシーモードを設定する"
 
 #: web/apps/welcome/templates/welcome/newpay.html:26
-
 msgid "Transaction information management;"
 msgstr "取引情報管理"
 
 #: web/apps/welcome/templates/welcome/newpay.html:27
-
 msgid "Transaction information sharing pricing and benefit;"
 msgstr "価格および利益を割り当てた取引情報"
 
@@ -3292,12 +3271,10 @@ msgid "Payment"
 msgstr "支払い"
 
 #: web/apps/welcome/templates/welcome/newpay.html:38
-
 msgid "Support cross-border transactions;"
 msgstr "クロスボーダー取引をサポートする"
 
 #: web/apps/welcome/templates/welcome/newpay.html:39
-
 msgid "Support for micro-payments;"
 msgstr "少額決済をサポートする"
 
@@ -3318,7 +3295,6 @@ msgid "Dapp management and permission control;"
 msgstr "Dapp管理と許可コントロール"
 
 #: web/apps/welcome/templates/welcome/newpay.html:53
-
 msgid "Security audit."
 msgstr "セキュリティ監査"
 
@@ -3328,14 +3304,15 @@ msgstr "アプリケーションのサポート"
 
 #: web/apps/welcome/templates/welcome/newpay.html:63
 msgid "Built-in support for free and open-source applications;"
-msgstr "自由でオープンなソースによって公開されている内蔵アプリケーションをサポートする"
+msgstr ""
+"自由でオープンなソースによって公開されている内蔵アプリケーションをサポートす"
+"る"
 
 #: web/apps/welcome/templates/welcome/newpay.html:64
 msgid "Built-in support for purchases within applications;"
 msgstr "内蔵アプリケーションの購入をサポートする"
 
 #: web/apps/welcome/templates/welcome/newpay.html:65
-
 msgid "Built-in support for development tools of applications."
 msgstr "内蔵アプリケーションの開発ツールをサポートする"
 
@@ -3643,13 +3620,16 @@ msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-#: web/templates/header.html:22
+#: web/templates/header.html:23
 msgid "HEP"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
-"Users can manage and control access to their digital assets by using a digital identity. Digital assets include; cryptocurrencies, personal data, personal credit and anything that exists in a binary format and come with the right to use."
+"Users can manage and control access to their digital assets by using a "
+"digital identity. Digital assets include; cryptocurrencies, personal data, "
+"personal credit and anything that exists in a binary format and come with "
+"the right to use."
 msgstr ""
 "デジタルIDを使用することで、ユーザーは、暗号化、プライバシーデータ、個人信用"
 "力等の自分のデジタル資産を簡単に管理し、デジタル資産へのアクセスを管理するこ"
@@ -3665,32 +3645,38 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
 msgid ""
-"By using techniques named as “Atom Hashing”, we can create a unique digital "
+"By using such techniques as “Atom Hashing” we can create a unique digital "
 "identity for commodities over the whole network. Through this digital "
-"identity, you can check the relevant information on the commodity at any "
+"identity a user can check the relevant information on any commodity at any "
 "time."
 msgstr ""
 "「Atom Hashing」を使用することで、ネットワーク全体にわたって商品に個別のデジ"
-"タルIDを作成できます。このデジタルIDによって、いつでも商品の関連情報を確認す"
-"ることができます。"
+"タルIDを作成できます。"
 
 #: web/apps/welcome/templates/welcome/protocol.html:38
 msgid ""
-"Once information on each operation of a product enters the Newton Supply Chain, that information will be stored on the Newton blockchain. This ensures no tampering with the data once it is stored on the Newton blockchain."
+"Once information on each operation of a product enters the Newton Supply "
+"Chain, that information will be stored on the Newton blockchain. This "
+"ensures no tampering with the data once it is stored on the Newton "
+"blockchain."
 msgstr ""
 "サプライチェーン全体では、商品の各オペレーションの基本情報はブロックチェーン"
 "に格納され、データが改ざんされないようにします。"
 
 #: web/apps/welcome/templates/welcome/protocol.html:39
 msgid ""
-"Through smart contract Newton can pre-set commercial exchanging rules to realize automatic insurance claims and property rights transfer. This will reduce the transaction costs and promote cooperation efficiency."
+"Through smart contract Newton can pre-set commercial exchanging rules to "
+"realize automatic insurance claims and property rights transfer. This will "
+"reduce the transaction costs and promote cooperation efficiency."
 msgstr ""
 "スマート契約技術によって、自動保険請求や財産権移転を事前に設定し、また、効率"
 "的な協力を促進して取引の対立を減らすことができます。"
 
 #: web/apps/welcome/templates/welcome/protocol.html:52
 msgid ""
-"Advertisers can set marketing plans through various built-in marketing smart contract templates in the system. This includes incentive modes, settlement modes, and dynamic price adjusting rules."
+"Advertisers can set marketing plans through various built-in marketing smart "
+"contract templates in the system. This includes incentive modes, settlement "
+"modes, and dynamic price adjusting rules."
 msgstr ""
 "広告主は、インセンティブ方式や決済方式、需給に応じた価格調整ルールなど、様々"
 "な組み込み型マーケティングのスマートコントラクトテンプレートを使用して、マー"
@@ -3698,7 +3684,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:53
 msgid ""
-"Advertisers can audit ongoing and completed marketing contracts. By calling out the DAI system, an advertiser can conduct market research before marketing activities, and analyze the results after the marketing activities."
+"Advertisers can audit ongoing and completed marketing contracts. By calling "
+"out the DAI system, an advertiser can conduct market research before "
+"marketing activities, and analyze the results after the marketing activities."
 msgstr ""
 "広告主は進行中および完了したマーケティング契約を監査できます。DAIシステムを呼"
 "び出すことで、マーケティング活動前に市場調査分析を行い、マーケティング後の結"
@@ -3706,7 +3694,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:66
 msgid ""
-"The Newton trading and payment platform will enable a user to define transactions using the built-in smart contract templates and rule engine. This enables the user to include: multi-party transactions based on complex business rules, settlement rules, smart insurance contracts, smart financial contracts, and external chain service."
+"The Newton trading and payment platform will enable a user to define "
+"transactions using the built-in smart contract templates and rule engine. "
+"This enables the user to include: multi-party transactions based on complex "
+"business rules, settlement rules, smart insurance contracts, smart financial "
+"contracts, and external chain service."
 msgstr ""
 "複雑なビジネスルール、決済ルール、スマート保険契約、スマートファイナンス契約"
 "および外部チェーンサービス等に基づく第三者との取引を含む、組み込み型スマート"
@@ -3718,7 +3710,10 @@ msgstr "信頼性の高い物理トンネル"
 
 #: web/apps/welcome/templates/welcome/protocol.html:81
 msgid ""
-"Based on NewChain and NewIoT technologies Newton is capable of designing a reliable physical tunnel protocol and define manufacturing specifications of related equipment. Any third party can manufacture safety equipment according to the protocol specification."
+"Based on NewChain and NewIoT technologies Newton is capable of designing a "
+"reliable physical tunnel protocol and define manufacturing specifications of "
+"related equipment. Any third party can manufacture safety equipment "
+"according to the protocol specification."
 msgstr ""
 "NewChainとNewIoT技術に基づき、信頼できる物理トンネルプロトコルを設計し、関連"
 "機器の製造仕様を定義しました。いかなる第三者も、プロトコル仕様に従って安全装"
@@ -3730,9 +3725,17 @@ msgstr "自動ファイナンス"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
 msgid ""
-"Developers can define smart financial contracts based on the built-in smart contract templates on; insurance, lending and investment, including digital identity and credit, KYC information, staking the Newton token, contract rules and external chain service. The system will automatically match smart financial contracts and automatically complete transactional matching."
+"Developers can define smart financial contracts based on the built-in smart "
+"contract templates on; insurance, lending and investment, including digital "
+"identity and credit, KYC information, staking the Newton token, contract "
+"rules and external chain service. The system will automatically match smart "
+"financial contracts and automatically complete transactional matching."
 msgstr ""
-"スマート・ファイナンシャル・コントラクトは、保険、融資、投資のためのスマートコントラクト・テンプレートに基づいて定義することができます。このスマート・ファイナンシャル・コントラクトには、デジタルIDと信用力、KYC情報、Newtonトークンの記録、契約ルール、外部チェーンサービスが含まれます。システムは自動的にスマートコントラクトを選択して取引を完了します。"
+"スマート・ファイナンシャル・コントラクトは、保険、融資、投資のためのスマート"
+"コントラクト・テンプレートに基づいて定義することができます。このスマート・"
+"ファイナンシャル・コントラクトには、デジタルIDと信用力、KYC情報、Newtonトーク"
+"ンの記録、契約ルール、外部チェーンサービスが含まれます。システムは自動的にス"
+"マートコントラクトを選択して取引を完了します。"
 
 #: web/apps/welcome/templates/welcome/protocol.html:107
 msgid "NNIO"
@@ -3740,7 +3743,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:109
 msgid ""
-"Developers can access NewNET through the NNIO (NewNET IO) protocol, using storage services, computing services and domain names."
+"Developers can access NewNET through the NNIO (NewNET IO) protocol, using "
+"storage services, computing services and domain names."
 msgstr ""
 "開発者はストレージサービス、コンピューティングサービス、ドメイン名を使用して"
 "NNIO（Newton IO）プロトコルを通じてNewtnetにアクセスできます。"
@@ -3769,10 +3773,12 @@ msgstr "テクノロジー"
 msgid ""
 "NewChain will have a main chain and sub-chains structure. The main chain "
 "will support account management, Newton token management, sub-chain "
-"management, network governance and more. The sub-chain will support "
-"specific service systems such as the hyper-exchange protocol, multiple "
-"consensus mechanisms and data structures, ensuring the assets transactions "
-"between the main chain and sub-chains, and between sub-chains. The NewChain provides a third-party developer the option and opportunity to create a new sub-chain after staking a certain amount of Newton tokens and passing the verification."
+"management, network governance and more. The sub-chain will support specific "
+"service systems such as the hyper-exchange protocol, multiple consensus "
+"mechanisms and data structures, ensuring the assets transactions between the "
+"main chain and sub-chains, and between sub-chains. The NewChain provides a "
+"third-party developer the option and opportunity to create a new sub-chain "
+"after staking a certain amount of Newton tokens and passing the verification."
 msgstr ""
 "NewChainはメインチェーンとサブチェーンから成ります。メインチェーンはアカウン"
 "ト管理、Newtonトークン管理、サブチェーン管理、ネットワークガバナンスなどをサ"
@@ -3784,7 +3790,12 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:23
 msgid ""
-"NewVM is compatible with the Webassembly standard, supporting various general programming languages such as C/C++, Java, Python, TypeScript, and more. The system provides built-in smart contract templates for the hyper exchange protocol. The system built-in smart contract templates provide an effortless development and deployment of any application on the Newton NewChain."
+"NewVM is compatible with the Webassembly standard, supporting various "
+"general programming languages such as C/C++, Java, Python, TypeScript, and "
+"more. The system provides built-in smart contract templates for the hyper "
+"exchange protocol. The system built-in smart contract templates provide an "
+"effortless development and deployment of any application on the Newton "
+"NewChain."
 msgstr ""
 "NewVMはC/C++、Java,TypeScript等のような一般的なプログラミング言語をサポートす"
 "るWebassembly標準と互換性を有します。システムは、ハイパーエクスチェンジプロト"
@@ -3793,14 +3804,25 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:24
 msgid ""
-"NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum security of all assets within the Newton ecosphere."
+"NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum "
+"security of all assets within the Newton ecosphere."
 msgstr ""
 "NewChainはRing-LWE反量子暗号アルゴリズムを使用して資産のセキュリティを保証し"
 "ます。"
 
 #: web/apps/welcome/templates/welcome/tech.html:36
 msgid ""
-"NewNET consists of a large number of nodes that run on an open network providing reliable storage services and supporting a full SQL database and various general programming languages. Through its flexible and decentralized architecture NewNET is able to directly host today's most widely used web services. Developers have the ability to release any calculation task to the nodes in the open network. The nodes can then select the corresponding calculation task according to their own (hardware) abilities, then obtain the corresponding incentives after completing the task. Through NewChain a decentralized network domain name service is fully supported. The ease of use of NewNET will increase through the blockchain technology."
+"NewNET consists of a large number of nodes that run on an open network "
+"providing reliable storage services and supporting a full SQL database and "
+"various general programming languages. Through its flexible and "
+"decentralized architecture NewNET is able to directly host today's most "
+"widely used web services. Developers have the ability to release any "
+"calculation task to the nodes in the open network. The nodes can then select "
+"the corresponding calculation task according to their own (hardware) "
+"abilities, then obtain the corresponding incentives after completing the "
+"task. Through NewChain a decentralized network domain name service is fully "
+"supported. The ease of use of NewNET will increase through the blockchain "
+"technology."
 msgstr ""
 "Newnetは多数のノードから構成され、信頼性の高いストレージサービスを提供する"
 "オープンなネットワークであり、完全なSQLデータベースと様々な一般的なプログラミ"
@@ -3812,7 +3834,14 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
-"By using radiometric dating, PCA, machine vision, and deep learning technology Newton can quickly extract multiple characteristics of a certain material asset, including; weight, volume, size, shape, texture, optical properties, radioactive properties, thermodynamic properties, and a variety of customized random features. Then based on these characteristic data and algorithms Newton can create a unique identification and authentic right for any digital asset. The whole process is repeatable, verifiable and fault-tolerant."
+"By using radiometric dating, PCA, machine vision, and deep learning "
+"technology Newton can quickly extract multiple characteristics of a certain "
+"material asset, including; weight, volume, size, shape, texture, optical "
+"properties, radioactive properties, thermodynamic properties, and a variety "
+"of customized random features. Then based on these characteristic data and "
+"algorithms Newton can create a unique identification and authentic right for "
+"any digital asset. The whole process is repeatable, verifiable and fault-"
+"tolerant."
 msgstr ""
 "放射年代測定、PCA、マシンビジョン、ディープラーニング技術を使用することで、重"
 "量・体積・サイズ・形状・テクスチャ・光学特性・放射性特性・熱力学特性・様々に"
@@ -3823,7 +3852,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:62
 msgid ""
-"NewIoT is a general conception for a category of technologies that includes; blockchain fog computing, communication protocols between IoT devices and gateways and NewChain IoT devices developing specifications."
+"NewIoT is a general conception for a category of technologies that includes; "
+"blockchain fog computing, communication protocols between IoT devices and "
+"gateways and NewChain IoT devices developing specifications."
 msgstr ""
 "NewIoTはブロックチェーンフォグコンピューティング、IoTデバイスとゲートウェイ間"
 "の通信プロトコル、使用を開発するNewChain IoTデバイスなど、一連の技術における"
@@ -3831,7 +3862,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:63
 msgid ""
-"The gateway has powerful computing and storage capabilities with built-in blockchain nodes, supporting multiple Internet accessing methods including; Ethernet/fiber, 3G/4G/5G, NB-IoT, IoT communication protocol such as BLE, Wi-Fi, ZigBee, and more. The IoT device store the collected information into NewChain through the gateway."
+"The gateway has powerful computing and storage capabilities with built-in "
+"blockchain nodes, supporting multiple Internet accessing methods including; "
+"Ethernet/fiber, 3G/4G/5G, NB-IoT, IoT communication protocol such as BLE, Wi-"
+"Fi, ZigBee, and more. The IoT device store the collected information into "
+"NewChain through the gateway."
 msgstr ""
 "このゲートウェイは、イーサネット/ファイバ、3G/4G/5G、NB-IoT、また、BLE、Wi-"
 "Fi、ZigBee等複数のインターネットアクセス方法をサポートするブロックチェーン"
@@ -3844,7 +3879,10 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:76
 msgid ""
-"DAI (Distributed Artificial Intelligence) promotes the development of AI from three aspects; data, algorithm model, and execution engine. By using these three aspects the Newton DAI closely connects the data suppliers, algorithm model developers and operating system providers together."
+"DAI (Distributed Artificial Intelligence) promotes the development of AI "
+"from three aspects; data, algorithm model, and execution engine. By using "
+"these three aspects the Newton DAI closely connects the data suppliers, "
+"algorithm model developers and operating system providers together."
 msgstr ""
 "DAI（分散人工知能）は、データ、アルゴリズム、実行エンジンの3つの側面からAIの"
 "開発を促進し、それによってデータサプライヤー、アルゴリズムモデル開発者と動作"
@@ -4632,7 +4670,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:71
+#: web/apps/zinnia/models_bases/entry.py:73
 msgid "title"
 msgstr ""
 
@@ -4769,7 +4807,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:492
+#: web/apps/zinnia/models_bases/entry.py:494
 msgid "categories"
 msgstr ""
 
@@ -4782,14 +4820,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:60
+#: web/apps/zinnia/models_bases/entry.py:62
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr "ブログ"
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:76
 msgid "slug"
 msgstr ""
 
@@ -4810,7 +4848,7 @@ msgid "language"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:117
+#: web/apps/zinnia/models_bases/entry.py:119
 msgid "Entry type"
 msgstr ""
 
@@ -4830,173 +4868,173 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:76
-#: web/apps/zinnia/models_bases/entry.py:101
+#: web/apps/zinnia/models_bases/entry.py:78
+#: web/apps/zinnia/models_bases/entry.py:103
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:79
+#: web/apps/zinnia/models_bases/entry.py:81
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:85
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:85
+#: web/apps/zinnia/models_bases/entry.py:87
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:88
+#: web/apps/zinnia/models_bases/entry.py:90
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:90
+#: web/apps/zinnia/models_bases/entry.py:92
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:95
+#: web/apps/zinnia/models_bases/entry.py:97
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:96
+#: web/apps/zinnia/models_bases/entry.py:98
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:101
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:104
+#: web/apps/zinnia/models_bases/entry.py:106
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:114
+#: web/apps/zinnia/models_bases/entry.py:116
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:121
+#: web/apps/zinnia/models_bases/entry.py:123
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:128
+#: web/apps/zinnia/models_bases/entry.py:130
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:243
+#: web/apps/zinnia/models_bases/entry.py:245
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:244
+#: web/apps/zinnia/models_bases/entry.py:246
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:258
+#: web/apps/zinnia/models_bases/entry.py:260
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:300
+#: web/apps/zinnia/models_bases/entry.py:302
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:301
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:305
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:304
+#: web/apps/zinnia/models_bases/entry.py:306
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:306
+#: web/apps/zinnia/models_bases/entry.py:308
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:309
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:312
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:312
+#: web/apps/zinnia/models_bases/entry.py:314
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:314
+#: web/apps/zinnia/models_bases/entry.py:316
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:398
+#: web/apps/zinnia/models_bases/entry.py:400
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:416
+#: web/apps/zinnia/models_bases/entry.py:418
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:417
+#: web/apps/zinnia/models_bases/entry.py:419
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:450
+#: web/apps/zinnia/models_bases/entry.py:452
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:452
+#: web/apps/zinnia/models_bases/entry.py:454
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:463
+#: web/apps/zinnia/models_bases/entry.py:465
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:478
+#: web/apps/zinnia/models_bases/entry.py:480
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:502
+#: web/apps/zinnia/models_bases/entry.py:504
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:521
+#: web/apps/zinnia/models_bases/entry.py:523
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:522
+#: web/apps/zinnia/models_bases/entry.py:524
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:534
+#: web/apps/zinnia/models_bases/entry.py:536
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:535
+#: web/apps/zinnia/models_bases/entry.py:537
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:547
+#: web/apps/zinnia/models_bases/entry.py:549
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:549
-#: web/apps/zinnia/models_bases/entry.py:565
+#: web/apps/zinnia/models_bases/entry.py:551
+#: web/apps/zinnia/models_bases/entry.py:567
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:551
+#: web/apps/zinnia/models_bases/entry.py:553
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:563
+#: web/apps/zinnia/models_bases/entry.py:565
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:567
+#: web/apps/zinnia/models_bases/entry.py:569
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5653,8 +5691,8 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/sitemap.html:4
 #: web/apps/zinnia/templates/zinnia/sitemap.html:11
-#: web/apps/zinnia/templates/zinnia/skeleton.html:55
-#: web/apps/zinnia/templates/zinnia/skeleton.html:56
+#: web/apps/zinnia/templates/zinnia/skeleton.html:65
+#: web/apps/zinnia/templates/zinnia/skeleton.html:66
 msgid "Sitemap"
 msgstr ""
 
@@ -5674,16 +5712,20 @@ msgstr ""
 msgid "Just another Zinnia weblog."
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:40
+#: web/apps/zinnia/templates/zinnia/skeleton.html:37 web/templates/base.html:71
+msgid "Join us to change the world"
+msgstr "世界を変えるために共に働きましょう"
+
+#: web/apps/zinnia/templates/zinnia/skeleton.html:50
 msgid "BLOG"
 msgstr "ブログ"
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:47
+#: web/apps/zinnia/templates/zinnia/skeleton.html:57
 msgid "Useful links"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:50
-#: web/apps/zinnia/templates/zinnia/skeleton.html:51
+#: web/apps/zinnia/templates/zinnia/skeleton.html:60
+#: web/apps/zinnia/templates/zinnia/skeleton.html:61
 msgid "Weblog index"
 msgstr ""
 
@@ -5980,10 +6022,6 @@ msgstr ""
 msgid "System Error."
 msgstr ""
 
-#: web/templates/base.html:71
-msgid "Join us to change the world"
-msgstr "世界を変えるために共に働きましょう"
-
 #: web/templates/dialog.html:8
 msgid "关闭"
 msgstr ""
@@ -6020,7 +6058,7 @@ msgstr "ユーザーセンター"
 msgid "LogOut"
 msgstr "ログアウト"
 
-#: web/templates/header.html:25
+#: web/templates/header.html:26
 msgid "Technology"
 msgstr "​技術"
 
@@ -6050,6 +6088,24 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid ""
+#~ "We support cross-border transactions, micro payments, lightning "
+#~ "settlement, etc., and provide comprehensive online and offline payment "
+#~ "tools."
+#~ msgstr ""
+#~ "クロスボーダー取引、超少額決済、瞬間決済などをサポートし、オンラインとオフ"
+#~ "ラインの総合的な支払いツールを提供します。"
+
+#~ msgid ""
+#~ "By using techniques named as “Atom Hashing”, we can create a unique "
+#~ "digital identity for commodities over the whole network. Through this "
+#~ "digital identity, you can check the relevant information on the commodity "
+#~ "at any time."
+#~ msgstr ""
+#~ "「Atom Hashing」を使用することで、ネットワーク全体にわたって商品に個別のデ"
+#~ "ジタルIDを作成できます。このデジタルIDによって、いつでも商品の関連情報を確"
+#~ "認することができます。"
 
 #~ msgid "Priority recruitment conditions:"
 #~ msgstr "優先募集条件:"

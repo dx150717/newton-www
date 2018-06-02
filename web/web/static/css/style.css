@@ -662,11 +662,12 @@ canvas { display: block; vertical-align: top; }
 .about_list h2{ text-align:left; font-weight:500; font-size:20px; color:#000}
 .about_list p{ text-align:left; font-size:16px; color:#888; margin:15px 0; line-height: 1.8em;}
 /**mediakit*/
+#mediakit{margin-bottom: 0}
 #mediakit .download_list{text-align:center;}
 #mediakit .download-but{ margin-top:0; margin-bottom: 10%}
 .download-but a{ font-weight:400; width: 200px; height: 50px; border-radius: 25px; border: solid 2px #000000; font-size:16px; line-height:47px; display:inline-block; margin:0 15px; color:#000}
 #mediakit .download_list img{height: 100%}
-#mediakit .download_list p{margin-top: 200px; margin-bottom: 60px; font-size: 18px; text-align: left}
+#mediakit .download_list p{margin-top: 170px; margin-bottom: 60px; font-size: 18px; text-align: left}
 @media(max-width:991px){
     #mediakit .download_list img{width: 80%}
     #mediakit .download_list p{margin-top:0; margin-bottom: 10%; font-size: 16px;}
@@ -1171,7 +1172,7 @@ canvas { display: block; vertical-align: top; }
     .joinus a img{display: none;}
 }
 
-.ad{ background:#bab9b9; position:relative;}
+.ad{ background:#083356; position:relative;}
 .ad a{text-align: center;}
 .ad span{ color: #f6fcfd; font-size: 30px; vertical-align: middle; text-align:center}
 .ad .container div{position: relative; padding: 10px 0 10px 0}
