@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-28 07:54+0000\n"
+"POT-Creation-Date: 2018-06-02 09:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,8 +164,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:107
-#: web/apps/zinnia/models_bases/entry.py:110
+#: web/apps/zinnia/models_bases/entry.py:109
+#: web/apps/zinnia/models_bases/entry.py:112
 msgid "Language"
 msgstr ""
 
@@ -302,7 +301,8 @@ msgstr ""
 
 #: web/apps/login/templates/login/index.html:27
 msgid ""
-"Tip: To login successfully, ensure that you can access the google recaptcha service."
+"Tip: To login successfully, ensure that you can access the google recaptcha "
+"service."
 msgstr ""
 "İpucu: Başarılı bir giriş için Google recaptcha servisine erişebilir olun."
 
@@ -453,7 +453,9 @@ msgstr "QR kodunu tarayın veya kodu manuel olarak GA uygulamanıza girin"
 
 #: web/apps/register/templates/register/gtoken.html:31
 msgid ""
-"Apple users are recommended to download Google Authenticator directly from the App Store and android users are recommended to download Google Authenticator from Google Play."
+"Apple users are recommended to download Google Authenticator directly from "
+"the App Store and android users are recommended to download Google "
+"Authenticator from Google Play."
 msgstr ""
 "Apple kullanıcılarına App Store'dan Authenticator'ı indirmeyi öneririz ve "
 "Android kullanıcılarına ise Google Authenticator'ı Google Play’den indirmeyi "
@@ -479,7 +481,8 @@ msgstr "QR kodunu taramak için GA uygulamasını kullanın"
 
 #: web/apps/register/templates/register/index.html:32
 msgid ""
-"Tip: To register successfully, ensure you can access the google recaptcha service."
+"Tip: To register successfully, ensure you can access the google recaptcha "
+"service."
 msgstr ""
 "İpucu: Başarılı bir şekilde kayıt olmak için, google recaptcha hizmetine "
 "erişebildiğinizden emin olun."
@@ -527,8 +530,11 @@ msgstr "Gönderim başarılı!"
 
 #: web/apps/register/templates/register/post-success.html:24
 msgid ""
-"We have sent you an email to your registered email, please check out to finish signing up."
-msgstr "Kayıtlı e-postanıza bir e-posta gönderdik, lütfen kaydolmayı bitirmek için kontrol edin."
+"We have sent you an email to your registered email, please check out to "
+"finish signing up."
+msgstr ""
+"Kayıtlı e-postanıza bir e-posta gönderdik, lütfen kaydolmayı bitirmek için "
+"kontrol edin."
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Complete the register process of Newton"
@@ -609,7 +615,8 @@ msgstr ""
 
 #: web/apps/reset/templates/reset/reset-success.html:22
 msgid ""
-"We have sent an email to your registered email address to complete the password reset procedure."
+"We have sent an email to your registered email address to complete the "
+"password reset procedure."
 msgstr ""
 "Kayıtlı e-posta adresinize bir e-posta gönderdik, lütfen şifre sıfırlama "
 "işlemini tamamlamak için mail adresinizi kontrol edin."
@@ -665,7 +672,7 @@ msgstr ""
 
 #: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:66
 #: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:68
-#: web/apps/zinnia/templates/zinnia/skeleton.html:62
+#: web/apps/zinnia/templates/zinnia/skeleton.html:72
 msgid "Search"
 msgstr ""
 
@@ -1422,7 +1429,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:61 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:63 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "Duyuru"
 
@@ -1436,17 +1443,17 @@ msgid "All"
 msgstr "Tümü"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:66
+#: web/apps/zinnia/models_bases/entry.py:68
 msgid "Operation"
 msgstr "Operasyon"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:67
+#: web/apps/zinnia/models_bases/entry.py:69
 msgid "Weekly"
 msgstr "Haftalık"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:65
+#: web/apps/zinnia/models_bases/entry.py:67
 msgid "Activity"
 msgstr "Aktivite"
 
@@ -1455,7 +1462,7 @@ msgstr "Aktivite"
 #: web/apps/welcome/templates/welcome/community.html:45
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:31
+#: web/templates/header.html:32
 msgid "Community"
 msgstr "Topluluk"
 
@@ -1469,7 +1476,6 @@ msgid "Scan QR Code to join us"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:34
-
 msgid "Email List"
 msgstr "E-Mail Listesi"
 
@@ -1515,7 +1521,6 @@ msgid "Email:"
 msgstr "E-Mail:"
 
 #: web/apps/welcome/templates/welcome/contact.html:24
-
 msgid ""
 "Whitepaper : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
@@ -1765,7 +1770,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
-#: web/templates/header.html:34
+#: web/templates/header.html:35
 msgid "Economy"
 msgstr "Ekonomi"
 
@@ -1814,7 +1819,6 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:38
 #: web/apps/welcome/templates/welcome/include-investor.html:60
-
 msgid "SVP of Cheetah (NASDAQ:CMCM)"
 msgstr "Cheetah Başkan Yardımcısı (NASDAQ: CMCM)"
 
@@ -1832,7 +1836,6 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:53
 #: web/apps/welcome/templates/welcome/include-investor.html:89
-
 msgid "Former CTO of Sina (NASDAQ: SINA)"
 msgstr "Sina eski CTO’su. (NASDAQ: SINA)"
 
@@ -1911,7 +1914,10 @@ msgstr "Daha Akıllı"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:38
 msgid ""
-"Personal credit can be automatically created in a free and open manner without authoritative intermediaries. This methodology will reduce human intervention and facilitate the coordination between people, between machines and between people and machines."
+"Personal credit can be automatically created in a free and open manner "
+"without authoritative intermediaries. This methodology will reduce human "
+"intervention and facilitate the coordination between people, between "
+"machines and between people and machines."
 msgstr ""
 "Kişisel kredi, yetkili aracılar olmadan özgür ve serbest bir şekilde "
 "otomatik olarak oluşturulabilir. Bu akıllı davranış, insan müdahalesini "
@@ -1924,7 +1930,10 @@ msgstr "Daha etkili teşvik mekanizmasi"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:50
 msgid ""
-"Replacing traditional business intermediaries by technology protocols will reduce the transactional cost and reward each who contributed in the transaction; such as service providers, consumers and other participants connected by the value-based Internet."
+"Replacing traditional business intermediaries by technology protocols will "
+"reduce the transactional cost and reward each who contributed in the "
+"transaction; such as service providers, consumers and other participants "
+"connected by the value-based Internet."
 msgstr ""
 "Geleneksel iş aracılarını teknoloji protokolleri ile değiştirmek suretiyle "
 "işlem maliyetinden kısmak mümkün. Bu kısılan miktar, hizmet sağlayıcılar, "
@@ -1937,7 +1946,10 @@ msgstr "Yeni organizasyon yapısı ve iş birliği modu"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:61
 msgid ""
-"The community economy managed by non-profit foundations will replace the monopoly of intermediary platforms managed by traditional for-profit organizations. Based on open, fair, and rational rules every contributor will benefit from the economy and become a part of the economy."
+"The community economy managed by non-profit foundations will replace the "
+"monopoly of intermediary platforms managed by traditional for-profit "
+"organizations. Based on open, fair, and rational rules every contributor "
+"will benefit from the economy and become a part of the economy."
 msgstr ""
 "Kâr amacı gütmeyen vakıflar tarafindan yönetilen toplum ekonomisi, "
 "geleneksel kâr amaci güden şirketler tarafından yönetilen tekel aracı "
@@ -1958,7 +1970,6 @@ msgid "Liu Jun"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:22
-
 msgid "Co-Founder of Lightinthebox (NYSE:LITB)"
 msgstr "Lightinthebox kurucularından (NYSE: LITB)"
 
@@ -2081,12 +2092,6 @@ msgstr ""
 "“Atom Hashing” adı verilen teknikleri kullanarak, emtialar için tüm ağ "
 "üzerinden benzersiz bir dijital kimlik oluşturabiliriz."
 
-msgid ""
-"By using such techniques as “Atom Hashing” we can create a unique digital identity for commodities over the whole network. Through this digital identity a user can check the relevant information on any commodity at any time."
-msgstr ""
-"“Atom Hashing” adı verilen teknikleri kullanarak, emtialar için tüm ağ "
-"üzerinden benzersiz bir dijital kimlik oluşturabiliriz."
-
 #: web/apps/welcome/templates/welcome/include-protocol.html:45
 #: web/apps/welcome/templates/welcome/protocol.html:50
 msgid "Digital Marketing"
@@ -2108,14 +2113,9 @@ msgstr "Ticaret ve ödeme"
 #: web/apps/welcome/templates/welcome/include-protocol.html:57
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
-"We support cross-border transactions, micro payments, lightning "
-"settlement, etc., and provide comprehensive online and offline payment tools."
-msgstr ""
-"Sınırlar ötesi işlemleri, cok düşük miktardaki ödemeleri, lightning "
-"yerleşimi vb. Konuları destekliyoruz. Online ve Offline ödeme araçları da "
-"sunuyoruz."
-
-msgid "Newton supports cross-border transactions, micro payments, lightning settlements and more to provide comprehensive online and offline payment tools."
+"Newton supports cross-border transactions, micro payments, lightning "
+"settlements and more to provide comprehensive online and offline payment "
+"tools."
 msgstr ""
 "Sınırlar ötesi işlemleri, cok düşük miktardaki ödemeleri, lightning "
 "yerleşimi vb. Konuları destekliyoruz. Online ve Offline ödeme araçları da "
@@ -2645,12 +2645,10 @@ msgstr ""
 "uygulamak."
 
 #: web/apps/welcome/templates/welcome/joinus.html:152
-
 msgid "Cooperation with designers to create intended visual design. "
 msgstr "Görsel tasarım amacına uygun tasarımcılar ile işbirliği yapmak."
 
 #: web/apps/welcome/templates/welcome/joinus.html:156
-
 msgid ""
 "Proven work experience with React or other modern Frontend Javascript "
 "Framework;"
@@ -2663,7 +2661,6 @@ msgid "Experience with Python/Django/Node.js;"
 msgstr "Python / Django / Node.js ile deneyim;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:158
-
 msgid "Experience in writing frontend and backend unit and integration tests;"
 msgstr "Deney frontend ve backend entegrasyon testleri yapabilmek;"
 
@@ -2698,7 +2695,6 @@ msgstr ""
 "çeşitli web teknolojilerini ve tekniklerini yönetebilme becerisi;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:163
-
 msgid ""
 "Bachelor’s or master’s degree in computer science or relevant experience;"
 msgstr ""
@@ -2709,32 +2705,27 @@ msgid "Communication Specialist"
 msgstr "İletişim uzmanı"
 
 #: web/apps/welcome/templates/welcome/joinus.html:186
-
 msgid ""
 "Delivering customer service and technical support on email/Facebook/Twitter;"
 msgstr ""
 "e-posta / facebook / twitter müşteri hizmetleri ve teknik destek sunmak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:187
-
 msgid "Communicating feedback and process suggestions of customers;"
 msgstr "Müşteri geri bildirimlerini ve süreç önerilerini iletmek;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:188
-
 msgid ""
 "Identifying causes of dissatisfaction, and providing ways for improvement;"
 msgstr ""
 "Tatminsizliklerin nedenini belirleme ve iyileştirme yollarını sağlamak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:189
-
 msgid "Filling reports on enquiry summaries and improvement areas;"
 msgstr ""
 "Araştırmaların özeti ve iyileştirme alanı hakkında raporlar hazırlamak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:190
-
 msgid ""
 "Ensure that all enquiries on social media are in compliance with all "
 "internal and external regulations, policies and guidelines;"
@@ -2744,17 +2735,14 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:194
 #: web/apps/welcome/templates/welcome/joinus.html:305
-
 msgid "Bachelor’s degree or above;"
 msgstr "Lisans derecesi veya üstü;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:195
-
 msgid "Preferably with 2 years of work experience in customer service;"
 msgstr "Tercihen müşteri desteği rolünde 2 yıllık tecrübe;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:196
-
 msgid ""
 "Must speak and write fluent English and Chinese with good presentation, "
 "communication and computer skills;"
@@ -2771,7 +2759,6 @@ msgid "Developer Relations Advocate"
 msgstr "Yazılımcı ilişkileri savunucusu"
 
 #: web/apps/welcome/templates/welcome/joinus.html:220
-
 msgid ""
 "Content creation, distribution and analysis tutorials, developer guides, "
 "newsletters, sample apps, client libraries;"
@@ -2780,7 +2767,6 @@ msgstr ""
 "bültenler, örnek uygulamalar, istemci kütüphaneleri;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:221
-
 msgid ""
 "Creating and implementing detailed annual, monthly and weekly plans for "
 "promotion/engagement activities;"
@@ -2789,7 +2775,6 @@ msgstr ""
 "planların oluşturulması ve uygulanması;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:222
-
 msgid ""
 "Organizing and coordinating marketing  engagement activities including "
 "social media campaigns, youtube broadcasts, progress reports;"
@@ -2803,10 +2788,10 @@ msgstr "3. taraflardan içerik kullanımı, dağıtım ve analizi;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:224
 msgid "Provide help and support to the organizers of community meetups;"
-msgstr "Topluluk buluşma organizasyonlarına katılın ve organizatörlere destek verin."
+msgstr ""
+"Topluluk buluşma organizasyonlarına katılın ve organizatörlere destek verin."
 
 #: web/apps/welcome/templates/welcome/joinus.html:229
-
 msgid ""
 "Must be fluent in both spoken and written English with good presentation, "
 "communication and computer skills;"
@@ -2815,14 +2800,12 @@ msgstr ""
 "konuşmalıdır;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:230
-
 msgid "Experience in writing tutorials, guides, API docs and sample apps;"
 msgstr ""
 "Eğitim programı yazmada, yönlendirme yazmada, API dokümanları ve örnek "
 "uygulamaları deneyimli;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:231
-
 msgid "Experience in writing code in C++/JavaScript;"
 msgstr "C++/JavaScript'te deneyimli;"
 
@@ -2843,7 +2826,6 @@ msgid "Senior UX Designer"
 msgstr "Tecrübeli UX tasarimcisi"
 
 #: web/apps/welcome/templates/welcome/joinus.html:259
-
 msgid ""
 "Translating concepts into user flows, wireframes, mockups and prototypes "
 "that lead to intuitive user experiences;"
@@ -2852,12 +2834,10 @@ msgstr ""
 "şablonlar, örnekler ve prototiplere dönüştürme;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:260
-
 msgid "Identifying design problems and devise elegant solutions;"
 msgstr "Tasarım problemlerini tanımlamak ve zarif çözümler tasarlamak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:261
-
 msgid ""
 "Taking a user-centered design approach and rapidly test and iterate your "
 "designs;"
@@ -2866,7 +2846,6 @@ msgstr ""
 "şekilde test edin ve yineleyin;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:262
-
 msgid "Collaborating with other team members and stakeholders;"
 msgstr "Diğer takım üyeleri ve paydaşlar ile işbirliği yapın;"
 
@@ -2880,7 +2859,6 @@ msgstr ""
 "karmaşık çözümler tasarlama deneyimi olan adaylar tercih edilecek;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
-
 msgid ""
 "Expertise in UX softwares such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
@@ -2889,7 +2867,6 @@ msgstr ""
 "uzmanlık. Basic React, SCSS veya JavaScript becerileri bir artıdır;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:268
-
 msgid ""
 "Ability to work with clients, understand their specifications and design "
 "complete user experiences that fulfills their needs and vision;"
@@ -2939,7 +2916,6 @@ msgid "Product Manager"
 msgstr "Ürün yöneticisi"
 
 #: web/apps/welcome/templates/welcome/joinus.html:297
-
 msgid ""
 "Understanding the development of the industry and its customer requirements, "
 "form product need specification;"
@@ -2948,7 +2924,6 @@ msgstr ""
 "şartnamesi oluşturmak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:298
-
 msgid ""
 "Designing product UE from requirements document, clearly and accurately "
 "communicate demands to developing engineers;"
@@ -2957,17 +2932,14 @@ msgstr ""
 "ve doğru bir şekilde iletmek;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:299
-
 msgid "Managing changes in product demand during product development;"
 msgstr "Ürün geliştirme sırasında ürün talebi değişikliklerini yönetmek;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:300
-
 msgid "Confirming the product satisfies all needs during product testing;"
 msgstr "Ürün testi sırasında ürün ihtiyaçlarının karşılanmasını sağlamak;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:301
-
 msgid ""
 "After releasing the product, tracking customers' usage and timely find "
 "problems."
@@ -2981,24 +2953,20 @@ msgid ""
 msgstr "3 yıllık e-ticaret endüstrisi ürün tasarımı deneyimi;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:307
-
 msgid "Proficient with product prototype designing tools;"
 msgstr "Ürün prototip tasarım araçları ile deneyimli;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:308
-
 msgid "Familiar with mobile UX design;"
 msgstr "bilindik mobil UX tasarımı;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:309
-
 msgid ""
 "Good technical background in creating rich user experience through "
 "technology;"
 msgstr "Teknolojiyle zengin kullanıcı deneyimi yaratan iyi teknik altyapı;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:310
-
 msgid "Good level of English, fluent in reading English documents."
 msgstr "İyi İngilizce seviyesi, İngilizce belgeleri akıcı bir şekilde okuyun."
 
@@ -3017,8 +2985,8 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
 "Participating in the analysis and design of products based on client "
-"requirements, cooperating with UI designers to complete initial testing based "
-"on product design;"
+"requirements, cooperating with UI designers to complete initial testing "
+"based on product design;"
 msgstr ""
 "Müşteri gereksinimlerine dayalı ürünlerin analizi ve tasarımına katılmak, "
 "ürün tasarımına dayanan ilk testleri tamamlamak için kullanıcı arayüz "
@@ -3036,8 +3004,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
-"At least 3 years experience in professional Java development; At least 2 years "
-"experience in Practical Android development experience; Familiar with "
+"At least 3 years experience in professional Java development; At least 2 "
+"years experience in Practical Android development experience; Familiar with "
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
 msgstr ""
@@ -3116,8 +3084,8 @@ msgstr "IOS Geliştirici"
 
 #: web/apps/welcome/templates/welcome/joinus.html:374
 msgid ""
-"Assisting the product manager to analyze and organize the customer's need, and "
-"make the product requirements document;"
+"Assisting the product manager to analyze and organize the customer's need, "
+"and make the product requirements document;"
 msgstr ""
 "Ürün yöneticisine, müşterinin ihtiyacını analiz ve organize etmesinde yol "
 "göstermek. Ürün gereksinimlerini belgelemek;"
@@ -3132,30 +3100,30 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:376
 msgid ""
-"Depending on the system architecture design, conducting iOS App-related program  "
-"development;"
+"Depending on the system architecture design, conducting iOS App-related "
+"program  development;"
 msgstr ""
 "Sistem mimarisi tasarımına bağlı olarak iOS App ile ilgili program "
 "geliştirme."
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
 msgid ""
-"Depending on the product requirements document, conducting an overall test on  "
-"the iOS app;"
+"Depending on the product requirements document, conducting an overall test "
+"on  the iOS app;"
 msgstr ""
 "Ürün gereksinimleri belgesine bağlı olarak, iOS uygulamasında genel bir test "
 "yapma."
 
 #: web/apps/welcome/templates/welcome/joinus.html:378
 msgid ""
-"According to customers’ feedback, continuously revising and improving the iOS app."
+"According to customers’ feedback, continuously revising and improving the "
+"iOS app."
 msgstr ""
 "Müşterilerin geri bildirimlerine göre, sürekli olarak IOS uygulamasını "
 "gözden geçirip geliştirmek."
 
 #: web/apps/welcome/templates/welcome/joinus.html:382
 #: web/apps/welcome/templates/welcome/joinus.html:420
-
 msgid ""
 "Bachelors’ degree or above, graduated in computer science or related major;"
 msgstr ""
@@ -3163,8 +3131,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:383
 msgid ""
-"At least 2 years working experience in computer software, or more than 1 year "
-"working experience in iOS App development;"
+"At least 2 years working experience in computer software, or more than 1 "
+"year working experience in iOS App development;"
 msgstr ""
 "Bilgisayar yazılımında 2 yıldan fazla iş deneyimi veya IOS Uygulama "
 "geliştirmede 1 yıldan fazla çalışma deneyimi;"
@@ -3201,15 +3169,16 @@ msgstr "Ara yüz web geliştiricisi"
 
 #: web/apps/welcome/templates/welcome/joinus.html:412
 msgid ""
-"Assisting the product manager, analyzing and organizing the customer's need, and making the product requirements document;"
+"Assisting the product manager, analyzing and organizing the customer's need, "
+"and making the product requirements document;"
 msgstr ""
 "Ürün yöneticisine yardımcı olun, müşterinin ihtiyacını analiz etme ve "
 "düzenleme ve ürün gereksinimlerini belgeleme;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
-"Depending on the product requirements document, designing the architecture of "
-"the website front-end;"
+"Depending on the product requirements document, designing the architecture "
+"of the website front-end;"
 msgstr ""
 "Ürün gereksinimleri belgesine bağlı olarak, web sitesinin ara yüz mimarisini "
 "tasarlama;"
@@ -3224,8 +3193,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
 msgid ""
-"According to the product requirements document, completing the development of "
-"the sites’ front-end interactive part of the program;"
+"According to the product requirements document, completing the development "
+"of the sites’ front-end interactive part of the program;"
 msgstr ""
 "Ürün gereksinimleri belgesine göre, programın ön uç etkileşimli bölümünün "
 "geliştirilmesini tamamlama;"
@@ -3291,13 +3260,27 @@ msgstr ""
 msgid "Media Kit"
 msgstr "Medya Kiti"
 
+#: web/apps/welcome/templates/welcome/mediakit.html:23
+msgid ""
+"Newton logo is a combination of calculus symbol and zigzag side of coin. "
+"This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
+"symbolizing the perfect integration of finance and technology."
+msgstr "Newton logosu, kalkülüs sembolü ve bozuk paranın yandan görünümünün birleşimidir. Bu logo, finans ve teknolojinin mükemmel entegrasyonunu simgeleyen büyük bilim insanı ve bozuk paranın öncüsü Sir Isaac Newton'u onurlandırıyor. "
+
+#: web/apps/welcome/templates/welcome/mediakit.html:28
+msgid "Download Logo"
+msgstr "Logo İndir"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:31
+msgid "Download Poster"
+msgstr "Poster indir"
+
 #: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/templates/header.html:28
+#: web/templates/header.html:29
 msgid "NewPay"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:24
-
 msgid "Create and manage DID (Decentralized ID);"
 msgstr "DID yaratma ve yönetme (DID: Merkezi olmayan kimlik);"
 
@@ -3306,12 +3289,10 @@ msgid "Set privacy mode for personal information;"
 msgstr "Kişisel bilgiler için gizlilik modu ayarlama;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:26
-
 msgid "Transaction information management;"
 msgstr "Trading bilgisi yönetimi;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:27
-
 msgid "Transaction information sharing pricing and benefit;"
 msgstr "Trading bilgisi fiyatlandırması ve paylaşım faydası;"
 
@@ -3324,12 +3305,10 @@ msgid "Payment"
 msgstr "Ödeme"
 
 #: web/apps/welcome/templates/welcome/newpay.html:38
-
 msgid "Support cross-border transactions;"
 msgstr "Sınır ötesi ödeme ve ticaret desteği;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:39
-
 msgid "Support for micro-payments;"
 msgstr "Mikro ödeme desteği;"
 
@@ -3350,7 +3329,6 @@ msgid "Dapp management and permission control;"
 msgstr "Dapp yönetimi ve izin kontrolu;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:53
-
 msgid "Security audit."
 msgstr "Güvenlik denetimi."
 
@@ -3367,7 +3345,6 @@ msgid "Built-in support for purchases within applications;"
 msgstr "Yerleşik uygulama satın alma desteği;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:65
-
 msgid "Built-in support for development tools of applications."
 msgstr "Yerleşik uygulama geliştirme araçları desteği;"
 
@@ -3675,13 +3652,16 @@ msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-#: web/templates/header.html:22
+#: web/templates/header.html:23
 msgid "HEP"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
-"Users can manage and control access to their digital assets by using a digital identity. Digital assets include; cryptocurrencies, personal data, personal credit and anything that exists in a binary format and come with the right to use."
+"Users can manage and control access to their digital assets by using a "
+"digital identity. Digital assets include; cryptocurrencies, personal data, "
+"personal credit and anything that exists in a binary format and come with "
+"the right to use."
 msgstr ""
 "Kullanıcılar kendi dijital varlıklarını dijital kimliklerini kullanarak "
 "yönetebilir ve kontrol edebilir. Dijital varlıklar; kripto paralar, gizli "
@@ -3697,25 +3677,29 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
 msgid ""
-"By using techniques named as “Atom Hashing”, we can create a unique digital "
+"By using such techniques as “Atom Hashing” we can create a unique digital "
 "identity for commodities over the whole network. Through this digital "
-"identity, you can check the relevant information on the commodity at any "
+"identity a user can check the relevant information on any commodity at any "
 "time."
 msgstr ""
 "“Atom Hashing” adı verilen teknikleri kullanarak, emtialar için tüm ağ "
-"üzerinden benzersiz bir dijital kimlik oluşturabiliriz. Bu dijital kimlik "
-"sayesinde, emtiaya ilişkin bilgileri istediğiniz zaman kontrol edebilirsiniz."
+"üzerinden benzersiz bir dijital kimlik oluşturabiliriz."
 
 #: web/apps/welcome/templates/welcome/protocol.html:38
 msgid ""
-"Once information on each operation of a product enters the Newton Supply Chain, that information will be stored on the Newton blockchain. This ensures no tampering with the data once it is stored on the Newton blockchain."
+"Once information on each operation of a product enters the Newton Supply "
+"Chain, that information will be stored on the Newton blockchain. This "
+"ensures no tampering with the data once it is stored on the Newton "
+"blockchain."
 msgstr ""
 "Tüm tedarik zincirinde, ürünün her işlemiyle ilgili temel bilgiler, "
 "verilerin değiştirilmesini önlemek için blok zincirinde saklanır."
 
 #: web/apps/welcome/templates/welcome/protocol.html:39
 msgid ""
-"Through smart contract Newton can pre-set commercial exchanging rules to realize automatic insurance claims and property rights transfer. This will reduce the transaction costs and promote cooperation efficiency."
+"Through smart contract Newton can pre-set commercial exchanging rules to "
+"realize automatic insurance claims and property rights transfer. This will "
+"reduce the transaction costs and promote cooperation efficiency."
 msgstr ""
 "Akıllı sözleşme ile, otomatik sigorta taleplerini gerçekleştirmek için "
 "ticari değiş tokuş kurallarını önceden belirleyebiliriz, böylece işlem "
@@ -3723,7 +3707,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:52
 msgid ""
-"Advertisers can set marketing plans through various built-in marketing smart contract templates in the system. This includes incentive modes, settlement modes, and dynamic price adjusting rules."
+"Advertisers can set marketing plans through various built-in marketing smart "
+"contract templates in the system. This includes incentive modes, settlement "
+"modes, and dynamic price adjusting rules."
 msgstr ""
 "Reklamcılar, teşvik planları, ödeme modları ve dinamik fiyat ayarlama "
 "kuralları dahil olmak üzere, sistemdeki çeşitli ön tanımlı akıllı pazarlama "
@@ -3731,7 +3717,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:53
 msgid ""
-"Advertisers can audit ongoing and completed marketing contracts. By calling out the DAI system, an advertiser can conduct market research before marketing activities, and analyze the results after the marketing activities."
+"Advertisers can audit ongoing and completed marketing contracts. By calling "
+"out the DAI system, an advertiser can conduct market research before "
+"marketing activities, and analyze the results after the marketing activities."
 msgstr ""
 "Reklamcılar, devam eden ve bitmiş pazarlama sözleşmelerini "
 "denetleyebilirler. DAI sistemini çağırarak pazarlama faaliyetlerinden önce "
@@ -3740,7 +3728,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:66
 msgid ""
-"The Newton trading and payment platform will enable a user to define transactions using the built-in smart contract templates and rule engine. This enables the user to include: multi-party transactions based on complex business rules, settlement rules, smart insurance contracts, smart financial contracts, and external chain service."
+"The Newton trading and payment platform will enable a user to define "
+"transactions using the built-in smart contract templates and rule engine. "
+"This enables the user to include: multi-party transactions based on complex "
+"business rules, settlement rules, smart insurance contracts, smart financial "
+"contracts, and external chain service."
 msgstr ""
 "Karmaşık iş kurallarını, anlaşma kurallarını, akıllı sigorta sözleşmelerini, "
 "akıllı finans sözleşmelerini ve dış zincir hizmetini de içeren, çok taraflı "
@@ -3753,7 +3745,10 @@ msgstr "Güvenilir fiziksel tunel"
 
 #: web/apps/welcome/templates/welcome/protocol.html:81
 msgid ""
-"Based on NewChain and NewIoT technologies Newton is capable of designing a reliable physical tunnel protocol and define manufacturing specifications of related equipment. Any third party can manufacture safety equipment according to the protocol specification."
+"Based on NewChain and NewIoT technologies Newton is capable of designing a "
+"reliable physical tunnel protocol and define manufacturing specifications of "
+"related equipment. Any third party can manufacture safety equipment "
+"according to the protocol specification."
 msgstr ""
 "NewChain ve NewIoT teknolojilerine dayanarak, güvenilir bir fiziksel tünel "
 "protokolü tasarladık ve ilgili ekipmanın üretim özelliklerini belirledik. "
@@ -3766,7 +3761,11 @@ msgstr "Otomatik finans"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
 msgid ""
-"Developers can define smart financial contracts based on the built-in smart contract templates on; insurance, lending and investment, including digital identity and credit, KYC information, staking the Newton token, contract rules and external chain service. The system will automatically match smart financial contracts and automatically complete transactional matching."
+"Developers can define smart financial contracts based on the built-in smart "
+"contract templates on; insurance, lending and investment, including digital "
+"identity and credit, KYC information, staking the Newton token, contract "
+"rules and external chain service. The system will automatically match smart "
+"financial contracts and automatically complete transactional matching."
 msgstr ""
 "Yazılımcılar, dijital kimlik ve kredi, KYC bilgisi, Newton tokenı "
 "barındırma, sözleşme kuralları ve dış zincir hizmeti dahil olmak üzere "
@@ -3781,7 +3780,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:109
 msgid ""
-"Developers can access NewNET through the NNIO (NewNET IO) protocol, using storage services, computing services and domain names."
+"Developers can access NewNET through the NNIO (NewNET IO) protocol, using "
+"storage services, computing services and domain names."
 msgstr ""
 "Yazılımcılar NewNET’e NNIO (NewNET IO) protokolü aracılığıyla depolama "
 "hizmetlerini, bilgi işlem hizmetlerini ve alan adı isimlerini kullanarak "
@@ -3814,10 +3814,12 @@ msgstr "Teknoloji"
 msgid ""
 "NewChain will have a main chain and sub-chains structure. The main chain "
 "will support account management, Newton token management, sub-chain "
-"management, network governance and more. The sub-chain will support "
-"specific service systems such as the hyper-exchange protocol, multiple "
-"consensus mechanisms and data structures, ensuring the assets transactions "
-"between the main chain and sub-chains, and between sub-chains. The NewChain provides a third-party developer the option and opportunity to create a new sub-chain after staking a certain amount of Newton tokens and passing the verification."
+"management, network governance and more. The sub-chain will support specific "
+"service systems such as the hyper-exchange protocol, multiple consensus "
+"mechanisms and data structures, ensuring the assets transactions between the "
+"main chain and sub-chains, and between sub-chains. The NewChain provides a "
+"third-party developer the option and opportunity to create a new sub-chain "
+"after staking a certain amount of Newton tokens and passing the verification."
 msgstr ""
 "NewChain bir adet ana zincir ve çoklu alt zincir yapısına sahip olacaktır. "
 "Ana zincir; hesap yönetimi, Newton tokenı yönetimi, alt zincir yönetimi, ağ "
@@ -3831,7 +3833,12 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:23
 msgid ""
-"NewVM is compatible with the Webassembly standard, supporting various general programming languages such as C/C++, Java, Python, TypeScript, and more. The system provides built-in smart contract templates for the hyper exchange protocol. The system built-in smart contract templates provide an effortless development and deployment of any application on the Newton NewChain."
+"NewVM is compatible with the Webassembly standard, supporting various "
+"general programming languages such as C/C++, Java, Python, TypeScript, and "
+"more. The system provides built-in smart contract templates for the hyper "
+"exchange protocol. The system built-in smart contract templates provide an "
+"effortless development and deployment of any application on the Newton "
+"NewChain."
 msgstr ""
 "NewVM, C / C ++, Java, Python, TypeScript vb. gibi yaygın programlama "
 "dillerini destekleyen Webassembly standardı ile uyumludur. Sistem, "
@@ -3840,14 +3847,25 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:24
 msgid ""
-"NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum security of all assets within the Newton ecosphere."
+"NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum "
+"security of all assets within the Newton ecosphere."
 msgstr ""
 "NewChain varlıkların güvenliğini sağlamak için Ring-LWE anti-kuantum "
 "şifreleme algoritmasını kullanır."
 
 #: web/apps/welcome/templates/welcome/tech.html:36
 msgid ""
-"NewNET consists of a large number of nodes that run on an open network providing reliable storage services and supporting a full SQL database and various general programming languages. Through its flexible and decentralized architecture NewNET is able to directly host today's most widely used web services. Developers have the ability to release any calculation task to the nodes in the open network. The nodes can then select the corresponding calculation task according to their own (hardware) abilities, then obtain the corresponding incentives after completing the task. Through NewChain a decentralized network domain name service is fully supported. The ease of use of NewNET will increase through the blockchain technology."
+"NewNET consists of a large number of nodes that run on an open network "
+"providing reliable storage services and supporting a full SQL database and "
+"various general programming languages. Through its flexible and "
+"decentralized architecture NewNET is able to directly host today's most "
+"widely used web services. Developers have the ability to release any "
+"calculation task to the nodes in the open network. The nodes can then select "
+"the corresponding calculation task according to their own (hardware) "
+"abilities, then obtain the corresponding incentives after completing the "
+"task. Through NewChain a decentralized network domain name service is fully "
+"supported. The ease of use of NewNET will increase through the blockchain "
+"technology."
 msgstr ""
 "Cok sayıda düğümden (node) oluşan NewNET, eksiksiz bir SQL veritabanı ve "
 "yaygın programlama dillerini destekleyen, güvenilir depolama hizmetleri "
@@ -3860,7 +3878,14 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
-"By using radiometric dating, PCA, machine vision, and deep learning technology Newton can quickly extract multiple characteristics of a certain material asset, including; weight, volume, size, shape, texture, optical properties, radioactive properties, thermodynamic properties, and a variety of customized random features. Then based on these characteristic data and algorithms Newton can create a unique identification and authentic right for any digital asset. The whole process is repeatable, verifiable and fault-tolerant."
+"By using radiometric dating, PCA, machine vision, and deep learning "
+"technology Newton can quickly extract multiple characteristics of a certain "
+"material asset, including; weight, volume, size, shape, texture, optical "
+"properties, radioactive properties, thermodynamic properties, and a variety "
+"of customized random features. Then based on these characteristic data and "
+"algorithms Newton can create a unique identification and authentic right for "
+"any digital asset. The whole process is repeatable, verifiable and fault-"
+"tolerant."
 msgstr ""
 "Radyometrik tarihleme, PCA, machine vision ve derin öğrenme teknolojilerini "
 "kullanarak bir materyalin, hacmini, kütlesini, boyutunu, şeklini, dokusunu, "
@@ -3872,7 +3897,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:62
 msgid ""
-"NewIoT is a general conception for a category of technologies that includes; blockchain fog computing, communication protocols between IoT devices and gateways and NewChain IoT devices developing specifications."
+"NewIoT is a general conception for a category of technologies that includes; "
+"blockchain fog computing, communication protocols between IoT devices and "
+"gateways and NewChain IoT devices developing specifications."
 msgstr ""
 "NewIoT, blok zincirli sis bilişim, IoT cihaz ve geçitler arası iletişim "
 "protokolu ve NewChain IoT cihaz geliştirme özelliklerini içeren genel bir "
@@ -3880,7 +3907,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:63
 msgid ""
-"The gateway has powerful computing and storage capabilities with built-in blockchain nodes, supporting multiple Internet accessing methods including; Ethernet/fiber, 3G/4G/5G, NB-IoT, IoT communication protocol such as BLE, Wi-Fi, ZigBee, and more. The IoT device store the collected information into NewChain through the gateway."
+"The gateway has powerful computing and storage capabilities with built-in "
+"blockchain nodes, supporting multiple Internet accessing methods including; "
+"Ethernet/fiber, 3G/4G/5G, NB-IoT, IoT communication protocol such as BLE, Wi-"
+"Fi, ZigBee, and more. The IoT device store the collected information into "
+"NewChain through the gateway."
 msgstr ""
 "Geçitlerin, sisteme entegre blok zinciri düğümleri ile birlikte güçlü bilgi "
 "işlem ve depolama kapasiteleri mevcuttur. Bu gecitler çoklu internet erişim "
@@ -3894,7 +3925,10 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:76
 msgid ""
-"DAI (Distributed Artificial Intelligence) promotes the development of AI from three aspects; data, algorithm model, and execution engine. By using these three aspects the Newton DAI closely connects the data suppliers, algorithm model developers and operating system providers together."
+"DAI (Distributed Artificial Intelligence) promotes the development of AI "
+"from three aspects; data, algorithm model, and execution engine. By using "
+"these three aspects the Newton DAI closely connects the data suppliers, "
+"algorithm model developers and operating system providers together."
 msgstr ""
 "DAI (Dagitik Yapay Zeka), yapay zekanın gelişimini 3 şekilde destekler: "
 "Veri, Algoritma modeli ve Yürütme motoru. Bu sayede veri sağlayıcılarını, "
@@ -4685,7 +4719,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:71
+#: web/apps/zinnia/models_bases/entry.py:73
 msgid "title"
 msgstr ""
 
@@ -4822,7 +4856,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:492
+#: web/apps/zinnia/models_bases/entry.py:494
 msgid "categories"
 msgstr ""
 
@@ -4835,14 +4869,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:60
+#: web/apps/zinnia/models_bases/entry.py:62
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:76
 msgid "slug"
 msgstr ""
 
@@ -4863,7 +4897,7 @@ msgid "language"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:117
+#: web/apps/zinnia/models_bases/entry.py:119
 msgid "Entry type"
 msgstr ""
 
@@ -4883,173 +4917,173 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:76
-#: web/apps/zinnia/models_bases/entry.py:101
+#: web/apps/zinnia/models_bases/entry.py:78
+#: web/apps/zinnia/models_bases/entry.py:103
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:79
+#: web/apps/zinnia/models_bases/entry.py:81
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:85
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:85
+#: web/apps/zinnia/models_bases/entry.py:87
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:88
+#: web/apps/zinnia/models_bases/entry.py:90
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:90
+#: web/apps/zinnia/models_bases/entry.py:92
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:95
+#: web/apps/zinnia/models_bases/entry.py:97
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:96
+#: web/apps/zinnia/models_bases/entry.py:98
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:101
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:104
+#: web/apps/zinnia/models_bases/entry.py:106
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:114
+#: web/apps/zinnia/models_bases/entry.py:116
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:121
+#: web/apps/zinnia/models_bases/entry.py:123
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:128
+#: web/apps/zinnia/models_bases/entry.py:130
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:243
+#: web/apps/zinnia/models_bases/entry.py:245
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:244
+#: web/apps/zinnia/models_bases/entry.py:246
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:258
+#: web/apps/zinnia/models_bases/entry.py:260
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:300
+#: web/apps/zinnia/models_bases/entry.py:302
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:301
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:305
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:304
+#: web/apps/zinnia/models_bases/entry.py:306
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:306
+#: web/apps/zinnia/models_bases/entry.py:308
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:309
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:312
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:312
+#: web/apps/zinnia/models_bases/entry.py:314
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:314
+#: web/apps/zinnia/models_bases/entry.py:316
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:398
+#: web/apps/zinnia/models_bases/entry.py:400
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:416
+#: web/apps/zinnia/models_bases/entry.py:418
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:417
+#: web/apps/zinnia/models_bases/entry.py:419
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:450
+#: web/apps/zinnia/models_bases/entry.py:452
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:452
+#: web/apps/zinnia/models_bases/entry.py:454
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:463
+#: web/apps/zinnia/models_bases/entry.py:465
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:478
+#: web/apps/zinnia/models_bases/entry.py:480
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:502
+#: web/apps/zinnia/models_bases/entry.py:504
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:521
+#: web/apps/zinnia/models_bases/entry.py:523
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:522
+#: web/apps/zinnia/models_bases/entry.py:524
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:534
+#: web/apps/zinnia/models_bases/entry.py:536
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:535
+#: web/apps/zinnia/models_bases/entry.py:537
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:547
+#: web/apps/zinnia/models_bases/entry.py:549
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:549
-#: web/apps/zinnia/models_bases/entry.py:565
+#: web/apps/zinnia/models_bases/entry.py:551
+#: web/apps/zinnia/models_bases/entry.py:567
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:551
+#: web/apps/zinnia/models_bases/entry.py:553
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:563
+#: web/apps/zinnia/models_bases/entry.py:565
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:567
+#: web/apps/zinnia/models_bases/entry.py:569
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5706,8 +5740,8 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/sitemap.html:4
 #: web/apps/zinnia/templates/zinnia/sitemap.html:11
-#: web/apps/zinnia/templates/zinnia/skeleton.html:55
-#: web/apps/zinnia/templates/zinnia/skeleton.html:56
+#: web/apps/zinnia/templates/zinnia/skeleton.html:65
+#: web/apps/zinnia/templates/zinnia/skeleton.html:66
 msgid "Sitemap"
 msgstr ""
 
@@ -5727,16 +5761,20 @@ msgstr ""
 msgid "Just another Zinnia weblog."
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:40
+#: web/apps/zinnia/templates/zinnia/skeleton.html:37 web/templates/base.html:71
+msgid "Join us to change the world"
+msgstr "Dünyayı değiştirmek için bize katılın"
+
+#: web/apps/zinnia/templates/zinnia/skeleton.html:50
 msgid "BLOG"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:47
+#: web/apps/zinnia/templates/zinnia/skeleton.html:57
 msgid "Useful links"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:50
-#: web/apps/zinnia/templates/zinnia/skeleton.html:51
+#: web/apps/zinnia/templates/zinnia/skeleton.html:60
+#: web/apps/zinnia/templates/zinnia/skeleton.html:61
 msgid "Weblog index"
 msgstr ""
 
@@ -6033,10 +6071,6 @@ msgstr ""
 msgid "System Error."
 msgstr ""
 
-#: web/templates/base.html:71
-msgid "Join us to change the world"
-msgstr "Dünyayı değiştirmek için bize katılın"
-
 #: web/templates/dialog.html:8
 msgid "关闭"
 msgstr ""
@@ -6073,7 +6107,7 @@ msgstr ""
 msgid "LogOut"
 msgstr ""
 
-#: web/templates/header.html:25
+#: web/templates/header.html:26
 msgid "Technology"
 msgstr "Teknoloji"
 
@@ -6103,6 +6137,26 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid ""
+#~ "We support cross-border transactions, micro payments, lightning "
+#~ "settlement, etc., and provide comprehensive online and offline payment "
+#~ "tools."
+#~ msgstr ""
+#~ "Sınırlar ötesi işlemleri, cok düşük miktardaki ödemeleri, lightning "
+#~ "yerleşimi vb. Konuları destekliyoruz. Online ve Offline ödeme araçları da "
+#~ "sunuyoruz."
+
+#~ msgid ""
+#~ "By using techniques named as “Atom Hashing”, we can create a unique "
+#~ "digital identity for commodities over the whole network. Through this "
+#~ "digital identity, you can check the relevant information on the commodity "
+#~ "at any time."
+#~ msgstr ""
+#~ "“Atom Hashing” adı verilen teknikleri kullanarak, emtialar için tüm ağ "
+#~ "üzerinden benzersiz bir dijital kimlik oluşturabiliriz. Bu dijital kimlik "
+#~ "sayesinde, emtiaya ilişkin bilgileri istediğiniz zaman kontrol "
+#~ "edebilirsiniz."
 
 #~ msgid "Priority recruitment conditions:"
 #~ msgstr "Öncelikli işe alım koşulları:"
