@@ -1172,11 +1172,11 @@ canvas { display: block; vertical-align: top; }
     .joinus a img{display: none;}
 }
 
-.ad{ background:#083356; position:relative;}
+.ad{ background:#333333; position:relative;}
 .ad a{text-align: center;}
 .ad span{ color: #f6fcfd; font-size: 30px; vertical-align: middle; text-align:center}
 .ad .container div{position: relative; padding: 10px 0 10px 0}
-.ad .container img{height: 100%; display: block; position: absolute; right: 0; bottom: 0}
+.ad .container img{width: 3.5%; height: 100%; display: block; position: absolute; right: 0; bottom: 0}
 
 
 @media(max-width:992px){
@@ -1189,10 +1189,12 @@ canvas { display: block; vertical-align: top; }
 
 @media(max-width:767px) and (min-width: 320px) {
 .ad .container span{ font-size:18px;}
+.ad .container img{width: 4.5%}
 }
 
 @media only screen and (max-width : 320px) {
 .ad .container span{ font-size:12px;}
+.ad .container img{width: 4.5%}
 }
 
 /* go top */
