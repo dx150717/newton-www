@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-23 03:23+0000\n"
+"POT-Creation-Date: 2018-06-04 11:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,8 +165,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:107
 #: web/apps/zinnia/models_bases/entry.py:110
+#: web/apps/zinnia/models_bases/entry.py:113
 msgid "Language"
 msgstr ""
 
@@ -263,11 +262,11 @@ msgid "Incorrect Google Authenticator Code"
 msgstr "Неверный код Google Authenticator"
 
 #: web/apps/login/templates/login/index.html:5
-#: web/apps/login/templates/login/index.html:19
-#: web/apps/login/templates/login/index.html:39
+#: web/apps/login/templates/login/index.html:22
+#: web/apps/login/templates/login/index.html:42
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
-#: web/templates/header-no-menu.html:38 web/templates/header.html:54
+#: web/templates/header-no-menu.html:38
 msgid "Login"
 msgstr "Войти"
 
@@ -301,38 +300,39 @@ msgstr "Войти"
 msgid "Newton Community"
 msgstr ""
 
-#: web/apps/login/templates/login/index.html:24
+#: web/apps/login/templates/login/index.html:27
 msgid ""
-"Tip: To login successfully, ensure that you can access the google recaptcha service."
+"Tip: To login successfully, ensure that you can access the google recaptcha "
+"service."
 msgstr ""
 "Совет: Чтобы войти в систему, убедитесь, что вы можете получить доступ к "
 "сервису google recaptcha."
 
-#: web/apps/login/templates/login/index.html:42
+#: web/apps/login/templates/login/index.html:45
 #: web/apps/register/templates/register/index.html:6
-#: web/apps/register/templates/register/index.html:24
-#: web/apps/register/templates/register/index.html:44
+#: web/apps/register/templates/register/index.html:27
+#: web/apps/register/templates/register/index.html:47
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
 #: web/apps/register/templates/register/register-success.html:6
-#: web/templates/header-no-menu.html:35 web/templates/header.html:51
+#: web/templates/header-no-menu.html:35
 msgid "Register"
 msgstr "Зарегистрироваться"
 
-#: web/apps/login/templates/login/index.html:43
+#: web/apps/login/templates/login/index.html:46
 msgid "Forgot Password"
 msgstr "Забыли пароль?"
 
-#: web/apps/login/templates/login/index.html:56
-#: web/apps/login/templates/login/index.html:63 web/apps/register/forms.py:19
+#: web/apps/login/templates/login/index.html:59
+#: web/apps/login/templates/login/index.html:66 web/apps/register/forms.py:19
 msgid "Google Authenticator Code"
 msgstr "Google Authenticator Code"
 
-#: web/apps/login/templates/login/index.html:67
-#: web/apps/register/templates/register/gtoken.html:56
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:35
-#: web/apps/user/templates/user/profile.html:31
+#: web/apps/login/templates/login/index.html:70
+#: web/apps/register/templates/register/gtoken.html:59
+#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:38
+#: web/apps/user/templates/user/profile.html:34
 msgid "Submit"
 msgstr "Подтвердить"
 
@@ -445,60 +445,63 @@ msgid "Entered passwords do not match"
 msgstr "Введенные пароли различаются"
 
 #: web/apps/register/templates/register/gtoken.html:6
-#: web/apps/register/templates/register/gtoken.html:20
+#: web/apps/register/templates/register/gtoken.html:23
 msgid "Add Google Authenticator"
 msgstr "Добавьте Google Authenticator"
 
-#: web/apps/register/templates/register/gtoken.html:25
+#: web/apps/register/templates/register/gtoken.html:28
 msgid "Scan the QR code or enter the code manually into your GA app"
 msgstr "Сканируйте QR-код или введите код вручную в свое приложение GA"
 
-#: web/apps/register/templates/register/gtoken.html:28
+#: web/apps/register/templates/register/gtoken.html:31
 msgid ""
-"Apple users are recommended to download Google Authenticator directly from the App Store and android users are recommended to download Google Authenticator from Google Play."
+"Apple users are recommended to download Google Authenticator directly from "
+"the App Store and android users are recommended to download Google "
+"Authenticator from Google Play."
 msgstr ""
 "Пользователям Apple рекомендуем загружать Authenticator из App Store, а "
 "пользователям Android рекомендуем Google Authenticator из Google Play."
 
-#: web/apps/register/templates/register/gtoken.html:31
+#: web/apps/register/templates/register/gtoken.html:34
 msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
 msgstr ""
 "Обязательно сохраните ключ или код qr, чтобы избежать каких-либо неудобств."
 
-#: web/apps/register/templates/register/gtoken.html:44
+#: web/apps/register/templates/register/gtoken.html:47
 msgid "Enter the  code manually into your GA app"
 msgstr "Введите код вручную в свое приложение GA"
 
-#: web/apps/register/templates/register/gtoken.html:48
+#: web/apps/register/templates/register/gtoken.html:51
 msgid "Or"
 msgstr "Или"
 
-#: web/apps/register/templates/register/gtoken.html:51
+#: web/apps/register/templates/register/gtoken.html:54
 msgid "Use the GA app to scan the QR code"
 msgstr "Используйте приложение GA для сканирования QR-кода"
 
-#: web/apps/register/templates/register/index.html:29
+#: web/apps/register/templates/register/index.html:32
 msgid ""
-"Tip: To register successfully, ensure you can access the google recaptcha service."
+"Tip: To register successfully, ensure you can access the google recaptcha "
+"service."
 msgstr ""
 "Совет: Чтобы войти в систему, убедитесь, что вы можете получить доступ к "
 "сервису google recaptcha."
 
-#: web/apps/register/templates/register/index.html:52
+#: web/apps/register/templates/register/index.html:55
 msgid "By clicking on the register button you agree and abide by<br/> Newton"
 msgstr ""
 "Нажатие кнопки регистрации означает, что вы согласны и выполняете <br/> "
 "Newton"
 
-#: web/apps/register/templates/register/index.html:52
+#: web/apps/register/templates/register/index.html:55
 msgid "User Agreement"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:52
+#: web/apps/register/templates/register/index.html:55
 msgid "and"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:52
+#: web/apps/register/templates/register/index.html:55
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -511,24 +514,27 @@ msgid "Invalid-link"
 msgstr ""
 
 #: web/apps/register/templates/register/password.html:6
-#: web/apps/register/templates/register/password.html:20
+#: web/apps/register/templates/register/password.html:23
 msgid "Set Password"
 msgstr ""
 
-#: web/apps/register/templates/register/password.html:29
+#: web/apps/register/templates/register/password.html:32
 msgid "Next"
 msgstr "Далее"
 
-#: web/apps/register/templates/register/post-success.html:20
-#: web/apps/reset/templates/reset/reset-success.html:18
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:20
+#: web/apps/register/templates/register/post-success.html:23
+#: web/apps/reset/templates/reset/reset-success.html:21
+#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
 msgid "Submit Success!"
 msgstr "Успешное подтверждение!"
 
-#: web/apps/register/templates/register/post-success.html:21
+#: web/apps/register/templates/register/post-success.html:24
 msgid ""
-"We have sent you an email to your registered email, please check out to finish signing up."
-msgstr "Мы отправили вам электронное письмо на ваш зарегистрированный адрес электронной почты, пожалуйста, проверьте, чтобы завершить регистрацию."
+"We have sent you an email to your registered email, please check out to "
+"finish signing up."
+msgstr ""
+"Мы отправили вам электронное письмо на ваш зарегистрированный адрес "
+"электронной почты, пожалуйста, проверьте, чтобы завершить регистрацию."
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Complete the register process of Newton"
@@ -552,11 +558,11 @@ msgstr ""
 msgid "If you received this email by mistake, simply delete it."
 msgstr ""
 
-#: web/apps/register/templates/register/register-success.html:20
+#: web/apps/register/templates/register/register-success.html:23
 msgid "Register Success!"
 msgstr ""
 
-#: web/apps/register/templates/register/register-success.html:21
+#: web/apps/register/templates/register/register-success.html:24
 msgid "Go to <a href='/login/'>Login</a>"
 msgstr ""
 
@@ -565,10 +571,10 @@ msgid "Email address does not exist"
 msgstr "Электронная почта не существует"
 
 #: web/apps/reset/templates/reset/edit_password.html:6
-#: web/apps/reset/templates/reset/edit_password.html:18
-#: web/apps/reset/templates/reset/edit_password.html:28
-#: web/apps/reset/templates/reset/index.html:18
-#: web/apps/reset/templates/reset/index.html:27
+#: web/apps/reset/templates/reset/edit_password.html:21
+#: web/apps/reset/templates/reset/edit_password.html:31
+#: web/apps/reset/templates/reset/index.html:21
+#: web/apps/reset/templates/reset/index.html:30
 #: web/apps/reset/templates/reset/invalid-link.html:6
 #: web/apps/reset/templates/reset/reset-complete.html:6
 #: web/apps/reset/templates/reset/reset-fail.html:6
@@ -582,11 +588,11 @@ msgstr "Сброс"
 msgid "ReSet"
 msgstr "Сброс"
 
-#: web/apps/reset/templates/reset/reset-complete.html:20
+#: web/apps/reset/templates/reset/reset-complete.html:23
 msgid "Reset Success!"
 msgstr "Восстановление прошло успешно!"
 
-#: web/apps/reset/templates/reset/reset-complete.html:21
+#: web/apps/reset/templates/reset/reset-complete.html:24
 msgid ""
 "You have successfully reset your password, please <a href='/login/'> login</"
 "a>"
@@ -607,9 +613,10 @@ msgid ""
 "org'> contact@newtonproject.org</a>"
 msgstr ""
 
-#: web/apps/reset/templates/reset/reset-success.html:19
+#: web/apps/reset/templates/reset/reset-success.html:22
 msgid ""
-"We have sent an email to your registered email address to complete the password reset procedure."
+"We have sent an email to your registered email address to complete the "
+"password reset procedure."
 msgstr ""
 "Мы отправили электронное письмо на ваш зарегистрированный адрес электронной "
 "почты, пожалуйста, проверьте и завершите процесс восстановления пароля."
@@ -665,7 +672,7 @@ msgstr ""
 
 #: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:66
 #: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:68
-#: web/apps/zinnia/templates/zinnia/skeleton.html:62
+#: web/apps/zinnia/templates/zinnia/skeleton.html:72
 msgid "Search"
 msgstr ""
 
@@ -807,7 +814,7 @@ msgstr ""
 msgid "KYC"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:18
+#: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:21
 msgid "Apply Success!"
 msgstr ""
 
@@ -815,19 +822,19 @@ msgstr ""
 msgid "NOTIFY"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:18
+#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:21
 msgid "Distribution confirm"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:21
+#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:24
 msgid "Confrm your amount of token exchange"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:27
+#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:30
 msgid "Your BTC amount is "
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:30
+#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:33
 msgid "Your ELA amount is "
 msgstr ""
 
@@ -835,18 +842,18 @@ msgstr ""
 msgid "Token Exchange"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:20
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:23
 msgid "NEWTON TOKEN EXCHANGE AGREEMENT"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:22
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:25
 msgid ""
 "Please read NEWTON Token Exchange Agreement, Terms of Use, and White Paper "
 "of Newtonproject.org, then clicks the check box to indicate that Buyer has "
 "read, understands and agrees to the terms of this Agreement."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:27
 msgid ""
 "This NEWTON Token Exchange Agreement (this 'Agreement') contains Terms of "
 "use NEWTON (https://www.newtonproject.org/terms-of-use/) and Privacy Policy "
@@ -855,21 +862,21 @@ msgid ""
 "and valuable consideration, NEWTON Token Buyer hereby agrees as follows:"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:25
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:28
 msgid ""
 "IMPORTANT INFORMATION: PLEASE READ THIS AGREEMENT CAREFULLY AND IN ITS "
 "ENTIRETY."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:26
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:29
 msgid "Buyer acknowledges, understands and agrees to the following:"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:27
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:30
 msgid "1. NO U.S. OR CHINESE BUYERS: "
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:28
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:31
 msgid ""
 "NEWTON Tokens are not being offered or distributed to U.S. persons or "
 "Chinese persons. If you are citizen, resident of, or a person located or "
@@ -879,7 +886,7 @@ msgid ""
 "attempt to exchange NEWTON Tokens."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:29
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:32
 msgid ""
 "2. Exchange of NEWTON tokens are non-refundable and exchanges cannot be "
 "cancelled. Buyer may lose all amounts paid. NEWTON tokens may have no value. "
@@ -887,7 +894,7 @@ msgid ""
 "at any time in its sole discretion."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:35
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:38
 msgid ""
 "3. NEWTON Tokens. As mentioned above, the NEWTON Tokens do not have any "
 "rights, uses, purpose, attributes, functionalities or features, express or "
@@ -896,7 +903,7 @@ msgid ""
 "or any other kind of financial instrument."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:36
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:39
 msgid ""
 "4. Buyer acknowledges and understands that the proceeds from the exchange of "
 "the NEWTON tokens. The NEWTON Tokens are not being offered to U.S. users or "
@@ -915,7 +922,7 @@ msgid ""
 "swap on either a security or commodity."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:37
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:40
 msgid ""
 "5. Before exchanging NEWTON Tokens, Buyer acknowledges and agrees that "
 "NEWTON Tokens are virtual digital cryptocurrency, not designed for "
@@ -924,7 +931,7 @@ msgid ""
 "laws governing those types of financial instruments."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:38
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:41
 msgid ""
 "6. Buyer acknowledges and agrees that Buyer is not exchanging NEWTON Tokens "
 "for purposes of investment, speculation, as some type of arbitrage strategy, "
@@ -938,7 +945,7 @@ msgid ""
 "interest in NEWTON Foundation."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:39
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:42
 msgid ""
 "7. Intellectual Property. NEWTON Foundation retains all right, title and "
 "interest in all of NEWTON Foundation’s intellectual property, including, "
@@ -950,11 +957,11 @@ msgid ""
 "for any reason without NEWTON Foundation’s prior written consent."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:40
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:43
 msgid "8. Security and Data Privacy."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:41
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:44
 msgid ""
 "Buyer will implement reasonable and appropriate measures designed to secure "
 "access to: (i) any device associated with Buyer and utilized in connection "
@@ -970,7 +977,7 @@ msgid ""
 "any NEWTON Tokens exchanged."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:42
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:45
 msgid ""
 "9. Upon NEWTON Foundation’s request, Buyer will immediately provide to "
 "NEWTON Foundation their information and documents. NEWTON Foundation, in its "
@@ -985,7 +992,7 @@ msgid ""
 "requested information is provided."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:43
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:46
 msgid ""
 "10. Buyer acknowledges, understands and agrees that: Buyer is solely "
 "responsible for Buyer’s compliance with Buyer’s tax obligations; and NEWTON "
@@ -993,20 +1000,20 @@ msgid ""
 "consequences to Buyer."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:44
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:47
 msgid ""
 "11. If an individual, Buyer is at least 18 years old and of sufficient legal "
 "age and capacity to exchange NEWTON Tokens."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:45
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:48
 msgid ""
 "12. If a legal person, Buyer is duly organized, validly existing and in good "
 "standing under the laws of its domiciliary jurisdiction and each "
 "jurisdiction where it conducts business."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:46
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:49
 msgid ""
 "13. Buyer has sufficient knowledge and experience in business and financial "
 "matters, including a sufficient understanding of blockchain or cryptographic "
@@ -1022,7 +1029,7 @@ msgid ""
 "exchange NEWTON Tokens."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:47
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:50
 msgid ""
 "14. The funds, including any fiat, virtual currency or cryptocurrency, Buyer "
 "uses to exchange NEWTON Tokens are not derived from or related to any "
@@ -1031,14 +1038,14 @@ msgid ""
 "engage in, or otherwise support any unlawful activities."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:48
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:51
 msgid ""
 "15. Anti-Money Laundering. Counter-Terrorism Financing. To the extent "
 "required by applicable law, Buyer complies with all anti-money laundering "
 "and counter-terrorism financing requirements."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:49
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:52
 msgid ""
 "16. Buyer expressly acknowledges, understands and agrees that Buyer is using "
 "the NEWTON Distribution Contract, the NEWTON Token Contract and exchanging "
@@ -1050,7 +1057,7 @@ msgid ""
 "investigation thereof."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:50
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:53
 msgid ""
 "17. Force Majeure. Buyer understands and agrees that NEWTON Foundation shall "
 "not be liable and disclaims all liability to Buyer in connection with any "
@@ -1062,7 +1069,7 @@ msgid ""
 "change, changes in interest rates or other monetary conditions."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:51
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:54
 msgid ""
 "18. Dispute Resolution. Buyer and NEWTON Foundation shall cooperate in good "
 "faith to resolve any dispute, controversy or claim arising out of, relating "
@@ -1082,7 +1089,7 @@ msgid ""
 "arbitration."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:52
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:55
 msgid ""
 "Severability. If any provision of this Agreement is determined by a court of "
 "competent jurisdiction to be invalid, inoperative or unenforceable for any "
@@ -1093,7 +1100,7 @@ msgid ""
 "possible."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:53
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:56
 msgid ""
 "Modification of Agreement. NEWTON Foundation may modify this Agreement at "
 "any time by posting a revised version on the Official Website. The modified "
@@ -1103,7 +1110,7 @@ msgid ""
 "Agreement."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:54
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:57
 msgid ""
 "No Waivers. The failure by NEWTON Foundation to exercise or enforce any "
 "right or provision of this Agreement will not constitute a present or future "
@@ -1112,7 +1119,7 @@ msgid ""
 "Foundation must be unequivocal and in writing to be effective."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:55
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:58
 msgid ""
 "No Partnership; No Agency; No Third Party Beneficiaries. Nothing in this "
 "Agreement and no action taken by the Parties shall constitute, or be deemed "
@@ -1125,7 +1132,7 @@ msgid ""
 "create any third party beneficiary rights in any person."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:56
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:59
 msgid ""
 "Electronic Communications. Buyer agrees and acknowledges that all "
 "agreements, notices, disclosures and other communications that NEWTON "
@@ -1135,7 +1142,7 @@ msgid ""
 "electronic form."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:57
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:60
 msgid ""
 "19. The NEWTON Token distribution ratio is shown on official website（www."
 "newtonproject.org）"
@@ -1149,7 +1156,7 @@ msgstr "Недействительная ссылка"
 msgid "TOKENEXCHANGE"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:20
+#: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:23
 msgid "Newton Token Sale"
 msgstr ""
 
@@ -1158,7 +1165,7 @@ msgstr ""
 msgid "Tokensale"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:20
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:23
 msgid "KYC Information"
 msgstr ""
 
@@ -1200,7 +1207,7 @@ msgstr ""
 msgid "Subscription Ratio"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:21
+#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:24
 msgid "您的KYC信息正在审核，请耐心等待。"
 msgstr ""
 
@@ -1252,93 +1259,93 @@ msgstr ""
 msgid "user"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:30
+#: web/apps/user/templates/user/index.html:33
 msgid "Profile"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:45
+#: web/apps/user/templates/user/index.html:48
 msgid "Basic information"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:76
+#: web/apps/user/templates/user/index.html:79
 msgid "You have summit KYC information"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:81
+#: web/apps/user/templates/user/index.html:84
 msgid "Passed"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:84
+#: web/apps/user/templates/user/index.html:87
 msgid "Rejected:"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:84
+#: web/apps/user/templates/user/index.html:87
 msgid "Rewrite"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:88
+#: web/apps/user/templates/user/index.html:91
 msgid ""
 "You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:125
+#: web/apps/user/templates/user/index.html:128
 msgid "Details "
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:132
+#: web/apps/user/templates/user/index.html:135
 msgid "There is no token exchange information"
 msgstr ""
 
-#: web/apps/user/templates/user/profile.html:21
+#: web/apps/user/templates/user/profile.html:24
 msgid "Edit Profile"
 msgstr ""
 
-#: web/apps/user/templates/user/settings.html:15
+#: web/apps/user/templates/user/settings.html:19
 msgid "Settings"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:42
-#: web/apps/user/templates/user/token-exchange-progress.html:88
+#: web/apps/user/templates/user/token-exchange-progress.html:45
+#: web/apps/user/templates/user/token-exchange-progress.html:91
 msgid "Passed KYC"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:50
-#: web/apps/user/templates/user/token-exchange-progress.html:95
+#: web/apps/user/templates/user/token-exchange-progress.html:53
+#: web/apps/user/templates/user/token-exchange-progress.html:98
 msgid "Fill in the expected investment quota"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:59
-#: web/apps/user/templates/user/token-exchange-progress.html:103
+#: web/apps/user/templates/user/token-exchange-progress.html:62
+#: web/apps/user/templates/user/token-exchange-progress.html:106
 msgid "Turn money to Newton"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:68
-#: web/apps/user/templates/user/token-exchange-progress.html:111
+#: web/apps/user/templates/user/token-exchange-progress.html:71
+#: web/apps/user/templates/user/token-exchange-progress.html:114
 msgid "Fill in the New wallet address"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:77
-#: web/apps/user/templates/user/token-exchange-progress.html:119
+#: web/apps/user/templates/user/token-exchange-progress.html:80
+#: web/apps/user/templates/user/token-exchange-progress.html:122
 msgid "Confirm receipt of New"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:138
+#: web/apps/user/templates/user/token-exchange-progress.html:141
 msgid "Apply Amount"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:152
+#: web/apps/user/templates/user/token-exchange-progress.html:155
 msgid "Distribution Amount"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:167
+#: web/apps/user/templates/user/token-exchange-progress.html:170
 msgid "Distribution Address"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:183
+#: web/apps/user/templates/user/token-exchange-progress.html:186
 msgid "Sended Amount"
 msgstr ""
 
-#: web/apps/user/templates/user/token-exchange-progress.html:200
+#: web/apps/user/templates/user/token-exchange-progress.html:203
 msgid "Fill in the expected investment quota "
 msgstr ""
 
@@ -1423,7 +1430,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:61 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:64 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "Новости"
 
@@ -1437,17 +1444,17 @@ msgid "All"
 msgstr "Все"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:66
+#: web/apps/zinnia/models_bases/entry.py:69
 msgid "Operation"
 msgstr "Процесс"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:67
+#: web/apps/zinnia/models_bases/entry.py:70
 msgid "Weekly"
 msgstr "Еженедельно"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:65
+#: web/apps/zinnia/models_bases/entry.py:68
 msgid "Activity"
 msgstr "Активность"
 
@@ -1456,7 +1463,7 @@ msgstr "Активность"
 #: web/apps/welcome/templates/welcome/community.html:45
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:31
+#: web/templates/header.html:32
 msgid "Community"
 msgstr "Сообщество"
 
@@ -1477,18 +1484,19 @@ msgstr "Список Email"
 msgid "English"
 msgstr "английский"
 
-msgid "Japanese"
-msgstr "Японский"
-
 #: web/apps/welcome/templates/welcome/community.html:54
 msgid "Chinese"
 msgstr "Китайский"
 
-#: web/apps/welcome/templates/welcome/community.html:68
+#: web/apps/welcome/templates/welcome/community.html:57
+msgid "Japanese"
+msgstr "Японский"
+
+#: web/apps/welcome/templates/welcome/community.html:71
 msgid "Press"
 msgstr "Пресса"
 
-#: web/apps/welcome/templates/welcome/community.html:74
+#: web/apps/welcome/templates/welcome/community.html:77
 #: web/apps/welcome/templates/welcome/include-protocol.html:65
 #: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
@@ -1763,7 +1771,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
-#: web/templates/header.html:34
+#: web/templates/header.html:35
 msgid "Economy"
 msgstr "Организация"
 
@@ -1908,7 +1916,10 @@ msgstr "Умнее"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:38
 msgid ""
-"Personal credit can be automatically created in a free and open manner without authoritative intermediaries. This methodology will reduce human intervention and facilitate the coordination between people, between machines and between people and machines."
+"Personal credit can be automatically created in a free and open manner "
+"without authoritative intermediaries. This methodology will reduce human "
+"intervention and facilitate the coordination between people, between "
+"machines and between people and machines."
 msgstr ""
 "Личный кредит доверия может автоматически создаваться свободным и открытым "
 "способом без авторитетных посредников. Этот более умный способ уменьшит "
@@ -1921,7 +1932,10 @@ msgstr "Более эффективный механизм стимулиров�
 
 #: web/apps/welcome/templates/welcome/include-feature.html:50
 msgid ""
-"Replacing traditional business intermediaries by technology protocols will reduce the transactional cost and reward each who contributed in the transaction; such as service providers, consumers and other participants connected by the value-based Internet."
+"Replacing traditional business intermediaries by technology protocols will "
+"reduce the transactional cost and reward each who contributed in the "
+"transaction; such as service providers, consumers and other participants "
+"connected by the value-based Internet."
 msgstr ""
 "Заменяя традиционных бизнес посредников технологическими протоколами, "
 "транзакционные издержки будут сохраняться и распределяться на каждого из "
@@ -1934,7 +1948,10 @@ msgstr "Новая организационная структура и меха
 
 #: web/apps/welcome/templates/welcome/include-feature.html:61
 msgid ""
-"The community economy managed by non-profit foundations will replace the monopoly of intermediary platforms managed by traditional for-profit organizations. Based on open, fair, and rational rules every contributor will benefit from the economy and become a part of the economy."
+"The community economy managed by non-profit foundations will replace the "
+"monopoly of intermediary platforms managed by traditional for-profit "
+"organizations. Based on open, fair, and rational rules every contributor "
+"will benefit from the economy and become a part of the economy."
 msgstr ""
 "Экономика сообщества, управляемая некоммерческими организациями, заменит "
 "платформы монопольного посредничества, управляемые традиционными компаниями, "
@@ -2055,6 +2072,7 @@ msgid "Hyper Exchange Protocol"
 msgstr "Hyper Exchange Protocol"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:23
+#: web/apps/welcome/templates/welcome/newpay.html:23
 #: web/apps/welcome/templates/welcome/protocol.html:21
 msgid "Digital Identity and Credit"
 msgstr "Цифровая идентификация и кредит доверия"
@@ -2075,13 +2093,6 @@ msgstr "Цепочка поставок"
 msgid ""
 "By using techniques such as 'atom hashing', we can create a unique digital "
 "identity for commodities of the whole network."
-msgstr ""
-"Используя методы, известные как «Атом-Хеширования», Благодаря этому "
-"цифровому удостоверению вы можете в любой момент проверить соответствующую "
-"информацию о товаре."
-
-msgid ""
-"By using such techniques as “Atom Hashing” we can create a unique digital identity for commodities over the whole network. Through this digital identity a user can check the relevant information on any commodity at any time."
 msgstr ""
 "Используя методы, известные как «Атом-Хеширования», Благодаря этому "
 "цифровому удостоверению вы можете в любой момент проверить соответствующую "
@@ -2108,14 +2119,9 @@ msgstr "Торговля и оплата"
 #: web/apps/welcome/templates/welcome/include-protocol.html:57
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
-"We support cross-border transactions, micro payments, lightning "
-"settlement, etc., and provide comprehensive online and offline payment tools."
-msgstr ""
-"Мы поддерживаем трансграничные транзакции, сверхмалые платежи, молниеносные "
-"расчеты и т. д., а также предоставляем комплексные онлайн- и офлайн- "
-"платежные инструменты."
-
-msgid "Newton supports cross-border transactions, micro payments, lightning settlements and more to provide comprehensive online and offline payment tools."
+"Newton supports cross-border transactions, micro payments, lightning "
+"settlements and more to provide comprehensive online and offline payment "
+"tools."
 msgstr ""
 "Мы поддерживаем трансграничные транзакции, сверхмалые платежи, молниеносные "
 "расчеты и т. д., а также предоставляем комплексные онлайн- и офлайн- "
@@ -2211,19 +2217,6 @@ msgstr "Специалист по маркетингу"
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Founder of WuZhou Online"
 msgstr "Основатель WuZhou Online"
-
-#: web/apps/welcome/templates/welcome/include-team.html:78
-#: web/apps/welcome/templates/welcome/include-team.html:80
-msgid "Jiang Yu"
-msgstr "Цзян Юй"
-
-#: web/apps/welcome/templates/welcome/include-team.html:81
-msgid "Product Specialist"
-msgstr "Специалист по продукции"
-
-#: web/apps/welcome/templates/welcome/include-team.html:81
-msgid "Previous Product Director of xs.cn"
-msgstr "В прошлом директор по продукции xs.cn"
 
 #: web/apps/welcome/templates/welcome/include-tech-chain.html:10
 msgid "Multiple Blockchain"
@@ -2341,7 +2334,7 @@ msgstr ""
 msgid "Newton: The infrastructure for a protocol-based economy"
 msgstr "Инфраструктура, основанная на протоколах экономики"
 
-#: web/apps/welcome/templates/welcome/index.html:46
+#: web/apps/welcome/templates/welcome/index.html:47
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -2376,7 +2369,9 @@ msgstr "НАША КУЛЬТУРА"
 
 #: web/apps/welcome/templates/welcome/joinus.html:30
 msgid ""
-"We believe in the free, open and inclusive culture advocated by the philosophy of free and open source. Decentralization is the core of our values."
+"We believe in the free, open and inclusive culture advocated by the "
+"philosophy of free and open source. Decentralization is the core of our "
+"values."
 msgstr ""
 "Мы верим в свободную, открытую и объединяющую культуру, пропагандируемую "
 "либеральной философией открытого программного обеспечения. Децентрализация "
@@ -2384,7 +2379,10 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
 msgid ""
-"Currently, Newton consists of top talents from the free and open source software community. We work with professionals in the fields of e-commerce, finance, media, etc. We hope that in the future more talents and professionals will join us."
+"Currently, Newton consists of top talents from the free and open source "
+"software community. We work with professionals in the fields of e-commerce, "
+"finance, media, etc. We hope that in the future more talents and "
+"professionals will join us."
 msgstr ""
 "В настоящее время команда разработчиков Newton привлекла множество "
 "профессиональных талантов из сообщества разработчиков программного "
@@ -2394,7 +2392,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:36
 msgid ""
-"In addition, developers around the world can join Newton through remote office. You don't have to worry about space limitations."
+"In addition, developers around the world can join Newton through remote "
+"office. You don't have to worry about space limitations."
 msgstr ""
 "Кроме того, разработчики по всему миру могут присоединиться к нам в "
 "дистанционном режиме. Расстояние не будет препятствовать нашему "
@@ -2407,8 +2406,10 @@ msgstr "КОГО МЫ ИЩЕМ"
 #: web/apps/welcome/templates/welcome/joinus.html:40
 msgid ""
 "We need technical talents in distributed systems, operating systems, "
-"encryption algorithms, blockchain, mobile development, product design, etc. We also need professionals in the fields of currency theory, "
-"economic models, asset management, financial innovation, etc. We are happy to work with volunteers and enthusiasts specialized in any field."
+"encryption algorithms, blockchain, mobile development, product design, etc. "
+"We also need professionals in the fields of currency theory, economic "
+"models, asset management, financial innovation, etc. We are happy to work "
+"with volunteers and enthusiasts specialized in any field."
 msgstr ""
 "Нам нужны технические таланты в системах распределения, операционных "
 "системах, алгоритмах шифрования, технологии блокчейн , мобильной разработке, "
@@ -2418,7 +2419,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
 msgid ""
-"We need everyone to be passionate and confident in decentralized business, because Newton has a close impact on everyone’s life."
+"We need everyone to be passionate and confident in decentralized business, "
+"because Newton has a close impact on everyone’s life."
 msgstr ""
 "Нам нужны таланты, увлеченные и верящие в децентрализованный бизнес, потому "
 "что проект Ньютон тесно связан с жизнью каждого."
@@ -2489,7 +2491,8 @@ msgstr "Квалификация:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:72
 msgid ""
-"Bachelor’s degree or above, applicants majored in computer science or related professions will be prioritized."
+"Bachelor’s degree or above, applicants majored in computer science or "
+"related professions will be prioritized."
 msgstr ""
 "Степень бакалавра или выше, кандидаты, занимающиеся информатикой или "
 "смежными профессиями, находятся в приоритете."
@@ -2645,8 +2648,8 @@ msgstr "Создание сетевых расширений и микро-ус�
 
 #: web/apps/welcome/templates/welcome/joinus.html:151
 msgid ""
-"Staying up-to-date with emerging technologies/industry trends and apply them into "
-"operations and activities;"
+"Staying up-to-date with emerging technologies/industry trends and apply them "
+"into operations and activities;"
 msgstr ""
 "Быть в курсе новых технологий / отраслевых тенденций и применять их в "
 "операциям и деятельности;"
@@ -2704,7 +2707,8 @@ msgstr ""
 "и овладевать разнообразными веб-технологиями и методами;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:163
-msgid "Bachelor’s or master’s degree in computer science or relevant experience;"
+msgid ""
+"Bachelor’s or master’s degree in computer science or relevant experience;"
 msgstr "Бакалавр или магистр по информатике или соответствующий опыт;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:177
@@ -2733,7 +2737,8 @@ msgstr "Подготавливать отчеты резюме по запрос
 
 #: web/apps/welcome/templates/welcome/joinus.html:190
 msgid ""
-"Ensure that all enquiries on social media are in compliance with all internal and external regulations, policies and guidelines;"
+"Ensure that all enquiries on social media are in compliance with all "
+"internal and external regulations, policies and guidelines;"
 msgstr ""
 "Обеспечить, чтобы все запросы на канале социальной сети соответствовали всем "
 "внутренним и внешним правилам, политике и руководящим принципам;"
@@ -2749,8 +2754,8 @@ msgstr "Желательно с 2-летним опытом работы в сф
 
 #: web/apps/welcome/templates/welcome/joinus.html:196
 msgid ""
-"Must speak and write fluent English and Chinese with good "
-"presentation, communication and computer skills;"
+"Must speak and write fluent English and Chinese with good presentation, "
+"communication and computer skills;"
 msgstr ""
 "ДОЛЖЕН свободно владеть разговорным и письменным английским языком, а также "
 "с хорошим китайским языком на уровне общения и работы с компьютером;"
@@ -2765,8 +2770,8 @@ msgstr "Технический евангелист"
 
 #: web/apps/welcome/templates/welcome/joinus.html:220
 msgid ""
-"Content creation, distribution and analysis tutorials, developer "
-"guides, newsletters, sample apps, client libraries;"
+"Content creation, distribution and analysis tutorials, developer guides, "
+"newsletters, sample apps, client libraries;"
 msgstr ""
 "Создание и распространение контента и аналитика -учебных пособий, "
 "руководства для разработчиков, информационные бюллетени, примеры приложений "
@@ -2782,8 +2787,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:222
 msgid ""
-"Organizing and coordinating marketing  engagement activities including social "
-"media campaigns, youtube broadcasts, progress reports;"
+"Organizing and coordinating marketing  engagement activities including "
+"social media campaigns, youtube broadcasts, progress reports;"
 msgstr ""
 "Организовыванная и координированая деятельность по маркетингу, включая "
 "кампании в социальных сетях, трансляции на YouTube и отчеты о ходе работы;"
@@ -2798,8 +2803,8 @@ msgstr "Участие и поддержка организаторов сооб
 
 #: web/apps/welcome/templates/welcome/joinus.html:229
 msgid ""
-"Must be fluent in both spoken and written English with good presentation, communication "
-"and computer skills;"
+"Must be fluent in both spoken and written English with good presentation, "
+"communication and computer skills;"
 msgstr ""
 "ДОЛЖЕН свободно владеть разговорным и письменным английским языком, уметь "
 "хорошо проводить презентации, быть коммуникабельным и обладать навыками "
@@ -2831,8 +2836,8 @@ msgstr "Старший UX дизайнер"
 
 #: web/apps/welcome/templates/welcome/joinus.html:259
 msgid ""
-"Translating concepts into user flows, wireframes, mockups and prototypes that "
-"lead to intuitive user experiences;"
+"Translating concepts into user flows, wireframes, mockups and prototypes "
+"that lead to intuitive user experiences;"
 msgstr ""
 "Такие концепции как каркасы, макеты и прототипы необходимо переводить в "
 "интуитивно понятный для пользователя образ;"
@@ -2924,8 +2929,8 @@ msgstr "Менеджер по продукту"
 
 #: web/apps/welcome/templates/welcome/joinus.html:297
 msgid ""
-"Understanding the development of the industry and its customer requirements, form product "
-"need specification;"
+"Understanding the development of the industry and its customer requirements, "
+"form product need specification;"
 msgstr ""
 "Понимать развитие отрасли и требований клиентов, формировать спецификацию "
 "продукта;"
@@ -2957,7 +2962,8 @@ msgstr ""
 "своевременно находить проблемы."
 
 #: web/apps/welcome/templates/welcome/joinus.html:306
-msgid "Three years or more of experience in designing e-commerce industry products;"
+msgid ""
+"Three years or more of experience in designing e-commerce industry products;"
 msgstr ""
 "3+ года опыта в разработке продуктов для индустрии электронной коммерции;"
 
@@ -2971,7 +2977,8 @@ msgstr "Быть знакомым с мобильным UX дизайном;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:309
 msgid ""
-"Good technical background in creating rich user experience through technology;"
+"Good technical background in creating rich user experience through "
+"technology;"
 msgstr ""
 "Хорошее техническое образование для создания богатого пользовательского "
 "опыта по технологиям;"
@@ -2997,8 +3004,8 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
 "Participating in the analysis and design of products based on client "
-"requirements, cooperating with UI designers to complete initial testing based "
-"on product design;"
+"requirements, cooperating with UI designers to complete initial testing "
+"based on product design;"
 msgstr ""
 "Участвует в анализе и разработке продуктов на основе требований клиентов, "
 "сотрудничает с UI дизайнерами для завершения первоначального тестирования на "
@@ -3015,8 +3022,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
-"At least 3 years experience in professional Java development; At least 2 years "
-"experience in Practical Android development experience; Familiar with "
+"At least 3 years experience in professional Java development; At least 2 "
+"years experience in Practical Android development experience; Familiar with "
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
 msgstr ""
@@ -3099,8 +3106,8 @@ msgstr "Разработчик  IOS"
 
 #: web/apps/welcome/templates/welcome/joinus.html:374
 msgid ""
-"Assisting the product manager to analyze and organize the customer's need, and "
-"make the product requirements document;"
+"Assisting the product manager to analyze and organize the customer's need, "
+"and make the product requirements document;"
 msgstr ""
 "Помогать менеджеру по продукту, анализировать и систематизировать "
 "потребности клиента, подготавливать документ о требованиях к продукту;"
@@ -3115,23 +3122,24 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:376
 msgid ""
-"Depending on the system architecture design, conducting iOS App-related program  "
-"development;"
+"Depending on the system architecture design, conducting iOS App-related "
+"program  development;"
 msgstr ""
 "В зависимости от архитектуры системы, проводить разработку программы, "
 "связанной с приложением iOS;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
 msgid ""
-"Depending on the product requirements document, conducting an overall test on  "
-"the iOS app;"
+"Depending on the product requirements document, conducting an overall test "
+"on  the iOS app;"
 msgstr ""
 "В зависимости от документа требований к продукции выполнять общий тест "
 "приложения iOS;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:378
 msgid ""
-"According to customers’ feedback, continuously revising and improving the iOS app."
+"According to customers’ feedback, continuously revising and improving the "
+"iOS app."
 msgstr ""
 "Согласно отзывам клиентов, постоянно корректировать и улучшать приложение "
 "iOS."
@@ -3146,8 +3154,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:383
 msgid ""
-"At least 2 years working experience in computer software, or more than 1 year "
-"working experience in iOS App development;"
+"At least 2 years working experience in computer software, or more than 1 "
+"year working experience in iOS App development;"
 msgstr ""
 "Более 2 лет опыта работы в области компьютерного программного обеспечения "
 "или более 1 года работы в области разработки приложений для iOS;"
@@ -3190,15 +3198,16 @@ msgstr "Фронтенд веб-разработчик"
 
 #: web/apps/welcome/templates/welcome/joinus.html:412
 msgid ""
-"Assisting the product manager, analyzing and organizing the customer's need, and making the product requirements document;"
+"Assisting the product manager, analyzing and organizing the customer's need, "
+"and making the product requirements document;"
 msgstr ""
 "Помогать менеджеру по продукту, анализировать и систематизировать "
 "потребности клиента, подготавливать документ о требованиях к продукту;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
-"Depending on the product requirements document, designing the architecture of "
-"the website front-end;"
+"Depending on the product requirements document, designing the architecture "
+"of the website front-end;"
 msgstr ""
 "В зависимости от документа требований к продукту, создавать фронтенд "
 "архитектуру веб-сайта;"
@@ -3213,8 +3222,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
 msgid ""
-"According to the product requirements document, completing the development of "
-"the sites’ front-end interactive part of the program;"
+"According to the product requirements document, completing the development "
+"of the sites’ front-end interactive part of the program;"
 msgstr ""
 "В соответствии с документом о требованиях к продукту завершать разработку "
 "интерактивной части интерфейса сайта;"
@@ -3285,8 +3294,23 @@ msgstr ""
 msgid "Media Kit"
 msgstr "Media набор"
 
+#: web/apps/welcome/templates/welcome/mediakit.html:23
+msgid ""
+"Newton logo is a combination of calculus symbol and zigzag side of coin. "
+"This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
+"symbolizing the perfect integration of finance and technology."
+msgstr "Логотип Newton - это комбинация символа исчисления и зигзагообразным  краем монеты. Этот логотип отдает честь великому ученому и пионеру чеканки сэру Исааку Ньютону и символизирует идеальную интеграцию финансов и технологий."
+
+#: web/apps/welcome/templates/welcome/mediakit.html:28
+msgid "Download Logo"
+msgstr "Загрузить логотип"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:31
+msgid "Download Poster"
+msgstr "Загрузить плакат"
+
 #: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/templates/header.html:28
+#: web/templates/header.html:29
 msgid "NewPay"
 msgstr ""
 
@@ -3665,13 +3689,16 @@ msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-#: web/templates/header.html:22
+#: web/templates/header.html:23
 msgid "HEP"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
-"Users can manage and control access to their digital assets by using a digital identity. Digital assets include; cryptocurrencies, personal data, personal credit and anything that exists in a binary format and come with the right to use."
+"Users can manage and control access to their digital assets by using a "
+"digital identity. Digital assets include; cryptocurrencies, personal data, "
+"personal credit and anything that exists in a binary format and come with "
+"the right to use."
 msgstr ""
 "Пользователь может управлять и контролировать доступ к своим цифровым "
 "активам с помощью цифровой идентификации. Цифровые активы, включая "
@@ -3688,26 +3715,30 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
 msgid ""
-"By using techniques named as “Atom Hashing”, we can create a unique digital "
+"By using such techniques as “Atom Hashing” we can create a unique digital "
 "identity for commodities over the whole network. Through this digital "
-"identity, you can check the relevant information on the commodity at any "
+"identity a user can check the relevant information on any commodity at any "
 "time."
 msgstr ""
-"Используя методы, известные как «Атом-Хеширование», мы можем создать "
-"уникальный цифровой идентификатор для сырьевых товаров по всей сети. "
-"Благодаря этому цифровому удостоверению вы можете в любой момент проверить "
-"соответствующую информацию о товаре."
+"Используя методы, известные как «Атом-Хеширования», Благодаря этому "
+"цифровому удостоверению вы можете в любой момент проверить соответствующую "
+"информацию о товаре."
 
 #: web/apps/welcome/templates/welcome/protocol.html:38
 msgid ""
-"Once information on each operation of a product enters the Newton Supply Chain, that information will be stored on the Newton blockchain. This ensures no tampering with the data once it is stored on the Newton blockchain."
+"Once information on each operation of a product enters the Newton Supply "
+"Chain, that information will be stored on the Newton blockchain. This "
+"ensures no tampering with the data once it is stored on the Newton "
+"blockchain."
 msgstr ""
 "Во всей цепочке поставок основная информация о каждой операции продукта "
 "будет храниться в блокчейн, и гарантировать, что данные не будут подделаны."
 
 #: web/apps/welcome/templates/welcome/protocol.html:39
 msgid ""
-"Through smart contract Newton can pre-set commercial exchanging rules to realize automatic insurance claims and property rights transfer. This will reduce the transaction costs and promote cooperation efficiency."
+"Through smart contract Newton can pre-set commercial exchanging rules to "
+"realize automatic insurance claims and property rights transfer. This will "
+"reduce the transaction costs and promote cooperation efficiency."
 msgstr ""
 "Благодаря смарт-контракту мы можем заранее установить правила коммерческого "
 "обмена для реализации автоматизированных страховых требований, чтобы "
@@ -3715,7 +3746,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:52
 msgid ""
-"Advertisers can set marketing plans through various built-in marketing smart contract templates in the system. This includes incentive modes, settlement modes, and dynamic price adjusting rules."
+"Advertisers can set marketing plans through various built-in marketing smart "
+"contract templates in the system. This includes incentive modes, settlement "
+"modes, and dynamic price adjusting rules."
 msgstr ""
 "Рекламодатели могут устанавливать маркетинговые планы через множество "
 "встроенных шаблон Смарт-контрактов в системе, включая режимы стимулирования, "
@@ -3723,7 +3756,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:53
 msgid ""
-"Advertisers can audit ongoing and completed marketing contracts. By calling out the DAI system, an advertiser can conduct market research before marketing activities, and analyze the results after the marketing activities."
+"Advertisers can audit ongoing and completed marketing contracts. By calling "
+"out the DAI system, an advertiser can conduct market research before "
+"marketing activities, and analyze the results after the marketing activities."
 msgstr ""
 "Рекламодатели могут проверять отчетность настоящих и завершенных "
 "маркетинговых контрактов. Через систему DAI вы можете проводить исследования "
@@ -3732,7 +3767,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:66
 msgid ""
-"The Newton trading and payment platform will enable a user to define transactions using the built-in smart contract templates and rule engine. This enables the user to include: multi-party transactions based on complex business rules, settlement rules, smart insurance contracts, smart financial contracts, and external chain service."
+"The Newton trading and payment platform will enable a user to define "
+"transactions using the built-in smart contract templates and rule engine. "
+"This enables the user to include: multi-party transactions based on complex "
+"business rules, settlement rules, smart insurance contracts, smart financial "
+"contracts, and external chain service."
 msgstr ""
 "Для определения транзакций, используются встроенные шаблоны смарт-контрактов "
 "и правила механизмов, включая многопартийные транзакции, основанные на "
@@ -3745,7 +3784,10 @@ msgstr "Надежный физический туннель"
 
 #: web/apps/welcome/templates/welcome/protocol.html:81
 msgid ""
-"Based on NewChain and NewIoT technologies Newton is capable of designing a reliable physical tunnel protocol and define manufacturing specifications of related equipment. Any third party can manufacture safety equipment according to the protocol specification."
+"Based on NewChain and NewIoT technologies Newton is capable of designing a "
+"reliable physical tunnel protocol and define manufacturing specifications of "
+"related equipment. Any third party can manufacture safety equipment "
+"according to the protocol specification."
 msgstr ""
 "Основываясь на NewChain и NewIoT технологиях, мы разработали надежный "
 "протокол физического туннеля и обозначили технические характеристики "
@@ -3759,7 +3801,11 @@ msgstr "Автоматическое финансирование"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
 msgid ""
-"Developers can define smart financial contracts based on the built-in smart contract templates on; insurance, lending and investment, including digital identity and credit, KYC information, staking the Newton token, contract rules and external chain service. The system will automatically match smart financial contracts and automatically complete transactional matching."
+"Developers can define smart financial contracts based on the built-in smart "
+"contract templates on; insurance, lending and investment, including digital "
+"identity and credit, KYC information, staking the Newton token, contract "
+"rules and external chain service. The system will automatically match smart "
+"financial contracts and automatically complete transactional matching."
 msgstr ""
 "Разработчики могут определять умные финансовые контракты, основанные на "
 "встроенных шаблонах смарт- контрактов для страхования, кредитования и "
@@ -3774,7 +3820,8 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:109
 msgid ""
-"Developers can access NewNET through the NNIO (NewNET IO) protocol, using storage services, computing services and domain names."
+"Developers can access NewNET through the NNIO (NewNET IO) protocol, using "
+"storage services, computing services and domain names."
 msgstr ""
 "Разработчики могут получить доступ к NewNET через NNIO (NewNETIO) протокол, "
 "используя услуги хранения, вычислительные услуги и названия доменов."
@@ -3804,10 +3851,12 @@ msgstr "ТЕХНОЛОГИЯ"
 msgid ""
 "NewChain will have a main chain and sub-chains structure. The main chain "
 "will support account management, Newton token management, sub-chain "
-"management, network governance and more. The sub-chain will support "
-"specific service systems such as the hyper-exchange protocol, multiple "
-"consensus mechanisms and data structures, ensuring the assets transactions "
-"between the main chain and sub-chains, and between sub-chains. The NewChain provides a third-party developer the option and opportunity to create a new sub-chain after staking a certain amount of Newton tokens and passing the verification."
+"management, network governance and more. The sub-chain will support specific "
+"service systems such as the hyper-exchange protocol, multiple consensus "
+"mechanisms and data structures, ensuring the assets transactions between the "
+"main chain and sub-chains, and between sub-chains. The NewChain provides a "
+"third-party developer the option and opportunity to create a new sub-chain "
+"after staking a certain amount of Newton tokens and passing the verification."
 msgstr ""
 "NewChain будет состоять из основной и вспомогательных цепей. Основная цепь "
 "будет поддерживать управление учетными записями, управление Newton токеном, "
@@ -3821,7 +3870,12 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:23
 msgid ""
-"NewVM is compatible with the Webassembly standard, supporting various general programming languages such as C/C++, Java, Python, TypeScript, and more. The system provides built-in smart contract templates for the hyper exchange protocol. The system built-in smart contract templates provide an effortless development and deployment of any application on the Newton NewChain."
+"NewVM is compatible with the Webassembly standard, supporting various "
+"general programming languages such as C/C++, Java, Python, TypeScript, and "
+"more. The system provides built-in smart contract templates for the hyper "
+"exchange protocol. The system built-in smart contract templates provide an "
+"effortless development and deployment of any application on the Newton "
+"NewChain."
 msgstr ""
 "NewVM совместим со стандартом Webassembly, поддерживающим общие языки "
 "программирования, такие как C / C ++, Java, Python, TypeScript и т. д. "
@@ -3831,14 +3885,25 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:24
 msgid ""
-"NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum security of all assets within the Newton ecosphere."
+"NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum "
+"security of all assets within the Newton ecosphere."
 msgstr ""
 "Для обеспечения безопасности активов NewChain использует алгоритм анти-"
 "квантового шифрования Ring-LWE."
 
 #: web/apps/welcome/templates/welcome/tech.html:36
 msgid ""
-"NewNET consists of a large number of nodes that run on an open network providing reliable storage services and supporting a full SQL database and various general programming languages. Through its flexible and decentralized architecture NewNET is able to directly host today's most widely used web services. Developers have the ability to release any calculation task to the nodes in the open network. The nodes can then select the corresponding calculation task according to their own (hardware) abilities, then obtain the corresponding incentives after completing the task. Through NewChain a decentralized network domain name service is fully supported. The ease of use of NewNET will increase through the blockchain technology."
+"NewNET consists of a large number of nodes that run on an open network "
+"providing reliable storage services and supporting a full SQL database and "
+"various general programming languages. Through its flexible and "
+"decentralized architecture NewNET is able to directly host today's most "
+"widely used web services. Developers have the ability to release any "
+"calculation task to the nodes in the open network. The nodes can then select "
+"the corresponding calculation task according to their own (hardware) "
+"abilities, then obtain the corresponding incentives after completing the "
+"task. Through NewChain a decentralized network domain name service is fully "
+"supported. The ease of use of NewNET will increase through the blockchain "
+"technology."
 msgstr ""
 "NewNET, состоит из большого количества узлов и представляет собой открытую "
 "облачную вычислительную сеть, которая обеспечивает надежные службы хранения, "
@@ -3852,7 +3917,14 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
-"By using radiometric dating, PCA, machine vision, and deep learning technology Newton can quickly extract multiple characteristics of a certain material asset, including; weight, volume, size, shape, texture, optical properties, radioactive properties, thermodynamic properties, and a variety of customized random features. Then based on these characteristic data and algorithms Newton can create a unique identification and authentic right for any digital asset. The whole process is repeatable, verifiable and fault-tolerant."
+"By using radiometric dating, PCA, machine vision, and deep learning "
+"technology Newton can quickly extract multiple characteristics of a certain "
+"material asset, including; weight, volume, size, shape, texture, optical "
+"properties, radioactive properties, thermodynamic properties, and a variety "
+"of customized random features. Then based on these characteristic data and "
+"algorithms Newton can create a unique identification and authentic right for "
+"any digital asset. The whole process is repeatable, verifiable and fault-"
+"tolerant."
 msgstr ""
 "Используя радиометрическое датирование, PCA, машинное зрение и технологию "
 "глубокого обучения, мы можем быстро извлечь несколько характеристик "
@@ -3865,7 +3937,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:62
 msgid ""
-"NewIoT is a general conception for a category of technologies that includes; blockchain fog computing, communication protocols between IoT devices and gateways and NewChain IoT devices developing specifications."
+"NewIoT is a general conception for a category of technologies that includes; "
+"blockchain fog computing, communication protocols between IoT devices and "
+"gateways and NewChain IoT devices developing specifications."
 msgstr ""
 "NewIoT - это основная концепция для ряда технологий, включая вычисления "
 "Blockchain FOG, протоколы связи между IоT устройствами и шлюзами, и "
@@ -3873,7 +3947,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:63
 msgid ""
-"The gateway has powerful computing and storage capabilities with built-in blockchain nodes, supporting multiple Internet accessing methods including; Ethernet/fiber, 3G/4G/5G, NB-IoT, IoT communication protocol such as BLE, Wi-Fi, ZigBee, and more. The IoT device store the collected information into NewChain through the gateway."
+"The gateway has powerful computing and storage capabilities with built-in "
+"blockchain nodes, supporting multiple Internet accessing methods including; "
+"Ethernet/fiber, 3G/4G/5G, NB-IoT, IoT communication protocol such as BLE, Wi-"
+"Fi, ZigBee, and more. The IoT device store the collected information into "
+"NewChain through the gateway."
 msgstr ""
 "Шлюз имеет мощные возможности вычисления и хранения со встроенными блокчейн "
 "узлами, поддерживающие несколько способов доступа в интернет, включая "
@@ -3887,7 +3965,10 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:76
 msgid ""
-"DAI (Distributed Artificial Intelligence) promotes the development of AI from three aspects; data, algorithm model, and execution engine. By using these three aspects the Newton DAI closely connects the data suppliers, algorithm model developers and operating system providers together."
+"DAI (Distributed Artificial Intelligence) promotes the development of AI "
+"from three aspects; data, algorithm model, and execution engine. By using "
+"these three aspects the Newton DAI closely connects the data suppliers, "
+"algorithm model developers and operating system providers together."
 msgstr ""
 "DAI – это распределенный искусственный интеллект, который способствует "
 "развитию искусственного интеллекта по трем аспектам: данные, модель "
@@ -4679,7 +4760,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:71
+#: web/apps/zinnia/models_bases/entry.py:74
 msgid "title"
 msgstr ""
 
@@ -4816,7 +4897,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:492
+#: web/apps/zinnia/models_bases/entry.py:495
 msgid "categories"
 msgstr ""
 
@@ -4829,14 +4910,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:60
+#: web/apps/zinnia/models_bases/entry.py:63
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr "Блог"
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:77
 msgid "slug"
 msgstr ""
 
@@ -4857,7 +4938,7 @@ msgid "language"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:117
+#: web/apps/zinnia/models_bases/entry.py:120
 msgid "Entry type"
 msgstr ""
 
@@ -4877,173 +4958,173 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:76
-#: web/apps/zinnia/models_bases/entry.py:101
+#: web/apps/zinnia/models_bases/entry.py:79
+#: web/apps/zinnia/models_bases/entry.py:104
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:79
+#: web/apps/zinnia/models_bases/entry.py:82
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:86
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:85
+#: web/apps/zinnia/models_bases/entry.py:88
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:88
+#: web/apps/zinnia/models_bases/entry.py:91
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:90
+#: web/apps/zinnia/models_bases/entry.py:93
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:95
+#: web/apps/zinnia/models_bases/entry.py:98
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:96
+#: web/apps/zinnia/models_bases/entry.py:99
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:102
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:104
+#: web/apps/zinnia/models_bases/entry.py:107
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:114
+#: web/apps/zinnia/models_bases/entry.py:117
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:121
+#: web/apps/zinnia/models_bases/entry.py:124
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:128
+#: web/apps/zinnia/models_bases/entry.py:131
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:243
+#: web/apps/zinnia/models_bases/entry.py:246
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:244
+#: web/apps/zinnia/models_bases/entry.py:247
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:258
+#: web/apps/zinnia/models_bases/entry.py:261
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:300
+#: web/apps/zinnia/models_bases/entry.py:303
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:301
+#: web/apps/zinnia/models_bases/entry.py:304
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:306
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:304
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:306
+#: web/apps/zinnia/models_bases/entry.py:309
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:310
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:313
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:312
+#: web/apps/zinnia/models_bases/entry.py:315
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:314
+#: web/apps/zinnia/models_bases/entry.py:317
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:398
+#: web/apps/zinnia/models_bases/entry.py:401
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:416
+#: web/apps/zinnia/models_bases/entry.py:419
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:417
+#: web/apps/zinnia/models_bases/entry.py:420
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:450
+#: web/apps/zinnia/models_bases/entry.py:453
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:452
+#: web/apps/zinnia/models_bases/entry.py:455
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:463
+#: web/apps/zinnia/models_bases/entry.py:466
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:478
+#: web/apps/zinnia/models_bases/entry.py:481
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:502
+#: web/apps/zinnia/models_bases/entry.py:505
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:521
+#: web/apps/zinnia/models_bases/entry.py:524
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:522
+#: web/apps/zinnia/models_bases/entry.py:525
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:534
+#: web/apps/zinnia/models_bases/entry.py:537
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:535
+#: web/apps/zinnia/models_bases/entry.py:538
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:547
+#: web/apps/zinnia/models_bases/entry.py:550
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:549
-#: web/apps/zinnia/models_bases/entry.py:565
+#: web/apps/zinnia/models_bases/entry.py:552
+#: web/apps/zinnia/models_bases/entry.py:568
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:551
+#: web/apps/zinnia/models_bases/entry.py:554
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:563
+#: web/apps/zinnia/models_bases/entry.py:566
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:567
+#: web/apps/zinnia/models_bases/entry.py:570
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5202,8 +5283,8 @@ msgid "%(linkbacks_per_entry)s linkbacks per entry"
 msgstr ""
 
 #: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:6
-#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:258
-#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:259
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:261
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:262
 msgid "Edit the entry"
 msgstr ""
 
@@ -5399,14 +5480,14 @@ msgstr ""
 msgid "Written on"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:91
-#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:121
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:94
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:124
 #, python-format
 msgid "%(percent)s%% of %(object)s still remains to read."
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:93
-#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:123
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:96
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:126
 msgid "Continue reading"
 msgstr ""
 
@@ -5553,15 +5634,15 @@ msgstr ""
 msgid "RSS Feed of trackbacks on"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:210
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:213
 msgid "Next entry"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:222
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:225
 msgid "Previous entry"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:234
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:237
 msgid "Related entries"
 msgstr ""
 
@@ -5700,8 +5781,8 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/sitemap.html:4
 #: web/apps/zinnia/templates/zinnia/sitemap.html:11
-#: web/apps/zinnia/templates/zinnia/skeleton.html:55
-#: web/apps/zinnia/templates/zinnia/skeleton.html:56
+#: web/apps/zinnia/templates/zinnia/skeleton.html:65
+#: web/apps/zinnia/templates/zinnia/skeleton.html:66
 msgid "Sitemap"
 msgstr ""
 
@@ -5721,16 +5802,20 @@ msgstr ""
 msgid "Just another Zinnia weblog."
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:40
+#: web/apps/zinnia/templates/zinnia/skeleton.html:37 web/templates/base.html:71
+msgid "Join us to change the world"
+msgstr "Присоединяйтесь к нам, чтобы изменить мир"
+
+#: web/apps/zinnia/templates/zinnia/skeleton.html:50
 msgid "BLOG"
 msgstr "Блог"
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:47
+#: web/apps/zinnia/templates/zinnia/skeleton.html:57
 msgid "Useful links"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:50
-#: web/apps/zinnia/templates/zinnia/skeleton.html:51
+#: web/apps/zinnia/templates/zinnia/skeleton.html:60
+#: web/apps/zinnia/templates/zinnia/skeleton.html:61
 msgid "Weblog index"
 msgstr ""
 
@@ -6055,15 +6140,15 @@ msgstr "СООБЩЕСТВО"
 msgid "Service Terms"
 msgstr "Условия обслуживания"
 
-#: web/templates/header-no-menu.html:29 web/templates/header.html:45
+#: web/templates/header-no-menu.html:29
 msgid "User Center"
 msgstr ""
 
-#: web/templates/header-no-menu.html:30 web/templates/header.html:46
+#: web/templates/header-no-menu.html:30
 msgid "LogOut"
 msgstr ""
 
-#: web/templates/header.html:25
+#: web/templates/header.html:26
 msgid "Technology"
 msgstr "Технология"
 
@@ -6094,5 +6179,31 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-msgid "Join us to change the world"
-msgstr "Присоединяйтесь к нам, чтобы изменить мир"
+#~ msgid ""
+#~ "We support cross-border transactions, micro payments, lightning "
+#~ "settlement, etc., and provide comprehensive online and offline payment "
+#~ "tools."
+#~ msgstr ""
+#~ "Мы поддерживаем трансграничные транзакции, сверхмалые платежи, "
+#~ "молниеносные расчеты и т. д., а также предоставляем комплексные онлайн- и "
+#~ "офлайн- платежные инструменты."
+
+#~ msgid "Jiang Yu"
+#~ msgstr "Цзян Юй"
+
+#~ msgid "Product Specialist"
+#~ msgstr "Специалист по продукции"
+
+#~ msgid "Previous Product Director of xs.cn"
+#~ msgstr "В прошлом директор по продукции xs.cn"
+
+#~ msgid ""
+#~ "By using techniques named as “Atom Hashing”, we can create a unique "
+#~ "digital identity for commodities over the whole network. Through this "
+#~ "digital identity, you can check the relevant information on the commodity "
+#~ "at any time."
+#~ msgstr ""
+#~ "Используя методы, известные как «Атом-Хеширование», мы можем создать "
+#~ "уникальный цифровой идентификатор для сырьевых товаров по всей сети. "
+#~ "Благодаря этому цифровому удостоверению вы можете в любой момент "
+#~ "проверить соответствующую информацию о товаре."
