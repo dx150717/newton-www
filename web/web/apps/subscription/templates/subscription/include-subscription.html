@@ -3,7 +3,10 @@
 
 
 {% block require_js %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<style>
+	.modal {top: 35%; background: #f7e8d4}
+</style>
 {% endblock %}
 
 <section id="subscribe" class="section">
@@ -27,14 +30,27 @@
         
         <div class="text-center" style="padding: 30px;">
             <form>
-				<div class="form-group">
-					<div class="google-recaptcha" id="google-recaptcha" style="display: none">
-						<input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
-						<div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
-					</div>
-				</div>
                 <input class="email_add" type="text" placeholder="{% trans "Email Address" %}">
-                <a class="subscription-button">{% trans "SUBSCRIBE" %}</a>
+				<a class="subscription-button" data-toggle="modal" data-target=".bs-example-modal-sm">{% trans "SUBSCRIBE" %}</a>
+				<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-backdrop="false">
+				  <div class="modal-dialog modal-sm" role="document" aria-hidden="true">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">{% trans "Tips" %}</h4>
+						</div>
+						<div class="modal-body">
+							{% trans "Tip: To login successfully, ensure that you can access the google recaptcha service." %}
+							<div class="form-group">
+								<div class="google-recaptcha" id="google-recaptcha" style="display: none">
+									<input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
+									<div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				  </div>
+				</div>
             </form>
         </div>
         <p class="small">{% trans "We won't share your email address or send you any spam." %}</p>
@@ -42,7 +58,6 @@
 </section><!-- end -->
 {% block js %}
 <script>
-
 function googleCallback(ret){
 	document.getElementById("id-google-recaptcha").value = ret;
 };
@@ -58,6 +73,7 @@ var UPGRADE = 6
 var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
 
 $(".subscription-button").click(function () {
+	$(".form-container").attr("style", "display: unset")
 	$("#google-recaptcha").attr("style", "display: unset");
 	$(".g-recaptcha div").attr("style", "margin:0 auto")
 	if ($(".subscription-height")[0]) {
