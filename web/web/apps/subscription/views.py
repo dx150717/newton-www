@@ -37,21 +37,19 @@ def subscribe(request):
         # check robot
         form = forms.SubscribeForm(request.POST)
         if not form.is_valid():
-            return http.JsonErrorResponse(error_message=_("Form Error"))
+            return http.JsonErrorResponse(error_message=_("Email Error"))
         g_recaptcha_response = request.POST.get('g-recaptcha-response')
         if not g_recaptcha_response:
-            return http.JsonErrorResponse(error_message=_("Authenticator Recaptcha Error"))
+            return http.JsonErrorResponse(error_message=_("No captcha"))
         post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
         res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
         res = json.loads(res.text)
         if not res['success']:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
             return http.JsonErrorResponse(error_message=_("Authenticator Recaptcha Error"))
         was_limited = getattr(request, 'limited', False)
         if was_limited:
             return http.JsonErrorResponse(error_message=_("You can only subscribe once per minute."))
-        email_address = request.POST['email_address']
-        validate_email(email_address)
+        email_address = form.cleaned_data['email_address']
         subscribed_email = subscription_model.SubscribedEmail.objects.filter(email_address=email_address).first()
         if subscribed_email:
             if subscribed_email.status == codes.StatusCode.RELEASE.value:

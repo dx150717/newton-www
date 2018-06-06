@@ -3,10 +3,8 @@
 
 
 {% block require_js %}
+<!-- <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script> -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<style>
-	.modal {top: 35%; background: #f7e8d4}
-</style>
 {% endblock %}
 
 <section id="subscribe" class="section">
@@ -32,106 +30,33 @@
             <form>
                 <input class="email_add" type="text" placeholder="{% trans "Email Address" %}">
 				<a class="subscription-button" data-toggle="modal" data-target=".bs-example-modal-sm">{% trans "SUBSCRIBE" %}</a>
-				<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-backdrop="false">
-				  <div class="modal-dialog modal-sm" role="document" aria-hidden="true">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="myModalLabel">{% trans "Tips" %}</h4>
-						</div>
-						<div class="modal-body">
-							{% trans "Tip: To login successfully, ensure that you can access the google recaptcha service." %}
-							<div class="form-group">
-								<div class="google-recaptcha" id="google-recaptcha" style="display: none">
-									<input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
-									<div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				  </div>
-				</div>
             </form>
         </div>
         <p class="small">{% trans "We won't share your email address or send you any spam." %}</p>
     </div>
 </section><!-- end -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-backdrop="false">
+	<div class="modal-dialog modal-sm" role="document" aria-hidden="true">
+	  <div class="modal-content" style="width:348px;">
+		  <div class="modal-body bg-warning">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">
+			{% trans "Tip: To login successfully, ensure that you can access the google recaptcha service." %}
+			</h4>
+				<div class="form-group">
+					<div class="google-recaptcha" id="google-recaptcha">
+						<input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
+						<div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
+					</div>
+				</div>
+		  </div>
+		  <div class="modal-footer bg-warning" style="text-align:center">
+			  <a id="subscription-confirm" class="subscription-button">{% trans "SUBSCRIBE" %}</a>
+		  </div>
+	  </div>
+	</div>
+  </div>
 {% block js %}
-<script>
-function googleCallback(ret){
-	document.getElementById("id-google-recaptcha").value = ret;
-};
-
-// subscribe email list
-var FAIL = 0
-var SUCCESS = 1
-var UNAUTH = 2
-var SIGN_ERROR = 3
-var INVALID_PARAMS = 4
-var MAINTAIN = 5
-var UPGRADE = 6
-var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
-
-$(".subscription-button").click(function () {
-	$(".form-container").attr("style", "display: unset")
-	$("#google-recaptcha").attr("style", "display: unset");
-	$(".g-recaptcha div").attr("style", "margin:0 auto")
-	if ($(".subscription-height")[0]) {
-		return;
-	}
-	var recaptcha = $("input[name='google-recaptcha-name']").val();
-	if (!recaptcha){
-		$("#google-recaptcha").attr("style", "display: none");
-	};
-	var email_address = $("input[type='text']").val();
-	if(email_address.length > 0){
-		if(emailReg.test(email_address)){
-			$.post("/subscribe/", { "email_address": email_address, "g-recaptcha-response":recaptcha }, function (ret) {
-				if (ret.error_code === FAIL) {
-					var content = ret.error_message;
-					var alertType = "alert-danger";
-					showSubscriptionResult(content, alertType);
-				} else {
-					if (ret.result) {
-						var content = ret.result.msg;
-						var alertType = "alert-success";
-						showSubscriptionResult(content, alertType);
-					}else{
-                        var content = "{% trans 'Subscribed Failed!' %}";
-                        var alertType = "alert-danger";
-                        showSubscriptionResult(content, alertType);
-                    }
-				}
-			});
-		}else{
-			var content = "{% trans 'Invalid Email Address!' %}";
-			var alertType = "alert-danger";
-			showSubscriptionResult(content, alertType);
-		}
-	}else{
-		var content = "{% trans 'Please Input Email Address!' %}";
-		var alertType = "alert-danger";
-		showSubscriptionResult(content, alertType);
-	}
-})
-
-/**
- * Show the subscription's result with parameters.
- * 
- * @param content { String } alert content for show in page
- * @param alertType { String } eg: alert-success, alert-danger 
- */
-function showSubscriptionResult(content, alertType) {
-	$("#subscribe .raw").addClass("subscription-height");
-	var t1 = "<div class='alert " + alertType + " alert-dismissible' role='alert'>";
-	var t2 = "<button type='button' class='close tf10' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
-    var t3 = "<strong>" + content + "</strong></div>";
-	var t = t1 + t2 + t3;
-	$("#dialog").append(t);
-	setTimeout(() => {
-		$(".close").click();
-		$(".raw").removeClass("subscription-height")
-	}, 3000);
-}
+<script src="{% version "js/subscription.js" %}"></script>
 </script>
 {% endblock %}
