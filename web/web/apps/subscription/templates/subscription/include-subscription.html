@@ -1,12 +1,6 @@
 {% load i18n %}
 {% load utils %}
 
-
-{% block require_js %}
-<!-- <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script> -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-{% endblock %}
-
 <section id="subscribe" class="section">
     <div class="container text-center">
 
@@ -27,9 +21,9 @@
         </div>
         
         <div class="text-center" style="padding: 30px;">
-            <form>
+            <form id="subscription_form" method="POST">
                 <input class="email_add" type="text" placeholder="{% trans "Email Address" %}">
-				<a class="subscription-button" data-toggle="modal" data-target=".recaptcha-modal">{% trans "SUBSCRIBE" %}</a>
+				<button class="subscription-button" type="submit">{% trans "SUBSCRIBE" %}</button>
             </form>
         </div>
         <p class="small">{% trans "We won't share your email address or send you any spam." %}</p>
@@ -41,7 +35,7 @@
 		  <div class="modal-body bg-warning">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title" id="myModalLabel">
-			{% trans "Tip: To login successfully, ensure that you can access the google recaptcha service." %}
+			{% trans "Tip: Ensure that you can access the google recaptcha service." %}
 			</h4>
 				<div class="form-group">
 					<div class="google-recaptcha" id="google-recaptcha">
@@ -53,7 +47,5 @@
 	  </div>
 	</div>
   </div>
-{% block js %}
-<script src="{% version "js/subscription.js" %}"></script>
-</script>
-{% endblock %}
+</div>
+

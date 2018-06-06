@@ -1,7 +1,3 @@
-function googleCallback(ret){
-    subscriptionConfirm(ret);
-};
-
 // subscribe email list
 var FAIL = 0
 var SUCCESS = 1
@@ -12,18 +8,34 @@ var MAINTAIN = 5
 var UPGRADE = 6
 var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
 
+$('#subscription_form').submit(function(event){
+	event.preventDefault();
+	var form = this;
+	var email_address = $(form).find("input[type='text']").val();
+	if(email_address.length > 0) {
+		if(emailReg.test(email_address)) {
+			grecaptcha.reset();
+			$('.recaptcha-modal').modal();
+		}
+	}
+});
+
+function googleCallback(ret){
+    subscriptionConfirm(ret);
+};
+
 function subscriptionConfirm(googleResponse) {
-    $(".close").click();
+	$('.recaptcha-modal').modal('hide');
 	var recaptcha = googleResponse;
-	if (!recaptcha){
+	if (!recaptcha) {
 		var content = "no recaptcha";
 		var alertType = "alert-danger";
 		showSubscriptionResult(content, alertType);
 		return;
 	};
-	var email_address = $("input[type='text']").val();
-	if(email_address.length > 0){
-		if(emailReg.test(email_address)){
+	var email_address = $('#subscription_form').find("input[type='text']").val();
+	if(email_address.length > 0) {
+		if(emailReg.test(email_address)) {
 			var data = { "email_address": email_address, "g-recaptcha-response":recaptcha };
 			showWaiting();
 			$.ajax({
@@ -41,28 +53,30 @@ function subscriptionConfirm(googleResponse) {
 							var content = ret.result.msg;
 							var alertType = "alert-success";
 							showSubscriptionResult(content, alertType);
-						}else{
+							// reset the input
+							$('#subscription_form').find("input[type='text']").val('');
+						} else {
 							var content = "Subscribed Failed!";
 							var alertType = "alert-danger";
 							showSubscriptionResult(content, alertType);
 						}
 					}
 				},
-				complete: function(request, status){
+				complete: function(request, status) {
 					dismiss();
-					if(status == 'timeout'){
+					if(status == 'timeout') {
 						var content = "Time out!";
 						var alertType = "alert-danger";
 						showSubscriptionResult(content, alertType);
 					}
 				}
 			});
-		}else{
+		} else {
 			var content = "Invalid Email Address!";
 			var alertType = "alert-danger";
 			showSubscriptionResult(content, alertType);
 		}
-	}else{
+	} else {
 		var content = "Please Input Email Address!";
 		var alertType = "alert-danger";
 		showSubscriptionResult(content, alertType);

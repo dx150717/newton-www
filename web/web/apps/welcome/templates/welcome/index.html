@@ -54,3 +54,12 @@
 {% block inline_js %}
 
 {% endblock %}
+
+{% block require_js %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/subscription.js" %}"></script>
+</script>
+{% endblock %}
