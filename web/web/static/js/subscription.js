@@ -14,7 +14,9 @@ $('#subscription_form').submit(function(event){
 	var email_address = $(form).find("input[type='text']").val();
 	if(email_address.length > 0) {
 		if(emailReg.test(email_address)) {
-			grecaptcha.reset();
+			if (grecaptcha) {
+				grecaptcha.reset();
+			}
 			$('.recaptcha-modal').modal();
 		}
 	}
