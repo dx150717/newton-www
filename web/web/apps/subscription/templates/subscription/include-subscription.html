@@ -29,13 +29,13 @@
         <div class="text-center" style="padding: 30px;">
             <form>
                 <input class="email_add" type="text" placeholder="{% trans "Email Address" %}">
-				<a class="subscription-button" data-toggle="modal" data-target=".bs-example-modal-sm">{% trans "SUBSCRIBE" %}</a>
+				<a class="subscription-button" data-toggle="modal" data-target=".recaptcha-modal">{% trans "SUBSCRIBE" %}</a>
             </form>
         </div>
         <p class="small">{% trans "We won't share your email address or send you any spam." %}</p>
     </div>
 </section><!-- end -->
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-backdrop="false">
+<div class="modal fade recaptcha-modal" tabindex="-1" role="dialog" aria-labelledby="recaptchaModalLabel" data-backdrop="false">
 	<div class="modal-dialog modal-sm" role="document" aria-hidden="true">
 	  <div class="modal-content" style="width:348px;">
 		  <div class="modal-body bg-warning">
@@ -49,9 +49,6 @@
 						<div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
 					</div>
 				</div>
-		  </div>
-		  <div class="modal-footer bg-warning" style="text-align:center">
-			  <a id="subscription-confirm" class="subscription-button">{% trans "SUBSCRIBE" %}</a>
 		  </div>
 	  </div>
 	</div>

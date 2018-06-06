@@ -1,5 +1,5 @@
 function googleCallback(ret){
-	document.getElementById("id-google-recaptcha").value = ret;
+    subscriptionConfirm(ret);
 };
 
 // subscribe email list
@@ -12,12 +12,9 @@ var MAINTAIN = 5
 var UPGRADE = 6
 var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
 
-$("#subscription-confirm").click(function () {
-	$(".close").click();
-	if ($(".subscription-height")[0]) {
-		return;
-	}
-	var recaptcha = $("input[name='google-recaptcha-name']").val();
+function subscriptionConfirm(googleResponse) {
+    $(".close").click();
+	var recaptcha = googleResponse;
 	if (!recaptcha){
 		var content = "no recaptcha";
 		var alertType = "alert-danger";
@@ -45,7 +42,7 @@ $("#subscription-confirm").click(function () {
 							var alertType = "alert-success";
 							showSubscriptionResult(content, alertType);
 						}else{
-							var content = "{% trans 'Subscribed Failed!' %}";
+							var content = "Subscribed Failed!";
 							var alertType = "alert-danger";
 							showSubscriptionResult(content, alertType);
 						}
@@ -54,23 +51,23 @@ $("#subscription-confirm").click(function () {
 				complete: function(request, status){
 					dismiss();
 					if(status == 'timeout'){
-						var content = "{% trans 'Time out!' %}";
+						var content = "Time out!";
 						var alertType = "alert-danger";
 						showSubscriptionResult(content, alertType);
 					}
 				}
 			});
 		}else{
-			var content = "{% trans 'Invalid Email Address!' %}";
+			var content = "Invalid Email Address!";
 			var alertType = "alert-danger";
 			showSubscriptionResult(content, alertType);
 		}
 	}else{
-		var content = "{% trans 'Please Input Email Address!' %}";
+		var content = "Please Input Email Address!";
 		var alertType = "alert-danger";
 		showSubscriptionResult(content, alertType);
 	}
-})
+}
 
 /**
  * Show the subscription's result with parameters.
