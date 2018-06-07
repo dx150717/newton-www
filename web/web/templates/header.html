@@ -74,11 +74,9 @@
                     </ul>
                 </div>
                 <div class="mobil_language">
-                    <div class="row">
-                        {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
-                        <a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}.png"></a>
-                        {% endfor %}
-                    </div>
+                    {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
+                    <a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}.png"></a>
+                    {% endfor %}
                 </div>
             </div><!-- /.navbar -->
 

@@ -578,7 +578,7 @@ canvas { display: block; vertical-align: top; }
     font-weight: 600;
     border-bottom: 1px solid #dadada;}
 
-.nav { color:#040404}
+.nav { color:#040404; z-index: 999}
 .nav a:hover{ color:#000;}
 #blog-list dl{ margin-bottom:40px;}
 #blog-list dt{ font-size:24px; line-height:1.5;}
@@ -1214,6 +1214,7 @@ canvas { display: block; vertical-align: top; }
 #normal .caret{display: none}
 @media(max-width:767px){
     /* #normal #dropdownLanguage {display: none}; */
+    .ad{display: none}
     #normal .dropdown {display: none}
     #normal .mobil_language{text-align: center;position: relative; top: 30px; width: 80%; margin: auto auto;}
     #normal .mobil_language a{display: inline-block; width: 17%; margin-top: 10px;}
