@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-04 11:53+0000\n"
+"POT-Creation-Date: 2018-06-07 07:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,47 +119,47 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:70
+#: web/apps/base/templatetags/utils.py:71
 #, python-format
 msgid "%(duration)d minute"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:72
+#: web/apps/base/templatetags/utils.py:73
 #, python-format
 msgid "%(duration)d hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:111
+#: web/apps/base/templatetags/utils.py:112
 #, python-format
 msgid "%(hour)d hour ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:114
+#: web/apps/base/templatetags/utils.py:115
 #, python-format
 msgid "%(minute)d minute ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:116
+#: web/apps/base/templatetags/utils.py:117
 #, python-format
 msgid "%(second)d second ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:145
+#: web/apps/base/templatetags/utils.py:146
 #, python-format
 msgid "%.f hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:175
+#: web/apps/base/templatetags/utils.py:176
 msgid "unfilled"
-msgstr ""
-
-#: web/apps/base/templatetags/utils.py:181
-#: web/apps/base/templatetags/utils.py:188
-msgid "Yes"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:182
 #: web/apps/base/templatetags/utils.py:189
+msgid "Yes"
+msgstr ""
+
+#: web/apps/base/templatetags/utils.py:183
+#: web/apps/base/templatetags/utils.py:190
 msgid "No"
 msgstr ""
 
@@ -215,6 +215,7 @@ msgstr ""
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:28
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:27
 #: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
+#: web/apps/subscription/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
 msgstr ""
@@ -229,11 +230,11 @@ msgid "Form Error"
 msgstr "Ошибка формы"
 
 #: web/apps/login/views.py:42 web/apps/register/views.py:46
-#: web/apps/register/views.py:52
+#: web/apps/register/views.py:52 web/apps/subscription/views.py:43
 msgid "No captcha"
 msgstr "No captcha"
 
-#: web/apps/login/views.py:43
+#: web/apps/login/views.py:43 web/apps/subscription/views.py:48
 msgid "Authenticator Recaptcha Error"
 msgstr "Ошибка Auth Recaptcha"
 
@@ -709,32 +710,36 @@ msgstr ""
 msgid "Subscribed emails"
 msgstr ""
 
-#: web/apps/subscription/views.py:35
+#: web/apps/subscription/views.py:40
+#, fuzzy
+msgid "Email Error"
+msgstr "Ошибка формы"
+
+#: web/apps/subscription/views.py:51
 msgid "You can only subscribe once per minute."
 msgstr ""
 
-#: web/apps/subscription/views.py:41
+#: web/apps/subscription/views.py:56
 msgid "Email Has Exist!"
 msgstr ""
 
-#: web/apps/subscription/views.py:45 web/apps/subscription/views.py:54
+#: web/apps/subscription/views.py:60 web/apps/subscription/views.py:69
 msgid "we've sent you a confirming e-mail,please check your email box."
 msgstr ""
 
-#: web/apps/subscription/views.py:47 web/apps/subscription/views.py:56
+#: web/apps/subscription/views.py:62 web/apps/subscription/views.py:71
 msgid "Subscribe Failed!"
 msgstr ""
 
-#: web/apps/subscription/views.py:58
-#: web/apps/subscription/templates/subscription/include-subscription.html:70
+#: web/apps/subscription/views.py:73
 msgid "Invalid Email Address!"
 msgstr ""
 
-#: web/apps/subscription/views.py:76
+#: web/apps/subscription/views.py:91
 msgid "Links expire or invalid pages."
 msgstr ""
 
-#: web/apps/subscription/views.py:83
+#: web/apps/subscription/views.py:98
 msgid "NewtonProject Notifications: Please Confirm Subscription"
 msgstr ""
 
@@ -775,13 +780,11 @@ msgid "We won't share your email address or send you any spam."
 msgstr ""
 "мы не будем использовать ваш адрес электронной почты для рассылки спама"
 
-#: web/apps/subscription/templates/subscription/include-subscription.html:63
-msgid "Subscribed Failed!"
+#: web/apps/subscription/templates/subscription/include-subscription.html:38
+msgid "Tip: Ensure that you can access the google recaptcha service."
 msgstr ""
-
-#: web/apps/subscription/templates/subscription/include-subscription.html:75
-msgid "Please Input Email Address!"
-msgstr ""
+"Совет: Чтобы войти в систему, убедитесь, что вы можете получить доступ к "
+"сервису google recaptcha."
 
 #: web/apps/subscription/templates/subscription/subscription-letter.html:44
 msgid "Welcome! Please Confirm Your Subscription"
@@ -1790,105 +1793,88 @@ msgstr "СОВЕТНИКИ"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:19
 #: web/apps/welcome/templates/welcome/include-advisor.html:21
-#: web/apps/welcome/templates/welcome/include-investor.html:70
-#: web/apps/welcome/templates/welcome/include-investor.html:72
+#: web/apps/welcome/templates/welcome/include-investor.html:73
+#: web/apps/welcome/templates/welcome/include-investor.html:75
 msgid "Han Feng"
 msgstr "Хан Фэнг"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:23
-#: web/apps/welcome/templates/welcome/include-investor.html:74
+#: web/apps/welcome/templates/welcome/include-investor.html:77
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Co-founder of Elastos"
 msgstr "Соучредитель Elastos"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:24
-#: web/apps/welcome/templates/welcome/include-investor.html:75
+#: web/apps/welcome/templates/welcome/include-investor.html:78
 msgid "Visiting Scholar & Research Associate at Columbia University"
 msgstr ""
 "Приглашенный научный сотрудник и научный сотрудник Колумбийского университета"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:25
-#: web/apps/welcome/templates/welcome/include-investor.html:76
+#: web/apps/welcome/templates/welcome/include-investor.html:79
 msgid "Advisor at Huawei Central Institute"
 msgstr "Советник Центрального института Huawei"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:34
-#: web/apps/welcome/templates/welcome/include-advisor.html:36
-#: web/apps/welcome/templates/welcome/include-investor.html:56
-#: web/apps/welcome/templates/welcome/include-investor.html:58
-msgid "Zhou Pin"
-msgstr "Чжоу Пин"
-
-#: web/apps/welcome/templates/welcome/include-advisor.html:38
-#: web/apps/welcome/templates/welcome/include-investor.html:60
-msgid "SVP of Cheetah (NASDAQ:CMCM)"
-msgstr "Директор и SV президент Cheetah(NASDAQ:CMCM)"
-
-#: web/apps/welcome/templates/welcome/include-advisor.html:39
-#: web/apps/welcome/templates/welcome/include-investor.html:61
-msgid "Founder of quwan.com"
-msgstr "Основатель quwan.com"
-
-#: web/apps/welcome/templates/welcome/include-advisor.html:49
-#: web/apps/welcome/templates/welcome/include-advisor.html:51
-#: web/apps/welcome/templates/welcome/include-investor.html:85
-#: web/apps/welcome/templates/welcome/include-investor.html:87
+#: web/apps/welcome/templates/welcome/include-advisor.html:52
+#: web/apps/welcome/templates/welcome/include-advisor.html:54
+#: web/apps/welcome/templates/welcome/include-investor.html:88
+#: web/apps/welcome/templates/welcome/include-investor.html:90
 msgid "Li Songbo"
 msgstr "Ли Сонгбо"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:53
-#: web/apps/welcome/templates/welcome/include-investor.html:89
+#: web/apps/welcome/templates/welcome/include-advisor.html:56
+#: web/apps/welcome/templates/welcome/include-investor.html:92
 msgid "Former CTO of Sina (NASDAQ: SINA)"
 msgstr "Бывший технический директор Sina (NASDAQ: SINA)"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:54
-#: web/apps/welcome/templates/welcome/include-investor.html:90
+#: web/apps/welcome/templates/welcome/include-advisor.html:57
+#: web/apps/welcome/templates/welcome/include-investor.html:93
 msgid "Partner of DFJ Venture Capital"
 msgstr "Партнер венчурного капитала DFJ"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:64
-#: web/apps/welcome/templates/welcome/include-advisor.html:66
-#: web/apps/welcome/templates/welcome/include-investor.html:124
-#: web/apps/welcome/templates/welcome/include-investor.html:126
+#: web/apps/welcome/templates/welcome/include-advisor.html:67
+#: web/apps/welcome/templates/welcome/include-advisor.html:69
+#: web/apps/welcome/templates/welcome/include-investor.html:127
+#: web/apps/welcome/templates/welcome/include-investor.html:129
 msgid "Hu Dinghe"
 msgstr "Ху Динге"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:67
-#: web/apps/welcome/templates/welcome/include-investor.html:127
+#: web/apps/welcome/templates/welcome/include-advisor.html:70
+#: web/apps/welcome/templates/welcome/include-investor.html:130
 msgid "Chairman of Elastos ecosystem board"
 msgstr "Председатель правления экосистемы Elastos"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:67
-#: web/apps/welcome/templates/welcome/include-investor.html:127
+#: web/apps/welcome/templates/welcome/include-advisor.html:70
+#: web/apps/welcome/templates/welcome/include-investor.html:130
 msgid "Previous President of Chongqing Lifan"
 msgstr "Предыдущий президент Chongqing Lifan"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:75
-#: web/apps/welcome/templates/welcome/include-advisor.html:77
-#: web/apps/welcome/templates/welcome/include-investor.html:99
-#: web/apps/welcome/templates/welcome/include-investor.html:101
+#: web/apps/welcome/templates/welcome/include-advisor.html:78
+#: web/apps/welcome/templates/welcome/include-advisor.html:80
+#: web/apps/welcome/templates/welcome/include-investor.html:102
+#: web/apps/welcome/templates/welcome/include-investor.html:104
 msgid "Gu Xueyong"
 msgstr "Гу Сюянг"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:79
-#: web/apps/welcome/templates/welcome/include-investor.html:103
+#: web/apps/welcome/templates/welcome/include-advisor.html:82
+#: web/apps/welcome/templates/welcome/include-investor.html:106
 msgid "Professor at Tsinghua University"
 msgstr "Профессор Университета Цинхуа"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:80
-#: web/apps/welcome/templates/welcome/include-investor.html:104
+#: web/apps/welcome/templates/welcome/include-advisor.html:83
+#: web/apps/welcome/templates/welcome/include-investor.html:107
 msgid "Director of International Relations at iCenter"
 msgstr "Директор по международным связям в iCenter"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:89
-#: web/apps/welcome/templates/welcome/include-advisor.html:91
-#: web/apps/welcome/templates/welcome/include-investor.html:136
-#: web/apps/welcome/templates/welcome/include-investor.html:138
+#: web/apps/welcome/templates/welcome/include-advisor.html:92
+#: web/apps/welcome/templates/welcome/include-advisor.html:94
+#: web/apps/welcome/templates/welcome/include-investor.html:139
+#: web/apps/welcome/templates/welcome/include-investor.html:141
 msgid "Lee Willson"
 msgstr "Ли Уилсон"
 
-#: web/apps/welcome/templates/welcome/include-advisor.html:92
-#: web/apps/welcome/templates/welcome/include-investor.html:139
+#: web/apps/welcome/templates/welcome/include-advisor.html:95
+#: web/apps/welcome/templates/welcome/include-investor.html:142
 msgid "Bitcoin Ambassador"
 msgstr "Амбасадор биткоина"
 
@@ -1998,67 +1984,67 @@ msgstr "Основатель meilishuo.com"
 msgid "CEO of HIGO"
 msgstr "Генеральный директор HIGO"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:113
-#: web/apps/welcome/templates/welcome/include-investor.html:115
+#: web/apps/welcome/templates/welcome/include-investor.html:116
+#: web/apps/welcome/templates/welcome/include-investor.html:118
 msgid "Ye Haifeng"
 msgstr "Ие Хайфэн"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:116
+#: web/apps/welcome/templates/welcome/include-investor.html:119
 msgid "Founder of mbaobao.com"
 msgstr "Основатель mbaobao.com"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:148
-#: web/apps/welcome/templates/welcome/include-investor.html:150
+#: web/apps/welcome/templates/welcome/include-investor.html:151
+#: web/apps/welcome/templates/welcome/include-investor.html:153
 msgid "Wang Feng"
 msgstr "Ван Фэн"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:152
+#: web/apps/welcome/templates/welcome/include-investor.html:155
 msgid "Founder of linekong.com"
 msgstr "Основатель linekong.com"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:153
+#: web/apps/welcome/templates/welcome/include-investor.html:156
 msgid "Founder of huoxing24.com"
 msgstr "Основатель huoxing24.com"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:163
-#: web/apps/welcome/templates/welcome/include-investor.html:165
+#: web/apps/welcome/templates/welcome/include-investor.html:166
+#: web/apps/welcome/templates/welcome/include-investor.html:168
 msgid "Stewie Zhu"
 msgstr "Стьюй Чжу"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:167
+#: web/apps/welcome/templates/welcome/include-investor.html:170
 msgid "Founder and CEO of Distributed Credit Chain"
 msgstr "Основатель и генеральный директор Distributed Credit Chain"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:177
-#: web/apps/welcome/templates/welcome/include-investor.html:179
-#: web/apps/welcome/templates/welcome/include-investor.html:190
-#: web/apps/welcome/templates/welcome/include-investor.html:204
+#: web/apps/welcome/templates/welcome/include-investor.html:180
+#: web/apps/welcome/templates/welcome/include-investor.html:182
+#: web/apps/welcome/templates/welcome/include-investor.html:193
+#: web/apps/welcome/templates/welcome/include-investor.html:207
 msgid "Li Zhu"
 msgstr "Ли Чжу"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:181
+#: web/apps/welcome/templates/welcome/include-investor.html:184
 msgid "Founder of Innoangel Fund"
 msgstr "Основатель фонда Innoangel"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:192
+#: web/apps/welcome/templates/welcome/include-investor.html:195
 msgid "Shi Junchao"
 msgstr "Ши Цжинчао"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:194
+#: web/apps/welcome/templates/welcome/include-investor.html:197
 msgid "Senior gem jade appraiser."
 msgstr "Старший оценщик драгоценных камней."
 
-#: web/apps/welcome/templates/welcome/include-investor.html:195
+#: web/apps/welcome/templates/welcome/include-investor.html:198
 msgid "Deputy secretary general of xinjiang hetian jade industry association."
 msgstr ""
 "Заместитель генерального секретаря ассоциации промышленности Хinjiang Hetian "
 "Jade."
 
-#: web/apps/welcome/templates/welcome/include-investor.html:206
+#: web/apps/welcome/templates/welcome/include-investor.html:209
 msgid "Guo Hongchi"
 msgstr "Гуо Хонгчи"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:208
+#: web/apps/welcome/templates/welcome/include-investor.html:211
 msgid "Founder of xijie.com"
 msgstr "Основатель xijie.com"
 
@@ -3299,7 +3285,10 @@ msgid ""
 "Newton logo is a combination of calculus symbol and zigzag side of coin. "
 "This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
 "symbolizing the perfect integration of finance and technology."
-msgstr "Логотип Newton - это комбинация символа исчисления и зигзагообразным  краем монеты. Этот логотип отдает честь великому ученому и пионеру чеканки сэру Исааку Ньютону и символизирует идеальную интеграцию финансов и технологий."
+msgstr ""
+"Логотип Newton - это комбинация символа исчисления и зигзагообразным  краем "
+"монеты. Этот логотип отдает честь великому ученому и пионеру чеканки сэру "
+"Исааку Ньютону и символизирует идеальную интеграцию финансов и технологий."
 
 #: web/apps/welcome/templates/welcome/mediakit.html:28
 msgid "Download Logo"
@@ -6178,6 +6167,15 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Zhou Pin"
+#~ msgstr "Чжоу Пин"
+
+#~ msgid "SVP of Cheetah (NASDAQ:CMCM)"
+#~ msgstr "Директор и SV президент Cheetah(NASDAQ:CMCM)"
+
+#~ msgid "Founder of quwan.com"
+#~ msgstr "Основатель quwan.com"
 
 #~ msgid ""
 #~ "We support cross-border transactions, micro payments, lightning "
