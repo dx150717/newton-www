@@ -227,15 +227,22 @@ def show_apply_status(status):
 @register.filter(name='show_language_icon')
 def show_language_icon(request):
     language = translation.get_language()
-    for tmp_language in settings.SUPPORT_LANGUAGES:
-        if language == tmp_language:
+    for k,v in settings.SUPPORT_LANGUAGES:
+        if language == k:
             return language
     return 'en'
 
 @register.filter(name='show_language_code')
 def show_language_code(request):
     language = translation.get_language()
-    for k,v in settings.SUPPORT_LANGUAGES.items():
+    for k,v in settings.SUPPORT_LANGUAGES:
         if language == k:
             return v
     return 'English'
+
+@register.filter(name='is_current_language')
+def is_current_language(language_code):
+    language = translation.get_language()
+    if language_code == language:
+        return True
+    return False

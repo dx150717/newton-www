@@ -1187,7 +1187,7 @@ canvas { display: block; vertical-align: top; }
 .ad .container span{ font-size:20px;}
 }
 
-@media(max-width:767px) and (min-width: 320px) {
+@media(max-width:768px) and (min-width: 320px) {
 .ad .container span{ font-size:18px;}
 .ad .container img{width: 4.5%}
 }
@@ -1204,11 +1204,20 @@ canvas { display: block; vertical-align: top; }
 
 .navFixed{position: fixed}
 .modal {top: 35%;}
-#normal .dropdown-menu{min-width: 100%; overflow: hidden; text-align: left; padding: 0; margin: 0; left: -5px; background: #f1f1f1}
+#normal .dropdown-menu{min-width: 100%; overflow: hidden; text-align: left; padding: 0; margin: 0; left: -5px; background: #f1f1f1;}
 #normal .dropdown-menu img{width: 22px; left: 0;}
 #normal .dropdown {position: absolute; top: 10px; right: 15%; width: 10%}
 #normal .dropdown-menu>li>a{padding: 2px 4px; text-align: left; margin: 2px 0;}
-#normal #dropdownLanguage {width: 22px; height: 22px; padding: 0; border: 0; font-size: 18px; line-height: 22px;}
+#normal #dropdownLanguage {width: 22px; height: 22px; padding: 0; border: 0; font-size: 14px; line-height: 22px;}
 #normal #dropdownLanguage img{width: 100%; margin-right: 6px}
 #normal #languge_icon {height: 100%}
 #normal .caret{display: none}
+@media(max-width:767px){
+    /* #normal #dropdownLanguage {display: none}; */
+    #normal .dropdown {display: none}
+    #normal .mobil_language{text-align: center;position: relative; top: 30px; width: 60%; margin: auto auto;}
+    #normal .mobil_language a{display: inline-block; width: 20%; margin-top: 10px;}
+}
+@media(min-width:768px){
+    #normal .mobil_language{display: none}
+}

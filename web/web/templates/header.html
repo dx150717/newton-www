@@ -56,20 +56,32 @@
                     {% endif %}
                 </ul>
                 {% endcomment %}
-                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <img src="/static/images/languages/{{ request|show_language_icon }}.png"/>{{ request | show_language_code}}
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                        {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
+                        <li>
+                            <a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}.png"> {{ language_name }}
+                                {% if language_code|is_current_language %}
+                                <span class="glyphicon glyphicon-ok" style="float: right" id="is_choice"></span>
+                                {% endif %}
+                            </a>
+                    </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="mobil_language">
+                    <div class="row">
+                        {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
+                        <a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}.png"></a>
+                        {% endfor %}
+                    </div>
+                </div>
             </div><!-- /.navbar -->
 
-            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <img src="/static/images/languages/{{ request|show_language_icon }}.png"/>{{ request | show_language_code}}
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
-                    {% for language_code, language_name in settings.SUPPORT_LANGUAGES.items %}
-                    <li><a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}.png"> {{ language_name }} </a></li>
-                    {% endfor %}
-                </ul>
-            </div>
         </div>
     </nav>
 </header><!-- end -->
