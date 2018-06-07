@@ -1204,3 +1204,9 @@ canvas { display: block; vertical-align: top; }
 
 .navFixed{position: fixed}
 .modal {top: 35%;}
+.dropdown-menu{min-width: 100%;  width: 100%; overflow: hidden; text-align: left}
+.dropdown-menu img{height: 100%; left: 0;}
+.dropdown {position: absolute; top: 5px; right: 5px;}
+.dropdown-menu>li>a{padding: 3px 0;}
+#dropdownLanguage {width: 31px; padding: 0;}
+#languge_icon {height: 100%}

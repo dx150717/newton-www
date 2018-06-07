@@ -71,3 +71,6 @@ DATABASE_ROUTERS = ['web.database_router.NewtonRouter']
 DATABASE_APPS_MAPPING = {
     "tokenexchange":"tokenexchange",
 }
+
+# language settings
+SUPPORT_LANGUAGES = ['zh-cn', 'en', 'ja', 'ko', 'ru', 'tr', 'es']

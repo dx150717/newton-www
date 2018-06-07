@@ -8,6 +8,7 @@ import re
 import datetime
 from django import template
 from django.conf import settings
+from django.utils import translation
 from django.utils.translation import ugettext
 from django.utils.translation import ungettext as _
 from sorl.thumbnail import get_thumbnail
@@ -222,3 +223,11 @@ def show_apply_status(status):
         if k == status:
             return v
     return ''
+
+@register.filter(name='show_language_icon')
+def show_language_icon(request):
+    language = translation.get_language()
+    for tmp_language in settings.SUPPORT_LANGUAGES:
+        if language == tmp_language:
+            return language
+    return 'en'
