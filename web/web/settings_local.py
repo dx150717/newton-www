@@ -73,4 +73,4 @@ DATABASE_APPS_MAPPING = {
 }
 
 # language settings
-SUPPORT_LANGUAGES = {'zh-cn':'中国', 'en':'English', 'ja':'日本', 'ko':'한국어', 'ru':'русский', 'tr':'Türkiye', 'es':'Español'}
+SUPPORT_LANGUAGES = {'zh-cn':'简体中文', 'en':'English', 'ja':'日本語', 'ko':'한국어', 'ru':'русский', 'tr':'Türkiye', 'es':'Español'}
