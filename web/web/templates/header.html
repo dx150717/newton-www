@@ -61,12 +61,12 @@
 
             <div class="dropdown">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <img src="/static/images/languages/{{ request|show_language_icon }}.png" />
+                    <img src="/static/images/languages/{{ request|show_language_icon }}.png"/>{{ request | show_language_code}}
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
-                    {% for language in settings.SUPPORT_LANGUAGES %}
-                    <li><a href="#" onclick="setLanguage('{{ language }}');"><img src="/static/images/languages/{{ language }}.png"></a></li>
+                    {% for language_code, language_name in settings.SUPPORT_LANGUAGES.items %}
+                    <li><a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}.png"> {{ language_name }} </a></li>
                     {% endfor %}
                 </ul>
             </div>

@@ -231,3 +231,11 @@ def show_language_icon(request):
         if language == tmp_language:
             return language
     return 'en'
+
+@register.filter(name='show_language_code')
+def show_language_code(request):
+    language = translation.get_language()
+    for k,v in settings.SUPPORT_LANGUAGES.items():
+        if language == k:
+            return v
+    return 'English'

@@ -1204,11 +1204,11 @@ canvas { display: block; vertical-align: top; }
 
 .navFixed{position: fixed}
 .modal {top: 35%;}
-.dropdown-menu{min-width: 100%;  width: 150%; overflow: hidden; text-align: left; padding: 0; margin: 0; left: -5px}
-.dropdown-menu img{width: 90%; left: 0;}
-.dropdown {position: absolute; top: 10px; right: 15%;}
-.dropdown-menu>li>a{padding: 2px 4px; text-align: center; margin: 2px 0;}
-#dropdownLanguage {width: 22px; height: 22px; padding: 0; border: 0}
-#dropdownLanguage img{width: 100%;}
-#languge_icon {height: 100%}
-.caret{display: none}
+#normal .dropdown-menu{min-width: 100%; overflow: hidden; text-align: left; padding: 0; margin: 0; left: -5px}
+#normal .dropdown-menu img{width: 22px; left: 0;}
+#normal .dropdown {position: absolute; top: 10px; right: 15%;}
+#normal .dropdown-menu>li>a{padding: 2px 4px; text-align: left; margin: 2px 0;}
+#normal #dropdownLanguage {width: 22px; height: 22px; padding: 0; border: 0; font-size: 18px; line-height: 22px;}
+#normal #dropdownLanguage img{width: 100%; margin-right: 3px}
+#normal #languge_icon {height: 100%}
+#normal .caret{display: none}
