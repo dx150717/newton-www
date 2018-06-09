@@ -121,6 +121,94 @@
                         <div class="item">
                             <div class="item-content">
                                 {% include "tokenexchange/token-exchange-info-summary.html" with token_exchange_info=item.token_exchange_info %}
+                                <div id="timeline">
+                                    <div class="timeline-lg wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                                        <div class="entry-lg">
+                                            <div class="date-lg">
+                                                <dl class="date-top">
+                                                    <dd>{% trans "Passed KYC" %}</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="entry-lg">
+                                            <div id="apply-amount-container" class="delay">
+                                                <div class="date-lg">
+                                                    <dl class="date-bottom">
+                                                        <dd>{% trans "Fill in the expected investment quota" %}</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry-lg">
+                                            <div id="send-amount-container" class="delay">
+                                                <div class="date-lg">
+                                                    <dl class="date-top">
+                                                        <dd>{% trans "Turn money to Newton" %}</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry-lg">
+                                            <div class="delay">
+                                                <div class="date-lg">
+                                                    <dl class="date-bottom">
+                                                        <dd>{% trans "Fill in the New wallet address" %}</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry-lg">
+                                            <div class="delay">
+                                                <div class="date-lg">
+                                                    <dl class="date-top">
+                                                        <dd>{% trans "Confirm receipt of New" %}</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <!-- end -->
+                                    <div class="timeline">
+                                        <div class="entry">
+                                            <div class="date"></div>
+                                            <div class="body">
+                                                <dd>{% trans "Passed KYC" %}</dd>
+                                            </div>
+                                        </div>
+                                        <div class="entry">
+                                            <div id="apply-amount-container-mobile" class="delay">
+                                                <div class="date"></div>
+                                                <div class="body">
+                                                    <dd>{% trans "Fill in the expected investment quota" %}</dd>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry">
+                                            <div id="send-amount-container-mobile" class="delay">
+                                                <div class="date"></div>
+                                                <div class="body">
+                                                    <dd>{% trans "Turn money to Newton" %}</dd>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry">
+                                            <div class="delay">
+                                                <div class="date"></div>
+                                                <div class="body">
+                                                    <dd>{% trans "Fill in the New wallet address" %}</dd>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry">
+                                            <div class="delay">
+                                                <div class="date"></div>
+                                                <div class="body">
+                                                    <dd>{% trans "Confirm receipt of New" %}</dd>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="text-left">
                                     <a class="form-button" href="/user/token-exchange-progress/{{ item.phase_id }}/"> {% trans "Details " %} >></a>
                                 </div>
