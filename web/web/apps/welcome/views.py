@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render
-
 __author__ = 'xiawu@zeuux.org'
 __version__ = '$Rev$'
 __doc__ = """  """
@@ -8,15 +6,19 @@ __doc__ = """  """
 import json
 import random
 import time
+
+from django.views import generic
+from django.shortcuts import render
 from django.conf import settings
 from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
 from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH
-from press.models import PressModel
 
-from django.views import generic
+from press.models import PressModel
+from subscription import forms as subscription_forms
+
 
 def show_home_view(request):
     language = translation.get_language()
@@ -45,6 +47,8 @@ def show_home_view(request):
             entry.urls = url
         else:
             entry.urls = entry.get_absolute_url()
+    # generate the captcha
+    captcha_form = subscription_forms.SubscribeForm()
     return render(request, 'welcome/index.html', locals())
 
 def show_tech_view(request):

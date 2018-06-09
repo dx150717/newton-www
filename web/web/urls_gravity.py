@@ -11,6 +11,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
                        url(r'^$', RedirectView.as_view(url='/newtonadmin/')),
                        url(r'^newtonadmin/',include('newtonadmin.urls')),
+                       url(r'^ishuman/',include('ishuman.urls')),
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),

@@ -34,15 +34,14 @@
 	  <div class="modal-content" style="width:348px;">
 		  <div class="modal-body bg-warning">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">
-			{% trans "Tip: Ensure that you can access the google recaptcha service." %}
-			</h4>
-				<div class="form-group">
-					<div class="google-recaptcha" id="google-recaptcha">
-						<input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
-						<div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
-					</div>
-				</div>
+            <form action="#" id="captcha_form" method="POST">
+                <div class="form-group text-center" id="id_captcha_container">
+                </div>
+			    <div class="form-group">
+                    <input class="form-control" type="text" name="code" id="id_code" style="display:inline;width:90%;"/>
+                    <span id="id_validator_status"/>
+                </div>
+            </form>
 		  </div>
 	  </div>
 	</div>

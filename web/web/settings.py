@@ -79,6 +79,7 @@ INSTALLED_APPS = (
     'verification',
     'tokenexchange',
     'tracker',
+    'ishuman',
     # new admin
     'newtonadmin',
 )
