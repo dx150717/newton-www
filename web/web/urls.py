@@ -39,6 +39,7 @@ urlpatterns = patterns('',
                        url(r'^subscribe/',include('subscription.urls')),
                        url(r'^press/',include('press.urls')),
                        url(r'^faq/',include('faq.urls')),
+                       url(r'^ishuman/',include('ishuman.urls')),
                        # user functionality
                        url(r'^register/',include('register.urls')),
                        url(r'^reset/',include('reset.urls')),

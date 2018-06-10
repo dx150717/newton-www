@@ -3,6 +3,7 @@ from django.shortcuts import render
 import json
 import re
 import logging
+import requests
 
 from django.http import HttpResponse
 from django.template import Template, Context, loader
@@ -11,17 +12,15 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext as _
 from django.views.decorators.http import require_http_methods
 from django.conf import settings
-
+from django.forms.forms import NON_FIELD_ERRORS
 from ratelimit.decorators import ratelimit
+
 from subscription import models as subscription_model
 from config import codes
 from utils import http, security
-
 from tasks import task_email
-
-import requests
-from django.forms.forms import NON_FIELD_ERRORS
 from . import forms
+from ishuman import services as ishuman_services
 
 
 logger = logging.getLogger(__name__)
@@ -38,13 +37,8 @@ def subscribe(request):
         form = forms.SubscribeForm(request.POST)
         if not form.is_valid():
             return http.JsonErrorResponse(error_message=_("Email Error"))
-        g_recaptcha_response = request.POST.get('g-recaptcha-response')
-        if not g_recaptcha_response:
-            return http.JsonErrorResponse(error_message=_("No captcha"))
-        post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
-        res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
-        res = json.loads(res.text)
-        if not res['success']:
+        code = form.cleaned_data['code']
+        if code != ishuman_services.get_captcha(request.session.session_key):
             return http.JsonErrorResponse(error_message=_("Authenticator Recaptcha Error"))
         was_limited = getattr(request, 'limited', False)
         if was_limited:
