@@ -20,44 +20,60 @@ $('#login_form').submit(function(event){
   var email = $("input[name='email']").val();
   var password = $("input[name='password']").val();
   var next = $("input[name='next']").val();
-  
+  var code = $("#id_code").val()
   if (!$(form).valid()) {
     return false;
   }
-  data.email = email;
-  data.password = password;
-  data['g-recaptcha-response'] = $("input[name='google-recaptcha-name']").val();
-  
-  showWaiting();
   $.ajax({
-    url:'/login/post/',
-    timeout: 15000,
+    url:'/ishuman/check/?code=' + code,
     type: 'post',
-    data: data,
-    success: function(response){
-      dismiss();
-      if (isSuccess(response)) {
-        $('#code-modal').modal('show');
-        var result = getData(response);
-        auth_token = result.auth_token;             
-      } else {
-        showFail(getErrorMessage(response));
-      }
+    data: {},
+    success: function(ret){
+        if (ret.error_code === FAIL) {
+            $("#id_login_code_error").removeClass("hide");
+            $("#id_login_code_error").attr("style", "display:!important block");
+            return false;
+        } else {
+          data.email = email;
+          data.password = password;
+          data.code = code;
+          showWaiting();
+          $.ajax({
+            url:'/login/post/',
+            timeout: 15000,
+            type: 'post',
+            data: data,
+            success: function(response){
+              dismiss();
+              if (isSuccess(response)) {
+                $('#code-modal').modal('show');
+                var result = getData(response);
+                auth_token = result.auth_token;             
+              } else {
+                showFail(getErrorMessage(response));
+              }
+            },
+            complete: function(request, status){
+              if(status == 'timeout'){
+                dismiss();
+                showFail("Time Out");
+              }
+            }
+          })
+        }
     },
-    complete: function(request, status){
-      if(status == 'timeout'){
-        dismiss();
-        showFail("Time Out");
-      }
+    complete: function(request, status) {
     }
-  })
+  });
+  
 }).validate({
   ignore: [],
   errorElement: "div",
   errorClass: "alert alert-danger",
   rules: {
     email: {required: true, email:true},
-    password: {required: true, minlength: 6, maxlength:16}
+    password: {required: true, minlength: 6, maxlength:16},
+    code: {required: true}
   },
   errorPlacement: function(error,element) {
     error.appendTo(element.parent());  
@@ -104,4 +120,11 @@ $("#google-auth-form").submit(function(event){
     error.appendTo(element.parent()); 
     return true;
   }
+});
+
+
+$('#login_captcha_code').click(function(event){
+  event.preventDefault();
+  $(this).attr("src", "/ishuman/image/?" + Math.random());
+  $("#id_login_code_error").addClass("hide");
 });
