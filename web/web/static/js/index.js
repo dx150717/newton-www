@@ -1,4 +1,11 @@
 initLanguage();
+var FAIL = 0
+var SUCCESS = 1
+var UNAUTH = 2
+var SIGN_ERROR = 3
+var INVALID_PARAMS = 4
+var MAINTAIN = 5
+var UPGRADE = 6
 $(function () {
 	var bottomNavToggle = function (event) {
 		$(event.target).next().slideToggle(300, function () {

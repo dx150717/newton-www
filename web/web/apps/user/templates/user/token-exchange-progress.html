@@ -37,98 +37,11 @@
                     {% include "tokenexchange/token-exchange-info.html" %}
                     <div class="item">
                         <div class="item-content">
-                            <div id="timeline">
-                                <div class="timeline-lg wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
-                                    <div class="entry-lg">
-                                        <div class="date-lg">
-                                            <dl class="date-top">
-                                                <dd>{% trans "Passed KYC" %}</dd>
-                                            </dl>
-                                        </div>
-                                    </div>
-                                    <div class="entry-lg">
-                                        <div id="apply-amount-container" class="delay">
-                                            <div class="date-lg">
-                                                <dl class="date-bottom">
-                                                    <dd>{% trans "Fill in the expected investment quota" %}</dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="entry-lg">
-                                        <div id="send-amount-container" class="delay">
-                                            <div class="date-lg">
-                                                <dl class="date-top">
-                                                    <dd>{% trans "Turn money to Newton" %}</dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="entry-lg">
-                                        <div class="delay">
-                                            <div class="date-lg">
-                                                <dl class="date-bottom">
-                                                    <dd>{% trans "Fill in the New wallet address" %}</dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="entry-lg">
-                                        <div class="delay">
-                                            <div class="date-lg">
-                                                <dl class="date-top">
-                                                    <dd>{% trans "Confirm receipt of New" %}</dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <!-- end -->
-                                <div class="timeline">
-                                    <div class="entry">
-                                        <div class="date"></div>
-                                        <div class="body">
-                                            <dd>{% trans "Passed KYC" %}</dd>
-                                        </div>
-                                    </div>
-                                    <div class="entry">
-                                        <div id="apply-amount-container-mobile" class="delay">
-                                            <div class="date"></div>
-                                            <div class="body">
-                                                <dd>{% trans "Fill in the expected investment quota" %}</dd>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="entry">
-                                        <div id="send-amount-container-mobile" class="delay">
-                                            <div class="date"></div>
-                                            <div class="body">
-                                                <dd>{% trans "Turn money to Newton" %}</dd>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="entry">
-                                        <div class="delay">
-                                            <div class="date"></div>
-                                            <div class="body">
-                                                <dd>{% trans "Fill in the New wallet address" %}</dd>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="entry">
-                                        <div class="delay">
-                                            <div class="date"></div>
-                                            <div class="body">
-                                                <dd>{% trans "Confirm receipt of New" %}</dd>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             {% if item.expect_btc or item.except_ela %}
                             <script>var hasExpect = true;</script>
                             <div class="auto-table">
                                 <table class="table">
+                                    <h1>Expect Info</h1>
                                     <thead>
                                         <tr>
                                             <td></td>
@@ -138,34 +51,46 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>{% trans "Apply Amount" %}</td>
+                                            <td>{% trans "Expect Amount" %}</td>
                                             {% if item.expect_btc %}
-                                            <td>{{ item.expect_btc }} BTC</td>
+                                            <td><span class="f30">{{ item.expect_btc }}</span> BTC</td>
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}
                                             {% if item.expect_ela %}
-                                            <td>{{ item.expect_ela }} ELA</td>
+                                            <td><span class="f30">{{ item.expect_ela }}</span> ELA</td>
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}
                                         </tr>
-                                        {% if item.assign_btc or item.assign_ela %}
+                                    </tbody>
+                                </table>
+                            </div>
+                                    {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
+                            <div class="auto-table">
+                                <table class="table">
+                                    <h1>Apply Info</h1>
+                                    <thead>
+                                        <tr>
+                                            <td></td>
+                                            <td>BTC</td>
+                                            <td>ELA</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>    
                                         <tr>
                                             <td>{% trans "Distribution Amount" %}</td>
                                             {% if item.assign_btc %}
-                                            <td>{{ item.assign_btc }} BTC</td>
+                                            <td><span class="f30">{{ item.assign_btc }}</span> BTC</td>
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}
                                             {% if item.assign_ela %}
-                                            <td>{{ item.assign_ela }} ELA</td>
+                                            <td><span class="f30">{{ item.assign_ela }}</span> ELA</td>
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}
                                         </tr>
-                                        {% endif %}
-                                        {% if item.receive_btc_address or item.receive_ela_address %}
                                         <tr>
                                             <td>{% trans "Distribution Address" %}</td>
                                             {% if item.receive_btc_address %}
@@ -179,26 +104,88 @@
                                             <td>-</td>
                                             {% endif %}
                                         </tr>
-                                        {% endif %}
-                                        {% if item.ela_final_balance or item.btc_final_balance %}
-                                        <script>var hasSendAmount = true;</script>
                                         <tr>
-                                            <td>{% trans "Sended Amount" %}</td>
-                                            {% if item.btc_final_balance %}
-                                            <td>{{ item.btc_final_balance }} BTC</td>
+                                            <td>QR Code</td>
+                                            {% if item.receive_btc_address %}
+                                            <td id="code">
+                                            <script>
+                                                new QRCode(document.getElementById("code"), "{{ item.receive_btc_address }}");
+                                            </script>
+                                            </td>
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}
-                                            {% if item.ela_final_balance %}
-                                            <td>{{ item.ela_final_balance }} ELA</td>
+                                            {% if item.receive_ela_address %}
+                                            <td id="ela_qrcode">
+                                                <script>
+                                                new QRCode(document.getElementById("ela_qrcode"), "{{ item.receive_ela_address }}");
+                                                </script>
+                                            </td>
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}
                                         </tr>
+                                        
+                                    {% if item.ela_final_balance or item.btc_final_balance %}
+                                            <script>var hasSendAmount = true;</script>
+                                            <tr>
+                                                <td>{% trans "Receive Amount Of<br/> Newton Foundation" %}</td>
+                                                {% if item.btc_final_balance %}
+                                                <td><span class="f30">{{ item.btc_final_balance }}</span> BTC</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
+                                                {% if item.ela_final_balance %}
+                                                <td><span class="f30">{{ item.ela_final_balance }}</span> ELA</td>
+                                                {% else %}
+                                                <td>-</td>
+                                                {% endif %}
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                        {% if item.btc_final_balance != item.assign_btc or item.ela_final_balance != item.assign_ela %}
+                                <div class="form-container mt50">
+                                    <div class="alert alert-warning f30">
+                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                        Transferred limits is not equal to allocated limits.
+                                    </div>
+                                </div>
+                                        {% else %}
+                                <div class="form-container mt50">
+                                    <div class="alert alert-success f30">
+                                        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                        Transfer success.
+                                    </div>
+                                </div>
                                         {% endif %}
-                                    </tbody>
-                                </table>
+                                {% else %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-container mt50">
+                                    <div class="alert alert-warning f30">
+                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                        * You can transfer BTC and ELA through your wallet.<br/>
+                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                        * After you finish transferring, you will check out transfer information on this page,
+                                        and soon you will check the transferring result on this page.
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% else %}
+                                    <!-- add else for no assign btc or assign ela -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="form-container mt50">
+                            <div class="alert alert-warning f30">
+                                <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+                                your expected limit is under evaluation.
                             </div>
+                        </div>
+                        {% endif %}
+                            <!-- end -->
                             {% else %}
                             <a class="form-button" href="/tokenexchange/invite/{{ item.id }}/post/">{% trans "Fill in the expected investment quota " %}</a>
                             {% endif %}
@@ -206,7 +193,7 @@
                     </div>
                     {% else %}
                     <div class="item">
-                        <p>暂无token交换信息</p>
+                        <p>No TokenExchange Information.</p>
                     </div>
                     {% endif %}
                 </div>
@@ -216,14 +203,5 @@
 </section>
 {% endblock %}
 {% block inline_js %}
-<script type="text/javascript">
-    if(hasExpect){
-        $("#apply-amount-container").removeClass("delay");
-        $("#apply-amount-container-mobile").removeClass("delay");
-    }
-    if(hasSendAmount){
-        $("#send-amount-container").removeClass("delay");
-        $("#send-amount-container-mobile").removeClass("delay");
-    }
-</script>
+
 {% endblock %}

@@ -47,16 +47,12 @@
     <!-- end --> 
   </div>
 </section>
-{% include "subscription/include-subscription.html" %}
+{% include "subscription/include-subscription.html" with form=captcha_form %}
 
 {% endblock %}
 
 {% block inline_js %}
 
-{% endblock %}
-
-{% block require_js %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endblock %}
 
 {% block js %}

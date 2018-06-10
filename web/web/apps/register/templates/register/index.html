@@ -14,10 +14,6 @@
 {% include "footer-simple.html" %}
 {% endblock %}
 
-{% block require_js %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
-{% endblock %}
-
 {% block notice %}
 {% endblock %}
 
@@ -27,20 +23,18 @@
             <h2>{% trans "Register" %}</h2>
         </div>
         <div class="container">
-            <div class="form-container">
+            <!-- <div class="form-container">
                 <div class="alert alert-warning">
                     {% trans "Tip: To register successfully, ensure you can access the google recaptcha service." %}
                 </div>
-            </div>
+            </div> -->
             <div class="form-container">
                 <form id="register-form" class="form" action="/register/post-email/" method="POST">
                     {% csrf_token %}
                     {% include "form.html" %}
+                    <div id='id_register_code_error' class='alert alert-danger hide'>Code error</div>
                     <div class="form-group">
-                        <div class="google-recaptcha" id="google-recaptcha">
-                            <input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
-                            <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
-                        </div>
+                        <image class="text-center" id="register_captcha_code" src="/ishuman/image/?' + Math.random() + '"/>
                     </div>
                     <div class="raw">
                         <div>

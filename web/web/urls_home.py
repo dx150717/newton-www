@@ -16,6 +16,7 @@ urlpatterns = patterns('',
                        url(r'^login/',include('login.urls')),
                        url(r'^logout/',include('logout.urls')),
                        url(r'^user/',include('user.urls')),
+                       url(r'^ishuman/',include('ishuman.urls')),
                        url(r'^tokenexchange/',include('tokenexchange.urls')),
 )
 

@@ -1,12 +1,7 @@
 // subscribe email list
-var FAIL = 0
-var SUCCESS = 1
-var UNAUTH = 2
-var SIGN_ERROR = 3
-var INVALID_PARAMS = 4
-var MAINTAIN = 5
-var UPGRADE = 6
 var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
+var ERROR_TIP = '<span class="glyphicon glyphicon-remove-circle alert-danger" aria-hidden="true"></span>';
+var SUCCESS_TIP = '<span class="glyphicon glyphicon-ok-circle alert-success" aria-hidden="true"></span>';
 
 $('#subscription_form').submit(function(event){
 	event.preventDefault();
@@ -14,31 +9,54 @@ $('#subscription_form').submit(function(event){
 	var email_address = $(form).find("input[type='text']").val();
 	if(email_address.length > 0) {
 		if(emailReg.test(email_address)) {
-			if (window.grecaptcha) {
-				grecaptcha.reset();
-			}
 			$('.recaptcha-modal').modal();
+			$('#id_captcha_container').html('<image class="text-center" id="id_code_image" src="/ishuman/image/?' + Math.random() + '"/>');
+			$('#id_code_image').click(function(event){
+				event.preventDefault();
+				$(this).attr("src", "/ishuman/image/?" + Math.random());
+			});
+			$('#id_validator_status').html('');
+			$('#id_code').val('');
+			$('#id_code').keyup(function(event){
+				var node = this;
+				var value = $(node).val();
+				if (value.length == 5) {
+					$.ajax({
+						url:'/ishuman/check/?code=' + value,
+						type: 'post',
+						data: {},
+						success: function(ret){
+							if (ret.error_code === FAIL) {
+								$('#id_validator_status').html(ERROR_TIP);
+								$('#id_code_image').click();
+								$('#id_code').val('');
+							} else {
+								$('#id_validator_status').html(SUCCESS_TIP);
+								subscriptionConfirm();
+							}
+						},
+						complete: function(request, status) {
+						}
+					});
+				} else {
+					if (value.length < 5) {
+						$('#id_validator_status').html('');
+					} else {
+						$('#id_validator_status').html(ERROR_TIP);
+					}
+				}
+			});
 		}
 	}
 });
 
-function googleCallback(ret){
-    subscriptionConfirm(ret);
-};
-
-function subscriptionConfirm(googleResponse) {
+function subscriptionConfirm() {
 	$('.recaptcha-modal').modal('hide');
-	var recaptcha = googleResponse;
-	if (!recaptcha) {
-		var content = "no recaptcha";
-		var alertType = "alert-danger";
-		showSubscriptionResult(content, alertType);
-		return;
-	};
+	var code = $('#id_code').val();
 	var email_address = $('#subscription_form').find("input[type='text']").val();
 	if(email_address.length > 0) {
 		if(emailReg.test(email_address)) {
-			var data = { "email_address": email_address, "g-recaptcha-response":recaptcha };
+			var data = { "email_address": email_address, "code":code };
 			showWaiting();
 			$.ajax({
 				url:'/subscribe/',
