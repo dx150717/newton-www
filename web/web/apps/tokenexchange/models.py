@@ -10,12 +10,22 @@ from utils import validators
 from config import codes
 
 class KYCInfo(models.Model):
+    ID_CHOICES = (
+        (codes.IDType.ID_CARD.value, _('Id Card')),
+        (codes.IDType.PASSPORT.value, _('Passport')),
+        (codes.IDType.DRIVERS_LICENSE.value, _('Drivers License'))
+    )
     user_id = models.IntegerField()
     first_name = models.CharField(max_length=128, verbose_name='First Name')
     last_name = models.CharField(max_length=128, verbose_name='Last Name')
     cellphone = models.CharField(max_length=20, db_index=True)
     country = CountryField(blank_label="Select country or region", verbose_name='Country or Region')
     country_code = models.CharField(max_length=4, db_index=True)
+    id_type = models.IntegerField(
+        _('id_type'),
+        choices=ID_CHOICES, default=codes.IDType.ID_CARD.value,
+        db_index=True,
+    )
     id_number = models.CharField(max_length=128, verbose_name='ID Number')
     id_card = models.FileField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name='ID Photo', validators=[validators.validate_file_extension_of_id_photo, validators.validate_file_size_of_id_photo])
     emergency_contact_first_name = models.CharField(max_length=128, verbose_name='First Name of Emergency Contact')

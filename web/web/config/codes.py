@@ -122,3 +122,8 @@ class AdminActionType(Enum):
     SEND_INVITE = 4
     ASSIGN_AMOUNT = 5
     SEND_CONFIRM_EMAIL = 6
+
+class IDType(Enum):
+    ID_CARD = 1
+    PASSPORT = 2
+    DRIVERS_LICENSE = 3

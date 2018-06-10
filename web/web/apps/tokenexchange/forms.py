@@ -14,6 +14,7 @@ class KYCInfoForm(ModelForm):
         self.fields.keyOrder = ['first_name',
                                 'last_name',
                                 'country',
+                                'id_type',
                                 'id_number',
                                 'id_card',
                                 'cellphone_group',
@@ -33,6 +34,7 @@ class KYCInfoForm(ModelForm):
             'last_name',
             'country',
             'location',
+            'id_type',
             'id_number',
             'id_card',
             'how_to_contribute',
@@ -42,7 +44,7 @@ class KYCInfoForm(ModelForm):
             'cellphone_of_emergency_contact',
             'relationships_with_emergency_contacts'
         ]
-
+class KYCBaseInfoForm()
 class ApplyAmountForm(ModelForm):
     class Meta:
         model = tokenexchange_models.InvestInvite
