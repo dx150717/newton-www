@@ -115,7 +115,15 @@
                                             {% else %}
                                             <td>-</td>
                                             {% endif %}
+                                            {% if item.receive_ela_address %}
+                                            <td id="ela_qrcode">
+                                                <script>
+                                                new QRCode(document.getElementById("ela_qrcode"), "{{ item.receive_ela_address }}");
+                                                </script>
+                                            </td>
+                                            {% else %}
                                             <td>-</td>
+                                            {% endif %}
                                         </tr>
                                         
                                     {% if item.ela_final_balance or item.btc_final_balance %}
@@ -159,6 +167,7 @@
                                     <div class="alert alert-warning f30">
                                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                                         * You can transfer BTC and ELA through your wallet.<br/>
+                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                                         * After you finish transferring, you will check out transfer information on this page,
                                         and soon you will check the transferring result on this page.
                                     </div>
@@ -194,14 +203,5 @@
 </section>
 {% endblock %}
 {% block inline_js %}
-<script type="text/javascript">
-    if(hasExpect){
-        $("#apply-amount-container").removeClass("delay");
-        $("#apply-amount-container-mobile").removeClass("delay");
-    }
-    if(hasSendAmount){
-        $("#send-amount-container").removeClass("delay");
-        $("#send-amount-container-mobile").removeClass("delay");
-    }
-</script>
+
 {% endblock %}

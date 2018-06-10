@@ -118,6 +118,16 @@
                     <div class="user-info">
                         {% if items %}
                         {% for item in items %}
+                        {% if item.expect_btc or item.except_ela %}
+                            <script>var hasExpect = true;</script>
+                        {% else %}
+                            <script>var hasExpect = false;</script>
+                        {% endif %}
+                        {% if item.ela_final_balance or item.btc_final_balance %}
+                            <script>var hasSendAmount = true;</script>
+                        {% else %}
+                            <script>var hasSendAmount = false;</script>
+                        {% endif %}
                         <div class="item">
                             <div class="item-content">
                                 {% include "tokenexchange/token-exchange-info-summary.html" with token_exchange_info=item.token_exchange_info %}
@@ -210,7 +220,7 @@
                                     </div>
                                 </div>
                                 <div class="text-left">
-                                    <a class="form-button" href="/user/token-exchange-progress/{{ item.phase_id }}/"> {% trans "Details " %} >></a>
+                                    <a class="form-button" href="/user/token-exchange-progress/{{ item.phase_id }}/"> {% trans "Details " %}</a>
                                 </div>
                             </div>
                         </div>
@@ -233,5 +243,13 @@
         e.preventDefault()
         $(this).tab("show")
     })
+    if(hasExpect){
+        $("#apply-amount-container").removeClass("delay");
+        $("#apply-amount-container-mobile").removeClass("delay");
+    }
+    if(undefined != hasSendAmount && hasSendAmount){
+        $("#send-amount-container").removeClass("delay");
+        $("#send-amount-container-mobile").removeClass("delay");
+    }
 </script>
 {% endblock %}
