@@ -1,6 +1,7 @@
 /**
  * register.js for valid register form and get response from google api.
  */
+var SUCCESS_TIP = '<span class="glyphicon glyphicon-ok-circle alert-success" aria-hidden="true"></span>';
 
 /**
  * 
@@ -15,16 +16,35 @@ function googleCallback(ret){
 $("#register-form").submit(function(event){
     event.preventDefault();
     var form = this;
+    var code = $("#id_code").val()
     if (!$(form).valid()) {
         return false;
     }
-    form.submit()
+    $.ajax({
+        url:'/ishuman/check/?code=' + code,
+        type: 'post',
+        data: {},
+        success: function(ret){
+            if (ret.error_code === FAIL) {
+                console.log("remove class")
+                $("#id_register_code_error").removeClass("hide");
+                $("#id_register_code_error").attr("style", "display:!important block");
+                return false;
+            } else {
+                form.submit();
+            }
+        },
+        complete: function(request, status) {
+        }
+    });
+    
 }).validate({
     ignore: [],
     errorElement: "div",
     errorClass: "alert alert-danger",
     rules: {
-        email: {required: true, email:true}
+        email: {required: true, email:true},
+        code: {required: true}
     },
     errorPlacement: function(error,element) {
         error.appendTo(element.parent());
@@ -74,4 +94,10 @@ $("#set-gtoken-form").submit(function(event){
     errorPlacement: function(error,element) {
         error.appendTo(element.parent());
     }
+});
+
+$('#register_captcha_code').click(function(event){
+    event.preventDefault();
+    $(this).attr("src", "/ishuman/image/?" + Math.random());
+    $("#id_register_code_error").addClass("hide");
 });

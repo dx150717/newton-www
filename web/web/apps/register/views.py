@@ -17,6 +17,7 @@ from django.utils.timezone import utc
 from django.forms.forms import NON_FIELD_ERRORS
 from django.utils import translation
 import pyotp
+from ishuman import services as ishuman_services
 
 import decorators
 from config import codes
@@ -40,17 +41,20 @@ def submit_email(request):
         form = forms.EmailForm(request.POST)
         if not form.is_valid():
             return render(request, 'register/index.html', locals())
+        code = form.cleaned_data['code']
+        if code != ishuman_services.get_captcha(request.session.session_key):
+            return http.JsonErrorResponse(error_message=_("Captcha Error"))
         # check robot 
-        g_recaptcha_response = request.POST.get('g-recaptcha-response')
-        if not g_recaptcha_response:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
-            return render(request, 'register/index.html', locals())
-        post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
-        res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
-        res = json.loads(res.text)
-        if not res['success']:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
-            return render(request, 'register/index.html', locals())
+        # g_recaptcha_response = request.POST.get('g-recaptcha-response')
+        # if not g_recaptcha_response:
+        #     form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
+        #     return render(request, 'register/index.html', locals())
+        # post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
+        # res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
+        # res = json.loads(res.text)
+        # if not res['success']:
+        #     form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
+        #     return render(request, 'register/index.html', locals())
         # check the availablity of email address
         email = form.cleaned_data['email']
         user = User.objects.filter(email=email).first()            
