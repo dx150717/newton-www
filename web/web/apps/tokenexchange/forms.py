@@ -29,7 +29,7 @@ class KYCBaseForm(ModelForm):
     """
     cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="Cellphone")
     def __init__(self, *args, **kw):
-        super(KYCAdvanceInfoForm, self).__init__(*args, **kw)
+        super(KYCBaseForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [
             'first_name',
             'last_name',
@@ -68,7 +68,7 @@ other_social_account = models.CharField(max_length=128, db_index=True, verbose_n
 class KYCProfileForm(ModelForm):
     """ kyc profile """
     def __init__(self, *args, **kw):
-        super(ContributeForm, self).__init__(*args, **kw)
+        super(KYCProfileForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [
             'personal_profile',
             'personal_profile_attachment',
