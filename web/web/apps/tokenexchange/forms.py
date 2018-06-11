@@ -18,13 +18,13 @@ class KYCBaseForm(ModelForm):
         self.fields.keyOrder = [
             'first_name',
             'last_name',
-            'cellphone_group',
+            'id_type',
+            'id_number',
+            'id_card',
             'country',
             'city',
             'location',
-            'id_type',
-            'id_number',
-            'id_card'
+            'cellphone_group',
         ]
         
     class Meta:
