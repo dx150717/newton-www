@@ -12,7 +12,7 @@ from user import forms as user_forms
 class KYCBaseForm(ModelForm):
     """advanceinfo for kyc example: what can you do for newton
     """
-    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="Cellphone")
+    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="*Cellphone")
     def __init__(self, *args, **kw):
         super(KYCBaseForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [
@@ -107,7 +107,7 @@ class ContributeForm(ModelForm):
 
 class EmergencyForm(ModelForm):
     """docstring for EmergencyForm"""
-    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label='Emergency Cellphone')
+    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label='*Emergency Cellphone')
     def __init__(self, *args, **kw):
         super(EmergencyForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [

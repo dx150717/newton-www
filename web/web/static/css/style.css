@@ -1280,4 +1280,19 @@ canvas { display: block; vertical-align: top; }
 #user .kycinfo_content{margin: 0; text-align: left;}
 #user .kycinfo_content .value{color: #282829; font-size: 14px;}
 @media (max-width:991px){
-    #user .kycinfo_title{text-align: left; padding-left: 15px;} 
+    #user .kycinfo_title{text-align: left; padding-left: 15px;}
+}
+
+#token input[class="form-control"]{width: 50%}
+#token #id_cellphone_group_0, #token #id_cellphone_of_emergency_contact_0{width: 15%}
+#token #id_cellphone_group_1, #token #id_cellphone_of_emergency_contact_1{width: 34%}
+#token #id_location, #token #id_emergency_location{width: 100%}
+#token #id_emergency_country, #token #id_country{width: 50%}
+#token #id_id_type{width: 50%}
+@media (max-width:991px){
+    #token input[class="form-control"]{width: 100%}
+    #token #id_cellphone_group_0, #token #id_cellphone_of_emergency_contact_0{width: 100%; margin-bottom: 10px;}
+    #token #id_cellphone_group_1, #token #id_cellphone_of_emergency_contact_1{width: 100%}
+    #token #id_emergency_country, #token #id_country{width: 100%}
+    #token #id_id_type{width: 100%}
+}

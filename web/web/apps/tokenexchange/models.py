@@ -11,31 +11,31 @@ from config import codes
 
 class KYCInfo(models.Model):
     ID_CHOICES = (
-        (codes.IDType.ID_CARD.value, _('Id Card')),
+        (codes.IDType.ID_CARD.value, _('ID Card')),
         (codes.IDType.PASSPORT.value, _('Passport')),
         (codes.IDType.DRIVERS_LICENSE.value, _('Drivers License'))
     )
 
     user_id = models.IntegerField()
     # base info
-    first_name = models.CharField(max_length=128, verbose_name='First Name')
-    last_name = models.CharField(max_length=128, verbose_name='Last Name')
+    first_name = models.CharField(max_length=128, verbose_name='*First Name')
+    last_name = models.CharField(max_length=128, verbose_name='*Last Name')
     country_code = models.CharField(max_length=4, db_index=True)            
-    cellphone = models.CharField(max_length=20, db_index=True)
-    country = CountryField(blank_label="Select country or region", verbose_name='Country or Region')
-    city = models.CharField(max_length=256, verbose_name='City')
-    location = models.CharField(max_length=1024, verbose_name='Location')
+    cellphone = models.CharField(max_length=20, db_index=True, verbose_name='*Cellphone')
+    country = CountryField(blank_label="Select country or region", verbose_name='*Country or Region')
+    city = models.CharField(max_length=256, verbose_name='*City')
+    location = models.CharField(max_length=1024, verbose_name='*Location')
     id_type = models.IntegerField(
-        _('id_type'),
+        _('*ID Type'),
         choices=ID_CHOICES, default=codes.IDType.ID_CARD.value,
         db_index=True,
     )
-    id_number = models.CharField(max_length=128, db_index=True, verbose_name='ID Number')
-    id_card = models.FileField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name='ID Photo', validators=[validators.validate_file_extension_of_id_photo, validators.validate_file_size_of_id_photo])
+    id_number = models.CharField(max_length=128, db_index=True, verbose_name='*ID Number')
+    id_card = models.FileField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name='*ID Photo', validators=[validators.validate_file_extension_of_id_photo, validators.validate_file_size_of_id_photo])
     
     # profile
-    personal_profile = models.TextField(verbose_name="Personal Introduction", max_length=10240)
-    personal_profile_attachment = models.FileField(upload_to=storage.hashfile_upload_to('personal_profile_attachment', path_prefix='personal_profile_attachment'), verbose_name='Attachment', validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
+    personal_profile = models.TextField(verbose_name="*Personal Introduction", max_length=10240)
+    personal_profile_attachment = models.FileField(upload_to=storage.hashfile_upload_to('personal_profile_attachment', path_prefix='personal_profile_attachment'), verbose_name='*Attachment', validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
     facebook = models.CharField(max_length=128, db_index=True, verbose_name='Facebook', null=True)
     twitter = models.CharField(max_length=128, db_index=True, verbose_name='Twitter', null=True)
     telegram = models.CharField(max_length=128, db_index=True, verbose_name='Telegram', null=True)
@@ -46,20 +46,20 @@ class KYCInfo(models.Model):
     your_node_name = models.CharField(max_length=128, verbose_name='Your Node Name', null=True)
     your_node_organizer = models.CharField(max_length=128, verbose_name='Your node organizer', null=True)
     your_node_organizer_contact = models.CharField(max_length=128, verbose_name="organizer's contact", null=True)
-    done_for_newton = models.TextField(verbose_name='What contribute you had do for newton', max_length=10240)
-    done_for_newton_attachment = models.FileField(upload_to=storage.hashfile_upload_to('done_for_newton_attachment', path_prefix='done_for_newton_attachment'), verbose_name="Attachment")
-    do_for_newton = models.TextField(verbose_name='What will you do for newton', max_length=10240)
+    done_for_newton = models.TextField(verbose_name='*What contribute you had do for newton', max_length=10240)
+    done_for_newton_attachment = models.FileField(upload_to=storage.hashfile_upload_to('done_for_newton_attachment', path_prefix='done_for_newton_attachment'), verbose_name="*Attachment")
+    do_for_newton = models.TextField(verbose_name='*What will you do for newton', max_length=10240)
     what_is_newton = models.TextField(verbose_name='Tell us your understanding about Newton', max_length=10240, null=True)
 
     # emergency info
-    emergency_contact_first_name = models.CharField(max_length=128, verbose_name='First Name of Emergency Contact')
-    emergency_contact_last_name = models.CharField(max_length=128, verbose_name='Last Name of Emergency Contact')
+    emergency_contact_first_name = models.CharField(max_length=128, verbose_name='*First Name of Emergency Contact')
+    emergency_contact_last_name = models.CharField(max_length=128, verbose_name='*Last Name of Emergency Contact')
     emergency_contact_country_code = models.CharField(max_length=4, db_index=True, verbose_name='Country Code of Emergency Contact')
-    emergency_contact_cellphone = models.CharField(max_length=20, db_index=True, default='', verbose_name='Cellphone of Emergency Contact')
-    emergency_country = CountryField(blank_label="Select country or region", verbose_name='Emergency Country or Region')
-    emergency_city = models.CharField(max_length=256, verbose_name='City')
-    emergency_location = models.CharField(max_length=1024, verbose_name='Emergency Location')
-    emergency_relationship = models.CharField(max_length=1024, verbose_name='Emergency Relationship')
+    emergency_contact_cellphone = models.CharField(max_length=20, db_index=True, default='', verbose_name='*Cellphone of Emergency Contact')
+    emergency_country = CountryField(blank_label="Select country or region", verbose_name='*Emergency Country or Region')
+    emergency_city = models.CharField(max_length=256, verbose_name='*City')
+    emergency_location = models.CharField(max_length=1024, verbose_name='*Emergency Location')
+    emergency_relationship = models.CharField(max_length=1024, verbose_name='*Emergency Relationship')
 
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)

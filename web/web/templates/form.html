@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load utils %}
 
 {% if form.non_field_errors %}
@@ -14,7 +15,18 @@
 {% endif %}
 {% for field in form %}
 <div class="form-group">
-    <p><label for="id_{{ field.name }}" class="control-label">{{ field.label }}</label></p>
+    <p>
+        <label for="id_{{ field.name }}" class="control-label">{{ field.label }}</label>
+        {% if field.name == "id_card" or field.name == "personal_profile_attachment" or field.name == "done_for_newton_attachment" %}
+        <p class="small">{% trans "Only jpeg, png and pdf file within 5M" %}</p>
+        {% endif %}
+        {% if field.name == "location" %}
+        <p class="small">{% trans "Detailed address needs to be accurate to the street" %}</p>
+        {% endif %}
+        {% if field.name == "done_for_newton" or field.name == "do_for_newton" %}
+        <p class="small">{% trans "This is an important basis for Newton's KYC review. Please fill in it carefully and thoroughly" %}</p>
+        {% endif %}
+    </p>
     <div>
         {{ field|addcss:"form-control" }}
         {% if field.errors %}
