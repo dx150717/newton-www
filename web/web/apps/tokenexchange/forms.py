@@ -69,6 +69,14 @@ class KYCProfileForm(ModelForm):
     """ kyc profile """
     def __init__(self, *args, **kw):
         super(KYCProfileForm, self).__init__(*args, **kw)
+        self.fields['personal_profile'].required = False
+        self.fields['personal_profile_attachment'].required = False
+        self.fields['facebook'].required = False
+        self.fields['twitter'].required = False
+        self.fields['telegram'].required = False
+        self.fields['wechat'].required = False
+        self.fields['other_social_account'].required = False
+
         self.fields.keyOrder = [
             'personal_profile',
             'personal_profile_attachment',
