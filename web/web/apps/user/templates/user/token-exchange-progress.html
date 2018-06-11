@@ -43,21 +43,21 @@
                             <div class="item">
                                 <div class="container">
                                     <div class="text-left">
-                                        <p class="token-exchange-title">{% trans "Expect Info" %}</p>
+                                        <p class="token-exchange-title">{% trans "Expected token exchange info" %}</p>
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.expect_btc %}
-                                        <p class="token-exchange-content">{% trans "Expect BTC" %}: <span class="f30">{{ item.expect_btc }}</span> BTC</p>
+                                        <p class="token-exchange-content">{% trans "Expected BTC amount" %}: <span class="f30">{{ item.expect_btc }}</span> BTC</p>
 
                                         {% else %}
-                                        <p class="token-exchange-content">{% trans "Expect BTC" %}: 0 BTC</p>
+                                        <p class="token-exchange-content">{% trans "Expected BTC amount" %}: 0 BTC</p>
                                         {% endif %}
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.expect_ela %}
-                                        <p class="token-exchange-content">{% trans "Expect ELA" %}: <span class="f30">{{ item.expect_ela }}</span> BTC</p>
+                                        <p class="token-exchange-content">{% trans "Expected ELA amount" %}: <span class="f30">{{ item.expect_ela }}</span> BTC</p>
                                         {% else %}
-                                        <p class="token-exchange-content">{% trans "Expect BTC" %}: 0 ELA</p>
+                                        <p class="token-exchange-content">{% trans "Expected BTC amount" %}: 0 ELA</p>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -69,12 +69,12 @@
                         <div class="item">
                             <div class="container">
                                 <div class="text-left">
-                                    <p class="token-exchange-title">{% trans "Apply Info" %}</p>
+                                    <p class="token-exchange-title">{% trans "Allocated token exchange info" %}</p>
                                 </div>
                                     <div class="col-md-6">
                                         {% if item.assign_btc %}
-                                        <p class="token-exchange-content">{% trans "Distribution BTC Amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
-                                        <p class="token-exchange-content">{% trans "Distribution BTC Address" %}:</p> 
+                                        <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
+                                        <p class="token-exchange-content">{% trans "Allocated BTC address" %}:</p> 
                                         <p class="token-exchange-content"><span class="address_style ">{{ item.receive_btc_address }}</span></p>
                                         <p id="btc_code"  class="qrcode-width">
                                             <script>
@@ -82,8 +82,8 @@
                                             </script>
                                         </p>
                                         {% else %}
-                                        <p class="token-exchange-content">{% trans "Distribution BTC Amount" %}: - BTC</p>
-                                        <p class="token-exchange-content">{% trans "Distribution BTC Address" %}: -</p>
+                                        <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: - BTC</p>
+                                        <p class="token-exchange-content">{% trans "Allocated BTC address" %}: -</p>
                                         <p id="btc_code">
                                             -
                                         </p>
@@ -91,8 +91,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.assign_ela %}
-                                        <p class="token-exchange-content">{% trans "Distribution ELA Amount" %}: <span class="f30">{{ item.assign_btc }}</span> ELA</p>
-                                        <p class="token-exchange-content">{% trans "Distribution ELA Address" %}:</p> 
+                                        <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: <span class="f30">{{ item.assign_btc }}</span> ELA</p>
+                                        <p class="token-exchange-content">{% trans "Allocated ELA address" %}:</p> 
                                         <p class="token-exchange-content"><span class="address_style">{{ item.receive_ela_address }}</span></p>
                                         <p id="ela_code" class="qrcode-width">
                                             <script>
@@ -100,8 +100,8 @@
                                             </script>
                                         </p>
                                         {% else %}
-                                        <p class="token-exchange-content">{% trans "Distribution ELA Amount" %}: - ELA</p>
-                                        <p class="token-exchange-content">{% trans "Distribution ELA Address" %}: -</p>
+                                        <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: - ELA</p>
+                                        <p class="token-exchange-content">{% trans "Allocated ELA address" %}: -</p>
                                         <p id="ela_code">
                                            -
                                         </p>

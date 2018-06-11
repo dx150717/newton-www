@@ -23,11 +23,6 @@
     </div>
     <div class="container">
         <div class="form-container">
-            <div class="alert alert-warning">
-                {% trans "Tip: To login successfully, ensure that you can access the google recaptcha service." %}
-            </div>
-        </div>
-        <div class="form-container">
             <form action="#" method="POST" id="login_form">
                 {% csrf_token %}
                 {% include "form.html" %}
