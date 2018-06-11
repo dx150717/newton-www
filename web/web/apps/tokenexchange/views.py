@@ -59,18 +59,18 @@ def post_kyc_information(request):
                 base_form._errors[NON_FIELD_ERRORS] = base_form.error_class([_('You had submited kyc info')])
                 return render(request, "tokenexchange/submit.html", locals())
             if not base_form.is_valid():
+                print 'base_form error'
                 return render(request, "tokenexchange/submit.html", locals())
             if not profile_form.is_valid():
+                print 'profile_form error'
+                profile_form._errors
                 return render(request, "tokenexchange/submit.html", locals())  
             if not contribute_form.is_valid():
+                print 'contribute_form error'
                 return render(request, "tokenexchange/submit.html", locals())
             if not emergency_form.is_valid():
+                print 'emergency_form error'
                 return render(request, "tokenexchange/submit.html", locals())
-
-            instance = base_form.save(commit=True)
-            instance = profile_form.save(commit=True)
-            instance = contribute_form.save(commit=True)
-            instance = emergency_form.save(commit=True)
 
             country_code, cellphone = base_form.cleaned_data['cellphone_group']
             instance.country_code = country_code
@@ -82,6 +82,12 @@ def post_kyc_information(request):
             instance.user_id = request.user.id
             instance.status = codes.KYCStatus.CANDIDATE.value
             instance.save()
+                        
+            instance = base_form.save(commit=True)
+            instance = profile_form.save(commit=True)
+            instance = contribute_form.save(commit=True)
+            instance = emergency_form.save(commit=True)
+            
             return redirect('/tokenexchange/wait-audit/')
         else:
             instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
