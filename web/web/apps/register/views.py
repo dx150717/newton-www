@@ -42,8 +42,9 @@ def submit_email(request):
         if not form.is_valid():
             return render(request, 'register/index.html', locals())
         code = form.cleaned_data['code']
-        if code != ishuman_services.get_captcha(request.session.session_key):
-            return http.JsonErrorResponse(error_message=_("Captcha Error"))
+        if "1" != ishuman_services.get_captcha(request.session.session_key):
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_("Captcha Error")])
+            return render(request, 'register/index.html', locals())
         # check robot 
         # g_recaptcha_response = request.POST.get('g-recaptcha-response')
         # if not g_recaptcha_response:
