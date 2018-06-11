@@ -36,20 +36,20 @@ class KYCInfo(models.Model):
     # profile
     personal_profile = models.TextField(verbose_name="Personal Introduction", max_length=10240)
     personal_profile_attachment = models.FileField(upload_to=storage.hashfile_upload_to('personal_profile_attachment', path_prefix='personal_profile_attachment'), verbose_name='Attachment', validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
-    facebook = models.CharField(max_length=128, db_index=True, verbose_name='Facebook')
-    twitter = models.CharField(max_length=128, db_index=True, verbose_name='Twitter')
-    telegram = models.CharField(max_length=128, db_index=True, verbose_name='Telegram')
-    wechat = models.CharField(max_length=128, db_index=True, verbose_name='WeChat')
-    other_social_account = models.CharField(max_length=128, db_index=True, verbose_name='Other')
+    facebook = models.CharField(max_length=128, db_index=True, verbose_name='Facebook', null=True)
+    twitter = models.CharField(max_length=128, db_index=True, verbose_name='Twitter', null=True)
+    telegram = models.CharField(max_length=128, db_index=True, verbose_name='Telegram', null=True)
+    wechat = models.CharField(max_length=128, db_index=True, verbose_name='WeChat', null=True)
+    other_social_account = models.CharField(max_length=128, db_index=True, verbose_name='Other', null=True)
 
     # how to contribute for newton
-    your_node_name = models.CharField(max_length=128, verbose_name='Your Node Name')
-    your_node_organizer = models.CharField(max_length=128, verbose_name='Your node organizer')
-    your_node_organizer_contact = models.CharField(max_length=128, verbose_name="organizer's contact")
+    your_node_name = models.CharField(max_length=128, verbose_name='Your Node Name', null=True)
+    your_node_organizer = models.CharField(max_length=128, verbose_name='Your node organizer', null=True)
+    your_node_organizer_contact = models.CharField(max_length=128, verbose_name="organizer's contact", null=True)
     done_for_newton = models.TextField(verbose_name='What contribute you had do for newton', max_length=10240)
     done_for_newton_attachment = models.FileField(upload_to=storage.hashfile_upload_to('done_for_newton_attachment'), verbose_name="Attachment")
     do_for_newton = models.TextField(verbose_name='What will you do for newton', max_length=10240)
-    what_is_newton = models.TextField(verbose_name='Tell us your understanding about Newton', max_length=10240)
+    what_is_newton = models.TextField(verbose_name='Tell us your understanding about Newton', max_length=10240, null=True)
 
     # emergency info
     emergency_contact_first_name = models.CharField(max_length=128, verbose_name='First Name of Emergency Contact')
@@ -59,7 +59,8 @@ class KYCInfo(models.Model):
     emergency_country = CountryField(blank_label="Select country or region", verbose_name='Emergency Country or Region')
     emergency_city = models.CharField(max_length=256, verbose_name='City')
     emergency_location = models.CharField(max_length=1024, verbose_name='Emergency Location')
-    
+    emergency_relationship = models.CharField(max_length=1024, verbose_name='Emergency Relationship')
+
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -56,15 +56,6 @@ class KYCBaseForm(ModelForm):
         ]
 
 
-"""
-personal_profile = models.TextField(verbose_name="Personal Introduction", max_length=10240)
-personal_profile_annex = models.FileField(upload_to=storage.hashfile_upload_to('personal_profile_annex', verbose_name='Annex' path_prefix='personal_profile_annex'), validators=[validators.validate_file_size_of_id_photo])
-facebook = models.CharField(max_length=128, db_index=True, verbose_name='Facebook')
-twitter = models.CharField(max_length=128, db_index=True, verbose_name='Twitter')
-telegram = models.CharField(max_length=128, db_index=True, verbose_name='Telegram')
-wechat = models.CharField(max_length=128, db_index=True, verbose_name='WeChat')
-other_social_account = models.CharField(max_length=128, db_index=True, verbose_name='Other')
-"""
 class KYCProfileForm(ModelForm):
     """ kyc profile """
     def __init__(self, *args, **kw):
@@ -100,17 +91,6 @@ class KYCProfileForm(ModelForm):
         ]
         
 
-
-"""
-how to contribute
-your_node_name = models.CharField(max_length=128, verbose_name='Your Node Name')
-your_node_organizer = models.CharField(max_length=128, verbose_name='Your node organizer')
-your_node_organizer_contact = models.CharField(max_length=128, verbose_name="organizer's contact")
-what_contribute_you_had_do_for_newton = models.TextField(verbose_name='What contribute you had do for newton', max_length=10240)
-what_contribute_you_had_do_for_newton_annex = models.FileField(upload_to=storage.hashfile_upload_to('contribute_annex'), verbose_name="Annex")
-what_contribute_you_will_do_for_newton = models.TextField(verbose_name='What will you do for newton', max_length=10240)
-what_is_newton = models.TextField(verbose_name='Tell us your understanding about Newton', max_length=10240)
-"""
 class ContributeForm(ModelForm):
     """how to contribut for newton form"""
     def __init__(self, *args, **kw):
@@ -138,14 +118,6 @@ class ContributeForm(ModelForm):
         ]
         
 
-"""
-emergency_contact_first_name = models.CharField(max_length=128, verbose_name='First Name of Emergency Contact', required=True)
-emergency_contact_last_name = models.CharField(max_length=128, verbose_name='Last Name of Emergency Contact', required=True)
-emergency_contact_country_code = models.CharField(max_length=4, db_index=True, verbose_name='Country Code of Emergency Contact', required=True)
-emergency_contact_cellphone = models.CharField(max_length=20, db_index=True, default='', verbose_name='Cellphone of Emergency Contact', required=True)
-emergency_country = CountryField(blank_label="Select country or region", verbose_name='Emergency Country or Region', required=True)
-emergency_location = models.CharField(max_length=1024, verbose_name='Emergency Location', required=True)
-"""
 class EmergencyForm(ModelForm):
     """docstring for EmergencyForm"""
     cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label='Emergency Cellphone')
@@ -157,7 +129,8 @@ class EmergencyForm(ModelForm):
             'cellphone_of_emergency_contact',
             'emergency_country',
             'emergency_city',
-            'emergency_location'
+            'emergency_location',
+            'emergency_relationship',
         ]
         
     class Meta:
@@ -167,7 +140,8 @@ class EmergencyForm(ModelForm):
             'emergency_contact_last_name',
             'emergency_country',
             'emergency_city',
-            'emergency_location'
+            'emergency_location',
+            'emergency_relationship'
         ]
         
 
