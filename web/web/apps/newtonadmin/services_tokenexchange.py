@@ -27,10 +27,7 @@ def __load_address_from_file(filename, coin):
             else:
                 is_valid = btc_validation.validate(line)
         else:
-            if settings.USE_TESTNET:
-                is_valid = btc_validation.validate(line, 0x21)
-            else:
-                is_valid = btc_validation.validate(line, 0x6a)
+            is_valid = btc_validation.validate(line, 0x21)
         if is_valid:
             all_address.append(line)
     return all_address
