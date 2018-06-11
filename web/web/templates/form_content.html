@@ -1,13 +1,26 @@
 {% load utils %}
+
 {% for field in form %}
 <div class="form-group">
-    <p><label for="id_{{ field.name }}" class="control-label">{{ field.label }}</label></p>
-    <div>
-    	{% if field.value.cellphone %}
-    	<div>+{{ field.value.country_code }}  {{ field.value.cellphone }}</div>
-    	{% else %}
-         <div class="value">{{ field.value }}</div>
-         {% endif %}
+    {% if field.value %}
+    <div class="row">
+        <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_{{ field.name }}" class="control-label">{{ field.label }}</label></p>
+        <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            {% if field.value.cellphone %}
+                <div class="value">+{{ field.value.country_code }}  {{ field.value.cellphone }}</div>
+            {% else %}
+                {% if field.name == "id_card" %}
+                <img src="{{ kycinfo.id_card.url }}" alt="">
+                {% elif field.name == "personal_profile_attachment" %}
+                <img src="{{ kycinfo.personal_profile_attachment.url }}" alt="">
+                {% elif field.name == "done_for_newton_attachment" %}
+                <img src="{{ kycinfo.done_for_newton_attachment.url }}" alt="">
+                {% else %}
+                <div class="value">{{ field.value }}</div>
+                {% endif %}
+            {% endif %}
+        </div>
     </div>
+    {% endif %}
 </div>
 {% endfor %}

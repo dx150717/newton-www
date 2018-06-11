@@ -66,17 +66,12 @@ def post_kyc_information(request):
             
 
             if not base_form.is_valid():
-                print 'base_form error'
                 return render(request, "tokenexchange/submit.html", locals())
             if not profile_form.is_valid():
-                print 'profile_form error'
-                profile_form._errors
                 return render(request, "tokenexchange/submit.html", locals())  
             if not contribute_form.is_valid():
-                print 'contribute_form error'
                 return render(request, "tokenexchange/submit.html", locals())
             if not emergency_form.is_valid():
-                print 'emergency_form error'
                 return render(request, "tokenexchange/submit.html", locals())
 
             instance.user_id = request.user.id

@@ -38,7 +38,7 @@
                 <form class="form" action="/tokenexchange/post/" method="POST" enctype="multipart/form-data">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h3 class="panel-title">Basic Information</h3>
+                        <h3 class="panel-title">{% trans "Basic Information" %}</h3>
                         </div>
                         <div class="panel-body">
                             {% include "form.html" with form=base_form %}
@@ -46,7 +46,7 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h3 class="panel-title">Personal Introduction</h3>
+                        <h3 class="panel-title">{% trans "Personal Introduction" %}</h3>
                         </div>
                         <div class="panel-body">
                             {% include "form.html" with form=profile_form %}
@@ -54,7 +54,7 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h3 class="panel-title">How to Join Newton</h3>
+                        <h3 class="panel-title">{% trans "How to Join Newton" %}</h3>
                         </div>
                         <div class="panel-body">
                             {% include "form.html" with form=contribute_form %}
@@ -62,7 +62,7 @@
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h3 class="panel-title">Emergency Information</h3>
+                        <h3 class="panel-title">{% trans "Emergency Information" %}</h3>
                         </div>
                         <div class="panel-body">
                             {% include "form.html" with form=emergency_form %}

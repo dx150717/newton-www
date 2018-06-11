@@ -67,57 +67,57 @@
                         <p class="title">KYC</p>
                     </div>
                     <div class="container">
-                        <div class="bg-gray">
-                            <div class="item">
+                        <div class="item">
+                            <div class="bg-gray">
                                 <div class="text-nowrap"><label for="status">Status:</label></div>
                                 <div class="value">
                                     {% if kycinfo %}
                                         {% if kycinfo.status == 1 %}
-                                        {% trans "You have summit KYC information" %}
+                                        {% trans "You have summit KYC information." %}
                                         {% endif %}
 
                                         {% if kycaudit %}
                                             {% if kycinfo.status == 2 %}
-                                            {% trans "Passed" %}
+                                            {% trans "Congratulations! You've passed Newton KYC audit." %}
                                             {% endif %}
                                             {% if kycinfo.status == 3 %}
                                             {% trans "Rejected:" %} {{ kycaudit.comment }} <a href="/tokenexchange/">{% trans "Rewrite" %}</a>
                                             {% endif %}
                                         {% endif %}
                                     {% else %}
-                                    {% trans "You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>" %}
+                                    {% trans "You have not summit KYC information.<a href='/tokenexchange/'>Join KYC</a>" %}
                                     {% endif %}
                                 </div>
                             </div>
-                            {% if kycinfo.status == 2 %}
-                            <div class="item">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">{% trans "Base Info" %}</div>
-                                    <div class="panel-body">
-                                        {% include "form_content.html" with form=base_form %}
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">{% trans "Base Info" %}</div>
-                                    <div class="panel-body">
-                                        {% include "form_content.html" with form=profile_form %}
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">{% trans "Base Info" %}</div>
-                                    <div class="panel-body">
-                                        {% include "form_content.html" with form=contribute_form %}
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">{% trans "Base Info" %}</div>
-                                    <div class="panel-body">
-                                        {% include "form_content.html" with form=emergency_form %}
-                                    </div>
+                        </div>    
+                        {% if kycinfo.status == 2 %}
+                        <div class="item">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">{% trans "Basic Information" %}</div>
+                                <div class="panel-body">
+                                    {% include "form_content.html" with form=base_form %}
                                 </div>
                             </div>
-                            {% endif %}
+                            <div class="panel panel-default">
+                                <div class="panel-heading">{% trans "Personal Introduction" %}</div>
+                                <div class="panel-body">
+                                    {% include "form_content.html" with form=profile_form %}
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">{% trans "How to Join Newton" %}</div>
+                                <div class="panel-body">
+                                    {% include "form_content.html" with form=contribute_form %}
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">{% trans "Emergency Information" %}</div>
+                                <div class="panel-body">
+                                    {% include "form_content.html" with form=emergency_form %}
+                                </div>
+                            </div>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

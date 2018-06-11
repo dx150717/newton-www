@@ -47,7 +47,7 @@ class KYCInfo(models.Model):
     your_node_organizer = models.CharField(max_length=128, verbose_name='Your node organizer', null=True)
     your_node_organizer_contact = models.CharField(max_length=128, verbose_name="organizer's contact", null=True)
     done_for_newton = models.TextField(verbose_name='What contribute you had do for newton', max_length=10240)
-    done_for_newton_attachment = models.FileField(upload_to=storage.hashfile_upload_to('done_for_newton_attachment'), verbose_name="Attachment")
+    done_for_newton_attachment = models.FileField(upload_to=storage.hashfile_upload_to('done_for_newton_attachment', path_prefix='done_for_newton_attachment'), verbose_name="Attachment")
     do_for_newton = models.TextField(verbose_name='What will you do for newton', max_length=10240)
     what_is_newton = models.TextField(verbose_name='Tell us your understanding about Newton', max_length=10240, null=True)
 
