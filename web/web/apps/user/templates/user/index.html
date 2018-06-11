@@ -90,11 +90,32 @@
                                 </div>
                             </div>
                             {% if kycinfo.status == 2 %}
-                            {% include "form.html" with form=base_form %}
-                            {% include "form.html" with form=profile_form %}
-                            {% include "form.html" with form=contribute_form %}
-                            {% include "form.html" with form=emergency_form %}
-                            
+                            <div class="item">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">{% trans "Base Info" %}</div>
+                                    <div class="panel-body">
+                                        {% include "form_content.html" with form=base_form %}
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">{% trans "Base Info" %}</div>
+                                    <div class="panel-body">
+                                        {% include "form_content.html" with form=profile_form %}
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">{% trans "Base Info" %}</div>
+                                    <div class="panel-body">
+                                        {% include "form_content.html" with form=contribute_form %}
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">{% trans "Base Info" %}</div>
+                                    <div class="panel-body">
+                                        {% include "form_content.html" with form=emergency_form %}
+                                    </div>
+                                </div>
+                            </div>
                             {% endif %}
                         </div>
                     </div>
