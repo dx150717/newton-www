@@ -994,9 +994,14 @@ canvas { display: block; vertical-align: top; }
 #user .user-detail-content table>thead>tr>td{font-size: 24px;color: #282929; padding-bottom: 32px;}
 #user .user-detail-content table>tbody>tr>td{font-size: 18px;color: #282929; padding: 32px;}
 #user .user-detail-content .token-exchange-info table>tbody>tr>td{padding: 8px;}
-.token-exchange-title {font-size: 26px; color: #666; }
-.token-exchange-time { font-size: 16px; color: #666; }
-.token-exchange-content { font-size: 16px; color: #666; }
+.token-exchange-big-title {font-size: 30px; color: #303030; font-family: 'Arial';}
+.token-exchange-title {font-size: 24px; color: #303030; font-family: 'Arial';}
+.token-exchange-time { font-size: 16px; color: #303030; font-family: 'Arial';}
+.token-exchange-content { font-size: 16px; color: #3e3e3e; font-family: 'Arial';}
+#token-exchange .container .col-md-6 {padding: 0;}
+.qrcode-width { width: 150px; }
+.qrcode-width img { width: 100%; }
+.address_style {color: #303030; }
 #user .user-detail-content .col-md-2{width: 0;}
 #user .user-detail-content .gray{color: #b7b7b7;}
 #user .user-detail-content .user-btn{width: 160px; background: #433e53;}
@@ -1009,7 +1014,7 @@ canvas { display: block; vertical-align: top; }
 #user #token-exchange .item-content table>thead>tr>td{font-size: 18px;color: #282929;padding: 8px;}
 #user #token-exchange .item-content table>tbody>tr>td{font-size: 18px;color: #282929;padding: 8px;white-space: nowrap;}
 #user #token-exchange #timeline{padding-top: 60px;padding-bottom: 60px;}
-#user #token-exchange .item{padding-top: 30px;padding-bottom: 30px; }
+#user #token-exchange .item{padding: 30px; border: solid 1px #f7f7f7; box-shadow: 2px 2px 20px 10px #f7f7f7; margin-top: 20px;}
 #user #tab-content .info-divider{padding: 0; background-color: #b7b7b7; height: 1px; margin-bottom: 20px;}
 #user .profile-title,
 #settings .profile-title{padding-top: 80px;}

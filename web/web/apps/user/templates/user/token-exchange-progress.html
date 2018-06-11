@@ -32,21 +32,22 @@
     <div id="token-exchange" class="user-content">
         <div class="container">
             <div class="raw user-detail-content">
-                <div class="user-info">
+                <div>
                     {% if item %}
+                    <div>
                     {% include "tokenexchange/token-exchange-info.html" %}
-                    <div class="item">
-                        <div class="item-content">
+                    </div>
+                        <div>
                         {% if item.expect_btc or item.except_ela %}
                             <script>var hasExpect = true;</script>
-                            <div class="raw">
-                                <div class="text-left">
-                                    <p class="token-exchange-title">{% trans "Expect Info" %}</p>
-                                </div>
-                                <div class="raw">
+                            <div class="item">
+                                <div class="container">
+                                    <div class="text-left">
+                                        <p class="token-exchange-title">{% trans "Expect Info" %}</p>
+                                    </div>
                                     <div class="col-md-6">
                                         {% if item.expect_btc %}
-                                        <p class="token-exchange-content">{% trans "Expect BTC" %}: {{ item.expect_btc }} BTC</p>
+                                        <p class="token-exchange-content">{% trans "Expect BTC" %}: <span class="f30">{{ item.expect_btc }}</span> BTC</p>
 
                                         {% else %}
                                         <p class="token-exchange-content">{% trans "Expect BTC" %}: 0 BTC</p>
@@ -54,25 +55,28 @@
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.expect_ela %}
-                                        <p class="token-exchange-content">{% trans "Expect ELA" %}: {{ item.expect_ela }} BTC</p>
+                                        <p class="token-exchange-content">{% trans "Expect ELA" %}: <span class="f30">{{ item.expect_ela }}</span> BTC</p>
                                         {% else %}
                                         <p class="token-exchange-content">{% trans "Expect BTC" %}: 0 ELA</p>
                                         {% endif %}
                                     </div>
                                 </div>
                             </div>
-                            
+                        </div>
+                    </div>
                             {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
-                            <div class="raw">
+                    <div>
+                        <div class="item">
+                            <div class="container">
                                 <div class="text-left">
                                     <p class="token-exchange-title">{% trans "Apply Info" %}</p>
                                 </div>
-                                <div class="raw">
                                     <div class="col-md-6">
                                         {% if item.assign_btc %}
-                                        <p class="token-exchange-content">{% trans "Distribution BTC Amount" %}: {{ item.assign_btc }} BTC</p>
-                                        <p class="token-exchange-content">{% trans "Distribution BTC Address" %}:<br/> {{ item.receive_btc_address }}</p>
-                                        <p id="btc_code">
+                                        <p class="token-exchange-content">{% trans "Distribution BTC Amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
+                                        <p class="token-exchange-content">{% trans "Distribution BTC Address" %}:</p> 
+                                        <p class="token-exchange-content"><span class="address_style ">{{ item.receive_btc_address }}</span></p>
+                                        <p id="btc_code"  class="qrcode-width">
                                             <script>
                                                 new QRCode(document.getElementById("btc_code"), "{{ item.receive_btc_address }}");
                                             </script>
@@ -87,9 +91,10 @@
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.assign_ela %}
-                                        <p class="token-exchange-content">{% trans "Distribution ELA Amount" %}: {{ item.assign_btc }} ELA</p>
-                                        <p class="token-exchange-content">{% trans "Distribution ELA Address" %}:<br/> {{ item.receive_ela_address }}</p>
-                                        <p id="ela_code">
+                                        <p class="token-exchange-content">{% trans "Distribution ELA Amount" %}: <span class="f30">{{ item.assign_btc }}</span> ELA</p>
+                                        <p class="token-exchange-content">{% trans "Distribution ELA Address" %}:</p> 
+                                        <p class="token-exchange-content"><span class="address_style">{{ item.receive_ela_address }}</span></p>
+                                        <p id="ela_code" class="qrcode-width">
                                             <script>
                                                 new QRCode(document.getElementById("ela_code"), "{{ item.receive_ela_address }}");
                                             </script>
@@ -103,8 +108,7 @@
                                         {% endif %}
                                     </div>
                                 </div>
-                      
-
+                        
                                 {% if item.ela_final_balance or item.btc_final_balance %}
                                 <script>var hasSendAmount = true;</script>
                                 <div class="raw">
@@ -114,21 +118,21 @@
                                     <div class="raw">
                                         <div class="col-md-6">
                                             {% if item.btc_final_balance %}
-                                            <p class="token-exchange-content">{% trans "Received BTC" %}: {{ item.btc_final_balance }} BTC</p>
+                                            <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">{{ item.btc_final_balance }}</span> BTC</p>
                                             {% else %}
                                             <p class="token-exchange-content">{% trans "Received BTC" %}: - BTC</p>
                                             {% endif %}
                                         </div>
                                         <div class="col-md-6">
                                             {% if item.ela_final_balance %}
-                                            <p class="token-exchange-content">{% trans "Received ELA" %}: {{ item.ela_final_balance }} ELA</p>
+                                            <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">{{ item.ela_final_balance }}</span> ELA</p>
                                             {% else %}
                                             <p class="token-exchange-content">{% trans "Received ELA" %}: - ELA</p>
                                             {% endif %}
                                         </div>
                                     </div>
                                 </div>
-    
+                            </div>
                                            
                                     {% if item.btc_final_balance != item.assign_btc or item.ela_final_balance != item.assign_ela %}
                                     <div class="form-container mt50">
