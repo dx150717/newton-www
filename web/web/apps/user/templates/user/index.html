@@ -92,28 +92,30 @@
                         </div>    
                         {% if kycinfo.status == 2 %}
                         <div class="item">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">{% trans "Basic Information" %}</div>
-                                <div class="panel-body">
-                                    {% include "form_content.html" with form=base_form %}
+                            <div class="col-sm-8">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">{% trans "Basic Information" %}</div>
+                                    <div class="panel-body">
+                                        {% include "form_content.html" with form=base_form %}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">{% trans "Personal Introduction" %}</div>
-                                <div class="panel-body">
-                                    {% include "form_content.html" with form=profile_form %}
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">{% trans "Personal Introduction" %}</div>
+                                    <div class="panel-body">
+                                        {% include "form_content.html" with form=profile_form %}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">{% trans "How to Join Newton" %}</div>
-                                <div class="panel-body">
-                                    {% include "form_content.html" with form=contribute_form %}
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">{% trans "How to Join Newton" %}</div>
+                                    <div class="panel-body">
+                                        {% include "form_content.html" with form=contribute_form %}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">{% trans "Emergency Information" %}</div>
-                                <div class="panel-body">
-                                    {% include "form_content.html" with form=emergency_form %}
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">{% trans "Emergency Information" %}</div>
+                                    <div class="panel-body">
+                                        {% include "form_content.html" with form=emergency_form %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
