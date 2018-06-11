@@ -129,17 +129,16 @@
             <div class="container">
                 <div class="raw user-detail-content">
                     <div class="user-info">
+                        <script>var hasExpect = false;</script>
+                        <script>var hasSendAmount = false;</script>
+                        
                         {% if items %}
                         {% for item in items %}
                         {% if item.expect_btc or item.except_ela %}
                             <script>var hasExpect = true;</script>
-                        {% else %}
-                            <script>var hasExpect = false;</script>
                         {% endif %}
                         {% if item.ela_final_balance or item.btc_final_balance %}
                             <script>var hasSendAmount = true;</script>
-                        {% else %}
-                            <script>var hasSendAmount = false;</script>
                         {% endif %}
                         <div class="item">
                             <div class="item-content">
