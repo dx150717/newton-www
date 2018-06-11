@@ -1,0 +1,13 @@
+{% load utils %}
+{% for field in form %}
+<div class="form-group">
+    <p><label for="id_{{ field.name }}" class="control-label">{{ field.label }}</label></p>
+    <div>
+    	{% if field.value.cellphone %}
+    	<div>+{{ field.value.country_code }}  {{ field.value.cellphone }}</div>
+    	{% else %}
+         <div class="value">{{ field.value }}</div>
+         {% endif %}
+    </div>
+</div>
+{% endfor %}
