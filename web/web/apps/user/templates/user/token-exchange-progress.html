@@ -69,12 +69,12 @@
                         <div class="item">
                             <div class="container">
                                 <div class="text-left">
-                                    <p class="token-exchange-title">{% trans "Allocated token exchange info" %}</p>
+                                    <p class="token-exchange-title">{% trans "Distributed token exchange info" %}</p>
                                 </div>
                                     <div class="col-md-6">
                                         {% if item.assign_btc %}
-                                        <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
-                                        <p class="token-exchange-content">{% trans "Allocated BTC address" %}:</p> 
+                                        <p class="token-exchange-content">{% trans "Distributed BTC amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
+                                        <p class="token-exchange-content">{% trans "Distributed BTC address" %}:</p> 
                                         <p class="token-exchange-content"><span class="address_style ">{{ item.receive_btc_address }}</span></p>
                                         <p id="btc_code"  class="qrcode-width">
                                             <script>
@@ -82,8 +82,8 @@
                                             </script>
                                         </p>
                                         {% else %}
-                                        <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: - BTC</p>
-                                        <p class="token-exchange-content">{% trans "Allocated BTC address" %}: -</p>
+                                        <p class="token-exchange-content">{% trans "Distributed BTC amount" %}: - BTC</p>
+                                        <p class="token-exchange-content">{% trans "Distributed BTC address" %}: -</p>
                                         <p id="btc_code">
                                             -
                                         </p>
@@ -91,8 +91,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.assign_ela %}
-                                        <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: <span class="f30">{{ item.assign_btc }}</span> ELA</p>
-                                        <p class="token-exchange-content">{% trans "Allocated ELA address" %}:</p> 
+                                        <p class="token-exchange-content">{% trans "Distributed ELA amount" %}: <span class="f30">{{ item.assign_btc }}</span> ELA</p>
+                                        <p class="token-exchange-content">{% trans "Distributed ELA address" %}:</p> 
                                         <p class="token-exchange-content"><span class="address_style">{{ item.receive_ela_address }}</span></p>
                                         <p id="ela_code" class="qrcode-width">
                                             <script>
@@ -100,8 +100,8 @@
                                             </script>
                                         </p>
                                         {% else %}
-                                        <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: - ELA</p>
-                                        <p class="token-exchange-content">{% trans "Allocated ELA address" %}: -</p>
+                                        <p class="token-exchange-content">{% trans "Distributed ELA amount" %}: - ELA</p>
+                                        <p class="token-exchange-content">{% trans "Distributed ELA address" %}: -</p>
                                         <p id="ela_code">
                                            -
                                         </p>
@@ -138,14 +138,15 @@
                                     <div class="form-container mt50">
                                         <div class="alert alert-warning f30">
                                             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                            Transferred limits is not equal to allocated limits.
+                                            {% trans "Transferred amount is not equal to distributed amount." %}
+                                           
                                         </div>
                                     </div>
                                     {% else %}
                                     <div class="form-container mt50">
                                         <div class="alert alert-success f30">
                                             <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                            Transfer success.
+                                            {% trans "Transfer success!" %}
                                         </div>
                                     </div>
                                     {% endif %}
@@ -153,10 +154,7 @@
                                 <div class="form-container mt50">
                                     <div class="alert alert-warning f30">
                                         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                        * You can transfer BTC and ELA through your wallet.<br/>
-                                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                        * After you finish transferring, you will check out transfer information on this page,
-                                        and soon you will check the transferring result on this page.
+                                        * {% trans "Attention! You can only transfer " %}  {{ item.assign_btc }} BTC {% trans "and" %} {{ item.assign_ela }} ELA {% trans "to above addresses." %}
                                     </div>
                                 </div>
                                 {% endif %}
@@ -164,14 +162,14 @@
                             <div class="form-container mt50">
                                 <div class="alert alert-warning f30">
                                     <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
-                                    {% trans "Your expected limit is under evaluation." %}
+                                    {% trans "Your expected amount is under evaluation." %}
                                 </div>
                             </div>
                             {% endif %}
                             <!-- end -->
                         {% else %}
                         <p style="margin: 20px;">
-                        <a class="form-button" href="/tokenexchange/invite/{{ item.id }}/post/">{% trans "Fill in the expected investment quota " %}</a></p>
+                        <a class="form-button" href="/tokenexchange/invite/{{ item.id }}/post/">{% trans "Fill in your expected token exchange amount" %}</a></p>
                         {% endif %}
                         </div>
                     </div>
