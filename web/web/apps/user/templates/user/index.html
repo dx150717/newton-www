@@ -90,21 +90,11 @@
                                 </div>
                             </div>
                             {% if kycinfo.status == 2 %}
-                            {% for field in kyc_form %}
-                                <div class="item">
-                                {% if forloop.counter == 5 %}
-                                <div class="">
-                                    {{ field.label_tag }}
-                                </div>
-                                <div class="value"><img style="width:300px;" src="{{ kycinfo.id_card.url }}"/></div>
-                                {% else %}
-                                <div class="">
-                                    {{ field.label_tag }}
-                                </div>
-                                <div class="value">{{ field.value }}</div>
-                                {% endif %}
-                                </div>
-                            {% endfor %}
+                            {% include "form.html" with form=base_form %}
+                            {% include "form.html" with form=profile_form %}
+                            {% include "form.html" with form=contribute_form %}
+                            {% include "form.html" with form=emergency_form %}
+                            
                             {% endif %}
                         </div>
                     </div>

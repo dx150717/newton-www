@@ -26,7 +26,7 @@ class CellphoneGroupWidget(MultiWidget):
 
     def decompress(self, value):
         if value:
-            return [value.country_code, value.cellphone]
+            return [value['country_code'], value['cellphone']]
         return [None, None]
 
     def format_output(self, rendered_widgets):
