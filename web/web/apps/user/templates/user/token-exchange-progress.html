@@ -43,7 +43,7 @@
                             <div class="item">
                                 <div class="container">
                                     <div class="text-left">
-                                        <p class="token-exchange-title">{% trans "Expected token exchange" %}</p>
+                                        <p class="token-exchange-title">{% trans "Expected" %}</p>
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.expect_btc %}
@@ -68,12 +68,12 @@
                         <div class="item">
                             <div class="container">
                                 <div class="text-left">
-                                    <p class="token-exchange-title">{% trans "Distributed token exchange" %}</p>
+                                    <p class="token-exchange-title">{% trans "Allocated" %}</p>
                                 </div>
                                     <div class="col-md-6">
                                         {% if item.assign_btc %}
-                                        <p class="token-exchange-content">{% trans "Distributed BTC amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
-                                        <p class="token-exchange-content">{% trans "Distributed BTC address" %}:</p> 
+                                        <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
+                                        <p class="token-exchange-content">{% trans "Allocated BTC address" %}:</p> 
                                         <p class="token-exchange-content"><span class="address_style ">{{ item.receive_btc_address }}</span></p>
                                         <p id="btc_code"  class="qrcode-width">
                                             <script>
@@ -81,8 +81,8 @@
                                             </script>
                                         </p>
                                         {% else %}
-                                        <p class="token-exchange-content">{% trans "Distributed BTC amount" %}: - BTC</p>
-                                        <p class="token-exchange-content">{% trans "Distributed BTC address" %}: -</p>
+                                        <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: - BTC</p>
+                                        <p class="token-exchange-content">{% trans "Allocated BTC address" %}: -</p>
                                         <p id="btc_code">
                                             -
                                         </p>
@@ -90,8 +90,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.assign_ela %}
-                                        <p class="token-exchange-content">{% trans "Distributed ELA amount" %}: <span class="f30">{{ item.assign_btc }}</span> ELA</p>
-                                        <p class="token-exchange-content">{% trans "Distributed ELA address" %}:</p> 
+                                        <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: <span class="f30">{{ item.assign_btc }}</span> ELA</p>
+                                        <p class="token-exchange-content">{% trans "Allocated ELA address" %}:</p> 
                                         <p class="token-exchange-content"><span class="address_style">{{ item.receive_ela_address }}</span></p>
                                         <p id="ela_code" class="qrcode-width">
                                             <script>
@@ -99,8 +99,8 @@
                                             </script>
                                         </p>
                                         {% else %}
-                                        <p class="token-exchange-content">{% trans "Distributed ELA amount" %}: - ELA</p>
-                                        <p class="token-exchange-content">{% trans "Distributed ELA address" %}: -</p>
+                                        <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: - ELA</p>
+                                        <p class="token-exchange-content">{% trans "Allocated ELA address" %}: -</p>
                                         <p id="ela_code">
                                            -
                                         </p>
@@ -137,7 +137,7 @@
                                     <div class="form-container mt50">
                                         <div class="alert alert-warning f30">
                                             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                                            {% trans "Transferred amount is not equal to distributed amount." %}
+                                            {% trans "Transferred amount is not equal to allocated amount." %}
                                            
                                         </div>
                                     </div>
