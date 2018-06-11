@@ -71,7 +71,10 @@ def post_kyc_information(request):
             return redirect('/tokenexchange/wait-audit/')
         else:
             instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
-            form = forms.KYCInfoForm(instance=instance)
+            base_form = forms.KYCBaseForm(instance=instance)
+            profile_form = forms.KYCProfileForm(instance=instance)
+            contribute_form = forms.ContributeForm(instance=instance)
+            emergency_form = forms.EmergencyForm(instance=instance)
             return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
         logger.exception("fail to post kyc information:%s" % str(inst))
