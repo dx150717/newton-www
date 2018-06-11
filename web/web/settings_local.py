@@ -72,5 +72,6 @@ DATABASE_APPS_MAPPING = {
     "tokenexchange":"tokenexchange",
 }
 
-# language settings
-SUPPORT_LANGUAGES = (('en','English'), ('zh-cn','简体中文'), ('ja','日本語'), ('ko','한국어'), ('ru','Pусский'), ('tr','Türkiye'), ('es','Español'))
+
+SUPPORT_LANGUAGES = (('en','English'), ('zh-cn','简体中文'), ('ja','日本語'), ('ko','한국어'), ('ru','Pусский'), ('fr', 'France'), ('tr','Türkiye'), ('es','Español'))
+

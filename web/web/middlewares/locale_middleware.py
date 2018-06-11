@@ -32,24 +32,20 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
                 return settings.LANGUAGE_CODE
             if language.find('zh') >= 0:
                 return 'zh_CN'
-            # Add Korean
             if language.find('ko') >= 0:
                 return 'ko'
-            # Add Russian
             if language.find('ru') >= 0:
                 return 'ru'
-            # Add turkish
             if language.find('tr') >= 0:
                 return 'tr'
-            # Add Japanese
             if language.find('ja') >= 0:
                 return 'ja'
-            # Add Dutch
             # if language.find('nl') >= 0:
             #     return 'nl'
-            # Add Spain
             if language.find('es') >= 0:
                 return 'es'
+            if language.find('fr') >= 0:
+                return 'fr'
             return 'en'
         except Exception, inst:
             logger.exception('fail to get user language:%s' % str(inst))

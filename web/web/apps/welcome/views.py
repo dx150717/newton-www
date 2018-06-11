@@ -15,6 +15,7 @@ from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
 from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH
+from zinnia.managers import PUBLISHED
 
 from press.models import PressModel
 from subscription import forms as subscription_forms
@@ -40,7 +41,7 @@ def show_home_view(request):
         language = ENGLISH
         
     entry = EntryDetail()
-    entries = entry.get_queryset().filter(language=language, show_in_home=True).order_by('-creation_date')[0:5]
+    entries = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:5]
     for entry in entries:
         if entry.entry_type == TYPE_ANNOUNCEMENT:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
@@ -146,7 +147,7 @@ class AnnouncementView(generic.ListView):
             language = ENGLISH
             
         entry = EntryDetail()
-        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language)
+        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
             entry.urls = url
@@ -178,7 +179,7 @@ class AnnouncementSubView(generic.ListView):
             language = ENGLISH
             
         entry = EntryDetail()
-        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,entry_sub_type=entry_sub_type)
+        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,entry_sub_type=entry_sub_type, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
             entry.urls = url

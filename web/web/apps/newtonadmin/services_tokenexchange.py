@@ -2,6 +2,7 @@
 
 """
 import logging
+from hashlib import sha256
 
 from django.conf import settings
 from django.template import Template, Context, loader
@@ -10,15 +11,27 @@ from verification import services
 from tasks import task_email
 from tokenexchange import models as tokenexchange_models
 from config import codes
+from utils import btc_validation
 
 logger = logging.getLogger(__name__)
 
-def __load_address_from_file(filename):
+def __load_address_from_file(filename, coin):
     f = open(filename)
     all_address = []
     for line in f.readlines():
         line = line.strip()
-        if len(line) == 34:
+        is_valid = False
+        if coin == 'btc':
+            if settings.USE_TESTNET:
+                is_valid = btc_validation.validate(line, 0x6f)
+            else:
+                is_valid = btc_validation.validate(line)
+        else:
+            if settings.USE_TESTNET:
+                is_valid = btc_validation.validate(line, 0x21)
+            else:
+                is_valid = btc_validation.validate(line, 0x6a)
+        if is_valid:
             all_address.append(line)
     return all_address
 
@@ -26,7 +39,7 @@ def allocate_btc_address():
     """Allocate the BTC address from address pool
     """
     try:
-        all_address = __load_address_from_file(settings.BTC_WALLET_ADDRESS_FILE)
+        all_address = __load_address_from_file(settings.BTC_WALLET_ADDRESS_FILE, "btc")
         allocated_address = tokenexchange_models.InvestInvite.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_btc_address', flat=True)
         avaiable_address = list(set(all_address).difference(set(allocated_address)))
         if not avaiable_address:
@@ -41,7 +54,7 @@ def allocate_ela_address():
     """Allocate the ela address from address pool
     """
     try:
-        all_address = __load_address_from_file(settings.ELA_WALLET_ADDRESS_FILE)
+        all_address = __load_address_from_file(settings.ELA_WALLET_ADDRESS_FILE, "ela")
         allocated_address = tokenexchange_models.InvestInvite.objects.filter(phase_id=settings.CURRENT_FUND_PHASE).values_list('receive_ela_address', flat=True)
         avaiable_address = list(set(all_address).difference(set(allocated_address)))
         if not avaiable_address:
