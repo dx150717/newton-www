@@ -3,41 +3,26 @@
 {% if item.phase_id == 1 %}
 <div class="token-exchange-info">
     <div class="raw">
-        <div>
-            <table class="table text-left table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap" scope="row" style="font-size:18px;">{% trans "First Token Exchange Info" %}</th>
-                        <td></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="text-nowrap" scope="row">{% trans "Start Time" %}</th>
-                        <td>{{ token_exchange_info.start_date }}</td>
-                    </tr>
-                    <tr>
-                        <th class="text-nowrap col-lg-2" scope="row">{% trans "End Time" %}</th>
-                        <td>{{ token_exchange_info.end_date }}</td>
-                    </tr>
-                    <tr>
-                        <th class="text-nowrap" scope="row">{% trans "The minimum accepted" %} BTC</th>
-                        <td>{{ token_exchange_info.min_btc }} BTC</td>
-                    </tr>
-                    <tr>
-                        <th class="text-nowrap" scope="row">{% trans "The minimum accepted" %} ELA</th>
-                        <td>{{ token_exchange_info.min_ela }} ELA</td>
-                    </tr>
-                    <tr>
-                        <th class="text-nowrap" scope="row">BTC {% trans "Subscription Ratio" %}</th>
-                        <td>1 BTC = {{ token_exchange_info.btc_ratio }} NEW</td>
-                    </tr>
-                    <tr>
-                        <th class="text-nowrap" scope="row">ELA {% trans "Subscription Ratio" %}</th>
-                        <td>1 ELA = {{ token_exchange_info.ela_ratio }} NEW</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="item">
+            <div class="text-center">
+                <p class="token-exchange-title">{% trans "First Token Exchange Info" %}</p>
+                <p class="token-exchange-time">{{ token_exchange_info.start_date }} ~ {{ token_exchange_info.end_date }}</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="text-left">
+                <p class="token-exchange-title">{% trans "Token exchange info and expect" %}</p>
+            </div>
+            <div class="raw">
+                <div class="col-md-6">
+                    <p>{% trans "Min BTC: " %} {{ token_exchange_info.min_btc }}</p>
+                    <p>BTC / NEW: {{ token_exchange_info.btc_ratio }}</p>
+                </div>
+                <div class="col-md-6">
+                    <p>{% trans "Min ELA: " %} {{ token_exchange_info.min_ela }}</p>
+                    <p>ELA / NEW: {{ token_exchange_info.ela_ratio }}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -45,40 +30,26 @@
 {% if item.phase_id == 2 %}
 <div class="token-exchange-info">
     <div class="raw">
-        <div>
-            <table class="table text-left">
-                <thead>
-                    <tr>
-                        <td>{% trans "Second Token Exchange Info" %}</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{% trans "Start Time" %}</td>
-                        <td>{{ token_exchange_info.start_date }}</td>
-                    </tr>
-                    <tr>
-                        <td>{% trans "End Time" %}</td>
-                        <td>{{ token_exchange_info.end_date }}</td>
-                    </tr>
-                    <tr>
-                        <td>{% trans "The minimum accepted" %} BTC</td>
-                        <td>{{ token_exchange_info.min_btc }} BTC</td>
-                    </tr>
-                    <tr>
-                        <td>{% trans "The minimum accepted" %} ELA</td>
-                        <td>{{ token_exchange_info.min_ela }} ELA</td>
-                    </tr>
-                    <tr>
-                        <td>BTC {% trans "Subscription Ratio" %}</td>
-                        <td>1 BTC = {{ token_exchange_info.btc_ratio }} NEW</td>
-                    </tr>
-                    <tr>
-                        <td>ELA {% trans "Subscription Ratio" %}</td>
-                        <td>1 ELA = {{ token_exchange_info.ela_ratio }} NEW</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="item">
+            <div class="text-center">
+                <p class="token-exchange-title">{% trans "Second Token Exchange Info" %}</p>
+                <p class="token-exchange-time">{{ token_exchange_info.start_date }} ~ {{ token_exchange_info.end_date }}</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="text-left">
+                <p class="token-exchange-title">{% trans "Token exchange info and expect" %}</p>
+            </div>
+            <div class="raw">
+                <div class="col-md-6">
+                    <p>{% trans "Min BTC: " %} {{ token_exchange_info.min_btc }}</p>
+                    <p>BTC / NEW: {{ token_exchange_info.btc_ratio }}</p>
+                </div>
+                <div class="col-md-6">
+                    <p>{% trans "Min ELA: " %} {{ token_exchange_info.min_ela }}</p>
+                    <p>ELA / NEW: {{ token_exchange_info.ela_ratio }}</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
