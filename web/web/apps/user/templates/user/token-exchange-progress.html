@@ -43,12 +43,11 @@
                             <div class="item">
                                 <div class="container">
                                     <div class="text-left">
-                                        <p class="token-exchange-title">{% trans "Expected token exchange info" %}</p>
+                                        <p class="token-exchange-title">{% trans "Expected token exchange" %}</p>
                                     </div>
                                     <div class="col-md-6">
                                         {% if item.expect_btc %}
                                         <p class="token-exchange-content">{% trans "Expected BTC amount" %}: <span class="f30">{{ item.expect_btc }}</span> BTC</p>
-
                                         {% else %}
                                         <p class="token-exchange-content">{% trans "Expected BTC amount" %}: 0 BTC</p>
                                         {% endif %}
@@ -69,7 +68,7 @@
                         <div class="item">
                             <div class="container">
                                 <div class="text-left">
-                                    <p class="token-exchange-title">{% trans "Distributed token exchange info" %}</p>
+                                    <p class="token-exchange-title">{% trans "Distributed token exchange" %}</p>
                                 </div>
                                     <div class="col-md-6">
                                         {% if item.assign_btc %}
