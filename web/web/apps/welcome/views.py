@@ -147,7 +147,7 @@ class AnnouncementView(generic.ListView):
             language = ENGLISH
             
         entry = EntryDetail()
-        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language)
+        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
             entry.urls = url
@@ -179,7 +179,7 @@ class AnnouncementSubView(generic.ListView):
             language = ENGLISH
             
         entry = EntryDetail()
-        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,entry_sub_type=entry_sub_type)
+        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,entry_sub_type=entry_sub_type, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
             entry.urls = url
