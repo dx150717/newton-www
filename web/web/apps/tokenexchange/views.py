@@ -51,17 +51,31 @@ def post_kyc_information(request):
         if request.method == 'POST':
             # check whether user is submit kyc info
             instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
-            form = forms.KYCInfoForm(request.POST, request.FILES, instance=instance)
+            base_form = forms.KYCBaseForm(request.POST, request.FILES, instance=instance)
+            profile_form = forms.KYCProfileForm(request.POST, request.FILES, instance=instance)
+            contribute_form = forms.ContributeForm(request.POST, request.FILES, instance=instance)
+            emergency_form = forms.EmergencyForm(request.POST, request.FILES, instance=instance)
             if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
-                form._errors[NON_FIELD_ERRORS] = form.error_class([_('You had submited kyc info')])
+                base_form._errors[NON_FIELD_ERRORS] = base_form.error_class([_('You had submited kyc info')])
                 return render(request, "tokenexchange/submit.html", locals())
-            if not form.is_valid():
+            if not base_form.is_valid():
                 return render(request, "tokenexchange/submit.html", locals())
-            instance = form.save(commit=False)
-            country_code, cellphone = form.cleaned_data['cellphone_group']
+            if not profile_form.is_valid():
+                return render(request, "tokenexchange/submit.html", locals())  
+            if not contribute_form.is_valid():
+                return render(request, "tokenexchange/submit.html", locals())
+            if not emergency_form.is_valid():
+                return render(request, "tokenexchange/submit.html", locals())
+
+            instance = base_form.save(commit=True)
+            instance = profile_form.save(commit=True)
+            instance = contribute_form.save(commit=True)
+            instance = emergency_form.save(commit=True)
+
+            country_code, cellphone = base_form.cleaned_data['cellphone_group']
             instance.country_code = country_code
             instance.cellphone = cellphone
-            emergency_contact_country_code, emergency_contact_cellphone = form.cleaned_data['cellphone_of_emergency_contact']
+            emergency_contact_country_code, emergency_contact_cellphone = emergency_form.cleaned_data['cellphone_of_emergency_contact']
             instance.emergency_contact_country_code = emergency_contact_country_code
             instance.emergency_contact_cellphone = emergency_contact_cellphone
             instance.phase_id = settings.CURRENT_FUND_PHASE
