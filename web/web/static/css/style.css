@@ -1262,3 +1262,14 @@ canvas { display: block; vertical-align: top; }
 
 #token .panel-title{font-size: 24px; font-weight: 500;}
 #token .panel{background-color: #f7f7f7}
+
+#user .panel-heading{font-size: 16px; font-weight: 500;}
+/* #user .panel{background-color: #f7f7f7} */
+
+
+#user .kycinfo_title{margin: 0; text-align: right;}
+#user .kycinfo_title label{color: #888; font-weight: unset; font-size: 14px;}
+#user .kycinfo_content{margin: 0; text-align: left;}
+#user .kycinfo_content .value{color: #282829; font-size: 14px;}
+@media (max-width:991px){
+    #user .kycinfo_title{text-align: left; padding-left: 15px;} 
