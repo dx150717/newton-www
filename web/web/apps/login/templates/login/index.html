@@ -25,17 +25,19 @@
         <div class="form-container">
             <form action="#" method="POST" id="login_form">
                 {% csrf_token %}
-                {% include "form.html" %}
+                {% include "form-code.html" %}
                     <!-- <div class="form-group">
                         <div class="google-recaptcha" id="google-recaptcha">
                             <input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
                             <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
                         </div>
                     </div> -->
+                    {% comment %}
                     <div id='id_login_code_error' class='alert alert-danger hide'>{% trans "Recaptcha Error" %}</div>
                     <div class="form-group">
                         <image class="text-center" id="login_captcha_code" src="/ishuman/image/?' + Math.random() + '"/>
                     </div>
+                    {% endcomment %}
                     <div>
                         <input type="hidden" name="next" value="{{ next }}" />
                         <button class="form-button" style="color:#fff;" type="submit">{% trans "Login" %}</button>
@@ -83,6 +85,7 @@
 
 {% block js %}
 <script src="{% version "js/login.js" %}"></script>
+<script src="{% version "js/register.js" %}"></script>
 {% endblock %}
 
 {% block footer %}
