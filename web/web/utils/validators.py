@@ -46,7 +46,7 @@ def validate_file_extension_of_id_photo(value):
     Validate file's type by value which input is file's name.
     """
     ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
-    valid_extensions = ['.pdf', '.jpg', '.png', '.jpeg']
+    valid_extensions = ['.jpg', '.png', '.jpeg']
     if not ext.lower() in valid_extensions:
         raise ValidationError(u'Unsupported file extension.')
 

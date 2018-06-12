@@ -20,8 +20,11 @@
 {% block content %}
 <section id="success" class="section-list">
     <div class="container text-center">
-        <p class="title">{% trans "Submit Success!" %}</p>
-        <p class="content">{% trans "您的KYC信息正在审核，请耐心等待。" %}</p>
+        <p class="title">{% trans "Submit Success" %}</p>
+        <p class="content">{% trans "Submit KYC information success! We will send you an email of reviewing result, Please check out." %}</p>
+        <p class="content">
+        	<a class="form-button" href="/user/">{% trans "Back user center." %}</a>
+        </p>
     </div>
 </section>
 {% endblock %}
