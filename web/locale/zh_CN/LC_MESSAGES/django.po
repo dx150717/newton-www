@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 08:49+0000\n"
+"POT-Creation-Date: 2018-06-12 13:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,12 +153,12 @@ msgid "unfilled"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:182
-#: web/apps/base/templatetags/utils.py:189
+#: web/apps/base/templatetags/utils.py:189 web/apps/tokenexchange/models.py:25
 msgid "Yes"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:183
-#: web/apps/base/templatetags/utils.py:190
+#: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:26
 msgid "No"
 msgstr ""
 
@@ -219,7 +219,7 @@ msgstr "暂无FAQ"
 msgid "Email"
 msgstr "电子邮箱"
 
-#: web/apps/login/forms.py:7 web/apps/register/forms.py:16
+#: web/apps/login/forms.py:7 web/apps/register/forms.py:17
 #: web/apps/reset/forms.py:9 web/apps/zinnia/templates/zinnia/password.html:24
 msgid "Password"
 msgstr "密码"
@@ -266,7 +266,7 @@ msgstr "谷歌身份验证码不正确"
 
 #: web/apps/login/templates/login/index.html:5
 #: web/apps/login/templates/login/index.html:22
-#: web/apps/login/templates/login/index.html:41
+#: web/apps/login/templates/login/index.html:44
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:38 web/templates/header.html:54
@@ -303,16 +303,10 @@ msgstr "登录"
 msgid "Newton Community"
 msgstr "牛顿社区"
 
-#: web/apps/login/templates/login/index.html:35
-#: web/apps/register/templates/register/index.html:35
-#: web/templates/form-code.html:18
-msgid "Recaptcha Error"
-msgstr ""
-
-#: web/apps/login/templates/login/index.html:44
+#: web/apps/login/templates/login/index.html:47
 #: web/apps/register/templates/register/index.html:6
 #: web/apps/register/templates/register/index.html:23
-#: web/apps/register/templates/register/index.html:41
+#: web/apps/register/templates/register/index.html:44
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
 #: web/apps/register/templates/register/register-letter.html:13
@@ -321,16 +315,16 @@ msgstr ""
 msgid "Register"
 msgstr "注册"
 
-#: web/apps/login/templates/login/index.html:45
+#: web/apps/login/templates/login/index.html:48
 msgid "Forgot Password"
 msgstr "忘记密码"
 
-#: web/apps/login/templates/login/index.html:58
-#: web/apps/login/templates/login/index.html:65 web/apps/register/forms.py:20
+#: web/apps/login/templates/login/index.html:61
+#: web/apps/login/templates/login/index.html:68 web/apps/register/forms.py:21
 msgid "Google Authenticator Code"
 msgstr "填写谷歌身份验证码"
 
-#: web/apps/login/templates/login/index.html:69
+#: web/apps/login/templates/login/index.html:72
 #: web/apps/register/templates/register/gtoken.html:59
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:38
 #: web/apps/user/templates/user/profile.html:34
@@ -430,7 +424,7 @@ msgstr ""
 msgid "press"
 msgstr "媒体报道"
 
-#: web/apps/register/forms.py:17 web/apps/reset/forms.py:10
+#: web/apps/register/forms.py:18 web/apps/reset/forms.py:10
 msgid "Repassword"
 msgstr "重复密码"
 
@@ -490,20 +484,20 @@ msgid ""
 "service."
 msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
 
-#: web/apps/register/templates/register/index.html:49
+#: web/apps/register/templates/register/index.html:51
 msgid "By clicking on the register button you agree and abide by<br/> Newton"
 msgstr "点击注册按钮即表示您同意并愿意遵守<br/> Newton的"
 
-#: web/apps/register/templates/register/index.html:49
+#: web/apps/register/templates/register/index.html:51
 msgid "User Agreement"
 msgstr "使用条款"
 
-#: web/apps/register/templates/register/index.html:49
+#: web/apps/register/templates/register/index.html:51
 #: web/apps/user/templates/user/token-exchange-progress.html:156
 msgid "and"
 msgstr "和"
 
-#: web/apps/register/templates/register/index.html:49
+#: web/apps/register/templates/register/index.html:51
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -809,8 +803,35 @@ msgstr "密码"
 msgid "Drivers License"
 msgstr ""
 
-#: web/apps/tokenexchange/models.py:29
+#: web/apps/tokenexchange/models.py:19
+msgid "Full Node"
+msgstr ""
+
+#: web/apps/tokenexchange/models.py:20
+#, fuzzy
+msgid "Media Node"
+msgstr "媒体资源"
+
+#: web/apps/tokenexchange/models.py:21
+#, fuzzy
+msgid "Technology Node"
+msgstr "技术"
+
+#: web/apps/tokenexchange/models.py:22
+#, fuzzy
+msgid "Operation Node"
+msgstr "运营公告"
+
+#: web/apps/tokenexchange/models.py:39
 msgid "ID Type"
+msgstr ""
+
+#: web/apps/tokenexchange/models.py:64
+msgid "Do you want to establish a Newton node ?"
+msgstr ""
+
+#: web/apps/tokenexchange/models.py:68
+msgid "Which type of node ?"
 msgstr ""
 
 #: web/apps/tokenexchange/services.py:26
@@ -838,6 +859,11 @@ msgstr ""
 #, fuzzy
 msgid "Apply Success"
 msgstr "申请成功！"
+
+#: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:23
+#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:26
+msgid "Back user center."
+msgstr "回到个人中心"
 
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:12
 msgid "NOTIFY"
@@ -1190,30 +1216,28 @@ msgstr "牛顿 Token 预售"
 msgid "Tokensale"
 msgstr "牛顿 Token 预售"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:23
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:24
 #, fuzzy
 msgid "Fill in KYC Information"
 msgstr "法律信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:40
-#: web/apps/user/templates/user/index.html:99
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:38
+#: web/apps/user/templates/user/index.html:118
 #, fuzzy
 msgid "Basic Information"
 msgstr "基本信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:48
-#: web/apps/user/templates/user/index.html:105
-#, fuzzy
-msgid "Personal Introduction"
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:49
+#: web/apps/user/models.py:30
+msgid "Self Introduction"
 msgstr "自我介绍"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:56
-#: web/apps/user/templates/user/index.html:111
-msgid "How to Join Newton"
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:60
+msgid "How to Contribute"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:64
-#: web/apps/user/templates/user/index.html:117
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:71
+#: web/apps/user/templates/user/index.html:136
 #, fuzzy
 msgid "Emergency Information"
 msgstr "法律信息"
@@ -1222,8 +1246,15 @@ msgstr "法律信息"
 msgid "First Token Exchange Info"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:17
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:30
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:9
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:9
+msgid ""
+"The blockchain token exchange process is not the process of funding, but the "
+"one of organization establishment"
+msgstr "区块链代币交换的过程不是融资过程，是团队组建的过程。"
+
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:18
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:31
 msgid "Second Token Exchange Info"
 msgstr ""
 
@@ -1232,23 +1263,23 @@ msgstr ""
 msgid "First Token Exchange"
 msgstr "牛顿 Token 预售"
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:13
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:14
 msgid "Minimum BTC: "
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:17
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:18
 msgid "Minimum ELA: "
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:36
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:37
 msgid "Token exchange info and expect"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:40
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:41
 msgid "Min BTC: "
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:44
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:45
 msgid "Min ELA: "
 msgstr ""
 
@@ -1257,14 +1288,11 @@ msgid "Submit Success"
 msgstr "提交成功"
 
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:24
+#: web/apps/user/templates/user/index.html:79
 msgid ""
 "Submit KYC information success! We will send you an email of reviewing "
 "result, Please check out."
 msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
-
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:26
-msgid "Back user center."
-msgstr "回到个人中心"
 
 #: web/apps/user/forms.py:35
 msgid "Area Code"
@@ -1273,10 +1301,6 @@ msgstr ""
 #: web/apps/user/forms.py:37
 msgid "Phone Number"
 msgstr ""
-
-#: web/apps/user/models.py:30
-msgid "Self Introduction"
-msgstr "自我介绍"
 
 #: web/apps/user/models.py:31
 msgid "Homepage"
@@ -1314,65 +1338,69 @@ msgstr "专业"
 msgid "user"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:77
+#: web/apps/user/templates/user/index.html:88
 #, fuzzy
-msgid "You have summit KYC information."
-msgstr "你已经提交了KYC信息"
+msgid "You've passed Newton KYC review."
+msgstr "密码"
 
-#: web/apps/user/templates/user/index.html:81
-msgid "Congratulations! You've passed Newton KYC audit."
+#: web/apps/user/templates/user/index.html:97
+msgid "You have not passed kyc review,"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:84
-msgid "Rejected:"
+#: web/apps/user/templates/user/index.html:99
+msgid "rejected reason is:"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:84
-msgid "Rewrite"
+#: web/apps/user/templates/user/index.html:101
+msgid "rewrite"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:89
+#: web/apps/user/templates/user/index.html:108
 #, fuzzy
 msgid "Your have not submit KYC information."
 msgstr "你已经提交了KYC信息"
 
-#: web/apps/user/templates/user/index.html:161
-#: web/apps/user/templates/user/index.html:206
-msgid "Filled in the expected amount"
+#: web/apps/user/templates/user/index.html:124
+#, fuzzy
+msgid "Personal Introduction"
+msgstr "自我介绍"
+
+#: web/apps/user/templates/user/index.html:130
+msgid "How to Join Newton"
 msgstr ""
 
-#: web/apps/user/templates/user/index.html:170
-#: web/apps/user/templates/user/index.html:214
-msgid "Transferred"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:91
-msgid ""
-"You have not summit KYC information.<a href='/tokenexchange/'>Join KYC</a>"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:154
-#: web/apps/user/templates/user/index.html:200
+#: web/apps/user/templates/user/index.html:172
+#: web/apps/user/templates/user/index.html:218
 #, fuzzy
 msgid "Passed the Newton KYC"
 msgstr "密码"
 
 #: web/apps/user/templates/user/index.html:180
-#: web/apps/user/templates/user/index.html:223
-msgid "Finished filling in newpay wallet address"
+#: web/apps/user/templates/user/index.html:225
+msgid "Filled in the expected amount"
 msgstr ""
 
 #: web/apps/user/templates/user/index.html:189
-#: web/apps/user/templates/user/index.html:231
+#: web/apps/user/templates/user/index.html:233
+msgid "Transferred"
+msgstr ""
+
+#: web/apps/user/templates/user/index.html:198
+#: web/apps/user/templates/user/index.html:241
+msgid "Finished filling in newpay wallet address"
+msgstr ""
+
+#: web/apps/user/templates/user/index.html:207
+#: web/apps/user/templates/user/index.html:249
 #, fuzzy
 msgid "Token exchange success"
 msgstr "牛顿 Token 预售"
 
-#: web/apps/user/templates/user/index.html:237
+#: web/apps/user/templates/user/index.html:256
 msgid "Details "
 msgstr "详情"
 
-#: web/apps/user/templates/user/index.html:244
+#: web/apps/user/templates/user/index.html:263
 msgid "There is no token exchange information"
 msgstr ""
 
@@ -6212,6 +6240,10 @@ msgstr "社区治理"
 msgid "Service Terms"
 msgstr "服务条款"
 
+#: web/templates/form-code.html:22
+msgid "Recaptcha Error"
+msgstr ""
+
 #: web/templates/form-code.html:25
 msgid "cannot recognize?"
 msgstr "看不清？换一张"
@@ -6268,6 +6300,10 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#, fuzzy
+#~ msgid "You have summit KYC information."
+#~ msgstr "你已经提交了KYC信息"
 
 #~ msgid "Your KYC information is being reviewed. Please be patient."
 #~ msgstr "您的 KYC 信息已提交，请耐心等待。"
