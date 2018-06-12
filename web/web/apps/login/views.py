@@ -68,8 +68,8 @@ def post_google_authenticator(request):
         auth_token = request.POST['auth_token']
         session_token = request.session.get('auth_token')
         # clear the session
-        if session_token:
-            del request.session['auth_token']
+        if not session_token:
+            return http.JsonErrorResponse(error_message=_("No session"))
         if auth_token != session_token:
             return http.JsonErrorResponse(error_message=_("No Auth_token"))
         user = authenticate(username=email, password=passwrod)
@@ -90,6 +90,7 @@ def post_google_authenticator(request):
         # redirect to expect target url
         login(request, user)
         next = request.POST.get('next')
+        del request.session['auth_token']
         if next:
             result = urlparse.urlparse(next)
             if result and not result.netloc and result.path:
