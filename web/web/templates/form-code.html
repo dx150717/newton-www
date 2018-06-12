@@ -1,0 +1,50 @@
+{% load i18n %}
+{% load utils %}
+
+{% if form.non_field_errors %}
+<div class="form-group">
+    <div class="raw">
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+            </button>
+            <strong>{{ form.non_field_errors.0 }}</strong>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% for field in form %}
+{% if field.name == "code" %}
+    <div id='id_register_code_error' class='alert alert-danger hide'>{% trans "Recaptcha Error" %}</div>
+    <div class="form-group">
+        <image class="text-center" id="register_captcha_code" src="/ishuman/image/?' + Math.random() + '"/>
+    </div>
+{% else %}
+    <div class="form-group">
+        <p>
+            <label for="id_{{ field.name }}" class="control-label">{{ field.label }}</label>
+            {% if field.name == "id_card" or field.name == "personal_profile_attachment" or field.name == "done_for_newton_attachment" %}
+            <p class="small">{% trans "Only jpeg, png and pdf file within 5M" %}</p>
+            {% endif %}
+            {% if field.name == "location" %}
+            <p class="small">{% trans "Detailed address needs to be accurate to the street" %}</p>
+            {% endif %}
+            {% if field.name == "done_for_newton" or field.name == "do_for_newton" %}
+            <p class="small">{% trans "This is an important basis for Newton's KYC review. Please fill in it carefully and thoroughly" %}</p>
+            {% endif %}
+        </p>
+        <div>
+            {{ field|addcss:"form-control" }}
+            {% if field.errors %}
+            <div class="alert alert-danger">
+                {{ field.errors.0 }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+{% endfor %}
+
+{% block js %}
+<script src="{% version "js/register.js" %}"></script>
+{% endblock %}
