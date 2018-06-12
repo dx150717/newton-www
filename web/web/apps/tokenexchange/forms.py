@@ -58,7 +58,7 @@ class KYCProfileForm(ModelForm):
             'telegram',
             'twitter',
             'facebook',
-            'other_social_account'
+            'other_social_account',
             'your_community',
             'your_community_screenshots'
         ]
@@ -82,12 +82,12 @@ class ContributeForm(ModelForm):
     """how to contribut for newton form"""
     def __init__(self, *args, **kw):
         super(ContributeForm, self).__init__(*args, **kw)
-        self.fields['your_node_name'].required = False
-        self.fields['your_node_organizer'].required = False
-        self.fields['your_node_organizer_contact'].required = False
         self.fields['done_for_newton'].required = False
         self.fields['done_for_newton_attachment'].required = False
         self.fields['do_for_newton'].required = False
+        self.fields['is_establish_node'].required = False
+        self.fields['which_node_establish'].required = False
+        self.fields['establish_node_plan'].required = False
         self.fields.keyOrder = [
             'what_is_newton',
             'done_for_newton',
@@ -95,7 +95,7 @@ class ContributeForm(ModelForm):
             'do_for_newton',
             'is_establish_node',
             'which_node_establish',
-            'establish_node_plan',
+            'establish_node_plan'
         ]
         
     class Meta:

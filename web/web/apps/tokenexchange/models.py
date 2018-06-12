@@ -16,11 +16,15 @@ class KYCInfo(models.Model):
         (codes.IDType.DRIVERS_LICENSE.value, _('Drivers License'))
     )
     NODE_CHOICE = (
-        (codes.NodeType.FULL_NODE, _('Full Node')),
-        (codes.NodeType.MEDIA_NODE, _('Media Node')),
-        (codes.NodeType.TECH_NODE, _('Technology Node')),
-        (codes.NodeType.OPERATION_NODE, _('Operation Node'))
-        )
+        (codes.NodeType.FULL_NODE.value, _('Full Node')),
+        (codes.NodeType.MEDIA_NODE.value, _('Media Node')),
+        (codes.NodeType.TECH_NODE.value, _('Technology Node')),
+        (codes.NodeType.OPERATION_NODE.value, _('Operation Node'))
+    )
+    ESTABLISH_CHOICE = (
+        (codes.EstablishNodeType.YES.value, _('Yes')),
+        (codes.EstablishNodeType.NO.value, _('No'))
+    )
 
     user_id = models.IntegerField()
     # base info
@@ -56,7 +60,10 @@ class KYCInfo(models.Model):
     done_for_newton = models.TextField(verbose_name='What contribute you had do for newton', max_length=10240)
     done_for_newton_attachment = models.FileField(upload_to=storage.hashfile_upload_to('done_for_newton_attachment', path_prefix='done_for_newton_attachment'), verbose_name="Attachment")
     do_for_newton = models.TextField(verbose_name='What will you do for newton', max_length=10240)
-    is_establish_node = models.BooleanField(default=False, verbose_name='Do you want to establish a Newton node ?')
+    is_establish_node = models.IntegerField(
+        _('Do you want to establish a Newton node ?'),
+        choices=ESTABLISH_CHOICE, default=codes.EstablishNodeType.YES.value,
+        )
     which_node_establish = models.IntegerField(
             _('Which type of node ?'),
             choices=NODE_CHOICE, default=codes.NodeType.FULL_NODE.value,

@@ -128,6 +128,10 @@ class IDType(Enum):
     PASSPORT = 2
     DRIVERS_LICENSE = 3
 
+class EstablishNodeType(Enum):
+    YES = 1
+    NO = 2
+ 
 class NodeType(Enum):
     FULL_NODE = 1
     MEDIA_NODE = 2
