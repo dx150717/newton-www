@@ -12,7 +12,7 @@ from user import forms as user_forms
 class KYCBaseForm(ModelForm):
     """advanceinfo for kyc example: what can you do for newton
     """
-    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="Cellphone")
+    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="Cellphone", help_text='(*)')
     def __init__(self, *args, **kw):
         super(KYCBaseForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [
@@ -50,7 +50,7 @@ class KYCProfileForm(ModelForm):
         self.fields['telegram'].required = False
         self.fields['wechat'].required = False
         self.fields['other_social_account'].required = False
-
+        self.fields['personal_profile_attachment'].required = False
         self.fields.keyOrder = [
             'personal_profile',
             'personal_profile_attachment',
@@ -78,10 +78,12 @@ class ContributeForm(ModelForm):
     """how to contribut for newton form"""
     def __init__(self, *args, **kw):
         super(ContributeForm, self).__init__(*args, **kw)
-        self.fields['what_is_newton'].required = False
         self.fields['your_node_name'].required = False
         self.fields['your_node_organizer'].required = False
         self.fields['your_node_organizer_contact'].required = False
+        self.fields['done_for_newton'].required = False
+        self.fields['done_for_newton_attachment'].required = False
+        self.fields['do_for_newton'].required = False
         self.fields.keyOrder = [
             'your_node_name',
             'your_node_organizer',
@@ -107,7 +109,7 @@ class ContributeForm(ModelForm):
 
 class EmergencyForm(ModelForm):
     """docstring for EmergencyForm"""
-    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label='Emergency Cellphone')
+    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label='Emergency Cellphone', help_text='(*)')
     def __init__(self, *args, **kw):
         super(EmergencyForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [
