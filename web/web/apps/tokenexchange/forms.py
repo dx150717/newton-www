@@ -12,7 +12,7 @@ from user import forms as user_forms
 class KYCBaseForm(ModelForm):
     """advanceinfo for kyc example: what can you do for newton
     """
-    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="*Cellphone")
+    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label="Cellphone")
     def __init__(self, *args, **kw):
         super(KYCBaseForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [
@@ -26,7 +26,7 @@ class KYCBaseForm(ModelForm):
             'location',
             'cellphone_group',
         ]
-        
+
     class Meta:
         model = tokenexchange_models.KYCInfo
         fields = [
@@ -54,10 +54,10 @@ class KYCProfileForm(ModelForm):
         self.fields.keyOrder = [
             'personal_profile',
             'personal_profile_attachment',
-            'facebook',
-            'twitter',
-            'telegram',
             'wechat',
+            'telegram',
+            'twitter',
+            'facebook',
             'other_social_account'
         ]
         
@@ -66,10 +66,10 @@ class KYCProfileForm(ModelForm):
         fields = [
             'personal_profile',
             'personal_profile_attachment',
-            'facebook',
-            'twitter',
-            'telegram',
             'wechat',
+            'telegram',
+            'twitter',
+            'facebook',
             'other_social_account'
         ]
         
@@ -107,7 +107,7 @@ class ContributeForm(ModelForm):
 
 class EmergencyForm(ModelForm):
     """docstring for EmergencyForm"""
-    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label='*Emergency Cellphone')
+    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label='Emergency Cellphone')
     def __init__(self, *args, **kw):
         super(EmergencyForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [
@@ -130,6 +130,7 @@ class EmergencyForm(ModelForm):
             'emergency_location',
             'emergency_relationship'
         ]
+
         
 
 class ApplyAmountForm(ModelForm):

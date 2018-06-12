@@ -20,13 +20,12 @@
 {% block content %}
 <section id="token" class="section-list">
     <div class="token-title container text-center">
-        <h2>{% trans "KYC Information" %}</h2>
+        <h2>{% trans "Fill in KYC Information" %}</h2>
     </div>
     <div class="container">
         <div class="raw">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
-                <p class="text-center"><span class="tr">Please fill in the following information carefully. This is an important basis for Newton KYC review</span></p>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -84,12 +83,6 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <form id="user_kyc_form" class="form" action="/tokenexchange/post/" method="POST" enctype="multipart/form-data">
-                    <!--
-      base_form = forms.KYCBaseForm(instance=instance)
-            profile_form = forms.KYCProfileForm(instance=instance)
-            contribute_form = forms.ContributeForm(instance=instance)
-            emergency_form = forms.EmergencyForm(instance=instance)
-                    -->
                     <div class="raw">
                         <div class="text-center token-btn">
                             <button class="form-button" type="submit">Submit</button>
