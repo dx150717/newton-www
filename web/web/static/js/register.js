@@ -26,7 +26,6 @@ $("#register-form").submit(function(event){
         data: {},
         success: function(ret){
             if (ret.error_code === FAIL) {
-                console.log("remove class")
                 $("#id_register_code_error").removeClass("hide");
                 $("#id_register_code_error").attr("style", "display:!important block");
                 return false;
