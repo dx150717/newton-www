@@ -24,14 +24,36 @@
                 </div>
                 <div>
                     <div class="raw">
-                        <div class="download-but col-lg-6 col-sm-6 col-xs-12">
+                        <div class="download-but col-lg-12 col-sm-12 col-xs-12">
                             <a href="{% version "images/logo.zip" %}" download="logo.zip">{% trans "Download Logo" %}</a>
                         </div>
+                        {% comment %}
                         <div class="download-but col-lg-6 col-sm-6 col-xs-12">
                             <a href="{% version "images/poster.zip" %}" download="poster.zip">{%  trans "Download Poster" %}</a>
                         </div>
+                        {% endcomment %}
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-6">
+                <div class="poster-thumbnail">
+                    <img src="{% version "images/poster-zh.jpg" %}" alt="">
+                </div>
+                <div class="download-but">
+                    <a href="https://newton.oss-cn-beijing.aliyuncs.com/poster-zh.zip" download="poster-zh.zip">{%  trans "Download Chinese Poster" %}</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="poster-thumbnail">
+                    <img src="{% version "images/poster-en.jpg" %}" alt="">
+                </div>
+                <div class="download-but">
+                    <a href="https://newton.oss-cn-beijing.aliyuncs.com/poster-en.zip" download="poster-en.zip">{%  trans "Download English Poster" %}</a>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -41,3 +63,4 @@
 
 {% block inline_js %}
 {% endblock %}
+

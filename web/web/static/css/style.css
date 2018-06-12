@@ -663,7 +663,7 @@ canvas { display: block; vertical-align: top; }
 .about_list p{ text-align:left; font-size:16px; color:#888; margin:15px 0; line-height: 1.8em;}
 /**mediakit*/
 #mediakit{margin-bottom: 0}
-#mediakit .download_list{text-align:center;}
+#mediakit .download_list{text-align:center; height: 515px;}
 #mediakit .download-but{ margin-top:0; margin-bottom: 10%}
 .download-but a{ font-weight:400; width: 200px; height: 50px; border-radius: 25px; border: solid 2px #000000; font-size:16px; line-height:47px; display:inline-block; margin:0 15px; color:#000}
 #mediakit .download_list img{height: 100%}
@@ -672,6 +672,11 @@ canvas { display: block; vertical-align: top; }
     #mediakit .download_list img{width: 80%}
     #mediakit .download_list p{margin-top:0; margin-bottom: 10%; font-size: 16px;}
 }
+
+#mediakit .poster-thumbnail{text-align: center;}
+#mediakit .poster-thumbnail img{width: 50%}
+#mediakit .download-but{text-align: center; margin-top: 30px}
+
 
 /** job */
 .panel{ box-shadow: unset;}
