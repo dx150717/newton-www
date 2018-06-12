@@ -85,25 +85,25 @@ class ContributeForm(ModelForm):
         self.fields['done_for_newton_attachment'].required = False
         self.fields['do_for_newton'].required = False
         self.fields.keyOrder = [
+            'what_is_newton',
             'your_node_name',
             'your_node_organizer',
             'your_node_organizer_contact',
             'done_for_newton',
             'done_for_newton_attachment',
-            'do_for_newton',
-            'what_is_newton',
+            'do_for_newton'
         ]
         
     class Meta:
         model = tokenexchange_models.KYCInfo
         fields = [
+            'what_is_newton',
             'your_node_name',
             'your_node_organizer',
             'your_node_organizer_contact',
             'done_for_newton',
             'done_for_newton_attachment',
-            'do_for_newton',
-            'what_is_newton'
+            'do_for_newton'
         ]
         
 
