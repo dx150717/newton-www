@@ -51,6 +51,8 @@ class KYCProfileForm(ModelForm):
         self.fields['wechat'].required = False
         self.fields['other_social_account'].required = False
         self.fields['personal_profile_attachment'].required = False
+        self.fields['your_community'].required = False
+        self.fields['your_community_screenshots'].required = False
         self.fields.keyOrder = [
             'personal_profile',
             'personal_profile_attachment',
