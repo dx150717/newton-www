@@ -15,6 +15,12 @@ class KYCInfo(models.Model):
         (codes.IDType.PASSPORT.value, _('Passport')),
         (codes.IDType.DRIVERS_LICENSE.value, _('Drivers License'))
     )
+    NODE_CHOICE = (
+        (codes.NodeType.FULL_NODE, _('Full Node')),
+        (codes.NodeType.MEDIA_NODE, _('Media Node')),
+        (codes.NodeType.TECH_NODE, _('Technology Node')),
+        (codes.NodeType.OPERATION_NODE, _('Operation Node'))
+        )
 
     user_id = models.IntegerField()
     # base info
@@ -39,18 +45,23 @@ class KYCInfo(models.Model):
     personal_profile_attachment = models.FileField(upload_to=storage.hashfile_upload_to('personal_profile_attachment', path_prefix='personal_profile_attachment'), verbose_name='Attachment', validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
     facebook = models.CharField(max_length=128, db_index=True, verbose_name='Facebook', null=True)
     twitter = models.CharField(max_length=128, db_index=True, verbose_name='Twitter', null=True)
-    telegram = models.CharField(max_length=128, db_index=True, verbose_name='Telegram', null=True)
-    wechat = models.CharField(max_length=128, db_index=True, verbose_name='WeChat', null=True)
-    other_social_account = models.CharField(max_length=128, db_index=True, verbose_name='Other', null=True)
+    telegram = models.CharField(max_length=128, db_index=True, verbose_name='Telegram ID', null=True)
+    wechat = models.CharField(max_length=128, db_index=True, verbose_name='WeChat ID', null=True)
+    other_social_account = models.CharField(max_length=128, db_index=True, verbose_name='Other Social Media', null=True)
+    your_community = models.CharField(max_length=1024, verbose_name='Newton Communities You are Involved in', null=True)
+    your_community_screenshots = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots', path_prefix='your_community_screenshots'), verbose_name='Screenshots of Abovementioned Communities')
 
     # how to contribute for newton
-    your_node_name = models.CharField(max_length=128, verbose_name='Your Node Name', null=True)
-    your_node_organizer = models.CharField(max_length=128, verbose_name='Your node organizer', null=True)
-    your_node_organizer_contact = models.CharField(max_length=128, verbose_name="organizer's contact", null=True)
+    what_is_newton = models.TextField(verbose_name='Tell us your understanding about Newton', max_length=10240, null=True, help_text='(*)')
     done_for_newton = models.TextField(verbose_name='What contribute you had do for newton', max_length=10240)
     done_for_newton_attachment = models.FileField(upload_to=storage.hashfile_upload_to('done_for_newton_attachment', path_prefix='done_for_newton_attachment'), verbose_name="Attachment")
     do_for_newton = models.TextField(verbose_name='What will you do for newton', max_length=10240)
-    what_is_newton = models.TextField(verbose_name='Tell us your understanding about Newton', max_length=10240, null=True, help_text='(*)')
+    is_establish_node = models.BooleanField(default=False, verbose_name='Do you want to establish a Newton node ?')
+    which_node_establish = models.IntegerField(
+            _('Which type of node ?'),
+            choices=NODE_CHOICE, default=codes.NodeType.FULL_NODE.value,
+        )
+    establish_node_plan = models.TextField(verbose_name='Your plan of node establishment')
 
     # emergency info
     emergency_contact_first_name = models.CharField(max_length=128, verbose_name='First Name of Emergency Contact', help_text="(*)")

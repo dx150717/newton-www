@@ -59,6 +59,8 @@ class KYCProfileForm(ModelForm):
             'twitter',
             'facebook',
             'other_social_account'
+            'your_community',
+            'your_community_screenshots'
         ]
         
     class Meta:
@@ -70,7 +72,9 @@ class KYCProfileForm(ModelForm):
             'telegram',
             'twitter',
             'facebook',
-            'other_social_account'
+            'other_social_account',
+            'your_community',
+            'your_community_screenshots'
         ]
         
 
@@ -86,24 +90,24 @@ class ContributeForm(ModelForm):
         self.fields['do_for_newton'].required = False
         self.fields.keyOrder = [
             'what_is_newton',
-            'your_node_name',
-            'your_node_organizer',
-            'your_node_organizer_contact',
             'done_for_newton',
             'done_for_newton_attachment',
-            'do_for_newton'
+            'do_for_newton',
+            'is_establish_node',
+            'which_node_establish',
+            'establish_node_plan',
         ]
         
     class Meta:
         model = tokenexchange_models.KYCInfo
         fields = [
             'what_is_newton',
-            'your_node_name',
-            'your_node_organizer',
-            'your_node_organizer_contact',
             'done_for_newton',
             'done_for_newton_attachment',
-            'do_for_newton'
+            'do_for_newton',
+            'is_establish_node',
+            'which_node_establish',
+            'establish_node_plan'
         ]
         
 

@@ -127,3 +127,11 @@ class IDType(Enum):
     ID_CARD = 1
     PASSPORT = 2
     DRIVERS_LICENSE = 3
+
+class NodeType(Enum):
+    FULL_NODE = 1
+    MEDIA_NODE = 2
+    TECH_NODE = 3
+    OPERATION_NODE = 4
+        
+        
