@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-07 07:02+0000\n"
+"POT-Creation-Date: 2018-06-13 07:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -229,11 +229,11 @@ msgid "Form Error"
 msgstr "서식 에러"
 
 #: web/apps/login/views.py:42 web/apps/register/views.py:46
-#: web/apps/register/views.py:52 web/apps/subscription/views.py:43
+#: web/apps/register/views.py:52
 msgid "No captcha"
 msgstr ""
 
-#: web/apps/login/views.py:43 web/apps/subscription/views.py:48
+#: web/apps/login/views.py:43 web/apps/subscription/views.py:42
 msgid "Authenticator Recaptcha Error"
 msgstr "인증 에러"
 
@@ -662,7 +662,7 @@ msgstr ""
 
 #: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:66
 #: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:68
-#: web/apps/zinnia/templates/zinnia/skeleton.html:72
+#: web/apps/zinnia/templates/zinnia/skeleton.html:75
 msgid "Search"
 msgstr ""
 
@@ -699,36 +699,36 @@ msgstr ""
 msgid "Subscribed emails"
 msgstr ""
 
-#: web/apps/subscription/views.py:40
+#: web/apps/subscription/views.py:39
 #, fuzzy
 msgid "Email Error"
 msgstr "서식 에러"
 
-#: web/apps/subscription/views.py:51
+#: web/apps/subscription/views.py:45
 msgid "You can only subscribe once per minute."
 msgstr ""
 
-#: web/apps/subscription/views.py:56
+#: web/apps/subscription/views.py:50
 msgid "Email Has Exist!"
 msgstr ""
 
-#: web/apps/subscription/views.py:60 web/apps/subscription/views.py:69
+#: web/apps/subscription/views.py:54 web/apps/subscription/views.py:63
 msgid "we've sent you a confirming e-mail,please check your email box."
 msgstr ""
 
-#: web/apps/subscription/views.py:62 web/apps/subscription/views.py:71
+#: web/apps/subscription/views.py:56 web/apps/subscription/views.py:65
 msgid "Subscribe Failed!"
 msgstr ""
 
-#: web/apps/subscription/views.py:73
+#: web/apps/subscription/views.py:67
 msgid "Invalid Email Address!"
 msgstr ""
 
-#: web/apps/subscription/views.py:91
+#: web/apps/subscription/views.py:85
 msgid "Links expire or invalid pages."
 msgstr ""
 
-#: web/apps/subscription/views.py:98
+#: web/apps/subscription/views.py:92
 msgid "NewtonProject Notifications: Please Confirm Subscription"
 msgstr ""
 
@@ -767,10 +767,6 @@ msgstr "구독하기"
 #: web/apps/subscription/templates/subscription/include-subscription.html:29
 msgid "We won't share your email address or send you any spam."
 msgstr "우리는 귀하의 메일주소를 공유하거나 스팸 메일을 보내지 않습니다."
-
-#: web/apps/subscription/templates/subscription/include-subscription.html:38
-msgid "Tip: Ensure that you can access the google recaptcha service."
-msgstr "팁: Google recaptcha 서비스에 액세스 할 수 있는지 확인하십시오."
 
 #: web/apps/subscription/templates/subscription/subscription-letter.html:44
 msgid "Welcome! Please Confirm Your Subscription"
@@ -3140,9 +3136,35 @@ msgstr ""
 msgid "Download Logo"
 msgstr "로고 다운로드"
 
-#: web/apps/welcome/templates/welcome/mediakit.html:31
-msgid "Download Poster"
-msgstr "포스터 다운로드"
+#: web/apps/welcome/templates/welcome/mediakit.html:47
+msgid "Chinese Poster"
+msgstr "중국어 포스터 다운로드"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:55
+msgid "English Poster"
+msgstr "영어 포스터 다운로드"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:66
+msgid "Newton Logo"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/mediakit.html:67
+msgid ""
+"Newton logo is a combination of calculus symbol and zigzag side of coin."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/mediakit.html:80
+msgid "Poster in Chinese"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/mediakit.html:81
+#: web/apps/welcome/templates/welcome/mediakit.html:95
+msgid "Features Posters of Newton offline activities"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/mediakit.html:94
+msgid "Poster in English"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
 #: web/templates/header.html:29
@@ -5584,8 +5606,8 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/sitemap.html:4
 #: web/apps/zinnia/templates/zinnia/sitemap.html:11
-#: web/apps/zinnia/templates/zinnia/skeleton.html:65
-#: web/apps/zinnia/templates/zinnia/skeleton.html:66
+#: web/apps/zinnia/templates/zinnia/skeleton.html:68
+#: web/apps/zinnia/templates/zinnia/skeleton.html:69
 msgid "Sitemap"
 msgstr ""
 
@@ -5605,20 +5627,16 @@ msgstr ""
 msgid "Just another Zinnia weblog."
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:37 web/templates/base.html:71
-msgid "Join us to change the world"
-msgstr "우리와 함께 세계를 바꿀 수 있습니다"
-
-#: web/apps/zinnia/templates/zinnia/skeleton.html:50
+#: web/apps/zinnia/templates/zinnia/skeleton.html:53
 msgid "BLOG"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:57
+#: web/apps/zinnia/templates/zinnia/skeleton.html:60
 msgid "Useful links"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:60
-#: web/apps/zinnia/templates/zinnia/skeleton.html:61
+#: web/apps/zinnia/templates/zinnia/skeleton.html:63
+#: web/apps/zinnia/templates/zinnia/skeleton.html:64
 msgid "Weblog index"
 msgstr ""
 
@@ -5981,6 +5999,15 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Tip: Ensure that you can access the google recaptcha service."
+#~ msgstr "팁: Google recaptcha 서비스에 액세스 할 수 있는지 확인하십시오."
+
+#~ msgid "Download Poster"
+#~ msgstr "포스터 다운로드"
+
+#~ msgid "Join us to change the world"
+#~ msgstr "우리와 함께 세계를 바꿀 수 있습니다"
 
 #~ msgid "SVP of Cheetah (NASDAQ:CMCM)"
 #~ msgstr "Cheetah(NASDAQ:CMCM) SVP"
