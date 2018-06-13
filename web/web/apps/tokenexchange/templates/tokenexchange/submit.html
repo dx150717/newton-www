@@ -58,6 +58,7 @@
                             <div class="panel panel-default bg-gray">
                                 <div class="panel-heading">
                                     <h3 class="panel-title text-center">{% trans "How to Contribute" %}</h3>
+                                    <p class="text-center red-color mt50">{%trans "This is an important basis for Newton's KYC review. Please fill in it carefully and thoroughly." %}</p>
                                 </div>
                                 <div class="panel-body">
                                     {% include "form.html" with form=contribute_form %}
@@ -77,7 +78,7 @@
                     </div>
                     <div class="raw">
                         <div class="text-center token-btn">
-                            <button class="form-button" type="submit">Submit</button>
+                            <button class="form-button" type="submit">{% trans "Submit" %}</button>
                         </div>
                     </div>
                 </form>
@@ -93,7 +94,7 @@
                 <form id="user_kyc_form" class="form" action="/tokenexchange/post/" method="POST" enctype="multipart/form-data">
                     <div class="raw">
                         <div class="text-center token-btn">
-                            <button class="form-button" type="submit">Submit</button>
+                            <button class="form-button" type="submit"></button>
                         </div>
                     </div>
                 </form>

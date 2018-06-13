@@ -38,7 +38,7 @@ class CellphoneGroupWidget(MultiWidget):
         new_widgets = [w1, w2]
         return ('''
         <div class="form-inline">
-            <div>%s %s</div>
+            <div>+ %s %s</div>
         </div>''') % tuple(new_widgets)
 
 

@@ -14,7 +14,7 @@ APPEND_SLASH = False
 
 LOGGING_API_REQUEST = True
 
-STATIC_DEFAULT_VERSION = 208
+STATIC_DEFAULT_VERSION = 209
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -30,7 +30,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-SESSION_COOKIE_AGE = 60 * 10
+SESSION_COOKIE_AGE = 5400
 SESSION_COOKIE_DOMAIN = '.newtonproject.org'
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"

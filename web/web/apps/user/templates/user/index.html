@@ -35,7 +35,7 @@
                     <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Profile" %}</a></li>
                     {% endcomment %}
                     <li class="active"><a href="#kyc">KYC</a></li>
-                    <li><a href="#token-exchange">Token Exchange</a></li>
+                    <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
                 </ul>
             </div>
         </div>
@@ -103,7 +103,7 @@
                                         {% endif %}
                                     {% else %}
                                     <div class="container text-center mt50">
-                                        <p>{% trans "Your have not submit KYC information." %}</p>
+                                        <p>{% trans "You have not submit KYC information." %}</p>
                                         <a class="form-button mt50" href="/tokenexchange/">Join KYC</a>
                                     </div>
                                     {% endif %}
@@ -119,13 +119,13 @@
                                     </div>
                                 </div>
                                 <div class="panel panel-default">
-                                    <div class="panel-heading">{% trans "Personal Introduction" %}</div>
+                                    <div class="panel-heading">{% trans "Self Introduction" %}</div>
                                     <div class="panel-body">
                                         {% include "form_content.html" with form=profile_form %}
                                     </div>
                                 </div>
                                 <div class="panel panel-default">
-                                    <div class="panel-heading">{% trans "How to Join Newton" %}</div>
+                                    <div class="panel-heading">{% trans "How to Contribute" %}</div>
                                     <div class="panel-body">
                                         {% include "form_content.html" with form=contribute_form %}
                                     </div>
@@ -153,6 +153,7 @@
                         
                         {% if items %}
                         {% for item in items %}
+                        <div class="shadow-item">
                         {% if item.expect_btc or item.except_ela %}
                             <script>var hasExpect = true;</script>
                         {% endif %}
@@ -255,10 +256,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                         {% endfor %}
                         {% else %}
                         <div class="item">
-                            <p style="font-size: 18px; text-align: center; margin-top: 30px">{% trans "There is no token exchange information" %}</p>
+                            <p style="font-size: 18px; text-align: center; margin-top: 30px">{% trans "No token exchange information." %}</p>
                         </div>
                         {% endif %}
                     </div>
