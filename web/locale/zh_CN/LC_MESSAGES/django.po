@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 12:47+0000\n"
+"POT-Creation-Date: 2018-06-13 14:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,13 +153,13 @@ msgid "unfilled"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:182
-#: web/apps/base/templatetags/utils.py:189 web/apps/tokenexchange/models.py:25
+#: web/apps/base/templatetags/utils.py:189 web/apps/tokenexchange/models.py:24
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:71
 msgid "Yes"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:183
-#: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:26
+#: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:25
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:72
 msgid "No"
 msgstr ""
@@ -182,8 +182,8 @@ msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:70
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:63
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:53
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:82
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:74
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:54
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:58
@@ -196,8 +196,8 @@ msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:74
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:67
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:57
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:86
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:78
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:58
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:62
@@ -212,11 +212,8 @@ msgstr "下一页"
 msgid "No FAQ"
 msgstr "暂无FAQ"
 
-#: web/apps/login/forms.py:6
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:28
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:27
-#: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
-#: web/apps/subscription/forms.py:6
+#: web/apps/login/forms.py:6 web/apps/register/forms.py:12
+#: web/apps/reset/forms.py:6 web/apps/subscription/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
 msgstr "电子邮箱"
@@ -336,6 +333,7 @@ msgstr "提交"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/kycindex.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:6
@@ -439,67 +437,56 @@ msgstr ""
 msgid "Confirm"
 msgstr "确认密码"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:27
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:26
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:28
 msgid "Name"
 msgstr "名字"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:29
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:28
 #: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:116
 msgid "Cellphone"
 msgstr "手机号"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:30
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:29
 msgid "Country"
 msgstr "国家"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:31
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:30
-msgid "Emergency Contact Name"
-msgstr "紧急联系人姓名"
+#: web/apps/tokenexchange/models.py:36 web/apps/tokenexchange/models.py:80
+msgid "City"
+msgstr "城市"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:32
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:31
-msgid "Emergency Contact Cellphone"
-msgstr "紧急联系人的手机号"
+#: web/apps/tokenexchange/models.py:37 web/apps/tokenexchange/models.py:81
+msgid "Address"
+msgstr "详细地址"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:32
-msgid "RelationShip"
-msgstr "与紧急联系人的关系"
+#: web/apps/tokenexchange/models.py:39
+msgid "ID Type"
+msgstr "身份信息类型"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:34
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:33
-msgid "Describe yourself & how you can help as a community member"
-msgstr "介绍一下自己，作为社区成员可以为牛顿做什么"
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:35
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:34
-msgid "Tell us your understanding about Newton"
-msgstr "你如何理解牛顿"
+#: web/apps/tokenexchange/models.py:44
+msgid "ID Number"
+msgstr "ID 号码"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:6
-#, fuzzy
-msgid "KYC verification success"
-msgstr "验证码"
+msgid "KYC reviewing success"
+msgstr "KYC 审核成功"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:8
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:28
-#, fuzzy
-msgid "KYC verification rejected"
-msgstr "验证码"
+msgid "KYC reviewing rejected"
+msgstr "KYC 审核被拒绝"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:11
 msgid ""
-"Congratulation you have passed Newton KYC verification. Please pay attention "
-"to our subsequent notification later on."
+"Congratulation you have passed Newton KYC reviewing. Please pay attention to "
+"our subsequent notification later on."
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:13
 msgid ""
-"We'd like to apologize that you haven't passed Newton KYC verification. The "
+"We'd like to apologize that you haven't passed Newton KYC reviewing. The "
 "reason is"
 msgstr ""
 
@@ -517,17 +504,12 @@ msgstr ""
 msgid "Best regard"
 msgstr ""
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:17
-#, fuzzy
-msgid "Newton team"
-msgstr "牛顿团队"
 
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:12
 msgid "Admin Login"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:30
-#, fuzzy
 msgid "Newton foundation has received your"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
 
@@ -700,14 +682,12 @@ msgid "ReSet"
 msgstr ""
 
 #: web/apps/reset/templates/reset/index.html:22
-#, fuzzy
 msgid "Reset Password"
-msgstr "设置密码"
+msgstr "重置密密码"
 
 #: web/apps/reset/templates/reset/index.html:33
-#, fuzzy
 msgid "Reset Passwrod"
-msgstr "设置密码"
+msgstr "重置密码"
 
 #: web/apps/reset/templates/reset/reset-complete.html:23
 msgid "Reset Success!"
@@ -744,7 +724,6 @@ msgid "Submit Success!"
 msgstr "提交成功！"
 
 #: web/apps/reset/templates/reset/reset-success.html:22
-#, fuzzy
 msgid ""
 "We have sent you an email. Please go to your reset email inbox to check and "
 "complete the registration process."
@@ -926,34 +905,34 @@ msgstr ""
 "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
 "阅。"
 
-#: web/apps/tokenexchange/models.py:14
+#: web/apps/tokenexchange/models.py:13
 msgid "ID Card"
 msgstr "身份证"
 
-#: web/apps/tokenexchange/models.py:15
+#: web/apps/tokenexchange/models.py:14
 msgid "Passport"
 msgstr "护照"
 
-#: web/apps/tokenexchange/models.py:16
+#: web/apps/tokenexchange/models.py:15
 msgid "Drivers License"
 msgstr "驾驶证"
 
-#: web/apps/tokenexchange/models.py:19
+#: web/apps/tokenexchange/models.py:18
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:82
 msgid "Full Node"
 msgstr "全节点"
 
-#: web/apps/tokenexchange/models.py:20
+#: web/apps/tokenexchange/models.py:19
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:83
 msgid "Media Node"
 msgstr "媒体节点"
 
-#: web/apps/tokenexchange/models.py:21
+#: web/apps/tokenexchange/models.py:20
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:84
 msgid "Technology Node"
 msgstr "技术节点"
 
-#: web/apps/tokenexchange/models.py:22
+#: web/apps/tokenexchange/models.py:21
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:85
 msgid "Operation Node"
 msgstr "运营节点"
@@ -973,22 +952,6 @@ msgstr "选择国家地区"
 #: web/apps/tokenexchange/models.py:35 web/apps/tokenexchange/models.py:79
 msgid "Country or Region"
 msgstr "国家或地区"
-
-#: web/apps/tokenexchange/models.py:36 web/apps/tokenexchange/models.py:80
-msgid "City"
-msgstr "城市"
-
-#: web/apps/tokenexchange/models.py:37 web/apps/tokenexchange/models.py:81
-msgid "Address"
-msgstr "详细地址"
-
-#: web/apps/tokenexchange/models.py:39
-msgid "ID Type"
-msgstr "身份信息类型"
-
-#: web/apps/tokenexchange/models.py:44
-msgid "ID Number"
-msgstr "ID 号码"
 
 #: web/apps/tokenexchange/models.py:45
 msgid "ID Photo"
@@ -1048,18 +1011,21 @@ msgstr "您将为牛顿做些什么"
 
 #: web/apps/tokenexchange/models.py:65
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:67
+#: web/apps/user/templates/user/index.html:136
 msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点？"
 
 #: web/apps/tokenexchange/models.py:69
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:77
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:81
+#: web/apps/user/templates/user/index.html:146
 msgid "Which type of node ?"
 msgstr "您想建立哪种节点？"
 
 #: web/apps/tokenexchange/models.py:72
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:91
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:95
+#: web/apps/user/templates/user/index.html:156
 msgid "Your plan of node establishment"
 msgstr "你准备如何建立节点"
 
@@ -1549,7 +1515,7 @@ msgid ""
 msgstr "* 这一节是Newton KYC 审核的重要依据，请认真填写。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:105
-#: web/apps/user/templates/user/index.html:136
+#: web/apps/user/templates/user/index.html:166
 msgid "Emergency Information"
 msgstr "紧急联系人信息"
 
@@ -1673,36 +1639,36 @@ msgstr "尚未提交KYC信息"
 msgid "Join KYC"
 msgstr "参加KYC"
 
-#: web/apps/user/templates/user/index.html:173
-#: web/apps/user/templates/user/index.html:219
+#: web/apps/user/templates/user/index.html:203
+#: web/apps/user/templates/user/index.html:249
 msgid "Passed the Newton KYC"
 msgstr "已经通过 Newton KYC"
 
-#: web/apps/user/templates/user/index.html:181
-#: web/apps/user/templates/user/index.html:226
+#: web/apps/user/templates/user/index.html:211
+#: web/apps/user/templates/user/index.html:256
 msgid "Filled in the expected amount"
 msgstr "填写期望额度"
 
-#: web/apps/user/templates/user/index.html:190
-#: web/apps/user/templates/user/index.html:234
+#: web/apps/user/templates/user/index.html:220
+#: web/apps/user/templates/user/index.html:264
 msgid "Transferred"
 msgstr "转币成功"
 
-#: web/apps/user/templates/user/index.html:199
-#: web/apps/user/templates/user/index.html:242
+#: web/apps/user/templates/user/index.html:229
+#: web/apps/user/templates/user/index.html:272
 msgid "Finished filling in newpay wallet address"
 msgstr "已经填写 newpay 钱包地址"
 
-#: web/apps/user/templates/user/index.html:208
-#: web/apps/user/templates/user/index.html:250
+#: web/apps/user/templates/user/index.html:238
+#: web/apps/user/templates/user/index.html:280
 msgid "Token exchange success"
 msgstr "通证交换成功"
 
-#: web/apps/user/templates/user/index.html:257
+#: web/apps/user/templates/user/index.html:287
 msgid "Details "
 msgstr "详情"
 
-#: web/apps/user/templates/user/index.html:265
+#: web/apps/user/templates/user/index.html:295
 #: web/apps/user/templates/user/token-exchange-progress.html:174
 msgid "No token exchange information."
 msgstr "没有通证交换信息"
@@ -6627,47 +6593,3 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#~ msgid "Or"
-#~ msgstr "或者"
-
-#~ msgid "TOKEN EXCHANGE"
-#~ msgstr "通证交换"
-
-#~ msgid "Apply Success"
-#~ msgstr "申请成功！"
-
-#~ msgid "Fill in your expected token exchange amount"
-#~ msgstr "填写你的期望额度"
-
-#~ msgid "Emergency Cellphone"
-#~ msgstr "紧急联系人的手机号"
-
-#~ msgid "What will you do for newton"
-#~ msgstr "您将为牛顿做什么"
-
-#~ msgid "First Name of Emergency Contact"
-#~ msgstr "紧急联系人的名字"
-
-#~ msgid "Last Name of Emergency Contact"
-#~ msgstr "紧急联系人姓"
-
-#~ msgid "Emergency Country or Region"
-#~ msgstr "紧急联系人的国家或地区"
-
-#~ msgid "Emergency Address"
-#~ msgstr "紧急联系人的地址"
-
-#~ msgid "Emergency Relationship"
-#~ msgstr "与紧急联系人的关系"
-
-#~ msgid "There is no token exchange information"
-#~ msgstr "没有通证交换信息"
-
-#, fuzzy
-#~ msgid "Personal Introduction"
-#~ msgstr "自我介绍"
-
-#~ msgid ""
-#~ "We have sent you an email to your registered email, please check out to "
-#~ "finish signing up."
-#~ msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"

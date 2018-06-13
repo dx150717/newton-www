@@ -3,14 +3,14 @@
 {% load utils %}
     {% block content %}
     {% if kyc_info.kyc_audit.is_pass %}
-    <h2>{% trans "KYC verification success" %}</h2>
+    <p class="newton-title">{% trans "KYC reviewing success" %}</p>
     {% else %}
-    <h2>{% trans "KYC verification rejected" %}</h2>
+    <p class="newton-title">{% trans "KYC reviewing rejected" %}</p>
     {% endif %}
     {% if kyc_info.kyc_audit.is_pass %}
-    <p class="pad-t10">{% trans "Congratulation you have passed Newton KYC verification. Please pay attention to our subsequent notification later on." %}</p>
+    <p class="pad-t10">{% trans "Congratulation you have passed Newton KYC reviewing. Please pay attention to our subsequent notification later on." %}</p>
     {% else %}
-    <p class="pad-t10">{% trans "We'd like to apologize that you haven't passed Newton KYC verification. The reason is" %} {{ kyc_info.kyc_audit.comment }},{% trans "You can check and modify the contents you fill into KYC information page carefully, and try to submit again." %}</p>
+    <p class="pad-t10">{% trans "We'd like to apologize that you haven't passed Newton KYC reviewing. The reason is" %} {{ kyc_info.kyc_audit.comment }},{% trans "You can check and modify the contents you fill into KYC information page carefully, and try to submit again." %}</p>
     {% endif %}
     <p class="pad-t10">{% trans "Thank you" %}</p>
     <p class="pad-t10">{% trans "Best regard" %}</p>
