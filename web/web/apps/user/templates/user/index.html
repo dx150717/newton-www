@@ -35,7 +35,7 @@
                     <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Profile" %}</a></li>
                     {% endcomment %}
                     <li class="active"><a href="#kyc">KYC</a></li>
-                    <li><a href="#token-exchange">Token Exchange</a></li>
+                    <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
                 </ul>
             </div>
         </div>
@@ -103,7 +103,7 @@
                                         {% endif %}
                                     {% else %}
                                     <div class="container text-center mt50">
-                                        <p>{% trans "Your have not submit KYC information." %}</p>
+                                        <p>{% trans "You have not submit KYC information." %}</p>
                                         <a class="form-button mt50" href="/tokenexchange/">Join KYC</a>
                                     </div>
                                     {% endif %}
@@ -258,7 +258,7 @@
                         {% endfor %}
                         {% else %}
                         <div class="item">
-                            <p style="font-size: 18px; text-align: center; margin-top: 30px">{% trans "There is no token exchange information" %}</p>
+                            <p style="font-size: 18px; text-align: center; margin-top: 30px">{% trans "No token exchange information." %}</p>
                         </div>
                         {% endif %}
                     </div>

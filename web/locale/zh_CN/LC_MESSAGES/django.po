@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 04:10+0000\n"
+"POT-Creation-Date: 2018-06-13 05:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1629,7 +1629,7 @@ msgid "rewrite"
 msgstr "重新填写"
 
 #: web/apps/user/templates/user/index.html:108
-msgid "Your have not submit KYC information."
+msgid "You have not submit KYC information."
 msgstr "尚未提交KYC信息"
 
 #: web/apps/user/templates/user/index.html:172
@@ -1662,7 +1662,8 @@ msgid "Details "
 msgstr "详情"
 
 #: web/apps/user/templates/user/index.html:263
-msgid "There is no token exchange information"
+#: web/apps/user/templates/user/token-exchange-progress.html:174
+msgid "No token exchange information."
 msgstr "没有通证交换信息"
 
 #: web/apps/user/templates/user/profile.html:24
@@ -1752,10 +1753,6 @@ msgstr "你填写的期望额度正在审核中。"
 #: web/apps/user/templates/user/token-exchange-progress.html:168
 msgid "Fill in your expected token exchange amount"
 msgstr "填写你的期望额度"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:174
-msgid "No token exchange information."
-msgstr "没有通证交换信息"
 
 #: web/apps/verification/models.py:22
 msgid "Verification emails"
@@ -6592,6 +6589,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "There is no token exchange information"
+#~ msgstr "没有通证交换信息"
 
 #, fuzzy
 #~ msgid "Personal Introduction"
