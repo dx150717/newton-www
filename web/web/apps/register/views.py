@@ -58,7 +58,7 @@ def submit_email(request):
         #     return render(request, 'register/index.html', locals())
         # check the availablity of email address
         email = form.cleaned_data['email']
-        user = User.objects.filter(email=email).first()            
+        user = User.objects.filter(email=email).first()
         if user:
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Email already existed')])
             return render(request, 'register/index.html', locals())
@@ -92,6 +92,11 @@ def verify_email_link(request):
         now = datetime.datetime.utcnow().replace(tzinfo=utc)
         # check whether the given link is expired
         if now > expire_time:
+            return http.HttpResponseRedirect('/register/invalid-link/')
+        user = User.objects.filter(email=email).first()
+        if user:
+            verification.status = codes.StatusCode.CLOSE.value
+            verification.save()
             return http.HttpResponseRedirect('/register/invalid-link/')
         return http.HttpResponseRedirect('/register/password/?uuid=%s' %str(uuid))
     except Exception, inst:
