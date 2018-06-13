@@ -1140,12 +1140,15 @@ canvas { display: block; vertical-align: top; }
     #countdown #button-group .button-container{display: flex; justify-content: space-between;}
 }
 
+#success .page-title{margin-bottom: 50px;}
+#success .page-title .container{padding:unset}
 #success .container{padding-top: 200px;}
 #success .container img{ width: 59px;}
 #success .title{ font-size: 30px; color: #0c0c0c; padding: 0; margin-bottom: 20px;padding-top: 40px;}
 #success .content{ font-size: 18px; color: #6f6f6f;}
 
 #reset{padding-bottom: 60px;}
+#reset .page-title{margin-bottom: 50px;}
 .amount .form-group .alert{width: 100%;}
 
 #news .content{display: flex; width: 100%;}
@@ -1294,8 +1297,6 @@ canvas { display: block; vertical-align: top; }
 
 .verification_small{font-size: 14px; margin-left: 10px; text-decoration: underline}
     #token .form-group .alert { width: 100%; }
-}
-}
 
 #mediakit .img-logo{width: 100%}
 #mediakit .img-poster{height: 100%}
@@ -1305,3 +1306,18 @@ canvas { display: block; vertical-align: top; }
 #mediakit .info-content{text-align: center; font-size: 12px; color: #bbb;}
 #mediakit .download-arrow{height: 35px; display: block; line-height: 35px; text-align: center;}
 #mediakit .download-arrow img{height: 100%;}
+
+#set-gtoken-form #code{text-align: center}
+#set-gtoken-form #code img{display: inline-block !important}
+#code-area{padding: 30px 0; border-bottom: solid 1px; border-top: solid 1px; margin-bottom: 10px}
+#manually-code{padding-top:10%; text-align: center}
+#qr-code{text-align: center; margin-bottom: 0}
+@media (max-width:959px){
+    #code-area{border: unset; padding:0}
+    #manually-code{padding-top: 0}
+}
+@media (max-width:768px){
+    #manually-code{
+        margin-left: auto;
+        margin-right: auto;}
+}
