@@ -9,23 +9,23 @@ from utils import storage
 from utils import validators
 from config import codes
 
-class KYCInfo(models.Model):
-    ID_CHOICES = (
+ID_CHOICES = (
         (codes.IDType.ID_CARD.value, _('ID Card')),
         (codes.IDType.PASSPORT.value, _('Passport')),
         (codes.IDType.DRIVERS_LICENSE.value, _('Drivers License'))
     )
-    NODE_CHOICE = (
-        (codes.NodeType.FULL_NODE.value, _('Full Node')),
-        (codes.NodeType.MEDIA_NODE.value, _('Media Node')),
-        (codes.NodeType.TECH_NODE.value, _('Technology Node')),
-        (codes.NodeType.OPERATION_NODE.value, _('Operation Node'))
-    )
-    ESTABLISH_CHOICE = (
-        (codes.EstablishNodeType.YES.value, _('Yes')),
-        (codes.EstablishNodeType.NO.value, _('No'))
-    )
-
+NODE_CHOICE = (
+    (codes.NodeType.FULL_NODE.value, _('Full Node')),
+    (codes.NodeType.MEDIA_NODE.value, _('Media Node')),
+    (codes.NodeType.TECH_NODE.value, _('Technology Node')),
+    (codes.NodeType.OPERATION_NODE.value, _('Operation Node'))
+)
+ESTABLISH_CHOICE = (
+    (codes.EstablishNodeType.YES.value, _('Yes')),
+    (codes.EstablishNodeType.NO.value, _('No'))
+)
+    
+class KYCInfo(models.Model):
     user_id = models.IntegerField()
     # base info
     first_name = models.CharField(max_length=128, verbose_name=_('First Name'), help_text='(*)')

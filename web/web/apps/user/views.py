@@ -9,6 +9,7 @@ from django.db.models import Sum
 from django.contrib.auth.models import User
 from django.conf import settings
 import pyotp
+from django_countries.data import COUNTRIES
 
 from utils import http
 from config import codes
@@ -17,6 +18,7 @@ from . import models
 import decorators
 from tokenexchange import forms as token_exchange_forms
 from tokenexchange import models as tokenexchange_models
+
 from tracker import models as tracker_models
 
 logger = logging.getLogger(__name__)
@@ -34,6 +36,21 @@ def show_user_index_view(request):
         data = kycinfo.__dict__
         data['cellphone_group'] = {"country_code":kycinfo.country_code, "cellphone":kycinfo.cellphone}
         data['cellphone_of_emergency_contact'] ={"country_code":kycinfo.emergency_contact_country_code, "cellphone":kycinfo.emergency_contact_cellphone}
+        if data['id_type']:
+            idtype = tokenexchange_models.ID_CHOICES
+            for i in idtype:
+                if i[0] == data['id_type']:
+                    data['id_type'] = i[1]
+        if data['is_establish_node']:
+            for j in tokenexchange_models.ESTABLISH_CHOICE:
+                if j[0] == data['is_establish_node']:
+                    data['is_establish_node'] = j[1]
+        if data['which_node_establish']:
+            for k in tokenexchange_models.NODE_CHOICE:
+                if k[0] == data['which_node_establish']:
+                    data['which_node_establish'] = k[1]
+        data['country'] = COUNTRIES[data['country']]
+        data['emergency_country'] = COUNTRIES[data['emergency_country']]
         base_form = token_exchange_forms.KYCBaseForm(initial=data)
         profile_form = token_exchange_forms.KYCProfileForm(initial=data)
         contribute_form = token_exchange_forms.ContributeForm(initial=data)
