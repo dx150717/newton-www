@@ -77,7 +77,7 @@ class KYCInfo(models.Model):
     emergency_contact_cellphone = models.CharField(max_length=20, db_index=True, default='', verbose_name='Cellphone of Emergency Contact', help_text="(*)")
     emergency_country = CountryField(blank_label="Select country or region", verbose_name='Emergency Country or Region', help_text='(*)')
     emergency_city = models.CharField(max_length=256, verbose_name='City', help_text='(*)')
-    emergency_location = models.CharField(max_length=1024, verbose_name='Emergency Location', help_text='(*)')
+    emergency_location = models.CharField(max_length=1024, verbose_name='Emergency Address', help_text='(*)')
     emergency_relationship = models.CharField(max_length=1024, verbose_name='Emergency Relationship', help_text='(*)')
 
     # base fields

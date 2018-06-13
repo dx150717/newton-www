@@ -132,6 +132,7 @@ h6, .f12 { font-size: 12px; }
 #privacy .page-title .container{background: url(../images/titlebg/privacy-bg.svg) no-repeat left bottom}
 #newpay .page-title .container{background: url(../images/titlebg/newpay-bg.svg) no-repeat left bottom}
 #token-exchange .page-title .container {background: url(../images/titlebg/tokenexchange.svg) no-repeat left bottom;}
+#kyc .page-title .container {background: url(../images/titlebg/terms-bg.svg) no-repeat left bottom }
 
 @media(max-width:991px) and (min-width: 768px){
 .page-title{ height: 200px;}
@@ -959,7 +960,7 @@ canvas { display: block; vertical-align: top; }
     }
 }
 .form-group .alert{width: 304px;}
-#token .form-group .alert{width: 100%;}
+#token .form-group .alert{width: 50%;}
 #login .container .register{font-size: 16px; color: #292929}
 #login .container .reset{font-size: 16px; color: #b7b7b7;}
 
@@ -1081,7 +1082,7 @@ canvas { display: block; vertical-align: top; }
  */
 .sub-level-page{padding-top: 120px;}
 #user-header .user .active{display: none;}
-#kyc {margin-top: 80px}
+
 #kyc h4{ font-size: 20px; font-weight: normal; color: #292929}
 #kyc pre{ background-color: #fff; margin-bottom: 20px;}
 #kyc .col-sm-6{padding-left: 0px;}
@@ -1099,7 +1100,7 @@ canvas { display: block; vertical-align: top; }
     #kyc .item, #basic-info .item {padding:10px;}  
     #kyc .item-title .title,#basic-info .item-title .title {padding: 10px; font-size: 20px; color: #282929}
 }
-#kyc .kyc-content{height:400px;overflow:scroll;border:1px solid #eee; padding: 20px;}
+#kyc .kyc-content{height:400px;overflow:scroll;border:1px solid #eee; padding: 20px; margin-top: 40px; }
 .user-avator{ width: 30px; border-radius: 15px; margin-top: -5px;}
 
 #countdown{background: url("../images/tokensale/tokensale_background.png") no-repeat; height: 720px; background-size: 100% 720px;}
@@ -1305,3 +1306,5 @@ canvas { display: block; vertical-align: top; }
 }
 
 .verification_small{font-size: 14px; margin-left: 10px; text-decoration: underline}
+    #token .form-group .alert { width: 100%; }
+}
