@@ -19,8 +19,11 @@
 
 {% block content %}
 <section id="register" class="section-list">
-        <div class="login-title container text-center">
-            <h2>{% trans "Register" %}</h2>
+        <div class="page-title">
+            <div class="container">
+                <p><a href="/announcement/">{% trans "Register" %}</a>
+                </p>
+            </div>
         </div>
         <div class="container">
             <!-- <div class="form-container">
@@ -47,7 +50,7 @@
             </div>
             <div class="raw">
                 <div>
-                    <p style="padding-top:30px;">{% trans "By clicking on the register button you agree and abide by<br/> Newton" %} <a href='{{ settings.NEWTON_WEB_URL }}/terms-of-use/'/>{% trans "User Agreement" %}</a> {% trans "and" %} <a href='{{ settings.NEWTON_WEB_URL }}/privacy/'>{% trans "Privacy Policy" %}</a>。</p>
+                    <p style="padding-top:30px;">{% trans "By clicking on the register button you agree and abide by<br/> Newton" %} <a href='{{ settings.NEWTON_WEB_URL }}/terms-of-use/' target="_blank"/>{% trans "User Agreement" %}</a> {% trans "and" %} <a href='{{ settings.NEWTON_WEB_URL }}/privacy/' target="_blank">{% trans "Privacy Policy" %}</a>。</p>
                 </div>
             </div>
         </div>

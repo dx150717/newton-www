@@ -894,6 +894,7 @@ canvas { display: block; vertical-align: top; }
 
 
 /* register */
+#register .page-title{margin-bottom: 50px}
 #register .email_add{ border:1px solid #ebebeb; width:338px; padding-left:12px; margin-bottom: 30px; height: 40px; border-radius: 4px;}
 #register #dialog{padding-top: 30px;}
 #register #id_code_error {display: none;}
@@ -907,9 +908,11 @@ canvas { display: block; vertical-align: top; }
 
 .error .alert{width: 300px; height: 60px;}
 .error .alert strong{line-height: 30px;}
+#login .page-title{margin-bottom: 50px}
 #login .ajax-error{margin-left: -15px;}
 #login .hidden{display: none;}
 #login .login-title,
+#reset .page-title{margin-bottom: 50px;}
 #reset .reset-title,
 #register .login-title{padding-top: 140px;}
 
@@ -1300,3 +1303,5 @@ canvas { display: block; vertical-align: top; }
     #token #id_emergency_country, #token #id_country{width: 100%}
     #token #id_id_type{width: 100%}
 }
+
+.verification_small{font-size: 14px; margin-left: 10px; text-decoration: underline}
