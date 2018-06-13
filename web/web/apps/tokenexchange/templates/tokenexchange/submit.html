@@ -62,6 +62,39 @@
                                 </div>
                                 <div class="panel-body">
                                     {% include "form.html" with form=contribute_form %}
+                                    <div class="form-group">   
+                                        <p>
+                                            <label for="id_is_establish_node" class="control-label">{% trans "Do you want to establish a Newton node ?" %}
+                                            </label>
+                                        </p>
+                                        <div>
+                                            <input type="radio" name="is_establish_node" checked value="1" onclick="openNode()">{% trans "Yes" %}
+                                            <input type="radio" name="is_establish_node" onclick="closeNode()" value="2">{% trans "No" %}
+                                        </div>
+                                    </div>
+                                    <div id="which-node" class="form-group">   
+                                        <p>
+                                            <label for="id_which_node_establish" class="control-label">{% trans "Which type of node ?" %} <span class="red-color"></span>
+                                            </label>
+                                        </p>
+                                        <div>
+                                            <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="{% trans "Which type of node ?" %}">
+                                                <option value="1" selected="selected">{% trans "Full Node" %}</option>
+                                                <option value="2">{% trans "Media Node" %}</option>
+                                                <option value="3">{% trans "Technology Node" %}</option>
+                                                <option value="4">{% trans "Operation Node" %}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="how-node" class="form-group">
+                                        <p>
+                                            <label for="id_establish_node_plan" class="control-label">{% trans "Your plan of node establishment" %} <span class="red-color"></span>
+                                            </label>
+                                        </p>
+                                        <div>
+                                            <textarea class="form-control" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Your plan of node establishment" %}" rows="10"></textarea>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +139,8 @@
 </section>
 {% endblock %}
 {% block js %}
-<script src="{% version "js/tokenexchange.js" %}"></script>
+<script src="{% version "js/tokenexchange.js" %}">
+</script>
 {% endblock %}
 <style>
     #id_first_name{"placeholder"}

@@ -87,17 +87,12 @@ class ContributeForm(ModelForm):
         self.fields['done_for_newton'].required = False
         self.fields['done_for_newton_attachment'].required = False
         self.fields['do_for_newton'].required = False
-        self.fields['is_establish_node'].required = False
-        self.fields['which_node_establish'].required = False
-        self.fields['establish_node_plan'].required = False
         self.fields.keyOrder = [
             'what_is_newton',
             'done_for_newton',
             'done_for_newton_attachment',
-            'do_for_newton',
-            'is_establish_node',
-            'which_node_establish',
-            'establish_node_plan'
+            'do_for_newton'
+
         ]
         
     class Meta:
@@ -106,10 +101,7 @@ class ContributeForm(ModelForm):
             'what_is_newton',
             'done_for_newton',
             'done_for_newton_attachment',
-            'do_for_newton',
-            'is_establish_node',
-            'which_node_establish',
-            'establish_node_plan'
+            'do_for_newton'
         ]
         
 

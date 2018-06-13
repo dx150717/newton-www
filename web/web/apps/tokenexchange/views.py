@@ -80,6 +80,13 @@ def post_kyc_information(request):
             instance = contribute_form.save(commit=True)
             instance = emergency_form.save(commit=True)
 
+            is_etablish_node = request.POST.get('is_etablish_node')
+            which_node_establish = request.POST.get('which_node_establish')
+            establish_node_plan = request.POST.get('establish_node_plan')
+            if establish_node_plan and len(establish_node_plan) < 10240:
+                instance.establish_node_plan = establish_node_plan
+            instance.is_etablish_node = is_etablish_node
+            instance.which_node_establish = which_node_establish
             country_code, cellphone = base_form.cleaned_data['cellphone_group']
             instance.country_code = country_code
             instance.cellphone = cellphone

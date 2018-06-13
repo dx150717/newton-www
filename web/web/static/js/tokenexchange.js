@@ -83,3 +83,12 @@ $("#user_kyc_form").submit(function(event){
         error.appendTo(element.parent());
     }
 });
+
+function openNode(){
+    $("#which-node").removeClass('hide');
+    $("#how-node").removeClass('hide');
+}
+function closeNode(){
+    $("#which-node").addClass('hide');
+    $("#how-node").addClass('hide');
+}
