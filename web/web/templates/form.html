@@ -15,7 +15,7 @@
 {% endif %}
 {% for field in form %}
 {% if field.name == "gtoken_code" %}
-<div class="form-group" style="margin-left: auto; margin-right: auto;">   
+<div class="form-group margin-auto">   
     <p>
         <label for="id_{{ field.name }}" class="control-label">{{ field.label }} <span class="red-color">{{ field.help_text }}</span>
         </label>
@@ -30,7 +30,11 @@
     </div>
 </div>
 {% else %}
-<div class="form-group">   
+    {% if field.name == "personal_profile_attachment" or field.name == "done_for_newton_attachment" %}
+<div class="form-group attachment">  
+    {% else %}
+<div class="form-group"> 
+    {% endif %}
     <p>
         <label for="id_{{ field.name }}" class="control-label">{{ field.label }} <span class="red-color">{{ field.help_text }}</span>
         </label>
