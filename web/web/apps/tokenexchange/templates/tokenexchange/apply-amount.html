@@ -21,18 +21,18 @@
 <section id="token-exchange" class="section-list">
     <div class="page-title">
         <div class="container">
-            <p>{% trans "Fill in your amount of token exchange" %}
+            <p>{% trans "Token Exchange" %}
             </p>
         </div>
     </div>
-    <div class="container text-center">
+    <div class="container text-center ">
         <div class="title">
         </div>  
         {% include "tokenexchange/token-exchange-info.html" %}
         <div class="container amount mt50">
             <div class="raw">
                 <div>
-                    <form id="user_kyc_form" class="form" action="/tokenexchange/invite/{{ invite_id }}/post/" method="POST">
+                    <form id="fill-amount" class="form text-left" action="/tokenexchange/invite/{{ invite_id }}/post/" method="POST">
                         {% include "form.html" %}
                         <div class="raw">
                             <div class="text-center token-btn">

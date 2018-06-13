@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 14:10+0000\n"
+"POT-Creation-Date: 2018-06-13 14:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -504,10 +504,19 @@ msgstr ""
 msgid "Best regard"
 msgstr ""
 
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:17
+#, fuzzy
+msgid "Newton team"
+msgstr "牛顿团队"
 
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:12
 msgid "Admin Login"
 msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:28
+#, fuzzy
+msgid "KYC verification rejected"
+msgstr "KYC 审核被拒绝"
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:30
 msgid "Newton foundation has received your"
@@ -1043,6 +1052,14 @@ msgstr "紧急联系人姓"
 msgid "Relation with Applicant"
 msgstr "与申请人的关系"
 
+#: web/apps/tokenexchange/models.py:108
+msgid "How much do you want to contribute in BTC"
+msgstr "您期望的 BTC 额度"
+
+#: web/apps/tokenexchange/models.py:109
+msgid "How much do you want to contribute in ELA"
+msgstr "您期望的 ELA 额度"
+
 #: web/apps/tokenexchange/services.py:26
 msgid "Newton notification: Received your KYC information"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
@@ -1062,8 +1079,11 @@ msgid "KYC"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:24
-msgid "Fill in your amount of token exchange"
-msgstr "填写你的期望额度"
+#: web/apps/tokenexchange/templates/tokenexchange/end.html:6
+#: web/apps/user/templates/user/index.html:39
+#: web/apps/user/templates/user/token-exchange-progress.html:24
+msgid "Token Exchange"
+msgstr "通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:21
 msgid "You have successfully filled in the expected amount."
@@ -1093,12 +1113,6 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:33
 msgid "Your ELA amount is "
 msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/end.html:6
-#: web/apps/user/templates/user/index.html:39
-#: web/apps/user/templates/user/token-exchange-progress.html:24
-msgid "Token Exchange"
-msgstr "通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:24
 #, fuzzy
@@ -6593,3 +6607,5 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
+#~ msgid "Fill in your amount of token exchange"
+#~ msgstr "填写你的期望额度"
