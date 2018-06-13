@@ -52,7 +52,9 @@ class KYCProfileForm(ModelForm):
         self.fields['other_social_account'].required = False
         self.fields['personal_profile_attachment'].required = False
         self.fields['your_community'].required = False
-        self.fields['your_community_screenshots'].required = False
+        self.fields['your_community_screenshots1'].required = False
+        self.fields['your_community_screenshots2'].required = False
+        self.fields['your_community_screenshots3'].required = False
         self.fields.keyOrder = [
             'personal_profile',
             'personal_profile_attachment',
@@ -62,7 +64,9 @@ class KYCProfileForm(ModelForm):
             'facebook',
             'other_social_account',
             'your_community',
-            'your_community_screenshots'
+            'your_community_screenshots1',
+            'your_community_screenshots2',
+            'your_community_screenshots3',
         ]
         
     class Meta:
@@ -76,7 +80,9 @@ class KYCProfileForm(ModelForm):
             'facebook',
             'other_social_account',
             'your_community',
-            'your_community_screenshots'
+            'your_community_screenshots1',
+            'your_community_screenshots2',
+            'your_community_screenshots3',
         ]
         
 

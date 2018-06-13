@@ -52,9 +52,10 @@ class KYCInfo(models.Model):
     telegram = models.CharField(max_length=128, db_index=True, verbose_name='Telegram ID', null=True)
     wechat = models.CharField(max_length=128, db_index=True, verbose_name=_('WeChat ID'), null=True)
     other_social_account = models.CharField(max_length=128, db_index=True, verbose_name=_('Other Social Media'), null=True)
-    your_community = models.CharField(max_length=1024, verbose_name=_('Newton Communities You are Involved in'), null=True)
-    your_community_screenshots = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots', path_prefix='your_community_screenshots'), verbose_name=_('Screenshots of Abovementioned Communities'))
-
+    your_community = models.TextField(max_length=10240, verbose_name=_('Newton Communities You are Involved in'), null=True)
+    your_community_screenshots1 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots', path_prefix='your_community_screenshots'), verbose_name=_('Screenshots of Abovementioned Communities') + str(1))
+    your_community_screenshots2 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots', path_prefix='your_community_screenshots'), verbose_name=_('Screenshots of Abovementioned Communities') + str(2))
+    your_community_screenshots3 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots', path_prefix='your_community_screenshots'), verbose_name=_('Screenshots of Abovementioned Communities') + str(3))
     # how to contribute for newton
     what_is_newton = models.TextField(verbose_name=_('Your Understanding of Newton'), max_length=10240, null=True, help_text='(*)')
     done_for_newton = models.TextField(verbose_name=_('Contribution You Have Made to Newton'), max_length=10240)

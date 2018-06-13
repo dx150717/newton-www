@@ -40,6 +40,9 @@
         {% if field.name == "location" %}
         <p class="small">{% trans "Detailed address needs to be accurate to the street" %}</p>
         {% endif %}
+        {% if field.name == "your_community" %}
+        <p class="small">{% trans "Tell us community name you are involved in, your nickname in the community, your social media ID." %}</p>
+        {% endif %}
     </p>
     <div>
         {{ field|addcss:"form-control" }}
