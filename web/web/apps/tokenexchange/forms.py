@@ -115,7 +115,7 @@ class ContributeForm(ModelForm):
 
 class EmergencyForm(ModelForm):
     """docstring for EmergencyForm"""
-    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_('Emergency Cellphone'), help_text='(*)')
+    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_('Cellphone'), help_text='(*)')
     def __init__(self, *args, **kw):
         super(EmergencyForm, self).__init__(*args, **kw)
         self.fields.keyOrder = [

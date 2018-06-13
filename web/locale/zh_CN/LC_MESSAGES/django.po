@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 05:28+0000\n"
+"POT-Creation-Date: 2018-06-13 06:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -326,7 +326,9 @@ msgstr "填写谷歌身份验证码"
 
 #: web/apps/login/templates/login/index.html:75
 #: web/apps/register/templates/register/gtoken.html:59
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:39
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:38
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:81
 #: web/apps/user/templates/user/profile.html:34
 msgid "Submit"
 msgstr "提交"
@@ -442,7 +444,7 @@ msgstr "名字"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:29
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:28
-#: web/apps/tokenexchange/forms.py:15
+#: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:118
 msgid "Cellphone"
 msgstr "手机号"
 
@@ -473,7 +475,6 @@ msgstr "介绍一下自己，作为社区成员可以为牛顿做什么"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:35
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:34
-#: web/apps/tokenexchange/models.py:59
 msgid "Tell us your understanding about Newton"
 msgstr "你如何理解牛顿"
 
@@ -911,10 +912,6 @@ msgstr ""
 "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
 "阅。"
 
-#: web/apps/tokenexchange/forms.py:118
-msgid "Emergency Cellphone"
-msgstr "紧急联系人的手机号"
-
 #: web/apps/tokenexchange/models.py:14
 msgid "ID Card"
 msgstr "身份证"
@@ -943,19 +940,19 @@ msgstr "技术节点"
 msgid "Operation Node"
 msgstr "运营节点"
 
-#: web/apps/tokenexchange/models.py:31
+#: web/apps/tokenexchange/models.py:31 web/apps/tokenexchange/models.py:74
 msgid "First Name"
 msgstr "名"
 
-#: web/apps/tokenexchange/models.py:32
+#: web/apps/tokenexchange/models.py:32 web/apps/tokenexchange/models.py:75
 msgid "Last Name"
 msgstr "姓"
 
-#: web/apps/tokenexchange/models.py:35
+#: web/apps/tokenexchange/models.py:35 web/apps/tokenexchange/models.py:78
 msgid "Select country or region"
 msgstr "选择国家地区"
 
-#: web/apps/tokenexchange/models.py:35
+#: web/apps/tokenexchange/models.py:35 web/apps/tokenexchange/models.py:78
 msgid "Country or Region"
 msgstr "国家或地区"
 
@@ -963,7 +960,7 @@ msgstr "国家或地区"
 msgid "City"
 msgstr "城市"
 
-#: web/apps/tokenexchange/models.py:37
+#: web/apps/tokenexchange/models.py:37 web/apps/tokenexchange/models.py:80
 msgid "Address"
 msgstr "详细地址"
 
@@ -985,6 +982,12 @@ msgstr "ID 照片"
 msgid "Self Introduction"
 msgstr "自我介绍"
 
+#: web/apps/tokenexchange/models.py:48
+msgid ""
+"(* Your CV. When were you involved in blockchain domain? Tell something "
+"about your understanding on blockchain industry.)"
+msgstr "(* 个人职业履历，接触区块链的时间，对区块链行业的理解等。)"
+
 #: web/apps/tokenexchange/models.py:49 web/apps/tokenexchange/models.py:61
 msgid "Attachment"
 msgstr "附件"
@@ -1005,13 +1008,17 @@ msgstr "您所在的牛顿社群"
 msgid "Screenshots of Abovementioned Communities"
 msgstr "您所在的社群截图"
 
+#: web/apps/tokenexchange/models.py:59
+msgid "Your Understanding of Newton"
+msgstr "您对牛顿的理解"
+
 #: web/apps/tokenexchange/models.py:60
-msgid "What contribute you had do for newton"
+msgid "Contribution You Have Made to Newton"
 msgstr "您已经为牛顿做了什么"
 
 #: web/apps/tokenexchange/models.py:62
-msgid "What will you do for newton"
-msgstr "您将为牛顿做什么"
+msgid "Contribution You Will Make to Newton"
+msgstr "您将为牛顿做些什么"
 
 #: web/apps/tokenexchange/models.py:64
 msgid "Do you want to establish a Newton node ?"
@@ -1025,14 +1032,6 @@ msgstr "您想建立哪种节点？"
 msgid "Your plan of node establishment"
 msgstr "你准备如何建立节点"
 
-#: web/apps/tokenexchange/models.py:74
-msgid "First Name of Emergency Contact"
-msgstr "紧急联系人的名字"
-
-#: web/apps/tokenexchange/models.py:75
-msgid "Last Name of Emergency Contact"
-msgstr "紧急联系人姓"
-
 #: web/apps/tokenexchange/models.py:76
 #, fuzzy
 msgid "Country Code of Emergency Contact"
@@ -1043,17 +1042,9 @@ msgstr "紧急联系人姓"
 msgid "Cellphone of Emergency Contact"
 msgstr "紧急联系人姓"
 
-#: web/apps/tokenexchange/models.py:78
-msgid "Emergency Country or Region"
-msgstr "紧急联系人的国家或地区"
-
-#: web/apps/tokenexchange/models.py:80
-msgid "Emergency Address"
-msgstr "紧急联系人的地址"
-
 #: web/apps/tokenexchange/models.py:81
-msgid "Emergency Relationship"
-msgstr "与紧急联系人的关系"
+msgid "Relation with Applicant"
+msgstr "与申请人的关系"
 
 #: web/apps/tokenexchange/services.py:26
 msgid "Newton notification: Received your KYC information"
@@ -1078,8 +1069,9 @@ msgid "Fill in your amount of token exchange"
 msgstr "填写你的期望额度"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:21
-msgid "Apply Success"
-msgstr "申请成功！"
+#, fuzzy
+msgid "You have successfully filled in the expected amount."
+msgstr "填写期望额度"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:23
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:26
@@ -1107,6 +1099,7 @@ msgid "Your ELA amount is "
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:6
+#: web/apps/user/templates/user/index.html:39
 msgid "Token Exchange"
 msgstr "通证交换"
 
@@ -1512,7 +1505,13 @@ msgstr "基本信息"
 msgid "How to Contribute"
 msgstr "如何参与Newton"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:71
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:61
+msgid ""
+"This is an important basis for Newton's KYC review. Please fill in it "
+"carefully and thoroughly."
+msgstr "这是 Newton KYC 审核的重要依据，请认真填写。"
+
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:72
 #: web/apps/user/templates/user/index.html:136
 msgid "Emergency Information"
 msgstr "紧急联系人信息"
@@ -1570,11 +1569,11 @@ msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件
 
 #: web/apps/user/forms.py:35
 msgid "Area Code"
-msgstr ""
+msgstr "国际区号"
 
 #: web/apps/user/forms.py:37
 msgid "Phone Number"
-msgstr ""
+msgstr "手机号码"
 
 #: web/apps/user/models.py:31
 msgid "Homepage"
@@ -1751,8 +1750,8 @@ msgid "Your expected amount is under evaluation."
 msgstr "你填写的期望额度正在审核中。"
 
 #: web/apps/user/templates/user/token-exchange-progress.html:168
-msgid "Fill in your expected token exchange amount"
-msgstr "填写你的期望额度"
+msgid "Fill in expected amount"
+msgstr "填写期望额度"
 
 #: web/apps/verification/models.py:22
 msgid "Verification emails"
@@ -6545,12 +6544,6 @@ msgstr "只能上传 jpeg, jpg 和 png 格式，大小在 5M 之内"
 msgid "Detailed address needs to be accurate to the street"
 msgstr "详细地址精确到街道"
 
-#: web/templates/form.html:28
-msgid ""
-"This is an important basis for Newton's KYC review. Please fill in it "
-"carefully and thoroughly"
-msgstr "这是 Newton KYC 审核的重要依据，请认真填写"
-
 #: web/templates/header-no-menu.html:29 web/templates/header.html:45
 msgid "User Center"
 msgstr "用户中心"
@@ -6589,6 +6582,33 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Apply Success"
+#~ msgstr "申请成功！"
+
+#~ msgid "Fill in your expected token exchange amount"
+#~ msgstr "填写你的期望额度"
+
+#~ msgid "Emergency Cellphone"
+#~ msgstr "紧急联系人的手机号"
+
+#~ msgid "What will you do for newton"
+#~ msgstr "您将为牛顿做什么"
+
+#~ msgid "First Name of Emergency Contact"
+#~ msgstr "紧急联系人的名字"
+
+#~ msgid "Last Name of Emergency Contact"
+#~ msgstr "紧急联系人姓"
+
+#~ msgid "Emergency Country or Region"
+#~ msgstr "紧急联系人的国家或地区"
+
+#~ msgid "Emergency Address"
+#~ msgstr "紧急联系人的地址"
+
+#~ msgid "Emergency Relationship"
+#~ msgstr "与紧急联系人的关系"
 
 #~ msgid "There is no token exchange information"
 #~ msgstr "没有通证交换信息"

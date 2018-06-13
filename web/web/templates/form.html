@@ -24,9 +24,6 @@
         {% if field.name == "location" %}
         <p class="small">{% trans "Detailed address needs to be accurate to the street" %}</p>
         {% endif %}
-        {% if field.name == "done_for_newton" or field.name == "do_for_newton" %}
-        <p class="small">{% trans "This is an important basis for Newton's KYC review. Please fill in it carefully and thoroughly" %}</p>
-        {% endif %}
     </p>
     <div>
         {{ field|addcss:"form-control" }}

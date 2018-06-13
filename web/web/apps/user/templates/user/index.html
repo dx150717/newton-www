@@ -153,6 +153,7 @@
                         
                         {% if items %}
                         {% for item in items %}
+                        <div class="shadow-item">
                         {% if item.expect_btc or item.except_ela %}
                             <script>var hasExpect = true;</script>
                         {% endif %}
@@ -255,6 +256,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                         {% endfor %}
                         {% else %}
                         <div class="item">
