@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 06:12+0000\n"
+"POT-Creation-Date: 2018-06-13 08:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,11 +154,13 @@ msgstr ""
 
 #: web/apps/base/templatetags/utils.py:182
 #: web/apps/base/templatetags/utils.py:189 web/apps/tokenexchange/models.py:25
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:71
 msgid "Yes"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:183
 #: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:26
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:72
 msgid "No"
 msgstr ""
 
@@ -325,10 +327,10 @@ msgid "Google Authenticator Code"
 msgstr "填写谷歌身份验证码"
 
 #: web/apps/login/templates/login/index.html:75
-#: web/apps/register/templates/register/gtoken.html:59
+#: web/apps/register/templates/register/gtoken.html:73
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:39
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:38
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:81
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:114
 #: web/apps/user/templates/user/profile.html:34
 msgid "Submit"
 msgstr "提交"
@@ -444,7 +446,7 @@ msgstr "名字"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:29
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:28
-#: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:118
+#: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:116
 msgid "Cellphone"
 msgstr "手机号"
 
@@ -572,15 +574,15 @@ msgid "Entered passwords do not match"
 msgstr "两次输入密码不一致"
 
 #: web/apps/register/templates/register/gtoken.html:6
-#: web/apps/register/templates/register/gtoken.html:23
+#: web/apps/register/templates/register/gtoken.html:24
 msgid "Add Google Authenticator"
 msgstr "添加谷歌身份验证器"
 
-#: web/apps/register/templates/register/gtoken.html:28
+#: web/apps/register/templates/register/gtoken.html:31
 msgid "Scan the QR code or enter the code manually into your GA app"
 msgstr "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
 
-#: web/apps/register/templates/register/gtoken.html:31
+#: web/apps/register/templates/register/gtoken.html:34
 msgid ""
 "Apple users are recommended to download Google Authenticator directly from "
 "the App Store and android users are recommended to download Google "
@@ -589,19 +591,15 @@ msgstr ""
 "苹果用户推荐在App Store中下载Authenticator,安卓用户推荐到Google Play下载谷歌"
 "身份验证器"
 
-#: web/apps/register/templates/register/gtoken.html:34
+#: web/apps/register/templates/register/gtoken.html:37
 msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
 msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
 
-#: web/apps/register/templates/register/gtoken.html:47
+#: web/apps/register/templates/register/gtoken.html:51
 msgid "Enter the  code manually into your GA app"
 msgstr "手动添加谷歌身份验证器"
 
-#: web/apps/register/templates/register/gtoken.html:51
-msgid "Or"
-msgstr "或者"
-
-#: web/apps/register/templates/register/gtoken.html:54
+#: web/apps/register/templates/register/gtoken.html:66
 msgid "Use the GA app to scan the QR code"
 msgstr "扫描二维码添加谷歌身份验证器"
 
@@ -637,20 +635,20 @@ msgid "Invalid Link"
 msgstr "无效链接"
 
 #: web/apps/register/templates/register/password.html:6
-#: web/apps/register/templates/register/password.html:23
+#: web/apps/register/templates/register/password.html:24
 msgid "Set Password"
 msgstr "设置密码"
 
-#: web/apps/register/templates/register/password.html:32
+#: web/apps/register/templates/register/password.html:35
 msgid "Next"
 msgstr "下一步"
 
-#: web/apps/register/templates/register/post-success.html:23
-#: web/apps/reset/templates/reset/reset-success.html:21
-msgid "Submit Success!"
-msgstr "提交成功！"
-
 #: web/apps/register/templates/register/post-success.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
+msgid "Submit Success"
+msgstr "提交成功"
+
+#: web/apps/register/templates/register/post-success.html:29
 msgid ""
 "We have sent you an email. Please go to your registered email inbox to check "
 "and complete the registration process."
@@ -728,6 +726,10 @@ msgstr ""
 "您好！这是一封来自 <a href='https://www.newtonproject.org'>https://www."
 "newtonproject.org</a> 的邮件，帮助您重置您的账户密码，点击下方按钮进行下一步"
 "操作。"
+
+#: web/apps/reset/templates/reset/reset-success.html:21
+msgid "Submit Success!"
+msgstr "提交成功！"
 
 #: web/apps/reset/templates/reset/reset-success.html:22
 #, fuzzy
@@ -925,42 +927,46 @@ msgid "Drivers License"
 msgstr "驾驶证"
 
 #: web/apps/tokenexchange/models.py:19
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:82
 msgid "Full Node"
 msgstr "全节点"
 
 #: web/apps/tokenexchange/models.py:20
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:83
 msgid "Media Node"
 msgstr "媒体节点"
 
 #: web/apps/tokenexchange/models.py:21
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:84
 msgid "Technology Node"
 msgstr "技术节点"
 
 #: web/apps/tokenexchange/models.py:22
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:85
 msgid "Operation Node"
 msgstr "运营节点"
 
-#: web/apps/tokenexchange/models.py:31 web/apps/tokenexchange/models.py:74
+#: web/apps/tokenexchange/models.py:31 web/apps/tokenexchange/models.py:75
 msgid "First Name"
 msgstr "名"
 
-#: web/apps/tokenexchange/models.py:32 web/apps/tokenexchange/models.py:75
+#: web/apps/tokenexchange/models.py:32 web/apps/tokenexchange/models.py:76
 msgid "Last Name"
 msgstr "姓"
 
-#: web/apps/tokenexchange/models.py:35 web/apps/tokenexchange/models.py:78
+#: web/apps/tokenexchange/models.py:35 web/apps/tokenexchange/models.py:79
 msgid "Select country or region"
 msgstr "选择国家地区"
 
-#: web/apps/tokenexchange/models.py:35 web/apps/tokenexchange/models.py:78
+#: web/apps/tokenexchange/models.py:35 web/apps/tokenexchange/models.py:79
 msgid "Country or Region"
 msgstr "国家或地区"
 
-#: web/apps/tokenexchange/models.py:36 web/apps/tokenexchange/models.py:79
+#: web/apps/tokenexchange/models.py:36 web/apps/tokenexchange/models.py:80
 msgid "City"
 msgstr "城市"
 
-#: web/apps/tokenexchange/models.py:37 web/apps/tokenexchange/models.py:80
+#: web/apps/tokenexchange/models.py:37 web/apps/tokenexchange/models.py:81
 msgid "Address"
 msgstr "详细地址"
 
@@ -988,7 +994,7 @@ msgid ""
 "about your understanding on blockchain industry.)"
 msgstr "(* 个人职业履历，接触区块链的时间，对区块链行业的理解等。)"
 
-#: web/apps/tokenexchange/models.py:49 web/apps/tokenexchange/models.py:61
+#: web/apps/tokenexchange/models.py:49 web/apps/tokenexchange/models.py:62
 msgid "Attachment"
 msgstr "附件"
 
@@ -1004,45 +1010,51 @@ msgstr "其他社交媒体账号"
 msgid "Newton Communities You are Involved in"
 msgstr "您所在的牛顿社群"
 
-#: web/apps/tokenexchange/models.py:56
+#: web/apps/tokenexchange/models.py:56 web/apps/tokenexchange/models.py:57
+#: web/apps/tokenexchange/models.py:58
 msgid "Screenshots of Abovementioned Communities"
 msgstr "您所在的社群截图"
 
-#: web/apps/tokenexchange/models.py:59
+#: web/apps/tokenexchange/models.py:60
 msgid "Your Understanding of Newton"
 msgstr "您对牛顿的理解"
 
-#: web/apps/tokenexchange/models.py:60
+#: web/apps/tokenexchange/models.py:61
 msgid "Contribution You Have Made to Newton"
 msgstr "您已经为牛顿做了什么"
 
-#: web/apps/tokenexchange/models.py:62
+#: web/apps/tokenexchange/models.py:63
 msgid "Contribution You Will Make to Newton"
 msgstr "您将为牛顿做些什么"
 
-#: web/apps/tokenexchange/models.py:64
+#: web/apps/tokenexchange/models.py:65
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:67
 msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点？"
 
-#: web/apps/tokenexchange/models.py:68
+#: web/apps/tokenexchange/models.py:69
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:77
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:81
 msgid "Which type of node ?"
 msgstr "您想建立哪种节点？"
 
-#: web/apps/tokenexchange/models.py:71
+#: web/apps/tokenexchange/models.py:72
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:91
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:95
 msgid "Your plan of node establishment"
 msgstr "你准备如何建立节点"
 
-#: web/apps/tokenexchange/models.py:76
+#: web/apps/tokenexchange/models.py:77
 #, fuzzy
 msgid "Country Code of Emergency Contact"
 msgstr "紧急联系人姓"
 
-#: web/apps/tokenexchange/models.py:77
+#: web/apps/tokenexchange/models.py:78
 #, fuzzy
 msgid "Cellphone of Emergency Contact"
 msgstr "紧急联系人姓"
 
-#: web/apps/tokenexchange/models.py:81
+#: web/apps/tokenexchange/models.py:82
 msgid "Relation with Applicant"
 msgstr "与申请人的关系"
 
@@ -1099,6 +1111,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:6
 #: web/apps/user/templates/user/index.html:39
+#: web/apps/user/templates/user/token-exchange-progress.html:24
 msgid "Token Exchange"
 msgstr "通证交换"
 
@@ -1510,7 +1523,7 @@ msgid ""
 "carefully and thoroughly."
 msgstr "这是 Newton KYC 审核的重要依据，请认真填写。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:72
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:105
 #: web/apps/user/templates/user/index.html:136
 msgid "Emergency Information"
 msgstr "紧急联系人信息"
@@ -1554,10 +1567,6 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:45
 msgid "Min ELA: "
 msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
-msgid "Submit Success"
-msgstr "提交成功"
 
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:24
 #: web/apps/user/templates/user/index.html:79
@@ -1630,36 +1639,36 @@ msgstr "重新填写"
 msgid "You have not submit KYC information."
 msgstr "尚未提交KYC信息"
 
-#: web/apps/user/templates/user/index.html:172
-#: web/apps/user/templates/user/index.html:218
+#: web/apps/user/templates/user/index.html:173
+#: web/apps/user/templates/user/index.html:219
 msgid "Passed the Newton KYC"
 msgstr "已经通过 Newton KYC"
 
-#: web/apps/user/templates/user/index.html:180
-#: web/apps/user/templates/user/index.html:225
+#: web/apps/user/templates/user/index.html:181
+#: web/apps/user/templates/user/index.html:226
 msgid "Filled in the expected amount"
 msgstr "填写期望额度"
 
-#: web/apps/user/templates/user/index.html:189
-#: web/apps/user/templates/user/index.html:233
+#: web/apps/user/templates/user/index.html:190
+#: web/apps/user/templates/user/index.html:234
 msgid "Transferred"
 msgstr "转币成功"
 
-#: web/apps/user/templates/user/index.html:198
-#: web/apps/user/templates/user/index.html:241
+#: web/apps/user/templates/user/index.html:199
+#: web/apps/user/templates/user/index.html:242
 msgid "Finished filling in newpay wallet address"
 msgstr "已经填写 newpay 钱包地址"
 
-#: web/apps/user/templates/user/index.html:207
-#: web/apps/user/templates/user/index.html:249
+#: web/apps/user/templates/user/index.html:208
+#: web/apps/user/templates/user/index.html:250
 msgid "Token exchange success"
 msgstr "通证交换成功"
 
-#: web/apps/user/templates/user/index.html:256
+#: web/apps/user/templates/user/index.html:257
 msgid "Details "
 msgstr "详情"
 
-#: web/apps/user/templates/user/index.html:263
+#: web/apps/user/templates/user/index.html:265
 #: web/apps/user/templates/user/token-exchange-progress.html:174
 msgid "No token exchange information."
 msgstr "没有通证交换信息"
@@ -1671,10 +1680,6 @@ msgstr "修改个人资料"
 #: web/apps/user/templates/user/settings.html:19
 msgid "Settings"
 msgstr "设置"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:24
-msgid "TOKEN EXCHANGE"
-msgstr "通证交换"
 
 #: web/apps/user/templates/user/token-exchange-progress.html:43
 msgid "Expected"
@@ -6535,13 +6540,19 @@ msgstr ""
 msgid "cannot recognize?"
 msgstr "看不清？换一张"
 
-#: web/templates/form.html:22
+#: web/templates/form.html:38
 msgid "Only jpeg, jpg and png file within 5M"
 msgstr "只能上传 jpeg, jpg 和 png 格式，大小在 5M 之内"
 
-#: web/templates/form.html:25
+#: web/templates/form.html:41
 msgid "Detailed address needs to be accurate to the street"
 msgstr "详细地址精确到街道"
+
+#: web/templates/form.html:44
+msgid ""
+"Tell us community name you are involved in, your nickname in the community, "
+"your social media ID."
+msgstr "填写您所在的社群名称，您在社区中的昵称和您的社交媒体ID。"
 
 #: web/templates/header-no-menu.html:29 web/templates/header.html:45
 msgid "User Center"
@@ -6581,6 +6592,12 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Or"
+#~ msgstr "或者"
+
+#~ msgid "TOKEN EXCHANGE"
+#~ msgstr "通证交换"
 
 #~ msgid "Apply Success"
 #~ msgstr "申请成功！"
