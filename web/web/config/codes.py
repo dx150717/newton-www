@@ -87,6 +87,9 @@ class KYCStatus(Enum):
     PASS_KYC = 2
     REJECT = 3
 
+KYC_STATUS_CANDIDATE_VALUE = KYCStatus.CANDIDATE.value
+
+
 class TokenExchangeStatus(Enum): 
     INVITE = 1  
     SEND_INVITE_NOTIFY = 2

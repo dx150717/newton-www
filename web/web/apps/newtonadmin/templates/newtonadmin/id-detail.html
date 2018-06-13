@@ -73,9 +73,11 @@
                     
                 </tbody>
             </table>
+            {% if item.status == codes.KYC_STATUS_CANDIDATE_VALUE %}
             <p>
                 <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
             </p>
+            {% endif %}
 
             {% if is_paginated %}
             <div class="pagination-simple">
