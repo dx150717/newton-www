@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block require_title %}
+<title>{% trans "KYC" %} | Newton Community </title>
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block notice %}
+{% endblock %}
+
+{% block content %}
+<section id="kyc" class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "KYC TOKEN EXCHANGE TERM" %}
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <p class="token-exchange-big-title text-center"></p>
+        <div class="kyc-content">
+            <strong>{% trans "Please read NEWTON Token Exchange Agreement, Terms of Use, and White Paper of Newtonproject.org, then clicks the check box to indicate that Buyer has read, understands and agrees to the terms of this Agreement." %}</strong>
+            <div>
+                <p>{% trans "This NEWTON Token Exchange Agreement (this 'Agreement') contains Terms of use NEWTON (https://www.newtonproject.org/terms-of-use/) and Privacy Policy (https://www.newtonproject.org/privacy/). Therefore, in consideration of the warranties and agreements contained in this Agreement, and for other good and valuable consideration, NEWTON Token Buyer hereby agrees as follows:" %}</p>
+                <p>{% trans "IMPORTANT INFORMATION: PLEASE READ THIS AGREEMENT CAREFULLY AND IN ITS ENTIRETY." %}</p>
+                <p>{% trans "Buyer acknowledges, understands and agrees to the following:" %}</p>
+                <p>{% trans "1. NO U.S. OR CHINESE BUYERS:" %}</p>
+                <p>{% trans "NEWTON Tokens are not being offered or distributed to U.S. persons or Chinese persons. If you are citizen, resident of, or a person located or domiciled in, or any entity, including, without limitation, any corporation or partnership created or organized in or under the laws of the People’s Republic of China AND the United States of America, do not exchange or attempt to exchange NEWTON Tokens." %}</p>
+                <p>{% trans "2. Exchange of NEWTON tokens are non-refundable and exchanges cannot be cancelled. Buyer may lose all amounts paid. NEWTON tokens may have no value. Newton reserves the right to refuse or cancel NEWTON token exchange requests at any time in its sole discretion." %}</p>
+                <p>{% trans "3. NEWTON Tokens. As mentioned above, the NEWTON Tokens do not have any rights, uses, purpose, attributes, functionalities or features, express or implied. Although NEWTON Tokens may be tradable, they are not an investment, currency, security, commodity, a swap on a currency, security or commodity or any other kind of financial instrument." %}</p>
+                <p>{% trans "4. Buyer acknowledges and understands that the proceeds from the exchange of the NEWTON tokens. The NEWTON Tokens are not being offered to U.S. users or Chinese users. If a U.S. person or a Chinese person entered into this Agreement on an unlawful, unauthorized and fraudulent basis, this Agreement is null and void. And NEWTON FOUNDATION may take all necessary and appropriate actions, in its sole discretion, to invalidate this Agreement, including referral of information to the appropriate authorities. The NEWTON Tokens themselves are not securities, commodities, swaps on either securities or commodities or a financial instrument of any kind. Exchange of NEWTON Tokens are not subject to the protections of any laws governing those types of financial instruments. This Agreement and all other documents referred to in this Agreement including the White Paper do not constitute a prospectus or offering document and are not an offer to sell, nor the solicitation of an offer to buy an investment, a security, commodity, or a swap on either a security or commodity." %}</p>
+                <p>{% trans "5. Before exchanging NEWTON Tokens, Buyer acknowledges and agrees that NEWTON Tokens are virtual digital cryptocurrency, not designed for investment purposes and should not be considered as a type of investment. Exchanges and sales of NEWTON Tokens are not subject to the protections of any laws governing those types of financial instruments." %}</p>
+                <p>{% trans "6. Buyer acknowledges and agrees that Buyer is not exchanging NEWTON Tokens for purposes of investment, speculation, as some type of arbitrage strategy, for immediate resale or other financial purposes. <br/>No Claim, Loan or Ownership Interest. The exchange of NEWTON Tokens: (a) does not provide Buyer with rights of any form with respect to the NEWTON Foundation or its revenues or assets, including, but not limited to, any voting, distribution, redemption, liquidation, proprietary (including all forms of intellectual property), or other financial or legal rights; (b) is not a loan to NEWTON Foundation; and (c) does not provide Buyer with any ownership or other interest in NEWTON Foundation." %}</p>
+                <p>{% trans "7. Intellectual Property. NEWTON Foundation retains all right, title and interest in all of NEWTON Foundation’s intellectual property, including, without limitation, inventions, ideas, concepts, code, discoveries, processes, marks, methods, software, compositions, formulae, techniques, information and data, whether or not patentable, copyrightable or protectable in trademark, and any trademarks, copyright or patents based thereon. Buyer may not use any of NEWTON Foundation’s intellectual property for any reason without NEWTON Foundation’s prior written consent." %}</p>
+                <p>{% trans "8. Security and Data Privacy." %}</p>
+                <p>{% trans "Buyer will implement reasonable and appropriate measures designed to secure access to: (i) any device associated with Buyer and utilized in connection with Buyer’s exchange of NEWTON Tokens; (ii) private keys to Buyer’s wallet or account; and (iii) any other username, passwords or other login or identifying credentials. In the event that Buyer is no longer in possession of Buyer’s private keys or any device associated with Buyer’s account or is not able to provide Buyer’s login or identifying credentials, Buyer may lose all of Buyer’s NEWTON Tokens and/or access to Buyer’s account. NEWTON Foundation is under no obligation to recover any NEWTON Tokens. Buyer acknowledges, understands and agrees that all exchanges of NEWTON Tokens are non-refundable and Buyer will not receive money or other compensation for any NEWTON Tokens exchanged." %}</p>
+                <p>{% trans "9. Upon NEWTON Foundation’s request, Buyer will immediately provide to NEWTON Foundation their information and documents. NEWTON Foundation, in its sole discretion, deems necessary or appropriate to comply with any laws, regulations, rules or agreements, including without limitation judicial process. Such documents include, but are not limited to, passport, driver’s license, utility bills, photographs of associated individuals, government identification cards, or sworn statements. Buyer consents to NEWTON Foundation disclosing such information and documents in order to comply with applicable laws, regulations, rules or agreements. Buyer acknowledges that NEWTON Foundation may refuse to distribute NEWTON Tokens to Buyer until such requested information is provided." %}</p>
+                <p>{% trans "10. Buyer acknowledges, understands and agrees that: Buyer is solely responsible for Buyer’s compliance with Buyer’s tax obligations; and NEWTON Foundation bears no liability or responsibility with respect to any tax consequences to Buyer." %}</p>
+                <p>{% trans "11. If an individual, Buyer is at least 18 years old and of sufficient legal age and capacity to exchange NEWTON Tokens." %}</p>
+                <p>{% trans "12. If a legal person, Buyer is duly organized, validly existing and in good standing under the laws of its domiciliary jurisdiction and each jurisdiction where it conducts business." %}</p>
+                <p>{% trans "13. Buyer has sufficient knowledge and experience in business and financial matters, including a sufficient understanding of blockchain or cryptographic tokens and other digital assets, smart contracts, storage mechanisms (such as digital or token wallets), blockchain-based software systems and blockchain technology, to be able to evaluate the risks and merits of Buyer’s exchange of NEWTON Tokens, including but not limited, to the matters set forth in this Agreement, and is able to bear the risks thereof, including loss of all amounts paid, loss of NEWTON Tokens, and others for its acts and omissions, including with limitation those constituting breach of this Agreement, negligence, fraud or willful misconduct. Buyer has obtained sufficient information in order to make an informed decision to exchange NEWTON Tokens." %}</p>
+                <p>{% trans "14. The funds, including any fiat, virtual currency or cryptocurrency, Buyer uses to exchange NEWTON Tokens are not derived from or related to any unlawful activities, including but not limited to money laundering or terrorist financing, and Buyer will not use the NEWTON Tokens to finance, engage in, or otherwise support any unlawful activities." %}</p>
+                <p>{% trans "15. Anti-Money Laundering. Counter-Terrorism Financing. To the extent required by applicable law, Buyer complies with all anti-money laundering and counter-terrorism financing requirements." %}</p>
+                <p>{% trans "16. Force Majeure. Buyer understands and agrees that NEWTON Foundation shall not be liable and disclaims all liability to Buyer in connection with any force majeure event, including labour disputes or other industrial disturbances, electrical, telecommunications, hardware, software or other utility failures, software or smart contract bugs or weaknesses, earthquakes, storms, or other nature-related events, blockages, embargoes, riots, acts or orders of government, acts of terrorism or war, technological change, changes in interest rates or other monetary conditions." %}</p>
+                <p>{% trans "17. Dispute Resolution. Buyer and NEWTON Foundation shall cooperate in good faith to resolve any dispute, controversy or claim arising out of, relating to or in connection with this Agreement, including with respect to the formation, applicability, breach, termination, validity or enforceability thereof (a 'Dispute'). If the Parties are unable to resolve a Any Dispute not resolved within 90 days shall be referred to and finally resolved by arbitration. The seat, or legal place, of arbitration shall be Singapore. The arbitration award shall be final and binding on the Parties. The Parties undertake to carry out any award without delay and waive their right to any form of recourse insofar as such waiver can validly be made. Judgment upon the award may be entered by any court having jurisdiction thereof or having jurisdiction over the relevant Party or its assets. Parties will each pay their respective attorneys’ fees and expenses. Notwithstanding the foregoing, NEWTON Foundation reserves the right, in its sole and exclusive discretion, to assume responsibility for any or all of the costs of the arbitration." %}</p>
+                <p>{% trans "Severability. If any provision of this Agreement is determined by a court of competent jurisdiction to be invalid, inoperative or unenforceable for any reason, the provision shall be modified to make it valid and, to the extent possible, effectuate the original intent of the Parties as closely as possible in an acceptable manner in order that the transactions contemplated hereby be consummated as originally contemplated to the fullest extent possible." %}</p>
+                <p>{% trans "Modification of Agreement. NEWTON Foundation may modify this Agreement at any time by posting a revised version on the Official Website. The modified terms will become effective upon posting. It is Buyer’s responsibility to check the Website regularly for modifications to this Agreement. This Agreement was last modified on the date listed at the beginning of this Agreement." %}</p>
+                <p>{% trans "No Waivers. The failure by NEWTON Foundation to exercise or enforce any right or provision of this Agreement will not constitute a present or future waiver of such right or provision nor limit NEWTON Foundation’s right to enforce such right or provision at a later time. All waivers by NEWTON Foundation must be unequivocal and in writing to be effective." %}</p>
+                <p>{% trans "No Partnership; No Agency; No Third Party Beneficiaries. Nothing in this Agreement and no action taken by the Parties shall constitute, or be deemed to constitute, a partnership, association, joint venture or other co-operative entity between the Parties. Nothing in this Agreement and no action taken by the Parties pursuant to this Agreement shall constitute, or be deemed to constitute, either Party the agent of the other Party for any purpose. No Party has, pursuant to this Agreement, any authority or power to bind or to contract in the name of the other Party. This Agreement does not create any third party beneficiary rights in any person." %}</p>
+                <p>{% trans "Electronic Communications. Buyer agrees and acknowledges that all agreements, notices, disclosures and other communications that NEWTON Foundation provides Buyer pursuant to this Agreement or in connection with or related to Buyer’s exchange of NEWTON Tokens, including this Agreement, may be provided by NEWTON Foundation, in its sole discretion, to Buyer, in electronic form." %}</p>
+                <p>{% trans "18. The NEWTON Token distribution ratio is shown on the official website（www.newtonproject.org）" %}</p>
+            </div>
+        </div>
+        
+        <div class="token-check-condition container">
+            <div class="raw">
+                <div class="col-sm-12 text-left flex readed">
+                    <input type="checkbox" onchange="check()" id="buy-token-checkboxo" class="accept" value="on"/>
+                    <label for="buy-token-checkbox0" onclick="changeCheckStatus()">
+                        <span>{% trans "I agree with the KYC token exchange term" %}</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="text-center kyc-btn">
+            <button id="gotokyc-btn" disabled="true"  type="button" onclick="gotokyc()" class="form-button">NEXT</button>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block inline_js %}
+<script type="text/javascript">
+    var checkboxes = $(".accept")
+    function check(){
+        for(var i = 0; i < checkboxes.length; i++){
+            var status = checkboxes[i].checked
+            if (status === false){
+                $("#gotokyc-btn")[0].setAttribute("disabled", true)
+                return;
+            } 
+            if (i == (checkboxes.length-1)){
+                $("#gotokyc-btn")[0].removeAttribute("disabled")
+            }
+        }
+    }
+    function gotokyc(){
+        location.href = ("/tokenexchange/post/");
+    }
+    function changeCheckStatus() {
+        checkboxes[0].checked = !checkboxes[0].checked;
+        check();
+    }
+</script>
+{% endblock %}
