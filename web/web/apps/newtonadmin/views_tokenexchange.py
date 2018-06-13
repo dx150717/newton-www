@@ -7,6 +7,7 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.views import generic
 from django.db.models import Sum
+from django_countries.data import COUNTRIES
 
 from utils import http
 from config import codes
@@ -465,6 +466,20 @@ def show_id_detail(request, user_id):
     """
     try:
         item = tokenexchange_models.KYCInfo.objects.filter(user_id=user_id).first()
+        if item.id_type:
+            idtype = tokenexchange_models.ID_CHOICES
+            for i in idtype:
+                if i[0] == item.id_type:
+                    item.id_type = i[1]
+        if item.is_establish_node:
+            for j in tokenexchange_models.ESTABLISH_CHOICE:
+                if j[0] == item.is_establish_node:
+                    item.is_establish_node = j[1]
+        if item.which_node_establish:
+            for k in tokenexchange_models.NODE_CHOICE:
+                if k[0] == item.which_node_establish:
+                    item.which_node_establish = k[1]
+        item.country = COUNTRIES[item.country]
         return render(request, "newtonadmin/id-detail.html", locals())
     except Exception, inst:
         logger.exception("fail to post email to investor:%s" % str(inst))
