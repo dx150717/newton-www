@@ -68,7 +68,6 @@ def show_token_exchange_progress_view(request, phase_id):
             item.btc_final_balance = btc_final_balance
         if ela_final_balance and ela_final_balance != 0:
             item.ela_final_balance = ela_final_balance
-        item.btc_final_balance = 1
         return render(request, "user/token-exchange-progress.html", locals())
     except Exception,inst:
         logger.exception("error show progress %s" %str(inst))
