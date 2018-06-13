@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 13:12+0000\n"
+"POT-Creation-Date: 2018-06-13 03:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,16 +237,6 @@ msgid "Captcha Error"
 msgstr ""
 
 #: web/apps/login/views.py:53 web/apps/newtonadmin/views.py:42
-#: web/apps/login/views.py:42 web/apps/register/views.py:46
-#: web/apps/register/views.py:52
-msgid "No captcha"
-msgstr ""
-
-#: web/apps/login/views.py:43 web/apps/subscription/views.py:42
-msgid "Authenticator Recaptcha Error"
-msgstr ""
-
-#: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
 msgstr "邮箱和密码不匹配"
 
@@ -275,8 +265,8 @@ msgid "Incorrect Google Authenticator Code"
 msgstr "谷歌身份验证码不正确"
 
 #: web/apps/login/templates/login/index.html:5
-#: web/apps/login/templates/login/index.html:22
-#: web/apps/login/templates/login/index.html:44
+#: web/apps/login/templates/login/index.html:23
+#: web/apps/login/templates/login/index.html:47
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:38 web/templates/header.html:54
@@ -313,28 +303,28 @@ msgstr "登录"
 msgid "Newton Community"
 msgstr "牛顿社区"
 
-#: web/apps/login/templates/login/index.html:47
+#: web/apps/login/templates/login/index.html:50
 #: web/apps/register/templates/register/index.html:6
-#: web/apps/register/templates/register/index.html:23
-#: web/apps/register/templates/register/index.html:44
+#: web/apps/register/templates/register/index.html:24
+#: web/apps/register/templates/register/index.html:47
 #: web/apps/register/templates/register/post-fail.html:6
 #: web/apps/register/templates/register/post-success.html:6
-#: web/apps/register/templates/register/register-letter.html:13
+#: web/apps/register/templates/register/register-letter.html:8
 #: web/apps/register/templates/register/register-success.html:6
 #: web/templates/header-no-menu.html:35 web/templates/header.html:51
 msgid "Register"
 msgstr "注册"
 
-#: web/apps/login/templates/login/index.html:48
+#: web/apps/login/templates/login/index.html:51
 msgid "Forgot Password"
 msgstr "忘记密码"
 
-#: web/apps/login/templates/login/index.html:61
-#: web/apps/login/templates/login/index.html:68 web/apps/register/forms.py:21
+#: web/apps/login/templates/login/index.html:64
+#: web/apps/login/templates/login/index.html:71 web/apps/register/forms.py:21
 msgid "Google Authenticator Code"
 msgstr "填写谷歌身份验证码"
 
-#: web/apps/login/templates/login/index.html:72
+#: web/apps/login/templates/login/index.html:75
 #: web/apps/register/templates/register/gtoken.html:59
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:38
 #: web/apps/user/templates/user/profile.html:34
@@ -355,6 +345,48 @@ msgstr "提交"
 #: web/apps/newtonadmin/templates/newtonadmin/welcome.html:6
 msgid "KYC Admin"
 msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:5
+#, fuzzy
+msgid "Newton Token Exchange Invite"
+msgstr "牛顿 Token 预售"
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:6
+#: web/apps/register/templates/register/register-letter.html:6
+#: web/apps/reset/templates/reset/reset-letter.html:6
+msgid "Dear"
+msgstr "尊敬的用户："
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:7
+msgid ""
+"Congratulation，you can participate in Newton first round Token Exchange, "
+"please read the detail on Newton Token Exchange carefully in Newton official "
+"website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) "
+"before filling in the expected amount."
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:8
+msgid ""
+"Newton only issues the announcement and notification though Newton official "
+"website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
+"a>), please ignore messages from any other medias."
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:9
+msgid "Click the following button to fill in expected amount"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:10
+msgid "Fill in"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:11
+#: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:9
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:18
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:39
+#: web/apps/register/templates/register/register-letter.html:9
+msgid "If you received this email by mistake, simply delete it."
+msgstr "如果您意外收到了这封邮件，请删除它。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:11
 #: web/templates/base.html:10
@@ -385,6 +417,23 @@ msgstr ""
 #: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:14
 msgid "Newton"
 msgstr "牛顿"
+
+#: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:5
+msgid "Confirm the amount"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:6
+msgid "Your BTC amount is:"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:7
+msgid "Your ELA amount is:"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:8
+#, fuzzy
+msgid "Confirm"
+msgstr "确认密码"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:27
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:26
@@ -426,15 +475,80 @@ msgstr "介绍一下自己，作为社区成员可以为牛顿做什么"
 msgid "Tell us your understanding about Newton"
 msgstr "你如何理解牛顿"
 
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:6
+#, fuzzy
+msgid "KYC verification success"
+msgstr "验证码"
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:8
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:28
+#, fuzzy
+msgid "KYC verification rejected"
+msgstr "验证码"
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:11
+msgid ""
+"Congratulation you have passed Newton KYC verification. Please pay attention "
+"to our subsequent notification later on."
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:13
+msgid ""
+"We'd like to apologize that you haven't passed Newton KYC verification. The "
+"reason is"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:13
+msgid ""
+"You can check and modify the contents you fill into KYC information page "
+"carefully, and try to submit again."
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:15
+msgid "Thank you"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:16
+msgid "Best regard"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:17
+#, fuzzy
+msgid "Newton team"
+msgstr "牛顿团队"
+
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:12
 msgid "Admin Login"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:30
+#, fuzzy
+msgid "Newton foundation has received your"
+msgstr "牛顿提醒：我们收到了您的KYC信息"
+
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:35
+#: web/apps/register/templates/register/index.html:54
+#: web/apps/user/templates/user/token-exchange-progress.html:153
+msgid "and"
+msgstr "和"
+
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:37
+msgid ""
+"we show sincere gratitude to contribution you have made in Newton community."
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:38
+msgid ""
+"You can join in our communities in other medias by go to the 'community' "
+"page through the navigator bar of Newton official website (<a href='https://"
+"www.newtonproject.org/'>www.newtonproject.org</a>)."
 msgstr ""
 
 #: web/apps/press/models.py:21
 msgid "press"
 msgstr "媒体报道"
 
-#: web/apps/register/forms.py:18 web/apps/reset/forms.py:10
+#: web/apps/register/forms.py:18
 msgid "Confirm Password"
 msgstr "确认密码"
 
@@ -488,26 +602,21 @@ msgstr "或者"
 msgid "Use the GA app to scan the QR code"
 msgstr "扫描二维码添加谷歌身份验证器"
 
-#: web/apps/register/templates/register/index.html:28
+#: web/apps/register/templates/register/index.html:31
 msgid ""
 "Tip: To register successfully, ensure you can access the google recaptcha "
 "service."
 msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
 
-#: web/apps/register/templates/register/index.html:51
+#: web/apps/register/templates/register/index.html:54
 msgid "By clicking on the register button you agree and abide by<br/> Newton"
 msgstr "点击注册按钮即表示您同意并愿意遵守<br/> Newton的"
 
-#: web/apps/register/templates/register/index.html:51
+#: web/apps/register/templates/register/index.html:54
 msgid "User Agreement"
 msgstr "使用条款"
 
-#: web/apps/register/templates/register/index.html:51
-#: web/apps/user/templates/user/token-exchange-progress.html:156
-msgid "and"
-msgstr "和"
-
-#: web/apps/register/templates/register/index.html:51
+#: web/apps/register/templates/register/index.html:54
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -535,31 +644,21 @@ msgstr "提交成功！"
 
 #: web/apps/register/templates/register/post-success.html:24
 msgid ""
-"We have sent you an email to your registered email, please check out to "
-"finish signing up."
+"We have sent you an email. Please go to your registered email inbox to check "
+"and complete the registration process."
 msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
 
-#: web/apps/register/templates/register/register-letter.html:6
+#: web/apps/register/templates/register/register-letter.html:5
 msgid "Complete the register process of Newton"
 msgstr "完成注册流程"
 
-#: web/apps/register/templates/register/register-letter.html:10
-#: web/apps/reset/templates/reset/reset-letter.html:9
-msgid "Dear"
-msgstr "尊敬的用户："
-
-#: web/apps/register/templates/register/register-letter.html:11
+#: web/apps/register/templates/register/register-letter.html:7
 msgid "This is an email from"
 msgstr "这封邮件来自"
 
-#: web/apps/register/templates/register/register-letter.html:11
+#: web/apps/register/templates/register/register-letter.html:7
 msgid "Click the button below to proceed to the next step."
 msgstr "点击下方<注册>按钮完成注册。"
-
-#: web/apps/register/templates/register/register-letter.html:14
-#: web/apps/reset/templates/reset/reset-letter.html:13
-msgid "If you received this email by mistake, simply delete it."
-msgstr "如果您意外收到了这封邮件，请删除它。"
 
 #: web/apps/register/templates/register/register-success.html:23
 msgid "Register Success!"
@@ -569,6 +668,11 @@ msgstr "注册成功！"
 msgid "Go to <a href='/login/'>Login</a>"
 msgstr "请前往<a href='/login/'>登录</a>"
 
+#: web/apps/reset/forms.py:10
+#, fuzzy
+msgid "Repassword"
+msgstr "密码"
+
 #: web/apps/reset/views.py:36
 msgid "Email address does not exist"
 msgstr "邮箱不存在！"
@@ -576,12 +680,12 @@ msgstr "邮箱不存在！"
 #: web/apps/reset/templates/reset/edit_password.html:6
 #: web/apps/reset/templates/reset/edit_password.html:21
 #: web/apps/reset/templates/reset/edit_password.html:31
-#: web/apps/reset/templates/reset/index.html:21
-#: web/apps/reset/templates/reset/index.html:30
+#: web/apps/reset/templates/reset/index.html:22
+#: web/apps/reset/templates/reset/index.html:33
 #: web/apps/reset/templates/reset/invalid-link.html:6
 #: web/apps/reset/templates/reset/reset-complete.html:6
 #: web/apps/reset/templates/reset/reset-fail.html:6
-#: web/apps/reset/templates/reset/reset-letter.html:12
+#: web/apps/reset/templates/reset/reset-letter.html:8
 #: web/apps/reset/templates/reset/reset-success.html:6
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
 msgid "Reset"
@@ -601,11 +705,11 @@ msgid ""
 "a>"
 msgstr "密码重置成功，请<a href='/login/'>登录</a>"
 
-#: web/apps/reset/templates/reset/reset-letter.html:6
+#: web/apps/reset/templates/reset/reset-letter.html:5
 msgid "Welcome! Please Reset Your Password!"
 msgstr "牛顿欢迎您！请重置您的密码"
 
-#: web/apps/reset/templates/reset/reset-letter.html:10
+#: web/apps/reset/templates/reset/reset-letter.html:7
 msgid ""
 "Hello! This is an email from <a class='main-color' href='https://www."
 "newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your "
@@ -618,8 +722,10 @@ msgstr ""
 "操作。"
 
 #: web/apps/reset/templates/reset/reset-success.html:22
+#, fuzzy
 msgid ""
-"We have sent you an email. Please go to your registered email inbox to check and complete the registration process."
+"We have sent you an email. Please go to your reset email inbox to check and "
+"complete the registration process."
 msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
 
 #: web/apps/sphinxdoc/models.py:20
@@ -713,6 +819,10 @@ msgstr "订阅邮箱"
 #: web/apps/subscription/views.py:39
 msgid "Email Error"
 msgstr "表单填写错误"
+
+#: web/apps/subscription/views.py:42
+msgid "Authenticator Recaptcha Error"
+msgstr ""
 
 #: web/apps/subscription/views.py:45
 msgid "You can only subscribe once per minute."
@@ -850,6 +960,7 @@ msgstr "你已经提交了KYC信息"
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:8
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:6
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:6
 msgid "KYC"
@@ -893,313 +1004,89 @@ msgstr ""
 msgid "Token Exchange"
 msgstr "牛顿 Token 预售"
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:23
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:24
 msgid "KYC TOKEN EXCHANGE TERM"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:25
-msgid ""
-"Please read NEWTON Token Exchange Agreement, Terms of Use, and White Paper "
-"of Newtonproject.org, then clicks the check box to indicate that Buyer has "
-"read, understands and agrees to the terms of this Agreement."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:27
-msgid ""
-"This NEWTON Token Exchange Agreement (this 'Agreement') contains Terms of "
-"use NEWTON (https://www.newtonproject.org/terms-of-use/) and Privacy Policy "
-"(https://www.newtonproject.org/privacy/). Therefore, in consideration of the "
-"warranties and agreements contained in this Agreement, and for other good "
-"and valuable consideration, NEWTON Token Buyer hereby agrees as follows:"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:28
-msgid ""
-"IMPORTANT INFORMATION: PLEASE READ THIS AGREEMENT CAREFULLY AND IN ITS "
-"ENTIRETY."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:29
-msgid "Buyer acknowledges, understands and agrees to the following:"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:30
-msgid "1. NO U.S. OR CHINESE BUYERS: "
-msgstr ""
-
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:31
-msgid ""
-"NEWTON Tokens are not being offered or distributed to U.S. persons or "
-"Chinese persons. If you are citizen, resident of, or a person located or "
-"domiciled in, or any entity, including, without limitation, any corporation "
-"or partnership created or organized in or under the laws of the People’s "
-"Republic of China AND the United States of America, do not exchange or "
-"attempt to exchange NEWTON Tokens."
+msgid "Objective of Newton 1st round token exchange"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:32
 msgid ""
-"2. Exchange of NEWTON tokens are non-refundable and exchanges cannot be "
-"cancelled. Buyer may lose all amounts paid. NEWTON tokens may have no value. "
-"Newton reserves the right to refuse or cancel NEWTON token exchange requests "
-"at any time in its sole discretion."
+"The objective of Newton 1st round token exchange is to construct the "
+"infrastructure of protocol based economy, as well as the Newton commercial "
+"ecosystem built on this infrastructure."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:33
+msgid "Core factors which determine distributed amount to KYC applicant"
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:34
+msgid ""
+"The core factors which determine distributed token exchange amount to KYC "
+"applicant of this round encompass understanding of Newton, contribution to "
+"Newton in the past, plan of contribution to Newton in the future, "
+"involvement in Newton various communities and plan of Newton node "
+"establishment."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:35
+#, fuzzy
+msgid "Operations of exchanged token"
+msgstr "运营公告"
+
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:36
+msgid ""
+"The Newton Tokens will be returned to applicant as soon as the release of "
+"Newton main chain and Newton wallet. Applicant should withdraw Newton Tokens "
+"through binding wallet address on Newton official website according to which "
+"round of token exchange is underway."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/index.html:37
+msgid "Disclaimer"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:38
 msgid ""
-"3. NEWTON Tokens. As mentioned above, the NEWTON Tokens do not have any "
-"rights, uses, purpose, attributes, functionalities or features, express or "
-"implied. Although NEWTON Tokens may be tradable, they are not an investment, "
-"currency, security, commodity, a swap on a currency, security or commodity "
-"or any other kind of financial instrument."
+"Newton 1st round token exchange is not responsible for any consequences from "
+"fraudulent token exchange regarding Newton, and is not responsible for "
+"anyone who use fake Newton ID or fiat Bitcoin or ELA token and wallet."
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:39
-msgid ""
-"4. Buyer acknowledges and understands that the proceeds from the exchange of "
-"the NEWTON tokens. The NEWTON Tokens are not being offered to U.S. users or "
-"Chinese users. If a U.S. person or a Chinese person entered into this "
-"Agreement on an unlawful, unauthorized and fraudulent basis, this Agreement "
-"is null and void. And NEWTON FOUNDATION may take all necessary and "
-"appropriate actions, in its sole discretion, to invalidate this Agreement, "
-"including referral of information to the appropriate authorities. The NEWTON "
-"Tokens themselves are not securities, commodities, swaps on either "
-"securities or commodities or a financial instrument of any kind. Exchange of "
-"NEWTON Tokens are not subject to the protections of any laws governing those "
-"types of financial instruments. This Agreement and all other documents "
-"referred to in this Agreement including the White Paper do not constitute a "
-"prospectus or offering document and are not an offer to sell, nor the "
-"solicitation of an offer to buy an investment, a security, commodity, or a "
-"swap on either a security or commodity."
+msgid "Risk factor"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:40
 msgid ""
-"5. Before exchanging NEWTON Tokens, Buyer acknowledges and agrees that "
-"NEWTON Tokens are virtual digital cryptocurrency, not designed for "
-"investment purposes and should not be considered as a type of investment. "
-"Exchanges and sales of EOS Tokens are not subject to the protections of any "
-"laws governing those types of financial instruments."
+"Before exchanging Newton Tokens, applicant acknowledges and agrees that "
+"Newton Tokens are virtual digital cryptocurrency designed for infrastructure "
+"of protocol based economy, but not designed for investment purposes and "
+"should not be considered as a type of investment, as well as that of "
+"speculation, as some type of arbitrage strategy, for immediate resale or "
+"other financial purposes. Exchanges and sales of Newton Tokens are not "
+"subject to the protections of any laws governing those types of financial "
+"instruments."
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:41
 msgid ""
-"6. Buyer acknowledges and agrees that Buyer is not exchanging NEWTON Tokens "
-"for purposes of investment, speculation, as some type of arbitrage strategy, "
-"for immediate resale or other financial purposes.<br/>No Claim, Loan or "
-"Ownership Interest. The exchange of NEWTON Tokens: (a) does not provide "
-"Buyer with rights of any form with respect to the NEWTON Foundation or its "
-"revenues or assets, including, but not limited to, any voting, distribution, "
-"redemption, liquidation, proprietary (including all forms of intellectual "
-"property), or other financial or legal rights; (b) is not a loan to NEWTON "
-"Foundation; and (c) does not provide Buyer with any ownership or other "
-"interest in NEWTON Foundation."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:42
-msgid ""
-"7. Intellectual Property. NEWTON Foundation retains all right, title and "
-"interest in all of NEWTON Foundation’s intellectual property, including, "
-"without limitation, inventions, ideas, concepts, code, discoveries, "
-"processes, marks, methods, software, compositions, formulae, techniques, "
-"information and data, whether or not patentable, copyrightable or "
-"protectable in trademark, and any trademarks, copyright or patents based "
-"thereon. Buyer may not use any of NEWTON Foundation’s intellectual property "
-"for any reason without NEWTON Foundation’s prior written consent."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:43
-msgid "8. Security and Data Privacy."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:44
-msgid ""
-"Buyer will implement reasonable and appropriate measures designed to secure "
-"access to: (i) any device associated with Buyer and utilized in connection "
-"with Buyer’s exchange of NEWTON Tokens; (ii) private keys to Buyer’s wallet "
-"or account; and (iii) any other username, passwords or other login or "
-"identifying credentials. In the event that Buyer is no longer in possession "
-"of Buyer’s private keys or any device associated with Buyer’s account or is "
-"not able to provide Buyer’s login or identifying credentials, Buyer may lose "
-"all of Buyer’s NEWTON Tokens and/or access to Buyer’s account. NEWTON "
-"Foundation is under no obligation to recover any NEWTON Tokens. Buyer "
-"acknowledges, understands and agrees that all exchanges of NEWTON Tokens are "
-"non-refundable and Buyer will not receive money or other compensation for "
-"any NEWTON Tokens exchanged."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:45
-msgid ""
-"9. Upon NEWTON Foundation’s request, Buyer will immediately provide to "
-"NEWTON Foundation their information and documents. NEWTON Foundation, in its "
-"sole discretion, deems necessary or appropriate to comply with any laws, "
-"regulations, rules or agreements, including without limitation judicial "
-"process. Such documents include, but are not limited to, passport, driver’s "
-"license, utility bills, photographs of associated individuals, government "
-"identification cards, or sworn statements. Buyer consents to NEWTON "
-"Foundation disclosing such information and documents in order to comply with "
-"applicable laws, regulations, rules or agreements. Buyer acknowledges that "
-"NEWTON Foundation may refuse to distribute NEWTON Tokens to Buyer until such "
-"requested information is provided."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:46
-msgid ""
-"10. Buyer acknowledges, understands and agrees that: Buyer is solely "
-"responsible for Buyer’s compliance with Buyer’s tax obligations; and NEWTON "
-"Foundation bears no liability or responsibility with respect to any tax "
-"consequences to Buyer."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:47
-msgid ""
-"11. If an individual, Buyer is at least 18 years old and of sufficient legal "
-"age and capacity to exchange NEWTON Tokens."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:48
-msgid ""
-"12. If a legal person, Buyer is duly organized, validly existing and in good "
-"standing under the laws of its domiciliary jurisdiction and each "
-"jurisdiction where it conducts business."
+"Applicant understands and agrees that Newton Foundation shall not be liable "
+"and disclaims all liability to applicant in connection with any force "
+"majeure event, including labour disputes or other industrial disturbances, "
+"electrical,telecommunications, hardware, software or other utility failures, "
+"software or smart contract bugs or weaknesses, earthquakes, storms, or other "
+"nature-related events, blockages, embargoes, riots, acts or orders of "
+"government, acts of terrorism or war, technological change, changes in "
+"interest rates or other monetary conditions."
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:49
-msgid ""
-"13. Buyer has sufficient knowledge and experience in business and financial "
-"matters, including a sufficient understanding of blockchain or cryptographic "
-"tokens and other digital assets, smart contracts, storage mechanisms (such "
-"as digital or token wallets), blockchain-based software systems and "
-"blockchain technology, to be able to evaluate the risks and merits of "
-"Buyer’s exchange of NEWTON Tokens, including but not limited, to the matters "
-"set forth in this Agreement, and is able to bear the risks thereof, "
-"including loss of all amounts paid, loss of NEWTON Tokens, and others for "
-"its acts and omissions, including with limitation those constituting breach "
-"of this Agreement, negligence, fraud or willful misconduct. Buyer has "
-"obtained sufficient information in order to make an informed decision to "
-"exchange NEWTON Tokens."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:50
-msgid ""
-"14. The funds, including any fiat, virtual currency or cryptocurrency, Buyer "
-"uses to exchange NEWTON Tokens are not derived from or related to any "
-"unlawful activities, including but not limited to money laundering or "
-"terrorist financing, and Buyer will not use the NEWTON Tokens to finance, "
-"engage in, or otherwise support any unlawful activities."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:51
-msgid ""
-"15. Anti-Money Laundering. Counter-Terrorism Financing. To the extent "
-"required by applicable law, Buyer complies with all anti-money laundering "
-"and counter-terrorism financing requirements."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:52
-msgid ""
-"16. Buyer expressly acknowledges, understands and agrees that Buyer is using "
-"the NEWTON Distribution Contract, the NEWTON Token Contract and exchanging "
-"NEWTON Tokens at the Buyer’s sole risk and that the NEWTON Distribution "
-"Contract, the NEWTON Token Contract and NEWTON Tokens are each provided, "
-"used and acquired on an “AS IS” and on an “AS AVAILABLE” basis without "
-"representations, warranties, promises or guarantees whatsoever of any kind "
-"by NEWTON Foundation and Buyer shall rely on its own examination and "
-"investigation thereof."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:53
-msgid ""
-"17. Force Majeure. Buyer understands and agrees that NEWTON Foundation shall "
-"not be liable and disclaims all liability to Buyer in connection with any "
-"force majeure event, including labour disputes or other industrial "
-"disturbances, electrical, telecommunications, hardware, software or other "
-"utility failures, software or smart contract bugs or weaknesses, "
-"earthquakes, storms, or other nature-related events, blockages, embargoes, "
-"riots, acts or orders of government, acts of terrorism or war, technological "
-"change, changes in interest rates or other monetary conditions."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:54
-msgid ""
-"18. Dispute Resolution. Buyer and NEWTON Foundation shall cooperate in good "
-"faith to resolve any dispute, controversy or claim arising out of, relating "
-"to or in connection with this Agreement, including with respect to the "
-"formation, applicability, breach, termination, validity or enforceability "
-"thereof (a 'Dispute'). If the Parties are unable to resolve a Any Dispute "
-"not resolved within 90 days shall be referred to and finally resolved by "
-"arbitration. The seat, or legal place, of arbitration shall be Singapore. "
-"The arbitration award shall be final and binding on the Parties. The Parties "
-"undertake to carry out any award without delay and waive their right to any "
-"form of recourse insofar as such waiver can validly be made. Judgment upon "
-"the award may be entered by any court having jurisdiction thereof or having "
-"jurisdiction over the relevant Party or its assets. Parties will each pay "
-"their respective attorneys’ fees and expenses. Notwithstanding the "
-"foregoing, NEWTON Foundation reserves the right, in its sole and exclusive "
-"discretion, to assume responsibility for any or all of the costs of the "
-"arbitration."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:55
-msgid ""
-"Severability. If any provision of this Agreement is determined by a court of "
-"competent jurisdiction to be invalid, inoperative or unenforceable for any "
-"reason, the provision shall be modified to make it valid and, to the extent "
-"possible, effectuate the original intent of the Parties as closely as "
-"possible in an acceptable manner in order that the transactions contemplated "
-"hereby be consummated as originally contemplated to the fullest extent "
-"possible."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:56
-msgid ""
-"Modification of Agreement. NEWTON Foundation may modify this Agreement at "
-"any time by posting a revised version on the Official Website. The modified "
-"terms will become effective upon posting. It is Buyer’s responsibility to "
-"check the Website regularly for modifications to this Agreement. This "
-"Agreement was last modified on the date listed at the beginning of this "
-"Agreement."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:57
-msgid ""
-"No Waivers. The failure by NEWTON Foundation to exercise or enforce any "
-"right or provision of this Agreement will not constitute a present or future "
-"waiver of such right or provision nor limit NEWTON Foundation’s right to "
-"enforce such right or provision at a later time. All waivers by NEWTON "
-"Foundation must be unequivocal and in writing to be effective."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:58
-msgid ""
-"No Partnership; No Agency; No Third Party Beneficiaries. Nothing in this "
-"Agreement and no action taken by the Parties shall constitute, or be deemed "
-"to constitute, a partnership, association, joint venture or other co-"
-"operative entity between the Parties. Nothing in this Agreement and no "
-"action taken by the Parties pursuant to this Agreement shall constitute, or "
-"be deemed to constitute, either Party the agent of the other Party for any "
-"purpose. No Party has, pursuant to this Agreement, any authority or power to "
-"bind or to contract in the name of the other Party. This Agreement does not "
-"create any third party beneficiary rights in any person."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:59
-msgid ""
-"Electronic Communications. Buyer agrees and acknowledges that all "
-"agreements, notices, disclosures and other communications that NEWTON "
-"Foundation provides Buyer pursuant to this Agreement or in connection with "
-"or related to Buyer’s exchange of NEWTON Tokens, including this Agreement, "
-"may be provided by NEWTON Foundation, in its sole discretion, to Buyer, in "
-"electronic form."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:60
-msgid ""
-"19. The NEWTON Token distribution ratio is shown on official website（www."
-"newtonproject.org）"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:69
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:69
 msgid "I agree with the KYC token exchange term"
 msgstr ""
 
@@ -1220,6 +1107,295 @@ msgstr "牛顿 Token 预售"
 msgid "Tokensale"
 msgstr "牛顿 Token 预售"
 
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:31
+msgid ""
+"Please read NEWTON Token Exchange Agreement, Terms of Use, and White Paper "
+"of Newtonproject.org, then clicks the check box to indicate that Buyer has "
+"read, understands and agrees to the terms of this Agreement."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:33
+msgid ""
+"This NEWTON Token Exchange Agreement (this 'Agreement') contains Terms of "
+"use NEWTON (https://www.newtonproject.org/terms-of-use/) and Privacy Policy "
+"(https://www.newtonproject.org/privacy/). Therefore, in consideration of the "
+"warranties and agreements contained in this Agreement, and for other good "
+"and valuable consideration, NEWTON Token Buyer hereby agrees as follows:"
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:34
+msgid ""
+"IMPORTANT INFORMATION: PLEASE READ THIS AGREEMENT CAREFULLY AND IN ITS "
+"ENTIRETY."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:35
+msgid "Buyer acknowledges, understands and agrees to the following:"
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:36
+msgid "1. NO U.S. OR CHINESE BUYERS:"
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:37
+msgid ""
+"NEWTON Tokens are not being offered or distributed to U.S. persons or "
+"Chinese persons. If you are citizen, resident of, or a person located or "
+"domiciled in, or any entity, including, without limitation, any corporation "
+"or partnership created or organized in or under the laws of the People’s "
+"Republic of China AND the United States of America, do not exchange or "
+"attempt to exchange NEWTON Tokens."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:38
+msgid ""
+"2. Exchange of NEWTON tokens are non-refundable and exchanges cannot be "
+"cancelled. Buyer may lose all amounts paid. NEWTON tokens may have no value. "
+"Newton reserves the right to refuse or cancel NEWTON token exchange requests "
+"at any time in its sole discretion."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:39
+msgid ""
+"3. NEWTON Tokens. As mentioned above, the NEWTON Tokens do not have any "
+"rights, uses, purpose, attributes, functionalities or features, express or "
+"implied. Although NEWTON Tokens may be tradable, they are not an investment, "
+"currency, security, commodity, a swap on a currency, security or commodity "
+"or any other kind of financial instrument."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:40
+msgid ""
+"4. Buyer acknowledges and understands that the proceeds from the exchange of "
+"the NEWTON tokens. The NEWTON Tokens are not being offered to U.S. users or "
+"Chinese users. If a U.S. person or a Chinese person entered into this "
+"Agreement on an unlawful, unauthorized and fraudulent basis, this Agreement "
+"is null and void. And NEWTON FOUNDATION may take all necessary and "
+"appropriate actions, in its sole discretion, to invalidate this Agreement, "
+"including referral of information to the appropriate authorities. The NEWTON "
+"Tokens themselves are not securities, commodities, swaps on either "
+"securities or commodities or a financial instrument of any kind. Exchange of "
+"NEWTON Tokens are not subject to the protections of any laws governing those "
+"types of financial instruments. This Agreement and all other documents "
+"referred to in this Agreement including the White Paper do not constitute a "
+"prospectus or offering document and are not an offer to sell, nor the "
+"solicitation of an offer to buy an investment, a security, commodity, or a "
+"swap on either a security or commodity."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:41
+msgid ""
+"5. Before exchanging NEWTON Tokens, Buyer acknowledges and agrees that "
+"NEWTON Tokens are virtual digital cryptocurrency, not designed for "
+"investment purposes and should not be considered as a type of investment. "
+"Exchanges and sales of NEWTON Tokens are not subject to the protections of "
+"any laws governing those types of financial instruments."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:42
+msgid ""
+"6. Buyer acknowledges and agrees that Buyer is not exchanging NEWTON Tokens "
+"for purposes of investment, speculation, as some type of arbitrage strategy, "
+"for immediate resale or other financial purposes. <br/>No Claim, Loan or Ownership Interest. The exchange of NEWTON Tokens: "
+"(a) does not provide Buyer with rights of any form with respect to the "
+"NEWTON Foundation or its revenues or assets, including, but not limited to, "
+"any voting, distribution, redemption, liquidation, proprietary (including "
+"all forms of intellectual property), or other financial or legal rights; (b) "
+"is not a loan to NEWTON Foundation; and (c) does not provide Buyer with any "
+"ownership or other interest in NEWTON Foundation."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:43
+msgid ""
+"7. Intellectual Property. NEWTON Foundation retains all right, title and "
+"interest in all of NEWTON Foundation’s intellectual property, including, "
+"without limitation, inventions, ideas, concepts, code, discoveries, "
+"processes, marks, methods, software, compositions, formulae, techniques, "
+"information and data, whether or not patentable, copyrightable or "
+"protectable in trademark, and any trademarks, copyright or patents based "
+"thereon. Buyer may not use any of NEWTON Foundation’s intellectual property "
+"for any reason without NEWTON Foundation’s prior written consent."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:44
+msgid "8. Security and Data Privacy."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:45
+msgid ""
+"Buyer will implement reasonable and appropriate measures designed to secure "
+"access to: (i) any device associated with Buyer and utilized in connection "
+"with Buyer’s exchange of NEWTON Tokens; (ii) private keys to Buyer’s wallet "
+"or account; and (iii) any other username, passwords or other login or "
+"identifying credentials. In the event that Buyer is no longer in possession "
+"of Buyer’s private keys or any device associated with Buyer’s account or is "
+"not able to provide Buyer’s login or identifying credentials, Buyer may lose "
+"all of Buyer’s NEWTON Tokens and/or access to Buyer’s account. NEWTON "
+"Foundation is under no obligation to recover any NEWTON Tokens. Buyer "
+"acknowledges, understands and agrees that all exchanges of NEWTON Tokens are "
+"non-refundable and Buyer will not receive money or other compensation for "
+"any NEWTON Tokens exchanged."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:46
+msgid ""
+"9. Upon NEWTON Foundation’s request, Buyer will immediately provide to "
+"NEWTON Foundation their information and documents. NEWTON Foundation, in its "
+"sole discretion, deems necessary or appropriate to comply with any laws, "
+"regulations, rules or agreements, including without limitation judicial "
+"process. Such documents include, but are not limited to, passport, driver’s "
+"license, utility bills, photographs of associated individuals, government "
+"identification cards, or sworn statements. Buyer consents to NEWTON "
+"Foundation disclosing such information and documents in order to comply with "
+"applicable laws, regulations, rules or agreements. Buyer acknowledges that "
+"NEWTON Foundation may refuse to distribute NEWTON Tokens to Buyer until such "
+"requested information is provided."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:47
+msgid ""
+"10. Buyer acknowledges, understands and agrees that: Buyer is solely "
+"responsible for Buyer’s compliance with Buyer’s tax obligations; and NEWTON "
+"Foundation bears no liability or responsibility with respect to any tax "
+"consequences to Buyer."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:48
+msgid ""
+"11. If an individual, Buyer is at least 18 years old and of sufficient legal "
+"age and capacity to exchange NEWTON Tokens."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:49
+msgid ""
+"12. If a legal person, Buyer is duly organized, validly existing and in good "
+"standing under the laws of its domiciliary jurisdiction and each "
+"jurisdiction where it conducts business."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:50
+msgid ""
+"13. Buyer has sufficient knowledge and experience in business and financial "
+"matters, including a sufficient understanding of blockchain or cryptographic "
+"tokens and other digital assets, smart contracts, storage mechanisms (such "
+"as digital or token wallets), blockchain-based software systems and "
+"blockchain technology, to be able to evaluate the risks and merits of "
+"Buyer’s exchange of NEWTON Tokens, including but not limited, to the matters "
+"set forth in this Agreement, and is able to bear the risks thereof, "
+"including loss of all amounts paid, loss of NEWTON Tokens, and others for "
+"its acts and omissions, including with limitation those constituting breach "
+"of this Agreement, negligence, fraud or willful misconduct. Buyer has "
+"obtained sufficient information in order to make an informed decision to "
+"exchange NEWTON Tokens."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:51
+msgid ""
+"14. The funds, including any fiat, virtual currency or cryptocurrency, Buyer "
+"uses to exchange NEWTON Tokens are not derived from or related to any "
+"unlawful activities, including but not limited to money laundering or "
+"terrorist financing, and Buyer will not use the NEWTON Tokens to finance, "
+"engage in, or otherwise support any unlawful activities."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:52
+msgid ""
+"15. Anti-Money Laundering. Counter-Terrorism Financing. To the extent "
+"required by applicable law, Buyer complies with all anti-money laundering "
+"and counter-terrorism financing requirements."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:53
+msgid ""
+"16. Force Majeure. Buyer understands and agrees that NEWTON Foundation shall "
+"not be liable and disclaims all liability to Buyer in connection with any "
+"force majeure event, including labour disputes or other industrial "
+"disturbances, electrical, telecommunications, hardware, software or other "
+"utility failures, software or smart contract bugs or weaknesses, "
+"earthquakes, storms, or other nature-related events, blockages, embargoes, "
+"riots, acts or orders of government, acts of terrorism or war, technological "
+"change, changes in interest rates or other monetary conditions."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:54
+msgid ""
+"17. Dispute Resolution. Buyer and NEWTON Foundation shall cooperate in good "
+"faith to resolve any dispute, controversy or claim arising out of, relating "
+"to or in connection with this Agreement, including with respect to the "
+"formation, applicability, breach, termination, validity or enforceability "
+"thereof (a 'Dispute'). If the Parties are unable to resolve a Any Dispute "
+"not resolved within 90 days shall be referred to and finally resolved by "
+"arbitration. The seat, or legal place, of arbitration shall be Singapore. "
+"The arbitration award shall be final and binding on the Parties. The Parties "
+"undertake to carry out any award without delay and waive their right to any "
+"form of recourse insofar as such waiver can validly be made. Judgment upon "
+"the award may be entered by any court having jurisdiction thereof or having "
+"jurisdiction over the relevant Party or its assets. Parties will each pay "
+"their respective attorneys’ fees and expenses. Notwithstanding the "
+"foregoing, NEWTON Foundation reserves the right, in its sole and exclusive "
+"discretion, to assume responsibility for any or all of the costs of the "
+"arbitration."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:55
+msgid ""
+"Severability. If any provision of this Agreement is determined by a court of "
+"competent jurisdiction to be invalid, inoperative or unenforceable for any "
+"reason, the provision shall be modified to make it valid and, to the extent "
+"possible, effectuate the original intent of the Parties as closely as "
+"possible in an acceptable manner in order that the transactions contemplated "
+"hereby be consummated as originally contemplated to the fullest extent "
+"possible."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:56
+msgid ""
+"Modification of Agreement. NEWTON Foundation may modify this Agreement at "
+"any time by posting a revised version on the Official Website. The modified "
+"terms will become effective upon posting. It is Buyer’s responsibility to "
+"check the Website regularly for modifications to this Agreement. This "
+"Agreement was last modified on the date listed at the beginning of this "
+"Agreement."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:57
+msgid ""
+"No Waivers. The failure by NEWTON Foundation to exercise or enforce any "
+"right or provision of this Agreement will not constitute a present or future "
+"waiver of such right or provision nor limit NEWTON Foundation’s right to "
+"enforce such right or provision at a later time. All waivers by NEWTON "
+"Foundation must be unequivocal and in writing to be effective."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:58
+msgid ""
+"No Partnership; No Agency; No Third Party Beneficiaries. Nothing in this "
+"Agreement and no action taken by the Parties shall constitute, or be deemed "
+"to constitute, a partnership, association, joint venture or other co-"
+"operative entity between the Parties. Nothing in this Agreement and no "
+"action taken by the Parties pursuant to this Agreement shall constitute, or "
+"be deemed to constitute, either Party the agent of the other Party for any "
+"purpose. No Party has, pursuant to this Agreement, any authority or power to "
+"bind or to contract in the name of the other Party. This Agreement does not "
+"create any third party beneficiary rights in any person."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:59
+msgid ""
+"Electronic Communications. Buyer agrees and acknowledges that all "
+"agreements, notices, disclosures and other communications that NEWTON "
+"Foundation provides Buyer pursuant to this Agreement or in connection with "
+"or related to Buyer’s exchange of NEWTON Tokens, including this Agreement, "
+"may be provided by NEWTON Foundation, in its sole discretion, to Buyer, in "
+"electronic form."
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/second-index.html:60
+msgid ""
+"18. The NEWTON Token distribution ratio is shown on the official "
+"website（www.newtonproject.org）"
+msgstr ""
+
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:24
 #, fuzzy
 msgid "Fill in KYC Information"
@@ -1232,11 +1408,12 @@ msgid "Basic Information"
 msgstr "基本信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:49
-#: web/apps/user/models.py:30
+#: web/apps/user/models.py:30 web/apps/user/templates/user/index.html:124
 msgid "Self Introduction"
 msgstr "自我介绍"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:60
+#: web/apps/user/templates/user/index.html:130
 msgid "How to Contribute"
 msgstr ""
 
@@ -1343,62 +1520,49 @@ msgid "user"
 msgstr ""
 
 #: web/apps/user/templates/user/index.html:88
-#, fuzzy
 msgid "You've passed Newton KYC review."
-msgstr "密码"
+msgstr "你已经通过了Newton KYC"
 
 #: web/apps/user/templates/user/index.html:97
 msgid "You have not passed kyc review,"
-msgstr ""
+msgstr "你没有通过 KYC "
 
 #: web/apps/user/templates/user/index.html:99
 msgid "rejected reason is:"
-msgstr ""
+msgstr "拒绝原因："
 
 #: web/apps/user/templates/user/index.html:101
 msgid "rewrite"
-msgstr ""
+msgstr "重新填写"
 
 #: web/apps/user/templates/user/index.html:108
-#, fuzzy
 msgid "Your have not submit KYC information."
-msgstr "你已经提交了KYC信息"
-
-#: web/apps/user/templates/user/index.html:124
-#, fuzzy
-msgid "Personal Introduction"
-msgstr "自我介绍"
-
-#: web/apps/user/templates/user/index.html:130
-msgid "How to Join Newton"
-msgstr ""
+msgstr "尚未提交KYC信息"
 
 #: web/apps/user/templates/user/index.html:172
 #: web/apps/user/templates/user/index.html:218
-#, fuzzy
 msgid "Passed the Newton KYC"
-msgstr "密码"
+msgstr "已经通过 Newton KYC"
 
 #: web/apps/user/templates/user/index.html:180
 #: web/apps/user/templates/user/index.html:225
 msgid "Filled in the expected amount"
-msgstr ""
+msgstr "填写期望额度"
 
 #: web/apps/user/templates/user/index.html:189
 #: web/apps/user/templates/user/index.html:233
 msgid "Transferred"
-msgstr ""
+msgstr "转币成功"
 
 #: web/apps/user/templates/user/index.html:198
 #: web/apps/user/templates/user/index.html:241
 msgid "Finished filling in newpay wallet address"
-msgstr ""
+msgstr "已经填写 newpay 钱包地址"
 
 #: web/apps/user/templates/user/index.html:207
 #: web/apps/user/templates/user/index.html:249
-#, fuzzy
 msgid "Token exchange success"
-msgstr "牛顿 Token 预售"
+msgstr "通证交换成功"
 
 #: web/apps/user/templates/user/index.html:256
 msgid "Details "
@@ -1406,7 +1570,7 @@ msgstr "详情"
 
 #: web/apps/user/templates/user/index.html:263
 msgid "There is no token exchange information"
-msgstr ""
+msgstr "没有通证交换信息"
 
 #: web/apps/user/templates/user/profile.html:24
 msgid "Edit Profile"
@@ -1416,90 +1580,93 @@ msgstr "修改个人资料"
 msgid "Settings"
 msgstr "设置"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:46
+#: web/apps/user/templates/user/token-exchange-progress.html:24
+msgid "TOKEN EXCHANGE"
+msgstr "通证交换"
+
+#: web/apps/user/templates/user/token-exchange-progress.html:43
 msgid "Expected"
-msgstr ""
+msgstr "期望信息"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:50
-#: web/apps/user/templates/user/token-exchange-progress.html:52
-#: web/apps/user/templates/user/token-exchange-progress.html:59
+#: web/apps/user/templates/user/token-exchange-progress.html:47
+#: web/apps/user/templates/user/token-exchange-progress.html:49
+#: web/apps/user/templates/user/token-exchange-progress.html:56
 msgid "Expected BTC amount"
-msgstr ""
+msgstr "期望 BTC 额度"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:57
+#: web/apps/user/templates/user/token-exchange-progress.html:54
 msgid "Expected ELA amount"
-msgstr ""
+msgstr "期望 ELA 额度"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:71
+#: web/apps/user/templates/user/token-exchange-progress.html:68
 msgid "Allocated"
-msgstr ""
+msgstr "分配信息"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:75
-#: web/apps/user/templates/user/token-exchange-progress.html:84
+#: web/apps/user/templates/user/token-exchange-progress.html:72
+#: web/apps/user/templates/user/token-exchange-progress.html:81
 msgid "Allocated BTC amount"
-msgstr ""
+msgstr "分配 BTC 额度"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:76
-#: web/apps/user/templates/user/token-exchange-progress.html:85
+#: web/apps/user/templates/user/token-exchange-progress.html:73
+#: web/apps/user/templates/user/token-exchange-progress.html:82
 msgid "Allocated BTC address"
-msgstr ""
+msgstr "分配 BTC 地址"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:93
-#: web/apps/user/templates/user/token-exchange-progress.html:102
+#: web/apps/user/templates/user/token-exchange-progress.html:90
+#: web/apps/user/templates/user/token-exchange-progress.html:99
 msgid "Allocated ELA amount"
-msgstr ""
+msgstr "分配 ELA 额度"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:94
-#: web/apps/user/templates/user/token-exchange-progress.html:103
+#: web/apps/user/templates/user/token-exchange-progress.html:91
+#: web/apps/user/templates/user/token-exchange-progress.html:100
 msgid "Allocated ELA address"
-msgstr ""
+msgstr "分配 ELA 地址"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:118
+#: web/apps/user/templates/user/token-exchange-progress.html:115
 msgid "Receive Amount Of Newton Foundation"
-msgstr ""
+msgstr "Newton 基金会收到的额度"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:122
-#: web/apps/user/templates/user/token-exchange-progress.html:124
+#: web/apps/user/templates/user/token-exchange-progress.html:119
+#: web/apps/user/templates/user/token-exchange-progress.html:121
 msgid "Received BTC"
-msgstr ""
+msgstr "接收的 BTC"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:129
-#: web/apps/user/templates/user/token-exchange-progress.html:131
+#: web/apps/user/templates/user/token-exchange-progress.html:126
+#: web/apps/user/templates/user/token-exchange-progress.html:128
 msgid "Received ELA"
-msgstr ""
+msgstr "接收的 ELA"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:141
+#: web/apps/user/templates/user/token-exchange-progress.html:138
 msgid "Transferred amount is not equal to allocated amount."
-msgstr ""
+msgstr "转币额度和分配额度不一致。"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:148
-#, fuzzy
+#: web/apps/user/templates/user/token-exchange-progress.html:145
 msgid "Transfer success!"
 msgstr "注册成功！"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:156
+#: web/apps/user/templates/user/token-exchange-progress.html:153
 msgid "Attention! You can only transfer "
-msgstr ""
+msgstr "注意！你只能转"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:156
+#: web/apps/user/templates/user/token-exchange-progress.html:153
 msgid "to above addresses."
-msgstr ""
+msgstr "到上述地址。"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:164
+#: web/apps/user/templates/user/token-exchange-progress.html:161
 msgid "Your expected amount is under evaluation."
-msgstr ""
+msgstr "你填写的期望额度正在审核中。"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:171
+#: web/apps/user/templates/user/token-exchange-progress.html:168
 msgid "Fill in your expected token exchange amount"
-msgstr ""
+msgstr "填写你的期望额度"
 
-#: web/apps/user/templates/user/token-exchange-progress.html:177
+#: web/apps/user/templates/user/token-exchange-progress.html:174
 msgid "No token exchange information."
-msgstr ""
+msgstr "没有通证交换信息"
 
 #: web/apps/verification/models.py:22
 msgid "Verification emails"
-msgstr ""
+msgstr "验证Email"
 
 #: web/apps/welcome/templates/welcome/about.html:6
 #: web/apps/welcome/templates/welcome/about.html:13
@@ -6276,7 +6443,7 @@ msgstr "服务条款"
 msgid "Recaptcha Error"
 msgstr ""
 
-#: web/templates/form-code.html:25
+#: web/templates/form-code.html:26
 msgid "cannot recognize?"
 msgstr "看不清？换一张"
 
@@ -6333,3 +6500,11 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
+#, fuzzy
+#~ msgid "Personal Introduction"
+#~ msgstr "自我介绍"
+
+#~ msgid ""
+#~ "We have sent you an email to your registered email, please check out to "
+#~ "finish signing up."
+#~ msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
