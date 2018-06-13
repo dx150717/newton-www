@@ -25,11 +25,11 @@
                             <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
                             <p>国籍:{{ item.country }}</p>
                             <p>城市:{{ item.city }}</p>
-                            <p>地址:{{ item.location }}</p>
+                            <p>地址: </p><p> {{ item.location }}</p>
                             <p>证件类型:{{ item.id_type }}</p>
                             <p>证件照片:<img src="{{ item.id_card.url }}" alt=""></p>
                             <p>证件号码:{{ item.id_number }}</p>
-                            <p>自我介绍:{{ item.personal_profile }}</p>
+                            <p>自我介绍: </p><p> {{ item.personal_profile }}</p>
                             <p>自我介绍附件:<img src="{{ item.personal_profile_attachment.url }}" alt=""></p>
                             <p>wechat:{{ item.wechat }}</p>
                             <p>telegram:{{ item.telegram }}</p>
@@ -46,17 +46,19 @@
                             {% if item.your_community_screenshots3 %}
                             <p>社群截图3:<img src="{{ item.your_community_screenshots3.url }}" alt=""></p>
                             {% endif %}
-                            <p>对牛顿的理解:{{ item.what_is_newton }}</p>
-                            <p>为牛顿做过什么:{{ item.done_for_newton }}</p>
-                            <p>为牛顿做过什么附件:{{ item.done_for_newton_attachment }}</p>
-                            <p>准备为牛顿做什么:{{ item.do_for_newton }}</p>
+                            <p>对牛顿的理解: </p><p> {{ item.what_is_newton }}</p>
+                            <p>为牛顿做过什么: </p><p> {{ item.done_for_newton }}</p>
+                            {% if item.done_for_newton_attachment %}
+                            <p>为牛顿做过什么附件:<img src="{{ c.url }}" alt=""></p>
+                            {% endif %}
+                            <p>准备为牛顿做什么: </p><p> {{ item.do_for_newton }}</p>
                             <p>是否成为节点:{{ item.is_establish_node }}</p>
-                            <p>哪种节点:{{ item.which_node_establish }}</p>
+                            <p>哪种节点: </p><p> {{ item.which_node_establish }}</p>
                             <p>紧急联系人姓名:{{ item.emergency_contact_first_name }} + {{ item.emergency_contact_last_name }}</p>
                             <p>紧急联系人电话:{{ item.emergency_contact_cellphone }}</p>
                             <p>紧急联系人国籍:{{ item.emergency_country }}</p>
                             <p>紧急联系人城市:{{ item.emergency_city }}</p>
-                            <p>紧急联系人地址:{{ item.emergency_location }}</p>
+                            <p>紧急联系人地址: </p><p> {{ item.emergency_location }}</p>
                             <p>与紧急联系人关系:{{ item.emergency_relationship }}</p>
                             <p>申请时间:{{ item.updated_at|date:"Y-m-d H:i:s"}}</p>
                         </td>
