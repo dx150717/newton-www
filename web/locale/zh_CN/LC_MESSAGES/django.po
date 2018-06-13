@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 03:39+0000\n"
+"POT-Creation-Date: 2018-06-13 04:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -442,6 +442,7 @@ msgstr "名字"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:29
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:28
+#: web/apps/tokenexchange/forms.py:15
 msgid "Cellphone"
 msgstr "手机号"
 
@@ -472,6 +473,7 @@ msgstr "介绍一下自己，作为社区成员可以为牛顿做什么"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:35
 #: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:34
+#: web/apps/tokenexchange/models.py:59
 msgid "Tell us your understanding about Newton"
 msgstr "你如何理解牛顿"
 
@@ -560,11 +562,11 @@ msgstr "牛顿通知：请完成牛顿注册"
 msgid "Email already existed"
 msgstr "邮箱已经存在！"
 
-#: web/apps/register/views.py:153
+#: web/apps/register/views.py:158
 msgid "Google Authenticator Code Error"
 msgstr "谷歌身份验证码错误"
 
-#: web/apps/register/views.py:215 web/apps/reset/views.py:110
+#: web/apps/register/views.py:220 web/apps/reset/views.py:110
 msgid "Entered passwords do not match"
 msgstr "两次输入密码不一致"
 
@@ -626,6 +628,11 @@ msgstr "隐私政策"
 
 #: web/apps/register/templates/register/invalid-link.html:6
 msgid "Invalid-link"
+msgstr "无效链接"
+
+#: web/apps/register/templates/register/invalid-link.html:23
+#: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
+msgid "Invalid Link"
 msgstr "无效链接"
 
 #: web/apps/register/templates/register/password.html:6
@@ -904,49 +911,149 @@ msgstr ""
 "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
 "阅。"
 
+#: web/apps/tokenexchange/forms.py:118
+msgid "Emergency Cellphone"
+msgstr "紧急联系人的手机号"
+
 #: web/apps/tokenexchange/models.py:14
 msgid "ID Card"
-msgstr ""
+msgstr "身份证"
 
 #: web/apps/tokenexchange/models.py:15
-#, fuzzy
 msgid "Passport"
-msgstr "密码"
+msgstr "护照"
 
 #: web/apps/tokenexchange/models.py:16
 msgid "Drivers License"
-msgstr ""
+msgstr "驾驶证"
 
 #: web/apps/tokenexchange/models.py:19
 msgid "Full Node"
-msgstr ""
+msgstr "全节点"
 
 #: web/apps/tokenexchange/models.py:20
-#, fuzzy
 msgid "Media Node"
-msgstr "媒体资源"
+msgstr "媒体节点"
 
 #: web/apps/tokenexchange/models.py:21
-#, fuzzy
 msgid "Technology Node"
-msgstr "技术"
+msgstr "技术节点"
 
 #: web/apps/tokenexchange/models.py:22
-#, fuzzy
 msgid "Operation Node"
-msgstr "运营公告"
+msgstr "运营节点"
+
+#: web/apps/tokenexchange/models.py:31
+msgid "First Name"
+msgstr "名"
+
+#: web/apps/tokenexchange/models.py:32
+msgid "Last Name"
+msgstr "姓"
+
+#: web/apps/tokenexchange/models.py:35
+msgid "Select country or region"
+msgstr "选择国家地区"
+
+#: web/apps/tokenexchange/models.py:35
+msgid "Country or Region"
+msgstr "国家或地区"
+
+#: web/apps/tokenexchange/models.py:36 web/apps/tokenexchange/models.py:79
+msgid "City"
+msgstr "城市"
+
+#: web/apps/tokenexchange/models.py:37
+msgid "Address"
+msgstr "详细地址"
 
 #: web/apps/tokenexchange/models.py:39
 msgid "ID Type"
-msgstr ""
+msgstr "身份信息类型"
+
+#: web/apps/tokenexchange/models.py:44
+msgid "ID Number"
+msgstr "ID 号码"
+
+#: web/apps/tokenexchange/models.py:45
+msgid "ID Photo"
+msgstr "ID 照片"
+
+#: web/apps/tokenexchange/models.py:48
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:49
+#: web/apps/user/models.py:30 web/apps/user/templates/user/index.html:124
+msgid "Self Introduction"
+msgstr "自我介绍"
+
+#: web/apps/tokenexchange/models.py:49 web/apps/tokenexchange/models.py:61
+msgid "Attachment"
+msgstr "附件"
+
+#: web/apps/tokenexchange/models.py:53
+msgid "WeChat ID"
+msgstr "微信号"
+
+#: web/apps/tokenexchange/models.py:54
+msgid "Other Social Media"
+msgstr "其他社交媒体账号"
+
+#: web/apps/tokenexchange/models.py:55
+msgid "Newton Communities You are Involved in"
+msgstr "您所在的牛顿社群"
+
+#: web/apps/tokenexchange/models.py:56
+msgid "Screenshots of Abovementioned Communities"
+msgstr "您所在的社群截图"
+
+#: web/apps/tokenexchange/models.py:60
+msgid "What contribute you had do for newton"
+msgstr "您已经为牛顿做了什么"
+
+#: web/apps/tokenexchange/models.py:62
+msgid "What will you do for newton"
+msgstr "您将为牛顿做什么"
 
 #: web/apps/tokenexchange/models.py:64
 msgid "Do you want to establish a Newton node ?"
-msgstr ""
+msgstr "是否愿意建立节点？"
 
 #: web/apps/tokenexchange/models.py:68
 msgid "Which type of node ?"
-msgstr ""
+msgstr "您想建立哪种节点？"
+
+#: web/apps/tokenexchange/models.py:71
+msgid "Your plan of node establishment"
+msgstr "你准备如何建立节点"
+
+#: web/apps/tokenexchange/models.py:74
+msgid "First Name of Emergency Contact"
+msgstr "紧急联系人的名字"
+
+#: web/apps/tokenexchange/models.py:75
+msgid "Last Name of Emergency Contact"
+msgstr "紧急联系人姓"
+
+#: web/apps/tokenexchange/models.py:76
+#, fuzzy
+msgid "Country Code of Emergency Contact"
+msgstr "紧急联系人姓"
+
+#: web/apps/tokenexchange/models.py:77
+#, fuzzy
+msgid "Cellphone of Emergency Contact"
+msgstr "紧急联系人姓"
+
+#: web/apps/tokenexchange/models.py:78
+msgid "Emergency Country or Region"
+msgstr "紧急联系人的国家或地区"
+
+#: web/apps/tokenexchange/models.py:80
+msgid "Emergency Address"
+msgstr "紧急联系人的地址"
+
+#: web/apps/tokenexchange/models.py:81
+msgid "Emergency Relationship"
+msgstr "与紧急联系人的关系"
 
 #: web/apps/tokenexchange/services.py:26
 msgid "Newton notification: Received your KYC information"
@@ -968,10 +1075,9 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:24
 msgid "Fill in your amount of token exchange"
-msgstr ""
+msgstr "填写你的期望额度"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:21
-#, fuzzy
 msgid "Apply Success"
 msgstr "申请成功！"
 
@@ -1002,7 +1108,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:6
 msgid "Token Exchange"
-msgstr "牛顿 Token 预售"
+msgstr "通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:24
 #: web/apps/tokenexchange/templates/tokenexchange/second-index.html:24
@@ -1089,10 +1195,6 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/second-index.html:69
 msgid "I agree with the KYC token exchange term"
 msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
-msgid "Invalid Link"
-msgstr "无效链接"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 msgid "TOKENEXCHANGE"
@@ -1397,35 +1499,27 @@ msgid ""
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:24
-#, fuzzy
 msgid "Fill in KYC Information"
-msgstr "法律信息"
+msgstr "填写KYC信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:38
 #: web/apps/user/templates/user/index.html:118
-#, fuzzy
 msgid "Basic Information"
 msgstr "基本信息"
-
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:49
-#: web/apps/user/models.py:30 web/apps/user/templates/user/index.html:124
-msgid "Self Introduction"
-msgstr "自我介绍"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:60
 #: web/apps/user/templates/user/index.html:130
 msgid "How to Contribute"
-msgstr ""
+msgstr "如何参与Newton"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:71
 #: web/apps/user/templates/user/index.html:136
-#, fuzzy
 msgid "Emergency Information"
-msgstr "法律信息"
+msgstr "紧急联系人信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:7
 msgid "First Token Exchange Info"
-msgstr ""
+msgstr "第一轮通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:9
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:9
@@ -1440,17 +1534,16 @@ msgid "Second Token Exchange Info"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:7
-#, fuzzy
 msgid "First Token Exchange"
-msgstr "牛顿 Token 预售"
+msgstr "第一轮通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:14
 msgid "Minimum BTC: "
-msgstr ""
+msgstr "最小 BTC 额度："
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:18
 msgid "Minimum ELA: "
-msgstr ""
+msgstr "最小 ELA 额度："
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:37
 msgid "Token exchange info and expect"
@@ -6448,18 +6541,18 @@ msgid "cannot recognize?"
 msgstr "看不清？换一张"
 
 #: web/templates/form.html:22
-msgid "Only jpeg, png and pdf file within 5M"
-msgstr ""
+msgid "Only jpeg, jpg and png file within 5M"
+msgstr "只能上传 jpeg, jpg 和 png 格式，大小在 5M 之内"
 
 #: web/templates/form.html:25
 msgid "Detailed address needs to be accurate to the street"
-msgstr ""
+msgstr "详细地址精确到街道"
 
 #: web/templates/form.html:28
 msgid ""
 "This is an important basis for Newton's KYC review. Please fill in it "
 "carefully and thoroughly"
-msgstr ""
+msgstr "这是 Newton KYC 审核的重要依据，请认真填写"
 
 #: web/templates/header-no-menu.html:29 web/templates/header.html:45
 msgid "User Center"
