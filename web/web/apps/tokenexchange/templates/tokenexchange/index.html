@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="container">
-        <p class="token-exchange-big-title text-center">{% trans  "KYC TOKEN EXCHANGE TERM" %}</p>
+        <p class="token-exchange-big-title text-center"></p>
         <div class="kyc-content">
             <strong>{% trans "Please read NEWTON Token Exchange Agreement, Terms of Use, and White Paper of Newtonproject.org, then clicks the check box to indicate that Buyer has read, understands and agrees to the terms of this Agreement." %}</strong>
             <div>
@@ -65,7 +65,7 @@
             <div class="raw">
                 <div class="col-sm-12 text-left flex readed">
                     <input type="checkbox" onchange="check()" id="buy-token-checkboxo" class="accept" value="on"/>
-                    <label for="buy-token-checkbox0">
+                    <label for="buy-token-checkbox0" onclick="changeCheckStatus()">
                         <span>{% trans "I agree with the KYC token exchange term" %}</span>
                     </label>
                 </div>
@@ -94,6 +94,10 @@
     }
     function gotokyc(){
         location.href = ("/tokenexchange/post/");
+    }
+    function changeCheckStatus() {
+        checkboxes[0].checked = !checkboxes[0].checked;
+        check();
     }
 </script>
 {% endblock %}
