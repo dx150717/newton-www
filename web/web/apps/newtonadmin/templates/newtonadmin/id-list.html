@@ -11,32 +11,31 @@
     <div class="container">
         <div class="raw table-responsive content">
             <table class="table">
-                <caption class="text-center">审核身份</caption>
+                <caption class="text-center">审核</caption>
                 <thead>
                     <tr>
                         <th>姓名</th>
                         <th>介绍</th>
                         <th>申请时间</th>
-                        <th>操作</th>
+                        <th>详情</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for item in items %}
+                    {% block kyc_id_list %}
                     <tr>
                         <td>
                             <p>{% trans "Name" %} : {{ item.first_name }} &nbsp; {{ item.last_name }}</p>
-                            <p>{% trans "Email" %} :  {{ item.user.email }}</p>
                             <p>{% trans "Cellphone" %}: +{{ item.country_code }} {{ item.cellphone }}</p>
                             <p>{% trans "Country" %}:{{ item.country }}</p>
-                            <p>{% trans "Emergency Contact Name" %}:{{ item.emergency_contact_first_name }}{{ item.emergency_contact_last_name }}</p>
-                            <p>{% trans "Emergency Contact Cellphone" %}:+{{ item.emergency_contact_country_code }} {{ item.emergency_contact_cellphone }}</p>
-                            <p>{% trans "RelationShip" %}:{{ item.relationships_with_emergency_contacts }}</p>
-                            <p>{% trans "Describe yourself & how you can help as a community member" %}:{{ item.how_to_contribute }}</p>
-                            <p>{% trans "Tell us your understanding about Newton" %}:{{ item.what_is_newton }}</p>
+                            <p>{% trans "City" %}:{{ item.city }}</p>
+                            <p>{% trans "Address" %}:{{ item.location }}</p>
+                            <p>{% trans "ID Type" %}:{{ item.id_type }}</p>
+                            <p>{% trans "ID Number" %}:{{ item.id_number }}</p>
                         </td>
                         <td>
                             <p>
-                                <img src="{{ item.id_card.url }}"/>
+                                <img src="{{ item.id_card.url }}" style="width: 300px"/>
                             </p>
                         </td>
                         
@@ -45,14 +44,25 @@
                                 {{ item.updated_at|date:"Y-m-d H:i:s"}}
                             </p>                            
                         </td>
-
+                        <td>
+                            {% block operate %}
+                            <p>
+                                <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-default">详情</a>
+                            </p>
+                            <p>
+                                <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
+                            </p>
+                            {% endblock %}
+                        </td>
+                        {% comment %}
                         <td>
                             <p>
                                 <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
                             </p>
                         </td>
-                        
+                        {% endcomment %}
                     </tr>
+                    {% endblock %}
                     {% endfor %}
                     
                 </tbody>
@@ -102,6 +112,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->             
+
 
 {% endblock %}
 

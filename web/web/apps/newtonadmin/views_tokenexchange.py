@@ -459,3 +459,36 @@ def send_receive_email(request, phase_id):
         return http.JsonErrorResponse()
 
 
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def show_id_detail(request, user_id):
+    """show detail info
+    """
+    try:
+        item = tokenexchange_models.KYCInfo.objects.filter(user_id=user_id).first()
+        return render(request, "newtonadmin/id-detail.html", locals())
+    except Exception, inst:
+        logger.exception("fail to post email to investor:%s" % str(inst))
+        return http.JsonErrorResponse()
+
+
+class RejectListView(generic.ListView):
+    """reject id list
+    """
+    template_name = "newtonadmin/pass-id-list.html"
+    context_object_name = "items"
+    paginate_by = settings.PAGE_SIZE
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(RejectListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_queryset(self):
+        try:
+            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.REJECT.value)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show pass id list:%s" % str(inst))
+            return None
