@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load utils %}
     {% block content %}
-    <h2>{% trans "Confirm the amount" %}</h2>
+    <p class="newton-title">{% trans "Confirm the amount" %}</p>
     <p class="pad-t10">{% trans "Your BTC amount is:" %} {{ item.min_btc_limit}} - {{ item.max_btc_limit }}</p>
     <p class="pad-t10">{% trans "Your ELA amount is:" %} {{ item.min_ela_limit}} - {{ item.max_ela_limit }}</p>
     <p class="pad-t20"><a href="{{ target_url }}" class="button-1">{% trans "Confirm" %}</a></p>
