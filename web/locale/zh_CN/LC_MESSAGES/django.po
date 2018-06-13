@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-12 13:44+0000\n"
+"POT-Creation-Date: 2018-06-12 13:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -237,6 +237,16 @@ msgid "Captcha Error"
 msgstr ""
 
 #: web/apps/login/views.py:53 web/apps/newtonadmin/views.py:42
+#: web/apps/login/views.py:42 web/apps/register/views.py:46
+#: web/apps/register/views.py:52
+msgid "No captcha"
+msgstr ""
+
+#: web/apps/login/views.py:43 web/apps/subscription/views.py:42
+msgid "Authenticator Recaptcha Error"
+msgstr ""
+
+#: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
 msgid "Email or Password don't match"
 msgstr "邮箱和密码不匹配"
 
@@ -701,13 +711,8 @@ msgid "Subscribed emails"
 msgstr "订阅邮箱"
 
 #: web/apps/subscription/views.py:39
-#, fuzzy
 msgid "Email Error"
 msgstr "表单填写错误"
-
-#: web/apps/subscription/views.py:42
-msgid "Authenticator Recaptcha Error"
-msgstr ""
 
 #: web/apps/subscription/views.py:45
 msgid "You can only subscribe once per minute."
@@ -3294,9 +3299,37 @@ msgstr ""
 msgid "Download Logo"
 msgstr "下载Logo"
 
-#: web/apps/welcome/templates/welcome/mediakit.html:31
-msgid "Download Poster"
-msgstr "下载海报"
+#: web/apps/welcome/templates/welcome/mediakit.html:47
+#, fuzzy
+msgid "Download Chinese Poster"
+msgstr "下载中文海报"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:55
+#, fuzzy
+msgid "Download English Poster"
+msgstr "下载英文海报"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:66
+msgid "Newton Logo"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/mediakit.html:67
+msgid ""
+"Newton logo is a combination of calculus symbol and zigzag side of coin."
+msgstr "牛顿品牌标识由“微积分符号+硬币边齿”组合而成。"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:80
+msgid "Poster in Chinese"
+msgstr "中文海报"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:81
+#: web/apps/welcome/templates/welcome/mediakit.html:95
+msgid "Features Posters of Newton offline activities"
+msgstr "适用于Newton线下活动"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:94
+msgid "Poster in English"
+msgstr "英文海报"
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
 #: web/templates/header.html:29
@@ -6300,70 +6333,3 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#, fuzzy
-#~ msgid "You have summit KYC information."
-#~ msgstr "你已经提交了KYC信息"
-
-#~ msgid "Your KYC information is being reviewed. Please be patient."
-#~ msgstr "您的 KYC 信息已提交，请耐心等待。"
-
-#~ msgid ""
-#~ "Tip: To login successfully, ensure that you can access the google "
-#~ "recaptcha service."
-#~ msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功登录。"
-
-#~ msgid "Tip: Ensure that you can access the google recaptcha service."
-#~ msgstr "小贴士:请确保您可以使用的谷歌验证码服务。"
-
-#~ msgid "Subscription Ratio"
-#~ msgstr "订阅确认"
-
-#~ msgid "Profile"
-#~ msgstr "用户信息"
-
-#~ msgid "Distribution Amount"
-#~ msgstr "确认分配"
-
-#~ msgid "Distribution Address"
-#~ msgstr "确认分配"
-
-#~ msgid "Join us to change the world"
-#~ msgstr "加入牛顿，和我们一起改变世界"
-
-#~ msgid "Subscribed Failed!"
-#~ msgstr "订阅失败"
-
-#~ msgid "Please Input Email Address!"
-#~ msgstr "请输入邮箱地址！"
-
-#~ msgid "Zhou Pin"
-#~ msgstr "周品"
-
-#~ msgid "SVP of Cheetah (NASDAQ:CMCM)"
-#~ msgstr "猎豹移动(NASDAQ:CMCM)高级副总裁"
-
-#~ msgid "Founder of quwan.com"
-#~ msgstr "趣玩网创始人"
-
-#~ msgid ""
-#~ "We support cross-border transactions, micro payments, lightning "
-#~ "settlement, etc., and provide comprehensive online and offline payment "
-#~ "tools."
-#~ msgstr ""
-#~ "支持跨境交易、超小额支付、闪电结算等，同时提供完善的线上、线下支付工具。"
-
-#~ msgid ""
-#~ "Contact:<a href='mailto:newton-hr@newtonproject.org'>newton-"
-#~ "hr@newtonproject.org</a>"
-#~ msgstr ""
-#~ "联系我们 ：<a href='mailto:newton-pr@newtonproject.org'>newton-"
-#~ "pr@newtonproject.org</a>"
-
-#~ msgid ""
-#~ "By using techniques named as “Atom Hashing”, we can create a unique "
-#~ "digital identity for commodities over the whole network. Through this "
-#~ "digital identity, you can check the relevant information on the commodity "
-#~ "at any time."
-#~ msgstr ""
-#~ "通过运用原子哈希等技术，我们可以为商品建立全网唯一数字身份。通过该数字身"
-#~ "份，可以随时查阅商品的相关信息。"

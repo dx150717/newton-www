@@ -262,17 +262,28 @@ function gotoTop(min_height){
 };
 gotoTop();
 
+// fixed navbar
+// $(window).scroll(function(){
+// 	var height
+// 	var s = $(window).scrollTop();
+// 	if (!document.getElementsByClassName("ad").length){
+// 		$(".NavBg").addClass("navFixed");
+// 	}else{
+// 		height = document.getElementsByClassName("ad")[0].offsetHeight;
+// 		if( s > height){
+// 			$(".NavBg").addClass("navFixed");
+// 		}else{
+// 			$(".NavBg").removeClass("navFixed");
+// 		};
+// 	};
+// });
+
 $(window).scroll(function(){
 	var height
 	var s = $(window).scrollTop();
-	if (!document.getElementsByClassName("ad").length){
+	if (s>0){
 		$(".NavBg").addClass("navFixed");
 	}else{
-		height = document.getElementsByClassName("ad")[0].offsetHeight;
-		if( s > height){
-			$(".NavBg").addClass("navFixed");
-		}else{
-			$(".NavBg").removeClass("navFixed");
+		$(".NavBg").removeClass("navFixed");
 		};
-	};
 });

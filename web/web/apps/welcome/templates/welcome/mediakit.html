@@ -14,8 +14,8 @@
         </div>
     </div>
     <div class="container">
-        <div class="download_list">
-            <div class="container col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+        <!-- <div class="download_list">
+            <div class="container logo_container col-lg-6 col-md-6 col-sm-12 col-xs-12" >
                 <img src="{% version "images/logo-512.png" %}" alt="">
             </div>
             <div class="container col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -24,16 +24,84 @@
                 </div>
                 <div>
                     <div class="raw">
-                        <div class="download-but col-lg-6 col-sm-6 col-xs-12">
+                        <div class="download-but col-lg-12 col-sm-12 col-xs-12">
                             <a href="{% version "images/logo.zip" %}" download="logo.zip">{% trans "Download Logo" %}</a>
                         </div>
+                        {% comment %}
                         <div class="download-but col-lg-6 col-sm-6 col-xs-12">
                             <a href="{% version "images/poster.zip" %}" download="poster.zip">{%  trans "Download Poster" %}</a>
                         </div>
+                        {% endcomment %}
                     </div>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-12">
+                <div class="poster-thumbnail col-lg-6">
+                    <img src="{% version "images/poster-zh.jpg" %}" alt="">
+                </div>
+                <div class="download-but col-lg-6">
+                    <a href="https://newton.oss-cn-beijing.aliyuncs.com/poster-zh.zip" download="poster-zh.zip">{%  trans "Download Chinese Poster" %}</a>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="poster-thumbnail">
+                    <img src="{% version "images/poster-en.jpg" %}" alt="">
+                </div>
+                <div class="download-but">
+                    <a href="https://newton.oss-cn-beijing.aliyuncs.com/poster-en.zip" download="poster-en.zip">{%  trans "Download English Poster" %}</a>
+                </div>
+            </div>
+            </div>
+        </div> -->
+        <div class="row mb50">
+            <div class="card-box col-lg-4">
+                <div class="card-img">
+                    <img src="{% version "images/logo-512.png" %}" alt="" class="img-logo">
+                </div>
+                <div class="card-info">
+                    <p class="info-title">{% trans "Newton Logo" %}</p>
+                    <p class="info-content">{% trans "Newton logo is a combination of calculus symbol and zigzag side of coin." %}</p>
+                </div>
+                <div class="card-download">
+                    <a href="{% version "images/logo.zip" %}" class="download-arrow">
+                        <img src="{% version "images/download_arrow.png" %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card-box col-lg-4">
+                <div class="card-img">
+                    <img src="{% version "images/poster-zh.jpg" %}" alt="" class="img-poster">
+                </div>
+                <div class="card-info">
+                    <p class="info-title">{% trans "Poster in Chinese" %}</p>
+                    <p class="info-content">{% trans "Features Posters of Newton offline activities" %}</p>
+                </div>
+                <div class="card-download">
+                    <a href="https://newton.oss-cn-beijing.aliyuncs.com/poster-zh.zip" download="poster-zh.zip" class="download-arrow">
+                        <img src="{% version "images/download_arrow.png" %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="card-box col-lg-4">
+                <div class="card-img">
+                    <img src="{% version "images/poster-en.jpg" %}" alt="" class="img-poster">
+                </div>
+                <div class="card-info">
+                    <p class="info-title">{% trans "Poster in English" %}</p>
+                    <p class="info-content">{% trans "Features Posters of Newton offline activities" %}</p>
+                </div>
+                <div class="card-download">
+                    <a href="https://newton.oss-cn-beijing.aliyuncs.com/poster-en.zip" download="poster-en.zip" class="download-arrow">
+                        <img src="{% version "images/download_arrow.png" %}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </section>
 
@@ -41,3 +109,4 @@
 
 {% block inline_js %}
 {% endblock %}
+
