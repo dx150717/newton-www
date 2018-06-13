@@ -72,7 +72,7 @@
                                 <div class="value">
                                     {% if kycinfo %}
                                         {% if kycinfo.status == 1 %}
-                                        <div class="shadow-item">
+                                        <div class="item">
                                             <p class="text-center">
                                             {% trans "Submit KYC information success! We will send you an email of reviewing result, Please check out." %}
                                         </p>
@@ -80,7 +80,7 @@
                                         {% endif %}
                                         {% if kycaudit %}
                                             {% if kycinfo.status == 2 %}
-                                            <div class="shadow-item">
+                                            <div class="item">
                                                 <p class="text-center">
                                                     <span class="alert-success glyphicon glyphicon-ok" aria-hidden="true"></span>
                                                     {% trans "You've passed Newton KYC review." %}
@@ -89,11 +89,11 @@
                                             
                                             {% endif %}
                                             {% if kycinfo.status == 3 %}
-                                            <div class="shadow-item">
+                                            <div class="item">
                                                 <p class="text-center">
                                                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                                     {% trans "You have not passed kyc review," %}
-                                                    {% if kycaudit.comment %}
+                                                    {% if kycaudit.comment != " " %}
                                                     {% trans "rejected reason is:" %} {{ kycaudit.comment }}
                                                     {% endif %}
                                                     <a href="/tokenexchange/">{% trans "rewrite" %}</a>
@@ -104,7 +104,7 @@
                                     {% else %}
                                     <div class="container text-center mt50">
                                         <p>{% trans "You have not submit KYC information." %}</p>
-                                        <a class="form-button mt50" href="/tokenexchange/">Join KYC</a>
+                                        <a class="form-button mt50" href="/tokenexchange/">{% trans "Join KYC" %}</a>
                                     </div>
                                     {% endif %}
                             </div>

@@ -53,9 +53,9 @@ class KYCInfo(models.Model):
     wechat = models.CharField(max_length=128, db_index=True, verbose_name=_('WeChat ID'), null=True)
     other_social_account = models.CharField(max_length=128, db_index=True, verbose_name=_('Other Social Media'), null=True)
     your_community = models.TextField(max_length=10240, verbose_name=_('Newton Communities You are Involved in'), null=True)
-    your_community_screenshots1 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots', path_prefix='your_community_screenshots'), verbose_name=_('Screenshots of Abovementioned Communities') + str(1))
-    your_community_screenshots2 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots', path_prefix='your_community_screenshots'), verbose_name=_('Screenshots of Abovementioned Communities') + str(2))
-    your_community_screenshots3 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots', path_prefix='your_community_screenshots'), verbose_name=_('Screenshots of Abovementioned Communities') + str(3))
+    your_community_screenshots1 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots1', path_prefix='your_community_screenshots1'), verbose_name=_('Screenshots of Abovementioned Communities 1'))
+    your_community_screenshots2 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots2', path_prefix='your_community_screenshots2'), verbose_name=_('Screenshots of Abovementioned Communities 2'))
+    your_community_screenshots3 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots3', path_prefix='your_community_screenshots3'), verbose_name=_('Screenshots of Abovementioned Communities 3'))
     # how to contribute for newton
     what_is_newton = models.TextField(verbose_name=_('Your Understanding of Newton'), max_length=10240, null=True, help_text='(*)')
     done_for_newton = models.TextField(verbose_name=_('Contribution You Have Made to Newton'), max_length=10240)
