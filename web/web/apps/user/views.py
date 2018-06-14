@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
+import time
+import datetime
 
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
@@ -10,6 +12,7 @@ from django.contrib.auth.models import User
 from django.conf import settings
 import pyotp
 from django_countries.data import COUNTRIES
+from django.utils.timezone import utc
 
 from utils import http
 from config import codes
@@ -78,19 +81,22 @@ def show_token_exchange_progress_view(request, phase_id):
             if item.receive_btc_address:
                 btc_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value).aggregate(Sum('value'))
                 btc_final_balance =  btc_final_balance.get("value__sum")
-                btc_final_balances = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value)
-                
-                
+                btc_transfer_list = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value)
             if item.receive_ela_address:
                 ela_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value).aggregate(Sum('value'))
                 ela_final_balance = ela_final_balance.get("value__sum")
-                ela_final_balances = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value)
+                ela_transfer_list = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value)
         if btc_final_balance and btc_final_balance != 0:
             item.btc_final_balance = btc_final_balance
-            item.btc_final_balances = btc_final_balances
+            item.btc_transfer_list = btc_transfer_list
         if ela_final_balance and ela_final_balance != 0:
             item.ela_final_balance = ela_final_balance
-            item.ela_final_balances = ela_final_balances
+            item.ela_transfer_list = ela_transfer_list
+        is_deadline = False
+        dead_time = datetime.datetime(*time.strptime(settings.FUND_END_DATE,"%Y-%m-%d")[:6])
+        now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
+        if now_time > dead_time:
+            is_deadline = True
         return render(request, "user/token-exchange-progress.html", locals())
     except Exception,inst:
         logger.exception("error show progress %s" %str(inst))
