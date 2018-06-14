@@ -1,7 +1,7 @@
 /**
  * tokenexhange.js for valid kyc form.
  */
-$("#user_kyc_form").submit(function(event){
+$("#fill-amount").submit(function(event){
     event.preventDefault();
     var form = this;
     if (!$(form).valid()) {

@@ -24,6 +24,7 @@ $('#login_form').submit(function(event){
   if (!$(form).valid()) {
     return false;
   }
+  showWaiting();
   $.ajax({
     url:'/ishuman/check/?code=' + code,
     type: 'post',
@@ -37,7 +38,6 @@ $('#login_form').submit(function(event){
           data.email = email;
           data.password = password;
           data.code = code;
-          showWaiting();
           $.ajax({
             url:'/login/post/',
             timeout: 15000,

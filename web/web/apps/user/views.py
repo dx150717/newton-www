@@ -15,6 +15,7 @@ from django_countries.data import COUNTRIES
 from django.utils.timezone import utc
 
 from utils import http
+from utils import convert
 from config import codes
 from . import forms
 from . import models
@@ -40,18 +41,11 @@ def show_user_index_view(request):
         data['cellphone_group'] = {"country_code":kycinfo.country_code, "cellphone":kycinfo.cellphone}
         data['cellphone_of_emergency_contact'] ={"country_code":kycinfo.emergency_contact_country_code, "cellphone":kycinfo.emergency_contact_cellphone}
         if data['id_type']:
-            idtype = tokenexchange_models.ID_CHOICES
-            for i in idtype:
-                if i[0] == data['id_type']:
-                    data['id_type'] = i[1]
+            data['id_type'] = convert.get_value_from_choice(data['id_type'], tokenexchange_models.ID_CHOICES)
         if data['is_establish_node']:
-            for j in tokenexchange_models.ESTABLISH_CHOICE:
-                if j[0] == data['is_establish_node']:
-                    data['is_establish_node'] = j[1]
+            data['is_establish_node'] = convert.get_value_from_choice(data['is_establish_node'], tokenexchange_models.ESTABLISH_CHOICE)
         if data['which_node_establish']:
-            for k in tokenexchange_models.NODE_CHOICE:
-                if k[0] == data['which_node_establish']:
-                    data['which_node_establish'] = k[1]
+            data['which_node_establish'] = convert.get_value_from_choice(data['which_node_establish'], tokenexchange_models.NODE_CHOICE)
         data['country'] = COUNTRIES[data['country']]
         data['emergency_country'] = COUNTRIES[data['emergency_country']]
         base_form = token_exchange_forms.KYCBaseForm(initial=data)
@@ -93,7 +87,8 @@ def show_token_exchange_progress_view(request, phase_id):
             item.ela_final_balance = ela_final_balance
             item.ela_transfer_list = ela_transfer_list
         is_deadline = False
-        dead_time = datetime.datetime(*time.strptime(settings.FUND_END_DATE,"%Y-%m-%d")[:6])
+        deadline_time = time.strptime(token_exchange_info['end_date'], "%Y-%m-%d")
+        dead_time = datetime.datetime(*deadline_time[:6]).replace(tzinfo=utc)
         now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
         if now_time > dead_time:
             is_deadline = True

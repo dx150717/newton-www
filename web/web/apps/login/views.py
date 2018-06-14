@@ -90,7 +90,8 @@ def post_google_authenticator(request):
         # redirect to expect target url
         login(request, user)
         next = request.POST.get('next')
-        del request.session['auth_token']
+        if request.session.get('auth_token'):
+            del request.session['auth_token']
         if next:
             result = urlparse.urlparse(next)
             if result and not result.netloc and result.path:

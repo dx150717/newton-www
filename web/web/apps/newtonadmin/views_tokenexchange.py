@@ -10,6 +10,7 @@ from django.db.models import Sum
 from django_countries.data import COUNTRIES
 
 from utils import http
+from utils import convert
 from config import codes
 from tokenexchange import models as tokenexchange_models
 from tracker import models as tracker_models
@@ -35,14 +36,12 @@ class IdListView(generic.ListView):
         try:
             fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
             items = []
-            for item in fields:
-                if item.id_type:
-                    idtype = tokenexchange_models.ID_CHOICES
-                    for i in idtype:
-                        if i[0] == item.id_type:
-                            item.id_type = i[1]
-                item.country = COUNTRIES[item.country]
-                items.append(item)
+            if fields and len(fields) > 0:
+                for item in fields:
+                    if item.id_type:
+                        item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+                    item.country = COUNTRIES[item.country]
+                    items.append(item)
             return items
         except Exception, inst:
             logger.exception("fail to show id list:%s" % str(inst))
@@ -65,14 +64,12 @@ class PassIdListView(generic.ListView):
         try:
             fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
             items = []
-            for item in fields:
-                if item.id_type:
-                    idtype = tokenexchange_models.ID_CHOICES
-                    for i in idtype:
-                        if i[0] == item.id_type:
-                            item.id_type = i[1]
-                item.country = COUNTRIES[item.country]
-                items.append(item)
+            if fields and len(fields) > 0:
+                for item in fields:
+                    if item.id_type:
+                        item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+                    item.country = COUNTRIES[item.country]
+                    items.append(item)
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
@@ -484,20 +481,14 @@ def show_id_detail(request, user_id):
     """
     try:
         item = tokenexchange_models.KYCInfo.objects.filter(user_id=user_id).first()
-        if item.id_type:
-            idtype = tokenexchange_models.ID_CHOICES
-            for i in idtype:
-                if i[0] == item.id_type:
-                    item.id_type = i[1]
-        if item.is_establish_node:
-            for j in tokenexchange_models.ESTABLISH_CHOICE:
-                if j[0] == item.is_establish_node:
-                    item.is_establish_node = j[1]
-        if item.which_node_establish:
-            for k in tokenexchange_models.NODE_CHOICE:
-                if k[0] == item.which_node_establish:
-                    item.which_node_establish = k[1]
-        item.country = COUNTRIES[item.country]
+        if item:
+            if item.id_type:
+                item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+            if item.is_establish_node:
+                item.is_establish_node = convert.get_value_from_choice(item.is_establish_node, tokenexchange_models.ESTABLISH_CHOICE)
+            if item.which_node_establish:
+                item.which_node_establish = convert.get_value_from_choice(item.which_node_establish, tokenexchange_models.NODE_CHOICE)
+            item.country = COUNTRIES[item.country]
         return render(request, "newtonadmin/id-detail.html", locals())
     except Exception, inst:
         logger.exception("fail to post email to investor:%s" % str(inst))
@@ -522,14 +513,12 @@ class RejectListView(generic.ListView):
         try:
             items = []
             fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.REJECT.value)
-            for item in fields:
-                if item.id_type:
-                    idtype = tokenexchange_models.ID_CHOICES
-                    for i in idtype:
-                        if i[0] == item.id_type:
-                            item.id_type = i[1]
-                item.country = COUNTRIES[item.country]
-                items.append(item)
+            if fields and len(fields) > 0:
+                for item in fields:
+                    if item.id_type:
+                        item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+                    item.country = COUNTRIES[item.country]
+                    items.append(item)
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
