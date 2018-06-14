@@ -2,7 +2,7 @@
 {% load utils %}
 
 {% if form.non_field_errors %}
-<div class="form-group">
+<div class="form-group margin-auto">
     <div class="raw">
         <div class="alert alert-danger alert-dismissible">
             <button type="button" class="close" data-dismiss="alert">
@@ -15,7 +15,7 @@
 {% endif %}
 {% for field in form %}
 {% if field.name == "gtoken_code" %}
-<div class="form-group margin-auto">   
+<div class="form-group margin-auto" >
     <p>
         <label for="id_{{ field.name }}" class="control-label">{{ field.label }} <span class="red-color">{{ field.help_text }}</span>
         </label>
@@ -30,7 +30,7 @@
     </div>
 </div>
 {% else %}
-    {% if field.name == "personal_profile_attachment" or field.name == "done_for_newton_attachment" %}
+    {% if field.name == "personal_profile_attachment" or field.name == "done_for_newton_attachment" or field.name == "your_community_screenshots1" or field.name == "your_community_screenshots2" or field.name == "your_community_screenshots3" %}
 <div class="form-group attachment">  
     {% else %}
 <div class="form-group"> 
@@ -42,10 +42,10 @@
         <p class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</p>
         {% endif %}
         {% if field.name == "location" %}
-        <p class="small">{% trans "Detailed address needs to be accurate to the street" %}</p>
+        <p class="small">{% trans "Recommend locate to block" %}</p>
         {% endif %}
         {% if field.name == "your_community" %}
-        <p class="small">{% trans "Tell us community name you are involved in, your nickname in the community, your social media ID." %}</p>
+        <p class="small">{% trans "Community name you are involved in, your nickname in the community, your social media ID." %}</p>
         {% endif %}
     </p>
     <div>

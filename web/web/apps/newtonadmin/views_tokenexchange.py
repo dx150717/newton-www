@@ -33,7 +33,16 @@ class IdListView(generic.ListView):
 
     def get_queryset(self):
         try:
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
+            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
+            items = []
+            for item in fields:
+                if item.id_type:
+                    idtype = tokenexchange_models.ID_CHOICES
+                    for i in idtype:
+                        if i[0] == item.id_type:
+                            item.id_type = i[1]
+                item.country = COUNTRIES[item.country]
+                items.append(item)
             return items
         except Exception, inst:
             logger.exception("fail to show id list:%s" % str(inst))
@@ -54,7 +63,16 @@ class PassIdListView(generic.ListView):
 
     def get_queryset(self):
         try:
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+            items = []
+            for item in fields:
+                if item.id_type:
+                    idtype = tokenexchange_models.ID_CHOICES
+                    for i in idtype:
+                        if i[0] == item.id_type:
+                            item.id_type = i[1]
+                item.country = COUNTRIES[item.country]
+                items.append(item)
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
@@ -502,7 +520,16 @@ class RejectListView(generic.ListView):
 
     def get_queryset(self):
         try:
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.REJECT.value)
+            items = []
+            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.REJECT.value)
+            for item in fields:
+                if item.id_type:
+                    idtype = tokenexchange_models.ID_CHOICES
+                    for i in idtype:
+                        if i[0] == item.id_type:
+                            item.id_type = i[1]
+                item.country = COUNTRIES[item.country]
+                items.append(item)
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))

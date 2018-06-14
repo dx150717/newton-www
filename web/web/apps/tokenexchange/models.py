@@ -45,7 +45,7 @@ class KYCInfo(models.Model):
     id_card = models.FileField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='id_card'), verbose_name=_('ID Photo'), validators=[validators.validate_file_extension_of_id_photo, validators.validate_file_size_of_id_photo], help_text="(*)")
     
     # profile
-    personal_profile = models.TextField(verbose_name=_("Self Introduction"), max_length=10240, help_text=_('(* Your CV. When were you involved in blockchain domain? Tell something about your understanding on blockchain industry.)'))
+    personal_profile = models.TextField(verbose_name=_("Self Introduction"), max_length=10240, help_text=_('(* Your CV. When were you involved in blockchain industry? Write something about your understanding on blockchain industry.)'))
     personal_profile_attachment = models.FileField(upload_to=storage.hashfile_upload_to('personal_profile_attachment', path_prefix='personal_profile_attachment'), verbose_name=_('Attachment'), validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
     facebook = models.CharField(max_length=128, db_index=True, verbose_name='Facebook', null=True)
     twitter = models.CharField(max_length=128, db_index=True, verbose_name='Twitter', null=True)

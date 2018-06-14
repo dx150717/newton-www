@@ -31,9 +31,29 @@
             <div class="raw user-detail-content">
                 <div>
                     {% if item %}
-                    <div>
-                    {% include "tokenexchange/token-exchange-info.html" %}
-                    </div>
+                        {% if item.expect_btc or item.except_ela %}
+                            {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
+                                {% if item.ela_final_balance or item.btc_final_balance %}
+                                    {% if item.assign_btc and item.btc_final_balance != item.assign_btc or item.assign_ela and item.ela_final_balance != item.assign_ela %}
+                                        <p class="tokenexchange-warning">
+                                            <span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="margin-right: 10px"></span>{% trans "Transferred amount is not equal to allocated amount." %}</p>
+                                    {% else %}
+                                        <p class="tokenexchange-success">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true" style="margin-right: 10px;"></span>{% trans "Transfer success!" %}</p>
+                                    {% endif %}
+                                {% else %}
+                                    <p class="tokenexchange-warning">
+                                        <span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="margin-right: 10px"></span>{% trans "Attention! You can only transfer " %}  {{ item.assign_btc }} BTC {% trans "and" %} {{ item.assign_ela }} ELA {% trans "to above addresses." %}</p>
+                                {% endif %}
+                            {% else %}
+                            <p class="tokenexchange-warning">
+                                <span class="glyphicon glyphicon-hand-right" aria-hidden="true" style="margin-right: 10px"></span>{% trans "Your expected amount is under evaluation." %}</p>
+                        {% endif %}
+                    {% endif %}
+                        <div>
+                        {% include "tokenexchange/token-exchange-info.html" %}
+                        </div>
+
                         <div>
                         {% if item.expect_btc or item.except_ela %}
                             <script>var hasExpect = true;</script>
@@ -128,9 +148,38 @@
                                         <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">0</span> ELA</p>
                                         {% endif %}
                                     </div>
+                                    <div class="col-md-6">
+                                        {% if item.btc_final_balances %}
+                                            {% for btc_final_balance in item.btc_final_balances %}
+                                                {% if btc_final_balance.value %}
+                                                {{ btc_final_balance.created_at|date:"Y-m-d H:i:s" }}
+                                                <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">{{ btc_final_balance.value }}</span> BTC</p>
+                                                {% else %}
+                                                <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">0</span> BTC</p>
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% else %}
+                                            <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">0</span> BTC</p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-md-6">
+                                        {% if item.ela_final_balances %}
+                                            {% for ela_final_balance in item.ela_final_balances %}
+                                                {% if ela_final_balance.value %}
+                                                {{ ela_final_balance.created_at|date:"Y-m-d H:i:s" }}
+                                                <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">{{ ela_final_balance.value }}</span> ELA</p>
+                                                {% else %}
+                                                <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">0</span> ELA</p>
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% else %}
+                                            <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">0</span> ELA</p>
+                                        {% endif %}
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                            {% comment %}
                                     {% if item.assign_btc and item.btc_final_balance != item.assign_btc or item.assign_ela and item.ela_final_balance != item.assign_ela %}
                                     <div class="form-container mt50">
                                         <div class="alert alert-warning f30">
@@ -161,7 +210,9 @@
                                     {% trans "Your expected amount is under evaluation." %}
                                 </div>
                             </div>
+                            {% endcomment %}
                             {% endif %}
+                        {% endif %}
                             <!-- end -->
                         {% else %}
                         <p class="mt50 text-center">

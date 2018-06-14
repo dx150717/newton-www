@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 14:28+0000\n"
+"POT-Creation-Date: 2018-06-14 05:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -182,7 +182,7 @@ msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:70
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:82
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:87
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:74
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:54
@@ -196,7 +196,7 @@ msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:74
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:86
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:91
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:78
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:58
@@ -323,7 +323,7 @@ msgid "Google Authenticator Code"
 msgstr "填写谷歌身份验证码"
 
 #: web/apps/login/templates/login/index.html:74
-#: web/apps/register/templates/register/gtoken.html:73
+#: web/apps/register/templates/register/gtoken.html:74
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:39
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:38
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:114
@@ -348,9 +348,8 @@ msgid "KYC Admin"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:5
-#, fuzzy
-msgid "Newton Token Exchange Invite"
-msgstr "牛顿 Token 预售"
+msgid "Newton Token Exchange Invitation"
+msgstr "牛顿通证交换邀请"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:6
 #: web/apps/register/templates/register/register-letter.html:6
@@ -364,26 +363,27 @@ msgid ""
 "please read the detail on Newton Token Exchange carefully in Newton official "
 "website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) "
 "before filling in the expected amount."
-msgstr ""
+msgstr "祝贺您，您可以参加牛顿第一轮通证交换。在填写您的期望通证交换额度之前，请在牛顿官方网站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 上阅读牛顿通证交换的详细信息。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:8
 msgid ""
 "Newton only issues the announcement and notification though Newton official "
 "website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
 "a>), please ignore messages from any other medias."
-msgstr ""
+msgstr "牛顿只会通过牛顿官方网站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
+"a>) 发布公告和通知，请忽略源于其他任何渠道的消息。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:9
 msgid "Click the following button to fill in expected amount"
-msgstr ""
+msgstr "点击下方按钮，填写您的通证交换期望额度。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:10
 msgid "Fill in"
-msgstr ""
+msgstr "填写期望额度"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:11
 #: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:9
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:18
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:26
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:39
 #: web/apps/register/templates/register/register-letter.html:9
 #: web/apps/reset/templates/reset/reset-letter.html:9
@@ -471,41 +471,50 @@ msgid "ID Number"
 msgstr "ID 号码"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:6
-msgid "KYC reviewing success"
+msgid "KYC review success"
 msgstr "KYC 审核成功"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:8
-msgid "KYC reviewing rejected"
+msgid "KYC review rejected"
 msgstr "KYC 审核被拒绝"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:11
-msgid ""
-"Congratulation you have passed Newton KYC reviewing. Please pay attention to "
-"our subsequent notification later on."
-msgstr ""
+msgid "Congratulation!"
+msgstr "恭喜！"
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:12
+msgid "You have passed Newton KYC reviewing."
+msgstr "您通过了牛顿KYC审核。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:13
-msgid ""
-"We'd like to apologize that you haven't passed Newton KYC reviewing. The "
-"reason is"
-msgstr ""
+msgid "Please pay attention to our subsequent notification later on."
+msgstr "请关注我们之后的公告。"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:13
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:15
+#, fuzzy
+msgid "We'd like to apologize that you haven't passed Newton KYC reviewing."
+msgstr "很抱歉，您未通过KYC审核。"
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:17
+msgid "Resulting of"
+msgstr "原因是"
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:18
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:20
 msgid ""
 "You can check and modify the contents you fill into KYC information page "
 "carefully, and try to submit again."
-msgstr ""
+msgstr "您可以仔细检查并修改KYC信息页面的内容，然后再次提交。"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:15
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:23
 msgid "Thank you"
-msgstr ""
+msgstr "谢谢！"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:16
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:24
 msgid "Best regard"
-msgstr ""
+msgstr "谢谢！"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:17
-#, fuzzy
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:25
 msgid "Newton team"
 msgstr "牛顿团队"
 
@@ -570,27 +579,42 @@ msgid "Add Google Authenticator"
 msgstr "添加谷歌身份验证器"
 
 #: web/apps/register/templates/register/gtoken.html:31
-msgid "Scan the QR code or enter the code manually into your GA app"
-msgstr "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
+msgid "Enter the code manually"
+msgstr "手动填写密钥"
+
+#: web/apps/register/templates/register/gtoken.html:31
+msgid "or"
+msgstr "或者"
+
+#: web/apps/register/templates/register/gtoken.html:31
+msgid "scan the QR code"
+msgstr "扫描二维码"
+
+#: web/apps/register/templates/register/gtoken.html:31
+msgid "into your GA app"
+msgstr "绑定谷歌身份验证器"
 
 #: web/apps/register/templates/register/gtoken.html:34
 msgid ""
 "Apple users are recommended to download Google Authenticator directly from "
-"the App Store and android users are recommended to download Google "
-"Authenticator from Google Play."
-msgstr ""
-"苹果用户推荐在App Store中下载Authenticator,安卓用户推荐到Google Play下载谷歌"
-"身份验证器"
+"the App Store"
+msgstr "苹果用户推荐在App Store中下载Authenticator"
 
-#: web/apps/register/templates/register/gtoken.html:37
+#: web/apps/register/templates/register/gtoken.html:35
+msgid ""
+"and Android users are recommended to download Google Authenticator from "
+"Google Play."
+msgstr "安卓用户推荐到Google Play下载谷歌身份验证器"
+
+#: web/apps/register/templates/register/gtoken.html:38
 msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
 msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
 
-#: web/apps/register/templates/register/gtoken.html:51
+#: web/apps/register/templates/register/gtoken.html:52
 msgid "Enter the  code manually into your GA app"
 msgstr "手动添加谷歌身份验证器"
 
-#: web/apps/register/templates/register/gtoken.html:66
+#: web/apps/register/templates/register/gtoken.html:67
 msgid "Use the GA app to scan the QR code"
 msgstr "扫描二维码添加谷歌身份验证器"
 
@@ -968,13 +992,13 @@ msgstr "ID 照片"
 
 #: web/apps/tokenexchange/models.py:48
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:49
-#: web/apps/user/models.py:30 web/apps/user/templates/user/index.html:124
+#: web/apps/user/models.py:30 web/apps/user/templates/user/index.html:126
 msgid "Self Introduction"
 msgstr "自我介绍"
 
 #: web/apps/tokenexchange/models.py:48
 msgid ""
-"(* Your CV. When were you involved in blockchain domain? Tell something "
+"(* Your CV. When were you involved in blockchain industry? Write something "
 "about your understanding on blockchain industry.)"
 msgstr "(* 个人职业履历，进入区块链行业的时间，对区块链行业的理解等。)"
 
@@ -996,15 +1020,15 @@ msgstr "您所在的牛顿社群"
 
 #: web/apps/tokenexchange/models.py:56
 msgid "Screenshots of Abovementioned Communities 1"
-msgstr "您所在的社群截图1"
+msgstr "社群截图1"
 
 #: web/apps/tokenexchange/models.py:57
 msgid "Screenshots of Abovementioned Communities 2"
-msgstr "您所在的社群截图2"
+msgstr "社群截图2"
 
 #: web/apps/tokenexchange/models.py:58
 msgid "Screenshots of Abovementioned Communities 3"
-msgstr "您所在的社群截图3"
+msgstr "社群截图3"
 
 #: web/apps/tokenexchange/models.py:60
 msgid "Your Understanding of Newton"
@@ -1020,21 +1044,21 @@ msgstr "您将为牛顿做些什么"
 
 #: web/apps/tokenexchange/models.py:65
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:67
-#: web/apps/user/templates/user/index.html:136
+#: web/apps/user/templates/user/index.html:138
 msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点？"
 
 #: web/apps/tokenexchange/models.py:69
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:77
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:81
-#: web/apps/user/templates/user/index.html:146
+#: web/apps/user/templates/user/index.html:148
 msgid "Which type of node ?"
 msgstr "您想建立哪种节点？"
 
 #: web/apps/tokenexchange/models.py:72
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:91
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:95
-#: web/apps/user/templates/user/index.html:156
+#: web/apps/user/templates/user/index.html:158
 msgid "Your plan of node establishment"
 msgstr "你准备如何建立节点"
 
@@ -1115,9 +1139,8 @@ msgid "Your ELA amount is "
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:24
-#, fuzzy
 msgid "KYC Token Exchange Term"
-msgstr "通证交换"
+msgstr "KYC 通证交换条款"
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:31
 msgid "Objective of Newton 1st round token exchange"
@@ -1197,7 +1220,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:49
 msgid "I agree to the KYC token exchange term"
-msgstr ""
+msgstr "我同意KYC通证交换条款"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 msgid "TOKENEXCHANGE"
@@ -1514,12 +1537,12 @@ msgid "Fill in KYC Information"
 msgstr "填写KYC信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:38
-#: web/apps/user/templates/user/index.html:118
+#: web/apps/user/templates/user/index.html:120
 msgid "Basic Information"
 msgstr "基本信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:60
-#: web/apps/user/templates/user/index.html:130
+#: web/apps/user/templates/user/index.html:132
 msgid "How to Contribute"
 msgstr "如何参与Newton"
 
@@ -1529,7 +1552,7 @@ msgid ""
 msgstr "* 这一节是Newton KYC 审核的重要依据，请认真填写。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:105
-#: web/apps/user/templates/user/index.html:166
+#: web/apps/user/templates/user/index.html:168
 msgid "Emergency Information"
 msgstr "紧急联系人信息"
 
@@ -1550,7 +1573,7 @@ msgid "Second Token Exchange Info"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:7
-msgid "First Token Exchange"
+msgid "First-Round Token Exchange"
 msgstr "第一轮通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:14
@@ -1638,54 +1661,54 @@ msgid "You have not passed kyc review,"
 msgstr "你没有通过 KYC "
 
 #: web/apps/user/templates/user/index.html:99
-msgid "rejected reason is:"
-msgstr "拒绝原因："
+msgid "resulting from:"
+msgstr ""
 
-#: web/apps/user/templates/user/index.html:101
-msgid "rewrite"
+#: web/apps/user/templates/user/index.html:103
+msgid "Fill in KYC information again"
 msgstr "重新填写"
 
-#: web/apps/user/templates/user/index.html:108
-msgid "You have not submit KYC information."
+#: web/apps/user/templates/user/index.html:110
+msgid "You have not submitted KYC information."
 msgstr "尚未提交KYC信息"
 
-#: web/apps/user/templates/user/index.html:109
+#: web/apps/user/templates/user/index.html:111
 msgid "Join KYC"
 msgstr "参加KYC"
 
-#: web/apps/user/templates/user/index.html:203
-#: web/apps/user/templates/user/index.html:249
+#: web/apps/user/templates/user/index.html:205
+#: web/apps/user/templates/user/index.html:251
 msgid "Passed the Newton KYC"
 msgstr "已经通过 Newton KYC"
 
-#: web/apps/user/templates/user/index.html:211
-#: web/apps/user/templates/user/index.html:256
+#: web/apps/user/templates/user/index.html:213
+#: web/apps/user/templates/user/index.html:258
 msgid "Filled in the expected amount"
 msgstr "填写期望额度"
 
-#: web/apps/user/templates/user/index.html:220
-#: web/apps/user/templates/user/index.html:264
+#: web/apps/user/templates/user/index.html:222
+#: web/apps/user/templates/user/index.html:266
 msgid "Transferred"
 msgstr "转币成功"
 
-#: web/apps/user/templates/user/index.html:229
-#: web/apps/user/templates/user/index.html:272
+#: web/apps/user/templates/user/index.html:231
+#: web/apps/user/templates/user/index.html:274
 msgid "Finished filling in newpay wallet address"
 msgstr "已经填写 newpay 钱包地址"
 
-#: web/apps/user/templates/user/index.html:238
-#: web/apps/user/templates/user/index.html:280
+#: web/apps/user/templates/user/index.html:240
+#: web/apps/user/templates/user/index.html:282
 msgid "Token exchange success"
 msgstr "通证交换成功"
 
-#: web/apps/user/templates/user/index.html:287
+#: web/apps/user/templates/user/index.html:289
 msgid "Details "
 msgstr "详情"
 
-#: web/apps/user/templates/user/index.html:295
+#: web/apps/user/templates/user/index.html:297
 #: web/apps/user/templates/user/token-exchange-progress.html:174
 msgid "No token exchange information."
-msgstr "没有通证交换信息"
+msgstr "没有通证交换信息。"
 
 #: web/apps/user/templates/user/profile.html:24
 msgid "Edit Profile"
@@ -6559,13 +6582,13 @@ msgid "Only jpeg, jpg and png file within 5M"
 msgstr "只能上传 jpeg, jpg 和 png 格式，大小在 5M 之内"
 
 #: web/templates/form.html:45
-msgid "Detailed address needs to be accurate to the street"
+msgid "Recommend locate to block"
 msgstr "详细地址精确到街道"
 
 #: web/templates/form.html:48
 msgid ""
-"Tell us community name you are involved in, your nickname in the community, "
-"your social media ID."
+"Community name you are involved in, your nickname in the community, your "
+"social media ID."
 msgstr "填写您所在的社群名称，您在社区中的昵称和您的社交媒体ID。"
 
 #: web/templates/header-no-menu.html:29 web/templates/header.html:45
@@ -6606,6 +6629,12 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "rejected reason is:"
+#~ msgstr "拒绝原因："
+
+#~ msgid "Scan the QR code or enter the code manually into your GA app"
+#~ msgstr "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
 
 #~ msgid "Fill in your amount of token exchange"
 #~ msgstr "填写你的期望额度"

@@ -16,7 +16,7 @@
                     <tr>
                         <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
                         <th>姓名</th>
-                        <th>介绍</th>
+                        <th></th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -29,15 +29,6 @@
                             <p>{{ item.user.email }}</p>
                         </td>
                         <td>
-                            <p>
-                                <img src="{{ item.id_card.url }}"/>
-                            </p>
-                            <p>
-                                {{ item.how_to_contribute }}                                
-                            </p>
-                            <p>
-                                {{ item.what_is_newton }}
-                            </p>
                         </td>
                         <td>
                             <a href="#" class="btn btn-default" onclick="javascript:preInviteUser({{ item.user_id }});">移至邀请列表</a>

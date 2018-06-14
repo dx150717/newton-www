@@ -29,31 +29,44 @@
                             <p>证件类型:{{ item.id_type }}</p>
                             <p>证件照片:<img src="{{ item.id_card.url }}" alt=""></p>
                             <p>证件号码:{{ item.id_number }}</p>
-                            <p>自我介绍: </p><p> {{ item.personal_profile }}</p>
+                            <p>自我介绍: </p><p> {{ item.personal_profile|default:"-" }}</p>
+                            {% if item.personal_profile_attachment %}
                             <p>自我介绍附件:<img src="{{ item.personal_profile_attachment.url }}" alt=""></p>
-                            <p>wechat:{{ item.wechat }}</p>
-                            <p>telegram:{{ item.telegram }}</p>
-                            <p>facebook:{{ item.facebook }}</p>
-                            <p>twitter:{{ item.twitter }}</p>
-                            <p>其他社交帐号:{{ item.other_social_account }}</p>
+                            {% else %}
+                            <p>自我介绍附件:－</p>
+                            {% endif %}
+                            <p>wechat:{{ item.wechat|default:"-" }}</p>
+                            <p>telegram:{{ item.telegram|default:"-" }}</p>
+                            <p>facebook:{{ item.facebook|default:"-" }}</p>
+                            <p>twitter:{{ item.twitter|default:"-" }}</p>
+                            <p>其他社交帐号:{{ item.other_social_account|default:"-" }}</p>
                             <p>参加社区:{{ item.your_community }}</p>
                             {% if item.your_community_screenshots1 %}
                             <p>社群截图1:<img src="{{ item.your_community_screenshots1.url }}" alt=""></p>
+                            {% else %}
+                            <p>社群截图1:－</p>
                             {% endif %}
                             {% if item.your_community_screenshots2 %}
                             <p>社群截图2:<img src="{{ item.your_community_screenshots2.url }}" alt=""></p>
+                            {% else %}
+                            <p>社群截图2:－</p>
                             {% endif %}
                             {% if item.your_community_screenshots3 %}
                             <p>社群截图3:<img src="{{ item.your_community_screenshots3.url }}" alt=""></p>
+                            {% else %}
+                            <p>社群截图3:－</p>
                             {% endif %}
-                            <p>对牛顿的理解: </p><p> {{ item.what_is_newton }}</p>
-                            <p>为牛顿做过什么: </p><p> {{ item.done_for_newton }}</p>
+                            <p>对牛顿的理解: </p><p> {{ item.what_is_newton|default:"-" }}</p>
+                            <p>为牛顿做过什么: </p><p> {{ item.done_for_newton|default:"-" }}</p>
                             {% if item.done_for_newton_attachment %}
-                            <p>为牛顿做过什么附件:<img src="{{ c.url }}" alt=""></p>
+                            <p>为牛顿做过什么附件:<img src="{{ item.done_for_newton_attachment.url }}" alt=""></p>
+                            {% else %}
+                            <p>为牛顿做过什么附件:－</p>
                             {% endif %}
-                            <p>准备为牛顿做什么: </p><p> {{ item.do_for_newton }}</p>
-                            <p>是否成为节点:{{ item.is_establish_node }}</p>
-                            <p>哪种节点: </p><p> {{ item.which_node_establish }}</p>
+                            <p>准备为牛顿做什么: </p><p> {{ item.do_for_newton|default:"-" }}</p>
+                            <p>是否成为节点:{{ item.is_establish_node|default:"-" }}</p>
+                            <p>哪种节点:{{ item.which_node_establish|default:"-" }}</p>
+                            <p>节点计划: </p><p> {{ item.establish_node_plan|default:"-" }}</p>
                             <p>紧急联系人姓名:{{ item.emergency_contact_first_name }} + {{ item.emergency_contact_last_name }}</p>
                             <p>紧急联系人电话:{{ item.emergency_contact_cellphone }}</p>
                             <p>紧急联系人国籍:{{ item.emergency_country }}</p>
