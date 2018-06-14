@@ -14,7 +14,7 @@ from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH
+from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH
 from zinnia.managers import PUBLISHED
 
 from press.models import PressModel
@@ -37,6 +37,8 @@ def show_home_view(request):
         language = TURKISH
     elif language.startswith('es'):
         language = SPANISH
+    elif language.startswith('fr'):
+        language = FRENCH
     else:
         language = ENGLISH
         
@@ -143,6 +145,8 @@ class AnnouncementView(generic.ListView):
             language = TURKISH
         elif language.startswith('es'):
             language = SPANISH
+        elif language.startswith('fr'):
+            language = FRENCH
         else:
             language = ENGLISH
             
@@ -175,6 +179,8 @@ class AnnouncementSubView(generic.ListView):
             language = TURKISH
         elif language.startswith('es'):
             language = SPANISH
+        elif language.startswith('fr'):
+            language = FRENCH
         else:
             language = ENGLISH
             

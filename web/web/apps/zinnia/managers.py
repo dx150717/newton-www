@@ -14,6 +14,7 @@ JAPANESE = 3
 RUSSIAN = 4
 TURKISH = 5
 SPANISH = 6
+FRENCH = 7
 
 TYPE_BLOG = 0
 TYPE_ANNOUNCEMENT = 1
@@ -54,6 +55,8 @@ def entries_published(queryset):
         language = TURKISH
     elif language.startswith('es'):
         language = SPANISH
+    elif language.startswith('fr'):
+        language = FRENCH
     else:
         language = ENGLISH
         
