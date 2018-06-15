@@ -58,7 +58,7 @@ def post_google_authenticator(request):
     try:
         gtoken_code = request.POST['gtoken_code']
         email = request.POST['email']
-        passwrod = request.POST['password']
+        password = request.POST['password']
         auth_token = request.POST['auth_token']
         session_token = request.session.get('auth_token')
         # clear the session
@@ -66,7 +66,7 @@ def post_google_authenticator(request):
             return http.JsonErrorResponse(error_message=_("No session"))
         if auth_token != session_token:
             return http.JsonErrorResponse(error_message=_("No Auth_token"))
-        user = authenticate(username=email, password=passwrod)
+        user = authenticate(username=email, password=password)
         if not user or user.is_staff:
             return http.JsonErrorResponse(error_message=_("No User"))
         user_profile = user_models.UserProfile.objects.filter(user=user).first()
