@@ -6,21 +6,18 @@
  * 
  * @param {string} ret google recaptcha response.
  */
-function googleCallback(ret){
-  document.getElementById("id-google-recaptcha").value = ret;
-};
 
 /**
  * valid login form and ajax post params for login.
  */
-$('#login_form').submit(function(event){
+$('#id_login_form').submit(function(event){
   event.preventDefault();
   var data = {};
   var form = this;
   var email = $("input[name='email']").val();
   var password = $("input[name='password']").val();
   var next = $("input[name='next']").val();
-  var code = $("#id_code").val()
+  var code = $("#id_captcha_code").val()
   if (!$(form).valid()) {
     return false;
   }
@@ -83,7 +80,7 @@ $('#login_form').submit(function(event){
 /**
  * valid google-auth form
  */
-$("#google-auth-form").submit(function(event){
+$("#id_google_auth_form").submit(function(event){
   event.preventDefault();
   var gtoken_code = $("input[name='gtoken']").val();
   data = {};
@@ -120,11 +117,4 @@ $("#google-auth-form").submit(function(event){
     error.appendTo(element.parent()); 
     return true;
   }
-});
-
-
-$('#login_captcha_code').click(function(event){
-  event.preventDefault();
-  $(this).attr("src", "/ishuman/image/?" + Math.random());
-  $("#id_login_code_error").addClass("hide");
 });
