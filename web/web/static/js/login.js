@@ -26,15 +26,18 @@ $('#id_login_form').submit(function(event){
     url:'/ishuman/check/?code=' + code,
     type: 'post',
     data: {},
+    timeout: 5000,
     success: function(ret){
+        dismiss();
         if (ret.error_code === FAIL) {
-            $("#id_login_code_error").removeClass("hide");
-            $("#id_login_code_error").attr("style", "display:!important block");
+            $("#id_register_code_error").removeClass("hide");
+            $("#id_register_code_error").attr("style", "display:!important block");
             return false;
         } else {
           data.email = email;
           data.password = password;
           data.code = code;
+          showWaiting();
           $.ajax({
             url:'/login/post/',
             timeout: 15000,
@@ -51,8 +54,8 @@ $('#id_login_form').submit(function(event){
               }
             },
             complete: function(request, status){
+              dismiss();
               if(status == 'timeout'){
-                dismiss();
                 showFail("Time Out");
               }
             }
@@ -60,6 +63,10 @@ $('#id_login_form').submit(function(event){
         }
     },
     complete: function(request, status) {
+      dismiss();
+      if(status == 'timeout') {
+        showFail("Time Out");
+      }
     }
   });
   

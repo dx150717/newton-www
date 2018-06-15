@@ -2,11 +2,10 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "user" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
-{% block require_js %}
+{% block title %}{% trans "user" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 
+{% block require_js %}
 {% endblock %}
 
 {% block notice %}
