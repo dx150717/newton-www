@@ -22,6 +22,7 @@ from ishuman import services as ishuman_services
 import decorators
 from config import codes
 from utils import http
+from utils import exception
 from utils import security
 from user import models as user_models
 from . import forms
@@ -29,10 +30,12 @@ from . import services
 
 logger = logging.getLogger(__name__)
 
+@decorators.nologin_required
 def show_register_view(request):
     form = forms.EmailForm()
     return render(request, 'register/index.html', locals())
 
+@decorators.nologin_required
 @decorators.http_post_required
 def submit_email(request):
     """Submit email to user's inbox
@@ -45,17 +48,6 @@ def submit_email(request):
         if code != ishuman_services.get_captcha(request.session.session_key):
             form._errors[NON_FIELD_ERRORS] = form.error_class([_("Captcha Error")])
             return render(request, 'register/index.html', locals())
-        # check robot 
-        # g_recaptcha_response = request.POST.get('g-recaptcha-response')
-        # if not g_recaptcha_response:
-        #     form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
-        #     return render(request, 'register/index.html', locals())
-        # post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
-        # res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
-        # res = json.loads(res.text)
-        # if not res['success']:
-        #     form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
-        #     return render(request, 'register/index.html', locals())
         # check the availablity of email address
         email = form.cleaned_data['email']
         user = User.objects.filter(email=email).first()
@@ -69,7 +61,7 @@ def submit_email(request):
             return http.HttpResponseRedirect('/register/post-success/')
     except Exception, inst:
         logger.exception('fail to submit email: %s' % str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
 
 def show_post_email_success_view(request):
     return render(request, 'register/post-success.html', locals())
@@ -77,6 +69,7 @@ def show_post_email_success_view(request):
 def show_post_email_fail_view(request):
     return render(request, 'register/post-fail.html', locals())
 
+@decorators.nologin_required
 def verify_email_link(request):
     try:
         uuid = request.GET['uuid']
@@ -98,15 +91,15 @@ def verify_email_link(request):
             verification.status = codes.StatusCode.CLOSE.value
             verification.save()
             return http.HttpResponseRedirect('/register/invalid-link/')
-        return http.HttpResponseRedirect('/register/password/?uuid=%s' %str(uuid))
+        return http.HttpResponseRedirect('/register/password/?uuid=%s' % str(uuid))
     except Exception, inst:
         logger.exception('fail to verify email link: %s' % str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
 
 def show_invalid_link_view(request):
     return render(request, 'register/invalid-link.html', locals())    
 
-
+@decorators.nologin_required
 def show_password_view(request):
     try:
         form = forms.PasswordForm()
@@ -116,7 +109,7 @@ def show_password_view(request):
         logger.exception("fail to show gtoken view:%s" %str(inst))
         return http.HttpResponseServerError()
 
-
+@decorators.nologin_required
 def show_gtoken_view(request):
     try:
         email = request.session.get('email')
@@ -131,6 +124,7 @@ def show_gtoken_view(request):
         logger.exception("fail to show gtoken view:%s" %str(inst))
         return http.HttpResponseServerError()
 
+@decorators.nologin_required
 @decorators.http_post_required
 def submit_gtoken(request):
     try:
@@ -196,6 +190,7 @@ def submit_gtoken(request):
         logger.exception("fail to post gtoken:%s" %str(inst))
         return http.HttpResponseServerError()
 
+@decorators.nologin_required
 @decorators.http_post_required
 def submit_password(request):
     try:

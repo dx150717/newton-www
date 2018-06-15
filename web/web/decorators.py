@@ -77,6 +77,15 @@ def auth_required(func):
         return http.JsonErrorResponse(codes.ErrorCode.UNAUTH.value)
     return _decorator
 
+def nologin_required(func):
+    """Ensure the current user is not login,otherwise redirect to user page
+    """
+    def _decorator(request, *args, **kwargs):
+        if request.user.is_authenticated():
+            return http.HttpResponseRedirect('/user/')
+        return func(request, *args, **kwargs)
+    return _decorator
+
 def admin_user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIELD_NAME):
     """
     Decorator for views that checks that the user passes the given test,
