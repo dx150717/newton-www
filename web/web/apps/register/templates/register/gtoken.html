@@ -40,7 +40,7 @@
     </div>
     <div class="container">
         <div class="form-container">
-            <form id="id-set-gtoken-form" class="form" action="/register/gtoken/post/" method="POST">
+            <form id="id_set_gtoken_form" class="form" action="/register/gtoken/post/" method="POST">
                 {% csrf_token %}
                 <input id="email" name="email" type="hidden" value="{{ email }}"/>
                 <input id="password" name="password" type="hidden" value="{{ password }}"/>

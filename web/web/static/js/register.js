@@ -6,7 +6,7 @@ var SUCCESS_TIP = '<span class="glyphicon glyphicon-ok-circle alert-success" ari
 /**
  * register.js for valid register form.
  */
-$("#id-register-form").submit(function(event){
+$("#id_register_form").submit(function(event){
     event.preventDefault();
     var form = this;
     var code = $("#id_captcha_code").val()
@@ -46,7 +46,7 @@ $("#id-register-form").submit(function(event){
 /**
  * valid set password form.
  */
-$("#id-set-password-form").submit(function(event){
+$("#id_set_password_form").submit(function(event){
     event.preventDefault();
     var form = this;
     if (!$(form).valid()) {
@@ -69,7 +69,7 @@ $("#id-set-password-form").submit(function(event){
 /**
  * set gtoken
  */
-$("#id-set-gtoken-form").submit(function(event){
+$("#id_set_gtoken_form").submit(function(event){
     event.preventDefault();
     var form = this;
     if (!$(form).valid()) {

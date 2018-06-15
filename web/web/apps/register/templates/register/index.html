@@ -32,7 +32,7 @@
                 </div>
             </div> -->
             <div class="form-container">
-                <form id="id-register-form" class="form" action="/register/email/post/" method="POST">
+                <form id="id_register_form" class="form" action="/register/email/post/" method="POST">
                     {% csrf_token %}
                     {% include "form.html" %}
                     {% include "captcha.html" %}
