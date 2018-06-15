@@ -36,7 +36,7 @@ def post_login(request):
         form = forms.LoginForm(request.POST)
         if not form.is_valid():
             return http.JsonErrorResponse(error_message=_("Form Error"))
-        code = form.cleaned_data['code']
+        code = request.POST.get['code']
         if code != ishuman_services.get_captcha(request.session.session_key):
             return http.JsonErrorResponse(error_message=_("Captcha Error"))
         # start authenticate
@@ -56,16 +56,21 @@ def post_login(request):
 @decorators.http_post_required
 def post_google_authenticator(request):
     try:
-        gtoken_code = request.POST['gtoken_code']
-        email = request.POST['email']
-        password = request.POST['password']
-        auth_token = request.POST['auth_token']
-        session_token = request.session.get('auth_token')
+        # check whether post data is valid
+        form = forms.GoogleAuthenticatorForm(request.POST)
+        if not form.is_valid():
+            return http.JsonErrorResponse(error_message=_("Form Error"))
+        # get cleaned data from form
+        email = form.cleaned_data["email"]
+        gtoken_code = form.cleaned_data["gtoken_code"]
+        password = form.cleaned_data["password"]
+        auth_token = form.cleaned_data["auth_token"]
         # clear the session
+        session_token = request.session.get("auth_token")
         if not session_token:
             return http.JsonErrorResponse(error_message=_("No session"))
         if auth_token != session_token:
-            return http.JsonErrorResponse(error_message=_("No Auth_token"))
+            return http.JsonErrorResponse(error_message=_("No Auth"))
         user = authenticate(username=email, password=password)
         if not user or user.is_staff:
             return http.JsonErrorResponse(error_message=_("No User"))

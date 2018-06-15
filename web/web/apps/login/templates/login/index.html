@@ -22,6 +22,7 @@
         <div class="form-container">
             <form action="#" method="POST" id="login_form">
                 {% csrf_token %}
+                {% include "form.html" %}
                 {% include "captcha.html" %}
                 <div>
                     <input type="hidden" name="next" value="{{ next }}" />
