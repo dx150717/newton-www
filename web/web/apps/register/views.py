@@ -56,9 +56,9 @@ def submit_email(request):
             return render(request, 'register/index.html', locals())
         is_send_success = services.send_register_validate_email(email, request)
         if not is_send_success:
-            return http.HttpResponseRedirect('/register/post-fail/')
+            return http.HttpResponseRedirect('/register/email/fail/')
         else:
-            return http.HttpResponseRedirect('/register/post-success/')
+            return http.HttpResponseRedirect('/register/email/success/')
     except Exception, inst:
         logger.exception('fail to submit email: %s' % str(inst))
         raise exception.SystemError500()
@@ -133,40 +133,33 @@ def show_gtoken_view(request):
 @decorators.http_post_required
 def submit_gtoken(request):
     try:
-        form = forms.GtokenForm(request.POST)
+        # check whether post data is valid
+        form = forms.SubmitGtokenForm(request.POST)
         if not form.is_valid():
-            return http.HttpResponseRedirect("/register/")
-        uuid = request.POST.get('uuid')
+            return http.HttpResponseRedirect("/register/gtoken/")
         # check uuid
+        uuid = form.cleaned_data["uuid"]
         verification = services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/invalid-link/')
-        # get post params
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        gtoken = request.POST.get('gtoken')
-        auth_token = request.POST.get('auth_token')
-        gtoken_code = form.cleaned_data['gtoken_code']
         # check google auth
+        gtoken = form.cleaned_data["gtoken"]
+        gtoken_code = form.cleaned_data["gtoken_code"]
         is_pass_google_auth = pyotp.TOTP(gtoken).verify(gtoken_code)
         if not is_pass_google_auth:
-            gtoken = gtoken
+            gtoken = pyotp.random_base32()
             gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Authenticator Code Error')])
             return render(request, 'register/gtoken.html', locals())
-        # clear session
+        # check whether form data is untouched
+        email = forms.cleaned_data["email"]
+        password = forms.cleaned_data["password"]
+        auth_token = forms.cleaned_data["auth_token"]
+        uuid = forms.cleaned_data["uuid"]
         session_email = request.session.get('email')
         session_password = request.session.get('password')
         session_token = request.session.get('auth_token')
         session_uuid = request.session.get('uuid')
-        if session_token:
-            del request.session['auth_token']
-        if session_email:
-            del request.session['email']
-        if session_password:
-            del request.session['password']
-        if session_uuid:
-            del request.session['uuid']
         if session_email != email:
             raise exception.SystemError500()
         if session_password != password:
@@ -188,7 +181,16 @@ def submit_gtoken(request):
         # set link valid
         verification.status = codes.StatusCode.CLOSE.value
         verification.save()
-        return http.HttpResponseRedirect('/register/register-success/')
+        # clear session
+        if session_token:
+            del request.session['auth_token']
+        if session_email:
+            del request.session['email']
+        if session_password:
+            del request.session['password']
+        if session_uuid:
+            del request.session['uuid']
+        return http.HttpResponseRedirect('/register/success/')
     except Exception,inst:
         logger.exception("fail to post gtoken:%s" %str(inst))
         raise exception.SystemError500()

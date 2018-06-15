@@ -23,7 +23,7 @@ def send_register_validate_email(email, request):
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        target_url = "%s/register/verify/?uuid=%s" % (settings.NEWTON_HOME_URL, str(verification.uuid))
+        target_url = "%s/register/email/verify/?uuid=%s" % (settings.NEWTON_HOME_URL, str(verification.uuid))
         subject = _("Newton Notification: Please complete the register process of Newton")
         template = loader.get_template("register/register-letter.html")
         context = Context({"target_url":target_url,"request":request})
