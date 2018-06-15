@@ -72,7 +72,7 @@ def show_post_email_fail_view(request):
 @decorators.nologin_required
 def verify_email_link(request):
     try:
-        uuid = request.GET['uuid']
+        uuid = request.GET.get('uuid')
         verification = services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/invalid-link/')
@@ -103,10 +103,12 @@ def show_invalid_link_view(request):
 def show_password_view(request):
     try:
         form = forms.PasswordForm()
-        uuid = request.GET['uuid']
+        uuid = request.GET.get('uuid')
+        if not uuid:
+            return http.HttpResponseRedirect('/register/invalid-link/')
         return render(request, 'register/password.html', locals())
     except Exception, inst:
-        logger.exception("fail to show gtoken view:%s" %str(inst))
+        logger.exception("fail to show gtoken view:%s" % str(inst))
         raise exception.SystemError500()
 
 @decorators.nologin_required
@@ -116,12 +118,15 @@ def show_gtoken_view(request):
         password = request.session.get('password')
         auth_token = request.session.get('auth_token')
         uuid = request.session.get('uuid')
+        # check whether session is expired
+        if not (email and password and auth_token and uuid):
+            return http.HttpResponseRedirect("/register/")
         gtoken = pyotp.random_base32()
         gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
         form = forms.GtokenForm()
         return render(request, 'register/gtoken.html', locals())
     except Exception, inst:
-        logger.exception("fail to show gtoken view:%s" %str(inst))
+        logger.exception("fail to show gtoken view:%s" % str(inst))
         raise exception.SystemError500()
 
 @decorators.nologin_required
@@ -130,9 +135,7 @@ def submit_gtoken(request):
     try:
         form = forms.GtokenForm(request.POST)
         if not form.is_valid():
-            gtoken = request.POST.get('gtoken')
-            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
-            return render(request, 'register/gtoken.html', locals())
+            return http.HttpResponseRedirect("/register/")
         uuid = request.POST.get('uuid')
         # check uuid
         verification = services.get_register_verification_by_uuid(uuid)
