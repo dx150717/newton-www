@@ -58,3 +58,5 @@ def show_user_index_view(request):
     for item in items:
         item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]
     return render(request, "user/index.html", locals())
+
+    
