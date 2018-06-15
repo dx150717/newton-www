@@ -13,7 +13,7 @@ function googleCallback(ret){
 /**
  * register.js for valid register form.
  */
-$("#register-form").submit(function(event){
+$("#id-register-form").submit(function(event){
     event.preventDefault();
     var form = this;
     var code = $("#id_code").val()
@@ -53,7 +53,7 @@ $("#register-form").submit(function(event){
 /**
  * valid set password form.
  */
-$("#set-password-form").submit(function(event){
+$("#id-set-password-form").submit(function(event){
     event.preventDefault();
     var form = this;
     if (!$(form).valid()) {
@@ -76,7 +76,7 @@ $("#set-password-form").submit(function(event){
 /**
  * set gtoken
  */
-$("#set-gtoken-form").submit(function(event){
+$("#id-set-gtoken-form").submit(function(event){
     event.preventDefault();
     var form = this;
     if (!$(form).valid()) {
