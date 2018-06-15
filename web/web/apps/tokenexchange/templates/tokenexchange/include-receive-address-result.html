@@ -8,147 +8,44 @@
             <div class="text-center">
                 <p class="token-exchange-title">{% trans "Token Exchange Result" %}</p>
             </div>
-            {% if item.assign_btc and item.btc_final_balance != item.assign_btc or item.assign_ela and item.ela_final_balance != item.assign_ela %}
-            <p class="result-tips">{% trans "Status：transferred amount is not equal to allocated amount" %}</p>
-            {% else %}
+            {% if is_equal %}
             <p class="result-tips">{% trans "Status：tranferring finished" %}</p>
+            {% else %}
+            <p class="result-tips">{% trans "Status：transferred amount is not equal to allocated amount" %}</p>
             {% endif %}
+            {% if item.btc_transfer_list %}
             <div class="row">
-                <div class="col-md-4">
-                    <p class="result-title">{% trans "Transferring time" %}</p>
-                </div>
-                <div class="col-md-4">
-                    <p class="result-title">BTC</p>
-                </div>
-                <div class="col-md-4">
-                    <p class="result-title">ELA</p>
-                </div>
+                <div class="col-md-6">{% trans "Transferring time" %}</div>
+                <div class="col-md-6">{% trans "收到额度" %}</div>
             </div>
+            {% for btc_transfer in item.btc_transfer_list %}
             <div class="row">
-                {% if item.btc_transfer_list %}
-                {% for btc_transfer in item.btc_transfer_list %}
-                <div class="col-md-12">
-                    <p class="result-content"> {{ btc_transfer.created_at|date:"Y-m-d H:i:s" }} </p>
-                </div>
-                {% endfor %}
+                <div class="col-md-6">{{ btc_transfer.create_at|date:"Y-m-d H:i:s" }}</div>
+                <div class="col-md-6">{{ btc_transfer.value }}</div>
             </div>
-            <div class="col-md-4">
-                {% if item.btc_transfer_list %}
-                {% for btc_transfer in item.btc_transfer_list %}
-                <div class="col-md-12">
-                    <p class="result-content"> {{ btc_transfer.created_at|date:"Y-m-d H:i:s" }} </p>
-                </div>
-                {% endfor %}
+            {% endfor %}
+            <div class="row">
+                <div class="col-md-6">{% trans "Total" %}</div>
+                <div class="col-md-6">{{ item.btc_final_balance }}</div>
             </div>
-            <div class="col-md-4">
-                {% if item.btc_transfer_list %}
-                {% for btc_transfer in item.btc_transfer_list %}
-                <div class="col-md-12">
-                    <p class="result-content"> {{ btc_transfer.created_at|date:"Y-m-d H:i:s" }} </p>
-                </div>
-                {% endfor %}
+            {% endif %}
+            {% if item.ela_transfer_list %}
+            <div class="row">
+                <div class="col-md-6">{% trans "Transferring time" %}</div>
+                <div class="col-md-6">{% trans "收到额度" %}</div>
             </div>
-            <div class="col-md-6">
-                {% if item.btc_final_balance %}
-                <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">{{ item.btc_final_balance }}</span> BTC</p>
-                {% else %}
-                <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">0</span> BTC</p>
-                {% endif %}
+            {% for ela_transfer in item.ela_transfer_list %}
+            <div class="row">
+                <div class="col-md-6">{{ ela_transfer.create_at|date:"Y-m-d H:i:s" }}</div>
+                <div class="col-md-6">{{ ela_transfer.value }}</div>
             </div>
-            <div class="col-md-6">
-                {% if item.ela_final_balance %}
-                <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">{{ item.ela_final_balance }}</span> ELA</p>
-                {% else %}
-                <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">0</span> ELA</p>
-                {% endif %}
+            {% endfor %}
+            <div class="row">
+                <div class="col-md-6">{% trans "Total" %}</div>
+                <div class="col-md-6">{{ item.ela_final_balance }}</div>
             </div>
-            <div class="col-md-6">
-                {% if item.btc_transfer_list %}
-                {% for btc_final_balance in item.btc_transfer_list %}
-                {% if btc_final_balance.value %}
-                {{ btc_final_balance.created_at|date:"Y-m-d H:i:s" }}
-                <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">{{ btc_final_balance.value }}</span> BTC</p>
-                {% else %}
-                <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">0</span> BTC</p>
-                {% endif %}
-                {% endfor %}
-                {% else %}
-                <p class="token-exchange-content">{% trans "Received BTC" %}: <span class="f30">0</span> BTC</p>
-                {% endif %}
-            </div>
-            <div class="col-md-6">
-                {% if item.ela_transfer_list %}
-                {% for ela_final_balance in item.ela_transfer_list %}
-                {% if ela_final_balance.value %}
-                {{ ela_final_balance.created_at|date:"Y-m-d H:i:s" }}
-                <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">{{ ela_final_balance.value }}</span> ELA</p>
-                {% else %}
-                <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">0</span> ELA</p>
-                {% endif %}
-                {% endfor %}
-                {% else %}
-                <p class="token-exchange-content">{% trans "Received ELA" %}: <span class="f30">0</span> ELA</p>
-                {% endif %}
-            </div>
+            {% endif %}
         </div>
     </div>
 </div>
-{% comment %}
-{% if item.assign_btc and item.btc_final_balance != item.assign_btc or item.assign_ela and item.ela_final_balance != item.assign_ela %}
-<div class="form-container mt50">
-    <div class="alert alert-warning f30">
-        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-        {% trans "Transferred amount is not equal to allocated amount." %}
-    </div>
-</div>
-{% else %}
-<div class="form-container mt50">
-    <div class="alert alert-success f30">
-        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-        {% trans "Transfer success!" %}
-    </div>
-</div>
 {% endif %}
-{% else %}
-<div class="form-container mt50">
-    <div class="alert alert-warning f30">
-        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-        * {% trans "Attention! You can only transfer " %}  {{ item.assign_btc }} BTC {% trans "and" %} {{ item.assign_ela }} ELA {% trans "to above addresses." %}
-    </div>
-</div>
-{% endif %}
-{% else %}
-<div class="form-container mt50">
-    <div class="alert alert-warning f30">
-        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
-        {% trans "Your expected amount is under evaluation." %}
-    </div>
-</div>
-{% endcomment %}
-{% endif %}
-{% endif %}
-<!-- end -->
-{% else %}
-<p class="mt50 text-center">
-    <a class="form-button" href="/tokenexchange/invite/{{ item.id }}/post/">{% trans "Fill in expected amount" %}</a></p>
-{% endif %}
-{% if item.expect_btc or item.except_ela %}
-{% if item.assign_btc or item.assign_ela%}
-<p></p>
-{% else %}
-<p class="except-tips">{% trans "Your expected amount is under evaluation." %}</p>
-{% endif %}
-{% endif %}
-</div>
-</div>
-{% else %}
-<div class="item">
-    <p>{% trans "No token exchange information." %}</p>
-</div>
-{% endif %}
-</div>
-</div>
-</div>
-</div>
-</section>
-

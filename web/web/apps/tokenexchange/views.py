@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 import datetime
+import time
 
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
@@ -17,6 +18,9 @@ from config import codes
 from . import forms
 from . import services
 from . import models as tokenexchange_models
+from tracker import models as tracker_models
+from django.db.models import Sum
+from django.utils.timezone import utc
 
 logger = logging.getLogger(__name__)
 
@@ -135,27 +139,27 @@ def show_receive_address_view(request, invite_id):
         if not invite_item:
             return http.HttpResponseNotFound()
         # query data
-        item.btc_final_balance = 0
-        item.btc_transfer_list = []
-        item.ela_final_balance = 0
-        item.ela_transfer_list = []
-        token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+        invite_item.btc_final_balance = 0
+        invite_item.btc_transfer_list = []
+        invite_item.ela_final_balance = 0
+        invite_item.ela_transfer_list = []
+        token_exchange_info = settings.FUND_CONFIG[invite_item.phase_id]
         # btc section
-        if item.receive_btc_address:
-            btc_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value).aggregate(Sum('value'))
+        if invite_item.receive_btc_address:
+            btc_final_balance = tracker_models.AddressTransaction.objects.filter(address=invite_item.receive_btc_address,address_type=codes.CurrencyType.BTC.value).aggregate(Sum('value'))
             btc_final_balance =  btc_final_balance.get("value__sum", 0)
-            btc_transfer_list = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value)
+            btc_transfer_list = tracker_models.AddressTransaction.objects.filter(address=invite_item.receive_btc_address,address_type=codes.CurrencyType.BTC.value)
             if btc_final_balance > 0:
-                item.btc_final_balance = btc_final_balance
-                item.btc_transfer_list = btc_transfer_list
+                invite_item.btc_final_balance = btc_final_balance
+                invite_item.btc_transfer_list = btc_transfer_list
         # ela section
-        if item.receive_ela_address:
-            ela_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value).aggregate(Sum('value'))
+        if invite_item.receive_ela_address:
+            ela_final_balance = tracker_models.AddressTransaction.objects.filter(address=invite_item.receive_ela_address,address_type=codes.CurrencyType.ELA.value).aggregate(Sum('value'))
             ela_final_balance = ela_final_balance.get("value__sum", 0)
-            ela_transfer_list = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value)
+            ela_transfer_list = tracker_models.AddressTransaction.objects.filter(address=invite_item.receive_ela_address,address_type=codes.CurrencyType.ELA.value)
             if ela_final_balance > 0:
-                item.ela_final_balance = ela_final_balance
-                item.ela_transfer_list = ela_transfer_list
+                invite_item.ela_final_balance = ela_final_balance
+                invite_item.ela_transfer_list = ela_transfer_list
         # check whether the fundraise process is expired
         is_deadline = False
         deadline_time = time.strptime(token_exchange_info['end_date'], "%Y-%m-%d")
@@ -163,6 +167,10 @@ def show_receive_address_view(request, invite_id):
         now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
         if now_time > dead_time:
             is_deadline = True
+        # check whether the receive equal assign
+        is_equal = True
+        if invite_item.btc_final_balance != invite_item.assign_btc or invite_item.ela_final_balance != invite_item.assign_ela:
+            is_equal = False
         return render(request, "tokenexchange/token-exchange-receive-address.html", locals())
     except Exception,inst:
         logger.exception("fail to  show receive address: %s" % str(inst))

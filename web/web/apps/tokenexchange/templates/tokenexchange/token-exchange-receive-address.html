@@ -33,10 +33,23 @@
     <div id="token-exchange" class="user-content">
         <div class="container">
             <div class="raw user-detail-content">
+            {% if invite_item %}
                 {% include "tokenexchange/include-token-exchange-info.html" with item=invite_item %}
                 {% include "tokenexchange/include-receive-address-expect.html" with item=invite_item %}
                 {% include "tokenexchange/include-receive-address-allocation.html" with item=invite_item %}
                 {% include "tokenexchange/include-receive-address-result.html" with item=invite_item %}
+                {% if invite_item.expect_btc or invite_item.expect_ela %}
+                    {% if invite_item.assign_btc or invite_item.assign_ela or invite_item.receive_btc_address or invite_item.receive_ela_address %}
+                    <p></p>
+                    {% else %}
+                    <p class="before-fill">{% trans "Your expected amount is under evaluation" %}</p>
+                    {% endif %}
+                {% else %}
+                <p class="before-fill">{% trans "No token exchange information." %}</p>
+                {% endif %}
+            {% else %}
+            <p class="before-fill">{% trans "No token exchange information." %}</p>
+            {% endif %}
             </div>
         </div>
     </div>

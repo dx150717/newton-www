@@ -9,52 +9,52 @@
                 <p class="token-exchange-title">{% trans "Allocated" %}</p>
             </div>
             {% if item.expect_btc or item.except_ela %}
-            {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
-            
-            {% if not is_deadline %}
-            <p class="allocated-tips">{% trans "* Please transfer your token before deadline of first-round token exchange." %}</p>
-            <p class="allocated-tips">{% trans "* Attention! You can only transfer 1.5 BTC and 200 ELA to above addresses. DO NOT transfer BTC and ELA amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
-            {% else %}
-            <p class="allocated-tips">{% trans "* First-round token exchange is overdue, DO NOT transfer any token to allocated addresses." %}</p>
-            {% endif %}
-            {% endif %}
+                {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
+                    {% if not is_deadline %}
+                        <p class="allocated-tips">{% trans "* Please transfer your token before deadline of first-round token exchange." %}</p>
+                        <p class="allocated-tips">{% trans "* Attention! You can only transfer"%} {{item.assign_btc}} BTC {% trans "and" %} {{item.assign_ela}} ELA {% trans "to above addresses. DO NOT transfer BTC and ELA amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
+                    {% else %}
+                        <p class="allocated-tips">{% trans "* First-round token exchange is overdue, DO NOT transfer any token to allocated addresses." %}</p>
+                    {% endif %}
+                {% endif %}
             {% endif %}
             <div class="col-md-6">
-                {% if item.assign_btc %}
-                <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
-                <p class="token-exchange-content">{% trans "Allocated BTC address" %}:</p> 
-                <p class="token-exchange-content"><span class="address_style ">{{ item.receive_btc_address }}</span></p>
-                <p id="btc_code"  class="qrcode-width">
-                    <script>
-                        new QRCode(document.getElementById("btc_code"), "{{ item.receive_btc_address }}");
-                    </script>
-                </p>
-                {% else %}
-                <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: <span class="f30">0</span> BTC</p>
-                <p class="token-exchange-content">{% trans "Allocated BTC address" %}: -</p>
-                <p id="btc_code">
-                    -
-                </p>
-                {% endif %}
+            {% if item.assign_btc %}
+            <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: <span class="f30">{{ item.assign_btc }}</span> BTC</p>
+            <p class="token-exchange-content">{% trans "Allocated BTC address" %}:</p> 
+            <p class="token-exchange-content"><span class="address_style ">{{ item.receive_btc_address }}</span></p>
+            <p id="btc_code"  class="qrcode-width">
+                <script>
+                    new QRCode(document.getElementById("btc_code"), "{{ item.receive_btc_address }}");
+                </script>
+            </p>
+            {% else %}
+            <p class="token-exchange-content">{% trans "Allocated BTC amount" %}: <span class="f30">0</span> BTC</p>
+            <p class="token-exchange-content">{% trans "Allocated BTC address" %}: -</p>
+            <p id="btc_code">
+                -
+            </p>
+            {% endif %}
             </div>
             <div class="col-md-6">
-                {% if item.assign_ela %}
-                <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: <span class="f30">{{ item.assign_ela }}</span> ELA</p>
-                <p class="token-exchange-content">{% trans "Allocated ELA address" %}:</p> 
-                <p class="token-exchange-content"><span class="address_style">{{ item.receive_ela_address }}</span></p>
-                <p id="ela_code" class="qrcode-width">
-                    <script>
-                        new QRCode(document.getElementById("ela_code"), "{{ item.receive_ela_address }}");
-                    </script>
-                </p>
-                {% else %}
-                <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: <span class="f30">0</span> ELA</p>
-                <p class="token-exchange-content">{% trans "Allocated ELA address" %}: -</p>
-                <p id="ela_code">
-                    -
-                </p>
-                {% endif %}
+            {% if item.assign_ela %}
+            <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: <span class="f30">{{ item.assign_ela }}</span> ELA</p>
+            <p class="token-exchange-content">{% trans "Allocated ELA address" %}:</p> 
+            <p class="token-exchange-content"><span class="address_style">{{ item.receive_ela_address }}</span></p>
+            <p id="ela_code" class="qrcode-width">
+                <script>
+                    new QRCode(document.getElementById("ela_code"), "{{ item.receive_ela_address }}");
+                </script>
+            </p>
+            {% else %}
+            <p class="token-exchange-content">{% trans "Allocated ELA amount" %}: <span class="f30">0</span> ELA</p>
+            <p class="token-exchange-content">{% trans "Allocated ELA address" %}: -</p>
+            <p id="ela_code">
+                -
+            </p>
+            {% endif %}
             </div>
         </div>
     </div>
 </div>
+{% endif %}

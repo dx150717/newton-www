@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-14 05:47+0000\n"
+"POT-Creation-Date: 2018-06-15 07:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -181,12 +181,12 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:70
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:87
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:73
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:99
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:74
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:54
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:58
+#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:49
 #: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:72
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
 #: web/apps/welcome/templates/welcome/announcement.html:72
@@ -195,12 +195,12 @@ msgid "previous"
 msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:74
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:91
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:77
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:103
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:78
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:58
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:62
+#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:53
 #: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:76
 #: web/apps/welcome/templates/welcome/announcement-detail.html:50
 #: web/apps/welcome/templates/welcome/announcement.html:76
@@ -293,11 +293,11 @@ msgstr "登录"
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:10
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:6
 #: web/apps/user/templates/user/index.html:6
 #: web/apps/user/templates/user/profile.html:6
 #: web/apps/user/templates/user/settings.html:6
-#: web/apps/user/templates/user/token-exchange-progress.html:6
 #: web/apps/user/templates/user/user-base.html:6
 msgid "Newton Community"
 msgstr "牛顿社区"
@@ -363,15 +363,19 @@ msgid ""
 "please read the detail on Newton Token Exchange carefully in Newton official "
 "website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) "
 "before filling in the expected amount."
-msgstr "祝贺您，您可以参加牛顿第一轮通证交换。在填写您的期望通证交换额度之前，请在牛顿官方网站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 上阅读牛顿通证交换的详细信息。"
+msgstr ""
+"祝贺您，您可以参加牛顿第一轮通证交换。在填写您的期望通证交换额度之前，请在牛"
+"顿官方网站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
+"a>) 上阅读牛顿通证交换的详细信息。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:8
 msgid ""
 "Newton only issues the announcement and notification though Newton official "
 "website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
 "a>), please ignore messages from any other medias."
-msgstr "牛顿只会通过牛顿官方网站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
-"a>) 发布公告和通知，请忽略源于其他任何渠道的消息。"
+msgstr ""
+"牛顿只会通过牛顿官方网站 (<a href='https://www.newtonproject.org/'>www."
+"newtonproject.org</a>) 发布公告和通知，请忽略源于其他任何渠道的消息。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:9
 msgid "Click the following button to fill in expected amount"
@@ -382,8 +386,18 @@ msgid "Fill in"
 msgstr "填写期望额度"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:11
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:21
+msgid "Best regard"
+msgstr "谢谢！"
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:12
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:22
+msgid "Newton team"
+msgstr "牛顿团队"
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:13
 #: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:9
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:26
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:23
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:39
 #: web/apps/register/templates/register/register-letter.html:9
 #: web/apps/reset/templates/reset/reset-letter.html:9
@@ -416,7 +430,7 @@ msgstr ""
 "链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:14
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:14
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
 msgid "Newton"
 msgstr "牛顿"
 
@@ -499,24 +513,11 @@ msgstr "很抱歉，您未通过KYC审核。"
 msgid "Resulting of"
 msgstr "原因是"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:18
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:20
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:19
 msgid ""
 "You can check and modify the contents you fill into KYC information page "
 "carefully, and try to submit again."
 msgstr "您可以仔细检查并修改KYC信息页面的内容，然后再次提交。"
-
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:23
-msgid "Thank you"
-msgstr "谢谢！"
-
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:24
-msgid "Best regard"
-msgstr "谢谢！"
-
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:25
-msgid "Newton team"
-msgstr "牛顿团队"
 
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:12
 msgid "Admin Login"
@@ -533,7 +534,7 @@ msgstr "牛顿提醒：我们收到了您的KYC信息"
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:35
 #: web/apps/register/templates/register/index.html:54
-#: web/apps/user/templates/user/token-exchange-progress.html:153
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
 msgid "and"
 msgstr "和"
 
@@ -1088,7 +1089,7 @@ msgstr "您期望的 ELA 额度"
 msgid "Newton notification: Received your KYC information"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
 
-#: web/apps/tokenexchange/views.py:64
+#: web/apps/tokenexchange/views.py:68
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
@@ -1104,8 +1105,8 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:24
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:6
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:28
 #: web/apps/user/templates/user/index.html:39
-#: web/apps/user/templates/user/token-exchange-progress.html:24
 msgid "Token Exchange"
 msgstr "通证交换"
 
@@ -1136,6 +1137,129 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:33
 msgid "Your ELA amount is "
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:9
+msgid "Allocated"
+msgstr "分配信息"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
+msgid ""
+"* Please transfer your token before deadline of first-round token exchange."
+msgstr "* 请于本轮通证交换截止日期前转币"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+msgid "* Attention! You can only transfer"
+msgstr "* 注意，您只能向分配地址中分别转"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+msgid ""
+"to above addresses. DO NOT transfer BTC and ELA amount larger than allocated "
+"amount, otherwise Newton Foundation won't refund the remainder."
+msgstr "请不要转入大于分配额度的BTC和ELA的数量，牛顿基金会不回退回超额的部分"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
+msgid ""
+"* First-round token exchange is overdue, DO NOT transfer any token to "
+"allocated addresses."
+msgstr "* 本轮通证交换已截止，请不要向分配地址中转币"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:23
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:32
+msgid "Allocated BTC amount"
+msgstr "分配 BTC 额度"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:33
+msgid "Allocated BTC address"
+msgstr "分配 BTC 地址"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:41
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:50
+msgid "Allocated ELA amount"
+msgstr "分配 ELA 额度"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:42
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:51
+msgid "Allocated ELA address"
+msgstr "分配 ELA 地址"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:9
+msgid "Expected"
+msgstr "期望信息"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:13
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:15
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:22
+msgid "Expected BTC amount"
+msgstr "期望 BTC 额度"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:20
+msgid "Expected ELA amount"
+msgstr "期望 ELA 额度"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:9
+msgid "Token Exchange Result"
+msgstr "通证交换结果"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:12
+msgid "Status：tranferring finished"
+msgstr "当前状态：转币已结束"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:14
+msgid "Status：transferred amount is not equal to allocated amount"
+msgstr "当前状态：转币数量和分配额度不一致"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:18
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:34
+msgid "Transferring time"
+msgstr "转币时间"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:19
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:35
+msgid "收到额度"
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:28
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:44
+msgid "Total"
+msgstr "总计"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:7
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:7
+msgid "First-Round Token Exchange"
+msgstr "第一轮通证交换"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:9
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:9
+msgid ""
+"The blockchain token exchange process is not the process of funding, but the "
+"one of organization establishment"
+msgstr "区块链代币交换的过程不是融资过程，是团队组建的过程。"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:14
+msgid "Minimum BTC: "
+msgstr "最小 BTC 额度："
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:18
+msgid "Minimum ELA: "
+msgstr "最小 ELA 额度："
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:31
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:18
+msgid "Second Token Exchange Info"
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:37
+msgid "Token exchange info and expect"
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:41
+msgid "Min BTC: "
+msgstr ""
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:45
+msgid "Min ELA: "
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:24
@@ -1231,7 +1355,6 @@ msgid "Newton Token Sale"
 msgstr "牛顿 Token 预售"
 
 #: web/apps/tokenexchange/templates/tokenexchange/pending.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/receive-address.html:6
 msgid "Tokensale"
 msgstr "牛顿 Token 预售"
 
@@ -1556,45 +1679,23 @@ msgstr "* 这一节是Newton KYC 审核的重要依据，请认真填写。"
 msgid "Emergency Information"
 msgstr "紧急联系人信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:7
-msgid "First Token Exchange Info"
-msgstr "第一轮通证交换"
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:9
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:9
-msgid ""
-"The blockchain token exchange process is not the process of funding, but the "
-"one of organization establishment"
-msgstr "区块链代币交换的过程不是融资过程，是团队组建的过程。"
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:18
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:31
-msgid "Second Token Exchange Info"
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:6
+#: web/apps/user/templates/user/index.html:6
+#: web/apps/user/templates/user/profile.html:6
+#: web/apps/user/templates/user/settings.html:6
+#: web/apps/user/templates/user/user-base.html:6
+msgid "user"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:7
-msgid "First-Round Token Exchange"
-msgstr "第一轮通证交换"
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:45
+msgid "Your expected amount is under evaluation"
+msgstr "您填写的期望额度正在评估中"
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:14
-msgid "Minimum BTC: "
-msgstr "最小 BTC 额度："
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:18
-msgid "Minimum ELA: "
-msgstr "最小 ELA 额度："
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:37
-msgid "Token exchange info and expect"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:41
-msgid "Min BTC: "
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:45
-msgid "Min ELA: "
-msgstr ""
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:48
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:51
+#: web/apps/user/templates/user/index.html:297
+msgid "No token exchange information."
+msgstr "没有通证交换信息。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:24
 msgid ""
@@ -1637,14 +1738,6 @@ msgstr "工作状态"
 #: web/apps/user/models.py:58
 msgid "Major"
 msgstr "专业"
-
-#: web/apps/user/templates/user/index.html:6
-#: web/apps/user/templates/user/profile.html:6
-#: web/apps/user/templates/user/settings.html:6
-#: web/apps/user/templates/user/token-exchange-progress.html:6
-#: web/apps/user/templates/user/user-base.html:6
-msgid "user"
-msgstr ""
 
 #: web/apps/user/templates/user/index.html:79
 msgid ""
@@ -1705,11 +1798,6 @@ msgstr "通证交换成功"
 msgid "Details "
 msgstr "详情"
 
-#: web/apps/user/templates/user/index.html:297
-#: web/apps/user/templates/user/token-exchange-progress.html:174
-msgid "No token exchange information."
-msgstr "没有通证交换信息。"
-
 #: web/apps/user/templates/user/profile.html:24
 msgid "Edit Profile"
 msgstr "修改个人资料"
@@ -1717,82 +1805,6 @@ msgstr "修改个人资料"
 #: web/apps/user/templates/user/settings.html:19
 msgid "Settings"
 msgstr "设置"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:43
-msgid "Expected"
-msgstr "期望信息"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:47
-#: web/apps/user/templates/user/token-exchange-progress.html:49
-#: web/apps/user/templates/user/token-exchange-progress.html:56
-msgid "Expected BTC amount"
-msgstr "期望 BTC 额度"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:54
-msgid "Expected ELA amount"
-msgstr "期望 ELA 额度"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:68
-msgid "Allocated"
-msgstr "分配信息"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:72
-#: web/apps/user/templates/user/token-exchange-progress.html:81
-msgid "Allocated BTC amount"
-msgstr "分配 BTC 额度"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:73
-#: web/apps/user/templates/user/token-exchange-progress.html:82
-msgid "Allocated BTC address"
-msgstr "分配 BTC 地址"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:90
-#: web/apps/user/templates/user/token-exchange-progress.html:99
-msgid "Allocated ELA amount"
-msgstr "分配 ELA 额度"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:91
-#: web/apps/user/templates/user/token-exchange-progress.html:100
-msgid "Allocated ELA address"
-msgstr "分配 ELA 地址"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:115
-msgid "Receive Amount Of Newton Foundation"
-msgstr "Newton 基金会收到的额度"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:119
-#: web/apps/user/templates/user/token-exchange-progress.html:121
-msgid "Received BTC"
-msgstr "接收的 BTC"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:126
-#: web/apps/user/templates/user/token-exchange-progress.html:128
-msgid "Received ELA"
-msgstr "接收的 ELA"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:138
-msgid "Transferred amount is not equal to allocated amount."
-msgstr "转币额度和分配额度不一致。"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:145
-msgid "Transfer success!"
-msgstr "转币成功！"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:153
-msgid "Attention! You can only transfer "
-msgstr "注意！你只能转"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:153
-msgid "to above addresses."
-msgstr "到上述地址。"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:161
-msgid "Your expected amount is under evaluation."
-msgstr "你填写的期望额度正在审核中。"
-
-#: web/apps/user/templates/user/token-exchange-progress.html:168
-msgid "Fill in expected amount"
-msgstr "填写期望额度"
 
 #: web/apps/verification/models.py:22
 msgid "Verification emails"
@@ -6629,6 +6641,30 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Thank you"
+#~ msgstr "谢谢！"
+
+#~ msgid "First Token Exchange Info"
+#~ msgstr "第一轮通证交换"
+
+#~ msgid "Receive Amount Of Newton Foundation"
+#~ msgstr "Newton 基金会收到的额度"
+
+#~ msgid "Received BTC"
+#~ msgstr "接收的 BTC"
+
+#~ msgid "Received ELA"
+#~ msgstr "接收的 ELA"
+
+#~ msgid "Transfer success!"
+#~ msgstr "转币成功！"
+
+#~ msgid "to above addresses."
+#~ msgstr "到上述地址。"
+
+#~ msgid "Fill in expected amount"
+#~ msgstr "填写期望额度"
 
 #~ msgid "rejected reason is:"
 #~ msgstr "拒绝原因："
