@@ -1333,15 +1333,41 @@ canvas { display: block; vertical-align: top; }
 
 #kyc .kycinfo_content img{width: 250px}
 
-.tokenexchange-warning{font-size: 30px;
-                    font-family:'Arial';
-                    text-align: center;
-                    color: #303030;
-                    /* color: #c90 */
-                }
-.tokenexchange-success{font-size: 30px;
-                    font-family:'Arial';
-                    text-align: center;
-                    color: #303030;
-                    /* color: #393 */
-                }
+.tokenexchange-warning{
+    font-size: 30px;
+    font-family:'Arial';
+    text-align: center;
+    color: #303030;
+    /* color: #c90 */
+}
+.tokenexchange-success{
+    font-size: 30px;
+    font-family:'Arial';
+    text-align: center;
+    color: #303030;
+    /* color: #393 */
+}
+
+#token-exchange .allocated-tips{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #CC0000;
+    text-align: center
+}
+#token-exchange .result-tips{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+#token-exchange .except-tips{
+    font-size: 24px;
+    color: #303030;
+    text-align: center;
+}
+#token-exchange .result-title{
+    text-align: center;
+    
+}
