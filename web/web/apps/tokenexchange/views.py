@@ -14,6 +14,7 @@ from django.forms.forms import NON_FIELD_ERRORS
 
 import decorators
 from utils import http
+from utils import exception
 from config import codes
 from . import forms
 from . import services
@@ -116,7 +117,7 @@ def post_kyc_information(request):
             return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
         logger.exception("fail to post kyc information:%s" % str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
 
 #@exchange_valid_required
 @login_required
@@ -174,7 +175,7 @@ def show_receive_address_view(request, invite_id):
         return render(request, "tokenexchange/token-exchange-receive-address.html", locals())
     except Exception,inst:
         logger.exception("fail to  show receive address: %s" % str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
  
 def show_pending_view(request):
     now = datetime.datetime.now()
@@ -193,7 +194,7 @@ def post_apply_amount(request, invite_id):
         invite_id = int(invite_id)
         item = tokenexchange_models.InvestInvite.objects.filter(user_id=request.user.id, id=invite_id).first()
         if not item:
-            return http.HttpResponseServerError()
+            raise exception.SystemError500()
         if item.expect_btc or item.expect_ela:
             return render(request, "tokenexchange/invalid-link.html")
         if request.method == 'POST':
@@ -214,4 +215,4 @@ def post_apply_amount(request, invite_id):
         return render(request, "tokenexchange/apply-amount.html", locals())
     except Exception, inst:
         logger.exception("fail to post the apply amount:%s" % str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()

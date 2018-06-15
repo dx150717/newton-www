@@ -18,6 +18,7 @@ from ishuman import services as ishuman_services
 import decorators
 from utils import http
 from utils import security
+from utils import exception
 from . import forms
 from user import models as user_models
 from . import sso
@@ -99,4 +100,4 @@ def post_google_authenticator(request):
         return http.JsonSuccessResponse(data={"msg":"/user/"})
     except Exception, inst:
         logger.exception("fail to post google authedticator:%s" % str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()

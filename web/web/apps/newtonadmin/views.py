@@ -17,6 +17,7 @@ import decorators
 from config import codes
 from utils import http
 from utils import security
+from utils import exception
 from . import forms
 
 logger = logging.getLogger(__name__)
@@ -45,7 +46,7 @@ def post_login(request):
         return redirect('/newtonadmin/')        
     except Exception, inst:
         logger.exception("fail to post login:%s" % str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
     
 @user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
 def show_index_view(request):

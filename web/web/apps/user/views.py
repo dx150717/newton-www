@@ -16,6 +16,7 @@ from django.utils.timezone import utc
 
 from utils import http
 from utils import convert
+from utils import exception
 from config import codes
 from . import forms
 from . import models
@@ -95,5 +96,5 @@ def show_token_exchange_progress_view(request, phase_id):
         return render(request, "user/token-exchange-progress.html", locals())
     except Exception,inst:
         logger.exception("error show progress %s" %str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
     

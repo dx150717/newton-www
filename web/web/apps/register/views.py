@@ -107,7 +107,7 @@ def show_password_view(request):
         return render(request, 'register/password.html', locals())
     except Exception, inst:
         logger.exception("fail to show gtoken view:%s" %str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
 
 @decorators.nologin_required
 def show_gtoken_view(request):
@@ -122,7 +122,7 @@ def show_gtoken_view(request):
         return render(request, 'register/gtoken.html', locals())
     except Exception, inst:
         logger.exception("fail to show gtoken view:%s" %str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
 
 @decorators.nologin_required
 @decorators.http_post_required
@@ -165,13 +165,13 @@ def submit_gtoken(request):
         if session_uuid:
             del request.session['uuid']
         if session_email != email:
-            return http.HttpResponseServerError()
+            raise exception.SystemError500()
         if session_password != password:
-            return http.HttpResponseServerError()
+            raise exception.SystemError500()
         if session_token != auth_token:
-            return http.HttpResponseServerError()
+            raise exception.SystemError500()
         if session_uuid != uuid:
-            return http.HttpResponseServerError()
+            raise exception.SystemError500()
         #create user
         username = security.generate_uuid()
         user = User.objects.create_user(username, email)
@@ -188,7 +188,7 @@ def submit_gtoken(request):
         return http.HttpResponseRedirect('/register/register-success/')
     except Exception,inst:
         logger.exception("fail to post gtoken:%s" %str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
 
 @decorators.nologin_required
 @decorators.http_post_required
@@ -221,7 +221,7 @@ def submit_password(request):
         return http.HttpResponseRedirect("/register/gtoken/")
     except Exception,inst:
         logger.exception("fail to post password:%s" %str(inst))
-        return http.HttpResponseServerError()
+        raise exception.SystemError500()
 
 
 def show_register_success_view(request):
