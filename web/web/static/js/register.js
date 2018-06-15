@@ -4,19 +4,12 @@
 var SUCCESS_TIP = '<span class="glyphicon glyphicon-ok-circle alert-success" aria-hidden="true"></span>';
 
 /**
- * 
- * @param {string} ret google recaptcha response.
- */
-function googleCallback(ret){
-    document.getElementById("id-google-recaptcha").value = ret;
-};
-/**
  * register.js for valid register form.
  */
 $("#id-register-form").submit(function(event){
     event.preventDefault();
     var form = this;
-    var code = $("#id_code").val()
+    var code = $("#id_captcha_code").val()
     if (!$(form).valid()) {
         return false;
     }

@@ -34,13 +34,8 @@
             <div class="form-container">
                 <form id="id-register-form" class="form" action="/register/email/post/" method="POST">
                     {% csrf_token %}
-                    {% include "form-code.html" %}
-                    {% comment %}
-                    <div id='id_register_code_error' class='alert alert-danger hide'>{% trans "Recaptcha Error" %}</div>
-                    <div class="form-group">
-                        <image class="text-center" id="register_captcha_code" src="/ishuman/image/?' + Math.random() + '"/>
-                    </div>
-                    {% endcomment %}
+                    {% include "form.html" %}
+                    {% include "captcha.html" %}
                     <div class="raw">
                         <div>
                             <button id="register-btn" class="form-button" type="submit">{% trans "Register" %}</button>
@@ -61,6 +56,7 @@
 {% endblock %}
 
 {% block js %}
+<script src="{% version "js/captcha.js" %}"></script>
 <script src="{% version "js/register.js" %}"></script>
 {% endblock %}
 
