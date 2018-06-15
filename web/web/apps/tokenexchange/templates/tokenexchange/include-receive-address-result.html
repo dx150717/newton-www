@@ -14,36 +14,50 @@
             <p class="result-tips">{% trans "Status：transferred amount is not equal to allocated amount" %}</p>
             {% endif %}
             {% if item.btc_transfer_list %}
-            <div class="row">
-                <div class="col-md-6">{% trans "Transferring time" %}</div>
-                <div class="col-md-6">{% trans "收到额度" %}</div>
-            </div>
-            {% for btc_transfer in item.btc_transfer_list %}
-            <div class="row">
-                <div class="col-md-6">{{ btc_transfer.create_at|date:"Y-m-d H:i:s" }}</div>
-                <div class="col-md-6">{{ btc_transfer.value }}</div>
-            </div>
-            {% endfor %}
-            <div class="row">
-                <div class="col-md-6">{% trans "Total" %}</div>
-                <div class="col-md-6">{{ item.btc_final_balance }}</div>
-            </div>
+            <table class="table">
+                <caption>BTC</caption>
+                <thead>
+                    <tr>
+                        <th>{% trans "Transferring time" %}</th>
+                        <th>BTC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for btc_transfer in item.btc_transfer_list %}
+                    <tr>
+                        <th>{{ btc_transfer.created_at|date:"Y-m-d H:i:s" }}</th>
+                        <th>{{ btc_transfer.value }}</th>
+                    </tr>
+                {% endfor %}
+                    <tr>
+                        <th>{% trans "Total" %}</th>
+                        <th>{{ item.btc_final_balance }}</th>
+                    </tr>
+                </tbody>
+            </table>
             {% endif %}
             {% if item.ela_transfer_list %}
-            <div class="row">
-                <div class="col-md-6">{% trans "Transferring time" %}</div>
-                <div class="col-md-6">{% trans "收到额度" %}</div>
-            </div>
-            {% for ela_transfer in item.ela_transfer_list %}
-            <div class="row">
-                <div class="col-md-6">{{ ela_transfer.create_at|date:"Y-m-d H:i:s" }}</div>
-                <div class="col-md-6">{{ ela_transfer.value }}</div>
-            </div>
-            {% endfor %}
-            <div class="row">
-                <div class="col-md-6">{% trans "Total" %}</div>
-                <div class="col-md-6">{{ item.ela_final_balance }}</div>
-            </div>
+            <table class="table">
+                <caption>ELA</caption>
+                <thead>
+                    <tr>
+                        <th>{% trans "Transferring time" %}</th>
+                        <th>ELA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for ela_transfer in item.ela_transfer_list %}
+                    <tr>
+                        <th>{{ ela_transfer.created_at|date:"Y-m-d H:i:s" }}</th>
+                        <th>{{ ela_transfer.value }}</th>
+                    </tr>
+                {% endfor %}
+                    <tr>
+                        <th>{% trans "Total" %}</th>
+                        <th>{{ item.ela_final_balance }}</th>
+                    </tr>
+                </tbody>
+            </table>
             {% endif %}
         </div>
     </div>
