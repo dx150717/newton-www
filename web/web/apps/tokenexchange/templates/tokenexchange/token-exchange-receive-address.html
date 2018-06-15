@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "user" %}
+{% endblock %}
+
+{% block site_name %}
+{% trans "Newton Community" %}
+{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block notice %}
+{% endblock %}
+
+{% block content %}
+<section id="user" class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Token Exchange" %}
+            </p>
+        </div>
+    </div>
+    
+    <div id="token-exchange" class="user-content">
+        <div class="container">
+            <div class="raw user-detail-content">
+                {% include "tokenexchange/include-token-exchange-info.html" with item=invite_item %}
+                {% include "tokenexchange/include-receive-address-expect.html" with item=invite_item %}
+                {% include "tokenexchange/include-receive-address-allocation.html" with item=invite_item %}
+                {% include "tokenexchange/include-receive-address-result.html" with item=invite_item %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load utils %}
+
+{% if item.expect_btc or item.expect_ela %}
+<div>
+    <div class="shadow-item">
+        <div class="container">
+            <div class="text-center">
+                <p class="token-exchange-title">{% trans "Expected" %}</p>
+            </div>
+            <div class="col-md-6">
+                {% if item.expect_btc %}
+                <p class="token-exchange-content">{% trans "Expected BTC amount" %}: <span class="f30">{{ item.expect_btc }}</span> BTC</p>
+                {% else %}
+                <p class="token-exchange-content">{% trans "Expected BTC amount" %}: 0 BTC</p>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                {% if item.expect_ela %}
+                <p class="token-exchange-content">{% trans "Expected ELA amount" %}: <span class="f30">{{ item.expect_ela }}</span> BTC</p>
+                {% else %}
+                <p class="token-exchange-content">{% trans "Expected BTC amount" %}: 0 ELA</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
