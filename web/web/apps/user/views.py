@@ -57,6 +57,8 @@ def show_user_index_view(request):
     items = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
     for item in items:
         item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+        if item.receive_btc_address or item.receive_ela_address:
+            item.process_status = 3
+        elif item.expect_btc or item.expect_ela:
+            item.process_status = 2
     return render(request, "user/index.html", locals())
-
-    

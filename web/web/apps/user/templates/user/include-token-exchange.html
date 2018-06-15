@@ -5,18 +5,9 @@
     <div class="container">
         <div class="raw user-detail-content">
             <div class="user-info">
-                <script>var hasExpect = false;</script>
-                <script>var hasSendAmount = false;</script>
-                
                 {% if items %}
                 {% for item in items %}
                 <div class="shadow-item">
-                {% if item.expect_btc or item.except_ela %}
-                    <script>var hasExpect = true;</script>
-                {% endif %}
-                {% if item.ela_final_balance or item.btc_final_balance %}
-                    <script>var hasSendAmount = true;</script>
-                {% endif %}
                 <div class="item">
                     <div class="item-content">
                         {% include "tokenexchange/token-exchange-info-summary.html" with token_exchange_info=item.token_exchange_info %}
@@ -30,7 +21,7 @@
                                     </div>
                                 </div>
                                 <div class="entry-lg">
-                                    <div id="apply-amount-container" class="delay">
+                                    <div id="apply-amount-container" {% if item.process_status < 2 %} class="delay" {% endif %} >
                                         <div class="date-lg">
                                             <dl class="date-bottom">
                                                 <dd>{% trans "Filled in the expected amount" %}</dd>
@@ -39,7 +30,7 @@
                                     </div>
                                 </div>
                                 <div class="entry-lg">
-                                    <div id="send-amount-container" class="delay">
+                                    <div id="send-amount-container" {% if item.process_status < 3 %} class="delay" {% endif %} >
                                         <div class="date-lg">
                                             <dl class="date-top">
                                                 <dd>{% trans "Transferred" %}</dd>
@@ -75,7 +66,7 @@
                                     </div>
                                 </div>
                                 <div class="entry">
-                                    <div id="apply-amount-container-mobile" class="delay">
+                                    <div id="apply-amount-container-mobile" {% if item.process_status < 2 %} class="delay" {% endif %} >
                                         <div class="date"></div>
                                         <div class="body">
                                             <dd>{% trans "Filled in the expected amount" %}</dd>
@@ -83,7 +74,7 @@
                                     </div>
                                 </div>
                                 <div class="entry">
-                                    <div id="send-amount-container-mobile" class="delay">
+                                    <div id="send-amount-container-mobile" {% if item.process_status < 3 %} class="delay" {% endif %} >
                                         <div class="date"></div>
                                         <div class="body">
                                             <dd>{% trans "Transferred" %}</dd>
