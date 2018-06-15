@@ -87,9 +87,3 @@ $("#id_set_gtoken_form").submit(function(event){
         error.appendTo(element.parent());
     }
 });
-
-$('#register_captcha_code').click(function(event){
-    event.preventDefault();
-    $(this).attr("src", "/ishuman/image/?" + Math.random());
-    $("#id_register_code_error").addClass("hide");
-});

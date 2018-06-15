@@ -112,6 +112,39 @@ def show_password_view(request):
         raise exception.SystemError500()
 
 @decorators.nologin_required
+@decorators.http_post_required
+def submit_password(request):
+    try:
+        # check uuid
+        uuid = request.POST['uuid']
+        verification = services.get_register_verification_by_uuid(uuid)
+        if not verification:
+            return http.HttpResponseRedirect('/register/invalid-link/')
+        #check link status
+        verification_status = verification.status
+        if verification_status != codes.StatusCode.AVAILABLE.value:
+            return http.HttpResponseRedirect('/register/invalid-link/')
+        email = verification.email_address
+        # check form 
+        form = forms.PasswordForm(request.POST)
+        if not form.is_valid():
+            return render(request, 'register/password.html', locals())
+        # check password
+        password = form.cleaned_data['password']
+        repassword = form.cleaned_data['repassword']
+        if password != repassword:
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords do not match')])
+            return render(request, 'register/password.html', locals())
+        request.session['email'] = email
+        request.session['password'] = password
+        request.session['auth_token'] = security.generate_uuid()
+        request.session['uuid'] = uuid
+        return http.HttpResponseRedirect("/register/gtoken/")
+    except Exception,inst:
+        logger.exception("fail to post password:%s" %str(inst))
+        raise exception.SystemError500()
+
+@decorators.nologin_required
 def show_gtoken_view(request):
     try:
         email = request.session.get('email')
@@ -194,40 +227,6 @@ def submit_gtoken(request):
     except Exception,inst:
         logger.exception("fail to post gtoken:%s" %str(inst))
         raise exception.SystemError500()
-
-@decorators.nologin_required
-@decorators.http_post_required
-def submit_password(request):
-    try:
-        # check uuid
-        uuid = request.POST['uuid']
-        verification = services.get_register_verification_by_uuid(uuid)
-        if not verification:
-            return http.HttpResponseRedirect('/register/invalid-link/')
-        #check link status
-        verification_status = verification.status
-        if verification_status != codes.StatusCode.AVAILABLE.value:
-            return http.HttpResponseRedirect('/register/invalid-link/')
-        email = verification.email_address
-        # check form 
-        form = forms.PasswordForm(request.POST)
-        if not form.is_valid():
-            return render(request, 'register/password.html', locals())
-        # check password
-        password = form.cleaned_data['password']
-        repassword = form.cleaned_data['repassword']
-        if password != repassword:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords do not match')])
-            return render(request, 'register/password.html', locals())
-        request.session['email'] = email
-        request.session['password'] = password
-        request.session['auth_token'] = security.generate_uuid()
-        request.session['uuid'] = uuid
-        return http.HttpResponseRedirect("/register/gtoken/")
-    except Exception,inst:
-        logger.exception("fail to post password:%s" %str(inst))
-        raise exception.SystemError500()
-
 
 def show_register_success_view(request):
     return render(request, "register/register-success.html", locals())
