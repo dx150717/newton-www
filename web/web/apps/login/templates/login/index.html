@@ -1,14 +1,8 @@
 {% extends "base.html" %} 
 {% load i18n %}
-{% load utils %} 
-{% block require_title %}
-<title>{% trans "Login" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
-
-{% block require_js %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
-{% endblock %}
-
+{% load utils %}
+{% block title %} {% trans "Login" %} {% endblock %}
+{% block site_name %} {% trans "Newton Community" %} {% endblock %}
 {% block header %}
 {% include "header-no-menu.html" %}
 {% endblock %}
@@ -28,27 +22,15 @@
         <div class="form-container">
             <form action="#" method="POST" id="login_form">
                 {% csrf_token %}
-                {% include "form-code.html" %}
-                    <!-- <div class="form-group">
-                        <div class="google-recaptcha" id="google-recaptcha">
-                            <input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
-                            <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
-                        </div>
-                    </div> -->
-                    {% comment %}
-                    <div id='id_login_code_error' class='alert alert-danger hide'>{% trans "Recaptcha Error" %}</div>
-                    <div class="form-group">
-                        <image class="text-center" id="login_captcha_code" src="/ishuman/image/?' + Math.random() + '"/>
-                    </div>
-                    {% endcomment %}
-                    <div>
-                        <input type="hidden" name="next" value="{{ next }}" />
-                        <button class="form-button" style="color:#fff;" type="submit">{% trans "Login" %}</button>
-                    </div>
-                    <div class="space-between">
-                        <a class="register" href="/register/">{% trans "Register" %}</a>
-                        <a class="reset" href="/reset/">{% trans "Forgot Password" %}</a>
-                    </div>
+                {% include "captcha.html" %}
+                <div>
+                    <input type="hidden" name="next" value="{{ next }}" />
+                    <button class="form-button" style="color:#fff;" type="submit">{% trans "Login" %}</button>
+                </div>
+                <div class="space-between">
+                    <a class="register" href="/register/">{% trans "Register" %}</a>
+                    <a class="reset" href="/reset/">{% trans "Forgot Password" %}</a>
+                </div>
             </form>
         </div>
     </div>
@@ -86,8 +68,8 @@
 {% endblock %}
 
 {% block js %}
+<script src="{% version "js/captcha.js" %}"></script>
 <script src="{% version "js/login.js" %}"></script>
-<script src="{% version "js/register.js" %}"></script>
 {% endblock %}
 
 {% block footer %}
