@@ -32,7 +32,24 @@
             <div class="raw">
                 <div>
                     <form id="fill-amount" class="form text-left" action="/tokenexchange/invite/{{ invite_id }}/post/" method="POST">
-                        {% include "form.html" %}
+                        <div class="form-group">
+                            <p class="label-expect">
+                                <label for="id_expect_btc" class="control-label">{% trans "How much do you want to contribute in BTC" %} <span class="red-color"></span>
+                                </label>
+                            </p>
+                            <div>
+                                <input class="form-control" id="id_expect_btc" name="expect_btc" placeholder="How much do you want to contribute in BTC" step="any" type="number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p class="label-expect">
+                                <label for="id_expect_ela" class="control-label">{% trans "How much do you want to contribute in ELA" %} <span class="red-color"></span>
+                                </label>
+                            </p>
+                            <div>
+                                <input class="form-control" id="id_expect_ela" name="expect_ela" placeholder="How much do you want to contribute in ELA" step="any" type="number">
+                            </div>
+                        </div>
                         <div class="raw">
                             <div class="text-center token-btn">
                                 <button class="form-button" type="submit">{% trans "Submit" %}</button>
