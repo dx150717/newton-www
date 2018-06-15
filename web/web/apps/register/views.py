@@ -152,10 +152,10 @@ def submit_gtoken(request):
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Authenticator Code Error')])
             return render(request, 'register/gtoken.html', locals())
         # check whether form data is untouched
-        email = forms.cleaned_data["email"]
-        password = forms.cleaned_data["password"]
-        auth_token = forms.cleaned_data["auth_token"]
-        uuid = forms.cleaned_data["uuid"]
+        email = form.cleaned_data["email"]
+        password = form.cleaned_data["password"]
+        auth_token = form.cleaned_data["auth_token"]
+        uuid = form.cleaned_data["uuid"]
         session_email = request.session.get('email')
         session_password = request.session.get('password')
         session_token = request.session.get('auth_token')
