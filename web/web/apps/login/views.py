@@ -36,7 +36,7 @@ def post_login(request):
         form = forms.LoginForm(request.POST)
         if not form.is_valid():
             return http.JsonErrorResponse(error_message=_("Form Error"))
-        code = request.POST.get['code']
+        code = request.POST.get('code')
         if code != ishuman_services.get_captcha(request.session.session_key):
             return http.JsonErrorResponse(error_message=_("Captcha Error"))
         # start authenticate
@@ -98,4 +98,4 @@ def post_google_authenticator(request):
         return http.JsonSuccessResponse(data={"msg":"/user/"})
     except Exception, inst:
         logger.exception("fail to post google authedticator:%s" % str(inst))
-        raise exception.SystemError500()
+        return http.JsonErrorResponse()

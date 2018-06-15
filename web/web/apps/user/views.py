@@ -59,42 +59,4 @@ def show_user_index_view(request):
         item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]
     return render(request, "user/index.html", locals())
 
-@login_required
-def show_token_exchange_progress_view(request, phase_id):
-    """
-    query user who pass the kyc, than render his progress information.
-    """
-    try:
-        user = request.user
-        kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()
-        kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).first()
-        item = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id, phase_id=phase_id).first()
-        btc_final_balance = 0
-        ela_final_balance = 0
-        if item:
-            token_exchange_info = settings.FUND_CONFIG[item.phase_id]
-            if item.receive_btc_address:
-                btc_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value).aggregate(Sum('value'))
-                btc_final_balance =  btc_final_balance.get("value__sum")
-                btc_transfer_list = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value)
-            if item.receive_ela_address:
-                ela_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value).aggregate(Sum('value'))
-                ela_final_balance = ela_final_balance.get("value__sum")
-                ela_transfer_list = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value)
-        if btc_final_balance and btc_final_balance != 0:
-            item.btc_final_balance = btc_final_balance
-            item.btc_transfer_list = btc_transfer_list
-        if ela_final_balance and ela_final_balance != 0:
-            item.ela_final_balance = ela_final_balance
-            item.ela_transfer_list = ela_transfer_list
-        is_deadline = False
-        deadline_time = time.strptime(token_exchange_info['end_date'], "%Y-%m-%d")
-        dead_time = datetime.datetime(*deadline_time[:6]).replace(tzinfo=utc)
-        now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
-        if now_time > dead_time:
-            is_deadline = True
-        return render(request, "user/token-exchange-progress.html", locals())
-    except Exception,inst:
-        logger.exception("error show progress %s" %str(inst))
-        raise exception.SystemError500()
     

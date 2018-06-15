@@ -38,11 +38,12 @@
         </div>
     </div>
     <div id="tab-content" class="tab-content">
-    {% include "include-kyc-section.html" %} 
-    {% include "include-token-exchange.html" %}
+    {% include "user/include-kyc-section.html" %} 
+    {% include "user/include-token-exchange.html" %}
     </div>
 </section>
 {% endblock %}
+
 {% block inline_js %}
 <script type="text/javascript">
     $("#user-tab a").click(function(e){

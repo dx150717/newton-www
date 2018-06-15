@@ -44,7 +44,7 @@ def submit_email(request):
         form = forms.EmailForm(request.POST)
         if not form.is_valid():
             return render(request, 'register/index.html', locals())
-        code = form.cleaned_data['code']
+        code = request.POST.get('code')
         if code != ishuman_services.get_captcha(request.session.session_key):
             form._errors[NON_FIELD_ERRORS] = form.error_class([_("Captcha Error")])
             return render(request, 'register/index.html', locals())
