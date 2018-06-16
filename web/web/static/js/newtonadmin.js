@@ -47,7 +47,7 @@ function openAuditIdPopuWindow(user_id) {
                 }
             });
         });
-    $('#reject_button').click(function(event){
+    $('#deny_button').click(function(event){
         event.preventDefault();
         var data = {};
         data.pass_kyc = "3";
