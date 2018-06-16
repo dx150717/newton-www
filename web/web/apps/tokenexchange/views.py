@@ -17,8 +17,8 @@ from utils import http
 from utils import exception
 from utils import compare_time
 from config import codes
-from . import forms
-from . import services
+from . import forms as tokenexchange_forms
+from . import services as tokenexchange_services
 from . import models as tokenexchange_models
 from tracker import models as tracker_models
 from django.db.models import Sum
@@ -30,7 +30,7 @@ def kyc_valid_required(func):
     """Check whether kyc is expired
     """
     def _decorator(request, *args, **kwargs):
-        is_deadline_expired = services.is_beyond_kyc_deadline()
+        is_deadline_expired = tokenexchange_services.is_beyond_kyc_deadline()
         if is_deadline_expired:
             return render(request, "tokenexchange/kyc-end.html")
         return func(request, *args, **kwargs)
@@ -56,10 +56,10 @@ def post_kyc_information(request):
             instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             if not instance:
                 instance = tokenexchange_models.KYCInfo()
-            base_form = forms.KYCBaseForm(request.POST, request.FILES, instance=instance)
-            profile_form = forms.KYCProfileForm(request.POST, request.FILES, instance=instance)
-            contribute_form = forms.ContributeForm(request.POST, request.FILES, instance=instance)
-            emergency_form = forms.EmergencyForm(request.POST, request.FILES, instance=instance)
+            base_form = tokenexchange_forms.KYCBaseForm(request.POST, request.FILES, instance=instance)
+            profile_form = tokenexchange_forms.KYCProfileForm(request.POST, request.FILES, instance=instance)
+            contribute_form = tokenexchange_forms.ContributeForm(request.POST, request.FILES, instance=instance)
+            emergency_form = tokenexchange_forms.EmergencyForm(request.POST, request.FILES, instance=instance)
             if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
                 base_form._errors[NON_FIELD_ERRORS] = base_form.error_class([_('You had submited kyc info')])
                 return render(request, "tokenexchange/submit.html", locals())
@@ -103,10 +103,10 @@ def post_kyc_information(request):
             return redirect('/tokenexchange/wait-audit/')
         else:
             instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
-            base_form = forms.KYCBaseForm(instance=instance)
-            profile_form = forms.KYCProfileForm(instance=instance)
-            contribute_form = forms.ContributeForm(instance=instance)
-            emergency_form = forms.EmergencyForm(instance=instance)
+            base_form = tokenexchange_forms.KYCBaseForm(instance=instance)
+            profile_form = tokenexchange_forms.KYCProfileForm(instance=instance)
+            contribute_form = tokenexchange_forms.ContributeForm(instance=instance)
+            emergency_form = tokenexchange_forms.EmergencyForm(instance=instance)
             return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
         logger.exception("fail to post kyc information:%s" % str(inst))
@@ -195,7 +195,7 @@ def post_apply_amount(request, invite_id):
         if item.expect_btc or item.expect_ela:
             return render(request, "tokenexchange/invalid-link.html")
         if request.method == 'POST':
-            form = forms.ApplyAmountForm(request.POST)
+            form = tokenexchange_forms.ApplyAmountForm(request.POST)
             if form.is_valid():
                 item.expect_btc = form.cleaned_data['expect_btc']
                 item.expect_ela = form.cleaned_data['expect_ela']
@@ -208,7 +208,7 @@ def post_apply_amount(request, invite_id):
                 return render(request, "tokenexchange/apply-success.html", locals())
         else:
             token_exchange_info = settings.FUND_CONFIG[item.phase_id]
-            form = forms.ApplyAmountForm()
+            form = tokenexchange_forms.ApplyAmountForm()
         return render(request, "tokenexchange/apply-amount.html", locals())
     except Exception, inst:
         logger.exception("fail to post the apply amount:%s" % str(inst))
