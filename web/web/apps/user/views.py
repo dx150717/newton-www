@@ -54,6 +54,10 @@ def show_user_index_view(request):
         profile_form = token_exchange_forms.KYCProfileForm(initial=data)
         contribute_form = token_exchange_forms.ContributeForm(initial=data)
         emergency_form = token_exchange_forms.EmergencyForm(initial=data)
+        # check whether reject or deny
+        is_deny = False
+        if kycinfo.level == codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE:
+            is_deny == True
     kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).last()
     items = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
     for item in items:

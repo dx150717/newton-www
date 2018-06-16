@@ -123,10 +123,11 @@ class CurrencyType(Enum):
 class AdminActionType(Enum):
     PASS_KYC = 1
     REJECT_KYC = 2
-    INVITE = 3
-    SEND_INVITE = 4
-    ASSIGN_AMOUNT = 5
-    SEND_CONFIRM_EMAIL = 6
+    DENY_KYC = 3
+    INVITE = 4
+    SEND_INVITE = 5
+    ASSIGN_AMOUNT = 6
+    SEND_CONFIRM_EMAIL = 7
 
 class IDType(Enum):
     ID_CARD = 1

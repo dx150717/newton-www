@@ -1,6 +1,7 @@
 {% extends "newtonadmin/base.html" %}
 {% load i18n %}
 {% load utils %}
+{% load tokenexchange_tags %}
 
 {% block title %}
 {% trans "KYC Admin" %}
@@ -92,11 +93,18 @@
             <div class="modal-body">
                 <form method="POST" action="#" id="id_form">
                     <p>
-                        <label>评级</label>
+                        <label>评分</label>
                         <select name="level" id="level">
-                            <option value="1">普通</option>
-                            <option value="2">良好</option>
-                            <option value="3">优秀</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
                         </select>
                     </p>
                     <p>
@@ -105,7 +113,8 @@
                     </p>
                     <p>
                         <button class="btn btn-default" type="button" id="pass_button">通过</button>
-                        <button class="btn btn-default" type="button" id="reject_button">拒绝</button>
+                        <button class="btn btn-default" type="button" id="reject_button">驳回</button>
+                        <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
                     </p>
                 </form>
             </div>

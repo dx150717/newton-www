@@ -30,7 +30,7 @@ function openAuditIdPopuWindow(user_id) {
     $('#reject_button').click(function(event){
         event.preventDefault();
         var data = {};
-        data.pass_kyc = "0";
+        data.pass_kyc = "2";
         data.user_id = user_id;
         var comment = $('#id_comment').val();
         comment = " " + comment;
@@ -41,6 +41,26 @@ function openAuditIdPopuWindow(user_id) {
             function(json){
                 if (json['error_code'] == 1) {
                 alert('success, we had reject user');
+                location.reload();
+                } else {
+                alert(json['error_message']);
+                }
+            });
+        });
+    $('#reject_button').click(function(event){
+        event.preventDefault();
+        var data = {};
+        data.pass_kyc = "3";
+        data.user_id = user_id;
+        var comment = $('#id_comment').val();
+        comment = " " + comment;
+        data.comment = comment;
+        data.level = $('#level').val();
+        $.post('/newtonadmin/tokenexchange/id/confirm/', 
+            data, 
+            function(json){
+                if (json['error_code'] == 1) {
+                alert('success, we had deny user');
                 location.reload();
                 } else {
                 alert(json['error_message']);

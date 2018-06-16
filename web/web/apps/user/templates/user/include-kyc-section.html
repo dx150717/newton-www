@@ -43,7 +43,7 @@
                             {% else %}
                             <div class="container text-center mt50">
                                 <p>{% trans "You have not submitted KYC information." %}</p>
-                                {% if not is_deadline %}
+                                {% if not is_deadline and not is_deny%}
                                 <a class="form-button mt50" href="/tokenexchange/">{% trans "Join KYC" %}</a>
                                 {% endif %}
                             </div>

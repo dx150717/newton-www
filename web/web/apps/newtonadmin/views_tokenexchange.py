@@ -304,14 +304,18 @@ def confirm_id(request):
         level = int(form.cleaned_data['level'])
         comment = form.cleaned_data['comment']
         item = tokenexchange_models.KYCInfo.objects.get(user_id=user_id, status=codes.KYCStatus.CANDIDATE.value)
-        if pass_tokenexchange:
+        if pass_tokenexchange == 1:
             item.status = codes.KYCStatus.PASS_KYC.value
             item.level = level
             action_id = codes.AdminActionType.PASS_KYC.value
             is_pass = True
-        else:
+        elif pass_tokenexchange == 2:
             item.status = codes.KYCStatus.REJECT.value
             action_id = codes.AdminActionType.REJECT_KYC.value
+            is_pass = False
+        else:
+            item.status = codes.KYCStatus.DENY.value
+            action_id = codes.AdminActionType.DENY_KYC.value
             is_pass = False
         target_user = User.objects.filter(id=user_id).first()
         
