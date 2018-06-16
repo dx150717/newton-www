@@ -24,7 +24,8 @@ ESTABLISH_CHOICE = (
     (codes.EstablishNodeType.YES.value, _('Yes')),
     (codes.EstablishNodeType.NO.value, _('No'))
 )
-    
+LEVEL_CHOICE = [(i+1, i+1) for i in range(10)]
+
 class KYCInfo(models.Model):
     user_id = models.IntegerField()
     # base info
@@ -81,6 +82,8 @@ class KYCInfo(models.Model):
     emergency_location = models.CharField(max_length=1024, verbose_name=_('Address'), help_text='(*)')
     emergency_relationship = models.CharField(max_length=1024, verbose_name=_('Relation with Applicant'), help_text='(*)')
 
+    # level
+    level = models.IntegerField(choices=LEVEL_CHOICE, default=0, db_index=True)
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
