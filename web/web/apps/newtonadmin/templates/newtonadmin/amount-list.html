@@ -1,6 +1,8 @@
 {% extends "newtonadmin/base.html" %}
 {% load i18n %}
 {% load utils %}
+{% load tokenexchange %}
+
 
 {% block title %}
 {% trans "KYC Admin" %}
@@ -10,6 +12,7 @@
 <section id="newtonadmin" class="section-list">
     <div class="container">
         <div class="raw table-responsive content">
+            {% show_amount_summary %}
             <table class="table">
                 <caption class="text-center">确定额度</caption>
                 <thead>
