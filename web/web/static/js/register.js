@@ -26,7 +26,7 @@ $("#id_register_form").submit(function(event){
                 form.submit();
             }
         },
-        complete: function(request, status) {
+        error: function(request, status) {
         }
     });
     

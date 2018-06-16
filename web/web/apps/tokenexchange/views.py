@@ -30,7 +30,7 @@ def kyc_valid_required(func):
     """Check whether kyc is expired
     """
     def _decorator(request, *args, **kwargs):
-        is_deadline_expired = compare_time.compare_now_with_deadline()
+        is_deadline_expired = services.is_beyond_kyc_deadline()
         if is_deadline_expired:
             return render(request, "tokenexchange/kyc-end.html")
         return func(request, *args, **kwargs)

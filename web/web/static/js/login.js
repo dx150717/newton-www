@@ -53,7 +53,7 @@ $('#id_login_form').submit(function(event){
                 showFail(getErrorMessage(response));
               }
             },
-            complete: function(request, status){
+            error: function(request, status){
               dismiss();
               if(status == 'timeout'){
                 showFail("Time Out");
@@ -62,7 +62,7 @@ $('#id_login_form').submit(function(event){
           })
         }
     },
-    complete: function(request, status) {
+    error: function(request, status) {
       dismiss();
       if(status == 'timeout') {
         showFail("Time Out");

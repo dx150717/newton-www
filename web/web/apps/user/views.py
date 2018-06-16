@@ -24,6 +24,7 @@ from . import models
 import decorators
 from tokenexchange import forms as token_exchange_forms
 from tokenexchange import models as tokenexchange_models
+from tokenexchange import services as tokenexchange_services
 
 from tracker import models as tracker_models
 
@@ -63,5 +64,5 @@ def show_user_index_view(request):
         elif item.expect_btc or item.expect_ela:
             item.process_status = 2
     # check whether out deadline
-    is_deadline = compare_time.compare_now_with_deadline()
+    is_deadline = tokenexchange_services.is_beyond_kyc_deadline()
     return render(request, "user/index.html", locals())

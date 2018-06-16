@@ -1,10 +1,13 @@
 """Service Implementation of kyc module
 """
+import time
+import datetime
 import logging
 
 from django.conf import settings
 from django.template import Template, Context, loader
 from django.utils.translation import ugettext_lazy as _
+from django.utils.timezone import utc
 
 from verification import services
 from tasks import task_email
@@ -39,5 +42,15 @@ def get_kyc_verification_by_uuid(uuid):
     """Get the verification object of kyc by uuid
     """
     return services.get_verification_by_uuid(uuid)
-    
-    
+
+def is_beyond_kyc_deadline():
+    """check whether expire kyc deadline
+    """
+    now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
+    phase_id = settings.CURRENT_FUND_PHASE
+    token_exchange_info = settings.FUND_CONFIG[phase_id]
+    kyc_deadline = time.strptime(token_exchange_info["kyc_deadline"], "%Y-%m-%d")
+    dead_time = datetime.datetime(*kyc_deadline[:6]).replace(tzinfo=utc)
+    if now_time > dead_time:
+        return True
+    return False
