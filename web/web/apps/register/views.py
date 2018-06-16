@@ -169,6 +169,7 @@ def submit_gtoken(request):
         # check whether post data is valid
         form = forms.SubmitGtokenForm(request.POST)
         if not form.is_valid():
+            form = forms.GtokenForm()
             return http.HttpResponseRedirect("/register/gtoken/")
         # check uuid
         uuid = form.cleaned_data["uuid"]
@@ -183,6 +184,7 @@ def submit_gtoken(request):
             gtoken = pyotp.random_base32()
             gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Authenticator Code Error')])
+            form = forms.GtokenForm()
             return render(request, 'register/gtoken.html', locals())
         # check whether form data is untouched
         email = form.cleaned_data["email"]

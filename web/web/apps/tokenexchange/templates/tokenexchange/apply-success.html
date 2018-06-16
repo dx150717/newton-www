@@ -4,9 +4,8 @@
 {% block header %}
 {% include "header-no-menu.html" %}
 {% endblock %}
-{% block require_title %}
-<title>{% trans "KYC" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "KYC" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 {% block footer %}
 {% include "footer-simple.html" %}
 {% endblock %}

@@ -2,9 +2,8 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "Token Exchange" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "Token Exchange" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 
 {% block header %}
 {% include "header-no-menu.html" %}
