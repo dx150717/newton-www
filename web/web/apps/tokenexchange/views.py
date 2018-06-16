@@ -54,20 +54,15 @@ def post_kyc_information(request):
         if request.method == 'POST':
             # check whether user is submit kyc info
             instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
-            
             if not instance:
                 instance = tokenexchange_models.KYCInfo()
-
             base_form = forms.KYCBaseForm(request.POST, request.FILES, instance=instance)
             profile_form = forms.KYCProfileForm(request.POST, request.FILES, instance=instance)
             contribute_form = forms.ContributeForm(request.POST, request.FILES, instance=instance)
             emergency_form = forms.EmergencyForm(request.POST, request.FILES, instance=instance)
-
             if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
                 base_form._errors[NON_FIELD_ERRORS] = base_form.error_class([_('You had submited kyc info')])
                 return render(request, "tokenexchange/submit.html", locals())
-            
-
             if not base_form.is_valid():
                 return render(request, "tokenexchange/submit.html", locals())
             if not profile_form.is_valid():
@@ -138,6 +133,8 @@ def show_receive_address_view(request, invite_id):
         invite_item = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id, id=invite_id).first()
         if not invite_item:
             return http.HttpResponseNotFound()
+        if invite_item.status == codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value:
+            return http.HttpResponseRedirect("/tokenexchange/invite/" + str(invite_item.id) + "/post/")
         # query data
         invite_item.btc_final_balance = 0
         invite_item.btc_transfer_list = []
