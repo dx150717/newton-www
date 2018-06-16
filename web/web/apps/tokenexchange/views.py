@@ -25,29 +25,27 @@ from django.utils.timezone import utc
 
 logger = logging.getLogger(__name__)
 
-def exchange_valid_required(func):
-    """
+def kyc_valid_required(func):
+    """Check whether kyc is expired
     """
     def _decorator(request, *args, **kwargs):
         now = datetime.datetime.now()
-        if now < settings.FUND_START_DATE:
-            return redirect('/tokenexchange/pending/')
-        elif now > settings.FUND_END_DATE:
-            return redirect('/tokenexchange/end/')
-        else:
-            return func(request, *args, **kwargs)
+        phase_id = settings.CURRENT_FUND_PHASE
+        token_exchange_info = settings.FUND_CONFIG[phase_id]
+        kyc_deadline = token_exchange_info['kyc_deadline']
+        return func(request, *args, **kwargs)
     return _decorator
 
-#@exchange_valid_required
 @login_required
+@kyc_valid_required
 def show_tokenexchange_index_view(request):
     """
     Show kyc agreement.
     """
     return render(request, "tokenexchange/index.html", locals()) 
 
-#@exchange_valid_required
 @login_required
+@kyc_valid_required
 def post_kyc_information(request):
     """
     Receive user's kyc information, and save them.
@@ -119,7 +117,6 @@ def post_kyc_information(request):
         logger.exception("fail to post kyc information:%s" % str(inst))
         raise exception.SystemError500()
 
-#@exchange_valid_required
 @login_required
 def show_wait_audit_view(request):
     return render(request, "tokenexchange/wait-audit.html", locals())
