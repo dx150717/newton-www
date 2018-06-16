@@ -159,6 +159,10 @@ class AmountListView(generic.ListView):
         context['phase_id'] = int(self.request.path.split("/")[4])
         context['form'] = forms_tokenexchange.AmountForm()
         context['token_exchange_info'] = settings.FUND_CONFIG[context['phase_id']]
+        phase_id = settings.CURRENT_FUND_PHASE
+        token_exchange_info = settings.FUND_CONFIG[phase_id]
+        context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
+        context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
         return context
 
     def get_queryset(self):
