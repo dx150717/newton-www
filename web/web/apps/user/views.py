@@ -61,4 +61,12 @@ def show_user_index_view(request):
             item.process_status = 3
         elif item.expect_btc or item.expect_ela:
             item.process_status = 2
+    # check whether out deadline
+    token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+    is_deadline = False
+    deadline_time = time.strptime(token_exchange_info['kyc_deadline'], "%Y-%m-%d")
+    dead_time = datetime.datetime(*deadline_time[:6]).replace(tzinfo=utc)
+    now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
+    if now_time > dead_time:
+        is_deadline = True
     return render(request, "user/index.html", locals())

@@ -97,6 +97,7 @@ FUND_CONFIG = {
         'min_ela': '100',
         'btc_ratio': '100000',
         'min_btc': '1',
+        'kyc_deadline': '2018-05-20',
     },
     codes.FundPhase.PUBLIC.value: {
         'start_date': '2018-06-01',
@@ -105,5 +106,6 @@ FUND_CONFIG = {
         'min_ela': '100',
         'btc_ratio': '100000',
         'min_btc': '1',
+        'kyc_deadline': '2018-05-20',
     },
 }

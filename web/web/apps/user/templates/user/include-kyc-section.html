@@ -1,5 +1,7 @@
 {% load i18n %}
 {% load utils %}
+
+{% if is_deadline %}
 <div id="kyc" class="tab-pane fade in active user-content">
     <div class="container">
         <div class="user-info">
@@ -111,3 +113,4 @@
         </div>
     </div>
 </div>
+{% endif %}
