@@ -17,7 +17,6 @@ from django.utils.timezone import utc
 from utils import http
 from utils import convert
 from utils import exception
-from utils import compare_time
 from config import codes
 from . import forms
 from . import models

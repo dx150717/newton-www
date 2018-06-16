@@ -15,7 +15,6 @@ from django.forms.forms import NON_FIELD_ERRORS
 import decorators
 from utils import http
 from utils import exception
-from utils import compare_time
 from config import codes
 from . import forms as tokenexchange_forms
 from . import services as tokenexchange_services
