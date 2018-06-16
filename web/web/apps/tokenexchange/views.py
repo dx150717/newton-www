@@ -15,6 +15,7 @@ from django.forms.forms import NON_FIELD_ERRORS
 import decorators
 from utils import http
 from utils import exception
+from utils import compare_time
 from config import codes
 from . import forms
 from . import services
@@ -29,10 +30,9 @@ def kyc_valid_required(func):
     """Check whether kyc is expired
     """
     def _decorator(request, *args, **kwargs):
-        now = datetime.datetime.now()
-        phase_id = settings.CURRENT_FUND_PHASE
-        token_exchange_info = settings.FUND_CONFIG[phase_id]
-        kyc_deadline = token_exchange_info['kyc_deadline']
+        is_deadline_expired = compare_time.compare_now_with_deadline()
+        if is_deadline_expired:
+            return render(request, "tokenexchange/kyc-end.html")
         return func(request, *args, **kwargs)
     return _decorator
 
@@ -118,6 +118,7 @@ def post_kyc_information(request):
         raise exception.SystemError500()
 
 @login_required
+@kyc_valid_required
 def show_wait_audit_view(request):
     return render(request, "tokenexchange/wait-audit.html", locals())
 
@@ -125,6 +126,7 @@ def show_invalid_link(request):
     return render(request, "tokenexchange/invalid-link.html", locals())
     
 @login_required
+@kyc_valid_required
 def show_receive_address_view(request, invite_id):
     """Show the receive address
     """
@@ -184,6 +186,7 @@ def show_end_view(request):
     return render(request, "tokenexchange/end.html", locals())
 
 @login_required
+@kyc_valid_required
 def post_apply_amount(request, invite_id):
     """ Post the amount of apply
     """

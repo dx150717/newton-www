@@ -17,6 +17,7 @@ from django.utils.timezone import utc
 from utils import http
 from utils import convert
 from utils import exception
+from utils import compare_time
 from config import codes
 from . import forms
 from . import models
@@ -62,11 +63,5 @@ def show_user_index_view(request):
         elif item.expect_btc or item.expect_ela:
             item.process_status = 2
     # check whether out deadline
-    token_exchange_info = settings.FUND_CONFIG[item.phase_id]
-    is_deadline = False
-    deadline_time = time.strptime(token_exchange_info['kyc_deadline'], "%Y-%m-%d")
-    dead_time = datetime.datetime(*deadline_time[:6]).replace(tzinfo=utc)
-    now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
-    if now_time > dead_time:
-        is_deadline = True
+    is_deadline = compare_time.compare_now_with_deadline()
     return render(request, "user/index.html", locals())
