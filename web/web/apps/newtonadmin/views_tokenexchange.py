@@ -32,6 +32,11 @@ class IdListView(generic.ListView):
         else:
             return redirect("/newtonadmin/login/")
 
+    def get_context_data(self, **kwargs):
+        context = super(IdListView, self).get_context_data(**kwargs)
+        context['level_choices'] = [i+1 for i in range(10)]
+        return context
+
     def get_queryset(self):
         try:
             fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
@@ -190,6 +195,13 @@ class ConfirmListView(generic.ListView):
             return response
         else:
             return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(ConfirmListView, self).get_context_data(**kwargs)
+        context['phase_id'] = int(self.request.path.split("/")[4])
+        context['form'] = forms_tokenexchange.AmountForm()
+        context['is_confirm'] = True
+        return context
 
     def get_queryset(self):
         try:
