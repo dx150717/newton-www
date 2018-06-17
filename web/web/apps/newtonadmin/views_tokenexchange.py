@@ -35,6 +35,7 @@ class IdListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(IdListView, self).get_context_data(**kwargs)
         context['level_choices'] = [i+1 for i in range(10)]
+        context['is_idlist'] = True
         return context
 
     def get_queryset(self):

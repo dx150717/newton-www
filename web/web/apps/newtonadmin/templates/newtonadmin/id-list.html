@@ -46,22 +46,15 @@
                             </p>                            
                         </td>
                         <td>
-                            {% block operate %}
                             <p>
                                 <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-default">详情</a>
                             </p>
+                            {% if is_idlist %}
                             <p>
                                 <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
                             </p>
-                            {% endblock %}
+                            {% endif %}
                         </td>
-                        {% comment %}
-                        <td>
-                            <p>
-                                <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
-                            </p>
-                        </td>
-                        {% endcomment %}
                     </tr>
                     {% endblock %}
                     {% endfor %}
@@ -98,16 +91,6 @@
                             {% for level in level_choices %}
                             <option value="{{ level }}">{{ level }}</option>
                             {% endfor %}
-                            <!-- <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option> -->
                         </select>
                     </p>
                     <p>
