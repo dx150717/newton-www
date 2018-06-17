@@ -182,7 +182,7 @@ class AmountListView(generic.ListView):
 class ConfirmListView(generic.ListView):
     template_name = "newtonadmin/amount-list.html"
     context_object_name = "items"
-    paginate_by = settings.PAGE_SIZE
+    paginate_by = 100
     
     def get(self, request, *args, **kwargs):
         if request.user.is_staff:
