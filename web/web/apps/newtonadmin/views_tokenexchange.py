@@ -547,6 +547,7 @@ def show_id_detail(request, user_id):
             if item.which_node_establish:
                 item.which_node_establish = convert.get_value_from_choice(item.which_node_establish, tokenexchange_models.NODE_CHOICE)
             item.country = COUNTRIES[item.country]
+            item.level_choices = [i+1 for i in range(10)]
         return render(request, "newtonadmin/id-detail.html", locals())
     except Exception, inst:
         logger.exception("fail to post email to investor:%s" % str(inst))
