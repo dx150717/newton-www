@@ -12,6 +12,7 @@ urlpatterns = patterns('',
                        url(r'^id/confirm/', views_tokenexchange.confirm_id),
                        url(r'^id/(?P<user_id>[0-9]+)/', views_tokenexchange.show_id_detail),
                        url(r'^id/reject/', views_tokenexchange.RejectListView.as_view()),
+                       url(r'^id/deny/', views_tokenexchange.DenyListView.as_view()),
 
                        url(r'^invite/(?P<phase_id>[0-9]+)/$', views_tokenexchange.InviteListView.as_view()),
                        url(r'^invite/(?P<phase_id>[0-9]+)/post/$', views_tokenexchange.post_invite),

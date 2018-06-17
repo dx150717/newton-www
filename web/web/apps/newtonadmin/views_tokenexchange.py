@@ -49,7 +49,7 @@ class IdListView(generic.ListView):
 
 
 class PassIdListView(generic.ListView):
-    template_name = "newtonadmin/pass-id-list.html"
+    template_name = "newtonadmin/id-list.html"
     context_object_name = "items"
     paginate_by = settings.PAGE_SIZE
     
@@ -506,7 +506,7 @@ def show_id_detail(request, user_id):
 class RejectListView(generic.ListView):
     """reject id list
     """
-    template_name = "newtonadmin/pass-id-list.html"
+    template_name = "newtonadmin/id-list.html"
     context_object_name = "items"
     paginate_by = settings.PAGE_SIZE
     
@@ -521,6 +521,35 @@ class RejectListView(generic.ListView):
         try:
             items = []
             fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.REJECT.value)
+            if fields and len(fields) > 0:
+                for item in fields:
+                    if item.id_type:
+                        item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+                    item.country = COUNTRIES[item.country]
+                    items.append(item)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show pass id list:%s" % str(inst))
+            return None
+
+class DenyListView(generic.ListView):
+    """reject id list
+    """
+    template_name = "newtonadmin/id-list.html"
+    context_object_name = "items"
+    paginate_by = settings.PAGE_SIZE
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(DenyListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_queryset(self):
+        try:
+            items = []
+            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.DENY.value)
             if fields and len(fields) > 0:
                 for item in fields:
                     if item.id_type:
