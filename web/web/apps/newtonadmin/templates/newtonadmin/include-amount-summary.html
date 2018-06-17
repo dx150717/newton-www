@@ -1,9 +1,10 @@
 {% load i18n %}
 {% load utils %}
-<div class="row">
+
+<div class="row" style="width: 100%">
     <div class="col-md-4"><p class="amount-summaary-tips">BTC总额度: {{ total_btc_amount }}</p></div>
     <div class="col-md-4"><p class="amount-summaary-tips">BTC已分配额度: {{ total_assign_btc }}</p></div>
-    <div class="col-md-4"><p class="amount-summaary-tips">BTC待分配额度：{{ btc_remain_amount }}</p></div>
+    <div class="col-md-4"><p class="amount-summaary-tips">BTC待分配额度: {{ btc_remain_amount }}</p></div>
     <div class="col-md-4"><p class="amount-summaary-tips">ELA总额度: {{ total_ela_amount }}</p></div>
     <div class="col-md-4"><p class="amount-summaary-tips">ELA已分配额度: {{ total_assign_ela }}</p></div>
     <div class="col-md-4"><p class="amount-summaary-tips">ELA待分配额度: {{ ela_remain_amount }}</p></div>

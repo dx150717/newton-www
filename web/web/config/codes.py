@@ -127,7 +127,8 @@ class AdminActionType(Enum):
     INVITE = 4
     SEND_INVITE = 5
     ASSIGN_AMOUNT = 6
-    SEND_CONFIRM_EMAIL = 7
+    CONFIRM_AMOUNT = 7
+    SEND_CONFIRM_EMAIL = 8
 
 class IDType(Enum):
     ID_CARD = 1

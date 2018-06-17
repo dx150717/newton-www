@@ -21,6 +21,7 @@ urlpatterns = patterns('',
                        
                        url(r'^amount/(?P<phase_id>[0-9]+)/$', views_tokenexchange.AmountListView.as_view()),
                        url(r'^amount/(?P<phase_id>[0-9]+)/post/$', views_tokenexchange.post_amount),
+                       url(r'^amount/(?P<phase_id>[0-9]+)/comfirm/$', views_tokenexchange.ConfirmListView.as_view()),
                        url(r'^amount/(?P<phase_id>[0-9]+)/completed/$', views_tokenexchange.CompletedAmountListView.as_view()),
                        
                        url(r'^receive/(?P<phase_id>[0-9]+)/$', views_tokenexchange.ReceiveListView.as_view()),

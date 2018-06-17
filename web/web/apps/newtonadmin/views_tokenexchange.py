@@ -179,6 +179,31 @@ class AmountListView(generic.ListView):
             logger.exception("fail to show the amount list:%s" % str(inst))
             return None
 
+class ConfirmListView(generic.ListView):
+    template_name = "newtonadmin/amount-list.html"
+    context_object_name = "items"
+    paginate_by = settings.PAGE_SIZE
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(ConfirmListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_queryset(self):
+        try:
+            phase_id = self.request.path.split("/")[4]
+            phase_id = int(phase_id)
+            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+            if items:
+                for item in items:
+                    item.user = User.objects.filter(id=item.user_id).first()
+                    item.kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=item.user_id).first()
+            return items
+        except Exception, inst:
+            logger.exception("fail to show the amount list:%s" % str(inst))
+            return None
 
 class CompletedAmountListView(generic.ListView):
     template_name = "newtonadmin/amount-list.html"
@@ -424,17 +449,30 @@ def post_amount(request, phase_id):
         if not btc_address and not ela_address:
             return http.JsonErrorResponse()
         # save status
-        item = tokenexchange_models.InvestInvite.objects.get(user_id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
-        item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
-        item.assign_ela = assign_ela
-        item.assign_btc = assign_btc
-        item.receive_btc_address = btc_address
-        item.receive_ela_address = ela_address
-        item.save()
-        action_id = codes.AdminActionType.ASSIGN_AMOUNT.value
-        target_user = User.objects.filter(id=user_id).first()
-        audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
-        audit_log.save()
+        item = tokenexchange_models.InvestInvite.objects.filter(user_id=user_id, phase_id=phase_id).first()
+        if item.status == codes.TokenExchangeStatus.APPLY_AMOUNT.value:
+            item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
+            item.assign_ela = assign_ela
+            item.assign_btc = assign_btc
+            item.receive_btc_address = btc_address
+            item.receive_ela_address = ela_address
+            item.save()
+            action_id = codes.AdminActionType.ASSIGN_AMOUNT.value
+            target_user = User.objects.filter(id=user_id).first()
+            audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
+            audit_log.save()
+        elif item.status == codes.TokenExchangeStatus.APPLY_AMOUNT.value:
+            item.status = codes.TokenExchangeStatus.CONFIRM_AMOUT.value
+            item.assign_ela = assign_ela
+            item.assign_btc = assign_btc
+            item.receive_btc_address = btc_address
+            item.receive_ela_address = ela_address
+            item.save()
+            action_id = codes.AdminActionType.CONFIRM_AMOUNT.value
+            target_user = User.objects.filter(id=user_id).first()
+            audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
+            audit_log.save()
+            
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post amount:%s" % str(inst))

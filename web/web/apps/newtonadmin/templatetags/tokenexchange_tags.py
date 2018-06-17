@@ -35,10 +35,14 @@ class AmountSummaryNode(template.Node):
             # caculate btc current allocated amount
             total_assign_btc = tokenexchange_models.InvestInvite.objects.all().aggregate(Sum('assign_btc'))
             total_assign_btc = total_assign_btc.get("assign_btc__sum", 0)
+            if not total_assign_btc:
+                total_assign_btc = 0
             btc_remain_amount = total_btc_amount - total_assign_btc
             # caculate ela current allocated amount
             total_assign_ela = tokenexchange_models.InvestInvite.objects.all().aggregate(Sum('assign_ela'))
             total_assign_ela = total_assign_ela.get("assign_ela__sum", 0)
+            if not total_assign_ela:
+                total_assign_ela = 0
             ela_remain_amount = total_ela_amount - total_assign_ela
             # render template
             request = context['request']
@@ -54,6 +58,7 @@ class AmountSummaryNode(template.Node):
 def show_amount_summary(parser, token):
     """Show the amount summary for current phase
     """
+    print "show amount summary is working"
     return AmountSummaryNode()
 
 def level_choices():

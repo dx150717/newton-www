@@ -54,8 +54,6 @@ def post_kyc_information(request):
             # check user's kycinfo status
             kycinfo_item = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             if kycinfo_item:
-                print "kycinfo_item.status is %s" % kycinfo_item.status
-                print "codes.KYCStatus.DENY.value is %s" % codes.KYCStatus.DENY.value
                 if kycinfo_item.status == codes.KYCStatus.DENY.value:
                     return render(request, "tokenexchange/kyc-deny.html", locals())
             # check whether user is submit kyc info
