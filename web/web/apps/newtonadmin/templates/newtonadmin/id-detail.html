@@ -109,35 +109,43 @@
 </section>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="id-modal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">ID审核</h4>
-            </div>
-            <div class="modal-body">
-                <form method="POST" action="#" id="id_form">
-                    <p>
-                        <label>评级</label>
-                        <select name="level" id="level">
-                            <option value="1">普通</option>
-                            <option value="2">良好</option>
-                            <option value="3">优秀</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label>注释</label>
-                        <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
-                    </p>
-                    <p>
-                        <button class="btn btn-default" type="button" id="pass_button">通过</button>
-                        <button class="btn btn-default" type="button" id="reject_button">拒绝</button>
-                    </p>
-                </form>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->             
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">ID审核</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="#" id="id_form">
+                        <p>
+                            <label>评分</label>
+                            <select name="level" id="level">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label>注释</label>
+                            <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
+                        </p>
+                        <p>
+                            <button class="btn btn-default" type="button" id="pass_button">通过</button>
+                            <button class="btn btn-default" type="button" id="reject_button">驳回</button>
+                            <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
+                        </p>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
 {% endblock %}
