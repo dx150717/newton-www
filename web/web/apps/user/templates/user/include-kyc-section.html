@@ -8,6 +8,7 @@
                 <div class="item">
                         <div class="value">
                             {% if kycinfo %}
+                                {{ kycinfo.status }}
                                 {% if kycinfo.status == 1 %}
                                 <div class="item">
                                     <p class="text-center" style="padding-top: 30px">
@@ -25,7 +26,7 @@
                                     </div>
                                     
                                     {% endif %}
-                                    {% if kycinfo.status == 3 %}
+                                    {% if kycinfo.status >= 3 %}
                                     <div class="item" style="padding-top: 60px">
                                         <p class="text-center">
                                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
@@ -35,7 +36,9 @@
                                             {% endif %}
                                         </p>
                                         <p style="text-align: center">
+                                        {% if kycinfo.status == 3 %}
                                         <a class="form-button mt50" href="/tokenexchange/">{% trans "Fill in KYC information again" %}</a>
+                                        {% endif %}
                                         </p>
                                     </div>
                                     {% endif %}
