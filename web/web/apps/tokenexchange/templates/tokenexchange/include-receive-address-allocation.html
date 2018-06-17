@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load utils %}
 
-{% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
+{% if item.status == codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE %}
 <div>
     <div class="shadow-item">
         <div class="container">
