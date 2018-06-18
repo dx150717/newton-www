@@ -333,3 +333,31 @@ function sendEmailForReceivedCoin(){
         }
     });
 }
+
+/**
+ * confirm assign amount
+ */
+function preConfirmSelectedUser(phase_id){
+    var user_list = [];
+    var checkboxes = $("input[type='checkbox']")
+    for(var i = 0; i < checkboxes.length; i++){
+        var checkbox = checkboxes[i]
+        if(checkbox.checked){
+            var value = checkbox.value
+            if(value != "on"){
+                user_list.push(value);
+            }
+        }
+    }
+    user_list = user_list.join(",");
+    var data = {}
+    data.user_list = user_list;
+    $.post("/newtonadmin/tokenexchange/amount/" + phase_id + "/confirm/post/",data,function(json){
+        if (json['error_code'] == 1) {  
+            alert('success');
+            location.reload();
+        } else {
+            alert(json['error_message']);
+        }
+    });
+}

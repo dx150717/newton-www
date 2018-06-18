@@ -494,7 +494,7 @@ def post_amount(request, phase_id):
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post amount:%s" % str(inst))
-        return http.JsonErrorResponse()    
+        return http.JsonErrorResponse()
 
 
 
@@ -617,3 +617,31 @@ class DenyListView(generic.ListView):
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
             return None
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def post_confirm_amount(request, phase_id):
+    """confirm assign amount
+    """
+    try:
+        user_list = [int(item) for item in request.POST['user_list'].split(",")]
+        for user_id in user_list:
+            data = {"user_id":user_id}
+            form = forms_tokenexchange.PostInviteForm(data)
+            if not form.is_valid():
+                return http.JsonErrorResponse()
+            user_id = int(form.cleaned_data['user_id'])
+            invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user_id=user_id).first()
+            if not invite:
+                invite = tokenexchange_models.InvestInvite()
+                invite.user_id = user_id
+                invite.phase_id = int(phase_id)
+            invite.status = codes.TokenExchangeStatus.CONFIRM_AMOUT.value
+            invite.save()
+            action_id = codes.AdminActionType.CONFIRM_AMOUNT.value
+            target_user = User.objects.filter(id=user_id).first()
+            audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
+            audit_log.save()
+        return http.JsonSuccessResponse()
+    except Exception, inst:
+        logger.exception("fail to post invite:%s" % str(inst))
+        return http.JsonErrorResponse()
