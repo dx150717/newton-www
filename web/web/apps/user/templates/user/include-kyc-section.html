@@ -8,7 +8,6 @@
                 <div class="item">
                         <div class="value">
                             {% if kycinfo %}
-                                {{ kycinfo.status }}
                                 {% if kycinfo.status == 1 %}
                                 <div class="item">
                                     <p class="text-center" style="padding-top: 30px">
@@ -31,7 +30,7 @@
                                         <p class="text-center">
                                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                             {% trans "You have not passed kyc review," %}
-                                            {% if kycaudit.comment != "" %}
+                                            {% if kycaudit_comment %}
                                                 {% trans "resulting from:" %} {{ kycaudit.comment }}
                                             {% endif %}
                                         </p>
