@@ -73,13 +73,13 @@
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td><button class="form-button" onclick="preConfirmSelectedUser({{ phase_id }});">确认额度</button></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         {% if is_confirm %}
-                        <td></td>
+                        <td><button class="form-button" onclick="preConfirmSelectedUser({{ phase_id }});">确认额度</button></td>
                         {% endif %}
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         {% if is_completed %}
                         <td></td>
                         {% endif %}
