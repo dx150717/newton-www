@@ -35,9 +35,11 @@
                 {% include "tokenexchange/include-receive-address-result.html" with item=invite_item %}
                 {% if invite_item.expect_btc or invite_item.expect_ela %}
                     {% if invite_item.assign_btc or invite_item.assign_ela or invite_item.receive_btc_address or invite_item.receive_ela_address %}
-                    <p></p>
-                    {% else %}
-                    <p class="before-fill">{% trans "Your expected amount is under evaluation" %}</p>
+                        {% if invite_item.status >= codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE %}
+                        <p></p>
+                        {% else %}
+                        <p class="before-fill">{% trans "Your expected amount is under evaluation" %}</p>
+                        {% endif %}
                     {% endif %}
                 {% else %}
                 <p class="before-fill">{% trans "No token exchange information." %}</p>

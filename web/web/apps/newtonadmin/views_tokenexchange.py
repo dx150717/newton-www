@@ -474,7 +474,7 @@ def post_amount(request, phase_id):
             target_user = User.objects.filter(id=user_id).first()
             audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
             audit_log.save()
-        elif item.status == codes.TokenExchangeStatus.APPLY_AMOUNT.value:
+        elif item.status == codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value:
             item.status = codes.TokenExchangeStatus.CONFIRM_AMOUT.value
             item.assign_ela = assign_ela
             item.assign_btc = assign_btc
