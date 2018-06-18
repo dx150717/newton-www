@@ -1392,3 +1392,14 @@ input[name="expect_btc"], input[name="expect_ela"]{
     font-size: 20px;
     color: red;
 }
+.filters{
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+    color: #333;
+}
+.filters input[type=radio]{
+    width: 14px;
+    height: 14px;
+}

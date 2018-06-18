@@ -14,6 +14,7 @@ from django.utils.translation import ungettext as _
 from sorl.thumbnail import get_thumbnail
 from django.utils.safestring import mark_safe
 from django.utils.timezone import utc
+from django_countries.data import COUNTRIES
 
 from config import codes
 
@@ -246,3 +247,15 @@ def is_current_language(language_code):
     if language_code == language:
         return True
     return False
+
+@register.filter(name='trans_country')
+def trans_country(country_code):
+    """translate country code to full name
+    """
+    try:
+        print 'country code is %s' % country_code
+        print COUNTRIES[country_code]
+        return COUNTRIES[country_code]
+    except Exception, inst:
+        logger.exception(str(inst))
+        return ""
