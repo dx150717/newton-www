@@ -21,7 +21,11 @@
                         <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
                         {% endif %}
                         <th>姓名</th>
+                        {% if is_confirm %}
+                        <th>已分配额度</th>
+                        {% else %}
                         <th>介绍</th>
+                        {% endif %}
                         <th>期望额度</th>
                         {% if is_completed %}
                         <th>分配额度</th>
@@ -42,17 +46,10 @@
                             <p>{{ item.user.email }}</p>
                         </td>
                         <td>
-                            {% comment %}
-                            <p>
-                                <img src="{{ item.kycinfo.id_card.url }}"/>
-                            </p>
-                            <p>
-                                {{ item.how_to_contribute }}                                
-                            </p>
-                            <p>
-                                {{ item.what_is_newton }}
-                            </p>
-                            {% endcomment %}
+                            {% if is_confirm %}
+                            <p>{{ item.assign_ela }} ELA</p>
+                            <p>{{ item.assign_btc }} BTC</p>
+                            {% endif %}
                         </td>
                         <td>
                             {% if item.expect_ela %}
@@ -70,7 +67,7 @@
                         {% endif %}
                         <td>
                             {% if not is_completed %}
-                            <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">重新分配额度</a>
+                            <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">分配额度</a>
                             {% endif %}
                         </td>
                     </tr>

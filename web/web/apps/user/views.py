@@ -59,11 +59,10 @@ def show_user_index_view(request):
         if kycinfo.level == codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE:
             is_deny == True
     kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).last()
-    kycaudit_comment = False
-    if kycaudit.comment.replace(" ", ""):
-        kycaudit_comment = kycaudit.comment
-    print "kycaudit comment is %s" % kycaudit.comment
-    print type(kycaudit.comment)
+    if kycaudit:
+        kycaudit_comment = False
+        if kycaudit.comment.replace(" ", ""):
+            kycaudit_comment = kycaudit.comment
     items = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
     for item in items:
         item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]

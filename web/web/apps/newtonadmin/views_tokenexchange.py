@@ -202,6 +202,11 @@ class ConfirmListView(generic.ListView):
         context['phase_id'] = int(self.request.path.split("/")[4])
         context['form'] = forms_tokenexchange.AmountForm()
         context['is_confirm'] = True
+        context['token_exchange_info'] = settings.FUND_CONFIG[context['phase_id']]
+        phase_id = settings.CURRENT_FUND_PHASE
+        token_exchange_info = settings.FUND_CONFIG[phase_id]
+        context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
+        context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
         return context
 
     def get_queryset(self):
@@ -241,7 +246,7 @@ class CompletedAmountListView(generic.ListView):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.CONFIRM_AMOUT.value, phase_id=phase_id)
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()

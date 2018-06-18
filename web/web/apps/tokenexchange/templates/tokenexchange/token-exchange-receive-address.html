@@ -40,6 +40,8 @@
                         {% else %}
                         <p class="before-fill">{% trans "Your expected amount is under evaluation" %}</p>
                         {% endif %}
+                    {% else %}
+                    <p class="before-fill">{% trans "Your expected amount is under evaluation" %}</p>
                     {% endif %}
                 {% else %}
                 <p class="before-fill">{% trans "No token exchange information." %}</p>
