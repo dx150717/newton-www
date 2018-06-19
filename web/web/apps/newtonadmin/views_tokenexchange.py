@@ -103,7 +103,8 @@ class InviteListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(InviteListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
-        context['countries_choices'] = COUNTRIES
+        query_form = forms_tokenexchange.KYCQueryForm()
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
@@ -138,7 +139,8 @@ class CompletedInviteListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(CompletedInviteListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
-        context['countries_choices'] = COUNTRIES
+        query_form = forms_tokenexchange.KYCQueryForm()
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
@@ -177,7 +179,8 @@ class AmountListView(generic.ListView):
         token_exchange_info = settings.FUND_CONFIG[phase_id]
         context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
         context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
-        context['countries_choices'] = COUNTRIES
+        query_form = forms_tokenexchange.KYCQueryForm()
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
@@ -216,7 +219,6 @@ class ConfirmListView(generic.ListView):
         token_exchange_info = settings.FUND_CONFIG[phase_id]
         context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
         context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
-        context['countries_choices'] = COUNTRIES
         return context
 
     def get_queryset(self):
@@ -250,7 +252,6 @@ class CompletedAmountListView(generic.ListView):
         context['phase_id'] = int(self.request.path.split("/")[4])
         context['form'] = forms_tokenexchange.AmountForm()
         context['is_completed'] = True
-        context['countries_choices'] = COUNTRIES
         return context
 
     def get_queryset(self):
@@ -283,7 +284,6 @@ class ReceiveListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(ReceiveListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
-        context['countries_choices'] = COUNTRIES
         return context
 
     def get_queryset(self):
@@ -316,7 +316,6 @@ class UserReceiveListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(UserReceiveListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
-        context['countries_choices'] = COUNTRIES
         return context
 
     def get_queryset(self):
@@ -623,7 +622,6 @@ class DenyListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(DenyListView, self).get_context_data(**kwargs)
-        context['countries_choices'] = COUNTRIES
         return context
 
     def get_queryset(self):

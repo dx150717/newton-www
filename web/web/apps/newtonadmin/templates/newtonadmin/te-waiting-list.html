@@ -9,51 +9,59 @@
 {% block content %}
 <section id="newtonadmin" class="section-list">
     <div class="container">
-        <div class="raw table-responsive content">
-            <table class="table">
-                <caption class="text-center">待邀请投资者列表</caption>
-                <thead>
-                    <tr>
-                        <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
-                        <th>姓名</th>
-                        <th></th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for item in items %}
-                    <tr>
-                        <td><p><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择</p></td>
-                        <td>
-                            <p>{{ item.first_name }} &nbsp; {{ item.last_name }}</p>
-                            <p>{{ item.user.email }}</p>
-                        </td>
-                        <td>
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn-default" onclick="javascript:preInviteUser({{ item.user_id }});">移至邀请列表</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                    <tr>
-                        <td><button class="form-button" onclick="preInviteSelectedUser();">移动选中</button></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            {% if is_paginated %}
-            <div class="pagination-simple">
-            {% if page_obj.has_previous %}
-                <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
-            {% endif %}
-            <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
-            {% endif %}
+        <h3 class="text-center">待邀请投资者列表</h3>
+        <div class="row">
+            <div class="col-md-2">
+                {% include "newtonadmin/include-filter.html" %}
             </div>
-            {% endif %}
+            <div class="col-md-10">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
+                                <th>姓名</th>
+                                <th></th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in items %}
+                            <tr>
+                                <td><p><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择</p></td>
+                                <td>
+                                    <p>{{ item.first_name }} &nbsp; {{ item.last_name }}</p>
+                                    <p>{{ item.user.email }}</p>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-default" onclick="javascript:preInviteUser({{ item.user_id }});">移至邀请列表</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            <tr>
+                                <td><button class="btn btn-default" onclick="preInviteSelectedUser();">移动选中</button></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    {% if is_paginated %}
+                    <div class="pagination-simple">
+                        {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+                        {% endif %}
+                        <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                        {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+
+            </div>
         </div>
     </div>
 </section>
@@ -61,7 +69,7 @@
 
 {% block inline_js %}
 <script type="text/javascript">
-var phase_id = {{ phase_id }};
+    var phase_id = {{ phase_id }};
 </script>
 {% endblock %}
 
