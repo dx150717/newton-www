@@ -969,7 +969,7 @@ canvas { display: block; vertical-align: top; }
 .margin-auto {margin-left: auto; margin-right: auto; }
 .form-group .alert{width: 304px;}
 #token .form-group .alert{width: 50%;}
-#token .form-group { margin-bottom: 30px; }
+#token .form-group { margin-bottom: 20px; }
 #token .attachment {padding-left: 50px; }
 #token .attachment p{font-size: 10px; font-weight: normal; }
 #login .container .register{font-size: 16px; color: #292929}
@@ -1406,4 +1406,10 @@ input[name="expect_btc"], input[name="expect_ela"]{
 }
 .select-individual-organization .btn{
     width: 100%;
+}
+.control-label{
+    color: #303030;
+}
+..panel-body{
+    padding: 20px 15px;
 }

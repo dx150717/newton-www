@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-19 12:52+0000\n"
+"POT-Creation-Date: 2018-06-19 13:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -181,12 +181,12 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:92
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:93
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:132
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:87
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:54
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:49
+#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:54
 #: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:72
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
 #: web/apps/welcome/templates/welcome/announcement.html:72
@@ -195,12 +195,12 @@ msgid "previous"
 msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:96
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:97
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:136
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:91
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:58
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:53
+#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:58
 #: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:76
 #: web/apps/welcome/templates/welcome/announcement-detail.html:50
 #: web/apps/welcome/templates/welcome/announcement.html:76
@@ -228,14 +228,14 @@ msgid ""
 "information concerning Newton token exchange, including allocated amount, "
 "address and QR code, through any other media including Email, Wechat, "
 "Telegram, phone, message and so on."
-msgstr ""
+msgstr "牛顿官方网站（www.newtonproject.org）是唯一的牛顿通证的合法交换渠道。牛顿不会在除网站之外的任何渠道（包括电子邮件、微信、Telegram、电话、短信等等）对您提供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配额度、分配地址和分配二维码。"
 
 #: web/apps/help/templates/help/security.html:21
 msgid ""
 "Please make sure that the SSL of Newton official website is “NEWTON "
 "FOUNDATION LTD. [SG]” before exchanging token，in case of property loss "
 "resulting from fraudulent Newton official website."
-msgstr ""
+msgstr "在进行通证交换之前，请确保网站的SSL证书是“NEWTON FOUNDATION LTD. [SG]”，防止进入假冒的牛顿官方网站造成的资产损失。"
 
 #: web/apps/login/forms.py:6 web/apps/login/forms.py:11
 #: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
@@ -1103,7 +1103,7 @@ msgstr "愿意建立哪种节点？"
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:121
 #: web/apps/user/templates/user/include-kyc-section.html:98
 #: web/apps/user/templates/user/include-kyc-section.html:157
-msgid "Your plan of node establishment" 
+msgid "Your plan of node establishment"
 msgstr "节点建立计划和方案"
 
 #: web/apps/tokenexchange/models.py:78
