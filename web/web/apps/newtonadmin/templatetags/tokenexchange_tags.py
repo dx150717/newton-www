@@ -58,16 +58,4 @@ class AmountSummaryNode(template.Node):
 def show_amount_summary(parser, token):
     """Show the amount summary for current phase
     """
-    print "show amount summary is working"
     return AmountSummaryNode()
-
-def level_choices():
-    """return level choices list
-    """
-    try:
-        return [i+1 for i in range(10)]
-    except Exception, inst:
-        logger.exception(str(inst))
-        return ""
-
-register.simple_tag(level_choices)

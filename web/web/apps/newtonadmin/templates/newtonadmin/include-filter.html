@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load utils %}
+
+<form action="">
+<div class="filters col-md-3">机构或个人：
+<input type="radio" name="individual-or-institution" id="individual-or-institution" value="1">个人
+&nbsp;&nbsp;
+<input type="radio" name="individual-or-institution" id="individual-or-institution" value="2">机构
+</div>
+<div class="filters col-md-3">是否愿意成为节点：
+<input type="radio" name="is_establish_node" id="is_establish_node" value="1">是
+&nbsp;&nbsp;
+<input type="radio" name="is_establish_node" id="is_establish_node" value="2">否
+</div>
+<select name="countries_choices" id=""class="filters col-md-3">国家
+    {% for country in countries_choices %}
+    <option value="{{ country }}">{{ country|trans_country }}</option>
+    {% endfor %}
+</select>
+<div class="filters col-md-3" style="line-height: 100%">
+    <button type="submit">确认筛选</button>
+</div>
+</form>
