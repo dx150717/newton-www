@@ -46,9 +46,7 @@ $('#id_login_form').submit(function(event){
             success: function(response){
               dismiss();
               if (isSuccess(response)) {
-                $('#code-modal').modal('show');
-                var result = getData(response);
-                auth_token = result.auth_token;             
+                location.href = '/user/';
               } else {
                 showFail(getErrorMessage(response));
               }

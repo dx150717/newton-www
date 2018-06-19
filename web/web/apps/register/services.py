@@ -6,13 +6,14 @@ import logging
 from django.conf import settings
 from django.template import Template, Context, loader
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth.models import User
 
 from verification import services
+from user import models as user_models
 from tasks import task_email
 from config import codes
 
 logger = logging.getLogger(__name__)
-
 
 def send_register_validate_email(email, request):
     """Send the validate email for user register
@@ -40,5 +41,22 @@ def get_register_verification_by_uuid(uuid):
     """Get the verification object of register by uuid
     """
     return services.get_verification_by_uuid(uuid)
+
+def create_user(username, email, password, language_code, verification):
+    """Create User
+    """
+    try:
+        user = User.objects.create_user(username, email)
+        user.set_password(password)
+        user.save()
+        user_profile = user_models.UserProfile.objects.create(user=user)
+        user_profile.language_code = language_code
+        user_profile.save()
+        verification.status = codes.StatusCode.CLOSE.value
+        verification.save()
+        return True
+    except Exception, inst:
+        logger.exception("fail to create user:%s" % str(inst))
+        return False
     
     

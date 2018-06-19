@@ -26,7 +26,7 @@ from utils import exception
 from utils import security
 from user import models as user_models
 from . import forms
-from . import services
+from register import services as register_services
 
 logger = logging.getLogger(__name__)
 
@@ -54,7 +54,7 @@ def submit_email(request):
         if user:
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Email already existed')])
             return render(request, 'register/index.html', locals())
-        is_send_success = services.send_register_validate_email(email, request)
+        is_send_success = register_services.send_register_validate_email(email, request)
         if not is_send_success:
             return http.HttpResponseRedirect('/register/email/fail/')
         else:
@@ -73,7 +73,7 @@ def show_post_email_fail_view(request):
 def verify_email_link(request):
     try:
         uuid = request.GET.get('uuid')
-        verification = services.get_register_verification_by_uuid(uuid)
+        verification = register_services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/invalid-link/')
             #check link status
@@ -117,7 +117,7 @@ def submit_password(request):
     try:
         # check uuid
         uuid = request.POST['uuid']
-        verification = services.get_register_verification_by_uuid(uuid)
+        verification = register_services.get_register_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/register/invalid-link/')
         #check link status
@@ -135,11 +135,13 @@ def submit_password(request):
         if password != repassword:
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Entered passwords do not match')])
             return render(request, 'register/password.html', locals())
-        request.session['email'] = email
-        request.session['password'] = password
-        request.session['auth_token'] = security.generate_uuid()
-        request.session['uuid'] = uuid
-        return http.HttpResponseRedirect("/register/gtoken/")
+        # create user
+        username = security.generate_uuid()
+        language_code = translation.get_language()
+        if not register_services.create_user(username, email, password, language_code, verification):
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Fail to register')])
+            return render(request, 'register/password.html', locals())            
+        return http.HttpResponseRedirect("/register/success/")
     except Exception,inst:
         logger.exception("fail to post password:%s" %str(inst))
         raise exception.SystemError500()
