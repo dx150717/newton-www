@@ -253,8 +253,6 @@ def trans_country(country_code):
     """translate country code to full name
     """
     try:
-        print 'country code is %s' % country_code
-        print COUNTRIES[country_code]
         return COUNTRIES[country_code]
     except Exception, inst:
         logger.exception(str(inst))

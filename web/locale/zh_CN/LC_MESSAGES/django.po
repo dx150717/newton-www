@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-17 16:49+0000\n"
+"POT-Creation-Date: 2018-06-19 12:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,49 +118,49 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:71
+#: web/apps/base/templatetags/utils.py:72
 #, python-format
 msgid "%(duration)d minute"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:73
+#: web/apps/base/templatetags/utils.py:74
 #, python-format
 msgid "%(duration)d hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:112
+#: web/apps/base/templatetags/utils.py:113
 #, python-format
 msgid "%(hour)d hour ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:115
+#: web/apps/base/templatetags/utils.py:116
 #, python-format
 msgid "%(minute)d minute ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:117
+#: web/apps/base/templatetags/utils.py:118
 #, python-format
 msgid "%(second)d second ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:146
+#: web/apps/base/templatetags/utils.py:147
 #, python-format
 msgid "%.f hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:176
+#: web/apps/base/templatetags/utils.py:177
 msgid "unfilled"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:182
-#: web/apps/base/templatetags/utils.py:189 web/apps/tokenexchange/models.py:24
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:70
+#: web/apps/base/templatetags/utils.py:183
+#: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:24
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:97
 msgid "Yes"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:183
-#: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:25
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:71
+#: web/apps/base/templatetags/utils.py:184
+#: web/apps/base/templatetags/utils.py:191 web/apps/tokenexchange/models.py:25
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:98
 msgid "No"
 msgstr ""
 
@@ -181,9 +181,9 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:76
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:99
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:75
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:92
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:132
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:87
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:54
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:49
@@ -195,9 +195,9 @@ msgid "previous"
 msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:80
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:103
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:79
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:96
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:136
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:91
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:58
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:53
@@ -211,6 +211,31 @@ msgstr "下一页"
 #: web/apps/faq/templates/faq/faq.html:42
 msgid "No FAQ"
 msgstr "暂无FAQ"
+
+#: web/apps/help/templates/help/security.html:6
+msgid "Secu"
+msgstr ""
+
+#: web/apps/help/templates/help/security.html:13
+#, fuzzy
+msgid "Security Notification"
+msgstr "安全审计。"
+
+#: web/apps/help/templates/help/security.html:20
+msgid ""
+"Newton official website（www.newtonproject.org）is the unique legitimate "
+"platform for Newton token exchange. Newton won't provide you with any "
+"information concerning Newton token exchange, including allocated amount, "
+"address and QR code, through any other media including Email, Wechat, "
+"Telegram, phone, message and so on."
+msgstr ""
+
+#: web/apps/help/templates/help/security.html:21
+msgid ""
+"Please make sure that the SSL of Newton official website is “NEWTON "
+"FOUNDATION LTD. [SG]” before exchanging token，in case of property loss "
+"resulting from fraudulent Newton official website."
+msgstr ""
 
 #: web/apps/login/forms.py:6 web/apps/login/forms.py:11
 #: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
@@ -330,7 +355,7 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/register/templates/register/gtoken.html:73
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:55
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:37
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:113
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:142
 #: web/apps/user/templates/user/profile.html:33
 msgid "Submit"
 msgstr "提交"
@@ -341,7 +366,6 @@ msgstr "提交"
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:7
 #: web/apps/newtonadmin/templates/newtonadmin/kycindex.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/sent-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:6
@@ -455,38 +479,39 @@ msgstr ""
 msgid "Confirm"
 msgstr "确认密码"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:29
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:30
 msgid "Name"
 msgstr "名字"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:30
-#: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:116
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:31
+#: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:46
+#: web/apps/tokenexchange/forms.py:177
 msgid "Cellphone"
 msgstr "手机号"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:31
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:32
 msgid "Country"
 msgstr "国家"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:32
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:33
 #: web/apps/tokenexchange/models.py:37 web/apps/tokenexchange/models.py:81
 msgid "City"
 msgstr "城市"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:33
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:34
 #: web/apps/tokenexchange/models.py:38 web/apps/tokenexchange/models.py:82
 msgid "Address"
 msgstr "详细地址"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:34
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:35
 #: web/apps/tokenexchange/models.py:40
 msgid "ID Type"
-msgstr "身份信息类型"
+msgstr "证件类型"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:35
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:36
 #: web/apps/tokenexchange/models.py:45
 msgid "ID Number"
-msgstr "ID 号码"
+msgstr "证件号码"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:6
 msgid "KYC review success"
@@ -943,6 +968,16 @@ msgstr ""
 "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
 "阅。"
 
+#: web/apps/tokenexchange/forms.py:49
+msgid "Registration Country"
+msgstr "注册国家"
+
+#: web/apps/tokenexchange/forms.py:128
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:70
+#: web/apps/user/templates/user/include-kyc-section.html:125
+msgid "Organization Introduction"
+msgstr "组织介绍"
+
 #: web/apps/tokenexchange/models.py:13
 msgid "ID Card"
 msgstr "身份证"
@@ -956,22 +991,22 @@ msgid "Drivers License"
 msgstr "驾驶证"
 
 #: web/apps/tokenexchange/models.py:18
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:81
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:108
 msgid "Full Node"
 msgstr "全节点"
 
 #: web/apps/tokenexchange/models.py:19
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:82
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:109
 msgid "Media Node"
 msgstr "媒体节点"
 
 #: web/apps/tokenexchange/models.py:20
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:83
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:110
 msgid "Technology Node"
 msgstr "技术节点"
 
 #: web/apps/tokenexchange/models.py:21
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:84
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:111
 msgid "Operation Node"
 msgstr "运营节点"
 
@@ -993,12 +1028,12 @@ msgstr "国家或地区"
 
 #: web/apps/tokenexchange/models.py:46
 msgid "ID Photo"
-msgstr "ID 照片"
+msgstr "证件照片"
 
 #: web/apps/tokenexchange/models.py:49
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:48
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:68
 #: web/apps/user/models.py:30
-#: web/apps/user/templates/user/include-kyc-section.html:65
+#: web/apps/user/templates/user/include-kyc-section.html:66
 msgid "Self Introduction"
 msgstr "自我介绍"
 
@@ -1049,22 +1084,25 @@ msgid "Contribution You Will Make to Newton"
 msgstr "您将为牛顿做些什么"
 
 #: web/apps/tokenexchange/models.py:66
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:66
-#: web/apps/user/templates/user/include-kyc-section.html:77
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:93
+#: web/apps/user/templates/user/include-kyc-section.html:78
+#: web/apps/user/templates/user/include-kyc-section.html:137
 msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点？"
 
 #: web/apps/tokenexchange/models.py:70
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:76
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:80
-#: web/apps/user/templates/user/include-kyc-section.html:87
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:103
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:107
+#: web/apps/user/templates/user/include-kyc-section.html:88
+#: web/apps/user/templates/user/include-kyc-section.html:147
 msgid "Which type of node ?"
 msgstr "您想建立哪种节点？"
 
 #: web/apps/tokenexchange/models.py:73
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:90
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:94
-#: web/apps/user/templates/user/include-kyc-section.html:97
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:117
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:121
+#: web/apps/user/templates/user/include-kyc-section.html:98
+#: web/apps/user/templates/user/include-kyc-section.html:157
 msgid "Your plan of node establishment"
 msgstr "你准备如何建立节点"
 
@@ -1082,12 +1120,28 @@ msgstr "紧急联系人姓"
 msgid "Relation with Applicant"
 msgstr "与申请人的关系"
 
-#: web/apps/tokenexchange/models.py:111
+#: web/apps/tokenexchange/models.py:91
+msgid "Organization Name"
+msgstr "组织机构名称"
+
+#: web/apps/tokenexchange/models.py:92
+msgid "Organization Code"
+msgstr "组织机构代码"
+
+#: web/apps/tokenexchange/models.py:93 web/apps/tokenexchange/models.py:94
+msgid "Organization Certificate"
+msgstr "组织机构证明"
+
+#: web/apps/tokenexchange/models.py:95
+msgid "Wechat Platform Name"
+msgstr "微信公众平台名称"
+
+#: web/apps/tokenexchange/models.py:121
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:37
 msgid "How much do you want to contribute in BTC"
 msgstr "您期望的 BTC 额度"
 
-#: web/apps/tokenexchange/models.py:112
+#: web/apps/tokenexchange/models.py:122
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:46
 msgid "How much do you want to contribute in ELA"
 msgstr "您期望的 ELA 额度"
@@ -1096,7 +1150,7 @@ msgstr "您期望的 ELA 额度"
 msgid "Newton notification: Received your KYC information"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
 
-#: web/apps/tokenexchange/views.py:67
+#: web/apps/tokenexchange/views.py:71
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
@@ -1677,32 +1731,45 @@ msgstr ""
 msgid "Fill in KYC Information"
 msgstr "填写KYC信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:37
-#: web/apps/user/templates/user/include-kyc-section.html:59
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:31
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:34
+msgid "Individual"
+msgstr "个人"
+
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:32
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:35
+msgid "Organization"
+msgstr "机构"
+
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:52
+#: web/apps/user/templates/user/include-kyc-section.html:60
+#: web/apps/user/templates/user/include-kyc-section.html:119
 msgid "Basic Information"
 msgstr "基本信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:59
-#: web/apps/user/templates/user/include-kyc-section.html:71
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:86
+#: web/apps/user/templates/user/include-kyc-section.html:72
+#: web/apps/user/templates/user/include-kyc-section.html:131
 msgid "How to Contribute"
 msgstr "如何参与Newton"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:60
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:87
 msgid ""
 "* This section is very important to KYC review, please fill in carefully."
 msgstr "* 这一节是Newton KYC 审核的重要依据，请认真填写。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:104
-#: web/apps/user/templates/user/include-kyc-section.html:107
+#: web/apps/tokenexchange/templates/tokenexchange/submit.html:132
+#: web/apps/user/templates/user/include-kyc-section.html:108
 msgid "Emergency Information"
 msgstr "紧急联系人信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:40
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:41
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:44
 msgid "Your expected amount is under evaluation"
 msgstr "您填写的期望额度正在评估中"
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:43
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:46
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:47
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:50
 #: web/apps/user/templates/user/include-token-exchange.html:111
 msgid "No token exchange information."
 msgstr "没有通证交换信息。"
@@ -6668,6 +6735,12 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Contact first name"
+#~ msgstr "联系人姓"
+
+#~ msgid "Contact last name"
+#~ msgstr "联系人名"
 
 #~ msgid "Thank you"
 #~ msgstr "谢谢！"

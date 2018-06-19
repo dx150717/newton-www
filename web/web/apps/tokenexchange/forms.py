@@ -46,8 +46,6 @@ class OrganizationBaseForm(ModelForm):
     cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_("Cellphone"), help_text='(*)')
     def __init__(self, *args, **kw):
         super(OrganizationBaseForm, self).__init__(*args, **kw)
-        self.fields['first_name'].label = _('Contact first name')
-        self.fields['last_name'].label = _('Contact last name')
         self.fields['country'].label = _('Registration Country')
         self.fields['orgnization_certificate2'].required = False
         self.fields.keyOrder = [
