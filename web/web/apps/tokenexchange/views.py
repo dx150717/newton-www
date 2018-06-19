@@ -65,6 +65,7 @@ def post_kyc_information(request, kyc_type):
             if not instance:
                 instance = tokenexchange_models.KYCInfo()
             instance.kyc_type = kyc_type
+            instance.phase_id = settings.CURRENT_FUND_PHASE
             # chekc whether user has pass kyc
             if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
                 base_form._errors[NON_FIELD_ERRORS] = base_form.error_class([_('You had submited kyc info')])
@@ -73,7 +74,6 @@ def post_kyc_information(request, kyc_type):
             if kyc_type == codes.KYCType.INDIVIDUAL.value:
                 base_form = tokenexchange_forms.KYCBaseForm(request.POST, request.FILES, instance=instance)
                 profile_form = tokenexchange_forms.KYCProfileForm(request.POST, request.FILES, instance=instance)
-                contribute_form = tokenexchange_forms.ContributeForm(request.POST, request.FILES, instance=instance)
                 emergency_form = tokenexchange_forms.EmergencyForm(request.POST, request.FILES, instance=instance)
                 if not base_form.is_valid():
                     return render(request, "tokenexchange/submit.html", locals())
@@ -119,7 +119,6 @@ def post_kyc_information(request, kyc_type):
                 emergency_contact_country_code, emergency_contact_cellphone = emergency_form.cleaned_data['cellphone_of_emergency_contact']
                 instance.emergency_contact_country_code = emergency_contact_country_code
                 instance.emergency_contact_cellphone = emergency_contact_cellphone
-            instance.phase_id = settings.CURRENT_FUND_PHASE
             instance.status = codes.KYCStatus.CANDIDATE.value
             instance.save()
 

@@ -49,6 +49,7 @@ class OrganizationBaseForm(ModelForm):
         self.fields['first_name'].label = _('Contact first name')
         self.fields['last_name'].label = _('Contact last name')
         self.fields['country'].label = _('Registration Country')
+        self.fields['orgnization_certificate2'].required = False
         self.fields.keyOrder = [
             'orgnization_name',
             'orgnization_code',
