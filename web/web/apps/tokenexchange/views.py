@@ -50,7 +50,13 @@ def post_kyc_information(request):
     Receive user's kyc information, and save them.
     """
     try:
+        # check whether individual or orgnizition
+        url_path = request.path.split('/')[2]
+        is_individual = True
+        if url_path == "organizition":
+            is_individual = False
         if request.method == 'POST':
+            print 'request method is POST'
             # check user's kycinfo status
             kycinfo_item = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             if kycinfo_item:
@@ -60,27 +66,46 @@ def post_kyc_information(request):
             instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             if not instance:
                 instance = tokenexchange_models.KYCInfo()
-            base_form = tokenexchange_forms.KYCBaseForm(request.POST, request.FILES, instance=instance)
-            profile_form = tokenexchange_forms.KYCProfileForm(request.POST, request.FILES, instance=instance)
-            contribute_form = tokenexchange_forms.ContributeForm(request.POST, request.FILES, instance=instance)
-            emergency_form = tokenexchange_forms.EmergencyForm(request.POST, request.FILES, instance=instance)
+            if is_individual == True:
+                instance.is_individual = True
+            else:
+                instance.is_individual = False
+            # chekc whether user has pass kyc
             if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
                 base_form._errors[NON_FIELD_ERRORS] = base_form.error_class([_('You had submited kyc info')])
                 return render(request, "tokenexchange/submit.html", locals())
-            if not base_form.is_valid():
-                return render(request, "tokenexchange/submit.html", locals())
-            if not profile_form.is_valid():
-                return render(request, "tokenexchange/submit.html", locals())  
+            # check whether post data is valid
+            if is_individual:
+                base_form = tokenexchange_forms.KYCBaseForm(request.POST, request.FILES, instance=instance)
+                profile_form = tokenexchange_forms.KYCProfileForm(request.POST, request.FILES, instance=instance)
+                contribute_form = tokenexchange_forms.ContributeForm(request.POST, request.FILES, instance=instance)
+                emergency_form = tokenexchange_forms.EmergencyForm(request.POST, request.FILES, instance=instance)
+                if not base_form.is_valid():
+                    return render(request, "tokenexchange/submit.html", locals())
+                if not profile_form.is_valid():
+                    return render(request, "tokenexchange/submit.html", locals())
+                if not emergency_form.is_valid():
+                    return render(request, "tokenexchange/submit.html", locals())
+            else:
+                organizition_base_form = tokenexchange_forms.OrganizitionBaseForm(request.POST, request.FILES, instance=instance)
+                organizition_profile_form = tokenexchange_forms.OrganizitionProfileForm(request.POST, request.FILES, instance=instance)
+                if not organizition_base_form.is_valid():
+                    return render(request, "tokenexchange/submit.html", locals())
+                if not organizition_profile_form.is_valid():
+                    return render(request, "tokenexchange/submit.html", locals())
+            contribute_form = tokenexchange_forms.ContributeForm(request.POST, request.FILES, instance=instance)
             if not contribute_form.is_valid():
                 return render(request, "tokenexchange/submit.html", locals())
-            if not emergency_form.is_valid():
-                return render(request, "tokenexchange/submit.html", locals())
-
+            # insert data into sql
             instance.user_id = request.user.id
-            instance = base_form.save(commit=True)
-            instance = profile_form.save(commit=True)
+            if is_individual:
+                instance = base_form.save(commit=True)
+                instance = profile_form.save(commit=True)
+                instance = emergency_form.save(commit=True)
+            else:
+                instance = organizition_base_form.save(commit=True)
+                instance = organizition_profile_form.save(commit=True)
             instance = contribute_form.save(commit=True)
-            instance = emergency_form.save(commit=True)
 
             is_etablish_node = request.POST.get('is_etablish_node')
             which_node_establish = request.POST.get('which_node_establish')
@@ -89,20 +114,28 @@ def post_kyc_information(request):
                 instance.establish_node_plan = establish_node_plan
             instance.is_etablish_node = is_etablish_node
             instance.which_node_establish = which_node_establish
-            country_code, cellphone = base_form.cleaned_data['cellphone_group']
+            if is_individual:
+                country_code, cellphone = base_form.cleaned_data['cellphone_group']
+            else:
+                country_code, cellphone = organizition_base_form.cleaned_data['cellphone_group']
             instance.country_code = country_code
             instance.cellphone = cellphone
-            emergency_contact_country_code, emergency_contact_cellphone = emergency_form.cleaned_data['cellphone_of_emergency_contact']
-            instance.emergency_contact_country_code = emergency_contact_country_code
-            instance.emergency_contact_cellphone = emergency_contact_cellphone
+            if is_individual:
+                emergency_contact_country_code, emergency_contact_cellphone = emergency_form.cleaned_data['cellphone_of_emergency_contact']
+                instance.emergency_contact_country_code = emergency_contact_country_code
+                instance.emergency_contact_cellphone = emergency_contact_cellphone
             instance.phase_id = settings.CURRENT_FUND_PHASE
             instance.status = codes.KYCStatus.CANDIDATE.value
             instance.save()
-                        
-            instance = base_form.save(commit=True)
-            instance = profile_form.save(commit=True)
+
+            if is_individual:     
+                instance = base_form.save(commit=True)
+                instance = profile_form.save(commit=True)
+                instance = emergency_form.save(commit=True)
+            else:
+                instance = organizition_base_form.save(commit=True)
+                instance = organizition_profile_form.save(commit=True)
             instance = contribute_form.save(commit=True)
-            instance = emergency_form.save(commit=True)
 
             return redirect('/tokenexchange/wait-audit/')
         else:
@@ -111,6 +144,8 @@ def post_kyc_information(request):
             profile_form = tokenexchange_forms.KYCProfileForm(instance=instance)
             contribute_form = tokenexchange_forms.ContributeForm(instance=instance)
             emergency_form = tokenexchange_forms.EmergencyForm(instance=instance)
+            organizition_base_form = tokenexchange_forms.OrganizitionBaseForm(instance=instance)
+            organizition_profile_form = tokenexchange_forms.OrganizitionProfileForm(instance=instance)
             return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
         logger.exception("fail to post kyc information:%s" % str(inst))

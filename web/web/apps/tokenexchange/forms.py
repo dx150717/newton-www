@@ -40,6 +40,38 @@ class KYCBaseForm(ModelForm):
             'id_card'
         ]
 
+class OrganizitionBaseForm(ModelForm):
+    """advanceinfo for kyc example: what can you do for newton
+    """
+    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_("Cellphone"), help_text='(*)')
+    def __init__(self, *args, **kw):
+        super(OrganizitionBaseForm, self).__init__(*args, **kw)
+        self.fields['first_name'].label = _('Contact first name')
+        self.fields['last_name'].label = _('Contact last name')
+        self.fields['country'].label = _('Registration Country')
+        self.fields.keyOrder = [
+            'orgnization_name',
+            'orgnization_code',
+            'orgnization_certificate1',
+            'orgnization_certificate2',
+            'country',
+            'first_name',
+            'last_name',
+            'cellphone_group',
+        ]
+
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'orgnization_name',
+            'orgnization_code',
+            'orgnization_certificate1',
+            'orgnization_certificate2',
+            'country',
+            'first_name',
+            'last_name',
+            'cellphone_group',
+        ]
 
 class KYCProfileForm(ModelForm):
     """ kyc profile """
@@ -84,6 +116,37 @@ class KYCProfileForm(ModelForm):
             'your_community_screenshots2',
             'your_community_screenshots3',
         ]
+
+class OrganizitionProfileForm(ModelForm):
+    """ kyc profile """
+    def __init__(self, *args, **kw):
+        super(OrganizitionProfileForm, self).__init__(*args, **kw)
+        self.fields['wechat_platform_name'].required = False
+        self.fields['twitter'].required = False
+        self.fields['facebook'].required = False
+        self.fields['other_social_account'].required = False
+        self.fields['personal_profile_attachment'].required = False
+        self.fields['personal_profile'].label = _("Organization Introduction")
+
+        self.fields.keyOrder = [
+            'personal_profile',
+            'personal_profile_attachment',
+            'wechat_platform_name',
+            'twitter',
+            'facebook',
+            'other_social_account',
+        ]
+        
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'personal_profile',
+            'personal_profile_attachment',
+            'wechat_platform_name',
+            'twitter',
+            'facebook',
+            'other_social_account',
+        ]
         
 
 class ContributeForm(ModelForm):
@@ -109,7 +172,6 @@ class ContributeForm(ModelForm):
             'done_for_newton_attachment',
             'do_for_newton'
         ]
-        
 
 class EmergencyForm(ModelForm):
     """docstring for EmergencyForm"""
@@ -136,8 +198,6 @@ class EmergencyForm(ModelForm):
             'emergency_location',
             'emergency_relationship'
         ]
-
-        
 
 class ApplyAmountForm(ModelForm):
     class Meta:

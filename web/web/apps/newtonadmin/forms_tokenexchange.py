@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from django_countries.fields import CountryField
 
 class ConfirmKYCForm(forms.Form):
     level = forms.IntegerField(required=True)
@@ -15,6 +14,3 @@ class AmountForm(forms.Form):
 
 class PostInviteForm(forms.Form):
     user_id = forms.IntegerField(required=True)
-
-class CountryForm(forms.Form):
-    country = froms.CountryField()

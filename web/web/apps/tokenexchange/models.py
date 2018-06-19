@@ -81,13 +81,21 @@ class KYCInfo(models.Model):
     emergency_city = models.CharField(max_length=256, verbose_name=_('City'), help_text='(*)')
     emergency_location = models.CharField(max_length=1024, verbose_name=_('Address'), help_text='(*)')
     emergency_relationship = models.CharField(max_length=1024, verbose_name=_('Relation with Applicant'), help_text='(*)')
-
     # level
     level = models.IntegerField(choices=LEVEL_CHOICE, default=0, db_index=True)
     # base fields
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
+    # orgnization info
+    orgnization_name = models.CharField(max_length=128, verbose_name=_('Organization Name'), help_text="(*)")
+    orgnization_code = models.CharField(max_length=128, verbose_name=_('Organization Code'), help_text="(*)")
+    orgnization_certificate1 = models.FileField(upload_to=storage.hashfile_upload_to('orgnization_certificate1', path_prefix='orgnization_certificate1'), verbose_name=_('Organization Certificate'), validators=[validators.validate_file_extension_of_id_photo, validators.validate_file_size_of_id_photo], help_text="(*)")
+    orgnization_certificate2 = models.FileField(upload_to=storage.hashfile_upload_to('orgnization_certificate2', path_prefix='orgnization_certificate2'), verbose_name=_('Organization Certificate'), validators=[validators.validate_file_extension_of_id_photo, validators.validate_file_size_of_id_photo])
+    wechat_platform_name = models.CharField(max_length=128, db_index=True, verbose_name=_('Wechat Platform Name'), null=True)
+
+    # kyc type
+    is_individual = models.BooleanField()
 
     class Meta:
         app_label = "tokenexchange"

@@ -4,7 +4,8 @@ from . import views
 
 urlpatterns = patterns('',
                        url(r'^$', views.show_tokenexchange_index_view),
-                       url(r'^post/$', views.post_kyc_information),
+                       url(r'^individual/post/$', views.post_kyc_information),
+                       url(r'^organizition/post/$', views.post_kyc_information),
                        url(r'^wait-audit/$', views.show_wait_audit_view),
                        url(r'^invalid-link/$', views.show_invalid_link),
                        url(r'^pending/', views.show_pending_view),

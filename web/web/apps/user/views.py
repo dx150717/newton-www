@@ -49,7 +49,8 @@ def show_user_index_view(request):
         if data['which_node_establish']:
             data['which_node_establish'] = convert.get_value_from_choice(data['which_node_establish'], tokenexchange_models.NODE_CHOICE)
         data['country'] = COUNTRIES[data['country']]
-        data['emergency_country'] = COUNTRIES[data['emergency_country']]
+        if data['emergency_country']:
+            data['emergency_country'] = COUNTRIES[data['emergency_country']]
         base_form = token_exchange_forms.KYCBaseForm(initial=data)
         profile_form = token_exchange_forms.KYCProfileForm(initial=data)
         contribute_form = token_exchange_forms.ContributeForm(initial=data)
