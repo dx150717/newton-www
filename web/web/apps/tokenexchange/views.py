@@ -45,6 +45,7 @@ def show_tokenexchange_index_view(request):
 
 @login_required
 @kyc_valid_required
+@decorators.google_authenticator_required
 def post_kyc_information(request, kyc_type):
     """
     Receive user's kyc information, and save them.
@@ -155,6 +156,7 @@ def show_invalid_link(request):
     
 @login_required
 @kyc_valid_required
+@decorators.google_authenticator_required
 def show_receive_address_view(request, invite_id):
     """Show the receive address
     """
@@ -217,6 +219,7 @@ def show_end_view(request):
 
 @login_required
 @kyc_valid_required
+@decorators.google_authenticator_required
 def post_apply_amount(request, invite_id):
     """ Post the amount of apply
     """

@@ -86,6 +86,15 @@ def nologin_required(func):
         return func(request, *args, **kwargs)
     return _decorator
 
+def google_authenticator_required(func):
+    """Ensure that the current user is set the google authenticator
+    """
+    def _decorator(request, *args, **kwargs):
+        if request.user.is_google_authenticator:
+            return func(request, *args, **kwargs)
+        return http.HttpResponseRedirect('/setting/gtoken/?redirect_url=' + request.path)
+    return _decorator
+
 def admin_user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIELD_NAME):
     """
     Decorator for views that checks that the user passes the given test,

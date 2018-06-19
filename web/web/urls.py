@@ -49,6 +49,7 @@ urlpatterns = patterns('',
                        url(r'^user/',include('user.urls')),
                        url(r'^tokenexchange/',include('tokenexchange.urls')),
                        url(r'^newtonadmin/',include('newtonadmin.urls')),
+                       url(r'^setting/',include('setting.urls')),
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),
