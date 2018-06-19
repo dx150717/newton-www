@@ -90,7 +90,7 @@ def google_authenticator_required(func):
     """Ensure that the current user is set the google authenticator
     """
     def _decorator(request, *args, **kwargs):
-        if request.user.is_google_authenticator:
+        if request.user.userprofile.is_google_authenticator:
             return func(request, *args, **kwargs)
         return http.HttpResponseRedirect('/setting/gtoken/?redirect_url=' + request.path)
     return _decorator

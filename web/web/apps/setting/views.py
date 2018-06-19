@@ -59,6 +59,10 @@ def show_check_gtoken_view(request):
 @login_required
 def submit_gtoken(request):
     try:
+        # check whether the current user already set the google authenticator
+        user_profile = request.user.userprofile
+        if user_profile.is_google_authenticator:
+            raise Exception("google authenticator is already set.")
         # check whether post data is valid
         form = forms.SubmitGtokenForm(request.POST)
         if not form.is_valid():
@@ -78,7 +82,6 @@ def submit_gtoken(request):
             form = forms.GtokenForm()
             return render(request, 'setting/set-gtoken.html', locals())
         #create user
-        user_profile = request.user.userprofile
         user_profile.is_google_authenticator = True
         user_profile.google_authenticator_private_key = gtoken
         user_profile.save()
