@@ -36,7 +36,9 @@
                         </td>
                         <td>
                             <p>
+                                {% if item.id_card %}
                                 <img src="{{ item.id_card.url }}" style="width: 300px"/>
+                                {% endif %}
                             </p>
                         </td>
                         

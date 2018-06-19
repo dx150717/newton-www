@@ -21,6 +21,10 @@
                 <img src="{{ kycinfo.done_for_newton_attachment2.url }}" alt="">
                 {% elif field.name == "your_community_screenshots3" %}
                 <img src="{{ kycinfo.your_community_screenshots3.url }}" alt="">
+                {% elif field.name == "orgnization_certificate1" %}
+                <img src="{{ kycinfo.orgnization_certificate1.url }}" alt="">
+                {% elif field.name == "orgnization_certificate2" %}
+                <img src="{{ kycinfo.orgnization_certificate2.url }}" alt="">
                 {% else %}
                 <div class="value">{{ field.value }}</div>
                 {% endif %}

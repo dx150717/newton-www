@@ -55,8 +55,8 @@ def show_user_index_view(request):
         profile_form = token_exchange_forms.KYCProfileForm(initial=data)
         contribute_form = token_exchange_forms.ContributeForm(initial=data)
         emergency_form = token_exchange_forms.EmergencyForm(initial=data)
-        organization_base_form = token_exchange_forms.KYCBaseForm(initial=data)
-        organization_profile_form = token_exchange_forms.KYCProfileForm(initial=data)
+        organization_base_form = token_exchange_forms.OrganizationBaseForm(initial=data)
+        organization_profile_form = token_exchange_forms.OrganizationProfileForm(initial=data)
         # check whether reject or deny
         is_deny = False
         if kycinfo.level == codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE:

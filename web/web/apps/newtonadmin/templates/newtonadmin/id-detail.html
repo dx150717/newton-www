@@ -27,7 +27,9 @@
                             <p>城市:{{ item.city }}</p>
                             <p>地址: </p><p> {{ item.location }}</p>
                             <p>证件类型:{{ item.id_type }}</p>
+                            {% if item.id_card %}
                             <p>证件照片:<img src="{{ item.id_card.url }}" alt=""></p>
+                            {% endif %}
                             <p>证件号码:{{ item.id_number }}</p>
                             <p>自我介绍: </p><p> {{ item.personal_profile|default:"-" }}</p>
                             {% if item.personal_profile_attachment %}
