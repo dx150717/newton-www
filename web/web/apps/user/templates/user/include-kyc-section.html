@@ -53,6 +53,7 @@
                     </div>
                 </div>    
                 {% if kycinfo.status == 2 %}
+                {% if kycinfo.kyc_type == 1 %}
                 <div class="item">
                     <div class="col-sm-8">
                         <div class="panel panel-default">
@@ -111,6 +112,60 @@
                         </div>
                     </div>
                 </div>
+                {% else %}
+                <div class="item">
+                        <div class="col-sm-8">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">{% trans "Basic Information" %}</div>
+                                <div class="panel-body">
+                                    {% include "form_content.html" with form=organization_base_form %}
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">{% trans "Organization Introduction" %}</div>
+                                <div class="panel-body">
+                                    {% include "form_content.html" with form=organization_profile_form %}
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">{% trans "How to Contribute" %}</div>
+                                <div class="panel-body">
+                                    {% include "form_content.html" with form=contribute_form %}
+                                    {% if data.is_establish_node %}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Do you want to establish a Newton node ?" %}</label></p>
+                                            <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                <div class="value">{{ data.is_establish_node }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% if data.which_node_establish %}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Which type of node ?" %}</label></p>
+                                            <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                <div class="value">{{ data.which_node_establish }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% if data.establish_node_plan %}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Your plan of node establishment" %}</label></p>
+                                            <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                <div class="value">{{ data.establish_node_plan }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
                 {% endif %}
             </div>
         </div>

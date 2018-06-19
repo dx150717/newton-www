@@ -21,13 +21,16 @@
                 <tbody>
                     <tr>
                         <td>
+                            {% if item.kyc_type == 1 %}
                             <p>姓名 : {{ item.first_name }} &nbsp; {{ item.last_name }}</p>
                             <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
                             <p>国籍:{{ item.country }}</p>
                             <p>城市:{{ item.city }}</p>
                             <p>地址: </p><p> {{ item.location }}</p>
                             <p>证件类型:{{ item.id_type }}</p>
+                            {% if item.id_card %}
                             <p>证件照片:<img src="{{ item.id_card.url }}" alt=""></p>
+                            {% endif %}
                             <p>证件号码:{{ item.id_number }}</p>
                             <p>自我介绍: </p><p> {{ item.personal_profile|default:"-" }}</p>
                             {% if item.personal_profile_attachment %}
@@ -74,6 +77,44 @@
                             <p>紧急联系人地址: </p><p> {{ item.emergency_location }}</p>
                             <p>与紧急联系人关系:{{ item.emergency_relationship }}</p>
                             <p>申请时间:{{ item.updated_at|date:"Y-m-d H:i:s"}}</p>
+                            {% else %}
+                            <p>机构名称:{{ item.orgnization_name }}</p>
+                            <p>机构代码:{{ item.orgnization_code }}</p>
+                            {% if item.orgnization_certificate1 %}
+                            <p>机构资格证书1:<img src="{{ item.orgnization_certificate1.url }}" alt=""></p>
+                            {% else %}
+                            <p>机构资格证书1:-</p>
+                            {% endif %}
+                            {% if item.orgnization_certificate2 %}
+                            <p>机构资格证书2:<img src="{{ item.orgnization_certificate2.url }}" alt=""></p>
+                            {% else %}
+                            <p>机构资格证书2:-</p>
+                            {% endif %}
+                            <p>注册国家:{{ item.country }}</p>
+                            <p>联系人姓名:{{ item.first_name }} &nbsp; {{ item.last_name }} &nbsp; </p>
+                            <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
+                            <p>机构介绍: </p><p> {{ item.personal_profile|default:"-" }}</p>
+                            {% if item.personal_profile_attachment %}
+                            <p>机构介绍附件:<img src="{{ item.personal_profile_attachment.url }}" alt=""></p>
+                            {% else %}
+                            <p>机构介绍附件:-</p>
+                            {% endif %}
+                            <p>机构微信公众号名称:{{ item.wechat_platform_name|default:"-" }}</p>
+                            <p>facebook:{{ item.facebook|default:"-" }}</p>
+                            <p>twitter:{{ item.twitter|default:"-" }}</p>
+                            <p>其他社交帐号:{{ item.other_social_account|default:"-" }}</p>
+                            <p>对牛顿的理解: </p><p> {{ item.what_is_newton|default:"-" }}</p>
+                            <p>为牛顿做过什么: </p><p> {{ item.done_for_newton|default:"-" }}</p>
+                            {% if item.done_for_newton_attachment %}
+                            <p>为牛顿做过什么附件:<img src="{{ item.done_for_newton_attachment.url }}" alt=""></p>
+                            {% else %}
+                            <p>为牛顿做过什么附件:－</p>
+                            {% endif %}
+                            <p>准备为牛顿做什么: </p><p> {{ item.do_for_newton|default:"-" }}</p>
+                            <p>是否成为节点:{{ item.is_establish_node|default:"-" }}</p>
+                            <p>哪种节点:{{ item.which_node_establish|default:"-" }}</p>
+                            <p>节点计划: </p><p> {{ item.establish_node_plan|default:"-" }}</p>
+                            {% endif %}
                         </td>
                     </tr>
                     
