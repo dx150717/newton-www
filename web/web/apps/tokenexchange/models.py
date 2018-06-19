@@ -96,6 +96,8 @@ class KYCInfo(models.Model):
 
     # kyc type
     is_individual = models.BooleanField()
+    # kyc submit type
+    phase_id = models.IntegerField()
 
     class Meta:
         app_label = "tokenexchange"
