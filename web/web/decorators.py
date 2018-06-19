@@ -95,6 +95,15 @@ def google_authenticator_required(func):
         return http.HttpResponseRedirect('/setting/gtoken/?redirect_url=' + request.path)
     return _decorator
 
+def check_google_authenticator_session(func):
+    """Ensure that the session of google authenticator is not expired
+    """
+    def _decorator(request, *args, **kwargs):
+        if request.session.get('google_authenticator'):
+            return func(request, *args, **kwargs)
+        return http.HttpResponseRedirect('/setting/gtoken/check/?redirect_url=' + request.path)
+    return _decorator
+
 def admin_user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIELD_NAME):
     """
     Decorator for views that checks that the user passes the given test,

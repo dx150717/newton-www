@@ -49,8 +49,19 @@ def show_check_gtoken_view(request):
     """Show the checking google authenticator page
     """
     try:
-        form = forms.GtokenForm()
         redirect_url = request.GET.get('redirect_url')
+        if request.method == 'POST':
+            form = forms.GtokenForm(request.POST)
+            if form.is_valid():
+                gtoken_code = form.cleaned_data["gtoken_code"]
+                is_pass_google_auth = pyotp.TOTP(request.user.userprofile.google_authenticator_private_key).verify(gtoken_code)
+                if is_pass_google_auth:
+                    request.session['google_authenticator'] = True
+                    return redirect(redirect_url)
+                else:
+                    form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Authenticator Code Error')])
+        else:
+            form = forms.GtokenForm()            
         return render(request, 'setting/check-gtoken.html', locals())
     except Exception, inst:
         logger.exception("fail to show gtoken view:%s" % str(inst))
