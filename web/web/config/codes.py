@@ -145,4 +145,6 @@ class NodeType(Enum):
     TECH_NODE = 3
     OPERATION_NODE = 4
         
-        
+class KYCType(Enum):
+    INDIVIDUAL = 1
+    ORGANIZATION = 2

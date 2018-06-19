@@ -95,7 +95,7 @@ class KYCInfo(models.Model):
     wechat_platform_name = models.CharField(max_length=128, db_index=True, verbose_name=_('Wechat Platform Name'), null=True)
 
     # kyc type
-    is_individual = models.BooleanField()
+    kyc_type = models.IntegerField()
     # kyc submit type
     phase_id = models.IntegerField()
 

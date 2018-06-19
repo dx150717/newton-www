@@ -29,10 +29,10 @@
 
     {% if is_individual %}
     <div class="col-md-6 select-button"><a href="/tokenexchange/individual/post/" class="btn btn-primary btn-lg active" role="button">{% trans "Individual" %}</a></div>
-    <div class="col-md-6 select-button"><a href="/tokenexchange/organizition/post/" class="btn btn-default btn-lg" role="button">{% trans "Organization" %}</a></div>
+    <div class="col-md-6 select-button"><a href="/tokenexchange/organization/post/" class="btn btn-default btn-lg" role="button">{% trans "Organization" %}</a></div>
     {% else %}
     <div class="col-md-6 select-button"><a href="/tokenexchange/individual/post/" class="btn btn-default btn-lg" role="button">{% trans "Individual" %}</a></div>
-    <div class="col-md-6 select-button"><a href="/tokenexchange/organizition/post/" class="btn btn-primary btn-lg active" role="button">{% trans "Organization" %}</a></div>
+    <div class="col-md-6 select-button"><a href="/tokenexchange/organization/post/" class="btn btn-primary btn-lg active" role="button">{% trans "Organization" %}</a></div>
     {% endif %}
 </section>
 <section id="token" class="section-list">
@@ -42,7 +42,7 @@
                 {% if is_individual %}
                 <form class="form" action="/tokenexchange/individual/post/" method="POST" enctype="multipart/form-data">
                 {% else %}
-                <form class="form" action="/tokenexchange/organizition/post/" method="POST" enctype="multipart/form-data">
+                <form class="form" action="/tokenexchange/organization/post/" method="POST" enctype="multipart/form-data">
                 {% endif %}
                     <div class="bg-gray">
                         <div class="container">
@@ -54,7 +54,7 @@
                                     {% if is_individual %}
                                     {% include "form.html" with form=base_form %}
                                     {% else %}
-                                    {% include "form.html" with form=organizition_base_form %}
+                                    {% include "form.html" with form=organization_base_form %}
                                     {% endif %}
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                 {% if is_individual %}
                                 {% include "form.html" with form=profile_form %}
                                 {% else %}
-                                {% include "form.html" with form=organizition_profile_form %}
+                                {% include "form.html" with form=organization_profile_form %}
                                 {% endif %}
                             </div>
                         </div>

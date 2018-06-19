@@ -40,12 +40,12 @@ class KYCBaseForm(ModelForm):
             'id_card'
         ]
 
-class OrganizitionBaseForm(ModelForm):
+class OrganizationBaseForm(ModelForm):
     """advanceinfo for kyc example: what can you do for newton
     """
     cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_("Cellphone"), help_text='(*)')
     def __init__(self, *args, **kw):
-        super(OrganizitionBaseForm, self).__init__(*args, **kw)
+        super(OrganizationBaseForm, self).__init__(*args, **kw)
         self.fields['first_name'].label = _('Contact first name')
         self.fields['last_name'].label = _('Contact last name')
         self.fields['country'].label = _('Registration Country')
@@ -117,10 +117,10 @@ class KYCProfileForm(ModelForm):
             'your_community_screenshots3',
         ]
 
-class OrganizitionProfileForm(ModelForm):
+class OrganizationProfileForm(ModelForm):
     """ kyc profile """
     def __init__(self, *args, **kw):
-        super(OrganizitionProfileForm, self).__init__(*args, **kw)
+        super(OrganizationProfileForm, self).__init__(*args, **kw)
         self.fields['wechat_platform_name'].required = False
         self.fields['twitter'].required = False
         self.fields['facebook'].required = False
