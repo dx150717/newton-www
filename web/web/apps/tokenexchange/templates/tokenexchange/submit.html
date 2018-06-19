@@ -26,14 +26,15 @@
 </section>
 
 <section class="select-individual-organization">
-
-    {% if is_individual %}
-    <div class="col-md-6 select-button"><a href="/tokenexchange/individual/post/" class="btn btn-primary btn-lg active" role="button">{% trans "Individual" %}</a></div>
-    <div class="col-md-6 select-button"><a href="/tokenexchange/organization/post/" class="btn btn-default btn-lg" role="button">{% trans "Organization" %}</a></div>
-    {% else %}
-    <div class="col-md-6 select-button"><a href="/tokenexchange/individual/post/" class="btn btn-default btn-lg" role="button">{% trans "Individual" %}</a></div>
-    <div class="col-md-6 select-button"><a href="/tokenexchange/organization/post/" class="btn btn-primary btn-lg active" role="button">{% trans "Organization" %}</a></div>
-    {% endif %}
+    <div class="container">
+        {% if is_individual %}
+        <div class="col-md-6 select-button"><a href="/tokenexchange/individual/post/" class="btn btn-primary btn-lg active" role="button">{% trans "Individual" %}</a></div>
+        <div class="col-md-6 select-button"><a href="/tokenexchange/organization/post/" class="btn btn-default btn-lg" role="button">{% trans "Organization" %}</a></div>
+        {% else %}
+        <div class="col-md-6 select-button"><a href="/tokenexchange/individual/post/" class="btn btn-default btn-lg" role="button">{% trans "Individual" %}</a></div>
+        <div class="col-md-6 select-button"><a href="/tokenexchange/organization/post/" class="btn btn-primary btn-lg active" role="button">{% trans "Organization" %}</a></div>
+        {% endif %}
+    </div>
 </section>
 <section id="token" class="section-list">
     <div>
