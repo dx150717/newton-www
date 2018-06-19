@@ -26,6 +26,7 @@
                     {% block kyc_id_list %}
                     <tr>
                         <td>
+                            {% if item.kyc_type == 1 %}
                             <p>{% trans "Name" %} : {{ item.first_name }} &nbsp; {{ item.last_name }}</p>
                             <p>{% trans "Cellphone" %}: +{{ item.country_code }} {{ item.cellphone }}</p>
                             <p>{% trans "Country" %}:{{ item.country }}</p>
@@ -33,6 +34,23 @@
                             <p>{% trans "Address" %}:{{ item.location }}</p>
                             <p>{% trans "ID Type" %}:{{ item.id_type }}</p>
                             <p>{% trans "ID Number" %}:{{ item.id_number }}</p>
+                            {% else %}
+                            <p>机构名称:{{ item.orgnization_name }}</p>
+                            <p>机构代码:{{ item.orgnization_code }}</p>
+                            {% if item.orgnization_certificate1 %}
+                            <p>机构资格证书1:<img src="{{ item.orgnization_certificate1.url }}" alt=""></p>
+                            {% else %}
+                            <p>机构资格证书1:-</p>
+                            {% endif %}
+                            {% if item.orgnization_certificate2 %}
+                            <p>机构资格证书2:<img src="{{ item.orgnization_certificate2.url }}" alt=""></p>
+                            {% else %}
+                            <p>机构资格证书2:-</p>
+                            {% endif %}
+                            <p>注册国家:{{ item.country }}</p>
+                            <p>联系人姓名:{{ item.first_name }} &nbsp; {{ item.last_name }} &nbsp; </p>
+                            <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
+                            {% endif %}
                         </td>
                         <td>
                             <p>
