@@ -9,132 +9,171 @@
 {% block content %}
 <section class="newtonadmin" class="section-list">
     <div class="container">
-        <div class="raw table-responsive content">
-            <table class="table">
-                <caption class="text-center">审核身份</caption>
-                <thead>
-                    <tr>
-                        <th>姓名</th>
-                        <th>介绍</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            {% if item.kyc_type == 1 %}
-                            <p>姓名 : {{ item.first_name }} &nbsp; {{ item.last_name }}</p>
-                            <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
-                            <p>国籍:{{ item.country }}</p>
-                            <p>城市:{{ item.city }}</p>
-                            <p>地址: </p><p> {{ item.location }}</p>
-                            <p>证件类型:{{ item.id_type }}</p>
-                            {% if item.id_card %}
-                            <p>证件照片:<img src="{{ item.id_card.url }}" alt=""></p>
-                            {% endif %}
-                            <p>证件号码:{{ item.id_number }}</p>
-                            <p>自我介绍: </p><p> {{ item.personal_profile|default:"-" }}</p>
-                            {% if item.personal_profile_attachment %}
-                            <p>自我介绍附件:<img src="{{ item.personal_profile_attachment.url }}" alt=""></p>
-                            {% else %}
-                            <p>自我介绍附件:－</p>
-                            {% endif %}
-                            <p>wechat:{{ item.wechat|default:"-" }}</p>
-                            <p>telegram:{{ item.telegram|default:"-" }}</p>
-                            <p>facebook:{{ item.facebook|default:"-" }}</p>
-                            <p>twitter:{{ item.twitter|default:"-" }}</p>
-                            <p>其他社交帐号:{{ item.other_social_account|default:"-" }}</p>
-                            <p>参加社区:{{ item.your_community }}</p>
-                            {% if item.your_community_screenshots1 %}
-                            <p>社群截图1:<img src="{{ item.your_community_screenshots1.url }}" alt=""></p>
-                            {% else %}
-                            <p>社群截图1:－</p>
-                            {% endif %}
-                            {% if item.your_community_screenshots2 %}
-                            <p>社群截图2:<img src="{{ item.your_community_screenshots2.url }}" alt=""></p>
-                            {% else %}
-                            <p>社群截图2:－</p>
-                            {% endif %}
-                            {% if item.your_community_screenshots3 %}
-                            <p>社群截图3:<img src="{{ item.your_community_screenshots3.url }}" alt=""></p>
-                            {% else %}
-                            <p>社群截图3:－</p>
-                            {% endif %}
-                            <p>对牛顿的理解: </p><p> {{ item.what_is_newton|default:"-" }}</p>
-                            <p>为牛顿做过什么: </p><p> {{ item.done_for_newton|default:"-" }}</p>
-                            {% if item.done_for_newton_attachment %}
-                            <p>为牛顿做过什么附件:<img src="{{ item.done_for_newton_attachment.url }}" alt=""></p>
-                            {% else %}
-                            <p>为牛顿做过什么附件:－</p>
-                            {% endif %}
-                            <p>准备为牛顿做什么: </p><p> {{ item.do_for_newton|default:"-" }}</p>
-                            <p>是否成为节点:{{ item.is_establish_node|default:"-" }}</p>
-                            <p>哪种节点:{{ item.which_node_establish|default:"-" }}</p>
-                            <p>节点计划: </p><p> {{ item.establish_node_plan|default:"-" }}</p>
-                            <p>紧急联系人姓名:{{ item.emergency_contact_first_name }} + {{ item.emergency_contact_last_name }}</p>
-                            <p>紧急联系人电话:{{ item.emergency_contact_cellphone }}</p>
-                            <p>紧急联系人国籍:{{ item.emergency_country }}</p>
-                            <p>紧急联系人城市:{{ item.emergency_city }}</p>
-                            <p>紧急联系人地址: </p><p> {{ item.emergency_location }}</p>
-                            <p>与紧急联系人关系:{{ item.emergency_relationship }}</p>
-                            <p>申请时间:{{ item.updated_at|date:"Y-m-d H:i:s"}}</p>
-                            {% else %}
-                            <p>机构名称:{{ item.orgnization_name }}</p>
-                            <p>机构代码:{{ item.orgnization_code }}</p>
-                            {% if item.orgnization_certificate1 %}
-                            <p>机构资格证书1:<img src="{{ item.orgnization_certificate1.url }}" alt=""></p>
-                            {% else %}
-                            <p>机构资格证书1:-</p>
-                            {% endif %}
-                            {% if item.orgnization_certificate2 %}
-                            <p>机构资格证书2:<img src="{{ item.orgnization_certificate2.url }}" alt=""></p>
-                            {% else %}
-                            <p>机构资格证书2:-</p>
-                            {% endif %}
-                            <p>注册国家:{{ item.country }}</p>
-                            <p>联系人姓名:{{ item.first_name }} &nbsp; {{ item.last_name }} &nbsp; </p>
-                            <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
-                            <p>机构介绍: </p><p> {{ item.personal_profile|default:"-" }}</p>
-                            {% if item.personal_profile_attachment %}
-                            <p>机构介绍附件:<img src="{{ item.personal_profile_attachment.url }}" alt=""></p>
-                            {% else %}
-                            <p>机构介绍附件:-</p>
-                            {% endif %}
-                            <p>机构微信公众号名称:{{ item.wechat_platform_name|default:"-" }}</p>
-                            <p>facebook:{{ item.facebook|default:"-" }}</p>
-                            <p>twitter:{{ item.twitter|default:"-" }}</p>
-                            <p>其他社交帐号:{{ item.other_social_account|default:"-" }}</p>
-                            <p>对牛顿的理解: </p><p> {{ item.what_is_newton|default:"-" }}</p>
-                            <p>为牛顿做过什么: </p><p> {{ item.done_for_newton|default:"-" }}</p>
-                            {% if item.done_for_newton_attachment %}
-                            <p>为牛顿做过什么附件:<img src="{{ item.done_for_newton_attachment.url }}" alt=""></p>
-                            {% else %}
-                            <p>为牛顿做过什么附件:－</p>
-                            {% endif %}
-                            <p>准备为牛顿做什么: </p><p> {{ item.do_for_newton|default:"-" }}</p>
-                            <p>是否成为节点:{{ item.is_establish_node|default:"-" }}</p>
-                            <p>哪种节点:{{ item.which_node_establish|default:"-" }}</p>
-                            <p>节点计划: </p><p> {{ item.establish_node_plan|default:"-" }}</p>
-                            {% endif %}
-                        </td>
-                    </tr>
-                    
-                </tbody>
-            </table>
+        <h3>身份详情</h3>
+        <div class="raw">
+            
+            {% if item.kyc_type == 1 %}
+            <p>
+                <label>姓名 :</label> {{ item.first_name }} &nbsp; {{ item.last_name }}
+            </p>
+            <p>
+                <label>电话: </label>+{{ item.country_code }} {{ item.cellphone }}
+            </p>
+            <p>
+                <label>国籍:</label>{{ item.country }}
+            </p>
+            <p>
+                <label>城市:</label>{{ item.city }}
+            </p>
+            <p>
+                <label>地址:</label> {{ item.location }}
+            </p>
+            <p>
+                <label>证件类型:</label>{{ item.id_type }}
+            </p>
+            {% if item.id_card %}
+            <p>
+                <label>证件照片:</label>
+                <img src="{{ item.id_card.url }}" alt="" style="width:200px;" />
+            </p>
+            {% endif %}
+            <p>
+                <label>证件号码:</label>{{ item.id_number }}
+            </p>
+            <p><label>自我介绍:</label> </p>
+            <p> {{ item.personal_profile|default:"-" }}</p>
+
+            {% if item.personal_profile_attachment %}
+            <p>
+                <label>自我介绍附件:</label>
+                <img src="{{ item.personal_profile_attachment.url }}" alt="" style="width:200px;"/>
+            </p>
+            {% else %}
+            <p><label>自我介绍附件:</label>－</p>
+            {% endif %}
+            <p>
+                <label>wechat:</label>{{ item.wechat|default:"-" }}
+            </p>
+            <p>
+                <label>telegram:</label>{{ item.telegram|default:"-" }}
+            </p>
+            <p>
+                <label>facebook:</label>{{ item.facebook|default:"-" }}
+            </p>
+            <p>
+                <label>twitter:</label>{{ item.twitter|default:"-" }}
+            </p>
+            <p>
+                <label>其他社交帐号:</label>{{ item.other_social_account|default:"-" }}
+            </p>
+            <p>
+                <label>参加社区:</label>{{ item.your_community }}
+            </p>
+            {% if item.your_community_screenshots1 %}
+            <p>
+                <label>社群截图1:</label>
+                <img src="{{ item.your_community_screenshots1.url }}" alt="" style="width:200px"/>
+            </p>
+            {% else %}
+            <p>
+                <label>社群截图1:</label>－
+            </p>
+            {% endif %}
+            
+            {% if item.your_community_screenshots2 %}
+            <p>
+                <label>社群截图2:</label><img src="{{ item.your_community_screenshots2.url }}" alt="" style="width:200px;"/>
+            </p>
+            {% else %}
+            <p>
+                <label>社群截图2:</label>－
+            </p>
+            {% endif %}
+            {% if item.your_community_screenshots3 %}
+            <p>
+                <label>社群截图3:</label><img src="{{ item.your_community_screenshots3.url }}" alt="" style="width:200px;"/>
+            </p>
+            {% else %}
+            <p><label>社群截图3:</label>－</p>
+            {% endif %}
+            <p><label>对牛顿的理解:</label> </p>
+            <p> {{ item.what_is_newton|default:"-" }}</p>
+            <p><label>为牛顿做过什么:</label> </p>
+            <p> {{ item.done_for_newton|default:"-" }}</p>
+            {% if item.done_for_newton_attachment %}
+            <p>
+                <label>为牛顿做过什么附件:</label>
+                <img src="{{ item.done_for_newton_attachment.url }}" alt="" style="width:200px;"/>
+            </p>
+            {% else %}
+            <p><label>为牛顿做过什么附件:</label>－</p>
+            {% endif %}
+            <p><label>准备为牛顿做什么:</label> </p>
+            <p> {{ item.do_for_newton|default:"-" }}</p>
+            <p><label>是否成为节点:</label>{{ item.is_establish_node|default:"-" }}</p>
+            <p><label>哪种节点:</label>{{ item.which_node_establish|default:"-" }}</p>
+            <p><label>节点计划:</label> </p><p> {{ item.establish_node_plan|default:"-" }}</p>
+            <p><label>紧急联系人姓名:</label>{{ item.emergency_contact_first_name }} + {{ item.emergency_contact_last_name }}</p>
+            <p><label>紧急联系人电话:</label>{{ item.emergency_contact_cellphone }}</p>
+            <p><label>紧急联系人国籍:</label>{{ item.emergency_country }}</p>
+            <p><label>紧急联系人城市:</label>{{ item.emergency_city }}</p>
+            <p><label>紧急联系人地址:</label> </p><p> {{ item.emergency_location }}</p>
+            <p><label>与紧急联系人关系:</label>{{ item.emergency_relationship }}</p>
+            <p><label>申请时间:</label>{{ item.updated_at|date:"Y-m-d H:i:s"}}</p>
+            {% else %}
+            <p><label>机构名称:</label>{{ item.orgnization_name }}</p>
+            <p><label>机构代码:</label>{{ item.orgnization_code }}</p>
+            {% if item.orgnization_certificate1 %}
+            <p><label>机构资格证书1:</label><img src="{{ item.orgnization_certificate1.url }}" alt="" style="width:200px;"/></p>
+            {% else %}
+            <p><label>机构资格证书1:</label>-</p>
+            {% endif %}
+            {% if item.orgnization_certificate2 %}
+            <p><label>机构资格证书2:</label><img src="{{ item.orgnization_certificate2.url }}" alt="" style="width:200px;" /></p>
+            {% else %}
+            <p><label>机构资格证书2:</label>-</p>
+            {% endif %}
+            <p>注册国家:{{ item.country }}</p>
+            <p>联系人姓名:{{ item.first_name }} &nbsp; {{ item.last_name }} &nbsp; </p>
+            <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
+            <p>机构介绍: </p><p> {{ item.personal_profile|default:"-" }}</p>
+            {% if item.personal_profile_attachment %}
+            <p>机构介绍附件:<img src="{{ item.personal_profile_attachment.url }}" alt=""></p>
+            {% else %}
+            <p>机构介绍附件:-</p>
+            {% endif %}
+            <p>机构微信公众号名称:{{ item.wechat_platform_name|default:"-" }}</p>
+            <p>facebook:{{ item.facebook|default:"-" }}</p>
+            <p>twitter:{{ item.twitter|default:"-" }}</p>
+            <p>其他社交帐号:{{ item.other_social_account|default:"-" }}</p>
+            <p>对牛顿的理解: </p><p> {{ item.what_is_newton|default:"-" }}</p>
+            <p>为牛顿做过什么: </p><p> {{ item.done_for_newton|default:"-" }}</p>
+            {% if item.done_for_newton_attachment %}
+            <p>为牛顿做过什么附件:<img src="{{ item.done_for_newton_attachment.url }}" alt=""></p>
+            {% else %}
+            <p>为牛顿做过什么附件:－</p>
+            {% endif %}
+            <p>准备为牛顿做什么: </p><p> {{ item.do_for_newton|default:"-" }}</p>
+            <p>是否成为节点:{{ item.is_establish_node|default:"-" }}</p>
+            <p>哪种节点:{{ item.which_node_establish|default:"-" }}</p>
+            <p>节点计划: </p><p> {{ item.establish_node_plan|default:"-" }}</p>
+            {% endif %}
+            
             {% if item.status == codes.KYC_STATUS_CANDIDATE_VALUE %}
             <p>
-                <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
+                <a href="#" class="btn btn-danger" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
             </p>
             {% endif %}
 
             {% if is_paginated %}
             <div class="pagination-simple">
-            {% if page_obj.has_previous %}
+                {% if page_obj.has_previous %}
                 <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
-            {% endif %}
-            <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
-            {% if page_obj.has_next %}
+                {% endif %}
+                <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
                 <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
-            {% endif %}
+                {% endif %}
             </div>
             {% endif %}
 
@@ -143,36 +182,36 @@
 </section>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="id-modal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">ID审核</h4>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" action="#" id="id_form">
-                        <p>
-                            <label>评分</label>
-                            <select name="level" id="level">
-                                {% for level in item.level_choices %}
-                                <option value="{{ level }}">{{ level }}</option>
-                                {% endfor %}
-                            </select>
-                        </p>
-                        <p>
-                            <label>注释</label>
-                            <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
-                        </p>
-                        <p>
-                            <button class="btn btn-default" type="button" id="pass_button">通过</button>
-                            <button class="btn btn-default" type="button" id="reject_button">驳回</button>
-                            <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
-                        </p>
-                    </form>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">ID审核</h4>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="#" id="id_form">
+                    <p>
+                        <label>评分</label>
+                        <select name="level" id="level">
+                            {% for level in item.level_choices %}
+                            <option value="{{ level }}">{{ level }}</option>
+                            {% endfor %}
+                        </select>
+                    </p>
+                    <p>
+                        <label>注释</label>
+                        <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
+                    </p>
+                    <p>
+                        <button class="btn btn-default" type="button" id="pass_button">通过</button>
+                        <button class="btn btn-default" type="button" id="reject_button">驳回</button>
+                        <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
+                    </p>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 {% endblock %}

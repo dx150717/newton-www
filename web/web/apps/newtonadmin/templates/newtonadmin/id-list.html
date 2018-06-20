@@ -80,9 +80,6 @@
                                 <img src="{{ item.id_card.url }}" style="width: 300px"/>
                                 {% endif %}
                             </p>
-                            <p>
-                                <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-default" target="_blank">详情</a>
-                            </p>
                         </td>
                         
                         <td>
@@ -93,9 +90,12 @@
                         <td>
                             {% if is_idlist %}
                             <p>
-                                <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
+                                <a href="#" class="btn btn-danger" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
                             </p>
                             {% endif %}
+                            <p>
+                                <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-primary" target="_blank">详情</a>
+                            </p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -145,7 +145,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label"></label>
                         <div class="col-sm-10">
-                            <button class="btn btn-default" type="button" id="pass_button">通过</button>
+                            <button class="btn btn-danger" type="button" id="pass_button">通过</button>
                             <button class="btn btn-default" type="button" id="reject_button">驳回</button>
                             <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
                         </div>
