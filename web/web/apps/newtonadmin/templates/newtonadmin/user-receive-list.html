@@ -7,11 +7,11 @@
 {% endblock %}
 
 {% block content %}
-<section id="faq" class="section-list">
-    <div class="container" style="width:100%;">
-        <div class="raw table-responsive content">
+<section class="section-list newtonadmin">
+    <div class="container">
+        <h3>用户打币列表</h3>
+        <div class="raw table-responsive">
             <table class="table">
-                <caption class="text-center">用户打币列表<span class=""><span></caption>
                 <thead>
                     <tr>
                         <th><input id="all-check-receive-coin" name="all-check-receive-coin" type="checkbox"/>&nbsp;&nbsp;全选</th>
@@ -52,17 +52,6 @@
                          </td>
                     </tr>
                     {% endfor %}
-                    <tr>
-                        <td><button class="form-button" onclick="sendEmailForReceivedCoin();">批量发送</button></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </tbody>
             </table>
             <div class="form-container">
@@ -77,6 +66,9 @@
                 {% endif %}
                 </div>
                 {% endif %}
+            </div>
+            <div class="well">
+                <button class="btn btn-primary" onclick="sendEmailForReceivedCoin();">批量发送</button>
             </div>
         </div>
     </div>
