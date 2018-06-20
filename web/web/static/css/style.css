@@ -1359,3 +1359,23 @@ input[name="expect_btc"], input[name="expect_ela"]{
 .section-list .block-tip{
     margin: 0;
 }
+
+/*
+* security
+*/
+.security-list {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+.security-list h2 {text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+}
+.security-list p {text-align: left;
+    font-size: 16px;
+    color: #888;
+    margin: 15px 0;
+    line-height: 1.8em;
+}
