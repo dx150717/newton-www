@@ -61,8 +61,12 @@
                     </div>
                     {% endif %}
 
-                    <div class="well">
+                    <div class="well text-center">
+                        {% if not items %}
+                        还没有数据
+                        {% else %}
                         <button class="btn btn-primary" onclick="sendSelectedEmailForInvite();">批量邀请</button>
+                        {% endif %}
                     </div>
 
                 </div>  

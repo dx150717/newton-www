@@ -67,9 +67,15 @@
                 </div>
                 {% endif %}
             </div>
+            {% if not items %}
+            <div class="well text-center">
+                还没有数据
+            </div>
+            {% else %}
             <div class="well">
                 <button class="btn btn-primary" onclick="sendEmailForReceivedCoin();">批量发送</button>
             </div>
+            {% endif %}
         </div>
     </div>
 </section>

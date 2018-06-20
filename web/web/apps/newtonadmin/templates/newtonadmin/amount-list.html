@@ -93,12 +93,19 @@
                 {% endif %}
 
                 {% if is_confirm %}
+                {% if items %}
                 <div class="well">
                     <button class="btn btn-primary" onclick="preConfirmSelectedUser({{ phase_id }});">批量确认额度</button>
                 </div>
-
+                {% endif %}
                 {% endif %}
                 {% if is_completed %}
+                {% endif %}
+
+                {% if not items %}
+                <div class="well text-center">
+                        还没有数据
+                </div>
                 {% endif %}
             </div>
         </div>

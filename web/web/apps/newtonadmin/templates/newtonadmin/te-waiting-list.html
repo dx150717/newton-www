@@ -55,8 +55,12 @@
                     </div>
                     {% endif %}
 
-                    <div class="well">
+                    <div class="well text-center">
+                        {% if not items %}
+                        还没有数据
+                        {% else %}
                         <button class="btn btn-danger" onclick="preInviteSelectedUser();">批量操作</button>
+                        {% endif %}
                     </div>
 
                 </div>
