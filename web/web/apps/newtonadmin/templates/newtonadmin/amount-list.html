@@ -11,93 +11,98 @@
 {% block content %}
 <section id="newtonadmin" class="section-list">
     <div class="container">
-        <div class="raw table-responsive content">
-            {% show_amount_summary %}
-            {% include "newtonadmin/include-filter.html" %}
-            <table class="table">
-                <caption class="text-center">确定额度</caption>
-                <thead>
-                    <tr>
-                        {% if is_confirm %}
-                        <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
-                        {% endif %}
-                        <th>姓名</th>
-                        {% if is_confirm %}
-                        <th>已分配额度</th>
-                        {% else %}
-                        <th>介绍</th>
-                        {% endif %}
-                        <th>期望额度</th>
-                        {% if is_completed %}
-                        <th>分配额度</th>
-                        {% endif %}
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for item in items %}
-                    <tr>
-                        {% if is_confirm %}
-                        <td>
-                            <p><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择</p>
-                        </td>
-                        {% endif %}
-                        <td>
-                            <p>{{ item.kycinfo.first_name }} &nbsp; {{ item.kycinfo.last_name }}</p>
-                            <p>{{ item.user.email }}</p>
-                        </td>
-                        <td>
-                            {% if is_confirm %}
-                            <p>{{ item.assign_ela }} ELA</p>
-                            <p>{{ item.assign_btc }} BTC</p>
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if item.expect_ela %}
-                            <p>{{ item.expect_ela }} ELA</p>
-                            {% endif %}
-                            {% if item.expect_btc %}
-                            <p>{{ item.expect_btc }} BTC</p>
-                            {% endif %}
-                        </td>
-                        {% if is_completed %}
-                        <td>
-                            <p>{{ item.assign_ela }} ELA</p>
-                            <p>{{ item.assign_btc }} BTC</p>
-                        </td>                        
-                        {% endif %}
-                        <td>
-                            {% if not is_completed %}
-                            <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">分配额度</a>
-                            {% endif %}
-                        </td>
-                    </tr>
-                    {% endfor %}
-                    <tr>
-                        {% if is_confirm %}
-                        <td><button class="form-button" onclick="preConfirmSelectedUser({{ phase_id }});">确认额度</button></td>
-                        {% endif %}
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        {% if is_completed %}
-                        <td></td>
-                        {% endif %}
-                    </tr>
-                </tbody>
-            </table>    
-            {% if is_paginated %}
-            <div class="pagination-simple">
-            {% if page_obj.has_previous %}
-                <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
-            {% endif %}
-            <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
-            {% endif %}
+        <h3>确定额度</h3>
+        <div class="row">
+            <div class="col-md-2">
+                {% show_amount_summary %}
+                {% include "newtonadmin/include-filter.html" %}
             </div>
-            {% endif %}
+            <div class="col-md-10">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            {% if is_confirm %}
+                            <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
+                            {% endif %}
+                            <th>姓名</th>
+                            {% if is_confirm %}
+                            <th>已分配额度</th>
+                            {% else %}
+                            <th>介绍</th>
+                            {% endif %}
+                            <th>期望额度</th>
+                            {% if is_completed %}
+                            <th>分配额度</th>
+                            {% endif %}
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in items %}
+                        <tr>
+                            {% if is_confirm %}
+                            <td>
+                                <p><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择</p>
+                            </td>
+                            {% endif %}
+                            <td>
+                                <p>{{ item.kycinfo.first_name }} &nbsp; {{ item.kycinfo.last_name }}</p>
+                                <p>{{ item.user.email }}</p>
+                            </td>
+                            <td>
+                                {% if is_confirm %}
+                                <p>{{ item.assign_ela }} ELA</p>
+                                <p>{{ item.assign_btc }} BTC</p>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if item.expect_ela %}
+                                <p>{{ item.expect_ela }} ELA</p>
+                                {% endif %}
+                                {% if item.expect_btc %}
+                                <p>{{ item.expect_btc }} BTC</p>
+                                {% endif %}
+                            </td>
+                            {% if is_completed %}
+                            <td>
+                                <p>{{ item.assign_ela }} ELA</p>
+                                <p>{{ item.assign_btc }} BTC</p>
+                            </td>                        
+                            {% endif %}
+                            <td>
+                                {% if not is_completed %}
+                                <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">分配额度</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                            {% if is_confirm %}
+                            <td><button class="form-button" onclick="preConfirmSelectedUser({{ phase_id }});">确认额度</button></td>
+                            {% endif %}
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            {% if is_completed %}
+                            <td></td>
+                            {% endif %}
+                        </tr>
+                    </tbody>
+                </table>    
+                {% if is_paginated %}
+                <div class="pagination-simple">
+                    {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+                    {% endif %}
+                    <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                    {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+            </div>
         </div>
     </div>
 </section>
@@ -125,7 +130,7 @@
                     <p>
                         <input type="hidden" id="user_id" name="user_id" value=""/>
                         <input type="hidden" id="phase_id" name="phase_id" value="">
-                        <button class="btn btn-default" type="button" id="confirm_button">确定</button>
+                            <button class="btn btn-default" type="button" id="confirm_button">确定</button>
                     </p>
                 </form>
             </div>
