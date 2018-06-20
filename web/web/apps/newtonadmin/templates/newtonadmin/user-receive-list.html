@@ -52,17 +52,6 @@
                          </td>
                     </tr>
                     {% endfor %}
-                    <tr>
-                        <td><button class="form-button" onclick="sendEmailForReceivedCoin();">批量发送</button></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </tbody>
             </table>
             <div class="form-container">
@@ -77,6 +66,9 @@
                 {% endif %}
                 </div>
                 {% endif %}
+            </div>
+            <div class="well">
+                <button class="btn btn-primary" onclick="sendEmailForReceivedCoin();">批量发送</button>
             </div>
         </div>
     </div>
