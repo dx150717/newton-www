@@ -10,7 +10,7 @@
                             {% if kycinfo %}
                                 {% if kycinfo.status == 1 %}
                                 <div class="item">
-                                    <p class="text-center" style="padding-top: 30px">
+                                    <p class="text-center" style="padding-top: 30px; color:#333;">
                                     {% trans "Submit KYC information success! We will send you an email of reviewing result, Please check out." %}
                                 </p>
                                 </div>
@@ -18,7 +18,7 @@
                                 {% if kycaudit %}
                                     {% if kycinfo.status == 2 %}
                                     <div class="item">
-                                        <p class="text-center">
+                                        <p class="text-center" style="margin-top: 27px; color: #333;">
                                             {% trans "You've passed Newton KYC review." %}
                                         </p>
                                     </div>
@@ -54,27 +54,27 @@
                 {% if kycinfo.status == 2 %}
                 {% if kycinfo.kyc_type == 1 %}
                 <div class="item">
-                    <div class="col-sm-8">
+                    <div class="col-sm-12">
                         <div class="panel panel-default">
-                            <div class="panel-heading">{% trans "Basic Information" %}</div>
+                            <div class="panel-heading" style="padding-top: 0">{% trans "Basic Information" %}</div>
                             <div class="panel-body">
-                                {% include "form_content.html" with form=base_form %}
+                                {% include "user/form_content.html" with form=base_form %}
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">{% trans "Self Introduction" %}</div>
                             <div class="panel-body">
-                                {% include "form_content.html" with form=profile_form %}
+                                {% include "user/form_content.html" with form=profile_form %}
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">{% trans "How to Contribute" %}</div>
                             <div class="panel-body">
-                                {% include "form_content.html" with form=contribute_form %}
+                                {% include "user/form_content.html" with form=contribute_form %}
                                 {% if data.is_establish_node %}
                                 <div class="form-group">
                                     <div class="row">
-                                        <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Do you want to establish a Newton node ?" %}</label></p>
+                                        <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Do you want to <br/>establish a Newton node ?" %}</label></p>
                                         <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
                                             <div class="value">{{ data.is_establish_node }}</div>
                                         </div>
@@ -106,34 +106,34 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">{% trans "Emergency Information" %}</div>
                             <div class="panel-body">
-                                {% include "form_content.html" with form=emergency_form %}
+                                {% include "user/form_content.html" with form=emergency_form %}
                             </div>
                         </div>
                     </div>
                 </div>
                 {% else %}
                 <div class="item">
-                        <div class="col-sm-8">
+                        <div class="col-sm-12">
                             <div class="panel panel-default">
-                                <div class="panel-heading">{% trans "Basic Information" %}</div>
+                                <div class="panel-heading" style="padding-top: 0">{% trans "Basic Information" %}</div>
                                 <div class="panel-body">
-                                    {% include "form_content.html" with form=organization_base_form %}
+                                    {% include "user/form_content.html" with form=organization_base_form %}
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">{% trans "Organization Introduction" %}</div>
                                 <div class="panel-body">
-                                    {% include "form_content.html" with form=organization_profile_form %}
+                                    {% include "user/form_content.html" with form=organization_profile_form %}
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">{% trans "How to Contribute" %}</div>
                                 <div class="panel-body">
-                                    {% include "form_content.html" with form=contribute_form %}
+                                    {% include "user/form_content.html" with form=contribute_form %}
                                     {% if data.is_establish_node %}
                                     <div class="form-group">
                                         <div class="row">
-                                            <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Do you want to establish a Newton node ?" %}</label></p>
+                                            <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Do you want to <br/>establish a Newton node ?" %}</label></p>
                                             <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
                                                 <div class="value">{{ data.is_establish_node }}</div>
                                             </div>

@@ -1079,7 +1079,8 @@ canvas {display: block; vertical-align: top;}
 #kyc .kyc-btn{padding-top: 40px;}
 #kyc .kyc-btn .form-button{line-height: unset;}
 #kyc .kyc-btn button:disabled{background-color: #939393;}
-#kyc .item,#basic-info .item {padding:12px;}
+#kyc .item {padding: 12px; padding-top: 18px;}
+#basic-info .item {padding:12px;}
 #kyc .item label,#basic-info .item label{font-size: 18px; color: #282929;}
 #kyc .item .value, #basic-info .item .value{font-size: 18px;}
 #kyc .item-title .title, #basic-info .item-title .title {padding: 10px; font-size: 24px; color: #282929}
@@ -1248,11 +1249,14 @@ canvas {display: block; vertical-align: top;}
 
 }
 
-#user .panel-heading{font-size: 16px; font-weight: 500;}
+#user .panel-heading{font-size: 18px; font-weight: 500; padding-bottom: 18px; padding-top: 0;}
+#user .panel-body{padding-bottom: 10px;}
 #user .kycinfo_title{margin: 0; text-align: right;}
 #user .kycinfo_title label{color: #888; font-weight: unset; font-size: 14px;}
 #user .kycinfo_content{margin: 0; text-align: left;}
 #user .kycinfo_content .value{color: #282829; font-size: 14px;}
+#user label{margin-bottom: 0}
+#user .form-group{margin-bottom: 11px;}
 @media (max-width:991px){
     #user .kycinfo_title{text-align: left; padding-left: 15px;}
 }
