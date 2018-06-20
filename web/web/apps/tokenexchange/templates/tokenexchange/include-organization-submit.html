@@ -203,11 +203,13 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
-                                        <option value="1" selected="selected">{% trans "Full Node" %}</option>
+                                        <option value="" selected="selected">{% trans "Select Node" %}</option>
+                                        <option value="1">{% trans "Full Node" %}</option>
                                         <option value="2">{% trans "Media Node" %}</option>
                                         <option value="3">{% trans "Technology Node" %}</option>
                                         <option value="4">{% trans "Operation Node" %}</option>
                                     </select>
+                                    <span class="small">{% trans "注：媒体节点是媒体渠道帮助牛顿进行宣传的节点；技术节点是在牛顿生态上开发各类DAPP或其他技术的节点；运营节点是帮助维护和发展牛顿社区的节点；全节点是集合上述两种及两种以上类型的节点。" %}
                                 </div>
                             </div>
                             <div id="id_how_node" class="form-group">

@@ -259,11 +259,13 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
-                                        <option value="1" selected="selected">{% trans "Full Node" %}</option>
+                                        <option value="" selected="selected">{% trans "Select Node" %}</option>
+                                        <option value="1">{% trans "Full Node" %}</option>
                                         <option value="2">{% trans "Media Node" %}</option>
                                         <option value="3">{% trans "Technology Node" %}</option>
                                         <option value="4">{% trans "Operation Node" %}</option>
                                     </select>
+                                    <span class="small">{% trans "注：媒体节点是媒体渠道帮助牛顿进行宣传的节点；技术节点是在牛顿生态上开发各类DAPP或其他技术的节点；运营节点是帮助维护和发展牛顿社区的节点；全节点是集合上述两种及两种以上类型的节点。" %}</span>
                                 </div>
                             </div>
                             <div id="how-node" class="form-group">
@@ -285,21 +287,19 @@
                         <h3 class="panel-title text-center">{% trans "Emergency Information" %}</h3>
                     </div>
                     <div class="panel-body">
-                    <div class="form-group">
-                        <div class="form-group emergency-name col-sm-12"> 
-                            <span>
-                                <label for="id_emergency_contact_first_name" class="control-label col-sm-3">
-                                    {% trans "First Name" %}<span class="red-color">(*)</span>
-                                </label>
-                                <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
-                            </span> 
-                            <span class="last-name">
-                                <label for="id_emergency_contact_last_name" class="control-label">
-                                    {% trans "Last Name" %}<span class="red-color">(*)</span>
-                                </label>
-                                <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
-                            </span>
-                        </div>
+                    <div class="form-group emergency-name col-sm-12"> 
+                        <span>
+                            <label for="id_emergency_contact_first_name" class="control-label col-sm-3">
+                                {% trans "First Name" %}<span class="red-color">(*)</span>
+                            </label>
+                            <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
+                        </span> 
+                        <span class="last-name">
+                            <label for="id_emergency_contact_last_name" class="control-label">
+                                {% trans "Last Name" %}<span class="red-color">(*)</span>
+                            </label>
+                            <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
+                        </span>
                     </div>
                     <div class="form-group">
                         <label for="id_cellphone_of_emergency_contact" class="control-label col-sm-3">
