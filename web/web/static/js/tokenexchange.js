@@ -85,10 +85,10 @@ $("#fill-amount").submit(function(event){
 });
 
 function openNode(){
-    $("#which-node").removeClass('hide');
-    $("#how-node").removeClass('hide');
+    $("#id_which_node").removeClass('hide');
+    $("#id_how_node").removeClass('hide');
 }
 function closeNode(){
-    $("#which-node").addClass('hide');
-    $("#how-node").addClass('hide');
+    $("#id_which_node").addClass('hide');
+    $("#id_how_node").addClass('hide');
 }
