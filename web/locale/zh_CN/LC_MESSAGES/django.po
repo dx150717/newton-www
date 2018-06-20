@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 12:40+0000\n"
+"POT-Creation-Date: 2018-06-20 13:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1234,7 +1234,7 @@ msgstr "您期望的 ELA 额度"
 msgid "Newton notification: Received your KYC information"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
 
-#: web/apps/tokenexchange/views.py:73
+#: web/apps/tokenexchange/views.py:72
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
@@ -1327,12 +1327,11 @@ msgstr "证件照片"
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:130
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:196
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:235
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:52
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:108
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:179
 #: web/templates/form.html:42
 msgid "Only jpeg, jpg and png file within 5M"
-msgstr "只能上传 jpeg, jpg 和 png 格式，大小在 5M 之内"
+msgstr "支持 jpeg, jpg 和 png 格式，大小在 5M 之内"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:88
 #: web/templates/form.html:45
@@ -1411,6 +1410,10 @@ msgstr ""
 #: web/apps/user/templates/user/include-kyc-section.html:107
 msgid "Emergency Information"
 msgstr "紧急联系人信息"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:52
+msgid "Upload at least one file, only jpeg, jpg and png file within 5M"
+msgstr "至少上传一个文件，支持 jpeg, jpg 和 png 格式，大小在 5M 之内"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:96
 msgid ""
