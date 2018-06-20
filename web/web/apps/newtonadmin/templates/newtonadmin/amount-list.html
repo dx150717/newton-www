@@ -14,8 +14,8 @@
         <h3>{% if is_confirm  %}已填写分配列表{% else %}{% if is_completed %}已确认分配列表{% else %}待分配列表{% endif %}{% endif %}</h3>
         <div class="row">
             <div class="col-md-3">
-                {% show_amount_summary %}
                 {% include "newtonadmin/include-filter.html" %}
+                {% show_amount_summary %}
             </div>
             <div class="col-md-9">
                 <table class="table">
