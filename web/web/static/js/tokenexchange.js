@@ -81,7 +81,7 @@ $("#id_individual_form").submit(function(event){
     },
 
     errorPlacement: function(error,element) {
-        error.appendTo(element.parent());
+        //error.appendTo(element.parent());
     }
 });
 
