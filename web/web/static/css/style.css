@@ -1034,6 +1034,9 @@ canvas {display: block; vertical-align: top;}
 #user #token-exchange .item-content table>thead>tr>td{font-size: 18px;color: #282929;padding: 8px;}
 #user #token-exchange .item-content table>tbody>tr>td{font-size: 18px;color: #282929;padding: 8px;white-space: nowrap;}
 #user #token-exchange #timeline{padding-top: 60px;padding-bottom: 60px;}
+.user-info .value {
+    word-wrap: break-word;
+}
 .shadow-item{padding: 30px; border: solid 1px #f7f7f7; box-shadow: 2px 2px 20px 10px #f7f7f7; margin-top: 20px;}
 .shadow-item .container {width: 100%;}
 .shadow .contact-item .col-md-6{text-align: center;}
@@ -1383,3 +1386,5 @@ input[name="expect_btc"], input[name="expect_ela"]{
     margin: 15px 0;
     line-height: 1.8em;
 }
+
+/* kycinfo */
