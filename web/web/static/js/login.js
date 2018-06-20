@@ -50,6 +50,8 @@ $('#id_login_form').submit(function(event){
               if (isSuccess(response)) {
                 location.href = '/user/';
               } else {
+                $('#id_captcha_image').click();
+                $("#id_captcha_code").val('')
                 showFail(getErrorMessage(response));
               }
             },
