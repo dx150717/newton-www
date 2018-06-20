@@ -11,6 +11,7 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.forms.forms import NON_FIELD_ERRORS
+from django.utils import translation
 
 import decorators
 from utils import http
@@ -134,6 +135,10 @@ def post_kyc_information(request, kyc_type):
 
             return redirect('/tokenexchange/wait-audit/')
         else:
+            is_chinese = False
+            language_code = translation.get_language()
+            if language_code.startswith('zh'):
+                is_chinese = True
             instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             base_form = tokenexchange_forms.KYCBaseForm(instance=instance)
             profile_form = tokenexchange_forms.KYCProfileForm(instance=instance)
