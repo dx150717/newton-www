@@ -122,27 +122,34 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">ID审核</h4>
+                <h4 class="modal-title">KYC审核</h4>
             </div>
             <div class="modal-body">
-                <form method="POST" action="#" id="id_form">
-                    <p>
-                        <label>评分</label>
-                        <select name="level" id="level">
-                            {% for level in level_choices %}
-                            <option value="{{ level }}">{{ level }}</option>
-                            {% endfor %}
-                        </select>
-                    </p>
-                    <p>
-                        <label>注释</label>
-                        <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
-                    </p>
-                    <p>
-                        <button class="btn btn-default" type="button" id="pass_button">通过</button>
-                        <button class="btn btn-default" type="button" id="reject_button">驳回</button>
-                        <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
-                    </p>
+                <form method="POST" action="#" id="id_form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">评分</label>
+                        <div class="col-sm-10">
+                            <select name="level" id="level">
+                                {% for level in level_choices %}
+                                <option value="{{ level }}">{{ level }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">注释</label>
+                        <div class="col-sm-10">
+                            <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <button class="btn btn-default" type="button" id="pass_button">通过</button>
+                            <button class="btn btn-default" type="button" id="reject_button">驳回</button>
+                            <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div><!-- /.modal-content -->
