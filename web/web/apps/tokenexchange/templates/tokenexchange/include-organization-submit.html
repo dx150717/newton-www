@@ -3,7 +3,7 @@
 <section class="section-list kyc">
     <div class="raw">
                 
-        <form class="form-horizontal" action="/tokenexchange/individual/post/" method="POST" enctype="multipart/form-data">
+        <form class="form-horizontal" action="/tokenexchange/organization/post/" method="POST" enctype="multipart/form-data">
             <div class="container form-container">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -30,16 +30,16 @@
                         <div class="panel-body">
                             <div class="form-group full-name col-sm-12"> 
                                 <span>
-                                    <label for="id_first_name" class="control-label col-sm-2 fullname-title">
-                                        {% trans "First Name" %}<span class="red-color">(*)</span>
+                                    <label for="id_orgnization_name" class="control-label col-sm-2 fullname-title">
+                                        {% trans "Organization Name" %}<span class="red-color">(*)</span>
                                     </label>
-                                    <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="First Name" type="text">
+                                    <input class="form-control" id="id_orgnization_name" maxlength="128" name="orgnization_name" placeholder="{% trans 'Organization Name' %}" type="text">
                                 </span> 
                                 <span class="last-name">
-                                    <label for="id_last_name" class="control-label">
-                                        {% trans "Last Name" %}<span class="red-color">(*)</span>
+                                    <label for="id_orgnization_code" class="control-label">
+                                        {% trans "Organization Code" %}<span class="red-color">(*)</span>
                                     </label>
-                                    <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="Last Name" type="text">
+                                    <input class="form-control" id="id_orgnization_code" maxlength="128" name="orgnization_code" placeholder="{%  trans'Organization Code' %}" type="text">
                                 </span>
                             </div>
                             <div class="form-group">
