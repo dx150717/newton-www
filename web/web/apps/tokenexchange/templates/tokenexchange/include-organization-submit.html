@@ -36,7 +36,7 @@
                                     <input class="form-control" id="id_orgnization_name" maxlength="128" name="orgnization_name" placeholder="{% trans 'Organization Name' %}" type="text">
                                 </span>
                                 <span class="last-name">
-                                    <label for="id_orgnization_code" class="control-label">
+                                    <label for="id_orgnization_code" class="control-label organization-code">
                                         {% trans "Organization Code" %}<span class="red-color">*</span>
                                     </label>
                                     <input class="form-control" id="id_orgnization_code" maxlength="128" name="orgnization_code" placeholder="{% trans 'Organization Code' %}" type="text">
@@ -73,8 +73,8 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <div class="form-inline">
-                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text"> 
-                                        <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text">
+                                        <input class="form-control area-code-input" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text"> 
+                                        <input class="form-control phone-number-input" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
                                 <label for="id_personal_profile_attachment" class="control-label col-sm-3 attachment-title">
                                     {% trans "Attachment" %}
                                 </label>
-                                <div class="col-sm-9">
+                                <div class="col-sm-9 attachment-div">
                                 <input class="form-control  select-file" id="id_personal_profile_attachment" name="personal_profile_attachment" placeholder="Attachment" type="file">
                                 <span class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</span>
                                 </div>
@@ -174,7 +174,7 @@
                                     <label for="id_done_for_newton_attachment" class="control-label col-sm-3 attachment-title">
                                         {% trans "Attachment" %}
                                     </label>
-                                    <div class="col-sm-9">
+                                    <div class="col-sm-9 attachment-div">
                                         <input class="form-control select-file" id="id_done_for_newton_attachment" name="done_for_newton_attachment" placeholder="Attachment" type="file">
                                         <span class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</span>
                                     </div>
@@ -209,7 +209,7 @@
                                         <option value="3">{% trans "Technology Node" %}</option>
                                         <option value="4">{% trans "Operation Node" %}</option>
                                     </select>
-                                    <span class="small">{% trans "注：媒体节点是媒体渠道帮助牛顿进行宣传的节点；技术节点是在牛顿生态上开发各类DAPP或其他技术的节点；运营节点是帮助维护和发展牛顿社区的节点；全节点是集合上述两种及两种以上类型的节点。" %}
+                                    <span class="small">{% trans "Note: Media node is the node where medias help broadcast Newton, technology node is the one where people develop various kind of DAPP or other technologies in Newton ecosystem, operation node is the one which helps maintain and develop Newton communities, and full node is the one which integrates functions of at least two aforementioned nodes." %}
                                 </div>
                             </div>
                             <div id="id_how_node" class="form-group">

@@ -19,12 +19,6 @@
 .kyc #id_cellphone_group_1, .kyc #id_cellphone_of_emergency_contact_1{width: 34%}
 .kyc #id_location, .kyc #id_emergency_location{width: 100%}
 .kyc #id_emergency_country, .kyc #id_country{width: 50%}
-@media (max-width:991px){
-    .kyc input[class="form-control"]{width: 100%}
-    .kyc #id_cellphone_group_0, .kyc #id_cellphone_of_emergency_contact_0{width: 100%; margin-bottom: 10px;}
-    .kyc #id_cellphone_group_1, .kyc #id_cellphone_of_emergency_contact_1{width: 100%}
-    .kyc #id_emergency_country, .kyc #id_country{width: 100%}
-}
 .kyc .form-container {
     max-width: 880pxs;
 }
@@ -107,6 +101,57 @@
 .kyc .contribute-title {
     padding-bottom: 0;
 }
-.kyc .contribute-tip{
+.kyc .contribute-tip {
     margin-bottom: 15px;
+}
+
+@media (max-width: 880px) {
+    .kyc .form-container {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .kyc .control-label{
+        width: 100%;
+    }
+    .kyc .fullname-title {
+        padding-left: 0; 
+    }
+    .kyc .full-name input {
+        margin-left: 0;
+        width: 100%;
+    }
+    .kyc .full-name .last-name {
+        margin-left: 0;
+    }
+    .kyc .last-name-label {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .kyc select {
+        max-width: unset;
+        width: 100%;
+    }
+    .kyc input.normal {
+        max-width: unset;
+    }
+    .kyc .area-code-input, .kyc .phone-number-input {
+        display: inline;
+    }
+    .kyc .attachment-div {
+        padding: 0;
+    }
+    .kyc .emergency-first-name {
+        padding-left: 0;
+    }
+    .kyc .emergency-name .last-name {
+        margin-left: 0;
+    }
+    .kyc .emergency-name input {
+        width: 100%;
+        margin-left: 0;
+    }
+    .kyc .organization-code {
+        margin-top: 20px;
+    }
 }
