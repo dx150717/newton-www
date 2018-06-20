@@ -1,9 +1,11 @@
 {% load i18n %}
 {% load utils %}
 
-<form action="">
-    {% include "form.html" with form=query_form %}
-    <div class="form-group">
-        <button type="bumit" class="btn btn-primary">submit</button>
-    </div>
-</form>
+<div class="well">
+	<form action="">
+	    {% include "form.html" with form=query_form %}
+	    <div class="form-group">
+	        <button type="bumit" class="btn btn-primary">submit</button>
+	    </div>
+	</form>
+</div>
