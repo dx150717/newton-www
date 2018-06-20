@@ -153,7 +153,7 @@ class InviteListView(generic.ListView):
             d = s1.difference(s2)
             q = Q(status=codes.KYCStatus.PASS_KYC.value, user_id__in=d)
             q = build_query_condition(self.request, q)
-            items = tokenexchange_models.KYCInfo.objects.filter(q)
+            items = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
@@ -178,7 +178,7 @@ class CompletedInviteListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(CompletedInviteListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
-        query_form = forms_tokenexchange.KYCQueryForm(extract_query_parameter(self.request))
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
         context['query_form'] = query_form
         return context
 
@@ -187,6 +187,7 @@ class CompletedInviteListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             q = Q(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value])
+            q = build_query_condition(self.request, q)
             items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-created_at')
             if items:
                 for item in items:
@@ -219,13 +220,17 @@ class AmountListView(generic.ListView):
         token_exchange_info = settings.FUND_CONFIG[phase_id]
         context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
         context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+            q = Q(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
@@ -257,13 +262,17 @@ class ConfirmListView(generic.ListView):
         token_exchange_info = settings.FUND_CONFIG[phase_id]
         context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
         context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+            q = Q(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
@@ -290,13 +299,17 @@ class CompletedAmountListView(generic.ListView):
         context['phase_id'] = int(self.request.path.split("/")[4])
         context['form'] = forms_tokenexchange.AmountForm()
         context['is_completed'] = True
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.CONFIRM_AMOUT.value, phase_id=phase_id)
+            q = Q(status=codes.TokenExchangeStatus.CONFIRM_AMOUT.value, phase_id=phase_id)
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
@@ -442,12 +455,18 @@ def post_invite(request, phase_id):
             if not form.is_valid():
                 return http.JsonErrorResponse()
             user_id = int(form.cleaned_data['user_id'])
+            kyc_info = tokenexchange_models.KYCInfo.objects.get(user_id=user_id)
             invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user_id=user_id).first()
             if not invite:
                 invite = tokenexchange_models.InvestInvite()
                 invite.user_id = user_id
                 invite.phase_id = int(phase_id)
             invite.status = codes.TokenExchangeStatus.INVITE.value
+            # copy fields to invite table for query
+            invite.kyc_type = kyc_info.kyc_type
+            invite.level = kyc_info.level
+            invite.is_establish_node = kyc_info.is_establish_node
+            invite.country = kyc_info.country
             invite.save()
             action_id = codes.AdminActionType.INVITE.value
             target_user = User.objects.filter(id=user_id).first()

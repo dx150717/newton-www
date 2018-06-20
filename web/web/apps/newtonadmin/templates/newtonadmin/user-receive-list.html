@@ -9,7 +9,7 @@
 {% block content %}
 <section class="section-list newtonadmin">
     <div class="container">
-        <h3>用户打币列表</h3>
+        <h3>用户转币列表</h3>
         <div class="raw table-responsive">
             <table class="table">
                 <thead>
@@ -67,9 +67,15 @@
                 </div>
                 {% endif %}
             </div>
+            {% if not items %}
+            <div class="well text-center">
+                还没有数据
+            </div>
+            {% else %}
             <div class="well">
                 <button class="btn btn-primary" onclick="sendEmailForReceivedCoin();">批量发送</button>
             </div>
+            {% endif %}
         </div>
     </div>
 </section>

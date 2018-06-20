@@ -21,7 +21,7 @@
                             <tr>
                                 <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
                                 <th>姓名</th>
-                                <th></th>
+                                <th>评分</th>
                                 <th>操作</th>
                             </tr>
                         </thead>
@@ -34,9 +34,10 @@
                                     <p>{{ item.user.email }}</p>
                                 </td>
                                 <td>
+                                    {{ item.level }}
                                 </td>
                                 <td>
-                                    <a href="#" class="btn btn-default" onclick="javascript:preInviteUser({{ item.user_id }});">移至邀请列表</a>
+                                    <a href="#" class="btn btn-primary" onclick="javascript:preInviteUser({{ item.user_id }});">移至邀请列表</a>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -54,8 +55,12 @@
                     </div>
                     {% endif %}
 
-                    <div class="well">
-                        <button class="btn btn-default" onclick="preInviteSelectedUser();">批量操作</button>
+                    <div class="well text-center">
+                        {% if not items %}
+                        还没有数据
+                        {% else %}
+                        <button class="btn btn-danger" onclick="preInviteSelectedUser();">批量操作</button>
+                        {% endif %}
                     </div>
 
                 </div>
