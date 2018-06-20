@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 14:32+0000\n"
+"POT-Creation-Date: 2018-06-20 15:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,13 +183,13 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:84
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:83
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:132
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:108
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:48
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:48
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:72
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:61
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
 #: web/apps/welcome/templates/welcome/announcement.html:72
 #: web/apps/welcome/templates/welcome/press.html:38
@@ -197,13 +197,13 @@ msgid "previous"
 msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:88
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:87
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:136
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:112
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:52
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:52
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:76
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:65
 #: web/apps/welcome/templates/welcome/announcement-detail.html:50
 #: web/apps/welcome/templates/welcome/announcement.html:76
 #: web/apps/welcome/templates/welcome/press.html:42
@@ -500,7 +500,6 @@ msgstr "确认密码"
 #: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:46
 #: web/apps/tokenexchange/forms.py:177
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:93
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:306
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:72
 msgid "Cellphone"
 msgstr "手机号"
@@ -1053,8 +1052,7 @@ msgstr "运营节点"
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:36
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:293
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:295
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:59
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:61
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:66
 msgid "First Name"
 msgstr "名"
 
@@ -1063,7 +1061,7 @@ msgstr "名"
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:42
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:299
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:301
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:65
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:64
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:67
 msgid "Last Name"
 msgstr "姓"
@@ -1420,9 +1418,17 @@ msgstr ""
 msgid "Emergency Information"
 msgstr "紧急联系人信息"
 
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:306
+msgid "Contact Phone"
+msgstr "联系人电话"
+
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:52
 msgid "Upload at least one file, only jpeg, jpg and png file within 5M"
 msgstr "至少上传一个文件，支持 jpeg, jpg 和 png 格式，大小在 5M 之内"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:59
+msgid "Contact Name"
+msgstr "联系人姓名"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:96
 msgid ""
@@ -6929,10 +6935,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Contact First Name"
 #~ msgstr "联系人姓"
-
-#, fuzzy
-#~ msgid "Contact Last Name"
-#~ msgstr "联系人名"
 
 #, fuzzy
 #~ msgid "Others Social Media"

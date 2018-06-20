@@ -28,19 +28,34 @@
                             <h3 class="panel-title text-center">{% trans "Basic Information" %}</h3>
                         </div>
                         <div class="panel-body">
-                            <div class="form-group full-name col-sm-12"> 
-                                <span>
-                                    <label for="id_first_name" class="control-label col-sm-3 fullname-title">
-                                        {% trans "First Name" %}<span class="red-color">*</span>
-                                    </label>
-                                    <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "First Name" %}" type="text">
-                                </span> 
-                                <span class="last-name">
-                                    <label for="id_last_name" class="control-label last-name-label">
-                                        {% trans "Last Name" %}<span class="red-color">*</span>
-                                    </label>
-                                    <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
-                                </span>
+                            <div class="form-group full-name col-sm-12">
+                                {% if is_chinese %}
+                                    <span>
+                                        <label for="id_last_name" class="control-label col-sm-3 fullname-title">
+                                            {% trans "Last Name" %}<span class="red-color">*</span>
+                                        </label>
+                                        <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
+                                    </span>
+                                    <span class="last-name">
+                                        <label for="id_first_name" class="control-label last-name-label">
+                                            {% trans "First Name" %}<span class="red-color">*</span>
+                                        </label>
+                                        <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "First Name" %}" type="text">
+                                    </span>
+                                    {% else %}
+                                    <span>
+                                        <label for="id_first_name" class="control-label col-sm-3 fullname-title">
+                                            {% trans "First Name" %}<span class="red-color">*</span>
+                                        </label>
+                                        <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "First Name" %}" type="text">
+                                    </span> 
+                                    <span class="last-name">
+                                        <label for="id_last_name" class="control-label last-name-label">
+                                            {% trans "Last Name" %}<span class="red-color">*</span>
+                                        </label>
+                                        <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
+                                    </span>
+                                {% endif %}
                             </div>
                             <div class="form-group">
                                 <label for="id_id_type" class="control-label col-sm-3">{% trans "Certificate Type" %}<span class="red-color">*</span>
@@ -287,7 +302,21 @@
                         <h3 class="panel-title text-center">{% trans "Emergency Information" %}</h3>
                     </div>
                     <div class="panel-body">
-                    <div class="form-group emergency-name col-sm-12"> 
+                    <div class="form-group emergency-name col-sm-12">
+                        {% if is_chinese %}
+                        <span>
+                            <label for="id_emergency_contact_last_name" class="control-label col-sm-3 emergency-first-name">
+                                {% trans "Last Name" %}<span class="red-color">*</span>
+                            </label>
+                            <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
+                        </span>
+                        <span class="last-name">
+                            <label for="id_emergency_contact_first_name" class="control-label">
+                                {% trans "First Name" %}<span class="red-color">*</span>
+                            </label>
+                            <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
+                        </span> 
+                        {% else %}
                         <span>
                             <label for="id_emergency_contact_first_name" class="control-label col-sm-3 emergency-first-name">
                                 {% trans "First Name" %}<span class="red-color">*</span>
@@ -300,6 +329,7 @@
                             </label>
                             <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
                         </span>
+                        {% endif %}
                     </div>
                     <div class="form-group">
                         <label for="id_cellphone_of_emergency_contact" class="control-label col-sm-3">
