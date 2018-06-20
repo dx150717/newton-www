@@ -56,15 +56,15 @@
                             <div class="form-group full-name col-sm-12"> 
                                 <span>
                                     <label for="id_first_name" class="control-label col-sm-3 fullname-title">
-                                        {% trans "Contact First Name" %}<span class="red-color">(*)</span>
+                                        {% trans "First Name" %}<span class="red-color">(*)</span>
                                     </label>
-                                    <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "Contact First Name" %}" type="text">
+                                    <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "First Name" %}" type="text">
                                 </span> 
                                 <span class="last-name">
                                     <label for="id_last_name" class="control-label">
-                                        {% trans "Contact Last Name" %}<span class="red-color">(*)</span>
+                                        {% trans "Last Name" %}<span class="red-color">(*)</span>
                                     </label>
-                                    <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Contact Last Name" %}" type="text">
+                                    <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
                                 </span>
                             </div>
                             <div class="form-group">
@@ -73,8 +73,8 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <div class="form-inline">
-                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="Area Code" cellphone"=" type="text"> 
-                                        <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="Phone Number" cellphone"=" type="text">
+                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text"> 
+                                        <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                                 {% trans "Other Social Media" %}
                             </label>
                             <div class="col-sm-9">
-                                <input class="form-control normal" id="id_other_social_account" maxlength="128" name="other_social_account" placeholder="{% trans "Others Social Media" %}" type="text">
+                                <input class="form-control normal" id="id_other_social_account" maxlength="128" name="other_social_account" placeholder="{% trans "Other Social Media" %}" type="text">
                             </div>
                         </div>
                     </div>
@@ -156,7 +156,7 @@
                                 <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Understanding of Newton" %}<span class="red-color">(*)</span>
                                 </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="Understanding of Newton" rows="10"></textarea>
+                                    <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Understanding of Newton" %}" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="form-group with-attachment">
@@ -164,7 +164,7 @@
                                     {% trans "Contribution You Have Made to Newton" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="Contribution You Have Made to Newton" rows="10"></textarea>
+                                    <textarea class="form-control" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Contribution You Have Made to Newton" %}" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -185,7 +185,7 @@
                                     {% trans "Contribution You Will Make to Newton" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" cols="40" id="id_do_for_newton" name="do_for_newton" placeholder="Contribution You Will Make to Newton" rows="10"></textarea>
+                                    <textarea class="form-control" cols="40" id="id_do_for_newton" name="do_for_newton" placeholder="{% trans "Contribution You Will Make to Newton" %}" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -193,8 +193,8 @@
                                     {% trans "Do you want to establish a Newton node ?" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="radio" name="is_establish_node" checked="" value="1" onclick="openNode()">Yes
-                                    <input type="radio" name="is_establish_node" onclick="closeNode()" value="2">No
+                                    <input type="radio" name="is_establish_node" checked="" value="1" onclick="openNode()">{% trans "Yes" %}
+                                    <input type="radio" name="is_establish_node" onclick="closeNode()" value="2">{% trans "No" %}
                                 </div>
                             </div>
                             <div id="id_which_node" class="form-group">
@@ -224,7 +224,7 @@
             </div>
             <div class="raw">
                 <div class="text-center token-btn">
-                    <button class="form-button" type="submit">Submit</button>
+                    <button class="form-button" type="submit">{% trans "Submit" %}</button>
                 </div>
             </div>
         </form>
