@@ -219,6 +219,20 @@ class CountryForm(ModelForm):
             'country',
         ]
 
+class OrganizationCountryForm(ModelForm):
+    def __init__(self, *args, **kw):
+        super(OrganizationCountryForm, self).__init__(*args, **kw)
+        self.fields['country'].label = _("Registration Country")
+        self.fields.keyOrder = [
+            'country',
+        ]
+        
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'country',
+        ]
+
 class EmergencyCountryForm(ModelForm):
     def __init__(self, *args, **kw):
         super(EmergencyCountryForm, self).__init__(*args, **kw)
