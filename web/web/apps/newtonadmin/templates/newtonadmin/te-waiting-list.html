@@ -40,12 +40,6 @@
                                 </td>
                             </tr>
                             {% endfor %}
-                            <tr>
-                                <td><button class="btn btn-default" onclick="preInviteSelectedUser();">批量操作</button></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
                         </tbody>
                     </table>
                     {% if is_paginated %}
@@ -59,6 +53,11 @@
                         {% endif %}
                     </div>
                     {% endif %}
+
+                    <div class="well">
+                        <button class="btn btn-default" onclick="preInviteSelectedUser();">批量操作</button>
+                    </div>
+
                 </div>
 
             </div>

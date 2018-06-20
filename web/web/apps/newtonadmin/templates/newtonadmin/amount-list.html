@@ -11,7 +11,7 @@
 {% block content %}
 <section id="newtonadmin" class="section-list">
     <div class="container">
-        <h3>确定额度</h3>
+        <h3>{% if is_confirm  %}已分配额度{% else %}待分配额度{% endif %}</h3>
         <div class="row">
             <div class="col-md-2">
                 {% show_amount_summary %}
@@ -76,18 +76,6 @@
                             </td>
                         </tr>
                         {% endfor %}
-                        <tr>
-                            {% if is_confirm %}
-                            <td><button class="form-button" onclick="preConfirmSelectedUser({{ phase_id }});">确认额度</button></td>
-                            {% endif %}
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            {% if is_completed %}
-                            <td></td>
-                            {% endif %}
-                        </tr>
                     </tbody>
                 </table>    
                 {% if is_paginated %}
@@ -102,6 +90,14 @@
                 </div>
                 {% endif %}
 
+                {% if is_confirm %}
+                <div class="well">
+                    <button class="btn btn-primary" onclick="preConfirmSelectedUser({{ phase_id }});">批量确认额度</button>
+                </div>
+
+                {% endif %}
+                {% if is_completed %}
+                {% endif %}
             </div>
         </div>
     </div>
