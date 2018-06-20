@@ -11,7 +11,7 @@
 {% block content %}
 <section class="section-list newtonadmin">
     <div class="container">
-        <h3>{% if is_confirm  %}已分配额度{% else %}{% if is_completed %}完成分配{% else %}待分配额度{% endif %}{% endif %}</h3>
+        <h3>{% if is_confirm  %}已填写分配列表{% else %}{% if is_completed %}已确认分配列表{% else %}待分配列表{% endif %}{% endif %}</h3>
         <div class="row">
             <div class="col-md-3">
                 {% show_amount_summary %}
