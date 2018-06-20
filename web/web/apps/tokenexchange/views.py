@@ -45,6 +45,7 @@ def show_tokenexchange_index_view(request):
 
 @login_required
 @kyc_valid_required
+@decorators.google_authenticator_required
 def post_kyc_information(request, kyc_type):
     """
     Receive user's kyc information, and save them.
@@ -140,6 +141,8 @@ def post_kyc_information(request, kyc_type):
             emergency_form = tokenexchange_forms.EmergencyForm(instance=instance)
             organization_base_form = tokenexchange_forms.OrganizationBaseForm(instance=instance)
             organization_profile_form = tokenexchange_forms.OrganizationProfileForm(instance=instance)
+            country_form = tokenexchange_forms.CountryForm(instance=instance)
+            emergency_country_form = tokenexchange_forms.EmergencyCountryForm(instance=instance)
             return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
         logger.exception("fail to post kyc information:%s" % str(inst))
@@ -155,6 +158,7 @@ def show_invalid_link(request):
     
 @login_required
 @kyc_valid_required
+@decorators.check_google_authenticator_session
 def show_receive_address_view(request, invite_id):
     """Show the receive address
     """
@@ -217,6 +221,7 @@ def show_end_view(request):
 
 @login_required
 @kyc_valid_required
+@decorators.check_google_authenticator_session
 def post_apply_amount(request, invite_id):
     """ Post the amount of apply
     """

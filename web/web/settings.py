@@ -83,6 +83,7 @@ INSTALLED_APPS = (
     # new admin
     'newtonadmin',
     'help',
+    'setting',
 )
 
 MIDDLEWARE_CLASSES = (

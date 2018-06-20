@@ -39,7 +39,7 @@
     </div>
     <div class="container">
         <div class="form-container">
-            <form id="id_set_gtoken_form" class="form" action="/register/gtoken/post/" method="POST">
+            <form id="id_set_gtoken_form" class="form" action="/setting/gtoken/post/?redirect_url={{ redirect_url }}" method="POST">
                 {% csrf_token %}
                 <input id="email" name="email" type="hidden" value="{{ email }}"/>
                 <input id="password" name="password" type="hidden" value="{{ password }}"/>
@@ -90,5 +90,5 @@
 {% endblock %}
 
 {% block js %}
-<script src="{% version "js/register.js" %}"></script>
+<script src="{% version "js/setting.js" %}"></script>
 {% endblock %}

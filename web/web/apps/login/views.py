@@ -45,10 +45,8 @@ def post_login(request):
         user = authenticate(username=username, password=password)
         if not user or user.is_staff:
             return http.JsonErrorResponse(error_message=_("Email or Password don't match"))
-        profile = user_models.UserProfile.objects.filter(user=user).first()
-        auth_token = security.generate_uuid()
-        request.session['auth_token'] = auth_token
-        return http.JsonSuccessResponse(data={"auth_token":auth_token})
+        login(request, user)
+        return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post login:%s" % str(inst))
         return http.JsonErrorResponse(error_message=_("Request Time Out"))
