@@ -1396,20 +1396,18 @@ input[name="expect_btc"], input[name="expect_ela"]{
     width: 14px;
     height: 14px;
 }
-.select-individual-organization{
-    font-size: 30px;
-    text-align: center;
-    height: 200px;
-}
-.select-individual-organization .select-button{
-    top:120px;
-}
-.select-individual-organization .btn{
-    width: 100%;
-}
-.control-label{
+.section-list .control-label{
     color: #303030;
 }
-..panel-body{
+.section-list .panel-body{
     padding: 20px 15px;
+}
+.section-list .select-button{
+    text-align: center;
+    font-size: 16px;
+    margin: 8px auto;
+}
+.section-list .panel-heading{
+    padding-top: 25px;
+    padding-bottom: 15px;
 }
