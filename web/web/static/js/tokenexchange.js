@@ -7,6 +7,7 @@ $("#id_individual_form").submit(function(event){
     if (!$(form).valid()) {
         return false;
     }
+    showWaiting();
     form.submit()
 }).validate({
     ignore: [],
@@ -80,15 +81,15 @@ $("#id_individual_form").submit(function(event){
     },
 
     errorPlacement: function(error,element) {
-        error.appendTo(element.parent());
+        //error.appendTo(element.parent());
     }
 });
 
 function openNode(){
-    $("#which-node").removeClass('hide');
-    $("#how-node").removeClass('hide');
+    $("#id_which_node").removeClass('hide');
+    $("#id_how_node").removeClass('hide');
 }
 function closeNode(){
-    $("#which-node").addClass('hide');
-    $("#how-node").addClass('hide');
+    $("#id_which_node").addClass('hide');
+    $("#id_how_node").addClass('hide');
 }
