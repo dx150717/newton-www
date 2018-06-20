@@ -55,7 +55,7 @@
 }
 .kyc .full-name input {
     display: inline;
-    width: auto;
+    width: 190px;
     margin-left: 15px;
 }
 .kyc .full-name .last-name {
@@ -66,7 +66,7 @@
 }
 .kyc input.normal {
     display: inline;
-    max-width: 172px;
+    max-width: 190px;
 }
 .kyc .with-attachment {
     margin-bottom: 10px;
@@ -78,7 +78,7 @@
     padding-left: 0;
     text-align: left;
     font-weight: unset;
-    width: 75px;
+    width: 60px;
 }
 .kyc .block-tip{
     text-align: center;
@@ -154,4 +154,10 @@
     .kyc .organization-code {
         margin-top: 20px;
     }
+}
+.kyc .attachment-title {
+    padding-right: 0;
+}
+.kyc .attachment-div {
+    padding-left: 0;
 }
