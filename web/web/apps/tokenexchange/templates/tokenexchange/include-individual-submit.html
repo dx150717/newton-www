@@ -31,19 +31,19 @@
                             <div class="form-group full-name col-sm-12"> 
                                 <span>
                                     <label for="id_first_name" class="control-label col-sm-3 fullname-title">
-                                        {% trans "First Name" %}<span class="red-color">(*)</span>
+                                        {% trans "First Name" %}<span class="red-color">*</span>
                                     </label>
                                     <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "First Name" %}" type="text">
                                 </span> 
                                 <span class="last-name">
                                     <label for="id_last_name" class="control-label">
-                                        {% trans "Last Name" %}<span class="red-color">(*)</span>
+                                        {% trans "Last Name" %}<span class="red-color">*</span>
                                     </label>
                                     <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
                                 </span>
                             </div>
                             <div class="form-group">
-                                <label for="id_id_type" class="control-label col-sm-3">{% trans "Certificate Type" %}<span class="red-color">(*)</span>
+                                <label for="id_id_type" class="control-label col-sm-3">{% trans "Certificate Type" %}<span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
                                     <select class="form-control" id="id_id_type" name="id_type" placeholder="Certificate Type">
@@ -55,7 +55,7 @@
                             </div>
                             <div class="form-group"> 
                                 <label for="id_id_number" class="control-label col-sm-3">
-                                    {% trans "Certificate Number" %}<span class="red-color">(*)</span>
+                                    {% trans "Certificate Number" %}<span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
                                     <input class="form-control normal" id="id_id_number" maxlength="128" name="id_number" placeholder="{% trans "Certificate Number" %}" type="text">
@@ -63,7 +63,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="id_id_card" class="control-label col-sm-3">
-                                    {% trans "Certificate Photo" %}<span class="red-color">(*)</span>
+                                    {% trans "Certificate Photo" %}<span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
                                     <input class="form-control select-file" id="id_id_card" name="id_card" placeholder="{% trans "Certificate Photo" %}" type="file">
@@ -73,7 +73,7 @@
                             {% include "tokenexchange/include-form-country.html" with form=country_form %}
                             <div class="form-group">
                                 <label for="id_city" class="control-label col-sm-3">
-                                    {% trans "City" %}<span class="red-color">(*)</span>
+                                    {% trans "City" %}<span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
                                     <input class="form-control normal" id="id_city" maxlength="256" name="city" placeholder="{% trans "City" %}" type="text">
@@ -81,7 +81,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="id_location" class="control-label col-sm-3">
-                                    {% trans "Address" %}<span class="red-color">(*)</span>
+                                    {% trans "Address" %}<span class="red-color">*</span>
                                     </label>
                                 <div class="col-sm-9">
                                     <input class="form-control normal" id="id_location" maxlength="1024" name="location" placeholder="{% trans "Address" %}" type="text">
@@ -90,7 +90,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="id_cellphone_group" class="control-label col-sm-3">
-                                    {% trans "Cellphone" %} <span class="red-color">(*)</span>
+                                    {% trans "Cellphone" %} <span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
                                     <div class="form-inline">
@@ -111,7 +111,7 @@
                     <div class="panel-body">
                         <div class="form-group with-attachment">
                                 <label for="id_personal_profile" class="control-label col-sm-3">
-                                    {% trans "Self Introduction" %}<span class="red-color">(*)</span>
+                                    {% trans "Self Introduction" %}<span class="red-color">*</span>
                                 </label>
                             <div class="col-sm-9">
                                 <textarea class="form-control with-tip" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "Self Introduction" %}" rows="10"></textarea>
@@ -209,7 +209,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Your Understanding of Newton" %}<span class="red-color">(*)</span>
+                                <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Your Understanding of Newton" %}<span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
                                     <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Your Understanding of Newton" %}" rows="10"></textarea>
@@ -290,20 +290,20 @@
                     <div class="form-group emergency-name col-sm-12"> 
                         <span>
                             <label for="id_emergency_contact_first_name" class="control-label col-sm-3">
-                                {% trans "First Name" %}<span class="red-color">(*)</span>
+                                {% trans "First Name" %}<span class="red-color">*</span>
                             </label>
                             <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
                         </span> 
                         <span class="last-name">
                             <label for="id_emergency_contact_last_name" class="control-label">
-                                {% trans "Last Name" %}<span class="red-color">(*)</span>
+                                {% trans "Last Name" %}<span class="red-color">*</span>
                             </label>
                             <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
                         </span>
                     </div>
                     <div class="form-group">
                         <label for="id_cellphone_of_emergency_contact" class="control-label col-sm-3">
-                            {% trans "Cellphone" %}<span class="red-color">(*)</span>
+                            {% trans "Cellphone" %}<span class="red-color">*</span>
                         </label>
                         <div class="col-sm-9">
                             <div class="form-inline">
@@ -315,7 +315,7 @@
                     {% include "tokenexchange/include-form-country.html" with form=emergency_country_form %}
                     <div class="form-group">
                         <label for="id_emergency_city" class="control-label col-sm-3">
-                            {% trans "City" %}<span class="red-color">(*)</span>
+                            {% trans "City" %}<span class="red-color">*</span>
                         </label>
                         <div class="col-sm-9">
                             <input class="form-control normal" id="id_emergency_city" maxlength="256" name="emergency_city" placeholder="{% trans "City" %}" type="text">
@@ -323,7 +323,7 @@
                     </div>
                     <div class="form-group">
                             <label for="id_emergency_location" class="control-label col-sm-3">
-                                {% trans "Address" %}<span class="red-color">(*)</span>
+                                {% trans "Address" %}<span class="red-color">*</span>
                             </label>
                         <div class="col-sm-9">
                             <input class="form-control normal" id="id_emergency_location" maxlength="1024" name="emergency_location" placeholder="{% trans "Address" %}" type="text">
@@ -331,7 +331,7 @@
                     </div>
                     <div class="form-group">
                         <label for="id_emergency_relationship" class="control-label col-sm-3">
-                            {% trans "Relation with Applicant"%} <span class="red-color">(*)</span>
+                            {% trans "Relation with Applicant"%} <span class="red-color">*</span>
                         </label>
                         <div class="col-sm-9">
                             <input class="form-control normal" id="id_emergency_relationship" maxlength="1024" name="emergency_relationship" placeholder="{% trans "Relation with Applicant"%}" type="text">
