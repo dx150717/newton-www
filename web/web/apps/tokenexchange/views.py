@@ -141,6 +141,8 @@ def post_kyc_information(request, kyc_type):
             emergency_form = tokenexchange_forms.EmergencyForm(instance=instance)
             organization_base_form = tokenexchange_forms.OrganizationBaseForm(instance=instance)
             organization_profile_form = tokenexchange_forms.OrganizationProfileForm(instance=instance)
+            country_form = tokenexchange_forms.CountryForm(instance=instance)
+            emergency_country_form = tokenexchange_forms.EmergencyCountryForm(instance=instance)
             return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
         logger.exception("fail to post kyc information:%s" % str(inst))

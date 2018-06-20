@@ -205,3 +205,29 @@ class ApplyAmountForm(ModelForm):
             'expect_btc',
             'expect_ela',
         ]
+
+class CountryForm(ModelForm):
+    def __init__(self, *args, **kw):
+        super(CountryForm, self).__init__(*args, **kw)
+        self.fields.keyOrder = [
+            'country',
+        ]
+        
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'country',
+        ]
+
+class EmergencyCountryForm(ModelForm):
+    def __init__(self, *args, **kw):
+        super(EmergencyCountryForm, self).__init__(*args, **kw)
+        self.fields.keyOrder = [
+            'emergency_country',
+        ]
+        
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'emergency_country',
+        ]
