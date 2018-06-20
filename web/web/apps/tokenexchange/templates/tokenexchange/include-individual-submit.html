@@ -3,7 +3,7 @@
 <section class="section-list kyc">
     <div class="raw">
                 
-        <form class="form-horizontal" action="/tokenexchange/individual/post/" method="POST" enctype="multipart/form-data">
+        <form class="form-horizontal" action="/tokenexchange/individual/post/" method="POST" enctype="multipart/form-data" id="id_individual_form">
             <div class="container form-container">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -94,7 +94,8 @@
                                 </label>
                                 <div class="col-sm-10">
                                     <div class="form-inline">
-                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="Area Code" cellphone"="" type="text"> <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="Phone Number" cellphone"="" type="text">
+                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="Area Code" cellphone"=" type="text"> 
+                                        <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="Phone Number" cellphone"=" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -147,27 +148,27 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="id_telegram" class="control-label col-sm-2">
+                            <label for="id_twiiter" class="control-label col-sm-2">
                                 {% trans "Twitter" %}
                             </label>
                             <div class="col-sm-10">
-                                <input class="form-control normal" id="id_telegram" maxlength="128" name="telegram" placeholder="Twitter" type="text">
+                                <input class="form-control normal" id="id_twiiter" maxlength="128" name="twiiter" placeholder="Twitter" type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="id_telegram" class="control-label col-sm-2">
+                            <label for="id_facebook" class="control-label col-sm-2">
                                 {% trans "Facebook" %}
                             </label>
                             <div class="col-sm-10">
-                                <input class="form-control normal" id="id_telegram" maxlength="128" name="telegram" placeholder="Facebook" type="text">
+                                <input class="form-control normal" id="id_facebook" maxlength="128" name="facebook" placeholder="Facebook" type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="id_telegram" class="control-label col-sm-2">
+                            <label for="id_other_social_account" class="control-label col-sm-2">
                                 {% trans "Other Social Media" %}
                             </label>
                             <div class="col-sm-10">
-                                <input class="form-control normal" id="id_telegram" maxlength="128" name="telegram" placeholder="Other" type="text">
+                                <input class="form-control normal" id="id_other_social_account" maxlength="128" name="other_social_account" placeholder="Other" type="text">
                             </div>
                         </div>
                         <div class="form-group with-attachment">
@@ -290,13 +291,13 @@
                                 <label for="id_emergency_contact_first_name" class="control-label col-sm-2">
                                     {% trans "First Name" %}<span class="red-color">(*)</span>
                                 </label>
-                                <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="first_name" placeholder="First Name" type="text">
+                                <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="emergency_contact_first_name" placeholder="First Name" type="text">
                             </span> 
                             <span class="last-name">
                                 <label for="id_emergency_contact_last_name" class="control-label">
                                     {% trans "Last Name" %}<span class="red-color">(*)</span>
                                 </label>
-                                <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="last_name" placeholder="Last Name" type="text">
+                                <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="emergency_contact_last_name" placeholder="Last Name" type="text">
                             </span>
                         </div>
                     </div>
