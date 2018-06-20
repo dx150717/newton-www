@@ -15,6 +15,7 @@
         <div class="row">
             <div class="col-md-3">
                 {% show_amount_summary %}
+                {% include "newtonadmin/include-filter.html" %}
             </div>
             <div class="col-md-9">
                 <table class="table">
@@ -24,6 +25,7 @@
                             <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
                             {% endif %}
                             <th>姓名</th>
+                            <th>评分</th>
                             {% if is_confirm %}
                             <th>已分配额度</th>
                             {% else %}
@@ -48,6 +50,7 @@
                                 <p>{{ item.kycinfo.first_name }} &nbsp; {{ item.kycinfo.last_name }}</p>
                                 <p>{{ item.user.email }}</p>
                             </td>
+                            <td>{{ item.level }}</td>
                             <td>
                                 {% if is_confirm %}
                                 <p>{{ item.assign_ela }} ELA</p>

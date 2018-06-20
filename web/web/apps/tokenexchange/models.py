@@ -127,6 +127,10 @@ class InvestInvite(models.Model):
     status = models.IntegerField(default=codes.TokenExchangeStatus.INVITE.value, db_index=True) 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    
+    # duplicate fields for backend query
+    level = models.IntegerField(choices=LEVEL_CHOICE, default=1, db_index=True)
+    kyc_type = models.IntegerField(default=1)
+    is_establish_node = models.IntegerField(choices=ESTABLISH_CHOICE, default=codes.EstablishNodeType.NO.value)
+    country = CountryField()
     class Meta:
         app_label = "tokenexchange"
