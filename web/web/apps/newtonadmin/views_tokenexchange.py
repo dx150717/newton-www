@@ -37,6 +37,7 @@ class IdListView(generic.ListView):
         context['level_choices'] = [i+1 for i in range(10)]
         context['is_idlist'] = True
         context['countries_choices'] = COUNTRIES
+        context['title'] = '待审核'
         return context
 
     def get_queryset(self):
@@ -70,6 +71,7 @@ class PassIdListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(PassIdListView, self).get_context_data(**kwargs)
         context['countries_choices'] = COUNTRIES
+        context['title'] = '已通过'
         return context
 
     def get_queryset(self):
@@ -589,6 +591,7 @@ class RejectListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(RejectListView, self).get_context_data(**kwargs)
         context['countries_choices'] = COUNTRIES
+        context['title'] = '已驳回'
         return context
 
     def get_queryset(self):
@@ -622,6 +625,7 @@ class DenyListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(DenyListView, self).get_context_data(**kwargs)
+        context['title'] = '已拒绝'
         return context
 
     def get_queryset(self):

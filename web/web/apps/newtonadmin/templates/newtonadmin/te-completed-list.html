@@ -40,12 +40,6 @@
                         </td>
                     </tr>
                     {% endfor %}
-                    <tr>
-                        <td><button class="form-button" onclick="sendSelectedEmailForInvite();">邀请选中</button></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
                 </tbody>
             </table>
             {% if is_paginated %}
@@ -59,6 +53,11 @@
             {% endif %}
             </div>
             {% endif %}
+
+            <div class="well">
+                <button class="btn btn-primary" onclick="sendSelectedEmailForInvite();">批量邀请</button>
+            </div>
+
         </div>
     </div>
 </section>

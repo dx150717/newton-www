@@ -10,32 +10,56 @@
 {% block content %}
 <section id="newtonadmin" class="section-list">
     <div class="container">
-        <div class="raw table-responsive content">
+        <div class="table-responsive content">
+            <h3>{{ title }}</h3>
             <table class="table">
-                <caption class="text-center">审核</caption>
                 <thead>
                     <tr>
-                        <th>姓名</th>
+                        <th>名称</th>
+                        <th>类型</th>
                         <th>介绍</th>
                         <th>申请时间</th>
-                        <th>详情</th>
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for item in items %}
-                    {% block kyc_id_list %}
                     <tr>
                         <td>
                             {% if item.kyc_type == 1 %}
-                            <p>{% trans "Name" %} : {{ item.first_name }} &nbsp; {{ item.last_name }}</p>
-                            <p>{% trans "Cellphone" %}: +{{ item.country_code }} {{ item.cellphone }}</p>
-                            <p>{% trans "Country" %}:{{ item.country }}</p>
-                            <p>{% trans "City" %}:{{ item.city }}</p>
-                            <p>{% trans "Address" %}:{{ item.location }}</p>
-                            <p>{% trans "ID Type" %}:{{ item.id_type }}</p>
-                            <p>{% trans "ID Number" %}:{{ item.id_number }}</p>
+                            <p>{{ item.first_name }} &nbsp; {{ item.last_name }}</p>
                             {% else %}
-                            <p>机构名称:{{ item.orgnization_name }}</p>
+                            <p>{{ item.orgnization_name }}</p>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if item.kyc_type == 1 %}
+                            个人
+                            {% else %}
+                            机构
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if item.kyc_type == 1 %}
+                            <p>
+                                <label>{% trans "Cellphone" %}:</label>{{ item.country_code }} {{ item.cellphone }}
+                            </p>
+                            <p>
+                                <label>{% trans "Country" %}:</label>{{ item.country }}
+                            </p>
+                            <p>
+                                <label>{% trans "City" %}:</label>{{ item.city }}
+                            </p>
+                            <p>
+                                <label>{% trans "Address" %}:</label>{{ item.location }}
+                            </p>
+                            <p>
+                                <label>{% trans "ID Type" %}:</label>{{ item.id_type }}
+                            </p>
+                            <p>
+                                <label>{% trans "ID Number" %}:</label>{{ item.id_number }}
+                            </p>
+                            {% else %}
                             <p>机构代码:{{ item.orgnization_code }}</p>
                             {% if item.orgnization_certificate1 %}
                             <p>机构资格证书1:<img src="{{ item.orgnization_certificate1.url }}" alt=""></p>
@@ -51,12 +75,13 @@
                             <p>联系人姓名:{{ item.first_name }} &nbsp; {{ item.last_name }} &nbsp; </p>
                             <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
                             {% endif %}
-                        </td>
-                        <td>
                             <p>
                                 {% if item.id_card %}
                                 <img src="{{ item.id_card.url }}" style="width: 300px"/>
                                 {% endif %}
+                            </p>
+                            <p>
+                                <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-default" target="_blank">详情</a>
                             </p>
                         </td>
                         
@@ -66,9 +91,6 @@
                             </p>                            
                         </td>
                         <td>
-                            <p>
-                                <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-default">详情</a>
-                            </p>
                             {% if is_idlist %}
                             <p>
                                 <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
@@ -76,7 +98,6 @@
                             {% endif %}
                         </td>
                     </tr>
-                    {% endblock %}
                     {% endfor %}
                     
                 </tbody>
