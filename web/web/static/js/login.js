@@ -32,6 +32,8 @@ $('#id_login_form').submit(function(event){
         if (ret.error_code === FAIL) {
             $("#id_register_code_error").removeClass("hide");
             $("#id_register_code_error").attr("style", "display:!important block");
+            $('#id_captcha_image').click();
+            $("#id_captcha_code").val('')
             return false;
         } else {
           data.email = email;
