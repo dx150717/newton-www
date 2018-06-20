@@ -11,11 +11,10 @@
 {% block content %}
 <section class="section-list newtonadmin">
     <div class="container">
-        <h3>{% if is_confirm  %}已分配额度{% else %}待分配额度{% endif %}</h3>
+        <h3>{% if is_confirm  %}已分配额度{% else %}{% if is_completed %}完成分配{% else %}待分配额度{% endif %}{% endif %}</h3>
         <div class="row">
             <div class="col-md-3">
                 {% show_amount_summary %}
-                {% include "newtonadmin/include-filter.html" %}
             </div>
             <div class="col-md-9">
                 <table class="table">

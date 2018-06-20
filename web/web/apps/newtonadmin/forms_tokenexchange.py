@@ -20,14 +20,14 @@ class PostInviteForm(forms.Form):
 
 class KYCQueryForm(forms.Form):
     KYC_TYPE_OPTIONS = (
-        (codes.KYCType.INDIVIDUAL.value, codes.KYCType.INDIVIDUAL.name),
-        (codes.KYCType.ORGANIZATION.value, codes.KYCType.ORGANIZATION.name),
+        (codes.KYCType.INDIVIDUAL.value, u'个人'),
+        (codes.KYCType.ORGANIZATION.value, u'机构'),
     )
     NODE_OPTIONS = (
-        (1, 'yes'),
-        (0, 'no'),
+        (1, u'是'),
+        (0, u'否'),
     )
-    kyc_type = forms.ChoiceField(widget=forms.Select, choices=KYC_TYPE_OPTIONS)
-    is_establish_node = forms.ChoiceField(widget=forms.Select, choices=NODE_OPTIONS)
-    country = CountryField()
+    kyc_type = forms.ChoiceField(widget=forms.Select, choices=KYC_TYPE_OPTIONS, label=u'主体类型')
+    is_establish_node = forms.ChoiceField(widget=forms.Select, choices=NODE_OPTIONS, label=u'是否建立社群节点')
+    country = CountryField().formfield(label=u'国家')
 

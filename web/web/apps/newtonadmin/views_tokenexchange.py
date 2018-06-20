@@ -26,13 +26,33 @@ def build_query_condition(request, q):
     """
     kyc_type = request.GET.get('kyc_type')
     is_establish_node = request.GET.get('is_establish_node')
+    country = request.GET.get('country')
     if kyc_type:
         kyc_type = int(kyc_type)
         q &= Q(kyc_type=kyc_type)
     if is_establish_node:
         is_establish_node = int(is_establish_node)
         q &= Q(is_establish_node=is_establish_node)
+    if country:
+        q &= Q(country=country)
     return q
+
+def extract_query_parameter(request):
+    """Extract the query parameter
+    """
+    result = {}
+    kyc_type = request.GET.get('kyc_type')
+    is_establish_node = request.GET.get('is_establish_node')
+    country = request.GET.get('country')
+    if kyc_type:
+        kyc_type = int(kyc_type)
+        result['kyc_type'] = kyc_type
+    if is_establish_node:
+        is_establish_node = int(is_establish_node)
+        result['is_establish_node'] = is_establish_node
+    if country:
+        result['country'] = country
+    return result
 
 class IdListView(generic.ListView):
     template_name = "newtonadmin/id-list.html"
@@ -120,7 +140,7 @@ class InviteListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(InviteListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
-        query_form = forms_tokenexchange.KYCQueryForm()
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
         context['query_form'] = query_form
         return context
 
@@ -158,7 +178,7 @@ class CompletedInviteListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(CompletedInviteListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
-        query_form = forms_tokenexchange.KYCQueryForm()
+        query_form = forms_tokenexchange.KYCQueryForm(extract_query_parameter(self.request))
         context['query_form'] = query_form
         return context
 
@@ -167,7 +187,6 @@ class CompletedInviteListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             q = Q(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value])
-            q = build_query_condition(self.request, q)
             items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-created_at')
             if items:
                 for item in items:
@@ -200,8 +219,6 @@ class AmountListView(generic.ListView):
         token_exchange_info = settings.FUND_CONFIG[phase_id]
         context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
         context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
-        query_form = forms_tokenexchange.KYCQueryForm()
-        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
