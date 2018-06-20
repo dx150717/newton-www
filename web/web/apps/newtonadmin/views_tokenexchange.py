@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.views import generic
 from django.db.models import Sum
 from django_countries.data import COUNTRIES
+from django.db.models import Q
 
 from utils import http
 from utils import convert
@@ -19,6 +20,19 @@ from . import forms_tokenexchange
 from . import services_tokenexchange
 
 logger = logging.getLogger(__name__)
+
+def build_query_condition(request, q):
+    """Build the query condition
+    """
+    kyc_type = request.GET.get('kyc_type')
+    is_establish_node = request.GET.get('is_establish_node')
+    if kyc_type:
+        kyc_type = int(kyc_type)
+        q &= Q(kyc_type=kyc_type)
+    if is_establish_node:
+        is_establish_node = int(is_establish_node)
+        q &= Q(is_establish_node=is_establish_node)
+    return q
 
 class IdListView(generic.ListView):
     template_name = "newtonadmin/id-list.html"
@@ -42,6 +56,7 @@ class IdListView(generic.ListView):
 
     def get_queryset(self):
         try:
+
             fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
             items = []
             if fields and len(fields) > 0:
@@ -116,13 +131,15 @@ class InviteListView(generic.ListView):
             s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user_id', flat=True))
             s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user_id', flat=True))
             d = s1.difference(s2)
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user_id__in=d)
+            q = Q(status=codes.KYCStatus.PASS_KYC.value, user_id__in=d)
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.KYCInfo.objects.filter(q)
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
             return items
         except Exception, inst:
-            logger.exception("fail to show pass id list:%s" % str(inst))
+            logger.exception("fail to show invite list:%s" % str(inst))
             return None
     
 
@@ -149,7 +166,9 @@ class CompletedInviteListView(generic.ListView):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value]).order_by('-created_at')
+            q = Q(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value])
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-created_at')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
