@@ -138,22 +138,7 @@ $("#id_organization_form").submit(function(event){
             maxlength: $.validator.format( "Please enter no more than 1000 characters." )},
         what_is_newton: {required: "This field is required.",
             minlength: $.validator.format( "Please enter at least 1 characters." ),
-            maxlength: $.validator.format( "Please enter no more than 1000 characters." )},
-        emergency_contact_first_name: {required: "This field is required.",
-            minlength: $.validator.format( "Please enter at least 1 characters." ),
-            maxlength: $.validator.format( "Please enter no more than 100 characters." )},
-        emergency_contact_last_name: {required: "This field is required.",
-            minlength: $.validator.format( "Please enter at least 1 characters." ),
-            maxlength: $.validator.format( "Please enter no more than 100 characters." )},
-        cellphone_of_emergency_contact_0: {required: "This field is required.",
-            minlength: $.validator.format( "Please enter at least 1 characters." ),
-            maxlength: $.validator.format( "Please enter no more than 4 characters." ),
-            number: "Please enter a valid number."},
-        cellphone_of_emergency_contact_1: {required: "This field is required.",
-            minlength: $.validator.format( "Please enter at least 1 characters." ),
-            maxlength: $.validator.format( "Please enter no more than 20 characters." ),
-            number: "Please enter a valid number."},
-        relationships_with_emergency_contacts: {required: "This field is required."}
+            maxlength: $.validator.format( "Please enter no more than 1000 characters." )}
     },
 
     errorPlacement: function(error,element) {
