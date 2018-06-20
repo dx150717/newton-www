@@ -33,13 +33,13 @@
                                     <label for="id_first_name" class="control-label col-sm-3 fullname-title">
                                         {% trans "First Name" %}<span class="red-color">(*)</span>
                                     </label>
-                                    <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="First Name" type="text">
+                                    <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "First Name" %}" type="text">
                                 </span> 
                                 <span class="last-name">
                                     <label for="id_last_name" class="control-label">
                                         {% trans "Last Name" %}<span class="red-color">(*)</span>
                                     </label>
-                                    <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="Last Name" type="text">
+                                    <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
                                 </span>
                             </div>
                             <div class="form-group">
@@ -58,7 +58,7 @@
                                     {% trans "Certificate Number" %}<span class="red-color">(*)</span>
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_id_number" maxlength="128" name="id_number" placeholder="Certificate Number" type="text">
+                                    <input class="form-control normal" id="id_id_number" maxlength="128" name="id_number" placeholder="{% trans "Certificate Number" %}" type="text">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -66,8 +66,8 @@
                                     {% trans "Certificate Photo" %}<span class="red-color">(*)</span>
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control select-file" id="id_id_card" name="id_card" placeholder="Certificate Photo" type="file">
-                                    <span class="small">Only jpeg, jpg and png file within 5M</span>
+                                    <input class="form-control select-file" id="id_id_card" name="id_card" placeholder="{% trans "Certificate Photo" %}" type="file">
+                                    <span class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</span>
                                 </div>
                             </div>
                             {% include "tokenexchange/include-form-country.html" with form=country_form %}
@@ -76,7 +76,7 @@
                                     {% trans "City" %}<span class="red-color">(*)</span>
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_city" maxlength="256" name="city" placeholder="City" type="text">
+                                    <input class="form-control normal" id="id_city" maxlength="256" name="city" placeholder="{% trans "City" %}" type="text">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -84,8 +84,8 @@
                                     {% trans "Address" %}<span class="red-color">(*)</span>
                                     </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_location" maxlength="1024" name="location" placeholder="Address" type="text">
-                                    <span class="small">Recommend locate to block</span>
+                                    <input class="form-control normal" id="id_location" maxlength="1024" name="location" placeholder="{% trans "Address" %}" type="text">
+                                    <span class="small">{% trans "Recommend locate to block" %}</span>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -94,8 +94,8 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <div class="form-inline">
-                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="Area Code" cellphone"=" type="text"> 
-                                        <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="Phone Number" cellphone"=" type="text">
+                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text"> 
+                                        <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                                     {% trans "Self Introduction" %}<span class="red-color">(*)</span>
                                 </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control with-tip" cols="40" id="id_personal_profile" name="personal_profile" placeholder="Self Introduction" rows="10"></textarea>
+                                <textarea class="form-control with-tip" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "Self Introduction" %}" rows="10"></textarea>
                                 <span class="small">{% trans "Your CV. When were you involved in blockchain industry? Write something about your understanding on blockchain industry." %}</span>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                                 {% trans "WeChat ID" %}
                             </label>
                             <div class="col-sm-9">
-                                <input class="form-control normal" id="id_wechat" maxlength="128" name="wechat" placeholder="WeChat ID" type="text">
+                                <input class="form-control normal" id="id_wechat" maxlength="128" name="wechat" placeholder="{% trans "WeChat ID" %}" type="text">
                             </div>
                         </div>
                         <div class="form-group">
@@ -168,7 +168,7 @@
                                 {% trans "Other Social Media" %}
                             </label>
                             <div class="col-sm-9">
-                                <input class="form-control normal" id="id_other_social_account" maxlength="128" name="other_social_account" placeholder="Other" type="text">
+                                <input class="form-control normal" id="id_other_social_account" maxlength="128" name="other_social_account" placeholder="{% trans "Other Social Media" %}" type="text">
                             </div>
                         </div>
                         <div class="form-group with-attachment">
@@ -176,7 +176,7 @@
                                 {% trans "Newton Communities You are Involved in" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control with-tip" cols="40" id="id_your_community" name="your_community" placeholder="Newton Communities You are Involved in" rows="10"></textarea>
+                                <textarea class="form-control with-tip" cols="40" id="id_your_community" name="your_community" placeholder="{% trans "Newton Communities You are Involved in" %}" rows="10"></textarea>
                                 <span class="small">
                                     {% trans "Community name you are involved in, your nickname in the community, your social media ID." %}
                                 </span>
@@ -187,7 +187,7 @@
                             </label>
                             <div class="col-sm-9">
                                 <label for="id_your_community_screenshots1" class="control-label col-sm-3 attachment-title">
-                                    {% trans "Attachments" %}
+                                    {% trans "Attachment" %}
                                 </label>
                                 <div class="col-sm-9">
                                     <input class="form-control select-file" id="id_your_community_screenshots1" name="your_community_screenshots1" placeholder="Screenshots of Abovementioned Communities 1" type="file">
@@ -212,7 +212,7 @@
                                 <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Your Understanding of Newton" %}<span class="red-color">(*)</span>
                                 </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="Your Understanding of Newton" rows="10"></textarea>
+                                    <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Your Understanding of Newton" %}" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="form-group with-attachment">
@@ -220,7 +220,7 @@
                                     {% trans "Contribution You Have Made to Newton" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control with-tip" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="Contribution You Have Made to Newton" rows="10"></textarea>
+                                    <textarea class="form-control with-tip" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Contribution You Have Made to Newton" %}" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -241,7 +241,7 @@
                                     {% trans "Contribution You Will Make to Newton" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" cols="40" id="id_do_for_newton" name="do_for_newton" placeholder="Contribution You Will Make to Newton" rows="10"></textarea>
+                                    <textarea class="form-control" cols="40" id="id_do_for_newton" name="do_for_newton" placeholder="{% trans "Contribution You Will Make to Newton" %}" rows="10"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -249,8 +249,8 @@
                                     {% trans "Do you want to establish a Newton node ?" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="radio" name="is_establish_node" checked="" value="1" onclick="openNode()">Yes
-                                    <input type="radio" name="is_establish_node" onclick="closeNode()" value="2">No
+                                    <input type="radio" name="is_establish_node" checked="" value="1" onclick="openNode()">{% trans "Yes" %}
+                                    <input type="radio" name="is_establish_node" onclick="closeNode()" value="2">{% trans "No" %}
                                 </div>
                             </div>
                             <div id="which-node" class="form-group">
@@ -259,11 +259,13 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
-                                        <option value="1" selected="selected">{% trans "Full Node" %}</option>
+                                        <option value="1" selected="selected">{% trans "Select Node" %}</option>
+                                        <option value="1">{% trans "Full Node" %}</option>
                                         <option value="2">{% trans "Media Node" %}</option>
                                         <option value="3">{% trans "Technology Node" %}</option>
                                         <option value="4">{% trans "Operation Node" %}</option>
                                     </select>
+                                    <span class="small">{% trans "注：媒体节点是媒体渠道帮助牛顿进行宣传的节点；技术节点是在牛顿生态上开发各类DAPP或其他技术的节点；运营节点是帮助维护和发展牛顿社区的节点；全节点是集合上述两种及两种以上类型的节点。" %}</span>
                                 </div>
                             </div>
                             <div id="how-node" class="form-group">
@@ -271,7 +273,7 @@
                                     {% trans "Your plan of node establishment" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="Your plan of node establishment" rows="10"></textarea>
+                                    <textarea class="form-control" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Your plan of node establishment" %}" rows="10"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -285,21 +287,19 @@
                         <h3 class="panel-title text-center">{% trans "Emergency Information" %}</h3>
                     </div>
                     <div class="panel-body">
-                    <div class="form-group">
-                        <div class="form-group emergency-name col-sm-12"> 
-                            <span>
-                                <label for="id_emergency_contact_first_name" class="control-label col-sm-3">
-                                    {% trans "First Name" %}<span class="red-color">(*)</span>
-                                </label>
-                                <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="emergency_contact_first_name" placeholder="First Name" type="text">
-                            </span> 
-                            <span class="last-name">
-                                <label for="id_emergency_contact_last_name" class="control-label">
-                                    {% trans "Last Name" %}<span class="red-color">(*)</span>
-                                </label>
-                                <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="emergency_contact_last_name" placeholder="Last Name" type="text">
-                            </span>
-                        </div>
+                    <div class="form-group emergency-name col-sm-12"> 
+                        <span>
+                            <label for="id_emergency_contact_first_name" class="control-label col-sm-3">
+                                {% trans "First Name" %}<span class="red-color">(*)</span>
+                            </label>
+                            <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
+                        </span> 
+                        <span class="last-name">
+                            <label for="id_emergency_contact_last_name" class="control-label">
+                                {% trans "Last Name" %}<span class="red-color">(*)</span>
+                            </label>
+                            <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
+                        </span>
                     </div>
                     <div class="form-group">
                         <label for="id_cellphone_of_emergency_contact" class="control-label col-sm-3">
@@ -307,8 +307,8 @@
                         </label>
                         <div class="col-sm-9">
                             <div class="form-inline">
-                                <input class="form-control" id="id_cellphone_of_emergency_contact_0" name="cellphone_of_emergency_contact_0" placeholder="Area Code" cellphone"=" type="text"> 
-                                <input class="form-control" id="id_cellphone_of_emergency_contact_1" name="cellphone_of_emergency_contact_1" placeholder="Phone Number" cellphone"=" type="text">
+                                <input class="form-control" id="id_cellphone_of_emergency_contact_0" name="cellphone_of_emergency_contact_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text"> 
+                                <input class="form-control" id="id_cellphone_of_emergency_contact_1" name="cellphone_of_emergency_contact_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text">
                             </div>
                         </div>
                     </div>
@@ -318,7 +318,7 @@
                             {% trans "City" %}<span class="red-color">(*)</span>
                         </label>
                         <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_city" maxlength="256" name="emergency_city" placeholder="City" type="text">
+                            <input class="form-control normal" id="id_emergency_city" maxlength="256" name="emergency_city" placeholder="{% trans "City" %}" type="text">
                         </div>
                     </div>
                     <div class="form-group">
@@ -326,7 +326,7 @@
                                 {% trans "Address" %}<span class="red-color">(*)</span>
                             </label>
                         <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_location" maxlength="1024" name="emergency_location" placeholder="Address" type="text">
+                            <input class="form-control normal" id="id_emergency_location" maxlength="1024" name="emergency_location" placeholder="{% trans "Address" %}" type="text">
                         </div>
                     </div>
                     <div class="form-group">
@@ -334,7 +334,7 @@
                             {% trans "Relation with Applicant"%} <span class="red-color">(*)</span>
                         </label>
                         <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_relationship" maxlength="1024" name="emergency_relationship" placeholder="Relation with Applicant" type="text">
+                            <input class="form-control normal" id="id_emergency_relationship" maxlength="1024" name="emergency_relationship" placeholder="{% trans "Relation with Applicant"%}" type="text">
                         </div>
                     </div>
                     </div>
@@ -343,7 +343,7 @@
             
             <div class="raw">
                 <div class="text-center token-btn">
-                    <button class="form-button" type="submit">Submit</button>
+                    <button class="form-button" type="submit">{% trans "Submit" %}</button>
                 </div>
             </div>
         </form>
