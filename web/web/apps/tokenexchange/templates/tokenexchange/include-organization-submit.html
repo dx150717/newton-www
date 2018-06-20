@@ -3,7 +3,7 @@
 <section class="section-list kyc">
     <div class="raw">
                 
-        <form class="form-horizontal" action="/tokenexchange/organization/post/" method="POST" enctype="multipart/form-data">
+        <form class="form-horizontal" action="/tokenexchange/organization/post/" method="POST" enctype="multipart/form-data" id="id_organization_form">
             <div class="container form-container">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -73,7 +73,8 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <div class="form-inline">
-                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="Area Code" cellphone"="" type="text"> <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="Phone Number" cellphone"="" type="text">
+                                        <input class="form-control" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="Area Code" cellphone"=" type="text"> 
+                                        <input class="form-control" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="Phone Number" cellphone"=" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -221,69 +222,6 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="container form-container">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title text-center">{% trans "Emergency Information" %}</h3>
-                    </div>
-                    <div class="panel-body">
-                    <div class="form-group">
-                        <div class="form-group emergency-name col-sm-12"> 
-                            <span>
-                                <label for="id_emergency_contact_first_name" class="control-label col-sm-3">
-                                    {% trans "First Name" %}<span class="red-color">(*)</span>
-                                </label>
-                                <input class="form-control" id="id_emergency_contact_first_name" maxlength="128" name="first_name" placeholder="First Name" type="text">
-                            </span> 
-                            <span class="last-name">
-                                <label for="id_emergency_contact_last_name" class="control-label">
-                                    {% trans "Last Name" %}<span class="red-color">(*)</span>
-                                </label>
-                                <input class="form-control" id="id_emergency_contact_last_name" maxlength="128" name="last_name" placeholder="Last Name" type="text">
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="id_cellphone_of_emergency_contact" class="control-label col-sm-3">
-                            {% trans "Cellphone" %}<span class="red-color">(*)</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <div class="form-inline">
-                                <input class="form-control" id="id_cellphone_of_emergency_contact_0" name="cellphone_of_emergency_contact_0" placeholder="Area Code" cellphone"=" type="text"> 
-                                <input class="form-control" id="id_cellphone_of_emergency_contact_1" name="cellphone_of_emergency_contact_1" placeholder="Phone Number" cellphone"=" type="text">
-                            </div>
-                        </div>
-                    </div>
-                    {% include "tokenexchange/include-form-country.html" with form=emergency_country_form %}
-                    <div class="form-group">
-                        <label for="id_emergency_city" class="control-label col-sm-3">
-                            {% trans "City" %}<span class="red-color">(*)</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_city" maxlength="256" name="emergency_city" placeholder="City" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                            <label for="id_emergency_location" class="control-label col-sm-3">
-                                {% trans "Address" %}<span class="red-color">(*)</span>
-                            </label>
-                        <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_location" maxlength="1024" name="emergency_location" placeholder="Address" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="id_emergency_relationship" class="control-label col-sm-3">
-                            {% trans "Relation with Applicant"%} <span class="red-color">(*)</span>
-                        </label>
-                        <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_relationship" maxlength="1024" name="emergency_relationship" placeholder="Relation with Applicant" type="text">
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            
             <div class="raw">
                 <div class="text-center token-btn">
                     <button class="form-button" type="submit">Submit</button>
