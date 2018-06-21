@@ -1097,6 +1097,12 @@ canvas {display: block; vertical-align: top;}
     margin: 0;
     text-align: right;
 }
+@media (max-width: 991px) {
+    .kyc-info .panel-heading p {
+        width: 100%;
+        text-align: center;
+    }
+}
 .user-avator{width: 30px; border-radius: 15px; margin-top: -5px;}
 
 #countdown{background: url("../images/tokensale/tokensale_background.png") no-repeat; height: 720px; background-size: 100% 720px;}
