@@ -86,6 +86,8 @@ class IdListView(generic.ListView):
                     if item.id_type:
                         item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
                     item.country = COUNTRIES[item.country]
+                    if item.emergency_relationship:
+                        item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
                     items.append(item)
             return items
         except Exception, inst:
@@ -120,6 +122,8 @@ class PassIdListView(generic.ListView):
                     if item.id_type:
                         item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
                     item.country = COUNTRIES[item.country]
+                    if item.emergency_relationship:
+                        item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
                     items.append(item)
             return items
         except Exception, inst:
@@ -623,6 +627,8 @@ def show_id_detail(request, user_id):
                 item.is_establish_node = convert.get_value_from_choice(item.is_establish_node, tokenexchange_models.ESTABLISH_CHOICE)
             if item.which_node_establish:
                 item.which_node_establish = convert.get_value_from_choice(item.which_node_establish, tokenexchange_models.NODE_CHOICE)
+            if item.emergency_relationship:
+                item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
             item.country = COUNTRIES[item.country]
             item.level_choices = [i+1 for i in range(10)]
         return render(request, "newtonadmin/id-detail.html", locals())
@@ -660,6 +666,8 @@ class RejectListView(generic.ListView):
                     if item.id_type:
                         item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
                     item.country = COUNTRIES[item.country]
+                    if item.emergency_relationship:
+                        item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
                     items.append(item)
             return items
         except Exception, inst:
@@ -695,6 +703,8 @@ class DenyListView(generic.ListView):
                         item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
                     item.country = COUNTRIES[item.country]
                     items.append(item)
+                    if item.emergency_relationship:
+                        item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))

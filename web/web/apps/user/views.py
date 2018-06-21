@@ -51,6 +51,8 @@ def show_user_index_view(request):
         data['country'] = COUNTRIES[data['country']]
         if data['emergency_country']:
             data['emergency_country'] = COUNTRIES[data['emergency_country']]
+        if data['emergency_relationship']:
+            data['emergency_relationship'] = convert.get_value_from_choice(data['emergency_relationship'], tokenexchange_models.RELATIONSHIP_CHOICE)
         base_form = token_exchange_forms.KYCBaseForm(initial=data)
         profile_form = token_exchange_forms.KYCProfileForm(initial=data)
         contribute_form = token_exchange_forms.ContributeForm(initial=data)
