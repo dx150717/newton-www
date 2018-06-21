@@ -33,7 +33,7 @@
         <div class="container amount mt50">
             <div class="raw">
                 <div>
-                    <form id="id_fill_amount_form" class="form text-left" action="/tokenexchange/invite/{{ invite_id }}/post/" method="POST">
+                    <form id="id_fill_amount_form" class="form-horizontal" action="/tokenexchange/invite/{{ invite_id }}/post/" method="POST">
                         {% if form.non_field_errors %}
                         <div class="form-group">
                             <div class="raw">
@@ -48,20 +48,15 @@
                         {% endif %}
 
                         <div class="form-group">
-                            <p class="label-expect">
-                                <label for="id_expect_btc" class="control-label">{% trans "How much do you want to contribute in BTC" %} <span class="red-color"></span>
+                            <label for="id_expect_btc" class="control-label col-sm-4">{% trans "How much do you want to contribute in BTC" %}
                                 </label>
-                            </p>
-                            <div>
+                            <div class="col-sm-8">
                                 <input class="form-control" id="id_expect_btc" name="expect_btc" placeholder="{% trans "How much do you want to contribute in BTC" %}" step="any" type="number" min="{{ min_btc }}">
                             </div>
                         </div>
                         <div class="form-group">
-                            <p class="label-expect">
-                                <label for="id_expect_ela" class="control-label">{% trans "How much do you want to contribute in ELA" %} <span class="red-color"></span>
-                                </label>
-                            </p>
-                            <div>
+                            <label for="id_expect_ela" class="control-label col-sm-4">{% trans "How much do you want to contribute in ELA" %}</label>
+                            <div class="col-sm-8">
                                 <input class="form-control" id="id_expect_ela" name="expect_ela" placeholder="{% trans "How much do you want to contribute in ELA" %}" step="any" type="number" min="{{ min_ela }}">
                             </div>
                         </div>
