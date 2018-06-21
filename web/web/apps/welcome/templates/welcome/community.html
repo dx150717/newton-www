@@ -7,13 +7,34 @@
 {% endblock %}
 
 {% block content %}
-<section id="community" class="section-list">
+<section class="section-list community">
     <div class="page-title">
         <div class="container">
             <p>{% trans "Community" %}</p>
         </div>
     </div>
-    <div class="social-network bg-gray">
+
+    {% include "welcome/include-community-event.html" %}
+    
+    <div class="press bg-gray">
+        <div class="container">
+            <h2>{% trans "Press" %}</h2>
+            <div>
+                {% if presses %}
+                {% for press in presses %}
+                <p><a href="{{ press.press_link }}" target="_blank">{{ press.press_title }} >> </a><span>({{press.created_at | date:'Y-m-d'}} , {{ press.press_partner }})</span></p>
+                {% if forloop.counter == 5 %}
+                <p><a href="/press/">{% trans "MORE" %}>></a></p>
+                {% endif %}
+                {% endfor %}
+                {% else %}
+                <p></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="social-network">
         <div class="container">
             <h2>{% trans "Social Network" %}</h2>
             <div class="row">
@@ -29,8 +50,8 @@
             </div>
         </div>
     </div>
-        <div class="email-list">
-            <div class="container">
+    <div class="email-list bg-gray">
+        <div class="container">
             <h2>{% trans "Email List" %}</h2>
             <div class="row">
                 <div class="col-md-3 item">
@@ -40,8 +61,8 @@
         </div>
     </div>
 
-        <div class="online-community bg-gray">
-            <div class="container">
+    <div class="online-community">
+        <div class="container">
             <h2>{% trans "Community" %}</h2>
             <div class="row">
                 <div class="col-md-3 item">
@@ -66,25 +87,8 @@
             </div>
         </div>
     </div>
-        <div class="press">
-            <div class="container">
-            <h2>{% trans "Press" %}</h2>
-            <div>
-                {% if presses %}
-                {% for press in presses %}
-                <p><a href="{{ press.press_link }}" target="_blank">{{ press.press_title }} >> </a><span>({{press.created_at | date:'Y-m-d'}} , {{ press.press_partner }})</span></p>
-                {% if forloop.counter == 5 %}
-                <p><a href="/press/">{% trans "MORE" %}>></a></p>
-                {% endif %}
-                {% endfor %}
-                {% else %}
-                <p>none</p>
-                {% endif %}
-            </div>
-        </div>
-    </div>
 </div>
-        
+
 </section>
 
 
@@ -92,18 +96,18 @@
 
 {% block inline_js %}
 <script>
-   $('body').on('click', function(event) {  
-        var target = $(event.target);
-        if (!target.hasClass('popover')  
-                && target.parent('.popover-content').length === 0  
-                && target.parent('.myPopover').length === 0  
-                && target.parent('.popover-title').length === 0  
-                && target.parent('.popover').length === 0 && target.attr("id") !== "wechat") {  
-            $('#wechat').popover('hide');  
-        }  
+    $('body').on('click', function(event) {  
+    var target = $(event.target);
+    if (!target.hasClass('popover')  
+    && target.parent('.popover-content').length === 0  
+    && target.parent('.myPopover').length === 0  
+    && target.parent('.popover-title').length === 0  
+    && target.parent('.popover').length === 0 && target.attr("id") !== "wechat") {  
+    $('#wechat').popover('hide');  
+    }  
     });  
     $(function (){
-        $("[data-toggle='popover']").popover();
+    $("[data-toggle='popover']").popover();
     });
 </script>
 {% endblock %}
