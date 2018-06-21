@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-21 03:08+0000\n"
+"POT-Creation-Date: 2018-06-21 05:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,11 +225,13 @@ msgstr "安全审计。"
 
 #: web/apps/help/templates/help/security.html:20
 #: web/apps/user/templates/user/include-security.html:5
+#: web/templates/email-kyc-template.html:47
 msgid "Newton Token Exchange Security Notification"
 msgstr "牛顿通证交换安全提示"
 
 #: web/apps/help/templates/help/security.html:21
 #: web/apps/user/templates/user/include-security.html:6
+#: web/templates/email-kyc-template.html:48
 msgid ""
 "Newton official website（www.newtonproject.org）is the unique legitimate "
 "platform for Newton token exchange. Newton won't provide you with any "
@@ -239,11 +241,12 @@ msgid ""
 msgstr ""
 "牛顿官方网站（www.newtonproject.org）是唯一的牛顿通证的合法交换渠道。牛顿不会"
 "在除网站之外的任何渠道（包括电子邮件、微信、Telegram、电话、短信等等）对您提"
-"供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配额度、分配地址和分配"
+"供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配数量、分配地址和分配"
 "二维码。"
 
 #: web/apps/help/templates/help/security.html:22
 #: web/apps/user/templates/user/include-security.html:7
+#: web/templates/email-kyc-template.html:49
 msgid ""
 "Please make sure that the SSL of Newton official website is “NEWTON "
 "FOUNDATION LTD. [SG]” before exchanging token，in case of property loss "
@@ -400,6 +403,7 @@ msgid "Newton Token Exchange Invitation"
 msgstr "牛顿通证交换邀请"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:6
 #: web/apps/register/templates/register/register-letter.html:6
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Dear"
@@ -412,7 +416,7 @@ msgid ""
 "website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) "
 "before filling in the expected amount."
 msgstr ""
-"祝贺您，您可以参加牛顿第一轮通证交换。在填写您的期望通证交换额度之前，请在牛"
+"祝贺您，您可以参加牛顿第一轮通证交换。在填写您的通证交换申请数量之前，请在牛"
 "顿官方网站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
 "a>) 上阅读牛顿通证交换的详细信息。"
 
@@ -427,26 +431,29 @@ msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:9
 msgid "Click the following button to fill in expected amount"
-msgstr "点击下方按钮，填写您的通证交换期望额度。"
+msgstr "点击下方按钮，填写您的通证交换申请数量。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:10
 msgid "Fill in"
-msgstr "填写期望额度"
+msgstr "填写申请数量"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:11
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:9
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:21
 msgid "Best regard"
 msgstr "谢谢！"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:12
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:10
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:22
 msgid "Newton team"
 msgstr "牛顿团队"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:13
 #: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:9
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:11
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:23
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:39
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:15
 #: web/apps/register/templates/register/register-letter.html:9
 #: web/apps/reset/templates/reset/reset-letter.html:9
 msgid "If you received this email by mistake, simply delete it."
@@ -495,9 +502,27 @@ msgid "Your ELA amount is:"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:8
-#, fuzzy
 msgid "Confirm"
 msgstr "确认密码"
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:5
+msgid "Welcome! Thank You for join Newton KYC!"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:7
+msgid ""
+"Hello! This e-mail comes from <a class='main-color' href='https://www."
+"newtonproject.org'>https://www.newtonproject.org</a>. Your KYC information "
+"has passed  verification. Click the button below to check your currency "
+"address and quota on  the  official website. For all enquiries, problems or "
+"suggestions regarding this service, please contact us <a href='mailto:"
+"contact@newtonproject.org'> contact@newtonproject.org</a>."
+msgstr ""
+""
+
+#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:8
+msgid "Lookup Address"
+msgstr "详细地址"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:45
 #: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:46
@@ -578,27 +603,27 @@ msgstr "您可以仔细检查并修改KYC信息页面的内容，然后再次提
 msgid "Admin Login"
 msgstr ""
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:28
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:4
 #, fuzzy
 msgid "KYC verification rejected"
 msgstr "KYC 审核被拒绝"
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:30
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:6
 msgid "Newton foundation has received your"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:35
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:11
 #: web/apps/register/templates/register/index.html:47
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
 msgid "and"
 msgstr "和"
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:37
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:13
 msgid ""
 "we show sincere gratitude to contribution you have made in Newton community."
 msgstr ""
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:38
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:14
 msgid ""
 "You can join in our communities in other medias by go to the 'community' "
 "page through the navigator bar of Newton official website (<a href='https://"
@@ -1250,12 +1275,12 @@ msgstr "微信公众平台名称"
 #: web/apps/tokenexchange/models.py:126
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:37
 msgid "How much do you want to contribute in BTC"
-msgstr "您期望的 BTC 额度"
+msgstr "您申请的 BTC 数量"
 
 #: web/apps/tokenexchange/models.py:127
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:46
 msgid "How much do you want to contribute in ELA"
-msgstr "您期望的 ELA 额度"
+msgstr "您申请的 ELA 数量"
 
 #: web/apps/tokenexchange/services.py:29
 msgid "Newton notification: Received your KYC information"
@@ -1287,7 +1312,7 @@ msgstr "通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:20
 msgid "You have successfully filled in the expected amount."
-msgstr "您已经成功填写了期望额度。"
+msgstr "您已经成功填写了申请数量。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:22
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:25
@@ -1488,7 +1513,7 @@ msgstr "* 注意，您只能向分配地址中分别转"
 msgid ""
 "to above addresses. DO NOT transfer BTC and ELA amount larger than allocated "
 "amount, otherwise Newton Foundation won't refund the remainder."
-msgstr "请不要转入大于分配额度的BTC和ELA的数量，牛顿基金会不回退回超额的部分"
+msgstr "请不要转入大于分配数量的BTC和ELA的数量，牛顿基金会不回退回超额的部分"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
 msgid ""
@@ -1499,7 +1524,7 @@ msgstr "* 本轮通证交换已截止，请不要向分配地址中转币"
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:23
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:32
 msgid "Allocated BTC amount"
-msgstr "分配 BTC 额度"
+msgstr "分配 BTC 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:24
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:33
@@ -1509,7 +1534,7 @@ msgstr "分配 BTC 地址"
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:41
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:50
 msgid "Allocated ELA amount"
-msgstr "分配 ELA 额度"
+msgstr "分配 ELA 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:42
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:51
@@ -1518,17 +1543,17 @@ msgstr "分配 ELA 地址"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:9
 msgid "Expected"
-msgstr "期望信息"
+msgstr "申请信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:13
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:15
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:22
 msgid "Expected BTC amount"
-msgstr "期望 BTC 额度"
+msgstr "申请 BTC 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:20
 msgid "Expected ELA amount"
-msgstr "期望 ELA 额度"
+msgstr "申请 ELA 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:9
 msgid "Token Exchange Result"
@@ -1540,7 +1565,7 @@ msgstr "当前状态：转币已结束"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:14
 msgid "Status：transferred amount is not equal to allocated amount"
-msgstr "当前状态：转币数量和分配额度不一致"
+msgstr "当前状态：转币数量和分配数量不一致"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:21
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:44
@@ -1566,11 +1591,11 @@ msgstr "区块链代币交换的过程不是融资过程，是团队组建的过
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:14
 msgid "Minimum BTC: "
-msgstr "最小 BTC 额度："
+msgstr "最小 BTC 数量："
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:18
 msgid "Minimum ELA: "
-msgstr "最小 ELA 额度："
+msgstr "最小 ELA 数量："
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:31
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:18
@@ -2006,7 +2031,7 @@ msgstr "填写KYC信息"
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:41
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:44
 msgid "Your expected amount is under evaluation"
-msgstr "您填写的期望额度正在评估中"
+msgstr "您填写的申请数量正在评估中"
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:47
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:50
@@ -2096,7 +2121,7 @@ msgstr "已经通过 Newton KYC"
 #: web/apps/user/templates/user/include-token-exchange.html:28
 #: web/apps/user/templates/user/include-token-exchange.html:73
 msgid "Filled in the expected amount"
-msgstr "填写期望额度"
+msgstr "填写申请数量"
 
 #: web/apps/user/templates/user/include-token-exchange.html:37
 #: web/apps/user/templates/user/include-token-exchange.html:81
@@ -4051,6 +4076,7 @@ msgid "PRESS"
 msgstr "媒体报道"
 
 #: web/apps/welcome/templates/welcome/press.html:29
+#: web/templates/email-kyc-template.html:50
 msgid "Details"
 msgstr "详情"
 
@@ -6986,7 +7012,7 @@ msgstr ""
 #~ msgstr "第一轮通证交换"
 
 #~ msgid "Receive Amount Of Newton Foundation"
-#~ msgstr "Newton 基金会收到的额度"
+#~ msgstr "Newton 基金会收到的数量"
 
 #~ msgid "Received BTC"
 #~ msgstr "接收的 BTC"
@@ -7001,7 +7027,7 @@ msgstr ""
 #~ msgstr "到上述地址。"
 
 #~ msgid "Fill in expected amount"
-#~ msgstr "填写期望额度"
+#~ msgstr "填写申请数量"
 
 #~ msgid "rejected reason is:"
 #~ msgstr "拒绝原因："
@@ -7010,4 +7036,4 @@ msgstr ""
 #~ msgstr "扫描二维码或者手动填写密钥绑定谷歌身份验证器"
 
 #~ msgid "Fill in your amount of token exchange"
-#~ msgstr "填写你的期望额度"
+#~ msgstr "填写你的申请数量"
