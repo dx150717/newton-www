@@ -27,3 +27,15 @@ def get_captcha(session_key):
     except Exception, inst:
         logger.exception("fail to get captcha:%s" % str(inst))
         return None
+
+def is_valid_captcha(session_key, code):
+    """Validate whether the given code is valid captcha
+    """
+    try:
+        real_code = get_captcha(session_key)
+        if code.lower() == real_code.lower():
+            return True
+        return False
+    except Exception, inst:
+        logger.exception("fail to validate captcha:%s" % str(inst))
+        return False
