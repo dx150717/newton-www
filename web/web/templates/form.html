@@ -14,39 +14,10 @@
 </div>
 {% endif %}
 {% for field in form %}
-{% if field.name == "gtoken_code" %}
-<div class="form-group margin-auto" >
-    <p>
-        <label for="id_{{ field.name }}" class="control-label">{{ field.label }} <span class="red-color">{{ field.help_text }}</span>
-        </label>
-    </p>
-    <div>
-        {{ field|addcss:"form-control" }}
-        {% if field.errors %}
-        <div class="alert alert-danger">
-            {{ field.errors.0 }}
-        </div>
-        {% endif %}
-    </div>
-</div>
-{% else %}
-    {% if field.name == "personal_profile_attachment" or field.name == "done_for_newton_attachment" or field.name == "your_community_screenshots1" or field.name == "your_community_screenshots2" or field.name == "your_community_screenshots3" or field.name == "orgnization_certificate1" or field.name == "orgnization_certificate2" %}
-<div class="form-group attachment">  
-    {% else %}
 <div class="form-group"> 
-    {% endif %}
     <p>
         <label for="id_{{ field.name }}" class="control-label">{{ field.label }} <span class="red-color">{{ field.help_text }}</span>
         </label>
-        {% if field.name == "id_card" or field.name == "personal_profile_attachment" or field.name == "done_for_newton_attachment" %}
-        <p class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</p>
-        {% endif %}
-        {% if field.name == "location" %}
-        <p class="small">{% trans "Recommend locate to block" %}</p>
-        {% endif %}
-        {% if field.name == "your_community" %}
-        <p class="small">{% trans "Community name you are involved in, your nickname in the community, your social media ID." %}</p>
-        {% endif %}
     </p>
     <div>
         {{ field|addcss:"form-control" }}
@@ -57,5 +28,4 @@
         {% endif %}
     </div>
 </div>
-{% endif %}
 {% endfor %}
