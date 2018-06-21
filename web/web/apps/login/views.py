@@ -37,7 +37,7 @@ def post_login(request):
         if not form.is_valid():
             return http.JsonErrorResponse(error_message=_("Form Error"))
         code = request.POST.get('code')
-        if ishuman_services.is_valid_captcha(request.session.session_key, code):
+        if not ishuman_services.is_valid_captcha(request.session.session_key, code):
             return http.JsonErrorResponse(error_message=_("Captcha Error"))
         # start authenticate
         username = form.cleaned_data['email']
