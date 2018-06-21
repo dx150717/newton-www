@@ -30,7 +30,7 @@ def check_captcha(request):
     try:
         code = request.GET.get('code')
         real_code = ishuman_services.get_captcha(request.session.session_key)
-        if code == real_code:
+        if code and code.lower() == real_code.lower():
             return http.JsonSuccessResponse()
         else:
             return http.JsonErrorResponse()
