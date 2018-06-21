@@ -53,22 +53,28 @@
                 </div>    
                 {% if kycinfo.status == 2 %}
                 {% if kycinfo.kyc_type == 1 %}
-                <div class="item">
+                <div class="item kyc-info">
                     <div class="col-sm-12">
                         <div class="panel panel-default">
-                            <div class="panel-heading" style="padding-top: 0">{% trans "Basic Information" %}</div>
+                            <div class="panel-heading" style="padding-top: 0">
+                                <p>{% trans "Basic Information" %}</p>
+                            </div>
                             <div class="panel-body">
                                 {% include "user/form_content.html" with form=base_form %}
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading">{% trans "Self Introduction" %}</div>
+                            <div class="panel-heading">
+                                <p>{% trans "Self Introduction" %}</p>
+                            </div>
                             <div class="panel-body">
                                 {% include "user/form_content.html" with form=profile_form %}
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading">{% trans "How to Contribute" %}</div>
+                            <div class="panel-heading">
+                                <p>{% trans "How to Contribute" %}</p>
+                            </div>
                             <div class="panel-body">
                                 {% include "user/form_content.html" with form=contribute_form %}
                                 {% if data.is_establish_node %}
@@ -104,7 +110,9 @@
                             </div>
                         </div>
                         <div class="panel panel-default">
-                            <div class="panel-heading">{% trans "Emergency Information" %}</div>
+                            <div class="panel-heading">
+                                <p>{% trans "Emergency Information" %}</p>
+                            </div>
                             <div class="panel-body">
                                 {% include "user/form_content.html" with form=emergency_form %}
                             </div>
@@ -112,22 +120,28 @@
                     </div>
                 </div>
                 {% else %}
-                <div class="item">
+                <div class="item kyc-info">
                         <div class="col-sm-12">
                             <div class="panel panel-default">
-                                <div class="panel-heading" style="padding-top: 0">{% trans "Basic Information" %}</div>
+                                <div class="panel-heading" style="padding-top: 0">
+                                    <p>{% trans "Basic Information" %}</p>
+                                </div>
                                 <div class="panel-body">
                                     {% include "user/form_content.html" with form=organization_base_form %}
                                 </div>
                             </div>
                             <div class="panel panel-default">
-                                <div class="panel-heading">{% trans "Organization Introduction" %}</div>
+                                <div class="panel-heading">
+                                    <p>{% trans "Organization Introduction" %}</p>
+                                </div>
                                 <div class="panel-body">
                                     {% include "user/form_content.html" with form=organization_profile_form %}
                                 </div>
                             </div>
                             <div class="panel panel-default">
-                                <div class="panel-heading">{% trans "How to Contribute" %}</div>
+                                <div class="panel-heading">
+                                    <p>{% trans "How to Contribute" %}</p>
+                                </div>
                                 <div class="panel-body">
                                     {% include "user/form_content.html" with form=contribute_form %}
                                     {% if data.is_establish_node %}
