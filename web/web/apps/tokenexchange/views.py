@@ -242,23 +242,26 @@ def post_apply_amount(request, invite_id):
             return render(request, "tokenexchange/invalid-link.html")
         # get token exchange info
         token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+        min_btc = token_exchange_info['min_btc']
+        min_ela = token_exchange_info['min_ela']
         if request.method == 'POST':
             form = tokenexchange_forms.ApplyAmountForm(request.POST)
             if form.is_valid():
-                item.expect_btc = form.cleaned_data['expect_btc']
-                item.expect_ela = form.cleaned_data['expect_ela']
-                if not item.expect_btc and not item.expect_ela:
+                expect_btc = form.cleaned_data['expect_btc']
+                expect_ela = form.cleaned_data['expect_ela']
+                if not expect_btc and not expect_ela:
                     form._errors[NON_FIELD_ERRORS] = form.error_class(['You must fill in at least one.'])
                     return render(request, "tokenexchange/apply-amount.html", locals())
-                elif item.expect_btc < token_exchange_info['min_btc']:
-                    form._errors[NON_FIELD_ERRORS] = form.error_class(['The quantity of BTC must be equal or more than %s.' % (token_exchange_info['min_btc'])])
+                elif expect_btc < min_btc:
+                    form._errors[NON_FIELD_ERRORS] = form.error_class(['The quantity of BTC must be equal or more than %s.' % (min_btc)])
                     return render(request, "tokenexchange/apply-amount.html", locals())
-                elif item.expect_ela < token_exchange_info['min_ela']:
-                    form._errors[NON_FIELD_ERRORS] = form.error_class(['The quantity of ELA must be equal or more than %s.' % (token_exchange_info['min_ela'])])
+                elif expect_ela < min_ela:
+                    form._errors[NON_FIELD_ERRORS] = form.error_class(['The quantity of ELA must be equal or more than %s.' % (min_ela)])
                     return render(request, "tokenexchange/apply-amount.html", locals())
+                item.expect_btc = expect_btc
+                item.expect_ela = expect_ela
                 item.status = codes.TokenExchangeStatus.APPLY_AMOUNT.value
                 item.save()
-                token_exchange_info = settings.FUND_CONFIG[item.phase_id]
                 return render(request, "tokenexchange/apply-success.html", locals())
         else:
             form = tokenexchange_forms.ApplyAmountForm()
