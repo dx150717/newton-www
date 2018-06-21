@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
+import csv
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import user_passes_test
 from django.conf import settings
@@ -12,6 +13,7 @@ from django.db.models import Q
 
 from utils import http
 from utils import convert
+from utils import exception
 from config import codes
 from tokenexchange import models as tokenexchange_models
 from tracker import models as tracker_models
@@ -725,3 +727,22 @@ def post_confirm_amount(request, phase_id):
     except Exception, inst:
         logger.exception("fail to post invite:%s" % str(inst))
         return http.JsonErrorResponse()
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def export_amount_list(request, phase_id):
+    """Export the amount list as csv format
+    """
+    try:
+        response = http.HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="amount-list.csv"'
+        writer = csv.writer(response)
+        writer.writerow([u'邮箱', u'申请BTC数量', u'分配BTC数量', u'申请ELA数量', u'分配ELA数量'])
+        for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
+            user = User.objects.get(id=item.user_id)
+            email = user.email
+            writer.writerow([email, item.expect_btc, item.assign_btc, item.expect_ela, item.assign_ela])
+        return response
+    except Exception, inst:
+        logger.exception("fail to export amount list:%s" % str(inst))
+        raise exception.SystemError500()
+        
