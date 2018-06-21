@@ -86,8 +86,6 @@ class IdListView(generic.ListView):
                     if item.id_type:
                         item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
                     item.country = COUNTRIES[item.country]
-                    if item.emergency_relationship:
-                        item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
                     items.append(item)
             return items
         except Exception, inst:
@@ -122,8 +120,6 @@ class PassIdListView(generic.ListView):
                     if item.id_type:
                         item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
                     item.country = COUNTRIES[item.country]
-                    if item.emergency_relationship:
-                        item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
                     items.append(item)
             return items
         except Exception, inst:
@@ -666,8 +662,6 @@ class RejectListView(generic.ListView):
                     if item.id_type:
                         item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
                     item.country = COUNTRIES[item.country]
-                    if item.emergency_relationship:
-                        item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
                     items.append(item)
             return items
         except Exception, inst:
@@ -703,8 +697,6 @@ class DenyListView(generic.ListView):
                         item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
                     item.country = COUNTRIES[item.country]
                     items.append(item)
-                    if item.emergency_relationship:
-                        item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
