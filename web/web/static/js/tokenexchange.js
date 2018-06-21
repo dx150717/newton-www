@@ -172,8 +172,8 @@ $("#id_fill_amount_form").submit(function(event){
     errorElement: "div",
     errorClass: "alert alert-danger",
     rules: {
-        expect_btc: {required: true, number: true, min:$('#id_expect_btc').attr('min')},
-        expect_ela: {required: true, number: true, min:$('#id_expect_ela').attr('min')}
+        expect_btc: {required: true, number: true, min:parseFloat($('#id_expect_btc').attr('min'))},
+        expect_ela: {required: true, number: true, min:parseFloat($('#id_expect_ela').attr('min'))}
     },
     errorPlacement: function(error,element) {
         //error.appendTo(element.parent());
