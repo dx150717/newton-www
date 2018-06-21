@@ -291,6 +291,9 @@ canvas { display: block; vertical-align: top; }
 .organization-logo img {
     width: 100%;
 }
+.organization-container {
+    height: 200px;
+}
 /* Partners ---------------------------------------------------------------- */
 .partner-bottom{padding-bottom: 60px;}
 .partners-list { vertical-align: middle;}
@@ -535,7 +538,6 @@ canvas { display: block; vertical-align: top; }
     .feature-item-wrap dl dd { font-size: 14px; line-height: 1.6; margin-bottom: 30px; padding: 0 10px; }
     .avatar { width: 120px; height: 120px; margin-bottom: 15px; }
     .team-item { margin-bottom: 35px; }
-    .team-item:last-child { margin-bottom: 0; }
     .timeline-lg { display: none; }
     .timeline { display: block; }
     .partners-list{ text-align: center; }

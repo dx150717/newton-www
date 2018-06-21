@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 07:21+0000\n"
+"POT-Creation-Date: 2018-06-21 13:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -164,8 +164,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:110
-#: web/apps/zinnia/models_bases/entry.py:113
+#: web/apps/zinnia/models_bases/entry.py:111
+#: web/apps/zinnia/models_bases/entry.py:114
 msgid "Language"
 msgstr "语言"
 
@@ -1428,7 +1428,7 @@ msgstr "技术、商业、经济或其他问题，联系"
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:64 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:65 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "公告"
 
@@ -1442,63 +1442,63 @@ msgid "All"
 msgstr "全部公告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:69
+#: web/apps/zinnia/models_bases/entry.py:70
 msgid "Operation"
 msgstr "运营公告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:70
+#: web/apps/zinnia/models_bases/entry.py:71
 msgid "Weekly"
 msgstr "周报"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:68
+#: web/apps/zinnia/models_bases/entry.py:69
 msgid "Activity"
 msgstr "活动公告"
 
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
-#: web/apps/welcome/templates/welcome/community.html:45
+#: web/apps/welcome/templates/welcome/community.html:66
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
 #: web/templates/header.html:32
 msgid "Community"
 msgstr "社区"
 
-#: web/apps/welcome/templates/welcome/community.html:18
-msgid "Social Network"
-msgstr "社交网络"
-
-#: web/apps/welcome/templates/welcome/community.html:27
-#: web/apps/welcome/templates/welcome/wechat.html:20
-msgid "Scan QR Code to join us"
-msgstr "扫描二维码关注微信公众号"
-
-#: web/apps/welcome/templates/welcome/community.html:34
-msgid "Email List"
-msgstr "邮件列表"
-
-#: web/apps/welcome/templates/welcome/community.html:51
-msgid "English"
-msgstr "英文"
-
-#: web/apps/welcome/templates/welcome/community.html:54
-msgid "Chinese"
-msgstr "中文"
-
-#: web/apps/welcome/templates/welcome/community.html:57
-msgid "Japanese"
-msgstr "日语"
-
-#: web/apps/welcome/templates/welcome/community.html:71
+#: web/apps/welcome/templates/welcome/community.html:21
 msgid "Press"
 msgstr "媒体报道"
 
-#: web/apps/welcome/templates/welcome/community.html:77
+#: web/apps/welcome/templates/welcome/community.html:27
 #: web/apps/welcome/templates/welcome/include-protocol.html:65
 #: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
 msgstr "更多"
+
+#: web/apps/welcome/templates/welcome/community.html:39
+msgid "Social Network"
+msgstr "社交网络"
+
+#: web/apps/welcome/templates/welcome/community.html:48
+#: web/apps/welcome/templates/welcome/wechat.html:20
+msgid "Scan QR Code to join us"
+msgstr "扫描二维码关注微信公众号"
+
+#: web/apps/welcome/templates/welcome/community.html:55
+msgid "Email List"
+msgstr "邮件列表"
+
+#: web/apps/welcome/templates/welcome/community.html:72
+msgid "English"
+msgstr "英文"
+
+#: web/apps/welcome/templates/welcome/community.html:75
+msgid "Chinese"
+msgstr "中文"
+
+#: web/apps/welcome/templates/welcome/community.html:78
+msgid "Japanese"
+msgstr "日语"
 
 #: web/apps/welcome/templates/welcome/contact.html:6
 #: web/apps/welcome/templates/welcome/contact.html:13
@@ -1907,6 +1907,35 @@ msgstr "Lee Willson"
 msgid "Bitcoin Ambassador"
 msgstr "比特币大使"
 
+#: web/apps/welcome/templates/welcome/include-community-event.html:6
+msgid "Coming Event"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:9
+msgid "Newton Beijing Meetup (Phase Ⅱ)"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:13
+msgid "2018-06-23, 14:00-18:00 CST"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:16
+msgid ""
+"2nd Floor, Tower A, Dinghao Electronics Building, Zhongguancun Street, "
+"Haidian District, Beijing"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:16
+msgid ""
+"/announcement/2018/06/19/june-23rd-newton-beijing-meet-sincerely-invites-you-"
+"join-us/"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:16
+#, fuzzy
+msgid "Detail"
+msgstr "详情"
+
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
 msgstr "牛顿协议经济"
@@ -2039,34 +2068,38 @@ msgstr "DCC创始人、CEO"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:180
 #: web/apps/welcome/templates/welcome/include-investor.html:182
-#: web/apps/welcome/templates/welcome/include-investor.html:193
-#: web/apps/welcome/templates/welcome/include-investor.html:207
-msgid "Li Zhu"
-msgstr "李竹"
-
-#: web/apps/welcome/templates/welcome/include-investor.html:184
-msgid "Founder of Innoangel Fund"
-msgstr "英诺天使基金创始人"
-
-#: web/apps/welcome/templates/welcome/include-investor.html:195
 msgid "Shi Junchao"
 msgstr "师俊超"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:197
+#: web/apps/welcome/templates/welcome/include-investor.html:184
 msgid "Senior gem jade appraiser."
 msgstr "资深珠宝玉石鉴定师"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:198
+#: web/apps/welcome/templates/welcome/include-investor.html:185
 msgid "Deputy secretary general of xinjiang hetian jade industry association."
 msgstr "新疆和田玉行业协会副秘书长"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:209
+#: web/apps/welcome/templates/welcome/include-investor.html:194
+msgid "Li Zhu"
+msgstr "李竹"
+
+#: web/apps/welcome/templates/welcome/include-investor.html:196
 msgid "Guo Hongchi"
 msgstr "郭洪驰"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:211
+#: web/apps/welcome/templates/welcome/include-investor.html:198
 msgid "Founder of xijie.com"
 msgstr "西街网创始人"
+
+#: web/apps/welcome/templates/welcome/include-investor.html:209
+#: web/apps/welcome/templates/welcome/include-investor.html:211
+msgid "JLAB"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:221
+#: web/apps/welcome/templates/welcome/include-investor.html:223
+msgid "Consensus Lab"
+msgstr "共识实验室"
 
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "Joint Ecological Construction"
@@ -3657,8 +3690,8 @@ msgid ""
 "out the NewAI system, an advertiser can conduct market research before "
 "marketing activities, and analyze the results after the marketing activities."
 msgstr ""
-"广告主可审计进行中和已完成投放的营销合约。通过调用NewAI系统，可以在营销活动前进"
-"行市场调研，以及营销结束后分析投放效果。"
+"广告主可审计进行中和已完成投放的营销合约。通过调用NewAI系统，可以在营销活动前"
+"进行市场调研，以及营销结束后分析投放效果。"
 
 #: web/apps/welcome/templates/welcome/protocol.html:66
 msgid ""
@@ -3835,8 +3868,8 @@ msgid ""
 "these three aspects the Newton NewAI closely connects the data suppliers, "
 "algorithm model developers and operating system providers together."
 msgstr ""
-"NewAI（Distributed Artificial Intelligence）将从数据、算法模型、执行引擎等三个"
-"方面推动AI的发展，将数据提供者、算法模型开发者、运行环境提供者无缝地连在一"
+"NewAI（Distributed Artificial Intelligence）将从数据、算法模型、执行引擎等三"
+"个方面推动AI的发展，将数据提供者、算法模型开发者、运行环境提供者无缝地连在一"
 "起。 "
 
 #: web/apps/welcome/templates/welcome/tech.html:77
@@ -3846,18 +3879,18 @@ msgid ""
 "compression, data encryption, etc. User private data safety will be "
 "protected by the k-anonymity, ε--differential privacy and other methods."
 msgstr ""
-"NewAI提供访问用户授权数据和数据提供商数据的规范，包括多维数据格式、数据分片、数"
-"据压缩、数据加密等，并且通过k-匿名化(k-anonymity)、差分隐私(ε-differential "
+"NewAI提供访问用户授权数据和数据提供商数据的规范，包括多维数据格式、数据分片、"
+"数据压缩、数据加密等，并且通过k-匿名化(k-anonymity)、差分隐私(ε-differential "
 "privacy)等方法保证用户隐私数据的安全。"
 
 #: web/apps/welcome/templates/welcome/tech.html:78
 msgid ""
-"NewAI uses docker container to run artificial intelligence computing software "
-"such as Tensorflow, Caffe. It encourages data suppliers to provide long-term "
-"service through multi-factor weighting profit distribution method."
+"NewAI uses docker container to run artificial intelligence computing "
+"software such as Tensorflow, Caffe. It encourages data suppliers to provide "
+"long-term service through multi-factor weighting profit distribution method."
 msgstr ""
-"NewAI中采用docker容器技术运行Tensorflow、caffe等人工智能计算软件，基于多因子加"
-"权的收益分配方法鼓励算力提供者提供长期服务。"
+"NewAI中采用docker容器技术运行Tensorflow、caffe等人工智能计算软件，基于多因子"
+"加权的收益分配方法鼓励算力提供者提供长期服务。"
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
@@ -4738,7 +4771,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:75
 msgid "title"
 msgstr ""
 
@@ -4875,7 +4908,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:495
+#: web/apps/zinnia/models_bases/entry.py:496
 msgid "categories"
 msgstr ""
 
@@ -4888,14 +4921,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:63
+#: web/apps/zinnia/models_bases/entry.py:64
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:77
+#: web/apps/zinnia/models_bases/entry.py:78
 msgid "slug"
 msgstr ""
 
@@ -4916,7 +4949,7 @@ msgid "language"
 msgstr "语言"
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:120
+#: web/apps/zinnia/models_bases/entry.py:121
 msgid "Entry type"
 msgstr "文章类型"
 
@@ -4936,173 +4969,173 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:79
-#: web/apps/zinnia/models_bases/entry.py:104
+#: web/apps/zinnia/models_bases/entry.py:80
+#: web/apps/zinnia/models_bases/entry.py:105
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:82
+#: web/apps/zinnia/models_bases/entry.py:83
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:87
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:88
+#: web/apps/zinnia/models_bases/entry.py:89
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:91
+#: web/apps/zinnia/models_bases/entry.py:92
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:93
+#: web/apps/zinnia/models_bases/entry.py:94
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:98
+#: web/apps/zinnia/models_bases/entry.py:99
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:100
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:102
+#: web/apps/zinnia/models_bases/entry.py:103
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:107
+#: web/apps/zinnia/models_bases/entry.py:108
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:117
+#: web/apps/zinnia/models_bases/entry.py:118
 msgid "entry type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:124
+#: web/apps/zinnia/models_bases/entry.py:125
 msgid "entry_sub_type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:131
+#: web/apps/zinnia/models_bases/entry.py:132
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:246
+#: web/apps/zinnia/models_bases/entry.py:247
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:247
+#: web/apps/zinnia/models_bases/entry.py:248
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:261
+#: web/apps/zinnia/models_bases/entry.py:262
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:304
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:304
+#: web/apps/zinnia/models_bases/entry.py:305
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:306
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:308
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:309
+#: web/apps/zinnia/models_bases/entry.py:310
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:311
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:313
+#: web/apps/zinnia/models_bases/entry.py:314
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:315
+#: web/apps/zinnia/models_bases/entry.py:316
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:317
+#: web/apps/zinnia/models_bases/entry.py:318
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:401
+#: web/apps/zinnia/models_bases/entry.py:402
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:419
+#: web/apps/zinnia/models_bases/entry.py:420
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:420
+#: web/apps/zinnia/models_bases/entry.py:421
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:453
+#: web/apps/zinnia/models_bases/entry.py:454
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:455
+#: web/apps/zinnia/models_bases/entry.py:456
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:466
+#: web/apps/zinnia/models_bases/entry.py:467
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:481
+#: web/apps/zinnia/models_bases/entry.py:482
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:505
+#: web/apps/zinnia/models_bases/entry.py:506
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:524
+#: web/apps/zinnia/models_bases/entry.py:525
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:525
+#: web/apps/zinnia/models_bases/entry.py:526
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:537
+#: web/apps/zinnia/models_bases/entry.py:538
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:538
+#: web/apps/zinnia/models_bases/entry.py:539
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:550
+#: web/apps/zinnia/models_bases/entry.py:551
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:552
-#: web/apps/zinnia/models_bases/entry.py:568
+#: web/apps/zinnia/models_bases/entry.py:553
+#: web/apps/zinnia/models_bases/entry.py:569
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:554
+#: web/apps/zinnia/models_bases/entry.py:555
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:566
+#: web/apps/zinnia/models_bases/entry.py:567
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:570
+#: web/apps/zinnia/models_bases/entry.py:571
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -6152,6 +6185,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Founder of Innoangel Fund"
+#~ msgstr "英诺天使基金创始人"
 
 #~ msgid "Tip: Ensure that you can access the google recaptcha service."
 #~ msgstr "小贴士:请确保您可以使用的谷歌验证码服务。"
