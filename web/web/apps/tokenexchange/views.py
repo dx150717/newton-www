@@ -107,10 +107,12 @@ def post_kyc_information(request, kyc_type):
             is_etablish_node = request.POST.get('is_etablish_node')
             which_node_establish = request.POST.get('which_node_establish')
             establish_node_plan = request.POST.get('establish_node_plan')
+            emergency_relationship = request.POST.get('emergency_relationship')
             if establish_node_plan and len(establish_node_plan) < 10240:
                 instance.establish_node_plan = establish_node_plan
             instance.is_etablish_node = is_etablish_node
             instance.which_node_establish = which_node_establish
+            instance.emergency_relationship = emergency_relationship
             if kyc_type == codes.KYCType.INDIVIDUAL.value:
                 country_code, cellphone = base_form.cleaned_data['cellphone_group']
             else:

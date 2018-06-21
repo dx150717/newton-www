@@ -148,3 +148,8 @@ class NodeType(Enum):
 class KYCType(Enum):
     INDIVIDUAL = 1
     ORGANIZATION = 2
+
+class RelationshipWithEmergency(Enum):
+    KINSHIP = 1
+    FRIENDSHIP = 2
+    COLLEAGUE = 3

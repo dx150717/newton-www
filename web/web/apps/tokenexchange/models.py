@@ -25,6 +25,11 @@ ESTABLISH_CHOICE = (
     (codes.EstablishNodeType.NO.value, _('No'))
 )
 LEVEL_CHOICE = [(i+1, i+1) for i in range(10)]
+RELATIONSHIP_CHOINCE = (
+    (codes.RelationshipWithEmergency.KINSHIP.value, _('Kinship')),
+    (codes.RelationshipWithEmergency.FRIENDSHIP.value, _('Friendship')),
+    (codes.RelationshipWithEmergency.COLLEAGUE.value, _('Colleague')),
+)
 
 class KYCInfo(models.Model):
     user_id = models.IntegerField()
@@ -80,7 +85,7 @@ class KYCInfo(models.Model):
     emergency_country = CountryField(blank_label=_("Select country or region"), verbose_name=_('Country or Region'), help_text='*')
     emergency_city = models.CharField(max_length=256, verbose_name=_('City'), help_text='*')
     emergency_location = models.CharField(max_length=1024, verbose_name=_('Address'), help_text='*')
-    emergency_relationship = models.CharField(max_length=1024, verbose_name=_('Relation with Applicant'), help_text='*')
+    emergency_relationship = models.IntegerField(_('Relation with Applicant'), help_text='*', choices=RELATIONSHIP_CHOINCE)
     # level
     level = models.IntegerField(choices=LEVEL_CHOICE, default=0, db_index=True)
     # base fields

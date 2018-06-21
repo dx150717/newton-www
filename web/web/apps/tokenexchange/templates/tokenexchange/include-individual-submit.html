@@ -364,7 +364,12 @@
                             {% trans "Relation with Applicant"%} <span class="red-color">*</span>
                         </label>
                         <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_relationship" maxlength="1024" name="emergency_relationship" placeholder="{% trans "Relation with Applicant"%}" type="text">
+                            <select class="form-control" id="id_emergency_relationship" name="emergency_relationship" placeholder="Relation with Applicant">
+                                <option value="0" selected="selected">{% trans "Relation with Applicant" %}</option>
+                                <option value="1">{% trans "Kinship" %}</option>
+                                <option value="2">{% trans "Friendship" %}</option>
+                                <option value="3">{% trans "Colleague" %}</option>
+                            </select>
                         </div>
                     </div>
                     </div>
