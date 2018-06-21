@@ -6,7 +6,7 @@
 <style>
 .pad-t10{ padding-top:10px;}
 .pad-t20{ padding-top:20px;}
-.pad-t30{ padding-top:30px;}
+.pad-t30{ padding-top:30px; margin-bottom: 50px;}
 
 .win-logo{padding:10px; width:128px; height:36px;}
 .newton-title { font-size: 1.5em; padding-bottom: 10px; padding-top: 10px; }
@@ -22,10 +22,10 @@
 .win-box .button-1{line-height:42px; overflow:hidden;}
 }
 .red-text {color: red}
-.security-container {border-top: red solid 1px;}
-.security-title {margin: 20px 0 10px 0; font-size: 18px;}
-.security-content {margin: 5px 0}
-.security-url {margin: 5px; text-align: center;}
+.security-container {border-top: #333 solid 1px;}
+.security-title {margin: 10px 0 10px 0; font-size: 14px;}
+.security-content {margin: 5px 0; font-size: 12px;}
+.security-url {margin: 5px 5px 5px 0; font-size: 12px;}
 </style>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -54,7 +54,7 @@
         <p class="red-text security-title">{% trans "Newton Token Exchange Security Notification" %}</p>
         <p class="red-text security-content">1. {% trans "Newton official website（www.newtonproject.org）is the unique legitimate platform for Newton token exchange. Newton won't provide you with any information concerning Newton token exchange, including allocated amount, address and QR code, through any other media including Email, Wechat, Telegram, phone, message and so on." %}</p>
         <p class="red-text security-content">2. {% trans "Please make sure that the SSL of Newton official website is “NEWTON FOUNDATION LTD. [SG]” before exchanging token，in case of property loss resulting from fraudulent Newton official website." %}</p>
-        <p class="red-text security-url"><a href="{{ security_url }}">{% trans "Details" %}</a></p>
+        <p class="security-url"><a href="{{ security_url }}" class="red-text">{% trans "more" %}</a></p>
     </div>
     {% endblock %}
   </div>

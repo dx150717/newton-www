@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-21 09:51+0000\n"
+"POT-Creation-Date: 2018-06-21 12:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,13 +225,13 @@ msgstr "安全审计。"
 
 #: web/apps/help/templates/help/security.html:20
 #: web/apps/user/templates/user/include-security.html:6
-#: web/templates/email-kyc-template.html:47
+#: web/templates/email-kyc-template.html:54
 msgid "Newton Token Exchange Security Notification"
 msgstr "牛顿通证交换安全提示"
 
 #: web/apps/help/templates/help/security.html:21
 #: web/apps/user/templates/user/include-security.html:7
-#: web/templates/email-kyc-template.html:48
+#: web/templates/email-kyc-template.html:55
 msgid ""
 "Newton official website（www.newtonproject.org）is the unique legitimate "
 "platform for Newton token exchange. Newton won't provide you with any "
@@ -246,7 +246,7 @@ msgstr ""
 
 #: web/apps/help/templates/help/security.html:22
 #: web/apps/user/templates/user/include-security.html:8
-#: web/templates/email-kyc-template.html:49
+#: web/templates/email-kyc-template.html:56
 msgid ""
 "Please make sure that the SSL of Newton official website is “NEWTON "
 "FOUNDATION LTD. [SG]” before exchanging token，in case of property loss "
@@ -637,7 +637,7 @@ msgstr "媒体报道"
 msgid "Confirm Password"
 msgstr "确认密码"
 
-#: web/apps/register/services.py:28
+#: web/apps/register/services.py:29
 msgid "Newton Notification: Please complete the register process of Newton"
 msgstr "牛顿通知：请完成牛顿注册"
 
@@ -4076,7 +4076,6 @@ msgid "PRESS"
 msgstr "媒体报道"
 
 #: web/apps/welcome/templates/welcome/press.html:29
-#: web/templates/email-kyc-template.html:50
 msgid "Details"
 msgstr "详情"
 
@@ -6932,6 +6931,10 @@ msgstr ""
 #: web/templates/dialog.html:14
 msgid "QQ"
 msgstr ""
+
+#: web/templates/email-kyc-template.html:57
+msgid "more"
+msgstr "更多"
 
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"

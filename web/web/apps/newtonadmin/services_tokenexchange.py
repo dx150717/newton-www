@@ -73,7 +73,7 @@ def send_distribution_letter(user, request):
         if not verification:
             return False
         target_url = "%s/tokenexchange/%s/" % (settings.NEWTON_HOME_URL, str(user.username))
-        security_url = "%s/help/" % (settings.NEWTON_HOME_URL)
+        security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
         subject = "NewtonProject Notification: KYC information is confirmed"
         template = loader.get_template("newtonadmin/distribution-letter.html")
         context = Context({"targetUrl": target_url,"request": request, "security_url": security_url})
@@ -101,7 +101,7 @@ def send_kycinfo_notify(kyc_info, request):
         else:
             subject = "Newton Notification: You are not passed the Newton KYC"
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
-        security_url = "%s/help/" % (settings.NEWTON_HOME_URL)
+        security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
         context = Context({"request":request, "kyc_info": kyc_info, 'security_url': security_url})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
@@ -123,7 +123,7 @@ def send_apply_amount_notify(invite_info, request):
         if not verification:
             return False
         target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWTON_HOME_URL, invite_info.id)
-        security_url = "%s/help/" % (settings.NEWTON_HOME_URL)
+        security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
         subject = "Newton Notification: Fillout your expect amount"
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
         context = Context({"target_url": target_url, "request": request, "invite_info": invite_info, "security_url": security_url})

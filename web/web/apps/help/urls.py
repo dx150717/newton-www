@@ -6,5 +6,5 @@ from . import views
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                    url(r'^$', views.show_help_view),
+                    url(r'^security/$', views.show_security_view),
 )
