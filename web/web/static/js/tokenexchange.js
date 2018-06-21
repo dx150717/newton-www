@@ -155,3 +155,27 @@ function closeNode(){
     $("#id_which_node").addClass('hide');
     $("#id_how_node").addClass('hide');
 }
+
+/**
+ * js for valid organization kyc
+ */
+$("#id_fill_amount_form").submit(function(event){
+    event.preventDefault();
+    var form = this;
+    if (!$(form).valid()) {
+        return false;
+    }
+    showWaiting();
+    form.submit()
+}).validate({
+    ignore: [],
+    errorElement: "div",
+    errorClass: "alert alert-danger",
+    rules: {
+        expect_btc: {required: true, number: true, min:parseFloat($('#id_expect_btc').attr('min'))},
+        expect_ela: {required: true, number: true, min:parseFloat($('#id_expect_ela').attr('min'))}
+    },
+    errorPlacement: function(error,element) {
+        //error.appendTo(element.parent());
+    }
+});
