@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-21 13:05+0000\n"
+"POT-Creation-Date: 2018-06-21 14:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1463,7 +1463,7 @@ msgstr "活动公告"
 #: web/apps/welcome/templates/welcome/wechat.html:13
 #: web/templates/header.html:32
 msgid "Community"
-msgstr "社区"
+msgstr "社群"
 
 #: web/apps/welcome/templates/welcome/community.html:21
 msgid "Press"
@@ -1907,34 +1907,46 @@ msgstr "Lee Willson"
 msgid "Bitcoin Ambassador"
 msgstr "比特币大使"
 
+#: web/apps/welcome/templates/welcome/include-community-ending-event.html:6
+msgid "Passed Events"
+msgstr "过往活动"
+
+#: web/apps/welcome/templates/welcome/include-community-ending-event.html:9
+msgid "Newton Meet-up Shijiazhuang station"
+msgstr "牛顿河北线下交流会-石家庄站"
+
+#: web/apps/welcome/templates/welcome/include-community-ending-event.html:13
+msgid "2018-06-16, 14:00-18:00 CST"
+msgstr "2018年6月16日下午14:00-18:00"
+
+#: web/apps/welcome/templates/welcome/include-community-ending-event.html:16
+msgid ""
+"4th floor of Yuetai Hotel, northeast corner of the intersection of Youyi "
+"North Street and Xinhua Road, Shijiazhuang, Hebei Province"
+msgstr "河北省石家庄市友谊北大街与新华路交叉口东北角悦泰大酒店四层"
+
+#: web/apps/welcome/templates/welcome/include-community-ending-event.html:16
+#: web/apps/welcome/templates/welcome/include-community-event.html:16
+msgid "Detail"
+msgstr "详情"
+
 #: web/apps/welcome/templates/welcome/include-community-event.html:6
-msgid "Coming Event"
-msgstr ""
+msgid "Coming Events"
+msgstr "活动预告"
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:9
 msgid "Newton Beijing Meetup (Phase Ⅱ)"
-msgstr ""
+msgstr "“牛顿线下交流会-北京站第二期”邀您参加"
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:13
 msgid "2018-06-23, 14:00-18:00 CST"
-msgstr ""
+msgstr "2018年6月23日下午14:00-18:00"
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:16
 msgid ""
 "2nd Floor, Tower A, Dinghao Electronics Building, Zhongguancun Street, "
 "Haidian District, Beijing"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-community-event.html:16
-msgid ""
-"/announcement/2018/06/19/june-23rd-newton-beijing-meet-sincerely-invites-you-"
-"join-us/"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-community-event.html:16
-#, fuzzy
-msgid "Detail"
-msgstr "详情"
+msgstr "北京市海淀区中关村大街甲1号鼎好电子大厦A座2层"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
@@ -6141,7 +6153,7 @@ msgstr "发展规划"
 
 #: web/templates/footer.html:20
 msgid "COMMUNITY"
-msgstr "社区治理"
+msgstr "社群治理"
 
 #: web/templates/footer.html:44
 msgid "Service Terms"
@@ -6185,6 +6197,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Ending Event"
+#~ msgstr "过往活动"
 
 #~ msgid "Founder of Innoangel Fund"
 #~ msgstr "英诺天使基金创始人"
