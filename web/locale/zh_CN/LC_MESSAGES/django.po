@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-21 05:13+0000\n"
+"POT-Creation-Date: 2018-06-21 07:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,7 +183,7 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:86
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:97
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:171
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:108
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
@@ -197,7 +197,7 @@ msgid "previous"
 msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:90
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:101
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:175
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:112
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
@@ -224,13 +224,13 @@ msgid "Security Notification"
 msgstr "安全审计。"
 
 #: web/apps/help/templates/help/security.html:20
-#: web/apps/user/templates/user/include-security.html:5
+#: web/apps/user/templates/user/include-security.html:6
 #: web/templates/email-kyc-template.html:47
 msgid "Newton Token Exchange Security Notification"
 msgstr "牛顿通证交换安全提示"
 
 #: web/apps/help/templates/help/security.html:21
-#: web/apps/user/templates/user/include-security.html:6
+#: web/apps/user/templates/user/include-security.html:7
 #: web/templates/email-kyc-template.html:48
 msgid ""
 "Newton official website（www.newtonproject.org）is the unique legitimate "
@@ -245,7 +245,7 @@ msgstr ""
 "二维码。"
 
 #: web/apps/help/templates/help/security.html:22
-#: web/apps/user/templates/user/include-security.html:7
+#: web/apps/user/templates/user/include-security.html:8
 #: web/templates/email-kyc-template.html:49
 msgid ""
 "Please make sure that the SSL of Newton official website is “NEWTON "
@@ -328,7 +328,7 @@ msgstr "登录"
 #: web/apps/reset/templates/reset/reset-success.html:6
 #: web/apps/setting/templates/setting/check-gtoken.html:6
 #: web/apps/setting/templates/setting/set-gtoken.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:6
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:7
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:8
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:12
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:6
@@ -375,7 +375,7 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/register/templates/register/password.html:34
 #: web/apps/setting/templates/setting/check-gtoken.html:35
 #: web/apps/setting/templates/setting/set-gtoken.html:73
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:55
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:57
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:37
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:381
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:229
@@ -518,7 +518,6 @@ msgid ""
 "suggestions regarding this service, please contact us <a href='mailto:"
 "contact@newtonproject.org'> contact@newtonproject.org</a>."
 msgstr ""
-""
 
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:8
 msgid "Lookup Address"
@@ -1273,12 +1272,12 @@ msgid "Wechat Platform Name"
 msgstr "微信公众平台名称"
 
 #: web/apps/tokenexchange/models.py:126
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:37
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:39
 msgid "How much do you want to contribute in BTC"
 msgstr "您申请的 BTC 数量"
 
 #: web/apps/tokenexchange/models.py:127
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:46
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:48
 msgid "How much do you want to contribute in ELA"
 msgstr "您申请的 ELA 数量"
 
@@ -1290,7 +1289,7 @@ msgstr "牛顿提醒：我们收到了您的KYC信息"
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:5
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:7
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:5
@@ -1301,7 +1300,7 @@ msgstr "你已经提交了KYC信息"
 msgid "KYC"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:23
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:24
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:5
@@ -1577,40 +1576,40 @@ msgstr "转币时间"
 msgid "Total"
 msgstr "总计"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:7
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:8
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:7
 msgid "First-Round Token Exchange"
 msgstr "第一轮通证交换"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:9
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:10
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:9
 msgid ""
 "The blockchain token exchange process is not the process of funding, but the "
 "one of organization establishment"
 msgstr "区块链代币交换的过程不是融资过程，是团队组建的过程。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:14
-msgid "Minimum BTC: "
-msgstr "最小 BTC 数量："
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:23
+msgid "Minimum Amount"
+msgstr "最小数量："
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:18
-msgid "Minimum ELA: "
-msgstr "最小 ELA 数量："
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:28
+msgid "Ratio"
+msgstr "兑换比率"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:31
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:43
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:18
 msgid "Second Token Exchange Info"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:37
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:49
 msgid "Token exchange info and expect"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:41
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:53
 msgid "Min BTC: "
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:45
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:57
 msgid "Min ELA: "
 msgstr ""
 
@@ -6983,6 +6982,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Minimum BTC: "
+#~ msgstr "最小 BTC 数量："
 
 #~ msgid "No token exchange information"
 #~ msgstr "没有通证交换信息"

@@ -1386,5 +1386,13 @@ input[name="expect_btc"], input[name="expect_ela"]{
     margin: 15px 0;
     line-height: 1.8em;
 }
-
-/* kycinfo */
+/* kycinfo security */
+.security-title {
+    font-weight: unset;
+    text-align: center;
+    color: #333;
+}
+.security-content {
+    text-align: left !important;
+    font-size: 16px !important;
+}

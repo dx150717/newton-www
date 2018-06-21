@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load utils %}
+
 {% if item.phase_id == 1 %}
 <div class="token-exchange-info">
     <div class="shadow-item">
@@ -9,16 +10,27 @@
             <p class="token-exchange-time">{% trans "The blockchain token exchange process is not the process of funding, but the one of organization establishment" %}</p>
         </div>
         <div class="mt50">
-            <div class="container">
-                <div class="col-md-6">
-                    <p class="token-exchange-content">{% trans "Minimum BTC: " %} <span class="f30">{{ token_exchange_info.min_btc }}</span> BTC</p>
-                    <p class="token-exchange-content">1 BTC = {{ token_exchange_info.btc_ratio }} NEW</p>
-                </div>
-                <div class="col-md-6">
-                    <p class="token-exchange-content">{% trans "Minimum ELA: " %} <span class="f30">{{ token_exchange_info.min_ela }}</span> ELA</p>
-                    <p class="token-exchange-content">1 ELA = {{ token_exchange_info.ela_ratio }} NEW</p>
-                </div>
-            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-sm-3"></th>
+                        <th class="col-sm-3 title">BTC</th>
+                        <th class="col-sm-3 title">ELA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="col-sm-3 title">{% trans "Minimum Amount" %}</th>
+                        <th class="col-sm-3">{{ min_btc }}</th>
+                        <th class="col-sm-3">{{ min_ela }}</th>
+                    </tr>
+                    <tr>
+                        <th class="col-sm-3 title">{% trans "Ratio" %}</th>
+                        <th class="col-sm-3">{{ btc_ratio }}</th>
+                        <th class="col-sm-3">{{ ela_ratio }}</th>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load utils %}
+{% load tokenexchange_tags %}
 
 {% block title %}{% trans "KYC" %}{% endblock %}
 {% block site_name %}{% trans "Newton Community" %}{% endblock %}
@@ -24,10 +25,11 @@
             </p>
         </div>
     </div>
-    <div class="container text-center ">
+    <div class="container text-center">
         <div class="title">
-        </div>  
-        {% include "tokenexchange/include-token-exchange-info.html" %}
+        </div>
+        {% include "user/include-security.html" %}
+        {% show_minimum_and_ratio item %}
         <div class="container amount mt50">
             <div class="raw">
                 <div>
@@ -64,4 +66,8 @@
 {% endblock %}
 {% block js %}
 <script src="{% version "js/tokenexchange.js" %}"></script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% version "css/tokenexchange.css" %}">
 {% endblock %}

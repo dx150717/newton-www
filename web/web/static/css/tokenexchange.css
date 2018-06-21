@@ -161,3 +161,18 @@
 .kyc .attachment-div {
     padding-left: 0;
 }
+
+.token-exchange-info table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (max-width: 768px) {
+    width: 100%
+}
+.token-exchange-info table th {
+    font-weight: unset;
+}
+.token-exchange-info table .title {
+    font-weight: bold;
+}
