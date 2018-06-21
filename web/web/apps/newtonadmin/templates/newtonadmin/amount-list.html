@@ -11,7 +11,18 @@
 {% block content %}
 <section class="section-list newtonadmin">
     <div class="container">
-        <h3>{% if is_confirm  %}已填写分配列表{% else %}{% if is_completed %}已确认分配列表{% else %}待分配列表{% endif %}{% endif %}</h3>
+        <h3>
+            {% if is_confirm  %}
+            已填写分配列表
+            {% else %}
+            {% if is_completed %}
+            已确认分配列表
+            {% else %}
+            待分配列表
+            {% endif %}
+            {% endif %}
+            <a href="/newtonadmin/tokenexchange/amount/{{ phase_id }}/export/" class="btn btn-primary pull-right">导出</a>
+        </h3>
         <div class="row">
             <div class="col-md-3">
                 {% include "newtonadmin/include-filter.html" %}
