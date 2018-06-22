@@ -453,7 +453,7 @@ msgstr "牛顿团队"
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:15
 #: web/apps/register/templates/register/register-letter.html:9
 #: web/apps/reset/templates/reset/reset-letter.html:9
-msgid "If you receive this email unexpectedly, please overlook and delete it."
+msgid "If you received this email by mistake, simply delete it."
 msgstr "如果您意外收到了这封邮件，请删除它。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:11
@@ -688,7 +688,7 @@ msgstr "设置密码"
 
 #: web/apps/register/templates/register/post-success.html:23
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:22
-msgid "Submit Success"
+msgid "Successfully submitted"
 msgstr "提交成功"
 
 #: web/apps/register/templates/register/post-success.html:28
@@ -779,7 +779,7 @@ msgstr ""
 "newtonproject.org</a> 的邮件，点击下方<注册>按钮完成注册。"
 
 #: web/apps/reset/templates/reset/reset-success.html:21
-msgid "Submit Success!"
+msgid "Successfully submitted!"
 msgstr "提交成功！"
 
 #: web/apps/reset/templates/reset/reset-success.html:22
@@ -1012,7 +1012,7 @@ msgstr "是的，确认订阅。"
 
 #: web/apps/subscription/templates/subscription/subscription-letter.html:46
 msgid ""
-"If you receive this email unexpectedly, please overlook and delete it. You won't be "
+"If you received this email by mistake, simply delete it. You won't be "
 "subscribed if you don't click the confirmation link above."
 msgstr ""
 "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
@@ -2042,8 +2042,7 @@ msgstr "没有通证交换信息。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
 msgid ""
-"Submit KYC information success! We will send you reviewing result by email "
-"in a few days."
+"Submitted KYC information successfully! We will send you reviewing result by email in a few days."
 msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
 
 #: web/apps/user/models.py:31
