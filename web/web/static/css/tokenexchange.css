@@ -187,7 +187,7 @@
 }
 .fill-amount .token-exchange-big-title {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .token-exchange-info .token-exchange-big-title {
     font-size: 24px;
@@ -231,8 +231,14 @@
     margin-bottom: 0;
     margin-top: 0;
 }
+.fill-amount .form-button {
+    width: 100%;
+}
 @media (max-width: 768px) {
     .fill-expect-section .tip {
         width: 100%;
-    } 
+    }
+    .fill-amount .form-horizontal {
+        width: 100%;
+    }
 }
