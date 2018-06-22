@@ -168,7 +168,9 @@
     margin-right: auto;
 }
 @media (max-width: 768px) {
-    width: 100%
+    .token-exchange-info table {
+        width: 100%;
+    }
 }
 .token-exchange-info table th {
     font-weight: unset;
@@ -184,6 +186,10 @@
     margin-right: auto;
 }
 .fill-amount .token-exchange-big-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.token-exchange-info .token-exchange-big-title {
     font-size: 24px;
     margin-bottom: 10px;
 }

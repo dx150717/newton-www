@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load utils %}
+{% load tokenexchange_tags %}
 
 {% block title %}{% trans "KYC" %}{% endblock %}
 {% block site_name %}{% trans "Newton Community" %}{% endblock %}
@@ -29,7 +30,7 @@
         <div class="container">
             <div class="raw user-detail-content">
             {% if invite_item %}
-                {% include "tokenexchange/include-token-exchange-info.html" with item=invite_item %}
+                {% show_minimum_and_ratio invite_item %}
                 {% include "tokenexchange/include-receive-address-expect.html" with item=invite_item %}
                 {% include "tokenexchange/include-receive-address-allocation.html" with item=invite_item %}
                 {% include "tokenexchange/include-receive-address-result.html" with item=invite_item %}
@@ -53,4 +54,8 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% version "css/tokenexchange.css" %}">
 {% endblock %}
