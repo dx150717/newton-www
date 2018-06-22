@@ -24,17 +24,19 @@
         </div>
     </div>
     <div class="container">
-        <div class="well well-sm tip">
-            {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
+        {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
                 {% if item.status >= codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE %}
                 <p></p>
                 {% else %}
-                <p class="before-fill text-danger">{% trans "Your expected amount is under evaluation" %}</p>
+                <div class="well well-sm tip">
+                    <p class="before-fill text-danger">{% trans "Your expected amount is under evaluation" %}</p>
+                </div>
                 {% endif %}
-            {% else %}
-            <p class="before-fill text-danger">{% trans "Your expected amount is under evaluation" %}</p>
-            {% endif %}
-        </div>
+        {% else %}
+            <div class="well well-sm tip">
+                <p class="before-fill text-danger">{% trans "Your expected amount is under evaluation" %</p>
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endif %}
