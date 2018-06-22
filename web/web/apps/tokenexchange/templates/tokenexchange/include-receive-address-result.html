@@ -9,9 +9,15 @@
                 <p class="token-exchange-title">{% trans "Token Exchange Result" %}</p>
             </div>
             {% if is_equal %}
-            <p class="result-tips">{% trans "Status：tranferring finished" %}</p>
+            <p class="result-tips">
+                {% trans "Status：" %}
+                <span class="text-success">{% trans "tranferring finished" %}</span>
+            </p>
             {% else %}
-            <p class="result-tips">{% trans "Status：transferred amount is not equal to allocated amount" %}</p>
+            <p class="result-tips">
+                {% trans "Status：" %}
+                <span class="text-danger">{% trans "transferred amount is not equal to allocated amount" %}</span>
+            </p>
             {% endif %}
             {% if item.btc_transfer_list %}
             <table class="table table-bordered">
