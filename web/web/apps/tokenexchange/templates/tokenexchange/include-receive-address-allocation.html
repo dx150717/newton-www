@@ -8,11 +8,20 @@
             <div class="text-center">
                 <p class="token-exchange-title">{% trans "Allocated" %}</p>
             </div>
-            {% if item.expect_btc or item.except_ela %}
+            {% if item.expect_btc or item.expect_ela %}
                 {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
                     {% if not is_deadline %}
                         <p class="allocated-tips text-danger">{% trans "* Please transfer your token before deadline of first-round token exchange." %}</p>
-                        <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%} {{item.assign_btc}} BTC {% trans "and" %} {{item.assign_ela}} ELA {% trans "to above addresses. DO NOT transfer BTC and ELA amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
+                            {% if item.expect_btc and item.expect_ela %}
+                                <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%} {{item.assign_btc}} BTC {% trans "and" %} {{item.assign_ela}} ELA {% trans "to below addresses. DO NOT transfer BTC and ELA amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
+                            {% else %}
+                                {% if item.expect_btc %}
+                                    <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%} {{item.assign_btc}} BTC {% trans "to below addresses. DO NOT transfer BTC amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
+                                {% endif %}
+                                {% if item.expect_ela %}
+                                    <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%}{{item.assign_ela}} ELA {% trans "to below addresses. DO NOT transfer ELA amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
+                                {% endif %}
+                            {% endif %}
                     {% else %}
                         <p class="allocated-tips text-danger">{% trans "* First-round token exchange is overdue, DO NOT transfer any token to allocated addresses." %}</p>
                     {% endif %}

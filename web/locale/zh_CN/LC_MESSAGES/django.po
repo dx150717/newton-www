@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-22 15:06+0000\n"
+"POT-Creation-Date: 2018-06-22 15:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -610,7 +610,7 @@ msgstr "牛顿提醒：我们收到了您的KYC信息"
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:11
 #: web/apps/register/templates/register/index.html:47
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:16
 msgid "and"
 msgstr "和"
 
@@ -1289,10 +1289,12 @@ msgid "You must fill in at least one."
 msgstr "至少填写BTC或者ELA中的一种。"
 
 #: web/apps/tokenexchange/views.py:256
+#, fuzzy, python-format
 msgid "The quantity of BTC must be equal or more than %s."
 msgstr "BTC的数量必须大于或等于"
 
 #: web/apps/tokenexchange/views.py:259
+#, fuzzy, python-format
 msgid "The quantity of ELA must be equal or more than %s."
 msgstr "ELA的数量必须大于或等于"
 
@@ -1511,41 +1513,55 @@ msgstr "分配信息"
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
 msgid ""
 "* Please transfer your token before deadline of first-round token exchange."
-msgstr "* 请于本轮通证交换截止日期前转币"
+msgstr "* 请于本轮通证交换截止日期前转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:16
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:19
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:22
 msgid "* Attention! You can only transfer"
-msgstr "* 注意，您只能向分配地址中分别转"
+msgstr "* 注意，您只能向下面的分配地址中转入"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:16
 msgid ""
-"to above addresses. DO NOT transfer BTC and ELA amount larger than allocated "
+"to below addresses. DO NOT transfer BTC and ELA amount larger than allocated "
 "amount, otherwise Newton Foundation won't refund the remainder."
-msgstr "请不要转入大于分配数量的BTC和ELA的数量，牛顿基金会不回退回超额的部分"
+msgstr "。请不要转入大于分配数量的BTC和ELA，牛顿基金会不回退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:19
+msgid ""
+"to below addresses. DO NOT transfer BTC amount larger than allocated amount, "
+"otherwise Newton Foundation won't refund the remainder."
+msgstr "。请不要转入大于分配数量的BTC，牛顿基金会不回退回超额的部分。"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:22
+msgid ""
+"to below addresses. DO NOT transfer ELA amount larger than allocated amount, "
+"otherwise Newton Foundation won't refund the remainder."
+msgstr "。请不要转入大于分配数量的ELA，牛顿基金会不回退回超额的部分。"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:26
 msgid ""
 "* First-round token exchange is overdue, DO NOT transfer any token to "
 "allocated addresses."
-msgstr "* 本轮通证交换已截止，请不要向分配地址中转币"
+msgstr "* 本轮通证交换已截止，请不要向分配地址中转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:23
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:32
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:41
 msgid "Allocated BTC amount"
 msgstr "分配 BTC 数量"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:24
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:33
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:42
 msgid "Allocated BTC address"
 msgstr "分配 BTC 地址"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:41
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:50
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:59
 msgid "Allocated ELA amount"
 msgstr "分配 ELA 数量"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:42
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:51
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:60
 msgid "Allocated ELA address"
 msgstr "分配 ELA 地址"
 
