@@ -22,7 +22,7 @@
         <p class="title">{% trans "Successfully submitted" %}</p>
         <p class="content">{% trans "Submitted KYC information successfully! We will send you reviewing result by email in a few days." %}</p>
         <p class="content">
-        	<a class="normal" href="/user/">{% trans "go to the user center" %}</a>
+            <a class="normal back-button" href="/user/">{% trans "go to the user center" %}</a>
         </p>
     </div>
 </section>
@@ -32,7 +32,4 @@
 {% endblock %}
 
 {% block inline_js %}
-<script type="text/javascript">
-    $("#normal").addClass("display-none");
-</script>
 {% endblock %}
