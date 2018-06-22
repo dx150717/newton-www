@@ -252,10 +252,10 @@ def post_apply_amount(request, invite_id):
                 if not expect_btc and not expect_ela:
                     form._errors[NON_FIELD_ERRORS] = form.error_class(['You must fill in at least one.'])
                     return render(request, "tokenexchange/apply-amount.html", locals())
-                elif expect_btc < min_btc:
+                elif expect_btc and expect_btc < min_btc:
                     form._errors[NON_FIELD_ERRORS] = form.error_class(['The quantity of BTC must be equal or more than %s.' % (min_btc)])
                     return render(request, "tokenexchange/apply-amount.html", locals())
-                elif expect_ela < min_ela:
+                elif expect_ela and expect_ela < min_ela:
                     form._errors[NON_FIELD_ERRORS] = form.error_class(['The quantity of ELA must be equal or more than %s.' % (min_ela)])
                     return render(request, "tokenexchange/apply-amount.html", locals())
                 item.expect_btc = expect_btc
