@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-22 08:01+0000\n"
+"POT-Creation-Date: 2018-06-22 11:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -704,12 +704,11 @@ msgstr "完成注册流程"
 #: web/apps/register/templates/register/register-letter.html:7
 msgid ""
 "This is an email from <a class='main-color' href='https://www.newtonproject."
-"org'>newtonproject.org, </a>Click the button below to proceed to the next "
-"step."
+"org'>newtonproject.org, </a>please click the button below to proceed to the "
+"next step."
 msgstr ""
 "您好！这是一封来自 <a href='https://www.newtonproject.org'>https://www."
-"newtonproject.org</a> 的邮件，帮助您重置您的账户密码，点击下方按钮进行下一步"
-"操作。"
+"newtonproject.org</a> 的邮件，点击下方按钮进行下一步操作。"
 
 #: web/apps/register/templates/register/register-success.html:22
 msgid "Register Success!"
@@ -1461,7 +1460,7 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:302
 #: web/apps/user/templates/user/include-kyc-section.html:113
-msgid "Emergency Information"
+msgid "Emergency Contact"
 msgstr "紧急联系人信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:52
@@ -2042,7 +2041,8 @@ msgstr "没有通证交换信息。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
 msgid ""
-"Submitted KYC information successfully! We will send you reviewing result by email in a few days."
+"Submitted KYC information successfully! We will send you reviewing result by "
+"email in a few days."
 msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
 
 #: web/apps/user/models.py:31
@@ -2080,8 +2080,8 @@ msgstr "基本信息"
 
 #: web/apps/user/templates/user/include-kyc-section.html:14
 msgid ""
-"Submit KYC information success! We will send you an email of reviewing "
-"result, Please check out."
+"Submitted KYC information successfully! We will send you an email of "
+"reviewing result, please check out."
 msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
 
 #: web/apps/user/templates/user/include-kyc-section.html:22
@@ -2122,10 +2122,10 @@ msgid ""
 "exchange, including allocated amount, address and QR code, through any other "
 "media including Email, Wechat, Telegram, phone, message and so on."
 msgstr ""
-"牛顿官方网站<span class='text-danger bold'>（www.newtonproject.org）</span>是唯一"
-"的牛顿通证的合法交换渠道。牛顿不会在除网站之外的任何渠道（包括电子邮件、微"
-"信、Telegram、电话、短信等等）对您提供任何牛顿相关的通证交换信息，这些信息包"
-"括：通证交换分配数量、分配地址和分配二维码。"
+"牛顿官方网站<span class='text-danger bold'>（www.newtonproject.org）</span>是"
+"唯一的牛顿通证的合法交换渠道。牛顿不会在除网站之外的任何渠道（包括电子邮件、"
+"微信、Telegram、电话、短信等等）对您提供任何牛顿相关的通证交换信息，这些信息"
+"包括：通证交换分配数量、分配地址和分配二维码。"
 
 #: web/apps/user/templates/user/include-security.html:8
 msgid ""
@@ -2134,8 +2134,9 @@ msgid ""
 "exchanging token，in case of property loss resulting from fraudulent Newton "
 "official website."
 msgstr ""
-"在进行通证交换之前，请确保网站的SSL证书是<span class='text-danger bold'>“NEWTON "
-"FOUNDATION LTD. [SG]”</span>，防止进入假冒的牛顿官方网站造成的资产损失。"
+"在进行通证交换之前，请确保网站的SSL证书是<span class='text-danger "
+"bold'>“NEWTON FOUNDATION LTD. [SG]”</span>，防止进入假冒的牛顿官方网站造成的"
+"资产损失。"
 
 #: web/apps/user/templates/user/include-token-exchange.html:20
 #: web/apps/user/templates/user/include-token-exchange.html:66
