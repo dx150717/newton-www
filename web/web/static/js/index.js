@@ -190,7 +190,7 @@ function showLoading()
 function showWaiting()
 {
   initGlobalToolkit();
-  $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Waiting...', 'black');
+  $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Processing...', 'black');
 }
 
 function showSuccess(msg)
