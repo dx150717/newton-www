@@ -4,7 +4,7 @@
 {% if item.ela_final_balance or item.btc_final_balance %}
 <div>
     <div class="shadow-item">
-        <div class="container">
+        <div class="container token-exchange-result">
             <div class="text-center">
                 <p class="token-exchange-title">{% trans "Token Exchange Result" %}</p>
             </div>
@@ -14,24 +14,24 @@
             <p class="result-tips">{% trans "Status：transferred amount is not equal to allocated amount" %}</p>
             {% endif %}
             {% if item.btc_transfer_list %}
-            <table class="table">
+            <table class="table table-bordered">
                 <caption>BTC</caption>
                 <thead>
                     <tr>
-                        <th>{% trans "Transferring time" %}</th>
-                        <th>BTC</th>
+                        <th class="col-sm-3">{% trans "Transferring time" %}</th>
+                        <th class="col-sm-3">BTC</th>
                     </tr>
                 </thead>
                 <tbody>
                 {% for btc_transfer in item.btc_transfer_list %}
                     <tr>
-                        <th>{{ btc_transfer.created_at|date:"Y-m-d H:i:s" }}</th>
-                        <th>{{ btc_transfer.value }}</th>
+                        <th class="col-sm-3">{{ btc_transfer.created_at|date:"Y-m-d H:i:s" }}</th>
+                        <th class="col-sm-3">{{ btc_transfer.value }}</th>
                     </tr>
                 {% endfor %}
                     <tr>
-                        <th>{% trans "Total" %}</th>
-                        <th>{{ item.btc_final_balance }}</th>
+                        <th class="col-sm-3">{% trans "Total" %}</th>
+                        <th class="col-sm-3">{{ item.btc_final_balance }}</th>
                     </tr>
                 </tbody>
             </table>
