@@ -840,7 +840,7 @@ canvas { display: block; vertical-align: top; }
 .community .popover-title{white-space: nowrap;}
 .community .popover{top: -59px !important}
 .community .popover-content{ text-align: center;}
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 #announcement .announcement-type{ text-align: left;}
 }
 .community .event {
@@ -859,6 +859,11 @@ canvas { display: block; vertical-align: top; }
 }
 .community .panel-title {
     color: #000;
+}
+@media (max-width: 991px) {
+    .community .event .panel {
+        width: 100%;
+    }
 }
 
 /* newpay */
