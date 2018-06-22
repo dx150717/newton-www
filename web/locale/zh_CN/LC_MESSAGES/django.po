@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-22 05:44+0000\n"
+"POT-Creation-Date: 2018-06-22 06:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1269,13 +1269,13 @@ msgstr "微信公众平台名称"
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:51
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:54
 msgid "How much do you want to contribute in BTC"
-msgstr "您申请的 BTC 数量"
+msgstr "BTC 数量"
 
 #: web/apps/tokenexchange/models.py:127
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:58
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:60
 msgid "How much do you want to contribute in ELA"
-msgstr "您申请的 ELA 数量"
+msgstr "ELA 数量"
 
 #: web/apps/tokenexchange/services.py:29
 msgid "Newton notification: Received your KYC information"
@@ -1304,6 +1304,10 @@ msgstr ""
 #: web/apps/user/templates/user/index.html:34
 msgid "Token Exchange"
 msgstr "通证交换"
+
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:49
+msgid "Fill in token exchange amount"
+msgstr "填写通证交换数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:20
 msgid "You have successfully filled in the expected amount."
@@ -2114,19 +2118,19 @@ msgid ""
 "including allocated amount, address and QR code, through any other media "
 "including Email, Wechat, Telegram, phone, message and so on."
 msgstr ""
-"牛顿官方网站<span class='red-color'>（www.newtonproject.org）</span>是唯一的牛顿通证的合法交换渠道。牛顿不会"
-"在除网站之外的任何渠道（包括电子邮件、微信、Telegram、电话、短信等等）对您提"
-"供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配数量、分配地址和分配"
-"二维码。"
+"牛顿官方网站<span class='red-color'>（www.newtonproject.org）</span>是唯一的"
+"牛顿通证的合法交换渠道。牛顿不会在除网站之外的任何渠道（包括电子邮件、微信、"
+"Telegram、电话、短信等等）对您提供任何牛顿相关的通证交换信息，这些信息包括："
+"通证交换分配数量、分配地址和分配二维码。"
 
-#: web/apps/user/templates/user/include-security.html:8 
+#: web/apps/user/templates/user/include-security.html:8
 msgid ""
 "Please make sure that the SSL of Newton official website is <span class='red-"
 "color'>“NEWTON FOUNDATION LTD. [SG]”</span> before exchanging token，in case "
 "of property loss resulting from fraudulent Newton official website."
 msgstr ""
-"在进行通证交换之前，请确保网站的SSL证书是<span class='red-color'>“NEWTON FOUNDATION LTD. [SG]”</span>，防止"
-"进入假冒的牛顿官方网站造成的资产损失。"
+"在进行通证交换之前，请确保网站的SSL证书是<span class='red-color'>“NEWTON "
+"FOUNDATION LTD. [SG]”</span>，防止进入假冒的牛顿官方网站造成的资产损失。"
 
 #: web/apps/user/templates/user/include-token-exchange.html:20
 #: web/apps/user/templates/user/include-token-exchange.html:66
