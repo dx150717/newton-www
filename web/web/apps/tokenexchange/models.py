@@ -85,7 +85,7 @@ class KYCInfo(models.Model):
     emergency_country = CountryField(blank_label=_("Select country or region"), verbose_name=_('Country or Region'), help_text='*')
     emergency_city = models.CharField(max_length=256, verbose_name=_('City'), help_text='*')
     emergency_location = models.CharField(max_length=1024, verbose_name=_('Address'), help_text='*')
-    emergency_relationship = models.IntegerField(_('Relation with Applicant'), help_text='*', choices=RELATIONSHIP_CHOICE, default=codes.RelationshipWithEmergency.KINSHIP.value)
+    emergency_relationship = models.IntegerField(_('Relation with Applicant'), help_text='*', choices=RELATIONSHIP_CHOICE, default=codes.RelationshipWithEmergency.KINSHIP.value, null=True)
     # level
     level = models.IntegerField(choices=LEVEL_CHOICE, default=0, db_index=True)
     # base fields
