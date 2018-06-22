@@ -2,26 +2,38 @@
 {% load utils %}
 
 {% if item.expect_btc or item.expect_ela %}
-<div>
-    <div class="shadow-item">
-        <div class="container">
-            <div class="text-center">
-                <p class="token-exchange-title">{% trans "Expected" %}</p>
-            </div>
-            <div class="col-md-6">
-                {% if item.expect_btc %}
-                <p class="token-exchange-content">{% trans "Expected BTC amount" %}: <span class="f30">{{ item.expect_btc }}</span> BTC</p>
+<div class="shadow-item fill-expect-section">
+    <div class="container">
+        <div class="text-center">
+            <p class="token-exchange-title">{% trans "Expected" %}</p>
+        </div>
+        <div class="col-md-6">
+            {% if item.expect_btc %}
+            <p class="token-exchange-content text-center">
+                <span class="key">{% trans "Expected BTC amount" %}:</span><span class="value">{{ item.expect_btc }}</span>BTC</p>
+            {% else %}
+            <p class="token-exchange-content text-center"><span class="key">{% trans "Expected BTC amount" %}:</span><span class="value">0</span>BTC</p>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            {% if item.expect_ela %}
+            <p class="token-exchange-content text-center"><span class="key">{% trans "Expected ELA amount" %}:</span><span class="value">{{ item.expect_ela }}</span>ELA</p>
+            {% else %}
+            <p class="token-exchange-content text-center"><span class="key">{% trans "Expected BTC amount" %}:</span><span class="value">0</span>ELA</p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="well well-sm tip">
+            {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
+                {% if item.status >= codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE %}
+                <p></p>
                 {% else %}
-                <p class="token-exchange-content">{% trans "Expected BTC amount" %}: 0 BTC</p>
+                <p class="before-fill text-danger">{% trans "Your expected amount is under evaluation" %}</p>
                 {% endif %}
-            </div>
-            <div class="col-md-6">
-                {% if item.expect_ela %}
-                <p class="token-exchange-content">{% trans "Expected ELA amount" %}: <span class="f30">{{ item.expect_ela }}</span> ELA</p>
-                {% else %}
-                <p class="token-exchange-content">{% trans "Expected BTC amount" %}: 0 ELA</p>
-                {% endif %}
-            </div>
+            {% else %}
+            <p class="before-fill text-danger">{% trans "Your expected amount is under evaluation" %}</p>
+            {% endif %}
         </div>
     </div>
 </div>

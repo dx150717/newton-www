@@ -206,3 +206,33 @@
         font-size: 2em !important;
     }
 }
+.fill-expect-section .value {
+    font-size: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.fill-expect-section .key {
+    font-size: 16px;
+}
+
+.fill-expect-section .before-fill {
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+.fill-expect-section .tip {
+    margin-top: 20px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.fill-expect-section .tip p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+@media (max-width: 768px) {
+    .fill-expect-section .tip {
+        width: 100%;
+    } 
+}
