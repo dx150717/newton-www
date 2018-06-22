@@ -27,8 +27,7 @@
                                     {% if kycinfo.status >= 3 %}
                                     <div class="item" style="padding-top: 60px">
                                         <p class="text-center">
-                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                            {% trans "You have not passed kyc review," %}
+                                            {% trans "You have not passed kyc review." %}
                                             {% if kycaudit_comment %}
                                                 {% trans "resulting from:" %} {{ kycaudit.comment }}
                                             {% endif %}
