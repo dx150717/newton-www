@@ -21,8 +21,7 @@
 .win-box{ min-height:160px;}
 .win-box .button-1{line-height:42px; overflow:hidden;}
 }
-.red-text {color: red}
-.security-container {border-top: #333 solid 1px;}
+.red-text {color: #a94442;}
 .security-title {margin: 10px 0 10px 0; font-size: 14px;}
 .security-content {margin: 5px 0; font-size: 12px;}
 .security-url {margin: 5px 5px 5px 0; font-size: 12px;}
@@ -50,11 +49,11 @@
     {% block content %}
     {% endblock %}
     {% block security %}
-    <div class="security-container red">
-        <p class="red-text security-title">{% trans "Newton Token Exchange Security Notification" %}</p>
-        <p class="red-text security-content">1. {% trans "Newton official website（www.newtonproject.org）is the unique legitimate platform for Newton token exchange. Newton won't provide you with any information concerning Newton token exchange, including allocated amount, address and QR code, through any other media including Email, Wechat, Telegram, phone, message and so on." %}</p>
-        <p class="red-text security-content">2. {% trans "Please make sure that the SSL of Newton official website is “NEWTON FOUNDATION LTD. [SG]” before exchanging token，in case of property loss resulting from fraudulent Newton official website." %}</p>
-        <p class="security-url"><a href="{{ security_url }}" class="red-text">{% trans "more" %}</a></p>
+    <div style="border-top: 1px #333333 solid;margin-top:50px;">
+        <p class="security-title" style="color: #a94442;margin-top: 5px;">{% trans "Newton Token Exchange Security Notification" %}</p>
+        <p class="security-content" style="color: #a94442;">1. {% trans "Newton official website（www.newtonproject.org）is the unique legitimate platform for Newton token exchange. Newton won't provide you with any information concerning Newton token exchange, including allocated amount, address and QR code, through any other media including Email, Wechat, Telegram, phone, message and so on." %}</p>
+        <p class="security-content" style="color: #a94442;">2. {% trans "Please make sure that the SSL of Newton official website is “NEWTON FOUNDATION LTD. [SG]” before exchanging token，in case of property loss resulting from fraudulent Newton official website." %}</p>
+        <p class="security-url"><a href="{{ security_url }}" style="color: #a94442;">{% trans "more" %}</a></p>
     </div>
     {% endblock %}
   </div>
