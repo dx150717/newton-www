@@ -9,23 +9,31 @@
 {% block content %}
 <section class="section-list newtonadmin">
     <div class="container">
-        <h3>用户转币列表</h3>
+        <h3>{% if is_sent %} 已发送转币确认用户列表{% else %} 用户转币列表 {% endif %}</h3>
         <div class="raw table-responsive">
             <table class="table">
                 <thead>
                     <tr>
+                        {% if not is_sent %}
                         <th><input id="all-check-receive-coin" name="all-check-receive-coin" type="checkbox"/>&nbsp;&nbsp;全选</th>
+                        {% endif %}
                         <th>姓名</th>
                         <th>收币地址及数量</th>
                         <th>时间</th>
+                        {% if not is_sent %}
                         <th>发送收币确认邮件</th>
+                        {% endif %}
                         <th>是否已经发送邮件</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for item in items %}
                     <tr>
-                        <td><input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择</td>
+                        {% if not is_sent %}
+                        <td>
+                            <input id="item-check-{{ forloop.counter }}" type="checkbox" name="item-check-{{ forloop.counter }}" value="{{ item.user_id }}"/>&nbsp;&nbsp;选择
+                        </td>
+                        {% endif %}
                         <td>
                             {{ item.user.email }}
                         </td>
@@ -40,11 +48,13 @@
                         <td>
                             {{ item.updated_at|date:"Y-m-d H:i:s"}}
                         </td>
+                        {% if not is_sent %}
                         <td>
                             <a href="#" class="btn btn-default" onclick="javascript:sendPerEmail('{{ item.user_id }}');">发送</a>
                         </td>
+                        {% endif %}
                          <td>
-                             {% if item.status == 7 %}
+                             {% if item.status == codes.TOKEN_EXCHANGE_STATUS_SEND_RECEIVE_AMOUNT_NOTIFY_VALUE %}
                              已发送
                              {% else %}
                              未发送
@@ -72,9 +82,11 @@
                 还没有数据
             </div>
             {% else %}
+            {% if not is_sent %}
             <div class="well">
                 <button class="btn btn-primary" onclick="sendEmailForReceivedCoin();">批量发送</button>
             </div>
+            {% endif %}
             {% endif %}
         </div>
     </div>

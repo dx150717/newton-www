@@ -6,8 +6,9 @@ from hashlib import sha256
 
 from django.conf import settings
 from django.template import Template, Context, loader
+from django.utils.translation import ugettext_lazy as _
 
-from verification import services
+from verification import services as verification_services
 from tasks import task_email
 from tokenexchange import models as tokenexchange_models
 from config import codes
@@ -69,7 +70,7 @@ def send_distribution_letter(user, request):
         # build the email body
         email = user.email
         email_type = codes.EmailType.TEXCHANGE_DISTRIBUTE_AMOUNT_NOTIFY.value
-        verification = services.generate_verification_uuid(email, email_type)
+        verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
         target_url = "%s/tokenexchange/%s/" % (settings.NEWTON_HOME_URL, str(user.username))
@@ -93,7 +94,7 @@ def send_kycinfo_notify(kyc_info, request):
         # build the email body
         email = kyc_info.user.email
         email_type = codes.EmailType.TEXCHANGE_CONFIRM_KYC.value
-        verification = services.generate_verification_uuid(email, email_type)
+        verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
         if kyc_info.kyc_audit.is_pass:
@@ -119,7 +120,7 @@ def send_apply_amount_notify(invite_info, request):
         # build the email body
         email = invite_info.user.email
         email_type = codes.EmailType.TEXCHANGE_INVITE_NOTIFY.value
-        verification = services.generate_verification_uuid(email, email_type)
+        verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
         target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWTON_HOME_URL, invite_info.id)
@@ -143,17 +144,18 @@ def send_receive_confirm_notify(request, receive_info):
         # build the email body
         email = receive_info.user.email
         email_type = codes.EmailType.TEXCHANGE_RECEIVE_NOTIFY.value
-        verification = services.generate_verification_uuid(email,email_type)
+        verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
+            logger.error("fail to generate verification object.")
             return False
-        subject = "Newton Notification: Receive Amount Notification!"
+        subject = _("Newton Notification: Receive Transferring Notification")
         template = loader.get_template("newtonadmin/receive-amount-notify-letter.html")
-        context = Context({"request":request, "receive_info":receive_info})
+        context = Context({"request": request, "receive_info": receive_info})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
         task_email.send_email.delay(subject, html_content, from_email, [email])
         return True
     except Exception, inst:
-        logger.exception("fail to send the receive amout notify:%s" %str(inst))
+        logger.exception("fail to send the receive amout notify:%s" % str(inst))
         return False
