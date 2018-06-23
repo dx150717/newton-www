@@ -25,6 +25,7 @@ from . import sso
 
 logger = logging.getLogger(__name__)
 
+@decorators.nologin_required
 def show_login_view(request):
     form = forms.LoginForm()
     next = request.GET.get('next', '')
