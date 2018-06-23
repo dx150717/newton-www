@@ -54,6 +54,7 @@ $("#id_set_password_form").submit(function(event){
     if (!$(form).valid()) {
         return false;
     }
+    showWaiting();
     form.submit()
 }).validate({
     ignore: [],

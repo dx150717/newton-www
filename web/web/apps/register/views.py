@@ -9,7 +9,7 @@ from django.shortcuts import render,redirect
 from django.core.validators import validate_email
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
 from django.template import Template, Context, loader
 from django.contrib.auth.decorators import login_required
