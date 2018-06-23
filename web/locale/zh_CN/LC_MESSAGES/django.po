@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-23 14:32+0000\n"
+"POT-Creation-Date: 2018-06-23 14:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -189,7 +189,7 @@ msgstr ""
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:55
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:49
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:61
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:71
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
 #: web/apps/welcome/templates/welcome/announcement.html:72
 #: web/apps/welcome/templates/welcome/press.html:38
@@ -203,7 +203,7 @@ msgstr "上一页"
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:59
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:53
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:65
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:75
 #: web/apps/welcome/templates/welcome/announcement-detail.html:50
 #: web/apps/welcome/templates/welcome/announcement.html:76
 #: web/apps/welcome/templates/welcome/press.html:42
@@ -380,6 +380,11 @@ msgstr "填写谷歌身份验证码"
 msgid "Submit"
 msgstr "提交"
 
+#: web/apps/newtonadmin/services_tokenexchange.py:152
+#, fuzzy
+msgid "Newton Notification: Receive Transferring Notification"
+msgstr "牛顿提醒：我们收到了您的KYC信息"
+
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:8
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:6
@@ -458,7 +463,6 @@ msgstr "牛顿团队"
 #: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:9
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:11
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:28
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:15
 #: web/apps/register/templates/register/register-letter.html:9
 #: web/apps/reset/templates/reset/reset-letter.html:9
 msgid "If you received this email by mistake, simply delete it."
@@ -623,32 +627,25 @@ msgstr "KYC 审核被拒绝"
 msgid "Admin Login"
 msgstr ""
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:4
-#, fuzzy
-msgid "KYC verification rejected"
-msgstr "KYC 审核被拒绝"
-
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:6
-msgid "Newton foundation has received your"
-msgstr "牛顿提醒：我们收到了您的KYC信息"
+msgid "Receive Transferring Notification"
+msgstr "转币确认提醒"
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:11
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:8
+msgid "Newton foundation has received your"
+msgstr "牛顿基金会收到您的"
+
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:13
 #: web/apps/register/templates/register/index.html:47
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:16
 msgid "and"
 msgstr "和"
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:13
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:15
 msgid ""
-"we show sincere gratitude to contribution you have made in Newton community."
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:14
-msgid ""
-"You can join in our communities in other medias by go to the 'community' "
-"page through the navigator bar of Newton official website (<a href='https://"
-"www.newtonproject.org/'>www.newtonproject.org</a>)."
-msgstr ""
+", we show sincere gratitude to contribution you have made in Newton "
+"community."
+msgstr "。我们对您在牛顿社区做出的贡献表示真诚的感谢。"
 
 #: web/apps/press/models.py:21
 msgid "press"
@@ -7066,6 +7063,10 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#, fuzzy
+#~ msgid "KYC verification rejected"
+#~ msgstr "KYC 审核被拒绝"
 
 #~ msgid "Resulting of"
 #~ msgstr "原因是"
