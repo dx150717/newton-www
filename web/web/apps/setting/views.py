@@ -35,10 +35,12 @@ def show_set_gtoken_view(request):
     """Show the set google authenticator page
     """
     try:
+        redirect_url = request.GET.get('redirect_url')
         gtoken = pyotp.random_base32()
         gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
         form = forms.GtokenForm()
-        redirect_url = request.GET.get('redirect_url')
+        # save the gtoken in session
+        request.session['gtoken'] = gtoken
         return render(request, 'setting/set-gtoken.html', locals())
     except Exception, inst:
         logger.exception("fail to show gtoken view:%s" % str(inst))
@@ -73,30 +75,26 @@ def submit_gtoken(request):
         # check whether the current user already set the google authenticator
         user_profile = request.user.userprofile
         if user_profile.is_google_authenticator:
-            raise Exception("google authenticator is already set.")
+            raise Exception("is_google_authenticator is already true.")
         # check whether post data is valid
         form = forms.SubmitGtokenForm(request.POST)
         if not form.is_valid():
-            return http.HttpResponseRedirect("/setting/gtoken/")
+            raise Exception("fail to validate")
         # redirect url
-        redirect_url = request.GET.get('redirect_url')
+        redirect_url = form.cleaned_data['redirect_url']
         if not redirect_url:
-            raise Exception(" redirect url is null")
+            raise Exception("redirect url is null")
         # check google auth
-        gtoken = form.cleaned_data["gtoken"]
+        gtoken = request.session["gtoken"]
         gtoken_code = form.cleaned_data["gtoken_code"]
         is_pass_google_auth = pyotp.TOTP(gtoken).verify(gtoken_code)
         if not is_pass_google_auth:
-            gtoken = pyotp.random_base32()
-            gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_('Google Authenticator Code Error')])
-            form = forms.GtokenForm()
-            return render(request, 'setting/set-gtoken.html', locals())
+            raise Exception('is_pass_google_auth is false')
         #create user
         user_profile.is_google_authenticator = True
         user_profile.google_authenticator_private_key = gtoken
         user_profile.save()
-        return http.HttpResponseRedirect(redirect_url)
+        return http.JsonSuccessResponse({'redirect_url': redirect_url})
     except Exception,inst:
         logger.exception("fail to post gtoken:%s" % str(inst))
-        raise exception.SystemError500()
+        return http.JsonErrorResponse(error_message=unicode(_('Google Authenticator Code Error')))
