@@ -1,16 +1,16 @@
 {% extends "email-kyc-template.html" %}
 {% load i18n %}
 {% load utils %}
-    <h2>{% trans "KYC verification rejected" %}</h2>
-    <p class="pad-t10">
-        {% trans "Newton foundation has received your"%}
-        {% if receive_info.btc_value %}
-        {{ receive_info.btc_value }} BTC
-        {% endif %}
-        {% if receive_info.ela_value %}
-        {% trans "and" %} {{ receive_info.ela_value }} ELA
-        {% endif %}
-        ,{% trans "we show sincere gratitude to contribution you have made in Newton community." %}</p>
-    <p class="pad-t10">{% trans "You can join in our communities in other medias by go to the 'community' page through the navigator bar of Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>)." %}</p>
-    <p class="pad-t30">{% trans "If you received this email by mistake, simply delete it." %}</p>
-    {% endblock %}
+
+{% block content %}
+<h2>{% trans "Receive Transferring Notification" %}</h2>
+<p class="pad-t10">
+    {% trans "Newton foundation has received your"%}
+    {% if receive_info.btc_value %}
+    {{ receive_info.btc_value }} BTC
+    {% endif %}
+    {% if receive_info.ela_value %}
+    {% trans "and" %} {{ receive_info.ela_value }} ELA
+    {% endif %}
+    {% trans ", we show sincere gratitude to contribution you have made in Newton community." %}</p>
+{% endblock %}

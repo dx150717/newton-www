@@ -28,5 +28,5 @@ urlpatterns = patterns('',
                        
                        url(r'^receive/(?P<phase_id>[0-9]+)/$', views_tokenexchange.ReceiveListView.as_view()),
                        url(r'^receive/(?P<phase_id>[0-9]+)/send/', views_tokenexchange.send_receive_email),  
-                       url(r'^receiveuser/(?P<phase_id>[0-9]+)/$', views_tokenexchange.UserReceiveListView.as_view()),                   
+                       url(r'^receiveuser/(?P<phase_id>[0-9]+)/$', views_tokenexchange.UserReceiveListView.as_view()),
 )

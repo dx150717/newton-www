@@ -368,7 +368,9 @@ class UserReceiveListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(UserReceiveListView, self).get_context_data(**kwargs)
+        is_sent = True if self.request.GET.get('is_sent') else False
         context['phase_id'] = int(self.request.path.split("/")[4])
+        context['is_sent'] = is_sent
         return context
 
     def get_queryset(self):
@@ -376,7 +378,13 @@ class UserReceiveListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             items = []
-            for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
+            is_sent = True if self.request.GET.get('is_sent') else False
+            q = Q(phase_id=phase_id)
+            if is_sent:
+                q &= Q(status=codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value)
+            else:
+                q &= Q(status=codes.TokenExchangeStatus.RECEIVE_AMOUNT.value)                
+            for item in tokenexchange_models.InvestInvite.objects.filter(q).order_by('-updated_at'):
                 queryset = tracker_models.AddressTransaction.objects.filter(user_id=item.user_id)
                 btc_final_balance = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value).aggregate(Sum("value"))
                 ela_final_balance = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value).aggregate(Sum("value"))
