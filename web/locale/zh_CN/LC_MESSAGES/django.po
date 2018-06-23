@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-23 12:53+0000\n"
+"POT-Creation-Date: 2018-06-23 13:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -444,20 +444,20 @@ msgstr "填写申请数量"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:15
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:9
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:21
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:25
 msgid "Best regard"
 msgstr "谢谢！"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:16
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:10
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:22
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:26
 msgid "Newton team"
 msgstr "牛顿团队"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:17
 #: web/apps/newtonadmin/templates/newtonadmin/confirm-distribution-notify-letter.html:9
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:11
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:23
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:27
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:15
 #: web/apps/register/templates/register/register-letter.html:9
 #: web/apps/reset/templates/reset/reset-letter.html:9
@@ -578,36 +578,41 @@ msgstr "证件号码"
 msgid "KYC review success"
 msgstr "KYC 审核成功"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:8
-msgid "KYC review rejected"
-msgstr "KYC 审核被拒绝"
-
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:11
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:7
 msgid "Welcome!"
 msgstr "您好"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:12
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:8
 msgid "Congratulations, you have passed Newton KYC reviewing."
 msgstr "恭喜您通过了牛顿KYC审核。"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:13
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:9
 msgid "Please pay attention to our subsequent notification later on."
 msgstr "请关注我们之后的公告。"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:15
-#, fuzzy
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:12
+msgid "KYC review rejected"
+msgstr "KYC 审核被驳回"
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:13
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:21
 msgid "We'd like to apologize that you haven't passed Newton KYC reviewing."
 msgstr "很抱歉，您未通过KYC审核。"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:17
-msgid "Resulting of"
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:15
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:23
+msgid "Reason"
 msgstr "原因是"
 
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:19
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:17
 msgid ""
 "You can check and modify the contents you fill into KYC information page "
 "carefully, and try to submit again."
 msgstr "您可以仔细检查并修改KYC信息页面的内容，然后再次提交。"
+
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:20
+msgid "KYC review denied"
+msgstr "KYC 审核被拒绝"
 
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:12
 msgid "Admin Login"
@@ -1507,7 +1512,6 @@ msgid "Contact Phone"
 msgstr "联系人电话"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:96
-#, fuzzy
 msgid ""
 "The time you were involved in blockchain industry. Your understanding on "
 "blockchain industry. The strategy in the future."
@@ -2182,6 +2186,11 @@ msgstr ""
 "在进行通证交换之前，请确保网站的SSL证书是<span class='text-danger "
 "bold'>“NEWTON FOUNDATION LTD. [SG]”</span>，防止进入假冒的牛顿官方网站造成的"
 "资产损失。"
+
+#: web/apps/user/templates/user/include-security.html:9
+#: web/templates/email-kyc-template.html:57
+msgid "more"
+msgstr "更多"
 
 #: web/apps/user/templates/user/include-token-exchange.html:20
 #: web/apps/user/templates/user/include-token-exchange.html:66
@@ -7002,10 +7011,6 @@ msgstr ""
 msgid "QQ"
 msgstr ""
 
-#: web/templates/email-kyc-template.html:57
-msgid "more"
-msgstr "更多"
-
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
 msgstr "发展规划"
@@ -7056,6 +7061,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Resulting of"
+#~ msgstr "原因是"
 
 #~ msgid "Congratulation!"
 #~ msgstr "恭喜！"

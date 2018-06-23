@@ -89,6 +89,10 @@ class KYCStatus(Enum):
     DENY = 4
 
 KYC_STATUS_CANDIDATE_VALUE = KYCStatus.CANDIDATE.value
+KYC_STATUS_PASS_KYC_VALUE = KYCStatus.PASS_KYC.value
+KYC_STATUS_REJECT_VALUE = KYCStatus.REJECT.value
+KYC_STATUS_DENY_VALUE = KYCStatus.DENY.value
+
 
 class TokenExchangeStatus(Enum): 
     INVITE = 1  

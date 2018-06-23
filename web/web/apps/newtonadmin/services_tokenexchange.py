@@ -102,8 +102,9 @@ def send_kycinfo_notify(kyc_info, request):
         else:
             subject = "Newton Notification: You are not passed the Newton KYC"
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
+        target_url = "%s/tokenexchange/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
-        context = Context({"request":request, "kyc_info": kyc_info, 'security_url': security_url})
+        context = Context({"request":request, "kyc_info": kyc_info, 'security_url': security_url, "target_url": target_url})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
