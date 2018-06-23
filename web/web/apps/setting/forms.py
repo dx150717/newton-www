@@ -7,4 +7,4 @@ class GtokenForm(forms.Form):
     
 class SubmitGtokenForm(forms.Form):
     gtoken_code = forms.CharField(max_length=100, required=True)
-    gtoken = forms.CharField(max_length=100, required=True)
+    redirect_url = forms.CharField(max_length=100, required=True)
