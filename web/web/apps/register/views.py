@@ -106,6 +106,9 @@ def show_password_view(request):
         uuid = request.GET.get('uuid')
         if not uuid:
             return http.HttpResponseRedirect('/register/invalid-link/')
+        verification = register_services.get_register_verification_by_uuid(uuid)
+        if not verification:
+            return http.HttpResponseRedirect('/register/invalid-link/')
         return render(request, 'register/password.html', locals())
     except Exception, inst:
         logger.exception("fail to show gtoken view:%s" % str(inst))
