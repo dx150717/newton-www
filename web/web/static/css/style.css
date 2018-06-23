@@ -1406,3 +1406,8 @@ input[name="expect_btc"], input[name="expect_ela"]{
     text-align: left !important;
     font-size: 16px !important;
 }
+@media (max-width: 768px) {
+    .check-gtoken-title {
+        font-size: 2em !important;
+    }
+}
