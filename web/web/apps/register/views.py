@@ -143,7 +143,7 @@ def submit_password(request):
             return render(request, 'register/password.html', locals())            
         return http.HttpResponseRedirect("/register/success/")
     except Exception,inst:
-        logger.exception("fail to post password:%s" %str(inst))
+        logger.exception("fail to post password:%s" % str(inst))
         raise exception.SystemError500()
 
 def show_register_success_view(request):
