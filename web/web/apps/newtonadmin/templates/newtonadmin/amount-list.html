@@ -35,17 +35,20 @@
                             {% if is_confirm %}
                             <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
                             {% endif %}
+
                             <th>姓名</th>
                             <th>评分</th>
+
                             {% if is_confirm %}
                             <th>已分配额度</th>
-                            {% else %}
-                            <th>介绍</th>
                             {% endif %}
+
                             <th>期望额度</th>
+
                             {% if is_completed %}
                             <th>分配额度</th>
                             {% endif %}
+
                             <th>操作</th>
                         </tr>
                     </thead>
