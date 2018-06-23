@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-23 15:56+0000\n"
+"POT-Creation-Date: 2018-06-23 16:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -380,10 +380,17 @@ msgstr "填写谷歌身份验证码"
 msgid "Submit"
 msgstr "提交"
 
+#: web/apps/newtonadmin/services_tokenexchange.py:101
+msgid "Newton Notification: You have passed the Newton KYC"
+msgstr "牛顿通知：您通过了牛顿KYC审核"
+
+#: web/apps/newtonadmin/services_tokenexchange.py:103
+msgid "Newton Notification: You are not passed the Newton KYC"
+msgstr "牛顿通知：您没有通过牛顿KYC审核"
+
 #: web/apps/newtonadmin/services_tokenexchange.py:152
-#, fuzzy
 msgid "Newton Notification: Receive Transferring Notification"
-msgstr "牛顿提醒：我们收到了您的KYC信息"
+msgstr "牛顿提醒：转币确认"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:8
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6

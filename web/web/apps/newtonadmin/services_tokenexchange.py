@@ -98,9 +98,9 @@ def send_kycinfo_notify(kyc_info, request):
         if not verification:
             return False
         if kyc_info.kyc_audit.is_pass:
-            subject = "Newton Notification: You have passed the Newton KYC"
+            subject = _("Newton Notification: You have passed the Newton KYC")
         else:
-            subject = "Newton Notification: You are not passed the Newton KYC"
+            subject = _("Newton Notification: You are not passed the Newton KYC")
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
         target_url = "%s/tokenexchange/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
