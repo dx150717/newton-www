@@ -62,7 +62,8 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <select class="form-control" id="id_id_type" name="id_type" placeholder="Certificate Type">
-                                    <option value="1" selected="selected">{% trans "ID Card" %}</option>
+                                    <option selected="selected" style="color: #858585">{% trans "Select certificate type" %}</option>
+                                    <option value="1">{% trans "ID Card" %}</option>
                                     <option value="2">{% trans "Passport" %}</option>
                                     <option value="3">{% trans "Drivers License" %}</option>
                                     </select>
@@ -365,7 +366,7 @@
                         </label>
                         <div class="col-sm-9">
                             <select class="form-control" id="id_emergency_relationship" name="emergency_relationship" placeholder="Relation with Applicant">
-                                <option value="0" selected="selected">{% trans "Relation with Applicant" %}</option>
+                                <option selected="selected">{% trans "Relation with Applicant" %}</option>
                                 <option value="1">{% trans "Kinship" %}</option>
                                 <option value="2">{% trans "Friendship" %}</option>
                                 <option value="3">{% trans "Colleague" %}</option>
