@@ -33,6 +33,7 @@ $("#reset-password-form").submit(function(event){
     if (!$(form).valid()) {
         return false;
     }
+    showWaiting();
     form.submit()
 }).validate({
     ignore: [],
