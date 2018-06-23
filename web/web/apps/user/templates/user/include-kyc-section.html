@@ -28,7 +28,7 @@
                                         <p class="text-center">
                                             {% trans "You have not passed kyc review." %}
                                             {% if kycaudit_comment %}
-                                                {% trans "resulting from:" %} {{ kycaudit.comment }}
+                                            <br/>{% trans "resulting from:" %} {{ kycaudit.comment }}
                                             {% endif %}
                                         </p>
                                         <p style="text-align: center">
