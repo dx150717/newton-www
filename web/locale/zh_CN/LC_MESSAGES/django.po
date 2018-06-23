@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-23 14:48+0000\n"
+"POT-Creation-Date: 2018-06-23 15:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,7 +183,7 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:97
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:100
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:171
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:107
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
@@ -197,7 +197,7 @@ msgid "previous"
 msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:101
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:104
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:175
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:111
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
@@ -224,12 +224,12 @@ msgstr "安全提示"
 
 #: web/apps/help/templates/help/security.html:20
 #: web/apps/user/templates/user/include-security.html:6
-#: web/templates/email-kyc-template.html:54
+#: web/templates/email-kyc-template.html:53
 msgid "Newton Token Exchange Security Notification"
 msgstr "牛顿通证交换安全提示"
 
 #: web/apps/help/templates/help/security.html:21
-#: web/templates/email-kyc-template.html:55
+#: web/templates/email-kyc-template.html:54
 msgid ""
 "Newton official website（www.newtonproject.org）is the unique legitimate "
 "platform for Newton token exchange. Newton won't provide you with any "
@@ -243,7 +243,7 @@ msgstr ""
 "二维码。"
 
 #: web/apps/help/templates/help/security.html:22
-#: web/templates/email-kyc-template.html:56
+#: web/templates/email-kyc-template.html:55
 msgid ""
 "Please make sure that the SSL of Newton official website is “NEWTON "
 "FOUNDATION LTD. [SG]” before exchanging token，in case of property loss "
@@ -360,8 +360,8 @@ msgid "Register"
 msgstr "注册"
 
 #: web/apps/login/templates/login/index.html:33
-msgid "Forgot Password"
-msgstr "忘记密码"
+msgid "Forgot Password?"
+msgstr "忘记密码？"
 
 #: web/apps/login/templates/login/index.html:46 web/apps/register/forms.py:19
 #: web/apps/setting/forms.py:6
@@ -371,7 +371,7 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/login/templates/login/index.html:56
 #: web/apps/register/templates/register/password.html:34
 #: web/apps/setting/templates/setting/check-gtoken.html:35
-#: web/apps/setting/templates/setting/set-gtoken.html:73
+#: web/apps/setting/templates/setting/set-gtoken.html:62
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:66
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:37
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:382
@@ -663,11 +663,11 @@ msgstr "牛顿通知：请完成牛顿注册"
 msgid "Email already existed"
 msgstr "邮箱已经存在！"
 
-#: web/apps/register/views.py:136 web/apps/reset/views.py:111
+#: web/apps/register/views.py:139 web/apps/reset/views.py:111
 msgid "Entered passwords do not match"
 msgstr "两次输入密码不一致"
 
-#: web/apps/register/views.py:142
+#: web/apps/register/views.py:145
 msgid "Fail to register"
 msgstr ""
 
@@ -796,7 +796,9 @@ msgid ""
 "org'> contact@newtonproject.org</a>"
 msgstr ""
 "您好！这是一封来自 <a href='https://www.newtonproject.org'>https://www."
-"newtonproject.org</a> 的邮件，点击下方<注册>按钮重置密码。如果您有任何疑问，请与我们联系。<a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>"
+"newtonproject.org</a> 的邮件，点击下方<注册>按钮重置密码。如果您有任何疑问，"
+"请与我们联系。<a href='mailto:contact@newtonproject.org'> "
+"contact@newtonproject.org</a>"
 
 #: web/apps/reset/templates/reset/reset-success.html:21
 msgid "Successfully submitted!"
@@ -861,7 +863,7 @@ msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
 msgid "Enter the  code manually into your GA app"
 msgstr "手动添加谷歌身份验证器"
 
-#: web/apps/setting/templates/setting/set-gtoken.html:66
+#: web/apps/setting/templates/setting/set-gtoken.html:55
 msgid "Use the GA app to scan the QR code"
 msgstr "扫描二维码添加谷歌身份验证器"
 
@@ -2190,7 +2192,7 @@ msgstr ""
 "资产损失。"
 
 #: web/apps/user/templates/user/include-security.html:9
-#: web/templates/email-kyc-template.html:57
+#: web/templates/email-kyc-template.html:56
 msgid "more"
 msgstr "更多"
 
