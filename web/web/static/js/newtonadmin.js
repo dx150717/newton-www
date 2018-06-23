@@ -20,10 +20,10 @@ function openAuditIdPopuWindow(user_id) {
             data, 
             function(json){
                 if (json['error_code'] == 1) {
-                alert('success,we had send a email to user');
-                location.reload();
+                  showSuccess('success,we had send a email to user');
+                  location.reload();
                 } else {
-                alert(json['error_message']);
+                  showFail(json['error_message']);
                 }
             });
     });
@@ -40,10 +40,10 @@ function openAuditIdPopuWindow(user_id) {
             data, 
             function(json){
                 if (json['error_code'] == 1) {
-                alert('success, we had reject user');
+                  showSuccess('success, we had reject user');
                 location.reload();
                 } else {
-                alert(json['error_message']);
+                  showFail(json['error_message']);
                 }
             });
         });
@@ -60,10 +60,10 @@ function openAuditIdPopuWindow(user_id) {
             data, 
             function(json){
                 if (json['error_code'] == 1) {
-                alert('success, we had deny user');
+                  showSuccess('success, we had deny user');
                 location.reload();
                 } else {
-                alert(json['error_message']);
+                  showFail(json['error_message']);
                 }
             });
         });
@@ -82,12 +82,12 @@ function preInviteUser(user_id) {
     $.post('/newtonadmin/tokenexchange/invite/'+ phase_id + '/post/', 
         data, 
         function(json){
-        if (json['error_code'] == 1) {
-            alert('success');
+          if (json['error_code'] == 1) {
+            showSuccess('success');
             location.reload();
-        } else {
-            alert(json['error_message']);
-        }
+          } else {
+            showFail(json['error_message']);
+          }
     });
 }
 /**
@@ -131,10 +131,10 @@ function preInviteSelectedUser(){
     data.user_list = user_list;
     $.post("/newtonadmin/tokenexchange/invite/" + phase_id + "/post/",data,function(json){
         if (json['error_code'] == 1) {  
-            alert('success');
+            showSuccess('success');
             location.reload();
         } else {
-            alert(json['error_message']);
+            showFail(json['error_message']);
         }
     });
 }
@@ -153,10 +153,10 @@ function sendPerInviteEmail(user_id) {
         data, 
         function(json){
         if (json['error_code'] == 1) {
-            alert('success');
+            showSuccess('success');
             location.reload();
         } else {
-            alert(json['error_message']);
+            showFail(json['error_message']);
         }
     });
 }
@@ -202,10 +202,10 @@ function sendSelectedEmailForInvite(){
     data.user_list = user_list;
     $.post('/newtonadmin/tokenexchange/invite/' + phase_id + '/send/',data,function(json){
         if (json['error_code'] == 1) {  
-            alert('success');
+            showSuccess('success');
             location.reload();
         } else {
-            alert(json['error_message']);
+            showFail(json['error_message']);
         }
     });
 }
@@ -241,21 +241,21 @@ function amountPopupWindow(user_id, phase_id, expect_ela, expect_btc) {
         data.user_id = user_id;
         data.phase_id = phase_id;
         if(data.assign_btc != 0 && data.assign_btc < btcLimit){
-            alert("btc 额度大于等于"+btcLimit);
+            showFail("btc 额度大于等于"+btcLimit);
             return;
         }
         if(data.assign_ela != 0 && data.assign_ela < elaLimit){
-            alert("ela 额度需要大于等于"+elaLimit);
+            showFail("ela 额度需要大于等于"+elaLimit);
             return;
         }
         $.post('/newtonadmin/tokenexchange/amount/'+phase_id+'/post/', 
             data, 
             function(json){
                 if (json['error_code'] == 1) {
-                alert('success');
+                  showSuccess('success');
                 location.reload();
                 } else {
-                alert(json['error_message']);
+                  showFail(json['error_message']);
                 }
         });
     });
@@ -276,10 +276,10 @@ function sendPerEmail(user_id) {
         data,
         function(json){
             if (json['error_code'] == 1) {
-            alert('success,we had send address to user.');
+              showSuccess('success,we had send address to user.');
             location.reload();
             } else {
-            alert(json['error_message']);
+              showFail(json['error_message']);
             }
         });
 }
@@ -326,10 +326,10 @@ function sendEmailForReceivedCoin(){
     data.user_list = user_list;
     $.post('/newtonadmin/tokenexchange/receive/' + phase_id + '/send/',data,function(json){
         if (json['error_code'] == 1) {  
-            alert('success');
+            showSuccess('success');
             location.reload();
         } else {
-            alert(json['error_message']);
+            showFail(json['error_message']);
         }
     });
 }
@@ -354,10 +354,10 @@ function preConfirmSelectedUser(phase_id){
     data.user_list = user_list;
     $.post("/newtonadmin/tokenexchange/amount/" + phase_id + "/confirm/post/",data,function(json){
         if (json['error_code'] == 1) {  
-            alert('success');
+            showSuccess('success');
             location.reload();
         } else {
-            alert(json['error_message']);
+            showFail(json['error_message']);
         }
     });
 }
