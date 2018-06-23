@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-23 12:45+0000\n"
+"POT-Creation-Date: 2018-06-23 12:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -806,9 +806,12 @@ msgid "Google Authenticator Code Error"
 msgstr "谷歌身份验证码错误"
 
 #: web/apps/setting/templates/setting/check-gtoken.html:5
-#: web/apps/setting/templates/setting/check-gtoken.html:23
 msgid "Verify Google Authenticator"
 msgstr "谷歌身份验证器校验"
+
+#: web/apps/setting/templates/setting/check-gtoken.html:23
+msgid "Enter verification code"
+msgstr "输入验证码"
 
 #: web/apps/setting/templates/setting/set-gtoken.html:5
 #: web/apps/setting/templates/setting/set-gtoken.html:23
