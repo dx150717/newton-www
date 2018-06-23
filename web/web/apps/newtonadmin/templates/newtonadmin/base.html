@@ -37,11 +37,19 @@
          {% include "footer-simple.html" %}
          {% endblock %}
 
+         <div id="id_loading"></div>
+
          <!-- jquery lib -->
          <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
+         <script src="{% version "js/jquery-validate.js" %}"></script>
+         <script src="{% version "js/jquery-validate-additional-methods.js" %}"></script>
+         <script src="{% version "js/nsprogress.js" %}"></script>
+         {% block thirdparty_js %}{% endblock %}
+         <script>var zhMessages = "{% version 'js/jquery-validate-messages.zh.js' %}"</script>
+
          <!-- bootstrap lib -->
-         <script src="{% version "js/bootstrap.min.js" %}"></script>
-         <script src="{% version "js/index.js" %}"></script>
+         <script src="{% version 'js/bootstrap.min.js' %}"></script>
+         <script src="{% version 'js/index.js' %}"></script>
          
          {% block inline_js %}{% endblock %}
 
