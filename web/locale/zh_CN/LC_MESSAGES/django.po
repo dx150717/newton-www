@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-23 16:12+0000\n"
+"POT-Creation-Date: 2018-06-23 18:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -644,7 +644,7 @@ msgstr "牛顿基金会收到您的"
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:13
 #: web/apps/register/templates/register/index.html:47
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:16
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
 msgid "and"
 msgstr "和"
 
@@ -749,6 +749,11 @@ msgstr "请前往<a href='/login/'>登录</a>"
 #: web/apps/reset/forms.py:10
 msgid "Repassword"
 msgstr "确认密码"
+
+#: web/apps/reset/services.py:27
+#, fuzzy
+msgid "NewtonProject Notifications: Please Reset password:"
+msgstr "牛顿提醒：请确认您的订阅"
 
 #: web/apps/reset/views.py:37
 msgid "Email address does not exist"
@@ -1541,61 +1546,57 @@ msgstr "您对牛顿的理解"
 msgid "Plan of node establishment"
 msgstr "节点建立计划和方案"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:9
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:7
 msgid "Allocated"
 msgstr "分配信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:12
 msgid ""
 "* Please transfer your token before deadline of first-round token exchange."
 msgstr "* 请于本轮通证交换截止日期前转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:16
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:19
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:22
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:20
 msgid "* Attention! You can only transfer"
 msgstr "* 注意，您只能向下面的分配地址中转入"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:16
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
 msgid ""
 "to below addresses. DO NOT transfer BTC and ELA amount larger than allocated "
 "amount, otherwise Newton Foundation won't refund the remainder."
 msgstr "。请不要转入大于分配数量的BTC和ELA，牛顿基金会不回退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:19
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
 msgid ""
 "to below addresses. DO NOT transfer BTC amount larger than allocated amount, "
 "otherwise Newton Foundation won't refund the remainder."
 msgstr "。请不要转入大于分配数量的BTC，牛顿基金会不回退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:22
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:20
 msgid ""
 "to below addresses. DO NOT transfer ELA amount larger than allocated amount, "
 "otherwise Newton Foundation won't refund the remainder."
 msgstr "。请不要转入大于分配数量的ELA，牛顿基金会不回退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:26
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:24
 msgid ""
 "* First-round token exchange is overdue, DO NOT transfer any token to "
 "allocated addresses."
 msgstr "* 本轮通证交换已截止，请不要向分配地址中转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:32
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:41
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:31
 msgid "Allocated BTC amount"
 msgstr "分配 BTC 数量"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:33
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:42
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:38
 msgid "Allocated BTC address"
 msgstr "分配 BTC 地址"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:50
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:59
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:52
 msgid "Allocated ELA amount"
 msgstr "分配 ELA 数量"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:51
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:60
 msgid "Allocated ELA address"
 msgstr "分配 ELA 地址"

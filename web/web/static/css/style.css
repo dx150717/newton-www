@@ -399,11 +399,16 @@ canvas {display: block; vertical-align: top;}
     #Distributed .fr {margin-top:-40px;}
     .timeline-lg .entry-lg {padding-left: 65px;}
     .entry-lg .date-lg {width: 145px;}
+    .token-exchange-timeline .entry-lg .date-lg {width: 120px;}
     #mediakit,#whitepaper{margin-bottom: 60px;}
     #intro {padding-bottom: 70px;}
     #intro h1 {margin:80px 0 30px;font-size: 50px;}
     #intro p.sty1 {font-size: 36px;}
     #intro p.sty2, span.sty2 {font-size: 26px;}
+}
+@media(max-width:992px) {
+    .timeline-lg {display: none;}
+    .timeline {display: block;}
 }
 @media(max-width:768px){
     .footer span a{padding: 0 0 0 10px}
@@ -1019,7 +1024,7 @@ canvas {display: block; vertical-align: top;}
 .token-exchange-time {font-size: 16px; color: #303030; font-family: 'Arial';}
 .token-exchange-content {font-size: 16px; color: #3e3e3e; font-family: 'Arial';}
 #token-exchange .container .col-md-6 {padding: 0;}
-.qrcode-width {width: 150px;}
+.qrcode-width {width: 150px; margin-left: auto; margin-right: auto}
 .qrcode-width img {width: 100%;}
 .address_style {color: #303030;}
 #user .user-detail-content .col-md-2{width: 0;}
