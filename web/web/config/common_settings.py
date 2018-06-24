@@ -71,7 +71,7 @@ LOGGING = {
 
 SESSION_COOKIE_AGE = 3600 * 24 * 365 * 10
 SESSION_COOKIE_DOMAIN = '.newtonproject.org'
-SESSION_COOKIE_NAME = 'xsid'
+SESSION_COOKIE_NAME = 'nsid'
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "session"
