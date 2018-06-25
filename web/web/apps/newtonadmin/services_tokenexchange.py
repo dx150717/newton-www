@@ -5,7 +5,9 @@ import logging
 from hashlib import sha256
 
 from django.conf import settings
+from django.utils import translation
 from django.template import Template, Context, loader
+from django.contrib.auth.models import User
 from django.utils.translation import ugettext as _
 
 from verification import services as verification_services
@@ -32,6 +34,10 @@ def __load_address_from_file(filename, coin):
         if is_valid:
             all_address.append(line)
     return all_address
+
+def __select_language(user):
+    if hasattr(user, 'userprofile'):
+        translation.activate(user.userprofile.language_code)
 
 def allocate_btc_address():
     """Allocate the BTC address from address pool
@@ -73,6 +79,8 @@ def send_distribution_letter(user, request):
         verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
+        # select language by user's prefer language
+        __select_language(user)
         target_url = "%s/tokenexchange/%s/" % (settings.NEWTON_HOME_URL, str(user.username))
         security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
         subject = _("KYC information is confirmed")
@@ -97,6 +105,10 @@ def send_kycinfo_notify(kyc_info, request):
         verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
+        # select language by user's prefer language
+        user = kyc_info.user
+        __select_language(user)
+        # build email
         if kyc_info.kyc_audit.is_pass:
             subject = _("You have passed the Newton KYC")
         else:
@@ -127,6 +139,10 @@ def send_apply_amount_notify(invite_info, request):
         verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
+        # select language by user's prefer language
+        user = invite_info.user
+        __select_language(user)
+        # build email
         target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWTON_HOME_URL, invite_info.id)
         security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
         subject = _("Fillout your expect amount")
@@ -152,6 +168,9 @@ def send_receive_confirm_notify(request, receive_info):
         if not verification:
             logger.error("fail to generate verification object.")
             return False
+        # select language by user's prefer language
+        user = receive_info.user
+        __select_language(user)
         subject = _("Receive Transferring Notification")
         template = loader.get_template("newtonadmin/receive-amount-notify-letter.html")
         security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
