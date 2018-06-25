@@ -21,6 +21,7 @@ from . import services
 
 logger = logging.getLogger(__name__)
 
+@decorators.nologin_required
 def show_reset_view(request):
     form = forms.EmailForm()
     return render(request,'reset/index.html', locals())
