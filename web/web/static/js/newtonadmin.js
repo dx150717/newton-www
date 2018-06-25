@@ -236,26 +236,28 @@ function amountPopupWindow(user_id, phase_id, expect_ela, expect_btc) {
     $('#confirm_button').click(function(event){
         event.preventDefault();
         var data = {};
-        data.assign_btc = $('#assign_btc').val();
-        data.assign_ela = $('#assign_ela').val();
+        data.assign_btc = parseFloat($('#assign_btc').val());
+        data.assign_ela = parseFloat($('#assign_ela').val());
         data.user_id = user_id;
         data.phase_id = phase_id;
-        if(data.assign_btc != 0 && data.assign_btc < btcLimit){
-            showFail("btc 额度大于等于"+btcLimit);
+        if (data.assign_btc < 0) {
+            showFail("BTC数量不能小于0");
             return;
         }
-        if(data.assign_ela != 0 && data.assign_ela < elaLimit){
-            showFail("ela 额度需要大于等于"+elaLimit);
+        if (data.assign_ela < 0) {
+            showFail("ELA数量不能小于0");
             return;
         }
+        showWaiting();
         $.post('/newtonadmin/tokenexchange/amount/'+phase_id+'/post/', 
             data, 
             function(json){
-                if (json['error_code'] == 1) {
+                dismiss();
+                if (isSuccess(json)) {
                   showSuccess('success');
-                location.reload();
+                  location.reload();
                 } else {
-                  showFail(json['error_message']);
+                  showFail(getErrorMessage(json));
                 }
         });
     });

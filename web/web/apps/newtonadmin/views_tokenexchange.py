@@ -535,14 +535,14 @@ def post_amount(request, phase_id):
         assign_btc = float(form.cleaned_data['assign_btc'])
         assign_ela = float(form.cleaned_data['assign_ela'])
         # Query the available address
-        if assign_btc != 0:
+        if assign_btc > 0:
             btc_address = services_tokenexchange.allocate_btc_address()
         else:
             btc_address = None
-        if assign_ela == 0:
-            ela_address = None
-        else:
+        if assign_ela > 0:
             ela_address = services_tokenexchange.allocate_ela_address()
+        else:
+            ela_address = None
         if not btc_address and not ela_address:
             return http.JsonErrorResponse()
         # save status
