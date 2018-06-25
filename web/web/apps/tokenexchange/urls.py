@@ -13,5 +13,6 @@ urlpatterns = patterns('',
                        url(r'^pending/', views.show_pending_view),
                        url(r'^end/', views.show_end_view),
                        url(r'^invite/(?P<invite_id>[0-9]+)/post/$', views.post_apply_amount),
+                       url(r'^invite/(?P<invite_id>[0-9]+)/success/$', views.show_apply_success),
                        url(r'^(?P<invite_id>[0-9]+)/$', views.show_receive_address_view),
 )

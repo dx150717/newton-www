@@ -165,8 +165,35 @@ $("#id_fill_amount_form").submit(function(event){
     if (!$(form).valid()) {
         return false;
     }
+    var url = $(form).attr('action');
+    var expect_btc = $('#id_expect_btc').val();
+    var expect_ela = $('#id_expect_ela').val();
+    var data = {};
+    data.expect_btc = expect_btc;
+    data.expect_ela = expect_ela;
     showWaiting();
-    form.submit()
+    $.ajax({
+            url: url,
+            timeout: 15000,
+            type: 'post',
+            data: data,
+            success: function(response){
+              dismiss();
+              if (isSuccess(response)) {
+                  var result = getData(response);
+                  location.href = result['redirect_url'];
+              } else {
+
+                showFail(getErrorMessage(response));
+              }
+            },
+            error: function(request, status){
+              dismiss();
+              if(status == 'timeout'){
+                showFail("Time Out");
+              }
+            }
+          });
 }).validate({
     ignore: [],
     errorElement: "div",

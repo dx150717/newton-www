@@ -249,22 +249,31 @@ def post_apply_amount(request, invite_id):
                 expect_btc = form.cleaned_data['expect_btc']
                 expect_ela = form.cleaned_data['expect_ela']
                 if not expect_btc and not expect_ela:
-                    form._errors[NON_FIELD_ERRORS] = form.error_class([_('You must fill in at least one.')])
-                    return render(request, "tokenexchange/apply-amount.html", locals())
+                    return http.JsonErrorResponse(error_message=_('You must fill in at least one.'))
                 elif expect_btc and expect_btc < min_btc:
-                    form._errors[NON_FIELD_ERRORS] = form.error_class([_('The quantity of BTC must be equal or more than %s.') % (min_btc)])
-                    return render(request, "tokenexchange/apply-amount.html", locals())
+                    return http.JsonErrorResponse(error_message=_('The quantity of BTC must be equal or more than %s.') % (min_btc))
                 elif expect_ela and expect_ela < min_ela:
-                    form._errors[NON_FIELD_ERRORS] = form.error_class([_('The quantity of ELA must be equal or more than %s.') % (min_ela)])
-                    return render(request, "tokenexchange/apply-amount.html", locals())
+                    return http.JsonErrorResponse(error_message=_('The quantity of ELA must be equal or more than %s.') % (min_ela))
                 item.expect_btc = expect_btc
                 item.expect_ela = expect_ela
                 item.status = codes.TokenExchangeStatus.APPLY_AMOUNT.value
                 item.save()
-                return render(request, "tokenexchange/apply-success.html", locals())
+                return http.JsonSuccessResponse({'redirect_url': '/tokenexchange/invite/%s/sucess/' % phase_id})
         else:
             form = tokenexchange_forms.ApplyAmountForm()
         return render(request, "tokenexchange/apply-amount.html", locals())
     except Exception, inst:
         logger.exception("fail to post the apply amount:%s" % str(inst))
+        raise exception.SystemError500()
+
+@login_required
+@kyc_valid_required
+@decorators.check_google_authenticator_session
+def show_apply_success(request, invite_id):
+    """Show the page of apply success
+    """
+    try:
+        return render(request, "tokenexchange/apply-amount.html", locals())
+    except Exception, inst:
+        logger.exception("fail to show the apply page:%s" % str(inst))
         raise exception.SystemError500()
