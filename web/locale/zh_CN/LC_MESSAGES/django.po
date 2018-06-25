@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 14:06+0000\n"
+"POT-Creation-Date: 2018-06-25 14:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1298,14 +1298,10 @@ msgid "Wechat Platform Name"
 msgstr "微信公众平台名称"
 
 #: web/apps/tokenexchange/models.py:126
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:51
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:54
 msgid "How much do you want to contribute in BTC"
 msgstr "BTC 数量"
 
 #: web/apps/tokenexchange/models.py:127
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:58
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:60
 msgid "How much do you want to contribute in ELA"
 msgstr "ELA 数量"
 
@@ -1354,8 +1350,18 @@ msgid "Token Exchange"
 msgstr "通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:49
-msgid "Fill in token exchange amount"
+msgid "Fill in applying amount"
 msgstr "填写申请数量"
+
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:51
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:54
+msgid "BTC amount"
+msgstr "BTC 数量"
+
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:58
+#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:60
+msgid "ELA amount"
+msgstr "ELA 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:20
 msgid "You have successfully filled in the expected amount"
@@ -2212,7 +2218,7 @@ msgstr "已经通过牛顿KYC"
 
 #: web/apps/user/templates/user/include-token-exchange.html:28
 #: web/apps/user/templates/user/include-token-exchange.html:73
-msgid "Filled in the expected amount"
+msgid "Filled in the applying amount"
 msgstr "填写申请数量"
 
 #: web/apps/user/templates/user/include-token-exchange.html:37
@@ -7074,6 +7080,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Fill in token exchange amount"
+#~ msgstr "填写申请数量"
 
 #~ msgid "Welcome!"
 #~ msgstr "您好"

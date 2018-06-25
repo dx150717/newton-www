@@ -46,18 +46,18 @@
                             </div>
                         </div>
                         {% endif %}
-                        <p class="token-exchange-big-title">{% trans "Fill in token exchange amount" %}</p>
+                        <p class="token-exchange-big-title">{% trans "Fill in applying amount" %}</p>
                         <div class="form-group">
-                            <label for="id_expect_btc" class="control-label col-sm-4">{% trans "How much do you want to contribute in BTC" %}
+                            <label for="id_expect_btc" class="control-label col-sm-4">{% trans "BTC amount" %}
                                 </label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="id_expect_btc" name="expect_btc" placeholder="{% trans "How much do you want to contribute in BTC" %}" step="any" type="number" min="{{ min_btc }}">
+                                <input class="form-control" id="id_expect_btc" name="expect_btc" placeholder="{% trans "BTC amount" %}" step="any" type="number" min="{{ min_btc }}">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="id_expect_ela" class="control-label col-sm-4">{% trans "How much do you want to contribute in ELA" %}</label>
+                            <label for="id_expect_ela" class="control-label col-sm-4">{% trans "ELA amount" %}</label>
                             <div class="col-sm-8">
-                                <input class="form-control" id="id_expect_ela" name="expect_ela" placeholder="{% trans "How much do you want to contribute in ELA" %}" step="any" type="number" min="{{ min_ela }}">
+                                <input class="form-control" id="id_expect_ela" name="expect_ela" placeholder="{% trans "ELA amount" %}" step="any" type="number" min="{{ min_ela }}">
                             </div>
                         </div>
                         <div class="form-group">
