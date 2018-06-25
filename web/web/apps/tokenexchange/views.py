@@ -54,16 +54,16 @@ def post_kyc_information(request, kyc_type):
     try:
         # check whether individual or orgnizition
         is_individual = True
+        instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
+        # check user's kycinfo status
+        if instance:
+            if instance.status == codes.KYCStatus.DENY.value:
+                return render(request, "tokenexchange/kyc-deny.html", locals())
+            elif instance.status == codes.KYCStatus.PASS_KYC.value:
+                return render(request, "tokenexchange/kyc-success.html", locals())                
         if kyc_type == codes.KYCType.ORGANIZATION.value:
             is_individual = False
         if request.method == 'POST':
-            # check user's kycinfo status
-            kycinfo_item = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
-            if kycinfo_item:
-                if kycinfo_item.status == codes.KYCStatus.DENY.value:
-                    return render(request, "tokenexchange/kyc-deny.html", locals())
-            # check whether user is submit kyc info
-            instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             if not instance:
                 instance = tokenexchange_models.KYCInfo()
             instance.kyc_type = kyc_type
@@ -141,7 +141,6 @@ def post_kyc_information(request, kyc_type):
             language_code = translation.get_language()
             if language_code.startswith('zh'):
                 is_chinese = True
-            instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
             base_form = tokenexchange_forms.KYCBaseForm(instance=instance)
             profile_form = tokenexchange_forms.KYCProfileForm(instance=instance)
             contribute_form = tokenexchange_forms.ContributeForm(instance=instance)
