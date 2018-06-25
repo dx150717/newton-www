@@ -26,7 +26,7 @@ def send_kyc_confirm_email(kyc_info, request):
         verification = services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
-        subject = _("Newton notification: Received your KYC information")
+        subject = _("Received your KYC information")
         template = loader.get_template("tokenexchange/receive-kyc-notify-letter.html")
         context = Context({"request":request, 'kyc_info':kyc_info})
         html_content = template.render(context)

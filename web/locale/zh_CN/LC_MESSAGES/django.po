@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 06:08+0000\n"
+"POT-Creation-Date: 2018-06-25 08:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -381,20 +381,21 @@ msgid "Submit"
 msgstr "提交"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:101
-msgid "Newton Notification: You have passed the Newton KYC"
-msgstr "牛顿通知：您通过了牛顿KYC审核"
+msgid "You have passed the Newton KYC"
+msgstr "您通过牛顿KYC审核"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:103
-msgid "Newton Notification: You are not passed the Newton KYC"
-msgstr "牛顿通知：您没有通过牛顿KYC审核"
+msgid "You are not passed the Newton KYC"
+msgstr "您没有通过牛顿KYC审核"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:132
-msgid "Newton Notification: Fillout your expect amount"
-msgstr "牛顿提醒：请填写申请数量"
+msgid "Fillout your expect amount"
+msgstr "请填写申请数量"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:155
-msgid "Newton Notification: Receive Transferring Notification"
-msgstr "牛顿提醒：转币确认"
+#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:6
+msgid "Receive Transferring Notification"
+msgstr "转币确认提醒"
 
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:8
 #: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
@@ -638,10 +639,6 @@ msgstr "KYC 审核被拒绝"
 msgid "Admin Login"
 msgstr ""
 
-#: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:6
-msgid "Receive Transferring Notification"
-msgstr "转币确认提醒"
-
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:8
 msgid "Newton foundation has received your"
 msgstr "牛顿基金会收到您的"
@@ -667,8 +664,8 @@ msgid "Confirm Password"
 msgstr "确认密码"
 
 #: web/apps/register/services.py:29
-msgid "Newton Notification: Please complete the register process of Newton"
-msgstr "牛顿通知：请完成牛顿注册"
+msgid "Please complete the register process of Newton"
+msgstr "请完成牛顿注册流程"
 
 #: web/apps/register/views.py:55
 msgid "Email already existed"
@@ -755,8 +752,8 @@ msgid "Repassword"
 msgstr "确认密码"
 
 #: web/apps/reset/services.py:27
-msgid "NewtonProject Notifications: Please Reset password"
-msgstr "牛顿提醒：请重置您的密码"
+msgid "Please Reset password"
+msgstr "请重置您的密码"
 
 #: web/apps/reset/views.py:38
 msgid "Email address does not exist"
@@ -7075,22 +7072,3 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
-
-#~ msgid "Add Google Authenticator"
-#~ msgstr "添加谷歌身份验证器"
-
-#, fuzzy
-#~ msgid "KYC verification rejected"
-#~ msgstr "KYC 审核被拒绝"
-
-#~ msgid "Resulting of"
-#~ msgstr "原因是"
-
-#~ msgid "Congratulation!"
-#~ msgstr "恭喜！"
-
-#~ msgid "Newton official website<span class=\\"
-#~ msgstr "牛顿官方网站<span class=\\"
-
-#~ msgid "You've passed KYC review."
-#~ msgstr "你已经通过了KYC审核。"

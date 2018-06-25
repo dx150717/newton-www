@@ -75,7 +75,7 @@ def send_distribution_letter(user, request):
             return False
         target_url = "%s/tokenexchange/%s/" % (settings.NEWTON_HOME_URL, str(user.username))
         security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
-        subject = "NewtonProject Notification: KYC information is confirmed"
+        subject = _("KYC information is confirmed")
         template = loader.get_template("newtonadmin/distribution-letter.html")
         context = Context({"targetUrl": target_url,"request": request, "security_url": security_url})
         html_content = template.render(context)
@@ -98,9 +98,9 @@ def send_kycinfo_notify(kyc_info, request):
         if not verification:
             return False
         if kyc_info.kyc_audit.is_pass:
-            subject = _("Newton Notification: You have passed the Newton KYC")
+            subject = _("You have passed the Newton KYC")
         else:
-            subject = _("Newton Notification: You are not passed the Newton KYC")
+            subject = _("You are not passed the Newton KYC")
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
         target_url = "%s/tokenexchange/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
@@ -129,7 +129,7 @@ def send_apply_amount_notify(invite_info, request):
             return False
         target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWTON_HOME_URL, invite_info.id)
         security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
-        subject = _("Newton Notification: Fillout your expect amount")
+        subject = _("Fillout your expect amount")
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
         context = Context({"target_url": target_url, "request": request, "invite_info": invite_info, "security_url": security_url})
         html_content = template.render(context)
@@ -152,7 +152,7 @@ def send_receive_confirm_notify(request, receive_info):
         if not verification:
             logger.error("fail to generate verification object.")
             return False
-        subject = _("Newton Notification: Receive Transferring Notification")
+        subject = _("Receive Transferring Notification")
         template = loader.get_template("newtonadmin/receive-amount-notify-letter.html")
         context = Context({"request": request, "receive_info": receive_info})
         html_content = template.render(context)
