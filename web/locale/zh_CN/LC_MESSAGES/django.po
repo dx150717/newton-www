@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 08:16+0000\n"
+"POT-Creation-Date: 2018-06-25 08:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -371,7 +371,7 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/login/templates/login/index.html:56
 #: web/apps/register/templates/register/password.html:34
 #: web/apps/setting/templates/setting/check-gtoken.html:35
-#: web/apps/setting/templates/setting/set-gtoken.html:58
+#: web/apps/setting/templates/setting/set-gtoken.html:62
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:66
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:37
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:382
@@ -379,6 +379,11 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/user/templates/user/profile.html:33
 msgid "Submit"
 msgstr "提交"
+
+#: web/apps/newtonadmin/services_tokenexchange.py:78
+#, fuzzy
+msgid "KYC information is confirmed"
+msgstr "重新填写"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:101
 msgid "You have passed the Newton KYC"
@@ -838,43 +843,33 @@ msgstr "输入验证码"
 msgid "Link Google Authenticator"
 msgstr "绑定谷歌身份验证器"
 
-#: web/apps/setting/templates/setting/set-gtoken.html:30
-msgid "Enter the code manually"
-msgstr "手动填写密钥"
-
-#: web/apps/setting/templates/setting/set-gtoken.html:30
-msgid "or"
-msgstr "或者"
-
-#: web/apps/setting/templates/setting/set-gtoken.html:30
-msgid "scan the QR code"
-msgstr "扫描二维码"
-
-#: web/apps/setting/templates/setting/set-gtoken.html:30
-msgid "into your GA app"
-msgstr "绑定谷歌身份验证器"
-
-#: web/apps/setting/templates/setting/set-gtoken.html:33
+#: web/apps/setting/templates/setting/set-gtoken.html:31
 msgid ""
-"Apple users are recommended to download Google Authenticator directly from "
-"the App Store"
-msgstr "苹果用户推荐在App Store中下载Authenticator"
+"Google Authenticator generates dynamic passwords and it is similar to SMS "
+"dynamic verification."
+msgstr "谷歌验证器是一款动态口令工具，工作原理类似短信动态验证。"
 
 #: web/apps/setting/templates/setting/set-gtoken.html:34
 msgid ""
-"and Android users are recommended to download Google Authenticator from "
-"Google Play."
-msgstr "安卓用户推荐到Google Play下载谷歌身份验证器"
+"Google Authenticator generates a new code every 30 seconds after you bind it "
+"to apps."
+msgstr "绑定后每30秒生成一个动态验证码。"
 
-#: web/apps/setting/templates/setting/set-gtoken.html:37
+#: web/apps/setting/templates/setting/set-gtoken.html:38
+msgid ""
+"Google Authenticator verification code can make your information and data "
+"security on Newton official website."
+msgstr "谷歌验证器可用于保护您在牛顿官方网站上的数据信息。"
+
+#: web/apps/setting/templates/setting/set-gtoken.html:41
 msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
 msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
 
-#: web/apps/setting/templates/setting/set-gtoken.html:46
+#: web/apps/setting/templates/setting/set-gtoken.html:50
 msgid "Enter the  code manually into your GA app"
 msgstr "手动添加谷歌身份验证器"
 
-#: web/apps/setting/templates/setting/set-gtoken.html:50
+#: web/apps/setting/templates/setting/set-gtoken.html:54
 msgid "Use the GA app to scan the QR code"
 msgstr "扫描二维码添加谷歌身份验证器"
 
@@ -1314,7 +1309,8 @@ msgid "How much do you want to contribute in ELA"
 msgstr "ELA 数量"
 
 #: web/apps/tokenexchange/services.py:29
-msgid "Newton notification: Received your KYC information"
+#, fuzzy
+msgid "Received your KYC information"
 msgstr "牛顿提醒：我们收到了您的KYC信息"
 
 #: web/apps/tokenexchange/views.py:73
@@ -7072,3 +7068,25 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Enter the code manually"
+#~ msgstr "手动填写密钥"
+
+#~ msgid "or"
+#~ msgstr "或者"
+
+#~ msgid "scan the QR code"
+#~ msgstr "扫描二维码"
+
+#~ msgid "into your GA app"
+#~ msgstr "绑定谷歌身份验证器"
+
+#~ msgid ""
+#~ "Apple users are recommended to download Google Authenticator directly "
+#~ "from the App Store"
+#~ msgstr "苹果用户推荐在App Store中下载Authenticator"
+
+#~ msgid ""
+#~ "and Android users are recommended to download Google Authenticator from "
+#~ "Google Play."
+#~ msgstr "安卓用户推荐到Google Play下载谷歌身份验证器"

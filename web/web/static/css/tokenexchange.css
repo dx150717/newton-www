@@ -69,16 +69,17 @@
     max-width: 190px;
 }
 .kyc .with-attachment {
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 .kyc .with-tip {
     margin-bottom: 0;
 }
 .kyc .attachment-title {
+    padding-right: 0;
     padding-left: 0;
     text-align: left;
     font-weight: unset;
-    width: 60px;
+    padding-top: 5px;
 }
 .kyc .block-tip{
     text-align: center;
@@ -168,11 +169,12 @@
         padding: 0 20px;
     }
 }
-.kyc .attachment-title {
-    padding-right: 0;
-}
 .kyc .attachment-div {
     padding-left: 0;
+    display: inline;
+}
+.kyc .attachment-div input {
+    display: inline;
 }
 
 .token-exchange-info table {
