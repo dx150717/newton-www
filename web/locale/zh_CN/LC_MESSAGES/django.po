@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 12:22+0000\n"
+"POT-Creation-Date: 2018-06-25 14:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -381,24 +381,24 @@ msgstr "填写谷歌身份验证码"
 msgid "Submit"
 msgstr "提交"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:78
+#: web/apps/newtonadmin/services_tokenexchange.py:86
 #, fuzzy
 msgid "KYC information is confirmed"
 msgstr "重新填写"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:101
+#: web/apps/newtonadmin/services_tokenexchange.py:113
 msgid "You have passed the Newton KYC"
 msgstr "您通过了牛顿KYC审核"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:103
+#: web/apps/newtonadmin/services_tokenexchange.py:115
 msgid "You are not passed the Newton KYC"
 msgstr "您没有通过牛顿KYC审核"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:132
+#: web/apps/newtonadmin/services_tokenexchange.py:148
 msgid "Fillout your expect amount"
 msgstr "请填写申请数量"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:155
+#: web/apps/newtonadmin/services_tokenexchange.py:174
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:6
 msgid "Receive Transferring Notification"
 msgstr "转币确认提醒"
@@ -423,8 +423,9 @@ msgid "Newton Token Exchange Invitation"
 msgstr "牛顿通证交换邀请"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:6
-msgid "welcome"
-msgstr "您好"
+#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:8
+msgid "welcome!"
+msgstr "您好！"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:8
 msgid ""
@@ -537,7 +538,6 @@ msgid "Welcome! Thank You for join Newton KYC!"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:6
-#: web/apps/register/templates/register/register-letter.html:6
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Dear"
 msgstr "尊敬的用户："
@@ -599,10 +599,6 @@ msgstr "证件号码"
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:7
 msgid "KYC review success"
 msgstr "KYC 审核成功"
-
-#: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:8
-msgid "Welcome!"
-msgstr "您好"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:9
 msgid "Congratulations, you have passed Newton KYC reviewing."
@@ -735,6 +731,10 @@ msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完
 #: web/apps/register/templates/register/register-letter.html:5
 msgid "Complete the register process of Newton"
 msgstr "完成注册流程"
+
+#: web/apps/register/templates/register/register-letter.html:6
+msgid "Dear:"
+msgstr "尊敬的用户："
 
 #: web/apps/register/templates/register/register-letter.html:7
 msgid ""
@@ -7074,6 +7074,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Welcome!"
+#~ msgstr "您好"
 
 #~ msgid "Your KYC has passed."
 #~ msgstr "您已通过KYC审核，请不要重复提交"
