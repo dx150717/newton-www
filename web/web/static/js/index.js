@@ -219,7 +219,7 @@ function dismissDelay()
 {
 	var task = setTimeout(function(){
 		$('#id_loading').nsProgress('dismiss');
-	}, 5000);
+	}, 3000);
 }
 var SUCCESS = 1;
 
