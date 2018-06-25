@@ -74,7 +74,7 @@ def send_distribution_letter(user, request):
         if not verification:
             return False
         target_url = "%s/tokenexchange/%s/" % (settings.NEWTON_HOME_URL, str(user.username))
-        security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
+        security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
         subject = _("KYC information is confirmed")
         template = loader.get_template("newtonadmin/distribution-letter.html")
         context = Context({"targetUrl": target_url,"request": request, "security_url": security_url})
@@ -103,7 +103,7 @@ def send_kycinfo_notify(kyc_info, request):
             subject = _("You are not passed the Newton KYC")
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
         target_url = "%s/tokenexchange/" % (settings.NEWTON_HOME_URL)
-        security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
+        security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
         is_show_comment = False
         if kyc_info.kyc_audit.comment.strip():
             is_show_comment = True
