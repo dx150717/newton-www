@@ -27,7 +27,7 @@
     
     <div class="container">
         <div class="form-container">
-            <form id="id_set_gtoken_form" class="form" action="/setting/gtoken/check/?redirect_url={{ redirect_url }}" method="POST">
+            <form class="form" action="/setting/gtoken/check/?redirect_url={{ redirect_url }}" method="POST">
                 {% csrf_token %}
                 <div class="col-lg-12" style="text-align: center">
                     {% include "form.html" %}
