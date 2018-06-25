@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 08:52+0000\n"
+"POT-Creation-Date: 2018-06-25 12:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -186,7 +186,7 @@ msgstr ""
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:100
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:171
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:107
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
+#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:55
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:49
 #: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:71
@@ -200,7 +200,7 @@ msgstr "上一页"
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:104
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:175
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:111
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
+#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:68
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:59
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:53
 #: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:75
@@ -334,6 +334,7 @@ msgstr "登录"
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:6
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/pending.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/second-index.html:6
@@ -510,7 +511,7 @@ msgstr ""
 "NewIoT,DAI,超级交换协议，自金融，NNIO，可信物理通道，数字营销，供应链，区块"
 "链，区块链技术，智能合约，开源社区，数字资产，token,blockchain"
 
-#: web/apps/newtonadmin/templates/newtonadmin/base.html:14
+#: web/apps/newtonadmin/templates/newtonadmin/base.html:16
 #: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
 msgid "Newton"
 msgstr "牛顿"
@@ -1317,16 +1318,16 @@ msgstr "牛顿提醒：我们收到了您的KYC信息"
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
-#: web/apps/tokenexchange/views.py:253
+#: web/apps/tokenexchange/views.py:252
 msgid "You must fill in at least one."
 msgstr "至少填写BTC或者ELA中的一种。"
 
-#: web/apps/tokenexchange/views.py:256
+#: web/apps/tokenexchange/views.py:255
 #, fuzzy, python-format
 msgid "The quantity of BTC must be equal or more than %s."
 msgstr "BTC的数量必须大于或等于"
 
-#: web/apps/tokenexchange/views.py:259
+#: web/apps/tokenexchange/views.py:258
 #, fuzzy, python-format
 msgid "The quantity of ELA must be equal or more than %s."
 msgstr "ELA的数量必须大于或等于"
@@ -1346,6 +1347,7 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:5
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:24
 #: web/apps/user/templates/user/index.html:34
 msgid "Token Exchange"
@@ -1777,9 +1779,13 @@ msgid "KYC deadline has expired."
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:23
-#, fuzzy
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:24
 msgid "Go to <a href='/user/'>User Center</a>"
-msgstr "请前往<a href='/login/'>登录</a>"
+msgstr "请前往<a href='/user/'>用户中心</a>"
+
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:22
+msgid "Your KYC has passed. Please don't submit again."
+msgstr "您已通过KYC审核，请不要重复提交。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:5
 msgid "TOKENEXCHANGE"
@@ -7068,6 +7074,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Your KYC has passed."
+#~ msgstr "您已通过KYC审核，请不要重复提交"
 
 #~ msgid "Enter the code manually"
 #~ msgstr "手动填写密钥"
