@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 15:22+0000\n"
+"POT-Creation-Date: 2018-06-25 16:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,7 +183,7 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:100
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:117
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:171
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:107
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
@@ -197,7 +197,7 @@ msgid "previous"
 msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:104
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:121
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:175
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:111
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:68
@@ -382,9 +382,8 @@ msgid "Submit"
 msgstr "提交"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:86
-#, fuzzy
 msgid "KYC information is confirmed"
-msgstr "重新填写"
+msgstr ""
 
 #: web/apps/newtonadmin/services_tokenexchange.py:113
 msgid "You have passed the Newton KYC"
@@ -1165,11 +1164,10 @@ msgid "Self Introduction"
 msgstr "自我介绍"
 
 #: web/apps/tokenexchange/models.py:54
-#, fuzzy
 msgid ""
 "(* Your CV. When were you involved in blockchain industry? Write something "
 "about your understanding on blockchain industry.)"
-msgstr "个人职业履历，进入区块链行业的时间，对区块链行业的理解等。"
+msgstr ""
 
 #: web/apps/tokenexchange/models.py:55 web/apps/tokenexchange/models.py:68
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:142
@@ -1257,14 +1255,12 @@ msgid "Your plan of node establishment"
 msgstr "节点建立计划和方案"
 
 #: web/apps/tokenexchange/models.py:83
-#, fuzzy
 msgid "Country Code of Emergency Contact"
-msgstr "紧急联系人姓"
+msgstr ""
 
 #: web/apps/tokenexchange/models.py:84
-#, fuzzy
 msgid "Cellphone of Emergency Contact"
-msgstr "紧急联系人姓"
+msgstr ""
 
 #: web/apps/tokenexchange/models.py:88
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:365
@@ -1306,27 +1302,28 @@ msgid "How much do you want to contribute in ELA"
 msgstr "ELA 数量"
 
 #: web/apps/tokenexchange/services.py:29
-#, fuzzy
 msgid "Received your KYC information"
-msgstr "牛顿提醒：我们收到了您的KYC信息"
+msgstr ""
 
 #: web/apps/tokenexchange/views.py:73
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
-#: web/apps/tokenexchange/views.py:252
+#: web/apps/tokenexchange/views.py:246
+msgid "You have applied."
+msgstr "您已提交过申请。"
+
+#: web/apps/tokenexchange/views.py:250 web/apps/tokenexchange/views.py:256
 msgid "You must fill in at least one."
 msgstr "至少填写BTC或者ELA中的一种。"
 
-#: web/apps/tokenexchange/views.py:255
-#, fuzzy, python-format
-msgid "The quantity of BTC must be equal or more than %s."
-msgstr "BTC的数量必须大于或等于"
-
 #: web/apps/tokenexchange/views.py:258
-#, fuzzy, python-format
+msgid "The quantity of BTC must be equal or more than %s."
+msgstr "BTC的数量必须大于或等于%s"
+
+#: web/apps/tokenexchange/views.py:261
 msgid "The quantity of ELA must be equal or more than %s."
-msgstr "ELA的数量必须大于或等于"
+msgstr "ELA的数量必须大于或等于%s"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:7
@@ -1717,9 +1714,8 @@ msgid ""
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:34
-#, fuzzy
 msgid "Operations of exchanged token"
-msgstr "运营公告"
+msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:35
 msgid ""
@@ -2147,9 +2143,8 @@ msgid "Major"
 msgstr "专业"
 
 #: web/apps/user/templates/user/include-basic-info.html:9
-#, fuzzy
 msgid "Basic information"
-msgstr "基本信息"
+msgstr ""
 
 #: web/apps/user/templates/user/include-kyc-section.html:13
 msgid ""
@@ -4058,14 +4053,12 @@ msgid "Download Logo"
 msgstr "下载Logo"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:47
-#, fuzzy
 msgid "Download Chinese Poster"
-msgstr "下载中文海报"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:55
-#, fuzzy
 msgid "Download English Poster"
-msgstr "下载英文海报"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:66
 msgid "Newton Logo"
@@ -7080,6 +7073,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "BTC or ELA must be not empty."
+#~ msgstr "BTC或ELA不能为空。"
 
 #~ msgid "Fill in token exchange amount"
 #~ msgstr "填写申请数量"

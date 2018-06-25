@@ -104,7 +104,7 @@
                             {% endif %}
                             <td>
                                 {% if not is_completed %}
-                                <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">{% if is_confirm %}修改额度{% else %}分配额度{% endif %}</a>
+                                <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {% if not item.expect_ela %} {{item.expect_ela}} {% else %} 0 {% endif %}, {% if not item.expect_btc %} {{item.expect_btc}} {% else %} 0 {% endif %});">{% if is_confirm %}修改额度{% else %}分配额度{% endif %}</a>
                                 {% endif %}
                             </td>
                         </tr>

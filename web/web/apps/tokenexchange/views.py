@@ -237,30 +237,38 @@ def post_apply_amount(request, invite_id):
         item = tokenexchange_models.InvestInvite.objects.filter(user_id=request.user.id, id=invite_id).first()
         if not item:
             raise exception.SystemError500()
-        if item.expect_btc or item.expect_ela:
-            return render(request, "tokenexchange/invalid-link.html")
         # get token exchange info
         token_exchange_info = settings.FUND_CONFIG[item.phase_id]
         min_btc = token_exchange_info['min_btc']
         min_ela = token_exchange_info['min_ela']
         if request.method == 'POST':
+            if item.expect_btc or item.expect_ela:
+                message = unicode(_("You have applied."))
+                return http.JsonErrorResponse(error_message=message)
             form = tokenexchange_forms.ApplyAmountForm(request.POST)
-            if form.is_valid():
+            if not form.is_valid():
+                message = unicode(_("You must fill in at least one."))
+                return http.JsonErrorResponse(error_message=message)
+            else:
                 expect_btc = form.cleaned_data['expect_btc']
                 expect_ela = form.cleaned_data['expect_ela']
                 if not expect_btc and not expect_ela:
-                    return http.JsonErrorResponse(error_message=_('You must fill in at least one.'))
+                    return http.JsonErrorResponse(error_message=unicode(_('You must fill in at least one.')))
                 elif expect_btc and expect_btc < min_btc:
-                    return http.JsonErrorResponse(error_message=_('The quantity of BTC must be equal or more than %s.') % (min_btc))
+                    message = unicode(_('The quantity of BTC must be equal or more than %s.')) % (min_btc)
+                    return http.JsonErrorResponse(error_message=message)
                 elif expect_ela and expect_ela < min_ela:
-                    return http.JsonErrorResponse(error_message=_('The quantity of ELA must be equal or more than %s.') % (min_ela))
+                    message = unicode(_('The quantity of ELA must be equal or more than %s.')) % (min_ela)
+                    return http.JsonErrorResponse(error_message=message)
                 item.expect_btc = expect_btc
                 item.expect_ela = expect_ela
                 item.status = codes.TokenExchangeStatus.APPLY_AMOUNT.value
                 item.save()
-                return http.JsonSuccessResponse({'redirect_url': '/tokenexchange/invite/%s/sucess/' % phase_id})
+                return http.JsonSuccessResponse({'redirect_url': '/tokenexchange/invite/%s/success/' % invite_id})
         else:
             form = tokenexchange_forms.ApplyAmountForm()
+        if item.expect_btc or item.expect_ela:
+            return render(request, "tokenexchange/invalid-link.html")
         return render(request, "tokenexchange/apply-amount.html", locals())
     except Exception, inst:
         logger.exception("fail to post the apply amount:%s" % str(inst))
@@ -273,7 +281,7 @@ def show_apply_success(request, invite_id):
     """Show the page of apply success
     """
     try:
-        return render(request, "tokenexchange/apply-amount.html", locals())
+        return render(request, "tokenexchange/apply-success.html", locals())
     except Exception, inst:
-        logger.exception("fail to show the apply page:%s" % str(inst))
+        logger.exception("fail to show the apply success page:%s" % str(inst))
         raise exception.SystemError500()

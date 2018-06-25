@@ -183,7 +183,6 @@ $("#id_fill_amount_form").submit(function(event){
                   var result = getData(response);
                   location.href = result['redirect_url'];
               } else {
-
                 showFail(getErrorMessage(response));
               }
             },
