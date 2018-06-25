@@ -39,11 +39,11 @@
                             <th>姓名</th>
                             <th>评分</th>
 
+                            <th>期望额度</th>
+
                             {% if is_confirm %}
                             <th>已分配额度</th>
                             {% endif %}
-
-                            <th>期望额度</th>
 
                             {% if is_completed %}
                             <th>分配额度</th>
@@ -65,29 +65,46 @@
                                 <p>{{ item.user.email }}</p>
                             </td>
                             <td>{{ item.level }}</td>
+
                             <td>
-                                {% if is_confirm %}
-                                <p>{{ item.assign_ela }} ELA</p>
-                                <p>{{ item.assign_btc }} BTC</p>
-                                {% endif %}
-                            </td>
-                            <td>
-                                {% if item.expect_ela %}
+                                {% if item.expect_ela > 0 %}
                                 <p>{{ item.expect_ela }} ELA</p>
                                 {% endif %}
-                                {% if item.expect_btc %}
+                                {% if item.expect_btc > 0 %}
                                 <p>{{ item.expect_btc }} BTC</p>
                                 {% endif %}
                             </td>
+                            {% if is_confirm %}
+                            <td>
+                                {% if item.assign_ela > 0 %}
+                                <p>
+                                    <span class="bold text-danger">{{ item.assign_ela }}</span> ELA
+                                </p>
+                                {% endif %}
+                                {% if item.assign_btc > 0 %}
+                                <p>
+                                    <span class="bold text-danger">{{ item.assign_btc }}</span> BTC
+                                </p>
+                                {% endif %}
+                            </td>
+                            {% endif %}
                             {% if is_completed %}
                             <td>
-                                <p>{{ item.assign_ela }} ELA</p>
-                                <p>{{ item.assign_btc }} BTC</p>
+                                {% if item.assign_ela > 0 %}
+                                <p>
+                                    <span class="bold text-danger">{{ item.assign_ela }}</span> ELA
+                                </p>
+                                {% endif %}
+                                {% if item.assign_btc > 0 %}
+                                <p>
+                                    <span class="bold text-danger">{{ item.assign_btc }}</span> BTC
+                                </p>
+                                {% endif %}
                             </td>                        
                             {% endif %}
                             <td>
                                 {% if not is_completed %}
-                                <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">分配额度</a>
+                                <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {{ item.expect_ela|default_if_none:"0" }}, {{ item.expect_btc|default_if_none:"0" }});">{% if is_confirm %}修改额度{% else %}分配额度{% endif %}</a>
                                 {% endif %}
                             </td>
                         </tr>
