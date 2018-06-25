@@ -154,7 +154,8 @@ def send_receive_confirm_notify(request, receive_info):
             return False
         subject = _("Receive Transferring Notification")
         template = loader.get_template("newtonadmin/receive-amount-notify-letter.html")
-        context = Context({"request": request, "receive_info": receive_info})
+        security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
+        context = Context({"request": request, "receive_info": receive_info, "security_url": security_url})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
