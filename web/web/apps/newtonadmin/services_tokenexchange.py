@@ -104,6 +104,7 @@ def send_kycinfo_notify(kyc_info, request):
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
         target_url = "%s/tokenexchange/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
+        print "security_url is %s" % security_url
         context = Context({"request":request, "kyc_info": kyc_info, 'security_url': security_url, "target_url": target_url, "codes": codes})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
@@ -125,7 +126,7 @@ def send_apply_amount_notify(invite_info, request):
         if not verification:
             return False
         target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWTON_HOME_URL, invite_info.id)
-        security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
+        security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
         subject = "Newton Notification: Fillout your expect amount"
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
         context = Context({"target_url": target_url, "request": request, "invite_info": invite_info, "security_url": security_url})
