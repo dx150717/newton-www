@@ -104,7 +104,7 @@ def send_kycinfo_notify(kyc_info, request):
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
         target_url = "%s/tokenexchange/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_HOME_URL)
-        context = Context({"request":request, "kyc_info": kyc_info, 'security_url': security_url, "target_url": target_url})
+        context = Context({"request":request, "kyc_info": kyc_info, 'security_url': security_url, "target_url": target_url, "codes": codes})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
