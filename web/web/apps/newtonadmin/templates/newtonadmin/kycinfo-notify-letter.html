@@ -5,7 +5,7 @@
 {% block content %}
     {% if kyc_info.status == codes.KYC_STATUS_PASS_KYC_VALUE %}
         <p class="newton-title">{% trans "KYC review success" %}</p>
-        <p>{% trans "Welcome!" %}</p>
+        <p>{{ kyc_info.first_name }}, {% trans "welcome!" %}</p>
         <p>{% trans "Congratulations, you have passed Newton KYC reviewing." %}</p>
         <p>{% trans "Please pay attention to our subsequent notification later on." %}</p>
     {% endif %}
