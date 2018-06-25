@@ -381,9 +381,9 @@ class UserReceiveListView(generic.ListView):
             is_sent = True if self.request.GET.get('is_sent') else False
             q = Q(phase_id=phase_id)
             if is_sent:
-                q &= Q(status=codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value)
+                q &= Q(status=codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value)
             else:
-                q &= Q(status=codes.TokenExchangeStatus.RECEIVE_AMOUNT.value)                
+                q &= Q(status=codes.TokenExchangeStatus.CONFIRM_AMOUT.value)
             for item in tokenexchange_models.InvestInvite.objects.filter(q).order_by('-updated_at'):
                 queryset = tracker_models.AddressTransaction.objects.filter(user_id=item.user_id)
                 btc_final_balance = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value).aggregate(Sum("value"))
@@ -606,7 +606,7 @@ def send_receive_email(request, phase_id):
                 item.ela_value = ela_final_balance
             item.kyc_info = kyc_info
             if services_tokenexchange.send_receive_confirm_notify(request, item):
-                item.status = codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
+                item.status = codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value
                 item.save()
                 action_id = codes.AdminActionType.SEND_CONFIRM_EMAIL.value
                 target_user = User.objects.filter(id=item.user_id).first()

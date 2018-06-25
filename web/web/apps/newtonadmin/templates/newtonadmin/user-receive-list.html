@@ -20,10 +20,10 @@
                         <th>姓名</th>
                         <th>收币地址及数量</th>
                         <th>时间</th>
+                        <th>是否已经发送邮件</th>
                         {% if not is_sent %}
                         <th>发送收币确认邮件</th>
                         {% endif %}
-                        <th>是否已经发送邮件</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,18 +48,18 @@
                         <td>
                             {{ item.updated_at|date:"Y-m-d H:i:s"}}
                         </td>
+                        <td>
+                            {% if item.status == codes.TOKEN_EXCHANGE_STATUS_SEND_TRANSFER_NOTIFY_VALUE %}
+                            已发送
+                            {% else %}
+                            未发送
+                            {% endif %}
+                        </td>
                         {% if not is_sent %}
                         <td>
                             <a href="#" class="btn btn-default" onclick="javascript:sendPerEmail('{{ item.user_id }}');">发送</a>
                         </td>
                         {% endif %}
-                         <td>
-                             {% if item.status == codes.TOKEN_EXCHANGE_STATUS_SEND_RECEIVE_AMOUNT_NOTIFY_VALUE %}
-                             已发送
-                             {% else %}
-                             未发送
-                             {% endif %}
-                         </td>
                     </tr>
                     {% endfor %}
                 </tbody>
