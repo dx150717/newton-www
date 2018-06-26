@@ -1436,6 +1436,19 @@ input[name="expect_btc"], input[name="expect_ela"]{
 .security-list .images-container {
     text-align: center;
 }
+.security-button {
+    display: inline-block;
+    width: 53px;
+    height: 34px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #292929;
+    text-align: center;
+    line-height: 34px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.form-button{}
 /* kycinfo security */
 .security-title {
     font-weight: unset;
@@ -1448,10 +1461,10 @@ input[name="expect_btc"], input[name="expect_ela"]{
 }
 .security-url {
     font-size: 16px !important;
+    margin-bottom: 0 !important;
 }
 .security-url a {
-    color: inherit;
-    text-decoration: underline;
+    color: #fff;
 }
 @media (max-width: 768px) {
     .check-gtoken-title, .set-gtoken-title {
