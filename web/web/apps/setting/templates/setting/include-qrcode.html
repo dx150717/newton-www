@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load utils %}
+
+<div role="tabpanel" class="tab-pane fade col-lg-12 col-md-12 col-sm-12" id="id_page_2">
+    <p class="step">
+        <span class="key">{% trans "Step 2" %}</span>
+        <span class="value">{% trans "Scan the QR code or enter the code manually" %}</span>
+    </p>
+    <div class="qr-panel">
+        <div class="form-group col-lg-6 col-md-12 col-sm-12" id="qr-code">
+            <label for="id_gtoken" class="control-label" style="font-size: 14px; color: #999; text-align: left;">
+                {% trans "Scan this QR code in the Google Authentication app" %}
+            </label>
+            <div id="code"></div> 
+        </div>
+        <div class="form-group col-lg-6 col-md-12 col-sm-12" id="manually-code">
+            <label for="id_gtoken" class="control-label" style="font-size: 14px; color: #999; padding-right: 0; text-align: left;">
+                {% trans "If you are unable to scan the QR code, please enter this code manually into the app." %}
+            </label>
+            <div id="key" style="font-size: 18px; color: #292929">{{ gtoken }}</div>
+            <p class="tip text-danger">
+                {% trans "* Please save this Key on paper. This Key will allow you to recover your Google Authentication in case of phone loss." %}
+            </p>
+        </div>
+    </div>
+    <div class="next-button-container">
+        <span class="operation">{% trans "I have already scanned QR code and written key" %}</span>
+        <a href="#" class="security-button next-button" index="2">{% trans "Next" %}</a>
+    </div>
+</div>
+

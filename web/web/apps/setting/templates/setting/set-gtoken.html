@@ -17,53 +17,40 @@
 {% endblock %}
 
 {% block content %}
-<section id="reset" class="section-list">
+<section id="reset" class="section-list set-gtoken">
 	<div class="page-title">
 		<div class="container">
 			<p class="set-gtoken-title">{% trans "Link Google Authenticator" %}
 			</p>
 		</div>
-	</div>
-    
-    <div class="container text-center" style="color: #999">
-        <div>
-            <p>
-                {% trans "Google Authenticator generates dynamic passwords and it is similar to SMS dynamic verification." %}
-            </p>
-            <p>
-                {% trans "Google Authenticator generates a new code every 30 seconds after you bind it to apps." %}
-            </p>
-        </div>
-        <div>
-            <p>{% trans "Google Authenticator verification code can make your information and data security on Newton official website." %}</p>
-        </div>
-        <div>
-            <p style="color: red">{% trans "Please be sure to keep the key or qr code to avoid any inconvenience." %}</p>
-        </div>
+    </div>  
+    <div class="introduction container">
+        <p class="col-md-8" style="font-size: 16px; color: #333;">
+            {% trans "Google Authenticator generates dynamic passwords, and the password can make your information and data secure on Newton official website." %}
+        </p>
     </div>
     <div class="container">
-        <div class="form-container">
-            <form id="id_set_gtoken_form" class="form" action="/setting/gtoken/post/?redirect_url={{ redirect_url }}" method="POST">
-                {% csrf_token %}
-                <div id="code-area" class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="form-group col-lg-6 col-md-12 col-sm-12" id="manually-code">
-                        <label for="id_gtoken" class="control-label" style="font-size: 14px; color: #999; padding-right: 0">{% trans "Enter the  code manually into your GA app" %}</label>
-                        <div id="key" style="font-size: 18px; color: #292929">{{ gtoken }}</div>
-                    </div>
-                    <div class="form-group col-lg-6 col-md-12 col-sm-12" style="text-align: center; margin: 0 auto;" id="qr-code">
-                        <label for="id_gtoken" class="control-label" style="font-size: 14px; color: #999">{% trans "Use the GA app to scan the QR code" %}</label>
-                        <div id="code"></div> 
-                    </div>
-                </div>
-                <div class="col-lg-12 gtoken-code-container">
-                    {% include "form.html" %}
-                    <div class="form-group" style="margin-left: auto; margin-right: auto">
-                        <input type="hidden" id="id_redirect_url" name="redirect_url" value="{{ redirect_url }}"/>
-                        <button class="form-button" type="submit">{% trans "Submit" %}</button>
-                    </div>
-                </div>
-            </form>
-        </div>   
+        <ul class="nav nav-tabs col-md-8" id="id_authenticator_tab" role="tablist" style="margin-top: 20px;">
+            <li role="presentation" class="active">
+                <a href="#id_page_1" aria-controls="id_page_1" role="tab" data-toggle="tab">{% trans "1. Install Google Authenticator" %}</a>
+            </li>
+            <li role="presentation">
+                <a href="#id_page_2" aria-controls="id_page_2" role="tab" data-toggle="tab">{% trans "2. Scan QR code" %}</a>
+            </li>
+            <li role="presentation">
+                <a href="#id_page_3" aria-controls="id_page_3" role="tab" data-toggle="tab">{% trans "3. Link Google Authenticator" %}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <form id="id_set_gtoken_form" class="form" action="/setting/gtoken/post/?redirect_url={{ redirect_url }}" method="POST">
+            {% csrf_token %}
+            <div class="tab-content col-sm-8">
+            {% include "setting/include-download.html" %}
+            {% include "setting/include-qrcode.html" %}
+            {% include "setting/include-verification.html" %}
+            </div>
+        </form> 
     </div>
 </section>
 {% endblock %}
@@ -77,9 +64,14 @@
         e.select();
         document.execCommand("Copy");
     }
+
 </script>
 {% endblock %}
 
 {% block js %}
 <script src="{% version "js/setting.js" %}"></script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% version "css/setting.css" %}">
 {% endblock %}

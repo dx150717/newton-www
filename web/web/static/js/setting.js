@@ -48,3 +48,16 @@ $("#id_set_gtoken_form").submit(function(event){
         error.appendTo(element.parent());
     }
 });
+/**
+ * Link google authenticator
+ */
+$('#id_authenticator_tab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+});
+$('.next-button').click(function(event){
+    event.preventDefault();
+    var index = parseInt($(this).attr('index')) + 1;
+    var targetTab = '#id_page_' + index;
+    $('#id_authenticator_tab a[href="' + targetTab + '"]').tab('show');
+});

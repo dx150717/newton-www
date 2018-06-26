@@ -1,0 +1,47 @@
+{% load i18n %}
+{% load utils %}
+
+<div role="tabpanel" class="tab-pane fade active in" style="color: #999" id="id_page_1">
+    <div class="install-panel">
+        <p class="step">
+            <span class="key">{% trans "Step 1" %}</span>
+            <span class="value">{% trans "Download and install Google Authenticator" %}</span>
+        </p>
+        <div class="img-container">
+            <div class="img-content row">
+                <div class="col-md-4">
+                    <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8" target="_blank">
+                        <img src="{% version "images/gtoken/App-Store.png" %}" alt=""/>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <p class="img-text">{% trans "You can search and download Google Authenticator APP on iOS App Atore." %}</p>
+                </div>
+            </div>
+            <div class="img-content row">
+                <div class="col-md-4">
+                    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2" target="_blank">
+                        <img src="{% version "images/gtoken/Google-play.png" %}" alt=""/>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <p class="img-text">{% trans "You can search and download Google Authenticator APP on Android Google Play or application stores." %}</p>
+                </div>
+            </div>
+            <div class="img-content row">
+                <div class="col-md-4">
+                    <a href="https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai?hl=zh-CN" target="_blank">
+                        <img src="{% version "images/gtoken/Chrome.png" %}" alt=""/>
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <p class="img-text">{% trans "You can install Google Authenticator plugin on Google Chrome, click here to download plugin." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="next-button-container">
+        <span class="operation">{% trans "I have finished installation" %}</span>
+        <a href="#" class="security-button next-button" index="1">{% trans "Next" %}</a>
+    </div>
+</div>

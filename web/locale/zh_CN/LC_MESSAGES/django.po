@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-26 11:40+0000\n"
+"POT-Creation-Date: 2018-06-26 16:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -373,7 +373,7 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/login/templates/login/index.html:56
 #: web/apps/register/templates/register/password.html:34
 #: web/apps/setting/templates/setting/check-gtoken.html:35
-#: web/apps/setting/templates/setting/set-gtoken.html:62
+#: web/apps/setting/templates/setting/include-verification.html:13
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:66
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:37
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:382
@@ -829,40 +829,97 @@ msgstr "谷歌身份验证器校验"
 msgid "Enter verification code"
 msgstr "输入验证码"
 
+#: web/apps/setting/templates/setting/include-download.html:7
+msgid "Step 1"
+msgstr "步骤1"
+
+#: web/apps/setting/templates/setting/include-download.html:8
+msgid "Download and install Google Authenticator"
+msgstr "下载并安装谷歌身份验证器"
+
+#: web/apps/setting/templates/setting/include-download.html:16
+msgid "You can search and download Google Authenticator APP on iOS App Atore."
+msgstr "您可以在iOS系统的App Store搜索下载“谷歌身份验证器”APP。"
+
+#: web/apps/setting/templates/setting/include-download.html:24
+msgid ""
+"You can search and download Google Authenticator APP on Android Google Play "
+"or application stores."
+msgstr "您可以在安卓系统的Google Play或应用市场上搜索下载“谷歌身份验证器”APP。"
+
+#: web/apps/setting/templates/setting/include-download.html:32
+msgid ""
+"You can install Google Authenticator plugin on Google Chrome, click here to "
+"download plugin."
+msgstr "您可以在谷歌浏览器（Google Chrome）上安装谷歌身份验证器插件，点击此处下载插件"
+
+#: web/apps/setting/templates/setting/include-download.html:38
+msgid "I have finished installation"
+msgstr "我已安装好APP或插件"
+
+#: web/apps/setting/templates/setting/include-download.html:39
+#: web/apps/setting/templates/setting/include-qrcode.html:28
+msgid "Next"
+msgstr "下一步"
+
+#: web/apps/setting/templates/setting/include-qrcode.html:6
+msgid "Step 2"
+msgstr "步骤2"
+
+#: web/apps/setting/templates/setting/include-qrcode.html:7
+msgid "Scan the QR code or enter the code manually"
+msgstr "扫描二维码或手动输入密钥"
+
+#: web/apps/setting/templates/setting/include-qrcode.html:12
+msgid "Scan this QR code in the Google Authentication app"
+msgstr "使用谷歌身份验证器APP扫描该二维码"
+
+#: web/apps/setting/templates/setting/include-qrcode.html:18
+msgid ""
+"If you are unable to scan the QR code, please enter this code manually into "
+"the app."
+msgstr "如果您无法扫描二维码，可以将该16位密钥手动输入到谷歌身份验证器APP中。"
+
+#: web/apps/setting/templates/setting/include-qrcode.html:22
+msgid ""
+"* Please save this Key on paper. This Key will allow you to recover your "
+"Google Authentication in case of phone loss."
+msgstr "* 请将16位密钥记录在纸上，并保存在安全的地方。如遇手机丢失，你可以通过该密钥和二维码恢复你的谷歌验证。"
+
+#: web/apps/setting/templates/setting/include-qrcode.html:27
+msgid "I have already scanned QR code and written key"
+msgstr "我已完成二维码扫描并备份密钥"
+
+#: web/apps/setting/templates/setting/include-verification.html:6
+msgid "Step 3"
+msgstr "步骤3"
+
+#: web/apps/setting/templates/setting/include-verification.html:7
+msgid "Enter google verification code"
+msgstr "输入谷歌验证码"
+
 #: web/apps/setting/templates/setting/set-gtoken.html:5
 #: web/apps/setting/templates/setting/set-gtoken.html:23
 msgid "Link Google Authenticator"
 msgstr "绑定谷歌身份验证器"
 
-#: web/apps/setting/templates/setting/set-gtoken.html:31
+#: web/apps/setting/templates/setting/set-gtoken.html:29
 msgid ""
-"Google Authenticator generates dynamic passwords and it is similar to SMS "
-"dynamic verification."
-msgstr "谷歌验证器是一款动态口令工具，工作原理类似短信动态验证。"
+"Google Authenticator generates dynamic passwords, and the password can make "
+"your information and data secure on Newton official website."
+msgstr "谷歌身份验证器（Google Authenticator）是一款动态口令工具，可用于保护您在牛顿官方网站上的数据信息。"
 
-#: web/apps/setting/templates/setting/set-gtoken.html:34
-msgid ""
-"Google Authenticator generates a new code every 30 seconds after you bind it "
-"to apps."
-msgstr "绑定后每30秒生成一个动态验证码。"
+#: web/apps/setting/templates/setting/set-gtoken.html:35
+msgid "1. Install Google Authenticator"
+msgstr "1. 安装谷歌身份验证器"
 
 #: web/apps/setting/templates/setting/set-gtoken.html:38
-msgid ""
-"Google Authenticator verification code can make your information and data "
-"security on Newton official website."
-msgstr "谷歌验证器可用于保护您在牛顿官方网站上的数据信息。"
+msgid "2. Scan QR code"
+msgstr "2. 扫描二维码"
 
 #: web/apps/setting/templates/setting/set-gtoken.html:41
-msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
-msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
-
-#: web/apps/setting/templates/setting/set-gtoken.html:50
-msgid "Enter the  code manually into your GA app"
-msgstr "手动添加谷歌身份验证器"
-
-#: web/apps/setting/templates/setting/set-gtoken.html:54
-msgid "Use the GA app to scan the QR code"
-msgstr "扫描二维码添加谷歌身份验证器"
+msgid "3. Link Google Authenticator"
+msgstr "3. 绑定谷歌身份验证器"
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -7172,3 +7229,23 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid ""
+#~ "Google Authenticator generates dynamic passwords and it is similar to SMS "
+#~ "dynamic verification."
+#~ msgstr "谷歌验证器是一款动态口令工具，工作原理类似短信动态验证。"
+
+#~ msgid ""
+#~ "Google Authenticator generates a new code every 30 seconds after you bind "
+#~ "it to apps."
+#~ msgstr "绑定后每30秒生成一个动态验证码。"
+
+#~ msgid ""
+#~ "Please be sure to keep the key or qr code to avoid any inconvenience."
+#~ msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
+
+#~ msgid "Enter the  code manually into your GA app"
+#~ msgstr "手动添加谷歌身份验证器"
+
+#~ msgid "Use the GA app to scan the QR code"
+#~ msgstr "扫描二维码添加谷歌身份验证器"
