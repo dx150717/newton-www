@@ -13,16 +13,19 @@ from django.contrib.auth.decorators import login_required
 from django.utils.timezone import utc
 from django.forms.forms import NON_FIELD_ERRORS
 import pyotp
+from ishuman import services as ishuman_services
 
 import decorators
 from utils import http
 from utils import security
+from utils import exception
 from . import forms
 from user import models as user_models
 from . import sso
 
 logger = logging.getLogger(__name__)
 
+@decorators.nologin_required
 def show_login_view(request):
     form = forms.LoginForm()
     next = request.GET.get('next', '')
@@ -34,23 +37,17 @@ def post_login(request):
         form = forms.LoginForm(request.POST)
         if not form.is_valid():
             return http.JsonErrorResponse(error_message=_("Form Error"))
-        g_recaptcha_response = request.POST.get('g-recaptcha-response')
-        post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
-        res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
-        res = json.loads(res.text)
-        if not res['success']:
-            form._errors[NON_FIELD_ERRORS] = form.error_class([_("No captcha")])
-            return http.JsonErrorResponse(error_message=_("Authenticator Recaptcha Error"))
+        code = request.POST.get('code')
+        if not ishuman_services.is_valid_captcha(request.session.session_key, code):
+            return http.JsonErrorResponse(error_message=_("Captcha Error"))
         # start authenticate
         username = form.cleaned_data['email']
         password = form.cleaned_data['password']
         user = authenticate(username=username, password=password)
         if not user or user.is_staff:
             return http.JsonErrorResponse(error_message=_("Email or Password don't match"))
-        profile = user_models.UserProfile.objects.filter(user=user).first()
-        auth_token = security.generate_uuid()
-        request.session['auth_token'] = auth_token
-        return http.JsonSuccessResponse(data={"auth_token":auth_token})
+        login(request, user)
+        return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post login:%s" % str(inst))
         return http.JsonErrorResponse(error_message=_("Request Time Out"))
@@ -58,17 +55,22 @@ def post_login(request):
 @decorators.http_post_required
 def post_google_authenticator(request):
     try:
-        gtoken_code = request.POST['gtoken_code']
-        email = request.POST['email']
-        passwrod = request.POST['password']
-        auth_token = request.POST['auth_token']
-        session_token = request.session.get('auth_token')
+        # check whether post data is valid
+        form = forms.GoogleAuthenticatorForm(request.POST)
+        if not form.is_valid():
+            return http.JsonErrorResponse(error_message=_("Form Error"))
+        # get cleaned data from form
+        email = form.cleaned_data["email"]
+        gtoken_code = form.cleaned_data["gtoken_code"]
+        password = form.cleaned_data["password"]
+        auth_token = form.cleaned_data["auth_token"]
         # clear the session
-        if session_token:
-            del request.session['auth_token']
+        session_token = request.session.get("auth_token")
+        if not session_token:
+            return http.JsonErrorResponse(error_message=_("No session"))
         if auth_token != session_token:
-            return http.JsonErrorResponse(error_message=_("No Auth_token"))
-        user = authenticate(username=email, password=passwrod)
+            return http.JsonErrorResponse(error_message=_("No Auth"))
+        user = authenticate(username=email, password=password)
         if not user or user.is_staff:
             return http.JsonErrorResponse(error_message=_("No User"))
         user_profile = user_models.UserProfile.objects.filter(user=user).first()
@@ -86,6 +88,8 @@ def post_google_authenticator(request):
         # redirect to expect target url
         login(request, user)
         next = request.POST.get('next')
+        if request.session.get('auth_token'):
+            del request.session['auth_token']
         if next:
             result = urlparse.urlparse(next)
             if result and not result.netloc and result.path:
@@ -93,4 +97,4 @@ def post_google_authenticator(request):
         return http.JsonSuccessResponse(data={"msg":"/user/"})
     except Exception, inst:
         logger.exception("fail to post google authedticator:%s" % str(inst))
-        return http.HttpResponseServerError()
+        return http.JsonErrorResponse()

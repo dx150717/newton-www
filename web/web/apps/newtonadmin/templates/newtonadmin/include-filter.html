@@ -1,0 +1,11 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="well">
+	<form action="">
+	    {% include "form.html" with form=query_form %}
+	    <div class="form-group">
+	        <button type="bumit" class="btn btn-primary">查询</button>
+	    </div>
+	</form>
+</div>

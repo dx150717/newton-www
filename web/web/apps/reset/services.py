@@ -5,6 +5,7 @@ import logging
 
 from django.conf import settings
 from django.template import Template, Context, loader
+from django.utils.translation import ugettext as _
 
 from verification import services
 from tasks import task_email
@@ -23,7 +24,7 @@ def send_reset_validate_email(email, request):
         if not verification:
             return False
         target_url = "%s/reset/verify/?uuid=%s" % (settings.NEWTON_HOME_URL, str(verification.uuid))
-        subject = "NewtonProject Notifications: Please Reset password:"
+        subject = _("Please Reset password")
         template = loader.get_template("reset/reset-letter.html")
         context = Context({"target_url":target_url,"request":request})
         html_content = template.render(context)

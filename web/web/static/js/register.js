@@ -1,30 +1,44 @@
 /**
  * register.js for valid register form and get response from google api.
  */
+var SUCCESS_TIP = '<span class="glyphicon glyphicon-ok-circle alert-success" aria-hidden="true"></span>';
 
-/**
- * 
- * @param {string} ret google recaptcha response.
- */
-function googleCallback(ret){
-    document.getElementById("id-google-recaptcha").value = ret;
-};
 /**
  * register.js for valid register form.
  */
-$("#register-form").submit(function(event){
+$("#id_register_form").submit(function(event){
     event.preventDefault();
     var form = this;
+    var code = $("#id_captcha_code").val()
     if (!$(form).valid()) {
         return false;
     }
-    form.submit()
+    $.ajax({
+        url:'/ishuman/check/?code=' + code,
+        type: 'post',
+        data: {},
+        success: function(ret){
+            if (ret.error_code === FAIL) {
+                $("#id_register_code_error").removeClass("hide");
+                $("#id_register_code_error").attr("style", "display:!important block");
+                $('#id_captcha_image').click();
+                $("#id_captcha_code").val('')
+                return false;
+            } else {
+                form.submit();
+            }
+        },
+        error: function(request, status) {
+        }
+    });
+    
 }).validate({
     ignore: [],
     errorElement: "div",
     errorClass: "alert alert-danger",
     rules: {
-        email: {required: true, email:true}
+        email: {required: true, email:true},
+        code: {required: true}
     },
     errorPlacement: function(error,element) {
         error.appendTo(element.parent());
@@ -34,12 +48,13 @@ $("#register-form").submit(function(event){
 /**
  * valid set password form.
  */
-$("#set-password-form").submit(function(event){
+$("#id_set_password_form").submit(function(event){
     event.preventDefault();
     var form = this;
     if (!$(form).valid()) {
         return false;
     }
+    showWaiting();
     form.submit()
 }).validate({
     ignore: [],
@@ -48,28 +63,6 @@ $("#set-password-form").submit(function(event){
     rules: {
         password: {required: true, minlength:6, maxlength:16, password:true},
         repassword: {required: true, minlength: 6, maxlength:16, equalTo:"#id_password", password:true},
-    },
-    errorPlacement: function(error,element) {
-        error.appendTo(element.parent());
-    }
-});
-
-/**
- * set gtoken
- */
-$("#set-gtoken-form").submit(function(event){
-    event.preventDefault();
-    var form = this;
-    if (!$(form).valid()) {
-        return false;
-    }
-    form.submit()
-}).validate({
-    ignore: [],
-    errorElement: "div",
-    errorClass: "alert alert-danger",
-    rules: {
-        gtoken_code: {required: true, minlength:4},
     },
     errorPlacement: function(error,element) {
         error.appendTo(element.parent());

@@ -35,7 +35,7 @@
                         <a href="/economy/">{% trans "Economy" %}</a>
                     </li>
                 </ul>
-                {% comment %}
+
                 <ul class="nav navbar-nav  navbar-right">
                     {% if request.user.is_authenticated %}
                     <li class="dropdown">
@@ -47,16 +47,39 @@
                         </ul>
                     </li>
                     {% else %}
-                    <li>
+                    <li class="toolbar-item">
                         <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
-                    <li>
+                    <li class="toolbar-item">
                         <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
                     {% endif %}
+                    <li class="dropdown language-drop-down">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <img src="/static/images/languages/{{ request|show_language_icon }}-m.png?v={{ settings.STATIC_DEFAULT_VERSION }}"/>{{ request | show_language_code}}
+                                <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
+                            <li>
+                                <a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}-m.png?v={{ settings.STATIC_DEFAULT_VERSION }}"> {{ language_name }}
+                                        {% if language_code|is_current_language %}
+                                        <span class="glyphicon glyphicon-ok" style="float: right" id="is_choice"></span>
+                                        {% endif %}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <div class="mobil_language">
+                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
+                            <a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}-m.png?v={{ settings.STATIC_DEFAULT_VERSION }}"></a>
+                            {% endfor %}
+                        </div>
+                    </li>
                 </ul>
-                {% endcomment %}
-                <div class="dropdown">
+
+                {% comment %}
+                <div class="dropdown" id="language-drop-down">
                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <img src="/static/images/languages/{{ request|show_language_icon }}-m.png?v={{ settings.STATIC_DEFAULT_VERSION }}"/>{{ request | show_language_code}}
                         <span class="caret"></span>
@@ -78,8 +101,8 @@
                     <a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}-m.png?v={{ settings.STATIC_DEFAULT_VERSION }}"></a>
                     {% endfor %}
                 </div>
+                {% endcomment %}
             </div><!-- /.navbar -->
-
         </div>
     </nav>
 </header><!-- end -->

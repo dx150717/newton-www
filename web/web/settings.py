@@ -82,6 +82,8 @@ INSTALLED_APPS = (
     'ishuman',
     # new admin
     'newtonadmin',
+    'help',
+    'setting',
 )
 
 MIDDLEWARE_CLASSES = (

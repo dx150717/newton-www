@@ -1,7 +1,8 @@
+{% load i18n %}
 {% load utils %}
 
 {% if form.non_field_errors %}
-<div class="form-group">
+<div class="form-group margin-auto">
     <div class="raw">
         <div class="alert alert-danger alert-dismissible">
             <button type="button" class="close" data-dismiss="alert">
@@ -13,8 +14,11 @@
 </div>
 {% endif %}
 {% for field in form %}
-<div class="form-group">
-    <p><label for="id_{{ field.name }}" class="control-label">{{ field.label }}</label></p>
+<div class="form-group"> 
+    <p>
+        <label for="id_{{ field.name }}" class="control-label">{{ field.label }} <span class="red-color">{{ field.help_text }}</span>
+        </label>
+    </p>
     <div>
         {{ field|addcss:"form-control" }}
         {% if field.errors %}

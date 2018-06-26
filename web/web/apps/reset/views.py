@@ -11,6 +11,7 @@ from django.forms.forms import NON_FIELD_ERRORS
 
 from utils import http
 from utils import security
+from utils import exception
 from config import codes
 from tasks import task_email
 
@@ -20,6 +21,7 @@ from . import services
 
 logger = logging.getLogger(__name__)
 
+@decorators.nologin_required
 def show_reset_view(request):
     form = forms.EmailForm()
     return render(request,'reset/index.html', locals())
@@ -42,7 +44,7 @@ def post_email(request):
             return http.HttpResponseRedirect('/reset/post-success/')
     except Exception, inst:
         logger.exception("fail to post email %s" % str(inst))
-    return http.HttpResponseServerError()
+        raise exception.SystemError500()
     
 def show_post_success_view(request):
     return render(request,'reset/reset-success.html', locals())

@@ -1,0 +1,71 @@
+{% load i18n %}
+{% load utils %}
+
+{% if item.ela_final_balance or item.btc_final_balance %}
+<div>
+    <div class="shadow-item">
+        <div class="container token-exchange-result">
+            <div class="text-center">
+                <p class="token-exchange-title">{% trans "Token Exchange Result" %}</p>
+            </div>
+            {% if is_equal %}
+            <p class="result-tips">
+                {% trans "Status：" %}
+                <span class="text-success">{% trans "tranferring successfully" %}</span>
+            </p>
+            {% else %}
+            <p class="result-tips">
+                {% trans "Status：" %}
+                <span class="text-danger">{% trans "transferred amount is not equal to allocated amount" %}</span>
+            </p>
+            {% endif %}
+            {% if item.btc_transfer_list %}
+            <table class="table table-bordered">
+                <caption>BTC</caption>
+                <thead>
+                    <tr>
+                        <th class="col-sm-3">{% trans "Transferring time" %}</th>
+                        <th class="col-sm-3">BTC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for btc_transfer in item.btc_transfer_list %}
+                    <tr>
+                        <th class="col-sm-3">{{ btc_transfer.created_at|date:"Y-m-d H:i:s" }}</th>
+                        <th class="col-sm-3">{{ btc_transfer.value }}</th>
+                    </tr>
+                {% endfor %}
+                    <tr>
+                        <th class="col-sm-3">{% trans "Total" %}</th>
+                        <th class="col-sm-3">{{ item.btc_final_balance }}</th>
+                    </tr>
+                </tbody>
+            </table>
+            {% endif %}
+            {% if item.ela_transfer_list %}
+            <table class="table">
+                <caption>ELA</caption>
+                <thead>
+                    <tr>
+                        <th>{% trans "Transferring time" %}</th>
+                        <th>ELA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for ela_transfer in item.ela_transfer_list %}
+                    <tr>
+                        <th>{{ ela_transfer.created_at|date:"Y-m-d H:i:s" }}</th>
+                        <th>{{ ela_transfer.value }}</th>
+                    </tr>
+                {% endfor %}
+                    <tr>
+                        <th>{% trans "Total" %}</th>
+                        <th>{{ item.ela_final_balance }}</th>
+                    </tr>
+                </tbody>
+            </table>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %}

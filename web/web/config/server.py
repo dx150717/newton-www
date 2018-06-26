@@ -55,7 +55,7 @@ HAYSTACK_CONNECTIONS = {
 
 # Email settings
 EMAIL_BACKEND = 'email_log.backends.EmailBackend'
-FROM_EMAIL = 'Newton Project Team<no-reply@crm.newtonproject.org>'
+FROM_EMAIL = 'Newton Foundation<no-reply@crm.newtonproject.org>'
 EMAIL_HOST = 'email-smtp.us-west-2.amazonaws.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'AKIAJIDOOT3MOAE6DSIA'
@@ -92,18 +92,24 @@ FUND_END_DATE = datetime.datetime(2018, 5, 30, 0, 0)
 FUND_CONFIG = {
     codes.FundPhase.PRIVATE.value: {
         'start_date': '2018-05-07',
-        'end_date': '2018-05-20',
-        'ela_ratio': '1000',
-        'min_ela': '100',
-        'btc_ratio': '100000',
-        'min_btc': '1',
+        'end_date': '2018-07-20',
+        'ela_ratio': 1000,
+        'min_ela': 100,
+        'btc_ratio': 100000,
+        'min_btc': 1,
+        'kyc_deadline': '2018-07-20',
+        'total_amount_btc': 2500,
+        'total_amount_ela': 2500,
     },
     codes.FundPhase.PUBLIC.value: {
         'start_date': '2018-06-01',
         'end_date': '2018-06-10',
-        'ela_ratio': '1000',
-        'min_ela': '100',
-        'btc_ratio': '100000',
-        'min_btc': '1',
+        'ela_ratio': 1000,
+        'min_ela': 100,
+        'btc_ratio': 100000,
+        'min_btc': 1,
+        'kyc_deadline': '2018-05-20',
+        'total_amount_btc': 2500,
+        'total_amount_ela': 2500,
     },
 }

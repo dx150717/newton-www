@@ -2,9 +2,9 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "Reset" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "Reset" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
+
 {% block header %}
 {% include "header-no-menu.html" %}
 {% endblock %}
@@ -18,8 +18,8 @@
 {% block content %}
 <section id="success" class="section-list">
     <div class="container text-center">
-        <p class="title">{% trans "Submit Success!" %}</p>
-        <p class="content">{% trans "We have sent an email to your registered email address to complete the password reset procedure." %}</p>
+        <p class="title">{% trans "Successfully submitted!" %}</p>
+        <p class="content">{% trans "We have sent you an email. Please go to your reset email inbox to check and complete the registration process." %}</p>
     </div>
 </section>
 {% endblock %}

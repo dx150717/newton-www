@@ -2,9 +2,9 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "ReSet" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "Reset" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
+
 {% block header %}
 {% include "header-no-menu.html" %}
 {% endblock %}
@@ -17,8 +17,11 @@
 
 {% block content %}
 <section id="reset" class="section-list">
-	<div class="reset-title container text-center">
-		<h2>{% trans "Reset" %}</h2>
+	<div class="page-title">
+		<div class="container">
+			<p>{% trans "Reset Password" %}
+			</p>
+		</div>
 	</div>
 	<div class="container">
 		<div class="form-container">
@@ -27,7 +30,7 @@
 				{% include "form.html" %}
 				<div class="raw">
 					<div>
-						<button class="form-button" type="submit">{% trans "Reset" %}</button>
+						<button class="form-button" type="submit">{% trans "Reset Passwrod" %}</button>
 					</div>
 				</div>
 			</form>

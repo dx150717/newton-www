@@ -6,12 +6,16 @@
 {% trans "KYC Admin" %}
 {% endblock %}
 
+{% block extra %}
+<meta http-equiv="refresh" content="60"/>  
+{% endblock %}
+
 {% block content %}
-<section id="faq" class="section-list">
-    <div class="container" style="width:100%;">
-        <div class="raw table-responsive content">
+<section class="section-list newtonadmin">
+    <div class="container">
+        <h3>转币交易列表<span class="">(每30分钟自动查询一次)</h3>
+        <div class="raw table-responsive">
             <table class="table">
-                <caption class="text-center">收币确认列表<span class="">(每30分钟自动查询一次)<span></caption>
                 <thead>
                     <tr>
                         <th>电子邮箱</th>
@@ -66,6 +70,11 @@
                 </div>
                 {% endif %}
             </div>
+            {% if not items %}
+            <div class="well text-center">
+                还没有数据
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>

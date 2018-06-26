@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}{% trans "Token Exchange" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block notice %}
+{% endblock %}
+
+{% block content %}
+<section id="register" class="section-list">
+    <div class="container text-center" style="padding-top:300px; font-size: 40px; color: #333">
+        <p>{% trans "Your KYC has passed. Please don't submit again." %}</p>
+        <p class="content" style="font-size: 18px; color: unset;">
+            {% trans "Go to <a href='/user/'>User Center</a>" %}
+        </p>
+    </div>
+</section><!-- end -->
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

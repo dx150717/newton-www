@@ -2,9 +2,8 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "KYC" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "KYC" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 
 {% block header %}
 {% include "header-no-menu.html" %}
@@ -18,7 +17,7 @@
 {% endblock %}
 
 {% block content %}
-<section id="newtonadmin" class="section-list">
+<section class="newtonadmin" class="section-list">
     <div class="container text-center">
         <div class="title">
             <h2>{% trans "Confrm your amount of token exchange" %}</h2>

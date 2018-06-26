@@ -1,15 +1,13 @@
-{% extends "email-template.html" %}
+{% extends "email-kyc-template.html" %}
 {% load i18n %}
 {% load utils %}
+  {% block content %}
+    <p class="newton-title">{% trans "Welcome! Please Reset Your Password!" %}</p>
+    <p class="main-color">{% trans "Dear" %}</p>
+    <p class="main-color">{% trans "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your newton password, click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>" %}</p>
+    <p class="pad-t20"><a href="{{ target_url }}" class="button-1">{% trans "Reset" %}</a></p>
+    <p class="pad-t30">{% trans "If you received this email by mistake, simply delete it." %}</p>
+  {% endblock %}
 
-{% block title %}
-<h1>{% trans "Welcome! Please Reset Your Password!" %}</h1>
-{% endblock %}
-{% block content %}
-<p class="main-color">{% trans "Dear" %}</p>
-<p class="main-color">{% trans "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your newton password, click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>" %}</p>
-<div class="link-button">
-    <a class="form-button" href="{{ target_url }}">{% trans "Reset" %}</a>
-    <p class="link-warn">{% trans "If you received this email by mistake, simply delete it." %}</p>
-</div>
-{% endblock %}
+  {% block security %}
+  {% endblock %}

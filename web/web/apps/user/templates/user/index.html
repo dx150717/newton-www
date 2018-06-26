@@ -2,9 +2,8 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "user" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "user" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 
 {% block header %}
 {% include "header-no-menu.html" %}
@@ -23,6 +22,7 @@
         <div class="container header">
             <img class="header" src="{% version "images/default_avator.png" %}"/>
             <div class="name">
+                <p style="color: #fff">{{ user.email }}</p>
             </div>
         </div>
     </div>
@@ -30,117 +30,19 @@
         <div class="sub-title">
             <div class="sub-title-nav">
                 <ul id="user-tab" class="nav nav-tabs">
-                    <li class="active"><a href="#basic-info" data-toggle="tab">{% trans "Profile" %}</a></li>
-                    <li><a href="#kyc">KYC</a></li>
-                    {% comment %}
-                    <li><a href="#token-exchange">Token Exchange</a></li>
-                    {% endcomment %}
+                    <li class="active"><a href="#kyc">KYC</a></li>
+                    <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div id="tab-content" class="tab-content">
-        <div id="basic-info" class="tab-pane fade in active user-content">
-            <div class="container">
-                <div class="user-info">
-                    <div class="item-title container">
-                        <p class="title">{% trans "Basic information" %}</p>
-                    </div>
-                    <div class="container">
-                        <div class="bg-gray">
-                            {% for field in user_form %}
-                                <div class="item">
-                                    <div>
-                                        {{ field.label_tag }}
-                                    </div>
-                                    <div class="value">{{ field.value }}</div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="kyc" class="tab-pane fade user-content">
-            <div class="container">
-                <div class="user-info">
-                    <div class="item-title container">
-                        <p class="title">KYC</p>
-                    </div>
-                    <div class="container">
-                        <div class="bg-gray">
-                            <div class="item">
-                                <div class="text-nowrap"><label for="status">Status:</label></div>
-                                <div class="value">
-                                    {% if kycinfo %}
-                                        {% if kycinfo.status == 1 %}
-                                        {% trans "You have summit KYC information" %}
-                                        {% endif %}
-
-                                        {% if kycaudit %}
-                                            {% if kycinfo.status == 2 %}
-                                            {% trans "Passed" %}
-                                            {% endif %}
-                                            {% if kycinfo.status == 3 %}
-                                            {% trans "Rejected:" %} {{ kycaudit.comment }} <a href="/tokenexchange/">{% trans "Rewrite" %}</a>
-                                            {% endif %}
-                                        {% endif %}
-                                    {% else %}
-                                    {% trans "You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>" %}
-                                    {% endif %}
-                                </div>
-                            </div>
-                            {% if kycinfo.status == 2 %}
-                            {% for field in kyc_form %}
-                                <div class="item">
-                                {% if forloop.counter == 5 %}
-                                <div class="">
-                                    {{ field.label_tag }}
-                                </div>
-                                <div class="value"><img style="width:300px;" src="{{ kycinfo.id_card.url }}"/></div>
-                                {% else %}
-                                <div class="">
-                                    {{ field.label_tag }}
-                                </div>
-                                <div class="value">{{ field.value }}</div>
-                                {% endif %}
-                                </div>
-                            {% endfor %}
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="token-exchange" class="tab-pane fade user-content">
-            <div class="container">
-                <div class="raw user-detail-content">
-                    <div class="user-info">
-                        {% if items %}
-                        {% for item in items %}
-                        <div class="item">
-                            <div class="item-content">
-                                {% include "tokenexchange/token-exchange-info-summary.html" with token_exchange_info=item.token_exchange_info %}
-                                <div class="text-left">
-                                    <a class="form-button" href="/user/token-exchange-progress/{{ item.phase_id }}/"> {% trans "Details " %} >></a>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                        {% else %}
-                        <div class="item">
-                            <p>{% trans "There is no token exchange information" %}</p>
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        </div>
+    {% include "user/include-kyc-section.html" %} 
+    {% include "user/include-token-exchange.html" %}
     </div>
 </section>
 {% endblock %}
+
 {% block inline_js %}
 <script type="text/javascript">
     $("#user-tab a").click(function(e){
@@ -148,4 +50,7 @@
         $(this).tab("show")
     })
 </script>
+{% endblock %}
+
+{% block css %}
 {% endblock %}

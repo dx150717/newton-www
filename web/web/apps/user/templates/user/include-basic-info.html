@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load utils %}
+
+
+<div id="basic-info" class="tab-pane fade in active user-content">
+    <div class="container">
+        <div class="user-info">
+            <div class="item-title container">
+                <p class="title">{% trans "Basic information" %}</p>
+            </div>
+            <div class="container">
+                <div class="bg-gray">
+                    {% for field in user_form %}
+                        <div class="item">
+                            <div>
+                                {{ field.label_tag }}
+                            </div>
+                            <div class="value">{{ field.value }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

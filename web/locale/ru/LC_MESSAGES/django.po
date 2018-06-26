@@ -247,7 +247,7 @@ msgid "Request Time Out"
 msgstr "Время ожидания запроса истекло"
 
 #: web/apps/login/views.py:70
-msgid "No Auth_token"
+msgid "No Auth"
 msgstr ""
 
 #: web/apps/login/views.py:73
@@ -426,8 +426,8 @@ msgid "press"
 msgstr ""
 
 #: web/apps/register/forms.py:16 web/apps/reset/forms.py:10
-msgid "Repassword"
-msgstr ""
+msgid "Confirm Password"
+msgstr "Подтвердите Пароль"
 
 #: web/apps/register/services.py:27
 msgid "Newton Notification: Please complete the register process of Newton"
@@ -526,7 +526,7 @@ msgstr "Далее"
 #: web/apps/register/templates/register/post-success.html:23
 #: web/apps/reset/templates/reset/reset-success.html:21
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
-msgid "Submit Success!"
+msgid "Successfully submitted!"
 msgstr "Успешное подтверждение!"
 
 #: web/apps/register/templates/register/post-success.html:24
@@ -616,8 +616,7 @@ msgstr ""
 
 #: web/apps/reset/templates/reset/reset-success.html:22
 msgid ""
-"We have sent an email to your registered email address to complete the "
-"password reset procedure."
+"We have sent you an email. Please go to your registered email inbox to check and complete the registration process."
 msgstr ""
 "Мы отправили электронное письмо на ваш зарегистрированный адрес электронной "
 "почты, пожалуйста, проверьте и завершите процесс восстановления пароля."

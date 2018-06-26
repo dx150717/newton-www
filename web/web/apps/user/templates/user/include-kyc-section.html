@@ -1,0 +1,183 @@
+{% load i18n %}
+{% load utils %}
+
+<div id="kyc" class="tab-pane fade in active user-content">
+    <div class="container">
+        <div class="user-info row">
+                <div class="item">
+                        <div class="value">
+                            {% if kycinfo %}
+                                {% if kycinfo.status == 1 %}
+                                <div class="item">
+                                    <p class="text-center" style="padding-top: 30px; color:#333;">
+                                    {% trans "Submitted KYC information successfully! We will send you an email of reviewing result, please check out." %}
+                                </p>
+                                </div>
+                                {% endif %}
+                                {% if kycaudit %}
+                                    {% if kycinfo.status == 2 %}
+                                    <div class="item">
+                                        <p class="text-center" style="margin-top: 27px; color: #333;">
+                                            {% trans "You've passed Newton KYC review." %}
+                                        </p>
+                                    </div>
+                                    
+                                    {% endif %}
+                                    {% if kycinfo.status >= 3 %}
+                                    <div class="item" style="padding-top: 60px">
+                                        <p class="text-center">
+                                            {% trans "You have not passed kyc review." %}
+                                            {% if kycaudit_comment %}
+                                            <br/>{% trans "resulting from:" %} {{ kycaudit.comment }}
+                                            {% endif %}
+                                        </p>
+                                        <p style="text-align: center">
+                                        {% if kycinfo.status == 3 %}
+                                        <a class="form-button mt50" href="/tokenexchange/">{% trans "Fill in KYC information again" %}</a>
+                                        {% endif %}
+                                        </p>
+                                    </div>
+                                    {% endif %}
+                                {% endif %}
+                            {% else %}
+                            <div class="container text-center mt50">
+                                <p style="color: #333">{% trans "You have not submitted KYC information." %}</p>
+                                {% if not is_deadline and not is_deny%}
+                                <a class="form-button mt50" href="/tokenexchange/">{% trans "Join KYC" %}</a>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                    </div>
+                </div>    
+                {% if kycinfo.status == 2 %}
+                {% if kycinfo.kyc_type == 1 %}
+                <div class="item kyc-info">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" style="padding-top: 0">
+                                <p>{% trans "Basic Information" %}</p>
+                            </div>
+                            <div class="panel-body">
+                                {% include "user/form_content.html" with form=base_form %}
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>{% trans "Self Introduction" %}</p>
+                            </div>
+                            <div class="panel-body">
+                                {% include "user/form_content.html" with form=profile_form %}
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>{% trans "How to Contribute" %}</p>
+                            </div>
+                            <div class="panel-body">
+                                {% include "user/form_content.html" with form=contribute_form %}
+                                {% if data.is_establish_node %}
+                                <div class="form-group">
+                                    <div class="row">
+                                        <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Do you want to <br/>establish a Newton node ?" %}</label></p>
+                                        <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                            <div class="value">{{ data.is_establish_node }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% if data.which_node_establish %}
+                                <div class="form-group">
+                                    <div class="row">
+                                        <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Which type of node ?" %}</label></p>
+                                        <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                            <div class="value">{{ data.which_node_establish }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% if data.establish_node_plan %}
+                                <div class="form-group">
+                                    <div class="row">
+                                        <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Your plan of node establishment" %}</label></p>
+                                        <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                            <div class="value">{{ data.establish_node_plan }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p>{% trans "Emergency Contact" %}</p>
+                            </div>
+                            <div class="panel-body">
+                                {% include "user/form_content.html" with form=emergency_form %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="item kyc-info">
+                        <div class="col-sm-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" style="padding-top: 0">
+                                    <p>{% trans "Basic Information" %}</p>
+                                </div>
+                                <div class="panel-body">
+                                    {% include "user/form_content.html" with form=organization_base_form %}
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <p>{% trans "Organization Introduction" %}</p>
+                                </div>
+                                <div class="panel-body">
+                                    {% include "user/form_content.html" with form=organization_profile_form %}
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <p>{% trans "How to Contribute" %}</p>
+                                </div>
+                                <div class="panel-body">
+                                    {% include "user/form_content.html" with form=contribute_form %}
+                                    {% if data.is_establish_node %}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Do you want to <br/>establish a Newton node ?" %}</label></p>
+                                            <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                <div class="value">{{ data.is_establish_node }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% if data.which_node_establish %}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Which type of node ?" %}</label></p>
+                                            <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                <div class="value">{{ data.which_node_establish }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                    {% if data.establish_node_plan %}
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <p class="kycinfo_title col-lg-3 col-md-3 col-sm-12 col-xs-12"><label for="id_do_for_newton" class="control-label">{% trans "Your plan of node establishment" %}</label></p>
+                                            <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                <div class="value">{{ data.establish_node_plan }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% endif %}
+        </div>
+    </div>
+</div>

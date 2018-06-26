@@ -2,9 +2,8 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "Invalid-link" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "Invalid-link" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 
 {% block header %}
 {% include "header-no-menu.html" %}
@@ -20,7 +19,7 @@
 {% block content %}
 <section id="register" class="section-list">
     <div class="container text-center" style="padding-top:300px;">
-        <p>链接无效或者过期</p>
+        <p>{% trans "Invalid Link" %}</p>
     </div>
 </section><!-- end -->
 {% endblock %}

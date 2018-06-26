@@ -1,11 +1,4 @@
 // subscribe email list
-var FAIL = 0
-var SUCCESS = 1
-var UNAUTH = 2
-var SIGN_ERROR = 3
-var INVALID_PARAMS = 4
-var MAINTAIN = 5
-var UPGRADE = 6
 var emailReg = new RegExp("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$");
 var ERROR_TIP = '<span class="glyphicon glyphicon-remove-circle alert-danger" aria-hidden="true"></span>';
 var SUCCESS_TIP = '<span class="glyphicon glyphicon-ok-circle alert-success" aria-hidden="true"></span>';

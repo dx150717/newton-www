@@ -2,9 +2,8 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "Register" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "Register" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 
 {% block header %}
 {% include "header-no-menu.html" %}
@@ -14,45 +13,38 @@
 {% include "footer-simple.html" %}
 {% endblock %}
 
-{% block require_js %}
-<script src="https://www.google.com/recaptcha/api.js" async defer></script> 
-{% endblock %}
-
 {% block notice %}
 {% endblock %}
 
 {% block content %}
 <section id="register" class="section-list">
-        <div class="login-title container text-center">
-            <h2>{% trans "Register" %}</h2>
+        <div class="page-title">
+            <div class="container">
+                <p>{% trans "Register" %}
+                </p>
+            </div>
         </div>
         <div class="container">
-            <div class="form-container">
+            <!-- <div class="form-container">
                 <div class="alert alert-warning">
                     {% trans "Tip: To register successfully, ensure you can access the google recaptcha service." %}
                 </div>
-            </div>
+            </div> -->
             <div class="form-container">
-                <form id="register-form" class="form" action="/register/post-email/" method="POST">
+                <form id="id_register_form" class="form" action="/register/email/post/" method="POST">
                     {% csrf_token %}
                     {% include "form.html" %}
-                    <div class="form-group">
-                        <div class="google-recaptcha" id="google-recaptcha">
-                            <input type="hidden" name="google-recaptcha-name" id="id-google-recaptcha"/>
-                            <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
-                        </div>
-                    </div>
+                    {% include "captcha.html" %}
                     <div class="raw">
                         <div>
                             <button id="register-btn" class="form-button" type="submit">{% trans "Register" %}</button>
                         </div>
                     </div>
-                    
                 </form>
             </div>
             <div class="raw">
                 <div>
-                    <p style="padding-top:30px;">{% trans "By clicking on the register button you agree and abide by<br/> Newton" %} <a href='{{ settings.NEWTON_WEB_URL }}/terms-of-use/'/>{% trans "User Agreement" %}</a> {% trans "and" %} <a href='{{ settings.NEWTON_WEB_URL }}/privacy/'>{% trans "Privacy Policy" %}</a>。</p>
+                    <p style="padding-top:30px;">{% trans "By clicking on the register button you agree and abide by<br/> Newton" %} <a href='{{ settings.NEWTON_WEB_URL }}/terms-of-use/' target="_blank"/>{% trans "User Agreement" %}</a> {% trans "and" %} <a href='{{ settings.NEWTON_WEB_URL }}/privacy/' target="_blank">{% trans "Privacy Policy" %}</a>。</p>
                 </div>
             </div>
         </div>
@@ -63,6 +55,7 @@
 {% endblock %}
 
 {% block js %}
+<script src="{% version "js/captcha.js" %}"></script>
 <script src="{% version "js/register.js" %}"></script>
 {% endblock %}
 

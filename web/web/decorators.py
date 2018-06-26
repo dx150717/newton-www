@@ -77,6 +77,33 @@ def auth_required(func):
         return http.JsonErrorResponse(codes.ErrorCode.UNAUTH.value)
     return _decorator
 
+def nologin_required(func):
+    """Ensure the current user is not login,otherwise redirect to user page
+    """
+    def _decorator(request, *args, **kwargs):
+        if request.user.is_authenticated():
+            return http.HttpResponseRedirect('/user/')
+        return func(request, *args, **kwargs)
+    return _decorator
+
+def google_authenticator_required(func):
+    """Ensure that the current user is set the google authenticator
+    """
+    def _decorator(request, *args, **kwargs):
+        if request.user.userprofile.is_google_authenticator:
+            return func(request, *args, **kwargs)
+        return http.HttpResponseRedirect('/setting/gtoken/?redirect_url=' + request.path)
+    return _decorator
+
+def check_google_authenticator_session(func):
+    """Ensure that the session of google authenticator is not expired
+    """
+    def _decorator(request, *args, **kwargs):
+        if request.session.get('google_authenticator'):
+            return func(request, *args, **kwargs)
+        return http.HttpResponseRedirect('/setting/gtoken/check/?redirect_url=' + request.path)
+    return _decorator
+
 def admin_user_passes_test(test_func, login_url=None, redirect_field_name=REDIRECT_FIELD_NAME):
     """
     Decorator for views that checks that the user passes the given test,

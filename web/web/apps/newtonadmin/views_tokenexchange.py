@@ -1,14 +1,19 @@
 # -*- coding: utf-8 -*-
 import logging
 
+import csv
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import user_passes_test
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.views import generic
 from django.db.models import Sum
+from django_countries.data import COUNTRIES
+from django.db.models import Q
 
 from utils import http
+from utils import convert
+from utils import exception
 from config import codes
 from tokenexchange import models as tokenexchange_models
 from tracker import models as tracker_models
@@ -17,6 +22,39 @@ from . import forms_tokenexchange
 from . import services_tokenexchange
 
 logger = logging.getLogger(__name__)
+
+def build_query_condition(request, q):
+    """Build the query condition
+    """
+    kyc_type = request.GET.get('kyc_type')
+    is_establish_node = request.GET.get('is_establish_node')
+    country = request.GET.get('country')
+    if kyc_type:
+        kyc_type = int(kyc_type)
+        q &= Q(kyc_type=kyc_type)
+    if is_establish_node:
+        is_establish_node = int(is_establish_node)
+        q &= Q(is_establish_node=is_establish_node)
+    if country:
+        q &= Q(country=country)
+    return q
+
+def extract_query_parameter(request):
+    """Extract the query parameter
+    """
+    result = {}
+    kyc_type = request.GET.get('kyc_type')
+    is_establish_node = request.GET.get('is_establish_node')
+    country = request.GET.get('country')
+    if kyc_type:
+        kyc_type = int(kyc_type)
+        result['kyc_type'] = kyc_type
+    if is_establish_node:
+        is_establish_node = int(is_establish_node)
+        result['is_establish_node'] = is_establish_node
+    if country:
+        result['country'] = country
+    return result
 
 class IdListView(generic.ListView):
     template_name = "newtonadmin/id-list.html"
@@ -30,9 +68,25 @@ class IdListView(generic.ListView):
         else:
             return redirect("/newtonadmin/login/")
 
+    def get_context_data(self, **kwargs):
+        context = super(IdListView, self).get_context_data(**kwargs)
+        context['level_choices'] = [i+1 for i in range(10)]
+        context['is_idlist'] = True
+        context['countries_choices'] = COUNTRIES
+        context['title'] = '待审核'
+        return context
+
     def get_queryset(self):
         try:
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
+
+            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
+            items = []
+            if fields and len(fields) > 0:
+                for item in fields:
+                    if item.id_type:
+                        item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+                    item.country = COUNTRIES[item.country]
+                    items.append(item)
             return items
         except Exception, inst:
             logger.exception("fail to show id list:%s" % str(inst))
@@ -40,7 +94,7 @@ class IdListView(generic.ListView):
 
 
 class PassIdListView(generic.ListView):
-    template_name = "newtonadmin/pass-id-list.html"
+    template_name = "newtonadmin/id-list.html"
     context_object_name = "items"
     paginate_by = settings.PAGE_SIZE
     
@@ -51,9 +105,22 @@ class PassIdListView(generic.ListView):
         else:
             return redirect("/newtonadmin/login/")
 
+    def get_context_data(self, **kwargs):
+        context = super(PassIdListView, self).get_context_data(**kwargs)
+        context['countries_choices'] = COUNTRIES
+        context['title'] = '已通过'
+        return context
+
     def get_queryset(self):
         try:
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+            items = []
+            if fields and len(fields) > 0:
+                for item in fields:
+                    if item.id_type:
+                        item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+                    item.country = COUNTRIES[item.country]
+                    items.append(item)
             return items
         except Exception, inst:
             logger.exception("fail to show pass id list:%s" % str(inst))
@@ -75,6 +142,8 @@ class InviteListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(InviteListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
@@ -84,13 +153,15 @@ class InviteListView(generic.ListView):
             s1 = set(tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value).values_list('user_id', flat=True))
             s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user_id', flat=True))
             d = s1.difference(s2)
-            items = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value, user_id__in=d)
+            q = Q(status=codes.KYCStatus.PASS_KYC.value, user_id__in=d)
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
             return items
         except Exception, inst:
-            logger.exception("fail to show pass id list:%s" % str(inst))
+            logger.exception("fail to show invite list:%s" % str(inst))
             return None
     
 
@@ -109,13 +180,17 @@ class CompletedInviteListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(CompletedInviteListView, self).get_context_data(**kwargs)
         context['phase_id'] = int(self.request.path.split("/")[4])
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value]).order_by('-created_at')
+            q = Q(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value])
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-created_at')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
@@ -143,13 +218,21 @@ class AmountListView(generic.ListView):
         context['phase_id'] = int(self.request.path.split("/")[4])
         context['form'] = forms_tokenexchange.AmountForm()
         context['token_exchange_info'] = settings.FUND_CONFIG[context['phase_id']]
+        phase_id = settings.CURRENT_FUND_PHASE
+        token_exchange_info = settings.FUND_CONFIG[phase_id]
+        context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
+        context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+            q = Q(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
@@ -159,6 +242,47 @@ class AmountListView(generic.ListView):
             logger.exception("fail to show the amount list:%s" % str(inst))
             return None
 
+class ConfirmListView(generic.ListView):
+    template_name = "newtonadmin/amount-list.html"
+    context_object_name = "items"
+    paginate_by = 100
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(ConfirmListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(ConfirmListView, self).get_context_data(**kwargs)
+        context['phase_id'] = int(self.request.path.split("/")[4])
+        context['form'] = forms_tokenexchange.AmountForm()
+        context['is_confirm'] = True
+        context['token_exchange_info'] = settings.FUND_CONFIG[context['phase_id']]
+        phase_id = settings.CURRENT_FUND_PHASE
+        token_exchange_info = settings.FUND_CONFIG[phase_id]
+        context['total_amount_btc'] = token_exchange_info["total_amount_btc"]
+        context['total_amount_ela'] = token_exchange_info["total_amount_ela"]
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
+        return context
+
+    def get_queryset(self):
+        try:
+            phase_id = self.request.path.split("/")[4]
+            phase_id = int(phase_id)
+            q = Q(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
+            if items:
+                for item in items:
+                    item.user = User.objects.filter(id=item.user_id).first()
+                    item.kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=item.user_id).first()
+            return items
+        except Exception, inst:
+            logger.exception("fail to show the amount list:%s" % str(inst))
+            return None
 
 class CompletedAmountListView(generic.ListView):
     template_name = "newtonadmin/amount-list.html"
@@ -177,13 +301,17 @@ class CompletedAmountListView(generic.ListView):
         context['phase_id'] = int(self.request.path.split("/")[4])
         context['form'] = forms_tokenexchange.AmountForm()
         context['is_completed'] = True
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
-            items = tokenexchange_models.InvestInvite.objects.filter(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
+            q = Q(status=codes.TokenExchangeStatus.CONFIRM_AMOUT.value, phase_id=phase_id)
+            q = build_query_condition(self.request, q)
+            items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
                     item.user = User.objects.filter(id=item.user_id).first()
@@ -240,7 +368,9 @@ class UserReceiveListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(UserReceiveListView, self).get_context_data(**kwargs)
+        is_sent = True if self.request.GET.get('is_sent') else False
         context['phase_id'] = int(self.request.path.split("/")[4])
+        context['is_sent'] = is_sent
         return context
 
     def get_queryset(self):
@@ -248,7 +378,13 @@ class UserReceiveListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             items = []
-            for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
+            is_sent = True if self.request.GET.get('is_sent') else False
+            q = Q(phase_id=phase_id)
+            if is_sent:
+                q &= Q(status=codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value)
+            else:
+                q &= Q(status=codes.TokenExchangeStatus.CONFIRM_AMOUT.value)
+            for item in tokenexchange_models.InvestInvite.objects.filter(q).order_by('-updated_at'):
                 queryset = tracker_models.AddressTransaction.objects.filter(user_id=item.user_id)
                 btc_final_balance = queryset.filter(address=item.receive_btc_address, address_type=codes.CurrencyType.BTC.value).aggregate(Sum("value"))
                 ela_final_balance = queryset.filter(address=item.receive_ela_address, address_type=codes.CurrencyType.ELA.value).aggregate(Sum("value"))
@@ -284,14 +420,18 @@ def confirm_id(request):
         level = int(form.cleaned_data['level'])
         comment = form.cleaned_data['comment']
         item = tokenexchange_models.KYCInfo.objects.get(user_id=user_id, status=codes.KYCStatus.CANDIDATE.value)
-        if pass_tokenexchange:
+        if pass_tokenexchange == 1:
             item.status = codes.KYCStatus.PASS_KYC.value
             item.level = level
             action_id = codes.AdminActionType.PASS_KYC.value
             is_pass = True
-        else:
+        elif pass_tokenexchange == 2:
             item.status = codes.KYCStatus.REJECT.value
             action_id = codes.AdminActionType.REJECT_KYC.value
+            is_pass = False
+        else:
+            item.status = codes.KYCStatus.DENY.value
+            action_id = codes.AdminActionType.DENY_KYC.value
             is_pass = False
         target_user = User.objects.filter(id=user_id).first()
         
@@ -325,12 +465,18 @@ def post_invite(request, phase_id):
             if not form.is_valid():
                 return http.JsonErrorResponse()
             user_id = int(form.cleaned_data['user_id'])
+            kyc_info = tokenexchange_models.KYCInfo.objects.get(user_id=user_id)
             invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user_id=user_id).first()
             if not invite:
                 invite = tokenexchange_models.InvestInvite()
                 invite.user_id = user_id
                 invite.phase_id = int(phase_id)
             invite.status = codes.TokenExchangeStatus.INVITE.value
+            # copy fields to invite table for query
+            invite.kyc_type = kyc_info.kyc_type
+            invite.level = kyc_info.level
+            invite.is_establish_node = kyc_info.is_establish_node
+            invite.country = kyc_info.country
             invite.save()
             action_id = codes.AdminActionType.INVITE.value
             target_user = User.objects.filter(id=user_id).first()
@@ -386,21 +532,21 @@ def post_amount(request, phase_id):
             return http.JsonErrorResponse()
         phase_id = int(phase_id)
         user_id = int(form.cleaned_data['user_id'])
-        assign_btc = int(form.cleaned_data['assign_btc'])
-        assign_ela = int(form.cleaned_data['assign_ela'])
+        assign_btc = float(form.cleaned_data['assign_btc'])
+        assign_ela = float(form.cleaned_data['assign_ela'])
         # Query the available address
-        if assign_btc != 0:
+        if assign_btc > 0:
             btc_address = services_tokenexchange.allocate_btc_address()
         else:
             btc_address = None
-        if assign_ela == 0:
-            ela_address = None
-        else:
+        if assign_ela > 0:
             ela_address = services_tokenexchange.allocate_ela_address()
+        else:
+            ela_address = None
         if not btc_address and not ela_address:
             return http.JsonErrorResponse()
         # save status
-        item = tokenexchange_models.InvestInvite.objects.get(user_id=user_id, status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
+        item = tokenexchange_models.InvestInvite.objects.filter(user_id=user_id, phase_id=phase_id).first()
         item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
         item.assign_ela = assign_ela
         item.assign_btc = assign_btc
@@ -414,7 +560,7 @@ def post_amount(request, phase_id):
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post amount:%s" % str(inst))
-        return http.JsonErrorResponse()    
+        return http.JsonErrorResponse()
 
 
 
@@ -447,7 +593,7 @@ def send_receive_email(request, phase_id):
                 item.ela_value = ela_final_balance
             item.kyc_info = kyc_info
             if services_tokenexchange.send_receive_confirm_notify(request, item):
-                item.status = codes.TokenExchangeStatus.SEND_RECEIVE_AMOUNT_NOTIFY.value
+                item.status = codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value
                 item.save()
                 action_id = codes.AdminActionType.SEND_CONFIRM_EMAIL.value
                 target_user = User.objects.filter(id=item.user_id).first()
@@ -459,3 +605,141 @@ def send_receive_email(request, phase_id):
         return http.JsonErrorResponse()
 
 
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def show_id_detail(request, user_id):
+    """show detail info
+    """
+    try:
+        item = tokenexchange_models.KYCInfo.objects.filter(user_id=user_id).first()
+        if item:
+            if item.id_type:
+                item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+            if item.is_establish_node:
+                item.is_establish_node = convert.get_value_from_choice(item.is_establish_node, tokenexchange_models.ESTABLISH_CHOICE)
+            if item.which_node_establish:
+                item.which_node_establish = convert.get_value_from_choice(item.which_node_establish, tokenexchange_models.NODE_CHOICE)
+            if item.emergency_relationship:
+                item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
+            item.country = COUNTRIES[item.country]
+            item.level_choices = [i+1 for i in range(10)]
+        return render(request, "newtonadmin/id-detail.html", locals())
+    except Exception, inst:
+        logger.exception("fail to post email to investor:%s" % str(inst))
+        return http.JsonErrorResponse()
+
+
+class RejectListView(generic.ListView):
+    """reject id list
+    """
+    template_name = "newtonadmin/id-list.html"
+    context_object_name = "items"
+    paginate_by = settings.PAGE_SIZE
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(RejectListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(RejectListView, self).get_context_data(**kwargs)
+        context['countries_choices'] = COUNTRIES
+        context['title'] = '已驳回'
+        return context
+
+    def get_queryset(self):
+        try:
+            items = []
+            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.REJECT.value)
+            if fields and len(fields) > 0:
+                for item in fields:
+                    if item.id_type:
+                        item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+                    item.country = COUNTRIES[item.country]
+                    items.append(item)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show pass id list:%s" % str(inst))
+            return None
+
+class DenyListView(generic.ListView):
+    """reject id list
+    """
+    template_name = "newtonadmin/id-list.html"
+    context_object_name = "items"
+    paginate_by = settings.PAGE_SIZE
+    
+    def get(self, request, *args, **kwargs):
+        if request.user.is_staff:
+            response = super(DenyListView, self).get(request, *args, **kwargs)
+            return response
+        else:
+            return redirect("/newtonadmin/login/")
+
+    def get_context_data(self, **kwargs):
+        context = super(DenyListView, self).get_context_data(**kwargs)
+        context['title'] = '已拒绝'
+        return context
+
+    def get_queryset(self):
+        try:
+            items = []
+            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.DENY.value)
+            if fields and len(fields) > 0:
+                for item in fields:
+                    if item.id_type:
+                        item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
+                    item.country = COUNTRIES[item.country]
+                    items.append(item)
+            return items
+        except Exception, inst:
+            logger.exception("fail to show pass id list:%s" % str(inst))
+            return None
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def post_confirm_amount(request, phase_id):
+    """confirm assign amount
+    """
+    try:
+        user_list = [int(item) for item in request.POST['user_list'].split(",")]
+        for user_id in user_list:
+            data = {"user_id":user_id}
+            form = forms_tokenexchange.PostInviteForm(data)
+            if not form.is_valid():
+                return http.JsonErrorResponse()
+            user_id = int(form.cleaned_data['user_id'])
+            invite = tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id, user_id=user_id).first()
+            if not invite:
+                invite = tokenexchange_models.InvestInvite()
+                invite.user_id = user_id
+                invite.phase_id = int(phase_id)
+            invite.status = codes.TokenExchangeStatus.CONFIRM_AMOUT.value
+            invite.save()
+            action_id = codes.AdminActionType.CONFIRM_AMOUNT.value
+            target_user = User.objects.filter(id=user_id).first()
+            audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
+            audit_log.save()
+        return http.JsonSuccessResponse()
+    except Exception, inst:
+        logger.exception("fail to post invite:%s" % str(inst))
+        return http.JsonErrorResponse()
+
+@user_passes_test(lambda u: u.is_staff, login_url='/newtonadmin/login/')
+def export_amount_list(request, phase_id):
+    """Export the amount list as csv format
+    """
+    try:
+        response = http.HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="amount-list.csv"'
+        writer = csv.writer(response)
+        writer.writerow([u'邮箱', u'申请BTC数量', u'分配BTC数量', u'申请ELA数量', u'分配ELA数量'])
+        for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
+            user = User.objects.get(id=item.user_id)
+            email = user.email
+            writer.writerow([email, item.expect_btc, item.assign_btc, item.expect_ela, item.assign_ela])
+        return response
+    except Exception, inst:
+        logger.exception("fail to export amount list:%s" % str(inst))
+        raise exception.SystemError500()
+        

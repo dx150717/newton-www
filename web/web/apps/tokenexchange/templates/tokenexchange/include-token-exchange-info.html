@@ -1,0 +1,64 @@
+{% load i18n %}
+{% load utils %}
+
+{% if item.phase_id == 1 %}
+<div class="token-exchange-info">
+    <div class="shadow-item">
+        <div class="text-center">
+            <p class="token-exchange-big-title">{% trans "First-Round Token Exchange" %}</p>
+            <p class="token-exchange-time">{{ token_exchange_info.start_date }} ~ {{ token_exchange_info.end_date }}</p>
+            <p class="token-exchange-time">{% trans "The blockchain token exchange process is not the process of funding, but the one of organization establishment" %}</p>
+        </div>
+        <div class="mt50 table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-sm-3"></th>
+                        <th class="col-sm-3 title">BTC</th>
+                        <th class="col-sm-3 title">ELA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="col-sm-3 title">{% trans "Minimum Amount" %}</th>
+                        <th class="col-sm-3">{{ min_btc }}</th>
+                        <th class="col-sm-3">{{ min_ela }}</th>
+                    </tr>
+                    <tr>
+                        <th class="col-sm-3 title">{% trans "Ratio" %}</th>
+                        <th class="col-sm-3">1&nbsp;BTC&nbsp;=&nbsp;{{ btc_ratio }}&nbsp;NEW</th>
+                        <th class="col-sm-3">1&nbsp;ELA&nbsp;=&nbsp;{{ ela_ratio }}&nbsp;NEW</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% if item.phase_id == 2 %}
+<div class="token-exchange-info">
+    <div class="raw">
+        <div class="item">
+            <div class="text-center">
+                <p class="token-exchange-title">{% trans "Second Token Exchange Info" %}</p>
+                <p class="token-exchange-time">{{ token_exchange_info.start_date }} ~ {{ token_exchange_info.end_date }}</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="text-left">
+                <p class="token-exchange-title">{% trans "Token exchange info and expect" %}</p>
+            </div>
+            <div class="raw">
+                <div class="col-md-6">
+                    <p class="token-exchange-content">{% trans "Min BTC: " %} {{ token_exchange_info.min_btc }}</p>
+                    <p class="token-exchange-content">BTC / NEW: {{ token_exchange_info.btc_ratio }}</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="token-exchange-content">{% trans "Min ELA: " %} {{ token_exchange_info.min_ela }}</p>
+                    <p class="token-exchange-content">ELA / NEW: {{ token_exchange_info.ela_ratio }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

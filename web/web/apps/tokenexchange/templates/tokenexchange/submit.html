@@ -2,9 +2,8 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "KYC" %} | Newton Community</title>
-{% endblock %}
+{% block title %}{% trans "KYC" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 
 {% block header %}
 {% include "header-no-menu.html" %}
@@ -18,38 +17,32 @@
 {% endblock %}
 
 {% block content %}
-<section id="token" class="section-list">
-    <div class="token-title container text-center">
-        <h2>{% trans "KYC Information" %}</h2>
-    </div>
-    
-    <div class="container">
-        <div class="raw">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <p class="text-center"><span class="tr">Please fill in the following information carefully</span></p>
-            </div>
-            <div class="col-sm-2"></div>
-        </div>
-    </div>
-    <div class="container token-form">
-        <div class="raw">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <form id="user_kyc_form" class="form" action="/tokenexchange/post/" method="POST" enctype="multipart/form-data">
-                    {% include "form.html" %}
-                    <div class="raw">
-                        <div class="text-center token-btn">
-                            <button class="form-button" type="submit">Submit</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-sm-2"></div>
+<section class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p class="kyc-info-title">{% trans "Fill in KYC Information" %}</p>
         </div>
     </div>
 </section>
+{% if is_individual %}
+{% include "tokenexchange/include-individual-submit.html" %}
+{% else %}
+{% include "tokenexchange/include-organization-submit.html" %}
+{% endif %}
 {% endblock %}
 {% block js %}
-<script src="{% version "js/tokenexchange.js" %}"></script>
+<script src="{% version "js/tokenexchange.js" %}">
+</script>
+<script>
+    $('input[type=radio][name=selece-individual-or-organization]').change(function() {
+       if (this.value == 'individual') {
+           window.location.href="/tokenexchange/individual/post/";
+       }else if (this.value == 'organization') {
+           window.location.href="/tokenexchange/organization/post/";
+       }
+    });
+</script>
+{% endblock %}
+{% block css %}
+<link href="{% version "css/tokenexchange.css" %}" rel="stylesheet" />
 {% endblock %}

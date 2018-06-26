@@ -41,6 +41,7 @@ urlpatterns = patterns('',
                        url(r'^press/',include('press.urls')),
                        url(r'^faq/',include('faq.urls')),
                        url(r'^ishuman/',include('ishuman.urls')),
+                       url(r'^help/',include('help.urls')),
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),

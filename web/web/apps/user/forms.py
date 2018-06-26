@@ -26,7 +26,7 @@ class CellphoneGroupWidget(MultiWidget):
 
     def decompress(self, value):
         if value:
-            return [value.country_code, value.cellphone]
+            return [value['country_code'], value['cellphone']]
         return [None, None]
 
     def format_output(self, rendered_widgets):
@@ -38,7 +38,7 @@ class CellphoneGroupWidget(MultiWidget):
         new_widgets = [w1, w2]
         return ('''
         <div class="form-inline">
-            <div>%s %s</div>
+            <div>+ %s %s</div>
         </div>''') % tuple(new_widgets)
 
 

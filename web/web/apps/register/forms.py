@@ -13,9 +13,15 @@ class EmailForm(forms.Form):
 
 class PasswordForm(forms.Form):
     password = forms.CharField(widget=forms.PasswordInput(), label=_("Password"), required=True)
-    repassword = forms.CharField(widget=forms.PasswordInput(), label=_("Repassword"), required=True)
+    repassword = forms.CharField(widget=forms.PasswordInput(), label=_("Confirm Password"), required=True)
 
 class GtokenForm(forms.Form):
     gtoken_code = forms.CharField(max_length=100, label=_("Google Authenticator Code"), required=True)
     
-
+class SubmitGtokenForm(forms.Form):
+    email = forms.EmailField(required=True)
+    password = forms.CharField(widget=forms.PasswordInput(), required=True)
+    gtoken_code = forms.CharField(max_length=100, required=True)
+    auth_token = forms.CharField(max_length=100, required=True)
+    gtoken = forms.CharField(max_length=100, required=True)
+    uuid = forms.CharField(max_length=100, required=True)

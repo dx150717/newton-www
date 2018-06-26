@@ -1,29 +1,39 @@
-{% extends "email-template.html" %}
+{% extends "email-kyc-template.html" %}
 {% load i18n %}
 {% load utils %}
 
-
-{% block title %}
-{% if kyc_info.kyc_audit.is_pass %}
-<h1>KYC verification success</h1>
-{% else %}
-<h1>KYC verification rejected</h1>
-{% endif %}
-{% endblock %}
-
 {% block content %}
-<p class="main-color">Dear {{ kyc_info.first_name }},</p>
-<p class="main-color">
-    {% if kyc_info.kyc_audit.is_pass %}
-    Congratulation you have passed Newton KYC verification. Please pay attention to our subsequent notification later on.Best regard
-    Newton team
-    {% else %}
-    We'd like to apologize that you haven't passed Newton KYC verification. The reason is 
-    {{ kyc_info.kyc_audit.comment }},
-    You can check and modify the contents you fill into KYC information page carefully, and try to submit again.
-Thank you 
-Best regard
-Newton team
+    {% if kyc_info.status == codes.KYC_STATUS_PASS_KYC_VALUE %}
+        <p class="newton-title">{% trans "KYC review success" %}</p>
+        <p>{{ kyc_info.first_name }}, {% trans "welcome!" %}</p>
+        <p>{% trans "Congratulations, you have passed Newton KYC reviewing." %}</p>
+        <p>{% trans "Please pay attention to our subsequent notification later on." %}</p>
     {% endif %}
-</p>
+
+    {% if kyc_info.status == codes.KYC_STATUS_REJECT_VALUE %}
+        <p class="newton-title">{% trans "KYC review rejected" %}</p>
+        <p>{% trans "We'd like to apologize that you haven't passed Newton KYC reviewing." %}</p>
+
+        {% if is_show_comment %}
+            <p>{% trans "Reason" %}: {{ kyc_info.kyc_audit.comment }}</p>
+        {% endif %}
+
+        <p>{% trans "You can check and modify the contents you fill into KYC information page carefully, and try to submit again." %}</p>
+        <p class="pad-t20"><a href="{{ target_url }}" class="button-1">{% trans "Fill in KYC information again" %}</a></p>
+
+    {% endif %}
+
+    {% if kyc_info.status == codes.KYC_STATUS_DENY_VALUE %}
+        <p class="newton-title">{% trans "KYC review denied" %}</p>
+        <p>{% trans "We'd like to apologize that you haven't passed Newton KYC reviewing." %}</p>
+
+        {% if is_show_comment %}
+            <p>{% trans "Reason" %}: {{ kyc_info.kyc_audit.comment }}</p>
+        {% endif %}
+
+        <p class="pad-t10">{% trans "Best regard" %}</p>
+        <p class="pad-t10">{% trans "Newton team" %}</p>
+        <p class="pad-t30">{% trans "If you received this email by mistake, simply delete it." %}</p>
+
+    {% endif %}
 {% endblock %}

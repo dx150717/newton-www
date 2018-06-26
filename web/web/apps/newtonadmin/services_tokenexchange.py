@@ -5,9 +5,12 @@ import logging
 from hashlib import sha256
 
 from django.conf import settings
+from django.utils import translation
 from django.template import Template, Context, loader
+from django.contrib.auth.models import User
+from django.utils.translation import ugettext as _
 
-from verification import services
+from verification import services as verification_services
 from tasks import task_email
 from tokenexchange import models as tokenexchange_models
 from config import codes
@@ -31,6 +34,10 @@ def __load_address_from_file(filename, coin):
         if is_valid:
             all_address.append(line)
     return all_address
+
+def __select_language(user):
+    if hasattr(user, 'userprofile'):
+        translation.activate(user.userprofile.language_code)
 
 def allocate_btc_address():
     """Allocate the BTC address from address pool
@@ -69,13 +76,16 @@ def send_distribution_letter(user, request):
         # build the email body
         email = user.email
         email_type = codes.EmailType.TEXCHANGE_DISTRIBUTE_AMOUNT_NOTIFY.value
-        verification = services.generate_verification_uuid(email, email_type)
+        verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
+        # select language by user's prefer language
+        __select_language(user)
         target_url = "%s/tokenexchange/%s/" % (settings.NEWTON_HOME_URL, str(user.username))
-        subject = "NewtonProject Notification: KYC information is confirmed"
+        security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
+        subject = _("KYC information is confirmed")
         template = loader.get_template("newtonadmin/distribution-letter.html")
-        context = Context({"targetUrl":target_url,"request":request})
+        context = Context({"targetUrl": target_url,"request": request, "security_url": security_url})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
@@ -92,15 +102,24 @@ def send_kycinfo_notify(kyc_info, request):
         # build the email body
         email = kyc_info.user.email
         email_type = codes.EmailType.TEXCHANGE_CONFIRM_KYC.value
-        verification = services.generate_verification_uuid(email, email_type)
+        verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
+        # select language by user's prefer language
+        user = kyc_info.user
+        __select_language(user)
+        # build email
         if kyc_info.kyc_audit.is_pass:
-            subject = "Newton Notification: You have passed the Newton KYC"
+            subject = _("You have passed the Newton KYC")
         else:
-            subject = "Newton Notification: You are not passed the Newton KYC"
+            subject = _("You are not passed the Newton KYC")
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
-        context = Context({"request":request, "kyc_info": kyc_info})
+        target_url = "%s/tokenexchange/" % (settings.NEWTON_HOME_URL)
+        security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
+        is_show_comment = False
+        if kyc_info.kyc_audit.comment.strip():
+            is_show_comment = True
+        context = Context({"request":request, "kyc_info": kyc_info, 'security_url': security_url, "target_url": target_url, "codes": codes, "is_show_comment":is_show_comment})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
@@ -117,13 +136,18 @@ def send_apply_amount_notify(invite_info, request):
         # build the email body
         email = invite_info.user.email
         email_type = codes.EmailType.TEXCHANGE_INVITE_NOTIFY.value
-        verification = services.generate_verification_uuid(email, email_type)
+        verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
+        # select language by user's prefer language
+        user = invite_info.user
+        __select_language(user)
+        # build email
         target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWTON_HOME_URL, invite_info.id)
-        subject = "Newton Notification: Fillout your expect amount"
+        security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
+        subject = _("Fillout your expect amount")
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
-        context = Context({"target_url": target_url, "request": request, "invite_info": invite_info})
+        context = Context({"target_url": target_url, "request": request, "invite_info": invite_info, "security_url": security_url})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
@@ -140,17 +164,22 @@ def send_receive_confirm_notify(request, receive_info):
         # build the email body
         email = receive_info.user.email
         email_type = codes.EmailType.TEXCHANGE_RECEIVE_NOTIFY.value
-        verification = services.generate_verification_uuid(email,email_type)
+        verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
+            logger.error("fail to generate verification object.")
             return False
-        subject = "Newton Notification: Receive Amount Notification!"
+        # select language by user's prefer language
+        user = receive_info.user
+        __select_language(user)
+        subject = _("Receive Transferring Notification")
         template = loader.get_template("newtonadmin/receive-amount-notify-letter.html")
-        context = Context({"request":request, "receive_info":receive_info})
+        security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
+        context = Context({"request": request, "receive_info": receive_info, "security_url": security_url})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
         task_email.send_email.delay(subject, html_content, from_email, [email])
         return True
     except Exception, inst:
-        logger.exception("fail to send the receive amout notify:%s" %str(inst))
+        logger.exception("fail to send the receive amout notify:%s" % str(inst))
         return False

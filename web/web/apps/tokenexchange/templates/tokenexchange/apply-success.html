@@ -4,9 +4,8 @@
 {% block header %}
 {% include "header-no-menu.html" %}
 {% endblock %}
-{% block require_title %}
-<title>{% trans "KYC" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "KYC" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 {% block footer %}
 {% include "footer-simple.html" %}
 {% endblock %}
@@ -18,7 +17,10 @@
 {% block content %}
 <section id="success" class="section-list">
     <div class="container text-center">
-        <p class="title">{% trans "Apply Success!" %}</p>
+        <p class="title">{% trans "You have successfully filled in the expected amount" %}</p>
+        <p class="content">
+        	<a class="normal .back-button" href="/user/">{% trans "go to the user center" %}</a>
+        </p>
     </div>
 </section>
 {% endblock %}

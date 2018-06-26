@@ -2,9 +2,8 @@
 {% load i18n %}
 {% load utils %}
 
-{% block require_title %}
-<title>{% trans "KYC" %} | {% trans "Newton Community" %}</title>
-{% endblock %}
+{% block title %}{% trans "KYC" %}{% endblock %}
+{% block site_name %}{% trans "Newton Community" %}{% endblock %}
 
 {% block header %}
 {% include "header-no-menu.html" %}
@@ -20,8 +19,11 @@
 {% block content %}
 <section id="success" class="section-list">
     <div class="container text-center">
-        <p class="title">{% trans "Submit Success!" %}</p>
-        <p class="content">{% trans "您的KYC信息正在审核，请耐心等待。" %}</p>
+        <p class="title">{% trans "Successfully submitted" %}</p>
+        <p class="content">{% trans "Submitted KYC information successfully! We will send you reviewing result by email in a few days." %}</p>
+        <p class="content">
+            <a class="normal back-button" href="/user/">{% trans "go to the user center" %}</a>
+        </p>
     </div>
 </section>
 {% endblock %}
@@ -30,7 +32,4 @@
 {% endblock %}
 
 {% block inline_js %}
-<script type="text/javascript">
-    $("#normal").addClass("display-none");
-</script>
 {% endblock %}

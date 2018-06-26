@@ -246,7 +246,7 @@ msgid "Request Time Out"
 msgstr "通信タイムアウト"
 
 #: web/apps/login/views.py:70
-msgid "No Auth_token"
+msgid "No Auth"
 msgstr ""
 
 #: web/apps/login/views.py:73
@@ -425,7 +425,7 @@ msgid "press"
 msgstr ""
 
 #: web/apps/register/forms.py:16 web/apps/reset/forms.py:10
-msgid "Repassword"
+msgid "Confirm Password"
 msgstr "新たなパスワード"
 
 #: web/apps/register/services.py:27
@@ -524,7 +524,7 @@ msgstr "次"
 #: web/apps/register/templates/register/post-success.html:23
 #: web/apps/reset/templates/reset/reset-success.html:21
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
-msgid "Submit Success!"
+msgid "Successfully submitted!"
 msgstr "提出完了！"
 
 #: web/apps/register/templates/register/post-success.html:24
@@ -614,8 +614,7 @@ msgstr ""
 
 #: web/apps/reset/templates/reset/reset-success.html:22
 msgid ""
-"We have sent an email to your registered email address to complete the "
-"password reset procedure."
+"We have sent you an email. Please go to your registered email inbox to check and complete the registration process."
 msgstr ""
 "登録したメールアドレスにEメールを送信しました。確認してパスワードのリセットプ"
 "ロセスを完了してください。"

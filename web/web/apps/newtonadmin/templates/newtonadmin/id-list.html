@@ -7,14 +7,15 @@
 {% endblock %}
 
 {% block content %}
-<section id="newtonadmin" class="section-list">
+<section class="newtonadmin" class="section-list">
     <div class="container">
-        <div class="raw table-responsive content">
+        <div class="table-responsive content">
+            <h3>{{ title }}</h3>
             <table class="table">
-                <caption class="text-center">审核身份</caption>
                 <thead>
                     <tr>
-                        <th>姓名</th>
+                        <th>名称</th>
+                        <th>类型</th>
                         <th>介绍</th>
                         <th>申请时间</th>
                         <th>操作</th>
@@ -24,19 +25,59 @@
                     {% for item in items %}
                     <tr>
                         <td>
-                            <p>{% trans "Name" %} : {{ item.first_name }} &nbsp; {{ item.last_name }}</p>
-                            <p>{% trans "Email" %} :  {{ item.user.email }}</p>
-                            <p>{% trans "Cellphone" %}: +{{ item.country_code }} {{ item.cellphone }}</p>
-                            <p>{% trans "Country" %}:{{ item.country }}</p>
-                            <p>{% trans "Emergency Contact Name" %}:{{ item.emergency_contact_first_name }}{{ item.emergency_contact_last_name }}</p>
-                            <p>{% trans "Emergency Contact Cellphone" %}:+{{ item.emergency_contact_country_code }} {{ item.emergency_contact_cellphone }}</p>
-                            <p>{% trans "RelationShip" %}:{{ item.relationships_with_emergency_contacts }}</p>
-                            <p>{% trans "Describe yourself & how you can help as a community member" %}:{{ item.how_to_contribute }}</p>
-                            <p>{% trans "Tell us your understanding about Newton" %}:{{ item.what_is_newton }}</p>
+                            {% if item.kyc_type == 1 %}
+                            <p>{{ item.first_name }} &nbsp; {{ item.last_name }}</p>
+                            {% else %}
+                            <p>{{ item.orgnization_name }}</p>
+                            {% endif %}
                         </td>
                         <td>
+                            {% if item.kyc_type == 1 %}
+                            个人
+                            {% else %}
+                            机构
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if item.kyc_type == 1 %}
                             <p>
-                                <img src="{{ item.id_card.url }}"/>
+                                <label>{% trans "Cellphone" %}:</label>{{ item.country_code }} {{ item.cellphone }}
+                            </p>
+                            <p>
+                                <label>{% trans "Country" %}:</label>{{ item.country }}
+                            </p>
+                            <p>
+                                <label>{% trans "City" %}:</label>{{ item.city }}
+                            </p>
+                            <p>
+                                <label>{% trans "Address" %}:</label>{{ item.location }}
+                            </p>
+                            <p>
+                                <label>{% trans "ID Type" %}:</label>{{ item.id_type }}
+                            </p>
+                            <p>
+                                <label>{% trans "ID Number" %}:</label>{{ item.id_number }}
+                            </p>
+                            {% else %}
+                            <p>机构代码:{{ item.orgnization_code }}</p>
+                            {% if item.orgnization_certificate1 %}
+                            <p>机构资格证书1:<img src="{{ item.orgnization_certificate1.url }}" alt=""></p>
+                            {% else %}
+                            <p>机构资格证书1:-</p>
+                            {% endif %}
+                            {% if item.orgnization_certificate2 %}
+                            <p>机构资格证书2:<img src="{{ item.orgnization_certificate2.url }}" alt=""></p>
+                            {% else %}
+                            <p>机构资格证书2:-</p>
+                            {% endif %}
+                            <p>注册国家:{{ item.country }}</p>
+                            <p>联系人姓名:{{ item.first_name }} &nbsp; {{ item.last_name }} &nbsp; </p>
+                            <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
+                            {% endif %}
+                            <p>
+                                {% if item.id_card %}
+                                <img src="{{ item.id_card.url }}" style="width: 300px"/>
+                                {% endif %}
                             </p>
                         </td>
                         
@@ -45,13 +86,16 @@
                                 {{ item.updated_at|date:"Y-m-d H:i:s"}}
                             </p>                            
                         </td>
-
                         <td>
+                            {% if is_idlist %}
                             <p>
-                                <a href="#" class="btn btn-default" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
+                                <a href="#" class="btn btn-danger" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
+                            </p>
+                            {% endif %}
+                            <p>
+                                <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-primary" target="_blank">详情</a>
                             </p>
                         </td>
-                        
                     </tr>
                     {% endfor %}
                     
@@ -68,6 +112,11 @@
             {% endif %}
             </div>
             {% endif %}
+            {% if not items %}
+            <div class="well text-center">
+                还没有数据
+            </div>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -77,31 +126,40 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">ID审核</h4>
+                <h4 class="modal-title">KYC审核</h4>
             </div>
             <div class="modal-body">
-                <form method="POST" action="#" id="id_form">
-                    <p>
-                        <label>评级</label>
-                        <select name="level" id="level">
-                            <option value="1">普通</option>
-                            <option value="2">良好</option>
-                            <option value="3">优秀</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label>注释</label>
-                        <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
-                    </p>
-                    <p>
-                        <button class="btn btn-default" type="button" id="pass_button">通过</button>
-                        <button class="btn btn-default" type="button" id="reject_button">拒绝</button>
-                    </p>
+                <form method="POST" action="#" id="id_form" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">评分</label>
+                        <div class="col-sm-10">
+                            <select name="level" id="level">
+                                {% for level in level_choices %}
+                                <option value="{{ level }}">{{ level }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">注释</label>
+                        <div class="col-sm-10">
+                            <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <button class="btn btn-danger" type="button" id="pass_button">通过</button>
+                            <button class="btn btn-default" type="button" id="reject_button">驳回</button>
+                            <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->             
+
 
 {% endblock %}
 

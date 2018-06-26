@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
+import time
+import datetime
 
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
@@ -9,14 +11,20 @@ from django.db.models import Sum
 from django.contrib.auth.models import User
 from django.conf import settings
 import pyotp
+from django_countries.data import COUNTRIES
+from django.utils.timezone import utc
 
 from utils import http
+from utils import convert
+from utils import exception
 from config import codes
 from . import forms
 from . import models
 import decorators
 from tokenexchange import forms as token_exchange_forms
 from tokenexchange import models as tokenexchange_models
+from tokenexchange import services as tokenexchange_services
+
 from tracker import models as tracker_models
 
 logger = logging.getLogger(__name__)
@@ -31,52 +39,42 @@ def show_user_index_view(request):
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()
     if kycinfo:
         data = {}
-        data['first_name'] = kycinfo.first_name
-        data['last_name'] = kycinfo.last_name
-        data['country'] = kycinfo.country
-        data['id_number'] = kycinfo.id_number
-        data['id_card'] = kycinfo.id_card
-        data['cellphone_group'] = kycinfo.country_code + kycinfo.cellphone
-        data['location'] = kycinfo.location
-        data['how_to_contribute'] = kycinfo.how_to_contribute
-        data['what_is_newton'] = kycinfo.what_is_newton
-        data['emergency_contact_first_name'] = kycinfo.emergency_contact_first_name
-        data['emergency_contact_last_name'] = kycinfo.emergency_contact_last_name
-        data['cellphone_of_emergency_contact'] = kycinfo.emergency_contact_country_code + kycinfo.emergency_contact_cellphone
-        data['relationships_with_emergency_contacts'] = kycinfo.relationships_with_emergency_contacts
-        kyc_form = token_exchange_forms.KYCInfoForm(initial=data)
+        data = kycinfo.__dict__
+        data['cellphone_group'] = {"country_code":kycinfo.country_code, "cellphone":kycinfo.cellphone}
+        data['cellphone_of_emergency_contact'] ={"country_code":kycinfo.emergency_contact_country_code, "cellphone":kycinfo.emergency_contact_cellphone}
+        if data['id_type']:
+            data['id_type'] = convert.get_value_from_choice(data['id_type'], tokenexchange_models.ID_CHOICES)
+        if data['is_establish_node']:
+            data['is_establish_node'] = convert.get_value_from_choice(data['is_establish_node'], tokenexchange_models.ESTABLISH_CHOICE)
+        if data['which_node_establish']:
+            data['which_node_establish'] = convert.get_value_from_choice(data['which_node_establish'], tokenexchange_models.NODE_CHOICE)
+        data['country'] = COUNTRIES[data['country']]
+        if data['emergency_country']:
+            data['emergency_country'] = COUNTRIES[data['emergency_country']]
+        if data['emergency_relationship']:
+            data['emergency_relationship'] = convert.get_value_from_choice(data['emergency_relationship'], tokenexchange_models.RELATIONSHIP_CHOICE)
+        base_form = token_exchange_forms.KYCBaseForm(initial=data)
+        profile_form = token_exchange_forms.KYCProfileForm(initial=data)
+        contribute_form = token_exchange_forms.ContributeForm(initial=data)
+        emergency_form = token_exchange_forms.EmergencyForm(initial=data)
+        organization_base_form = token_exchange_forms.OrganizationBaseForm(initial=data)
+        organization_profile_form = token_exchange_forms.OrganizationProfileForm(initial=data)
+        # check whether reject or deny
+        is_deny = False
+        if kycinfo.level == codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE:
+            is_deny == True
     kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).last()
+    if kycaudit:
+        kycaudit_comment = False
+        if kycaudit.comment.replace(" ", ""):
+            kycaudit_comment = kycaudit.comment
     items = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id,status__gte=codes.TOKEN_EXCHANGE_STATUS_SEND_INVITE_NOTIFY_VALUE)
     for item in items:
         item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]
+        if item.status >= codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value:
+            item.process_status = 3
+        elif item.expect_btc or item.expect_ela:
+            item.process_status = 2
+    # check whether out deadline
+    is_deadline = tokenexchange_services.is_beyond_kyc_deadline()
     return render(request, "user/index.html", locals())
-
-@login_required
-def show_token_exchange_progress_view(request, phase_id):
-    """
-    query user who pass the kyc, than render his progress information.
-    """
-    try:
-        user = request.user
-        kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()
-        kycaudit = tokenexchange_models.KYCAudit.objects.filter(user_id=user.id).first()
-        item = tokenexchange_models.InvestInvite.objects.filter(user_id=user.id, phase_id=phase_id).first()
-        btc_final_balance = 0
-        ela_final_balance = 0
-        if item:
-            token_exchange_info = settings.FUND_CONFIG[item.phase_id]
-            if item.receive_btc_address:
-                btc_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_btc_address,address_type=codes.CurrencyType.BTC.value).aggregate(Sum('value'))
-                btc_final_balance =  btc_final_balance.get("value__sum")
-            if item.receive_ela_address:
-                ela_final_balance = tracker_models.AddressTransaction.objects.filter(address=item.receive_ela_address,address_type=codes.CurrencyType.ELA.value).aggregate(Sum('value'))
-                ela_final_balance = ela_final_balance.get("value__sum")
-        if btc_final_balance and btc_final_balance != 0:
-            item.btc_final_balance = btc_final_balance
-        if ela_final_balance and ela_final_balance != 0:
-            item.ela_final_balance = ela_final_balance
-        return render(request, "user/token-exchange-progress.html", locals())
-    except Exception,inst:
-        logger.exception("error show progress %s" %str(inst))
-        return http.HttpResponseServerError()
-    

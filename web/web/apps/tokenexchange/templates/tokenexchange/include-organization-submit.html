@@ -1,0 +1,234 @@
+{% load i18n %}
+{% load utils %}
+<section class="section-list kyc">
+    <div class="raw">
+                
+        <form class="form-horizontal" action="/tokenexchange/organization/post/" method="POST" enctype="multipart/form-data" id="id_organization_form">
+            <div class="container form-container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">{% trans "Entity Type" %}</h3>
+                    </div>
+                    <p class="entity-container">
+                        <a href="/tokenexchange/individual/post/" class="item">
+                            <input type="radio" name="selece-individual-or-organization" id="selece-individual-or-organization" value="individual">
+                            {% trans "Individual" %}
+                        </a>
+                        <a href="/tokenexchange/organization/post/" class="item">
+                            <input type="radio" name="selece-individual-or-organization" id="selece-individual-or-organization" checked="on" value="organization">
+                            {% trans "Organization" %}
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-gray">
+                <div class="container form-container">
+                    <div class="panel panel-default bg-gray">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">{% trans "Basic Information" %}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group full-name col-sm-12"> 
+                                <span>
+                                    <label for="id_orgnization_name" class="control-label col-sm-3 fullname-title">
+                                        {% trans "Organization Name" %}<span class="red-color">*</span>
+                                    </label>
+                                    <input class="form-control" id="id_orgnization_name" maxlength="128" name="orgnization_name" placeholder="{% trans 'Organization Name' %}" type="text">
+                                </span>
+                                <span class="last-name">
+                                    <label for="id_orgnization_code" class="control-label organization-code">
+                                        {% trans "Organization Code" %}<span class="red-color">*</span>
+                                    </label>
+                                    <input class="form-control" id="id_orgnization_code" maxlength="128" name="orgnization_code" placeholder="{% trans 'Organization Code' %}" type="text">
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_orgnization_certificate" class="control-label col-sm-3">
+                                    {% trans "Organization Certificate" %}<span class="red-color">*</span>
+                                </label>
+                                <div class="col-sm-9">
+                                    <input class="form-control select-file" id="id_orgnization_certificate1" name="orgnization_certificate1" placeholder="{% trans "Organization Certificate" %}" type="file">
+                                    <input class="form-control select-file" id="id_orgnization_certificate1" name="orgnization_certificate1" placeholder="{% trans "Organization Certificate" %}" type="file" style="display: inline;">
+                                    <p class="small">{% trans "Upload at least one file, only jpeg, jpg and png file within 5M" %}</p>
+                                </div>
+                            </div>
+                            {% include "tokenexchange/include-form-country.html" with form=organization_country_form %}
+                            <div class="form-group full-name col-sm-12"> 
+                                <span>
+                                    <label for="id_first_name" class="control-label col-sm-3 fullname-title">
+                                        {% trans "Contact Name" %}<span class="red-color">*</span>
+                                    </label>
+                                    {% if is_chinese %}
+                                    <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
+                                    <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "First Name" %}" type="text">
+                                    {% else %}
+                                    <input class="form-control" id="id_first_name" maxlength="128" name="first_name" placeholder="{% trans "First Name" %}" type="text">
+                                    <input class="form-control" id="id_last_name" maxlength="128" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
+                                    {% endif %}
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_cellphone_group" class="control-label col-sm-3">
+                                    {% trans "Contact Phone" %} <span class="red-color">*</span>
+                                </label>
+                                <div class="col-sm-9">
+                                    <div class="form-inline">
+                                        <input class="form-control area-code-input" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text"> 
+                                        <input class="form-control phone-number-input" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container form-container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">{% trans "Organization Introduction" %}</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group with-attachment">
+                                <label for="id_personal_profile" class="control-label col-sm-3">
+                                    {% trans "Organization Introduction" %}<span class="red-color">*</span>
+                                </label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "The time you were involved in blockchain industry. Your understanding on blockchain industry. The strategy in the future." %}" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <label for="id_personal_profile_attachment" class="control-label col-sm-3">
+                                </label>
+                            <div class="col-sm-9">
+                                <label for="id_personal_profile_attachment" class="control-label attachment-title">
+                                    {% trans "Attachment" %}
+                                </label>
+                                <div class="attachment-div">
+                                <input class="form-control  select-file" id="id_personal_profile_attachment" name="personal_profile_attachment" placeholder="Attachment" type="file">
+                                <p class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_wechat_platform_name" class="control-label col-sm-3">
+                                {% trans "Wechat Platform Name" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <input class="form-control normal" id="wechat_platform_name" maxlength="128" name="wechat_platform_name" placeholder="{% trans "Wechat Platform Name" %}" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_twitter" class="control-label col-sm-3">
+                                {% trans "Twitter" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <input class="form-control normal" id="id_twitter" maxlength="128" name="twitter" placeholder="{% trans "Twitter" %}" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_facebook" class="control-label col-sm-3">
+                                {% trans "Facebook" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <input class="form-control normal" id="id_facebook" maxlength="128" name="facebook" placeholder="{% trans "Facebook" %}" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_other_social_account" class="control-label col-sm-3">
+                                {% trans "Other Social Media" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <input class="form-control normal" id="id_other_social_account" maxlength="128" name="other_social_account" placeholder="{% trans "Other Social Media" %}" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray">
+                <div class="container form-container">
+                    <div class="panel panel-default bg-gray">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center contribute-title">{% trans "How to Contribute" %}</h3>
+                            <p class="red-color contribute-tip">{% trans "This section is very important to KYC review, please fill in carefully." %}</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Understanding of Newton" %}<span class="red-color">*</span>
+                                </label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Understanding of Newton" %}" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group with-attachment">
+                                <label for="id_done_for_newton" class="control-label col-sm-3 with-attachment">
+                                    {% trans "Contribution You Have Made to Newton" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Contribution You Have Made to Newton" %}" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_done_for_newton_attachment" class="control-label col-sm-3">
+                                </label>
+                                <div class="col-sm-9">
+                                    <label for="id_done_for_newton_attachment" class="control-label attachment-title">
+                                        {% trans "Attachment" %}
+                                    </label>
+                                    <div class="attachment-div">
+                                        <input class="form-control select-file" id="id_done_for_newton_attachment" name="done_for_newton_attachment" placeholder="Attachment" type="file">
+                                        <p class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_do_for_newton" class="control-label col-sm-3">
+                                    {% trans "Contribution You Will Make to Newton" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" cols="40" id="id_do_for_newton" name="do_for_newton" placeholder="{% trans "Contribution You Will Make to Newton" %}" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_is_establish_node" class="control-label col-sm-3">
+                                    {% trans "Do you want to establish a Newton node ?" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <input type="radio" name="is_establish_node" checked="" value="1" onclick="openNode()">{% trans "Yes" %}
+                                    <input type="radio" name="is_establish_node" onclick="closeNode()" value="2">{% trans "No" %}
+                                </div>
+                            </div>
+                            <div id="id_which_node" class="form-group">
+                                <label for="id_which_node_establish" class="control-label col-sm-3">
+                                    {% trans "Which type of node ?" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
+                                        <option value="1" selected="selected">{% trans "Select Node" %}</option>
+                                        <option value="1">{% trans "Full Node" %}</option>
+                                        <option value="2">{% trans "Media Node" %}</option>
+                                        <option value="3">{% trans "Technology Node" %}</option>
+                                        <option value="4">{% trans "Operation Node" %}</option>
+                                    </select>
+                                    <span class="small">{% trans "Note: Media node is the node where medias help broadcast Newton, technology node is the one where people develop various kind of DAPP or other technologies in Newton ecosystem, operation node is the one which helps maintain and develop Newton communities, and full node is the one which integrates functions of at least two aforementioned nodes." %}
+                                </div>
+                            </div>
+                            <div id="id_how_node" class="form-group">
+                                <label for="id_establish_node_plan" class="control-label col-sm-3">
+                                    {% trans "Plan of node establishment" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Plan of node establishment" %}" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="raw">
+                <div class="text-center token-btn">
+                    <button class="form-button" type="submit">{% trans "Submit" %}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
