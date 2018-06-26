@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-26 03:50+0000\n"
+"POT-Creation-Date: 2018-06-26 05:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -334,6 +334,7 @@ msgstr "登录"
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:6
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/pending.html:6
@@ -1305,24 +1306,24 @@ msgstr "ELA 数量"
 msgid "Received your KYC information"
 msgstr ""
 
-#: web/apps/tokenexchange/views.py:73
+#: web/apps/tokenexchange/views.py:75
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
-#: web/apps/tokenexchange/views.py:246
+#: web/apps/tokenexchange/views.py:248
 msgid "You have applied."
 msgstr "您已提交过申请。"
 
-#: web/apps/tokenexchange/views.py:250 web/apps/tokenexchange/views.py:256
+#: web/apps/tokenexchange/views.py:252 web/apps/tokenexchange/views.py:258
 msgid "You must fill in at least one."
 msgstr "至少填写BTC或者ELA中的一种。"
 
-#: web/apps/tokenexchange/views.py:258
+#: web/apps/tokenexchange/views.py:260
 #, python-format
 msgid "The quantity of BTC must be equal or more than %s."
 msgstr "BTC的数量必须大于或等于%s"
 
-#: web/apps/tokenexchange/views.py:261
+#: web/apps/tokenexchange/views.py:263
 #, python-format
 msgid "The quantity of ELA must be equal or more than %s."
 msgstr "ELA的数量必须大于或等于%s"
@@ -1342,6 +1343,7 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:5
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:24
 #: web/apps/user/templates/user/index.html:34
@@ -1610,11 +1612,11 @@ msgstr "申请信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:13
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:15
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:22
 msgid "Expected BTC amount"
 msgstr "申请 BTC 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:20
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:22
 msgid "Expected ELA amount"
 msgstr "申请 ELA 数量"
 
@@ -1778,14 +1780,21 @@ msgstr "申请KYC"
 msgid "Your KYC has been denied. Please don't submit again."
 msgstr "您的KYC审核已被拒绝，请不要重复提交。"
 
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:23
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:24
+msgid ""
+"Go to <a href='/user/' style='text-decoration: underline'>User Center</a>"
+msgstr "请前往<a href='/user/' style='text-decoration: underline'>用户中心</a>"
+
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:22
 msgid "KYC deadline has expired."
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:23
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:24
-msgid "Go to <a href='/user/'>User Center</a>"
-msgstr "请前往<a href='/user/'>用户中心</a>"
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:22
+msgid "Your KYC has been submitted. Please don't submit again."
+msgstr "您已提交过KYC信息，请不要重复提交。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:22
 msgid "Your KYC has passed. Please don't submit again."
