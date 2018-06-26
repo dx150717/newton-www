@@ -95,7 +95,7 @@ FUND_CONFIG = {
         'end_date': '2018-07-20',
         'ela_ratio': 1000,
         'min_ela': 100,
-        'btc_ratio': 100000,
+        'btc_ratio': 2000000,
         'min_btc': 1,
         'kyc_deadline': '2018-07-20',
         'total_amount_btc': 2500,

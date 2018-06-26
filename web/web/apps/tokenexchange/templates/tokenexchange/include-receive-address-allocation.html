@@ -9,7 +9,7 @@
     {% if item.expect_btc or item.expect_ela %}
         {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
             {% if not is_deadline %}
-                <p class="allocated-tips text-danger">{% trans "* Please transfer your token before deadline of first-round token exchange." %}</p>
+                <p class="allocated-tips text-danger">{% trans "* Please transfer your token before deadline of second-round token exchange." %}</p>
                     {% if item.expect_btc and item.expect_ela %}
                         <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%} {{item.assign_btc}} BTC {% trans "and" %} {{item.assign_ela}} ELA {% trans "to below addresses. DO NOT transfer BTC and ELA amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
                     {% else %}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-26 06:01+0000\n"
+"POT-Creation-Date: 2018-06-26 07:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -334,8 +334,8 @@ msgstr "登录"
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:6
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:6
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/pending.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/second-index.html:6
@@ -1343,8 +1343,8 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:5
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:5
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:5
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:5
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:24
 #: web/apps/user/templates/user/index.html:34
 msgid "Token Exchange"
@@ -1557,7 +1557,7 @@ msgstr "分配信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:12
 msgid ""
-"* Please transfer your token before deadline of first-round token exchange."
+"* Please transfer your token before deadline of second-round token exchange."
 msgstr "* 请于本轮通证交换截止日期前转币。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
@@ -1654,8 +1654,8 @@ msgstr "总计"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:8
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:7
-msgid "First-Round Token Exchange"
-msgstr "第一轮通证交换"
+msgid "Second-Round Token Exchange"
+msgstr "第二轮通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:10
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:9
@@ -1782,8 +1782,8 @@ msgstr "KYC审核被拒绝！"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:24
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:24
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:24
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:24
 msgid ""
 "Go to <a href='/user/' style='text-decoration: underline'>User Center</a>"
 msgstr "请前往<a href='/user/' style='text-decoration: underline'>用户中心</a>"
@@ -1792,13 +1792,13 @@ msgstr "请前往<a href='/user/' style='text-decoration: underline'>用户中�
 msgid "KYC deadline has expired!"
 msgstr "KYC已截止！"
 
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:22
-msgid "KYC Submitted!"
-msgstr "KYC已提交！"
-
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:22
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:22
 msgid "KYC Passed!"
 msgstr "KYC已通过审核！"
+
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:22
+msgid "KYC Submitted!"
+msgstr "KYC已提交！"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:5
 msgid "TOKENEXCHANGE"
