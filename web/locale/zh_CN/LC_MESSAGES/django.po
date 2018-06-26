@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-26 05:34+0000\n"
+"POT-Creation-Date: 2018-06-26 06:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1777,11 +1777,11 @@ msgid "Apply"
 msgstr "申请KYC"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:22
-msgid "Your KYC has been denied. Please don't submit again."
-msgstr "您的KYC审核已被拒绝，请不要重复提交。"
+msgid "KYC Denied!"
+msgstr "KYC审核被拒绝！"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:24
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:23
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:24
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:24
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:24
 msgid ""
@@ -1789,16 +1789,16 @@ msgid ""
 msgstr "请前往<a href='/user/' style='text-decoration: underline'>用户中心</a>"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:22
-msgid "KYC deadline has expired."
-msgstr ""
+msgid "KYC deadline has expired!"
+msgstr "KYC已截止！"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-submit-success.html:22
-msgid "Your KYC has been submitted. Please don't submit again."
-msgstr "您已提交过KYC信息，请不要重复提交。"
+msgid "KYC Submitted!"
+msgstr "KYC已提交！"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-success.html:22
-msgid "Your KYC has passed. Please don't submit again."
-msgstr "您已通过KYC审核，请不要重复提交。"
+msgid "KYC Passed!"
+msgstr "KYC已通过审核！"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:5
 msgid "TOKENEXCHANGE"
@@ -7175,3 +7175,12 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Your KYC has been denied. Please don't submit again."
+#~ msgstr "您的KYC审核已被拒绝，请不要重复提交。"
+
+#~ msgid "Your KYC has been submitted. Please don't submit again."
+#~ msgstr "您已提交过KYC信息，请不要重复提交。"
+
+#~ msgid "Your KYC has passed. Please don't submit again."
+#~ msgstr "您已通过KYC审核，请不要重复提交。"

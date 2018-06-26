@@ -17,14 +17,17 @@
 {% endblock %}
 
 {% block content %}
-<section id="register" class="section-list">
-    <div class="container text-center" style="padding-top:300px; font-size: 40px; color: #333">
-        <p>{% trans "KYC deadline has expired." %}</p>
-        <p class="content" style="font-size: 18px; color: unset;">
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <p class="title">{% trans "KYC deadline has expired!" %}</p>
+        <p class="content">
             {% trans "Go to <a href='/user/' style='text-decoration: underline'>User Center</a>" %}
         </p>
     </div>
-</section><!-- end -->
+</section>
+{% endblock %}
+{% block js %}
+
 {% endblock %}
 
 {% block inline_js %}

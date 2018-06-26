@@ -17,15 +17,22 @@
 {% endblock %}
 
 {% block content %}
-<section id="register" class="section-list">
-    <div class="container text-center" style="padding-top:300px; font-size: 40px; color: #333">
-        <p>{% trans "Your KYC has passed. Please don't submit again." %}</p>
-        <p class="content" style="font-size: 18px; color: unset;">
+<section id="success" class="section-list">
+    <div class="container text-center">
+        <p class="title">{% trans "KYC Submitted!" %}</p>
+        <p class="content">
             {% trans "Go to <a href='/user/' style='text-decoration: underline'>User Center</a>" %}
         </p>
     </div>
-</section><!-- end -->
+</section>
+{% endblock %}
+{% block js %}
+
 {% endblock %}
 
 {% block inline_js %}
+<script type="text/javascript">
+    $("#normal").addClass("display-none");
+    setTimeout(function(){location.href='/user/';}, 3000);
+</script>
 {% endblock %}
