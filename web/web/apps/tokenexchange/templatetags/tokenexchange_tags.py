@@ -50,3 +50,18 @@ def show_minimum_and_ratio(parser, token):
     """Show the amount summary for current phase
     """
     return MinimumAndRatioNode(token.split_contents()[1])
+
+
+def exchange_assign_amount_to_NEW(assign_btc, assign_ela):
+    """calculate amount to NEW
+    """
+    # get btc ratio and ela ratio
+    phase_id = settings.CURRENT_FUND_PHASE
+    token_exchange_info = settings.FUND_CONFIG[phase_id]
+    btc_ratio = token_exchange_info['btc_ratio']
+    ela_ratio = token_exchange_info['ela_ratio']
+    # calculate exchange NEW
+    btc_exchange_NEW = assign_btc * btc_ratio if assign_btc else 0
+    ela_exchange_NEW = assign_ela * ela_ratio if assign_ela else 0
+    return btc_exchange_NEW + ela_exchange_NEW
+register.simple_tag(exchange_assign_amount_to_NEW)

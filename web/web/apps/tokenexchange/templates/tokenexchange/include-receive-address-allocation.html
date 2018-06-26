@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load utils %}
+{% load tokenexchange_tags %}
 
 {% if item.status == codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE %}
 <div class="shadow-item">
@@ -25,6 +26,7 @@
             {% endif %}
         {% endif %}
     {% endif %}
+
     {% if item.assign_btc %}
     <div class="text-center receive-panel">
         <div class="quantity">
@@ -64,6 +66,18 @@
             <script>
                 new QRCode(document.getElementById("ela_code"), "{{ item.receive_ela_address }}");
             </script>
+        </div>
+    </div>
+    {% endif %}
+    
+    {% if item.assign_btc or item.assign_els %}
+    <div class="text-center receive-panel well well-sm exchange-panel">
+        <div class="quantity">
+            <span class="text-muted key">{% trans "You can exchange for" %}</span>
+            <span class="value">
+                <span class="number text-danger bold">{% exchange_assign_amount_to_NEW item.assign_btc item.assign_ela %}</span>
+                <span class="unit">NEW</span>
+            </span>
         </div>
     </div>
     {% endif %}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-26 09:27+0000\n"
+"POT-Creation-Date: 2018-06-26 11:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -428,16 +428,6 @@ msgid "welcome!"
 msgstr "您好！"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:8
-msgid ""
-"Congratulation，you can participate in Newton first round Token Exchange, "
-"please read the detail on Newton Token Exchange carefully in Newton official "
-"website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) "
-"before filling in the expected amount."
-msgstr ""
-"欢迎参加牛顿第一轮通证交换。在填写您的通证交换申请数量之前，请在牛顿官方网站 "
-"(<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 上阅读牛"
-"顿通证交换的详细信息。"
-
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:10
 msgid ""
 "Congratulation，you can participate in Newton second round Token Exchange, "
@@ -647,7 +637,7 @@ msgstr "牛顿基金会收到您的"
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:13
 #: web/apps/register/templates/register/index.html:47
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
 msgid "and"
 msgstr "和"
 
@@ -1554,60 +1544,64 @@ msgstr "您对牛顿的理解"
 msgid "Plan of node establishment"
 msgstr "节点建立计划和方案"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:7
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:8
 msgid "Allocated"
 msgstr "分配信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:12
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:13
 msgid ""
 "* Please transfer your token before deadline of second-round token exchange."
 msgstr "* 请于本轮通证交换截止日期前转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:20
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:18
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:21
 msgid "* Attention! You can only transfer"
 msgstr "* 注意，您只能向下面的分配地址中转入"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
 msgid ""
 "to below addresses. DO NOT transfer BTC and ELA amount larger than allocated "
 "amount, otherwise Newton Foundation won't refund the remainder."
-msgstr "。请不要转入大于分配数量的BTC和ELA，牛顿基金会不回退回超额的部分。"
+msgstr "。请不要转入大于分配数量的BTC和ELA，牛顿基金会不会退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:18
 msgid ""
 "to below addresses. DO NOT transfer BTC amount larger than allocated amount, "
 "otherwise Newton Foundation won't refund the remainder."
-msgstr "。请不要转入大于分配数量的BTC，牛顿基金会不回退回超额的部分。"
+msgstr "。请不要转入大于分配数量的BTC，牛顿基金会不会退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:20
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:21
 msgid ""
 "to below addresses. DO NOT transfer ELA amount larger than allocated amount, "
 "otherwise Newton Foundation won't refund the remainder."
-msgstr "。请不要转入大于分配数量的ELA，牛顿基金会不回退回超额的部分。"
+msgstr "。请不要转入大于分配数量的ELA，牛顿基金会不会退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:25
 msgid ""
 "* First-round token exchange is overdue, DO NOT transfer any token to "
 "allocated addresses."
 msgstr "* 本轮通证交换已截止，请不要向分配地址中转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:31
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:33
 msgid "Allocated BTC amount"
 msgstr "分配 BTC 数量"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:38
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:40
 msgid "Allocated BTC address"
 msgstr "分配 BTC 地址"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:52
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:54
 msgid "Allocated ELA amount"
 msgstr "分配 ELA 数量"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:60
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:62
 msgid "Allocated ELA address"
 msgstr "分配 ELA 地址"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:76
+msgid "You can exchange for"
+msgstr "可兑换牛顿通证数量："
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:8
 msgid "Expected"
@@ -7178,6 +7172,16 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid ""
+#~ "Congratulation，you can participate in Newton first round Token Exchange, "
+#~ "please read the detail on Newton Token Exchange carefully in Newton "
+#~ "official website (<a href='https://www.newtonproject.org/'>www."
+#~ "newtonproject.org</a>) before filling in the expected amount."
+#~ msgstr ""
+#~ "欢迎参加牛顿第一轮通证交换。在填写您的通证交换申请数量之前，请在牛顿官方网"
+#~ "站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 上"
+#~ "阅读牛顿通证交换的详细信息。"
 
 #~ msgid "Your KYC has been denied. Please don't submit again."
 #~ msgstr "您的KYC审核已被拒绝，请不要重复提交。"
