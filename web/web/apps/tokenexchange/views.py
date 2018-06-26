@@ -57,10 +57,12 @@ def post_kyc_information(request, kyc_type):
         instance = tokenexchange_models.KYCInfo.objects.filter(user_id=request.user.id).first()
         # check user's kycinfo status
         if instance:
-            if instance.status == codes.KYCStatus.DENY.value:
-                return render(request, "tokenexchange/kyc-deny.html", locals())
+            if instance.status == codes.KYCStatus.CANDIDATE.value:
+                return render(request, "tokenexchange/kyc-submit-success.html", locals())
             elif instance.status == codes.KYCStatus.PASS_KYC.value:
-                return render(request, "tokenexchange/kyc-success.html", locals())                
+                return render(request, "tokenexchange/kyc-success.html", locals())
+            elif instance.status == codes.KYCStatus.DENY.value:
+                return render(request, "tokenexchange/kyc-deny.html", locals())
         if kyc_type == codes.KYCType.ORGANIZATION.value:
             is_individual = False
         if request.method == 'POST':
