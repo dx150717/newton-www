@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-26 07:50+0000\n"
+"POT-Creation-Date: 2018-06-26 09:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1282,9 +1282,6 @@ msgid "Organization Code"
 msgstr "机构代码"
 
 #: web/apps/tokenexchange/models.py:98 web/apps/tokenexchange/models.py:99
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:47
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:50
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:51
 msgid "Organization Certificate"
 msgstr "机构证明"
 
@@ -1522,6 +1519,12 @@ msgstr ""
 #: web/apps/user/templates/user/include-kyc-section.html:112
 msgid "Emergency Contact"
 msgstr "紧急联系人信息"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:47
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:50
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:51
+msgid "Organization Certificate Files"
+msgstr "机构证明文件"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:52
 msgid "Upload at least one file, only jpeg, jpg and png file within 5M"
