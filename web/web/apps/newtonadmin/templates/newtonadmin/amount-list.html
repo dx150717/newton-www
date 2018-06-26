@@ -104,7 +104,7 @@
                             {% endif %}
                             <td>
                                 {% if not is_completed %}
-                                <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {% if not item.expect_ela %} {{item.expect_ela}} {% else %} 0 {% endif %}, {% if not item.expect_btc %} {{item.expect_btc}} {% else %} 0 {% endif %});">{% if is_confirm %}修改额度{% else %}分配额度{% endif %}</a>
+                                <a href="#" class="btn btn-default" onclick="javascript:amountPopupWindow({{ item.user_id }}, {{ phase_id }}, {% if item.expect_ela %} {{item.expect_ela}} {% else %} 0 {% endif %}, {% if item.expect_btc %} {{item.expect_btc}} {% else %} 0 {% endif %});">{% if is_confirm %}修改额度{% else %}分配额度{% endif %}</a>
                                 {% endif %}
                             </td>
                         </tr>
@@ -143,7 +143,7 @@
     </div>
 </section>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="amount_modal">
+<div class="modal fade" tabindex="-1" role="dialog" id="id_amount_modal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -152,21 +152,21 @@
             </div>
             <div class="modal-body">
                 <form method="POST" action="#" id="amount_form">
-                    <p id="btc-limit">
+                    <p id="id_btc_line">
                         <label>BTC额度</label>
                         <script>var btcLimit = {{ token_exchange_info.min_btc }}</script>
-                        <input type="number" name="assign_btc" id="assign_btc" value="0" placeholder="BTC 额度" />
+                        <input type="number" name="assign_btc" id="id_assign_btc" value="0" placeholder="BTC 额度" />
                     </p>
                     
-                    <p id="ela-limit">
+                    <p id="id_ela_line">
                         <label>ELA额度</label>
                         <script>var elaLimit = {{ token_exchange_info.min_ela }}</script>
-                        <input type="number" name="assign_ela" id="assign_ela" value="0" placeholder="ELA 额度"/>
+                        <input type="number" name="assign_ela" id="id_assign_ela" value="0" placeholder="ELA 额度"/>
                     </p>
                     <p>
-                        <input type="hidden" id="user_id" name="user_id" value=""/>
-                        <input type="hidden" id="phase_id" name="phase_id" value="">
-                            <button class="btn btn-default" type="button" id="confirm_button">确定</button>
+                        <input type="hidden" id="id_user_id" name="user_id" value=""/>
+                        <input type="hidden" id="id_phase_id" name="phase_id" value="">
+                            <button class="btn btn-default" type="button" id="id_confirm_button">确定</button>
                     </p>
                 </form>
             </div>

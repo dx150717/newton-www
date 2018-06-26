@@ -220,24 +220,24 @@ function sendSelectedEmailForInvite(){
  * @param {int} expect_btc 
  */
 function amountPopupWindow(user_id, phase_id, expect_ela, expect_btc) {
-    $('#user_id').val(user_id);
-    $('#phase_id').val(phase_id)
-    if(expect_ela===0){
-        $("#ela-limit").addClass("hide")
-    }else{
-        $("#ela-limit").removeClass("hide")
+    $('#id_user_id').val(user_id);
+    $('#id_phase_id').val(phase_id)
+    if(expect_ela == 0) {
+        $("#id_ela_line").addClass("hide")
+    } else {
+        $("#id_ela_line").removeClass("hide")
     }
-    if(expect_btc===0){
-        $("#btc-limit").addClass("hide")
-    }else{
-        $("#btc-limit").removeClass("hide")
+    if(expect_btc == 0) {
+        $("#id_btc_line").addClass("hide")
+    } else {
+        $("#id_btc_line").removeClass("hide")
     }
-    $('#amount_modal').modal('show');
-    $('#confirm_button').click(function(event){
+    $('#id_amount_modal').modal('show');
+    $('#id_confirm_button').click(function(event){
         event.preventDefault();
         var data = {};
-        data.assign_btc = parseFloat($('#assign_btc').val());
-        data.assign_ela = parseFloat($('#assign_ela').val());
+        data.assign_btc = parseFloat($('#id_assign_btc').val());
+        data.assign_ela = parseFloat($('#id_assign_ela').val());
         data.user_id = user_id;
         data.phase_id = phase_id;
         if (data.assign_btc < 0) {
