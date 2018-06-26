@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 17:41+0000\n"
+"POT-Creation-Date: 2018-06-26 03:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -224,12 +224,12 @@ msgstr "安全提示"
 
 #: web/apps/help/templates/help/security.html:20
 #: web/apps/user/templates/user/include-security.html:6
-#: web/templates/email-kyc-template.html:53
+#: web/templates/email-template.html:53
 msgid "Newton Token Exchange Security Notification"
 msgstr "牛顿通证交换安全提示"
 
 #: web/apps/help/templates/help/security.html:21
-#: web/templates/email-kyc-template.html:54
+#: web/templates/email-template.html:54
 msgid ""
 "Newton official website（www.newtonproject.org）is the unique legitimate "
 "platform for Newton token exchange. Newton won't provide you with any "
@@ -243,7 +243,7 @@ msgstr ""
 "二维码。"
 
 #: web/apps/help/templates/help/security.html:22
-#: web/templates/email-kyc-template.html:55
+#: web/templates/email-template.html:55
 msgid ""
 "Please make sure that the SSL of Newton official website is “NEWTON "
 "FOUNDATION LTD. [SG]” before exchanging token，in case of property loss "
@@ -503,7 +503,7 @@ msgstr ""
 #: web/templates/base.html:12
 msgid ""
 "Newton,NewtonProject,newtonproject.org,NewChain,NewNET,Protocol-based "
-"Economy,Atom Hashing,NewIoT,NewAI,Hyper Exchange Protocol,Automatic finance,"
+"Economy,Atom Hashing,NewIoT,DAI,Hyper Exchange Protocol,Automatic finance,"
 "NNIO,Reliable physical tunnel,Digital Marketing,Supply Chain,Blockchain,"
 "Intelligent Contract,Open Source Community,Digital Assets,token"
 msgstr ""
@@ -1318,10 +1318,12 @@ msgid "You must fill in at least one."
 msgstr "至少填写BTC或者ELA中的一种。"
 
 #: web/apps/tokenexchange/views.py:258
+#, python-format
 msgid "The quantity of BTC must be equal or more than %s."
 msgstr "BTC的数量必须大于或等于%s"
 
 #: web/apps/tokenexchange/views.py:261
+#, python-format
 msgid "The quantity of ELA must be equal or more than %s."
 msgstr "ELA的数量必须大于或等于%s"
 
@@ -2202,7 +2204,7 @@ msgstr ""
 "资产损失。"
 
 #: web/apps/user/templates/user/include-security.html:9
-#: web/templates/email-kyc-template.html:56
+#: web/templates/email-template.html:56
 msgid "more"
 msgstr "更多"
 
@@ -7164,4 +7166,3 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
-
