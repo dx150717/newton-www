@@ -71,7 +71,8 @@ def __get_btc_transactions(address):
             txid = item['hash']
             dt = datetime.datetime.fromtimestamp(item['time'])
             # Ensure more than 6 confirmations
-            if not settings.DEBUG and now > (dt + datetime.timedelta(hours=1)):
+            if not settings.USE_TESTNET and now < (dt + datetime.timedelta(hours=1)):
+                logger.info("pending transaction:%s" % txid)
                 continue
             value = 0
             for tmp_item in out:
@@ -86,7 +87,10 @@ def __get_btc_transactions(address):
 
 def __get_ela_transactions(address):
     try:
-        ela_url = 'https://blockchain.elastos.org/api/v1/txs/?address=%s&pageNum=0'
+        if not settings.USE_TESTNET:
+            ela_url = 'https://blockchain.elastos.org/api/v1/txs/?address=%s&pageNum=0'
+        else:
+            ela_url = 'https://blockchain.test.elastos.org/api/v1/txs/?address=%s&pageNum=0'
         response = requests.get(ela_url % address)
         data = json.loads(response.text)
         txs = data['txs']
@@ -97,7 +101,8 @@ def __get_ela_transactions(address):
             txid = item['txid']
             dt = datetime.datetime.fromtimestamp(item['time'])
             # Ensure more than 6 confirmations
-            if now > (dt + datetime.timedelta(minutes=12)):
+            if not settings.USE_TESTNET and now < (dt + datetime.timedelta(minutes=12)):
+                logger.info("pending transaction:%s" % txid)
                 continue
             value = 0
             for tmp_item in out:
