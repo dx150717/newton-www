@@ -2,7 +2,7 @@
 {% load utils %}
 {% load tokenexchange_tags %}
 
-{% if item.status == codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE %}
+{% if item.status >= codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE %}
 <div class="shadow-item">
     <div class="text-center">
         <p class="token-exchange-title">{% trans "Allocated" %}</p>
