@@ -71,7 +71,8 @@ def __get_btc_transactions(address):
             txid = item['hash']
             dt = datetime.datetime.fromtimestamp(item['time'])
             # Ensure more than 6 confirmations
-            if not settings.DEBUG and now > (dt + datetime.timedelta(hours=1)):
+            if not settings.USE_TESTNET and now < (dt + datetime.timedelta(hours=1)):
+                logger.info("pending transaction:%s" % txid)
                 continue
             value = 0
             for tmp_item in out:
@@ -100,7 +101,8 @@ def __get_ela_transactions(address):
             txid = item['txid']
             dt = datetime.datetime.fromtimestamp(item['time'])
             # Ensure more than 6 confirmations
-            if now > (dt + datetime.timedelta(minutes=12)):
+            if not settings.USE_TESTNET and now < (dt + datetime.timedelta(minutes=12)):
+                logger.info("pending transaction:%s" % txid)
                 continue
             value = 0
             for tmp_item in out:
