@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 01:59+0000\n"
+"POT-Creation-Date: 2018-06-27 04:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -223,6 +223,12 @@ msgid "Security Notification"
 msgstr "安全提示"
 
 #: web/apps/help/templates/help/security.html:20
+#: web/apps/user/templates/user/include-security.html:6
+#: web/templates/email-template.html:53
+msgid "Newton Token Exchange Security Notification"
+msgstr "牛顿通证交换安全提示"
+
+#: web/apps/help/templates/help/security.html:21
 #: web/templates/email-template.html:54
 msgid ""
 "Newton Official Website (www.newtonproject.org) is the only channel and "
@@ -232,16 +238,21 @@ msgid ""
 "you can only find token exchange information on the official website, these "
 "information includes Newton token exchange- distribution quotas, receiving "
 "address or QR code, etc."
-msgstr "牛顿官方网站（www.newtonproject.org）是牛顿通证交换的唯一渠道。牛顿不会在除牛顿官方网站之外的任何渠道（包括但不限于电子邮件、微信、Telegram、电话、短信）向您提供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配额度、接收地址或二维码等。"
+msgstr ""
+"牛顿官方网站（www.newtonproject.org）是牛顿通证交换的唯一渠道。牛顿不会在除牛"
+"顿官方网站之外的任何渠道（包括但不限于电子邮件、微信、Telegram、电话、短信）"
+"向您提供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配额度、接收地址"
+"或二维码等。"
 
-#: web/apps/help/templates/help/security.html:21
+#: web/apps/help/templates/help/security.html:22
 #: web/templates/email-template.html:55
 msgid ""
 "Please make sure that the SSL certificate identifier of Newton official "
 "website is “NEWTON FOUNDATION LTD. [SG]” before exchanging token. Any "
 "website without this SSL is a fraudulent Newton official website."
 msgstr ""
-"在进行通证交换之前，请确保浏览器地址栏中显示的SSL证书是“NEWTON FOUNDATION LTD. [SG]”，没有此标识的网站一律是假冒的牛顿官方网站。"
+"在进行通证交换之前，请确保浏览器地址栏中显示的SSL证书是“NEWTON FOUNDATION "
+"LTD. [SG]”，没有此标识的网站一律是假冒的牛顿官方网站。"
 
 #: web/apps/login/forms.py:6 web/apps/login/forms.py:11
 #: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
@@ -256,7 +267,7 @@ msgstr "电子邮箱"
 msgid "Password"
 msgstr "密码"
 
-#: web/apps/login/views.py:39 web/apps/login/views.py:61
+#: web/apps/login/views.py:39 web/apps/login/views.py:63
 msgid "Form Error"
 msgstr "表单填写错误"
 
@@ -268,27 +279,27 @@ msgstr ""
 msgid "Email or Password don't match"
 msgstr "邮箱或密码错误"
 
-#: web/apps/login/views.py:53
+#: web/apps/login/views.py:55
 msgid "Request Time Out"
 msgstr "请求超时"
 
-#: web/apps/login/views.py:70
+#: web/apps/login/views.py:72
 msgid "No session"
 msgstr ""
 
-#: web/apps/login/views.py:72
+#: web/apps/login/views.py:74
 msgid "No Auth"
 msgstr "请重新登录"
 
-#: web/apps/login/views.py:75
+#: web/apps/login/views.py:77
 msgid "No User"
 msgstr "请重新登录"
 
-#: web/apps/login/views.py:78
+#: web/apps/login/views.py:80
 msgid "No User Profile"
 msgstr "请重新登录"
 
-#: web/apps/login/views.py:81
+#: web/apps/login/views.py:83
 msgid "Incorrect Google Authenticator Code"
 msgstr "谷歌身份验证码不正确"
 
@@ -647,18 +658,19 @@ msgid "Confirm Password"
 msgstr "确认密码"
 
 #: web/apps/register/services.py:29
-msgid "Please complete the register process of Newton"
+#: web/apps/register/templates/register/register-letter.html:5
+msgid "Please complete the Newton register process"
 msgstr "请完成牛顿注册流程"
 
 #: web/apps/register/views.py:55
 msgid "Email already existed"
 msgstr "邮箱已经存在！"
 
-#: web/apps/register/views.py:139 web/apps/reset/views.py:112
+#: web/apps/register/views.py:141 web/apps/reset/views.py:112
 msgid "Entered passwords do not match"
 msgstr "两次输入密码不一致"
 
-#: web/apps/register/views.py:145
+#: web/apps/register/views.py:147
 msgid "Fail to register"
 msgstr ""
 
@@ -708,10 +720,6 @@ msgid ""
 "We have sent you an email. Please go to your registered email inbox to check "
 "and complete the registration process."
 msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
-
-#: web/apps/register/templates/register/register-letter.html:5
-msgid "Please complete the Newton register process"
-msgstr "请完成牛顿注册流程"
 
 #: web/apps/register/templates/register/register-letter.html:6
 msgid "Dear user:"
@@ -2238,11 +2246,6 @@ msgstr "参加KYC"
 msgid "Do you want to <br/>establish a Newton node ?"
 msgstr "是否愿意建立节点？"
 
-#: web/apps/user/templates/user/include-security.html:6
-#: web/templates/email-template.html:53
-msgid "Newton Token Exchange Security Notification"
-msgstr "牛顿通证交换安全提示"
-
 #: web/apps/user/templates/user/include-security.html:7
 msgid ""
 "Newton official website<span class='text-danger bold'>（www.newtonproject."
@@ -2254,7 +2257,10 @@ msgid ""
 "Newton token exchange- distribution quotas, receiving address or QR code, "
 "etc."
 msgstr ""
-"牛顿官方网站<span class='text-danger bold'>（www.newtonproject.org）</span>是牛顿通证交换的唯一渠道。牛顿不会在除牛顿官方网站之外的任何渠道（包括但不限于电子邮件、微信、Telegram、电话、短信）向您提供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配额度、接收地址或二维码等。"
+"牛顿官方网站<span class='text-danger bold'>（www.newtonproject.org）</span>是"
+"牛顿通证交换的唯一渠道。牛顿不会在除牛顿官方网站之外的任何渠道（包括但不限于"
+"电子邮件、微信、Telegram、电话、短信）向您提供任何牛顿相关的通证交换信息，这"
+"些信息包括：通证交换分配额度、接收地址或二维码等。"
 
 #: web/apps/user/templates/user/include-security.html:8
 msgid ""
@@ -2263,8 +2269,9 @@ msgid ""
 "span> before exchanging token. Any website without this SSL is a fraudulent "
 "Newton official website."
 msgstr ""
-"在进行通证交换之前，请确保浏览器地址栏中显示的SSL证书是<span class='text-danger "
-"bold'>“NEWTON FOUNDATION LTD. [SG]”</span>，没有此标识的网站一律是假冒的牛顿官方网站。"
+"在进行通证交换之前，请确保浏览器地址栏中显示的SSL证书是<span class='text-"
+"danger bold'>“NEWTON FOUNDATION LTD. [SG]”</span>，没有此标识的网站一律是假冒"
+"的牛顿官方网站。"
 
 #: web/apps/user/templates/user/include-security.html:9
 #: web/templates/email-template.html:56
@@ -7229,35 +7236,3 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
-
-#~ msgid ""
-#~ "Newton official website（www.newtonproject.org）is the unique legitimate "
-#~ "platform for Newton token exchange. Newton won't provide you with any "
-#~ "information concerning Newton token exchange, including allocated amount, "
-#~ "address and QR code, through any other media including Email, Wechat, "
-#~ "Telegram, phone, message and so on."
-#~ msgstr ""
-#~ "牛顿官方网站（www.newtonproject.org）是唯一的牛顿通证的合法交换渠道。牛顿"
-#~ "不会在除官网之外的任何渠道（包括电子邮件、微信、Telegram、电话、短信等等）"
-#~ "对您提供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配数量、分配地"
-#~ "址和分配二维码。"
-
-#~ msgid ""
-#~ "Google Authenticator generates dynamic passwords and it is similar to SMS "
-#~ "dynamic verification."
-#~ msgstr "谷歌验证器是一款动态口令工具，工作原理类似短信动态验证。"
-
-#~ msgid ""
-#~ "Google Authenticator generates a new code every 30 seconds after you bind "
-#~ "it to apps."
-#~ msgstr "绑定后每30秒生成一个动态验证码。"
-
-#~ msgid ""
-#~ "Please be sure to keep the key or qr code to avoid any inconvenience."
-#~ msgstr "请务必保管好密钥或者二维码，以免丢失造成不便"
-
-#~ msgid "Enter the  code manually into your GA app"
-#~ msgstr "手动添加谷歌身份验证器"
-
-#~ msgid "Use the GA app to scan the QR code"
-#~ msgstr "扫描二维码添加谷歌身份验证器"
