@@ -5,21 +5,21 @@
 <div class="shadow-item fill-expect-section">
     <div class="container">
         <div class="text-center">
-            <p class="token-exchange-title">{% trans "Expected" %}</p>
+            <p class="token-exchange-title">{% trans "Request" %}</p>
         </div>
         <div class="col-md-6">
             {% if item.expect_btc %}
             <p class="token-exchange-content text-center">
-                <span class="key">{% trans "Expected BTC amount" %}:</span><span class="value">{{ item.expect_btc }}</span>BTC</p>
+                <span class="key">{% trans "Requesting BTC amount" %}:</span><span class="value">{{ item.expect_btc }}</span>BTC</p>
             {% else %}
-            <p class="token-exchange-content text-center"><span class="key">{% trans "Expected BTC amount" %}:</span><span class="value">0</span>BTC</p>
+            <p class="token-exchange-content text-center"><span class="key">{% trans "Requesting BTC amount" %}:</span><span class="value">0</span>BTC</p>
             {% endif %}
         </div>
         <div class="col-md-6">
             {% if item.expect_ela %}
-            <p class="token-exchange-content text-center"><span class="key">{% trans "Expected ELA amount" %}:</span><span class="value">{{ item.expect_ela }}</span>ELA</p>
+            <p class="token-exchange-content text-center"><span class="key">{% trans "Requesting ELA amount" %}:</span><span class="value">{{ item.expect_ela }}</span>ELA</p>
             {% else %}
-            <p class="token-exchange-content text-center"><span class="key">{% trans "Expected ELA amount" %}:</span><span class="value">0</span>ELA</p>
+            <p class="token-exchange-content text-center"><span class="key">{% trans "Requesting ELA amount" %}:</span><span class="value">0</span>ELA</p>
             {% endif %}
         </div>
     </div>
@@ -29,12 +29,12 @@
                 <p></p>
                 {% else %}
                 <div class="well well-sm tip">
-                    <p class="before-fill text-danger">{% trans "Your expected amount is under evaluation" %}</p>
+                    <p class="before-fill text-danger">{% trans "Your requesting amount is under evaluation" %}</p>
                 </div>
                 {% endif %}
         {% else %}
             <div class="well well-sm tip">
-                <p class="before-fill text-danger">{% trans "Your expected amount is under evaluation" %}</p>
+                <p class="before-fill text-danger">{% trans "Your requesting amount is under evaluation" %}</p>
             </div>
         {% endif %}
     </div>
