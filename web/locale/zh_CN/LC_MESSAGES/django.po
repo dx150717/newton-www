@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-26 16:25+0000\n"
+"POT-Creation-Date: 2018-06-27 01:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -223,34 +223,25 @@ msgid "Security Notification"
 msgstr "安全提示"
 
 #: web/apps/help/templates/help/security.html:20
-#: web/apps/user/templates/user/include-security.html:6
-#: web/templates/email-template.html:53
-msgid "Newton Token Exchange Security Notification"
-msgstr "牛顿通证交换安全提示"
-
-#: web/apps/help/templates/help/security.html:21
 #: web/templates/email-template.html:54
 msgid ""
-"Newton official website（www.newtonproject.org）is the unique legitimate "
-"platform for Newton token exchange. Newton won't provide you with any "
-"information concerning Newton token exchange, including allocated amount, "
-"address and QR code, through any other media including Email, Wechat, "
-"Telegram, phone, message and so on."
-msgstr ""
-"牛顿官方网站（www.newtonproject.org）是唯一的牛顿通证的合法交换渠道。牛顿不会"
-"在除官网之外的任何渠道（包括电子邮件、微信、Telegram、电话、短信等等）对您提"
-"供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配数量、分配地址和分配"
-"二维码。"
+"Newton Official Website (www.newtonproject.org) is the only channel and "
+"information source for Newton token exchange. Newton will not provide you "
+"with any Newton token exchange information on any other channels(including "
+"but not limited to e-mail, WeChat, telegram, telephone, text message)  . And "
+"you can only find token exchange information on the official website, these "
+"information includes Newton token exchange- distribution quotas, receiving "
+"address or QR code, etc."
+msgstr "牛顿官方网站（www.newtonproject.org）是牛顿通证交换的唯一渠道。牛顿不会在除牛顿官方网站之外的任何渠道（包括但不限于电子邮件、微信、Telegram、电话、短信）向您提供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配额度、接收地址或二维码等。"
 
-#: web/apps/help/templates/help/security.html:22
+#: web/apps/help/templates/help/security.html:21
 #: web/templates/email-template.html:55
 msgid ""
-"Please make sure that the SSL of Newton official website is “NEWTON "
-"FOUNDATION LTD. [SG]” before exchanging token，in case of property loss "
-"resulting from fraudulent Newton official website."
+"Please make sure that the SSL certificate identifier of Newton official "
+"website is “NEWTON FOUNDATION LTD. [SG]” before exchanging token. Any "
+"website without this SSL is a fraudulent Newton official website."
 msgstr ""
-"在进行通证交换之前，请确保网站的SSL证书是“NEWTON FOUNDATION LTD. [SG]”，防止"
-"进入假冒的牛顿官方网站造成的资产损失。"
+"在进行通证交换之前，请确保浏览器地址栏中显示的SSL证书是“NEWTON FOUNDATION LTD. [SG]”，没有此标识的网站一律是假冒的牛顿官方网站。"
 
 #: web/apps/login/forms.py:6 web/apps/login/forms.py:11
 #: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
@@ -837,27 +828,28 @@ msgstr "步骤1"
 msgid "Download and install Google Authenticator"
 msgstr "下载并安装谷歌身份验证器"
 
-#: web/apps/setting/templates/setting/include-download.html:16
+#: web/apps/setting/templates/setting/include-download.html:18
 msgid "You can search and download Google Authenticator APP on iOS App Atore."
 msgstr "您可以在iOS系统的App Store搜索下载“谷歌身份验证器”APP。"
 
-#: web/apps/setting/templates/setting/include-download.html:24
+#: web/apps/setting/templates/setting/include-download.html:28
 msgid ""
 "You can search and download Google Authenticator APP on Android Google Play "
 "or application stores."
 msgstr "您可以在安卓系统的Google Play或应用市场上搜索下载“谷歌身份验证器”APP。"
 
-#: web/apps/setting/templates/setting/include-download.html:32
+#: web/apps/setting/templates/setting/include-download.html:38
 msgid ""
 "You can install Google Authenticator plugin on Google Chrome, click here to "
 "download plugin."
-msgstr "您可以在谷歌浏览器（Google Chrome）上安装谷歌身份验证器插件，点击此处下载插件"
+msgstr ""
+"您可以在谷歌浏览器（Google Chrome）上安装谷歌身份验证器插件，点击此处下载插件"
 
-#: web/apps/setting/templates/setting/include-download.html:38
+#: web/apps/setting/templates/setting/include-download.html:44
 msgid "I have finished installation"
 msgstr "我已安装好APP或插件"
 
-#: web/apps/setting/templates/setting/include-download.html:39
+#: web/apps/setting/templates/setting/include-download.html:45
 #: web/apps/setting/templates/setting/include-qrcode.html:28
 msgid "Next"
 msgstr "下一步"
@@ -884,7 +876,9 @@ msgstr "如果您无法扫描二维码，可以将该16位密钥手动输入到�
 msgid ""
 "* Please save this Key on paper. This Key will allow you to recover your "
 "Google Authentication in case of phone loss."
-msgstr "* 请将16位密钥记录在纸上，并保存在安全的地方。如遇手机丢失，你可以通过该密钥和二维码恢复你的谷歌验证。"
+msgstr ""
+"* 请将16位密钥记录在纸上，并保存在安全的地方。如遇手机丢失，你可以通过该密钥"
+"和二维码恢复你的谷歌验证。"
 
 #: web/apps/setting/templates/setting/include-qrcode.html:27
 msgid "I have already scanned QR code and written key"
@@ -907,7 +901,9 @@ msgstr "绑定谷歌身份验证器"
 msgid ""
 "Google Authenticator generates dynamic passwords, and the password can make "
 "your information and data secure on Newton official website."
-msgstr "谷歌身份验证器（Google Authenticator）是一款动态口令工具，可用于保护您在牛顿官方网站上的数据信息。"
+msgstr ""
+"谷歌身份验证器（Google Authenticator）是一款动态口令工具，可用于保护您在牛顿"
+"官方网站上的数据信息。"
 
 #: web/apps/setting/templates/setting/set-gtoken.html:35
 msgid "1. Install Google Authenticator"
@@ -2242,29 +2238,33 @@ msgstr "参加KYC"
 msgid "Do you want to <br/>establish a Newton node ?"
 msgstr "是否愿意建立节点？"
 
+#: web/apps/user/templates/user/include-security.html:6
+#: web/templates/email-template.html:53
+msgid "Newton Token Exchange Security Notification"
+msgstr "牛顿通证交换安全提示"
+
 #: web/apps/user/templates/user/include-security.html:7
 msgid ""
 "Newton official website<span class='text-danger bold'>（www.newtonproject."
-"org）</span>is the unique legitimate platform for Newton token exchange. "
-"Newton won't provide you with any information concerning Newton token "
-"exchange, including allocated amount, address and QR code, through any other "
-"media including Email, Wechat, Telegram, phone, message and so on."
+"org）</span>is the only channel and information source for Newton token "
+"exchange. Newton will not provide you with any Newton token exchange "
+"information on any other channels(including but not limited to e-mail, "
+"WeChat, telegram, telephone, text message)  . And you can only find token "
+"exchange information on the official website, these information includes "
+"Newton token exchange- distribution quotas, receiving address or QR code, "
+"etc."
 msgstr ""
-"牛顿官方网站<span class='text-danger bold'>（www.newtonproject.org）</span>是"
-"唯一的牛顿通证的合法交换渠道。牛顿不会在除网站之外的任何渠道（包括电子邮件、"
-"微信、Telegram、电话、短信等等）对您提供任何牛顿相关的通证交换信息，这些信息"
-"包括：通证交换分配数量、分配地址和分配二维码。"
+"牛顿官方网站<span class='text-danger bold'>（www.newtonproject.org）</span>是牛顿通证交换的唯一渠道。牛顿不会在除牛顿官方网站之外的任何渠道（包括但不限于电子邮件、微信、Telegram、电话、短信）向您提供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配额度、接收地址或二维码等。"
 
 #: web/apps/user/templates/user/include-security.html:8
 msgid ""
-"Please make sure that the SSL of Newton official website is <span "
-"class='text-danger bold'>“NEWTON FOUNDATION LTD. [SG]”</span> before "
-"exchanging token，in case of property loss resulting from fraudulent Newton "
-"official website."
+"Please make sure that the SSL certificate identifier of Newton official "
+"website is <span class='text-danger bold'>“NEWTON FOUNDATION LTD. [SG]”</"
+"span> before exchanging token. Any website without this SSL is a fraudulent "
+"Newton official website."
 msgstr ""
-"在进行通证交换之前，请确保网站的SSL证书是<span class='text-danger "
-"bold'>“NEWTON FOUNDATION LTD. [SG]”</span>，防止进入假冒的牛顿官方网站造成的"
-"资产损失。"
+"在进行通证交换之前，请确保浏览器地址栏中显示的SSL证书是<span class='text-danger "
+"bold'>“NEWTON FOUNDATION LTD. [SG]”</span>，没有此标识的网站一律是假冒的牛顿官方网站。"
 
 #: web/apps/user/templates/user/include-security.html:9
 #: web/templates/email-template.html:56
@@ -7229,6 +7229,18 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid ""
+#~ "Newton official website（www.newtonproject.org）is the unique legitimate "
+#~ "platform for Newton token exchange. Newton won't provide you with any "
+#~ "information concerning Newton token exchange, including allocated amount, "
+#~ "address and QR code, through any other media including Email, Wechat, "
+#~ "Telegram, phone, message and so on."
+#~ msgstr ""
+#~ "牛顿官方网站（www.newtonproject.org）是唯一的牛顿通证的合法交换渠道。牛顿"
+#~ "不会在除官网之外的任何渠道（包括电子邮件、微信、Telegram、电话、短信等等）"
+#~ "对您提供任何牛顿相关的通证交换信息，这些信息包括：通证交换分配数量、分配地"
+#~ "址和分配二维码。"
 
 #~ msgid ""
 #~ "Google Authenticator generates dynamic passwords and it is similar to SMS "
