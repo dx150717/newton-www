@@ -1,4 +1,3 @@
-initLanguage();
 var FAIL = 0
 var SUCCESS = 1
 var UNAUTH = 2
@@ -6,6 +5,41 @@ var SIGN_ERROR = 3
 var INVALID_PARAMS = 4
 var MAINTAIN = 5
 var UPGRADE = 6
+// load messages
+function loadCurrentMessage()
+{
+	var language = document.cookie.split("language=")[1];
+	if(language == null || language == undefined){
+		language = navigator.language;
+	}
+	if (language && language.indexOf('zh') >= 0) {
+		language = 'zh_CN';
+	} else {
+		language = 'en';
+	}
+	jQuery.i18n.properties({
+	    name:'Messages', 
+	    path:'/static/js/', 
+	    mode: 'both',
+	    language: language,
+	    async: true,
+	    callback: function() {
+	    }
+	});
+}
+loadCurrentMessage();
+// load language javascript
+function initLanguage(){
+	var language = document.cookie.split("language=")[1];
+	if(language == null || language == undefined){
+		language = navigator.language;
+	}
+	if(language!=null && language!=undefined && language.startsWith("zh")){
+		$.getScript(zhMessages);
+	}
+}
+initLanguage();
+
 $(function () {
 	var bottomNavToggle = function (event) {
 		$(event.target).next().slideToggle(300, function () {
@@ -76,16 +110,8 @@ function setLanguage(language) {
 	if(locationHref.startsWith("\/announcement")){
 		location.replace("/announcement/");
 	}
-}
-
-function initLanguage(){
-	var language = document.cookie.split("language=")[1];
-	if(language == null || language == undefined){
-		language = navigator.language;
-	}
-	if(language!=null && language!=undefined && language.startsWith("zh")){
-		$.getScript(zhMessages);
-	}
+	// load the nessary resource file
+	loadCurrentMessage();
 }
 
 // language's dropdown menu.
@@ -174,7 +200,6 @@ function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'UA-116218760-1');
 
-
 // global progress
 function initGlobalToolkit()
 {
@@ -184,20 +209,22 @@ function initGlobalToolkit()
 function showLoading()
 {
   initGlobalToolkit();
-  $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Loading...', 'black');
+  var msg = $.i18n.prop('msg_loading');
+  $('#id_loading').nsProgress('showWithStatusAndMaskType', msg, 'black');
 }
 
 function showWaiting()
 {
   initGlobalToolkit();
-  $('#id_loading').nsProgress('showWithStatusAndMaskType', 'Processing...', 'black');
+  var msg = $.i18n.prop('msg_processing');
+  $('#id_loading').nsProgress('showWithStatusAndMaskType', msg, 'black');
 }
 
 function showSuccess(msg)
 {
   initGlobalToolkit();
   if (!msg) {
-    msg = '操作成功';
+    msg = $.i18n.prop('msg_operation_success');
   }
   $('#id_loading').nsProgress('showSuccessWithStatusAndMaskType', msg, 'black');
   dismissDelay();
@@ -208,6 +235,12 @@ function showFail(msg)
   initGlobalToolkit();
   $('#id_loading').nsProgress('showErrorWithStatusAndMaskType', msg, 'black');
   dismissDelay();
+}
+
+function showNetworkError(msg)
+{
+	var msg = $.i18n.prop('msg_network_error');
+	showFail(msg);
 }
 
 function dismiss()
@@ -261,22 +294,6 @@ function gotoTop(min_height){
     });
 };
 gotoTop();
-
-// fixed navbar
-// $(window).scroll(function(){
-// 	var height
-// 	var s = $(window).scrollTop();
-// 	if (!document.getElementsByClassName("ad").length){
-// 		$(".NavBg").addClass("navFixed");
-// 	}else{
-// 		height = document.getElementsByClassName("ad")[0].offsetHeight;
-// 		if( s > height){
-// 			$(".NavBg").addClass("navFixed");
-// 		}else{
-// 			$(".NavBg").removeClass("navFixed");
-// 		};
-// 	};
-// });
 
 $(window).scroll(function(){
 	var height
