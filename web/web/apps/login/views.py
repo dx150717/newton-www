@@ -47,6 +47,8 @@ def post_login(request):
         if not user or user.is_staff:
             return http.JsonErrorResponse(error_message=_("Email or Password don't match"))
         login(request, user)
+        # refresh captcha
+        ishuman_services.refresh_captcha(request.session.session_key)
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post login:%s" % str(inst))
