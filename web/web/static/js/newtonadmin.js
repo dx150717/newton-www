@@ -20,7 +20,7 @@ function openAuditIdPopuWindow(user_id) {
             data, 
             function(json){
                 if (json['error_code'] == 1) {
-                  showSuccess('success,we had send a email to user');
+                  showSuccess();
                   location.reload();
                 } else {
                   showFail(json['error_message']);
@@ -40,7 +40,7 @@ function openAuditIdPopuWindow(user_id) {
             data, 
             function(json){
                 if (json['error_code'] == 1) {
-                  showSuccess('success, we had reject user');
+                  showSuccess();
                 location.reload();
                 } else {
                   showFail(json['error_message']);
@@ -60,7 +60,7 @@ function openAuditIdPopuWindow(user_id) {
             data, 
             function(json){
                 if (json['error_code'] == 1) {
-                  showSuccess('success, we had deny user');
+                  showSuccess();
                 location.reload();
                 } else {
                   showFail(json['error_message']);
@@ -83,7 +83,7 @@ function preInviteUser(user_id) {
         data, 
         function(json){
           if (json['error_code'] == 1) {
-            showSuccess('success');
+            showSuccess();
             location.reload();
           } else {
             showFail(json['error_message']);
@@ -131,7 +131,7 @@ function preInviteSelectedUser(){
     data.user_list = user_list;
     $.post("/newtonadmin/tokenexchange/invite/" + phase_id + "/post/",data,function(json){
         if (json['error_code'] == 1) {  
-            showSuccess('success');
+            showSuccess();
             location.reload();
         } else {
             showFail(json['error_message']);
@@ -153,7 +153,7 @@ function sendPerInviteEmail(user_id) {
         data, 
         function(json){
         if (json['error_code'] == 1) {
-            showSuccess('success');
+            showSuccess();
             location.reload();
         } else {
             showFail(json['error_message']);
@@ -202,7 +202,7 @@ function sendSelectedEmailForInvite(){
     data.user_list = user_list;
     $.post('/newtonadmin/tokenexchange/invite/' + phase_id + '/send/',data,function(json){
         if (json['error_code'] == 1) {  
-            showSuccess('success');
+            showSuccess();
             location.reload();
         } else {
             showFail(json['error_message']);
@@ -254,7 +254,7 @@ function amountPopupWindow(user_id, phase_id, expect_ela, expect_btc) {
             function(json){
                 dismiss();
                 if (isSuccess(json)) {
-                  showSuccess('success');
+                  showSuccess();
                   location.reload();
                 } else {
                   showFail(getErrorMessage(json));
@@ -278,8 +278,8 @@ function sendPerEmail(user_id) {
         data,
         function(json){
             if (json['error_code'] == 1) {
-              showSuccess('success,we had send address to user.');
-            location.reload();
+              showSuccess();
+              location.reload();
             } else {
               showFail(json['error_message']);
             }
@@ -328,7 +328,7 @@ function sendEmailForReceivedCoin(){
     data.user_list = user_list;
     $.post('/newtonadmin/tokenexchange/receive/' + phase_id + '/send/',data,function(json){
         if (json['error_code'] == 1) {  
-            showSuccess('success');
+            showSuccess();
             location.reload();
         } else {
             showFail(json['error_message']);
@@ -356,7 +356,7 @@ function preConfirmSelectedUser(phase_id){
     data.user_list = user_list;
     $.post("/newtonadmin/tokenexchange/amount/" + phase_id + "/confirm/post/",data,function(json){
         if (json['error_code'] == 1) {  
-            showSuccess('success');
+            showSuccess();
             location.reload();
         } else {
             showFail(json['error_message']);
