@@ -1,6 +1,13 @@
 /**
  * tokenexhange.js for valid kyc form.
  */
+$.validator.addMethod('filesize', function (value, element, param) {
+    return this.optional(element) || (element.files[0].size <= param)
+}, 'File size must be less than {0}');
+
+var fileRuleWithoutRequired = {extension:'jpg,jpeg,png', filesize: 5*1024*1024};
+var fileRuleWithRequired = {required: true, extension:'jpg,jpeg,png', filesize: 5*1024*1024};
+
 $("#id_individual_form").submit(function(event){
     event.preventDefault();
     var form = this;
@@ -18,14 +25,19 @@ $("#id_individual_form").submit(function(event){
         last_name: {required: true, minlength: 1, maxlength:100},
         id_type: {required: true},
         id_number: {required: true, minlength:1},
-        id_card: {required: true, extension:true, checkPicSize:true},
+        id_card: fileRuleWithRequired,
         country: {required: true},
         city: {required: true},
         location:{required: true, minlength:1, maxlength:200},
         cellphone_group_0: {required: true, minlength:1, maxlength:4},
         cellphone_group_1: {required: true, minlength:1, maxlength:20},
         personal_profile: {required: true},
+        personal_profile_attachment: fileRuleWithoutRequired,
+        your_community_screenshots1: fileRuleWithoutRequired,
+        your_community_screenshots2: fileRuleWithoutRequired,
+        your_community_screenshots3: fileRuleWithoutRequired,
         how_to_contribute: {required: true, maxlength:1000},
+        done_for_newton_attachment: fileRuleWithoutRequired,
         what_is_newton: {required:true, minlength:1, maxlength:1000},
         emergency_contact_first_name: {required:true, minlength:1, maxlength:100},
         emergency_contact_last_name: {required:true, minlength:1, maxlength:100},
@@ -103,14 +115,17 @@ $("#id_organization_form").submit(function(event){
     rules: {
         orgnization_name: {required: true},
         orgnization_code: {required: true},
-        orgnization_certificate1: {required: true},
+        orgnization_certificate1: fileRuleWithRequired,
+        orgnization_certificate2: fileRuleWithoutRequired,
         first_name: {required: true, minlength: 1, maxlength: 100},
         last_name: {required: true, minlength: 1, maxlength:100},
         country: {required: true},
         cellphone_group_0: {required: true, minlength:1, maxlength:4},
         cellphone_group_1: {required: true, minlength:1, maxlength:20},
         personal_profile: {required: true},
-        what_is_newton: {required:true, minlength:1, maxlength:1000}
+        personal_profile_attachment: fileRuleWithoutRequired,
+        what_is_newton: {required:true, minlength:1, maxlength:1000},
+        done_for_newton_attachment: fileRuleWithoutRequired
     },
     messages: {
         first_name: {required: "This field is required.",
