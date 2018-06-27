@@ -220,3 +220,28 @@ $("#id_fill_amount_form").submit(function(event){
         //error.appendTo(element.parent());
     }
 });
+
+/**
+ * KYC terms
+ */
+var checkboxes = $(".accept")
+    function check(){
+        for(var i = 0; i < checkboxes.length; i++){
+            var status = checkboxes[i].checked
+            if (status === false){
+                $("#gotokyc-btn")[0].setAttribute("disabled", true)
+                return;
+            } 
+            if (i == (checkboxes.length-1)){
+                $("#gotokyc-btn")[0].removeAttribute("disabled")
+            }
+        }
+    };
+    function gotokyc(){
+        showWaiting();
+        location.href = ("/tokenexchange/individual/post/");
+    };
+    function changeCheckStatus() {
+        checkboxes[0].checked = !checkboxes[0].checked;
+        check();
+    };
