@@ -13,11 +13,13 @@ $("#id_register_form").submit(function(event){
     if (!$(form).valid()) {
         return false;
     }
+    showWaiting();
     $.ajax({
         url:'/ishuman/check/?code=' + code,
         type: 'post',
         data: {},
         success: function(ret){
+            dismiss();
             if (ret.error_code === FAIL) {
                 $("#id_register_code_error").removeClass("hide");
                 $("#id_register_code_error").attr("style", "display:!important block");
@@ -29,6 +31,7 @@ $("#id_register_form").submit(function(event){
             }
         },
         error: function(request, status) {
+            dismiss();
         }
     });
     
