@@ -48,7 +48,7 @@ def sync_blockchain_data():
                         instance.address = item.receive_ela_address
                         instance.address_type = codes.CurrencyType.ELA.value
                         instance.txid = txid
-                        instance.value = float(decimal.Decimal(str(value)) / DECIMAL_SATOSHI)
+                        instance.value = float(decimal.Decimal(str(value)))
                         instance.save()
     except Exception, inst:
         logger.error("fail to sync blockchain data: %s" % str(inst))
