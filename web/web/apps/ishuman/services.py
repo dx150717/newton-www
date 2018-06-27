@@ -6,6 +6,9 @@ import logging
 from django.core.cache import cache
 from django.conf import settings
 
+from utils import new_captcha
+from utils import security
+
 logger = logging.getLogger(__name__)
 CACHE_KEY_PREFIX = 'ishuman-'
 
@@ -38,4 +41,15 @@ def is_valid_captcha(session_key, code):
         return False
     except Exception, inst:
         logger.exception("fail to validate captcha:%s" % str(inst))
+        return False
+
+def refresh_captcha(session_key):
+    """Refresh captcha
+    """
+    try:
+        code = security.generate_uuid()[0:5]
+        set_captcha(session_key, code)
+        return True
+    except Exception, inst:
+        logger.exception("fail to refresh captcha:%s" % str(inst))
         return False

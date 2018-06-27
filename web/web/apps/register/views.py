@@ -55,6 +55,8 @@ def submit_email(request):
             form._errors[NON_FIELD_ERRORS] = form.error_class([_('Email already existed')])
             return render(request, 'register/index.html', locals())
         is_send_success = register_services.send_register_validate_email(email, request)
+        # refresh captcha
+        ishuman_services.refresh_captcha(request.session.session_key)
         if not is_send_success:
             return http.HttpResponseRedirect('/register/email/fail/')
         else:
