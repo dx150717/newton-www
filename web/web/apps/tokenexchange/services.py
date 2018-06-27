@@ -38,11 +38,6 @@ def send_kyc_confirm_email(kyc_info, request):
         logger.exception("fail to send the kyc confirm email:%s" % str(inst))
         return False
         
-def get_kyc_verification_by_uuid(uuid):
-    """Get the verification object of kyc by uuid
-    """
-    return services.get_verification_by_uuid(uuid)
-
 def is_beyond_kyc_deadline():
     """check whether expire kyc deadline
     """
