@@ -41,7 +41,7 @@ def send_register_validate_email(email, request):
 def get_register_verification_by_uuid(uuid):
     """Get the verification object of register by uuid
     """
-    return services.get_verification_by_uuid(uuid)
+    return services.get_verification_by_uuid(uuid, codes.EmailType.REGISTER.value)
 
 def create_user(username, email, password, language_code, verification):
     """Create User

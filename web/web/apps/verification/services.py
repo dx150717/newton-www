@@ -6,6 +6,7 @@ import logging
 import datetime
 
 from django.conf import settings
+from django.utils.timezone import utc
 
 from utils import security
 from . import models
@@ -32,13 +33,19 @@ def generate_verification_uuid(email, email_type):
         logger.exception("fail to generate verification uuid:%s" % str(inst))
         return None
 
-def get_verification_by_uuid(uuid):
+def get_verification_by_uuid(uuid, email_type):
     """Get verification by uuid
     """
     try:
         # query
-        verification = models.EmailVerification.objects.get(uuid=uuid)
+        verification = models.EmailVerification.objects.get(uuid=uuid, email_type=email_type)
+        expire_time = verification.expire_time
+        now = datetime.datetime.utcnow().replace(tzinfo=utc)
+        if now > expire_time:
+            logger.info("uuid is expired.")
+            return None
         # return result
         return verification
     except Exception, inst:
+        logger.exception("fail to get verification by uuid:%s" % str(inst))
         return None

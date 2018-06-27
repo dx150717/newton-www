@@ -39,6 +39,6 @@ def send_reset_validate_email(email, request):
 def get_reset_verification_by_uuid(uuid):
     """Get the verification object of reset by uuid
     """
-    return services.get_verification_by_uuid(uuid)
+    return services.get_verification_by_uuid(uuid, codes.EmailType.RESET.value)
     
     
