@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 11:48+0000\n"
+"POT-Creation-Date: 2018-06-27 16:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -430,7 +430,6 @@ msgid "welcome!"
 msgstr "您好！"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:8
-#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:10
 msgid ""
 "Congratulation，you can participate in Newton second round Token Exchange, "
 "please read the detail on Newton Token Exchange carefully in Newton official "
@@ -438,6 +437,17 @@ msgid ""
 "before filling in the requesting amount."
 msgstr ""
 "欢迎参加牛顿第二轮通证交换。在填写您的通证交换申请数量之前，请在牛顿官方网站 "
+"(<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 上阅读牛"
+"顿通证交换的详细信息。"
+
+#: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:10
+msgid ""
+"Congratulation，you can participate in Newton third round Token Exchange, "
+"please read the detail on Newton Token Exchange carefully in Newton official "
+"website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) "
+"before filling in the requesting amount."
+msgstr ""
+"欢迎参加牛顿第三轮通证交换。在填写您的通证交换申请数量之前，请在牛顿官方网站 "
 "(<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 上阅读牛"
 "顿通证交换的详细信息。"
 
@@ -666,7 +676,7 @@ msgstr "请完成牛顿注册流程"
 msgid "Email already existed"
 msgstr "邮箱已经存在！"
 
-#: web/apps/register/views.py:141 web/apps/reset/views.py:112
+#: web/apps/register/views.py:141 web/apps/reset/views.py:120
 msgid "Entered passwords do not match"
 msgstr "两次输入密码不一致"
 
@@ -754,12 +764,12 @@ msgstr "请重置您的密码"
 msgid "Email address does not exist"
 msgstr "邮箱不存在！"
 
-#: web/apps/reset/templates/reset/edit_password.html:6
+#: web/apps/reset/templates/reset/edit_password.html:5
 #: web/apps/reset/templates/reset/edit_password.html:21
 #: web/apps/reset/templates/reset/edit_password.html:31
 #: web/apps/reset/templates/reset/index.html:5
-#: web/apps/reset/templates/reset/invalid-link.html:6
-#: web/apps/reset/templates/reset/reset-complete.html:6
+#: web/apps/reset/templates/reset/invalid-link.html:5
+#: web/apps/reset/templates/reset/reset-complete.html:5
 #: web/apps/reset/templates/reset/reset-fail.html:6
 #: web/apps/reset/templates/reset/reset-letter.html:8
 #: web/apps/reset/templates/reset/reset-success.html:5
@@ -775,11 +785,11 @@ msgstr "重置密码"
 msgid "Reset Passwrod"
 msgstr "重置密码"
 
-#: web/apps/reset/templates/reset/reset-complete.html:23
+#: web/apps/reset/templates/reset/reset-complete.html:22
 msgid "Reset Success!"
 msgstr "重置密码成功"
 
-#: web/apps/reset/templates/reset/reset-complete.html:24
+#: web/apps/reset/templates/reset/reset-complete.html:23
 msgid ""
 "You have successfully reset your password, please <a href='/login/'> login</"
 "a>"
@@ -1640,7 +1650,7 @@ msgstr "。请不要转入大于分配数量的ELA，牛顿基金会不会退回
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:25
 msgid ""
-"* First-round token exchange is overdue, DO NOT transfer any token to "
+"* Second-round token exchange is overdue, DO NOT transfer any token to "
 "allocated addresses."
 msgstr "* 本轮通证交换已截止，请不要向分配地址中转币。"
 
@@ -1731,7 +1741,6 @@ msgid "Ratio"
 msgstr "兑换比率"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:43
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:18
 msgid "Second Token Exchange Info"
 msgstr ""
 
@@ -2170,6 +2179,10 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/submit.html:23
 msgid "Fill in KYC Information"
 msgstr "填写KYC信息"
+
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:18
+msgid "Third-Round Token Exchange"
+msgstr "第三轮通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:40
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:43
