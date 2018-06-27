@@ -26,6 +26,7 @@ def show_reset_view(request):
     form = forms.EmailForm()
     return render(request,'reset/index.html', locals())
 
+@decorators.nologin_required
 @decorators.http_post_required
 def post_email(request):
     try:
@@ -52,6 +53,7 @@ def show_post_success_view(request):
 def show_post_fail_view(request):
     return render(request,'reset/reset-fail.html', locals())
 
+@decorators.nologin_required
 def verify_email_link(request):
     try:
         uuid = request.GET['uuid']
@@ -79,6 +81,7 @@ def verify_email_link(request):
 def show_invalid_link_view(request):
     return render(request,'reset/invalid-link.html', locals())
 
+@decorators.nologin_required
 def show_reset_password_view(request):
     form = forms.PasswordForm()
     uuid = request.GET.get('uuid')
@@ -92,6 +95,7 @@ def show_reset_password_view(request):
         return http.HttpResponseRedirect('/reset/invalid-link/')
     return render(request,'reset/edit_password.html', locals())
 
+@decorators.nologin_required
 @decorators.http_post_required
 def post_password(request):
     try:
