@@ -90,7 +90,7 @@ def __get_ela_transactions(address):
         if not settings.USE_TESTNET:
             ela_url = 'https://blockchain.elastos.org/api/v1/txs/?address=%s&pageNum=0'
         else:
-            ela_url = 'https://blockchain.test.elastos.org/api/v1/txs/?address=%s&pageNum=0'
+            ela_url = 'https://blockchain-beta.elastos.org/api/v1/txs/?address=%s&pageNum=0'
         response = requests.get(ela_url % address)
         data = json.loads(response.text)
         txs = data['txs']
