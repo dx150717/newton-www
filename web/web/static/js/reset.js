@@ -11,6 +11,7 @@ $("#reset-email-form").submit(function(event){
     if (!$(form).valid()) {
         return false;
     }
+    showWaiting();
     form.submit()
 }).validate({
     ignore: [],
