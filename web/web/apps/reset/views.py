@@ -81,7 +81,15 @@ def show_invalid_link_view(request):
 
 def show_reset_password_view(request):
     form = forms.PasswordForm()
-    uuid = request.GET['uuid']
+    uuid = request.GET.get('uuid')
+    # check verification
+    verification = services.get_reset_verification_by_uuid(uuid)
+    if not verification:
+        return http.HttpResponseRedirect('/reset/invalid-link/')
+    #check link status
+    verification_status = verification.status
+    if verification_status != codes.StatusCode.AVAILABLE.value:
+        return http.HttpResponseRedirect('/reset/invalid-link/')
     return render(request,'reset/edit_password.html', locals())
 
 @decorators.http_post_required
@@ -92,7 +100,7 @@ def post_password(request):
         verification = services.get_reset_verification_by_uuid(uuid)
         if not verification:
             return http.HttpResponseRedirect('/reset/invalid-link/')
-            #check link status
+        #check link status
         verification_status = verification.status
         if verification_status != codes.StatusCode.AVAILABLE.value:
             return http.HttpResponseRedirect('/reset/invalid-link/')
