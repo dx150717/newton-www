@@ -9,6 +9,7 @@ from django.conf import settings
 from django.utils.timezone import utc
 
 from utils import security
+from config import codes
 from . import models
 
 logger = logging.getLogger(__name__)
@@ -38,7 +39,7 @@ def get_verification_by_uuid(uuid, email_type):
     """
     try:
         # query
-        verification = models.EmailVerification.objects.get(uuid=uuid, email_type=email_type)
+        verification = models.EmailVerification.objects.get(uuid=uuid, email_type=email_type, status=codes.StatusCode.AVAILABLE.value)
         expire_time = verification.expire_time
         now = datetime.datetime.utcnow().replace(tzinfo=utc)
         if now > expire_time:
