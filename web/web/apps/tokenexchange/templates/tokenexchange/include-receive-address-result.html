@@ -43,24 +43,24 @@
             </table>
             {% endif %}
             {% if item.ela_transfer_list %}
-            <table class="table">
+            <table class="table table-bordered">
                 <caption>ELA</caption>
                 <thead>
                     <tr>
-                        <th>{% trans "Transferring time" %}</th>
-                        <th>ELA</th>
+                        <th class="col-sm-3">{% trans "Transferring time" %}</th>
+                        <th class="col-sm-3">ELA</th>
                     </tr>
                 </thead>
                 <tbody>
                 {% for ela_transfer in item.ela_transfer_list %}
                     <tr>
-                        <th>{{ ela_transfer.created_at|date:"Y-m-d H:i:s" }}</th>
-                        <th>{{ ela_transfer.value }}</th>
+                        <th class="col-sm-3">{{ ela_transfer.created_at|date:"Y-m-d H:i:s" }}</th>
+                        <th class="col-sm-3">{{ ela_transfer.value }}</th>
                     </tr>
                 {% endfor %}
                     <tr>
-                        <th>{% trans "Total" %}</th>
-                        <th>{{ item.ela_final_balance }}</th>
+                        <th class="col-sm-3">{% trans "Total" %}</th>
+                        <th class="col-sm-3">{{ item.ela_final_balance }}</th>
                     </tr>
                 </tbody>
             </table>
