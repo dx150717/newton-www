@@ -86,7 +86,10 @@ def __get_btc_transactions(address):
 
 def __get_ela_transactions(address):
     try:
-        ela_url = 'https://blockchain.elastos.org/api/v1/txs/?address=%s&pageNum=0'
+        if not settings.USE_TESTNET:
+            ela_url = 'https://blockchain.elastos.org/api/v1/txs/?address=%s&pageNum=0'
+        else:
+            ela_url = 'https://blockchain.test.elastos.org/api/v1/txs/?address=%s&pageNum=0'
         response = requests.get(ela_url % address)
         data = json.loads(response.text)
         txs = data['txs']
