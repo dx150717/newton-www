@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 04:51+0000\n"
+"POT-Creation-Date: 2018-06-27 06:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -435,7 +435,7 @@ msgid ""
 "Congratulation，you can participate in Newton second round Token Exchange, "
 "please read the detail on Newton Token Exchange carefully in Newton official "
 "website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) "
-"before filling in the expected amount."
+"before filling in the requesting amount."
 msgstr ""
 "欢迎参加牛顿第二轮通证交换。在填写您的通证交换申请数量之前，请在牛顿官方网站 "
 "(<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 上阅读牛"
@@ -451,7 +451,7 @@ msgstr ""
 "newtonproject.org</a>) 发布公告和通知，请忽略源于其他任何渠道的消息。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:13
-msgid "Click the following button to fill in expected amount"
+msgid "Click the following button to fill in requesting amount"
 msgstr "点击下方按钮，填写您的通证交换申请数量。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:14
@@ -1413,7 +1413,7 @@ msgid "ELA amount"
 msgstr "ELA 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:20
-msgid "You have successfully filled in the expected amount"
+msgid "You have successfully filled in the requesting amount"
 msgstr "您已经成功填写了申请数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:22
@@ -1665,22 +1665,22 @@ msgid "You can exchange for"
 msgstr "可兑换牛顿通证数量："
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:8
-msgid "Expected"
+msgid "Request"
 msgstr "申请信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:13
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:15
-msgid "Expected BTC amount"
+msgid "Requesting BTC amount"
 msgstr "申请 BTC 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:20
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:22
-msgid "Expected ELA amount"
+msgid "Requesting ELA amount"
 msgstr "申请 ELA 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:32
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:37
-msgid "Your expected amount is under evaluation"
+msgid "Your requesting amount is under evaluation"
 msgstr "您填写的申请数量正在评估中"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:9
@@ -7236,3 +7236,6 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Expected"
+#~ msgstr "申请信息"
