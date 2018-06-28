@@ -34,10 +34,25 @@
                         </td>
                         <td>
                             {% ifequal item.address_type  1 %}
-                            BTC &nbsp;&nbsp;<a href="https://blockchain.info/address/{{ item.address }}">查询</a>
+
+                            BTC &nbsp;&nbsp;
+                            {% if settings.USE_TESTNET %}
+                            <a href="{{ settings.BTC_TESTNET_EXPLORER }}/address/{{ item.address }}">查询</a>
+                            {% else %}
+                            <a href="{{ settings.BTC_MAINNET_EXPLORER }}/address/{{ item.address }}">查询</a>
+                            {% endif %}
+                            
                             {% endifequal %}
+
                             {% ifequal item.address_type  2 %}
-                            ELA &nbsp;&nbsp;<a href="https://blockchain.elastos.org/address/{{ item.address }}">查询</a>
+
+                            ELA &nbsp;&nbsp;
+                            {% if settings.USE_TESTNET %}
+                            <a href="{{ settings.ELA_TESTNET_EXPLORER }}/address/{{ item.address }}">查询</a>
+                            {% else %}
+                            <a href="{{ settings.ELA_MAINNET_EXPLORER }}/address/{{ item.address }}">查询</a>
+                            {% endif %}
+
                             {% endifequal %}
                         </td>
                         <td>
