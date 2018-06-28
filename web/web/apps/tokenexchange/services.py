@@ -38,14 +38,14 @@ def send_kyc_confirm_email(kyc_info, request):
         logger.exception("fail to send the kyc confirm email:%s" % str(inst))
         return False
         
-def is_beyond_kyc_deadline():
-    """check whether expire kyc deadline
+def is_beyond_apply_deadline():
+    """check whether it is beyond the deadline of applying amount
     """
     now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
     phase_id = settings.CURRENT_FUND_PHASE
     token_exchange_info = settings.FUND_CONFIG[phase_id]
-    kyc_deadline = time.strptime(token_exchange_info["kyc_deadline"], "%Y-%m-%d")
-    dead_time = datetime.datetime(*kyc_deadline[:6]).replace(tzinfo=utc)
+    deadline = datetime.datetime.strptime(token_exchange_info["end_date"], "%Y-%m-%d %H:%M")
+    dead_time = deadline.replace(tzinfo=utc)
     if now_time > dead_time:
         return True
     return False

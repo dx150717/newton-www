@@ -75,6 +75,4 @@ def show_user_index_view(request):
             item.process_status = 3
         elif item.expect_btc or item.expect_ela:
             item.process_status = 2
-    # check whether out deadline
-    is_deadline = tokenexchange_services.is_beyond_kyc_deadline()
     return render(request, "user/index.html", locals())

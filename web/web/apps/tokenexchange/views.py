@@ -26,18 +26,17 @@ from django.utils.timezone import utc
 
 logger = logging.getLogger(__name__)
 
-def kyc_valid_required(func):
-    """Check whether kyc is expired
+def apply_valid_required(func):
+    """Check whether it is beyond the deadline of applying amount
     """
     def _decorator(request, *args, **kwargs):
-        is_deadline_expired = tokenexchange_services.is_beyond_kyc_deadline()
+        is_deadline_expired = tokenexchange_services.is_beyond_apply_deadline()
         if is_deadline_expired:
-            return render(request, "tokenexchange/kyc-end.html")
+            return render(request, "tokenexchange/apply-end.html")
         return func(request, *args, **kwargs)
     return _decorator
 
 @login_required
-@kyc_valid_required
 def show_tokenexchange_index_view(request):
     """
     Show kyc agreement.
@@ -45,7 +44,6 @@ def show_tokenexchange_index_view(request):
     return render(request, "tokenexchange/index.html", locals()) 
 
 @login_required
-@kyc_valid_required
 @decorators.google_authenticator_required
 def post_kyc_information(request, kyc_type):
     """
@@ -158,7 +156,6 @@ def post_kyc_information(request, kyc_type):
         raise exception.SystemError500()
 
 @login_required
-@kyc_valid_required
 def show_wait_audit_view(request):
     return render(request, "tokenexchange/wait-audit.html", locals())
 
@@ -166,7 +163,6 @@ def show_invalid_link(request):
     return render(request, "tokenexchange/invalid-link.html", locals())
     
 @login_required
-@kyc_valid_required
 @decorators.check_google_authenticator_session
 def show_receive_address_view(request, invite_id):
     """Show the receive address
@@ -229,7 +225,7 @@ def show_end_view(request):
     return render(request, "tokenexchange/end.html", locals())
 
 @login_required
-@kyc_valid_required
+@apply_valid_required
 @decorators.check_google_authenticator_session
 def post_apply_amount(request, invite_id):
     """ Post the amount of apply
@@ -277,7 +273,7 @@ def post_apply_amount(request, invite_id):
         raise exception.SystemError500()
 
 @login_required
-@kyc_valid_required
+@apply_valid_required
 @decorators.check_google_authenticator_session
 def show_apply_success(request, invite_id):
     """Show the page of apply success
