@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-28 08:42+0000\n"
+"POT-Creation-Date: 2018-06-28 13:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -184,7 +184,7 @@ msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:117
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:326
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:327
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:117
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:55
@@ -198,7 +198,7 @@ msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:121
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:330
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:331
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:121
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:68
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:59
@@ -308,7 +308,8 @@ msgstr "谷歌身份验证码不正确"
 #: web/apps/login/templates/login/index.html:29
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
-#: web/templates/header-no-menu.html:38 web/templates/header.html:54
+#: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
+#: web/templates/header.html:45 web/templates/header.html.py:65
 msgid "Login"
 msgstr "登录"
 
@@ -359,7 +360,8 @@ msgstr "牛顿社区"
 #: web/apps/register/templates/register/post-success.html:5
 #: web/apps/register/templates/register/register-letter.html:10
 #: web/apps/register/templates/register/register-success.html:5
-#: web/templates/header-no-menu.html:35 web/templates/header.html:51
+#: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
+#: web/templates/header.html:42 web/templates/header.html.py:62
 msgid "Register"
 msgstr "注册"
 
@@ -384,23 +386,23 @@ msgstr "填写谷歌身份验证码"
 msgid "Submit"
 msgstr "提交"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:86
+#: web/apps/newtonadmin/services_tokenexchange.py:98
 msgid "KYC information is confirmed"
 msgstr ""
 
-#: web/apps/newtonadmin/services_tokenexchange.py:113
+#: web/apps/newtonadmin/services_tokenexchange.py:125
 msgid "You have passed the Newton KYC"
 msgstr "您通过了牛顿KYC审核"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:115
+#: web/apps/newtonadmin/services_tokenexchange.py:127
 msgid "You are not passed the Newton KYC"
 msgstr "您没有通过牛顿KYC审核"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:148
+#: web/apps/newtonadmin/services_tokenexchange.py:160
 msgid "Fillout your expect amount"
 msgstr "请填写申请数量"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:174
+#: web/apps/newtonadmin/services_tokenexchange.py:186
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:7
 msgid "Receive Transferring Notification"
 msgstr "转币确认提醒"
@@ -801,8 +803,8 @@ msgstr "提交成功！"
 #: web/apps/reset/templates/reset/reset-success.html:22
 msgid ""
 "We have sent you an email. Please go to your reset email inbox to check and "
-"complete the registration process."
-msgstr "我们发送了一份邮件到您的注册邮箱，请前往查看，完成注册流程。"
+"complete the resetting process."
+msgstr "我们发送了一份邮件到您的重置密码邮箱，请前往查看，完成密码重置流程。"
 
 #: web/apps/setting/views.py:64 web/apps/setting/views.py:100
 msgid "Google Authenticator Code Error"
@@ -7201,11 +7203,13 @@ msgstr "社群治理"
 msgid "Service Terms"
 msgstr "服务条款"
 
-#: web/templates/header-no-menu.html:29 web/templates/header.html:45
+#: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
+#: web/templates/header.html:38 web/templates/header.html.py:56
 msgid "User Center"
 msgstr "用户中心"
 
-#: web/templates/header-no-menu.html:30 web/templates/header.html:46
+#: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
+#: web/templates/header.html:39 web/templates/header.html.py:57
 msgid "LogOut"
 msgstr "退出"
 
