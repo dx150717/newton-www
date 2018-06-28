@@ -1269,6 +1269,15 @@ canvas {display: block; vertical-align: top;}
 .navFixed{position: fixed}
 .modal {top: 35%;}
 
+/* mobile navbar */
+@media (max-width: 767px) {
+    .navbar-collapse .navbar-nav>li>a {
+        border-bottom: solid 1px #dde6e8;
+        padding: 13px 0;
+        text-align: left;
+    }
+}
+
 /* language drop down */
 .navbar-nav li.language-drop-down {
     margin-right: 50px;
