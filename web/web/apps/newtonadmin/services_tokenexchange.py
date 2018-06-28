@@ -21,16 +21,28 @@ logger = logging.getLogger(__name__)
 def __load_address_from_file(filename, coin):
     f = open(filename)
     all_address = []
+    btc_mainnet_prefix = [0x0, 0x5]
+    btc_testnet_prefix = [0x6f, 0xc4]
+    ela_mainnet_prefix = [0x21, 0x12]
     for line in f.readlines():
         line = line.strip()
         is_valid = False
         if coin == 'btc':
             if settings.USE_TESTNET:
-                is_valid = btc_validation.validate(line, 0x6f)
+                for prefix in btc_testnet_prefix:
+                    is_valid = btc_validation.validate(line, prefix)
+                    if is_valid:
+                        break
             else:
-                is_valid = btc_validation.validate(line)
+                for prefix in btc_mainnet_prefix:
+                    is_valid = btc_validation.validate(line, prefix)
+                    if is_valid:
+                        break
         else:
-            is_valid = btc_validation.validate(line, 0x21)
+            for prefix in ela_mainnet_prefix:
+                is_valid = btc_validation.validate(line, prefix)
+                if is_valid:
+                    break
         if is_valid:
             all_address.append(line)
     return all_address
