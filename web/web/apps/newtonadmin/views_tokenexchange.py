@@ -612,6 +612,7 @@ def show_id_detail(request, user_id):
     try:
         item = tokenexchange_models.KYCInfo.objects.filter(user_id=user_id).first()
         if item:
+            audit_logs = newtonadmin_models.AuditLog.objects.filter(target_user_id=user_id).order_by('created_at')
             if item.id_type:
                 item.id_type = convert.get_value_from_choice(item.id_type, tokenexchange_models.ID_CHOICES)
             if item.is_establish_node:
