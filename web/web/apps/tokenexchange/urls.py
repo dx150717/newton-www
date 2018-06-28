@@ -5,7 +5,7 @@ from . import views
 from config import codes
 
 urlpatterns = patterns('',
-                       url(r'^$', views.show_tokenexchange_index_view),
+                       #url(r'^$', views.show_tokenexchange_index_view),
                        url(r'^individual/post/$', views.post_kyc_information, {"kyc_type": codes.KYCType.INDIVIDUAL.value}),
                        url(r'^organization/post/$', views.post_kyc_information, {"kyc_type": codes.KYCType.ORGANIZATION.value}),
                        url(r'^wait-audit/$', views.show_wait_audit_view),

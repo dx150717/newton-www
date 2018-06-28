@@ -87,29 +87,27 @@ ELA_WALLET_ADDRESS_FILE = 'ela-wallet.txt'
 
 # fund settings
 CURRENT_FUND_PHASE = codes.FundPhase.PRIVATE.value
-FUND_START_DATE = datetime.datetime(2018, 4, 29, 0, 0)
-FUND_END_DATE = datetime.datetime(2018, 5, 30, 0, 0)
+FUND_START_DATE = datetime.datetime(2018, 7, 1, 0, 0)
+FUND_END_DATE = datetime.datetime(2018, 7, 15, 0, 0)
 FUND_CONFIG = {
     codes.FundPhase.PRIVATE.value: {
-        'start_date': '2018-05-07',
-        'end_date': '2018-07-20',
-        'ela_ratio': 1000,
-        'min_ela': 100,
+        'start_date': '2018-07-01 00:00',
+        'end_date': '2018-07-15 23:59',
+        'ela_ratio': 10000,
+        'min_ela': 0.01,
         'btc_ratio': 2000000,
-        'min_btc': 1,
-        'kyc_deadline': '2018-07-20',
-        'total_amount_btc': 2500,
-        'total_amount_ela': 2500,
+        'min_btc': 0.01,
+        'total_amount_btc': 3000,
+        'total_amount_ela': 0,
     },
     codes.FundPhase.PUBLIC.value: {
         'start_date': '2018-06-01',
         'end_date': '2018-06-10',
-        'ela_ratio': 1000,
-        'min_ela': 100,
-        'btc_ratio': 100000,
-        'min_btc': 1,
-        'kyc_deadline': '2018-05-20',
-        'total_amount_btc': 2500,
-        'total_amount_ela': 2500,
+        'ela_ratio': 5000,
+        'min_ela': 0.01,
+        'btc_ratio': 1000000,
+        'min_btc': 0.01,
+        'total_amount_btc': 1500,
+        'total_amount_ela': 0,
     },
 }
