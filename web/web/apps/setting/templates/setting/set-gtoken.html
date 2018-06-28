@@ -30,7 +30,7 @@
         </p>
     </div>
     <div class="container">
-        <ul class="nav nav-tabs col-md-8" id="id_authenticator_tab" role="tablist" style="margin-top: 20px;">
+        <ul class="nav nav-tabs col-md-8 nav-justified" id="id_authenticator_tab" role="tablist" style="margin-top: 20px;">
             <li role="presentation" class="active">
                 <a href="#id_page_1" aria-controls="id_page_1" role="tab" data-toggle="tab">{% trans "1. Install Google Authenticator" %}</a>
             </li>
@@ -45,7 +45,7 @@
     <div class="container">
         <form id="id_set_gtoken_form" class="form" action="/setting/gtoken/post/?redirect_url={{ redirect_url }}" method="POST">
             {% csrf_token %}
-            <div class="tab-content col-sm-8">
+            <div class="tab-content">
             {% include "setting/include-download.html" %}
             {% include "setting/include-qrcode.html" %}
             {% include "setting/include-verification.html" %}
