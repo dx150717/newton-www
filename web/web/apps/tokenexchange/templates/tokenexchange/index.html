@@ -60,6 +60,11 @@
 {% block inline_js %}
 {% endblock %}
 
+{% block js %}
+<script src="{% version "js/tokenexchange.js" %}">
+</script>
+{% endblock %}
+
 {% block css %}
 <link rel="stylesheet" href="{% version "css/tokenexchange.css" %}">
 {% endblock %}
