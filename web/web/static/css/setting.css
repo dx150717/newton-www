@@ -25,6 +25,7 @@
 }
 .set-gtoken .img-text {
     color: #303030;
+    margin-left: 20px;
 }
 .set-gtoken .operation {
 
@@ -43,8 +44,9 @@
 }
 .set-gtoken .qr-panel {
     padding-left: 63px;
-    height: 280px;
     border-bottom: solid 1px #333;
+    display:block;
+    overflow:auto;
 }
 .set-gtoken #code {
     text-align: left !important;
@@ -63,7 +65,9 @@
     padding-bottom: 20px;
 }
 @media (max-width: 768px) {
-    .set-gtoken .qr-panel {
-        height: unset;
+    .set-gtoken .img-text {
+        margin-top:10px;
+        margin-left: 0px;
+        display: block;
     }
 }
