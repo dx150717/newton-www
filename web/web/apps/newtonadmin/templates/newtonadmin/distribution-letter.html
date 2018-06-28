@@ -2,11 +2,14 @@
 {% load i18n %}
 {% load utils %}
     {% block content %}
-    <p class="newton-title">{% trans "Welcome! Thank You for join Newton KYC!" %}</p>
-    <p class="pad-t10">{% trans "Dear" %} {{ invite_info.kyc_info.first_name }}:</p>
-    <p class="pad-t10">{% trans "Hello! This e-mail comes from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. Your KYC information has passed  verification. Click the button below to check your currency address and quota on  the  official website. For all enquiries, problems or suggestions regarding this service, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>." %}</p>
-    <p class="pad-t20"><a href="{{ targetUrl }}" class="button-1">{% trans "Lookup Address" %}</a></p>
-    <p class="pad-t10">{% trans "Best regard" %}</p>
-    <p class="pad-t10">{% trans "Newton team" %}</p>
-    <p class="pad-t30">{% trans "If you have received this email in error, please delete it." %}</p>
+    <p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px;">
+        {% trans "Welcome! Thank You for join Newton KYC!" %}
+    </p>
+    <p>{% trans "Dear" %} {{ invite_info.kyc_info.first_name }}:</p>
+    <p>{% trans "Hello! This e-mail comes from <a href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. Your KYC information has passed  verification. Click the button below to check your currency address and quota on  the  official website. For all enquiries, problems or suggestions regarding this service, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>." %}</p>
+    <p style="padding-top:20px;">
+        <a href="{{ targetUrl }}" class="button-1" style="display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff;">
+            {% trans "Lookup Address" %}
+        </a>
+    </p>
     {% endblock %}
