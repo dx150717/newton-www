@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-<section id="login" class="section-list">
+<section id="login" class="section-list login">
 	<div class="page-title">
 		<div class="container">
 			<p>{% trans "Login" %}
@@ -75,5 +75,9 @@
 
 {% block footer %}
 {% include "footer-simple.html" %}
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% version "css/login.css" %}">
 {% endblock %}
 

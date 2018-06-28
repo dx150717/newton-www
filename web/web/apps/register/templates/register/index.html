@@ -17,7 +17,7 @@
 {% endblock %}
 
 {% block content %}
-<section id="register" class="section-list">
+<section id="register" class="section-list register">
         <div class="page-title">
             <div class="container">
                 <p>{% trans "Register" %}
@@ -57,5 +57,9 @@
 {% block js %}
 <script src="{% version "js/captcha.js" %}" type="text/javascript"></script>
 <script src="{% version "js/register.js" %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% version "css/register.css" %}">
 {% endblock %}
 
