@@ -61,12 +61,20 @@
                             {% else %}
                             <p>机构代码:{{ item.orgnization_code }}</p>
                             {% if item.orgnization_certificate1 %}
-                            <p>机构资格证书1:<img src="{{ item.orgnization_certificate1.url }}" alt=""></p>
+                            <p>机构资格证书1: 
+                                <a href="{{ item.orgnization_certificate1.url }}" target="_blank">
+                                    <img src="{{ item.orgnization_certificate1.url }}" alt=""/>
+                                </a>
+                            </p>
                             {% else %}
                             <p>机构资格证书1:-</p>
                             {% endif %}
                             {% if item.orgnization_certificate2 %}
-                            <p>机构资格证书2:<img src="{{ item.orgnization_certificate2.url }}" alt=""></p>
+                            <p>机构资格证书2:
+                                <a href="{{ item.orgnization_certificate2.url }}" target="_blank">
+                                    <img src="{{ item.orgnization_certificate2.url }}" alt=""/>
+                                </a>
+                            </p>
                             {% else %}
                             <p>机构资格证书2:-</p>
                             {% endif %}
@@ -76,7 +84,9 @@
                             {% endif %}
                             <p>
                                 {% if item.id_card %}
-                                <img src="{{ item.id_card.url }}" style="width: 300px"/>
+                                <a href="{{ item.id_card.url }}" target="_blank">
+                                    <img src="{{ item.id_card.url }}" style="width: 300px"/>
+                                </a>
                                 {% endif %}
                             </p>
                         </td>
