@@ -80,6 +80,13 @@
     text-align: left;
     font-weight: unset;
     padding-top: 5px;
+    float: left;
+}
+.kyc .attachment-div {
+    padding-left: 0;
+    display: inline;
+    float: left;
+    margin-left: 20px;
 }
 .kyc .block-tip{
     text-align: center;
@@ -147,6 +154,7 @@
     }
     .kyc .attachment-div {
         padding: 0;
+        margin-left: unset;
     }
     .kyc .emergency-first-name {
         padding-left: 0;
@@ -169,12 +177,12 @@
         padding: 0 20px;
     }
 }
-.kyc .attachment-div {
-    padding-left: 0;
-    display: inline;
-}
+
 .kyc .attachment-div input {
     display: inline;
+}
+.kyc .attachment-div .select-file {
+    display: block;
 }
 
 .token-exchange-info table {
