@@ -2,11 +2,16 @@
 {% load i18n %}
 {% load utils %}
   {% block content %}
-    <p class="newton-title">{% trans "Welcome! Please Reset Your Password!" %}</p>
-    <p class="main-color">{% trans "Dear" %}</p>
-    <p class="main-color">{% trans "Hello! This is an email from <a class='main-color' href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your newton password, click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>" %}</p>
-    <p class="pad-t20"><a href="{{ target_url }}" class="button-1">{% trans "Reset" %}</a></p>
-    <p class="pad-t30">{% trans "If you have received this email in error, please delete it." %}</p>
+    <p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px;">
+      {% trans "Welcome! Please Reset Your Password!" %}
+    </p>
+    <p>{% trans "Dear" %}</p>
+    <p>{% trans "Hello! This is an email from <a href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your newton password, click the button below to proceed to the next step. If you have any questions, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>" %}</p>
+    <p style="padding-top:20px;">
+      <a href="{{ target_url }}" class="button-1" style="display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff;">
+        {% trans "Reset" %}
+      </a>
+    </p>
   {% endblock %}
 
   {% block security %}

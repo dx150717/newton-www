@@ -3,29 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.pad-t10{ padding-top:10px;}
-.pad-t20{ padding-top:20px;}
-.pad-t30{ padding-top:30px; margin-bottom: 50px;}
-
-.win-logo{padding:10px; width:128px; height:36px;}
-.newton-title { font-size: 1.5em; padding-bottom: 10px; padding-top: 10px; }
-.window-container{ 
-  width:800px;
-  margin:0 auto 0; background: #eee; padding: 20px 15px 20px 15px; }
-.win-box{ border:1px solid #fff; border-radius:6px; padding:20px; min-height:224px; background-color:#fff;}
-.win-box .button-1{ display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff; }
-@media (max-width: 767px) {
-.win-logo{ margin:20px 0;}
-.window-container{ width:70%; margin:0 auto;}
-.win-box{ min-height:160px;}
-.win-box .button-1{line-height:42px; overflow:hidden;}
-}
-.red-text {color: #a94442;}
-.security-title {margin: 10px 0 10px 0; font-size: 14px;}
-.security-content {margin: 5px 0; font-size: 12px;}
-.security-url {margin: 5px 5px 5px 0; font-size: 12px;}
-</style>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -41,21 +18,32 @@
 <!--==== style css ====-->
 </head>
 <body>
-<div class="window-container">
+<div style="width:800px; margin:0 auto 0; background: #eee; padding: 20px 15px 20px 15px;">
   <div>
-      <img class="win-logo" src="{% version "images/logo_new_style.svg" %}" alt="Newton">
+      <img src="{% version "images/logo_new_style.svg" %}" alt="Newton" style="padding:10px; width:128px; height:36px;">
   </div>
-  <div class="win-box">
+  <div style="border:1px solid #fff; border-radius:6px; padding:20px; min-height:224px; background-color:#fff;">
+    
     {% block content %}
     {% endblock %}
+
+    {% block sign %}
+    <p style="padding-top:20px;">{% trans "Best regard" %}</p>
+    <p style="padding-top:20px;">{% trans "Newton Foundation" %}</p>
+    <p style="padding-top:30px; margin-bottom: 50px;">{% trans "If you have received this email in error, please delete it." %}</p>
+    {% endblock %}
+    
     {% block security %}
     <div style="border-top: 1px #333333 solid;margin-top:50px;">
-        <p class="security-title" style="color: #a94442;margin-top: 5px;">{% trans "Newton Token Exchange Security Notification" %}</p>
-        <p class="security-content" style="color: #a94442;">1. {% trans "Newton Official Website (www.newtonproject.org) is the only channel and information source for Newton token exchange. Newton will not provide you with any Newton token exchange information on any other channels(including but not limited to e-mail, WeChat, telegram, telephone, text message)  . And you can only find token exchange information on the official website, these information includes Newton token exchange- distribution quotas, receiving address or QR code, etc." %}</p>
-        <p class="security-content" style="color: #a94442;">2. {% trans "Please make sure that the SSL certificate identifier of Newton official website is “NEWTON FOUNDATION LTD. [SG]” before exchanging token. Any website without this SSL is a fraudulent Newton official website." %}</p>
-        <p class="security-url" style="text-align: right"><a href="{{ security_url }}" style="color: #a94442;">{% trans "Learn more" %}</a></p>
+        <p style="color: #a94442; margin-top: 5px;margin: 10px 0 10px 0; font-size: 14px;">{% trans "Newton Token Exchange Security Notification" %}</p>
+        <p style="color: #a94442; margin: 5px 0; font-size: 12px;">1. {% trans "Newton Official Website (www.newtonproject.org) is the only channel and information source for Newton token exchange. Newton will not provide you with any Newton token exchange information on any other channels(including but not limited to e-mail, WeChat, telegram, telephone, text message)  . And you can only find token exchange information on the official website, these information includes Newton token exchange- distribution quotas, receiving address or QR code, etc." %}</p>
+        <p style="color: #a94442; margin: 5px 0; font-size: 12px;">2. {% trans "Please make sure that the SSL certificate identifier of Newton official website is “NEWTON FOUNDATION LTD. [SG]” before exchanging token. Any website without this SSL is a fraudulent Newton official website." %}</p>
+        <p style="text-align: right; margin: 5px 5px 5px 0; font-size: 12px;">
+          <a href="{{ security_url }}" style="color: #a94442;">{% trans "Learn more" %}</a>
+        </p>
     </div>
     {% endblock %}
+
   </div>
 </div>
 </body>

@@ -3,14 +3,25 @@
 {% load utils %}
 
 {% block content %}
-<h2>{% trans "Receive Transferring Notification" %}</h2>
-<p class="pad-t10">
+<p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px;">
+    {% trans "Receive Transferring Notification" %}
+</p>
+<p>
     {% trans "Newton foundation has received your"%}
-    {% if receive_info.btc_value %}
-    {{ receive_info.btc_value }} BTC
+
+    {% if not receive_info.ela_value %}
+        {{ receive_info.btc_value }} BTC
     {% endif %}
-    {% if receive_info.ela_value %}
-    {% trans "and" %} {{ receive_info.ela_value }} ELA
+
+    {% if not receive_info.btc_value %}
+        {{ receive_info.ela_value }} ELA
     {% endif %}
+
+    {% if receive_info.ela_value and receive_info.btc_value %}
+        {{ receive_info.btc_value }} BTC
+        {% trans "and" %} 
+        {{ receive_info.ela_value }} ELA
+    {% endif %}
+
     {% trans ", we would like to express our sincere gratitude to your contribution in the Newton community." %}</p>
 {% endblock %}

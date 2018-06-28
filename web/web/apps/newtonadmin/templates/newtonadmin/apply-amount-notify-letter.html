@@ -2,8 +2,8 @@
 {% load i18n %}
 {% load utils %}
     {% block content %}
-    <p class="newton-title">{% trans "Newton Token Exchange Invitation" %}</p>
-    <p class="pad-t10">{{ invite_info.kyc_info.first_name }}, {% trans "welcome!" %}</p>
+    <p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px;">{% trans "Newton Token Exchange Invitation" %}</p>
+    <p>{{ invite_info.kyc_info.first_name }}, {% trans "welcome!" %}</p>
     {% if settings.CURRENT_FUND_PHASE == codes.FUNDPHASE_PRIVATE_VALUE %}
         <p>{% trans "Congratulation，you can participate in Newton second round Token Exchange, please read the detail on Newton Token Exchange carefully in Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) before filling in the requesting amount." %}</p>
     {% else %}
@@ -11,8 +11,9 @@
     {% endif %}
     <p>{% trans "Newton only issues the announcement and notification though Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>), please ignore messages from any other medias." %}</p>
     <p>{% trans "Click the following button to fill in requesting amount" %}</p>
-    <p class="pad-t20"><a href="{{ target_url }}" class="button-1">{% trans "Fill in" %}</a></p>
-    <p class="pad-t10">{% trans "Best regard" %}</p>
-    <p class="pad-t10">{% trans "Newton team" %}</p>
-    <p class="pad-t30">{% trans "If you have received this email in error, please delete it." %}</p>
+    <p class="pad-t20">
+        <a href="{{ target_url }}" style="display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff;">
+            {% trans "Fill in" %}
+        </a>
+    </p>
     {% endblock %}
