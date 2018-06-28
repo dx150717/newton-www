@@ -149,6 +149,9 @@ class KYCType(Enum):
     INDIVIDUAL = 1
     ORGANIZATION = 2
 
+KYC_TYPE_INDIVIDUAL_VALUE = KYCType.INDIVIDUAL.value
+KYC_TYPE_ORGANIZATION_VALUE = KYCType.ORGANIZATION.value
+
 class RelationshipWithEmergency(Enum):
     KINSHIP = 1
     FRIENDSHIP = 2

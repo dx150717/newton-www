@@ -80,8 +80,8 @@ def show_audit_operation(audit_code):
             if audit_code == k:
                 return v
     except Exception, inst:
-        logger.exception(str(inst))
-        return path_string
+        logger.exception("fail to show the audit operation:%s" % str(inst))
+        return ""
 register.simple_tag(show_audit_operation)
 
 def show_audit_email(audit_id):
@@ -91,6 +91,6 @@ def show_audit_email(audit_id):
         admin_user_info = User.objects.filter(id=audit_id).first()
         return admin_user_info.email
     except Exception, inst:
-        logger.exception(str(inst))
-        return path_string
+        logger.exception("fail to show the audit email address:%s" % str(inst))
+        return ""
 register.simple_tag(show_audit_email)
