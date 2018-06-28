@@ -56,9 +56,9 @@ def sync_blockchain_data():
 def __get_btc_transactions(address):
     try:
         if not settings.USE_TESTNET:
-            btc_url = 'https://blockchain.info/rawaddr/%s'
+            btc_url = settings.BTC_MAINNET_EXPLORER + '/rawaddr/%s'
         else:
-            btc_url = 'https://testnet.blockchain.info/rawaddr/%s'
+            btc_url = settings.BTC_TESTNET_EXPLORER + '/rawaddr/%s'
         response = requests.get(btc_url % address)
         data = json.loads(response.text)
         if data['total_received'] <= 0:
@@ -88,9 +88,9 @@ def __get_btc_transactions(address):
 def __get_ela_transactions(address):
     try:
         if not settings.USE_TESTNET:
-            ela_url = 'https://blockchain.elastos.org/api/v1/txs/?address=%s&pageNum=0'
+            ela_url = settings.ELA_MAINNET_EXPLORER + '/api/v1/txs/?address=%s&pageNum=0'
         else:
-            ela_url = 'https://blockchain-beta.elastos.org/api/v1/txs/?address=%s&pageNum=0'
+            ela_url = settings.ELA_TESTNET_EXPLORER + '/api/v1/txs/?address=%s&pageNum=0'
         response = requests.get(ela_url % address)
         data = json.loads(response.text)
         txs = data['txs']

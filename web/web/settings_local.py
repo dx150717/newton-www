@@ -77,3 +77,9 @@ SUPPORT_LANGUAGES = (('en','English'), ('zh-cn','简体中文'), ('ja','日本�
 
 # country settings
 COUNTRIES_FIRST = ['CN', 'US', 'KR', 'JP', 'EN', 'FR']
+
+# blockchain settings
+BTC_MAINNET_EXPLORER = 'https://blockchain.info'
+BTC_TESTNET_EXPLORER = 'https://testnet.blockchain.info'
+ELA_MAINNET_EXPLORER = 'https://blockchain.elastos.org'
+ELA_TESTNET_EXPLORER = 'https://blockchain-beta.elastos.org'
