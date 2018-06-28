@@ -34,7 +34,9 @@
             {% if item.id_card %}
             <p>
                 <label>证件照片:</label>
-                <img src="{{ item.id_card.url }}" alt="" style="width:200px;" />
+                <a href="{{ item.id_card.url }}" target="_blank">
+                    <img src="{{ item.id_card.url }}" alt="" style="width:200px;" />
+                </a>
             </p>
             {% endif %}
             <p>
@@ -46,7 +48,9 @@
             {% if item.personal_profile_attachment %}
             <p>
                 <label>自我介绍附件:</label>
-                <img src="{{ item.personal_profile_attachment.url }}" alt="" style="width:200px;"/>
+                <a href="{{ item.personal_profile_attachment.url }}" target="_blank">
+                    <img src="{{ item.personal_profile_attachment.url }}" alt="" style="width:200px;"/>
+                </a>
             </p>
             {% else %}
             <p><label>自我介绍附件:</label>－</p>
@@ -72,7 +76,9 @@
             {% if item.your_community_screenshots1 %}
             <p>
                 <label>社群截图1:</label>
-                <img src="{{ item.your_community_screenshots1.url }}" alt="" style="width:200px"/>
+                <a href="{{ item.your_community_screenshots1.url }}" target="_blank">
+                    <img src="{{ item.your_community_screenshots1.url }}" alt="" style="width:200px"/>
+                </a>
             </p>
             {% else %}
             <p>
@@ -82,7 +88,10 @@
             
             {% if item.your_community_screenshots2 %}
             <p>
-                <label>社群截图2:</label><img src="{{ item.your_community_screenshots2.url }}" alt="" style="width:200px;"/>
+                <label>社群截图2:</label>
+                <a href="{{ item.your_community_screenshots2.url }}" target="_blank">
+                    <img src="{{ item.your_community_screenshots2.url }}" alt="" style="width:200px;"/>
+                </a>
             </p>
             {% else %}
             <p>
@@ -91,7 +100,10 @@
             {% endif %}
             {% if item.your_community_screenshots3 %}
             <p>
-                <label>社群截图3:</label><img src="{{ item.your_community_screenshots3.url }}" alt="" style="width:200px;"/>
+                <label>社群截图3:</label>
+                <a href="{{ item.your_community_screenshots3.url }}" target="_blank">
+                    <img src="{{ item.your_community_screenshots3.url }}" alt="" style="width:200px;"/>
+                </a>
             </p>
             {% else %}
             <p><label>社群截图3:</label>－</p>
@@ -103,7 +115,9 @@
             {% if item.done_for_newton_attachment %}
             <p>
                 <label>为牛顿做过什么附件:</label>
-                <img src="{{ item.done_for_newton_attachment.url }}" alt="" style="width:200px;"/>
+                <a href="{{ item.done_for_newton_attachment.url }}" target="_blank">
+                    <img src="{{ item.done_for_newton_attachment.url }}" alt="" style="width:200px;"/>
+                </a>
             </p>
             {% else %}
             <p><label>为牛顿做过什么附件:</label>－</p>
@@ -124,12 +138,20 @@
             <p><label>机构名称:</label>{{ item.orgnization_name }}</p>
             <p><label>机构代码:</label>{{ item.orgnization_code }}</p>
             {% if item.orgnization_certificate1 %}
-            <p><label>机构资格证书1:</label><img src="{{ item.orgnization_certificate1.url }}" alt="" style="width:200px;"/></p>
+            <p><label>机构资格证书1:</label>
+                <a href="{{ item.orgnization_certificate1.url }}" target="_blank">
+                    <img src="{{ item.orgnization_certificate1.url }}" alt="" style="width:200px;"/>
+                </a>
+            </p>
             {% else %}
             <p><label>机构资格证书1:</label>-</p>
             {% endif %}
             {% if item.orgnization_certificate2 %}
-            <p><label>机构资格证书2:</label><img src="{{ item.orgnization_certificate2.url }}" alt="" style="width:200px;" /></p>
+            <p><label>机构资格证书2:</label>
+                <a href="{{ item.orgnization_certificate2.url }}" target="_blank">
+                    <img src="{{ item.orgnization_certificate2.url }}" alt="" style="width:200px;" />
+                </a>
+            </p>
             {% else %}
             <p><label>机构资格证书2:</label>-</p>
             {% endif %}
@@ -138,7 +160,11 @@
             <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
             <p>机构介绍: </p><p> {{ item.personal_profile|default:"-" }}</p>
             {% if item.personal_profile_attachment %}
-            <p>机构介绍附件:<img src="{{ item.personal_profile_attachment.url }}" alt=""></p>
+            <p>机构介绍附件:
+                <a href="{{ item.personal_profile_attachment.url }}" target="_blank">
+                    <img src="{{ item.personal_profile_attachment.url }}" alt="" style="width:200px;" />
+                </a>
+            </p>
             {% else %}
             <p>机构介绍附件:-</p>
             {% endif %}
@@ -149,7 +175,11 @@
             <p>对牛顿的理解: </p><p> {{ item.what_is_newton|default:"-" }}</p>
             <p>为牛顿做过什么: </p><p> {{ item.done_for_newton|default:"-" }}</p>
             {% if item.done_for_newton_attachment %}
-            <p>为牛顿做过什么附件:<img src="{{ item.done_for_newton_attachment.url }}" alt=""></p>
+            <p>为牛顿做过什么附件:
+                <a href="{{ item.done_for_newton_attachment.url }}" target="_blank">
+                    <img src="{{ item.done_for_newton_attachment.url }}" alt="" style="width:200px;" />
+                </a>
+            </p>
             {% else %}
             <p>为牛顿做过什么附件:－</p>
             {% endif %}
