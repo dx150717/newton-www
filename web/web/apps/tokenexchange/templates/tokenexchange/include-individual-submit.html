@@ -100,8 +100,8 @@
                                     {% trans "Address" %}<span class="red-color">*</span>
                                     </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_location" maxlength="1024" name="location" placeholder="{% trans "Address" %}" type="text">
-                                    <span class="small">{% trans "Recommend locate to block" %}</span>
+                                    <input class="form-control" id="id_location" maxlength="1024" name="location" placeholder="{% trans "Address" %}" type="text">
+                                    <p class="small">{% trans "Recommend locate to block" %}</p>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -195,7 +195,7 @@
                     <div class="panel panel-default bg-gray">
                         <div class="panel-heading">
                             <h3 class="panel-title text-center contribute-title">{% trans "How to Contribute" %}</h3>
-                            <p class="red-color contribute-tip">{% trans "This section is very important to KYC review, please fill in carefully." %}</p>
+                            <p class="text-danger contribute-tip">{% trans "This section is very important to KYC review, please fill in carefully." %}</p>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -323,7 +323,8 @@
                                 {% trans "Address" %}<span class="red-color">*</span>
                             </label>
                         <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_location" maxlength="1024" name="emergency_location" placeholder="{% trans "Address" %}" type="text">
+                            <input class="form-control" id="id_emergency_location" maxlength="1024" name="emergency_location" placeholder="{% trans "Address" %}" type="text">
+                            <p class="small">{% trans "Recommend locate to block" %}</p>
                         </div>
                     </div>
                     <div class="form-group">
