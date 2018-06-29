@@ -81,30 +81,30 @@ def allocate_ela_address():
         logger.exception("fail to allocate ELA address:%s" % str(inst))
         return None
 
-def send_distribution_letter(user, request):
-    """ Send distribution Letter to investor.
+def send_assign_letter(user, request):
+    """ Send assign Letter to investor.
     """
     try:
         # build the email body
         email = user.email
-        email_type = codes.EmailType.TEXCHANGE_DISTRIBUTE_AMOUNT_NOTIFY.value
+        email_type = codes.EmailType.TEXCHANGE_ASSIGN_AMOUNT_NOTIFY.value
         verification = verification_services.generate_verification_uuid(email, email_type)
         if not verification:
             return False
         # select language by user's prefer language
         __select_language(user)
-        target_url = "%s/tokenexchange/%s/" % (settings.NEWTON_HOME_URL, str(user.username))
+        target_url = "%s/user/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
-        subject = _("KYC information is confirmed")
-        template = loader.get_template("newtonadmin/distribution-letter.html")
-        context = Context({"targetUrl": target_url,"request": request, "security_url": security_url})
+        subject = _("Please check the allocation of Newton token exchange")
+        template = loader.get_template("newtonadmin/assign-letter.html")
+        context = Context({"target_url": target_url,"request": request, "security_url": security_url})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
         task_email.send_email.delay(subject, html_content, from_email, [email])
         return True
     except Exception, inst:
-        logger.exception("fail to send distribution letter:%s" % str(inst))
+        logger.exception("fail to send assign letter:%s" % str(inst))
         return False
 
 def send_kycinfo_notify(kyc_info, request):

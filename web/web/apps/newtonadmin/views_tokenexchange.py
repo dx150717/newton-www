@@ -714,6 +714,8 @@ def post_confirm_amount(request, phase_id):
             target_user = User.objects.filter(id=user_id).first()
             audit_log = newtonadmin_models.AuditLog(user=request.user,target_user=target_user,action_id=action_id)
             audit_log.save()
+            # send email
+            services_tokenexchange.send_assign_letter(target_user, request)
         return http.JsonSuccessResponse()
     except Exception, inst:
         logger.exception("fail to post invite:%s" % str(inst))
