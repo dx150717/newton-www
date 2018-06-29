@@ -155,7 +155,8 @@ def send_apply_amount_notify(invite_info, request):
         user = invite_info.user
         __select_language(user)
         # build email
-        target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWTON_HOME_URL, invite_info.id)
+        # target_url = "%s/tokenexchange/invite/%s/post/" % (settings.NEWTON_HOME_URL, invite_info.id)
+        target_url = "%s/user/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
         subject = _("Fillout your expect amount")
         template = loader.get_template("newtonadmin/apply-amount-notify-letter.html")
