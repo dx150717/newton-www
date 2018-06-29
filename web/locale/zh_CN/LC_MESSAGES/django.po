@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 03:39+0000\n"
+"POT-Creation-Date: 2018-06-29 03:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -155,14 +155,14 @@ msgstr ""
 #: web/apps/base/templatetags/utils.py:183
 #: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:24
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:234
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:196
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:188
 msgid "Yes"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:184
 #: web/apps/base/templatetags/utils.py:191 web/apps/tokenexchange/models.py:25
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:235
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:197
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:189
 msgid "No"
 msgstr ""
 
@@ -381,7 +381,7 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:60
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:37
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:348
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:229
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:221
 #: web/apps/user/templates/user/profile.html:33
 msgid "Submit"
 msgstr "提交"
@@ -1118,25 +1118,25 @@ msgstr "驾驶证"
 
 #: web/apps/tokenexchange/models.py:18
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:245
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:207
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:199
 msgid "Full Node"
 msgstr "全节点"
 
 #: web/apps/tokenexchange/models.py:19
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:246
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:208
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:200
 msgid "Media Node"
 msgstr "媒体节点"
 
 #: web/apps/tokenexchange/models.py:20
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:247
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:209
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:201
 msgid "Technology Node"
 msgstr "技术节点"
 
 #: web/apps/tokenexchange/models.py:21
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:248
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:210
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:202
 msgid "Operation Node"
 msgstr "运营节点"
 
@@ -1255,25 +1255,21 @@ msgid "Your Understanding of Newton"
 msgstr "您对牛顿的理解"
 
 #: web/apps/tokenexchange/models.py:67
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:164
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:167
 msgid "Contribution You Have Made to Newton"
 msgstr "您已经为牛顿做了什么"
 
 #: web/apps/tokenexchange/models.py:69
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:185
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:188
 msgid "Contribution You Will Make to Newton"
 msgstr "您将为牛顿做些什么"
 
 #: web/apps/tokenexchange/models.py:71
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:193
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:185
 msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点"
 
 #: web/apps/tokenexchange/models.py:75
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:240
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:202
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:194
 #: web/apps/user/templates/user/include-kyc-section.html:91
 #: web/apps/user/templates/user/include-kyc-section.html:158
 msgid "Which type of node ?"
@@ -1316,8 +1312,8 @@ msgid "Organization Certificate"
 msgstr "机构证明"
 
 #: web/apps/tokenexchange/models.py:100
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:114
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:117
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:130
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:133
 msgid "Wechat Platform Name"
 msgstr "微信公众平台名称"
 
@@ -1499,14 +1495,14 @@ msgid "Telegram ID"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:160
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:122
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:125
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:114
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:117
 msgid "Twitter"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:168
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:130
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:133
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:122
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:125
 msgid "Facebook"
 msgstr ""
 
@@ -1523,6 +1519,7 @@ msgid "This section is very important to KYC review, please fill in carefully."
 msgstr "这一节是Newton KYC 审核的重要依据，请认真填写。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:210
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:164
 msgid "Plans for contributing to Newton"
 msgstr "您计划如何参与牛顿项目"
 
@@ -1539,12 +1536,12 @@ msgid "Do you want to elect a community node?"
 msgstr "是否愿意竞选社群节点"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:244
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:206
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:198
 msgid "Select Node"
 msgstr "选择节点"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:250
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:212
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:204
 msgid ""
 "Note: Media node is the node where medias help broadcast Newton, technology "
 "node is the one where people develop various kind of DAPP or other "
@@ -1595,8 +1592,13 @@ msgstr "请介绍您的机构的基本概况、机构类型（比如交易所、
 msgid "Understanding of Newton"
 msgstr "您对牛顿的理解"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:217
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:220
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:167
+msgid ""
+"Please list the experiences of your institution that have participated in the construction of Newton project, or how your organization plans to participate and contribute to Newton project construction."
+msgstr "请列举您的机构曾参与牛顿项目建设的经历，或者您的机构计划如何参与牛顿项目建设。"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:209
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:212
 #, fuzzy
 msgid "Plan of node establishment"
 msgstr "节点建立计划和方案"

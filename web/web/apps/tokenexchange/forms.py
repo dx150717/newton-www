@@ -162,7 +162,6 @@ class ContributeForm(ModelForm):
             'done_for_newton',
             'done_for_newton_attachment',
             'do_for_newton'
-
         ]
         
     class Meta:

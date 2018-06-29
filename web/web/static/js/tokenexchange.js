@@ -124,6 +124,7 @@ $("#id_organization_form").submit(function(event){
         personal_profile: {required: true},
         personal_profile_attachment: fileRuleWithoutRequired,
         what_is_newton: {required:true, minlength:1, maxlength:1000},
+        done_for_newton: {required:true},
         done_for_newton_attachment: fileRuleWithoutRequired
     },
     messages: {
