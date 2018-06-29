@@ -7,23 +7,14 @@
     <div class="text-center">
         <p class="token-exchange-title">{% trans "Allocated" %}</p>
     </div>
-    {% if item.expect_btc or item.expect_ela %}
-        {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
-            {% if not is_deadline %}
-                <p class="allocated-tips text-danger">{% trans "* Please transfer your token before deadline of second-round token exchange." %}</p>
-                    {% if item.expect_btc and item.expect_ela %}
-                        <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%} {{item.assign_btc}} BTC {% trans "and" %} {{item.assign_ela}} ELA {% trans "to below addresses. DO NOT transfer BTC and ELA amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
-                    {% else %}
-                        {% if item.expect_btc %}
-                            <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%} {{item.assign_btc}} BTC {% trans "to below addresses. DO NOT transfer BTC amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
-                        {% endif %}
-                        {% if item.expect_ela %}
-                            <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%}{{item.assign_ela}} ELA {% trans "to below addresses. DO NOT transfer ELA amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
-                        {% endif %}
-                    {% endif %}
-            {% else %}
-                <p class="allocated-tips text-danger">{% trans "* Second-round token exchange is overdue, DO NOT transfer any token to allocated addresses." %}</p>
+    {% if item.assign_btc and item.receive_btc_address %}
+        {% if not is_deadline %}
+            <p class="allocated-tips text-danger">{% trans "* Please transfer your token before deadline of second-round token exchange." %}</p>
+            {% if item.expect_btc %}
+                <p class="allocated-tips text-danger">{% trans "* Attention! You can only transfer"%} {{item.assign_btc}} BTC {% trans "to below addresses. DO NOT transfer BTC amount larger than allocated amount, otherwise Newton Foundation won't refund the remainder." %}</p>
             {% endif %}
+        {% else %}
+            <p class="allocated-tips text-danger">{% trans "* Second-round token exchange is overdue, DO NOT transfer any token to allocated addresses." %}</p>
         {% endif %}
     {% endif %}
 
@@ -48,34 +39,13 @@
         </div>
     </div>
     {% endif %}
-    {% if item.assign_ela %}
-    <div class="text-center receive-panel">
-        <div class="quantity">
-            <span class="text-muted key">{% trans "Allocated ELA amount" %}:</span>
-            <span class="value">
-                <span class="number text-danger bold">{{ item.assign_ela }}</span>
-                <span class="unit">ELA</span>
-            </span>
-        </div>
-        
-        <div class="address">
-            <span class="text-muted key">{% trans "Allocated ELA address" %}:</span>
-            <span class="text-danger bold value text-nowrap">{{ item.receive_ela_address }}</span>
-        </div> 
-        <div id="ela_code"  class="qrcode">
-            <script>
-                new QRCode(document.getElementById("ela_code"), "{{ item.receive_ela_address }}");
-            </script>
-        </div>
-    </div>
-    {% endif %}
     
-    {% if item.assign_btc or item.assign_ela %}
+    {% if item.assign_btc %}
     <div class="text-center receive-panel well well-sm exchange-panel">
         <div class="quantity">
             <span class="text-muted key">{% trans "You can exchange for" %}</span>
             <span class="value">
-                <span class="number text-danger bold">{% exchange_assign_amount_to_NEW item.assign_btc item.assign_ela %}</span>
+                <span class="number text-danger bold">{% exchange_assign_amount_to_NEW item.assign_btc %}</span>
                 <span class="unit">NEW</span>
             </span>
         </div>

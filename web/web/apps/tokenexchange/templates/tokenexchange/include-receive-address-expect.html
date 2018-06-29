@@ -1,13 +1,13 @@
 {% load i18n %}
 {% load utils %}
 
-{% if item.expect_btc or item.expect_ela %}
+{% if item.expect_btc %}
 <div class="shadow-item fill-expect-section">
     <div class="container">
         <div class="text-center">
             <p class="token-exchange-title">{% trans "Request" %}</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
             {% if item.expect_btc %}
             <p class="token-exchange-content text-center">
                 <span class="key">{% trans "Requesting BTC amount" %}:</span><span class="value">{{ item.expect_btc }}</span>BTC</p>
@@ -15,16 +15,9 @@
             <p class="token-exchange-content text-center"><span class="key">{% trans "Requesting BTC amount" %}:</span><span class="value">0</span>BTC</p>
             {% endif %}
         </div>
-        <div class="col-md-6">
-            {% if item.expect_ela %}
-            <p class="token-exchange-content text-center"><span class="key">{% trans "Requesting ELA amount" %}:</span><span class="value">{{ item.expect_ela }}</span>ELA</p>
-            {% else %}
-            <p class="token-exchange-content text-center"><span class="key">{% trans "Requesting ELA amount" %}:</span><span class="value">0</span>ELA</p>
-            {% endif %}
-        </div>
     </div>
     <div class="container">
-        {% if item.assign_btc or item.assign_ela or item.receive_btc_address or item.receive_ela_address %}
+        {% if item.assign_btc or item.receive_btc_address %}
                 {% if item.status >= codes.TOKEN_EXCHANGE_STATUS_CONFIRM_AMOUT_VALUE %}
                 <p></p>
                 {% else %}

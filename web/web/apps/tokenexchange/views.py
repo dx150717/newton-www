@@ -191,24 +191,16 @@ def show_receive_address_view(request, invite_id):
             if btc_final_balance > 0:
                 invite_item.btc_final_balance = btc_final_balance
                 invite_item.btc_transfer_list = btc_transfer_list
-        # ela section
-        if invite_item.receive_ela_address:
-            ela_final_balance = tracker_models.AddressTransaction.objects.filter(address=invite_item.receive_ela_address,address_type=codes.CurrencyType.ELA.value).aggregate(Sum('value'))
-            ela_final_balance = ela_final_balance.get("value__sum", 0)
-            ela_transfer_list = tracker_models.AddressTransaction.objects.filter(address=invite_item.receive_ela_address,address_type=codes.CurrencyType.ELA.value)
-            if ela_final_balance > 0:
-                invite_item.ela_final_balance = ela_final_balance
-                invite_item.ela_transfer_list = ela_transfer_list
         # check whether the fundraise process is expired
         is_deadline = False
-        deadline_time = time.strptime(token_exchange_info['end_date'], "%Y-%m-%d")
-        dead_time = datetime.datetime(*deadline_time[:6]).replace(tzinfo=utc)
+        deadline_dt = datetime.datetime.strptime(token_exchange_info['end_date'], "%Y-%m-%d %H:%M")
+        deadline_dt = deadline_dt.replace(tzinfo=utc)
         now_time = datetime.datetime.utcnow().replace(tzinfo=utc)
-        if now_time > dead_time:
+        if now_time > deadline_dt:
             is_deadline = True
         # check whether the receive equal assign
         is_equal = True
-        if invite_item.btc_final_balance != invite_item.assign_btc or invite_item.ela_final_balance != invite_item.assign_ela:
+        if invite_item.btc_final_balance != invite_item.assign_btc:
             is_equal = False
         return render(request, "tokenexchange/token-exchange-receive-address.html", locals())
     except Exception,inst:
@@ -238,34 +230,37 @@ def post_apply_amount(request, invite_id):
         # get token exchange info
         token_exchange_info = settings.FUND_CONFIG[item.phase_id]
         min_btc = token_exchange_info['min_btc']
-        min_ela = token_exchange_info['min_ela']
+        #min_ela = token_exchange_info['min_ela']
         if request.method == 'POST':
-            if item.expect_btc or item.expect_ela:
+            #if item.expect_btc or item.expect_ela:
+            if item.expect_btc:
                 message = unicode(_("You have applied."))
                 return http.JsonErrorResponse(error_message=message)
             form = tokenexchange_forms.ApplyAmountForm(request.POST)
             if not form.is_valid():
-                message = unicode(_("You must fill in at least one."))
+                message = unicode(_("BTC is required."))
                 return http.JsonErrorResponse(error_message=message)
             else:
                 expect_btc = form.cleaned_data['expect_btc']
-                expect_ela = form.cleaned_data['expect_ela']
-                if not expect_btc and not expect_ela:
-                    return http.JsonErrorResponse(error_message=unicode(_('You must fill in at least one.')))
+                #expect_ela = form.cleaned_data['expect_ela']
+                #if not expect_btc and not expect_ela:
+                if not expect_btc:
+                    return http.JsonErrorResponse(error_message=unicode(_('BTC is required.')))
                 elif expect_btc and expect_btc < min_btc:
                     message = unicode(_('The quantity of BTC must be equal or more than %s.')) % (min_btc)
                     return http.JsonErrorResponse(error_message=message)
-                elif expect_ela and expect_ela < min_ela:
-                    message = unicode(_('The quantity of ELA must be equal or more than %s.')) % (min_ela)
-                    return http.JsonErrorResponse(error_message=message)
+                #elif expect_ela and expect_ela < min_ela:
+                #    message = unicode(_('The quantity of ELA must be equal or more than %s.')) % (min_ela)
+                #    return http.JsonErrorResponse(error_message=message)
                 item.expect_btc = expect_btc
-                item.expect_ela = expect_ela
+                #item.expect_ela = expect_ela
                 item.status = codes.TokenExchangeStatus.APPLY_AMOUNT.value
                 item.save()
                 return http.JsonSuccessResponse({'redirect_url': '/tokenexchange/invite/%s/success/' % invite_id})
         else:
             form = tokenexchange_forms.ApplyAmountForm()
-        if item.expect_btc or item.expect_ela:
+        #if item.expect_btc or item.expect_ela:
+        if item.expect_btc:
             return render(request, "tokenexchange/invalid-link.html")
         return render(request, "tokenexchange/apply-amount.html", locals())
     except Exception, inst:

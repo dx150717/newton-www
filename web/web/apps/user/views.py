@@ -73,6 +73,7 @@ def show_user_index_view(request):
         item.token_exchange_info = settings.FUND_CONFIG[item.phase_id]
         if item.status >= codes.TokenExchangeStatus.SEND_TRANSFER_NOTIFY.value:
             item.process_status = 3
-        elif item.expect_btc or item.expect_ela:
+        #elif item.expect_btc or item.expect_ela:
+        elif item.expect_btc:
             item.process_status = 2
     return render(request, "user/index.html", locals())

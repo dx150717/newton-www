@@ -203,7 +203,7 @@ class ApplyAmountForm(ModelForm):
         model = tokenexchange_models.InvestInvite
         fields = [
             'expect_btc',
-            'expect_ela',
+            #'expect_ela',
         ]
 
 class CountryForm(ModelForm):
