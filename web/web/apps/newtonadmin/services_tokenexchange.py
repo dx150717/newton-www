@@ -87,17 +87,16 @@ def send_assign_letter(user, request):
     try:
         # build the email body
         email = user.email
-        email_type = codes.EmailType.TEXCHANGE_ASSIGN_AMOUNT_NOTIFY.value
-        verification = verification_services.generate_verification_uuid(email, email_type)
-        if not verification:
-            return False
+        # check user's kyc_info
+        kyc_info = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()
+        print "kyc_info.first_name is %s" % kyc_info.first_name
         # select language by user's prefer language
         __select_language(user)
         target_url = "%s/user/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
         subject = _("Please check the allocation of Newton token exchange")
         template = loader.get_template("newtonadmin/assign-letter.html")
-        context = Context({"target_url": target_url,"request": request, "security_url": security_url})
+        context = Context({"target_url": target_url,"request": request, "security_url": security_url, "kyc_info":kyc_info})
         html_content = template.render(context)
         from_email = settings.FROM_EMAIL
         # send
