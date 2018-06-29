@@ -30,9 +30,12 @@
     {% block sign %}
     <p style="padding-top:20px;">{% trans "Best regard" %}</p>
     <p style="padding-top:20px;">{% trans "Newton" %}</p>
+    {% endblock %}
+
+    {% block case %}
     <p style="padding-top:30px; margin-bottom: 50px;">{% trans "If you have received this email in error, please delete it." %}</p>
     {% endblock %}
-    
+
     {% block security %}
     <div style="border-top: 1px #333333 solid;margin-top:50px;">
         <p style="color: #a94442; margin-top: 5px;margin: 10px 0 10px 0; font-size: 14px;">{% trans "Security Notification" %}</p>
