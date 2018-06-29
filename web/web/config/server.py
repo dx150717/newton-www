@@ -55,7 +55,7 @@ HAYSTACK_CONNECTIONS = {
 
 # Email settings
 EMAIL_BACKEND = 'email_log.backends.EmailBackend'
-FROM_EMAIL = 'Newton Foundation<no-reply@crm.newtonproject.org>'
+FROM_EMAIL = 'Newton<no-reply@crm.newtonproject.org>'
 EMAIL_HOST = 'email-smtp.us-west-2.amazonaws.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'AKIAJIDOOT3MOAE6DSIA'

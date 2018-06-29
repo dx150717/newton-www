@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 09:28+0000\n"
+"POT-Creation-Date: 2018-06-29 11:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -184,7 +184,7 @@ msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:114
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:327
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:279
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:122
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:79
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:55
@@ -198,7 +198,7 @@ msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:118
-#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:331
+#: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:283
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:126
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:83
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:59
@@ -241,7 +241,6 @@ msgstr ""
 "供任何相关通证交换信息，比如：通证交换分配额度、接收地址或二维码等。"
 
 #: web/apps/help/templates/help/security.html:22
-#: web/templates/email-template.html:40
 msgid ""
 "The Newton official website uses the EV SSL certificate for secure identity "
 "verification. The SSL certificate displayed in the browser's address bar "
@@ -384,29 +383,29 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/setting/templates/setting/include-verification.html:13
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:60
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:37
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:348
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:349
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:221
 #: web/apps/user/templates/user/profile.html:33
 msgid "Submit"
 msgstr "提交"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:98
+#: web/apps/newtonadmin/services_tokenexchange.py:97
 msgid "Please check the allocation of Newton token exchange"
 msgstr "请查看牛顿通证交换分配信息"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:125
+#: web/apps/newtonadmin/services_tokenexchange.py:124
 msgid "You have passed the Newton KYC"
 msgstr "您通过了牛顿KYC审核"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:127
+#: web/apps/newtonadmin/services_tokenexchange.py:126
 msgid "You are not passed the Newton KYC"
 msgstr "您没有通过牛顿KYC审核"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:161
+#: web/apps/newtonadmin/services_tokenexchange.py:160
 msgid "Fillout your expect amount"
 msgstr "请填写申请数量"
 
-#: web/apps/newtonadmin/services_tokenexchange.py:187
+#: web/apps/newtonadmin/services_tokenexchange.py:186
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:7
 msgid "Receive Transferring Notification"
 msgstr "转币确认提醒"
@@ -459,7 +458,7 @@ msgstr ""
 "顿通证交换的详细信息。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:12
-#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:10
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:20
 msgid ""
 "Newton only issues the announcement and notification though Newton official "
 "website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
@@ -480,18 +479,16 @@ msgstr "现在填写"
 msgid "Newton Token Exchange Allocation"
 msgstr "牛顿通证交换分配信息"
 
-#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:9
-msgid ""
-"Newton foundation has already allocated token exchanging amount and address for you, more information on Token Exchange page of Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>)."
-msgstr ""
-"牛顿基金会已经为您分配了通证交换数量和地址，请前往牛顿官方网站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 的通证交换页面查看详情。"
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:10
+msgid "Your amount of Newton token exchange has been allocated."
+msgstr "您的通证交换数量已分配完成。"
 
-#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:11
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:13
 msgid ""
 "Click the following button to check the allocation of Newton token exchange."
 msgstr "点击下方按钮，查看分配详情。"
 
-#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:14
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:17
 #: web/apps/welcome/templates/welcome/press.html:29
 msgid "Details"
 msgstr "详情"
@@ -523,6 +520,7 @@ msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:16
 #: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
+#: web/templates/email-template.html:32
 msgid "Newton"
 msgstr "牛顿"
 
@@ -628,8 +626,8 @@ msgid "Admin Login"
 msgstr ""
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:10
-msgid "Newton foundation has received your"
-msgstr "牛顿基金会收到您的"
+msgid "Newton has received your"
+msgstr "牛顿收到您的"
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:22
 #: web/apps/register/templates/register/index.html:47
@@ -1148,17 +1146,17 @@ msgid "Operation Node"
 msgstr "运营节点"
 
 #: web/apps/tokenexchange/models.py:29
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:336
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:337
 msgid "Kinship"
 msgstr "亲属"
 
 #: web/apps/tokenexchange/models.py:30
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:337
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:338
 msgid "Friendship"
 msgstr "朋友"
 
 #: web/apps/tokenexchange/models.py:31
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:338
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:339
 msgid "Colleague"
 msgstr "同事"
 
@@ -1296,8 +1294,8 @@ msgid "Cellphone of Emergency Contact"
 msgstr ""
 
 #: web/apps/tokenexchange/models.py:88
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:331
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:335
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:332
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:336
 msgid "Relation with Applicant"
 msgstr "与申请人的关系"
 
@@ -1474,6 +1472,7 @@ msgid "Only jpeg, jpg and png file within 5M"
 msgstr "支持 jpeg, jpg 和 png 格式，大小在 5M 之内"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:104
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:327
 msgid "Recommend locate to block"
 msgstr "详细地址精确到街道"
 
@@ -7141,13 +7140,25 @@ msgstr ""
 msgid "Best regard"
 msgstr "谢谢！"
 
-#: web/templates/email-template.html:32
-msgid "Newton Foundation"
-msgstr "牛顿基金会"
-
 #: web/templates/email-template.html:33
 msgid "If you have received this email in error, please delete it."
 msgstr "如果您意外收到了这封邮件，请删除它。"
+
+#: web/templates/email-template.html:40
+msgid ""
+"The Newton official website uses the EV SSL certificate for secure identity "
+"verification. The SSL certificate displayed in the browser's address bar "
+"should be: “NEWTON FOUNDATION LTD. [SG]”. Websites without this identity are "
+"fraudulent Newton official websites. Please do not perform any operation "
+"such as: log in, fill in personal information, etc. If you find any "
+"fraudulent website, please immediately report this website to Newton: <a "
+"href='mailto:contact@newtonproject.org'>contact@newtonproject.org</a>."
+msgstr ""
+"牛顿官方网站采用EV SSL证书进行安全身份标识，浏览器地址栏中显示的SSL证书"
+"是：“NEWTON FOUNDATION LTD. [SG]”，没有此身份标识的网站是虚假牛顿官方网站，请"
+"勿进行任何操作，比如：登录、填写个人信息等，并请第一时间将此虚假网站情况反馈"
+"给牛顿官方：<a href='mailto:contact@newtonproject.org'>contact@newtonproject."
+"org。</a>."
 
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
@@ -7201,6 +7212,18 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid ""
+#~ "Newton has already allocated the token exchanging amount and address for "
+#~ "you, more information on Token Exchange page of Newton official website "
+#~ "(<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>)."
+#~ msgstr ""
+#~ "牛顿已经为您分配了通证交换数量和地址，请前往牛顿官方网站 (<a "
+#~ "href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 的通证交"
+#~ "换页面查看详情。"
+
+#~ msgid "Newton Foundation"
+#~ msgstr "牛顿基金会"
 
 #~ msgid "Lookup Address"
 #~ msgstr "详细地址"

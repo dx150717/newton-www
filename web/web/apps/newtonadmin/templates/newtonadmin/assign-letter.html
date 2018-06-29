@@ -2,16 +2,20 @@
 {% load i18n %}
 {% load utils %}
     {% block content %}
-    <p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px;">
-        {% trans "Newton Token Exchange Allocation" %}
-    </p>
-    <p>{{ kyc_info.first_name }}, {% trans "welcome!" %}</p>
-    <p>{% trans "Newton foundation has already allocated token exchanging amount and address for you, more information on Token Exchange page of Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>)." %}</p>
-    <p>{% trans "Newton only issues the announcement and notification though Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>), please ignore messages from any other medias." %}</p>
-    <p>{% trans "Click the following button to check the allocation of Newton token exchange." %}</p>
-    <p style="padding-top:20px;">
-        <a href="{{ target_url }}" class="button-1" style="display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff;">
-            {% trans "Details" %}
-        </a>
-    </p>
+        <p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px;">
+            {% trans "Newton Token Exchange Allocation" %}
+        </p>
+        <p>{{ kyc_info.first_name }}, {% trans "welcome!" %}</p>
+        <p>
+            {% trans "Your amount of Newton token exchange has been allocated." %}
+        </p>
+        <p>
+            {% trans "Click the following button to check the allocation of Newton token exchange." %}
+        </p>
+        <p style="padding-top:20px;">
+            <a href="{{ target_url }}" class="button-1" style="display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff;">
+                {% trans "Details" %}
+            </a>
+        </p>
+        <p>{% trans "Newton only issues the announcement and notification though Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>), please ignore messages from any other medias." %}</p>
     {% endblock %}
