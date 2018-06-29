@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 02:36+0000\n"
+"POT-Creation-Date: 2018-06-29 02:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1281,8 +1281,6 @@ msgid "Which type of node ?"
 msgstr "节点类型"
 
 #: web/apps/tokenexchange/models.py:78
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:255
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:258
 #: web/apps/user/templates/user/include-kyc-section.html:101
 #: web/apps/user/templates/user/include-kyc-section.html:168
 msgid "Your plan of node establishment"
@@ -1570,6 +1568,11 @@ msgstr ""
 "DAPP或其他技术的节点；运营节点是帮助维护和发展牛顿社区的节点；全节点是集合上"
 "述两种及两种以上类型的节点。"
 
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:255
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:258
+msgid "Plans of community node election"
+msgstr "社群节点建立构想"
+
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:269
 #: web/apps/user/templates/user/include-kyc-section.html:112
 msgid "Emergency Contact"
@@ -1606,6 +1609,7 @@ msgstr "您对牛顿的理解"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:217
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:220
+#, fuzzy
 msgid "Plan of node establishment"
 msgstr "节点建立计划和方案"
 
