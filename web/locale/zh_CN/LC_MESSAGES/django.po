@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-28 13:28+0000\n"
+"POT-Creation-Date: 2018-06-29 02:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,14 +154,14 @@ msgstr ""
 
 #: web/apps/base/templatetags/utils.py:183
 #: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:24
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:268
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:234
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:196
 msgid "Yes"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:184
 #: web/apps/base/templatetags/utils.py:191 web/apps/tokenexchange/models.py:25
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:269
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:235
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:197
 msgid "No"
 msgstr ""
@@ -186,7 +186,7 @@ msgstr ""
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:117
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:327
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:117
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
+#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:79
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:55
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:49
 #: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:71
@@ -200,7 +200,7 @@ msgstr "上一页"
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:121
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:331
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:121
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:68
+#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:83
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:59
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:53
 #: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:75
@@ -329,6 +329,7 @@ msgstr "登录"
 #: web/apps/setting/templates/setting/check-gtoken.html:6
 #: web/apps/setting/templates/setting/set-gtoken.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:7
+#: web/apps/tokenexchange/templates/tokenexchange/apply-end.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:8
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:12
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:6
@@ -336,7 +337,6 @@ msgstr "登录"
 #: web/apps/tokenexchange/templates/tokenexchange/index.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:6
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
@@ -380,7 +380,7 @@ msgstr "填写谷歌身份验证码"
 #: web/apps/setting/templates/setting/include-verification.html:13
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:66
 #: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:37
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:382
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:348
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:229
 #: web/apps/user/templates/user/profile.html:33
 msgid "Submit"
@@ -543,7 +543,7 @@ msgstr "详细地址"
 #: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:46
 #: web/apps/tokenexchange/forms.py:177
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:109
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:337
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:303
 msgid "Cellphone"
 msgstr "手机号"
 
@@ -555,8 +555,8 @@ msgstr "国家"
 #: web/apps/tokenexchange/models.py:42 web/apps/tokenexchange/models.py:86
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:92
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:95
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:349
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:352
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:315
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:318
 msgid "City"
 msgstr "城市"
 
@@ -564,8 +564,8 @@ msgstr "城市"
 #: web/apps/tokenexchange/models.py:43 web/apps/tokenexchange/models.py:87
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:100
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:103
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:357
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:360
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:323
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:326
 msgid "Address"
 msgstr "详细地址"
 
@@ -1103,56 +1103,56 @@ msgid "Organization Introduction"
 msgstr "机构介绍"
 
 #: web/apps/tokenexchange/models.py:13
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:66
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:68
 msgid "ID Card"
 msgstr "身份证"
 
 #: web/apps/tokenexchange/models.py:14
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:67
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:66
 msgid "Passport"
 msgstr "护照"
 
 #: web/apps/tokenexchange/models.py:15
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:68
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:67
 msgid "Drivers License"
 msgstr "驾驶证"
 
 #: web/apps/tokenexchange/models.py:18
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:279
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:245
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:207
 msgid "Full Node"
 msgstr "全节点"
 
 #: web/apps/tokenexchange/models.py:19
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:280
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:246
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:208
 msgid "Media Node"
 msgstr "媒体节点"
 
 #: web/apps/tokenexchange/models.py:20
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:281
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:247
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:209
 msgid "Technology Node"
 msgstr "技术节点"
 
 #: web/apps/tokenexchange/models.py:21
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:282
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:248
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:210
 msgid "Operation Node"
 msgstr "运营节点"
 
 #: web/apps/tokenexchange/models.py:29
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:370
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:336
 msgid "Kinship"
 msgstr "亲属"
 
 #: web/apps/tokenexchange/models.py:30
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:371
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:337
 msgid "Friendship"
 msgstr "朋友"
 
 #: web/apps/tokenexchange/models.py:31
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:372
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:338
 msgid "Colleague"
 msgstr "同事"
 
@@ -1161,10 +1161,10 @@ msgstr "同事"
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:43
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:48
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:50
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:316
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:318
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:323
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:325
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:282
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:284
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:289
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:291
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:63
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:65
 msgid "First Name"
@@ -1175,10 +1175,10 @@ msgstr "名"
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:37
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:54
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:56
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:310
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:312
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:329
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:331
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:276
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:278
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:295
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:297
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:62
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:66
 msgid "Last Name"
@@ -1213,16 +1213,15 @@ msgstr ""
 
 #: web/apps/tokenexchange/models.py:55 web/apps/tokenexchange/models.py:68
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:142
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:206
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:247
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:221
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:104
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:175
 msgid "Attachment"
 msgstr "附件"
 
 #: web/apps/tokenexchange/models.py:59
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:152
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:155
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:176
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:179
 msgid "WeChat ID"
 msgstr "微信号"
 
@@ -1235,8 +1234,6 @@ msgid "Other Social Media"
 msgstr "其他社交媒体账号"
 
 #: web/apps/tokenexchange/models.py:61
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:192
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:195
 msgid "Newton Communities You are Involved in"
 msgstr "您所在的牛顿社群"
 
@@ -1253,35 +1250,31 @@ msgid "Screenshots of Abovementioned Communities 3"
 msgstr "社群截图3"
 
 #: web/apps/tokenexchange/models.py:66
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:228
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:231
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:202
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:205
 msgid "Your Understanding of Newton"
 msgstr "您对牛顿的理解"
 
 #: web/apps/tokenexchange/models.py:67
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:236
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:239
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:164
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:167
 msgid "Contribution You Have Made to Newton"
 msgstr "您已经为牛顿做了什么"
 
 #: web/apps/tokenexchange/models.py:69
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:257
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:260
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:185
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:188
 msgid "Contribution You Will Make to Newton"
 msgstr "您将为牛顿做些什么"
 
 #: web/apps/tokenexchange/models.py:71
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:265
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:231
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:193
 msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点？"
 
 #: web/apps/tokenexchange/models.py:75
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:274
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:240
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:202
 #: web/apps/user/templates/user/include-kyc-section.html:91
 #: web/apps/user/templates/user/include-kyc-section.html:158
@@ -1289,8 +1282,8 @@ msgid "Which type of node ?"
 msgstr "愿意建立哪种节点？"
 
 #: web/apps/tokenexchange/models.py:78
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:289
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:292
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:255
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:258
 #: web/apps/user/templates/user/include-kyc-section.html:101
 #: web/apps/user/templates/user/include-kyc-section.html:168
 msgid "Your plan of node establishment"
@@ -1305,8 +1298,8 @@ msgid "Cellphone of Emergency Contact"
 msgstr ""
 
 #: web/apps/tokenexchange/models.py:88
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:365
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:369
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:331
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:335
 msgid "Relation with Applicant"
 msgstr "与申请人的关系"
 
@@ -1344,24 +1337,24 @@ msgstr "ELA 数量"
 msgid "Received your KYC information"
 msgstr ""
 
-#: web/apps/tokenexchange/views.py:75
+#: web/apps/tokenexchange/views.py:73
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
-#: web/apps/tokenexchange/views.py:248
+#: web/apps/tokenexchange/views.py:244
 msgid "You have applied."
 msgstr "您已提交过申请。"
 
-#: web/apps/tokenexchange/views.py:252 web/apps/tokenexchange/views.py:258
+#: web/apps/tokenexchange/views.py:248 web/apps/tokenexchange/views.py:254
 msgid "You must fill in at least one."
 msgstr "至少填写BTC或者ELA中的一种。"
 
-#: web/apps/tokenexchange/views.py:260
+#: web/apps/tokenexchange/views.py:256
 #, python-format
 msgid "The quantity of BTC must be equal or more than %s."
 msgstr "BTC的数量必须大于或等于%s"
 
-#: web/apps/tokenexchange/views.py:263
+#: web/apps/tokenexchange/views.py:259
 #, python-format
 msgid "The quantity of ELA must be equal or more than %s."
 msgstr "ELA的数量必须大于或等于%s"
@@ -1378,9 +1371,9 @@ msgid "KYC"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/apply-end.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/end.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:5
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:24
@@ -1401,6 +1394,19 @@ msgstr "BTC 数量"
 #: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:60
 msgid "ELA amount"
 msgstr "ELA 数量"
+
+#: web/apps/tokenexchange/templates/tokenexchange/apply-end.html:22
+#, fuzzy
+msgid "Current Token Exchange has expired!"
+msgstr "KYC 通证交换条款"
+
+#: web/apps/tokenexchange/templates/tokenexchange/apply-end.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:24
+#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:24
+msgid ""
+"Go to <a href='/user/' style='text-decoration: underline'>User Center</a>"
+msgstr "请前往<a href='/user/' style='text-decoration: underline'>用户中心</a>"
 
 #: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:20
 msgid "You have successfully filled in the requesting amount"
@@ -1473,8 +1479,7 @@ msgstr "证件照片"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:86
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:146
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:212
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:251
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:225
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:108
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:179
 msgid "Only jpeg, jpg and png file within 5M"
@@ -1485,14 +1490,14 @@ msgid "Recommend locate to block"
 msgstr "详细地址精确到街道"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:113
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:341
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:307
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:76
 #: web/apps/user/forms.py:35
 msgid "Area Code"
 msgstr "国际区号"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:114
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:342
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:308
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:77
 #: web/apps/user/forms.py:37
 msgid "Phone Number"
@@ -1504,46 +1509,52 @@ msgid ""
 "about your understanding on blockchain industry."
 msgstr "个人职业履历，进入区块链行业的时间，对区块链行业的理解等。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:160
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:152
 msgid "Telegram ID"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:168
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:160
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:122
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:125
 msgid "Twitter"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:176
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:168
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:130
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:133
 msgid "Facebook"
 msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:197
-msgid ""
-"Community name you are involved in, your nickname in the community, your "
-"social media ID."
-msgstr "填写您所在的社群名称，您在社区中的昵称和您的社交媒体ID。"
-
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:223
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:151
 #: web/apps/user/templates/user/include-kyc-section.html:74
 #: web/apps/user/templates/user/include-kyc-section.html:141
 msgid "How to Contribute"
 msgstr "如何参与牛顿"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:224
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:198
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:152
 msgid "This section is very important to KYC review, please fill in carefully."
 msgstr "这一节是Newton KYC 审核的重要依据，请认真填写。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:278
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:210
+msgid "Plans for contributing to Newton"
+msgstr "您计划如何参与牛顿项目"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:213
+msgid ""
+"Please list the contributions you have made to Newton project and your "
+"experience of participating in the Newton project. And how do you plan to "
+"contribute to the Newton project in the future and participate in the "
+"construction of the Newton project?"
+msgstr "请列举您曾参与牛顿项目建设的经历，或者您计划如何参与牛顿项目建设。"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:244
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:206
 msgid "Select Node"
 msgstr "选择节点"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:284
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:250
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:212
 msgid ""
 "Note: Media node is the node where medias help broadcast Newton, technology "
@@ -1556,7 +1567,7 @@ msgstr ""
 "DAPP或其他技术的节点；运营节点是帮助维护和发展牛顿社区的节点；全节点是集合上"
 "述两种及两种以上类型的节点。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:303
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:269
 #: web/apps/user/templates/user/include-kyc-section.html:112
 msgid "Emergency Contact"
 msgstr "紧急联系人信息"
@@ -1826,18 +1837,6 @@ msgstr "申请KYC"
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:22
 msgid "KYC Denied!"
 msgstr "KYC审核被拒绝！"
-
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-deny.html:24
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:24
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:24
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:24
-msgid ""
-"Go to <a href='/user/' style='text-decoration: underline'>User Center</a>"
-msgstr "请前往<a href='/user/' style='text-decoration: underline'>用户中心</a>"
-
-#: web/apps/tokenexchange/templates/tokenexchange/kyc-end.html:22
-msgid "KYC deadline has expired!"
-msgstr "KYC已截止！"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:22
 msgid "KYC Passed!"
@@ -7243,3 +7242,11 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid ""
+#~ "Community name you are involved in, your nickname in the community, your "
+#~ "social media ID."
+#~ msgstr "填写您所在的社群名称，您在社区中的昵称和您的社交媒体ID。"
+
+#~ msgid "KYC deadline has expired!"
+#~ msgstr "KYC已截止！"
