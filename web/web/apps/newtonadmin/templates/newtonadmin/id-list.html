@@ -9,124 +9,131 @@
 {% block content %}
 <section class="newtonadmin" class="section-list">
     <div class="container">
-        <div class="table-responsive content">
-            <h3>{{ title }}</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>名称</th>
-                        <th>类型</th>
-                        <th>介绍</th>
-                        <th>申请时间</th>
-                        <th>操作</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for item in items %}
-                    <tr>
-                        <td>
-                            {% if item.kyc_type == 1 %}
-                            <p>{{ item.first_name }} &nbsp; {{ item.last_name }}</p>
-                            {% else %}
-                            <p>{{ item.orgnization_name }}</p>
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if item.kyc_type == 1 %}
-                            个人
-                            {% else %}
-                            机构
-                            {% endif %}
-                        </td>
-                        <td>
-                            {% if item.kyc_type == 1 %}
-                            <p>
-                                <label>{% trans "Cellphone" %}:</label>{{ item.country_code }} {{ item.cellphone }}
-                            </p>
-                            <p>
-                                <label>{% trans "Country" %}:</label>{{ item.country }}
-                            </p>
-                            <p>
-                                <label>{% trans "City" %}:</label>{{ item.city }}
-                            </p>
-                            <p>
-                                <label>{% trans "Address" %}:</label>{{ item.location }}
-                            </p>
-                            <p>
-                                <label>{% trans "ID Type" %}:</label>{{ item.id_type }}
-                            </p>
-                            <p>
-                                <label>{% trans "ID Number" %}:</label>{{ item.id_number }}
-                            </p>
-                            {% else %}
-                            <p>机构代码:{{ item.orgnization_code }}</p>
-                            {% if item.orgnization_certificate1 %}
-                            <p>机构资格证书1: 
-                                <a href="{{ item.orgnization_certificate1.url }}" target="_blank">
-                                    <img src="{{ item.orgnization_certificate1.url }}" alt=""/>
-                                </a>
-                            </p>
-                            {% else %}
-                            <p>机构资格证书1:-</p>
-                            {% endif %}
-                            {% if item.orgnization_certificate2 %}
-                            <p>机构资格证书2:
-                                <a href="{{ item.orgnization_certificate2.url }}" target="_blank">
-                                    <img src="{{ item.orgnization_certificate2.url }}" alt=""/>
-                                </a>
-                            </p>
-                            {% else %}
-                            <p>机构资格证书2:-</p>
-                            {% endif %}
-                            <p>注册国家:{{ item.country }}</p>
-                            <p>联系人姓名:{{ item.first_name }} &nbsp; {{ item.last_name }} &nbsp; </p>
-                            <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
-                            {% endif %}
-                            <p>
-                                {% if item.id_card %}
-                                <a href="{{ item.id_card.url }}" target="_blank">
-                                    <img src="{{ item.id_card.url }}" style="width: 300px"/>
-                                </a>
-                                {% endif %}
-                            </p>
-                        </td>
-                        
-                        <td>
-                            <p>
-                                {{ item.updated_at|date:"Y-m-d H:i:s"}}
-                            </p>                            
-                        </td>
-                        <td>
-                            {% if is_idlist %}
-                            <p>
-                                <a href="#" class="btn btn-danger" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
-                            </p>
-                            {% endif %}
-                            <p>
-                                <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-primary" target="_blank">详情</a>
-                            </p>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                    
-                </tbody>
-            </table>
-            {% if is_paginated %}
-            <div class="pagination-simple">
-            {% if page_obj.has_previous %}
-                <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
-            {% endif %}
-            <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
-            {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
-            {% endif %}
+        <div class="row">
+            <div class="col-md-3">
+                {% include "newtonadmin/include-filter.html" %}
             </div>
-            {% endif %}
-            {% if not items %}
-            <div class="well text-center">
-                还没有数据
+            <div class="col-md-9">
+                <div class="table-responsive content">
+                    <h3>{{ title }}</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>类型</th>
+                                <th>介绍</th>
+                                <th>申请时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in items %}
+                            <tr>
+                                <td>
+                                    {% if item.kyc_type == 1 %}
+                                    <p>{{ item.first_name }} &nbsp; {{ item.last_name }}</p>
+                                    {% else %}
+                                    <p>{{ item.orgnization_name }}</p>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if item.kyc_type == 1 %}
+                                    个人
+                                    {% else %}
+                                    机构
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if item.kyc_type == 1 %}
+                                    <p>
+                                        <label>{% trans "Cellphone" %}:</label>{{ item.country_code }} {{ item.cellphone }}
+                                    </p>
+                                    <p>
+                                        <label>{% trans "Country" %}:</label>{{ item.country }}
+                                    </p>
+                                    <p>
+                                        <label>{% trans "City" %}:</label>{{ item.city }}
+                                    </p>
+                                    <p>
+                                        <label>{% trans "Address" %}:</label>{{ item.location }}
+                                    </p>
+                                    <p>
+                                        <label>{% trans "ID Type" %}:</label>{{ item.id_type }}
+                                    </p>
+                                    <p>
+                                        <label>{% trans "ID Number" %}:</label>{{ item.id_number }}
+                                    </p>
+                                    {% else %}
+                                    <p>机构代码:{{ item.orgnization_code }}</p>
+                                    {% if item.orgnization_certificate1 %}
+                                    <p>机构资格证书1: 
+                                        <a href="{{ item.orgnization_certificate1.url }}" target="_blank">
+                                            <img src="{{ item.orgnization_certificate1.url }}" alt=""/>
+                                        </a>
+                                    </p>
+                                    {% else %}
+                                    <p>机构资格证书1:-</p>
+                                    {% endif %}
+                                    {% if item.orgnization_certificate2 %}
+                                    <p>机构资格证书2:
+                                        <a href="{{ item.orgnization_certificate2.url }}" target="_blank">
+                                            <img src="{{ item.orgnization_certificate2.url }}" alt=""/>
+                                        </a>
+                                    </p>
+                                    {% else %}
+                                    <p>机构资格证书2:-</p>
+                                    {% endif %}
+                                    <p>注册国家:{{ item.country }}</p>
+                                    <p>联系人姓名:{{ item.first_name }} &nbsp; {{ item.last_name }} &nbsp; </p>
+                                    <p>电话: +{{ item.country_code }} {{ item.cellphone }}</p>
+                                    {% endif %}
+                                    <p>
+                                        {% if item.id_card %}
+                                        <a href="{{ item.id_card.url }}" target="_blank">
+                                            <img src="{{ item.id_card.url }}" style="width: 300px"/>
+                                        </a>
+                                        {% endif %}
+                                    </p>
+                                </td>
+                                
+                                <td>
+                                    <p>
+                                        {{ item.updated_at|date:"Y-m-d H:i:s"}}
+                                    </p>                            
+                                </td>
+                                <td>
+                                    {% if is_idlist %}
+                                    <p>
+                                        <a href="#" class="btn btn-danger" onclick="javascript:openAuditIdPopuWindow({{ item.user_id }});">审核</a>
+                                    </p>
+                                    {% endif %}
+                                    <p>
+                                        <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-primary" target="_blank">详情</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                    {% if is_paginated %}
+                    <div class="pagination-simple">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+                    {% endif %}
+                    <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+                    {% endif %}
+                    </div>
+                    {% endif %}
+                    {% if not items %}
+                    <div class="well text-center">
+                        还没有数据
+                    </div>
+                    {% endif %}
+                </div>  
             </div>
-            {% endif %}
         </div>
     </div>
 </section>

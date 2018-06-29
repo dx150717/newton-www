@@ -74,12 +74,15 @@ class IdListView(generic.ListView):
         context['is_idlist'] = True
         context['countries_choices'] = COUNTRIES
         context['title'] = '待审核'
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
-
-            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.CANDIDATE.value)
+            q = Q(status=codes.KYCStatus.CANDIDATE.value)
+            q = build_query_condition(self.request, q)
+            fields = tokenexchange_models.KYCInfo.objects.filter(q)
             items = []
             if fields and len(fields) > 0:
                 for item in fields:
@@ -109,11 +112,15 @@ class PassIdListView(generic.ListView):
         context = super(PassIdListView, self).get_context_data(**kwargs)
         context['countries_choices'] = COUNTRIES
         context['title'] = '已通过'
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
-            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.PASS_KYC.value)
+            q = Q(status=codes.KYCStatus.PASS_KYC.value)
+            q = build_query_condition(self.request, q)
+            fields = tokenexchange_models.KYCInfo.objects.filter(q)
             items = []
             if fields and len(fields) > 0:
                 for item in fields:
@@ -640,12 +647,16 @@ class RejectListView(generic.ListView):
         context = super(RejectListView, self).get_context_data(**kwargs)
         context['countries_choices'] = COUNTRIES
         context['title'] = '已驳回'
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
             items = []
-            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.REJECT.value)
+            q = Q(status=codes.KYCStatus.REJECT.value)
+            q = build_query_condition(self.request, q)
+            fields = tokenexchange_models.KYCInfo.objects.filter(q)
             if fields and len(fields) > 0:
                 for item in fields:
                     if item.id_type:
@@ -674,12 +685,16 @@ class DenyListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(DenyListView, self).get_context_data(**kwargs)
         context['title'] = '已拒绝'
+        query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
+        context['query_form'] = query_form
         return context
 
     def get_queryset(self):
         try:
             items = []
-            fields = tokenexchange_models.KYCInfo.objects.filter(status=codes.KYCStatus.DENY.value)
+            q = Q(status=codes.KYCStatus.DENY.value)
+            q = build_query_condition(self.request, q)
+            fields = tokenexchange_models.KYCInfo.objects.filter(q)
             if fields and len(fields) > 0:
                 for item in fields:
                     if item.id_type:
