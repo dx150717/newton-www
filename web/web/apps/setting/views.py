@@ -35,6 +35,10 @@ def show_set_gtoken_view(request):
     """Show the set google authenticator page
     """
     try:
+        # prevent user double set gtoken
+        user_profile = request.user.userprofile
+        if user_profile.is_google_authenticator:
+            return redirect('/user/')
         redirect_url = request.GET.get('redirect_url')
         gtoken = pyotp.random_base32()
         gtoken_uri = pyotp.totp.TOTP(gtoken).provisioning_uri("newtonproject.org")
