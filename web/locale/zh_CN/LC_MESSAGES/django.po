@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 02:27+0000\n"
+"POT-Creation-Date: 2018-06-29 02:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1268,10 +1268,9 @@ msgid "Contribution You Will Make to Newton"
 msgstr "您将为牛顿做些什么"
 
 #: web/apps/tokenexchange/models.py:71
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:231
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:193
 msgid "Do you want to establish a Newton node ?"
-msgstr "是否愿意建立节点？"
+msgstr "是否愿意建立节点"
 
 #: web/apps/tokenexchange/models.py:75
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:240
@@ -1548,6 +1547,10 @@ msgid ""
 "contribute to the Newton project in the future and participate in the "
 "construction of the Newton project?"
 msgstr "请列举您曾参与牛顿项目建设的经历，或者您计划如何参与牛顿项目建设。"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:231
+msgid "Do you want to elect a community node?"
+msgstr "是否愿意竞选社群节点？"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:244
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:206
