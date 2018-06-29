@@ -533,25 +533,18 @@ def post_amount(request, phase_id):
         phase_id = int(phase_id)
         user_id = int(form.cleaned_data['user_id'])
         assign_btc = float(form.cleaned_data['assign_btc'])
-        assign_ela = float(form.cleaned_data['assign_ela'])
         # Query the available address
         if assign_btc > 0:
             btc_address = services_tokenexchange.allocate_btc_address()
         else:
             btc_address = None
-        if assign_ela > 0:
-            ela_address = services_tokenexchange.allocate_ela_address()
-        else:
-            ela_address = None
-        if not btc_address and not ela_address:
+        if not btc_address:
             return http.JsonErrorResponse()
         # save status
         item = tokenexchange_models.InvestInvite.objects.filter(user_id=user_id, phase_id=phase_id).first()
         item.status = codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value
-        item.assign_ela = assign_ela
         item.assign_btc = assign_btc
         item.receive_btc_address = btc_address
-        item.receive_ela_address = ela_address
         item.save()
         action_id = codes.AdminActionType.ASSIGN_AMOUNT.value
         target_user = User.objects.filter(id=user_id).first()
@@ -734,11 +727,11 @@ def export_amount_list(request, phase_id):
         response = http.HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="amount-list.csv"'
         writer = csv.writer(response)
-        writer.writerow([u'邮箱', u'申请BTC数量', u'分配BTC数量', u'申请ELA数量', u'分配ELA数量'])
+        writer.writerow([u'邮箱', u'申请BTC数量', u'分配BTC数量'])
         for item in tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id):
             user = User.objects.get(id=item.user_id)
             email = user.email
-            writer.writerow([email, item.expect_btc, item.assign_btc, item.expect_ela, item.assign_ela])
+            writer.writerow([email, item.expect_btc, item.assign_btc])
         return response
     except Exception, inst:
         logger.exception("fail to export amount list:%s" % str(inst))

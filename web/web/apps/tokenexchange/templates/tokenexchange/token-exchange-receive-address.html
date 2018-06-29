@@ -35,7 +35,7 @@
                 {% include "tokenexchange/include-receive-address-expect.html" with item=invite_item %}
                 {% include "tokenexchange/include-receive-address-allocation.html" with item=invite_item %}
                 {% include "tokenexchange/include-receive-address-result.html" with item=invite_item %}
-                {% if invite_item.expect_btc or invite_item.expect_ela %}
+                {% if invite_item.expect_btc %}
                 {% else %}
                 <p class="before-fill">{% trans "No token exchange information." %}</p>
                 {% endif %}

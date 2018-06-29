@@ -15,19 +15,16 @@
                     <tr>
                         <th class="col-sm-3"></th>
                         <th class="col-sm-3 title">BTC</th>
-                        <th class="col-sm-3 title">ELA</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th class="col-sm-3 title">{% trans "Minimum Amount" %}</th>
                         <th class="col-sm-3">{{ min_btc }}</th>
-                        <th class="col-sm-3">{{ min_ela }}</th>
                     </tr>
                     <tr>
                         <th class="col-sm-3 title">{% trans "Ratio" %}</th>
                         <th class="col-sm-3">1&nbsp;BTC&nbsp;=&nbsp;{{ btc_ratio }}&nbsp;NEW</th>
-                        <th class="col-sm-3">1&nbsp;ELA&nbsp;=&nbsp;{{ ela_ratio }}&nbsp;NEW</th>
                     </tr>
                 </tbody>
             </table>
@@ -52,10 +49,6 @@
                 <div class="col-md-6">
                     <p class="token-exchange-content">{% trans "Min BTC: " %} {{ token_exchange_info.min_btc }}</p>
                     <p class="token-exchange-content">BTC / NEW: {{ token_exchange_info.btc_ratio }}</p>
-                </div>
-                <div class="col-md-6">
-                    <p class="token-exchange-content">{% trans "Min ELA: " %} {{ token_exchange_info.min_ela }}</p>
-                    <p class="token-exchange-content">ELA / NEW: {{ token_exchange_info.ela_ratio }}</p>
                 </div>
             </div>
         </div>

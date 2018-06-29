@@ -182,10 +182,8 @@ $("#id_fill_amount_form").submit(function(event){
     }
     var url = $(form).attr('action');
     var expect_btc = $('#id_expect_btc').val();
-    var expect_ela = $('#id_expect_ela').val();
     var data = {};
     data.expect_btc = expect_btc;
-    data.expect_ela = expect_ela;
     showWaiting();
     $.ajax({
             url: url,
@@ -213,8 +211,7 @@ $("#id_fill_amount_form").submit(function(event){
     errorElement: "div",
     errorClass: "alert alert-danger",
     rules: {
-        expect_btc: {number: true},
-        expect_ela: {number: true}
+        expect_btc: {number: true, required: true}
     },
     errorPlacement: function(error,element) {
         //error.appendTo(element.parent());

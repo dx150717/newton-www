@@ -216,17 +216,11 @@ function sendSelectedEmailForInvite(){
  * distribute coin for user according to expect limit.
  * @param {string} user_id 
  * @param {int} phase_id 1 for first tokenexchange. 2 for second
- * @param {int} expect_ela 
  * @param {int} expect_btc 
  */
-function amountPopupWindow(user_id, phase_id, expect_ela, expect_btc) {
+function amountPopupWindow(user_id, phase_id, expect_btc) {
     $('#id_user_id').val(user_id);
     $('#id_phase_id').val(phase_id)
-    if(expect_ela == 0) {
-        $("#id_ela_line").addClass("hide")
-    } else {
-        $("#id_ela_line").removeClass("hide")
-    }
     if(expect_btc == 0) {
         $("#id_btc_line").addClass("hide")
     } else {
@@ -237,15 +231,10 @@ function amountPopupWindow(user_id, phase_id, expect_ela, expect_btc) {
         event.preventDefault();
         var data = {};
         data.assign_btc = parseFloat($('#id_assign_btc').val());
-        data.assign_ela = parseFloat($('#id_assign_ela').val());
         data.user_id = user_id;
         data.phase_id = phase_id;
         if (data.assign_btc < 0) {
             showFail("BTC数量不能小于0");
-            return;
-        }
-        if (data.assign_ela < 0) {
-            showFail("ELA数量不能小于0");
             return;
         }
         showWaiting();
