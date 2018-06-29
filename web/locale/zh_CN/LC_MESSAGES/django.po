@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 09:10+0000\n"
+"POT-Creation-Date: 2018-06-29 09:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -392,7 +392,7 @@ msgstr "提交"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:98
 msgid "Please check the allocation of Newton token exchange"
-msgstr ""
+msgstr "请查看牛顿通证交换分配信息"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:125
 msgid "You have passed the Newton KYC"
@@ -431,6 +431,7 @@ msgid "Newton Token Exchange Invitation"
 msgstr "牛顿通证交换邀请"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:6
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:8
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:10
 msgid "welcome!"
 msgstr "您好！"
@@ -458,6 +459,7 @@ msgstr ""
 "顿通证交换的详细信息。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/apply-amount-notify-letter.html:12
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:10
 msgid ""
 "Newton only issues the announcement and notification though Newton official "
 "website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</"
@@ -475,27 +477,26 @@ msgid "Fill in now"
 msgstr "现在填写"
 
 #: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:6
-msgid "Welcome! Thank You for join Newton KYC!"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:8
-#: web/apps/reset/templates/reset/reset-letter.html:8
-msgid "Dear"
-msgstr "尊敬的用户："
+msgid "Newton Token Exchange Allocation"
+msgstr "牛顿通证交换分配信息"
 
 #: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:9
 msgid ""
-"Hello! This e-mail comes from <a href='https://www.newtonproject."
-"org'>https://www.newtonproject.org</a>. Your KYC information has passed  "
-"verification. Click the button below to check your currency address and "
-"quota on  the  official website. For all enquiries, problems or suggestions "
-"regarding this service, please contact us <a href='mailto:"
-"contact@newtonproject.org'> contact@newtonproject.org</a>."
+"Newton foundation has already allocated token exchanging amount and address "
+"for you, more information on Token Exchange page of Newton official website "
+"(<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>)."
 msgstr ""
+"牛顿基金会已经为您分配了通证交换数量和地址，请前往牛顿官方网站 (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 的通证交换页面查看详情。"
 
-#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:12
-msgid "Lookup Address"
-msgstr "详细地址"
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:11
+msgid ""
+"Click the following button to check the allocation of Newton token exchange."
+msgstr "点击下方按钮，查看分配详情。"
+
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:14
+#: web/apps/welcome/templates/welcome/press.html:29
+msgid "Details"
+msgstr "详情"
 
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:11
 #: web/templates/base.html:10
@@ -785,6 +786,10 @@ msgstr ""
 #: web/apps/reset/templates/reset/reset-letter.html:6
 msgid "Welcome! Please Reset Your Password!"
 msgstr "牛顿欢迎您！请重置您的密码"
+
+#: web/apps/reset/templates/reset/reset-letter.html:8
+msgid "Dear"
+msgstr "尊敬的用户："
 
 #: web/apps/reset/templates/reset/reset-letter.html:9
 msgid ""
@@ -4281,10 +4286,6 @@ msgstr "合作伙伴"
 msgid "PRESS"
 msgstr "媒体报道"
 
-#: web/apps/welcome/templates/welcome/press.html:29
-msgid "Details"
-msgstr "详情"
-
 #: web/apps/welcome/templates/welcome/press.html:47
 msgid "No presss"
 msgstr "暂无媒体报道"
@@ -7202,6 +7203,9 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Lookup Address"
+#~ msgstr "详细地址"
 
 #~ msgid "* Attention! You can only transfer"
 #~ msgstr "* 注意，您只能向下面的分配地址中转入"
