@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 07:35+0000\n"
+"POT-Creation-Date: 2018-06-29 07:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1655,8 +1655,10 @@ msgstr "申请 BTC 数量"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:25
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:30
-msgid "Your requesting amount is under evaluation"
-msgstr "您填写的申请数量正在评估中"
+msgid ""
+"We will  assess your expected token exchange quota and notify the assessing "
+"result by email later. Please note your email-box."
+msgstr "我们正在评估您填写的申请数量，稍后我们会邮件通知您，请注意查收邮件。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:9
 msgid "Transfer Details"
@@ -7207,3 +7209,6 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Your requesting amount is under evaluation"
+#~ msgstr "您填写的申请数量正在评估中"
