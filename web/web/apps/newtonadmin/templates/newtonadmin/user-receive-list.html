@@ -18,7 +18,10 @@
                         <th><input id="all-check-receive-coin" name="all-check-receive-coin" type="checkbox"/>&nbsp;&nbsp;全选</th>
                         {% endif %}
                         <th>姓名</th>
+                        <th>期望额度</th>
+                        <th>分配额度</th>
                         <th>收币地址及数量</th>
+                        <th>是否一致</th>
                         <th>时间</th>
                         <th>是否已经发送邮件</th>
                         {% if not is_sent %}
@@ -38,11 +41,21 @@
                             {{ item.user.email }}
                         </td>
                         <td>
+                            {{ item.expect_btc }}&nbsp;BTC
+                        </td>
+                        <td>
+                            {{ item.assign_btc }}&nbsp;BTC
+                        </td>
+                        <td>
                             {% if item.btc_value %}
-                            <p>{{ item.receive_btc_address }} : {{ item.btc_value }} BTC</p>
+                            <p>{{ item.receive_btc_address }} : <span class="text-danger">{{ item.btc_value }} BTC</span></p>
                             {% endif %}
-                            {% if item.ela_value %}
-                            <p>{{ item.receive_ela_address }} : {{ item.ela_value }} ELA</p>
+                        </td>
+                        <td>
+                            {% if item.btc_vlue == item.expect_btc %}
+                            <span class="text-success">一致</span>
+                            {% else %}
+                            <span class="text-danger">不一致</span> 
                             {% endif %}
                         </td>
                         <td>
