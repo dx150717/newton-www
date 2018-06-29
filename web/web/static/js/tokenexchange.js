@@ -31,7 +31,6 @@ $("#id_individual_form").submit(function(event){
         location:{required: true, minlength:1, maxlength:200},
         cellphone_group_0: {required: true, minlength:1, maxlength:4},
         cellphone_group_1: {required: true, minlength:1, maxlength:20},
-        personal_profile: {required: true},
         personal_profile_attachment: fileRuleWithoutRequired,
         your_community_screenshots1: fileRuleWithoutRequired,
         your_community_screenshots2: fileRuleWithoutRequired,

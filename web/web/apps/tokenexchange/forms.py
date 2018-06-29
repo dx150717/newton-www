@@ -86,6 +86,7 @@ class KYCProfileForm(ModelForm):
         self.fields['your_community_screenshots1'].required = False
         self.fields['your_community_screenshots2'].required = False
         self.fields['your_community_screenshots3'].required = False
+        self.fields['personal_profile'].required = False
         self.fields.keyOrder = [
             'personal_profile',
             'personal_profile_attachment',
@@ -155,6 +156,7 @@ class ContributeForm(ModelForm):
         self.fields['done_for_newton'].required = False
         self.fields['done_for_newton_attachment'].required = False
         self.fields['do_for_newton'].required = False
+        self.fields['what_is_newton'].required = False
         self.fields.keyOrder = [
             'what_is_newton',
             'done_for_newton',
