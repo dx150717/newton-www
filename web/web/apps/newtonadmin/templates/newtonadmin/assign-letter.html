@@ -3,13 +3,15 @@
 {% load utils %}
     {% block content %}
     <p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px;">
-        {% trans "Welcome! Thank You for join Newton KYC!" %}
+        {% trans "Newton Token Exchange Allocation" %}
     </p>
-    <p>{% trans "Dear" %} {{ invite_info.kyc_info.first_name }}:</p>
-    <p>{% trans "Hello! This e-mail comes from <a href='https://www.newtonproject.org'>https://www.newtonproject.org</a>. Your KYC information has passed  verification. Click the button below to check your currency address and quota on  the  official website. For all enquiries, problems or suggestions regarding this service, please contact us <a href='mailto:contact@newtonproject.org'> contact@newtonproject.org</a>." %}</p>
+    <p>{{ invite_info.kyc_info.first_name }}, {% trans "welcome!" %}</p>
+    <p>{% trans "Newton foundation has already allocated token exchanging amount and address for you, more information on Token Exchange page of Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>)." %}</p>
+    <p>{% trans "Newton only issues the announcement and notification though Newton official website (<a href='https://www.newtonproject.org/'>www.newtonproject.org</a>), please ignore messages from any other medias." %}</p>
+    <p>{% trans "Click the following button to check the allocation of Newton token exchange." %}</p>
     <p style="padding-top:20px;">
-        <a href="{{ targetUrl }}" class="button-1" style="display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff;">
-            {% trans "Lookup Address" %}
+        <a href="{{ target_url }}" class="button-1" style="display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff;">
+            {% trans "Details" %}
         </a>
     </p>
     {% endblock %}

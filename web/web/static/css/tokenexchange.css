@@ -229,12 +229,12 @@
         font-size: 2em !important;
     }
 }
-.fill-expect-section .value {
+.fill-expect-section .value, .token-exchange-info .value {
     font-size: 30px;
     margin-right: 5px;
     margin-left: 5px;
 }
-.fill-expect-section .key {
+.fill-expect-section .key, .token-exchange-info .key {
     font-size: 16px;
 }
 
@@ -276,10 +276,17 @@
     color: unset;
 }
 .receive-panel {
+    margin-bottom: 50px;
+}
+.receive-panel .exchange-new-amount {
+    margin-left: 10px;
+}
+.receive-panel .allocate-btc {
+    margin-right: 10px;
 }
 .receive-panel .quantity {
     margin-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .receive-panel .number {
     font-size: 24px; 
@@ -310,6 +317,11 @@
     }
     .receive-panel .address .value {
         font-size: 16px;
+    }
+    .receive-panel .exchange-new-amount, .receive-panel .allocate-btc {
+        margin-left: unset;
+        text-align: center;
+        margin-top: 10px;
     }
 }
 .exchange-panel {

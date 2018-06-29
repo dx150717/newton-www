@@ -91,55 +91,15 @@
                         <td>{{ item.other_social_account|default:"-" }}</td>
                     </tr>
                     <tr>
-                        <th>参加社区: </th>
-                        <td>{{ item.your_community|default:"-"  }}</td>
-                    </tr>
-                    <tr>
-                        <th>社群截图1: </th>
-                        <td>
-                            {% if item.your_community_screenshots1 %}
-                            <a href="{{ item.your_community_screenshots1.url }}" target="_blank">
-                                <img src="{{ item.your_community_screenshots1.url }}" alt="" style="width:200px"/>
-                            </a>
-                            {% else %}
-                            -
-                            {% endif %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>社群截图2: </th>
-                        <td>
-                            {% if item.your_community_screenshots2 %}
-                            <a href="{{ item.your_community_screenshots2.url }}" target="_blank">
-                                <img src="{{ item.your_community_screenshots2.url }}" alt="" style="width:200px;"/>
-                            </a>
-                            {% else %}
-                            -
-                            {% endif %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>社群截图3: </th>
-                        <td>
-                            {% if item.your_community_screenshots3 %}
-                            <a href="{{ item.your_community_screenshots3.url }}" target="_blank">
-                                <img src="{{ item.your_community_screenshots3.url }}" alt="" style="width:200px;"/>
-                            </a>
-                            {% else %}
-                            -
-                            {% endif %}
-                        </td>
-                    </tr>
-                    <tr>
                         <th>对牛顿的理解: </th>
                         <td>{{ item.what_is_newton|default:"-" }}</td>
                     </tr>
                     <tr>
-                        <th>为牛顿做过什么: </th>
+                        <th>如何参与牛顿项目: </th>
                         <td>{{ item.done_for_newton|default:"-" }}</td>
                     </tr>
                     <tr>
-                        <th>为牛顿做过什么附件: </th>
+                        <th>如何参与牛顿项目附件: </th>
                         <td>
                             {% if item.done_for_newton_attachment %}
                             <a href="{{ item.done_for_newton_attachment.url }}" target="_blank">
@@ -151,11 +111,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>准备为牛顿做什么: </th>
-                        <td>{{ item.do_for_newton|default:"-" }}</td>
-                    </tr>
-                    <tr>
-                        <th>是否成为节点: </th>
+                        <th>是否竞选节点: </th>
                         <td>{{ item.is_establish_node|default:"-" }}</td>
                     </tr>
                     <tr>
@@ -208,7 +164,7 @@
                         <td>{{ item.orgnization_code }}</td>
                     </tr>
                     <tr>
-                        <th>机构资格证书1:</th>
+                        <th>机构证明文件1:</th>
                         <td>
                             {% if item.orgnization_certificate1 %}
                             <a href="{{ item.orgnization_certificate1.url }}" target="_blank">
@@ -220,7 +176,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>机构资格证书2:</th>
+                        <th>机构证明文件2:</th>
                         <td>
                             {% if item.orgnization_certificate2 %}
                             <a href="{{ item.orgnization_certificate2.url }}" target="_blank">
@@ -280,11 +236,11 @@
                         <td>{{ item.what_is_newton|default:"-" }}</td>
                     </tr>
                     <tr>
-                        <th>为牛顿做过什么:</th>
+                        <th>如何参与牛顿:</th>
                         <td>{{ item.done_for_newton|default:"-" }}</td>
                     </tr>
                     <tr>
-                        <th>为牛顿做过什么附件:</th>
+                        <th>如何参与牛顿附件:</th>
                         <td>
                         {% if item.done_for_newton_attachment %}
                         <a href="{{ item.done_for_newton_attachment.url }}" target="_blank">
@@ -296,11 +252,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>准备为牛顿做什么:</th>
-                        <td>{{ item.do_for_newton|default:"-" }}</td>
-                    </tr>
-                    <tr>
-                        <th>是否成为节点:</th>
+                        <th>是否竞选节点:</th>
                         <td>{{ item.is_establish_node|default:"-" }}</td>
                     </tr>
                     <tr>
