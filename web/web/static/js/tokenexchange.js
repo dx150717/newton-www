@@ -38,7 +38,7 @@ $("#id_individual_form").submit(function(event){
         your_community_screenshots3: fileRuleWithoutRequired,
         how_to_contribute: {required: true, maxlength:1000},
         done_for_newton_attachment: fileRuleWithoutRequired,
-        what_is_newton: {required:true, minlength:1, maxlength:1000},
+        what_is_newton: {minlength:1, maxlength:1000},
         emergency_contact_first_name: {required:true, minlength:1, maxlength:100},
         emergency_contact_last_name: {required:true, minlength:1, maxlength:100},
         cellphone_of_emergency_contact_0: {required:true, minlength:1, maxlength:4},
