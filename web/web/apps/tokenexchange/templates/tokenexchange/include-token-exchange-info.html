@@ -2,31 +2,17 @@
 {% load utils %}
 
 {% if item.phase_id == 1 %}
-<div class="token-exchange-info">
-    <div class="shadow-item">
+<div class="token-exchange-info shadow-item">
+    <div class="container">
         <div class="text-center">
             <p class="token-exchange-big-title">{% trans "Second-Round Token Exchange" %}</p>
             <p class="token-exchange-time">{{ token_exchange_info.start_date }} ~ {{ token_exchange_info.end_date }}</p>
         </div>
-        <div class="mt50 table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th class="col-sm-3"></th>
-                        <th class="col-sm-3 title">BTC</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="col-sm-3 title">{% trans "Minimum Amount" %}</th>
-                        <th class="col-sm-3">{{ min_btc }}</th>
-                    </tr>
-                    <tr>
-                        <th class="col-sm-3 title">{% trans "Ratio" %}</th>
-                        <th class="col-sm-3">1&nbsp;BTC&nbsp;=&nbsp;{{ btc_ratio }}&nbsp;NEW</th>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-md-12">
+            <p class="token-exchange-content text-center">
+                <span class="key">{% trans "Ratio" %}:</span>
+                <span class="key">1&nbsp;BTC&nbsp;=&nbsp;<span class="value"> {{ btc_ratio|integer_format }} </span>&nbsp;NEW</span>
+            </p>
         </div>
     </div>
 </div>

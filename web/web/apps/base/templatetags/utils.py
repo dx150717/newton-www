@@ -257,3 +257,22 @@ def trans_country(country_code):
     except Exception, inst:
         logger.exception(str(inst))
         return ""
+
+@register.filter(name='integer_format')
+def integer_format(number):
+    """integer format by given parameters
+    """
+    try:
+        output = ''
+        cnt = 1
+        str_number = str(number)
+        length = len(str_number)
+        for c in str_number[::-1]:
+            output += c
+            if cnt % 3 == 0 and cnt != length:
+                output += ','
+            cnt += 1
+        return output[::-1]
+    except Exception, inst:
+        logger.exception("fail to integer format:%s" % str(inst))
+        return ""
