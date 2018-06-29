@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 07:40+0000\n"
+"POT-Creation-Date: 2018-06-29 09:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -185,7 +185,7 @@ msgstr ""
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:114
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:327
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:117
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:122
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:79
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:55
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:49
@@ -199,7 +199,7 @@ msgstr "上一页"
 #: web/apps/faq/templates/faq/faq.html:37
 #: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:118
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:331
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:121
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:126
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:83
 #: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:59
 #: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:53
@@ -391,7 +391,7 @@ msgid "Submit"
 msgstr "提交"
 
 #: web/apps/newtonadmin/services_tokenexchange.py:98
-msgid "KYC information is confirmed"
+msgid "Please check the allocation of Newton token exchange"
 msgstr ""
 
 #: web/apps/newtonadmin/services_tokenexchange.py:125
@@ -474,6 +474,29 @@ msgstr "点击下方按钮，填写您的通证交换申请数量。"
 msgid "Fill in now"
 msgstr "现在填写"
 
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:6
+msgid "Welcome! Thank You for join Newton KYC!"
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:8
+#: web/apps/reset/templates/reset/reset-letter.html:8
+msgid "Dear"
+msgstr "尊敬的用户："
+
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:9
+msgid ""
+"Hello! This e-mail comes from <a href='https://www.newtonproject."
+"org'>https://www.newtonproject.org</a>. Your KYC information has passed  "
+"verification. Click the button below to check your currency address and "
+"quota on  the  official website. For all enquiries, problems or suggestions "
+"regarding this service, please contact us <a href='mailto:"
+"contact@newtonproject.org'> contact@newtonproject.org</a>."
+msgstr ""
+
+#: web/apps/newtonadmin/templates/newtonadmin/assign-letter.html:12
+msgid "Lookup Address"
+msgstr "详细地址"
+
 #: web/apps/newtonadmin/templates/newtonadmin/base.html:11
 #: web/templates/base.html:10
 msgid ""
@@ -520,30 +543,7 @@ msgstr ""
 msgid "Confirm"
 msgstr "确认密码"
 
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:6
-msgid "Welcome! Thank You for join Newton KYC!"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:8
-#: web/apps/reset/templates/reset/reset-letter.html:8
-msgid "Dear"
-msgstr "尊敬的用户："
-
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:9
-msgid ""
-"Hello! This e-mail comes from <a href='https://www.newtonproject."
-"org'>https://www.newtonproject.org</a>. Your KYC information has passed  "
-"verification. Click the button below to check your currency address and "
-"quota on  the  official website. For all enquiries, problems or suggestions "
-"regarding this service, please contact us <a href='mailto:"
-"contact@newtonproject.org'> contact@newtonproject.org</a>."
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/distribution-letter.html:12
-msgid "Lookup Address"
-msgstr "详细地址"
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:44
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:49
 #: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:46
 #: web/apps/tokenexchange/forms.py:178
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:109
@@ -551,11 +551,11 @@ msgstr "详细地址"
 msgid "Cellphone"
 msgstr "手机号"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:47
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:52
 msgid "Country"
 msgstr "国家"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:50
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:55
 #: web/apps/tokenexchange/models.py:42 web/apps/tokenexchange/models.py:86
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:92
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:95
@@ -564,7 +564,7 @@ msgstr "国家"
 msgid "City"
 msgstr "城市"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:53
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:58
 #: web/apps/tokenexchange/models.py:43 web/apps/tokenexchange/models.py:87
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:100
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:103
@@ -573,12 +573,12 @@ msgstr "城市"
 msgid "Address"
 msgstr "详细地址"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:56
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:61
 #: web/apps/tokenexchange/models.py:45
 msgid "ID Type"
 msgstr "证件类型"
 
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:59
+#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:64
 #: web/apps/tokenexchange/models.py:50
 msgid "ID Number"
 msgstr "证件号码"
@@ -1611,38 +1611,34 @@ msgstr ""
 msgid "Allocated"
 msgstr "分配信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:12
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+msgid "Allocated BTC amount"
+msgstr "分配 BTC 数量"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:22
+msgid "You can exchange for"
+msgstr "可交换的牛顿通证数量："
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:30
+msgid "Allocated BTC address"
+msgstr "分配 BTC 地址"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:44
 msgid ""
 "* Please transfer your token before deadline of second-round token exchange."
 msgstr "* 请于本轮通证交换截止日期前转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
-msgid "* Attention! You can only transfer"
-msgstr "* 注意，您只能向下面的分配地址中转入"
-
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:46
 msgid ""
-"to below addresses. DO NOT transfer BTC amount larger than allocated amount, "
+"* Attention! DO NOT transfer BTC amount larger than allocated amount, "
 "otherwise Newton Foundation won't refund the remainder."
-msgstr "。请不要转入大于分配数量的BTC，牛顿基金会不会退回超额的部分。"
+msgstr "* 注意！请不要转入大于分配数量的BTC，牛顿基金会不会退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:49
 msgid ""
 "* Second-round token exchange is overdue, DO NOT transfer any token to "
 "allocated addresses."
 msgstr "* 本轮通证交换已截止，请不要向分配地址中转币。"
-
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:24
-msgid "Allocated BTC amount"
-msgstr "分配 BTC 数量"
-
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:31
-msgid "Allocated BTC address"
-msgstr "分配 BTC 地址"
-
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:46
-msgid "You can exchange for"
-msgstr "可交换的牛顿通证数量："
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-expect.html:8
 msgid "Request"
@@ -1690,24 +1686,20 @@ msgstr "总计"
 msgid "Second-Round Token Exchange"
 msgstr "第二轮通证交换"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:21
-msgid "Minimum Amount"
-msgstr "最小数量"
-
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:25
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:13
 msgid "Ratio"
 msgstr "兑换比率"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:39
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:25
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:17
 msgid "Third-Round Token Exchange"
 msgstr "第三轮通证交换"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:45
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:31
 msgid "Token exchange info and expect"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:49
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:35
 msgid "Min BTC: "
 msgstr ""
 
@@ -7209,6 +7201,12 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "* Attention! You can only transfer"
+#~ msgstr "* 注意，您只能向下面的分配地址中转入"
+
+#~ msgid "Minimum Amount"
+#~ msgstr "最小数量"
 
 #~ msgid "Your requesting amount is under evaluation"
 #~ msgstr "您填写的申请数量正在评估中"
