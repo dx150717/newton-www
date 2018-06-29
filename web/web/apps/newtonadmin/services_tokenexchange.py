@@ -125,7 +125,7 @@ def send_kycinfo_notify(kyc_info, request):
         else:
             subject = _("You are not passed the Newton KYC")
         template = loader.get_template("newtonadmin/kycinfo-notify-letter.html")
-        target_url = "%s/tokenexchange/" % (settings.NEWTON_HOME_URL)
+        target_url = "%s/user/" % (settings.NEWTON_HOME_URL)
         security_url = "%s/help/security/" % (settings.NEWTON_WEB_URL)
         is_show_comment = False
         if kyc_info.kyc_audit.comment.strip():
