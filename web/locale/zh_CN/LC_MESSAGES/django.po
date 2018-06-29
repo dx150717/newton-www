@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 02:46+0000\n"
+"POT-Creation-Date: 2018-06-29 03:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -541,7 +541,7 @@ msgstr "详细地址"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:44
 #: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:46
-#: web/apps/tokenexchange/forms.py:177
+#: web/apps/tokenexchange/forms.py:179
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:109
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:303
 msgid "Cellphone"
@@ -1090,11 +1090,11 @@ msgstr ""
 "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
 "阅。"
 
-#: web/apps/tokenexchange/forms.py:49 web/apps/tokenexchange/forms.py:225
+#: web/apps/tokenexchange/forms.py:49 web/apps/tokenexchange/forms.py:227
 msgid "Registration Country"
 msgstr "注册国家"
 
-#: web/apps/tokenexchange/forms.py:128
+#: web/apps/tokenexchange/forms.py:129
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:88
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:93
 #: web/apps/user/templates/user/include-kyc-section.html:133
@@ -1337,15 +1337,15 @@ msgstr ""
 msgid "You had submited kyc info"
 msgstr "你已经提交了KYC信息"
 
-#: web/apps/tokenexchange/views.py:245
+#: web/apps/tokenexchange/views.py:237
 msgid "You have applied."
 msgstr "您已提交过申请。"
 
-#: web/apps/tokenexchange/views.py:249 web/apps/tokenexchange/views.py:256
+#: web/apps/tokenexchange/views.py:241 web/apps/tokenexchange/views.py:248
 msgid "BTC is required."
 msgstr "BTC必填"
 
-#: web/apps/tokenexchange/views.py:258
+#: web/apps/tokenexchange/views.py:250
 #, python-format
 msgid "The quantity of BTC must be equal or more than %s."
 msgstr "BTC的数量必须大于或等于%s"
@@ -1586,9 +1586,9 @@ msgstr "联系人电话"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:96
 msgid ""
-"The time you were involved in blockchain industry. Your understanding on "
-"blockchain industry. The strategy in the future."
-msgstr "进入区块链行业的时间，对区块链行业的理解，未来的发展战略等"
+"Please describe the basic information of your institution, the type of "
+"institution (such as trading institutions, investment funds, etc.)"
+msgstr "请介绍您的机构的基本概况、机构类型（比如交易所、投资基金等）"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:156
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:159
@@ -1605,36 +1605,36 @@ msgstr "节点建立计划和方案"
 msgid "Allocated"
 msgstr "分配信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:13
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:12
 msgid ""
 "* Please transfer your token before deadline of second-round token exchange."
 msgstr "* 请于本轮通证交换截止日期前转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
 msgid "* Attention! You can only transfer"
 msgstr "* 注意，您只能向下面的分配地址中转入"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:15
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:14
 msgid ""
 "to below addresses. DO NOT transfer BTC amount larger than allocated amount, "
 "otherwise Newton Foundation won't refund the remainder."
 msgstr "。请不要转入大于分配数量的BTC，牛顿基金会不会退回超额的部分。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:19
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:17
 msgid ""
 "* Second-round token exchange is overdue, DO NOT transfer any token to "
 "allocated addresses."
 msgstr "* 本轮通证交换已截止，请不要向分配地址中转币。"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:27
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:24
 msgid "Allocated BTC amount"
 msgstr "分配 BTC 数量"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:34
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:31
 msgid "Allocated BTC address"
 msgstr "分配 BTC 地址"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:49
+#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:46
 msgid "You can exchange for"
 msgstr "可交换的牛顿通证数量："
 
@@ -1670,12 +1670,10 @@ msgid "transferred amount is not equal to allocated amount"
 msgstr "转币数量和分配数量不一致"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:27
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:50
 msgid "Transferring time"
 msgstr "转币时间"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:39
-#: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-result.html:62
 msgid "Total"
 msgstr "总计"
 
@@ -7206,6 +7204,11 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid ""
+#~ "The time you were involved in blockchain industry. Your understanding on "
+#~ "blockchain industry. The strategy in the future."
+#~ msgstr "进入区块链行业的时间，对区块链行业的理解，未来的发展战略等"
 
 #~ msgid ""
 #~ "Community name you are involved in, your nickname in the community, your "
