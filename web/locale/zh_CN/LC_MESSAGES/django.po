@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 03:50+0000\n"
+"POT-Creation-Date: 2018-06-29 05:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -541,7 +541,7 @@ msgstr "详细地址"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:44
 #: web/apps/tokenexchange/forms.py:15 web/apps/tokenexchange/forms.py:46
-#: web/apps/tokenexchange/forms.py:179
+#: web/apps/tokenexchange/forms.py:178
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:109
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:303
 msgid "Cellphone"
@@ -1090,7 +1090,7 @@ msgstr ""
 "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
 "阅。"
 
-#: web/apps/tokenexchange/forms.py:49 web/apps/tokenexchange/forms.py:227
+#: web/apps/tokenexchange/forms.py:49 web/apps/tokenexchange/forms.py:226
 msgid "Registration Country"
 msgstr "注册国家"
 
@@ -1263,7 +1263,6 @@ msgid "Contribution You Will Make to Newton"
 msgstr "您将为牛顿做些什么"
 
 #: web/apps/tokenexchange/models.py:71
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:185
 msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点"
 
@@ -1532,6 +1531,7 @@ msgid ""
 msgstr "请列举您曾参与牛顿项目建设的经历，或者您计划如何参与牛顿项目建设。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:231
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:185
 msgid "Do you want to elect a community node?"
 msgstr "是否愿意竞选社群节点"
 
@@ -1555,6 +1555,8 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:255
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:258
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:209
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:212
 msgid "Plans of community node election"
 msgstr "社群节点建立构想"
 
@@ -1594,14 +1596,12 @@ msgstr "您对牛顿的理解"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:167
 msgid ""
-"Please list the experiences of your institution that have participated in the construction of Newton project, or how your organization plans to participate and contribute to Newton project construction."
-msgstr "请列举您的机构曾参与牛顿项目建设的经历，或者您的机构计划如何参与牛顿项目建设。"
-
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:209
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:212
-#, fuzzy
-msgid "Plan of node establishment"
-msgstr "节点建立计划和方案"
+"Please list the experiences of your institution that have participated in "
+"the construction of Newton project, or how your organization plans to "
+"participate and contribute to Newton project construction."
+msgstr ""
+"请列举您的机构曾参与牛顿项目建设的经历，或者您的机构计划如何参与牛顿项目建"
+"设。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-receive-address-allocation.html:8
 msgid "Allocated"
@@ -2178,8 +2178,10 @@ msgid ""
 msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
 
 #: web/apps/user/templates/user/include-kyc-section.html:21
-msgid "You've passed Newton KYC review."
-msgstr "您通过了牛顿KYC审核。"
+msgid ""
+"You have passed the Newton KYC verification and some of the passers will be "
+"invited to join the Newton token exchange."
+msgstr "您通过了牛顿KYC审核，我们将邀请部分通过者参加牛顿通证交换。"
 
 #: web/apps/user/templates/user/include-kyc-section.html:29
 msgid "You have not passed kyc review."
@@ -7206,6 +7208,13 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Plan of node establishment"
+#~ msgstr "节点建立计划和方案"
+
+#~ msgid "You've passed Newton KYC review."
+#~ msgstr "您通过了牛顿KYC审核。"
 
 #~ msgid ""
 #~ "The time you were involved in blockchain industry. Your understanding on "
