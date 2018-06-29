@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 06:35+0000\n"
+"POT-Creation-Date: 2018-06-29 06:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1681,30 +1681,24 @@ msgstr "总计"
 msgid "Second-Round Token Exchange"
 msgstr "第二轮通证交换"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:10
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:9
-msgid ""
-"The blockchain token exchange process is not the process of funding, but the "
-"one of organization establishment"
-msgstr "区块链代币交换的过程不是融资过程，是团队组建的过程。"
-
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:22
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:21
 msgid "Minimum Amount"
 msgstr "最小数量"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:26
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:25
 msgid "Ratio"
 msgstr "兑换比率"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:40
-msgid "Second Token Exchange Info"
-msgstr ""
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:39
+#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:17
+msgid "Third-Round Token Exchange"
+msgstr "第三轮通证交换"
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:46
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:45
 msgid "Token exchange info and expect"
 msgstr ""
 
-#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:50
+#: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:49
 msgid "Min BTC: "
 msgstr ""
 
@@ -2120,10 +2114,6 @@ msgstr ""
 msgid "Fill in KYC Information"
 msgstr "填写KYC信息"
 
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:18
-msgid "Third-Round Token Exchange"
-msgstr "第三轮通证交换"
-
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:40
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:43
 #: web/apps/user/templates/user/include-token-exchange.html:112
@@ -2255,8 +2245,8 @@ msgstr "已经填写 newpay 钱包地址"
 
 #: web/apps/user/templates/user/include-token-exchange.html:55
 #: web/apps/user/templates/user/include-token-exchange.html:97
-msgid "Token exchange success"
-msgstr "通证交换成功"
+msgid "Token exchange finished"
+msgstr "通证交换完成"
 
 #: web/apps/user/templates/user/include-token-exchange.html:104
 msgid "Details "
@@ -7205,6 +7195,14 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "Token exchange success"
+#~ msgstr "通证交换成功"
+
+#~ msgid ""
+#~ "The blockchain token exchange process is not the process of funding, but "
+#~ "the one of organization establishment"
+#~ msgstr "区块链代币交换的过程不是融资过程，是团队组建的过程。"
 
 #~ msgid "Newton Token Exchange Security Notification"
 #~ msgstr "安全提示"
