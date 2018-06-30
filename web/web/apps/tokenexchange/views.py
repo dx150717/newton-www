@@ -104,13 +104,13 @@ def post_kyc_information(request, kyc_type):
                 instance = organization_profile_form.save(commit=True)
             instance = contribute_form.save(commit=True)
 
-            is_etablish_node = request.POST.get('is_etablish_node')
-            which_node_establish = request.POST.get('which_node_establish')
-            establish_node_plan = request.POST.get('establish_node_plan')
-            emergency_relationship = request.POST.get('emergency_relationship')
+            is_establish_node = contribute_form.cleaned_data['is_establish_node']
+            which_node_establish = contribute_form.cleaned_data['which_node_establish']
+            establish_node_plan = contribute_form.cleaned_data['establish_node_plan']
+            emergency_relationship = emergency_form.cleaned_data['emergency_relationship']
             if establish_node_plan and len(establish_node_plan) < 10240:
                 instance.establish_node_plan = establish_node_plan
-            instance.is_etablish_node = is_etablish_node
+            instance.is_establish_node = is_establish_node
             instance.which_node_establish = which_node_establish
             instance.emergency_relationship = emergency_relationship
             if kyc_type == codes.KYCType.INDIVIDUAL.value:
@@ -120,9 +120,10 @@ def post_kyc_information(request, kyc_type):
             instance.country_code = country_code
             instance.cellphone = cellphone
             if kyc_type == codes.KYCType.INDIVIDUAL.value:
-                emergency_contact_country_code, emergency_contact_cellphone = emergency_form.cleaned_data['cellphone_of_emergency_contact']
-                instance.emergency_contact_country_code = emergency_contact_country_code
-                instance.emergency_contact_cellphone = emergency_contact_cellphone
+                if emergency_form.cleaned_data['cellphone_of_emergency_contact']:
+                    emergency_contact_country_code, emergency_contact_cellphone = emergency_form.cleaned_data['cellphone_of_emergency_contact']
+                    instance.emergency_contact_country_code = emergency_contact_country_code
+                    instance.emergency_contact_cellphone = emergency_contact_cellphone
             instance.status = codes.KYCStatus.CANDIDATE.value
             instance.save()
 
