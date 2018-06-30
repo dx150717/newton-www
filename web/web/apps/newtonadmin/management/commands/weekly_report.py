@@ -37,6 +37,7 @@ class Command(BaseCommand):
                 print "fail to search entry with entry id: %s" % article_id
                 return None
             target_url = settings.BASE_URL + entry.get_absolute_url()
+            base_url = settings.BASE_URL
             title = entry.title
             content = entry.content
             template = loader.get_template("newtonadmin/subscription-letter.html")
@@ -44,6 +45,7 @@ class Command(BaseCommand):
                 "target_url": target_url,
                 "title": title,
                 "content": content,
+                "base_url": base_url,
             })
             html_content = template.render(context)
             for to_email in subscribe_emails:

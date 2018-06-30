@@ -3,11 +3,56 @@
 {% load utils %}
 
 {% block content %}
-<p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px;">
-    {{ title }}
-</p>
-    {{ content }}
+    <p style="font-size: 1.5em; padding-bottom: 10px; padding-top: 10px; text-align: center">
+        {{ title }}
+    </p>
+    {{ content|safe }}
+<div>
+    <p style="text-align: left; font-size: 18px; font-weight: 400px; margin-top: 50px;">Contact us:</p>
+    <p style="text-align: left; font-size: 16px;">You can stay up to data on the latest news of Newton project through the following media channels:</p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Website:</span><a href="{{ base_url }}">https://www.newtonproject.org/</a>
+    </p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Twitter:</span>
+        <a href="https://www.twitter.com/newton_project">https://www.twitter.com/newton_project</a>
+    </p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Facebook:</span>
+        <a href="https://www.facebook.com/newtonproject">https://www.facebook.com/newtonproject</a>
+    </p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Telegram English:</span>
+        <a href="https://t.me/Newtonproject">https://t.me/Newtonproject</a>
+    </p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Telegram Chinese:</span>
+        <a href="https://t.me/newtonprojectchinese">https://t.me/newtonprojectchinese</a>
+    </p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Google Group:</span>
+        <a href="https://groups.google.com/forum/#!aboutgroup/newton-universe">https://groups.google.com/forum/#!aboutgroup/newton-universe</a>
+    </p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Medium:</span>
+        <a href="https://medium.com/@newtonproject">https://medium.com/@newtonproject</a>
+    </p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Reddit:</span>
+        <a href="https://www.reddit.com/user/newtonproject/">https://www.reddit.com/user/newtonproject/</a>
+    </p>
+    <p style="text-align: left; font-size: 14px; margin-top: 10px; margin-bottom: 10px;">
+        <span>Weibo:</span>
+        <a href="http://weibo.com/newtonproject">http://weibo.com/newtonproject</a>
+    </p>
+</div>
+{% endblock %}
+
+{% block sign %}
 {% endblock %}
 
 {% block ignore_message %}
+{% endblock %}
+
+{% block security %}
 {% endblock %}
