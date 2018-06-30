@@ -70,7 +70,7 @@ class IdListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(IdListView, self).get_context_data(**kwargs)
-        context['level_choices'] = [i+1 for i in range(10)]
+        context['level_choices'] = [i+1 for i in range(5)]
         context['is_idlist'] = True
         context['countries_choices'] = COUNTRIES
         context['title'] = '待审核'
@@ -628,7 +628,7 @@ def show_id_detail(request, user_id):
             if item.emergency_relationship:
                 item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
             item.country = COUNTRIES[item.country]
-            item.level_choices = [i+1 for i in range(10)]
+            item.level_choices = [i+1 for i in range(5)]
         return render(request, "newtonadmin/id-detail.html", locals())
     except Exception, inst:
         logger.exception("fail to post email to investor:%s" % str(inst))
