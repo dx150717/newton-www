@@ -84,11 +84,10 @@ class IdListView(generic.ListView):
             q = build_query_condition(self.request, q)
             exclude_country = self.request.GET.get('exclude_country')
             if exclude_country:
-                print "exclude_country is %s" % exclude_country
                 exclude_country = exclude_country.split(',')
-                fields = tokenexchange_models.KYCInfo.objects.filter(q).exclude(country__in=exclude_country)
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).exclude(country__in=exclude_country).order_by('-created_at')
             else:
-                fields = tokenexchange_models.KYCInfo.objects.filter(q)
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
             items = []
             if fields and len(fields) > 0:
                 for item in fields:
@@ -126,7 +125,7 @@ class PassIdListView(generic.ListView):
         try:
             q = Q(status=codes.KYCStatus.PASS_KYC.value)
             q = build_query_condition(self.request, q)
-            fields = tokenexchange_models.KYCInfo.objects.filter(q)
+            fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
             items = []
             if fields and len(fields) > 0:
                 for item in fields:
