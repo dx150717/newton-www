@@ -6,3 +6,4 @@ BASE_URL = 'https://home.newtonproject.org'
 MEDIA_URL = 'https://home.newtonproject.org/filestorage/'
 
 ROOT_URLCONF = 'web.urls_home'
+SESSION_COOKIE_NAME = 'nhsid'

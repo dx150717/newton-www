@@ -6,3 +6,4 @@ BASE_URL = 'https://gravity.newtonproject.org'
 MEDIA_URL = 'https://gravity.newtonproject.org/filestorage/'
 
 ROOT_URLCONF = 'web.urls_gravity'
+SESSION_COOKIE_NAME = 'ngsid'
