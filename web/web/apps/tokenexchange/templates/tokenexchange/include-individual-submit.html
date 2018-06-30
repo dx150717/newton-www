@@ -21,44 +21,46 @@
                     </p>
                 </div>
             </div>
+
             <div class="bg-gray">
                 <div class="container form-container">
                     <div class="panel panel-default bg-gray">
                         <div class="panel-heading">
                             <h3 class="panel-title text-center">{% trans "Basic Information" %}</h3>
+                            <span class="small">{% trans " (required)" %}</span>
                         </div>
                         <div class="panel-body">
                             <div class="form-group full-name col-sm-12">
                                 {% if is_chinese %}
                                     <span>
                                         <label for="id_last_name" class="control-label col-sm-3 fullname-title">
-                                            {% trans "Last Name" %}<span class="red-color">*</span>
+                                            {% trans "Last Name" %}
                                         </label>
                                         <input class="form-control" id="id_last_name" maxlength="32" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
                                     </span>
                                     <span class="last-name">
                                         <label for="id_first_name" class="control-label last-name-label">
-                                            {% trans "First Name" %}<span class="red-color">*</span>
+                                            {% trans "First Name" %}
                                         </label>
                                         <input class="form-control" id="id_first_name" maxlength="32" name="first_name" placeholder="{% trans "First Name" %}" type="text">
                                     </span>
                                     {% else %}
                                     <span>
                                         <label for="id_first_name" class="control-label col-sm-3 fullname-title">
-                                            {% trans "First Name" %}<span class="red-color">*</span>
+                                            {% trans "First Name" %}
                                         </label>
                                         <input class="form-control" id="id_first_name" maxlength="32" name="first_name" placeholder="{% trans "First Name" %}" type="text">
                                     </span> 
                                     <span class="last-name">
                                         <label for="id_last_name" class="control-label last-name-label">
-                                            {% trans "Last Name" %}<span class="red-color">*</span>
+                                            {% trans "Last Name" %}
                                         </label>
                                         <input class="form-control" id="id_last_name" maxlength="32" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
                                     </span>
                                 {% endif %}
                             </div>
                             <div class="form-group">
-                                <label for="id_id_type" class="control-label col-sm-3">{% trans "Certificate Type" %}<span class="red-color">*</span>
+                                <label for="id_id_type" class="control-label col-sm-3">{% trans "Certificate Type" %}
                                 </label>
                                 <div class="col-sm-9">
                                     <select class="form-control" id="id_id_type" name="id_type" placeholder="Certificate Type">
@@ -71,7 +73,7 @@
                             </div>
                             <div class="form-group"> 
                                 <label for="id_id_number" class="control-label col-sm-3">
-                                    {% trans "Certificate Number" %}<span class="red-color">*</span>
+                                    {% trans "Certificate Number" %}
                                 </label>
                                 <div class="col-sm-9">
                                     <input class="form-control normal" id="id_id_number" maxlength="64" name="id_number" placeholder="{% trans "Certificate Number" %}" type="text">
@@ -79,7 +81,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="id_id_card" class="control-label col-sm-3">
-                                    {% trans "Certificate Photo" %}<span class="red-color">*</span>
+                                    {% trans "Certificate Photo" %}
                                 </label>
                                 <div class="col-sm-9">
                                     <input class="form-control select-file" id="id_id_card" name="id_card" placeholder="{% trans "Certificate Photo" %}" type="file">
@@ -89,7 +91,7 @@
                             {% include "tokenexchange/include-form-country.html" with form=country_form %}
                             <div class="form-group">
                                 <label for="id_city" class="control-label col-sm-3">
-                                    {% trans "City" %}<span class="red-color">*</span>
+                                    {% trans "City" %}
                                 </label>
                                 <div class="col-sm-9">
                                     <input class="form-control normal" id="id_city" maxlength="64" name="city" placeholder="{% trans "City" %}" type="text">
@@ -97,7 +99,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="id_location" class="control-label col-sm-3">
-                                    {% trans "Address" %}<span class="red-color">*</span>
+                                    {% trans "Address" %}
                                     </label>
                                 <div class="col-sm-9">
                                     <input class="form-control" id="id_location" maxlength="128" name="location" placeholder="{% trans "Address" %}" type="text">
@@ -106,7 +108,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="id_cellphone_group" class="control-label col-sm-3">
-                                    {% trans "Cellphone" %} <span class="red-color">*</span>
+                                    {% trans "Cellphone" %} 
                                 </label>
                                 <div class="col-sm-9">
                                     <div class="form-inline">
@@ -119,180 +121,38 @@
                     </div>
                 </div>
             </div>
-            <div class="container form-container">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title text-center">{% trans "Self Introduction" %}</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="form-group with-attachment">
-                                <label for="id_personal_profile" class="control-label col-sm-3">
-                                    {% trans "Self Introduction" %}
-                                </label>
-                            <div class="col-sm-9">
-                                <textarea class="form-control with-tip" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "Self Introduction" %}" rows="10" maxlength="2048"></textarea>
-                                <span class="small">{% trans "Your CV. When were you involved in blockchain industry? Write something about your understanding on blockchain industry." %}</span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                                <label for="id_personal_profile_attachment" class="control-label col-sm-3">
-                                </label>
-                            <div class="col-sm-9">
-                                <label for="id_personal_profile_attachment" class="control-label attachment-title">
-                                    {% trans "Attachment" %}
-                                </label>
-                                <div class="attachment-div">
-                                <input class="form-control select-file" id="id_personal_profile_attachment" name="personal_profile_attachment" placeholder="Attachment" type="file">
-                                <p class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_telegram" class="control-label col-sm-3">
-                                {% trans "Telegram ID" %}
-                            </label>
-                            <div class="col-sm-9">
-                                <input class="form-control normal" id="id_telegram" maxlength="64" name="telegram" placeholder="Telegram ID" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_twitter" class="control-label col-sm-3">
-                                {% trans "Twitter" %}
-                            </label>
-                            <div class="col-sm-9">
-                                <input class="form-control normal" id="id_twitter" maxlength="64" name="twitter" placeholder="Twitter" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_facebook" class="control-label col-sm-3">
-                                {% trans "Facebook" %}
-                            </label>
-                            <div class="col-sm-9">
-                                <input class="form-control normal" id="id_facebook" maxlength="64" name="facebook" placeholder="Facebook" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_wechat" class="control-label col-sm-3">
-                                {% trans "WeChat ID" %}
-                            </label>
-                            <div class="col-sm-9">
-                                <input class="form-control normal" id="id_wechat" maxlength="64" name="wechat" placeholder="{% trans "WeChat ID" %}" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_other_social_account" class="control-label col-sm-3">
-                                {% trans "Other Social Media" %}
-                            </label>
-                            <div class="col-sm-9">
-                                <input class="form-control normal" id="id_other_social_account" maxlength="64" name="other_social_account" placeholder="{% trans "Other Social Media" %}" type="text">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-gray">
-                <div class="container form-container">
-                    <div class="panel panel-default bg-gray">
-                        <div class="panel-heading">
-                            <h3 class="panel-title text-center contribute-title">{% trans "How to Contribute" %}</h3>
-                            <p class="text-danger contribute-tip">{% trans "This section is very important to KYC review, please fill in carefully." %}</p>
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Your Understanding of Newton" %}
-                                </label>
-                                <div class="col-sm-9">
-                                    <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Your Understanding of Newton" %}" rows="10" maxlength="2048"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group with-attachment">
-                                <label for="id_done_for_newton" class="control-label col-sm-3 with-attachment">
-                                    {% trans "Plans for contributing to Newton" %}
-                                </label>
-                                <div class="col-sm-9">
-                                    <textarea class="form-control with-tip" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the contributions you have made to Newton project and your experience of participating in the Newton project. And how do you plan to contribute to the Newton project in the future and participate in the construction of the Newton project?" %}" rows="10" maxlength="2048"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="id_done_for_newton_attachment" class="control-label col-sm-3">
-                                </label>
-                                <div class="col-sm-9">
-                                    <label for="id_done_for_newton_attachment" class="control-label attachment-title">
-                                        {% trans "Attachment" %}
-                                    </label>
-                                    <div class="attachment-div">
-                                        <input class="form-control select-file" id="id_done_for_newton_attachment" name="done_for_newton_attachment" placeholder="Attachment" type="file">
-                                        <p class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="id_is_establish_node" class="control-label col-sm-3">
-                                    {% trans "Do you want to elect a community node?" %}
-                                </label>
-                                <div class="col-sm-9">
-                                    <input type="radio" name="is_establish_node" value="1" onclick="openNode()">{% trans "Yes" %}
-                                    <input type="radio" name="is_establish_node" checked="" onclick="closeNode()" value="2">{% trans "No" %}
-                                </div>
-                            </div>
-                            <div id="id_which_node" class="form-group hide">
-                                <label for="id_which_node_establish" class="control-label col-sm-3">
-                                    {% trans "Which type of node ?" %}
-                                </label>
-                                <div class="col-sm-9">
-                                    <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
-                                        <option value="1" selected="selected">{% trans "Select Node" %}</option>
-                                        <option value="1">{% trans "Full Node" %}</option>
-                                        <option value="2">{% trans "Media Node" %}</option>
-                                        <option value="3">{% trans "Technology Node" %}</option>
-                                        <option value="4">{% trans "Operation Node" %}</option>
-                                    </select>
-                                    <span class="small">{% trans "Note: Media node is the node where medias help broadcast Newton, technology node is the one where people develop various kind of DAPP or other technologies in Newton ecosystem, operation node is the one which helps maintain and develop Newton communities, and full node is the one which integrates functions of at least two aforementioned nodes." %}</span>
-                                </div>
-                            </div>
-                            <div id="id_how_node" class="form-group hide">
-                                <label for="id_establish_node_plan" class="control-label col-sm-3">
-                                    {% trans "Plans of community node election" %}
-                                </label>
-                                <div class="col-sm-9">
-                                    <textarea class="form-control" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Plans of community node election" %}" rows="10" maxlength="2048"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+
             <div class="container form-container">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">{% trans "Emergency Contact" %}</h3>
+                        <span class="small">{% trans " (required)" %}</span>
                     </div>
                     <div class="panel-body">
                     <div class="form-group emergency-name col-sm-12">
                         {% if is_chinese %}
                         <span>
                             <label for="id_emergency_contact_last_name" class="control-label col-sm-3 emergency-first-name">
-                                {% trans "Last Name" %}<span class="red-color">*</span>
+                                {% trans "Last Name" %}
                             </label>
                             <input class="form-control" id="id_emergency_contact_last_name" maxlength="32" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
                         </span>
                         <span class="last-name">
                             <label for="id_emergency_contact_first_name" class="control-label last-name-label">
-                                {% trans "First Name" %}<span class="red-color">*</span>
+                                {% trans "First Name" %}
                             </label>
                             <input class="form-control" id="id_emergency_contact_first_name" maxlength="32" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
                         </span> 
                         {% else %}
                         <span>
                             <label for="id_emergency_contact_first_name" class="control-label col-sm-3 emergency-first-name">
-                                {% trans "First Name" %}<span class="red-color">*</span>
+                                {% trans "First Name" %}
                             </label>
                             <input class="form-control" id="id_emergency_contact_first_name" maxlength="32" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
                         </span> 
                         <span class="last-name">
                             <label for="id_emergency_contact_last_name" class="control-label last-name-label">
-                                {% trans "Last Name" %}<span class="red-color">*</span>
+                                {% trans "Last Name" %}
                             </label>
                             <input class="form-control" id="id_emergency_contact_last_name" maxlength="32" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
                         </span>
@@ -300,7 +160,7 @@
                     </div>
                     <div class="form-group">
                         <label for="id_cellphone_of_emergency_contact" class="control-label col-sm-3">
-                            {% trans "Cellphone" %}<span class="red-color">*</span>
+                            {% trans "Cellphone" %}
                         </label>
                         <div class="col-sm-9">
                             <div class="form-inline">
@@ -312,7 +172,7 @@
                     {% include "tokenexchange/include-form-country.html" with form=emergency_country_form %}
                     <div class="form-group">
                         <label for="id_emergency_city" class="control-label col-sm-3">
-                            {% trans "City" %}<span class="red-color">*</span>
+                            {% trans "City" %}
                         </label>
                         <div class="col-sm-9">
                             <input class="form-control normal" id="id_emergency_city" maxlength="64" name="emergency_city" placeholder="{% trans "City" %}" type="text">
@@ -320,7 +180,7 @@
                     </div>
                     <div class="form-group">
                             <label for="id_emergency_location" class="control-label col-sm-3">
-                                {% trans "Address" %}<span class="red-color">*</span>
+                                {% trans "Address" %}
                             </label>
                         <div class="col-sm-9">
                             <input class="form-control" id="id_emergency_location" maxlength="128" name="emergency_location" placeholder="{% trans "Address" %}" type="text">
@@ -329,7 +189,7 @@
                     </div>
                     <div class="form-group">
                         <label for="id_emergency_relationship" class="control-label col-sm-3">
-                            {% trans "Relation with Applicant"%} <span class="red-color">*</span>
+                            {% trans "Relation with Applicant"%} 
                         </label>
                         <div class="col-sm-9">
                             <select class="form-control" id="id_emergency_relationship" name="emergency_relationship" placeholder="Relation with Applicant">
@@ -340,6 +200,152 @@
                             </select>
                         </div>
                     </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray">
+                <div class="container form-container">
+                    <div class="panel panel-default bg-gray">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">{% trans "Self Introduction" %}</h3>
+                            <span class="small">{% trans " (optional)" %}</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group with-attachment">
+                                    <label for="id_personal_profile" class="control-label col-sm-3">
+                                        {% trans "Self Introduction" %}
+                                    </label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control with-tip" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "Self Introduction" %}" rows="10" maxlength="2048"></textarea>
+                                    <span class="small">{% trans "Your CV. When were you involved in blockchain industry? Write something about your understanding on blockchain industry." %}</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="id_personal_profile_attachment" class="control-label col-sm-3">
+                                    </label>
+                                <div class="col-sm-9">
+                                    <label for="id_personal_profile_attachment" class="control-label attachment-title">
+                                        {% trans "Attachment" %}
+                                    </label>
+                                    <div class="attachment-div">
+                                    <input class="form-control select-file" id="id_personal_profile_attachment" name="personal_profile_attachment" placeholder="Attachment" type="file">
+                                    <p class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_telegram" class="control-label col-sm-3">
+                                    {% trans "Telegram ID" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <input class="form-control normal" id="id_telegram" maxlength="64" name="telegram" placeholder="Telegram ID" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_twitter" class="control-label col-sm-3">
+                                    {% trans "Twitter" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <input class="form-control normal" id="id_twitter" maxlength="64" name="twitter" placeholder="Twitter" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_facebook" class="control-label col-sm-3">
+                                    {% trans "Facebook" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <input class="form-control normal" id="id_facebook" maxlength="64" name="facebook" placeholder="Facebook" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_wechat" class="control-label col-sm-3">
+                                    {% trans "WeChat ID" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <input class="form-control normal" id="id_wechat" maxlength="64" name="wechat" placeholder="{% trans "WeChat ID" %}" type="text">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_other_social_account" class="control-label col-sm-3">
+                                    {% trans "Other Social Media" %}
+                                </label>
+                                <div class="col-sm-9">
+                                    <input class="form-control normal" id="id_other_social_account" maxlength="64" name="other_social_account" placeholder="{% trans "Other Social Media" %}" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container form-container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">{% trans "How to Contribute" %}</h3>
+                        <span class="small">{% trans " (optional)" %}</span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Your Understanding of Newton" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Your Understanding of Newton" %}" rows="10" maxlength="2048"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group with-attachment">
+                            <label for="id_done_for_newton" class="control-label col-sm-3 with-attachment">
+                                {% trans "Plans for contributing to Newton" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control with-tip" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the contributions you have made to Newton project and your experience of participating in the Newton project. And how do you plan to contribute to the Newton project in the future and participate in the construction of the Newton project?" %}" rows="10" maxlength="2048"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_done_for_newton_attachment" class="control-label col-sm-3">
+                            </label>
+                            <div class="col-sm-9">
+                                <label for="id_done_for_newton_attachment" class="control-label attachment-title">
+                                    {% trans "Attachment" %}
+                                </label>
+                                <div class="attachment-div">
+                                    <input class="form-control select-file" id="id_done_for_newton_attachment" name="done_for_newton_attachment" placeholder="Attachment" type="file">
+                                    <p class="small">{% trans "Only jpeg, jpg and png file within 5M" %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="id_is_establish_node" class="control-label col-sm-3">
+                                {% trans "Do you want to elect a community node?" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <input type="radio" name="is_establish_node" value="1" onclick="openNode()">{% trans "Yes" %}
+                                <input type="radio" name="is_establish_node" checked="" onclick="closeNode()" value="2">{% trans "No" %}
+                            </div>
+                        </div>
+                        <div id="id_which_node" class="form-group hide">
+                            <label for="id_which_node_establish" class="control-label col-sm-3">
+                                {% trans "Which type of node ?" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
+                                    <option value="1" selected="selected">{% trans "Select Node" %}</option>
+                                    <option value="1">{% trans "Full Node" %}</option>
+                                    <option value="2">{% trans "Media Node" %}</option>
+                                    <option value="3">{% trans "Technology Node" %}</option>
+                                    <option value="4">{% trans "Operation Node" %}</option>
+                                </select>
+                                <span class="small">{% trans "Note: Media node is the node where medias help broadcast Newton, technology node is the one where people develop various kind of DAPP or other technologies in Newton ecosystem, operation node is the one which helps maintain and develop Newton communities, and full node is the one which integrates functions of at least two aforementioned nodes." %}</span>
+                            </div>
+                        </div>
+                        <div id="id_how_node" class="form-group hide">
+                            <label for="id_establish_node_plan" class="control-label col-sm-3">
+                                {% trans "Plans of community node election" %}
+                            </label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Plans of community node election" %}" rows="10" maxlength="2048"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
