@@ -50,6 +50,8 @@ urlpatterns = patterns('',
                        url(r'^tokenexchange/',include('tokenexchange.urls')),
                        url(r'^newtonadmin/',include('newtonadmin.urls')),
                        url(r'^setting/',include('setting.urls')),
+                       # protect resource
+                       url(r'^storage/',include('storage.urls')),
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),
