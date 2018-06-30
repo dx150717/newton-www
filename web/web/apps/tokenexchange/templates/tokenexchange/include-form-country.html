@@ -17,7 +17,10 @@
 {% for field in form %}
 <div class="form-group"> 
     <label for="id_{{ field.name }}" class="control-label col-sm-3">
-        {{ field.label }}<span class="red-color">*</span>
+        {{ field.label }}
+        {% if field.name == "country" %}
+        <span class="red-color">*</span>
+        {% endif %}
     </label>
     <div class="col-sm-9">
         {{ field|addcss:"form-control" }}

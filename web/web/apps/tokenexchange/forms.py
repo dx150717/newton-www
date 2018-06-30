@@ -155,13 +155,17 @@ class ContributeForm(ModelForm):
         super(ContributeForm, self).__init__(*args, **kw)
         self.fields['done_for_newton'].required = False
         self.fields['done_for_newton_attachment'].required = False
-        self.fields['do_for_newton'].required = False
+        self.fields['is_establish_node'].required = False
         self.fields['what_is_newton'].required = False
+        self.fields['which_node_establish'].required = False
+        self.fields['establish_node_plan'].required = False
         self.fields.keyOrder = [
             'what_is_newton',
             'done_for_newton',
             'done_for_newton_attachment',
-            'do_for_newton'
+            'is_establish_node',
+            'which_node_establish',
+            'establish_node_plan'
         ]
         
     class Meta:
@@ -170,7 +174,9 @@ class ContributeForm(ModelForm):
             'what_is_newton',
             'done_for_newton',
             'done_for_newton_attachment',
-            'do_for_newton'
+            'is_establish_node',
+            'which_node_establish',
+            'establish_node_plan'
         ]
 
 class EmergencyForm(ModelForm):
@@ -178,6 +184,13 @@ class EmergencyForm(ModelForm):
     cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_('Cellphone'), help_text='(*)')
     def __init__(self, *args, **kw):
         super(EmergencyForm, self).__init__(*args, **kw)
+        self.fields['emergency_contact_first_name'].required = False
+        self.fields['emergency_contact_last_name'].required = False
+        self.fields['cellphone_of_emergency_contact'].required = False
+        self.fields['emergency_country'].required = False
+        self.fields['emergency_city'].required = False
+        self.fields['emergency_location'].required = False
+        self.fields['emergency_relationship'].required = False
         self.fields.keyOrder = [
             'emergency_contact_first_name',
             'emergency_contact_last_name',
