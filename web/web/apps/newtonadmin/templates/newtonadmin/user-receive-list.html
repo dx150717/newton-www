@@ -9,7 +9,11 @@
 {% block content %}
 <section class="section-list newtonadmin">
     <div class="container">
-        <h3>{% if is_sent %} 已发送转币确认用户列表{% else %} 用户转币列表 {% endif %}</h3>
+        <h3>{% if is_sent %}
+            已发送转币确认用户列表 &nbsp;&nbsp;&nbsp;&nbsp;已发送转币确认用户列表总人数：{{ items|length }}
+            {% else %}
+            用户转币列表 &nbsp;&nbsp;&nbsp;&nbsp;用户转币列表总人数：{{ items|length }}
+            {% endif %}</h3>
         <div class="raw table-responsive">
             <table class="table">
                 <thead>

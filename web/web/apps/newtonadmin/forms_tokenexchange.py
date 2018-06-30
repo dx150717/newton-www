@@ -29,4 +29,3 @@ class KYCQueryForm(forms.Form):
     kyc_type = forms.ChoiceField(widget=forms.Select, choices=KYC_TYPE_OPTIONS, label=u'主体类型')
     is_establish_node = forms.ChoiceField(widget=forms.Select, choices=NODE_OPTIONS, label=u'是否建立社群节点')
     country = CountryField().formfield(label=u'国家')
-
