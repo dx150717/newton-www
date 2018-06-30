@@ -437,9 +437,9 @@ canvas {display: block; vertical-align: top;}
 .Notice p{height: 25px; font-size: 11px; margin: 0; text-align: center; line-height: 25px}
 .Notice span{font-size: 25px; line-height: 50px; text-align: center}
 .notice_title{width:60%; text-align: center;}
-.Notice a{color:#fff}
+.Notice a{color:#fff}background-color:#333333; height:50px;
 .Notice .only-pc-center{line-height: 50px;}
-@media (max-width: 768px){
+@media (max-width: 768px){background-color:#333333; height:50px;
     #hide {display: none}
     .Notice{height: 100px;padding-top: 10px;}
     .Notice .container{height: 100px; width: 100%;  display: block; padding-top: 3px}
@@ -447,6 +447,10 @@ canvas {display: block; vertical-align: top;}
     .Notice p{height: 18px; font-size: 12px; line-height: 18px;}
     .Notice span{line-height: 20px; font-size: 15px;}    
     .Notice .only-pc-center{line-height: 20px;}
+}
+.token-exchange-notice {
+    background-color:#333333;
+    min-height:350px;
 }
 /* Responsive ----------------------------------------------------------------- */
 .feature-item-img{text-align:center;}

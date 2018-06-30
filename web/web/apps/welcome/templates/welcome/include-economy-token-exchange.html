@@ -1,0 +1,58 @@
+{% load i18n %}
+{% load utils %}
+<div class="container">
+    <div class="token-exchange">
+    	<div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "Token Exchange" %}</strong><span></span>
+                </h2>
+            </div>
+        </div>
+
+    	<table class="table">
+    		<tr>
+    			<th style="width:10%;">{% trans "Round" %}</th>
+    			<th style="width:10%;">{% trans "Total Amount" %}</th>
+    			<th style="width:20%;">{% trans "Ratio" %}</th>
+    			<th style="width:10%;">{% trans "Lock Time" %}</th>
+    			<th style="width:20%;">{% trans "Start Date" %}</th>
+    			<th style="width:20%;">{% trans "End Date" %}</th>
+    			<th style="width:10%;">{% trans "Status" %}</th>
+    		</tr>
+    		<tr>
+    			<td>#1</td>
+    			<td>500&nbsp;BTC</td>
+    			<td>1 BTC = 15,000,000 NEW</td>
+    			<td>{% trans "1 Year" %}</td>
+    			<td>{% trans "January 1,2018" %}</td>
+    			<td>{% trans "April 1,2018" %}</td>
+    			<td>{% trans "Finished" %}</td>
+    		</tr>
+    		<tr class="current-round">
+    			<td>#2</td>
+    			<td>3000&nbsp;BTC</td>
+    			<td>1&nbsp;BTC&nbsp;=&nbsp;2,000,000&nbsp;NEW</td>
+    			<td>{% trans "No Lock" %}</td>
+    			<td>{% trans "July 1,2018" %}</td>
+    			<td>{% trans "July 31,2018" %}</td>
+    			<td>{% trans "In Progress" %}</td>
+    		</tr>
+    		<tr>
+    			<td>#3</td>
+    			<td>1500&nbsp;BTC</td>
+    			<td>1&nbsp;BTC&nbsp;=&nbsp;1,000,000&nbsp;NEW</td>
+    			<td>{% trans "No Lock" %}</td>
+    			<td>{% trans "Estimate on October,2018" %}</td>
+    			<td>{% trans "Estimate on October,2018" %}</td>
+    			<td>{% trans "Waiting" %}</td>
+    		</tr>
+    		<tr>
+    			<td colspan="7" class="text-center">
+    				<a href="{{ settings.NEWTON_HOME_URL }}/user/" class="form-button">{% trans "Join Round #2" %}
+    				</a>
+    			</td>
+    		</tr>
+    	</table>
+    </div>
+</div>

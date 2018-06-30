@@ -14,7 +14,10 @@
         </div>
     </div>
 </section>
-
+<div class="economy">
+    {% include "welcome/include-allocation.html" %}
+    {% include "welcome/include-economy-token-exchange.html" %}
+</div>
 {% include "welcome/include-investor.html" %}
 <div class="container text-center">
     <div class="row">
@@ -59,4 +62,7 @@
 <script type="text/javascript">
     $("#angels").addClass("bg-gray");
 </script>
+{% endblock %}
+{% block css %}
+<link href="{% version "css/economy.css" %}" rel="stylesheet" />
 {% endblock %}
