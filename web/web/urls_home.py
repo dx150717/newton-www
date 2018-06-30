@@ -19,6 +19,8 @@ urlpatterns = patterns('',
                        url(r'^ishuman/',include('ishuman.urls')),
                        url(r'^setting/',include('setting.urls')),
                        url(r'^tokenexchange/',include('tokenexchange.urls')),
+                       # protect resource
+                       url(r'^storage/',include('storage.urls')),
 )
 
 handler404 = 'welcome.views.show_404_page'
