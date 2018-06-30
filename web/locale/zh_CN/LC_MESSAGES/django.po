@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-29 11:36+0000\n"
+"POT-Creation-Date: 2018-06-30 09:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,14 +153,14 @@ msgid "unfilled"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:183
-#: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:24
+#: web/apps/base/templatetags/utils.py:190 web/apps/tokenexchange/models.py:25
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:234
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:188
 msgid "Yes"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:184
-#: web/apps/base/templatetags/utils.py:191 web/apps/tokenexchange/models.py:25
+#: web/apps/base/templatetags/utils.py:191 web/apps/tokenexchange/models.py:26
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:235
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:189
 msgid "No"
@@ -221,12 +221,12 @@ msgstr "安全提示"
 #: web/apps/help/templates/help/security.html:13
 #: web/apps/help/templates/help/security.html:20
 #: web/apps/user/templates/user/include-security.html:6
-#: web/templates/email-template.html:38
+#: web/templates/email-template.html:41
 msgid "Security Notification"
 msgstr "安全提示"
 
 #: web/apps/help/templates/help/security.html:21
-#: web/templates/email-template.html:39
+#: web/templates/email-template.html:42
 msgid ""
 "Newton Official Website (www.newtonproject.org) is the only channel and "
 "information source for Newton token exchange. Newton will not provide you "
@@ -553,7 +553,7 @@ msgid "Country"
 msgstr "国家"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:55
-#: web/apps/tokenexchange/models.py:42 web/apps/tokenexchange/models.py:86
+#: web/apps/tokenexchange/models.py:43 web/apps/tokenexchange/models.py:87
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:92
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:95
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:315
@@ -562,7 +562,7 @@ msgid "City"
 msgstr "城市"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:58
-#: web/apps/tokenexchange/models.py:43 web/apps/tokenexchange/models.py:87
+#: web/apps/tokenexchange/models.py:44 web/apps/tokenexchange/models.py:88
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:100
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:103
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:323
@@ -571,12 +571,12 @@ msgid "Address"
 msgstr "详细地址"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:61
-#: web/apps/tokenexchange/models.py:45
+#: web/apps/tokenexchange/models.py:46
 msgid "ID Type"
 msgstr "证件类型"
 
 #: web/apps/newtonadmin/templates/newtonadmin/id-list.html:64
-#: web/apps/tokenexchange/models.py:50
+#: web/apps/tokenexchange/models.py:51
 msgid "ID Number"
 msgstr "证件号码"
 
@@ -810,7 +810,7 @@ msgid ""
 "complete the resetting process."
 msgstr "我们发送了一份邮件到您的重置密码邮箱，请前往查看，完成密码重置流程。"
 
-#: web/apps/setting/views.py:64 web/apps/setting/views.py:100
+#: web/apps/setting/views.py:68 web/apps/setting/views.py:104
 msgid "Google Authenticator Code Error"
 msgstr "谷歌身份验证码错误"
 
@@ -1106,61 +1106,61 @@ msgstr "注册国家"
 msgid "Organization Introduction"
 msgstr "机构介绍"
 
-#: web/apps/tokenexchange/models.py:13
+#: web/apps/tokenexchange/models.py:14
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:68
 msgid "ID Card"
 msgstr "身份证"
 
-#: web/apps/tokenexchange/models.py:14
+#: web/apps/tokenexchange/models.py:15
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:66
 msgid "Passport"
 msgstr "护照"
 
-#: web/apps/tokenexchange/models.py:15
+#: web/apps/tokenexchange/models.py:16
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:67
 msgid "Drivers License"
 msgstr "驾驶证"
 
-#: web/apps/tokenexchange/models.py:18
+#: web/apps/tokenexchange/models.py:19
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:245
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:199
 msgid "Full Node"
 msgstr "全节点"
 
-#: web/apps/tokenexchange/models.py:19
+#: web/apps/tokenexchange/models.py:20
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:246
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:200
 msgid "Media Node"
 msgstr "媒体节点"
 
-#: web/apps/tokenexchange/models.py:20
+#: web/apps/tokenexchange/models.py:21
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:247
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:201
 msgid "Technology Node"
 msgstr "技术节点"
 
-#: web/apps/tokenexchange/models.py:21
+#: web/apps/tokenexchange/models.py:22
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:248
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:202
 msgid "Operation Node"
 msgstr "运营节点"
 
-#: web/apps/tokenexchange/models.py:29
+#: web/apps/tokenexchange/models.py:30
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:337
 msgid "Kinship"
 msgstr "亲属"
 
-#: web/apps/tokenexchange/models.py:30
+#: web/apps/tokenexchange/models.py:31
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:338
 msgid "Friendship"
 msgstr "朋友"
 
-#: web/apps/tokenexchange/models.py:31
+#: web/apps/tokenexchange/models.py:32
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:339
 msgid "Colleague"
 msgstr "同事"
 
-#: web/apps/tokenexchange/models.py:37 web/apps/tokenexchange/models.py:81
+#: web/apps/tokenexchange/models.py:38 web/apps/tokenexchange/models.py:82
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:41
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:43
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:48
@@ -1174,7 +1174,7 @@ msgstr "同事"
 msgid "First Name"
 msgstr "名"
 
-#: web/apps/tokenexchange/models.py:38 web/apps/tokenexchange/models.py:82
+#: web/apps/tokenexchange/models.py:39 web/apps/tokenexchange/models.py:83
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:35
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:37
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:54
@@ -1188,19 +1188,19 @@ msgstr "名"
 msgid "Last Name"
 msgstr "姓"
 
-#: web/apps/tokenexchange/models.py:41 web/apps/tokenexchange/models.py:85
+#: web/apps/tokenexchange/models.py:42 web/apps/tokenexchange/models.py:86
 msgid "Select country or region"
 msgstr "选择国家地区"
 
-#: web/apps/tokenexchange/models.py:41 web/apps/tokenexchange/models.py:85
+#: web/apps/tokenexchange/models.py:42 web/apps/tokenexchange/models.py:86
 msgid "Country or Region"
 msgstr "国家或地区"
 
-#: web/apps/tokenexchange/models.py:51
+#: web/apps/tokenexchange/models.py:52
 msgid "ID Photo"
 msgstr "证件照片"
 
-#: web/apps/tokenexchange/models.py:54
+#: web/apps/tokenexchange/models.py:55
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:125
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:130
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:133
@@ -1209,13 +1209,13 @@ msgstr "证件照片"
 msgid "Self Introduction"
 msgstr "自我介绍"
 
-#: web/apps/tokenexchange/models.py:54
+#: web/apps/tokenexchange/models.py:55
 msgid ""
 "(* Your CV. When were you involved in blockchain industry? Write something "
 "about your understanding on blockchain industry.)"
 msgstr ""
 
-#: web/apps/tokenexchange/models.py:55 web/apps/tokenexchange/models.py:68
+#: web/apps/tokenexchange/models.py:56 web/apps/tokenexchange/models.py:69
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:142
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:221
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:104
@@ -1223,13 +1223,13 @@ msgstr ""
 msgid "Attachment"
 msgstr "附件"
 
-#: web/apps/tokenexchange/models.py:59
+#: web/apps/tokenexchange/models.py:60
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:176
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:179
 msgid "WeChat ID"
 msgstr "微信号"
 
-#: web/apps/tokenexchange/models.py:60
+#: web/apps/tokenexchange/models.py:61
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:184
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:187
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:138
@@ -1237,41 +1237,41 @@ msgstr "微信号"
 msgid "Other Social Media"
 msgstr "其他社交媒体账号"
 
-#: web/apps/tokenexchange/models.py:61
+#: web/apps/tokenexchange/models.py:62
 msgid "Newton Communities You are Involved in"
 msgstr "您所在的牛顿社群"
 
-#: web/apps/tokenexchange/models.py:62
+#: web/apps/tokenexchange/models.py:63
 msgid "Screenshots of Abovementioned Communities 1"
 msgstr "社群截图1"
 
-#: web/apps/tokenexchange/models.py:63
+#: web/apps/tokenexchange/models.py:64
 msgid "Screenshots of Abovementioned Communities 2"
 msgstr "社群截图2"
 
-#: web/apps/tokenexchange/models.py:64
+#: web/apps/tokenexchange/models.py:65
 msgid "Screenshots of Abovementioned Communities 3"
 msgstr "社群截图3"
 
-#: web/apps/tokenexchange/models.py:66
+#: web/apps/tokenexchange/models.py:67
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:202
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:205
 msgid "Your Understanding of Newton"
 msgstr "您对牛顿的理解"
 
-#: web/apps/tokenexchange/models.py:67
+#: web/apps/tokenexchange/models.py:68
 msgid "Contribution You Have Made to Newton"
 msgstr "您已经为牛顿做了什么"
 
-#: web/apps/tokenexchange/models.py:69
+#: web/apps/tokenexchange/models.py:70
 msgid "Contribution You Will Make to Newton"
 msgstr "您将为牛顿做些什么"
 
-#: web/apps/tokenexchange/models.py:71
+#: web/apps/tokenexchange/models.py:72
 msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点"
 
-#: web/apps/tokenexchange/models.py:75
+#: web/apps/tokenexchange/models.py:76
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:240
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:194
 #: web/apps/user/templates/user/include-kyc-section.html:91
@@ -1279,53 +1279,53 @@ msgstr "是否愿意建立节点"
 msgid "Which type of node ?"
 msgstr "节点类型"
 
-#: web/apps/tokenexchange/models.py:78
+#: web/apps/tokenexchange/models.py:79
 #: web/apps/user/templates/user/include-kyc-section.html:101
 #: web/apps/user/templates/user/include-kyc-section.html:168
 msgid "Your plan of node establishment"
 msgstr "节点建立计划和方案"
 
-#: web/apps/tokenexchange/models.py:83
+#: web/apps/tokenexchange/models.py:84
 msgid "Country Code of Emergency Contact"
 msgstr ""
 
-#: web/apps/tokenexchange/models.py:84
+#: web/apps/tokenexchange/models.py:85
 msgid "Cellphone of Emergency Contact"
 msgstr ""
 
-#: web/apps/tokenexchange/models.py:88
+#: web/apps/tokenexchange/models.py:89
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:332
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:336
 msgid "Relation with Applicant"
 msgstr "与申请人的关系"
 
-#: web/apps/tokenexchange/models.py:96
+#: web/apps/tokenexchange/models.py:97
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:34
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:36
 msgid "Organization Name"
 msgstr "机构名称"
 
-#: web/apps/tokenexchange/models.py:97
+#: web/apps/tokenexchange/models.py:98
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:40
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:42
 msgid "Organization Code"
 msgstr "机构代码"
 
-#: web/apps/tokenexchange/models.py:98 web/apps/tokenexchange/models.py:99
+#: web/apps/tokenexchange/models.py:99 web/apps/tokenexchange/models.py:100
 msgid "Organization Certificate"
 msgstr "机构证明"
 
-#: web/apps/tokenexchange/models.py:100
+#: web/apps/tokenexchange/models.py:101
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:130
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:133
 msgid "Wechat Platform Name"
 msgstr "微信公众平台名称"
 
-#: web/apps/tokenexchange/models.py:126
+#: web/apps/tokenexchange/models.py:127
 msgid "How much do you want to contribute in BTC"
 msgstr "BTC 数量"
 
-#: web/apps/tokenexchange/models.py:127
+#: web/apps/tokenexchange/models.py:128
 msgid "How much do you want to contribute in ELA"
 msgstr "ELA 数量"
 
@@ -1369,6 +1369,7 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:24
 #: web/apps/user/templates/user/index.html:34
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
 msgid "Token Exchange"
 msgstr "通证交换"
 
@@ -1690,6 +1691,7 @@ msgid "Second-Round Token Exchange"
 msgstr "第二轮通证交换"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-token-exchange-info.html:13
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:17
 msgid "Ratio"
 msgstr "兑换比率"
 
@@ -2228,7 +2230,7 @@ msgstr ""
 "contact@newtonproject.org'>contact@newtonproject.org</a>。"
 
 #: web/apps/user/templates/user/include-security.html:9
-#: web/templates/email-template.html:42
+#: web/templates/email-template.html:45
 msgid "Learn more"
 msgstr "了解更多"
 
@@ -2743,7 +2745,7 @@ msgstr ""
 msgid "Economy"
 msgstr "经济体"
 
-#: web/apps/welcome/templates/welcome/economy.html:23
+#: web/apps/welcome/templates/welcome/economy.html:26
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
 msgstr "联合商业组织"
@@ -2842,6 +2844,47 @@ msgstr "Lee Willson"
 msgid "Bitcoin Ambassador"
 msgstr "比特币大使"
 
+#: web/apps/welcome/templates/welcome/include-allocation.html:8
+msgid "Token Matrix"
+msgstr "通证分配"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:10
+msgid "Total Supply:"
+msgstr "总量："
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:15
+msgid "Item"
+msgstr "分配"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:16
+msgid "Proportion"
+msgstr "比例"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:19
+#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
+msgid "Team"
+msgstr "团队"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:24
+msgid "Token Exchange #1"
+msgstr "通证交换 #1"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:32
+msgid "Token Exchange #2"
+msgstr "通证交换 #2"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:40
+msgid "Token Exchange #3"
+msgstr "通证交换 #3"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:48
+msgid "Newton Foundation"
+msgstr "牛顿基金会"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:56
+msgid "Mining"
+msgstr "挖矿"
+
 #: web/apps/welcome/templates/welcome/include-community-event.html:6
 msgid "Coming Events"
 msgstr "活动预告"
@@ -2919,6 +2962,78 @@ msgid ""
 msgstr ""
 "https://www.newtonproject.org/announcement/2018/05/18/newton-meetup-"
 "beijing-518/"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:15
+msgid "Round"
+msgstr "轮次"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:16
+msgid "Amount"
+msgstr "数量"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:18
+msgid "Lock Time"
+msgstr "锁定期"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:19
+msgid "Start Date"
+msgstr "起始日期"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:20
+msgid "End Date"
+msgstr "截止日期"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:21
+msgid "Status"
+msgstr "当前状态"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:27
+msgid "1 Year"
+msgstr "1年"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:28
+msgid "January 1,2018"
+msgstr "2018年1月1日"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:29
+msgid "April 1,2018"
+msgstr "2018年4月1日"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:30
+msgid "Finished"
+msgstr "已经结束"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:36
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:45
+msgid "No Lock"
+msgstr "无"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:37
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
+msgid "July 1,2018"
+msgstr "2018年7月1日"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:38
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
+msgid "July 31,2018"
+msgstr "2018年7月31日"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:39
+msgid "In Progress"
+msgstr "正在进行"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:46
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
+msgid "Estimate on October,2018"
+msgstr "预计2018年10月"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:48
+msgid "Waiting"
+msgstr "尚未开始"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:52
+msgid "Join Round #2"
+msgstr "参加第二轮通证交换"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
@@ -3089,6 +3204,14 @@ msgstr "共识实验室"
 #: web/apps/welcome/templates/welcome/include-investor.html:235
 msgid "GENESIS"
 msgstr "创世资本"
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:6
+msgid "Newton Token Exchange Round #2 is in progress."
+msgstr "牛顿第二轮通证交换正在进行中。"
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:9
+msgid "View Detail"
+msgstr "查看详情"
 
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "Joint Ecological Construction"
@@ -3342,7 +3465,7 @@ msgstr "每一个人都应该从经济增长中受益"
 msgid "Newton: Infrastructure for the protocol-based economy"
 msgstr "牛顿：协议经济基础设施"
 
-#: web/apps/welcome/templates/welcome/index.html:47
+#: web/apps/welcome/templates/welcome/index.html:48
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -4745,10 +4868,6 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/roadmap.html:6
 msgid "Roadmap"
 msgstr "路线图"
-
-#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
-msgid "Team"
-msgstr "团队"
 
 #: web/apps/welcome/templates/welcome/tech.html:6
 msgid "TECH"
@@ -7140,11 +7259,11 @@ msgstr ""
 msgid "Best regard"
 msgstr "谢谢！"
 
-#: web/templates/email-template.html:33
+#: web/templates/email-template.html:36
 msgid "If you have received this email in error, please delete it."
 msgstr "如果您意外收到了这封邮件，请删除它。"
 
-#: web/templates/email-template.html:40
+#: web/templates/email-template.html:43
 msgid ""
 "The Newton official website uses the EV SSL certificate for secure identity "
 "verification. The SSL certificate displayed in the browser's address bar "
@@ -7221,9 +7340,6 @@ msgstr ""
 #~ "牛顿已经为您分配了通证交换数量和地址，请前往牛顿官方网站 (<a "
 #~ "href='https://www.newtonproject.org/'>www.newtonproject.org</a>) 的通证交"
 #~ "换页面查看详情。"
-
-#~ msgid "Newton Foundation"
-#~ msgstr "牛顿基金会"
 
 #~ msgid "Lookup Address"
 #~ msgstr "详细地址"

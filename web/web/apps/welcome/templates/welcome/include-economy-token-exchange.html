@@ -13,7 +13,7 @@
     	<table class="table">
     		<tr>
     			<th style="width:10%;">{% trans "Round" %}</th>
-    			<th style="width:10%;">{% trans "Total Amount" %}</th>
+    			<th style="width:10%;">{% trans "Amount" %}</th>
     			<th style="width:20%;">{% trans "Ratio" %}</th>
     			<th style="width:10%;">{% trans "Lock Time" %}</th>
     			<th style="width:20%;">{% trans "Start Date" %}</th>
@@ -29,7 +29,7 @@
     			<td>{% trans "April 1,2018" %}</td>
     			<td>{% trans "Finished" %}</td>
     		</tr>
-    		<tr class="current-round">
+    		<tr class="bg-gray">
     			<td>#2</td>
     			<td>3000&nbsp;BTC</td>
     			<td>1&nbsp;BTC&nbsp;=&nbsp;2,000,000&nbsp;NEW</td>
@@ -48,7 +48,7 @@
     			<td>{% trans "Waiting" %}</td>
     		</tr>
     		<tr>
-    			<td colspan="7" class="text-center">
+    			<td colspan="7" class="text-center" style="padding-top: 30px;">
     				<a href="{{ settings.NEWTON_HOME_URL }}/user/" class="form-button">{% trans "Join Round #2" %}
     				</a>
     			</td>
