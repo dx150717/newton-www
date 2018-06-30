@@ -26,6 +26,13 @@ class KYCQueryForm(forms.Form):
         (1, u'是'),
         (0, u'否'),
     )
+    EXCLUDE_COUNTRY = (
+        ('', u'------'),
+        ('CN', u'中国除外'),
+        ('US', u'美国除外'),
+        ('CN, US', u'中国和美国除外'),
+    )
     kyc_type = forms.ChoiceField(widget=forms.Select, choices=KYC_TYPE_OPTIONS, label=u'主体类型')
     is_establish_node = forms.ChoiceField(widget=forms.Select, choices=NODE_OPTIONS, label=u'是否建立社群节点')
     country = CountryField().formfield(label=u'国家')
+    exclude_country = forms.ChoiceField(widget=forms.Select, choices=EXCLUDE_COUNTRY, label=u'主体类型')

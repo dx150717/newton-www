@@ -82,7 +82,13 @@ class IdListView(generic.ListView):
         try:
             q = Q(status=codes.KYCStatus.CANDIDATE.value)
             q = build_query_condition(self.request, q)
-            fields = tokenexchange_models.KYCInfo.objects.filter(q)
+            exclude_country = self.request.GET.get('exclude_country')
+            if exclude_country:
+                print "exclude_country is %s" % exclude_country
+                exclude_country = exclude_country.split(',')
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).exclude(country__in=exclude_country)
+            else:
+                fields = tokenexchange_models.KYCInfo.objects.filter(q)
             items = []
             if fields and len(fields) > 0:
                 for item in fields:
