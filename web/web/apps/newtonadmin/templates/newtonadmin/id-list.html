@@ -15,7 +15,8 @@
             </div>
             <div class="col-md-9">
                 <div class="table-responsive content">
-                    <h3>{{ title }} &nbsp;&nbsp;&nbsp;&nbsp;{{ title }}总人数：{{ items|length }}</h3>
+                    <h3>{{ title }} &nbsp;(人数：{{ paginator.count }})</h3>
+                    {% include "newtonadmin/include-paginator.html" %}
                     <table class="table">
                         <thead>
                             <tr>
@@ -116,22 +117,7 @@
                             
                         </tbody>
                     </table>
-                    {% if is_paginated %}
-                    <div class="pagination-simple">
-                    {% if page_obj.has_previous %}
-                        <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
-                    {% endif %}
-                    <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
-                    {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
-                    {% endif %}
-                    </div>
-                    {% endif %}
-                    {% if not items %}
-                    <div class="well text-center">
-                        还没有数据
-                    </div>
-                    {% endif %}
+                    {% include "newtonadmin/include-paginator.html" %}
                 </div>  
             </div>
         </div>
