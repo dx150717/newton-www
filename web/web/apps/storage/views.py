@@ -30,7 +30,15 @@ def check_file_permission(request, path):
             item.orgnization_certificate1,
             item.orgnization_certificate2]
         if path in resources:
+            # work around for content type
+            content_type = 'image/jpeg'
+            if path.endswith('.jpg') or path.endswith('.jpeg'):
+                content_type = 'image/jpeg'
+            elif path.endswith('.png'):
+                content_type = 'image/png'
+            # end
             response = http.HttpResponse()
+            response['Content-Type'] = content_type
             response['X-Accel-Redirect'] = '/filestorage/%s' % path
             return response
         else:
