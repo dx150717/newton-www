@@ -18,8 +18,16 @@
                 {% trans "If you are unable to scan the QR code, please enter this code manually into the app." %}
             </label>
             <div id="key" style="font-size: 18px; color: #292929">{{ gtoken }}</div>
-            <p class="tip text-danger">
-                {% trans "* Please save this Key on paper. This Key will allow you to recover your Google Authentication in case of phone loss." %}
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <p class="text-danger">
+                {% trans "* This QR code and key are important personal information. Please keep it safe and  confidential. Don't share it with others." %}
+            </p>
+            <p class="text-danger">
+                {% trans "* Please keep your QR code and key safe and confidential. If your phone is lost, you can use this QR code and key to recover your Google Authenticator." %}
+            </p>
+            <p class="text-danger">
+                {% trans "* After the Google Authenticator is successfully installed, unless it is necessary, do not arbitrarily delete so as to avoid inconvenience to your login." %}
             </p>
         </div>
     </div>
