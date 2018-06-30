@@ -7,7 +7,7 @@ STATIC_URL = 'http://web.newtonproject.beta.diynova.com/static/'
 DOMAIN = 'web.newtonproject.beta.diynova.com'
 BASE_URL = 'http://web.newtonproject.beta.diynova.com'
 SESSION_COOKIE_DOMAIN = '.newtonproject.beta.diynova.com'
-MEDIA_URL = 'http://web.newtonproject.beta.diynova.com/storage/protect/'
+MEDIA_URL = 'http://web.newtonproject.beta.diynova.com/filestorage/'
 
 NEWTON_WEB_URL = 'http://web.newtonproject.beta.diynova.com'
 NEWTON_HOME_URL = 'http://home.newtonproject.beta.diynova.com'

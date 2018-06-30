@@ -13,12 +13,28 @@ from tokenexchange import models as tokenexchange_models
 
 logger = logging.getLogger(__name__)
 
+def __build_nginx_internal_redirct(path):
+    # work around for content type
+    content_type = 'image/jpeg'
+    if path.endswith('.jpg') or path.endswith('.jpeg'):
+        content_type = 'image/jpeg'
+    elif path.endswith('.png'):
+        content_type = 'image/png'
+    # end
+    response = http.HttpResponse()
+    response['Content-Type'] = content_type
+    response['X-Accel-Redirect'] = '/filestorage/%s' % path
+    return response
+
 def check_file_permission(request, path):
     """Check the permission of protect file
     """
     try:
         if not request.user.is_authenticated():
             return HttpResponseForbidden()
+        # for admin user, don't check
+        if request.user.is_staff:
+            return __build_nginx_internal_redirct(path)
         item = tokenexchange_models.KYCInfo.objects.get(user_id=request.user.id)
         resources = [
             item.id_card, 
@@ -30,17 +46,7 @@ def check_file_permission(request, path):
             item.orgnization_certificate1,
             item.orgnization_certificate2]
         if path in resources:
-            # work around for content type
-            content_type = 'image/jpeg'
-            if path.endswith('.jpg') or path.endswith('.jpeg'):
-                content_type = 'image/jpeg'
-            elif path.endswith('.png'):
-                content_type = 'image/png'
-            # end
-            response = http.HttpResponse()
-            response['Content-Type'] = content_type
-            response['X-Accel-Redirect'] = '/filestorage/%s' % path
-            return response
+            return __build_nginx_internal_redirct(path)
         else:
             return HttpResponseForbidden()
     except Exception, inst:
