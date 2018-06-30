@@ -124,27 +124,27 @@
                     </tr>
                     <tr>
                         <th>紧急联系人姓名: </th>
-                        <td>{{ item.emergency_contact_first_name }} &nbsp; {{ item.emergency_contact_last_name }}</td>
+                        <td>{{ item.emergency_contact_first_name|default:"-" }} &nbsp; {{ item.emergency_contact_last_name }}</td>
                     </tr>
                     <tr>
                         <th>紧急联系人电话: </th>
-                        <td>{{ item.emergency_contact_cellphone }}</td>
+                        <td>{{ item.emergency_contact_cellphone|default:"-" }}</td>
                     </tr>
                     <tr>
                         <th>紧急联系人国籍: </th>
-                        <td>{{ item.emergency_country }}</td>
+                        <td>{{ item.emergency_country|default:"-" }}</td>
                     </tr>
                     <tr>
                         <th>紧急联系人城市: </th>
-                        <td>{{ item.emergency_city }}</td>
+                        <td>{{ item.emergency_city|default:"-" }}</td>
                     </tr>
                     <tr>
                         <th>紧急联系人地址: </th>
-                        <td>{{ item.emergency_location }}</td>
+                        <td>{{ item.emergency_location|default:"-" }}</td>
                     </tr>
                     <tr>
                         <th>与紧急联系人关系: </th>
-                        <td>{{ item.emergency_relationship }}</td>
+                        <td>{{ item.emergency_relationship|default:"-" }}</td>
                     </tr>
                     <tr>
                         <th>申请时间: </th>

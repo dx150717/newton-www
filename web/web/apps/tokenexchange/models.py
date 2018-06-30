@@ -16,6 +16,7 @@ ID_CHOICES = (
         (codes.IDType.DRIVERS_LICENSE.value, _('Drivers License'))
     )
 NODE_CHOICE = (
+    (codes.NodeType.UNKNOWN.value, '-'),
     (codes.NodeType.FULL_NODE.value, _('Full Node')),
     (codes.NodeType.MEDIA_NODE.value, _('Media Node')),
     (codes.NodeType.TECH_NODE.value, _('Technology Node')),

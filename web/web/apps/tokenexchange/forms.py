@@ -307,10 +307,6 @@ class KYCProfileForm(ModelForm):
         self.fields['wechat'].required = False
         self.fields['other_social_account'].required = False
         self.fields['personal_profile_attachment'].required = False
-        self.fields['your_community'].required = False
-        self.fields['your_community_screenshots1'].required = False
-        self.fields['your_community_screenshots2'].required = False
-        self.fields['your_community_screenshots3'].required = False
         self.fields['personal_profile'].required = False
         self.fields.keyOrder = [
             'personal_profile',
@@ -320,10 +316,6 @@ class KYCProfileForm(ModelForm):
             'twitter',
             'facebook',
             'other_social_account',
-            'your_community',
-            'your_community_screenshots1',
-            'your_community_screenshots2',
-            'your_community_screenshots3',
         ]
         
     class Meta:

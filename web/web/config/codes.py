@@ -140,6 +140,7 @@ class EstablishNodeType(Enum):
     NO = 2
  
 class NodeType(Enum):
+    UNKNOWN = 0
     FULL_NODE = 1
     MEDIA_NODE = 2
     TECH_NODE = 3
