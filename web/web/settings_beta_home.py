@@ -6,3 +6,4 @@ BASE_URL = 'http://home.newtonproject.beta.diynova.com'
 MEDIA_URL = 'http://home.newtonproject.beta.diynova.com/filestorage/'
 
 ROOT_URLCONF = 'web.urls_home'
+SESSION_COOKIE_NAME = 'nhsid'

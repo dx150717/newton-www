@@ -8,3 +8,4 @@ MEDIA_URL = 'http://gravity.newtonproject.beta.diynova.com/filestorage/'
 LOGGING_API_REQUEST = True
 USE_TESTNET = True
 ROOT_URLCONF = 'web.urls_gravity'
+SESSION_COOKIE_NAME = 'ngsid'

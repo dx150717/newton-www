@@ -6,3 +6,4 @@ BASE_URL = 'http://web.rc.newtonproject.org'
 MEDIA_URL = 'http://web.rc.newtonproject.org/filestorage/'
 
 ROOT_URLCONF = 'web.urls_web'
+SESSION_COOKIE_NAME = 'nwsid'
