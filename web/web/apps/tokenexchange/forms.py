@@ -6,8 +6,233 @@ from django.utils.translation import ugettext_lazy as _
 from tokenexchange import models as tokenexchange_models
 from user import forms as user_forms
 
-'''
-'''
+class KYCIndividualForm(ModelForm):
+    """advanceinfo for kyc example: what can you do for newton
+    """
+    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_("Cellphone"), help_text='(*)')
+    cellphone_of_emergency_contact = user_forms.CellphoneGroupField(required=False, widget=user_forms.CellphoneGroupWidget, label=_('Cellphone'), help_text='(*)')
+    def __init__(self, *args, **kw):
+        super(KYCIndividualForm, self).__init__(*args, **kw)
+        # required fields
+        self.fields['first_name'].required = True
+        self.fields['last_name'].required = True
+        self.fields['id_type'].required = True
+        self.fields['id_number'].required = True
+        self.fields['id_card'].required = True
+        self.fields['country'].required = True
+        self.fields['city'].required = True
+        self.fields['location'].required = True
+        # optional fields
+        self.fields['emergency_contact_first_name'].required = False
+        self.fields['emergency_contact_last_name'].required = False
+        self.fields['emergency_country'].required = False
+        self.fields['emergency_city'].required = False
+        self.fields['emergency_location'].required = False
+        self.fields['emergency_relationship'].required = False
+        self.fields['personal_profile'].required = False
+        self.fields['personal_profile_attachment'].required = False
+        self.fields['telegram'].required = False
+        self.fields['facebook'].required = False
+        self.fields['twitter'].required = False
+        self.fields['wechat'].required = False
+        self.fields['other_social_account'].required = False
+        self.fields['what_is_newton'].required = False
+        self.fields['done_for_newton'].required = False
+        self.fields['done_for_newton_attachment'].required = False
+        self.fields['is_establish_node'].required = False
+        self.fields['which_node_establish'].required = False
+        self.fields['establish_node_plan'].required = False
+        self.fields.keyOrder = [
+            'first_name',
+            'last_name',
+            'id_type',
+            'id_number',
+            'id_card',
+            'country',
+            'city',
+            'location',
+            'cellphone_group',
+            'emergency_contact_first_name',
+            'emergency_contact_last_name',
+            'cellphone_of_emergency_contact',
+            'emergency_country',
+            'emergency_city',
+            'emergency_location',
+            'emergency_relationship',
+            'personal_profile',
+            'personal_profile_attachment',
+            'wechat',
+            'telegram',
+            'twitter',
+            'facebook',
+            'other_social_account',
+            'what_is_newton',
+            'done_for_newton',
+            'done_for_newton_attachment',
+            'is_establish_node',
+            'which_node_establish',
+            'establish_node_plan',
+        ]
+
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'first_name',
+            'last_name',
+            'country',
+            'city',
+            'location',
+            'id_type',
+            'id_number',
+            'id_card',
+            'emergency_contact_first_name',
+            'emergency_contact_last_name',
+            'emergency_country',
+            'emergency_city',
+            'emergency_location',
+            'emergency_relationship',
+            'personal_profile',
+            'personal_profile_attachment',
+            'wechat',
+            'telegram',
+            'twitter',
+            'facebook',
+            'other_social_account',
+            'what_is_newton',
+            'done_for_newton',
+            'done_for_newton_attachment',
+            'is_establish_node',
+            'which_node_establish',
+            'establish_node_plan'
+        ]
+
+
+class KYCOrganizationForm(ModelForm):
+    """advanceinfo for kyc example: what can you do for newton
+    """
+    cellphone_group = user_forms.CellphoneGroupField(required=True, widget=user_forms.CellphoneGroupWidget, label=_("Cellphone"), help_text='(*)')
+    def __init__(self, *args, **kw):
+        super(KYCOrganizationForm, self).__init__(*args, **kw)
+        # required
+        self.fields['orgnization_name'].required = True
+        self.fields['orgnization_code'].required = True
+        self.fields['orgnization_certificate1'].required = True
+        self.fields['country'].required = True
+        self.fields['first_name'].required = True
+        self.fields['last_name'].required = True
+        self.fields['personal_profile'].required = True
+        self.fields['what_is_newton'].required = True
+        self.fields['done_for_newton'].required = True
+        # optional
+        self.fields['orgnization_certificate2'].required = False
+        self.fields['personal_profile_attachment'].required = False
+        self.fields['wechat_platform_name'].required = False
+        self.fields['twitter'].required = False
+        self.fields['facebook'].required = False
+        self.fields['other_social_account'].required = False
+        self.fields['done_for_newton_attachment'].required = False
+        self.fields['is_establish_node'].required = False
+        self.fields['which_node_establish'].required = False
+        self.fields['establish_node_plan'].required = False
+        # lobel
+        self.fields['country'].label = _('Registration Country')
+        self.fields['personal_profile'].label = _("Organization Introduction")
+        self.fields.keyOrder = [
+            'orgnization_name',
+            'orgnization_code',
+            'orgnization_certificate1',
+            'orgnization_certificate2',
+            'country',
+            'first_name',
+            'last_name',
+            'cellphone_group',
+            'personal_profile',
+            'personal_profile_attachment',
+            'wechat_platform_name',
+            'twitter',
+            'facebook',
+            'other_social_account',
+            'what_is_newton',
+            'done_for_newton',
+            'done_for_newton_attachment',
+            'is_establish_node',
+            'which_node_establish',
+            'establish_node_plan',
+        ]
+
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'orgnization_name',
+            'orgnization_code',
+            'orgnization_certificate1',
+            'orgnization_certificate2',
+            'country',
+            'first_name',
+            'last_name',
+            'cellphone_group',
+            'personal_profile',
+            'personal_profile_attachment',
+            'wechat_platform_name',
+            'twitter',
+            'facebook',
+            'other_social_account',
+            'what_is_newton',
+            'done_for_newton',
+            'done_for_newton_attachment',
+            'is_establish_node',
+            'which_node_establish',
+            'establish_node_plan'
+        ]
+        
+
+class ApplyAmountForm(ModelForm):
+    class Meta:
+        model = tokenexchange_models.InvestInvite
+        fields = [
+            'expect_btc',
+            #'expect_ela',
+        ]
+
+class CountryForm(ModelForm):
+    def __init__(self, *args, **kw):
+        super(CountryForm, self).__init__(*args, **kw)
+        self.fields.keyOrder = [
+            'country',
+        ]
+        
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'country',
+        ]
+
+class OrganizationCountryForm(ModelForm):
+    def __init__(self, *args, **kw):
+        super(OrganizationCountryForm, self).__init__(*args, **kw)
+        self.fields['country'].label = _("Registration Country")
+        self.fields.keyOrder = [
+            'country',
+        ]
+        
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'country',
+        ]
+
+class EmergencyCountryForm(ModelForm):
+    def __init__(self, *args, **kw):
+        super(EmergencyCountryForm, self).__init__(*args, **kw)
+        self.fields.keyOrder = [
+            'emergency_country',
+        ]
+        
+    class Meta:
+        model = tokenexchange_models.KYCInfo
+        fields = [
+            'emergency_country',
+        ]
 
 class KYCBaseForm(ModelForm):
     """advanceinfo for kyc example: what can you do for newton
@@ -210,52 +435,4 @@ class EmergencyForm(ModelForm):
             'emergency_city',
             'emergency_location',
             'emergency_relationship'
-        ]
-
-class ApplyAmountForm(ModelForm):
-    class Meta:
-        model = tokenexchange_models.InvestInvite
-        fields = [
-            'expect_btc',
-            #'expect_ela',
-        ]
-
-class CountryForm(ModelForm):
-    def __init__(self, *args, **kw):
-        super(CountryForm, self).__init__(*args, **kw)
-        self.fields.keyOrder = [
-            'country',
-        ]
-        
-    class Meta:
-        model = tokenexchange_models.KYCInfo
-        fields = [
-            'country',
-        ]
-
-class OrganizationCountryForm(ModelForm):
-    def __init__(self, *args, **kw):
-        super(OrganizationCountryForm, self).__init__(*args, **kw)
-        self.fields['country'].label = _("Registration Country")
-        self.fields.keyOrder = [
-            'country',
-        ]
-        
-    class Meta:
-        model = tokenexchange_models.KYCInfo
-        fields = [
-            'country',
-        ]
-
-class EmergencyCountryForm(ModelForm):
-    def __init__(self, *args, **kw):
-        super(EmergencyCountryForm, self).__init__(*args, **kw)
-        self.fields.keyOrder = [
-            'emergency_country',
-        ]
-        
-    class Meta:
-        model = tokenexchange_models.KYCInfo
-        fields = [
-            'emergency_country',
         ]

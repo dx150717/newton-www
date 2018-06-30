@@ -64,90 +64,52 @@ def post_kyc_information(request, kyc_type):
         if kyc_type == codes.KYCType.ORGANIZATION.value:
             is_individual = False
         if request.method == 'POST':
-            if not instance:
-                instance = tokenexchange_models.KYCInfo()
-            instance.kyc_type = kyc_type
-            instance.phase_id = settings.CURRENT_FUND_PHASE
-            # chekc whether user has pass kyc
-            if instance and instance.status == codes.KYCStatus.PASS_KYC.value:
-                base_form._errors[NON_FIELD_ERRORS] = base_form.error_class([_('You had submited kyc info')])
-                return render(request, "tokenexchange/submit.html", locals())
-            # check whether post data is valid
             if kyc_type == codes.KYCType.INDIVIDUAL.value:
-                base_form = tokenexchange_forms.KYCBaseForm(request.POST, request.FILES, instance=instance)
-                profile_form = tokenexchange_forms.KYCProfileForm(request.POST, request.FILES, instance=instance)
-                emergency_form = tokenexchange_forms.EmergencyForm(request.POST, request.FILES, instance=instance)
-                if not base_form.is_valid():
+                # build a instance object
+                if not instance:
+                    instance = tokenexchange_models.KYCInfo()
+                    instance.phase_id = settings.CURRENT_FUND_PHASE
+                    instance.user_id = request.user.id
+                # check whether individual post data is valid
+                form = tokenexchange_forms.KYCIndividualForm(request.POST, request.FILES, instance=instance)
+                if not form.is_valid():
                     return render(request, "tokenexchange/submit.html", locals())
-                if not profile_form.is_valid():
-                    return render(request, "tokenexchange/submit.html", locals())
-                if not emergency_form.is_valid():
-                    return render(request, "tokenexchange/submit.html", locals())
-            else:
-                organization_base_form = tokenexchange_forms.OrganizationBaseForm(request.POST, request.FILES, instance=instance)
-                organization_profile_form = tokenexchange_forms.OrganizationProfileForm(request.POST, request.FILES, instance=instance)
-                if not organization_base_form.is_valid():
-                    return render(request, "tokenexchange/submit.html", locals())
-                if not organization_profile_form.is_valid():
-                    return render(request, "tokenexchange/submit.html", locals())
-            contribute_form = tokenexchange_forms.ContributeForm(request.POST, request.FILES, instance=instance)
-            if not contribute_form.is_valid():
-                return render(request, "tokenexchange/submit.html", locals())
-            # insert data into sql
-            instance.user_id = request.user.id
-            if kyc_type == codes.KYCType.INDIVIDUAL.value:
-                instance = base_form.save(commit=True)
-                instance = profile_form.save(commit=True)
-                instance = emergency_form.save(commit=True)
-            else:
-                instance = organization_base_form.save(commit=True)
-                instance = organization_profile_form.save(commit=True)
-            instance = contribute_form.save(commit=True)
-
-            is_establish_node = contribute_form.cleaned_data['is_establish_node']
-            which_node_establish = contribute_form.cleaned_data['which_node_establish']
-            establish_node_plan = contribute_form.cleaned_data['establish_node_plan']
-            emergency_relationship = emergency_form.cleaned_data['emergency_relationship']
-            if establish_node_plan and len(establish_node_plan) < 10240:
-                instance.establish_node_plan = establish_node_plan
-            instance.is_establish_node = is_establish_node
-            instance.which_node_establish = which_node_establish
-            instance.emergency_relationship = emergency_relationship
-            if kyc_type == codes.KYCType.INDIVIDUAL.value:
-                country_code, cellphone = base_form.cleaned_data['cellphone_group']
-            else:
-                country_code, cellphone = organization_base_form.cleaned_data['cellphone_group']
-            instance.country_code = country_code
-            instance.cellphone = cellphone
-            if kyc_type == codes.KYCType.INDIVIDUAL.value:
-                if emergency_form.cleaned_data['cellphone_of_emergency_contact']:
-                    emergency_contact_country_code, emergency_contact_cellphone = emergency_form.cleaned_data['cellphone_of_emergency_contact']
+                # extract indivadual data
+                instance = form.save(commit=False)
+                country_code, cellphone = form.cleaned_data['cellphone_group']
+                if form.cleaned_data['cellphone_of_emergency_contact']:
+                    emergency_contact_country_code, emergency_contact_cellphone = form.cleaned_data['cellphone_of_emergency_contact']
                     instance.emergency_contact_country_code = emergency_contact_country_code
                     instance.emergency_contact_cellphone = emergency_contact_cellphone
-            instance.status = codes.KYCStatus.CANDIDATE.value
-            instance.save()
-
-            if kyc_type == codes.KYCType.INDIVIDUAL.value:
-                instance = base_form.save(commit=True)
-                instance = profile_form.save(commit=True)
-                instance = emergency_form.save(commit=True)
+                instance.country_code = country_code
+                instance.cellphone = cellphone
+                instance.kyc_type = kyc_type
+                instance.status = codes.KYCStatus.CANDIDATE.value
+                instance.save()
             else:
-                instance = organization_base_form.save(commit=True)
-                instance = organization_profile_form.save(commit=True)
-            instance = contribute_form.save(commit=True)
-
+                # build a instance object
+                if not instance:
+                    instance = tokenexchange_models.KYCInfo()
+                    instance.phase_id = settings.CURRENT_FUND_PHASE
+                    instance.user_id = request.user.id
+                # check whether organization post data is valid
+                form = tokenexchange_forms.KYCOrganizationForm(request.POST, request.FILES, instance=instance)
+                if not form.is_valid():
+                    return render(request, "tokenexchange/submit.html", locals())
+                # extract organization data
+                instance = form.save(commit=False)
+                country_code, cellphone = form.cleaned_data['cellphone_group']
+                instance.country_code = country_code
+                instance.cellphone = cellphone
+                instance.kyc_type = kyc_type
+                instance.status = codes.KYCStatus.CANDIDATE.value
+                instance.save()
             return redirect('/tokenexchange/wait-audit/')
         else:
             is_chinese = False
             language_code = translation.get_language()
             if language_code.startswith('zh'):
                 is_chinese = True
-            base_form = tokenexchange_forms.KYCBaseForm(instance=instance)
-            profile_form = tokenexchange_forms.KYCProfileForm(instance=instance)
-            contribute_form = tokenexchange_forms.ContributeForm(instance=instance)
-            emergency_form = tokenexchange_forms.EmergencyForm(instance=instance)
-            organization_base_form = tokenexchange_forms.OrganizationBaseForm(instance=instance)
-            organization_profile_form = tokenexchange_forms.OrganizationProfileForm(instance=instance)
             country_form = tokenexchange_forms.CountryForm(instance=instance)
             organization_country_form = tokenexchange_forms.OrganizationCountryForm(instance=instance)
             emergency_country_form = tokenexchange_forms.EmergencyCountryForm(instance=instance)

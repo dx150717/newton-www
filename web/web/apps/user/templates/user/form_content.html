@@ -8,8 +8,12 @@
         </p>
         {% if field.value %}
             <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                {% if field.value.cellphone %}
-                    <div class="value">+{{ field.value.country_code }}  {{ field.value.cellphone }}</div>
+                {% if field.name == "cellphone_group" or field.name == "cellphone_of_emergency_contact" %}
+                    {% if field.value.country_code %}
+                    <div class="value">{{ field.value.country_code }}  {{ field.value.cellphone }}</div>
+                    {% else %}
+                    <div class="kycinfo_content col-lg-9 col-md-9 col-sm-12 col-xs-12" style="padding-left: 0">-</div>
+                    {% endif %}
                 {% else %}
                     {% if field.name == "id_card" %}
                     <img src="{{ kycinfo.id_card.url }}" alt="">
