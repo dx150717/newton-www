@@ -31,7 +31,7 @@ def check_file_permission(request, path):
             item.orgnization_certificate2]
         if path in resources:
             response = http.HttpResponse()
-            response['X-Accel-Redirect'] = path
+            response['X-Accel-Redirect'] = 'filestorage/%s' % path
             return response
         else:
             return HttpResponseForbidden()
