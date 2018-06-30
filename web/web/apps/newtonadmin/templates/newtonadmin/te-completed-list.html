@@ -9,7 +9,8 @@
 {% block content %}
 <section class="newtonadmin" class="section-list">
     <div class="container">
-        <h3>已邀请列表</h3>
+        <h3>已邀请列表 &nbsp;(人数：{{ paginator.count }})</h3>
+        {% include "newtonadmin/include-paginator.html" %}
         <div class="raw">
             <div class="col-md-2">
                 {% include "newtonadmin/include-filter.html" %}

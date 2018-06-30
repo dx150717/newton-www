@@ -9,7 +9,12 @@
 {% block content %}
 <section class="section-list newtonadmin">
     <div class="container">
-        <h3>{% if is_sent %} 已发送转币确认用户列表{% else %} 用户转币列表 {% endif %}</h3>
+        <h3>{% if is_sent %}
+            已发送转币确认用户列表 &nbsp;(人数：{{ paginator.count }})
+            {% else %}
+            用户转币列表 &nbsp;(人数：{{ paginator.count }})
+            {% endif %}</h3>
+        {% include "newtonadmin/include-paginator.html" %}
         <div class="raw table-responsive">
             <table class="table">
                 <thead>

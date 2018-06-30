@@ -13,7 +13,8 @@
 {% block content %}
 <section class="section-list newtonadmin">
     <div class="container">
-        <h3>转币交易列表<span class="">(每30分钟自动查询一次)</h3>
+        <h3>转币交易列表(每30分钟自动查询一次) &nbsp;(交易次数：{{ paginator.count }})</h3>
+        {% include "newtonadmin/include-paginator.html" %}
         <div class="raw table-responsive">
             <table class="table">
                 <thead>

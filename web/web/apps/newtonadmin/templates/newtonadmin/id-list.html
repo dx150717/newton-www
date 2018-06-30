@@ -15,7 +15,8 @@
             </div>
             <div class="col-md-9">
                 <div class="table-responsive content">
-                    <h3>{{ title }}</h3>
+                    <h3>{{ title }} &nbsp;(人数：{{ paginator.count }})</h3>
+                    {% include "newtonadmin/include-paginator.html" %}
                     <table class="table">
                         <thead>
                             <tr>
@@ -116,22 +117,7 @@
                             
                         </tbody>
                     </table>
-                    {% if is_paginated %}
-                    <div class="pagination-simple">
-                    {% if page_obj.has_previous %}
-                        <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
-                    {% endif %}
-                    <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
-                    {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
-                    {% endif %}
-                    </div>
-                    {% endif %}
-                    {% if not items %}
-                    <div class="well text-center">
-                        还没有数据
-                    </div>
-                    {% endif %}
+                    {% include "newtonadmin/include-paginator.html" %}
                 </div>  
             </div>
         </div>
@@ -150,7 +136,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">评分</label>
                         <div class="col-sm-10">
-                            <select name="level" id="level">
+                            <select name="level" id="level" class="form-control">
                                 {% for level in level_choices %}
                                 <option value="{{ level }}">{{ level }}</option>
                                 {% endfor %}
@@ -160,15 +146,15 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">注释</label>
                         <div class="col-sm-10">
-                            <textarea name="comment" id="id_comment" cols="50" rows="3"></textarea>
+                            <textarea name="comment" id="id_comment" cols="50" rows="5" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label"></label>
                         <div class="col-sm-10">
-                            <button class="btn btn-danger" type="button" id="pass_button">通过</button>
-                            <button class="btn btn-default" type="button" id="reject_button">驳回</button>
-                            <button class="btn btn-default" type="button" id="deny_button">拒绝</button>
+                            <button class="btn btn-danger btn-lg" type="button" id="pass_button">通过</button>
+                            <button class="btn btn-default btn-lg" type="button" id="reject_button" style="margin-left:20px;">驳回</button>
+                            <button class="btn btn-default btn-lg" type="button" id="deny_button"  style="margin-left:20px;">拒绝</button>
                         </div>
                     </div>
                 </form>

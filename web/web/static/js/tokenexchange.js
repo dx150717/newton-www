@@ -42,14 +42,12 @@ $("#id_individual_form").submit(function(event){
         done_for_newton: {maxlength:2048},
         done_for_newton_attachment: fileRuleWithoutRequired,
         establish_node_plan: {maxlength: 2048},
-        emergency_contact_first_name: {required:true, minlength:1, maxlength:32},
-        emergency_contact_last_name: {required:true, minlength:1, maxlength:32},
-        cellphone_of_emergency_contact_0: {required:true, minlength:1, maxlength:4},
-        cellphone_of_emergency_contact_1: {required:true, minlength:1, maxlength:20},
-        emergency_country: {required: true},
-        emergency_city: {required: true, maxlength:64},
-        emergency_location: {required: true, maxlength:128},
-        emergency_relationship: {required:true}
+        emergency_contact_first_name: {maxlength:32},
+        emergency_contact_last_name: {maxlength:32},
+        cellphone_of_emergency_contact_0: {maxlength:4},
+        cellphone_of_emergency_contact_1: {maxlength:20},
+        emergency_city: {maxlength:64},
+        emergency_location: {maxlength:128}
     },
     messages: {
         first_name: {required: "This field is required.",

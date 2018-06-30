@@ -12,6 +12,8 @@ urlpatterns = patterns('',
                        url(r'^$', RedirectView.as_view(url='/newtonadmin/')),
                        url(r'^newtonadmin/',include('newtonadmin.urls')),
                        url(r'^ishuman/',include('ishuman.urls')),
+                       # protect resource
+                       url(r'^storage/',include('storage.urls')),
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),

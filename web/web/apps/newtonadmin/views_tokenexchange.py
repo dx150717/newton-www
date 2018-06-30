@@ -70,7 +70,7 @@ class IdListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(IdListView, self).get_context_data(**kwargs)
-        context['level_choices'] = [i+1 for i in range(10)]
+        context['level_choices'] = [i+1 for i in range(5)]
         context['is_idlist'] = True
         context['countries_choices'] = COUNTRIES
         context['title'] = '待审核'
@@ -82,7 +82,12 @@ class IdListView(generic.ListView):
         try:
             q = Q(status=codes.KYCStatus.CANDIDATE.value)
             q = build_query_condition(self.request, q)
-            fields = tokenexchange_models.KYCInfo.objects.filter(q)
+            exclude_country = self.request.GET.get('exclude_country')
+            if exclude_country:
+                exclude_country = exclude_country.split(',')
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).exclude(country__in=exclude_country).order_by('-created_at')
+            else:
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
             items = []
             if fields and len(fields) > 0:
                 for item in fields:
@@ -120,7 +125,7 @@ class PassIdListView(generic.ListView):
         try:
             q = Q(status=codes.KYCStatus.PASS_KYC.value)
             q = build_query_condition(self.request, q)
-            fields = tokenexchange_models.KYCInfo.objects.filter(q)
+            fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
             items = []
             if fields and len(fields) > 0:
                 for item in fields:
@@ -622,7 +627,7 @@ def show_id_detail(request, user_id):
             if item.emergency_relationship:
                 item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
             item.country = COUNTRIES[item.country]
-            item.level_choices = [i+1 for i in range(10)]
+            item.level_choices = [i+1 for i in range(5)]
         return render(request, "newtonadmin/id-detail.html", locals())
     except Exception, inst:
         logger.exception("fail to post email to investor:%s" % str(inst))

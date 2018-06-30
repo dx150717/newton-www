@@ -26,6 +26,7 @@
                     <div class="panel panel-default bg-gray">
                         <div class="panel-heading">
                             <h3 class="panel-title text-center">{% trans "Basic Information" %}</h3>
+                            <span class="small red-color">{% trans "(required)" %}</span>
                         </div>
                         <div class="panel-body">
                             <div class="form-group full-name col-sm-12"> 
@@ -86,6 +87,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">{% trans "Organization Introduction" %}</h3>
+                        <span class="small red-color">{% trans "(required)" %}</span>
                     </div>
                     <div class="panel-body">
                         <div class="form-group with-attachment">
@@ -148,8 +150,8 @@
                 <div class="container form-container">
                     <div class="panel panel-default bg-gray">
                         <div class="panel-heading">
-                            <h3 class="panel-title text-center contribute-title">{% trans "How to Contribute" %}</h3>
-                            <p class="red-color contribute-tip">{% trans "This section is very important to KYC review, please fill in carefully." %}</p>
+                            <h3 class="panel-title text-center">{% trans "How to Contribute" %}</h3>
+                            <span class="small red-color">{% trans "(required)" %}</span>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -195,7 +197,7 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
-                                        <option value="1" selected="selected">{% trans "Select Node" %}</option>
+                                        <option selected="selected" value="1">{% trans "Select Node" %}</option>
                                         <option value="1">{% trans "Full Node" %}</option>
                                         <option value="2">{% trans "Media Node" %}</option>
                                         <option value="3">{% trans "Technology Node" %}</option>
