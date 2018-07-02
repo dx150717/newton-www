@@ -627,7 +627,8 @@ def show_id_detail(request, user_id):
             if item.emergency_relationship:
                 item.emergency_relationship = convert.get_value_from_choice(item.emergency_relationship, tokenexchange_models.RELATIONSHIP_CHOICE)
             item.country = COUNTRIES[item.country]
-            item.emergency_country = COUNTRIES[item.emergency_country]
+            if item.emergency_country:
+                item.emergency_country = COUNTRIES[item.emergency_country]
             item.level_choices = [i+1 for i in range(5)]
         return render(request, "newtonadmin/id-detail.html", locals())
     except Exception, inst:
