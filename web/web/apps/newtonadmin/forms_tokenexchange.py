@@ -23,8 +23,8 @@ class KYCQueryForm(forms.Form):
         (codes.KYCType.ORGANIZATION.value, u'机构'),
     )
     NODE_OPTIONS = (
-        (1, u'是'),
-        (0, u'否'),
+        (codes.EstablishNodeType.YES.value, u'是'),
+        (codes.EstablishNodeType.NO.value, u'否'),
     )
     EXCLUDE_COUNTRY = (
         ('', '---'),

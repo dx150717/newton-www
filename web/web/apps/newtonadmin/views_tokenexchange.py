@@ -29,6 +29,7 @@ def build_query_condition(request, q):
     kyc_type = request.GET.get('kyc_type')
     is_establish_node = request.GET.get('is_establish_node')
     country = request.GET.get('country')
+    email = request.GET.get('email')
     if kyc_type:
         kyc_type = int(kyc_type)
         q &= Q(kyc_type=kyc_type)
@@ -37,7 +38,7 @@ def build_query_condition(request, q):
         q &= Q(is_establish_node=is_establish_node)
     if country:
         q &= Q(country=country)
-    return q
+    return q, email
 
 def extract_query_parameter(request):
     """Extract the query parameter
@@ -76,16 +77,23 @@ class IdListView(generic.ListView):
         context['title'] = '待审核'
         query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
         context['query_form'] = query_form
+        context['email'] = self.request.GET.get('email')
         return context
 
     def get_queryset(self):
         try:
             q = Q(status=codes.KYCStatus.CANDIDATE.value)
-            q = build_query_condition(self.request, q)
+            q, email = build_query_condition(self.request, q)
             exclude_country = self.request.GET.get('exclude_country')
             if exclude_country:
                 exclude_country = exclude_country.split(',')
                 fields = tokenexchange_models.KYCInfo.objects.filter(q).exclude(country__in=exclude_country).order_by('-created_at')
+            if email:
+                user = User.objects.filter(email=email).first()
+                if user:
+                    return tokenexchange_models.KYCInfo.objects.filter(user_id=user.id)
+                else:
+                    return []
             else:
                 fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
             items = []
@@ -119,13 +127,25 @@ class PassIdListView(generic.ListView):
         context['title'] = '已通过'
         query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
         context['query_form'] = query_form
+        context['email'] = self.request.GET.get('email')
         return context
 
     def get_queryset(self):
         try:
             q = Q(status=codes.KYCStatus.PASS_KYC.value)
-            q = build_query_condition(self.request, q)
-            fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
+            q, email = build_query_condition(self.request, q)
+            exclude_country = self.request.GET.get('exclude_country')
+            if exclude_country:
+                exclude_country = exclude_country.split(',')
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).exclude(country__in=exclude_country).order_by('-created_at')
+            if email:
+                user = User.objects.filter(email=email).first()
+                if user:
+                    return tokenexchange_models.KYCInfo.objects.filter(user_id=user.id)
+                else:
+                    return []
+            else:
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
             items = []
             if fields and len(fields) > 0:
                 for item in fields:
@@ -656,14 +676,26 @@ class RejectListView(generic.ListView):
         context['title'] = '已驳回'
         query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
         context['query_form'] = query_form
+        context['email'] = self.request.GET.get('email')
         return context
 
     def get_queryset(self):
         try:
             items = []
             q = Q(status=codes.KYCStatus.REJECT.value)
-            q = build_query_condition(self.request, q)
-            fields = tokenexchange_models.KYCInfo.objects.filter(q)
+            q, email = build_query_condition(self.request, q)
+            exclude_country = self.request.GET.get('exclude_country')
+            if exclude_country:
+                exclude_country = exclude_country.split(',')
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).exclude(country__in=exclude_country).order_by('-created_at')
+            if email:
+                user = User.objects.filter(email=email).first()
+                if user:
+                    return tokenexchange_models.KYCInfo.objects.filter(user_id=user.id)
+                else:
+                    return []
+            else:
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
             if fields and len(fields) > 0:
                 for item in fields:
                     if item.id_type:
@@ -694,14 +726,26 @@ class DenyListView(generic.ListView):
         context['title'] = '已拒绝'
         query_form = forms_tokenexchange.KYCQueryForm(initial=extract_query_parameter(self.request))
         context['query_form'] = query_form
+        context['email'] = self.request.GET.get('email')
         return context
 
     def get_queryset(self):
         try:
             items = []
             q = Q(status=codes.KYCStatus.DENY.value)
-            q = build_query_condition(self.request, q)
-            fields = tokenexchange_models.KYCInfo.objects.filter(q)
+            q, email = build_query_condition(self.request, q)
+            exclude_country = self.request.GET.get('exclude_country')
+            if exclude_country:
+                exclude_country = exclude_country.split(',')
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).exclude(country__in=exclude_country).order_by('-created_at')
+            if email:
+                user = User.objects.filter(email=email).first()
+                if user:
+                    return tokenexchange_models.KYCInfo.objects.filter(user_id=user.id)
+                else:
+                    return []
+            else:
+                fields = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-created_at')
             if fields and len(fields) > 0:
                 for item in fields:
                     if item.id_type:
