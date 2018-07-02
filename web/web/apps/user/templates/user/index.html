@@ -26,12 +26,18 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="sub-title">
             <div class="sub-title-nav">
                 <ul id="user-tab" class="nav nav-tabs">
-                    <li class="active"><a href="#kyc">KYC</a></li>
-                    <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
+                    {% if is_kyc_active %}
+                        <li class="active"><a href="#kyc">KYC</a></li>
+                        <li><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
+                    {% else %}
+                        <li><a href="#kyc">KYC</a></li>
+                        <li class="active"><a href="#token-exchange">{% trans "Token Exchange" %}</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

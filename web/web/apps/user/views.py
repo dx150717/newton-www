@@ -30,10 +30,14 @@ from tracker import models as tracker_models
 logger = logging.getLogger(__name__)
 
 @login_required
-def show_user_index_view(request):
+def show_user_index_view(request, active_page):
     """
     Show user index view.includes basic information, kyc information, tokenexchange information.
     """
+    # select the active page
+    is_kyc_active = True
+    if active_page == codes.UserCenterActivePage.TOKENEXCHANGEACTIVE.value:
+        is_kyc_active = False
     user = request.user
     user_form = forms.UserForm(instance=user)
     kycinfo = tokenexchange_models.KYCInfo.objects.filter(user_id=user.id).first()

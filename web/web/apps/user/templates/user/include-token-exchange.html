@@ -1,7 +1,11 @@
 {% load i18n %}
 {% load utils %}
 
+{% if is_kyc_active %}
 <div id="token-exchange" class="tab-pane fade user-content">
+{% else %}
+<div id="token-exchange" class="tab-pane fade in active user-content">
+{% endif %}
     <div class="container">
         <div class="raw user-detail-content">
             <div class="user-info">

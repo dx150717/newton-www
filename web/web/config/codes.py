@@ -157,3 +157,7 @@ class RelationshipWithEmergency(Enum):
     KINSHIP = 1
     FRIENDSHIP = 2
     COLLEAGUE = 3
+
+class UserCenterActivePage(Enum):
+    KYCACTIVE = 1
+    TOKENEXCHANGEACTIVE = 2
