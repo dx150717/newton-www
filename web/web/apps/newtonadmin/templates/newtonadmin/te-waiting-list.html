@@ -22,6 +22,7 @@
                             <tr>
                                 <th><input id="all-check-pre-invite" name="all-check-pre-invite" type="checkbox"/>&nbsp;&nbsp;全选</th>
                                 <th>姓名</th>
+                                <th>详情</th>
                                 <th>评分</th>
                                 <th>操作</th>
                             </tr>
@@ -33,6 +34,11 @@
                                 <td>
                                     <p>{{ item.first_name }} &nbsp; {{ item.last_name }}</p>
                                     <p>{{ item.user.email }}</p>
+                                </td>
+                                <td>
+                                    <p>
+                                        <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" class="btn btn-primary" target="_blank">详情</a>
+                                    </p>
                                 </td>
                                 <td>
                                     {{ item.level }}

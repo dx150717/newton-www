@@ -62,7 +62,9 @@
                             </td>
                             {% endif %}
                             <td>
-                                <p>{{ item.kycinfo.first_name }} &nbsp; {{ item.kycinfo.last_name }}</p>
+                                <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" style="text-decoration: underline">
+                                    <p>{{ item.kycinfo.first_name }} &nbsp; {{ item.kycinfo.last_name }}</p>
+                                </a>
                                 <p>{{ item.user.email }}</p>
                             </td>
                             <td>{{ item.level }}</td>

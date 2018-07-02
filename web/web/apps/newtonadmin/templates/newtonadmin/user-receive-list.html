@@ -43,7 +43,9 @@
                         </td>
                         {% endif %}
                         <td>
-                            {{ item.user.email }}
+                            <a href="/newtonadmin/tokenexchange/id/{{ item.user_id }}/" style="text-decoration: underline">
+                                {{ item.user.email }}
+                            </a>
                         </td>
                         <td>
                             {{ item.expect_btc }}&nbsp;BTC
