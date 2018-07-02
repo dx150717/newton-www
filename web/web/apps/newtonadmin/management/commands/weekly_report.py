@@ -28,8 +28,8 @@ class Command(BaseCommand):
             # defined variable
             article_id = None
             email_list = []
-            start_index = 0
-            end_index = 0
+            start_index = None
+            end_index = None
             # handle params
             if len(args) < 2:
                 self.print_usage()
@@ -49,14 +49,13 @@ class Command(BaseCommand):
             if email_list != 'all':
                 subscribe_emails = [item.strip() for item in email_list.split(',')]
             else:
-                subscribe_emails = [item.email_address for item in subscription_models.SubscribedEmail.objects.filter(status=codes.StatusCode.RELEASE.value)]
-                if not start_index and not end_index:
+                subscribe_emails = [item.email_address for item in subscription_models.SubscribedEmail.objects.filter(status=codes.StatusCode.RELEASE.value).order_by('id')]
+                if start_index is None and end_index is None:
                     pass
-                elif start_index and not end_index:
+                elif start_index >= 0 and end_index is None:
                     subscribe_emails = subscribe_emails[start_index:]
-                elif start_index and end_index:
+                elif start_index >= 0 and end_index >= 0:
                     subscribe_emails = subscribe_emails[start_index:end_index]
-                    print subscribe_emails
             # get entry
             entry = EntryDetail().get_queryset().filter(id=article_id).first()
             if not entry:
