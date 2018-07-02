@@ -186,7 +186,7 @@ class InviteListView(generic.ListView):
             s2 = set(tokenexchange_models.InvestInvite.objects.filter(phase_id=phase_id).values_list('user_id', flat=True))
             d = s1.difference(s2)
             q = Q(status=codes.KYCStatus.PASS_KYC.value, user_id__in=d)
-            q = build_query_condition(self.request, q)
+            q, email = build_query_condition(self.request, q)
             items = tokenexchange_models.KYCInfo.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
@@ -221,7 +221,7 @@ class CompletedInviteListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             q = Q(phase_id=phase_id, status__in=[codes.TokenExchangeStatus.INVITE.value, codes.TokenExchangeStatus.SEND_INVITE_NOTIFY.value])
-            q = build_query_condition(self.request, q)
+            q, email = build_query_condition(self.request, q)
             items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-created_at')
             if items:
                 for item in items:
@@ -263,7 +263,7 @@ class AmountListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             q = Q(status=codes.TokenExchangeStatus.APPLY_AMOUNT.value, phase_id=phase_id)
-            q = build_query_condition(self.request, q)
+            q, email = build_query_condition(self.request, q)
             items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
@@ -305,7 +305,7 @@ class ConfirmListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             q = Q(status=codes.TokenExchangeStatus.DISTRIBUTE_AMOUNT.value, phase_id=phase_id)
-            q = build_query_condition(self.request, q)
+            q, email = build_query_condition(self.request, q)
             items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
@@ -342,7 +342,7 @@ class CompletedAmountListView(generic.ListView):
             phase_id = self.request.path.split("/")[4]
             phase_id = int(phase_id)
             q = Q(status=codes.TokenExchangeStatus.CONFIRM_AMOUT.value, phase_id=phase_id)
-            q = build_query_condition(self.request, q)
+            q, email = build_query_condition(self.request, q)
             items = tokenexchange_models.InvestInvite.objects.filter(q).order_by('-level')
             if items:
                 for item in items:
