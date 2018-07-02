@@ -7,7 +7,7 @@
                 <div class="item">
                         <div class="value">
                             {% if kycinfo %}
-                                {% if kycinfo.status == 1 %}
+                                {% if kycinfo.status == codes.KYC_STATUS_CANDIDATE_VALUE %}
                                 <div class="item">
                                     <p class="text-center" style="padding-top: 30px; color:#333;">
                                     {% trans "Submitted KYC information successfully! We will send you an email of reviewing result, please check out." %}
@@ -15,7 +15,7 @@
                                 </div>
                                 {% endif %}
                                 {% if kycaudit %}
-                                    {% if kycinfo.status == 2 %}
+                                    {% if kycinfo.status == codes.KYC_STATUS_PASS_KYC_VALUE %}
                                     <div class="item">
                                         <p class="text-center" style="margin-top: 27px; color: #333;">
                                             {% trans "You have passed the Newton KYC verification and some of the passers will be invited to join the Newton token exchange." %}
@@ -23,7 +23,7 @@
                                     </div>
                                     
                                     {% endif %}
-                                    {% if kycinfo.status >= 3 %}
+                                    {% if kycinfo.status >= codes.KYC_STATUS_REJECT_VALUE %}
                                     <div class="item" style="padding-top: 60px">
                                         <p class="text-center">
                                             {% trans "You have not passed kyc review." %}
@@ -32,7 +32,7 @@
                                             {% endif %}
                                         </p>
                                         <p style="text-align: center">
-                                        {% if kycinfo.status == 3 %}
+                                        {% if kycinfo.status == codes.KYC_STATUS_REJECT_VALUE %}
                                         <a class="form-button mt50" href="/tokenexchange/individual/post/">{% trans "Fill in KYC information again" %}</a>
                                         {% endif %}
                                         </p>
@@ -49,8 +49,8 @@
                             {% endif %}
                     </div>
                 </div>    
-                {% if kycinfo.status == 2 %}
-                {% if kycinfo.kyc_type == 1 %}
+                {% if kycinfo.status == codes.KYC_STATUS_PASS_KYC_VALUE %}
+                {% if kycinfo.kyc_type == codes.KYC_TYPE_INDIVIDUAL_VALUE %}
                 <div class="item kyc-info">
                     <div class="col-sm-12">
                         <div class="panel panel-default">
