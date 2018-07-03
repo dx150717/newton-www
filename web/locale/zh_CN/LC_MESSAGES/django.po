@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-01 14:13+0000\n"
+"POT-Creation-Date: 2018-07-03 04:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,13 +183,13 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:115
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:117
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:279
 #: web/apps/newtonadmin/templates/newtonadmin/include-paginator.html:6
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:80
-#: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:56
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:50
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:89
+#: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:62
+#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:56
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:91
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
 #: web/apps/welcome/templates/welcome/announcement.html:72
 #: web/apps/welcome/templates/welcome/press.html:38
@@ -197,13 +197,13 @@ msgid "previous"
 msgstr "上一页"
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:119
+#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:121
 #: web/apps/newtonadmin/templates/newtonadmin/id-detail.html:283
 #: web/apps/newtonadmin/templates/newtonadmin/include-paginator.html:10
 #: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:84
-#: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:60
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:54
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:93
+#: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:66
+#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:60
+#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:95
 #: web/apps/welcome/templates/welcome/announcement-detail.html:50
 #: web/apps/welcome/templates/welcome/announcement.html:76
 #: web/apps/welcome/templates/welcome/press.html:42
@@ -614,7 +614,7 @@ msgid ""
 msgstr "您可以仔细检查并修改KYC信息页面的内容，然后再次提交。"
 
 #: web/apps/newtonadmin/templates/newtonadmin/kycinfo-notify-letter.html:28
-#: web/apps/user/templates/user/include-kyc-section.html:36
+#: web/apps/user/templates/user/include-kyc-section.html:40
 msgid "Fill in KYC information again"
 msgstr "重新填写"
 
@@ -1120,7 +1120,7 @@ msgstr "注册国家"
 #: web/apps/tokenexchange/forms.py:139 web/apps/tokenexchange/forms.py:346
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:89
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:95
-#: web/apps/user/templates/user/include-kyc-section.html:103
+#: web/apps/user/templates/user/include-kyc-section.html:107
 msgid "Organization Introduction"
 msgstr "机构介绍"
 
@@ -1223,7 +1223,7 @@ msgstr "证件照片"
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:217
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:220
 #: web/apps/user/models.py:30
-#: web/apps/user/templates/user/include-kyc-section.html:66
+#: web/apps/user/templates/user/include-kyc-section.html:70
 msgid "Self Introduction"
 msgstr "自我介绍"
 
@@ -1378,7 +1378,8 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-pass.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:5
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:24
-#: web/apps/user/templates/user/index.html:34
+#: web/apps/user/templates/user/index.html:36
+#: web/apps/user/templates/user/index.html:39
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
 msgid "Token Exchange"
 msgstr "通证交换"
@@ -1451,8 +1452,8 @@ msgstr "机构"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:29
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:28
-#: web/apps/user/templates/user/include-kyc-section.html:58
-#: web/apps/user/templates/user/include-kyc-section.html:95
+#: web/apps/user/templates/user/include-kyc-section.html:62
+#: web/apps/user/templates/user/include-kyc-section.html:99
 msgid "Basic Information"
 msgstr "基本信息"
 
@@ -1509,7 +1510,7 @@ msgid "Phone Number"
 msgstr "手机号码"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:128
-#: web/apps/user/templates/user/include-kyc-section.html:82
+#: web/apps/user/templates/user/include-kyc-section.html:86
 msgid "Emergency Contact"
 msgstr "紧急联系人信息"
 
@@ -1543,8 +1544,8 @@ msgstr ""
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:285
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:153
-#: web/apps/user/templates/user/include-kyc-section.html:74
-#: web/apps/user/templates/user/include-kyc-section.html:111
+#: web/apps/user/templates/user/include-kyc-section.html:78
+#: web/apps/user/templates/user/include-kyc-section.html:115
 msgid "How to Contribute"
 msgstr "如何参与牛顿"
 
@@ -1822,8 +1823,11 @@ msgid "KYC Passed!"
 msgstr "KYC已通过审核！"
 
 #: web/apps/tokenexchange/templates/tokenexchange/kyc-submit.html:22
-msgid "KYC Submitted!"
-msgstr "KYC已提交！"
+#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
+#: web/apps/user/templates/user/include-kyc-section.html:17
+msgid ""
+"KYC information was successfully submitted! We will checked and verified your information in batches. It may take some time so please be patient and wait for our feedback. The feedback will be notified by email. Please check your mail on time."
+msgstr "KYC信息提交成功，工作人员将分批次进行审核，可能需要较长时间，请耐心等待。审核完毕后也将会为您发送审核结果邮件，请注意查收。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:5
 msgid "TOKENEXCHANGE"
@@ -2140,15 +2144,9 @@ msgstr "填写KYC信息"
 
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:40
 #: web/apps/tokenexchange/templates/tokenexchange/token-exchange-receive-address.html:43
-#: web/apps/user/templates/user/include-token-exchange.html:112
+#: web/apps/user/templates/user/include-token-exchange.html:116
 msgid "No token exchange information."
 msgstr "没有通证交换信息。"
-
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
-msgid ""
-"Submitted KYC information successfully! We will send you reviewing result by "
-"email in a few days."
-msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
 
 #: web/apps/user/models.py:31
 msgid "Homepage"
@@ -2182,31 +2180,25 @@ msgstr "专业"
 msgid "Basic information"
 msgstr ""
 
-#: web/apps/user/templates/user/include-kyc-section.html:13
-msgid ""
-"Submitted KYC information successfully! We will send you an email of "
-"reviewing result, please check out."
-msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
-
-#: web/apps/user/templates/user/include-kyc-section.html:21
+#: web/apps/user/templates/user/include-kyc-section.html:25
 msgid ""
 "You have passed the Newton KYC verification and some of the passers will be "
 "invited to join the Newton token exchange."
 msgstr "您通过了牛顿KYC审核，我们将邀请部分通过者参加牛顿通证交换。"
 
-#: web/apps/user/templates/user/include-kyc-section.html:29
+#: web/apps/user/templates/user/include-kyc-section.html:33
 msgid "You have not passed kyc review."
 msgstr "你没有通过KYC审核。"
 
-#: web/apps/user/templates/user/include-kyc-section.html:31
+#: web/apps/user/templates/user/include-kyc-section.html:35
 msgid "resulting from:"
 msgstr "原因是："
 
-#: web/apps/user/templates/user/include-kyc-section.html:44
+#: web/apps/user/templates/user/include-kyc-section.html:48
 msgid "You have not submitted KYC information."
 msgstr "尚未提交KYC信息。"
 
-#: web/apps/user/templates/user/include-kyc-section.html:46
+#: web/apps/user/templates/user/include-kyc-section.html:50
 msgid "Join KYC"
 msgstr "参加KYC"
 
@@ -2247,32 +2239,32 @@ msgstr ""
 msgid "Learn more"
 msgstr "了解更多"
 
-#: web/apps/user/templates/user/include-token-exchange.html:20
-#: web/apps/user/templates/user/include-token-exchange.html:66
+#: web/apps/user/templates/user/include-token-exchange.html:24
+#: web/apps/user/templates/user/include-token-exchange.html:70
 msgid "Passed the Newton KYC"
 msgstr "已经通过牛顿KYC"
 
-#: web/apps/user/templates/user/include-token-exchange.html:28
-#: web/apps/user/templates/user/include-token-exchange.html:73
+#: web/apps/user/templates/user/include-token-exchange.html:32
+#: web/apps/user/templates/user/include-token-exchange.html:77
 msgid "Filled in the applying amount"
 msgstr "填写申请数量"
 
-#: web/apps/user/templates/user/include-token-exchange.html:37
-#: web/apps/user/templates/user/include-token-exchange.html:81
+#: web/apps/user/templates/user/include-token-exchange.html:41
+#: web/apps/user/templates/user/include-token-exchange.html:85
 msgid "Transferred"
 msgstr "转币成功"
 
-#: web/apps/user/templates/user/include-token-exchange.html:46
-#: web/apps/user/templates/user/include-token-exchange.html:89
+#: web/apps/user/templates/user/include-token-exchange.html:50
+#: web/apps/user/templates/user/include-token-exchange.html:93
 msgid "Finished filling in newpay wallet address"
 msgstr "已经填写 newpay 钱包地址"
 
-#: web/apps/user/templates/user/include-token-exchange.html:55
-#: web/apps/user/templates/user/include-token-exchange.html:97
+#: web/apps/user/templates/user/include-token-exchange.html:59
+#: web/apps/user/templates/user/include-token-exchange.html:101
 msgid "Token exchange finished"
 msgstr "通证交换完成"
 
-#: web/apps/user/templates/user/include-token-exchange.html:104
+#: web/apps/user/templates/user/include-token-exchange.html:108
 msgid "Details "
 msgstr "详情"
 
@@ -2758,7 +2750,7 @@ msgstr ""
 msgid "Economy"
 msgstr "经济体"
 
-#: web/apps/welcome/templates/welcome/economy.html:26
+#: web/apps/welcome/templates/welcome/economy.html:29
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
 msgstr "联合商业组织"
@@ -3195,9 +3187,6 @@ msgid "Deputy secretary general of xinjiang hetian jade industry association."
 msgstr "新疆和田玉行业协会副秘书长"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:194
-msgid "Li Zhu"
-msgstr "李竹"
-
 #: web/apps/welcome/templates/welcome/include-investor.html:196
 msgid "Guo Hongchi"
 msgstr "郭洪驰"
@@ -3481,7 +3470,7 @@ msgstr "每一个人都应该从经济增长中受益"
 msgid "Newton: Infrastructure for the protocol-based economy"
 msgstr "牛顿：协议经济基础设施"
 
-#: web/apps/welcome/templates/welcome/index.html:48
+#: web/apps/welcome/templates/welcome/index.html:50
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -7347,6 +7336,22 @@ msgstr ""
 #: web/templates/admin/change_list.html:78
 msgid "Filter"
 msgstr ""
+
+#~ msgid "KYC Submitted!"
+#~ msgstr "KYC已提交！"
+
+#~ msgid ""
+#~ "Submitted KYC information successfully! We will send you reviewing result "
+#~ "by email in a few days."
+#~ msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
+
+#~ msgid ""
+#~ "Submitted KYC information successfully! We will send you an email of "
+#~ "reviewing result, please check out."
+#~ msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
+
+#~ msgid "Li Zhu"
+#~ msgstr "李竹"
 
 #~ msgid "You had submited kyc info"
 #~ msgstr "你已经提交了KYC信息"
