@@ -61,6 +61,14 @@ def post_kyc_information(request, kyc_type):
                 return render(request, "tokenexchange/kyc-pass.html", locals())
             elif instance.status == codes.KYCStatus.DENY.value:
                 return render(request, "tokenexchange/kyc-deny.html", locals())
+        # forms
+        is_chinese = False
+        language_code = translation.get_language()
+        if language_code.startswith('zh'):
+            is_chinese = True
+        country_form = tokenexchange_forms.CountryForm(instance=instance)
+        organization_country_form = tokenexchange_forms.OrganizationCountryForm(instance=instance)
+        emergency_country_form = tokenexchange_forms.EmergencyCountryForm(instance=instance)
         if kyc_type == codes.KYCType.ORGANIZATION.value:
             is_individual = False
         if request.method == 'POST':
@@ -106,13 +114,6 @@ def post_kyc_information(request, kyc_type):
                 instance.save()
             return redirect('/tokenexchange/wait-audit/')
         else:
-            is_chinese = False
-            language_code = translation.get_language()
-            if language_code.startswith('zh'):
-                is_chinese = True
-            country_form = tokenexchange_forms.CountryForm(instance=instance)
-            organization_country_form = tokenexchange_forms.OrganizationCountryForm(instance=instance)
-            emergency_country_form = tokenexchange_forms.EmergencyCountryForm(instance=instance)
             return render(request, "tokenexchange/submit.html", locals()) 
     except Exception, inst:
         logger.exception("fail to post kyc information:%s" % str(inst))
