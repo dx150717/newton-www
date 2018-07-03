@@ -36,26 +36,26 @@
                                         <label for="id_last_name" class="control-label col-sm-3 fullname-title">
                                             {% trans "Last Name" %}<span class="red-color">*</span>
                                         </label>
-                                        <input class="form-control" id="id_last_name" maxlength="32" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
+                                        <input class="form-control {% if form.last_name.errors  %}alert alert-danger{% endif %}" id="id_last_name" maxlength="32" name="last_name" placeholder="{% trans "Last Name" %}" type="text" value="{{ form.last_name.value }}">
                                     </span>
                                     <span class="last-name">
                                         <label for="id_first_name" class="control-label last-name-label">
                                             {% trans "First Name" %}<span class="red-color">*</span>
                                         </label>
-                                        <input class="form-control" id="id_first_name" maxlength="32" name="first_name" placeholder="{% trans "First Name" %}" type="text">
+                                        <input class="form-control {% if form.first_name.errors  %}alert alert-danger{% endif %}" id="id_first_name" maxlength="32" name="first_name" placeholder="{% trans "First Name" %}" type="text" value="{{ form.first_name.value }}">
                                     </span>
                                     {% else %}
                                     <span>
                                         <label for="id_first_name" class="control-label col-sm-3 fullname-title">
                                             {% trans "First Name" %}<span class="red-color">*</span>
                                         </label>
-                                        <input class="form-control" id="id_first_name" maxlength="32" name="first_name" placeholder="{% trans "First Name" %}" type="text">
+                                        <input class="form-control {% if form.first_name.errors  %}alert alert-danger{% endif %}" id="id_first_name" maxlength="32" name="first_name" placeholder="{% trans "First Name" %}" type="text" value="{{ form.first_name.value }}">
                                     </span> 
                                     <span class="last-name">
                                         <label for="id_last_name" class="control-label last-name-label">
                                             {% trans "Last Name" %}<span class="red-color">*</span>
                                         </label>
-                                        <input class="form-control" id="id_last_name" maxlength="32" name="last_name" placeholder="{% trans "Last Name" %}" type="text">
+                                        <input class="form-control {% if form.last_name.errors  %}alert alert-danger{% endif %}" id="id_last_name" maxlength="32" name="last_name" placeholder="{% trans "Last Name" %}" type="text" value="{{ form.last_name.value }}">
                                     </span>
                                 {% endif %}
                             </div>
@@ -76,7 +76,7 @@
                                     {% trans "Certificate Number" %}<span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_id_number" maxlength="64" name="id_number" placeholder="{% trans "Certificate Number" %}" type="text">
+                                    <input class="form-control normal {% if form.id_number.errors  %}alert alert-danger{% endif %}" id="id_id_number" maxlength="64" name="id_number" placeholder="{% trans "Certificate Number" %}" type="text" value="{{ form.id_number.value }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -94,7 +94,7 @@
                                     {% trans "City" %}<span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_city" maxlength="64" name="city" placeholder="{% trans "City" %}" type="text">
+                                    <input class="form-control normal {% if form.city.errors  %}alert alert-danger{% endif %}" id="id_city" maxlength="64" name="city" placeholder="{% trans "City" %}" type="text" value="{{ form.city.value }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -102,7 +102,7 @@
                                     {% trans "Address" %}<span class="red-color">*</span>
                                     </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="id_location" maxlength="128" name="location" placeholder="{% trans "Address" %}" type="text">
+                                    <input class="form-control {% if form.location.errors  %}alert alert-danger{% endif %}" id="id_location" maxlength="128" name="location" placeholder="{% trans "Address" %}" type="text" value="{{ form.location.value }}">
                                     <p class="small">{% trans "Recommend locate to block" %}</p>
                                 </div>
                             </div>
@@ -112,8 +112,8 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <div class="form-inline">
-                                        <input class="form-control area-code-input" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text" maxlength="4"> 
-                                        <input class="form-control phone-number-input" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text" maxlength="20">
+                                        <input class="form-control area-code-input {% if form.cellphone_group.0.errors.0  %}alert alert-danger{% endif %}" id="id_cellphone_group_0" name="cellphone_group_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text" maxlength="4" value="{{ form.cellphone_group.0.value.0 }}"> 
+                                        <input class="form-control phone-number-input {% if form.cellphone_group.1.0.errors  %}alert alert-danger{% endif %}" id="id_cellphone_group_1" name="cellphone_group_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text" maxlength="20" value="{{ form.cellphone_group.0.value.1 }}">
                                     </div>
                                 </div>
                             </div>
@@ -135,26 +135,26 @@
                             <label for="id_emergency_contact_last_name" class="control-label col-sm-3 emergency-first-name">
                                 {% trans "Last Name" %}
                             </label>
-                            <input class="form-control" id="id_emergency_contact_last_name" maxlength="32" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
+                            <input class="form-control {% if form.emergency_contact_last_name.errors  %}alert alert-danger{% endif %}" id="id_emergency_contact_last_name" maxlength="32" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text" value="{{ form.emergency_contact_last_name.value }}">
                         </span>
                         <span class="last-name">
                             <label for="id_emergency_contact_first_name" class="control-label last-name-label">
                                 {% trans "First Name" %}
                             </label>
-                            <input class="form-control" id="id_emergency_contact_first_name" maxlength="32" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
+                            <input class="form-control {% if form.emergency_contact_first_name.errors  %}alert alert-danger{% endif %}" id="id_emergency_contact_first_name" maxlength="32" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text" value="{{ form.emergency_contact_first_name.value }}">
                         </span> 
                         {% else %}
                         <span>
                             <label for="id_emergency_contact_first_name" class="control-label col-sm-3 emergency-first-name">
                                 {% trans "First Name" %}
                             </label>
-                            <input class="form-control" id="id_emergency_contact_first_name" maxlength="32" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text">
+                            <input class="form-control {% if form.emergency_contact_first_name.errors  %}alert alert-danger{% endif %}" id="id_emergency_contact_first_name" maxlength="32" name="emergency_contact_first_name" placeholder="{% trans "First Name" %}" type="text" value="{{ form.emergency_contact_first_name.value }}">
                         </span> 
                         <span class="last-name">
                             <label for="id_emergency_contact_last_name" class="control-label last-name-label">
                                 {% trans "Last Name" %}
                             </label>
-                            <input class="form-control" id="id_emergency_contact_last_name" maxlength="32" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text">
+                            <input class="form-control {% if form.emergency_contact_last_name.errors  %}alert alert-danger{% endif %}" id="id_emergency_contact_last_name" maxlength="32" name="emergency_contact_last_name" placeholder="{% trans "Last Name" %}" type="text" value="{{ form.emergency_contact_last_name.value }}">
                         </span>
                         {% endif %}
                     </div>
@@ -164,8 +164,8 @@
                         </label>
                         <div class="col-sm-9">
                             <div class="form-inline">
-                                <input class="form-control area-code-input" id="id_cellphone_of_emergency_contact_0" name="cellphone_of_emergency_contact_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text" maxlength="4"> 
-                                <input class="form-control phone-number-input" id="id_cellphone_of_emergency_contact_1" name="cellphone_of_emergency_contact_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text" maxlength="20">
+                                <input class="form-control area-code-input {% if form.cellphone_of_emergency_contact.0.errors  %}alert alert-danger{% endif %}" id="id_cellphone_of_emergency_contact_0" name="cellphone_of_emergency_contact_0" placeholder="{% trans "Area Code" %}" cellphone"=" type="text" maxlength="4" value="{{ form.cellphone_of_emergency_contact.0.value.0 }}"> 
+                                <input class="form-control phone-number-input {% if form.cellphone_of_emergency_contact.0.errors  %}alert alert-danger{% endif %}" id="id_cellphone_of_emergency_contact_1" name="cellphone_of_emergency_contact_1" placeholder="{% trans "Phone Number" %}" cellphone"=" type="text" maxlength="20" value="{{ form.cellphone_of_emergency_contact.0.value.1 }}">
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                             {% trans "City" %}
                         </label>
                         <div class="col-sm-9">
-                            <input class="form-control normal" id="id_emergency_city" maxlength="64" name="emergency_city" placeholder="{% trans "City" %}" type="text">
+                            <input class="form-control normal {% if form.emergency_city.errors  %}alert alert-danger{% endif %}" id="id_emergency_city" maxlength="64" name="emergency_city" placeholder="{% trans "City" %}" type="text" value="{{ form.emergency_city.value }}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -183,7 +183,7 @@
                                 {% trans "Address" %}
                             </label>
                         <div class="col-sm-9">
-                            <input class="form-control" id="id_emergency_location" maxlength="128" name="emergency_location" placeholder="{% trans "Address" %}" type="text">
+                            <input class="form-control {% if form.emergency_location.errors  %}alert alert-danger{% endif %}" id="id_emergency_location" maxlength="128" name="emergency_location" placeholder="{% trans "Address" %}" type="text" value="{{ form.emergency_location.value }}">
                             <p class="small">{% trans "Recommend locate to block" %}</p>
                         </div>
                     </div>
@@ -217,7 +217,7 @@
                                         {% trans "Self Introduction" %}
                                     </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control with-tip" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "Self Introduction" %}" rows="10" maxlength="2048"></textarea>
+                                    <textarea class="form-control with-tip {% if form.personal_profile.errors  %}alert alert-danger{% endif %}" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "Self Introduction" %}" rows="10" maxlength="2048">{{ form.personal_profile.value }}</textarea>
                                     <span class="small">{% trans "Your CV. When were you involved in blockchain industry? Write something about your understanding on blockchain industry." %}</span>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@
                                     {% trans "Telegram ID" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_telegram" maxlength="64" name="telegram" placeholder="Telegram ID" type="text">
+                                    <input class="form-control normal {% if form.telegram.errors  %}alert alert-danger{% endif %}" id="id_telegram" maxlength="64" name="telegram" placeholder="Telegram ID" type="text" value="{{ form.telegram.value }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -247,7 +247,7 @@
                                     {% trans "Twitter" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_twitter" maxlength="64" name="twitter" placeholder="Twitter" type="text">
+                                    <input class="form-control normal {% if form.twitter.errors  %}alert alert-danger{% endif %}" id="id_twitter" maxlength="64" name="twitter" placeholder="Twitter" type="text" value="{{ form.twitter.value }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -255,7 +255,7 @@
                                     {% trans "Facebook" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_facebook" maxlength="64" name="facebook" placeholder="Facebook" type="text">
+                                    <input class="form-control normal {% if form.facebook.errors  %}alert alert-danger{% endif %}" id="id_facebook" maxlength="64" name="facebook" placeholder="Facebook" type="text" value="{{ form.facebook.value }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -263,7 +263,7 @@
                                     {% trans "WeChat ID" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_wechat" maxlength="64" name="wechat" placeholder="{% trans "WeChat ID" %}" type="text">
+                                    <input class="form-control normal {% if form.wechat.errors  %}alert alert-danger{% endif %}" id="id_wechat" maxlength="64" name="wechat" placeholder="{% trans "WeChat ID" %}" type="text" value="{{ form.wechat.value }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -271,7 +271,7 @@
                                     {% trans "Other Social Media" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <input class="form-control normal" id="id_other_social_account" maxlength="64" name="other_social_account" placeholder="{% trans "Other Social Media" %}" type="text">
+                                    <input class="form-control normal {% if form.other_social_account.errors  %}alert alert-danger{% endif %}" id="id_other_social_account" maxlength="64" name="other_social_account" placeholder="{% trans "Other Social Media" %}" type="text" value="{{ form.other_social_account.value }}">
                                 </div>
                             </div>
                         </div>
@@ -290,7 +290,7 @@
                             <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Your Understanding of Newton" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Your Understanding of Newton" %}" rows="10" maxlength="2048"></textarea>
+                                <textarea class="form-control {% if form.what_is_newton.errors  %}alert alert-danger{% endif %}" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Your Understanding of Newton" %}" rows="10" maxlength="2048">{{ form.what_is_newton.value }}</textarea>
                             </div>
                         </div>
                         <div class="form-group with-attachment">
@@ -298,7 +298,7 @@
                                 {% trans "Plans for contributing to Newton" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control with-tip" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the contributions you have made to Newton project and your experience of participating in the Newton project. And how do you plan to contribute to the Newton project in the future and participate in the construction of the Newton project?" %}" rows="10" maxlength="2048"></textarea>
+                                <textarea class="form-control with-tip {% if form.done_for_newton.errors  %}alert alert-danger{% endif %}" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the contributions you have made to Newton project and your experience of participating in the Newton project. And how do you plan to contribute to the Newton project in the future and participate in the construction of the Newton project?" %}" rows="10" maxlength="2048">{{ form.done_for_newton.value }}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -343,7 +343,7 @@
                                 {% trans "Plans of community node election" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Plans of community node election" %}" rows="10" maxlength="2048"></textarea>
+                                <textarea class="form-control {% if form.establish_node_plan.errors  %}alert alert-danger{% endif %}" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Plans of community node election" %}" rows="10" maxlength="2048">{{ form.establish_node_plan.value }}</textarea>
                             </div>
                         </div>
                     </div>
