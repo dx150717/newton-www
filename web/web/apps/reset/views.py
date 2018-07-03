@@ -8,13 +8,14 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import utc
 from django.conf import settings
 from django.forms.forms import NON_FIELD_ERRORS
+from django.utils import translation
 
 from utils import http
 from utils import security
 from utils import exception
 from config import codes
 from tasks import task_email
-
+from ishuman import services as ishuman_services
 import decorators
 from . import forms
 from . import services
@@ -23,6 +24,12 @@ logger = logging.getLogger(__name__)
 
 @decorators.nologin_required
 def show_reset_view(request):
+    # determine the captcha type
+    language = translation.get_language()
+    if language.startswith('zh'):
+        captcha_service_type = "tencent"
+    else:
+        captcha_service_type = 'google'
     form = forms.EmailForm()
     return render(request,'reset/index.html', locals())
 
@@ -30,9 +37,19 @@ def show_reset_view(request):
 @decorators.http_post_required
 def post_email(request):
     try:
+        # determine the captcha type
+        language = translation.get_language()
+        if language.startswith('zh'):
+            captcha_service_type = "tencent"
+        else:
+            captcha_service_type = 'google'
         form = forms.EmailForm(request.POST)
         if not form.is_valid():
             return render(request,'reset/index.html', locals())
+        # check the captcha
+        if not ishuman_services.is_valid_captcha(request):
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_("Captcha Error")])
+            return render(request, 'register/index.html', locals())
         email = form.cleaned_data['email']
         user = User.objects.filter(email=email).first()
         if not user:

@@ -12,6 +12,15 @@
 {% include "footer-simple.html" %}
 {% endblock %}
 
+{% block require_js %}
+{% if captcha_service_type == "google" %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endif %}
+{% if captcha_service_type == "tencent" %}
+<script type="text/javascript" src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+{% endif %}
+{% endblock %}
+
 {% block notice %}
 {% endblock %}
 
@@ -25,9 +34,10 @@
 	</div>
 	<div class="container">
 		<div class="form-container">
-			<form id="reset-email-form" class="form" action="/reset/post-email/" method="POST">
+			<form id="id_reset_email_form" class="form" action="/reset/post-email/" method="POST">
 				{% csrf_token %}
 				{% include "form.html" %}
+				{% include "captcha.html" with captcha_service_type=captcha_service_type %}
 				<div class="raw">
 					<div>
 						<button class="form-button" type="submit">{% trans "Reset Passwrod" %}</button>
@@ -40,5 +50,6 @@
 
 {% endblock %}
 {% block js %}
+<script src="{% version "js/captcha.js" %}" type="text/javascript"></script>
 <script src="{% version "js/reset.js" %}"></script>
 {% endblock %}

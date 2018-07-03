@@ -3,6 +3,7 @@ import logging
 import requests
 import json
 import urlparse
+import pyotp
 
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
@@ -12,8 +13,7 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import utc
 from django.forms.forms import NON_FIELD_ERRORS
-import pyotp
-from ishuman import services as ishuman_services
+from django.utils import translation
 
 import decorators
 from utils import http
@@ -22,11 +22,18 @@ from utils import exception
 from . import forms
 from user import models as user_models
 from . import sso
+from ishuman import services as ishuman_services
 
 logger = logging.getLogger(__name__)
 
 @decorators.nologin_required
 def show_login_view(request):
+    # check language
+    language = translation.get_language()
+    if language.startswith('zh'):
+        captcha_service_type = "tencent"
+    else:
+        captcha_service_type = 'google'
     form = forms.LoginForm()
     next = request.GET.get('next', '')
     return render(request, 'login/index.html', locals())
@@ -34,25 +41,33 @@ def show_login_view(request):
 @decorators.http_post_required
 def post_login(request):
     try:
+        # check language
+        language = translation.get_language()
+        if language.startswith('zh'):
+            captcha_service_type = "tencent"
+        else:
+            captcha_service_type = 'google'
+            
         form = forms.LoginForm(request.POST)
         if not form.is_valid():
-            return http.JsonErrorResponse(error_message=_("Form Error"))
-        code = request.POST.get('code')
-        if not ishuman_services.is_valid_captcha(request.session.session_key, code):
-            return http.JsonErrorResponse(error_message=_("Captcha Error"))
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_("Form Error")])
+            return render(request, 'login/index.html', locals())
+        # check the captcha
+        if not ishuman_services.is_valid_captcha(request):
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_("Captcha Error")])
+            return render(request, 'login/index.html', locals())
         # start authenticate
         username = form.cleaned_data['email']
         password = form.cleaned_data['password']
         user = authenticate(username=username, password=password)
         if not user or user.is_staff:
-            return http.JsonErrorResponse(error_message=_("Email or Password don't match"))
+            form._errors[NON_FIELD_ERRORS] = form.error_class([_("Email or Password don't match")])
+            return render(request, 'login/index.html', locals())
         login(request, user)
-        # refresh captcha
-        ishuman_services.refresh_captcha(request.session.session_key)
-        return http.JsonSuccessResponse()
+        return http.HttpResponseRedirect('/user/')
     except Exception, inst:
         logger.exception("fail to post login:%s" % str(inst))
-        return http.JsonErrorResponse(error_message=_("Request Time Out"))
+        return exception.SystemError500()
 
 @decorators.http_post_required
 def post_google_authenticator(request):

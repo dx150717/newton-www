@@ -54,13 +54,20 @@ HAYSTACK_CONNECTIONS = {
 }
 
 # Email settings
-EMAIL_BACKEND = 'email_log.backends.EmailBackend'
-FROM_EMAIL = 'Newton<no-reply@crm.newtonproject.org>'
-EMAIL_HOST = 'email-smtp.us-west-2.amazonaws.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'AKIAJIDOOT3MOAE6DSIA'
-EMAIL_HOST_PASSWORD = 'As9XbddNsFQu3WApE48QfYdYOTL00KuAbht9lR2EMF7S'
-EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'email_log.backends.EmailBackend'
+# FROM_EMAIL = 'Newton<no-reply@crm.newtonproject.org>'
+# EMAIL_HOST = 'email-smtp.us-west-2.amazonaws.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'AKIAJIDOOT3MOAE6DSIA'
+# EMAIL_HOST_PASSWORD = 'As9XbddNsFQu3WApE48QfYdYOTL00KuAbht9lR2EMF7S'
+# EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'cumtbliu@163.com'
+EMAIL_HOST_PASSWORD = '025103a'
+FROM_EMAIL = 'cumtbliu@163.com'
 
 # celery settings
 import djcelery
@@ -76,7 +83,7 @@ from datetime import timedelta
 CELERYBEAT_SCHEDULE = {
     'report-task-free-resource': {
         'task': 'tasks.task_blockchain.sync_blockchain_data',
-        'schedule': crontab(minute='*/1'),
+        'schedule': crontab(minute='*/30'),
     },
 }
 

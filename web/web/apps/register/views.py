@@ -17,7 +17,7 @@ from django.utils.timezone import utc
 from django.forms.forms import NON_FIELD_ERRORS
 from django.utils import translation
 import pyotp
-from ishuman import services as ishuman_services
+
 
 import decorators
 from config import codes
@@ -27,6 +27,7 @@ from utils import security
 from user import models as user_models
 from . import forms
 from register import services as register_services
+from ishuman import services as ishuman_services
 
 logger = logging.getLogger(__name__)
 
@@ -41,7 +42,6 @@ def submit_email(request):
             captcha_service_type = "tencent"
         else:
             captcha_service_type = 'google'
-        print "request.method:", request.method
         if request.method != 'POST':
             form = forms.EmailForm()
             return render(request, 'register/index.html', locals())

@@ -5,14 +5,18 @@
  /**
   * valid reset email
   */
-$("#reset-email-form").submit(function(event){
+initCaptcha('id_reset_email_form');
+$("#id_reset_email_form").submit(function(event){
     event.preventDefault();
     var form = this;
     if (!$(form).valid()) {
         return false;
     }
+    if (showCaptchaWindow()) {
+        return false;
+    }
     showWaiting();
-    form.submit()
+    form.submit();
 }).validate({
     ignore: [],
     errorElement: "div",

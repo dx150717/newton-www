@@ -10,6 +10,7 @@
 /**
  * valid login form and ajax post params for login.
  */
+initCaptcha('id_login_form');
 $('#id_login_form').submit(function(event){
   event.preventDefault();
   var data = {};
@@ -21,57 +22,11 @@ $('#id_login_form').submit(function(event){
   if (!$(form).valid()) {
     return false;
   }
+  if (showCaptchaWindow()) {
+      return false;
+  }
   showWaiting();
-  $.ajax({
-    url:'/ishuman/check/?code=' + code,
-    type: 'post',
-    data: {},
-    timeout: 5000,
-    success: function(ret){
-        dismiss();
-        if (ret.error_code === FAIL) {
-            $("#id_register_code_error").removeClass("hide");
-            $("#id_register_code_error").attr("style", "display:!important block");
-            $('#id_captcha_image').click();
-            $("#id_captcha_code").val('')
-            return false;
-        } else {
-          data.email = email;
-          data.password = password;
-          data.code = code;
-          showWaiting();
-          $.ajax({
-            url:'/login/post/',
-            timeout: 15000,
-            type: 'post',
-            data: data,
-            success: function(response){
-              dismiss();
-              if (isSuccess(response)) {
-                location.href = '/user/';
-              } else {
-                $('#id_captcha_image').click();
-                $("#id_captcha_code").val('')
-                showFail(getErrorMessage(response));
-              }
-            },
-            error: function(request, status){
-              dismiss();
-              if(status == 'timeout'){
-                showFail("Time Out");
-              }
-            }
-          })
-        }
-    },
-    error: function(request, status) {
-      dismiss();
-      if(status == 'timeout') {
-        showFail("Time Out");
-      }
-    }
-  });
-  
+  form.submit();
 }).validate({
   ignore: [],
   errorElement: "div",
