@@ -31,21 +31,26 @@ from register import services as register_services
 logger = logging.getLogger(__name__)
 
 @decorators.nologin_required
-def show_register_view(request):
-    form = forms.EmailForm()
-    return render(request, 'register/index.html', locals())
-
-@decorators.nologin_required
-@decorators.http_post_required
 def submit_email(request):
     """Submit email to user's inbox
     """
     try:
+        # determine the captcha type
+        language = translation.get_language()
+        if language.startswith('zh'):
+            captcha_service_type = "tencent"
+        else:
+            captcha_service_type = 'google'
+        print "request.method:", request.method
+        if request.method != 'POST':
+            form = forms.EmailForm()
+            return render(request, 'register/index.html', locals())
+        # the following is post request
         form = forms.EmailForm(request.POST)
         if not form.is_valid():
             return render(request, 'register/index.html', locals())
-        code = request.POST.get('code')
-        if not ishuman_services.is_valid_captcha(request.session.session_key, code):
+        # check the captcha
+        if not ishuman_services.is_valid_captcha(request):
             form._errors[NON_FIELD_ERRORS] = form.error_class([_("Captcha Error")])
             return render(request, 'register/index.html', locals())
         # check the availablity of email address

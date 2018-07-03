@@ -56,4 +56,21 @@ class JsonUnauthErrorResponse(JsonResponse):
         if error_message:
             responseData['error_message'] = error_message
         super(JsonUnauthErrorResponse, self).__init__(responseData)
-    
+
+def parse_ip_address(address):
+    ip_address_list = address.split(',')
+    if len(ip_address_list) > 1:
+        for ip_address in ip_address_list:
+            ip_address = ip_address.strip()
+            if (not ip_address.startswith('10.')) and (not ip_address.startswith('192.')) and (not ip_address.startswith('172.')):
+                return ip_address
+    return address.strip()
+
+def get_client_ip(request):
+    # Retrieve the x-forwarded-for header from proxy
+    ip_address = request.META.get('HTTP_X_FORWARDED_FOR')
+    if not ip_address:
+        ip_address = request.META['REMOTE_ADDR']
+        return ip_address.strip()
+    else:
+        return parse_ip_address(ip_address)

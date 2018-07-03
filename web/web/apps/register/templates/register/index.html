@@ -13,6 +13,15 @@
 {% include "footer-simple.html" %}
 {% endblock %}
 
+{% block require_js %}
+{% if captcha_service_type == "google" %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endif %}
+{% if captcha_service_type == "tencent" %}
+<script type="text/javascript" src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+{% endif %}
+{% endblock %}
+
 {% block notice %}
 {% endblock %}
 
@@ -31,10 +40,10 @@
                 </div>
             </div> -->
             <div class="form-container">
-                <form id="id_register_form" class="form" action="/register/email/post/" method="POST">
+                <form id="id_register_form" class="form" action="/register/" method="POST">
                     {% csrf_token %}
                     {% include "form.html" %}
-                    {% include "captcha.html" %}
+                    {% include "captcha.html" with captcha_service_type=captcha_service_type %}
                     <div class="raw">
                         <div>
                             <button id="register-btn" class="form-button" type="submit">{% trans "Register" %}</button>

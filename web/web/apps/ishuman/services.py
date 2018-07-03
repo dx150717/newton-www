@@ -2,12 +2,15 @@
 """The API of ishuman module
 """
 import logging
+import requests
+import json
 
 from django.core.cache import cache
 from django.conf import settings
 
 from utils import new_captcha
 from utils import security
+from utils import http
 
 logger = logging.getLogger(__name__)
 CACHE_KEY_PREFIX = 'ishuman-'
@@ -52,4 +55,66 @@ def refresh_captcha(session_key):
         return True
     except Exception, inst:
         logger.exception("fail to refresh captcha:%s" % str(inst))
+        return False
+
+def is_valid_captcha(request):
+    """Check whether it is valid captcha
+    """
+    try:
+        captcha_service_type = request.POST.get('captcha_service_type')
+        if captcha_service_type == "google":
+            if is_valid_google_recaptcha(request):
+                return True
+            else:
+                return False
+        elif captcha_service_type == "tencent":
+            if is_valid_tencent_captcha(request):
+                return True
+            else:
+                return False
+        else:
+            raise Exception("invalid captcha_service_type")
+    except Exception, inst:
+        logger.exception("fail to check captcha:%s" % str(inst))
+        return False
+
+def is_valid_google_recaptcha(request):
+    """Check whether it is valid google recaptcha
+    """
+    try:
+        g_recaptcha_response = request.POST.get('google_recaptcha_name')
+        if not g_recaptcha_response:
+            return False
+        post_data = {"secret":settings.GOOGLE_SECRET_KEY, "response":g_recaptcha_response}
+        res = requests.post(settings.GOOGLE_VERIFICATION_URL, post_data)
+        res = json.loads(res.text)
+        if not res['success']:
+            return False
+        return True
+    except Exception, inst:
+        logger.exception("fail to check google recaptcha:%s" % str(inst))
+        return False
+
+
+def is_valid_tencent_captcha(request):
+    """Check whether it is valid tencent captcha
+    """
+    try:
+        url = 'https://ssl.captcha.qq.com/ticket/verify'
+        ticket = request.POST.get('ticket')
+        randstr = request.POST.get('randstr')
+        post_data = {
+            'aid': '2075015244',
+            'AppSecretKey': '0alyS6l5dhGmH32EX4zIQaw**',
+            'Ticket': ticket,
+            'Randstr': randstr,
+            'UserIP': http.get_client_ip(request),
+        }
+        res = requests.post(url, post_data)
+        res = json.loads(res.text)
+        if int(res['response']) == 1:
+            return True
+        return False
+    except Exception, inst:
+        logger.exception("fail to check tencent captcha:%s" % str(inst))
         return False

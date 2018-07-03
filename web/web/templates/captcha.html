@@ -2,6 +2,7 @@
 {% load utils %}
 
 
+{% if captcha_service_type  == "native" %}
 <div class="form-group">
         <p>
             <label for="id_captcha_code" class="control-label">{% trans "Verification Code" %}</label>
@@ -17,3 +18,21 @@
             <input autocomplete="off" class="form-control" id="id_captcha_code" name="code" placeholder="{% trans "Verification Code" %}" type="text"/>  
         </div>
 </div>
+{% endif %}
+
+{% if captcha_service_type  == "google" %}
+<div class="form-group">
+    <div class="google-recaptcha" id="google-recaptcha">
+        <input type="hidden" name="captcha_service_type" value="google" />
+        <input type="hidden" name="google_recaptcha_name" id="id_google_recaptcha"/>
+        <div class="g-recaptcha" data-sitekey="6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
+    </div>
+</div>
+{% endif %}
+
+{% if captcha_service_type  == "tencent" %}
+<span type="submit" id="TencentCaptcha" data-appid="2075015244" data-cbfn="tencent_captcha_callback"></span>
+<input type="hidden" id="id_captcha_service_type" name="captcha_service_type" value="tencent" />
+<input type="hidden" name="ticket" id="id_ticket" value="" />
+<input type="hidden" name="randstr" id="id_randstr" value="" />
+{% endif %}
