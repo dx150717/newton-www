@@ -4,7 +4,9 @@
 /**
  * register.js for valid register form.
  */
-initCaptcha('id_register_form');
+if (window.initCaptcha) {
+    initCaptcha('id_register_form');
+}
 $("#id_register_form").submit(function(event){
     event.preventDefault();
     var form = this;
