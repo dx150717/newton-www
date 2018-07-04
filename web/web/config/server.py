@@ -53,6 +53,7 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
+# email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = False
 EMAIL_HOST = 'smtp.163.com'

@@ -5,7 +5,9 @@
  /**
   * valid reset email
   */
-initCaptcha('id_reset_email_form');
+if (window.initCaptcha) {
+    initCaptcha('id_reset_email_form');
+}
 $("#id_reset_email_form").submit(function(event){
     event.preventDefault();
     var form = this;
@@ -32,7 +34,7 @@ $("#id_reset_email_form").submit(function(event){
 /**
  * valid reset password form.
  */
-$("#reset-password-form").submit(function(event){
+$("#id_reset_password_form").submit(function(event){
     event.preventDefault();
     var form = this;
     if (!$(form).valid()) {
