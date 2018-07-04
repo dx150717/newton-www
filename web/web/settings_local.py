@@ -49,8 +49,8 @@ AUTHENTICATION_BACKENDS = (
 )
 # google recaptcha verification url
 GOOGLE_VERIFICATION_URL = "https://www.google.com/recaptcha/api/siteverify"
-GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
-
+# tencent captcha
+TENCENT_CAPTCHA_URL = 'https://ssl.captcha.qq.com/ticket/verify'
 # global authenticate
 LOGIN_URL = '/login/'
 
