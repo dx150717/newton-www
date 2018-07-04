@@ -34,11 +34,13 @@
             </div>
         </div>
         <div class="container">
-            <!-- <div class="form-container">
+            {% if captcha_service_type == "google" %}
+            <div class="form-container">
                 <div class="alert alert-warning">
                     {% trans "Tip: To register successfully, ensure you can access the google recaptcha service." %}
                 </div>
-            </div> -->
+            </div>
+            {% endif %}
             <div class="form-container">
                 <form id="id_register_form" class="form" action="/register/" method="POST">
                     {% csrf_token %}
