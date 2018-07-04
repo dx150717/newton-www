@@ -81,6 +81,10 @@ def post_kyc_information(request, kyc_type):
                 # check whether individual post data is valid
                 form = tokenexchange_forms.KYCIndividualForm(request.POST, request.FILES, instance=instance)
                 if not form.is_valid():
+                    try:
+                        logger.info("kyc validate error: %s" % form.errors)
+                    except:
+                        pass
                     return render(request, "tokenexchange/submit.html", locals())
                 # extract indivadual data
                 instance = form.save(commit=False)
