@@ -8,6 +8,7 @@ import os
 from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.utils.translation.trans_real import get_supported_language_variant
+from django.utils.translation import ugettext_lazy as _
 
 GLOBAL_PHONE_PATTERN = re.compile(r'^\d{6,15}$')
 
@@ -48,7 +49,7 @@ def validate_file_extension_of_id_photo(value):
     ext = os.path.splitext(value.name)[1]  # [0] returns path+filename
     valid_extensions = ['.jpg', '.png', '.jpeg']
     if not ext.lower() in valid_extensions:
-        raise ValidationError(u'Unsupported file extension.')
+        raise ValidationError(_(u'Unsupported file extension.'))
 
 def validate_file_size_of_id_photo(value):
     """
@@ -56,6 +57,10 @@ def validate_file_size_of_id_photo(value):
     """
     limit = 5 * 1024 * 1024
     if value.size > limit:
-        raise ValidationError(u'File too large,Size should not exceed 5M')
+        raise ValidationError(_(u'File too large,Size should not exceed 5M'))
 
-
+def valid_password(value):
+    """Validate whether password contains upercase, lowercase and number 
+    """
+    if not re.search('[A-Z]', value) or not re.search('[a-z]', value) or not re.search('[0-9]', value):
+        raise ValidationError(_(u'Please input 6～16 characters，must contain upper-case, lower-case letters and numbers.'))

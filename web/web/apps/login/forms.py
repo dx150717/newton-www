@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class LoginForm(forms.Form):
     email = forms.EmailField(label=_("Email"), required=True)
-    password = forms.CharField(widget=forms.PasswordInput(),label=_("Password"), required=True)
+    password = forms.CharField(widget=forms.PasswordInput(),label=_("Password"), required=True, min_length=6, max_length=16)
 
 class GoogleAuthenticatorForm(forms.Form):
     gtoken_code = forms.CharField(required=True, max_length=100)

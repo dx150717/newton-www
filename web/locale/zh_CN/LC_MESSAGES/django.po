@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-03 04:06+0000\n"
+"POT-Creation-Date: 2018-07-04 13:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -258,61 +258,59 @@ msgstr ""
 "org'>contact@newtonproject.org。</a>."
 
 #: web/apps/login/forms.py:6 web/apps/login/forms.py:11
-#: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
+#: web/apps/register/forms.py:13 web/apps/reset/forms.py:8
 #: web/apps/subscription/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
 msgstr "电子邮箱"
 
 #: web/apps/login/forms.py:7 web/apps/login/forms.py:12
-#: web/apps/register/forms.py:15 web/apps/reset/forms.py:9
+#: web/apps/register/forms.py:16 web/apps/reset/forms.py:11
 #: web/apps/zinnia/templates/zinnia/password.html:24
 msgid "Password"
 msgstr "密码"
 
-#: web/apps/login/views.py:39 web/apps/login/views.py:63
+#: web/apps/login/views.py:53 web/apps/login/views.py:78
 msgid "Form Error"
 msgstr "表单填写错误"
 
-#: web/apps/login/views.py:42 web/apps/register/views.py:49
+#: web/apps/login/views.py:57 web/apps/register/views.py:54
+#: web/apps/reset/views.py:51
 msgid "Captcha Error"
 msgstr ""
 
-#: web/apps/login/views.py:48 web/apps/newtonadmin/views.py:43
+#: web/apps/login/views.py:64 web/apps/newtonadmin/views.py:43
 msgid "Email or Password don't match"
 msgstr "邮箱或密码错误"
 
-#: web/apps/login/views.py:55
-msgid "Request Time Out"
-msgstr "请求超时"
-
-#: web/apps/login/views.py:72
+#: web/apps/login/views.py:87
 msgid "No session"
 msgstr ""
 
-#: web/apps/login/views.py:74
+#: web/apps/login/views.py:89
 msgid "No Auth"
 msgstr "请重新登录"
 
-#: web/apps/login/views.py:77
+#: web/apps/login/views.py:92
 msgid "No User"
 msgstr "请重新登录"
 
-#: web/apps/login/views.py:80
+#: web/apps/login/views.py:95
 msgid "No User Profile"
 msgstr "请重新登录"
 
-#: web/apps/login/views.py:83
+#: web/apps/login/views.py:98
 msgid "Incorrect Google Authenticator Code"
 msgstr "谷歌身份验证码不正确"
 
 #: web/apps/login/templates/login/index.html:4
-#: web/apps/login/templates/login/index.html:17
-#: web/apps/login/templates/login/index.html:29
+#: web/apps/login/templates/login/index.html:26
+#: web/apps/login/templates/login/index.html:45
 #: web/apps/newtonadmin/templates/newtonadmin/login.html:21
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
-#: web/templates/header.html:45 web/templates/header.html.py:65
+#: web/templates/header.html:46 web/templates/header.html.py:54
+#: web/templates/header.html:75 web/templates/header.html.py:83
 msgid "Login"
 msgstr "登录"
 
@@ -355,29 +353,38 @@ msgstr "登录"
 msgid "Newton Community"
 msgstr "牛顿社区"
 
-#: web/apps/login/templates/login/index.html:32
-#: web/apps/register/templates/register/index.html:5
-#: web/apps/register/templates/register/index.html:23
+#: web/apps/login/templates/login/index.html:34
 #: web/apps/register/templates/register/index.html:40
+#: web/apps/reset/templates/reset/index.html:39
+msgid ""
+"Tip: To register successfully, ensure you can access the google recaptcha "
+"service."
+msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
+
+#: web/apps/login/templates/login/index.html:48
+#: web/apps/register/templates/register/index.html:5
+#: web/apps/register/templates/register/index.html:32
+#: web/apps/register/templates/register/index.html:51
 #: web/apps/register/templates/register/post-fail.html:5
 #: web/apps/register/templates/register/post-success.html:5
 #: web/apps/register/templates/register/register-letter.html:10
 #: web/apps/register/templates/register/register-success.html:5
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
-#: web/templates/header.html:42 web/templates/header.html.py:62
+#: web/templates/header.html:43 web/templates/header.html.py:51
+#: web/templates/header.html:72 web/templates/header.html.py:80
 msgid "Register"
 msgstr "注册"
 
-#: web/apps/login/templates/login/index.html:33
+#: web/apps/login/templates/login/index.html:49
 msgid "Forgot Password?"
 msgstr "忘记密码？"
 
-#: web/apps/login/templates/login/index.html:46 web/apps/register/forms.py:19
+#: web/apps/login/templates/login/index.html:62 web/apps/register/forms.py:20
 #: web/apps/setting/forms.py:6
 msgid "Google Authenticator Code"
 msgstr "填写谷歌身份验证码"
 
-#: web/apps/login/templates/login/index.html:56
+#: web/apps/login/templates/login/index.html:72
 #: web/apps/register/templates/register/password.html:34
 #: web/apps/setting/templates/setting/check-gtoken.html:35
 #: web/apps/setting/templates/setting/include-verification.html:13
@@ -631,7 +638,7 @@ msgid "Newton has received your"
 msgstr "牛顿收到您的"
 
 #: web/apps/newtonadmin/templates/newtonadmin/receive-amount-notify-letter.html:22
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:58
 msgid "and"
 msgstr "和"
 
@@ -645,7 +652,7 @@ msgstr "。我们对您在牛顿社区做出的贡献表示感谢。"
 msgid "press"
 msgstr "媒体报道"
 
-#: web/apps/register/forms.py:16
+#: web/apps/register/forms.py:17
 msgid "Confirm Password"
 msgstr "确认密码"
 
@@ -654,33 +661,27 @@ msgstr "确认密码"
 msgid "Please complete the Newton register process"
 msgstr "请完成牛顿注册流程"
 
-#: web/apps/register/views.py:55
+#: web/apps/register/views.py:60
 msgid "Email already existed"
 msgstr "邮箱已经存在！"
 
-#: web/apps/register/views.py:141 web/apps/reset/views.py:124
+#: web/apps/register/views.py:146 web/apps/reset/views.py:141
 msgid "Entered passwords do not match"
 msgstr "两次输入密码不一致"
 
-#: web/apps/register/views.py:147
+#: web/apps/register/views.py:152
 msgid "Fail to register"
 msgstr ""
 
-#: web/apps/register/templates/register/index.html:30
-msgid ""
-"Tip: To register successfully, ensure you can access the google recaptcha "
-"service."
-msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
-
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:58
 msgid "By clicking on the register button you agree and abide by<br/> Newton"
 msgstr "点击注册按钮即表示您同意并愿意遵守<br/> Newton的"
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:58
 msgid "User Agreement"
 msgstr "使用条款"
 
-#: web/apps/register/templates/register/index.html:47
+#: web/apps/register/templates/register/index.html:58
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
@@ -733,7 +734,7 @@ msgstr "注册成功！"
 msgid "Go to <a href='/login/'>Login</a>"
 msgstr "请前往<a href='/login/'>登录</a>"
 
-#: web/apps/reset/forms.py:10
+#: web/apps/reset/forms.py:12
 msgid "Repassword"
 msgstr "确认密码"
 
@@ -741,7 +742,7 @@ msgstr "确认密码"
 msgid "Please Reset password"
 msgstr "请重置您的密码"
 
-#: web/apps/reset/views.py:39
+#: web/apps/reset/views.py:56
 msgid "Email address does not exist"
 msgstr "邮箱不存在！"
 
@@ -758,11 +759,11 @@ msgstr "邮箱不存在！"
 msgid "Reset"
 msgstr "重置密码"
 
-#: web/apps/reset/templates/reset/index.html:22
+#: web/apps/reset/templates/reset/index.html:31
 msgid "Reset Password"
 msgstr "重置密码"
 
-#: web/apps/reset/templates/reset/index.html:33
+#: web/apps/reset/templates/reset/index.html:50
 msgid "Reset Passwrod"
 msgstr "重置密码"
 
@@ -1347,15 +1348,15 @@ msgstr "ELA 数量"
 msgid "Received your KYC information"
 msgstr ""
 
-#: web/apps/tokenexchange/views.py:200
+#: web/apps/tokenexchange/views.py:201
 msgid "You have applied."
 msgstr "您已提交过申请。"
 
-#: web/apps/tokenexchange/views.py:204 web/apps/tokenexchange/views.py:211
+#: web/apps/tokenexchange/views.py:205 web/apps/tokenexchange/views.py:212
 msgid "BTC is required."
 msgstr "BTC必填"
 
-#: web/apps/tokenexchange/views.py:213
+#: web/apps/tokenexchange/views.py:214
 #, python-format
 msgid "The quantity of BTC must be equal or more than %s."
 msgstr "BTC的数量必须大于或等于%s"
@@ -1826,8 +1827,13 @@ msgstr "KYC已通过审核！"
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
 #: web/apps/user/templates/user/include-kyc-section.html:17
 msgid ""
-"KYC information was successfully submitted! We will checked and verified your information in batches. It may take some time so please be patient and wait for our feedback. The feedback will be notified by email. Please check your mail on time."
-msgstr "KYC信息提交成功，工作人员将分批次进行审核，可能需要较长时间，请耐心等待。审核完毕后也将会为您发送审核结果邮件，请注意查收。"
+"KYC information was successfully submitted! We will checked and verified "
+"your information in batches. It may take some time so please be patient and "
+"wait for our feedback. The feedback will be notified by email. Please check "
+"your mail on time."
+msgstr ""
+"KYC信息提交成功，工作人员将分批次进行审核，可能需要较长时间，请耐心等待。审核"
+"完毕后也将会为您发送审核结果邮件，请注意查收。"
 
 #: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:5
 msgid "TOKENEXCHANGE"
@@ -7232,15 +7238,15 @@ msgstr "不存在页面。"
 msgid "System Error."
 msgstr "系统错误。"
 
-#: web/templates/captcha.html:7 web/templates/captcha.html.py:17
+#: web/templates/captcha.html:8 web/templates/captcha.html.py:18
 msgid "Verification Code"
 msgstr "验证码"
 
-#: web/templates/captcha.html:9
+#: web/templates/captcha.html:10
 msgid "Captcha error"
 msgstr "验证码错误"
 
-#: web/templates/captcha.html:13
+#: web/templates/captcha.html:14
 msgid "cannot recognize?"
 msgstr "看不清？换一张"
 
@@ -7297,12 +7303,12 @@ msgid "Service Terms"
 msgstr "服务条款"
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:38 web/templates/header.html.py:56
+#: web/templates/header.html:39 web/templates/header.html.py:66
 msgid "User Center"
 msgstr "用户中心"
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:39 web/templates/header.html.py:57
+#: web/templates/header.html:40 web/templates/header.html.py:67
 msgid "LogOut"
 msgstr "退出"
 
@@ -7337,24 +7343,16 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#~ msgid "KYC Submitted!"
-#~ msgstr "KYC已提交！"
+#: web/utils/validators.py:52
+msgid "Unsupported file extension."
+msgstr "文件类型不支持"
 
-#~ msgid ""
-#~ "Submitted KYC information successfully! We will send you reviewing result "
-#~ "by email in a few days."
-#~ msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
+#: web/utils/validators.py:60
+msgid "File too large,Size should not exceed 5M"
+msgstr "您上传的文件过大，请上传5M以内的文件"
 
-#~ msgid ""
-#~ "Submitted KYC information successfully! We will send you an email of "
-#~ "reviewing result, please check out."
-#~ msgstr "KYC信息提交成功！我们会在之后为您发送审核结果邮件，请注意查收。"
-
-#~ msgid "Li Zhu"
-#~ msgstr "李竹"
-
-#~ msgid "You had submited kyc info"
-#~ msgstr "你已经提交了KYC信息"
-
-#~ msgid "Do you want to <br/>establish a Newton node ?"
-#~ msgstr "是否愿意建立节点？"
+#: web/utils/validators.py:66
+msgid ""
+"Please input 6～16 characters，must contain upper-case, lower-case letters "
+"and numbers."
+msgstr "请输入6~16个字符，必须包含大小写字母和数字"
