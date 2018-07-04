@@ -88,12 +88,12 @@ def is_valid_tencent_captcha(request):
     """Check whether it is valid tencent captcha
     """
     try:
-        url = 'https://ssl.captcha.qq.com/ticket/verify'
+        url = settings.TENCENT_CAPTCHA_URL
         ticket = request.POST.get('ticket')
         randstr = request.POST.get('randstr')
         post_data = {
-            'aid': '2075015244',
-            'AppSecretKey': '0alyS6l5dhGmH32EX4zIQaw**',
+            'aid': settings.TENCENT_CAPTCHA_APP_ID,
+            'AppSecretKey': settings.TENCENT_CAPTCHA_APP_SECRET,
             'Ticket': ticket,
             'Randstr': randstr,
             'UserIP': http.get_client_ip(request),

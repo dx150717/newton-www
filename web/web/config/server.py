@@ -61,7 +61,11 @@ EMAIL_PORT = 25
 EMAIL_HOST_USER = 'cumtbliu@163.com'
 EMAIL_HOST_PASSWORD = '025103a'
 FROM_EMAIL = 'cumtbliu@163.com'
-
+# captcha settings
+GOOGLE_SITE_KEY = '6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv'
+GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
+TENCENT_CAPTCHA_APP_ID = '2075015244'
+TENCENT_CAPTCHA_APP_SECRET = '0alyS6l5dhGmH32EX4zIQaw**'
 # celery settings
 import djcelery
 djcelery.setup_loader()
