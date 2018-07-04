@@ -64,10 +64,10 @@
                                 </label>
                                 <div class="col-sm-9">
                                     <select class="form-control" id="id_id_type" name="id_type" placeholder="Certificate Type">
-                                    <option selected="selected" value="" style="color: #858585">{% trans "Select certificate type" %}</option>
-                                    <option value="2">{% trans "Passport" %}</option>
-                                    <option value="3">{% trans "Drivers License" %}</option>
-                                    <option value="1">{% trans "ID Card" %}</option>
+                                    <option value="" style="color: #858585">{% trans "Select certificate type" %}</option>
+                                    <option value="2" {% if form.id_type.value == 2 %} selected="selected" {% endif %}>{% trans "Passport" %}</option>
+                                    <option value="3" {% if form.id_type.value == 3 %} selected="selected" {% endif %}>{% trans "Drivers License" %}</option>
+                                    <option value="1" {% if form.id_type.value == 1 %} selected="selected" {% endif %}>{% trans "ID Card" %}</option>
                                     </select>
                                 </div>
                             </div>
@@ -193,10 +193,10 @@
                         </label>
                         <div class="col-sm-9">
                             <select class="form-control" id="id_emergency_relationship" name="emergency_relationship" placeholder="Relation with Applicant">
-                                <option value="" selected="selected">{% trans "Relation with Applicant" %}</option>
-                                <option value="1">{% trans "Kinship" %}</option>
-                                <option value="2">{% trans "Friendship" %}</option>
-                                <option value="3">{% trans "Colleague" %}</option>
+                                <option value="">{% trans "Relation with Applicant" %}</option>
+                                <option value="1" {% if form.emergency_relationship.value == 1 %} selected="selected" {% endif %}>{% trans "Kinship" %}</option>
+                                <option value="2" {% if form.emergency_relationship.value == 2 %} selected="selected" {% endif %}>{% trans "Friendship" %}</option>
+                                <option value="3" {% if form.emergency_relationship.value == 3 %} selected="selected" {% endif %}>{% trans "Colleague" %}</option>
                             </select>
                         </div>
                     </div>
@@ -329,11 +329,11 @@
                             </label>
                             <div class="col-sm-9">
                                 <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
-                                    <option value="0" selected="selected">{% trans "Select Node" %}</option>
-                                    <option value="1">{% trans "Full Node" %}</option>
-                                    <option value="2">{% trans "Media Node" %}</option>
-                                    <option value="3">{% trans "Technology Node" %}</option>
-                                    <option value="4">{% trans "Operation Node" %}</option>
+                                    <option value="0">{% trans "Select Node" %}</option>
+                                    <option value="1" {% if form.which_node_establish.value == 1 %} selected="selected" {% endif %}>{% trans "Full Node" %}</option>
+                                    <option value="2" {% if form.which_node_establish.value == 2 %} selected="selected" {% endif %}>{% trans "Media Node" %}</option>
+                                    <option value="3" {% if form.which_node_establish.value == 3 %} selected="selected" {% endif %}>{% trans "Technology Node" %}</option>
+                                    <option value="4" {% if form.which_node_establish.value == 4 %} selected="selected" {% endif %}>{% trans "Operation Node" %}</option>
                                 </select>
                                 <span class="small">{% trans "Note: Media node is the node where medias help broadcast Newton, technology node is the one where people develop various kind of DAPP or other technologies in Newton ecosystem, operation node is the one which helps maintain and develop Newton communities, and full node is the one which integrates functions of at least two aforementioned nodes." %}</span>
                             </div>
