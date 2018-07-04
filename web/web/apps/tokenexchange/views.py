@@ -82,7 +82,7 @@ def post_kyc_information(request, kyc_type):
                 form = tokenexchange_forms.KYCIndividualForm(request.POST, request.FILES, instance=instance)
                 if not form.is_valid():
                     try:
-                        logger.info("kyc validate error: %s" % form.errors)
+                        logger.error("kyc validate error: %s" % form.errors)
                     except:
                         pass
                     return render(request, "tokenexchange/submit.html", locals())
