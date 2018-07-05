@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-04 13:49+0000\n"
+"POT-Creation-Date: 2018-07-05 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -354,10 +354,8 @@ msgid "Newton Community"
 msgstr "牛顿社区"
 
 #: web/apps/login/templates/login/index.html:34
-#: web/apps/register/templates/register/index.html:40
-#: web/apps/reset/templates/reset/index.html:39
 msgid ""
-"Tip: To register successfully, ensure you can access the google recaptcha "
+"Tip: To login successfully, ensure you can access the google recaptcha "
 "service."
 msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
 
@@ -673,6 +671,12 @@ msgstr "两次输入密码不一致"
 msgid "Fail to register"
 msgstr ""
 
+#: web/apps/register/templates/register/index.html:40
+msgid ""
+"Tip: To register successfully, ensure you can access the google recaptcha "
+"service."
+msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
+
 #: web/apps/register/templates/register/index.html:58
 msgid "By clicking on the register button you agree and abide by<br/> Newton"
 msgstr "点击注册按钮即表示您同意并愿意遵守<br/> Newton的"
@@ -762,6 +766,12 @@ msgstr "重置密码"
 #: web/apps/reset/templates/reset/index.html:31
 msgid "Reset Password"
 msgstr "重置密码"
+
+#: web/apps/reset/templates/reset/index.html:39
+msgid ""
+"Tip: To reset successfully, ensure you can access the google recaptcha "
+"service."
+msgstr "小贴士:请确保您可以使用的谷歌验证码服务，以便成功注册。"
 
 #: web/apps/reset/templates/reset/index.html:50
 msgid "Reset Passwrod"
@@ -1273,8 +1283,6 @@ msgid "Screenshots of Abovementioned Communities 3"
 msgstr "社群截图3"
 
 #: web/apps/tokenexchange/models.py:68
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:290
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:293
 msgid "Your Understanding of Newton"
 msgstr "您对牛顿的理解"
 
@@ -1291,10 +1299,8 @@ msgid "Do you want to establish a Newton node ?"
 msgstr "是否愿意建立节点"
 
 #: web/apps/tokenexchange/models.py:77
-#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:328
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:196
 msgid "Which type of node ?"
-msgstr "节点类型"
+msgstr ""
 
 #: web/apps/tokenexchange/models.py:80
 msgid "Your plan of node establishment"
@@ -1331,10 +1337,8 @@ msgid "Organization Certificate"
 msgstr "机构证明"
 
 #: web/apps/tokenexchange/models.py:102
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:132
-#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:135
 msgid "Wechat Platform Name"
-msgstr "微信公众平台名称"
+msgstr ""
 
 #: web/apps/tokenexchange/models.py:128
 msgid "How much do you want to contribute in BTC"
@@ -1348,15 +1352,15 @@ msgstr "ELA 数量"
 msgid "Received your KYC information"
 msgstr ""
 
-#: web/apps/tokenexchange/views.py:201
+#: web/apps/tokenexchange/views.py:205
 msgid "You have applied."
 msgstr "您已提交过申请。"
 
-#: web/apps/tokenexchange/views.py:205 web/apps/tokenexchange/views.py:212
+#: web/apps/tokenexchange/views.py:209 web/apps/tokenexchange/views.py:216
 msgid "BTC is required."
 msgstr "BTC必填"
 
-#: web/apps/tokenexchange/views.py:214
+#: web/apps/tokenexchange/views.py:218
 #, python-format
 msgid "The quantity of BTC must be equal or more than %s."
 msgstr "BTC的数量必须大于或等于%s"
@@ -1547,12 +1551,17 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:153
 #: web/apps/user/templates/user/include-kyc-section.html:78
 #: web/apps/user/templates/user/include-kyc-section.html:115
-msgid "How to Contribute"
+msgid "Participation in Newton"
 msgstr "如何参与牛顿"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:290
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:293
+msgid "Your understanding of Newton"
+msgstr "您对牛顿的理解"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:298
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:166
-msgid "Plans for contributing to Newton"
+msgid "Your contributions and future participation plan to Newton"
 msgstr "您计划如何参与牛顿项目"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:301
@@ -1565,8 +1574,13 @@ msgstr "请列举您曾参与牛顿项目建设的经历，或者您计划如何
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:319
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:187
-msgid "Do you want to elect a community node?"
+msgid "Would you like to be a Newton community node by election?"
 msgstr "是否愿意竞选社群节点"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:328
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:196
+msgid "Which type of community node would you like to be?"
+msgstr "节点类型"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:332
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:200
@@ -1576,11 +1590,11 @@ msgstr "选择节点"
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:338
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:206
 msgid ""
-"Note: Media node is the node where medias help broadcast Newton, technology "
-"node is the one where people develop various kind of DAPP or other "
-"technologies in Newton ecosystem, operation node is the one which helps "
-"maintain and develop Newton communities, and full node is the one which "
-"integrates functions of at least two aforementioned nodes."
+"Note: Media node is the node where medias help to broadcast Newton. "
+"Technology node is the one where people develop various kind of DAPPs or "
+"other technologies in Newton ecosystem. Operation node is the one which "
+"helps to maintain and develop Newton communities. And full node is the one "
+"which integrates functions of at least two aforementioned nodes."
 msgstr ""
 "注：媒体节点是媒体渠道帮助牛顿进行宣传的节点；技术节点是在牛顿生态上开发各类"
 "DAPP或其他技术的节点；运营节点是帮助维护和发展牛顿社区的节点；全节点是集合上"
@@ -1590,7 +1604,7 @@ msgstr ""
 #: web/apps/tokenexchange/templates/tokenexchange/include-individual-submit.html:346
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:211
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:214
-msgid "Plans of community node election"
+msgid "Plan of building the Newton community node"
 msgstr "社群节点建立构想"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:48
@@ -1616,6 +1630,11 @@ msgid ""
 "Please describe the basic information of your institution, the type of "
 "institution (such as trading institutions, investment funds, etc.)"
 msgstr "请介绍您的机构的基本概况、机构类型（比如交易所、投资基金等）"
+
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:132
+#: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:135
+msgid "WeChat subscription account"
+msgstr "微信公众平台名称"
 
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:158
 #: web/apps/tokenexchange/templates/tokenexchange/include-organization-submit.html:161
@@ -1827,10 +1846,10 @@ msgstr "KYC已通过审核！"
 #: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
 #: web/apps/user/templates/user/include-kyc-section.html:17
 msgid ""
-"KYC information was successfully submitted! We will checked and verified "
-"your information in batches. It may take some time so please be patient and "
-"wait for our feedback. The feedback will be notified by email. Please check "
-"your mail on time."
+"KYC information was successfully submitted! We will check and verify your "
+"information in batches. It may take some time so please be patient and wait "
+"for our feedback. The feedback will be notified by email. Please check your "
+"mail on time."
 msgstr ""
 "KYC信息提交成功，工作人员将分批次进行审核，可能需要较长时间，请耐心等待。审核"
 "完毕后也将会为您发送审核结果邮件，请注意查收。"

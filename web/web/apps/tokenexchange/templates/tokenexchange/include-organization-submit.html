@@ -129,10 +129,10 @@
                         </div>
                         <div class="form-group">
                             <label for="id_wechat_platform_name" class="control-label col-sm-3">
-                                {% trans "Wechat Platform Name" %}
+                                {% trans "WeChat subscription account" %}
                             </label>
                             <div class="col-sm-9">
-                                <input class="form-control normal {% if form.wechat_platform_name.errors %}alert alert-danger{% endif %}" id="wechat_platform_name" maxlength="64" name="wechat_platform_name" placeholder="{% trans "Wechat Platform Name" %}" type="text" value="{{ form.wechat_platform_name.value }}">
+                                <input class="form-control normal {% if form.wechat_platform_name.errors %}alert alert-danger{% endif %}" id="wechat_platform_name" maxlength="64" name="wechat_platform_name" placeholder="{% trans "WeChat subscription account" %}" type="text" value="{{ form.wechat_platform_name.value }}">
                             </div>
                         </div>
                         <div class="form-group">
@@ -150,7 +150,7 @@
                 <div class="container form-container">
                     <div class="panel panel-default bg-gray">
                         <div class="panel-heading">
-                            <h3 class="panel-title text-center">{% trans "How to Contribute" %}</h3>
+                            <h3 class="panel-title text-center">{% trans "Participation in Newton" %}</h3>
                             <span class="small red-color">{% trans "(required)" %}</span>
                         </div>
                         <div class="panel-body">
@@ -163,7 +163,7 @@
                             </div>
                             <div class="form-group with-attachment">
                                 <label for="id_done_for_newton" class="control-label col-sm-3 with-attachment">
-                                    {% trans "Plans for contributing to Newton" %}<span class="red-color">*</span>
+                                    {% trans "Your contributions and future participation plan to Newton" %}<span class="red-color">*</span>
                                 </label>
                                 <div class="col-sm-9">
                                     <textarea class="form-control {% if form.done_for_newton.errors %}alert alert-danger{% endif %}" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the experiences of your institution that have participated in the construction of Newton project, or how your organization plans to participate and contribute to Newton project construction." %}" rows="10" maxlength="2048">{{ form.done_for_newton.value }}</textarea>
@@ -184,7 +184,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="id_is_establish_node" class="control-label col-sm-3">
-                                    {% trans "Do you want to elect a community node?" %}
+                                    {% trans "Would you like to be a Newton community node by election?" %}
                                 </label>
                                 <div class="col-sm-9">
                                     <input type="radio" name="is_establish_node" value="1" onclick="openNode()">{% trans "Yes" %}
@@ -193,25 +193,25 @@
                             </div>
                             <div id="id_which_node" class="form-group hide">
                                 <label for="id_which_node_establish" class="control-label col-sm-3">
-                                    {% trans "Which type of node ?" %}
+                                    {% trans "Which type of community node would you like to be?" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of node ?">
+                                    <select class="form-control" id="id_which_node_establish" name="which_node_establish" placeholder="Which type of community node would you like to be?">
                                         <option value="0">{% trans "Select Node" %}</option>
                                         <option value="1" {% if form.which_node_establish.value == "1" %} selected="selected" {% endif %}>{% trans "Full Node" %}</option>
                                         <option value="2" {% if form.which_node_establish.value == "2" %} selected="selected" {% endif %}>{% trans "Media Node" %}</option>
                                         <option value="3" {% if form.which_node_establish.value == "3" %} selected="selected" {% endif %}>{% trans "Technology Node" %}</option>
                                         <option value="4" {% if form.which_node_establish.value == "4" %} selected="selected" {% endif %}>{% trans "Operation Node" %}</option>
                                     </select>
-                                    <span class="small">{% trans "Note: Media node is the node where medias help broadcast Newton, technology node is the one where people develop various kind of DAPP or other technologies in Newton ecosystem, operation node is the one which helps maintain and develop Newton communities, and full node is the one which integrates functions of at least two aforementioned nodes." %}
+                                    <span class="small">{% trans "Note: Media node is the node where medias help to broadcast Newton. Technology node is the one where people develop various kind of DAPPs or other technologies in Newton ecosystem. Operation node is the one which helps to maintain and develop Newton communities. And full node is the one which integrates functions of at least two aforementioned nodes." %}
                                 </div>
                             </div>
                             <div id="id_how_node" class="form-group hide">
                                 <label for="id_establish_node_plan" class="control-label col-sm-3">
-                                    {% trans "Plans of community node election" %}
+                                    {% trans "Plan of building the Newton community node" %}
                                 </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control {% if form.establish_node_plan.errors %}alert alert-danger{% endif %}" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Plans of community node election" %}" rows="10" maxlength="2048">{{ form.establish_node_plan.value }}</textarea>
+                                    <textarea class="form-control {% if form.establish_node_plan.errors %}alert alert-danger{% endif %}" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Plan of building the Newton community node" %}" rows="10" maxlength="2048">{{ form.establish_node_plan.value }}</textarea>
                                 </div>
                             </div>
                         </div>
