@@ -53,22 +53,22 @@ class KYCInfo(models.Model):
     id_card = models.FileField(upload_to=storage.hashfile_upload_to('id_card', path_prefix='attachment'), verbose_name=_('ID Photo'), validators=[validators.validate_file_extension_of_id_photo, validators.validate_file_size_of_id_photo], help_text="*")
     
     # profile
-    personal_profile = models.TextField(verbose_name=_("Self Introduction"), validators=[MaxLengthValidator(2048)], help_text=_('(* Your CV. When were you involved in blockchain industry? Write something about your understanding on blockchain industry.)'))
+    personal_profile = models.TextField(verbose_name=_("Self Introduction"), validators=[MaxLengthValidator(20480)], help_text=_('(* Your CV. When were you involved in blockchain industry? Write something about your understanding on blockchain industry.)'))
     personal_profile_attachment = models.FileField(upload_to=storage.hashfile_upload_to('personal_profile_attachment', path_prefix='attachment'), verbose_name=_('Attachment'), validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
     facebook = models.CharField(max_length=128, db_index=True, verbose_name='Facebook', null=True)
     twitter = models.CharField(max_length=128, db_index=True, verbose_name='Twitter', null=True)
     telegram = models.CharField(max_length=128, db_index=True, verbose_name='Telegram ID', null=True)
     wechat = models.CharField(max_length=128, db_index=True, verbose_name=_('WeChat ID'), null=True)
     other_social_account = models.CharField(max_length=128, db_index=True, verbose_name=_('Other Social Media'), null=True)
-    your_community = models.TextField(validators=[MaxLengthValidator(2048)], verbose_name=_('Newton Communities You are Involved in'), null=True)
+    your_community = models.TextField(validators=[MaxLengthValidator(20480)], verbose_name=_('Newton Communities You are Involved in'), null=True)
     your_community_screenshots1 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots1', path_prefix='attachment'), verbose_name=_('Screenshots of Abovementioned Communities 1'), validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
     your_community_screenshots2 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots2', path_prefix='attachment'), verbose_name=_('Screenshots of Abovementioned Communities 2'), validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
     your_community_screenshots3 = models.FileField(upload_to=storage.hashfile_upload_to('your_community_screenshots3', path_prefix='attachment'), verbose_name=_('Screenshots of Abovementioned Communities 3'), validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
     # how to contribute for newton
-    what_is_newton = models.TextField(verbose_name=_('Your Understanding of Newton'), validators=[MaxLengthValidator(2048)], null=True, help_text='*')
-    done_for_newton = models.TextField(verbose_name=_('Contribution You Have Made to Newton'), validators=[MaxLengthValidator(2048)])
+    what_is_newton = models.TextField(verbose_name=_('Your Understanding of Newton'), validators=[MaxLengthValidator(20480)], null=True, help_text='*')
+    done_for_newton = models.TextField(verbose_name=_('Contribution You Have Made to Newton'), validators=[MaxLengthValidator(20480)])
     done_for_newton_attachment = models.FileField(upload_to=storage.hashfile_upload_to('done_for_newton_attachment', path_prefix='attachment'), verbose_name=_("Attachment"), validators=[validators.validate_file_size_of_id_photo, validators.validate_file_extension_of_id_photo])
-    do_for_newton = models.TextField(verbose_name=_('Contribution You Will Make to Newton'), validators=[MaxLengthValidator(2048)])
+    do_for_newton = models.TextField(verbose_name=_('Contribution You Will Make to Newton'), validators=[MaxLengthValidator(20480)])
     is_establish_node = models.IntegerField(
         _('Do you want to establish a Newton node ?'),
         choices=ESTABLISH_CHOICE, default=codes.EstablishNodeType.YES.value,
@@ -77,7 +77,7 @@ class KYCInfo(models.Model):
             _('Which type of node ?'),
             choices=NODE_CHOICE, default=codes.NodeType.FULL_NODE.value,
         )
-    establish_node_plan = models.TextField(verbose_name=_('Your plan of node establishment'), validators=[MaxLengthValidator(2048)])
+    establish_node_plan = models.TextField(verbose_name=_('Your plan of node establishment'), validators=[MaxLengthValidator(20480)])
 
     # emergency info
     emergency_contact_first_name = models.CharField(max_length=128, verbose_name=_('First Name'), help_text="*")

@@ -217,7 +217,7 @@
                                         {% trans "Self Introduction" %}
                                     </label>
                                 <div class="col-sm-9">
-                                    <textarea class="form-control with-tip {% if form.personal_profile.errors  %}alert alert-danger{% endif %}" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "Self Introduction" %}" rows="10" maxlength="2048">{{ form.personal_profile.value }}</textarea>
+                                    <textarea class="form-control with-tip {% if form.personal_profile.errors  %}alert alert-danger{% endif %}" cols="40" id="id_personal_profile" name="personal_profile" placeholder="{% trans "Self Introduction" %}" rows="10" maxlength="20480">{{ form.personal_profile.value }}</textarea>
                                     <span class="small">{% trans "Your CV. When were you involved in blockchain industry? Write something about your understanding on blockchain industry." %}</span>
                                 </div>
                             </div>
@@ -290,7 +290,7 @@
                             <label for="id_what_is_newton" class="control-label col-sm-3">{% trans "Your understanding of Newton" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control {% if form.what_is_newton.errors  %}alert alert-danger{% endif %}" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Your understanding of Newton" %}" rows="10" maxlength="2048">{{ form.what_is_newton.value }}</textarea>
+                                <textarea class="form-control {% if form.what_is_newton.errors  %}alert alert-danger{% endif %}" cols="40" id="id_what_is_newton" name="what_is_newton" placeholder="{% trans "Your understanding of Newton" %}" rows="10" maxlength="20480">{{ form.what_is_newton.value }}</textarea>
                             </div>
                         </div>
                         <div class="form-group with-attachment">
@@ -298,7 +298,7 @@
                                 {% trans "Your contributions and future participation plan to Newton" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control with-tip {% if form.done_for_newton.errors  %}alert alert-danger{% endif %}" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the contribution you have made to Newton and your experience of participating in the Newton project. How do you plan to participate in the Newton project and make contributions?" %}" rows="10" maxlength="2048">{{ form.done_for_newton.value }}</textarea>
+                                <textarea class="form-control with-tip {% if form.done_for_newton.errors  %}alert alert-danger{% endif %}" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the contribution you have made to Newton and your experience of participating in the Newton project. How do you plan to participate in the Newton project and make contributions?" %}" rows="10" maxlength="20480">{{ form.done_for_newton.value }}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -343,7 +343,7 @@
                                 {% trans "Your plan of building the Newton community node" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control {% if form.establish_node_plan.errors  %}alert alert-danger{% endif %}" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Your plan of building the Newton community node" %}" rows="10" maxlength="2048">{{ form.establish_node_plan.value }}</textarea>
+                                <textarea class="form-control {% if form.establish_node_plan.errors  %}alert alert-danger{% endif %}" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Your plan of building the Newton community node" %}" rows="10" maxlength="20480">{{ form.establish_node_plan.value }}</textarea>
                             </div>
                         </div>
                     </div>

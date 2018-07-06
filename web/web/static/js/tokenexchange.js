@@ -31,17 +31,17 @@ $("#id_individual_form").submit(function(event){
         location:{required: true, minlength:1, maxlength:128},
         cellphone_group_0: {required: true, minlength:1, maxlength:4},
         cellphone_group_1: {required: true, minlength:1, maxlength:20},
-        personal_profile: {maxlength:2048},
+        personal_profile: {maxlength:20480},
         personal_profile_attachment: fileRuleWithoutRequired,
         telegram: {maxlength: 64},
         twitter: {maxlength: 64},
         facebook: {maxlength: 64},
         wechat: {maxlength: 64},
         other_social_account: {maxlength: 64},
-        what_is_newton: {maxlength: 2048},
-        done_for_newton: {maxlength:2048},
+        what_is_newton: {maxlength: 20480},
+        done_for_newton: {maxlength:20480},
         done_for_newton_attachment: fileRuleWithoutRequired,
-        establish_node_plan: {maxlength: 2048},
+        establish_node_plan: {maxlength: 20480},
         emergency_contact_first_name: {maxlength:32},
         emergency_contact_last_name: {maxlength:32},
         cellphone_of_emergency_contact_0: {maxlength:4},
@@ -148,7 +148,7 @@ $("#id_organization_form").submit(function(event){
         },
         personal_profile: {
             required: true,
-            maxlength: 2048
+            maxlength: 20480
         },
         personal_profile_attachment: fileRuleWithoutRequired,
         twitter: {maxlength: 64},
@@ -158,15 +158,15 @@ $("#id_organization_form").submit(function(event){
         what_is_newton: {
             required:true,
             minlength:1,
-            maxlength:2048
+            maxlength:20480
         },
         done_for_newton: {
             required:true,
             minlength:1,
-            maxlength:2048
+            maxlength:20480
         },
         done_for_newton_attachment: fileRuleWithoutRequired,
-        establish_node_plan: {maxlength:2048}
+        establish_node_plan: {maxlength:20480}
     },
     messages: {
         orgnization_name: {
