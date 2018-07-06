@@ -298,7 +298,7 @@
                                 {% trans "Your contributions and future participation plan to Newton" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control with-tip {% if form.done_for_newton.errors  %}alert alert-danger{% endif %}" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the contributions you have made to Newton project and your experience of participating in the Newton project. And how do you plan to contribute to the Newton project in the future and participate in the construction of the Newton project?" %}" rows="10" maxlength="2048">{{ form.done_for_newton.value }}</textarea>
+                                <textarea class="form-control with-tip {% if form.done_for_newton.errors  %}alert alert-danger{% endif %}" cols="40" id="id_done_for_newton" name="done_for_newton" placeholder="{% trans "Please list the contribution you have made to Newton and your experience of participating in the Newton project. How do you plan to participate in the Newton project and make contributions?" %}" rows="10" maxlength="2048">{{ form.done_for_newton.value }}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -340,10 +340,10 @@
                         </div>
                         <div id="id_how_node" class="form-group hide">
                             <label for="id_establish_node_plan" class="control-label col-sm-3">
-                                {% trans "Plan of building the Newton community node" %}
+                                {% trans "Your plan of building the Newton community node" %}
                             </label>
                             <div class="col-sm-9">
-                                <textarea class="form-control {% if form.establish_node_plan.errors  %}alert alert-danger{% endif %}" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Plan of building the Newton community node" %}" rows="10" maxlength="2048">{{ form.establish_node_plan.value }}</textarea>
+                                <textarea class="form-control {% if form.establish_node_plan.errors  %}alert alert-danger{% endif %}" cols="40" id="id_establish_node_plan" name="establish_node_plan" placeholder="{% trans "Your plan of building the Newton community node" %}" rows="10" maxlength="2048">{{ form.establish_node_plan.value }}</textarea>
                             </div>
                         </div>
                     </div>
