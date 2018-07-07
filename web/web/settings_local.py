@@ -73,7 +73,8 @@ DATABASE_APPS_MAPPING = {
 }
 
 
-SUPPORT_LANGUAGES = (('en','English'), ('zh-cn','简体中文'), ('ja','日本語'), ('ko','한국어'), ('ru','Pусский'), ('fr', 'France'), ('tr','Türkiye'), ('es','Español'))
+SUPPORT_LANGUAGES = (('en', 'English'), ('zh-cn', '简体中文'), ('ja', '日本語'), ('ko', '한국어'), ('ru', 'Pусский'),
+                     ('fr', 'France'), ('tr', 'Türkiye'), ('es', 'Español'), ('de', 'Deutsch'))
 
 # country settings
 COUNTRIES_FIRST = []
