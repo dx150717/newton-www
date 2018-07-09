@@ -11,7 +11,7 @@
 
 {% block content %}
 
-<section id="jobs" class="section-list">
+<section id="jobs" class="section-list jobs-section">
     <div class="page-title">
         <div class="container">
             <p>{% trans "Join Us" %}</p>
@@ -456,4 +456,8 @@
         }
     }
 </script>
+{% endblock %}
+
+{% block css %}
+<link href="{% version "css/jobs.css" %}" rel="stylesheet" />
 {% endblock %}
