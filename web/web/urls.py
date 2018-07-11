@@ -36,20 +36,11 @@ urlpatterns = patterns('',
                        url(r'^tinymce/zinnia/', include('zinnia_tinymce.urls')),
                        url(r'^tinymce/', include('tinymce.urls')),
                        url(r'^comments/', include('django_comments.urls')),
-                    #    url(r'^subscribe/',include('subscription.urls')),
+
                        url(r'^press/',include('press.urls')),
                        url(r'^faq/',include('faq.urls')),
                        url(r'^ishuman/',include('ishuman.urls')),
                        url(r'^help/',include('help.urls')),
-                       # user functionality
-                       url(r'^register/',include('register.urls')),
-                       url(r'^reset/',include('reset.urls')),
-                       url(r'^login/',include('login.urls')),
-                       url(r'^logout/',include('logout.urls')),
-                       url(r'^user/',include('user.urls')),
-                       url(r'^tokenexchange/',include('tokenexchange.urls')),
-                       url(r'^newtonadmin/',include('newtonadmin.urls')),
-                       url(r'^setting/',include('setting.urls')),
                        # protect resource
                        url(r'^storage/',include('storage.urls')),
                        # admin
