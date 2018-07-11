@@ -41,8 +41,6 @@ urlpatterns = patterns('',
                        url(r'^faq/',include('faq.urls')),
                        url(r'^ishuman/',include('ishuman.urls')),
                        url(r'^help/',include('help.urls')),
-                       # protect resource
-                       url(r'^storage/',include('storage.urls')),
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),
