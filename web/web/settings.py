@@ -57,8 +57,8 @@ INSTALLED_APPS = (
     'djcelery',
     'email_log',
     'django_countries',
-    #'haystack',
-    #'sphinxdoc',
+
+
     # main entry
     'web',
     # apps
@@ -72,18 +72,11 @@ INSTALLED_APPS = (
     'subscription',
     'press',
     'faq',
-    'user',
-    'login',
-    'register',
-    'reset',
     'verification',
-    'tokenexchange',
-    'tracker',
     'ishuman',
     # new admin
-    'newtonadmin',
     'help',
-    'setting',
+
 )
 
 MIDDLEWARE_CLASSES = (
