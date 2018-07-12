@@ -276,3 +276,24 @@ def integer_format(number):
     except Exception, inst:
         logger.exception("fail to integer format:%s" % str(inst))
         return ""
+
+
+class GetCookiesNode(template.Node):
+    def __init__(self, item):
+        self.item = template.Variable(item)
+
+    def render(self, context):
+        try:
+            cookie_key = self.item.resolve(context)
+            request = context['request']
+            return request.COOKIES[cookie_key]
+        except Exception, inst:
+            logger.exception("fail to get cookies:%s" % str(inst))
+            return ""
+
+
+@register.tag(name='get_cookie_value')
+def get_cookie_value(parser, token):
+    """Get cookie value
+    """
+    return GetCookiesNode(token.split_contents()[1])

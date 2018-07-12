@@ -37,55 +37,36 @@
                     <li>
                         <a href="/foundation/">{% trans "Foundation & Funds" %}</a>
                     </li>
-                    {% if request.user.is_authenticated %}
-                        {% if not request.user.is_superuser %}
-                            <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                            <li class="visible-xs-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
-                        {% else %}
-                            <li class="visible-sm-block visible-xs-block">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                            </li>
-                            <li class="visible-sm-block visible-xs-block">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                            </li>
-                        {% endif %}
-                    {% else %}
-                    <li class="visible-sm-block visible-xs-block">
+                    <li id="id_center_phone_display" class="visible-sm-block visible-xs-block">
+                        <a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a>
+                    </li>
+                    <li id="id_logout_phone_display" class="visible-sm-block visible-xs-block">
+                        <a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a>
+                    </li>
+
+                    <li id="id_register_phone_display" class="visible-sm-block visible-xs-block">
                         <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
-                    <li class="visible-sm-block visible-xs-block">
+                    <li id="id_login_phone_display" class="visible-sm-block visible-xs-block">
                         <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
-                    {% endif %}
                 </ul>
 
                 <ul class="nav navbar-nav  navbar-right">
-                    {% if request.user.is_authenticated %}
-                        {% if not request.user.is_superuser %}
-                            <li class="dropdown hidden-xs hidden-sm">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
-                                <ul class="dropdown-menu hidden-xs hidden-sm">
-                                    <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                                    <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
-                                </ul>
-                            </li>
-                        {% else %}
-                            <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                            </li>
-                            <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                            </li>
-                        {% endif %}
-                    {% else %}
-                    <li class="toolbar-item hidden-xs hidden-sm">
+                    <li id="id_user_dropdown" class="dropdown hidden-xs hidden-sm">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
+                        <ul class="dropdown-menu hidden-xs hidden-sm">
+                            <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+                            <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
+                        </ul>
+                    </li>
+                    <li id="id_register_item" class="toolbar-item hidden-xs hidden-sm">
                         <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
-                    <li class="toolbar-item hidden-xs hidden-sm">
+                    <li id="id_login_item" class="toolbar-item hidden-xs hidden-sm">
                         <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
-                    {% endif %}
                     <li class="language-drop-down visible-xs-block visible-sm-block">
                         <div class="mobil_language">
                             {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}

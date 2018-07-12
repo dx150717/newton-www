@@ -304,3 +304,40 @@ $(window).scroll(function(){
 		$(".NavBg").removeClass("navFixed");
 		};
 });
+
+
+//Verify User Login Status
+$(window).ready(function(){
+    var data_dict = {};
+    data_dict[HOME_SESSION_KEY] = homeSessionID
+    $.ajax({
+        url : NEWTON_HOME_URL + "/nauth/session/",
+        type : "GET",
+        data : data_dict,
+        dataType : "JSON",
+        success : function(data){
+            var user_status = isSuccess(data);
+            if (user_status){
+                $("#id_user_dropdown").show();
+                $("#id_register_item").hide();
+                $("#id_login_item").hide();
+                $("#id_center_phone_display").show();
+                $("#id_logout_phone_display").show();
+                $("#id_register_phone_display").hide();
+                $("#id_login_phone_display").hide();
+                $("#id_register_phone_display").removeClass("visible-xs-block");
+                $("#id_login_phone_display").removeClass("visible-xs-block");
+            }else{
+                $("#id_user_dropdown").hide();
+                $("#id_register_item").show();
+                $("#id_login_item").show();
+                $("#id_center_phone_display").hide();
+                $("#id_center_phone_display").removeClass("visible-xs-block");
+                $("#id_logout_phone_display").removeClass("visible-xs-block");
+                $("#id_logout_phone_display").hide();
+                $("#id_register_phone_display").show();
+                $("#id_login_phone_display").show();
+            };
+            }
+    });
+    });
