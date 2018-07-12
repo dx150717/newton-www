@@ -3,11 +3,74 @@
 {% load utils %}
 
 {% block title %}
-{% trans "Foundation" %}
+{% trans "FUNDS" %}
 {% endblock %}
 
 {% block content %}
+<section class="section-list foundation">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Foundation & Funds" %}</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="foundation_list">
+            <h1>{% trans "Foundation" %}</h1>
+            <div class="foundation_text row">
+                <div class="fr"><img class="technology_icon1" src="{% version "images/technology/new-chain.svg" %}" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <p>{% trans "The Newton Foundation is the core organization that leads and supports the development of Newton economy.The Foundation includes the following three funds." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray">
+        <div class="container">
+            <div class="foundation_list">
+                <h1>{% trans "Main Fund: Newton Las Manos Fund (NLMF)" %}</h1>
+                <div class="foundation_text row">
+                    <div class="fl"><img class="technology_icon2" src="{% version "images/technology/new-net.svg" %}" alt="">
+                    </div>
+                    <div class="col-sm-6">
+                        <p>{% trans "The three main operating mechanisms of the NLMF are : community mechanisms, technical mechanisms, value mechanisms (exchanging NEW and operating agencies)." %}</p>
+                        <p>{% trans "The establishment and operation of NLMF: exchanging BTC + Foundation circulation + cornerstone capital buy-back(core community of common interests)." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="foundation_list">
+            <h1>{% trans "Ecological Fund, Newton Darwin Fund (NDF)" %}</h1>
+            <div class="foundation_text row">
+                <div class="fl"><img class="technology_icon4" src="{% version "images/technology/hash.png" %}" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <p>{% trans "The two functions of the NDF: value maintenance + business ecological development." %}</p>
+                    <p>{% trans "Establishment and operation of the NDF: the main fund (core community of common interests) + the cornerstone capital and part of the presale capital buy-back (super community node)." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray">
+        <div class="container">
+            <div class="foundation_list">
+                <h1>{% trans "Public welfare fund" %}</h1>
+                <div class="foundation_text row">
+                    <div class="fr"><img class="technology_icon5" src="{% version "images/technology/giot.svg" %}" alt="">
+                    </div>
+                    <div class="col-sm-6">
+                        <p>{% trans "The Public Welfare Fund (NXXF) will spare no effort to fulfill our social responsibility, actively supports the development of charities, and helps vulnerable groups，play well our role in improving public welfare" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
 
-{% block inline_js %}
+{% block css %}
+<link rel="stylesheet" href="{% version "css/foundation.css" %}">
 {% endblock %}

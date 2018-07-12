@@ -118,6 +118,9 @@ def show_whitepaper_view(request):
 def show_wechat_view(request):
     return render(request, 'welcome/wechat.html', locals())
 
+def show_foundation_view(request):
+    return render(request, 'welcome/foundation.html', locals())
+
 def show_404_page(request):
     return render(request, '404.html')
 
