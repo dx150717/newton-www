@@ -34,23 +34,23 @@
                     <li>
                         <a href="/economy/">{% trans "Economy" %}</a>
                     </li>
-                    <li id="id_center_phone_display" class="visible-sm-block visible-xs-block">
+                    <li id="id_center_phone_display" class="visible-sm-block visible-xs-block  auth-item">
                         <a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a>
                     </li>
-                    <li id="id_logout_phone_display" class="visible-sm-block visible-xs-block">
+                    <li id="id_logout_phone_display" class="visible-sm-block visible-xs-block  auth-item">
                         <a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a>
                     </li>
 
-                    <li id="id_register_phone_display" class="visible-sm-block visible-xs-block">
+                    <li id="id_register_phone_display" class="visible-sm-block visible-xs-block noauth-item">
                         <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
-                    <li id="id_login_phone_display" class="visible-sm-block visible-xs-block">
+                    <li id="id_login_phone_display" class="visible-sm-block visible-xs-block  noauth-item">
                         <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
                 </ul>
 
                 <ul class="nav navbar-nav  navbar-right">
-                    <li id="id_user_dropdown" class="dropdown hidden-xs hidden-sm">
+                    <li id="id_user_dropdown" class="dropdown hidden-xs hidden-sm auth-item">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
                         <ul class="dropdown-menu hidden-xs hidden-sm">
@@ -58,10 +58,10 @@
                             <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
                         </ul>
                     </li>
-                    <li id="id_register_item" class="toolbar-item hidden-xs hidden-sm">
+                    <li id="id_register_item" class="toolbar-item hidden-xs hidden-sm noauth-item">
                         <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
-                    <li id="id_login_item" class="toolbar-item hidden-xs hidden-sm">
+                    <li id="id_login_item" class="toolbar-item hidden-xs hidden-sm noauth-item">
                         <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
                     <li class="language-drop-down visible-xs-block visible-sm-block">

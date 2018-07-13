@@ -305,9 +305,8 @@ $(window).scroll(function(){
 		};
 });
 
-
 //Verify User Login Status
-$(window).ready(function(){
+function detectAuthStatus() {
     var data_dict = {};
     data_dict[HOME_SESSION_KEY] = homeSessionID
     $.ajax({
@@ -318,26 +317,15 @@ $(window).ready(function(){
         success : function(data){
             var user_status = isSuccess(data);
             if (user_status){
-                $("#id_user_dropdown").show();
-                $("#id_register_item").hide();
-                $("#id_login_item").hide();
-                $("#id_center_phone_display").show();
-                $("#id_logout_phone_display").show();
-                $("#id_register_phone_display").hide();
-                $("#id_login_phone_display").hide();
-                $("#id_register_phone_display").removeClass("visible-xs-block");
-                $("#id_login_phone_display").removeClass("visible-xs-block");
+                $('.navbar-nav .auth-item').show();
+                $('.navbar-nav .noauth-item').hide();
+                $('.navbar-nav .noauth-item').removeClass('visible-xs-block');
             }else{
-                $("#id_user_dropdown").hide();
-                $("#id_register_item").show();
-                $("#id_login_item").show();
-                $("#id_center_phone_display").hide();
-                $("#id_center_phone_display").removeClass("visible-xs-block");
-                $("#id_logout_phone_display").removeClass("visible-xs-block");
-                $("#id_logout_phone_display").hide();
-                $("#id_register_phone_display").show();
-                $("#id_login_phone_display").show();
+                $('.navbar-nav .auth-item').hide();
+                $('.navbar-nav .noauth-item').show();
+                $('.navbar-nav .auth-item').removeClass('visible-xs-block');
             };
             }
     });
-    });
+}
+detectAuthStatus();

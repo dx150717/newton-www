@@ -3,16 +3,16 @@ from settings import *
 DEBUG = True
 TEMPLATE_DEBUG = True
 THUMBNAIL_DEBUG = True
-STATIC_URL = 'http://localhost:8000/static/'
-DOMAIN = 'localhost:8000'
-SESSION_COOKIE_DOMAIN = None
-MEDIA_URL = 'http://localhost:8000/filestorage/'
+STATIC_URL = 'http://www.test.newtonproject.org:8000/static/'
+DOMAIN = 'www.test.newtonproject.org:8000'
+SESSION_COOKIE_DOMAIN = '.test.newtonproject.org:8000'
+MEDIA_URL = 'http://www.test.newtonproject.org:8000/filestorage/'
 MEDIA_ROOT = BASE_DIR
-BASE_URL = "http://localhost:8000"
+BASE_URL = "http://www.test.newtonproject.org:8000"
 USE_TESTNET=True
-NEWTON_WEB_URL = 'http://localhost:8000'
-NEWTON_HOME_URL = 'http://localhost:8000'
-NEWTON_GRAVITY_URL = 'http://localhost:8000'
+NEWTON_WEB_URL = 'http://www.test.newtonproject.org:8000'
+NEWTON_HOME_URL = 'http://home.test.newtonproject.org:8001'
+NEWTON_GRAVITY_URL = 'http://gravity.test.newtonproject.org:8000'
 
 SESSION_COOKIE_AGE = 60 * 1000
 # LOGGING
