@@ -34,7 +34,7 @@ urlpatterns = patterns('',
                        url(r'^legal/', 'welcome.views.show_legal_view'),
                        url(r'^mediakit/', 'welcome.views.show_mediakit_view'),
                        url(r'^tinymce/zinnia/', include('zinnia_tinymce.urls')),
-                       url(r'^foundation/', 'welcome.views.show_foundation_view'),
+                       # url(r'^foundation/', 'welcome.views.show_foundation_view'),
                        url(r'^tinymce/', include('tinymce.urls')),
                        url(r'^comments/', include('django_comments.urls')),
 
