@@ -15,8 +15,16 @@
     .foundation .container {width: 1050px}
     .foundation_list h1 {white-space: nowrap;}
     }
-.foundation .fr{float:right; width:50%; text-align:center;}
-.foundation .fl{float:left; width:50%; text-align:center;}
+.foundation .fr{float:right; width:50%;
+    text-align: unset;
+    position: relative;
+    top: 60px;
+    }
+.foundation .fl{float:left; width:50%;
+    text-align: unset;
+    position: relative;
+    top: 60px;
+    }
 .foundation .col-sm-6,#protocol .col-sm-6{padding:0}
 .foundation .bg-gray,#protocol .bg-gray{background-color:#f8f9fb}
 @media (max-width: 767px) {
@@ -26,3 +34,10 @@
     .foundation .col-sm-6 {padding:0 5%;}
     .foundation_text {padding-bottom:40px;}
     }
+.foundation .foundation_introduction {
+    margin-left: auto;
+    margin-right: auto;
+    float: unset;
+    }
+
+
