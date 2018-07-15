@@ -7,6 +7,7 @@ from django.views.decorators.cache import never_cache
 from django.views.generic import TemplateView, RedirectView
 
 from welcome import views
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -33,11 +34,11 @@ urlpatterns = patterns('',
                        url(r'^privacy/', 'welcome.views.show_privacy_view'),
                        url(r'^legal/', 'welcome.views.show_legal_view'),
                        url(r'^mediakit/', 'welcome.views.show_mediakit_view'),
-                       url(r'^tinymce/zinnia/', include('zinnia_tinymce.urls')),
                        url(r'^foundation/', 'welcome.views.show_foundation_view'),
+                       url(r'^tinymce/zinnia/', include('zinnia_tinymce.urls')),
                        url(r'^tinymce/', include('tinymce.urls')),
                        url(r'^comments/', include('django_comments.urls')),
-
+                       url(r'^subscribe/',include('subscription.urls')),
                        url(r'^press/',include('press.urls')),
                        url(r'^faq/',include('faq.urls')),
                        url(r'^ishuman/',include('ishuman.urls')),

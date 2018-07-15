@@ -9,7 +9,6 @@ from config import codes
 from config.common_settings import *
 from config.settings_label import *
 
-SITE_ID = '1'
 APPEND_SLASH = False
 
 LOGGING_API_REQUEST = True
@@ -36,9 +35,6 @@ SESSION_SAVE_EVERY_REQUEST = True
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
 
-# website meta
-BASE_NAME = 'newtonproject'
-
 # verification default expire time s
 VERIFICATION_DEFAULT_EXPIRE_TIME = 7200
 
@@ -54,16 +50,8 @@ TENCENT_CAPTCHA_URL = 'https://ssl.captcha.qq.com/ticket/verify'
 # global authenticate
 LOGIN_URL = '/login/'
 
-# chain settings of digital currency
-USE_TESTNET = False
-
 # page size
 PAGE_SIZE = 20
-
-# multiple domain
-NEWTON_WEB_URL = 'https://www.newtonproject.org'
-NEWTON_HOME_URL = 'https://home.newtonproject.org'
-NEWTON_GRAVITY_URL = 'https://gravity.newtonproject.org'
 
 # database router
 DATABASE_ROUTERS = ['web.database_router.NewtonRouter']
