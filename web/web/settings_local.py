@@ -28,13 +28,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'context_processors.settings_variable',
 )
 
-
-SESSION_COOKIE_AGE = 5400
-SESSION_COOKIE_DOMAIN = '.newtonproject.org'
-SESSION_SAVE_EVERY_REQUEST = True
-SESSION_ENGINE = "django.contrib.sessions.backends.cache"
-SESSION_CACHE_ALIAS = "default"
-
 # verification default expire time s
 VERIFICATION_DEFAULT_EXPIRE_TIME = 7200
 
