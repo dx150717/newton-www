@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 14:43+0000\n"
+"POT-Creation-Date: 2018-07-16 15:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1086,11 +1086,13 @@ msgid "10 billions"
 msgstr "100 亿"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:27
-msgid "Incentives of founding team;"
+msgid "Incentives for founding team;"
 msgstr "创始团队激励；"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:28
-msgid "Lock on first year. Unlock 1/24 per month from next year."
+msgid ""
+"The first year is the lock period. From the second year, every month 1/24 of "
+"the total amount will be unlocked."
 msgstr "第一年锁定，第二年起每个月释放1/24。"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:34
@@ -1104,17 +1106,17 @@ msgid "15 billions"
 msgstr "150 亿"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:42
-msgid "Operations of earlier stage."
+msgid "For foundation's initial operation."
 msgstr "基金会前期运营。"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:56
-msgid "Operations of later stage;"
-msgstr "基金会后期运营。"
+msgid "For foundation's later operation;"
+msgstr "基金会后期运营;"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:57
 msgid ""
-"Unlock 1/2 immediately, and unlock 1/12 of remainder per month from next "
-"month."
+"1/2 of the total amount is immediately unlocked, the rest will be unlocked "
+"1/12 every month."
 msgstr "立刻释放1/2，其余部分每个月释放1/12。"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:68
@@ -1122,7 +1124,7 @@ msgid "60 billions"
 msgstr "600 亿"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:71
-msgid "Incentives of community;"
+msgid "Incentives for community;"
 msgstr "社群激励；"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:72
@@ -1720,6 +1722,7 @@ msgid "Newton: Infrastructure for the protocol-based economy"
 msgstr "牛顿：协议经济基础设施"
 
 #: web/apps/welcome/templates/welcome/index.html:17
+#: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/apps/welcome/templates/welcome/whitepaper.html:13
 #: web/apps/welcome/templates/welcome/whitepaper.html:18
 msgid "Whitepaper"
@@ -2530,7 +2533,6 @@ msgstr "法律信息"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:6
 #: web/apps/welcome/templates/welcome/mediakit.html:13
-#: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/templates/footer.html:39
 msgid "Media Kit"
 msgstr "媒体资源"
@@ -3971,7 +3973,7 @@ msgstr ""
 "本网站由本公司运营。所有其他反馈，意见，技术支持请求和其他与本网站相关的通信"
 "应该直接发送到：contact@newtonproject.org。最后修改日期：2018年4月"
 
-#: web/apps/welcome/templates/welcome/whitepaper.html:24
+#: web/apps/welcome/templates/welcome/whitepaper.html:23
 msgid "Chinese Whitepaper"
 msgstr "下载中文版"
 
@@ -5669,6 +5671,20 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
+
+#~ msgid "Lock on first year. Unlock 1/24 per month from next year."
+#~ msgstr "第一年锁定，第二年起每个月释放1/24。"
+
+#~ msgid "Operations of earlier stage."
+#~ msgstr "基金会前期运营。"
+
+#~ msgid "Operations of later stage;"
+#~ msgstr "基金会后期运营。"
+
+#~ msgid ""
+#~ "Unlock 1/2 immediately, and unlock 1/12 of remainder per month from next "
+#~ "month."
+#~ msgstr "立刻释放1/2，其余部分每个月释放1/12。"
 
 #~ msgid "Newton Whitepaper"
 #~ msgstr "牛顿白皮书"
