@@ -9,7 +9,7 @@ from . import codes
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-STATIC_URL = 'http://www.test.newtonproject.org:8000/static/'
+STATIC_URL = 'http://localhost:8000/static/'
 STATIC_ROOT = 'web/static'
 
 # website meta
@@ -20,9 +20,9 @@ BASE_NAME = 'www'
 DEBUG = True
 TEMPLATE_DEBUG = False
 THUMBNAIL_DEBUG = False
-DOMAIN = 'www.test.newtonproject.org'
-BASE_URL = 'http://www.test.newtonproject.org:8000'
-MEDIA_URL = 'http://www.test.newtonproject.org:8000/filestorage/'
+DOMAIN = 'localhost'
+BASE_URL = 'http://localhost:8000'
+MEDIA_URL = 'http://localhost:8000/filestorage/'
 MEDIA_ROOT = './'
 
 #session settings
@@ -154,6 +154,6 @@ GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
 TENCENT_CAPTCHA_APP_ID = '2075015244'
 TENCENT_CAPTCHA_APP_SECRET = '0alyS6l5dhGmH32EX4zIQaw**'
 # multiple domain
-NEWTON_WEB_URL = 'http://www.test.newtonproject.org:8000'
+NEWTON_WEB_URL = 'http://localhost:8000'
 NEWTON_HOME_URL = 'http://home.test.newtonproject.org:8000'
 NEWTON_GRAVITY_URL = 'http://gravity.test.newtonproject.org:8000'
