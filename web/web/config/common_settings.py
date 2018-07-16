@@ -9,7 +9,7 @@ from server import *
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-STATIC_URL = 'https://www.newtonproject.org/static/'
+STATIC_URL = 'https://localhost:8000/static/'
 STATIC_ROOT = 'web/static'
 
 # LOGGING
@@ -82,10 +82,10 @@ USE_X_FORWARDED_HOST = True
 
 # File server storage
 MEDIA_ROOT = '/data/newton-storage/filestorage'
-MEDIA_URL = 'https://www.newtonproject.org/filestorage/'
+MEDIA_URL = 'https://localhost:8000/filestorage/'
 
 # website meta
-BASE_URL = 'https://www.newtonproject.org'
+BASE_URL = 'https://localhost:8000'
 BASE_NAME = 'newtonproject'
 
 # User Default Preferred Language Code

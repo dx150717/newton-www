@@ -10,53 +10,58 @@
                 <h3 class="text-center">{% trans "Total Supply:" %}&nbsp;<span>100,000,000,000&nbsp;NEW</span></h3>
             </div>
         </div>
-        <table class="table">
+        <table class="table table-bordered">
             <tr>
-                <th>{% trans "Item" %}</th>
-                <th>{% trans "Proportion" %}</th>
+                <th class="text-center">{% trans "Actor" %}</th>
+                <th class="text-center">{% trans "Proportion" %}</th>
+                <th class="text-center">{% trans "Amount" %}</th>
+                <th class="text-center">{% trans "Description" %}</th>
             </tr>
             <tr>
-                <td>{% trans "Team" %}</td>
-                <td>10%</td>
-            </tr>
-            <tr>
+                <td>{% trans "Core Team" %}</td>
+                <td class="text-center">10%</td>
+                <td class="text-center">{% trans "10 billions" %}</td>
                 <td>
-                    {% trans "Token Exchange #1" %}
-                </td>
-                <td>
-                    7.5%
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    {% trans "Token Exchange #2" %}
-                </td>
-                <td>
-                    6%
+                    <p>1.{% trans "创始团队激励；" %}</p>
+                    <p>2.{% trans "第一年锁定，第二年起每个月释放1/24。" %}</p>
                 </td>
             </tr>
             <tr>
                 <td>
-                    {% trans "Token Exchange #3" %}
+                    {% trans "Token Exchange" %}
                 </td>
+                <td class="text-center">
+                    15%
+                </td>
+                <td class="text-center">{% trans "15 billions" %}</td>
                 <td>
-                    1.5%
+                    <p>{% trans "基金会前期运营。" %}</p>
                 </td>
             </tr>
             <tr>
                 <td>
                     {% trans "Newton Foundation" %}
                 </td>
-                <td>
+                <td class="text-center">
                     15%
+                </td>
+                <td class="text-center">{% trans "15 billions" %}</td>
+                <td>
+                    <p>1.{% trans "基金会后期运营；" %}</p>
+                    <p>2.{% trans "立刻释放1/2，其余部分每个月释放1/12。" %}</p>
                 </td>
             </tr>
             <tr>
                 <td>
                     {% trans "Mining" %}
                 </td>
-                <td>
+                <td class="text-center">
                     60%
+                </td>
+                <td class="text-center">{% trans "60 billions" %}</td>
+                <td>
+                    <p>1.{% trans "社群激励；" %}</p>
+                    <p>2.{% trans "在未来五十年陆续释放。" %}</p>
                 </td>
             </tr>
 
