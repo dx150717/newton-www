@@ -200,7 +200,7 @@ h6, .f12 {font-size: 12px;}
 .nav-logo:focus {outline: none;}
 .navbar {margin-bottom: 0px;}
 .navbar-nav {float: left; margin: 0px !important; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
-.navbar-nav li {margin-left: 30px;}
+.navbar-nav li {margin-left: 45px;}
 .navbar-nav li a {color: #000; padding: 8px 0 0; line-height: 20px; font-size: 18px; position: relative; background-color: transparent !important; -webkit-transition: all .8s ease; -moz-transition: all .8s ease; -o-transition: all .8s ease; transition: all .8s ease;}
 .navbar-nav li.active a, .navbar-nav li a:hover {color: #000;}
 .navbar-collapse{max-height: 1000px !important; height: 1000px !important;}
@@ -1296,6 +1296,7 @@ canvas {display: block; vertical-align: top;}
 
 /* language drop down */
 .navbar-nav li.language-drop-down {
+    margin-right: 50px;
     margin-left: 20px;
     margin-top: 5px;
 }
@@ -1305,14 +1306,13 @@ li.language-drop-down ul.dropdown-menu li:first-child {
 .language-drop-down .dropdown-menu{min-width: 100%; overflow: hidden; text-align: left; padding: 0; margin: 0; background: #f1f1f1; top:-9px; right: auto}
 .language-drop-down .dropdown-menu img{width: 22px; left: 0;}
 .language-drop-down .dropdown {position: absolute; top: 10px; right: 15%; width: 10%}
-.language-drop-down .dropdown-menu>li>a{padding: 2px 4px; margin: 2px 0; font-size: 14px}
-.language-drop-down .dropdown-menu>li>a .checked_icon {width: 10px;}
-.language-drop-down #dropdownLanguage {padding: 0 0 0 5px; border: 0; font-size: 14px; line-height: 22px; border: solid 1px #ccc;}
-.language-drop-down #dropdownLanguage img{width: 14px; margin-right: 6px}
+.language-drop-down .dropdown-menu>li>a{padding: 2px 4px; text-align: left; margin: 2px 0; font-size: 14px}
+.language-drop-down #dropdownLanguage {width: 22px; padding: 0; border: 0; font-size: 14px; line-height: 22px;}
+.language-drop-down #dropdownLanguage img{width: 100%; margin-right: 6px}
 .language-drop-down #languge_icon {height: 100%}
 .language-drop-down .caret{display: none}
-.language-drop-down .btn-default{background-color: #fff}
-.language-drop-down .dropdown-menu li{margin: 0; padding: 0;}
+.language-drop-down .btn-default{background-color: #f7f7f7}
+.language-drop-down .dropdown-menu li{margin: 0; width: 130px; padding: 0;}
 @media(max-width:767px){
     .ad{display: none}
     .language-drop-down .dropdown {display: none}
@@ -1329,7 +1329,7 @@ li.language-drop-down ul.dropdown-menu li:first-child {
 }
 
 @media(max-width:1199px) and (min-width:992px){
-    .navbar-nav li{margin-left: 30px;}
+    .navbar-nav li{margin-left: 35px;}
 }
 @media(max-width:991px) and (min-width:769px){
     .navbar-nav li{margin-left: 10px;}
