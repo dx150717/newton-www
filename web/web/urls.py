@@ -7,6 +7,7 @@ from django.views.decorators.cache import never_cache
 from django.views.generic import TemplateView, RedirectView
 
 from welcome import views
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -27,17 +28,18 @@ urlpatterns = patterns('',
                        url(r'^contact/', 'welcome.views.show_contact_view'),
                        url(r'^roadmap/', 'welcome.views.show_roadmap_view'),
                        url(r'^partner/', 'welcome.views.show_partner_view'),
-                       url(r'^foundation/', 'welcome.views.show_foundation_view'),
+                       # url(r'^foundation/', 'welcome.views.show_foundation_view'),
                        url(r'^copyright/', 'welcome.views.show_copyright_view'),
                        url(r'^terms-of-use/', 'welcome.views.show_terms_of_use_view'),
                        url(r'^privacy/', 'welcome.views.show_privacy_view'),
                        url(r'^legal/', 'welcome.views.show_legal_view'),
                        url(r'^mediakit/', 'welcome.views.show_mediakit_view'),
+                       url(r'^foundation/', 'welcome.views.show_foundation_view'),
+                       url(r'^whitepaper/', 'welcome.views.show_whitepaper_view'),
                        url(r'^tinymce/zinnia/', include('zinnia_tinymce.urls')),
-                       # url(r'^foundation/', 'welcome.views.show_foundation_view'),
                        url(r'^tinymce/', include('tinymce.urls')),
                        url(r'^comments/', include('django_comments.urls')),
-
+                       url(r'^subscribe/',include('subscription.urls')),
                        url(r'^press/',include('press.urls')),
                        url(r'^faq/',include('faq.urls')),
                        url(r'^ishuman/',include('ishuman.urls')),
