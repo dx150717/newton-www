@@ -104,6 +104,11 @@ h6, .f12 {font-size: 12px;}
     font-size: 50px;
     margin-bottom: 0;
 }
+.select-label {
+    display: block;
+    font-size: 18px;
+    font-weight: unset;
+}
 /*title color*/
 #technology .page-title{background-color:#826f97;}
 #protocol .page-title{background-color: #5c8dbd;}/*Hyper Exchange Protocol*/
@@ -1288,6 +1293,14 @@ canvas {display: block; vertical-align: top;}
 /* mobile navbar */
 @media (max-width: 767px) {
     .navbar-collapse .navbar-nav>li>a {
+        border-bottom: solid 1px #dde6e8;
+        padding: 13px 0;
+        text-align: left;
+    }
+}
+
+@media (max-width: 767px) {
+     .navbar-nav>li>label {
         border-bottom: solid 1px #dde6e8;
         padding: 13px 0;
         text-align: left;
