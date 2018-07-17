@@ -34,9 +34,11 @@
                     <li>
                         <a href="/economy/">{% trans "Economy" %}</a>
                     </li>
+                    {% comment %}
                     <li>
                         <a href="/foundation/">{% trans "Foundation & Funds" %}</a>
                     </li>
+                    {% endcomment %}
                     {% if request.user.is_authenticated %}
                         {% if not request.user.is_superuser %}
                             <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
@@ -71,17 +73,21 @@
                                 </ul>
                             </li>
                         {% else %}
+                            {% comment %}
                             <li class="toolbar-item hidden-xs hidden-sm">
                                 <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                             </li>
+                            {% endcomment %}
                             <li class="toolbar-item hidden-xs hidden-sm">
                                 <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                             </li>
                         {% endif %}
                     {% else %}
+                    {% comment %}
                     <li class="toolbar-item hidden-xs hidden-sm">
                         <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
+                    {% endcomment %}
                     <li class="toolbar-item hidden-xs hidden-sm">
                         <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
@@ -95,16 +101,20 @@
                     </li>
                     <li class="dropdown language-drop-down hidden-xs hidden-sm">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <img src="/static/images/languages/{{ request|show_language_icon }}-m.png?v={{ settings.STATIC_DEFAULT_VERSION }}"/>{{ request | show_language_code}}
-                                <span class="caret"></span>
+                            <img src="{% version "images/languages/languages-icon/select-language.jpg" %}"/>
+                            {{ request | show_language_code}}
+                            <img src="{% version "images/languages/languages-icon/arrow-down.jpg" %}"/>
+                            <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
                             {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
                             <li>
-                                <a href="#" onclick="setLanguage('{{ language_code }}');"><img src="/static/images/languages/{{ language_code }}-m.png?v={{ settings.STATIC_DEFAULT_VERSION }}"> {{ language_name }}
-                                        {% if language_code|is_current_language %}
-                                        <span class="glyphicon glyphicon-ok" style="float: right" id="is_choice"></span>
-                                        {% endif %}
+                                <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
+                                    {% if language_code|is_current_language %}
+                                    <span style="float: left" id="is_choice">
+                                    <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
+                                    </span>
+                                    {% endif %}
                                 </a>
                             </li>
                             {% endfor %}
