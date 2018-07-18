@@ -13,7 +13,7 @@ APPEND_SLASH = False
 
 LOGGING_API_REQUEST = True
 
-STATIC_DEFAULT_VERSION = 258
+STATIC_DEFAULT_VERSION = 259
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -54,7 +54,7 @@ DATABASE_APPS_MAPPING = {
 }
 
 
-SUPPORT_LANGUAGES = (('de', 'Deutsch'), ('en', 'English'),  ('es', 'Español'), ('fr', 'Français'), ('tr', 'Türkçe'), ('ru', 'Pусский'), ('ar', 'العربية'), ('ko', '한국어'), ('ja', '日本語'), ('zh-cn', '简体中文'))
+SUPPORT_LANGUAGES = (('de', 'Deutsch'), ('en', 'English'),  ('es', 'Español'), ('fr', 'Français'), ('tr', 'Türkçe'), ('ru', 'Pусский'), ('ko', '한국어'), ('ja', '日本語'), ('zh-cn', '简体中文'))
 
 
 # country settings
