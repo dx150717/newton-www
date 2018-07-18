@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 15:48+0000\n"
+"POT-Creation-Date: 2018-07-18 11:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,7 +165,7 @@ msgstr ""
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
 #: web/apps/zinnia/models_bases/entry.py:112
-#: web/apps/zinnia/models_bases/entry.py:115
+#: web/apps/zinnia/models_bases/entry.py:115 web/templates/header.html:62
 msgid "Language"
 msgstr "语言"
 
@@ -902,74 +902,18 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:13
 #: web/templates/header.html:38
-msgid "Foundation & Funds"
+msgid "Neweco Fund"
 msgstr "生态发展基金"
 
 #: web/apps/welcome/templates/welcome/foundation.html:19
-#: web/apps/welcome/templates/welcome/include-allocation.html:48
-msgid "Newton Foundation"
-msgstr "牛顿基金会"
-
 #: web/apps/welcome/templates/welcome/foundation.html:24
-msgid ""
-"The Newton Foundation is the core organization that leads and supports the "
-"development of Newton economy.The Foundation includes the following three "
-"funds."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:36
-msgid "Newton Las Manos Fund"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:38
-msgid ""
-"The three main operating mechanisms of the NLMF are : community mechanisms, "
-"technical mechanisms, value mechanisms (exchanging NEW and operating "
-"agencies)."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:39
-msgid ""
-"The establishment and operation of NLMF: exchanging BTC + Foundation "
-"circulation + cornerstone capital buy-back(core community of common "
-"interests)."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:50
-#, fuzzy
-msgid "Newton Darwin Fund"
-msgstr "牛顿基金会"
-
-#: web/apps/welcome/templates/welcome/foundation.html:52
-msgid ""
-"The two functions of the NDF: value maintenance + business ecological "
-"development."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:53
-msgid ""
-"Establishment and operation of the NDF: the main fund (core community of "
-"common interests) + the cornerstone capital and part of the presale capital "
-"buy-back (super community node)."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:64
-msgid "Public welfare fund"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:66
-msgid ""
-"The Public Welfare Fund (NXXF) will spare no effort to fulfill our social "
-"responsibility, actively supports the development of charities, and helps "
-"vulnerable groups，play well our role in improving public welfare"
-msgstr ""
-
 #: web/apps/welcome/templates/welcome/foundation.html:32
-msgid "Main Fund: Newton Las Manos Fund (NLMF)"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:46
-msgid "Ecological Fund, Newton Darwin Fund (NDF)"
+#: web/apps/welcome/templates/welcome/foundation.html:37
+#: web/apps/welcome/templates/welcome/foundation.html:45
+#: web/apps/welcome/templates/welcome/foundation.html:50
+#: web/apps/welcome/templates/welcome/foundation.html:58
+#: web/apps/welcome/templates/welcome/foundation.html:63
+msgid " "
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
@@ -1117,6 +1061,10 @@ msgstr "150 亿"
 #: web/apps/welcome/templates/welcome/include-allocation.html:42
 msgid "For foundation's initial operation."
 msgstr "基金会前期运营。"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:48
+msgid "Foundation"
+msgstr "基金会"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:56
 msgid "For foundation's later operation;"
@@ -5170,7 +5118,7 @@ msgstr ""
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
 #: web/templates/header.html:49 web/templates/header.html.py:57
-#: web/templates/header.html:78 web/templates/header.html.py:86
+#: web/templates/header.html:93 web/templates/header.html.py:104
 msgid "Login"
 msgstr "登录"
 
@@ -5621,18 +5569,17 @@ msgid "Service Terms"
 msgstr "服务条款"
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:42 web/templates/header.html.py:69
+#: web/templates/header.html:42 web/templates/header.html.py:81
 msgid "User Center"
 msgstr "用户中心"
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:43 web/templates/header.html.py:70
+#: web/templates/header.html:43 web/templates/header.html.py:82
 msgid "LogOut"
 msgstr "退出"
 
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
 #: web/templates/header.html:46 web/templates/header.html.py:54
-#: web/templates/header.html:75 web/templates/header.html.py:83
 msgid "Register"
 msgstr "注册"
 
