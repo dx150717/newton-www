@@ -6,7 +6,9 @@
 .foundation_text p,.protocol_text p{color:#393939; margin-bottom:20px; font-size:18px;}
 .foundation_text_NewPay{margin-top:110px;}
 @media(max-width:991px) and (min-width: 768px) {
-    .foundation .page-title .container {background-size:30%;}
+    .foundation .page-title .container {
+        background-size:30%;
+    }
     }
 @media only screen and (max-width : 768px) {
     .foundation .page-title .container {background-size:50%; background-position: 20px bottom}
@@ -27,6 +29,15 @@
     .foundation_text {padding-bottom:40px;}
     }
 
-.foundation .foundation_text img{
+.foundation .foundation_text img {
     width:350px;
+}
+
+.foundation .foundation_text p {
+    padding-top: 80px;
+}
+@media (max-width: 768px) {
+    .foundation .foundation_text p {
+        padding-top: unset;
+    }
 }
