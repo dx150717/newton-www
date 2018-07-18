@@ -34,11 +34,9 @@
                     <li>
                         <a href="/economy/">{% trans "Economy" %}</a>
                     </li>
-                    {% comment %}
                     <li>
-                        <a href="/foundation/">{% trans "Foundation & Funds" %}</a>
+                        <a href="/foundation/">{% trans "NewFund" %}</a>
                     </li>
-                    {% endcomment %}
                     {% if request.user.is_authenticated %}
                         {% if not request.user.is_superuser %}
                             <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>

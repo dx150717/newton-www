@@ -1,12 +1,14 @@
 /* foundation css style */
-.foundation .page-title {background-color:#826f97;}
-.foundation .page-title .container {background: url(../images/titlebg/technology-bg.svg) no-repeat left bottom;}
+.foundation .page-title {background-color:#59a1ed;}
+.foundation .page-title .container {background: url(../images/titlebg/foundation-bg.png) no-repeat left bottom;}
 .foundation_list h1 {text-align:center; color:#333; font-size:32px; margin:60px 0; font-weight:700}
 .foundation_text{padding-bottom:80px;}
 .foundation_text p,.protocol_text p{color:#393939; margin-bottom:20px; font-size:18px;}
 .foundation_text_NewPay{margin-top:110px;}
 @media(max-width:991px) and (min-width: 768px) {
-    .foundation .page-title .container {background-size:30%;}
+    .foundation .page-title .container {
+        background-size:30%;
+    }
     }
 @media only screen and (max-width : 768px) {
     .foundation .page-title .container {background-size:50%; background-position: 20px bottom}
@@ -26,3 +28,16 @@
     .foundation .col-sm-6 {padding:0 5%;}
     .foundation_text {padding-bottom:40px;}
     }
+
+.foundation .foundation_text img {
+    width:350px;
+}
+
+.foundation .foundation_text p {
+    padding-top: 80px;
+}
+@media (max-width: 768px) {
+    .foundation .foundation_text p {
+        padding-top: unset;
+    }
+}
