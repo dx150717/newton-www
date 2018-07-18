@@ -114,6 +114,11 @@ function setLanguage(language) {
 	loadCurrentMessage();
 }
 
+function changeLanguage(){
+    var language_code = $("#id_select_language").val();
+    setLanguage(language_code);
+}
+
 // language's dropdown menu.
 var windowWidth = window.innerWidth;
 var dropdownFlag = true;
