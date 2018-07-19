@@ -83,21 +83,17 @@
                                 </ul>
                             </li>
                         {% else %}
-                            {% comment %}
                             <li class="toolbar-item hidden-xs hidden-sm">
                                 <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                             </li>
-                            {% endcomment %}
                             <li class="toolbar-item hidden-xs hidden-sm">
                                 <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                             </li>
                         {% endif %}
                     {% else %}
-                    {% comment %}
                     <li class="toolbar-item hidden-xs hidden-sm">
                         <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
                     </li>
-                    {% endcomment %}
                     <li class="toolbar-item hidden-xs hidden-sm">
                         <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
                     </li>
