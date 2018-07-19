@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-13 07:33+0000\n"
+"POT-Creation-Date: 2018-07-19 02:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -119,54 +119,54 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:71
+#: web/apps/base/templatetags/utils.py:72
 #, python-format
 msgid "%(duration)d minute"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:73
+#: web/apps/base/templatetags/utils.py:74
 #, python-format
 msgid "%(duration)d hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:112
+#: web/apps/base/templatetags/utils.py:113
 #, python-format
 msgid "%(hour)d hour ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:115
+#: web/apps/base/templatetags/utils.py:116
 #, python-format
 msgid "%(minute)d minute ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:117
+#: web/apps/base/templatetags/utils.py:118
 #, python-format
 msgid "%(second)d second ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:146
+#: web/apps/base/templatetags/utils.py:147
 #, python-format
 msgid "%.f hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:176
+#: web/apps/base/templatetags/utils.py:177
 msgid "unfilled"
-msgstr ""
-
-#: web/apps/base/templatetags/utils.py:182
-#: web/apps/base/templatetags/utils.py:189
-msgid "Yes"
 msgstr ""
 
 #: web/apps/base/templatetags/utils.py:183
 #: web/apps/base/templatetags/utils.py:190
+msgid "Yes"
+msgstr ""
+
+#: web/apps/base/templatetags/utils.py:184
+#: web/apps/base/templatetags/utils.py:191
 msgid "No"
 msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:110
-#: web/apps/zinnia/models_bases/entry.py:113
+#: web/apps/zinnia/models_bases/entry.py:112
+#: web/apps/zinnia/models_bases/entry.py:115 web/templates/header.html:62
 msgid "Language"
 msgstr ""
 
@@ -180,13 +180,6 @@ msgid "FAQ"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:70
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:63
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:53
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:60
-#: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:54
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:58
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:72
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
 #: web/apps/welcome/templates/welcome/announcement.html:72
 #: web/apps/welcome/templates/welcome/press.html:38
@@ -194,13 +187,6 @@ msgid "previous"
 msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:37
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:74
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:67
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:57
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:64
-#: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:58
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:62
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:76
 #: web/apps/welcome/templates/welcome/announcement-detail.html:50
 #: web/apps/welcome/templates/welcome/announcement.html:76
 #: web/apps/welcome/templates/welcome/press.html:42
@@ -211,413 +197,42 @@ msgstr ""
 msgid "No FAQ"
 msgstr ""
 
-#: web/apps/login/forms.py:6
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:28
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:27
-#: web/apps/register/forms.py:12 web/apps/reset/forms.py:6
-#: web/apps/subscription/forms.py:6
-#: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
-msgid "Email"
+#: web/apps/help/templates/help/security.html:6
+msgid "Secu"
 msgstr ""
 
-#: web/apps/login/forms.py:7 web/apps/register/forms.py:15
-#: web/apps/reset/forms.py:9 web/apps/zinnia/templates/zinnia/password.html:24
-msgid "Password"
-msgstr ""
+#: web/apps/help/templates/help/security.html:13
+#: web/apps/help/templates/help/security.html:20
+#: web/templates/email-template.html:41
+msgid "Security Notification"
+msgstr "Audit de sécurité"
 
-#: web/apps/login/views.py:36
-msgid "Form Error"
-msgstr "Erreur de formulaire"
-
-#: web/apps/login/views.py:42 web/apps/register/views.py:46
-#: web/apps/register/views.py:52
-msgid "No captcha"
-msgstr "Pas de captcha"
-
-#: web/apps/login/views.py:43 web/apps/subscription/views.py:42
-msgid "Authenticator Recaptcha Error"
-msgstr "Authenticator Recaptcha Erreur"
-
-#: web/apps/login/views.py:49 web/apps/newtonadmin/views.py:42
-msgid "Email or Password don't match"
-msgstr "L’email ou le mot de passe ne correspondent pas"
-
-#: web/apps/login/views.py:56
-msgid "Request Time Out"
-msgstr "La demande a expiré"
-
-#: web/apps/login/views.py:70
-msgid "No Auth"
-msgstr ""
-
-#: web/apps/login/views.py:73
-msgid "No User"
-msgstr ""
-
-#: web/apps/login/views.py:76
-msgid "No User Profile"
-msgstr "Aucun profil d'utilisateur"
-
-#: web/apps/login/views.py:79
-msgid "Incorrect Google Authenticator Code"
-msgstr "Code Google Authenticator incorrect"
-
-#: web/apps/login/templates/login/index.html:5
-#: web/apps/login/templates/login/index.html:22
-#: web/apps/login/templates/login/index.html:42
-#: web/apps/newtonadmin/templates/newtonadmin/login.html:21
-#: web/apps/zinnia/templates/zinnia/login.html:34
-#: web/templates/header-no-menu.html:38
-msgid "Login"
-msgstr "Connexion"
-
-#: web/apps/login/templates/login/index.html:5
-#: web/apps/register/templates/register/gtoken.html:6
-#: web/apps/register/templates/register/index.html:6
-#: web/apps/register/templates/register/invalid-link.html:6
-#: web/apps/register/templates/register/password.html:6
-#: web/apps/register/templates/register/post-fail.html:6
-#: web/apps/register/templates/register/post-success.html:6
-#: web/apps/register/templates/register/register-success.html:6
-#: web/apps/reset/templates/reset/edit_password.html:6
-#: web/apps/reset/templates/reset/index.html:6
-#: web/apps/reset/templates/reset/invalid-link.html:6
-#: web/apps/reset/templates/reset/reset-complete.html:6
-#: web/apps/reset/templates/reset/reset-fail.html:6
-#: web/apps/reset/templates/reset/reset-success.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:8
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:12
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/end.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:6
-#: web/apps/user/templates/user/index.html:6
-#: web/apps/user/templates/user/profile.html:6
-#: web/apps/user/templates/user/settings.html:6
-#: web/apps/user/templates/user/token-exchange-progress.html:6
-#: web/apps/user/templates/user/user-base.html:6
-msgid "Newton Community"
-msgstr ""
-
-#: web/apps/login/templates/login/index.html:27
+#: web/apps/help/templates/help/security.html:21
+#: web/templates/email-template.html:42
 msgid ""
-"Tip: To login successfully, ensure that you can access the google recaptcha "
-"service."
-msgstr ""
-"Astuce: Pour vous connecter avec succès, assurez-vous que vous pouvez "
-"accéder au service google recaptcha."
-
-#: web/apps/login/templates/login/index.html:45
-#: web/apps/register/templates/register/index.html:6
-#: web/apps/register/templates/register/index.html:27
-#: web/apps/register/templates/register/index.html:47
-#: web/apps/register/templates/register/post-fail.html:6
-#: web/apps/register/templates/register/post-success.html:6
-#: web/apps/register/templates/register/register-letter.html:13
-#: web/apps/register/templates/register/register-success.html:6
-#: web/templates/header-no-menu.html:35
-msgid "Register"
-msgstr "Inscription"
-
-#: web/apps/login/templates/login/index.html:46
-msgid "Forgot Password"
-msgstr "Mot de passe oublié"
-
-#: web/apps/login/templates/login/index.html:59
-#: web/apps/login/templates/login/index.html:66 web/apps/register/forms.py:19
-msgid "Google Authenticator Code"
-msgstr "Code Google Authenticator"
-
-#: web/apps/login/templates/login/index.html:70
-#: web/apps/register/templates/register/gtoken.html:59
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:38
-#: web/apps/user/templates/user/profile.html:34
-msgid "Submit"
-msgstr "Valider"
-
-#: web/apps/newtonadmin/templates/newtonadmin/amount-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/email-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/kycindex.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/login.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/receive-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/sent-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/te-completed-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/te-waiting-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/user-receive-list.html:6
-#: web/apps/newtonadmin/templates/newtonadmin/welcome.html:6
-msgid "KYC Admin"
+"Newton Official Website (www.newtonproject.org) is the only channel and "
+"information source for Newton token exchange. Newton will not provide you "
+"with any Newton token exchange information on any other channels (including "
+"but not limited to e-mail, telegram, telephone, text message, WeChat). And "
+"you can only find token exchange information on the official website, these "
+"information includes Newton token exchange distribution quotas, receiving "
+"address or QR code, etc."
 msgstr ""
 
-#: web/apps/newtonadmin/templates/newtonadmin/base.html:11
-#: web/templates/base.html:10
+#: web/apps/help/templates/help/security.html:22
 msgid ""
-"Newton-Infrastructure of protocol-based economy,We are committed to creating "
-"a decentralized protocol standards and development tool chains that can be "
-"used in the entire business process, including supply chain, marketing, "
-"payment, transaction, credit, finance and so on, thereby building a highly "
-"collaborative, fair and reasonable, highly automated business environment "
-"with lower cost and fewer conflicts."
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/base.html:13
-#: web/templates/base.html:12
-msgid ""
-"Newton,NewtonProject,newtonproject.org,NewChain,NewNET,Protocol-based "
-"Economy,Atom Hashing,NewIoT,NewAI,Hyper Exchange Protocol,Automatic finance,"
-"NNIO,Reliable physical tunnel,Digital Marketing,Supply Chain,Blockchain,"
-"Intelligent Contract,Open Source Community,Digital Assets,token"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/base.html:14
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:14
-msgid "Newton"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:27
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:26
-msgid "Name"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:29
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:28
-msgid "Cellphone"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:30
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:29
-msgid "Country"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:31
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:30
-msgid "Emergency Contact Name"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:32
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:31
-msgid "Emergency Contact Cellphone"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:33
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:32
-msgid "RelationShip"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:34
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:33
-msgid "Describe yourself & how you can help as a community member"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/id-list.html:35
-#: web/apps/newtonadmin/templates/newtonadmin/pass-id-list.html:34
-msgid "Tell us your understanding about Newton"
-msgstr ""
-
-#: web/apps/newtonadmin/templates/newtonadmin/login.html:12
-msgid "Admin Login"
+"The Newton official website uses the EV SSL certificate for secure identity "
+"verification. The SSL certificate displayed in the browser's address bar "
+"should be: “NEWTON FOUNDATION LTD. [SG]”. Websites without this identity are "
+"fraudulent Newton official websites. Please do not perform any operation "
+"such as: log in, fill in personal information, etc. If you find any "
+"fraudulent website, please immediately report this website to Newton "
+"Foundation: <a href='mailto:contact@newtonproject.org'>contact@newtonproject."
+"org</a>."
 msgstr ""
 
 #: web/apps/press/models.py:21
 msgid "press"
-msgstr ""
-
-#: web/apps/register/forms.py:16 web/apps/reset/forms.py:10
-msgid "Confirm Password"
-msgstr "Confirmez le mot de passe"
-
-#: web/apps/register/services.py:27
-msgid "Newton Notification: Please complete the register process of Newton"
-msgstr ""
-
-#: web/apps/register/views.py:58
-msgid "Email already existed"
-msgstr ""
-
-#: web/apps/register/views.py:148
-msgid "Google Authenticator Code Error"
-msgstr "Erreur de code d'authentification Google"
-
-#: web/apps/register/views.py:210 web/apps/reset/views.py:110
-msgid "Entered passwords do not match"
-msgstr "Les mots de passe entrés ne sont pas identiques"
-
-#: web/apps/register/templates/register/gtoken.html:6
-#: web/apps/register/templates/register/gtoken.html:23
-msgid "Add Google Authenticator"
-msgstr "Ajouter Google Authenticator"
-
-#: web/apps/register/templates/register/gtoken.html:28
-msgid "Scan the QR code or enter the code manually into your GA app"
-msgstr ""
-"Scannez le code QR ou entrez le code manuellement dans votre application GA"
-
-#: web/apps/register/templates/register/gtoken.html:31
-msgid ""
-"Apple users are recommended to download Google Authenticator directly from "
-"the App Store and android users are recommended to download Google "
-"Authenticator from Google Play."
-msgstr ""
-"Les utilisateurs d'Apple peuvent télécharger l'Authenticator dans l'App "
-"Store, et les utilisateurs Android peuvent télécharger Google Authenticator "
-"dans Google Play."
-
-#: web/apps/register/templates/register/gtoken.html:34
-msgid "Please be sure to keep the key or qr code to avoid any inconvenience."
-msgstr ""
-"Assurez-vous de garder la clé ou le QR code pour éviter tout problème "
-"d’identification."
-
-#: web/apps/register/templates/register/gtoken.html:47
-msgid "Enter the  code manually into your GA app"
-msgstr "Entrez le code manuellement dans votre application GA"
-
-#: web/apps/register/templates/register/gtoken.html:51
-msgid "Or"
-msgstr "Ou"
-
-#: web/apps/register/templates/register/gtoken.html:54
-msgid "Use the GA app to scan the QR code"
-msgstr "Utilisez l'application GA pour scanner le QR code"
-
-#: web/apps/register/templates/register/index.html:32
-msgid ""
-"Tip: To register successfully, ensure you can access the google recaptcha "
-"service."
-msgstr ""
-"Conseil: pour vous enregistrer, assurez-vous d'avoir accès au service google "
-"recaptcha."
-
-#: web/apps/register/templates/register/index.html:55
-msgid "By clicking on the register button you agree and abide by<br/> Newton"
-msgstr ""
-"Cliquer sur le bouton Inscription signifie que vous êtes d'accord et que "
-"vous vous conformez à <br/> Newton"
-
-#: web/apps/register/templates/register/index.html:55
-msgid "User Agreement"
-msgstr ""
-
-#: web/apps/register/templates/register/index.html:55
-msgid "and"
-msgstr ""
-
-#: web/apps/register/templates/register/index.html:55
-#: web/apps/welcome/templates/welcome/privacy.html:6
-#: web/apps/welcome/templates/welcome/privacy.html:13
-#: web/apps/welcome/templates/welcome/privacy.html:19
-#: web/templates/footer.html:48
-msgid "Privacy Policy"
-msgstr "Politique de confidentialité"
-
-#: web/apps/register/templates/register/invalid-link.html:6
-msgid "Invalid-link"
-msgstr ""
-
-#: web/apps/register/templates/register/password.html:6
-#: web/apps/register/templates/register/password.html:23
-msgid "Set Password"
-msgstr ""
-
-#: web/apps/register/templates/register/password.html:32
-msgid "Next"
-msgstr "Suivant"
-
-#: web/apps/register/templates/register/post-success.html:23
-#: web/apps/reset/templates/reset/reset-success.html:21
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:23
-msgid "Successfully submitted!"
-msgstr "Enregistrement validé"
-
-#: web/apps/register/templates/register/post-success.html:24
-msgid ""
-"We have sent you an email to your registered email, please check out to "
-"finish signing up."
-msgstr ""
-"Nous avons envoyé un e-mail à l’adresse e-mail enregistrée, merci de valider "
-"votre email afin de finir le processus de réinitialisation du mot de passe."
-
-#: web/apps/register/templates/register/register-letter.html:6
-msgid "Complete the register process of Newton"
-msgstr ""
-
-#: web/apps/register/templates/register/register-letter.html:10
-#: web/apps/reset/templates/reset/reset-letter.html:9
-msgid "Dear"
-msgstr ""
-
-#: web/apps/register/templates/register/register-letter.html:11
-msgid "This is an email from"
-msgstr ""
-
-#: web/apps/register/templates/register/register-letter.html:11
-msgid "Click the button below to proceed to the next step."
-msgstr ""
-
-#: web/apps/register/templates/register/register-letter.html:14
-#: web/apps/reset/templates/reset/reset-letter.html:13
-msgid "If you have received this email in error, please delete it."
-msgstr ""
-
-#: web/apps/register/templates/register/register-success.html:23
-msgid "Register Success!"
-msgstr ""
-
-#: web/apps/register/templates/register/register-success.html:24
-msgid "Go to <a href='/login/'>Login</a>"
-msgstr ""
-
-#: web/apps/reset/views.py:36
-msgid "Email address does not exist"
-msgstr "L’email n’existe pas"
-
-#: web/apps/reset/templates/reset/edit_password.html:6
-#: web/apps/reset/templates/reset/edit_password.html:21
-#: web/apps/reset/templates/reset/edit_password.html:31
-#: web/apps/reset/templates/reset/index.html:21
-#: web/apps/reset/templates/reset/index.html:30
-#: web/apps/reset/templates/reset/invalid-link.html:6
-#: web/apps/reset/templates/reset/reset-complete.html:6
-#: web/apps/reset/templates/reset/reset-fail.html:6
-#: web/apps/reset/templates/reset/reset-letter.html:12
-#: web/apps/reset/templates/reset/reset-success.html:6
-#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
-msgid "Reset"
-msgstr "Reinitialiser"
-
-#: web/apps/reset/templates/reset/index.html:6
-msgid "ReSet"
-msgstr "Reinitialiser"
-
-#: web/apps/reset/templates/reset/reset-complete.html:23
-msgid "Reset Success!"
-msgstr "Réinitialisation validée"
-
-#: web/apps/reset/templates/reset/reset-complete.html:24
-msgid ""
-"You have successfully reset your password, please <a href='/login/'> login</"
-"a>"
-msgstr "Vous avez réinitialisé votre mot de passe, vous pouvez vous connecter"
-
-#: web/apps/reset/templates/reset/reset-letter.html:6
-msgid "Welcome! Please Reset Your Password!"
-msgstr "Lien invalide"
-
-#: web/apps/reset/templates/reset/reset-letter.html:10
-msgid ""
-"Hello! This is an email from <a class='main-color' href='https://www."
-"newtonproject.org'>https://www.newtonproject.org</a>. To help you reset your "
-"newton password, click the button below to proceed to the next step. If you "
-"have any questions, please contact us <a href='mailto:contact@newtonproject."
-"org'> contact@newtonproject.org</a>"
-msgstr ""
-
-#: web/apps/reset/templates/reset/reset-success.html:22
-msgid ""
-"We have sent you an email. Please go to your registered email inbox to check and complete the registration process."
 msgstr ""
 
 #: web/apps/sphinxdoc/models.py:20
@@ -704,6 +319,11 @@ msgstr ""
 msgid "No search query entered."
 msgstr ""
 
+#: web/apps/subscription/forms.py:6
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
+msgid "Email"
+msgstr ""
+
 #: web/apps/subscription/models.py:19
 msgid "Subscribed emails"
 msgstr ""
@@ -711,6 +331,10 @@ msgstr ""
 #: web/apps/subscription/views.py:39
 msgid "Email Error"
 msgstr ""
+
+#: web/apps/subscription/views.py:42
+msgid "Authenticator Recaptcha Error"
+msgstr "Authenticator Recaptcha Erreur"
 
 #: web/apps/subscription/views.py:45
 msgid "You can only subscribe once per minute."
@@ -791,558 +415,6 @@ msgstr ""
 msgid ""
 "If you have received this email in error, please delete it. You won't be "
 "subscribed if you don't click the confirmation link above."
-msgstr ""
-
-#: web/apps/tokenexchange/services.py:26
-msgid "Newton notification: Received your KYC information"
-msgstr ""
-
-#: web/apps/tokenexchange/views.py:56
-msgid "You had submited kyc info"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/apply-amount.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:8
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:6
-msgid "KYC"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/apply-success.html:21
-msgid "Apply Success!"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:12
-msgid "NOTIFY"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution-success.html:21
-msgid "Distribution confirm"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:24
-msgid "Confrm your amount of token exchange"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:30
-msgid "Your BTC amount is "
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/confirm-distribution.html:33
-msgid "Your ELA amount is "
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/end.html:6
-msgid "Token Exchange"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:23
-msgid "NEWTON TOKEN EXCHANGE AGREEMENT"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:25
-msgid ""
-"Please read NEWTON Token Exchange Agreement, Terms of Use, and White Paper "
-"of Newtonproject.org, then clicks the check box to indicate that Buyer has "
-"read, understands and agrees to the terms of this Agreement."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:27
-msgid ""
-"This NEWTON Token Exchange Agreement (this 'Agreement') contains Terms of "
-"use NEWTON (https://www.newtonproject.org/terms-of-use/) and Privacy Policy "
-"(https://www.newtonproject.org/privacy/). Therefore, in consideration of the "
-"warranties and agreements contained in this Agreement, and for other good "
-"and valuable consideration, NEWTON Token Buyer hereby agrees as follows:"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:28
-msgid ""
-"IMPORTANT INFORMATION: PLEASE READ THIS AGREEMENT CAREFULLY AND IN ITS "
-"ENTIRETY."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:29
-msgid "Buyer acknowledges, understands and agrees to the following:"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:30
-msgid "1. NO U.S. OR CHINESE BUYERS: "
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:31
-msgid ""
-"NEWTON Tokens are not being offered or distributed to U.S. persons or "
-"Chinese persons. If you are citizen, resident of, or a person located or "
-"domiciled in, or any entity, including, without limitation, any corporation "
-"or partnership created or organized in or under the laws of the People’s "
-"Republic of China AND the United States of America, do not exchange or "
-"attempt to exchange NEWTON Tokens."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:32
-msgid ""
-"2. Exchange of NEWTON tokens are non-refundable and exchanges cannot be "
-"cancelled. Buyer may lose all amounts paid. NEWTON tokens may have no value. "
-"Newton reserves the right to refuse or cancel NEWTON token exchange requests "
-"at any time in its sole discretion."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:38
-msgid ""
-"3. NEWTON Tokens. As mentioned above, the NEWTON Tokens do not have any "
-"rights, uses, purpose, attributes, functionalities or features, express or "
-"implied. Although NEWTON Tokens may be tradable, they are not an investment, "
-"currency, security, commodity, a swap on a currency, security or commodity "
-"or any other kind of financial instrument."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:39
-msgid ""
-"4. Buyer acknowledges and understands that the proceeds from the exchange of "
-"the NEWTON tokens. The NEWTON Tokens are not being offered to U.S. users or "
-"Chinese users. If a U.S. person or a Chinese person entered into this "
-"Agreement on an unlawful, unauthorized and fraudulent basis, this Agreement "
-"is null and void. And NEWTON FOUNDATION may take all necessary and "
-"appropriate actions, in its sole discretion, to invalidate this Agreement, "
-"including referral of information to the appropriate authorities. The NEWTON "
-"Tokens themselves are not securities, commodities, swaps on either "
-"securities or commodities or a financial instrument of any kind. Exchange of "
-"NEWTON Tokens are not subject to the protections of any laws governing those "
-"types of financial instruments. This Agreement and all other documents "
-"referred to in this Agreement including the White Paper do not constitute a "
-"prospectus or offering document and are not an offer to sell, nor the "
-"solicitation of an offer to buy an investment, a security, commodity, or a "
-"swap on either a security or commodity."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:40
-msgid ""
-"5. Before exchanging NEWTON Tokens, Buyer acknowledges and agrees that "
-"NEWTON Tokens are virtual digital cryptocurrency, not designed for "
-"investment purposes and should not be considered as a type of investment. "
-"Exchanges and sales of EOS Tokens are not subject to the protections of any "
-"laws governing those types of financial instruments."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:41
-msgid ""
-"6. Buyer acknowledges and agrees that Buyer is not exchanging NEWTON Tokens "
-"for purposes of investment, speculation, as some type of arbitrage strategy, "
-"for immediate resale or other financial purposes.<br/>No Claim, Loan or "
-"Ownership Interest. The exchange of NEWTON Tokens: (a) does not provide "
-"Buyer with rights of any form with respect to the NEWTON Foundation or its "
-"revenues or assets, including, but not limited to, any voting, distribution, "
-"redemption, liquidation, proprietary (including all forms of intellectual "
-"property), or other financial or legal rights; (b) is not a loan to NEWTON "
-"Foundation; and (c) does not provide Buyer with any ownership or other "
-"interest in NEWTON Foundation."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:42
-msgid ""
-"7. Intellectual Property. NEWTON Foundation retains all right, title and "
-"interest in all of NEWTON Foundation’s intellectual property, including, "
-"without limitation, inventions, ideas, concepts, code, discoveries, "
-"processes, marks, methods, software, compositions, formulae, techniques, "
-"information and data, whether or not patentable, copyrightable or "
-"protectable in trademark, and any trademarks, copyright or patents based "
-"thereon. Buyer may not use any of NEWTON Foundation’s intellectual property "
-"for any reason without NEWTON Foundation’s prior written consent."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:43
-msgid "8. Security and Data Privacy."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:44
-msgid ""
-"Buyer will implement reasonable and appropriate measures designed to secure "
-"access to: (i) any device associated with Buyer and utilized in connection "
-"with Buyer’s exchange of NEWTON Tokens; (ii) private keys to Buyer’s wallet "
-"or account; and (iii) any other username, passwords or other login or "
-"identifying credentials. In the event that Buyer is no longer in possession "
-"of Buyer’s private keys or any device associated with Buyer’s account or is "
-"not able to provide Buyer’s login or identifying credentials, Buyer may lose "
-"all of Buyer’s NEWTON Tokens and/or access to Buyer’s account. NEWTON "
-"Foundation is under no obligation to recover any NEWTON Tokens. Buyer "
-"acknowledges, understands and agrees that all exchanges of NEWTON Tokens are "
-"non-refundable and Buyer will not receive money or other compensation for "
-"any NEWTON Tokens exchanged."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:45
-msgid ""
-"9. Upon NEWTON Foundation’s request, Buyer will immediately provide to "
-"NEWTON Foundation their information and documents. NEWTON Foundation, in its "
-"sole discretion, deems necessary or appropriate to comply with any laws, "
-"regulations, rules or agreements, including without limitation judicial "
-"process. Such documents include, but are not limited to, passport, driver’s "
-"license, utility bills, photographs of associated individuals, government "
-"identification cards, or sworn statements. Buyer consents to NEWTON "
-"Foundation disclosing such information and documents in order to comply with "
-"applicable laws, regulations, rules or agreements. Buyer acknowledges that "
-"NEWTON Foundation may refuse to distribute NEWTON Tokens to Buyer until such "
-"requested information is provided."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:46
-msgid ""
-"10. Buyer acknowledges, understands and agrees that: Buyer is solely "
-"responsible for Buyer’s compliance with Buyer’s tax obligations; and NEWTON "
-"Foundation bears no liability or responsibility with respect to any tax "
-"consequences to Buyer."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:47
-msgid ""
-"11. If an individual, Buyer is at least 18 years old and of sufficient legal "
-"age and capacity to exchange NEWTON Tokens."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:48
-msgid ""
-"12. If a legal person, Buyer is duly organized, validly existing and in good "
-"standing under the laws of its domiciliary jurisdiction and each "
-"jurisdiction where it conducts business."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:49
-msgid ""
-"13. Buyer has sufficient knowledge and experience in business and financial "
-"matters, including a sufficient understanding of blockchain or cryptographic "
-"tokens and other digital assets, smart contracts, storage mechanisms (such "
-"as digital or token wallets), blockchain-based software systems and "
-"blockchain technology, to be able to evaluate the risks and merits of "
-"Buyer’s exchange of NEWTON Tokens, including but not limited, to the matters "
-"set forth in this Agreement, and is able to bear the risks thereof, "
-"including loss of all amounts paid, loss of NEWTON Tokens, and others for "
-"its acts and omissions, including with limitation those constituting breach "
-"of this Agreement, negligence, fraud or willful misconduct. Buyer has "
-"obtained sufficient information in order to make an informed decision to "
-"exchange NEWTON Tokens."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:50
-msgid ""
-"14. The funds, including any fiat, virtual currency or cryptocurrency, Buyer "
-"uses to exchange NEWTON Tokens are not derived from or related to any "
-"unlawful activities, including but not limited to money laundering or "
-"terrorist financing, and Buyer will not use the NEWTON Tokens to finance, "
-"engage in, or otherwise support any unlawful activities."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:51
-msgid ""
-"15. Anti-Money Laundering. Counter-Terrorism Financing. To the extent "
-"required by applicable law, Buyer complies with all anti-money laundering "
-"and counter-terrorism financing requirements."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:52
-msgid ""
-"16. Buyer expressly acknowledges, understands and agrees that Buyer is using "
-"the NEWTON Distribution Contract, the NEWTON Token Contract and exchanging "
-"NEWTON Tokens at the Buyer’s sole risk and that the NEWTON Distribution "
-"Contract, the NEWTON Token Contract and NEWTON Tokens are each provided, "
-"used and acquired on an “AS IS” and on an “AS AVAILABLE” basis without "
-"representations, warranties, promises or guarantees whatsoever of any kind "
-"by NEWTON Foundation and Buyer shall rely on its own examination and "
-"investigation thereof."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:53
-msgid ""
-"17. Force Majeure. Buyer understands and agrees that NEWTON Foundation shall "
-"not be liable and disclaims all liability to Buyer in connection with any "
-"force majeure event, including labour disputes or other industrial "
-"disturbances, electrical, telecommunications, hardware, software or other "
-"utility failures, software or smart contract bugs or weaknesses, "
-"earthquakes, storms, or other nature-related events, blockages, embargoes, "
-"riots, acts or orders of government, acts of terrorism or war, technological "
-"change, changes in interest rates or other monetary conditions."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:54
-msgid ""
-"18. Dispute Resolution. Buyer and NEWTON Foundation shall cooperate in good "
-"faith to resolve any dispute, controversy or claim arising out of, relating "
-"to or in connection with this Agreement, including with respect to the "
-"formation, applicability, breach, termination, validity or enforceability "
-"thereof (a 'Dispute'). If the Parties are unable to resolve a Any Dispute "
-"not resolved within 90 days shall be referred to and finally resolved by "
-"arbitration. The seat, or legal place, of arbitration shall be Singapore. "
-"The arbitration award shall be final and binding on the Parties. The Parties "
-"undertake to carry out any award without delay and waive their right to any "
-"form of recourse insofar as such waiver can validly be made. Judgment upon "
-"the award may be entered by any court having jurisdiction thereof or having "
-"jurisdiction over the relevant Party or its assets. Parties will each pay "
-"their respective attorneys’ fees and expenses. Notwithstanding the "
-"foregoing, NEWTON Foundation reserves the right, in its sole and exclusive "
-"discretion, to assume responsibility for any or all of the costs of the "
-"arbitration."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:55
-msgid ""
-"Severability. If any provision of this Agreement is determined by a court of "
-"competent jurisdiction to be invalid, inoperative or unenforceable for any "
-"reason, the provision shall be modified to make it valid and, to the extent "
-"possible, effectuate the original intent of the Parties as closely as "
-"possible in an acceptable manner in order that the transactions contemplated "
-"hereby be consummated as originally contemplated to the fullest extent "
-"possible."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:56
-msgid ""
-"Modification of Agreement. NEWTON Foundation may modify this Agreement at "
-"any time by posting a revised version on the Official Website. The modified "
-"terms will become effective upon posting. It is Buyer’s responsibility to "
-"check the Website regularly for modifications to this Agreement. This "
-"Agreement was last modified on the date listed at the beginning of this "
-"Agreement."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:57
-msgid ""
-"No Waivers. The failure by NEWTON Foundation to exercise or enforce any "
-"right or provision of this Agreement will not constitute a present or future "
-"waiver of such right or provision nor limit NEWTON Foundation’s right to "
-"enforce such right or provision at a later time. All waivers by NEWTON "
-"Foundation must be unequivocal and in writing to be effective."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:58
-msgid ""
-"No Partnership; No Agency; No Third Party Beneficiaries. Nothing in this "
-"Agreement and no action taken by the Parties shall constitute, or be deemed "
-"to constitute, a partnership, association, joint venture or other co-"
-"operative entity between the Parties. Nothing in this Agreement and no "
-"action taken by the Parties pursuant to this Agreement shall constitute, or "
-"be deemed to constitute, either Party the agent of the other Party for any "
-"purpose. No Party has, pursuant to this Agreement, any authority or power to "
-"bind or to contract in the name of the other Party. This Agreement does not "
-"create any third party beneficiary rights in any person."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:59
-msgid ""
-"Electronic Communications. Buyer agrees and acknowledges that all "
-"agreements, notices, disclosures and other communications that NEWTON "
-"Foundation provides Buyer pursuant to this Agreement or in connection with "
-"or related to Buyer’s exchange of NEWTON Tokens, including this Agreement, "
-"may be provided by NEWTON Foundation, in its sole discretion, to Buyer, in "
-"electronic form."
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/index.html:60
-msgid ""
-"19. The NEWTON Token distribution ratio is shown on official website（www."
-"newtonproject.org）"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/invalid-link.html:6
-msgid "Invalid Link"
-msgstr "Lien invalide"
-
-#: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:6
-msgid "TOKENEXCHANGE"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/limit-address.html:23
-msgid "Newton Token Sale"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/pending.html:6
-#: web/apps/tokenexchange/templates/tokenexchange/receive-address.html:6
-msgid "Tokensale"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/submit.html:23
-msgid "KYC Information"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:10
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:10
-msgid "First Token Exchange Info"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:16
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:42
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:16
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:57
-msgid "Start Time"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:20
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:46
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:20
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:61
-msgid "End Time"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info-summary.html:36
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:52
-msgid "Second Token Exchange Info"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:24
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:28
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:65
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:69
-msgid "The minimum accepted"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:32
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:36
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:73
-#: web/apps/tokenexchange/templates/tokenexchange/token-exchange-info.html:77
-msgid "Subscription Ratio"
-msgstr ""
-
-#: web/apps/tokenexchange/templates/tokenexchange/wait-audit.html:24
-msgid "您的KYC信息正在审核，请耐心等待。"
-msgstr ""
-
-#: web/apps/user/forms.py:35
-msgid "Area Code"
-msgstr ""
-
-#: web/apps/user/forms.py:37
-msgid "Phone Number"
-msgstr ""
-
-#: web/apps/user/models.py:30
-msgid "Self Introduction"
-msgstr ""
-
-#: web/apps/user/models.py:31
-msgid "Homepage"
-msgstr ""
-
-#: web/apps/user/models.py:34
-msgid "Gender"
-msgstr ""
-
-#: web/apps/user/models.py:35
-msgid "Birth Date"
-msgstr ""
-
-#: web/apps/user/models.py:40
-msgid "Location"
-msgstr ""
-
-#: web/apps/user/models.py:50
-msgid "Channel"
-msgstr ""
-
-#: web/apps/user/models.py:57
-msgid "Job Status"
-msgstr ""
-
-#: web/apps/user/models.py:58
-msgid "Major"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:6
-#: web/apps/user/templates/user/profile.html:6
-#: web/apps/user/templates/user/settings.html:6
-#: web/apps/user/templates/user/token-exchange-progress.html:6
-#: web/apps/user/templates/user/user-base.html:6
-msgid "user"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:33
-msgid "Profile"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:48
-msgid "Basic information"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:79
-msgid "You have summit KYC information"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:84
-msgid "Passed"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:87
-msgid "Rejected:"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:87
-msgid "Rewrite"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:91
-msgid ""
-"You have not summit KYC information,<a href='/tokenexchange/'>Join KYC</a>"
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:128
-msgid "Details "
-msgstr ""
-
-#: web/apps/user/templates/user/index.html:135
-msgid "There is no token exchange information"
-msgstr ""
-
-#: web/apps/user/templates/user/profile.html:24
-msgid "Edit Profile"
-msgstr ""
-
-#: web/apps/user/templates/user/settings.html:19
-msgid "Settings"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:45
-#: web/apps/user/templates/user/token-exchange-progress.html:91
-msgid "Passed KYC"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:53
-#: web/apps/user/templates/user/token-exchange-progress.html:98
-msgid "Fill in the expected investment quota"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:62
-#: web/apps/user/templates/user/token-exchange-progress.html:106
-msgid "Turn money to Newton"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:71
-#: web/apps/user/templates/user/token-exchange-progress.html:114
-msgid "Fill in the New wallet address"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:80
-#: web/apps/user/templates/user/token-exchange-progress.html:122
-msgid "Confirm receipt of New"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:141
-msgid "Apply Amount"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:155
-msgid "Distribution Amount"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:170
-msgid "Distribution Address"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:186
-msgid "Sended Amount"
-msgstr ""
-
-#: web/apps/user/templates/user/token-exchange-progress.html:203
-msgid "Fill in the expected investment quota "
 msgstr ""
 
 #: web/apps/verification/models.py:22
@@ -1426,7 +498,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:64 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:66 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "Annonce"
 
@@ -1440,63 +512,64 @@ msgid "All"
 msgstr "Tout"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:69
+#: web/apps/zinnia/models_bases/entry.py:71
 msgid "Operation"
 msgstr "Operation"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:70
+#: web/apps/zinnia/models_bases/entry.py:72
 msgid "Weekly"
 msgstr "Semaine"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:68
+#: web/apps/zinnia/models_bases/entry.py:70
 msgid "Activity"
 msgstr "Activité"
 
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
-#: web/apps/welcome/templates/welcome/community.html:45
+#: web/apps/welcome/templates/welcome/community.html:65
+#: web/apps/welcome/templates/welcome/include-allocation.html:63
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
 #: web/templates/header.html:32
 msgid "Community"
 msgstr "Communauté"
 
-#: web/apps/welcome/templates/welcome/community.html:18
-msgid "Social Network"
-msgstr "Réseaux sociaux"
-
-#: web/apps/welcome/templates/welcome/community.html:27
-#: web/apps/welcome/templates/welcome/wechat.html:20
-msgid "Scan QR Code to join us"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/community.html:34
-msgid "Email List"
-msgstr "Groupes E-mail"
-
-#: web/apps/welcome/templates/welcome/community.html:51
-msgid "English"
-msgstr "Anglais"
-
-#: web/apps/welcome/templates/welcome/community.html:54
-msgid "Chinese"
-msgstr "Chinois"
-
-#: web/apps/welcome/templates/welcome/community.html:57
-msgid "Japanese"
-msgstr "Japonais"
-
-#: web/apps/welcome/templates/welcome/community.html:71
+#: web/apps/welcome/templates/welcome/community.html:20
 msgid "Press"
 msgstr "Presse"
 
-#: web/apps/welcome/templates/welcome/community.html:77
+#: web/apps/welcome/templates/welcome/community.html:26
 #: web/apps/welcome/templates/welcome/include-protocol.html:65
 #: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
 msgstr "PLUS"
+
+#: web/apps/welcome/templates/welcome/community.html:38
+msgid "Social Network"
+msgstr "Réseaux sociaux"
+
+#: web/apps/welcome/templates/welcome/community.html:47
+#: web/apps/welcome/templates/welcome/wechat.html:20
+msgid "Scan QR Code to join us"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/community.html:54
+msgid "Email List"
+msgstr "Groupes E-mail"
+
+#: web/apps/welcome/templates/welcome/community.html:71
+msgid "English"
+msgstr "Anglais"
+
+#: web/apps/welcome/templates/welcome/community.html:74
+msgid "Chinese"
+msgstr "Chinois"
+
+#: web/apps/welcome/templates/welcome/community.html:77
+msgid "Japanese"
+msgstr "Japonais"
 
 #: web/apps/welcome/templates/welcome/contact.html:6
 #: web/apps/welcome/templates/welcome/contact.html:13
@@ -1771,13 +844,66 @@ msgstr ""
 msgid "Economy"
 msgstr "Économie"
 
-#: web/apps/welcome/templates/welcome/economy.html:23
+#: web/apps/welcome/templates/welcome/economy.html:28
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
 msgstr "Organisation commerciale mixte"
 
 #: web/apps/welcome/templates/welcome/foundation.html:6
-msgid "Foundation"
+msgid "FUND"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:13
+msgid "Newton Eco Development Fund"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:19
+msgid "Fund positioning"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:24
+msgid ""
+"The Newton Eco Development Fund (NewFund) is a blockchain FOF (Fund of Fund) "
+"under the Newton Foundation. It aims to encourage more people to participate "
+"in the development of Newton's business ecosystem and ensure that all "
+"parties share economic growth dividends through innovative incentive "
+"mechanisms."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:32
+msgid "Funding source"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:37
+msgid ""
+"NewFund comes mainly from the Newton Foundation and Newton private equity "
+"investors. The fund is managed by a professional GP. By becoming a NewFund "
+"LP, investors can  share the growth of the Newton economy and the blockchain "
+"industry."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:45
+msgid "Fund management"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:50
+msgid ""
+"NewFund will be managed it in the form of joint governance and shared "
+"enjoyment, conducting global cooperation business, and establish a special "
+"token fund with top talents and institutions in the industry."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:58
+msgid "Direction of investment"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:63
+msgid ""
+"NewFund's main mission is to develop Newton's economy. It will use funds, "
+"technology, community and other resources to support the entire ecosystem of "
+"the commercial infrastructure, general services, application layers and "
+"peripheral services. At the same time, it will also set up accelerators to "
+"help ecological projects."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
@@ -1870,6 +996,238 @@ msgstr ""
 msgid "Bitcoin Ambassador"
 msgstr "Ambassadeur du Bitcoin"
 
+#: web/apps/welcome/templates/welcome/include-allocation.html:8
+msgid "Token Metrics"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:10
+msgid "Total Supply:"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:16
+msgid "Actor"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:17
+msgid "Proportion"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:18
+msgid "Amount"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:19
+msgid "Description"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:22
+msgid "Founding Team"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:24
+msgid "10 billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:27
+msgid "Incentives for founding team;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:28
+msgid ""
+"The first year is the lock period. From the second year, every month 1/24 of "
+"the total amount will be unlocked."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:34
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
+msgid "Token Exchange"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:39
+#: web/apps/welcome/templates/welcome/include-allocation.html:53
+msgid "15 billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:42
+msgid "For foundation's initial operation."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:48
+msgid "Foundation"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:56
+msgid "For foundation's later operation;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:57
+msgid ""
+"1/2 of the total amount is immediately unlocked, the rest will be unlocked "
+"1/12 every month."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:68
+msgid "60 billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:71
+msgid "Incentives for community;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:72
+msgid "Unlock in later fifty years."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:6
+msgid "Coming Events"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:9
+msgid "Newton Beijing Meetup (Phase Ⅱ)"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:13
+msgid "2018-06-23, 14:00-18:00 CST"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:16
+msgid ""
+"2nd Floor, Tower A, Dinghao Electronics Building, Zhongguancun Street, "
+"Haidian District, Beijing"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:16
+msgid ""
+"https://www.newtonproject.org/announcement/2018/06/19/june-23rd-newton-"
+"beijing-meet-sincerely-invites-you-join-us/"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:16
+#: web/apps/welcome/templates/welcome/include-community-event.html:30
+#: web/apps/welcome/templates/welcome/include-community-event.html:43
+msgid "Detail"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:20
+msgid "Passed Events"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:23
+msgid "Newton Meetup Shijiazhuang station successfully ended"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:27
+msgid "2018-06-16, 14:00-18:00 CST"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:30
+msgid ""
+"4th floor of Yuetai Hotel, northeast corner of the intersection of Youyi "
+"North Street and Xinhua Road, Shijiazhuang, Hebei Province"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:30
+msgid ""
+"https://www.newtonproject.org/announcement/2018/06/14/newton-meet-"
+"shijiazhuang-station-welcome-you-join/"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:36
+msgid "Newton offline Meetup (Beijing) successfully ended"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:40
+msgid "2018-05-19, 14:00-18:00 CST"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:43
+msgid ""
+"Chaoke Coffee, Floor 1, Block C, Building 40, Xingfu Square, Xingfu Second"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:43
+msgid ""
+"https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-"
+"defining-business-order-new-economy-era-sincerely-invites-you-join-us/"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:16
+msgid "Round"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:17
+msgid "NEW"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:18
+msgid "Ratio"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:19
+msgid "BTC"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:20
+msgid "Lock Time"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:21
+msgid "Duration"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:22
+msgid "Status"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:26
+msgid "7.5&nbsp;billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:29
+msgid "1 Year"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:30
+msgid "March 1,2018 - April 30,2018"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:31
+msgid "Finished"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:35
+msgid "6&nbsp;billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:38
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
+msgid "No Lock"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:39
+msgid "July 1,2018 - July 31,2018"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:40
+msgid "In Progress"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:44
+msgid "1.5&nbsp;billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:48
+msgid "Estimate on October,2018"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:49
+msgid "Waiting"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:55
+msgid "Join Round #2"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
 msgstr "Newton: Un modèle économique basé sur le protocole"
@@ -1947,7 +1305,7 @@ msgid "FEED"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:9
-msgid "ANGEL INVESTORS"
+msgid "CORNERSTONE INVESTORS"
 msgstr "INVESTISSEUR"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:19
@@ -2014,36 +1372,58 @@ msgstr "Fondateur et PDG de Distributed Credit Chain"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:180
 #: web/apps/welcome/templates/welcome/include-investor.html:182
-#: web/apps/welcome/templates/welcome/include-investor.html:193
-#: web/apps/welcome/templates/welcome/include-investor.html:207
-msgid "Li Zhu"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-investor.html:184
-msgid "Founder of Innoangel Fund"
-msgstr "Fondateur du fond Innoangel"
-
-#: web/apps/welcome/templates/welcome/include-investor.html:195
 msgid "Shi Junchao"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-investor.html:197
+#: web/apps/welcome/templates/welcome/include-investor.html:184
 msgid "Senior gem jade appraiser."
 msgstr "Expert de bijoux en jade"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:198
+#: web/apps/welcome/templates/welcome/include-investor.html:185
 msgid "Deputy secretary general of xinjiang hetian jade industry association."
 msgstr ""
 "Secrétaire général adjoint de l’association pour l’industrie du jade de la "
 "province du xinjiang"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:209
+#: web/apps/welcome/templates/welcome/include-investor.html:194
+#: web/apps/welcome/templates/welcome/include-investor.html:196
 msgid "Guo Hongchi"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-investor.html:211
+#: web/apps/welcome/templates/welcome/include-investor.html:198
 msgid "Founder of xijie.com"
 msgstr "Fondateur de xijie.com"
+
+#: web/apps/welcome/templates/welcome/include-investor.html:210
+#: web/apps/welcome/templates/welcome/include-investor.html:212
+msgid "JLAB"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:222
+#: web/apps/welcome/templates/welcome/include-investor.html:224
+msgid "Consensus Lab"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:234
+#: web/apps/welcome/templates/welcome/include-investor.html:236
+msgid "GENESIS"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:6
+msgid "Newton Token Exchange Round #2 is in progress."
+msgstr "La deuxième phase d'échange de token Newton est en cours"
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
+msgid "July 1,2018"
+msgstr "1er juillet 2018"
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
+msgid "July 31,2018"
+msgstr "31 juillet 2018"
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:9
+msgid "View Detail"
+msgstr "Voir les details"
 
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "Joint Ecological Construction"
@@ -2315,10 +1695,17 @@ msgid "Everyone should benefit directly from economic growth"
 msgstr "Pour que la croissance profite à tous"
 
 #: web/apps/welcome/templates/welcome/index.html:15
-msgid "Newton: Infrastructure for the protocol-based economy"
-msgstr "Newton: Infrastructure d’un modèle économique basé sur les protocoles"
+msgid "Newton: Infrastructure for the community economy"
+msgstr "Newton: l'infrastructure d'une économie communautaire"
 
-#: web/apps/welcome/templates/welcome/index.html:47
+#: web/apps/welcome/templates/welcome/index.html:17
+#: web/apps/welcome/templates/welcome/whitepaper.html:6
+#: web/apps/welcome/templates/welcome/whitepaper.html:13
+#: web/apps/welcome/templates/welcome/whitepaper.html:18
+msgid "Whitepaper"
+msgstr "Livre blanc"
+
+#: web/apps/welcome/templates/welcome/index.html:46
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -3293,7 +2680,6 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:6
 #: web/apps/welcome/templates/welcome/mediakit.html:13
-#: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/templates/footer.html:39
 msgid "Media Kit"
 msgstr "Kit Media"
@@ -3322,25 +2708,30 @@ msgstr "Affiche Chinoise"
 msgid "English Poster"
 msgstr "Affiche Anglaise"
 
-#: web/apps/welcome/templates/welcome/mediakit.html:66
+#: web/apps/welcome/templates/welcome/mediakit.html:63
+#, fuzzy
+msgid "Korean Poster"
+msgstr "Télécharger Poster"
+
+#: web/apps/welcome/templates/welcome/mediakit.html:74
 msgid "Newton Logo"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/mediakit.html:67
+#: web/apps/welcome/templates/welcome/mediakit.html:75
 msgid ""
 "Newton logo is a combination of calculus symbol and zigzag side of coin."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/mediakit.html:80
+#: web/apps/welcome/templates/welcome/mediakit.html:88
 msgid "Poster in Chinese"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/mediakit.html:81
-#: web/apps/welcome/templates/welcome/mediakit.html:95
+#: web/apps/welcome/templates/welcome/mediakit.html:89
+#: web/apps/welcome/templates/welcome/mediakit.html:103
 msgid "Features Posters of Newton offline activities"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/mediakit.html:94
+#: web/apps/welcome/templates/welcome/mediakit.html:102
 msgid "Poster in English"
 msgstr ""
 
@@ -3438,6 +2829,13 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/press.html:47
 msgid "No presss"
 msgstr ""
+
+#: web/apps/welcome/templates/welcome/privacy.html:6
+#: web/apps/welcome/templates/welcome/privacy.html:13
+#: web/apps/welcome/templates/welcome/privacy.html:19
+#: web/templates/footer.html:48
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
 
 #: web/apps/welcome/templates/welcome/privacy.html:20
 msgid ""
@@ -4025,8 +3423,8 @@ msgid ""
 "these three aspects the Newton NewAI closely connects the data suppliers, "
 "algorithm model developers and operating system providers together."
 msgstr ""
-"La NewAI favorise le développement de l'intelligence artificielle à partir de "
-"trois aspects: les données, le modèle algorithmique et le moteur "
+"La NewAI favorise le développement de l'intelligence artificielle à partir "
+"de trois aspects: les données, le modèle algorithmique et le moteur "
 "d'exécution. La NewAI connectera en toute transparence les fournisseurs de "
 "données, les développeurs de modèles d'algorithmes et les fournisseurs "
 "d'environnement d'exploitation."
@@ -4047,9 +3445,9 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:78
 msgid ""
-"NewAI uses docker container to run artificial intelligence computing software "
-"such as Tensorflow, Caffe. It encourages data suppliers to provide long-term "
-"service through multi-factor weighting profit distribution method."
+"NewAI uses docker container to run artificial intelligence computing "
+"software such as Tensorflow, Caffe. It encourages data suppliers to provide "
+"long-term service through multi-factor weighting profit distribution method."
 msgstr ""
 "NewAI utilise la technologie des conteneurs mis en œuvre grâce au logiciel "
 "libre docker pour utiliser des logiciels d'intelligence artificielle tels "
@@ -4634,13 +4032,10 @@ msgid ""
 "April, 2018"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/whitepaper.html:13
-msgid "Whitepaper"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/whitepaper.html:20
-msgid "Newton Whitepaper"
-msgstr ""
+#: web/apps/welcome/templates/welcome/whitepaper.html:23
+#, fuzzy
+msgid "Chinese Whitepaper"
+msgstr "Affiche Chinoise"
 
 #: web/apps/zinnia/breadcrumbs.py:68 web/apps/zinnia/admin/forms.py:66
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:25
@@ -4817,7 +4212,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:76
 msgid "title"
 msgstr ""
 
@@ -4954,7 +4349,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:495
+#: web/apps/zinnia/models_bases/entry.py:497
 msgid "categories"
 msgstr ""
 
@@ -4967,14 +4362,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:63
+#: web/apps/zinnia/models_bases/entry.py:65
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:77
+#: web/apps/zinnia/models_bases/entry.py:79
 msgid "slug"
 msgstr ""
 
@@ -4995,7 +4390,7 @@ msgid "language"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:120
+#: web/apps/zinnia/models_bases/entry.py:122
 msgid "Entry type"
 msgstr ""
 
@@ -5015,173 +4410,173 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:79
-#: web/apps/zinnia/models_bases/entry.py:104
+#: web/apps/zinnia/models_bases/entry.py:81
+#: web/apps/zinnia/models_bases/entry.py:106
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:82
+#: web/apps/zinnia/models_bases/entry.py:84
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:88
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:88
+#: web/apps/zinnia/models_bases/entry.py:90
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:91
+#: web/apps/zinnia/models_bases/entry.py:93
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:93
+#: web/apps/zinnia/models_bases/entry.py:95
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:98
+#: web/apps/zinnia/models_bases/entry.py:100
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:101
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:102
+#: web/apps/zinnia/models_bases/entry.py:104
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:107
+#: web/apps/zinnia/models_bases/entry.py:109
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:117
+#: web/apps/zinnia/models_bases/entry.py:119
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:124
+#: web/apps/zinnia/models_bases/entry.py:126
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:131
+#: web/apps/zinnia/models_bases/entry.py:133
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:246
+#: web/apps/zinnia/models_bases/entry.py:248
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:247
+#: web/apps/zinnia/models_bases/entry.py:249
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:261
+#: web/apps/zinnia/models_bases/entry.py:263
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:303
+#: web/apps/zinnia/models_bases/entry.py:305
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:304
+#: web/apps/zinnia/models_bases/entry.py:306
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:306
+#: web/apps/zinnia/models_bases/entry.py:308
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:309
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:309
+#: web/apps/zinnia/models_bases/entry.py:311
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:312
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:313
+#: web/apps/zinnia/models_bases/entry.py:315
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:315
+#: web/apps/zinnia/models_bases/entry.py:317
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:317
+#: web/apps/zinnia/models_bases/entry.py:319
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:401
+#: web/apps/zinnia/models_bases/entry.py:403
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:419
+#: web/apps/zinnia/models_bases/entry.py:421
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:420
+#: web/apps/zinnia/models_bases/entry.py:422
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:453
+#: web/apps/zinnia/models_bases/entry.py:455
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:455
+#: web/apps/zinnia/models_bases/entry.py:457
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:466
+#: web/apps/zinnia/models_bases/entry.py:468
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:481
+#: web/apps/zinnia/models_bases/entry.py:483
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:505
+#: web/apps/zinnia/models_bases/entry.py:507
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:524
+#: web/apps/zinnia/models_bases/entry.py:526
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:525
+#: web/apps/zinnia/models_bases/entry.py:527
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:537
+#: web/apps/zinnia/models_bases/entry.py:539
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:538
+#: web/apps/zinnia/models_bases/entry.py:540
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:550
+#: web/apps/zinnia/models_bases/entry.py:552
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:552
-#: web/apps/zinnia/models_bases/entry.py:568
+#: web/apps/zinnia/models_bases/entry.py:554
+#: web/apps/zinnia/models_bases/entry.py:570
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:554
+#: web/apps/zinnia/models_bases/entry.py:556
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:566
+#: web/apps/zinnia/models_bases/entry.py:568
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:570
+#: web/apps/zinnia/models_bases/entry.py:572
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -5437,6 +4832,10 @@ msgstr ""
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:33
 msgid "Save as draft"
 msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
+msgid "Reset"
+msgstr "Reinitialiser"
 
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:35
 msgid "Publish"
@@ -5819,6 +5218,13 @@ msgstr ""
 msgid "You need to be connected to view this entry."
 msgstr ""
 
+#: web/apps/zinnia/templates/zinnia/login.html:34
+#: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
+#: web/templates/header.html:49 web/templates/header.html.py:57
+#: web/templates/header.html:90 web/templates/header.html.py:98
+msgid "Login"
+msgstr "Connexion"
+
 #: web/apps/zinnia/templates/zinnia/password.html:4
 #: web/apps/zinnia/templates/zinnia/password.html:9
 msgid "Password required"
@@ -5830,6 +5236,10 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/password.html:17
 msgid "You need to provide a password to view this entry."
+msgstr ""
+
+#: web/apps/zinnia/templates/zinnia/password.html:24
+msgid "Password"
 msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/password.html:29
@@ -5853,6 +5263,11 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/sitemap.html:23
 msgid "comment"
+msgstr ""
+
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
+#: web/templates/email-template.html:32
+msgid "Newton"
 msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/skeleton.html:12
@@ -6158,11 +5573,42 @@ msgid "Your account has been locked, please contact customer service"
 msgstr ""
 
 #: web/templates/404.html:16
-msgid "You enter the blackhole."
-msgstr ""
+#, fuzzy
+msgid "Not found."
+msgstr "Co-fondateur"
 
 #: web/templates/500.html:18
 msgid "System Error."
+msgstr ""
+
+#: web/templates/base.html:10
+msgid ""
+"Newton-Infrastructure of protocol-based economy,We are committed to creating "
+"a decentralized protocol standards and development tool chains that can be "
+"used in the entire business process, including supply chain, marketing, "
+"payment, transaction, credit, finance and so on, thereby building a highly "
+"collaborative, fair and reasonable, highly automated business environment "
+"with lower cost and fewer conflicts."
+msgstr ""
+
+#: web/templates/base.html:12
+msgid ""
+"Newton,NewtonProject,newtonproject.org,NewChain,NewNET,Protocol-based "
+"Economy,Atom Hashing,NewIoT,DAI,Hyper Exchange Protocol,Automatic finance,"
+"NNIO,Reliable physical tunnel,Digital Marketing,Supply Chain,Blockchain,"
+"Intelligent Contract,Open Source Community,Digital Assets,token"
+msgstr ""
+
+#: web/templates/captcha.html:8 web/templates/captcha.html.py:18
+msgid "Verification Code"
+msgstr ""
+
+#: web/templates/captcha.html:10
+msgid "Captcha error"
+msgstr ""
+
+#: web/templates/captcha.html:14
+msgid "cannot recognize?"
 msgstr ""
 
 #: web/templates/dialog.html:8
@@ -6181,6 +5627,29 @@ msgstr ""
 msgid "QQ"
 msgstr ""
 
+#: web/templates/email-template.html:31
+msgid "Best regard"
+msgstr ""
+
+#: web/templates/email-template.html:36
+msgid "If you have received this email in error, please delete it."
+msgstr ""
+
+#: web/templates/email-template.html:43
+msgid ""
+"The Newton official website uses the EV SSL certificate for secure identity "
+"verification. The SSL certificate displayed in the browser's address bar "
+"should be: “NEWTON FOUNDATION LTD. [SG]”. Websites without this identity are "
+"fraudulent Newton official websites. Please do not perform any operation "
+"such as: log in, fill in personal information, etc. If you find any "
+"fraudulent website, please immediately report this website to Newton: <a "
+"href='mailto:contact@newtonproject.org'>contact@newtonproject.org</a>."
+msgstr ""
+
+#: web/templates/email-template.html:45
+msgid "Learn more"
+msgstr ""
+
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
 msgstr "Développement"
@@ -6193,17 +5662,29 @@ msgstr "Communauté"
 msgid "Service Terms"
 msgstr "Conditions générales"
 
-#: web/templates/header-no-menu.html:29
+#: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
+#: web/templates/header.html:42 web/templates/header.html.py:81
 msgid "User Center"
 msgstr ""
 
-#: web/templates/header-no-menu.html:30
+#: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
+#: web/templates/header.html:43 web/templates/header.html.py:82
 msgid "LogOut"
 msgstr ""
+
+#: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
+#: web/templates/header.html:46 web/templates/header.html.py:54
+#: web/templates/header.html:87 web/templates/header.html.py:95
+msgid "Register"
+msgstr "Inscription"
 
 #: web/templates/header.html:26
 msgid "Technology"
 msgstr "Technologie"
+
+#: web/templates/header.html:38
+msgid "NewFund"
+msgstr ""
 
 #: web/templates/admin/change_form.html:33
 msgid "History"
@@ -6232,5 +5713,16 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#~ msgid "Download Poster"
-#~ msgstr "Télécharger Poster"
+#: web/utils/validators.py:52
+msgid "Unsupported file extension."
+msgstr ""
+
+#: web/utils/validators.py:60
+msgid "File too large,Size should not exceed 5M"
+msgstr ""
+
+#: web/utils/validators.py:66
+msgid ""
+"Please input 6～16 characters，must contain upper-case, lower-case letters "
+"and numbers."
+msgstr ""
