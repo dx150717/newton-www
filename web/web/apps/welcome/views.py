@@ -14,7 +14,7 @@ from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN
+from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN,ARABIC,NETHERLAND
 from zinnia.managers import PUBLISHED
 
 from press.models import PressModel
@@ -23,6 +23,8 @@ from subscription import forms as subscription_forms
 
 def show_home_view(request):
     language = translation.get_language()
+    language_header = language
+    request.language_header = language_header
     if language.startswith('zh'):
         language = CHINESE
     elif language.startswith('en'):
@@ -41,9 +43,12 @@ def show_home_view(request):
         language = FRENCH
     elif language.startswith('de'):
         language = GERMAN
+    elif language.startswith('ar'):
+        language = ARABIC
+    elif language.startswith('nl'):
+        language = NETHERLAND
     else:
         language = ENGLISH
-        
     entry = EntryDetail()
     entries = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:5]
     for entry in entries:
@@ -54,6 +59,7 @@ def show_home_view(request):
             entry.urls = entry.get_absolute_url()
     # generate the captcha
     captcha_form = subscription_forms.SubscribeForm()
+
     return render(request, 'welcome/index.html', locals())
 
 def show_tech_view(request):
@@ -154,6 +160,10 @@ class AnnouncementView(generic.ListView):
             language = FRENCH
         elif language.startswith('de'):
             language = GERMAN
+        elif language.startswith('ar'):
+            language = ARABIC
+        elif language.startswith('nl'):
+            language = NETHERLAND
         else:
             language = ENGLISH
             
@@ -190,6 +200,10 @@ class AnnouncementSubView(generic.ListView):
             language = FRENCH
         elif language.startswith('de'):
             language = GERMAN
+        elif language.startswith('ar'):
+            language = ARABIC
+        elif language.startswith('nl'):
+            language = NETHERLAND
         else:
             language = ENGLISH
             
