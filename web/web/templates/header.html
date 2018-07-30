@@ -14,11 +14,33 @@
                     <span class="sr-only">Toggle navigation</span>
                     <i class="iconfont toggle-nav"></i>
                 </button>
-                
+
             </div><!-- /.logo -->
 
             <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav">
+
+                    {% if is_change_css %}
+                    <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/protocol/" style="font-size:16px;">{% trans "HEP" %}</a>
+                    </li>
+                    <li>
+                        <a href="/technology/" style="font-size:16px;">{% trans "Technology" %}</a>
+                    </li>
+                    <li>
+                        <a href="/newpay/" style="font-size:16px;">{% trans "NewPay" %}</a>
+                    </li>
+                    <li>
+                        <a href="/community/" style="font-size:16px;">{% trans "Community" %}</a>
+                    </li>
+                    <li>
+                        <a href="/economy/" style="font-size:16px;">{% trans "Economy" %}</a>
+                    </li>
+                    <li>
+                        <a href="/newfund/" style="font-size:16px;">{% trans "NewFund" %}</a>
+                    </li>
+                    {% else %}
+                    <ul class="nav navbar-nav">
                     <li>
                         <a href="/protocol/">{% trans "HEP" %}</a>
                     </li>
@@ -37,6 +59,7 @@
                     <li>
                         <a href="/newfund/">{% trans "NewFund" %}</a>
                     </li>
+                    {% endif %}
                     {% if request.user.is_authenticated %}
                         {% if not request.user.is_superuser %}
                             <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
@@ -81,6 +104,7 @@
                                     <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
                                     <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
                                 </ul>
+                                </a>
                             </li>
                         {% else %}
                             <li class="toolbar-item hidden-xs hidden-sm">
@@ -91,12 +115,21 @@
                             </li>
                         {% endif %}
                     {% else %}
-                    <li class="toolbar-item hidden-xs hidden-sm">
-                        <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                    </li>
-                    <li class="toolbar-item hidden-xs hidden-sm">
-                        <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                    </li>
+                        {% if is_change_css_ru %}
+                        <li class="toolbar-item hidden-xs hidden-sm">
+                            <a href="{{ settings.NEWTON_HOME_URL }}/register/" style="font-size:16px;">{% trans "Register" %}</a>
+                        </li>
+                        <li class="toolbar-item hidden-xs hidden-sm">
+                            <a href="{{ settings.NEWTON_HOME_URL }}/login/" style="font-size:16px;">{% trans "Login" %}</a>
+                        </li>
+                        {% else %}
+                        <li class="toolbar-item hidden-xs hidden-sm">
+                            <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
+                        </li>
+                        <li class="toolbar-item hidden-xs hidden-sm">
+                            <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
+                        </li>
+                        {% endif %}
                     {% endif %}
                     <li class="language-drop-down visible-xs-block visible-sm-block">
                     </li>
