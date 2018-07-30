@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-14 08:32+0000\n"
+"POT-Creation-Date: 2018-07-30 09:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -163,8 +163,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:111
 #: web/apps/zinnia/models_bases/entry.py:114
+#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:87
 msgid "Language"
 msgstr ""
 
@@ -493,7 +493,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:65 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:68 web/templates/footer.html:23
 msgid "Announcement"
 msgstr ""
 
@@ -507,26 +507,27 @@ msgid "All"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:70
+#: web/apps/zinnia/models_bases/entry.py:73
 msgid "Operation"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:71
+#: web/apps/zinnia/models_bases/entry.py:74
 msgid "Weekly"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:69
+#: web/apps/zinnia/models_bases/entry.py:72
 msgid "Activity"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
 #: web/apps/welcome/templates/welcome/community.html:65
+#: web/apps/welcome/templates/welcome/include-allocation.html:63
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:32
+#: web/templates/header.html:34 web/templates/header.html.py:54
 msgid "Community"
 msgstr ""
 
@@ -818,80 +819,70 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
-#: web/templates/header.html:35
+#: web/templates/header.html:37 web/templates/header.html.py:57
 msgid "Economy"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/economy.html:29
+#: web/apps/welcome/templates/welcome/economy.html:28
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:6
-msgid "FUNDS"
+msgid "FUND"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:13
-#: web/templates/header.html:38
-msgid "Foundation & Funds"
+msgid "Newton Eco Development Fund"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:19
-#: web/apps/welcome/templates/welcome/include-allocation.html:48
-msgid "Newton Foundation"
+msgid "Fund positioning"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:24
 msgid ""
-"The Newton Foundation is the core organization that leads and supports the "
-"development of Newton economy.The Foundation includes the following three "
-"funds."
+"The Newton Eco Development Fund (NewFund) is a blockchain FOF (Fund of Fund) "
+"under the Newton Foundation. It aims to encourage more people to participate "
+"in the development of Newton's business ecosystem and ensure that all "
+"parties share economic growth dividends through innovative incentive "
+"mechanisms."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/foundation.html:36
-msgid "Newton Las Manos Fund"
+#: web/apps/welcome/templates/welcome/foundation.html:32
+msgid "Funding source"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/foundation.html:38
+#: web/apps/welcome/templates/welcome/foundation.html:37
 msgid ""
-"The three main operating mechanisms of the NLMF are : community mechanisms, "
-"technical mechanisms, value mechanisms (exchanging NEW and operating "
-"agencies)."
+"NewFund comes mainly from the Newton Foundation and Newton private equity "
+"investors. The fund is managed by a professional GP. By becoming a NewFund "
+"LP, investors can  share the growth of the Newton economy and the blockchain "
+"industry."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/foundation.html:39
-msgid ""
-"The establishment and operation of NLMF: exchanging BTC + Foundation "
-"circulation + cornerstone capital buy-back(core community of common "
-"interests)."
+#: web/apps/welcome/templates/welcome/foundation.html:45
+msgid "Fund management"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:50
-msgid "Newton Darwin Fund"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:52
 msgid ""
-"The two functions of the NDF: value maintenance + business ecological "
-"development."
+"NewFund will be managed it in the form of joint governance and shared "
+"enjoyment, conducting global cooperation business, and establish a special "
+"token fund with top talents and institutions in the industry."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/foundation.html:53
+#: web/apps/welcome/templates/welcome/foundation.html:58
+msgid "Direction of investment"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:63
 msgid ""
-"Establishment and operation of the NDF: the main fund (core community of "
-"common interests) + the cornerstone capital and part of the presale capital "
-"buy-back (super community node)."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:64
-msgid "Public welfare fund"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:66
-msgid ""
-"The Public Welfare Fund (NXXF) will spare no effort to fulfill our social "
-"responsibility, actively supports the development of charities, and helps "
-"vulnerable groups，play well our role in improving public welfare"
+"NewFund's main mission is to develop Newton's economy. It will use funds, "
+"technology, community and other resources to support the entire ecosystem of "
+"the commercial infrastructure, general services, application layers and "
+"peripheral services. At the same time, it will also set up accelerators to "
+"help ecological projects."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
@@ -984,41 +975,107 @@ msgstr ""
 msgid "Bitcoin Ambassador"
 msgstr ""
 
+#: web/apps/welcome/templates/welcome/include-advisor.html:103
+#: web/apps/welcome/templates/welcome/include-advisor.html:105
+msgid "Theodore Gray"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:107
+msgid "Co-Founder of Wolfram Research"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:108
+msgid "Creator of the Mathematica Notebook System"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:109
+msgid "Founder of Touch Press"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:110
+msgid "BAFTA Award winning author"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-allocation.html:8
-msgid "Token Matrix"
+msgid "Token Metrics"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:10
 msgid "Total Supply:"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-allocation.html:15
-msgid "Item"
+#: web/apps/welcome/templates/welcome/include-allocation.html:16
+msgid "Actor"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-allocation.html:16
+#: web/apps/welcome/templates/welcome/include-allocation.html:17
 msgid "Proportion"
 msgstr ""
 
+#: web/apps/welcome/templates/welcome/include-allocation.html:18
+msgid "Amount"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-allocation.html:19
-#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
-msgid "Team"
+msgid "Description"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:22
+msgid "Founding Team"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:24
-msgid "Token Exchange #1"
+msgid "10 billions"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-allocation.html:32
-msgid "Token Exchange #2"
+#: web/apps/welcome/templates/welcome/include-allocation.html:27
+msgid "Incentives for founding team;"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-allocation.html:40
-msgid "Token Exchange #3"
+#: web/apps/welcome/templates/welcome/include-allocation.html:28
+msgid ""
+"The first year is the lock period. From the second year, every month 1/24 of "
+"the total amount will be unlocked."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:34
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
+msgid "Token Exchange"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:39
+#: web/apps/welcome/templates/welcome/include-allocation.html:53
+msgid "15 billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:42
+msgid "For foundation's initial operation."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:48
+msgid "Foundation"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:56
-msgid "Mining"
+msgid "For foundation's later operation;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:57
+msgid ""
+"1/2 of the total amount is immediately unlocked, the rest will be unlocked "
+"1/12 every month."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:68
+msgid "60 billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:71
+msgid "Incentives for community;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:72
+msgid "Unlock in later fifty years."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:6
@@ -1094,16 +1151,12 @@ msgid ""
 "defining-business-order-new-economy-era-sincerely-invites-you-join-us/"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
-msgid "Token Exchange"
-msgstr ""
-
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:16
 msgid "Round"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:17
-msgid "Amount"
+msgid "NEW"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:18
@@ -1111,60 +1164,58 @@ msgid "Ratio"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:19
-msgid "Lock Time"
+msgid "BTC"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:20
-msgid "Start Date"
+msgid "Lock Time"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:21
-msgid "End Date"
+msgid "Duration"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:22
 msgid "Status"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:28
-msgid "1 Year"
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:26
+msgid "7.5&nbsp;billions"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:29
-msgid "January 1,2018"
+msgid "1 Year"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:30
-msgid "April 1,2018"
+msgid "March 1,2018 - April 30,2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:31
 msgid "Finished"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:37
-msgid "4 times token issue within 3 months"
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:35
+msgid "6&nbsp;billions"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:38
-#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
-msgid "July 1,2018"
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
+msgid "No Lock"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:39
-#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
-msgid "July 31,2018"
+msgid "July 1,2018 - July 31,2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:40
 msgid "In Progress"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:46
-msgid "No Lock"
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:44
+msgid "1.5&nbsp;billions"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:48
 msgid "Estimate on October,2018"
 msgstr ""
@@ -1173,7 +1224,7 @@ msgstr ""
 msgid "Waiting"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:53
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:55
 msgid "Join Round #2"
 msgstr ""
 
@@ -1320,23 +1371,36 @@ msgstr ""
 msgid "Founder of xijie.com"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-investor.html:213
-#: web/apps/welcome/templates/welcome/include-investor.html:215
+#: web/apps/welcome/templates/welcome/include-investor.html:210
+#: web/apps/welcome/templates/welcome/include-investor.html:212
 msgid "JLAB"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-investor.html:225
-#: web/apps/welcome/templates/welcome/include-investor.html:227
+#: web/apps/welcome/templates/welcome/include-investor.html:222
+#: web/apps/welcome/templates/welcome/include-investor.html:224
 msgid "Consensus Lab"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-investor.html:237
-#: web/apps/welcome/templates/welcome/include-investor.html:239
+#: web/apps/welcome/templates/welcome/include-investor.html:234
+#: web/apps/welcome/templates/welcome/include-investor.html:236
 msgid "GENESIS"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-investor.html:248
+#: web/apps/welcome/templates/welcome/include-investor.html:250
+msgid "ELAFUND"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:6
 msgid "Newton Token Exchange Round #2 is in progress."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
+msgid "July 1,2018"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
+msgid "July 31,2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:9
@@ -1586,10 +1650,17 @@ msgid "Everyone should benefit directly from economic growth"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/index.html:15
-msgid "Newton: Infrastructure for the protocol-based economy"
+msgid "Newton: Infrastructure for the community economy"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/index.html:50
+#: web/apps/welcome/templates/welcome/index.html:17
+#: web/apps/welcome/templates/welcome/whitepaper.html:6
+#: web/apps/welcome/templates/welcome/whitepaper.html:13
+#: web/apps/welcome/templates/welcome/whitepaper.html:18
+msgid "Whitepaper"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/index.html:46
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
@@ -2365,7 +2436,6 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:6
 #: web/apps/welcome/templates/welcome/mediakit.html:13
-#: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/templates/footer.html:39
 msgid "Media Kit"
 msgstr ""
@@ -2416,7 +2486,7 @@ msgid "Poster in English"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/templates/header.html:29
+#: web/templates/header.html:31 web/templates/header.html.py:51
 msgid "NewPay"
 msgstr ""
 
@@ -2799,7 +2869,7 @@ msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-#: web/templates/header.html:23
+#: web/templates/header.html:25 web/templates/header.html.py:45
 msgid "HEP"
 msgstr ""
 
@@ -2906,6 +2976,10 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/roadmap.html:6
 msgid "Roadmap"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
+msgid "Team"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:6
@@ -3587,14 +3661,6 @@ msgid ""
 "April, 2018"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/whitepaper.html:13
-msgid "Whitepaper"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/whitepaper.html:20
-msgid "Newton Whitepaper"
-msgstr ""
-
 #: web/apps/zinnia/breadcrumbs.py:68 web/apps/zinnia/admin/forms.py:66
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:25
 #: web/apps/zinnia/templates/zinnia/tag_list.html:6
@@ -3770,7 +3836,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:75
+#: web/apps/zinnia/models_bases/entry.py:78
 msgid "title"
 msgstr ""
 
@@ -3907,7 +3973,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:496
+#: web/apps/zinnia/models_bases/entry.py:499
 msgid "categories"
 msgstr ""
 
@@ -3920,14 +3986,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:64
+#: web/apps/zinnia/models_bases/entry.py:67
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:78
+#: web/apps/zinnia/models_bases/entry.py:81
 msgid "slug"
 msgstr ""
 
@@ -3948,7 +4014,7 @@ msgid "language"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:121
+#: web/apps/zinnia/models_bases/entry.py:124
 msgid "Entry type"
 msgstr ""
 
@@ -3968,173 +4034,173 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:80
-#: web/apps/zinnia/models_bases/entry.py:105
+#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:108
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:86
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:87
+#: web/apps/zinnia/models_bases/entry.py:90
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:89
+#: web/apps/zinnia/models_bases/entry.py:92
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:92
+#: web/apps/zinnia/models_bases/entry.py:95
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:94
+#: web/apps/zinnia/models_bases/entry.py:97
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:102
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:100
+#: web/apps/zinnia/models_bases/entry.py:103
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:103
+#: web/apps/zinnia/models_bases/entry.py:106
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:108
+#: web/apps/zinnia/models_bases/entry.py:111
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:118
+#: web/apps/zinnia/models_bases/entry.py:121
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:125
+#: web/apps/zinnia/models_bases/entry.py:128
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:132
+#: web/apps/zinnia/models_bases/entry.py:135
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:247
+#: web/apps/zinnia/models_bases/entry.py:250
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:248
+#: web/apps/zinnia/models_bases/entry.py:251
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:262
+#: web/apps/zinnia/models_bases/entry.py:265
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:304
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:305
+#: web/apps/zinnia/models_bases/entry.py:308
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:310
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:308
+#: web/apps/zinnia/models_bases/entry.py:311
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:313
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:311
+#: web/apps/zinnia/models_bases/entry.py:314
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:314
+#: web/apps/zinnia/models_bases/entry.py:317
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:316
+#: web/apps/zinnia/models_bases/entry.py:319
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:318
+#: web/apps/zinnia/models_bases/entry.py:321
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:402
+#: web/apps/zinnia/models_bases/entry.py:405
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:420
+#: web/apps/zinnia/models_bases/entry.py:423
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:421
+#: web/apps/zinnia/models_bases/entry.py:424
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:454
+#: web/apps/zinnia/models_bases/entry.py:457
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:456
+#: web/apps/zinnia/models_bases/entry.py:459
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:467
+#: web/apps/zinnia/models_bases/entry.py:470
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:482
+#: web/apps/zinnia/models_bases/entry.py:485
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:506
+#: web/apps/zinnia/models_bases/entry.py:509
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:525
+#: web/apps/zinnia/models_bases/entry.py:528
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:526
+#: web/apps/zinnia/models_bases/entry.py:529
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:538
+#: web/apps/zinnia/models_bases/entry.py:541
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:539
+#: web/apps/zinnia/models_bases/entry.py:542
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:551
+#: web/apps/zinnia/models_bases/entry.py:554
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:553
-#: web/apps/zinnia/models_bases/entry.py:569
+#: web/apps/zinnia/models_bases/entry.py:556
+#: web/apps/zinnia/models_bases/entry.py:572
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:555
+#: web/apps/zinnia/models_bases/entry.py:558
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:567
+#: web/apps/zinnia/models_bases/entry.py:570
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:571
+#: web/apps/zinnia/models_bases/entry.py:574
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -4778,8 +4844,8 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
-#: web/templates/header.html:49 web/templates/header.html.py:57
-#: web/templates/header.html:78 web/templates/header.html.py:86
+#: web/templates/header.html:72 web/templates/header.html.py:82
+#: web/templates/header.html:115 web/templates/header.html.py:123
 msgid "Login"
 msgstr ""
 
@@ -5220,23 +5286,29 @@ msgid "Service Terms"
 msgstr ""
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:42 web/templates/header.html.py:69
+#: web/templates/header.html:65 web/templates/header.html.py:75
+#: web/templates/header.html:106
 msgid "User Center"
 msgstr ""
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:43 web/templates/header.html.py:70
+#: web/templates/header.html:66 web/templates/header.html.py:76
+#: web/templates/header.html:107
 msgid "LogOut"
 msgstr ""
 
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
-#: web/templates/header.html:46 web/templates/header.html.py:54
-#: web/templates/header.html:75 web/templates/header.html.py:83
+#: web/templates/header.html:69 web/templates/header.html.py:79
+#: web/templates/header.html:112 web/templates/header.html.py:120
 msgid "Register"
 msgstr ""
 
-#: web/templates/header.html:26
+#: web/templates/header.html:28 web/templates/header.html.py:48
 msgid "Technology"
+msgstr ""
+
+#: web/templates/header.html:40 web/templates/header.html.py:60
+msgid "NewFund"
 msgstr ""
 
 #: web/templates/admin/change_form.html:33

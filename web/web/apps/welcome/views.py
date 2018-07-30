@@ -23,8 +23,10 @@ from subscription import forms as subscription_forms
 
 def show_home_view(request):
     language = translation.get_language()
-    language_header = language
-    request.language_header = language_header
+    is_change_css = False
+    if language in ['de', 'es', 'fr', 'nl', 'ru']:
+        is_change_css = True
+
     if language.startswith('zh'):
         language = CHINESE
     elif language.startswith('en'):
