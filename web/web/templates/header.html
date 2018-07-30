@@ -61,17 +61,19 @@
                     </li>
                     {% endif %}
                     {% if request.user.is_authenticated %}
-                        {% if not request.user.is_superuser %}
-                            <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                            <li class="visible-xs-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
-                        {% else %}
-                            <li class="visible-sm-block visible-xs-block">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                            </li>
-                            <li class="visible-sm-block visible-xs-block">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                            </li>
-                        {% endif %}
+                        <!--{% if not request.user.is_superuser %}-->
+                            <!--<li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>-->
+                            <!--<li class="visible-xs-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>-->
+                        <!--{% else %}-->
+                            <!--<li class="visible-sm-block visible-xs-block">-->
+                                <!--<a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>-->
+                            <!--</li>-->
+                            <!--<li class="visible-sm-block visible-xs-block">-->
+                                <!--<a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>-->
+                            <!--</li>-->
+                        <!--{% endif %}-->
+                    <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+                    <li class="visible-xs-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
                     {% else %}
                     <li class="visible-sm-block visible-xs-block">
                         <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
