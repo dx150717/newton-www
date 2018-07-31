@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-30 09:38+0000\n"
+"POT-Creation-Date: 2018-07-31 15:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,7 +165,7 @@ msgstr ""
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
 #: web/apps/zinnia/models_bases/entry.py:114
-#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:87
+#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:85
 msgid "Language"
 msgstr "语言"
 
@@ -1273,6 +1273,7 @@ msgid "March 1,2018 - April 30,2018"
 msgstr "2018年3月1日 - 2018年4月30日"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:31
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:40
 msgid "Finished"
 msgstr "已经结束"
 
@@ -1289,10 +1290,6 @@ msgstr "无"
 msgid "July 1,2018 - July 31,2018"
 msgstr "2018年7月1日 - 2018年7月31日"
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:40
-msgid "In Progress"
-msgstr "正在进行"
-
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:44
 msgid "1.5&nbsp;billions"
 msgstr "15&nbsp;亿"
@@ -1304,10 +1301,6 @@ msgstr "预计2018年10月"
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:49
 msgid "Waiting"
 msgstr "尚未开始"
-
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:55
-msgid "Join Round #2"
-msgstr "参加第二轮通证交换"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Protocol-based economy of Newton"
@@ -1482,8 +1475,8 @@ msgid "ELAFUND"
 msgstr "亦来资本"
 
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:6
-msgid "Newton Token Exchange Round #2 is in progress."
-msgstr "牛顿第二轮通证交换正在进行中。"
+msgid "The second round Newton token exchange has ended."
+msgstr "牛顿第二轮通证交换已经结束"
 
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
 msgid "July 1,2018"
@@ -5184,8 +5177,9 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
-#: web/templates/header.html:72 web/templates/header.html.py:82
-#: web/templates/header.html:115 web/templates/header.html.py:123
+#: web/templates/header.html:72 web/templates/header.html.py:80
+#: web/templates/header.html:114 web/templates/header.html.py:123
+#: web/templates/header.html:130
 msgid "Login"
 msgstr "登录"
 
@@ -5636,20 +5630,19 @@ msgid "Service Terms"
 msgstr "服务条款"
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:65 web/templates/header.html.py:75
-#: web/templates/header.html:106
+#: web/templates/header.html:65 web/templates/header.html.py:104
 msgid "User Center"
 msgstr "用户中心"
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:66 web/templates/header.html.py:76
-#: web/templates/header.html:107
+#: web/templates/header.html:66 web/templates/header.html.py:105
 msgid "LogOut"
 msgstr "退出"
 
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
-#: web/templates/header.html:69 web/templates/header.html.py:79
-#: web/templates/header.html:112 web/templates/header.html.py:120
+#: web/templates/header.html:69 web/templates/header.html.py:77
+#: web/templates/header.html:111 web/templates/header.html.py:120
+#: web/templates/header.html:127
 msgid "Register"
 msgstr "注册"
 
@@ -5701,6 +5694,15 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
+
+#~ msgid "In Progress"
+#~ msgstr "正在进行"
+
+#~ msgid "Join Round #2"
+#~ msgstr "参加第二轮通证交换"
+
+#~ msgid "Newton Token Exchange Round #2 is in progress."
+#~ msgstr "牛顿第二轮通证交换正在进行中。"
 
 #~ msgid "Chinese Whitepaper"
 #~ msgstr "下载中文版"

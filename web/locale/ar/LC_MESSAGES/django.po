@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-13 07:06+0000\n"
+"POT-Creation-Date: 2018-07-31 15:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,8 +166,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:111
 #: web/apps/zinnia/models_bases/entry.py:114
+#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:85
 msgid "Language"
 msgstr ""
 
@@ -496,7 +496,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:65 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:68 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "إعلان"
 
@@ -510,26 +510,27 @@ msgid "All"
 msgstr "الكل"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:70
+#: web/apps/zinnia/models_bases/entry.py:73
 msgid "Operation"
 msgstr "العملية"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:71
+#: web/apps/zinnia/models_bases/entry.py:74
 msgid "Weekly"
 msgstr "أسبوعيا"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:69
+#: web/apps/zinnia/models_bases/entry.py:72
 msgid "Activity"
 msgstr "النشاط"
 
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
 #: web/apps/welcome/templates/welcome/community.html:65
+#: web/apps/welcome/templates/welcome/include-allocation.html:63
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:32
+#: web/templates/header.html:34 web/templates/header.html.py:54
 msgid "Community"
 msgstr "المجتمع"
 
@@ -579,8 +580,9 @@ msgstr "تواصل معنا"
 msgid ""
 "Web Site: <a href='https://www.newtonproject.org' target='_blank'>https://"
 "www.newtonproject.org"
-msgstr " <a href='https://www.newtonproject.org' target='_blank'>https://"
-"www.newtonproject.org : الموقع"
+msgstr ""
+" <a href='https://www.newtonproject.org' target='_blank'>https://www."
+"newtonproject.org : الموقع"
 
 #: web/apps/welcome/templates/welcome/contact.html:22
 msgid "Email:"
@@ -590,50 +592,57 @@ msgstr "الايميل:"
 msgid ""
 "Whitepaper : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
-msgstr "<a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
+msgstr ""
+"<a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>الصفحة البيضا : ء"
 
 #: web/apps/welcome/templates/welcome/contact.html:25
 msgid ""
 "Global Community : <a href='mailto:newton-community@newtonproject."
 "org'>newton-community@newtonproject.org</a>"
-msgstr "<a href='mailto:newton-community@newtonproject."
-"org'>newton-community@newtonproject.org</a> : المجتمع العالمي"
+msgstr ""
+"<a href='mailto:newton-community@newtonproject.org'>newton-"
+"community@newtonproject.org</a> : المجتمع العالمي"
 
 #: web/apps/welcome/templates/welcome/contact.html:26
 msgid ""
 "Newton Token Exchange : <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
-msgstr "<a href='mailto:newton-ir@newtonproject.org'>newton-"
-"ir@newtonproject.org</a> : عملة تبادل Newton"
+msgstr ""
+"<a href='mailto:newton-ir@newtonproject.org'>newton-ir@newtonproject.org</"
+"a> : عملة تبادل Newton"
 
 #: web/apps/welcome/templates/welcome/contact.html:27
 msgid ""
 "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
-msgstr "<a href='mailto:newton-pr@newtonproject.org'>newton-"
-"pr@newtonproject.org</a> : علاقات عامة"
+msgstr ""
+"<a href='mailto:newton-pr@newtonproject.org'>newton-pr@newtonproject.org</"
+"a> : علاقات عامة"
 
 #: web/apps/welcome/templates/welcome/contact.html:28
 msgid ""
 "Newton Fund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
-msgstr "<a href='mailto:newton-fund@newtonproject.org'>newton-"
-"fund@newtonproject.org</a> : تمويل Newton"
+msgstr ""
+"<a href='mailto:newton-fund@newtonproject.org'>newton-fund@newtonproject."
+"org</a> : تمويل Newton"
 
 #: web/apps/welcome/templates/welcome/contact.html:29
 msgid ""
 "Council : <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
-msgstr "<a href='mailto:newton-council@newtonproject.org'>newton-"
+msgstr ""
+"<a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a> : المجلس"
 
 #: web/apps/welcome/templates/welcome/contact.html:30
 msgid ""
 "Other Contacts : <a href='mailto:contact@newtonproject."
 "org'>contact@newtonproject.org</a>"
-msgstr "<a href='mailto:contact@newtonproject."
-"org'>contact@newtonproject.org</a> : اتصالات أخرى"
+msgstr ""
+"<a href='mailto:contact@newtonproject.org'>contact@newtonproject.org</a> : "
+"اتصالات أخرى"
 
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
@@ -829,79 +838,70 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
-#: web/templates/header.html:35
+#: web/templates/header.html:37 web/templates/header.html.py:57
 msgid "Economy"
 msgstr "الاقتصاد"
 
-#: web/apps/welcome/templates/welcome/economy.html:29
+#: web/apps/welcome/templates/welcome/economy.html:28
 #: web/apps/welcome/templates/welcome/include-partner.html:27
 msgid "Joint Business Organization"
 msgstr "منظمة تجارية مشتركة"
 
 #: web/apps/welcome/templates/welcome/foundation.html:6
-msgid "FUNDS"
+msgid "FUND"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:13
-#: web/templates/header.html:38
-msgid "Foundation & Funds"
+msgid "Newton Eco Development Fund"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:19
-msgid "Foundation"
+msgid "Fund positioning"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:24
 msgid ""
-"The Newton Foundation is the core organization that leads and supports the "
-"development of Newton economy.The Foundation includes the following three "
-"funds."
+"The Newton Eco Development Fund (NewFund) is a blockchain FOF (Fund of Fund) "
+"under the Newton Foundation. It aims to encourage more people to participate "
+"in the development of Newton's business ecosystem and ensure that all "
+"parties share economic growth dividends through innovative incentive "
+"mechanisms."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:32
-msgid "Main Fund: Newton Las Manos Fund (NLMF)"
+msgid "Funding source"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:37
 msgid ""
-"The three main operating mechanisms of the NLMF are : community mechanisms, "
-"technical mechanisms, value mechanisms (exchanging NEW and operating "
-"agencies)."
+"NewFund comes mainly from the Newton Foundation and Newton private equity "
+"investors. The fund is managed by a professional GP. By becoming a NewFund "
+"LP, investors can  share the growth of the Newton economy and the blockchain "
+"industry."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/foundation.html:38
+#: web/apps/welcome/templates/welcome/foundation.html:45
+msgid "Fund management"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/foundation.html:50
 msgid ""
-"The establishment and operation of NLMF: exchanging BTC + Foundation "
-"circulation + cornerstone capital buy-back(core community of common "
-"interests)."
+"NewFund will be managed it in the form of joint governance and shared "
+"enjoyment, conducting global cooperation business, and establish a special "
+"token fund with top talents and institutions in the industry."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/foundation.html:46
-msgid "Ecological Fund, Newton Darwin Fund (NDF)"
+#: web/apps/welcome/templates/welcome/foundation.html:58
+msgid "Direction of investment"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/foundation.html:51
+#: web/apps/welcome/templates/welcome/foundation.html:63
 msgid ""
-"The two functions of the NDF: value maintenance + business ecological "
-"development."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:52
-msgid ""
-"Establishment and operation of the NDF: the main fund (core community of "
-"common interests) + the cornerstone capital and part of the presale capital "
-"buy-back (super community node)."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:60
-msgid "Public welfare fund"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/foundation.html:65
-msgid ""
-"The Public Welfare Fund (NXXF) will spare no effort to fulfill our social "
-"responsibility, actively supports the development of charities, and helps "
-"vulnerable groups，play well our role in improving public welfare"
+"NewFund's main mission is to develop Newton's economy. It will use funds, "
+"technology, community and other resources to support the entire ecosystem of "
+"the commercial infrastructure, general services, application layers and "
+"peripheral services. At the same time, it will also set up accelerators to "
+"help ecological projects."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
@@ -994,45 +994,111 @@ msgstr ""
 msgid "Bitcoin Ambassador"
 msgstr "سفيرة    Bitcoin"
 
+#: web/apps/welcome/templates/welcome/include-advisor.html:103
+#: web/apps/welcome/templates/welcome/include-advisor.html:105
+msgid "Theodore Gray"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:107
+#, fuzzy
+msgid "Co-Founder of Wolfram Research"
+msgstr "مؤسس شريك  لدى"
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:108
+msgid "Creator of the Mathematica Notebook System"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:109
+#, fuzzy
+msgid "Founder of Touch Press"
+msgstr "مؤسس WuZhou online"
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:110
+msgid "BAFTA Award winning author"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-allocation.html:8
-msgid "Token Matrix"
+msgid "Token Metrics"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:10
 msgid "Total Supply:"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-allocation.html:15
-msgid "Item"
+#: web/apps/welcome/templates/welcome/include-allocation.html:16
+msgid "Actor"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-allocation.html:16
+#: web/apps/welcome/templates/welcome/include-allocation.html:17
 msgid "Proportion"
 msgstr ""
 
+#: web/apps/welcome/templates/welcome/include-allocation.html:18
+msgid "Amount"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-allocation.html:19
-#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
-msgid "Team"
-msgstr "الفريق"
+#, fuzzy
+msgid "Description"
+msgstr "الوصف الوظيفي"
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:22
+#, fuzzy
+msgid "Founding Team"
+msgstr "مؤسس"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:24
-msgid "Token Exchange #1"
+msgid "10 billions"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-allocation.html:32
-msgid "Token Exchange #2"
+#: web/apps/welcome/templates/welcome/include-allocation.html:27
+msgid "Incentives for founding team;"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-allocation.html:40
-msgid "Token Exchange #3"
+#: web/apps/welcome/templates/welcome/include-allocation.html:28
+msgid ""
+"The first year is the lock period. From the second year, every month 1/24 of "
+"the total amount will be unlocked."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:34
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
+msgid "Token Exchange"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:39
+#: web/apps/welcome/templates/welcome/include-allocation.html:53
+msgid "15 billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:42
+msgid "For foundation's initial operation."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:48
-msgid "Newton Foundation"
+msgid "Foundation"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:56
-msgid "Mining"
+msgid "For foundation's later operation;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:57
+msgid ""
+"1/2 of the total amount is immediately unlocked, the rest will be unlocked "
+"1/12 every month."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:68
+msgid "60 billions"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:71
+msgid "Incentives for community;"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-allocation.html:72
+msgid "Unlock in later fifty years."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:6
@@ -1108,16 +1174,12 @@ msgid ""
 "defining-business-order-new-economy-era-sincerely-invites-you-join-us/"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
-msgid "Token Exchange"
-msgstr ""
-
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:16
 msgid "Round"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:17
-msgid "Amount"
+msgid "NEW"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:18
@@ -1125,70 +1187,62 @@ msgid "Ratio"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:19
-msgid "Lock Time"
+msgid "BTC"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:20
-msgid "Start Date"
+msgid "Lock Time"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:21
-msgid "End Date"
-msgstr ""
+#, fuzzy
+msgid "Duration"
+msgstr "العملية"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:22
 msgid "Status"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:28
-msgid "1 Year"
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:26
+msgid "7.5&nbsp;billions"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:29
-msgid "January 1,2018"
+msgid "1 Year"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:30
-msgid "April 1,2018"
+msgid "March 1,2018 - April 30,2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:31
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:40
 msgid "Finished"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:37
-msgid "4 times token issue within 3 months"
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:35
+msgid "6&nbsp;billions"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:38
-#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
-msgid "July 1,2018"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:39
-#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
-msgid "July 31,2018"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:40
-msgid "In Progress"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:46
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
 msgid "No Lock"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:39
+msgid "July 1,2018 - July 31,2018"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:44
+msgid "1.5&nbsp;billions"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:48
 msgid "Estimate on October,2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:49
 msgid "Waiting"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:53
-msgid "Join Round #2"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature.html:10
@@ -1204,7 +1258,10 @@ msgid ""
 "Users secure and control their personal data through cryptography, and can "
 "then manage their personal credit. Users share the profit produced by data "
 "in a pre-agreed manner."
-msgstr "يقوم المستخدمون بتأمين بياناتهم الشخصية والتحكم بها من خلال التشفير ، ثم يمكنهم إدارة رصيدهم الشخصي. و يشارك المستخدمون الربح الناتج عن البيانات بطريقة متفق عليها مسبقًا."
+msgstr ""
+"يقوم المستخدمون بتأمين بياناتهم الشخصية والتحكم بها من خلال التشفير ، ثم "
+"يمكنهم إدارة رصيدهم الشخصي. و يشارك المستخدمون الربح الناتج عن البيانات "
+"بطريقة متفق عليها مسبقًا."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:37
 msgid "Smarter"
@@ -1216,7 +1273,10 @@ msgid ""
 "without authoritative intermediaries. This methodology will reduce human "
 "intervention and facilitate the coordination between people, between "
 "machines and between people and machines."
-msgstr "يمكن أن يؤدي الإنتاج الائتماني التلقائي للائتمان بطريقة حرة ومفتوحة إلى تسهيل التنسيق الأفضل بين الناس وبعضهم وبين الناس والآلات وبين الآلات والآلات بدون وسيط موثوق ويمكن أن يقلل من العوامل المزعجة بحيث تعزز الأتمتة والذكاء."
+msgstr ""
+"يمكن أن يؤدي الإنتاج الائتماني التلقائي للائتمان بطريقة حرة ومفتوحة إلى "
+"تسهيل التنسيق الأفضل بين الناس وبعضهم وبين الناس والآلات وبين الآلات والآلات "
+"بدون وسيط موثوق ويمكن أن يقلل من العوامل المزعجة بحيث تعزز الأتمتة والذكاء."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:49
 msgid "More effective incentive mechanism"
@@ -1228,7 +1288,10 @@ msgid ""
 "reduce the transactional cost and reward each who contributed in the "
 "transaction; such as service providers, consumers and other participants "
 "connected by the value-based Internet."
-msgstr "استبدال وسطاء الأعمال ببروتوكولات التكنولوجيا ، وربط مقدمي الخدمات ، والمستهلكين والأدوار الأخرى من خلال الإنترنت القائم على القيمة ، سيتم تحميل تكاليف معاملات مقدمي الخدمة مباشرة بالمساهمين المناظرين."
+msgstr ""
+"استبدال وسطاء الأعمال ببروتوكولات التكنولوجيا ، وربط مقدمي الخدمات ، "
+"والمستهلكين والأدوار الأخرى من خلال الإنترنت القائم على القيمة ، سيتم تحميل "
+"تكاليف معاملات مقدمي الخدمة مباشرة بالمساهمين المناظرين."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:60
 msgid "New organizational structure and cooperation mode"
@@ -1240,7 +1303,11 @@ msgid ""
 "monopoly of intermediary platforms managed by traditional for-profit "
 "organizations. Based on open, fair, and rational rules every contributor "
 "will benefit from the economy and become a part of the economy."
-msgstr "سوف تحل اقتصادات المجتمعات المحلية التي تديرها المؤسسات غير الربحية محل منصات الاحتكار التي تديرها الشركات التقليدية المربحة. يكتسب كل مساهم الحقوق والمصالح من الاقتصاد وفقا لمبادئ عادلة ومعقولة وشفافة ، لتصبح جزءا من الاقتصاد."
+msgstr ""
+"سوف تحل اقتصادات المجتمعات المحلية التي تديرها المؤسسات غير الربحية محل "
+"منصات الاحتكار التي تديرها الشركات التقليدية المربحة. يكتسب كل مساهم الحقوق "
+"والمصالح من الاقتصاد وفقا لمبادئ عادلة ومعقولة وشفافة ، لتصبح جزءا من "
+"الاقتصاد."
 
 #: web/apps/welcome/templates/welcome/include-feed.html:11
 msgid "FEED"
@@ -1334,24 +1401,37 @@ msgstr ""
 msgid "Founder of xijie.com"
 msgstr "مؤسس xijie.com"
 
-#: web/apps/welcome/templates/welcome/include-investor.html:213
-#: web/apps/welcome/templates/welcome/include-investor.html:215
+#: web/apps/welcome/templates/welcome/include-investor.html:210
+#: web/apps/welcome/templates/welcome/include-investor.html:212
 msgid "JLAB"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-investor.html:225
-#: web/apps/welcome/templates/welcome/include-investor.html:227
+#: web/apps/welcome/templates/welcome/include-investor.html:222
+#: web/apps/welcome/templates/welcome/include-investor.html:224
 msgid "Consensus Lab"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-investor.html:237
-#: web/apps/welcome/templates/welcome/include-investor.html:239
+#: web/apps/welcome/templates/welcome/include-investor.html:234
+#: web/apps/welcome/templates/welcome/include-investor.html:236
 msgid "GENESIS"
 msgstr ""
 
+#: web/apps/welcome/templates/welcome/include-investor.html:248
+#: web/apps/welcome/templates/welcome/include-investor.html:250
+msgid "ELAFUND"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:6
-msgid "Newton Token Exchange Round #2 is in progress."
-msgstr "Newton Token Exchange Round # 2 قيد التقدم."
+msgid "The second round Newton token exchange has ended."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
+msgid "July 1,2018"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
+msgid "July 31,2018"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:9
 msgid "View Detail"
@@ -1375,7 +1455,9 @@ msgstr "الهوية الرقمية و الائتمان"
 #: web/apps/welcome/templates/welcome/include-protocol.html:25
 msgid ""
 "With digital identities, users can easily manage their own digital assets."
-msgstr "باستخدام الهويات الرقمية،  يتمكن المستخدمون بسهولة من إدارة أصولهم الرقمية الخاصة، الأصول "
+msgstr ""
+"باستخدام الهويات الرقمية،  يتمكن المستخدمون بسهولة من إدارة أصولهم الرقمية "
+"الخاصة، الأصول "
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:34
 #: web/apps/welcome/templates/welcome/protocol.html:35
@@ -1386,7 +1468,9 @@ msgstr "سلسلة الإمداد"
 msgid ""
 "By using techniques such as 'atom hashing', we can create a unique digital "
 "identity for commodities of the whole network."
-msgstr "باستخدام تقنيات مثل 'atom hashing' ، فإنه يمكننا إنشاء هوية رقمية فريدة لسلع الشبكة بالكامل و عبر هذه الهوية"
+msgstr ""
+"باستخدام تقنيات مثل 'atom hashing' ، فإنه يمكننا إنشاء هوية رقمية فريدة لسلع "
+"الشبكة بالكامل و عبر هذه الهوية"
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:45
 #: web/apps/welcome/templates/welcome/protocol.html:50
@@ -1397,7 +1481,9 @@ msgstr "التسويق الرقمي"
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system."
-msgstr "يمكن للمعلنين وضع خطط تسويقية من خلال العديد من نماذج العقود الذكية التسويقية المضمنة في النظام ، بما في ذلك طرق المكافآت وأوضاع التسوية "
+msgstr ""
+"يمكن للمعلنين وضع خطط تسويقية من خلال العديد من نماذج العقود الذكية "
+"التسويقية المضمنة في النظام ، بما في ذلك طرق المكافآت وأوضاع التسوية "
 
 #: web/apps/welcome/templates/welcome/include-protocol.html:55
 #: web/apps/welcome/templates/welcome/protocol.html:64
@@ -1410,7 +1496,9 @@ msgid ""
 "Newton supports cross-border transactions, micro payments, lightning "
 "settlements and more to provide comprehensive online and offline payment "
 "tools."
-msgstr "نحن ندعم المعاملات عبر الحدود ، والمدفوعات الصغيرة جدًا ، التسويات السريعة ، وما إلى ذلك ، ونوفر أدوات دفع شاملة متصلة وغير متصلة بالإنترنت."
+msgstr ""
+"نحن ندعم المعاملات عبر الحدود ، والمدفوعات الصغيرة جدًا ، التسويات السريعة ، "
+"وما إلى ذلك ، ونوفر أدوات دفع شاملة متصلة وغير متصلة بالإنترنت."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:9
 msgid "ROADMAP"
@@ -1560,7 +1648,11 @@ msgid ""
 "supports multiple consensus mechanisms and data structures, ensures the "
 "assets transactions between the main chain and sub-chains, and between sub-"
 "chains."
-msgstr "بينما تدعم السلسلة الفرعية أنظمة خدماتية محددة ، مثل بروتوكول التبادل المفرط, إلى جانب ذلك فهي تدعم آليات توافقية وهياكل بيانات متعددة ، وتضمن معاملات الأصول بين السلسلة الرئيسية والسلاسل الفرعية وبين السلاسل الفرعية والسلاسل الفرعية الأخرى."
+msgstr ""
+"بينما تدعم السلسلة الفرعية أنظمة خدماتية محددة ، مثل بروتوكول التبادل "
+"المفرط, إلى جانب ذلك فهي تدعم آليات توافقية وهياكل بيانات متعددة ، وتضمن "
+"معاملات الأصول بين السلسلة الرئيسية والسلاسل الفرعية وبين السلاسل الفرعية "
+"والسلاسل الفرعية الأخرى."
 
 #: web/apps/welcome/templates/welcome/include-technology.html:34
 #: web/apps/welcome/templates/welcome/tech.html:45
@@ -1571,7 +1663,9 @@ msgstr "أتوم هاشينغ"
 msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning "
 "technology, the hashing ID is generated."
-msgstr "من خلال استخدام الموازين الراديومترية ، وتحليل المركبات الرئيسية PCA ، ورؤية الماكينة ، وتكنولوجيا التعلم العميق "
+msgstr ""
+"من خلال استخدام الموازين الراديومترية ، وتحليل المركبات الرئيسية PCA ، ورؤية "
+"الماكينة ، وتكنولوجيا التعلم العميق "
 
 #: web/apps/welcome/templates/welcome/include-technology.html:45
 #: web/apps/welcome/templates/welcome/tech.html:32
@@ -1582,7 +1676,9 @@ msgstr "NewNet"
 msgid ""
 "NewNET, which consists of a large number of nodes, is an open cloud "
 "computing network."
-msgstr "إن NewNet ، التي تتكون من عدد كبير من العقد ، هي عبارة عن شبكة مفتوحة تقوم بتوفير خدمات تخزين موثوق بها ، كما "
+msgstr ""
+"إن NewNet ، التي تتكون من عدد كبير من العقد ، هي عبارة عن شبكة مفتوحة تقوم "
+"بتوفير خدمات تخزين موثوق بها ، كما "
 
 #: web/apps/welcome/templates/welcome/include-technology.html:55
 #: web/apps/welcome/templates/welcome/tech.html:58
@@ -1593,7 +1689,10 @@ msgstr "NewIOT"
 msgid ""
 "Blockchain fog computing, communication protocols between IoT devices and "
 "gateways, and NewChain IoT devices development specifications."
-msgstr " NewIOT هو تعريف عام لسلسلة من التقنيات ، بما في ذلك حوسبة الضباب في blockchain ، وبروتوكولات الاتصال بين أجهزة IoT والبوابات ، ومواصفات تطوير أجهزة NewChain IoT."
+msgstr ""
+" NewIOT هو تعريف عام لسلسلة من التقنيات ، بما في ذلك حوسبة الضباب في "
+"blockchain ، وبروتوكولات الاتصال بين أجهزة IoT والبوابات ، ومواصفات تطوير "
+"أجهزة NewChain IoT."
 
 #: web/apps/welcome/templates/welcome/index.html:14
 msgid "Everyone should benefit directly from economic growth"
@@ -1603,11 +1702,20 @@ msgstr "يجب أن يستفيد الجميع مباشرة من التنمية �
 msgid "Newton: Infrastructure for the community economy"
 msgstr "Newton : البنية التحتية للاقتصاد المجتمعي"
 
-#: web/apps/welcome/templates/welcome/index.html:50
+#: web/apps/welcome/templates/welcome/index.html:17
+#: web/apps/welcome/templates/welcome/whitepaper.html:6
+#: web/apps/welcome/templates/welcome/whitepaper.html:13
+#: web/apps/welcome/templates/welcome/whitepaper.html:18
+msgid "Whitepaper"
+msgstr "ورق ابيض"
+
+#: web/apps/welcome/templates/welcome/index.html:46
 msgid ""
 "Tribute to one of the greatest scientists ever to impact our lives, Sir "
 "Isaac Newton."
-msgstr " تحية لواحد من أعظم العلماء على الإطلاق بالتأثير على حياتنا ، السيد إسحاق نيوتن."
+msgstr ""
+" تحية لواحد من أعظم العلماء على الإطلاق بالتأثير على حياتنا ، السيد إسحاق "
+"نيوتن."
 
 #: web/apps/welcome/templates/welcome/joinus.html:6
 msgid "Jobs"
@@ -1626,7 +1734,9 @@ msgstr ""
 msgid ""
 "We are committed to building an efficient, collaborative, low-cost, highly "
 "automated business infrastructure ecosystem."
-msgstr "نحن ملتزمون ببناء بنية تحتية فعالة ، تعاونية ، منخفضة التكلفة ، مؤتمتة للأعمال التجارية"
+msgstr ""
+"نحن ملتزمون ببناء بنية تحتية فعالة ، تعاونية ، منخفضة التكلفة ، مؤتمتة "
+"للأعمال التجارية"
 
 #: web/apps/welcome/templates/welcome/joinus.html:28
 msgid "OUR CULTURE"
@@ -1637,7 +1747,9 @@ msgid ""
 "We believe in the free, open and inclusive culture advocated by the "
 "philosophy of free and open source. Decentralization is the core of our "
 "values."
-msgstr "نحن نؤمن بالثقافة الحرة والمفتوحة والشاملة التي تدعو إليها فلسفة الليبرالية مفتوحة المصدر. ان  .اللامركزية هي جوهر قيمنا."
+msgstr ""
+"نحن نؤمن بالثقافة الحرة والمفتوحة والشاملة التي تدعو إليها فلسفة الليبرالية "
+"مفتوحة المصدر. ان  .اللامركزية هي جوهر قيمنا."
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
 msgid ""
@@ -1645,13 +1757,18 @@ msgid ""
 "software community. We work with professionals in the fields of e-commerce, "
 "finance, media, etc. We hope that in the future more talents and "
 "professionals will join us."
-msgstr "وفي الوقت الحالي،  يتكون فريق Newton مع محترفين في مجالات التجارة الإلكترونية ، التمويل ، وسائل الإعلام ، إلخ. ونحن من المواهب المهنية العليا من مجتمع البرمجيات الحرة والمفتوحة المصدر ، نحن نعمل "
+msgstr ""
+"وفي الوقت الحالي،  يتكون فريق Newton مع محترفين في مجالات التجارة "
+"الإلكترونية ، التمويل ، وسائل الإعلام ، إلخ. ونحن من المواهب المهنية العليا "
+"من مجتمع البرمجيات الحرة والمفتوحة المصدر ، نحن نعمل "
 
 #: web/apps/welcome/templates/welcome/joinus.html:36
 msgid ""
 "In addition, developers around the world can join Newton through remote "
 "office. You don't have to worry about space limitations."
-msgstr "وكذلك، يمكن للمطورين في جميع أنحاء العالم الانضمام إلينا عن طريق العمل عن بعد. فان عائق المسافة لن يمنع التعاون بيننا"
+msgstr ""
+"وكذلك، يمكن للمطورين في جميع أنحاء العالم الانضمام إلينا عن طريق العمل عن "
+"بعد. فان عائق المسافة لن يمنع التعاون بيننا"
 
 #: web/apps/welcome/templates/welcome/joinus.html:38
 msgid "WHO WE ARE LOOKING FOR"
@@ -1664,20 +1781,26 @@ msgid ""
 "We also need professionals in the fields of currency theory, economic "
 "models, asset management, financial innovation, etc. We are happy to work "
 "with volunteers and enthusiasts specialized in any field."
-msgstr "نحن بحاجة إلى المواهب الفنية في الأنظمة الموزعة وأنظمة التشغيل وخوارزميات التشفير و سلسلة الكتل وتطوير الهواتف المحمولة وتصميم المنتجات وغيرها من المجالات. نحتاج أيضًا إلى مختصين في مجالات نظرية العملات والنماذج الاقتصادية وإدارة الأصول والابتكار المالي. نرحب بالمتطوعين والمتحمسين في جميع المجالات."
+msgstr ""
+"نحن بحاجة إلى المواهب الفنية في الأنظمة الموزعة وأنظمة التشغيل وخوارزميات "
+"التشفير و سلسلة الكتل وتطوير الهواتف المحمولة وتصميم المنتجات وغيرها من "
+"المجالات. نحتاج أيضًا إلى مختصين في مجالات نظرية العملات والنماذج الاقتصادية "
+"وإدارة الأصول والابتكار المالي. نرحب بالمتطوعين والمتحمسين في جميع المجالات."
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
 msgid ""
 "We need everyone to be passionate and confident in decentralized business, "
 "because Newton has a close impact on everyone’s life."
-msgstr "نحن بحاجة إلى أن تكون كل المواهب متحمسة ومؤمنة بالعمل اللامركزي ، وذلك كون Newton "
-"مرتبطا ارتباطًا وثيقًا بحياة الجميع."
+msgstr ""
+"نحن بحاجة إلى أن تكون كل المواهب متحمسة ومؤمنة بالعمل اللامركزي ، وذلك كون "
+"Newton مرتبطا ارتباطًا وثيقًا بحياة الجميع."
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
 msgid ""
 "In addition, we will use NEW to pay part of the salary, which is a condition "
 "that must be accepted."
-msgstr "بالإضافة إلى ذلك ، سوف نستخدم New لدفع جزء من الراتب ، وهو شرط يجب قبوله.   "
+msgstr ""
+"بالإضافة إلى ذلك ، سوف نستخدم New لدفع جزء من الراتب ، وهو شرط يجب قبوله.   "
 
 #: web/apps/welcome/templates/welcome/joinus.html:49
 msgid "Currently open positions"
@@ -1715,7 +1838,9 @@ msgstr "أن يكون مسئول عن تصميم و تطوير نظام Newton"
 msgid ""
 "Being responsible for researching the latest technologies in the industry "
 "and applying them to Newtonian system improvements."
-msgstr "أن يكون مسئول عن البحث عن آخر التقنيات في الصناعة و تطبيقهم في تحسينات نظام Newton"
+msgstr ""
+"أن يكون مسئول عن البحث عن آخر التقنيات في الصناعة و تطبيقهم في تحسينات نظام "
+"Newton"
 
 #: web/apps/welcome/templates/welcome/joinus.html:70
 #: web/apps/welcome/templates/welcome/joinus.html:114
@@ -1734,7 +1859,9 @@ msgstr "المؤهلات:"
 msgid ""
 "Bachelor’s degree or above, applicants majored in computer science or "
 "related professions will be prioritized."
-msgstr "الدرجة الجامعية او أعلى و تعطى الأولوية لدى المتقدمين من تخصص علوم الكمبيوتر او تخصصات ذاتعلاقة"
+msgstr ""
+"الدرجة الجامعية او أعلى و تعطى الأولوية لدى المتقدمين من تخصص علوم الكمبيوتر "
+"او تخصصات ذاتعلاقة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:73
 msgid "More than 5 years of software development experience."
@@ -1743,19 +1870,24 @@ msgstr "أكثر من خمس سنوات خبرة في تطوير البرمجي�
 #: web/apps/welcome/templates/welcome/joinus.html:74
 msgid ""
 "Skilled in a variety of programming languages (Java，Go，C++，Rust，Kotlin)."
-msgstr "أن تكون لديه المهارة في العديد من لغات البرمجة  Java，Go，C++，Rust，Kotlin"
+msgstr ""
+"أن تكون لديه المهارة في العديد من لغات البرمجة  Java，Go，C++，Rust，Kotlin"
 
 #: web/apps/welcome/templates/welcome/joinus.html:75
 msgid ""
 "Being familiar with the principles of software security, can apply security "
 "standards to research and development."
-msgstr "أن يكون على دراية بمبدأ أمن البرمجيات، و أن يكون قادر على تطبيق معايير الأمان على البحث و التطوير"
+msgstr ""
+"أن يكون على دراية بمبدأ أمن البرمجيات، و أن يكون قادر على تطبيق معايير "
+"الأمان على البحث و التطوير"
 
 #: web/apps/welcome/templates/welcome/joinus.html:76
 msgid ""
 "Good English reading ability, being able to read English technical documents "
 "smoothly."
-msgstr "القدرة على قراءة اللغة الانجليزية أن يكون قادر على قراءة الوثائق التقنية بسلاسة"
+msgstr ""
+"القدرة على قراءة اللغة الانجليزية أن يكون قادر على قراءة الوثائق التقنية "
+"بسلاسة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:78
 #: web/apps/welcome/templates/welcome/joinus.html:120
@@ -1862,7 +1994,9 @@ msgstr "Fullstack   مطور شامل على شبكة الانترنت"
 msgid ""
 "Writing well-designed, testable, efficient code by using best software "
 "development practices;"
-msgstr ". كتابة أكواد مصممة بشكل جيد وقابلة للاختبار وفعالة باستخدام أفضل ممارسات تطوير البرمجيات ؛"
+msgstr ""
+". كتابة أكواد مصممة بشكل جيد وقابلة للاختبار وفعالة باستخدام أفضل ممارسات "
+"تطوير البرمجيات ؛"
 
 #: web/apps/welcome/templates/welcome/joinus.html:149
 msgid ""
@@ -1887,11 +2021,14 @@ msgstr ". التعاون مع المصممين لمناسبة الموقع مع 
 msgid ""
 "Proven work experience with React or other modern Frontend Javascript "
 "Framework;"
-msgstr "خبرة  مثبتة للعمل في   Python/Django/Node.js  أو غيرها من اطار جافا سكريبت الحديثة' الواجهة الأمامية '"
+msgstr ""
+"خبرة  مثبتة للعمل في   Python/Django/Node.js  أو غيرها من اطار جافا سكريبت "
+"الحديثة' الواجهة الأمامية '"
 
 #: web/apps/welcome/templates/welcome/joinus.html:157
 msgid "Experience with Python/Django/Node.js;"
-msgstr "خبرة في كتابة وحدة الواجهة الأمامية و الواجهة الخلفية و اختبارات التكامل"
+msgstr ""
+"خبرة في كتابة وحدة الواجهة الأمامية و الواجهة الخلفية و اختبارات التكامل"
 
 #: web/apps/welcome/templates/welcome/joinus.html:158
 msgid "Experience in writing frontend and backend unit and integration tests;"
@@ -1899,19 +2036,25 @@ msgstr "مهارات برمجة من الدرجة الأولى ومعرفة مت
 
 #: web/apps/welcome/templates/welcome/joinus.html:159
 msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
-msgstr "فهم قوي لكيفية عمل تطبيقات الويب بما في ذلك الأمن وإدارة الجلسة وأفضل الممارسات التطويرية ؛"
+msgstr ""
+"فهم قوي لكيفية عمل تطبيقات الويب بما في ذلك الأمن وإدارة الجلسة وأفضل "
+"الممارسات التطويرية ؛"
 
 #: web/apps/welcome/templates/welcome/joinus.html:160
 msgid ""
 "A solid understanding of how web applications work including security, "
 "session management, and best development practices;"
-msgstr "مهارات تنظيمية قوية للتوفيق بين مهام متعددة ضمن قيود الجداول الزمنية والميزانيات مع فطنة العمل ؛"
+msgstr ""
+"مهارات تنظيمية قوية للتوفيق بين مهام متعددة ضمن قيود الجداول الزمنية "
+"والميزانيات مع فطنة العمل ؛"
 
 #: web/apps/welcome/templates/welcome/joinus.html:161
 msgid ""
 "Strong organizational skills to juggle multiple tasks within the constraints "
 "of timelines and budgets with business acumen;"
-msgstr "القدرة على العمل والازدهار في بيئة سريعة الخطى ، والتعلم بسرعة واتقان تقنيات الويب المختلفة ؛"
+msgstr ""
+"القدرة على العمل والازدهار في بيئة سريعة الخطى ، والتعلم بسرعة واتقان تقنيات "
+"الويب المختلفة ؛"
 
 #: web/apps/welcome/templates/welcome/joinus.html:162
 msgid ""
@@ -1950,7 +2093,9 @@ msgstr "تحديد سبب عدم رضا الزبون و تقديم طرق للت
 msgid ""
 "Ensure that all enquiries on social media are in compliance with all "
 "internal and external regulations, policies and guidelines;"
-msgstr "التاكيد على أن كل الاستفسارت في قناة وسائل التواصل الاجتماعي  تنسجم مع القوانين الداخلية و الخارجيةالسياسات و التوجيهات"
+msgstr ""
+"التاكيد على أن كل الاستفسارت في قناة وسائل التواصل الاجتماعي  تنسجم مع "
+"القوانين الداخلية و الخارجيةالسياسات و التوجيهات"
 
 #: web/apps/welcome/templates/welcome/joinus.html:194
 #: web/apps/welcome/templates/welcome/joinus.html:305
@@ -1965,7 +2110,9 @@ msgstr "من المفضل سنتين خبرة في وظيفة  دعم الزبا
 msgid ""
 "Must speak and write fluent English and Chinese with good presentation, "
 "communication and computer skills;"
-msgstr "يجب أن يتكلم بطلاقة مستخدما اللغة الانجليزية و اللغة الانجليزية المكتوبة مع تقديم و تواصل و مهاراتكمبيوتر جيدة"
+msgstr ""
+"يجب أن يتكلم بطلاقة مستخدما اللغة الانجليزية و اللغة الانجليزية المكتوبة مع "
+"تقديم و تواصل و مهاراتكمبيوتر جيدة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:197
 msgid "Self-motivated and able to work independently;"
@@ -1979,19 +2126,24 @@ msgstr "أخصائي علاقات:"
 msgid ""
 "Content creation, distribution and analysis tutorials, developer guides, "
 "newsletters, sample apps, client libraries;"
-msgstr "يتعين عليه أن يقوم بانشاء المحتوى و توزيعه و كذلك القيام بالتحليلات و الدروس و الارشادات و النشرات و تطبيقات العينة و مكتبات العملاء كذلك"
+msgstr ""
+"يتعين عليه أن يقوم بانشاء المحتوى و توزيعه و كذلك القيام بالتحليلات و الدروس "
+"و الارشادات و النشرات و تطبيقات العينة و مكتبات العملاء كذلك"
 
 #: web/apps/welcome/templates/welcome/joinus.html:221
 msgid ""
 "Creating and implementing detailed annual, monthly and weekly plans for "
 "promotion/engagement activities;"
-msgstr "انشاء و تطبيق خطط أسبوعية و شهرية و سنوية مفصلة لنشاطات التأييد/الانخراط."
+msgstr ""
+"انشاء و تطبيق خطط أسبوعية و شهرية و سنوية مفصلة لنشاطات التأييد/الانخراط."
 
 #: web/apps/welcome/templates/welcome/joinus.html:222
 msgid ""
 "Organizing and coordinating marketing  engagement activities including "
 "social media campaigns, youtube broadcasts, progress reports;"
-msgstr "تنظيم و تنسيق النشاطات التسويقية بما فيها حملات التواصل الاجتماعي و اليوتيوب و تقارير التقدم"
+msgstr ""
+"تنظيم و تنسيق النشاطات التسويقية بما فيها حملات التواصل الاجتماعي و اليوتيوب "
+"و تقارير التقدم"
 
 #: web/apps/welcome/templates/welcome/joinus.html:223
 msgid "Content sourcing from 3rd parties, distribution and analytics;"
@@ -2005,7 +2157,9 @@ msgstr "الانخراط و تقديم الدعم لمنظمي الاجتماع�
 msgid ""
 "Must be fluent in both spoken and written English with good presentation, "
 "communication and computer skills;"
-msgstr "يجب أن يتكلم بطلاقة مستخدما اللغة الانجليزية و اللغة الانجليزية المكتوبة مع تقديم و تواصل و مهارات كمبيوتر جيدة"
+msgstr ""
+"يجب أن يتكلم بطلاقة مستخدما اللغة الانجليزية و اللغة الانجليزية المكتوبة مع "
+"تقديم و تواصل و مهارات كمبيوتر جيدة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:230
 msgid "Experience in writing tutorials, guides, API docs and sample apps;"
@@ -2019,7 +2173,9 @@ msgstr "خبرة في كتابة أكواد c++   و الجافا سكريبت"
 msgid ""
 "Preferably with 2 years of working experience in IT industry customer "
 "support role;"
-msgstr "يفضل أن يكون لديه خبرة عمل سنتين في دعم الزبائن  في مجال صناعة تكنولوجيا المعلومات"
+msgstr ""
+"يفضل أن يكون لديه خبرة عمل سنتين في دعم الزبائن  في مجال صناعة تكنولوجيا "
+"المعلومات"
 
 #: web/apps/welcome/templates/welcome/joinus.html:233
 msgid "Self-motivated and able to work independently."
@@ -2027,7 +2183,7 @@ msgstr "أن يكون ذات شخصية ذات دافعية و قادر على �
 
 #: web/apps/welcome/templates/welcome/joinus.html:250
 msgid "Senior UX Designer"
-msgstr "مصمم  'تجربة مستخدم'  UX محترف	"
+msgstr "مصمم  'تجربة مستخدم'  UX محترف\t"
 
 #: web/apps/welcome/templates/welcome/joinus.html:259
 msgid ""
@@ -2043,7 +2199,8 @@ msgstr "تحديد مشاكل التصميم و اختراع حلول ذكية"
 msgid ""
 "Taking a user-centered design approach and rapidly test and iterate your "
 "designs;"
-msgstr "اتباع مذهب تصميم يتمحور حول المستخدم و اعادة التصاميم و اختبارها بشكل سريع"
+msgstr ""
+"اتباع مذهب تصميم يتمحور حول المستخدم و اعادة التصاميم و اختبارها بشكل سريع"
 
 #: web/apps/welcome/templates/welcome/joinus.html:262
 msgid "Collaborating with other team members and stakeholders;"
@@ -2054,38 +2211,50 @@ msgid ""
 "Three or more years of UX design experience. Preference will be given to "
 "candidates who have experience designing complex solutions for complete "
 "digital environments;"
-msgstr "خبرة ثلاث سنوات أو أكثر لتصميم تجربة المستخدمللبيئة الرقمية الكاملة  UX  و سيعطى تفضيل للمرشحين الذين لديهم الخبرة في تصميم الحلول المعقدة"
+msgstr ""
+"خبرة ثلاث سنوات أو أكثر لتصميم تجربة المستخدمللبيئة الرقمية الكاملة  UX  و "
+"سيعطى تفضيل للمرشحين الذين لديهم الخبرة في تصميم الحلول المعقدة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
 msgid ""
 "Expertise in UX softwares such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
-msgstr "و تعتبر مهارات الحافا سكريبت و ال CSS وخبرة واسعة في برمجيات تجربة المستخدم UX مثل  Sketch و InVisionو UXPin Framer تطبيق Marvel"
+msgstr ""
+"و تعتبر مهارات الحافا سكريبت و ال CSS وخبرة واسعة في برمجيات تجربة المستخدم "
+"UX مثل  Sketch و InVisionو UXPin Framer تطبيق Marvel"
 
 #: web/apps/welcome/templates/welcome/joinus.html:268
 msgid ""
 "Ability to work with clients, understand their specifications and design "
 "complete user experiences that fulfills their needs and vision;"
-msgstr "القدرة على العمل مع العملاء لفهم المتطلبات التفصيلية وتصميم تجارب المستخدم الكاملة التي تلبي احتياجات العميل ورؤيته؛"
+msgstr ""
+"القدرة على العمل مع العملاء لفهم المتطلبات التفصيلية وتصميم تجارب المستخدم "
+"الكاملة التي تلبي احتياجات العميل ورؤيته؛"
 
 #: web/apps/welcome/templates/welcome/joinus.html:269
 msgid ""
 "Extensive experience in using UX design best practices to design solutions, "
 "and a deep understanding of mobile-first and responsive design;"
-msgstr "خبرة واسعة في استخدام أفضل الممارسات لتجربة المستخدم UX و ذلك لتصميم الحلول ، وفهم عميق للتصميم التجاوبي و تصميم ال mobile-first."
+msgstr ""
+"خبرة واسعة في استخدام أفضل الممارسات لتجربة المستخدم UX و ذلك لتصميم "
+"الحلول ، وفهم عميق للتصميم التجاوبي و تصميم ال mobile-first."
 
 #: web/apps/welcome/templates/welcome/joinus.html:270
 msgid ""
 "A solid grasp of user-centered design (UCD), planning and conducting user "
 "research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
 "usability and accessibility concerns;"
-msgstr "فهم عميق ل التصميم القائم على محورية المستخدم و في التخطيط و اعداد بحث المستخدم و اختبار المستخدم و اختبار"
+msgstr ""
+"فهم عميق ل التصميم القائم على محورية المستخدم و في التخطيط و اعداد بحث "
+"المستخدم و اختبار المستخدم و اختبار"
 
 #: web/apps/welcome/templates/welcome/joinus.html:271
 msgid ""
 "Ability to clearly and effectively communicate design processes, ideas, and "
 "solutions to teams and clients;"
-msgstr "القدرة على التواصل مع عمليات التصميم و أفكارها بشكل فاعل و واضح و تقديم حلول للفرق و العملاء"
+msgstr ""
+"القدرة على التواصل مع عمليات التصميم و أفكارها بشكل فاعل و واضح و تقديم حلول "
+"للفرق و العملاء"
 
 #: web/apps/welcome/templates/welcome/joinus.html:272
 msgid "Be open to receiving feedback and constructive criticism;"
@@ -2109,7 +2278,8 @@ msgstr "فهم تطور الصناعة و متطلبات الزبون و تشك�
 msgid ""
 "Designing product UE from requirements document, clearly and accurately "
 "communicate demands to developing engineers;"
-msgstr "تصميم المنتج حسب متطلبات الوثيقة بشكل واضح و التواصل مع تطورات المهندسين "
+msgstr ""
+"تصميم المنتج حسب متطلبات الوثيقة بشكل واضح و التواصل مع تطورات المهندسين "
 
 #: web/apps/welcome/templates/welcome/joinus.html:299
 msgid "Managing changes in product demand during product development;"
@@ -2128,7 +2298,8 @@ msgstr "تتبع استخدام المستهلك عندما يتم اصدار ا
 #: web/apps/welcome/templates/welcome/joinus.html:306
 msgid ""
 "Three years or more of experience in designing e-commerce industry products;"
-msgstr "ثلاث سنوات خبرة أو أكثر في التجارة الالكترونية في مجال صناعة تصميم المنتج"
+msgstr ""
+"ثلاث سنوات خبرة أو أكثر في التجارة الالكترونية في مجال صناعة تصميم المنتج"
 
 #: web/apps/welcome/templates/welcome/joinus.html:307
 msgid "Proficient with product prototype designing tools;"
@@ -2146,7 +2317,9 @@ msgstr "خلفية تقنية جيدة في خلق تجربة مستخدم غن�
 
 #: web/apps/welcome/templates/welcome/joinus.html:310
 msgid "Good level of English, fluent in reading English documents."
-msgstr "القدرة على قراءة اللغة الانجليزية أن يكون قادر على قراءة الوثائق التقنية بسلاسة"
+msgstr ""
+"القدرة على قراءة اللغة الانجليزية أن يكون قادر على قراءة الوثائق التقنية "
+"بسلاسة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:325
 msgid "Android R&D Engineer"
@@ -2156,21 +2329,26 @@ msgstr "مهندس أندرويد للبحث و التطوير"
 msgid ""
 "Responsible for the development of Android client product, helping other "
 "developers grow and make progress;"
-msgstr " مسؤول عن تطوير منتج عميل أندرويد ، ومساعدة المطورين الآخرين على النمو وتحقيق"
+msgstr ""
+" مسؤول عن تطوير منتج عميل أندرويد ، ومساعدة المطورين الآخرين على النمو وتحقيق"
 
 #: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
 "Participating in the analysis and design of products based on client "
 "requirements, cooperating with UI designers to complete initial testing "
 "based on product design;"
-msgstr " المشاركة في تحليل وتصميم المنتجات بناءا على متطلبات العميل ، والتعاون مع مصممي واجهة المستخدم UI  لإكمال الاختبار الأولي بناءا على تصميم المنتج"
+msgstr ""
+" المشاركة في تحليل وتصميم المنتجات بناءا على متطلبات العميل ، والتعاون مع "
+"مصممي واجهة المستخدم UI  لإكمال الاختبار الأولي بناءا على تصميم المنتج"
 
 #: web/apps/welcome/templates/welcome/joinus.html:336
 msgid ""
 "Responsible for the development of subsequent iteration versions of the "
 "product, and continuously optimizing the quality, performance, and user "
 "experience of products."
-msgstr "مسؤول عن تطوير الإصدارات المتلاحقة للمنتج ، وتحسين جودة و أداء  و تجربة المستخدم للمنتج باستمرار"
+msgstr ""
+"مسؤول عن تطوير الإصدارات المتلاحقة للمنتج ، وتحسين جودة و أداء  و تجربة "
+"المستخدم للمنتج باستمرار"
 
 #: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
@@ -2178,25 +2356,33 @@ msgid ""
 "years experience in Practical Android development experience; Familiar with "
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
-msgstr "أكثر من 3 سنوات خبرة في تطوير الجافا؛ أكثر من سنتين خبرة في  تطوير أندرويد العملي ؛ على دراية بخصائص  التطوير لل  mobile terminals في أندرويد و أن يكون قادر على حل المشكلات الشائعة"
+msgstr ""
+"أكثر من 3 سنوات خبرة في تطوير الجافا؛ أكثر من سنتين خبرة في  تطوير أندرويد "
+"العملي ؛ على دراية بخصائص  التطوير لل  mobile terminals في أندرويد و أن يكون "
+"قادر على حل المشكلات الشائعة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:341
 msgid ""
 "Familiar with Android components and session; Be able to reasonably allocate "
 "resources in the available session;"
-msgstr "على دراية بجلسة و بمكونات أندرويد  و أن يكون قادراً على تخصيص الموارد بشكل معقول في الجلسة المتاحة."
+msgstr ""
+"على دراية بجلسة و بمكونات أندرويد  و أن يكون قادراً على تخصيص الموارد بشكل "
+"معقول في الجلسة المتاحة."
 
 #: web/apps/welcome/templates/welcome/joinus.html:342
 msgid ""
 "Familiar with common controls & custom controls, event mechanisms and "
 "gesture operations;"
-msgstr "على دراية بالضوابط المشتركة والضوابط المخصصة وآليات الحدث وعمليات الإيماءات"
+msgstr ""
+"على دراية بالضوابط المشتركة والضوابط المخصصة وآليات الحدث وعمليات الإيماءات"
 
 #: web/apps/welcome/templates/welcome/joinus.html:343
 msgid ""
 "Proficient in Android performance & memory optimization; good at solving "
 "system crashes & compatibility, memory leaks & overflow;"
-msgstr " يتقن أداء أندرويد و يستطيع وتحسين ذاكرته ؛ جيد في حل تعطل النظام والتوافق ، تسرب الذاكرة ومشاكل الفيض overflow"
+msgstr ""
+" يتقن أداء أندرويد و يستطيع وتحسين ذاكرته ؛ جيد في حل تعطل النظام والتوافق ، "
+"تسرب الذاكرة ومشاكل الفيض overflow"
 
 #: web/apps/welcome/templates/welcome/joinus.html:344
 msgid "Familiar with Android network communication mechanism, Json analysis;"
@@ -2215,7 +2401,8 @@ msgstr "على دراية بانسجام المنصة مع الشاشة في أ�
 msgid ""
 "Competent to work independently; Experienced in analyzing & re-writing "
 "Android source code;"
-msgstr "قادر على العمل بشكل مستقل و خبير في تحليل و اعادة كتابة رمز المصدر لأندرويد"
+msgstr ""
+"قادر على العمل بشكل مستقل و خبير في تحليل و اعادة كتابة رمز المصدر لأندرويد"
 
 #: web/apps/welcome/templates/welcome/joinus.html:348
 msgid ""
@@ -2241,7 +2428,8 @@ msgstr "IOS مطور "
 msgid ""
 "Assisting the product manager to analyze and organize the customer's need, "
 "and make the product requirements document;"
-msgstr "مساعدة مدير الانتاج في تحليل و تنظيم حاجة العميل و تقديم وثيقة متطلبات المنتج"
+msgstr ""
+"مساعدة مدير الانتاج في تحليل و تنظيم حاجة العميل و تقديم وثيقة متطلبات المنتج"
 
 #: web/apps/welcome/templates/welcome/joinus.html:375
 msgid ""
@@ -2253,7 +2441,8 @@ msgstr "تصميم بنية النظام  لتطبيق ال iOS  و ذلك حس�
 msgid ""
 "Depending on the system architecture design, conducting iOS App-related "
 "program  development;"
-msgstr "تصميم تطبيق ال  iOS التي لها علاقة بتطور البرنامج حسب تصميم بنية النظام"
+msgstr ""
+"تصميم تطبيق ال  iOS التي لها علاقة بتطور البرنامج حسب تصميم بنية النظام"
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
 msgid ""
@@ -2277,7 +2466,9 @@ msgstr "درجة البكالوريوس أو أعلى في تخصص علوم ا�
 msgid ""
 "At least 2 years working experience in computer software, or more than 1 "
 "year working experience in iOS App development;"
-msgstr "خبرة عمل أكثر من سنتين في برمجيات الكمبيوتر أو أكثر من سنة خبرة في تطوير تطبيق ال  iOS"
+msgstr ""
+"خبرة عمل أكثر من سنتين في برمجيات الكمبيوتر أو أكثر من سنة خبرة في تطوير "
+"تطبيق ال  iOS"
 
 #: web/apps/welcome/templates/welcome/joinus.html:384
 msgid "Familiar with Swift or Objective C programming language;"
@@ -2293,7 +2484,9 @@ msgstr "على دراية بنموذج تطوير برمجيات منصة ال i
 msgid ""
 "Familiar with common data structures and algorithms, has a persistent "
 "pursuit of new technologies;"
-msgstr "على دراية بنظم البيانات واللوغاريتمات المشتركة ، والمواكبة المستمرة للتكنولوجيات الحديثة"
+msgstr ""
+"على دراية بنظم البيانات واللوغاريتمات المشتركة ، والمواكبة المستمرة "
+"للتكنولوجيات الحديثة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:387
 msgid "Good at using technology to create a good user experience;"
@@ -2301,7 +2494,8 @@ msgstr "جيد في استخدام التكنولوجيا لخلق تجربة م
 
 #: web/apps/welcome/templates/welcome/joinus.html:388
 msgid "Good English level, able to read English technical documents smoothly."
-msgstr "مستوى جيد بالانجليزية و قادر على قراءة الوثائق التقنية بالانجليزية بسلاسة"
+msgstr ""
+"مستوى جيد بالانجليزية و قادر على قراءة الوثائق التقنية بالانجليزية بسلاسة"
 
 #: web/apps/welcome/templates/welcome/joinus.html:403
 msgid "Front-end Web Developer"
@@ -2311,7 +2505,8 @@ msgstr "مطور ويب ' واجهة أمامية '"
 msgid ""
 "Assisting the product manager, analyzing and organizing the customer's need, "
 "and making the product requirements document;"
-msgstr "مساعدة مدير الانتاج ، تحليل وتنظيم حاجة العميل ، وتقديم وثيقة متطلبات المنتج"
+msgstr ""
+"مساعدة مدير الانتاج ، تحليل وتنظيم حاجة العميل ، وتقديم وثيقة متطلبات المنتج"
 
 #: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
@@ -2323,13 +2518,16 @@ msgstr "تصميم بنية الواجهة الأمامية للموقع و ذل
 msgid ""
 "Depending on the design draft provided by the UI designer, completing the "
 "production of the website page;"
-msgstr "إنجاز صفحة الموقع حسب  مسودة التصميم المقدمة من قِبل مصمم واجهة المستخدم"
+msgstr ""
+"إنجاز صفحة الموقع حسب  مسودة التصميم المقدمة من قِبل مصمم واجهة المستخدم"
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
 msgid ""
 "According to the product requirements document, completing the development "
 "of the sites’ front-end interactive part of the program;"
-msgstr "انجاز تطوير الجزء التفاعلي للواجهة الأمامية للبرنامج بناءا على وثيقة متطلبات المنتج"
+msgstr ""
+"انجاز تطوير الجزء التفاعلي للواجهة الأمامية للبرنامج بناءا على وثيقة متطلبات "
+"المنتج"
 
 #: web/apps/welcome/templates/welcome/joinus.html:416
 msgid ""
@@ -2341,13 +2539,17 @@ msgstr "تصحيح مشاكل الواجهة الأمامية للموقع حس�
 msgid ""
 "2+ years working experience in computer software, more than 1 year "
 "experience in front end development of the website;"
-msgstr " خبرة عمل أكثر من سنتين في برمجيات الكمبيوتر و أكثر من سنة خبرة في تطوير الواجهة الأمامية للمواقع"
+msgstr ""
+" خبرة عمل أكثر من سنتين في برمجيات الكمبيوتر و أكثر من سنة خبرة في تطوير "
+"الواجهة الأمامية للمواقع"
 
 #: web/apps/welcome/templates/welcome/joinus.html:422
 msgid ""
 "Familiar with AI and Photoshop software, can create web pages based on UI "
 "design drafts;"
-msgstr "على دراية ببرمجيات الفوتوشوب و الذكاء الصناعي AI. و يستطيع انشاء صفحات ويب بناءا على مسودات تصميم واجهة المستخدم"
+msgstr ""
+"على دراية ببرمجيات الفوتوشوب و الذكاء الصناعي AI. و يستطيع انشاء صفحات ويب "
+"بناءا على مسودات تصميم واجهة المستخدم"
 
 #: web/apps/welcome/templates/welcome/joinus.html:423
 msgid "Familiar with HTML5, CSS, Javascript programming language;"
@@ -2371,7 +2573,9 @@ msgstr "استخدام التكنولوجيا و مواكبتها بمهارة �
 
 #: web/apps/welcome/templates/welcome/joinus.html:427
 msgid "Good English level, able to read English technical documents."
-msgstr "أن يكون لديه مستوى جيد في اللغة الانجليزية و أن يقرأ مستندات اللغة الانجليزية بطلاقة"
+msgstr ""
+"أن يكون لديه مستوى جيد في اللغة الانجليزية و أن يقرأ مستندات اللغة "
+"الانجليزية بطلاقة"
 
 #: web/apps/welcome/templates/welcome/legal.html:6
 #: web/apps/welcome/templates/welcome/legal.html:13
@@ -2380,7 +2584,6 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:6
 #: web/apps/welcome/templates/welcome/mediakit.html:13
-#: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/templates/footer.html:39
 msgid "Media Kit"
 msgstr "مجموعة الوسائط"
@@ -2390,7 +2593,10 @@ msgid ""
 "Newton logo is a combination of calculus symbol and zigzag side of coin. "
 "This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
 "symbolizing the perfect integration of finance and technology."
-msgstr "ان شعار  Newton هو مزيج من رمز الحساب في التفاضل و التكامل و الجانب المتعرج للعملة ، يكرم هذا الشعار رائد سك العملة  و العالم المبدع الرائد اسحاق نيوتن رامزا للتكامل التام للتكنولوجيا مع التمويل"
+msgstr ""
+"ان شعار  Newton هو مزيج من رمز الحساب في التفاضل و التكامل و الجانب المتعرج "
+"للعملة ، يكرم هذا الشعار رائد سك العملة  و العالم المبدع الرائد اسحاق نيوتن "
+"رامزا للتكامل التام للتكنولوجيا مع التمويل"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:28
 msgid "Download Logo"
@@ -2431,7 +2637,7 @@ msgid "Poster in English"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/templates/header.html:29
+#: web/templates/header.html:31 web/templates/header.html.py:51
 msgid "NewPay"
 msgstr "NewPay"
 
@@ -2814,7 +3020,7 @@ msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-#: web/templates/header.html:23
+#: web/templates/header.html:25 web/templates/header.html.py:45
 msgid "HEP"
 msgstr "HEP"
 
@@ -2824,13 +3030,18 @@ msgid ""
 "digital identity. Digital assets include; cryptocurrencies, personal data, "
 "personal credit and anything that exists in a binary format and come with "
 "the right to use."
-msgstr "باستخدام الهويات الرقمية،  يتمكن المستخدمون بسهولة من إدارة أصولهم الرقمية الخاصة، الأصول الرقمية بما فيها العملة المشفرة و البيانات الخصوصية و الائتمان الخصوصي و ما الى ذلك"
+msgstr ""
+"باستخدام الهويات الرقمية،  يتمكن المستخدمون بسهولة من إدارة أصولهم الرقمية "
+"الخاصة، الأصول الرقمية بما فيها العملة المشفرة و البيانات الخصوصية و "
+"الائتمان الخصوصي و ما الى ذلك"
 
 #: web/apps/welcome/templates/welcome/protocol.html:24
 msgid ""
 "Users can control and set different privacy modes for corresponding digital "
 "assets, and price the digital assets."
-msgstr "يستطيع المستخدمون التحكم في أوضاع الخصوصية المختلفة للأصول الرقمية المكافئة و تسعير الأصول الرقمية ."
+msgstr ""
+"يستطيع المستخدمون التحكم في أوضاع الخصوصية المختلفة للأصول الرقمية المكافئة "
+"و تسعير الأصول الرقمية ."
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
 msgid ""
@@ -2838,7 +3049,11 @@ msgid ""
 "identity for commodities over the whole network. Through this digital "
 "identity a user can check the relevant information on any commodity at any "
 "time."
-msgstr "باستخدام تقنيات مثل 'atom hashing' ، فإنه يمكننا إنشاء هوية رقمية فريدة لسلع الشبكة بالكامل و عبر هذه الهوية الرقمية يمكنك التحقق من المعلومات المتعلقة  بالسلع في أي وقت.. و في كل سلسلة الإمداد ، فإن المعلومات الضرورية لكل عملية للمنتج، سوف يتم تخزينها على سلسلة الكتل "
+msgstr ""
+"باستخدام تقنيات مثل 'atom hashing' ، فإنه يمكننا إنشاء هوية رقمية فريدة لسلع "
+"الشبكة بالكامل و عبر هذه الهوية الرقمية يمكنك التحقق من المعلومات المتعلقة  "
+"بالسلع في أي وقت.. و في كل سلسلة الإمداد ، فإن المعلومات الضرورية لكل عملية "
+"للمنتج، سوف يتم تخزينها على سلسلة الكتل "
 
 #: web/apps/welcome/templates/welcome/protocol.html:38
 msgid ""
@@ -2853,21 +3068,29 @@ msgid ""
 "Through smart contract Newton can pre-set commercial exchanging rules to "
 "realize automatic insurance claims and property rights transfer. This will "
 "reduce the transaction costs and promote cooperation efficiency."
-msgstr "من خلال تقنية العقود الذكية ، يمكننا تحديد مطالبات التأمين التلقائي ونقل حقوق الملكية مسبقا و تقليل التضارب في المعاملات وذلك  لتعزيز التعاون الفعال"
+msgstr ""
+"من خلال تقنية العقود الذكية ، يمكننا تحديد مطالبات التأمين التلقائي ونقل "
+"حقوق الملكية مسبقا و تقليل التضارب في المعاملات وذلك  لتعزيز التعاون الفعال"
 
 #: web/apps/welcome/templates/welcome/protocol.html:52
 msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system. This includes incentive modes, settlement "
 "modes, and dynamic price adjusting rules."
-msgstr "يمكن للمعلنين وضع خطط تسويقية من خلال العديد من نماذج العقود الذكية التسويقية المضمنة في النظام ، بما في ذلك طرق المكافآت وأوضاع التسوية وقواعد تعديل الأسعار الديناميكية."
+msgstr ""
+"يمكن للمعلنين وضع خطط تسويقية من خلال العديد من نماذج العقود الذكية "
+"التسويقية المضمنة في النظام ، بما في ذلك طرق المكافآت وأوضاع التسوية وقواعد "
+"تعديل الأسعار الديناميكية."
 
 #: web/apps/welcome/templates/welcome/protocol.html:53
 msgid ""
 "Advertisers can audit ongoing and completed marketing contracts. By calling "
 "out the NewAI system, an advertiser can conduct market research before "
 "marketing activities, and analyze the results after the marketing activities."
-msgstr "كما و يمكن للمعلنين مراجعة عقود التسويق الجارية والمكتملة. من خلال استدعاء نظام DAI ، يمكنك إجراء بحث تسويقي قبل أنشطة التسويق ، وتحليل النتائج بعد الأنشطة التسويقية."
+msgstr ""
+"كما و يمكن للمعلنين مراجعة عقود التسويق الجارية والمكتملة. من خلال استدعاء "
+"نظام DAI ، يمكنك إجراء بحث تسويقي قبل أنشطة التسويق ، وتحليل النتائج بعد "
+"الأنشطة التسويقية."
 
 #: web/apps/welcome/templates/welcome/protocol.html:66
 msgid ""
@@ -2876,7 +3099,10 @@ msgid ""
 "This enables the user to include: multi-party transactions based on complex "
 "business rules, settlement rules, smart insurance contracts, smart financial "
 "contracts, and external chain service."
-msgstr "تحديد المعاملات باستخدام نماذج وقواعد العقود الذكية المضمنة ، بما في ذلك المعاملات متعددة الأطراف القائمة على قواعد الأعمال المعقدة وقواعد التسوية وعقود التأمين الذكية والعقود المالية الذكية وخدمة السلسلة الخارجية."
+msgstr ""
+"تحديد المعاملات باستخدام نماذج وقواعد العقود الذكية المضمنة ، بما في ذلك "
+"المعاملات متعددة الأطراف القائمة على قواعد الأعمال المعقدة وقواعد التسوية "
+"وعقود التأمين الذكية والعقود المالية الذكية وخدمة السلسلة الخارجية."
 
 #: web/apps/welcome/templates/welcome/protocol.html:79
 msgid "Reliable physical tunnel"
@@ -2888,7 +3114,10 @@ msgid ""
 "reliable physical tunnel protocol and define manufacturing specifications of "
 "related equipment. Any third party can manufacture safety equipment "
 "according to the protocol specification."
-msgstr "استناداً إلى تقنيات NewChain و NewIOT ، قمنا بتصميم بروتوكول اتصال نفقي مادي وموثوق به و قمنا بتحديد مواصفات التصنيع  للمعدات ذات الصلة. يمكن لأي طرف ثالث تصنيع معدات السلامة وفقا لمواصفات البروتوكول."
+msgstr ""
+"استناداً إلى تقنيات NewChain و NewIOT ، قمنا بتصميم بروتوكول اتصال نفقي مادي "
+"وموثوق به و قمنا بتحديد مواصفات التصنيع  للمعدات ذات الصلة. يمكن لأي طرف "
+"ثالث تصنيع معدات السلامة وفقا لمواصفات البروتوكول."
 
 #: web/apps/welcome/templates/welcome/protocol.html:93
 msgid "Automatic finance"
@@ -2901,7 +3130,12 @@ msgid ""
 "identity and credit, KYC information, staking the Newton token, contract "
 "rules and external chain service. The system will automatically match smart "
 "financial contracts and automatically complete transactional matching."
-msgstr "يمكن للمطورين تحديد العقود المالية الذكية على أساس النماذج المضمنة في العقود الذكية للتأمين والإقراض والاستثمار ، بما في ذلك الهوية الرقمية والائتمان والمعلومات الخاصة بالتعرف على الزبون KYC ، وتعدين العملة المشفرة ل نيوتون Newton ، وقواعد العقد وخدمة السلسلة الخارجية. يتطابق النظام تلقائيًا مع العقود المالية الذكية ويكمل المعاملات المماثلة."
+msgstr ""
+"يمكن للمطورين تحديد العقود المالية الذكية على أساس النماذج المضمنة في العقود "
+"الذكية للتأمين والإقراض والاستثمار ، بما في ذلك الهوية الرقمية والائتمان "
+"والمعلومات الخاصة بالتعرف على الزبون KYC ، وتعدين العملة المشفرة ل نيوتون "
+"Newton ، وقواعد العقد وخدمة السلسلة الخارجية. يتطابق النظام تلقائيًا مع "
+"العقود المالية الذكية ويكمل المعاملات المماثلة."
 
 #: web/apps/welcome/templates/welcome/protocol.html:107
 msgid "NNIO"
@@ -2911,17 +3145,25 @@ msgstr "NNIO"
 msgid ""
 "Developers can access NewNET through the NNIO (NewNET IO) protocol, using "
 "storage services, computing services and domain names."
-msgstr "يمكن  للمطورين الوصول إلى NewNet من خلال بروتوكول NNIO (NewNet IO) ، باستخدام خدمة التخزين ، وخدمة الحوسبة ، وأسماء النطاقات."
+msgstr ""
+"يمكن  للمطورين الوصول إلى NewNet من خلال بروتوكول NNIO (NewNet IO) ، "
+"باستخدام خدمة التخزين ، وخدمة الحوسبة ، وأسماء النطاقات."
 
 #: web/apps/welcome/templates/welcome/protocol.html:110
 msgid ""
 "Through smart storage contracts, smart computing contracts, smart domain "
 "name contracts, developers can quickly and innovatively develop applications."
-msgstr "من خلال عقود التخزين الذكية ، وعقود الحوسبة الذكية ، وعقود اسم المجال الذكي ، يمكن للمطورين تطوير التطبيقات بشكل سريع و ابداعي"
+msgstr ""
+"من خلال عقود التخزين الذكية ، وعقود الحوسبة الذكية ، وعقود اسم المجال "
+"الذكي ، يمكن للمطورين تطوير التطبيقات بشكل سريع و ابداعي"
 
 #: web/apps/welcome/templates/welcome/roadmap.html:6
 msgid "Roadmap"
 msgstr "خارطة الطريق"
+
+#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:36
+msgid "Team"
+msgstr "الفريق"
 
 #: web/apps/welcome/templates/welcome/tech.html:6
 msgid "TECH"
@@ -2937,7 +3179,16 @@ msgid ""
 "main chain and sub-chains, and between sub-chains. The NewChain provides a "
 "third-party developer the option and opportunity to create a new sub-chain "
 "after staking a certain amount of Newton tokens and passing the verification."
-msgstr "يعتمد نظام NewChain على تصميم نظام السلسلة الرئيسية والسلسلة الفرعية. بحيث تكون السلسلة الرئيسية هي المسئولة عن إدارة الحسابات ، وإدارة العملة الرقمية Newton ، وإدارة السلسلة الفرعية ، وإدارة الشبكة. بينما تدعم السلسلة الفرعية أنظمة خدماتية محددة ، مثل بروتوكول التبادل المفرط, إلى جانب ذلك فهي تدعم آليات توافقية وهياكل بيانات متعددة ، وتضمن معاملات الأصول بين السلسلة الرئيسية والسلاسل الفرعية وبين السلاسل الفرعية والسلاسل الفرعية الأخرى. بعد مساهمة مطور الطرف الثالث بعدد معين من العملات الرقمية   Newton Tokens واجتيازه اختبار التحقق من الشخصية ، يمكنه إنشاء سلسلة فرعية جديدة ونشر عملات رقمية جديدة."
+msgstr ""
+"يعتمد نظام NewChain على تصميم نظام السلسلة الرئيسية والسلسلة الفرعية. بحيث "
+"تكون السلسلة الرئيسية هي المسئولة عن إدارة الحسابات ، وإدارة العملة الرقمية "
+"Newton ، وإدارة السلسلة الفرعية ، وإدارة الشبكة. بينما تدعم السلسلة الفرعية "
+"أنظمة خدماتية محددة ، مثل بروتوكول التبادل المفرط, إلى جانب ذلك فهي تدعم "
+"آليات توافقية وهياكل بيانات متعددة ، وتضمن معاملات الأصول بين السلسلة "
+"الرئيسية والسلاسل الفرعية وبين السلاسل الفرعية والسلاسل الفرعية الأخرى. بعد "
+"مساهمة مطور الطرف الثالث بعدد معين من العملات الرقمية   Newton Tokens "
+"واجتيازه اختبار التحقق من الشخصية ، يمكنه إنشاء سلسلة فرعية جديدة ونشر عملات "
+"رقمية جديدة."
 
 #: web/apps/welcome/templates/welcome/tech.html:23
 msgid ""
@@ -2947,13 +3198,18 @@ msgid ""
 "exchange protocol. The system built-in smart contract templates provide an "
 "effortless development and deployment of any application on the Newton "
 "NewChain."
-msgstr "ان نموذج NewVM متوافق مع معيار ويب اسسيمبلي Webassembly ،والذي  يدعم لغات البرمجة العامة مثل C / C ++ ، Java ، Python ، TypeScript ، إلخ. يوفر النظام بعض نماذج العقد الذكي المضمنة لبروتوكولات التبادل الفائق ، وذلك لتبسيط تطوير التطبيق."
+msgstr ""
+"ان نموذج NewVM متوافق مع معيار ويب اسسيمبلي Webassembly ،والذي  يدعم لغات "
+"البرمجة العامة مثل C / C ++ ، Java ، Python ، TypeScript ، إلخ. يوفر النظام "
+"بعض نماذج العقد الذكي المضمنة لبروتوكولات التبادل الفائق ، وذلك لتبسيط تطوير "
+"التطبيق."
 
 #: web/apps/welcome/templates/welcome/tech.html:24
 msgid ""
 "NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum "
 "security of all assets within the Newton ecosphere."
-msgstr "تستخدم NewChain خوارزمية التشفير Ring-LWE anti-quantum لضمان أمان الأصول."
+msgstr ""
+"تستخدم NewChain خوارزمية التشفير Ring-LWE anti-quantum لضمان أمان الأصول."
 
 #: web/apps/welcome/templates/welcome/tech.html:36
 msgid ""
@@ -2968,7 +3224,15 @@ msgid ""
 "task. Through NewChain a decentralized network domain name service is fully "
 "supported. The ease of use of NewNET will increase through the blockchain "
 "technology."
-msgstr "إن NewNet ، التي تتكون من عدد كبير من العقد ، هي عبارة عن شبكة مفتوحة تقوم بتوفير خدمات تخزين موثوق بها ، كما و تقوم بدعم قاعدة البيانات  SQL ' لغة استفسارية انشائية ' كاملة  و تدعم الكثير  من لغات البرمجة العامة. و يمكن استضافة معظم خدمات الشبكة العنكبوتية مباشرة على NewNet.  فنجد أن المطورين يمكنهم القيام بمهمة الحساب عن طريق تمكن العقد من تحديد مهمة الحساب المقابلة وفقًا لقدرة الحساب ، و من ثم الحصول على الحوافز المتكافئة بعد الانتهاء. كما و يمكن تحقيق خدمات اسم نطاق الشبكة اللامركزية ، وسيكون استخدام NewNet اكثر سهولة من خلال تقنية سلسلة الكتل blockchain."
+msgstr ""
+"إن NewNet ، التي تتكون من عدد كبير من العقد ، هي عبارة عن شبكة مفتوحة تقوم "
+"بتوفير خدمات تخزين موثوق بها ، كما و تقوم بدعم قاعدة البيانات  SQL ' لغة "
+"استفسارية انشائية ' كاملة  و تدعم الكثير  من لغات البرمجة العامة. و يمكن "
+"استضافة معظم خدمات الشبكة العنكبوتية مباشرة على NewNet.  فنجد أن المطورين "
+"يمكنهم القيام بمهمة الحساب عن طريق تمكن العقد من تحديد مهمة الحساب المقابلة "
+"وفقًا لقدرة الحساب ، و من ثم الحصول على الحوافز المتكافئة بعد الانتهاء. كما و "
+"يمكن تحقيق خدمات اسم نطاق الشبكة اللامركزية ، وسيكون استخدام NewNet اكثر "
+"سهولة من خلال تقنية سلسلة الكتل blockchain."
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
@@ -2980,14 +3244,25 @@ msgid ""
 "algorithms Newton can create a unique identification and authentic right for "
 "any digital asset. The whole process is repeatable, verifiable and fault-"
 "tolerant."
-msgstr "من خلال استخدام الموازين الراديومترية ، وتحليل المركبات الرئيسية PCA ، ورؤية الماكينة ، وتكنولوجيا التعلم العميق ، يمكننا بسرعة استخراج خصائص متعددة لأصل مادي معين ، بما في ذلك: الوزن ،المقدار, الحجم ، الشكل ، البنية ، الخصائص البصرية ، الخصائص المشعة ، الخصائص الديناميكية الحرارية ، و مجموعة متنوعة من الميزات العشوائية المخصصة. وبعد ذلك ، استنادًا على هذه البيانات المميزة ، يمكننا وباستخدام الخوارزميات إجراء عمليات حسابية والوصول إلى نتائج خاصة بالتحقق من الملكية الفريدة من نوعها.  إن العملية برمتها يمكن تكرارها, والتحقق منها وهي تمتلك ميزة تحمل الأخطاء."
+msgstr ""
+"من خلال استخدام الموازين الراديومترية ، وتحليل المركبات الرئيسية PCA ، ورؤية "
+"الماكينة ، وتكنولوجيا التعلم العميق ، يمكننا بسرعة استخراج خصائص متعددة لأصل "
+"مادي معين ، بما في ذلك: الوزن ،المقدار, الحجم ، الشكل ، البنية ، الخصائص "
+"البصرية ، الخصائص المشعة ، الخصائص الديناميكية الحرارية ، و مجموعة متنوعة من "
+"الميزات العشوائية المخصصة. وبعد ذلك ، استنادًا على هذه البيانات المميزة ، "
+"يمكننا وباستخدام الخوارزميات إجراء عمليات حسابية والوصول إلى نتائج خاصة "
+"بالتحقق من الملكية الفريدة من نوعها.  إن العملية برمتها يمكن تكرارها, "
+"والتحقق منها وهي تمتلك ميزة تحمل الأخطاء."
 
 #: web/apps/welcome/templates/welcome/tech.html:62
 msgid ""
 "NewIoT is a general conception for a category of technologies that includes; "
 "blockchain fog computing, communication protocols between IoT devices and "
 "gateways and NewChain IoT devices developing specifications."
-msgstr " NewIOT هو تعريف عام لسلسلة من التقنيات ، بما في ذلك حوسبة الضباب في blockchain ، وبروتوكولات الاتصال بين أجهزة IoT والبوابات ، ومواصفات تطوير أجهزة ."
+msgstr ""
+" NewIOT هو تعريف عام لسلسلة من التقنيات ، بما في ذلك حوسبة الضباب في "
+"blockchain ، وبروتوكولات الاتصال بين أجهزة IoT والبوابات ، ومواصفات تطوير "
+"أجهزة ."
 
 #: web/apps/welcome/templates/welcome/tech.html:63
 msgid ""
@@ -2996,7 +3271,12 @@ msgid ""
 "Ethernet/fiber, 3G/4G/5G, NB-IoT, IoT communication protocol such as BLE, Wi-"
 "Fi, ZigBee, and more. The IoT device store the collected information into "
 "NewChain through the gateway."
-msgstr "NewChain IoTولدى البوابة قدرات قوية في الحوسبة والتخزين مزودة بعقد blockchain مدمجة ، تدعم العديد من طرق الوصول إلى الإنترنت ، بما في ذلك: Ethernet / fiber ، و 3G / 4G / 5G ، و NB-IoT ، وما إلى ذلك ، بالاضافة لبروتوكول اتصالات إنترنت الأشياء مثل BLE ، و Wi- Fi، ZigBee، etc .. يخزن جهاز IoT المعلومات المجمعة في NewChain عبر البوابة."
+msgstr ""
+"NewChain IoTولدى البوابة قدرات قوية في الحوسبة والتخزين مزودة بعقد "
+"blockchain مدمجة ، تدعم العديد من طرق الوصول إلى الإنترنت ، بما في ذلك: "
+"Ethernet / fiber ، و 3G / 4G / 5G ، و NB-IoT ، وما إلى ذلك ، بالاضافة "
+"لبروتوكول اتصالات إنترنت الأشياء مثل BLE ، و Wi- Fi، ZigBee، etc .. يخزن "
+"جهاز IoT المعلومات المجمعة في NewChain عبر البوابة."
 
 #: web/apps/welcome/templates/welcome/tech.html:72
 msgid "NewAI"
@@ -3008,7 +3288,11 @@ msgid ""
 "from three aspects; data, algorithm model, and execution engine. By using "
 "these three aspects the Newton NewAI closely connects the data suppliers, "
 "algorithm model developers and operating system providers together."
-msgstr "يعمل NewAI (الذكاء الاصطناعي الموزع) على تعزيز تطوير الذكاء الاصطناعي من ثلاثة جوانب: البيانات ، نموذج الخوارزمية ، محرك التنفيذ ، وبالتالي يربط بشكل وثيق مزودي البيانات ومطوري نماذج الخوارزمية ومزودي بيئة التطوير المتكاملة معًا."
+msgstr ""
+"يعمل NewAI (الذكاء الاصطناعي الموزع) على تعزيز تطوير الذكاء الاصطناعي من "
+"ثلاثة جوانب: البيانات ، نموذج الخوارزمية ، محرك التنفيذ ، وبالتالي يربط بشكل "
+"وثيق مزودي البيانات ومطوري نماذج الخوارزمية ومزودي بيئة التطوير المتكاملة "
+"معًا."
 
 #: web/apps/welcome/templates/welcome/tech.html:77
 msgid ""
@@ -3016,14 +3300,21 @@ msgid ""
 "suppliers, including multidimensional data formats, data fragmentation, data "
 "compression, data encryption, etc. User private data safety will be "
 "protected by the k-anonymity, ε--differential privacy and other methods."
-msgstr "يوفر NewAI معايير بيانات معتمدة للوصول إلى المستخدمين وموردي البيانات ، بما في ذلك تنسيقات البيانات متعددة الأبعاد ، وتجزئة البيانات ، وضغط البيانات ، وتشفير البيانات ، وما إلى ذلك. ستتم حماية سلامة بيانات المستخدم الخاصة من خلال إخفاء هوية k ، ε - الخصوصية التفاضلية والطرق الأخرى ."
+msgstr ""
+"يوفر NewAI معايير بيانات معتمدة للوصول إلى المستخدمين وموردي البيانات ، بما "
+"في ذلك تنسيقات البيانات متعددة الأبعاد ، وتجزئة البيانات ، وضغط البيانات ، "
+"وتشفير البيانات ، وما إلى ذلك. ستتم حماية سلامة بيانات المستخدم الخاصة من "
+"خلال إخفاء هوية k ، ε - الخصوصية التفاضلية والطرق الأخرى ."
 
 #: web/apps/welcome/templates/welcome/tech.html:78
 msgid ""
 "NewAI uses docker container to run artificial intelligence computing "
 "software such as Tensorflow, Caffe. It encourages data suppliers to provide "
 "long-term service through multi-factor weighting profit distribution method."
-msgstr "يستخدم NewAI حاوية دوكر لتشغيل برامج حوسبة ذكاء اصطناعية مثل Tensorflow، Caffe. وتشجع موردي البيانات على توفير خدمة طويلة الأجل من خلال طريقة توزيع الأرباح المتعددة العوامل."
+msgstr ""
+"يستخدم NewAI حاوية دوكر لتشغيل برامج حوسبة ذكاء اصطناعية مثل Tensorflow، "
+"Caffe. وتشجع موردي البيانات على توفير خدمة طويلة الأجل من خلال طريقة توزيع "
+"الأرباح المتعددة العوامل."
 
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
@@ -3602,14 +3893,6 @@ msgid ""
 "April, 2018"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/whitepaper.html:13
-msgid "Whitepaper"
-msgstr "ورق ابيض"
-
-#: web/apps/welcome/templates/welcome/whitepaper.html:20
-msgid "Newton Whitepaper"
-msgstr ""
-
 #: web/apps/zinnia/breadcrumbs.py:68 web/apps/zinnia/admin/forms.py:66
 #: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:25
 #: web/apps/zinnia/templates/zinnia/tag_list.html:6
@@ -3785,7 +4068,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:75
+#: web/apps/zinnia/models_bases/entry.py:78
 msgid "title"
 msgstr ""
 
@@ -3922,7 +4205,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:496
+#: web/apps/zinnia/models_bases/entry.py:499
 msgid "categories"
 msgstr ""
 
@@ -3935,14 +4218,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:64
+#: web/apps/zinnia/models_bases/entry.py:67
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr "المدونة"
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:78
+#: web/apps/zinnia/models_bases/entry.py:81
 msgid "slug"
 msgstr ""
 
@@ -3963,7 +4246,7 @@ msgid "language"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:121
+#: web/apps/zinnia/models_bases/entry.py:124
 msgid "Entry type"
 msgstr ""
 
@@ -3983,173 +4266,173 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:80
-#: web/apps/zinnia/models_bases/entry.py:105
+#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:108
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
+#: web/apps/zinnia/models_bases/entry.py:86
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:87
+#: web/apps/zinnia/models_bases/entry.py:90
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:89
+#: web/apps/zinnia/models_bases/entry.py:92
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:92
+#: web/apps/zinnia/models_bases/entry.py:95
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:94
+#: web/apps/zinnia/models_bases/entry.py:97
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:99
+#: web/apps/zinnia/models_bases/entry.py:102
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:100
+#: web/apps/zinnia/models_bases/entry.py:103
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:103
+#: web/apps/zinnia/models_bases/entry.py:106
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:108
+#: web/apps/zinnia/models_bases/entry.py:111
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:118
+#: web/apps/zinnia/models_bases/entry.py:121
 msgid "entry type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:125
+#: web/apps/zinnia/models_bases/entry.py:128
 msgid "entry_sub_type"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:132
+#: web/apps/zinnia/models_bases/entry.py:135
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:247
+#: web/apps/zinnia/models_bases/entry.py:250
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:248
+#: web/apps/zinnia/models_bases/entry.py:251
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:262
+#: web/apps/zinnia/models_bases/entry.py:265
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:304
+#: web/apps/zinnia/models_bases/entry.py:307
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:305
+#: web/apps/zinnia/models_bases/entry.py:308
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:310
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:308
+#: web/apps/zinnia/models_bases/entry.py:311
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:313
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:311
+#: web/apps/zinnia/models_bases/entry.py:314
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:314
+#: web/apps/zinnia/models_bases/entry.py:317
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:316
+#: web/apps/zinnia/models_bases/entry.py:319
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:318
+#: web/apps/zinnia/models_bases/entry.py:321
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:402
+#: web/apps/zinnia/models_bases/entry.py:405
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:420
+#: web/apps/zinnia/models_bases/entry.py:423
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:421
+#: web/apps/zinnia/models_bases/entry.py:424
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:454
+#: web/apps/zinnia/models_bases/entry.py:457
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:456
+#: web/apps/zinnia/models_bases/entry.py:459
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:467
+#: web/apps/zinnia/models_bases/entry.py:470
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:482
+#: web/apps/zinnia/models_bases/entry.py:485
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:506
+#: web/apps/zinnia/models_bases/entry.py:509
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:525
+#: web/apps/zinnia/models_bases/entry.py:528
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:526
+#: web/apps/zinnia/models_bases/entry.py:529
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:538
+#: web/apps/zinnia/models_bases/entry.py:541
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:539
+#: web/apps/zinnia/models_bases/entry.py:542
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:551
+#: web/apps/zinnia/models_bases/entry.py:554
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:553
-#: web/apps/zinnia/models_bases/entry.py:569
+#: web/apps/zinnia/models_bases/entry.py:556
+#: web/apps/zinnia/models_bases/entry.py:572
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:555
+#: web/apps/zinnia/models_bases/entry.py:558
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:567
+#: web/apps/zinnia/models_bases/entry.py:570
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:571
+#: web/apps/zinnia/models_bases/entry.py:574
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
@@ -4793,8 +5076,9 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
-#: web/templates/header.html:49 web/templates/header.html.py:57
-#: web/templates/header.html:78 web/templates/header.html.py:86
+#: web/templates/header.html:72 web/templates/header.html.py:80
+#: web/templates/header.html:114 web/templates/header.html.py:123
+#: web/templates/header.html:130
 msgid "Login"
 msgstr "تسجيل الدخول"
 
@@ -5235,24 +5519,29 @@ msgid "Service Terms"
 msgstr "شروط الخدمة"
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:42 web/templates/header.html.py:69
+#: web/templates/header.html:65 web/templates/header.html.py:104
 msgid "User Center"
 msgstr ""
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:43 web/templates/header.html.py:70
+#: web/templates/header.html:66 web/templates/header.html.py:105
 msgid "LogOut"
 msgstr ""
 
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
-#: web/templates/header.html:46 web/templates/header.html.py:54
-#: web/templates/header.html:75 web/templates/header.html.py:83
+#: web/templates/header.html:69 web/templates/header.html.py:77
+#: web/templates/header.html:111 web/templates/header.html.py:120
+#: web/templates/header.html:127
 msgid "Register"
 msgstr "تسجيل"
 
-#: web/templates/header.html:26
+#: web/templates/header.html:28 web/templates/header.html.py:48
 msgid "Technology"
 msgstr "التكنولوجيا"
+
+#: web/templates/header.html:40 web/templates/header.html.py:60
+msgid "NewFund"
+msgstr ""
 
 #: web/templates/admin/change_form.html:33
 msgid "History"
