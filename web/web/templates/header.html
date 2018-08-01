@@ -18,48 +18,26 @@
             </div><!-- /.logo -->
 
             <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/protocol/" {% language_change_header_style %}>{% trans "HEP" %}</a>
+                    </li>
+                    <li>
+                        <a href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
+                    </li>
+                    <li>
+                        <a href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
+                    </li>
+                    <li>
+                        <a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
+                    </li>
+                    <li>
+                        <a href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
+                    </li>
+                    <li>
+                        <a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
+                    </li>
 
-                    {% if is_change_css %}
-                    <ul class="nav navbar-nav">
-                    <li>
-                        <a href="/protocol/" style="font-size:16px;">{% trans "HEP" %}</a>
-                    </li>
-                    <li>
-                        <a href="/technology/" style="font-size:16px;">{% trans "Technology" %}</a>
-                    </li>
-                    <li>
-                        <a href="/newpay/" style="font-size:16px;">{% trans "NewPay" %}</a>
-                    </li>
-                    <li>
-                        <a href="/community/" style="font-size:16px;">{% trans "Community" %}</a>
-                    </li>
-                    <li>
-                        <a href="/economy/" style="font-size:16px;">{% trans "Economy" %}</a>
-                    </li>
-                    <li>
-                        <a href="/newfund/" style="font-size:16px;">{% trans "NewFund" %}</a>
-                    </li>
-                    {% else %}
-                    <ul class="nav navbar-nav">
-                    <li>
-                        <a href="/protocol/">{% trans "HEP" %}</a>
-                    </li>
-                    <li>
-                        <a href="/technology/">{% trans "Technology" %}</a>
-                    </li>
-                    <li>
-                        <a href="/newpay/">{% trans "NewPay" %}</a>
-                    </li>
-                    <li>
-                        <a href="/community/">{% trans "Community" %}</a>
-                    </li>
-                    <li>
-                        <a href="/economy/">{% trans "Economy" %}</a>
-                    </li>
-                    <li>
-                        <a href="/newfund/">{% trans "NewFund" %}</a>
-                    </li>
-                    {% endif %}
                     {% if request.user.is_authenticated %}
                         {% if not request.user.is_superuser %}
                             <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
@@ -115,21 +93,12 @@
                             </li>
                         {% endif %}
                     {% else %}
-                        {% if is_change_css_ru %}
                         <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/register/" style="font-size:16px;">{% trans "Register" %}</a>
+                            <a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
                         </li>
                         <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/login/" style="font-size:16px;">{% trans "Login" %}</a>
+                            <a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
                         </li>
-                        {% else %}
-                        <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                        </li>
-                        <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                        </li>
-                        {% endif %}
                     {% endif %}
                     <li class="language-drop-down visible-xs-block visible-sm-block">
                     </li>

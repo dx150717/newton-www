@@ -17,11 +17,13 @@ from django.utils.timezone import utc
 from django_countries.data import COUNTRIES
 
 from config import codes
+from django.utils import translation
 
 logger = logging.getLogger(__name__)
 
 register = template.Library()
 version_pattern = re.compile(r"^(.*)\.(.*?)$")
+
 
 def version(path_string):
     """
@@ -33,25 +35,29 @@ def version(path_string):
         logger.exception(str(inst))
         return path_string
 
+
 register.simple_tag(version)
+
 
 def menu_active(uri, key):
     if uri.find(key) >= 0:
         return "active"
     return ""
 
+
 register.filter(menu_active)
+
 
 @register.filter(name='addcss')
 def addcss(field, css):
-    return field.as_widget(attrs={"class":css, "placeholder": field.label })
+    return field.as_widget(attrs={"class": css, "placeholder": field.label})
 
 
 @register.filter(name='get_head_url')
 def get_head_url(user):
     if hasattr(user, 'userprofile') and user.userprofile:
         if user.userprofile.head_image:
-            return '/filestorage/%s' % user.userprofile.head_image 
+            return '/filestorage/%s' % user.userprofile.head_image
         elif user.userprofile.head_image_url:
             return user.userprofile.head_image_url
     return '/static/images/user.jpg'
@@ -71,7 +77,7 @@ def duration_format(duration):
         if duration < 60:
             return _('%(duration)d minute', '%(duration)d minutes', duration) % {'duration': duration}
         else:
-            return _('%(duration)d hour', '%(duration)d hours', duration/60) % {'duration': duration/60}
+            return _('%(duration)d hour', '%(duration)d hours', duration / 60) % {'duration': duration / 60}
     return ''
 
 
@@ -79,6 +85,7 @@ def duration_format(duration):
 def multiply(unit_price, qty, *args, **kwargs):
     # you would need to do any localization of the result here
     return '{0:.2f}'.format(qty * unit_price)
+
 
 @register.filter(name='show_entity_image')
 def show_entity_image(image, size=None):
@@ -92,6 +99,7 @@ def show_entity_image(image, size=None):
         else:
             return image.url
     return version('images/entity-default.png')
+
 
 @register.filter(name='show_material_image')
 def show_material_image(image):
@@ -119,15 +127,18 @@ def show_count_down(d):
     else:
         return d.strftime('%Y-%m-%d %H:%M')
 
+
 @register.filter(name='show_datetime')
 def show_datetime(d, delta_hours=0):
     d = d + datetime.timedelta(hours=delta_hours)
     return d.strftime('%Y-%m-%d %H:%M')
 
+
 @register.filter(name='show_time')
 def show_time(d, delta_hours=0):
     d = d + datetime.timedelta(hours=delta_hours)
     return d.strftime('%H:%M')
+
 
 @register.filter(name='show_date')
 def show_date(d):
@@ -135,9 +146,11 @@ def show_date(d):
         return d.strftime('%Y-%m-%d')
     return ''
 
+
 @register.filter(name='show_month')
 def show_month(d):
     return d.strftime('%m-%d')
+
 
 @register.filter(name='show_date')
 def show_left_time(d, duration):
@@ -145,6 +158,7 @@ def show_left_time(d, duration):
     now = datetime.datetime.utcnow().replace(tzinfo=utc)
     delta = dt - now
     return ugettext("%.f hour") % (delta.total_seconds() / 3600.0)
+
 
 @register.filter(name='show_user_title')
 def show_user_title(user):
@@ -225,21 +239,24 @@ def show_apply_status(status):
             return v
     return ''
 
+
 @register.filter(name='show_language_icon')
 def show_language_icon(request):
     language = translation.get_language()
-    for k,v in settings.SUPPORT_LANGUAGES:
+    for k, v in settings.SUPPORT_LANGUAGES:
         if language == k:
             return language
     return 'en'
 
+
 @register.filter(name='show_language_code')
 def show_language_code(request):
     language = translation.get_language()
-    for k,v in settings.SUPPORT_LANGUAGES:
+    for k, v in settings.SUPPORT_LANGUAGES:
         if language == k:
             return v
     return 'English'
+
 
 @register.filter(name='is_current_language')
 def is_current_language(language_code):
@@ -247,6 +264,7 @@ def is_current_language(language_code):
     if language_code == language:
         return True
     return False
+
 
 @register.filter(name='trans_country')
 def trans_country(country_code):
@@ -257,6 +275,7 @@ def trans_country(country_code):
     except Exception, inst:
         logger.exception(str(inst))
         return ""
+
 
 @register.filter(name='integer_format')
 def integer_format(number):
@@ -276,3 +295,63 @@ def integer_format(number):
     except Exception, inst:
         logger.exception("fail to integer format:%s" % str(inst))
         return ""
+
+
+def arabic_change_page_style():
+    """integer format by given parameters
+    """
+    try:
+        language = translation.get_language()
+        if language == 'ar':
+            return 'dir="rtl"'
+    except Exception, inst:
+        logger.exception("fail to arabic_change_page_style:%s" % str(inst))
+        return ""
+
+
+register.simple_tag(arabic_change_page_style)
+
+
+def arabic_change_style():
+    """integer format by given parameters
+    """
+    try:
+        language = translation.get_language()
+        if language == 'ar':
+            return 'style="text-align:right;"'
+    except Exception, inst:
+        logger.exception("fail to arabic_change_style:%s" % str(inst))
+        return ""
+
+
+register.simple_tag(arabic_change_style)
+
+
+def language_change_header_style():
+    """integer format by given parameters
+    """
+    try:
+        language = translation.get_language()
+        if language in ['de', 'es', 'fr', 'nl', 'ru']:
+            return 'style="font-size:16px;"'
+    except Exception, inst:
+        logger.exception("fail to language_change_header_style:%s" % str(inst))
+        return ""
+
+
+register.simple_tag(language_change_header_style)
+
+
+def russian_change_header_style():
+    """integer format by given parameters
+    """
+    try:
+        language = translation.get_language()
+        if language == 'ru':
+            return 'style="font-size:16px;"'
+    except Exception, inst:
+        logger.exception("fail to russian_change_header_style:%s" % str(inst))
+        return ""
+
+
+register.simple_tag(russian_change_header_style)
