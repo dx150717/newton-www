@@ -27,7 +27,7 @@ MEDIA_ROOT = './'
 
 #session settings
 SESSION_COOKIE_AGE = 7200
-SESSION_COOKIE_DOMAIN = '.test.newtonproject.org'
+SESSION_COOKIE_DOMAIN = None
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
