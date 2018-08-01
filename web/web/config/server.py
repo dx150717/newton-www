@@ -157,3 +157,12 @@ TENCENT_CAPTCHA_APP_SECRET = '0alyS6l5dhGmH32EX4zIQaw**'
 NEWTON_WEB_URL = 'http://localhost:8000'
 NEWTON_HOME_URL = 'http://home.test.newtonproject.org:8000'
 NEWTON_GRAVITY_URL = 'http://gravity.test.newtonproject.org:8000'
+
+# celery settings
+import djcelery
+djcelery.setup_loader()
+BROKER_URL = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
+CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+CELERYD_HIJACK_ROOT_LOGGER = False
+CELERY_IMPORTS = ('tasks.task_email', 'tasks.task_blockchain')
