@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-31 15:26+0000\n"
+"POT-Creation-Date: 2018-08-01 10:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -326,12 +326,16 @@ msgstr ""
 msgid "No search query entered."
 msgstr ""
 
+#: web/apps/subscription/admin.py:31 web/apps/subscription/admin.py:32
+msgid "Set emails as spam"
+msgstr "设置为垃圾邮箱"
+
 #: web/apps/subscription/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
 msgstr "电子邮箱"
 
-#: web/apps/subscription/models.py:19
+#: web/apps/subscription/models.py:20
 msgid "Subscribed emails"
 msgstr "订阅邮箱"
 

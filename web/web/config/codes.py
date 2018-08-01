@@ -161,3 +161,8 @@ class RelationshipWithEmergency(Enum):
 class UserCenterActivePage(Enum):
     KYCACTIVE = 1
     TOKENEXCHANGEACTIVE = 2
+
+
+class SubscriptionEmailType(Enum):
+    AVAILABLE = 0
+    SPAM = 1
