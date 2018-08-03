@@ -123,7 +123,6 @@ h6, .f12 {font-size: 12px;}
 #announcement .page-title{background-color:rgb(240, 211, 109);}
 #announcementdetail .page-title{background-color:rgb(240, 211, 109);}
 #faq .page-title{background-color: #5c8dbd;}
-#newpay .page-title{background-color: #6969AF;}
 #token-exchange .page-title{background-color: #333333;}
 /*title bg*/
 #technology .page-title .container{background: url(../images/titlebg/technology-bg.svg) no-repeat left bottom;}
@@ -139,7 +138,6 @@ h6, .f12 {font-size: 12px;}
 #copyright .page-title .container{background: url(../images/titlebg/copyright-bg.svg) no-repeat left bottom}
 #terms .page-title .container{background: url(../images/titlebg/terms-bg.svg) no-repeat left bottom}
 #privacy .page-title .container{background: url(../images/titlebg/privacy-bg.svg) no-repeat left bottom}
-#newpay .page-title .container{background: url(../images/titlebg/newpay-bg.svg) no-repeat left bottom}
 #token-exchange .page-title .container {background: url(../images/titlebg/tokenexchange.svg) no-repeat left bottom;}
 #kyc .page-title .container {background: url(../images/titlebg/terms-bg.svg) no-repeat left bottom}
 
@@ -180,7 +178,6 @@ h6, .f12 {font-size: 12px;}
 #mediakit .page-title .container,
 #copyright .page-title .container,
 #terms .page-title .container,
-#newpay .page-title .container,
 #privacy .page-title .container{background-size:50%; background-position: 20px bottom}
 #user .page-title{height: 200px;}
 #user .header img{width: 80px !important;}
@@ -890,45 +887,6 @@ canvas {display: block; vertical-align: top;}
     .community .event .panel {
         width: 100%;
     }
-}
-
-/* newpay */
-.newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg_1.png) no-repeat top center; width:100%; height:1040px;}
-.newpay_text{padding-bottom:120px;}
-.newpay_text img{text-align:center; margin:0 auto;}
-.newpay_text h2{padding-left:10px; color:#333; font-size:32px;}
-.newpay_text p{padding-left:10px; color:#333; font-size:18px;}
-.newpay_text .col-sm-6{margin:120px 0 0;}
-@media(max-width:1199px) and (min-width: 992px){
-.newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg_1.png) no-repeat top center; background-size:960px 520px; width:100%; height:520px;}
-.newpay_text{padding-bottom:80px;}
-.newpay_text .col-sm-6{padding:0}
-.newpay_text .col-sm-4{text-align:right}
-.newpay_text img{width:120px; height:120px;}
-.newpay_text h2{padding-left:0; color: #333; font-size:26px;}
-.newpay_text p{padding-left:0; color: #333; font-size:18px;}
-.newpay_text .col-sm-6{margin:80px 0 0;}
-}
-@media(max-width:991px) and (min-width: 768px){
-.newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg_1.png) no-repeat top center; background-size:960px 520px; width:100%; height:520px;}
-.newpay_text{padding-bottom:60px;}
-.newpay_text .col-sm-6{padding:0}
-.newpay_text .col-sm-4{text-align:right}
-.newpay_text img{width:80px; height:80px;}
-.newpay_text h2{padding-left:0; font-size:26px;}
-.newpay_text p{padding-left:0; font-size:18px;}
-.newpay_text .col-sm-6{margin:60px 0 0;}
-}
-@media only screen and (max-width : 768px) {
-.newpay_bg{background:#FFF url(../images/newpay/newpay_bg_1.png) no-repeat top center; background-size:480px 260px; width:100%; height:260px;}
-.newpay_text{padding-bottom:30px;}
-.newpay_text .col-sm-6{padding:0}
-.newpay_text .col-sm-4{margin-bottom:15px}
-.newpay_text img{width:80px; height:80px;}
-.newpay_text h2{padding-left:0; font-size:26px; font-weight: normal;}
-.newpay_text p{padding-left:0; font-size:18px;}
-.newpay_text .col-sm-6{margin:0; padding-top: 30px;padding-bottom: 30px}
-.newpay-gray{background-color: #f7f7f7}
 }
 
 /* whitepaper*/
