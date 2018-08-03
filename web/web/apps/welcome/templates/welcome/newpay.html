@@ -11,13 +11,7 @@
       <p>NewPay</p>
     </div>
   </div>
-  <div class="newpay_bg">
-    <div class="col-md-8 newpay-bg-content">
-      <p class="slogan-newpay">{% trans "Entry for New World" %}</p>
-      <a href="{{ settings.NEWTON_DEV_URL }}/developer/dashboard/" class="btn btn-default btn-newpay">
-        {% trans "Join internal testing" %}
-      </a></div>
-    </div>
+  <div class="newpay_bg"></div>
   <div class="container">
     <div class="newpay_list">
       <div class="newpay_text row">
@@ -79,8 +73,4 @@
 </section>
 {% endblock %} 
 {% block inline_js %} 
-{% endblock %}
-
-{% block css %}
-<link rel="stylesheet" href="{% version "css/newpay.css" %}">
 {% endblock %}
