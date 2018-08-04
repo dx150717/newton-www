@@ -332,7 +332,7 @@ def language_change_header_style():
     """
     try:
         language = translation.get_language()
-        if language in ['de', 'es', 'fr', 'nl', 'ru']:
+        if language in ['de', 'es', 'fr', 'nl', 'ru', 'fi']:
             return 'style="font-size:16px;"'
     except Exception, inst:
         logger.exception("fail to language_change_header_style:%s" % str(inst))
