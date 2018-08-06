@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-31 15:19+0000\n"
+"POT-Creation-Date: 2018-08-06 03:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,54 +118,54 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:72
+#: web/apps/base/templatetags/utils.py:78
 #, python-format
 msgid "%(duration)d minute"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:74
+#: web/apps/base/templatetags/utils.py:80
 #, python-format
 msgid "%(duration)d hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:113
+#: web/apps/base/templatetags/utils.py:121
 #, python-format
 msgid "%(hour)d hour ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:116
+#: web/apps/base/templatetags/utils.py:124
 #, python-format
 msgid "%(minute)d minute ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:118
+#: web/apps/base/templatetags/utils.py:126
 #, python-format
 msgid "%(second)d second ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:147
+#: web/apps/base/templatetags/utils.py:160
 #, python-format
 msgid "%.f hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:177
+#: web/apps/base/templatetags/utils.py:191
 msgid "unfilled"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:183
-#: web/apps/base/templatetags/utils.py:190
+#: web/apps/base/templatetags/utils.py:197
+#: web/apps/base/templatetags/utils.py:204
 msgid "Yes"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:184
-#: web/apps/base/templatetags/utils.py:191
+#: web/apps/base/templatetags/utils.py:198
+#: web/apps/base/templatetags/utils.py:205
 msgid "No"
 msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
 #: web/apps/zinnia/models_bases/entry.py:114
-#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:85
+#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:63
 msgid "Language"
 msgstr ""
 
@@ -318,12 +318,16 @@ msgstr ""
 msgid "No search query entered."
 msgstr ""
 
+#: web/apps/subscription/admin.py:31 web/apps/subscription/admin.py:32
+msgid "Set emails as spam"
+msgstr ""
+
 #: web/apps/subscription/forms.py:6
 #: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
 msgid "Email"
 msgstr ""
 
-#: web/apps/subscription/models.py:19
+#: web/apps/subscription/models.py:20
 msgid "Subscribed emails"
 msgstr ""
 
@@ -402,20 +406,6 @@ msgid "We won't share your email address or send you any spam."
 msgstr ""
 "No compartiremos su dirección de correo electrónico ni le enviaremos ningún "
 "correo no deseado."
-
-#: web/apps/subscription/templates/subscription/subscription-letter.html:44
-msgid "Welcome! Please Confirm Your Subscription"
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/subscription-letter.html:45
-msgid "Yes,subscribe me to this list."
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/subscription-letter.html:46
-msgid ""
-"If you have received this email in error, please delete it. You won't be "
-"subscribed if you don't click the confirmation link above."
-msgstr ""
 
 #: web/apps/verification/models.py:22
 msgid "Verification emails"
@@ -532,7 +522,7 @@ msgstr "Actividad"
 #: web/apps/welcome/templates/welcome/include-allocation.html:63
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:34 web/templates/header.html.py:54
+#: web/templates/header.html:32
 msgid "Community"
 msgstr "Comunidad"
 
@@ -840,7 +830,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
-#: web/templates/header.html:37 web/templates/header.html.py:57
+#: web/templates/header.html:35
 msgid "Economy"
 msgstr "Economía"
 
@@ -1002,7 +992,6 @@ msgid "Theodore Gray"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:107
-#, fuzzy
 msgid "Co-Founder of Wolfram Research"
 msgstr "Cofundador de Elastos"
 
@@ -1011,7 +1000,6 @@ msgid "Creator of the Mathematica Notebook System"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:109
-#, fuzzy
 msgid "Founder of Touch Press"
 msgstr "Fundador de WuZhou Online"
 
@@ -1101,74 +1089,70 @@ msgstr ""
 msgid "Unlock in later fifty years."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:6
-msgid "Coming Events"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-community-event.html:9
-msgid "Newton Beijing Meetup (Phase Ⅱ)"
+#: web/apps/welcome/templates/welcome/include-community-event.html:10
+msgid "Passed Events"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:13
+msgid "Newton Beijing Meetup (Phase Ⅱ)"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-community-event.html:17
 msgid "2018-06-23, 14:00-18:00 CST"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:16
+#: web/apps/welcome/templates/welcome/include-community-event.html:20
 msgid ""
 "2nd Floor, Tower A, Dinghao Electronics Building, Zhongguancun Street, "
 "Haidian District, Beijing"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:16
+#: web/apps/welcome/templates/welcome/include-community-event.html:20
 msgid ""
 "https://www.newtonproject.org/announcement/2018/06/19/june-23rd-newton-"
 "beijing-meet-sincerely-invites-you-join-us/"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:16
-#: web/apps/welcome/templates/welcome/include-community-event.html:30
-#: web/apps/welcome/templates/welcome/include-community-event.html:43
+#: web/apps/welcome/templates/welcome/include-community-event.html:20
+#: web/apps/welcome/templates/welcome/include-community-event.html:33
+#: web/apps/welcome/templates/welcome/include-community-event.html:46
 msgid "Detail"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:20
-msgid "Passed Events"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-community-event.html:23
+#: web/apps/welcome/templates/welcome/include-community-event.html:26
 msgid "Newton Meetup Shijiazhuang station successfully ended"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:27
+#: web/apps/welcome/templates/welcome/include-community-event.html:30
 msgid "2018-06-16, 14:00-18:00 CST"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:30
+#: web/apps/welcome/templates/welcome/include-community-event.html:33
 msgid ""
 "4th floor of Yuetai Hotel, northeast corner of the intersection of Youyi "
 "North Street and Xinhua Road, Shijiazhuang, Hebei Province"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:30
+#: web/apps/welcome/templates/welcome/include-community-event.html:33
 msgid ""
 "https://www.newtonproject.org/announcement/2018/06/14/newton-meet-"
 "shijiazhuang-station-welcome-you-join/"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:36
+#: web/apps/welcome/templates/welcome/include-community-event.html:39
 msgid "Newton offline Meetup (Beijing) successfully ended"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:40
+#: web/apps/welcome/templates/welcome/include-community-event.html:43
 msgid "2018-05-19, 14:00-18:00 CST"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:43
+#: web/apps/welcome/templates/welcome/include-community-event.html:46
 msgid ""
 "Chaoke Coffee, Floor 1, Block C, Building 40, Xingfu Square, Xingfu Second"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:43
+#: web/apps/welcome/templates/welcome/include-community-event.html:46
 msgid ""
 "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-"
 "defining-business-order-new-economy-era-sincerely-invites-you-join-us/"
@@ -2689,10 +2673,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:23
 msgid ""
-"Newton logo is a combination of calculus symbol and zigzag side of coin. "
-"This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
-"symbolizing the perfect integration of finance and technology."
-msgstr ""
+"Newton logo is a combination of calculus symbol and ridged coin edge. This "
+"logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
+"symbolizing his great contribution and perfect integration of finance and "
+"technology."
+msgstr "El logo de Newton es una combinación de símbolo de cálculo y la cara zigzagueante de la moneda. Este logotipo rinde homenaje al gran científico y pionero de la acuñación de monedas Sir Isaac Newton, que simboliza la perfecta integración de las finanzas y la tecnología."
 
 #: web/apps/welcome/templates/welcome/mediakit.html:28
 msgid "Download Logo"
@@ -2708,7 +2693,7 @@ msgstr "Cartel Inglés"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:63
 msgid "Korean Poster"
-msgstr ""
+msgstr "Cartel coreano"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:74
 msgid "Newton Logo"
@@ -2733,7 +2718,7 @@ msgid "Poster in English"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/templates/header.html:31 web/templates/header.html.py:51
+#: web/templates/header.html:29
 msgid "NewPay"
 msgstr ""
 
@@ -3116,7 +3101,7 @@ msgid "Last modified: April 2018"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-#: web/templates/header.html:25 web/templates/header.html.py:45
+#: web/templates/header.html:23
 msgid "HEP"
 msgstr ""
 
@@ -5193,9 +5178,8 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
-#: web/templates/header.html:72 web/templates/header.html.py:80
-#: web/templates/header.html:114 web/templates/header.html.py:123
-#: web/templates/header.html:130
+#: web/templates/header.html:50 web/templates/header.html.py:58
+#: web/templates/header.html:92 web/templates/header.html.py:100
 msgid "Login"
 msgstr "​Inicio de sesión"
 
@@ -5239,7 +5223,7 @@ msgstr ""
 msgid "comment"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:14
 #: web/templates/email-template.html:32
 msgid "Newton"
 msgstr ""
@@ -5554,7 +5538,7 @@ msgstr "Cofundador"
 msgid "System Error."
 msgstr ""
 
-#: web/templates/base.html:10
+#: web/templates/base.html:11
 msgid ""
 "Newton-Infrastructure of protocol-based economy,We are committed to creating "
 "a decentralized protocol standards and development tool chains that can be "
@@ -5564,7 +5548,7 @@ msgid ""
 "with lower cost and fewer conflicts."
 msgstr ""
 
-#: web/templates/base.html:12
+#: web/templates/base.html:13
 msgid ""
 "Newton,NewtonProject,newtonproject.org,NewChain,NewNET,Protocol-based "
 "Economy,Atom Hashing,NewIoT,DAI,Hyper Exchange Protocol,Automatic finance,"
@@ -5636,27 +5620,26 @@ msgid "Service Terms"
 msgstr "Tėrminos deservicio"
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:65 web/templates/header.html.py:104
+#: web/templates/header.html:43 web/templates/header.html.py:82
 msgid "User Center"
 msgstr ""
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:66 web/templates/header.html.py:105
+#: web/templates/header.html:44 web/templates/header.html.py:83
 msgid "LogOut"
 msgstr ""
 
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
-#: web/templates/header.html:69 web/templates/header.html.py:77
-#: web/templates/header.html:111 web/templates/header.html.py:120
-#: web/templates/header.html:127
+#: web/templates/header.html:47 web/templates/header.html.py:55
+#: web/templates/header.html:89 web/templates/header.html.py:97
 msgid "Register"
 msgstr "Registrar"
 
-#: web/templates/header.html:28 web/templates/header.html.py:48
+#: web/templates/header.html:26
 msgid "Technology"
 msgstr "Tecnología"
 
-#: web/templates/header.html:40 web/templates/header.html.py:60
+#: web/templates/header.html:38
 msgid "NewFund"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-01 10:15+0000\n"
+"POT-Creation-Date: 2018-08-06 03:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,54 +118,54 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:72
+#: web/apps/base/templatetags/utils.py:78
 #, python-format
 msgid "%(duration)d minute"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:74
+#: web/apps/base/templatetags/utils.py:80
 #, python-format
 msgid "%(duration)d hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:113
+#: web/apps/base/templatetags/utils.py:121
 #, python-format
 msgid "%(hour)d hour ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:116
+#: web/apps/base/templatetags/utils.py:124
 #, python-format
 msgid "%(minute)d minute ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:118
+#: web/apps/base/templatetags/utils.py:126
 #, python-format
 msgid "%(second)d second ago"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:147
+#: web/apps/base/templatetags/utils.py:160
 #, python-format
 msgid "%.f hour"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:177
+#: web/apps/base/templatetags/utils.py:191
 msgid "unfilled"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:183
-#: web/apps/base/templatetags/utils.py:190
+#: web/apps/base/templatetags/utils.py:197
+#: web/apps/base/templatetags/utils.py:204
 msgid "Yes"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:184
-#: web/apps/base/templatetags/utils.py:191
+#: web/apps/base/templatetags/utils.py:198
+#: web/apps/base/templatetags/utils.py:205
 msgid "No"
 msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
 #: web/apps/zinnia/models_bases/entry.py:114
-#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:85
+#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:63
 msgid "Language"
 msgstr "语言"
 
@@ -411,22 +411,6 @@ msgstr "订阅"
 msgid "We won't share your email address or send you any spam."
 msgstr "我们不会分享您的电子邮件地址或发送任何垃圾邮件。"
 
-#: web/apps/subscription/templates/subscription/subscription-letter.html:44
-msgid "Welcome! Please Confirm Your Subscription"
-msgstr "牛顿欢迎您！请确认您的订阅"
-
-#: web/apps/subscription/templates/subscription/subscription-letter.html:45
-msgid "Yes,subscribe me to this list."
-msgstr "是的，确认订阅。"
-
-#: web/apps/subscription/templates/subscription/subscription-letter.html:46
-msgid ""
-"If you have received this email in error, please delete it. You won't be "
-"subscribed if you don't click the confirmation link above."
-msgstr ""
-"如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
-"阅。"
-
 #: web/apps/verification/models.py:22
 msgid "Verification emails"
 msgstr "验证Email"
@@ -548,7 +532,7 @@ msgstr "活动公告"
 #: web/apps/welcome/templates/welcome/include-allocation.html:63
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:34 web/templates/header.html.py:54
+#: web/templates/header.html:32
 msgid "Community"
 msgstr "社群"
 
@@ -891,7 +875,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
-#: web/templates/header.html:37 web/templates/header.html.py:57
+#: web/templates/header.html:35
 msgid "Economy"
 msgstr "经济体"
 
@@ -1158,56 +1142,52 @@ msgstr "社群激励；"
 msgid "Unlock in later fifty years."
 msgstr "在未来五十年陆续释放。"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:6
-msgid "Coming Events"
-msgstr "活动预告"
+#: web/apps/welcome/templates/welcome/include-community-event.html:10
+msgid "Passed Events"
+msgstr "往期活动"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:9
+#: web/apps/welcome/templates/welcome/include-community-event.html:13
 msgid "Newton Beijing Meetup (Phase Ⅱ)"
 msgstr "“牛顿线下交流会-北京站第二期”邀您参加"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:13
+#: web/apps/welcome/templates/welcome/include-community-event.html:17
 msgid "2018-06-23, 14:00-18:00 CST"
 msgstr "2018年6月23日下午14:00-18:00"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:16
+#: web/apps/welcome/templates/welcome/include-community-event.html:20
 msgid ""
 "2nd Floor, Tower A, Dinghao Electronics Building, Zhongguancun Street, "
 "Haidian District, Beijing"
 msgstr "北京市海淀区中关村大街甲1号鼎好电子大厦A座2层"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:16
+#: web/apps/welcome/templates/welcome/include-community-event.html:20
 msgid ""
 "https://www.newtonproject.org/announcement/2018/06/19/june-23rd-newton-"
 "beijing-meet-sincerely-invites-you-join-us/"
 msgstr ""
 "https://www.newtonproject.org/announcement/2018/06/19/meet-up-beijing-623/"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:16
-#: web/apps/welcome/templates/welcome/include-community-event.html:30
-#: web/apps/welcome/templates/welcome/include-community-event.html:43
+#: web/apps/welcome/templates/welcome/include-community-event.html:20
+#: web/apps/welcome/templates/welcome/include-community-event.html:33
+#: web/apps/welcome/templates/welcome/include-community-event.html:46
 msgid "Detail"
 msgstr "详情"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:20
-msgid "Passed Events"
-msgstr "往期活动"
-
-#: web/apps/welcome/templates/welcome/include-community-event.html:23
+#: web/apps/welcome/templates/welcome/include-community-event.html:26
 msgid "Newton Meetup Shijiazhuang station successfully ended"
 msgstr "“牛顿河北线下交流会-石家庄站”圆满落幕"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:27
+#: web/apps/welcome/templates/welcome/include-community-event.html:30
 msgid "2018-06-16, 14:00-18:00 CST"
 msgstr "2018年6月16日下午14:00-18:00"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:30
+#: web/apps/welcome/templates/welcome/include-community-event.html:33
 msgid ""
 "4th floor of Yuetai Hotel, northeast corner of the intersection of Youyi "
 "North Street and Xinhua Road, Shijiazhuang, Hebei Province"
 msgstr "河北省石家庄市友谊北大街与新华路交叉口东北角悦泰大酒店四层"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:30
+#: web/apps/welcome/templates/welcome/include-community-event.html:33
 msgid ""
 "https://www.newtonproject.org/announcement/2018/06/14/newton-meet-"
 "shijiazhuang-station-welcome-you-join/"
@@ -1215,20 +1195,20 @@ msgstr ""
 "https://www.newtonproject.org/announcement/2018/06/13/newton-shijiazhuang-"
 "meetup/"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:36
+#: web/apps/welcome/templates/welcome/include-community-event.html:39
 msgid "Newton offline Meetup (Beijing) successfully ended"
 msgstr "牛顿线下见面会-北京站"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:40
+#: web/apps/welcome/templates/welcome/include-community-event.html:43
 msgid "2018-05-19, 14:00-18:00 CST"
 msgstr "2018年6月16日下午14:00-18:00"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:43
+#: web/apps/welcome/templates/welcome/include-community-event.html:46
 msgid ""
 "Chaoke Coffee, Floor 1, Block C, Building 40, Xingfu Square, Xingfu Second"
 msgstr "北京市朝阳区新东路幸福二村首开幸福广场40号楼C座一层潮客咖啡"
 
-#: web/apps/welcome/templates/welcome/include-community-event.html:43
+#: web/apps/welcome/templates/welcome/include-community-event.html:46
 msgid ""
 "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-"
 "defining-business-order-new-economy-era-sincerely-invites-you-join-us/"
@@ -2564,9 +2544,10 @@ msgstr "媒体资源"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:23
 msgid ""
-"Newton logo is a combination of calculus symbol and zigzag side of coin. "
-"This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
-"symbolizing the perfect integration of finance and technology."
+"Newton logo is a combination of calculus symbol and ridged coin edge. This "
+"logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
+"symbolizing his great contribution and perfect integration of finance and "
+"technology."
 msgstr ""
 "牛顿品牌标识由“微积分符号+硬币边齿”组合而成，该标识致敬伟大的科学家、铸币先驱"
 "艾萨克•牛顿 爵士，寓意金融与科技完美融合。"
@@ -2610,7 +2591,7 @@ msgid "Poster in English"
 msgstr "英文海报"
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/templates/header.html:31 web/templates/header.html.py:51
+#: web/templates/header.html:29
 msgid "NewPay"
 msgstr ""
 
@@ -3036,7 +3017,7 @@ msgid "Last modified: April 2018"
 msgstr "修改时间：2018年4月"
 
 #: web/apps/welcome/templates/welcome/protocol.html:6
-#: web/templates/header.html:25 web/templates/header.html.py:45
+#: web/templates/header.html:23
 msgid "HEP"
 msgstr "超级交换协议"
 
@@ -5181,9 +5162,8 @@ msgstr ""
 
 #: web/apps/zinnia/templates/zinnia/login.html:34
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
-#: web/templates/header.html:72 web/templates/header.html.py:80
-#: web/templates/header.html:114 web/templates/header.html.py:123
-#: web/templates/header.html:130
+#: web/templates/header.html:50 web/templates/header.html.py:58
+#: web/templates/header.html:92 web/templates/header.html.py:100
 msgid "Login"
 msgstr "登录"
 
@@ -5227,7 +5207,7 @@ msgstr ""
 msgid "comment"
 msgstr ""
 
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:13
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:14
 #: web/templates/email-template.html:32
 msgid "Newton"
 msgstr "牛顿"
@@ -5542,7 +5522,7 @@ msgstr "不存在页面。"
 msgid "System Error."
 msgstr "系统错误。"
 
-#: web/templates/base.html:10
+#: web/templates/base.html:11
 msgid ""
 "Newton-Infrastructure of protocol-based economy,We are committed to creating "
 "a decentralized protocol standards and development tool chains that can be "
@@ -5554,7 +5534,7 @@ msgstr ""
 "牛顿-协议经济基础设施，牛顿致力于打造高效协作、低成本、高度自动化的商业基础协"
 "议生态系统。涵盖供应链、营销、支付、交易、信用、金融等商业全流程。"
 
-#: web/templates/base.html:12
+#: web/templates/base.html:13
 msgid ""
 "Newton,NewtonProject,newtonproject.org,NewChain,NewNET,Protocol-based "
 "Economy,Atom Hashing,NewIoT,DAI,Hyper Exchange Protocol,Automatic finance,"
@@ -5634,27 +5614,26 @@ msgid "Service Terms"
 msgstr "服务条款"
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:65 web/templates/header.html.py:104
+#: web/templates/header.html:43 web/templates/header.html.py:82
 msgid "User Center"
 msgstr "用户中心"
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:66 web/templates/header.html.py:105
+#: web/templates/header.html:44 web/templates/header.html.py:83
 msgid "LogOut"
 msgstr "退出"
 
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
-#: web/templates/header.html:69 web/templates/header.html.py:77
-#: web/templates/header.html:111 web/templates/header.html.py:120
-#: web/templates/header.html:127
+#: web/templates/header.html:47 web/templates/header.html.py:55
+#: web/templates/header.html:89 web/templates/header.html.py:97
 msgid "Register"
 msgstr "注册"
 
-#: web/templates/header.html:28 web/templates/header.html.py:48
+#: web/templates/header.html:26
 msgid "Technology"
 msgstr "技术"
 
-#: web/templates/header.html:40 web/templates/header.html.py:60
+#: web/templates/header.html:38
 msgid "NewFund"
 msgstr "生态发展基金"
 
@@ -5698,6 +5677,22 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
+
+#~ msgid "Welcome! Please Confirm Your Subscription"
+#~ msgstr "牛顿欢迎您！请确认您的订阅"
+
+#~ msgid "Yes,subscribe me to this list."
+#~ msgstr "是的，确认订阅。"
+
+#~ msgid ""
+#~ "If you have received this email in error, please delete it. You won't be "
+#~ "subscribed if you don't click the confirmation link above."
+#~ msgstr ""
+#~ "如果您意外收到了这封邮件，请删除它。如果您不点击上面的确认链接，您就不会订"
+#~ "阅。"
+
+#~ msgid "Coming Events"
+#~ msgstr "活动预告"
 
 #~ msgid "In Progress"
 #~ msgstr "正在进行"
