@@ -117,6 +117,10 @@ def show_community_view(request):
     return render(request, 'welcome/community.html', locals())
 
 def show_economy_view(request):
+    language = translation.get_language()
+    arabic_read_style = False
+    if language == 'ar':
+        arabic_read_style = True
     return render(request, 'welcome/economy.html', locals())
 
 def show_whitepaper_view(request):

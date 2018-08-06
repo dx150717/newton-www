@@ -24,7 +24,11 @@
 				<tr>
 					<td>#1</td>
 					<td>{% trans "7.5&nbsp;billions" %}</td>
-					<td>1 BTC = 15,000,000 NEW</td>
+					{% if arabic_read_style %}
+						<td>NEW 15,000,000 = BTC 1</td>
+					{% else %}
+						<td>1 BTC = 15,000,000 NEW</td>
+					{% endif %}
 					<td>500&nbsp;BTC</td>
 					<td>{% trans "1 Year" %}</td>
 					<td>{% trans "March 1,2018 - April 30,2018" %}</td>
@@ -33,7 +37,11 @@
 				<tr class="bg-gray">
 					<td>#2</td>
 					<td>{% trans "6&nbsp;billions" %}</td>
-					<td>1&nbsp;BTC&nbsp;=&nbsp;2,000,000&nbsp;NEW</td>
+					{% if arabic_read_style %}
+						<td>NEW 2,000,000 = BTC 1</td>
+					{% else %}
+						<td>1&nbsp;BTC&nbsp;=&nbsp;2,000,000&nbsp;NEW</td>
+					{% endif %}
 					<td>3000&nbsp;BTC</td>
 					<td>{% trans "No Lock" %}</td>
 					<td>{% trans "July 1,2018 - July 31,2018" %}</td>
