@@ -307,12 +307,13 @@ $(window).scroll(function(){
 
 //Verify User Login Status
 function detectAuthStatus() {
-    var data_dict = {};
-    data_dict[HOME_SESSION_KEY] = homeSessionID
+    var data = {};
+    var NAUTH_KEY = "nauth_id";
+    data[NAUTH_KEY] = homeSessionID;
     $.ajax({
         url : NEWTON_HOME_URL + "/nauth/session/",
         type : "GET",
-        data : data_dict,
+        data : data,
         dataType : "JSON",
         success : function(data){
             var user_status = isSuccess(data);
