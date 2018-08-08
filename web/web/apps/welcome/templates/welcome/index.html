@@ -12,20 +12,17 @@
       <div class="row relative">
         <div class="col-md-12 text-center">
           <h1>{% trans "Everyone should benefit directly from economic growth" %}</h1>
-          <p class="sty1">{% trans "Newton: Infrastructure for the protocol-based economy" %}</p>
-          {% comment %}
+          <p class="sty1">{% trans "Newton: Infrastructure for the community economy" %}</p>
           <div class="more"> 
-            <a href="/#/" target="_self"><span class="f20">{% trans "Whitepaper" %}</span></a> 
+            <a href="/whitepaper/" target="_self"><span class="f20">{% trans "Whitepaper" %}</span></a>
           </div>
-          {% endcomment %}
         </div>
       </div>
     </div>
 
   </section>
-{% comment %}
+
 {% include "welcome/include-notice-token-exchange.html" %}
-{% endcomment %}
 
 {% include "welcome/include-feature.html" %}
 
@@ -44,7 +41,7 @@
 
 {% include "welcome/include-partner.html" %}
 {% include "welcome/include-feed.html" %}
-<section id="sir" class="section bg-gray">
+<section id="sir" class="section">
   <div class="container"><img class="img-1" src="{% version "images/partners/bitmap.png" %}" width="200">
       <p class="sty1">{% trans "Tribute to one of the greatest scientists ever to impact our lives, Sir Isaac Newton." %}</p>
     <!-- end --> 

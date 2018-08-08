@@ -7,7 +7,94 @@ import os
 import datetime
 from . import codes
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.6/howto/static-files/
+STATIC_URL = 'http://localhost:8000/static/'
+STATIC_ROOT = 'web/static'
+
+# website meta
+SITE_ID = '1'
+BASE_NAME = 'www'
+
+# domain settings
+DEBUG = True
+TEMPLATE_DEBUG = False
+THUMBNAIL_DEBUG = False
+DOMAIN = 'localhost'
+BASE_URL = 'http://localhost:8000'
+MEDIA_URL = 'http://localhost:8000/filestorage/'
+MEDIA_ROOT = './'
+
+#session settings
+SESSION_COOKIE_AGE = 7200
+SESSION_COOKIE_DOMAIN = None
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
+SESSION_COOKIE_NAME = 'nwsid'
+
+# LOGGING
+import platform
+system_string = platform.system()
+if system_string == 'Linux':
+    syslog_path = '/dev/log'
+elif system_string == 'Darwin':
+    syslog_path = '/var/run/syslog'
+else:
+    raise Exception('Upsupport platform!')
+
+from logging.handlers import SysLogHandler
+LOGGING_LEVEL = 'DEBUG'
+LOGGING_LEVEL_SENTRY = 'ERROR'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': "[%(asctime)s][%(msecs)03d] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'syslog': {
+            'level': LOGGING_LEVEL,
+            'class': 'logging.handlers.SysLogHandler',
+            'facility': SysLogHandler.LOG_LOCAL2,
+            'formatter': 'verbose',
+            'address': syslog_path,
+        },
+        'sentry': {
+            'level': LOGGING_LEVEL_SENTRY,
+            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+            'tags': {'custom-tag': 'x'},
+        },
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'verbose'
+        }
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', ],
+            'level': LOGGING_LEVEL,
+        },
+        'django': {
+            'handlers': ['console', ],
+            'propagate': True,
+            'level': LOGGING_LEVEL,
+        },
+        'celery.task': {
+            'handlers': ['console', ],
+            'propagate': True,
+            'level': LOGGING_LEVEL,
+        }
+    }
+}
+
 # database
 DATABASES = {
     'default': {
@@ -66,6 +153,11 @@ GOOGLE_SITE_KEY = '6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv'
 GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
 TENCENT_CAPTCHA_APP_ID = '2075015244'
 TENCENT_CAPTCHA_APP_SECRET = '0alyS6l5dhGmH32EX4zIQaw**'
+# multiple domain
+NEWTON_WEB_URL = 'http://localhost:8000'
+NEWTON_HOME_URL = 'http://home.test.newtonproject.org:8000'
+NEWTON_GRAVITY_URL = 'http://gravity.test.newtonproject.org:8000'
+
 # celery settings
 import djcelery
 djcelery.setup_loader()
@@ -74,44 +166,3 @@ CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
 CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
 CELERYD_HIJACK_ROOT_LOGGER = False
 CELERY_IMPORTS = ('tasks.task_email', 'tasks.task_blockchain')
-
-from celery.schedules import crontab
-from datetime import timedelta
-CELERYBEAT_SCHEDULE = {
-    'report-task-free-resource': {
-        'task': 'tasks.task_blockchain.sync_blockchain_data',
-        'schedule': crontab(minute='*/30'),
-    },
-}
-
-CHINA_COUNTRY_CALLING_CODE = '86'
-# wallet settings
-BTC_WALLET_ADDRESS_FILE = 'btc-wallet.txt'
-ELA_WALLET_ADDRESS_FILE = 'ela-wallet.txt'
-
-# fund settings
-CURRENT_FUND_PHASE = codes.FundPhase.PRIVATE.value
-FUND_START_DATE = datetime.datetime(2018, 7, 1, 0, 0)
-FUND_END_DATE = datetime.datetime(2018, 7, 15, 0, 0)
-FUND_CONFIG = {
-    codes.FundPhase.PRIVATE.value: {
-        'start_date': '2018-07-01 00:00',
-        'end_date': '2018-07-15 23:59',
-        'ela_ratio': 10000,
-        'min_ela': 0.01,
-        'btc_ratio': 2000000,
-        'min_btc': 0.01,
-        'total_amount_btc': 3000,
-        'total_amount_ela': 0,
-    },
-    codes.FundPhase.PUBLIC.value: {
-        'start_date': '2018-06-01',
-        'end_date': '2018-06-10',
-        'ela_ratio': 5000,
-        'min_ela': 0.01,
-        'btc_ratio': 1000000,
-        'min_btc': 0.01,
-        'total_amount_btc': 1500,
-        'total_amount_ela': 0,
-    },
-}
