@@ -331,7 +331,12 @@ function detectAuthStatus() {
                 $('.navbar-nav .noauth-item').show();
                 $('.navbar-nav .auth-item').removeClass('visible-xs-block');
             };
-            }
+            },
+        error: function(){
+            $('.navbar-nav .auth-item').hide();
+            $('.navbar-nav .noauth-item').show();
+            $('.navbar-nav .auth-item').removeClass('visible-xs-block');
+        }
     });
 }
 detectAuthStatus();
