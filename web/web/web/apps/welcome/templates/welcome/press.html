@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "PRESS" %}
+{% endblock %}
+
+{% block content %}
+<section id="press" class="section-list">
+    <div class="page-title bg-gray">
+        <div class="container">
+            <p>{% trans "PRESS" %}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content-area">
+                {% if presses %}
+                {% for press in presses %}
+                <div class="content">
+                    <div class="press-item">
+                        <div class="press-title">
+                            <a href={{ press.press_link }} target="_blank"><p>{{ press.press_title }}</p></a>
+                        </div>
+                        <div class="press-summary">
+                            <p>{{ press.press_summary }}</p>
+                        </div>
+                        <div class="press-link">
+                            <a href={{ press.press_link }} target="_blank"><p>{% trans "Details" %} >></p></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% if is_paginated %}
+                
+                <div class="pagination-simple">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+                {% endif %}
+                <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+                {% endif %}
+                </div>
+                {% endif %}
+                {% else %}
+                <p>{% trans "No presss" %}</p>
+                {% endif %}
+        </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

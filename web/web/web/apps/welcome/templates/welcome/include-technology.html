@@ -1,0 +1,72 @@
+{% load i18n %}
+{% load utils %}
+
+<section class="section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "TECHNOLOGY" %}</strong><span></span>
+                </h2>
+            </div>
+        </div><!-- end -->
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="feature-item-img">
+                    <img class="feature-icon"  src="{% version "images/features/icon-6.svg" %}"/>
+                </div>
+            </div>
+            <div class="col-md-8 col-xs-12">
+                <div class="col-md-6 col-xs-12"> 
+                    <div class="feature-item-wrap">
+                        <ul>
+                            <li {% arabic_change_style %}>{% trans "NewChain" %}</li>
+                            <p {% arabic_change_style %}>
+                                {% trans "NewChain adopts a main chain and sub-chain design scheme. The sub-chain supports multiple consensus mechanisms and data structures, ensures the assets transactions between the main chain and sub-chains, and between sub-chains." %}
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="feature-item-wrap">
+                        <ul>
+                            <li {% arabic_change_style %}>{% trans "Atom Hashing" %}</li>
+                            <p {% arabic_change_style %}>
+                                {% trans "By using radiometric dating, PCA, machine vision, and deep learning technology, the hashing ID is generated." %}
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix col-md-visible"></div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="feature-item-wrap">
+                        <ul>
+                            <li {% arabic_change_style %}>{% trans "NewNET" %}</li>
+                            <p {% arabic_change_style %}>
+                                {% trans "NewNET, which consists of a large number of nodes, is an open cloud computing network." %}
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="feature-item-wrap">
+                        <ul>
+                            <li {% arabic_change_style %}>{% trans "NewIoT" %}</li>
+                            <p {% arabic_change_style %}>
+                                {% trans "Blockchain fog computing, communication protocols between IoT devices and gateways, and NewChain IoT devices development specifications." %}
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-item col-lg-12 col-xs-12">
+                <div class="feature-item-wrap">
+                    <div class="more">
+                        <a href="/technology/">{% trans "MORE" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- end -->

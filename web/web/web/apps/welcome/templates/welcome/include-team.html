@@ -1,0 +1,89 @@
+{% load i18n %}
+{% load utils %}
+
+<section id="team" class="section bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "TEAM" %}</strong><span></span>
+                </h2>
+            </div>
+        </div><!-- end -->
+
+        <div class="team-list row">
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="avatar">
+                            <img class="media-object" src="{% version "images/team/1.jpg" %}" alt="{% trans "Xu Jizhe" %}">
+                        </div>
+                        <h4 class="media-heading">{% trans "Xu Jizhe" %}</h4>
+                        <div class="media-intro">{% trans "Founder" %}<br/>{% trans "Co-founder of Elastos" %}<br/>{% trans "Founder of Zeuux (A Community for Free Software Usage)" %}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="avatar">
+                            <img class="media-object" src="{% version "images/team/2.jpg" %}" alt="{% trans "Li Shubin" %}">
+                        </div>
+                        <h4 class="media-heading">{% trans "Li Shubin" %}</h4>
+                        <div class="media-intro">{% trans "Co-founder" %}<br/>{% trans "Founder and CEO of OKbuy" %}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="avatar">
+                            <img class="media-object" src="{% version "images/team/xiawu.jpg" %}" alt="{% trans "Xia Wu" %}">
+                        </div>
+                        <h4 class="media-heading">{% trans "Xia Wu" %}</h4>
+                        <div class="media-intro" style="padding:unset;">{% trans "Joint Chief Architect" %}<br/>{% trans "Co-founder of Zeuux (A Community for Free Software Usage)" %}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="avatar">
+                            <img class="media-object" src="{% version "images/team/mengguang.jpg" %}" alt="{% trans "Meng Guang" %}">
+                        </div>
+                        <h4 class="media-heading">{% trans "Meng Guang" %}</h4>
+                        <div class="media-intro">{% trans "Joint Chief Architect" %}<br/></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="avatar">
+                            <img class="media-object" src="{% version "images/team/zhangyu.jpg" %}" alt="{% trans "Zhang Yu" %}">
+                        </div>
+                        <h4 class="media-heading">{% trans "Zhang Yu" %}</h4>
+                        <div class="media-intro">{% trans "Marketing Specialist" %}<br/>{% trans "Founder of WuZhou Online" %}</div>
+                    </div>
+                </div>
+            </div>
+            {% comment %}
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="avatar">
+                            <img class="media-object" src="{% version "images/team/jiangyu.jpg" %}" alt="{% trans "Jiang Yu" %}">
+                        </div>
+                        <h4 class="media-heading">{% trans "Jiang Yu" %}</h4>
+                        <div class="media-intro">{% trans "Product Specialist" %}<br/>{% trans "Previous Product Director of xs.cn" %}</div>
+                    </div>
+                </div>
+            </div>
+            {% endcomment %}
+        </div>
+
+    </div>
+</section><!-- end -->

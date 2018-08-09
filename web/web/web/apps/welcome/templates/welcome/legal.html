@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Legal Information" %}
+{% endblock %}
+
+{% block content %}
+<section id="legal" class="section-list">
+        <div class="page-title">
+          <div class="container">
+              <p>{% trans "Legal Information" %}</p>
+          </div>
+        </div>
+    
+        <div class="container">
+            <div class="legal-list">
+                <div>
+                    <p>This copyright policy applies to content posted on Newton forums and websites.</p>
+    
+                    <h2>您在版权作品中有权利吗?</h2>
+                    <p>请在向我们发送版权通知或反通知之前慎重考虑，因为DMCA对欺诈或恶意举报追究法律和财务责任。 如果您不确定您是否是实际的版权所有者，或者您是否有权代表权利持有人采取行动，请在向我们提交版权声明或反通知前咨询律师。</p>
+                
+                    <h2>如何提交版权声明</h2>
+                    <p>如果您要在Newton网站提交有关侵犯版权的通知，需要提供以下信息：</p>
+                    <ul>
+                        <li>版权所有者或授权代人的手写或电子签名（输入您的全名即可）；</li>
+                        <li>确定被侵权的版权作品的识别（例如，您的原始作品的副本或链接，或明确描述涉嫌侵权的材料）；</li>
+                        <li>侵权材料和信息的识别足以让我们在我们的服务上定位材料（例如，在我们网站上涉嫌侵权的材料的链接）；</li>
+                        <li>您的联系方式，包括您的地址，电话号码，和邮件地址；</li>
+                        <li>您确信以所声明的方式使用该材料没有被版权所有者，其代理人或法律授权的声明；</li>
+                        <li>声明该通知中的信息是准确的，并且由于做伪证会受到处罚，您有权代表版权持有者。</li>
+                    </ul>
+                    <p>您可以通过邮件发送上述信息到 newton-copyright@newtonproject.org 举报涉嫌侵犯版权行为</p>
+                    <p>您也可以将版权声明邮寄至：</p>
+    
+                    <h2>Newton 如何回应版权声明</h2>
+                    <p>我们对侵犯版权声明的回应包括删除或限制对涉嫌侵权的材料的访问。 如果我们采取这些行动来回应版权声明，我们将作出诚挚的努力与受影响的信息提供者联系，提供有关情况的信息，包括删除通知的副本和提交反通知的说明。</p>
+                
+                </div>
+            </div>
+        </div>
+    
+    </section>
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

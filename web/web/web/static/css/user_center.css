@@ -1,0 +1,28 @@
+.user-kyc h4{font-size: 20px; font-weight: normal; color: #292929}
+.user-kyc pre{background-color: #fff; margin-bottom: 20px;}
+.user-kyc .col-sm-6{padding-left: 0px;}
+.user-kyc input[type=checkbox], input[type=radio]{width: 22px; height: 22px; margin: 3px;}
+.user-kyc .readed{padding-top: 20px;}
+.user-kyc .token-check-condition label span{font-size: 16px; color: #292929;font-weight: 350;}
+.user-kyc .kyc-btn{padding-top: 40px;}
+.user-kyc .kyc-btn .form-button{line-height: unset;}
+.user-kyc .kyc-btn button:disabled{background-color: #939393;}
+.user-kyc .item,#basic-info .item {padding:12px;}
+.user-kyc .item label,#basic-info .item label{font-size: 18px; color: #282929;}
+.user-kyc .item .value, #basic-info .item .value{font-size: 18px;}
+.user-kyc .item-title .title, #basic-info .item-title .title {padding: 10px; font-size: 24px; color: #282929}
+
+@media(max-width:768px) {
+    .user-kyc .item, #basic-info .item {padding:10px;}  
+    .user-kyc .item-title .title,#basic-info .item-title .title {padding: 10px; font-size: 20px; color: #282929}
+}
+.user-kyc .kyc-content{height:400px;overflow:scroll;border:1px solid #eee; padding: 20px; margin-top: 40px;}
+.user-kyc .kycinfo_content img{width: 250px}
+.user-kyc .page-title .container {background: url(../images/titlebg/terms-bg.svg) no-repeat left bottom}
+#user .user-kyc table{width: 100%;}
+
+@media(max-width:768px) {
+    .user-kyc {margin-top: 40px;}
+    .user-kyc h4{padding: 10px;}
+    .user-kyc p{padding-left: 5px;padding-right: 5px;}
+}

@@ -1,0 +1,23 @@
+{%extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block header %}
+{% include "header-no-menu.html" %}
+{% endblock %}
+
+{% block footer %}
+{% include "footer-simple.html" %}
+{% endblock %}
+
+{% block content %}
+<section id="error-404" class="section-list">
+    <div class="container text-center" style="padding-top:50px;">
+            {% trans "Not found." %}
+        </div>
+    </div>
+</section>
+<script language="javascript">
+    setTimeout(function(){location.href='/';}, 2000);
+</script>
+{% endblock %}
