@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Team" %}
+{% endblock %}
+
+{% block content %}
+<section id="team" class="section section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "TEAM" %}</p>
+        </div>
+    </div>
+    <div id="blog-list">
+        <div class="content">
+            {% include "welcome/include-team.html" %}
+            {% include "welcome/include-advisor.html" %}
+            {% include "welcome/include-investor.html" %}
+        </div>
+    </div>
+    
+</section>
+
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    $("#advisor").removeClass("bg-gray");
+    $("#angels").removeClass("bg-gray")
+</script>
+{% endblock %}

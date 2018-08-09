@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "FAQ" %}
+{% endblock %}
+
+{% block content %}
+<section id="faq" class="section-list">
+    <div class="page-title bg-gray">
+        <div class="container">
+            <p>{% trans "FAQ" %}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content-area">
+                {% if faqs %}
+                <div class="content">
+                    <ul>
+                        {% for faq in faqs %}
+                        <dl class="faq-item">
+                            <dt class="faq-question">{{ forloop.counter }}. {{ faq.faq_question }}</dt>
+                            <dd class="faq-answer">{{ faq.faq_answer }}</dd>
+                        </dl>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% if is_paginated %}
+                
+                <div class="pagination-simple">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+                {% endif %}
+                <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+                {% endif %}
+                </div>
+                {% endif %}
+                {% else %}
+                <p>{% trans "No FAQ" %}</p>
+                {% endif %}
+        </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+{% endblock %}

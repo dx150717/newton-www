@@ -1,0 +1,69 @@
+{% load i18n %}
+{% load utils %}
+<div class="container">
+    <div class="token-exchange">
+    	<div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "Token Exchange" %}</strong><span></span>
+                </h2>
+            </div>
+        </div>
+
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<tr>
+					<th>{% trans "Round" %}</th>
+					<th>{% trans "NEW" %}</th>
+					<th>{% trans "Ratio" %}</th>
+					<th>{% trans "BTC" %}</th>
+					<th>{% trans "Lock Time" %}</th>
+					<th>{% trans "Duration" %}</th>
+					<th>{% trans "Status" %}</th>
+				</tr>
+				<tr>
+					<td>#1</td>
+					<td>{% trans "7.5&nbsp;billions" %}</td>
+					{% if arabic_read_style %}
+						<td>NEW 15,000,000 = BTC 1</td>
+					{% else %}
+						<td>1 BTC = 15,000,000 NEW</td>
+					{% endif %}
+					<td>500&nbsp;BTC</td>
+					<td>{% trans "1 Year" %}</td>
+					<td>{% trans "March 1,2018 - April 30,2018" %}</td>
+					<td>{% trans "Finished" %}</td>
+				</tr>
+				<tr>
+					<td>#2</td>
+					<td>{% trans "6&nbsp;billions" %}</td>
+					{% if arabic_read_style %}
+						<td>NEW 2,000,000 = BTC 1</td>
+					{% else %}
+						<td>1&nbsp;BTC&nbsp;=&nbsp;2,000,000&nbsp;NEW</td>
+					{% endif %}
+					<td>3000&nbsp;BTC</td>
+					<td>{% trans "No Lock" %}</td>
+					<td>{% trans "July 1,2018 - July 31,2018" %}</td>
+					<td>{% trans "Finished" %}</td>
+				</tr>
+				<tr>
+					<td>#3</td>
+					<td>{% trans "1.5&nbsp;billions" %}</td>
+					<td>TBD</td>
+					<td>TBD</td>
+					<td>{% trans "No Lock" %}</td>
+					<td>{% trans "Estimate on October,2018" %}</td>
+					<td>{% trans "Waiting" %}</td>
+				</tr>
+			</table>
+		</div>
+		{% comment %}
+		<p class="text-center">
+			<a href="{{ settings.NEWTON_HOME_URL }}/user/" class="form-button">
+				{% trans "Join Round #2" %}
+			</a>
+		</p>
+		{% endcomment %}
+    </div>
+</div>

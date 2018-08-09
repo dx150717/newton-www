@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+body, html { height: 100%; width: 100%; max-width: 100%; padding:0; margin:0;}
+html { font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100% }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.6; color: #393939; background-color: #eee }
+p,h2{ padding:0; margin:0}
+a{text-decoration:none;}
+
+.pad-t10{ padding-top:10px;}
+.pad-t20{ padding-top:20px;}
+.pad-t30{ padding-top:30px;}
+
+.win-logo{ margin:85px 0 19px; width:128px; height:36px;}
+.window-container{ width:596px; margin:0 auto 0;}
+.win-box{ border:1px solid #fff; border-radius:6px; padding:20px; min-height:224px; background-color:#fff;}
+.win-box .button-1{ display:block; width:215px; height:39px;line-height:39px; border-radius:4px; background-color:#535353; text-align:center; color:#fff; }
+
+
+
+@media (max-width: 767px) {
+.win-logo{ margin:20px 0;}
+.window-container{ width:90%; margin:0 auto;}
+.win-box{ min-height:160px;}
+.win-box .button-1{line-height:42px; overflow:hidden;}
+}
+
+
+
+

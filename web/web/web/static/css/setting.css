@@ -1,0 +1,73 @@
+/* gtoken */
+.set-gtoken .install-panel {
+}
+.set-gtoken .step {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+}
+.set-gtoken .step .key {
+    width: 30px;
+}
+.set-gtoken .step .value {
+    margin-left: 10px;
+}
+.set-gtoken .img-container {
+    padding-left: 80px;
+    border-bottom: solid 1px #333;
+    padding-bottom: 20px;
+}
+.set-gtoken .img-content {
+    margin-bottom: 20px;
+}
+.set-gtoken img {
+    width: 200px;
+}
+.set-gtoken .img-text {
+    color: #303030;
+    margin-left: 20px;
+}
+.set-gtoken .operation {
+
+}
+.set-gtoken .next-button-container {
+    float: right;
+}
+.set-gtoken .security-button {
+    color: #fff;
+}
+.set-gtoken #code-area {
+    padding: unset;
+}
+.set-gtoken #manually-code {
+    padding: unset;
+}
+.set-gtoken .qr-panel {
+    padding-left: 63px;
+    border-bottom: solid 1px #333;
+    display:block;
+    overflow:auto;
+}
+.set-gtoken #code {
+    text-align: left !important;
+}
+.set-gtoken #manually-code {
+    text-align: left;
+}
+.set-gtoken .tip {
+    margin-top: 80px;
+    font-size: 18px;
+}
+.set-gtoken .gtoken-code-container {
+}
+.set-gtoken .verificaton-panel {
+    border-bottom: solid 1px #333;
+    padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .set-gtoken .img-text {
+        margin-top:10px;
+        margin-left: 0px;
+        display: block;
+    }
+}

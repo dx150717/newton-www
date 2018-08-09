@@ -1,0 +1,38 @@
+{% load i18n %}
+{% load utils %}
+
+
+{% if captcha_service_type  == "native" %}
+<div class="form-group">
+        <p>
+            <label for="id_captcha_code" class="control-label">{% trans "Verification Code" %}</label>
+        </p>
+        <div id="id_register_code_error" class="alert alert-danger hide" style="display: none;">{% trans "Captcha error" %}</div>
+        <div class="form-group">
+            <img class="text-center" id="id_captcha_image" src="/ishuman/image/?' + Math.random() + '"/>
+            <a id="id_captcha_tip" href="javascript:void(0);">
+                <span class="verification_small">{% trans "cannot recognize?" %}</span>
+            </a>
+        </div>
+        <div>
+            <input autocomplete="off" class="form-control" id="id_captcha_code" name="code" placeholder="{% trans "Verification Code" %}" type="text"/>  
+        </div>
+</div>
+{% endif %}
+
+{% if captcha_service_type  == "google" %}
+<div class="form-group">
+    <div class="google-recaptcha" id="google-recaptcha">
+        <input type="hidden" name="captcha_service_type" value="google" />
+        <input type="hidden" name="google_recaptcha_name" id="id_google_recaptcha"/>
+        <div class="g-recaptcha" data-sitekey="{{ settings.GOOGLE_SITE_KEY }}" data-callback="googleCallback" data-error-callback="googleErrorCallback"></div>
+    </div>
+</div>
+{% endif %}
+
+{% if captcha_service_type  == "tencent" %}
+<span type="submit" id="TencentCaptcha" data-appid="{{ settings.TENCENT_CAPTCHA_APP_ID }}" data-cbfn="tencent_captcha_callback"></span>
+<input type="hidden" id="id_captcha_service_type" name="captcha_service_type" value="tencent" />
+<input type="hidden" name="ticket" id="id_ticket" value="" />
+<input type="hidden" name="randstr" id="id_randstr" value="" />
+{% endif %}

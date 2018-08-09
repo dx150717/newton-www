@@ -1,0 +1,28 @@
+{% load i18n %}
+{% load staticfiles utils %}
+
+<footer class="footer footer-simple">
+    <div class="container" id="nav-footer">
+		<div class="row pc-line">
+			<div class="col-md-6"> 
+				<span class="pc-left">
+					<a href="#" onclick="setLanguage('zh_CN');"><img src="{% version "images/languages/icon-ch.svg" %}">简体中文</a>
+					<a href="#" onclick="setLanguage('en');"><img src="{% version "images/languages/icon-English.svg" %}">English</a>
+					{% comment %}
+					<a href="#" onclick="setLanguage('ko');"><img src="{% version "images/languages/ko.png" %}">한국어</a>
+					<a href="#" onclick="setLanguage('ja');"><img src="{% version "images/languages/ja.png" %}">日本</a>
+					<a href="#" onclick="setLanguage('ru');"><img src="{% version "images/languages/ru.png" %}">русский</a>
+					<a href="#" onclick="setLanguage('tr');"><img src="{% version "images/languages/tr.png" %}">Türkiye</a>
+					<a href="#" onclick="setLanguage('es');"><img src="{% version "images/languages/es.png" %}">Español</a>
+					<a href="#" onclick="setLanguage('nl');"><img src="{% version "images/languages/nl.png" %}">Nederlands</a>
+					{% endcomment %}
+				</span>
+			</div>
+			<div class="col-md-6 pc-align-right"> 
+			Copyright &copy; 2018 Newton Foundation. All Rights Reserved.
+			</div>
+		</div>
+	</div>
+</footer>
+
+    
