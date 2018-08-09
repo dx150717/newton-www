@@ -309,3 +309,34 @@ $(window).scroll(function(){
 		$(".NavBg").removeClass("navFixed");
 		};
 });
+
+//Verify User Login Status
+function detectAuthStatus() {
+    var data = {};
+    var NAUTH_KEY = "nauth_id";
+    data[NAUTH_KEY] = homeSessionID;
+    $.ajax({
+        url : NEWTON_HOME_URL + "/nauth/session/",
+        type : "GET",
+        data : data,
+        dataType : "JSON",
+        success : function(data){
+            var user_status = isSuccess(data);
+            if (user_status){
+                $('.navbar-nav .auth-item').show();
+                $('.navbar-nav .noauth-item').hide();
+                $('.navbar-nav .noauth-item').removeClass('visible-xs-block');
+            }else{
+                $('.navbar-nav .auth-item').hide();
+                $('.navbar-nav .noauth-item').show();
+                $('.navbar-nav .auth-item').removeClass('visible-xs-block');
+            };
+            },
+        error: function(){
+            $('.navbar-nav .auth-item').hide();
+            $('.navbar-nav .noauth-item').show();
+            $('.navbar-nav .auth-item').removeClass('visible-xs-block');
+        }
+    });
+}
+detectAuthStatus();

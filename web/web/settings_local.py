@@ -13,7 +13,7 @@ APPEND_SLASH = False
 
 LOGGING_API_REQUEST = True
 
-STATIC_DEFAULT_VERSION = 266
+STATIC_DEFAULT_VERSION = 269
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -65,3 +65,6 @@ BTC_MAINNET_EXPLORER = 'https://blockchain.info'
 BTC_TESTNET_EXPLORER = 'https://testnet.blockchain.info'
 ELA_MAINNET_EXPLORER = 'https://blockchain.elastos.org'
 ELA_TESTNET_EXPLORER = 'https://blockchain-beta.elastos.org'
+
+# home domain settings
+HOME_SESSION_KEY = 'nhsid'
