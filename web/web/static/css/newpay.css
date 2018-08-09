@@ -1,0 +1,95 @@
+/* NewPay css */
+#newpay .page-title{background-color: #6969AF;}
+
+#newpay .page-title .container{
+    background: url(../images/titlebg/newpay-bg.svg) no-repeat left bottom
+}
+
+@media only screen and (max-width : 768px) {
+    #newpay .page-title .container {
+        background-size:50%; background-position: 20px bottom;
+    }
+}
+
+.newpay_bg{background:url(../images/newpay/newpay-bg-english.jpg) no-repeat top center; width:100%; height:569px;}
+.newpay_bg_chinese{background:url(../images/newpay/newpay-bg-chinese.jpg) no-repeat top center; width:100%; height:569px;}
+.newpay_text{padding-bottom:120px;}
+.newpay_text img{text-align:center; margin:0 auto;}
+.newpay_text h2{padding-left:3px; color:#333; font-size:25px; display: inline; font-weight: 500; line-height: 44px;}
+.newpay_text p{padding-left:10px; color:#333; font-size:16px;}
+.newpay_text .col-sm-6{margin:120px 0 0;}
+@media(max-width:1199px) and (min-width: 992px){
+.newpay_bg{background:url(../images/newpay/newpay-bg-english.jpg) no-repeat top center; width:100%; height:520px;}
+.newpay_bg_chinese{background:url(../images/newpay/newpay-bg-chinese.jpg) no-repeat top center; width:100%; height:520px;}
+.newpay_text{padding-bottom:80px;}
+.newpay_text .col-sm-6{padding:0}
+.newpay_text .col-sm-4{text-align:left;}
+.newpay_text img{}
+.newpay_text h2{padding-left:0; color: #333; font-size:26px;}
+.newpay_text p{padding-left:0; color: #333; font-size:18px;}
+.newpay_text .col-sm-6{margin:80px 0 0;}
+}
+@media(max-width:991px) and (min-width: 768px){
+.newpay_bg{background:url(../images/newpay/newpay-bg-english.jpg) no-repeat top center; width:100%; height:520px;}
+.newpay_bg_chinese{background:url(../images/newpay/newpay-bg-chinese.jpg) no-repeat top center; width:100%; height:520px;}
+.newpay_text{padding-bottom:60px;}
+.newpay_text .col-sm-6{padding:0}
+.newpay_text .col-sm-4{text-align:left;}
+.newpay_text img{}
+.newpay_text h2{padding-left:0; font-size:26px;}
+.newpay_text p{padding-left:0; font-size:18px;}
+.newpay_text .col-sm-6{margin:60px 0 0;}
+}
+@media only screen and (max-width : 768px) {
+.newpay_bg{background:url(../images/newpay/newpay-bg-english.jpg) no-repeat top center; background-size:480px 100%; width:100%; height:190px;}
+.newpay_bg_chinese{background:url(../images/newpay/newpay-bg-chinese.jpg) no-repeat top center; background-size:480px 100%; width:100%; height:190px;}
+.newpay_text{padding-bottom:30px;}
+.newpay_text .col-sm-6{padding:0}
+.newpay_text .col-sm-4{margin-bottom:15px}
+.newpay_text img{}
+.newpay_text h2{padding-left:0; font-size:26px; font-weight: normal;}
+.newpay_text p{padding-left:0; font-size:15px;}
+.newpay_text .col-sm-6{margin:0; padding-top: 30px;padding-bottom: 30px}
+.newpay-gray{background-color: #f7f7f7}
+}
+
+.newpay-bg-content {
+    text-align: center;
+    padding-top: 250px;
+}
+
+.newpay-bg-content .slogan-newpay {
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 5%;
+}
+
+.newpay-bg-content .btn-newpay {
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 7px;
+}
+
+@media (max-width: 768px) {
+    .newpay-bg-content {
+        text-align: center;
+        padding-top:unset;
+        margin-top: 18%;
+        display: inline-block;
+    }
+
+    .newpay-bg-content .slogan-newpay {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 5%;
+    }
+
+    .newpay-bg-content .btn-newpay {
+        font-size: 10px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 7px;
+    }
+
+}

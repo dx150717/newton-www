@@ -376,3 +376,20 @@ def russian_change_header_style():
 
 
 register.simple_tag(russian_change_header_style)
+
+
+def newpay_page_background_picture():
+    """integer format by given parameters
+    """
+    try:
+        language = translation.get_language()
+        if language.startswith('zh'):
+            return 'newpay_bg_chinese'
+        else:
+            return 'newpay_bg'
+    except Exception, inst:
+        logger.exception("fail to newpay page background picture:%s" % str(inst))
+        return ""
+
+
+register.simple_tag(newpay_page_background_picture)
