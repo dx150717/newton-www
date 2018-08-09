@@ -305,7 +305,7 @@ class GetCookiesNode(template.Node):
         try:
             cookie_key = self.item.resolve(context)
             request = context['request']
-            return request.COOKIES[cookie_key]
+            return request.COOKIES.get("cookie_key")
         except Exception, inst:
             logger.exception("fail to get cookies:%s" % str(inst))
             return ""
