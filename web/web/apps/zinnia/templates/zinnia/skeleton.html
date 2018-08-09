@@ -22,8 +22,6 @@
     <link href="{% version "css/style.css" %}" rel="stylesheet"/>
     <script src="{% static "js/jquery-2.1.4.min.js" %}"></script>
     <script src="{% static "js/plugins.js" %}"></script>
-    <script src="{% static "js/jquery.i18n.properties.js" %}"></script>
-    <script>var zhMessages = "{% version 'js/jquery-validate-messages.zh.js' %}"</script>
     
 
     {% block link %}
@@ -88,12 +86,6 @@
     {% block footer %}
          {% include "footer.html" %}
     {% endblock %}
-
-    <script type="text/javascript">
-         var HOME_SESSION_KEY = "{{ settings.HOME_SESSION_KEY }}";
-         var NEWTON_HOME_URL = "{{ settings.NEWTON_HOME_URL }}";
-         var homeSessionID = "{% get_cookie_value settings.HOME_SESSION_KEY %}";
-     </script>
     <script src="{% version "js/index.js" %}"></script>
     <script>
         $(window).scroll(function(){

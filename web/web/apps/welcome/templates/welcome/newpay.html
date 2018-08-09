@@ -11,58 +11,66 @@
       <p>NewPay</p>
     </div>
   </div>
-  <div class="{% newpay_page_background_picture %}">
-    <div class="col-md-8 newpay-bg-content">
-      <p class="slogan-newpay">{% trans "Entry for New World" %}</p>
-      <a href="{{ settings.NEWTON_DEV_URL }}/dashboard/" class="btn btn-newpay">
-        {% trans "Join internal testing" %}
-      </a></div>
-    </div>
+  <div class="newpay_bg"></div>
   <div class="container">
-      <div class="newpay_text row" style="margin-top: 12%">
-        <div class="col-sm-4">
-            <div style="margin-bottom: 5%">
-              <img src="{% version "images/newpay/newpay_icon_1.png" %}" alt="" style='vertical-align: bottom;'>
-              <h2>{% trans "Digital Identity and Credit" %}</h2>
-            </div>
+    <div class="newpay_list">
+      <div class="newpay_text row">
+        <div class="col-sm-6 row  newpay-gray">
+          <div class="col-sm-4">
+            <img src="{% version "images/newpay/newpay_icon_1.png" %}" alt="">
+          </div>
+          <div class="col-sm-8">
+            <h2>{% trans "Digital Identity and Credit" %}</h2>
             <p>{% trans "Create and manage DID (Decentralized ID);" %}</p>
               <p> {% trans "Set privacy mode for personal information;" %}</p>
               <p> {% trans "Transaction information management;" %}</p>
               <p> {% trans "Transaction information sharing pricing and benefit;" %}</p>
               <p> {% trans "Digital asset management, including NEW, BTC, ETH, etc." %}
-              <p>{% trans "Log in multiple Dapps using a unified identity;" %}</p>
-              <p> {% trans "Dapp management and permission control;" %}</p>
-              <p> {% trans "Security audit." %}
             </p>
-        </div>
-        <div class="col-sm-4">
-          <div style="margin-bottom: 5%">
-            <img src="{% version "images/newpay/newpay_icon_2.png" %}" alt="" style='vertical-align: bottom;'>
-            <h2>{% trans "Payment" %}</h2>
           </div>
+        </div>
+        <div class="col-sm-6 row">
+          <div class="col-sm-4">
+            <img src="{% version "images/newpay/newpay_icon_2.png" %}" alt="">
+          </div>
+          <div class="col-sm-8">
+            <h2>{% trans "Payment" %}</h2>
             <p>{% trans "Support cross-border transactions;" %}</p>
               <p> {% trans "Support for micro-payments;" %}</p>
               <p> {% trans "Extremely fast transaction confirmation." %}
             </p>
-        </div>
-        <div class="col-sm-4">
-          <div style="margin-bottom: 5%">
-            <img src="{% version "images/newpay/newpay_icon_3.png" %}" alt="" style='vertical-align: bottom;'>
-            <h2>{% trans "Application Support" %}</h2>
           </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-6 row newpay-gray">
+          <div class="col-sm-4">
+            <img src="{% version "images/newpay/newpay_icon_3.png" %}" alt="">
+          </div>
+          <div class="col-sm-8">
+            <h2>{% trans "Joint Login" %}</h2>
+            <p>{% trans "Log in multiple Dapps using a unified identity;" %}</p>
+              <p> {% trans "Dapp management and permission control;" %}</p>
+              <p> {% trans "Security audit." %}
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 row">
+          <div class="col-sm-4">
+            <img src="{% version "images/newpay/newpay_icon_4.png" %}" alt="">
+          </div>
+          <div class="col-sm-8">
+            <h2>{% trans "Application Support" %}</h2>
             <p>{% trans "Built-in support for free and open-source applications;" %}</p>
               <p> {% trans "Built-in support for purchases within applications;" %}</p>
               <p> {% trans "Built-in support for development tools of applications." %}
             </p>
+          </div>
         </div>
       </div>
+    </div>
   </div>
-
+  </div>
 </section>
 {% endblock %} 
 {% block inline_js %} 
-{% endblock %}
-
-{% block css %}
-<link rel="stylesheet" href="{% version "css/newpay.css" %}">
 {% endblock %}

@@ -100,16 +100,10 @@
          <!-- bootstrap lib -->
          <script src="{% version 'js/bootstrap.min.js' %}" type="text/javascript"></script>
          <script src="{% version 'js/jquery.i18n.properties.js' %}" type="text/javascript"></script>
-         <script type="text/javascript">
-             var HOME_SESSION_KEY = "{{ settings.HOME_SESSION_KEY }}";
-             var NEWTON_HOME_URL = "{{ settings.NEWTON_HOME_URL }}";
-             var homeSessionID = "{% get_cookie_value settings.HOME_SESSION_KEY %}";
-         </script>
          <script src="{% version 'js/index.js' %}" type="text/javascript"></script>
          
          {% block js %}{% endblock %}
          {% block inline_js %}{% endblock %}
-
 
     </body>
 </html>

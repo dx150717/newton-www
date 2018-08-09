@@ -297,29 +297,6 @@ def integer_format(number):
         return ""
 
 
-class GetCookiesNode(template.Node):
-    def __init__(self, item):
-        self.item = template.Variable(item)
-
-    def render(self, context):
-        try:
-            cookie_key = self.item.resolve(context)
-            logger.info("cookie key is: %s" % cookie_key)
-            request = context['request']
-            logger.info("value is: %s" % request.COOKIES.get(cookie_key))
-            return request.COOKIES.get(cookie_key)
-        except Exception, inst:
-            logger.exception("fail to get cookies:%s" % str(inst))
-            return ""
-
-
-@register.tag(name='get_cookie_value')
-def get_cookie_value(parser, token):
-    """Get cookie value
-    """
-    return GetCookiesNode(token.split_contents()[1])
-
-
 def arabic_change_page_style():
     """integer format by given parameters
     """
@@ -378,20 +355,3 @@ def russian_change_header_style():
 
 
 register.simple_tag(russian_change_header_style)
-
-
-def newpay_page_background_picture():
-    """integer format by given parameters
-    """
-    try:
-        language = translation.get_language()
-        if language.startswith('zh'):
-            return 'newpay_bg_chinese'
-        else:
-            return 'newpay_bg'
-    except Exception, inst:
-        logger.exception("fail to newpay page background picture:%s" % str(inst))
-        return ""
-
-
-register.simple_tag(newpay_page_background_picture)
