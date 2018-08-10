@@ -54,7 +54,7 @@ DATABASE_APPS_MAPPING = {
 }
 
 
-SUPPORT_LANGUAGES = (('de', 'Deutsch'), ('en', 'English'),  ('es', 'Español'), ('fr', 'Français'), ('nl', 'Nederlands'), ('tr', 'Türkçe'), ('ru', 'Pусский'), ('fi', 'suomalainen'), ('ar', 'العربية'), ('ko', '한국어'), ('ja', '日本語'), ('zh-cn', '简体中文'))
+SUPPORT_LANGUAGES = (('id', 'Bahasa Indonesia'), ('de', 'Deutsch'), ('en', 'English'),  ('es', 'Español'), ('fr', 'Français'), ('nl', 'Nederlands'), ('tr', 'Türkçe'), ('ru', 'Pусский'), ('fi', 'suomalainen'), ('ar', 'العربية'), ('ko', '한국어'), ('ja', '日本語'), ('zh-cn', '简体中文'))
 
 
 # country settings
