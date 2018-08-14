@@ -18,6 +18,8 @@ FRENCH = 7
 GERMAN = 8
 ARABIC = 9
 NETHERLAND = 10
+FINNISH = 11
+INDONESIAN = 12
 
 TYPE_BLOG = 0
 TYPE_ANNOUNCEMENT = 1
@@ -66,6 +68,10 @@ def entries_published(queryset):
         language = ARABIC
     elif language.startswith('nl'):
         language = NETHERLAND
+    elif language.startswith('fi'):
+        language = FINNISH
+    elif language.startswith('id'):
+        language = INDONESIAN
     else:
         language = ENGLISH
         
