@@ -2753,13 +2753,11 @@ msgstr "如果您未满18周岁，或者是无民事行为能力人或限制民�
 msgid "II. Definition"
 msgstr "二、 定义"
 
-#: web/apps/welcome/templates/welcome/page_en.html:27
-msgid ""
-"NewPay: means the blockchain wallet developed by We based on Ethereum (and "
-"other blockchain systems which NewPay may support in the future) and other "
-"supporting tools which are developed for the convenience of the Users when "
-"using blockchain systems."
-msgstr "NewPay：指由我们基于以太坊单链系统（及将来陆续支持的其他区块链系统）开发的区块链钱包，包括其他为方便用户使用区块链系统而开发的辅助工具。"
+msgid "NewPay:"
+msgstr "NewPay:"
+
+msgid "A digital asset management tool launched by the Newton Foundation that provides digital identity and credit, payment, multi-account management, and applications to consumers. It includes other ancillary tools developed to facilitate the use of the Block Chain system."
+msgstr "指牛顿基金会推出的数字资产管理工具，面向消费用户实现数字身份与信用、支付、多账户管理及应用等服务，包含其他为方便用户使用区块链系统而开发的辅助工具。"
 
 #: web/apps/welcome/templates/welcome/page_en.html:28
 msgid "User:"
@@ -2908,13 +2906,6 @@ msgid ""
 "actual transfer of Tokens happens on the blockchain system."
 msgstr "转账、收款。您可以使用NewPay的转账、收款功能进行数字代币的管理，即运用私钥进行电子签名，对相关区块链的账本进行修改。转账是指付款方利用收款方的区块链地址进行转账操作，实际的转账、收款行为均在相关区块链系统（而非NewPay）发生。"
 
-#: web/apps/welcome/templates/welcome/page_en.html:56
-msgid ""
-"Observe the quotation. You may use NewPay to observe the quotation of the "
-"Tokens supported by NewPay. The quotation of each Token is captured by "
-"NewPay from corresponding exchange and is displayed in the “Market” column "
-"on NewPay."
-msgstr "行情查看。您可以使用NewPay查看所提供的数字代币汇率价格。NewPay通过抓取相应的数字代币汇率信息并展示在NewPay中的“市场”版块。"
 
 #: web/apps/welcome/templates/welcome/page_en.html:57
 msgid ""
@@ -2941,7 +2932,7 @@ msgid ""
 "cancel the transaction because transactions based on blockchain technologies "
 "are irrevocable. However, under certain circumstances, we may suspend or "
 "limit the function of NewPay used by a particular User."
-msgstr "暂停服务。您知悉基于区块链系统交易“不可撤销”的属性，我们不能为您暂停或撤销转账交易等操作，但在一定情况下，我们可以暂停或者限制某位用户对NewPay软件的操作。"
+msgstr "暂停服务。您知悉基于区块链系统交易“不可撤销”的属性，我们不能为您暂停或撤销转账交易等操作，但在一定情况下，我们可以暂停或者限制某位用户对NewPay软件的操作或其他我们认为有必要提供的服务。"
 
 #: web/apps/welcome/templates/welcome/page_en.html:61
 msgid "Other services that We would like to provide."
@@ -2963,28 +2954,28 @@ msgstr "秉承着区块链的去中心化特点，并为了保护用户的数字
 msgid ""
 "a) store Users’ Wallet Password (the password Users set when creating or "
 "importing wallets), Private Key, Mnemonic Words or Keystore;"
-msgstr "（1）存储用户的钱包密码（即用户创建/导入钱包时设置的密码）、私钥、助记词、Keystore；"
+msgstr "存储用户的钱包密码（即用户创建/导入钱包时设置的密码）、私钥、助记词、Keystore；"
 
 #: web/apps/welcome/templates/welcome/page_en.html:66
 msgid ""
 "b) restore Users’ Wallet Password, Private Key, Mnemonic Words or Keystore;"
-msgstr "（2）找回用户的钱包密码、私钥、助记词、Keystore；"
+msgstr "找回用户的钱包密码、私钥、助记词、Keystore；"
 
 #: web/apps/welcome/templates/welcome/page_en.html:67
 msgid "c) freeze the wallet;"
-msgstr "（3）冻结钱包；"
+msgstr "冻结钱包；"
 
 #: web/apps/welcome/templates/welcome/page_en.html:68
 msgid "d) report the loss of wallet;"
-msgstr "（4）挂失钱包；"
+msgstr "挂失钱包；"
 
 #: web/apps/welcome/templates/welcome/page_en.html:69
 msgid "e) restore the wallet;"
-msgstr "（5）恢复钱包；"
+msgstr "恢复钱包；"
 
 #: web/apps/welcome/templates/welcome/page_en.html:70
 msgid "f) rollback transactions."
-msgstr "（6）交易回滚。"
+msgstr "交易回滚。"
 
 #: web/apps/welcome/templates/welcome/page_en.html:73
 msgid ""
@@ -3032,21 +3023,9 @@ msgid ""
 "wallet on NewPay to transfer and receive Tokens on blockchain."
 msgstr "创建或导入钱包：您有权在您的移动设备上通过NewPay创建和/或导入钱包，有权设定钱包的钱包密码等信息，并有权通过NewPay应用程序，使用自己的钱包在区块链上进行转账和收款等交易。"
 
-#: web/apps/welcome/templates/welcome/page_en.html:82
-msgid ""
-"b) Identification verification: Specific Users will be asked to complete "
-"identification verification before using NewPay to comply with related laws "
-"and regulations, according to the notification of NewPay. Specific Users may "
-"be asked to provide Personal Information including but not limited to name, "
-"identification card number, cell phone number, bank card information, etc., "
-"without which the Specific Users will not be able to use certain services "
-"and the Specific Users alone shall be responsible for the loss caused by "
-"their delay in completing the verification."
-msgstr "身份验证：按照有关法律法规和政策要求，特定用户在使用NewPay提供的有关服务时，应当按照NewPay的提示及时完成相关身份验证，要求您提交包括但不限于您的姓名、身份证号码、手机号码、银行卡号信息等个人信息。否则该特定用户将无法使用有关服务，因特定用户拖延造成的损失由您自行承担。"
-
 #: web/apps/welcome/templates/welcome/page_en.html:83
 msgid ""
-"c) We may develop different versions of NewPay for different terminal "
+"b) We may develop different versions of NewPay for different terminal "
 "devices. You shall download and install applicable version. If you download "
 "and install NewPay or other application with the same name as “NewPay” from "
 "any unauthorized third party, We cannot guarantee the normal operation or "
@@ -3056,7 +3035,7 @@ msgstr "我们可能为不同的终端设备开发不同的软件版本，您应
 
 #: web/apps/welcome/templates/welcome/page_en.html:84
 msgid ""
-"d) A previous version of NewPay may stop to operate after a new version is "
+"c) A previous version of NewPay may stop to operate after a new version is "
 "released. We cannot guarantee the security, continuous operation or customer "
 "services for the previous version. Users shall download and use the latest "
 "version."
@@ -3680,16 +3659,16 @@ msgstr "依照《NewPay服务协议》及我们其他有关规定，我们将利
 msgid ""
 "6）We may use your information in accordance with laws, regulations and to "
 "cooperate with regulatory authorities."
-msgstr ""
+msgstr "法律法规规定及与监管机构配合的要求。"
 
 #: web/apps/welcome/templates/welcome/page_en.html:196
 msgid "How You Control Your Own Information"
-msgstr "法律法规规定及与监管机构配合的要求。"
+msgstr "您如何控制自己的信息"
 
 #: web/apps/welcome/templates/welcome/page_en.html:197
 msgid ""
 "You are entitled to control your Personal Information provided to NewPay:"
-msgstr "您如何控制自己的信息"
+msgstr "您在NewPay中拥有以下对您个人信息自主控制权："
 
 #: web/apps/welcome/templates/welcome/page_en.html:198
 msgid ""
@@ -3697,13 +3676,13 @@ msgid ""
 "wallets and you may export your wallets from NewPay to other Tokens "
 "management wallets. NewPay will display the information of imported wallets "
 "to you."
-msgstr "您在NewPay中拥有以下对您个人信息自主控制权："
+msgstr "您可以通过同步钱包的方式，将您的其他钱包导入NewPay中，或者将您在NewPay的钱包导入到其他数字代币管理钱包中。NewPay将向您显示导入钱包的信息。"
 
 #: web/apps/welcome/templates/welcome/page_en.html:199
 msgid ""
 "2）You may add or delete Tokens, transfer and collect Tokens using the "
 "“Assets” column."
-msgstr "您可以通过同步钱包的方式，将您的其他钱包导入NewPay中，或者将您在NewPay的钱包导入到其他数字代币管理钱包中。NewPay将向您显示导入钱包的信息。"
+msgstr "您知悉您可以通过“资产”版块内容修改您的数字代币种类、进行转账及收款等活动。"
 
 #: web/apps/welcome/templates/welcome/page_en.html:200
 msgid ""
