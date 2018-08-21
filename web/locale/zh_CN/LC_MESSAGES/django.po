@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-09 15:03+0000\n"
+"POT-Creation-Date: 2018-08-21 03:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -164,8 +164,8 @@ msgstr ""
 
 #: web/apps/faq/models.py:23 web/apps/faq/models.py:26
 #: web/apps/zinnia/models/category.py:49
-#: web/apps/zinnia/models_bases/entry.py:114
-#: web/apps/zinnia/models_bases/entry.py:117 web/templates/header.html:63
+#: web/apps/zinnia/models_bases/entry.py:116
+#: web/apps/zinnia/models_bases/entry.py:119 web/templates/header.html:63
 msgid "Language"
 msgstr "语言"
 
@@ -498,7 +498,7 @@ msgstr "技术、商业、经济或其他问题，联系"
 #: web/apps/welcome/templates/welcome/announcement.html:6
 #: web/apps/welcome/templates/welcome/announcement.html:13
 #: web/apps/zinnia/models/category.py:26
-#: web/apps/zinnia/models_bases/entry.py:68 web/templates/footer.html:23
+#: web/apps/zinnia/models_bases/entry.py:70 web/templates/footer.html:23
 msgid "Announcement"
 msgstr "公告"
 
@@ -512,17 +512,17 @@ msgid "All"
 msgstr "全部公告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#: web/apps/zinnia/models_bases/entry.py:73
+#: web/apps/zinnia/models_bases/entry.py:75
 msgid "Operation"
 msgstr "运营公告"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
-#: web/apps/zinnia/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:76
 msgid "Weekly"
 msgstr "周报"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
-#: web/apps/zinnia/models_bases/entry.py:72
+#: web/apps/zinnia/models_bases/entry.py:74
 msgid "Activity"
 msgstr "活动公告"
 
@@ -1147,8 +1147,7 @@ msgid "Coming Events"
 msgstr "活动预告"
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:10
-msgid ""
-"Newton 'Global Hundred cities Tour' -Shenzhen Station"
+msgid "Newton 'Global Hundred cities Tour' -Shenzhen Station"
 msgstr "牛顿'全球百城巡讲'-深圳站"
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:15
@@ -1165,8 +1164,7 @@ msgstr "广东深圳市南山区软件产业基地5B栋7层"
 msgid ""
 "https://www.newtonproject.org/announcement/2018/08/09/newton-global-100-"
 "cities-tour-shenzhen-station-meetup"
-msgstr ""
-"https://www.newtonproject.org/announcement/2018/08/09/-/"
+msgstr "https://www.newtonproject.org/announcement/2018/08/09/-/"
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:18
 #: web/apps/welcome/templates/welcome/include-community-event.html:32
@@ -1762,7 +1760,8 @@ msgstr "白皮书"
 
 #: web/apps/welcome/templates/welcome/index.html:46
 msgid ""
-"To pay tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!"
+"To pay tribute to Sir Isaac Newton, the great scientist who made a "
+"significant impact on our lives!"
 msgstr "向伟大的科学家、铸币先驱<br/>艾萨克•牛顿 爵士<br/>致敬！"
 
 #: web/apps/welcome/templates/welcome/joinus.html:6
@@ -2688,6 +2687,1495 @@ msgstr "支持内置应用购买；"
 #: web/apps/welcome/templates/welcome/newpay.html:65
 msgid "Built-in support for development tools of applications."
 msgstr "内置应用开发工具支持。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:9
+#: web/apps/welcome/templates/welcome/page_en.html:15
+msgid "NewPay Terms of Service"
+msgstr "NewPay服务协议"
+
+#: web/apps/welcome/templates/welcome/page_en.html:16
+msgid "Dear User,"
+msgstr "尊敬的用户："
+
+#: web/apps/welcome/templates/welcome/page_en.html:17
+msgid ""
+"Thank you for choosing NewPay. This NewPay Terms of Service (“Agreement”) is "
+"made between you (“you” or“User”) and NewPay Team. (“we”) and is legally "
+"binding between you and We."
+msgstr "感谢您选择NewPay服务。《NewPay服务协议》（以下简称“本协议”）由NewPay Team（以下简称 “我们”）和用户（以下简称“您”或“用户”）签订，本协议在您与我们之间具有合同上的法律效力。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:18
+msgid ""
+"We hereby reminds you that you must carefully read the full content of this "
+"Agreement and other documents mentioned in this Agreement before using "
+"NewPay (“NewPay” or “App”). You must make sure that you fully understand the "
+"whole Agreement and evaluate the risks of using NewPay on your own."
+msgstr "我们在此特别提醒您在使用NewPay之前，请认真阅读《NewPay服务协议》及后文提到的相关协议，尤其是本协议规定的“免责及责任限制”等条款将以加粗的形式体现，确保您充分理解本协议中各条款，并自主考虑风险。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:20
+msgid "I. Confirmation and Acceptance of this Agreement"
+msgstr "一、 关于本协议的确认与接纳"
+
+#: web/apps/welcome/templates/welcome/page_en.html:21
+msgid ""
+"You understand that this Agreement and other relevant documents apply to "
+"NewPay and the Decentralized Applications (“DApps”) which are developed and "
+"owned independently by We on NewPay (and excluding DApps developed by third "
+"parties)."
+msgstr "您理解本协议及有关协议适用于NewPay及NewPay上我们所自主开发和拥有的去中心化应用（简称“DApp”）（排除第三方开发的DApp）。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:22
+msgid ""
+"After you download NewPay and start to create or import wallet, you are "
+"deemed as having read and accepted this Agreement, which shall cause this "
+"Agreement to become effective and legally binding on both you and We "
+"immediately."
+msgstr "您下载NewPay软件并创建或导入钱包，即视为您已经充分阅读并接受本协议全部条款，本协议立即生效，对双方具有约束力。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:23
+msgid ""
+"We may, at its sole discretion, modify or replace this Agreement at any "
+"time. The modified Agreement will automatically take effect once it is "
+"posted on NewPay and you will not be notified separately. If you do not "
+"agree with the modifications, you shall cease to use NewPay immediately. Use "
+"of NewPay by you after any modification to this Agreement constitutes your "
+"acceptance of this Agreement as modified."
+msgstr "本协议可由我们随时更新，经修改的协议一经在NewPay上公布，立即自动生效，恕不再另行通知。在我们公布修改协议条款后，如果您不接受修改后的条款，请立即停止使用NewPay，您继续使用NewPay将被视为接受修改后的协议。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:24
+msgid ""
+"If you are under 18 years old or you are a person of no capacity for civil "
+"acts or a person of limited capacity for civil acts, please use NewPay under "
+"the guidance of your parents or guardians."
+msgstr "如果您未满18周岁，或者是无民事行为能力人或限制民事行为能力人，请在父母或监护人指导下使用NewPay。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:26
+msgid "II. Definition"
+msgstr "二、 定义"
+
+#: web/apps/welcome/templates/welcome/page_en.html:27
+msgid ""
+"NewPay: means the blockchain wallet developed by We based on Ethereum (and "
+"other blockchain systems which NewPay may support in the future) and other "
+"supporting tools which are developed for the convenience of the Users when "
+"using blockchain systems."
+msgstr "NewPay：指由我们基于以太坊单链系统（及将来陆续支持的其他区块链系统）开发的区块链钱包，包括其他为方便用户使用区块链系统而开发的辅助工具。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:28
+msgid "User:"
+msgstr "用户："
+
+#: web/apps/welcome/templates/welcome/page_en.html:30
+msgid ""
+"a) a User must be a natural person who possesses full capacity for civil "
+"acts;"
+msgstr "用户必须是具备完全民事行为能力的自然人；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:31
+msgid ""
+"b) if you are under 18 years old, please use NewPay under the guidance of "
+"your parents or guardians. If any person of no capacity for civil acts "
+"conducts any transactions on NewPay or any person of limited capacity for "
+"civil acts conducts any transaction which does not commensurate his/her "
+"civil rights or act capacity, the parents or guardians of the User shall be "
+"liable for the consequences of such transactions."
+msgstr "若您为18周岁以下的未成年人使用NewPay服务，需要在您父母或监护人的指导下使用NewPay。无民事行为能力人使用NewPay或限制民事行为能力人超过其民事权利或行为能力范围从事交易的，造成的一切后果，NewPay有权要求您及您的父母或监护人负责。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:33
+msgid "Create or import wallet: "
+msgstr "创建或导入钱包："
+
+#: web/apps/welcome/templates/welcome/page_en.html:34
+msgid ""
+"means you use NewPay to create or import wallet after you accept this "
+"Agreement."
+msgstr "指您使用NewPay，确认履行本协议并创建或导入钱包的过程。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:35
+msgid "Wallet Password: "
+msgstr "钱包密码："
+
+#: web/apps/welcome/templates/welcome/page_en.html:36
+msgid ""
+"means the password you set when you create the wallet. The Wallet Password "
+"will be used to encrypt and protect your Private Key. NewPay, as a "
+"decentralized application, will not store your Wallet Password on our "
+"servers, nor will your Wallet Password be stored in your own mobile devices. "
+"If you lose or forget your Wallet Password, you will have to reset the "
+"Wallet Password with your Private Key or Mnemonic Words."
+msgstr "指您在创建NewPay钱包过程中，软件操作界面提示您填写的密码，该密码用于加密保护私钥。作为去中心化的应用，钱包密码不存储在您的这台移动设备或我们的服务器，一旦丢失你需要借助明文私钥或助记词重置新密码。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:37
+msgid "Alert: "
+msgstr "信息提示："
+
+#: web/apps/welcome/templates/welcome/page_en.html:38
+msgid ""
+"means the messages displayed on NewPay’s operation interface which provides "
+"suggestions for Users on subsequent operations."
+msgstr "NewPay软件操作界面涉及的信息提示内容，建议用户按照相关步骤进行操作。"
+
+msgid "Specific Users: "
+msgstr "特定用户："
+
+#: web/apps/welcome/templates/welcome/page_en.html:39
+msgid ""
+"means Users who should cooperate with We and disclose "
+"Personal Information in order to comply with the laws, regulations and "
+"policies of PRC."
+msgstr "指按照中国法律法规及政策规定必须要配合我们履行个人信息披露义务的用户。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:40
+msgid "Private Key: "
+msgstr "私钥："
+
+#: web/apps/welcome/templates/welcome/page_en.html:41
+msgid ""
+"consists of 256 random bits. Private Key is the core for the User to hold "
+"and use the Tokens."
+msgstr "由256位随机字符构成，是用户拥有并使用数字代币的核心。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:42
+msgid "Public Key: "
+msgstr "公钥："
+
+#: web/apps/welcome/templates/welcome/page_en.html:43
+msgid ""
+"is derived from the Private Key based on cryptography and is used to "
+"generate wallet addresses. A wallet address is a public address for "
+"reception of Tokens."
+msgstr "由私钥借助密码学原理单向推导生成，并用以生成区块链数字钱包地址，数字钱包地址即为公开收款地址。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:44
+msgid "Mnemonic Words: "
+msgstr "助记词："
+
+#: web/apps/welcome/templates/welcome/page_en.html:45
+msgid ""
+"consists of 12 (or 15/18/21/24) words which are randomly generated, and it "
+"is based on BIP39, the industry standard of blockchain. It is a human "
+"readable format of words to back up your Private Key for recovery."
+msgstr "符合区块链BIP39 行业标准，由随机算法生成的12（或15/18/21/24）个有序单词组成。是私钥的易记录表现形式，方便用户备份保管。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:46
+msgid "Keystore: "
+msgstr "Keystore: "
+
+#: web/apps/welcome/templates/welcome/page_en.html:47
+msgid ""
+"means Private Key or Mnemonic Words in the format of a file which is "
+"encrypted and protected by the User’s Wallet Password. Keystore is stored "
+"only in your mobile device and will not be synchronized to We’ servers."
+msgstr "是私钥或助记词经过用户设置的钱包密码加密保存的文件形式，它只存储在您的这台移动设备中，不会同步至我们服务器"
+
+#: web/apps/welcome/templates/welcome/page_en.html:48
+msgid "Tokens: "
+msgstr "数字代币："
+
+#: web/apps/welcome/templates/welcome/page_en.html:49
+msgid ""
+"means the tokens which are supported by NewPay currently, including but not "
+"limited to BTC, ETH and so on."
+msgstr "指NewPay目前支持的数字代币种类，包括但不限于BTC、ETH等。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:50
+msgid "PRC: "
+msgstr "中华人民共和国："
+
+#: web/apps/welcome/templates/welcome/page_en.html:51
+msgid ""
+"means the People’s Republic of China, excluding Hong Kong, Macau and Taiwan "
+"for the purpose of this Agreement."
+msgstr "本协议所指的中华人民共和国是指中华人民共和国大陆地区，不包括香港特别行政区、澳门特别行政区、台湾地区。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:53
+msgid "III. Services"
+msgstr "三、 服务内容"
+
+#: web/apps/welcome/templates/welcome/page_en.html:54
+msgid ""
+"Create or import wallet. You may use NewPay to create a new wallet or import "
+"wallets generated by other wallet application. You may only import wallets "
+"with Tokens which are supported by NewPay."
+msgstr "创建或导入钱包。对NewPay支持的数字代币，您可以使用NewPay生成新钱包或导入相关区块链系统的其它钱包工具生成的兼容钱包。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:55
+msgid ""
+"Transfer and receive Tokens. You may manage your digital Tokens by using the "
+"transfer and reception functionalities of NewPay, i.e., you may revise the "
+"blockchain ledger by signing with your Private Key. Transfer of Tokens means "
+"the payer transfer the Token to the blockchain address of the payee. The "
+"actual transfer of Tokens happens on the blockchain system."
+msgstr "转账、收款。您可以使用NewPay的转账、收款功能进行数字代币的管理，即运用私钥进行电子签名，对相关区块链的账本进行修改。转账是指付款方利用收款方的区块链地址进行转账操作，实际的转账、收款行为均在相关区块链系统（而非NewPay）发生。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:56
+msgid ""
+"Observe the quotation. You may use NewPay to observe the quotation of the "
+"Tokens supported by NewPay. The quotation of each Token is captured by "
+"NewPay from corresponding exchange and is displayed in the “Market” column "
+"on NewPay."
+msgstr "行情查看。您可以使用NewPay查看所提供的数字代币汇率价格。NewPay通过抓取相应的数字代币汇率信息并展示在NewPay中的“市场”版块。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:57
+msgid ""
+"Manage Tokens. You may use NewPay to add, manage or delete the Tokens "
+"(except ETH) supported by NewPay."
+msgstr "管理数字资产。您可以使用NewPay添加、保管并移除NewPay所支持的数字代币。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:58
+msgid ""
+"Browse DApps. Users may use NewPay to visit and use the services provided by "
+"DApps (including DApps developed by We and DApps developed by third parties)."
+msgstr "浏览DApp。用户通过在NewPay上的链接，可以跳转至DApp并使用该DApp（包括我们自己的DApp和第三方DApp）提供的服务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:59
+msgid ""
+"Transaction records. We will copy all or part of your transaction records "
+"from the blockchain system. However, Users shall refer to the blockchain "
+"system for the latest transaction records."
+msgstr "交易记录。我们将通过区块链系统拷贝您全部或部分的交易记录。但交易记录以区块链系统的记载为准。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:60
+msgid ""
+"Suspension of service. You understand that we are not able to reverse or "
+"cancel the transaction because transactions based on blockchain technologies "
+"are irrevocable. However, under certain circumstances, we may suspend or "
+"limit the function of NewPay used by a particular User."
+msgstr "暂停服务。您知悉基于区块链系统交易“不可撤销”的属性，我们不能为您暂停或撤销转账交易等操作，但在一定情况下，我们可以暂停或者限制某位用户对NewPay软件的操作。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:61
+msgid "Other services that We would like to provide."
+msgstr "其他我们认为有必要提供的服务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:62
+msgid "Users who use NewPay must understand that:"
+msgstr "用户接受我们提供的上述服务时应了解以下常见问题："
+
+#: web/apps/welcome/templates/welcome/page_en.html:63
+msgid ""
+"In order to keep the decentralization feature of blockchain and to protect "
+"the security of your digital Tokens, We offers decentralized service which "
+"is largely different from the banking and financial institutions. Users "
+"shall understand that We does not provide the following services:"
+msgstr "秉承着区块链的去中心化特点，并为了保护用户的数字代币安全，我们提供的是去中心化服务，大大区别于银行业金融机构。用户了解，我们不提供以下服务："
+
+#: web/apps/welcome/templates/welcome/page_en.html:65
+msgid ""
+"a) store Users’ Wallet Password (the password Users set when creating or "
+"importing wallets), Private Key, Mnemonic Words or Keystore;"
+msgstr "（1）存储用户的钱包密码（即用户创建/导入钱包时设置的密码）、私钥、助记词、Keystore；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:66
+msgid ""
+"b) restore Users’ Wallet Password, Private Key, Mnemonic Words or Keystore;"
+msgstr "（2）找回用户的钱包密码、私钥、助记词、Keystore；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:67
+msgid "c) freeze the wallet;"
+msgstr "（3）冻结钱包；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:68
+msgid "d) report the loss of wallet;"
+msgstr "（4）挂失钱包；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:69
+msgid "e) restore the wallet;"
+msgstr "（5）恢复钱包；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:70
+msgid "f) rollback transactions."
+msgstr "（6）交易回滚。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:73
+msgid ""
+"Users shall take care of their mobile devices, back up the NewPay App, and "
+"back up the Wallet Password, Mnemonic Words, Private Key and Keystore by "
+"themselves. If your mobile device is lost, your NewPay App or your wallet is "
+"deleted and not backed up, your wallet is stolen or you forget your Wallet "
+"Password, Private Key, Mnemonic Words or Keystore, We is not able to recover "
+"the wallet or restore Wallet Password, Private Key, Mnemonic Words or "
+"Keystore. Nor can We cancel transactions for the mishandling of Users (such "
+"as typing in wrong addresses for transactions)."
+msgstr "由于我们不提供上述服务，因此用户应当自行保管含有NewPay的移动设备、备份NewPay、备份钱包密码、助记词、私钥及Keystore。如用户遗失移动设备、删除且未备份NewPay、删除且未备份钱包、钱包被盗或遗忘钱包密码、私钥、助记词、Keystore，我们均无法还原钱包或找回钱包密码、私钥、助记词、Keystore；如用户进行交易时误操作（例如输错转账地址），我们亦无法取消交易。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:74
+msgid ""
+"NewPay does not support all existing Tokens. Do not use NewPay to handle any "
+"non-supported Tokens."
+msgstr "我们和NewPay所能够提供的数字代币管理服务并未包括所有已存在的数字代币，请勿通过NewPay操作任何NewPay不支持的数字代币。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:75
+msgid "NewPay is only a tool for Users to manage their Tokens and is not an exchange or a trading platform. For the purpose of this Agreement, the word “transactions” only means transferring and receiving Tokens, which is substantially different from transactions on the exchanges and trading platforms."
+msgstr "NewPay仅是用户的数字代币管理工具，并非交易所或交易平台。虽然本协议将多次提及“交易”，其行为泛指用户使用NewPay进行的转账和收款操作，这与交易所或交易平台上进行的“交易”有本质区别。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:76
+msgid ""
+"The DApps integrated into NewPay include those developed independently by We "
+"and those developed by third parties. NewPay only acts as a blockchain "
+"browser for those third-party-developed DApps. Users shall, at their sole "
+"discretion, decide whether there would be any risks to accept the services "
+"provided by or to conduct transactions on the third-party-developed DApps."
+msgstr "NewPay上集成的DApp包括我们自主拥有的DApp和第三方平台提供的DApp。对于第三方平台提供的DApp，NewPay仅为用户进入DApp提供区块链浏览器。用户在第三方DApp上接受服务或进行交易前应自行判断和评估该第三方DApp提供的服务或交易是否存在风险。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:78
+msgid "IV. Your Rights and Obligations"
+msgstr "四、 您的权利义务"
+
+#: web/apps/welcome/templates/welcome/page_en.html:79
+msgid "Create or Import Wallet"
+msgstr "（一）创建或导入钱包"
+
+#: web/apps/welcome/templates/welcome/page_en.html:81
+msgid ""
+"a) Create or import wallet: you are entitled to use NewPay on your mobile "
+"device to create and/or import wallet, set Wallet Password and use your "
+"wallet on NewPay to transfer and receive Tokens on blockchain."
+msgstr "创建或导入钱包：您有权在您的移动设备上通过NewPay创建和/或导入钱包，有权设定钱包的钱包密码等信息，并有权通过NewPay应用程序，使用自己的钱包在区块链上进行转账和收款等交易。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:82
+msgid ""
+"b) Identification verification: Specific Users will be asked to complete "
+"identification verification before using NewPay to comply with related laws "
+"and regulations, according to the notification of NewPay. Specific Users may "
+"be asked to provide Personal Information including but not limited to name, "
+"identification card number, cell phone number, bank card information, etc., "
+"without which the Specific Users will not be able to use certain services "
+"and the Specific Users alone shall be responsible for the loss caused by "
+"their delay in completing the verification."
+msgstr "身份验证：按照有关法律法规和政策要求，特定用户在使用NewPay提供的有关服务时，应当按照NewPay的提示及时完成相关身份验证，要求您提交包括但不限于您的姓名、身份证号码、手机号码、银行卡号信息等个人信息。否则该特定用户将无法使用有关服务，因特定用户拖延造成的损失由您自行承担。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:83
+msgid ""
+"c) We may develop different versions of NewPay for different terminal "
+"devices. You shall download and install applicable version. If you download "
+"and install NewPay or other application with the same name as “NewPay” from "
+"any unauthorized third party, We cannot guarantee the normal operation or "
+"security of such application. Any loss caused by using such application "
+"shall be borne by you."
+msgstr "我们可能为不同的终端设备开发不同的软件版本，您应当根据实际需要选择下载合适的版本进行安装。如果您从未经合法授权的第三方获取本软件或与本软件名称相同的安装程序，我们将无法保证该软件能否正常使用，也无法保证其安全性，因此造成的损失由您自行承担。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:84
+msgid ""
+"d) A previous version of NewPay may stop to operate after a new version is "
+"released. We cannot guarantee the security, continuous operation or customer "
+"services for the previous version. Users shall download and use the latest "
+"version."
+msgstr "本软件新版本发布后，旧版软件可能无法使用。我们不保证旧版软件的安全性、继续可用性及提供相应的客户服务。请您随时核对并下载最新版本。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:86
+msgid "Use of NewPay"
+msgstr "（二）使用"
+
+#: web/apps/welcome/templates/welcome/page_en.html:88
+msgid ""
+"a) Users shall take care of their mobile devices, Wallet Password, Private "
+"Key, Mnemonic Words and Keystore by themselves. We does not store or hold "
+"the above information for Users. You shall be responsible for any risks, "
+"liabilities, losses and expenses which result from frauds, you losing your "
+"mobile device, disclosing (whether actively or passively) or forgetting "
+"Wallet Password, Private Key, Mnemonic Words or Keystore, or your wallet "
+"being attacked."
+msgstr "用户应自行妥善保管移动设备、钱包密码、私钥、助记词、Keystore等信息。我们不负责为用户保管以上信息。因您遗失移动设备、主动或被动泄露、遗忘钱包密码、私钥、助记词、Keystore或遭受他人攻击、诈骗等所引起的一切风险、责任、损失、费用应由您自行承担。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:89
+msgid ""
+"b) Follow the Alert. You understand and agree to follow the Alert pushed by "
+"NewPay. You shall be responsible for any risks, liabilities, losses and "
+"expenses which result from your failure to comply with the Alert."
+msgstr "遵循信息提示。您了解并同意遵循NewPay对您做出的信息提示，按照信息提示的内容进行操作，否则，由此引起的一切风险、责任、损失、费用等应由您自行承担。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:90
+msgid ""
+"c) You understand that NewPay undertakes no responsibility to conduct due "
+"diligence on the services or transactions provided by third-party-developed "
+"DApps. You shall make investment decisions rationally and assume the risks "
+"by yourself."
+msgstr "您知悉并理解NewPay没有义务对链接的第三方DApp服务或交易履行尽职调查义务，您应当理性做出投资决策并自主承担相应的投资风险。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:91
+msgid ""
+"d) Complete the identification verification. If NewPay reasonably deems your "
+"operation or transactions to be abnormal, or considers your identification "
+"to be doubtful, or NewPay considers it necessary to verify your "
+"identification documents or other necessary documents, you shall cooperate "
+"with NewPay and provide your valid identification documents or other "
+"necessary documents and complete the identification verification in time."
+msgstr "积极完成身份验证。当NewPay合理认为您的交易行为或交易情况出现异常的，或认为您的身份信息存在疑点的，或NewPay认为应核对您身份证件或其他必要文件的情形时，请您积极配合NewPay核对您的有效身份证件或其他必要文件，及时完成相关的身份验证。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:92
+msgid "e) Transfer of Tokens"
+msgstr "转账"
+
+#: web/apps/welcome/templates/welcome/page_en.html:93
+msgid ""
+"i. You understand that you may be subject to daily limits on the amount and "
+"times of transfers according to your location, regulatory requirements, "
+"transferring purposes, risk control by NewPay, or identification "
+"verification."
+msgstr "（1）您知悉对于NewPay服务中您可使用的日计转账限额和笔数，可能因为您使用该转账服务时所处的国家/地区、监管要求、转账目的、NewPay风险控制、身份验证等事由而不同。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:94
+msgid ""
+"ii. You understand that blockchain operations are “irrevocable”. When you "
+"use NewPay to transfer Tokens, you shall be responsible for the consequences "
+"of your mishandling of the transfer (including but not limited to wrong "
+"address, problems of the node servers selected by you)."
+msgstr "（2）您理解基于区块链操作的“不可撤销”属性，当您使用NewPay转账功能时，您应当自行承担因您操作失误而导致的后果（包括但不限于因您输错转账地址、您自身选择转账节点服务器的问题）。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:95
+msgid "iii. You understand that the following reasons may result in “transfer failed” or “mining overtime”"
+msgstr "（3）您知悉在使用NewPay服务时，以下情况的出现可能导致转账“交易失败”或“打包超时”："
+
+#: web/apps/welcome/templates/welcome/page_en.html:96
+msgid "insufficient balance in wallet;"
+msgstr "  a) 钱包余额不足；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:97
+msgid "insufficient gas for transaction;"
+msgstr "  b) 交易矿工费不足；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:98
+msgid "blockchain’s failure to execute the code of smart contracts;"
+msgstr "  c) 区块链执行合约代码失败；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:99
+msgid ""
+"the transfer amount exceeds the transfer limits imposed by authorities, "
+"NewPay or laws or regulations;"
+msgstr "  d) 超出监管部门、NewPay或法律法规规定的付款额度；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:100
+msgid "technical failure of the network or equipment;"
+msgstr "  e) 网络、设备等技术故障；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:101
+msgid ""
+"abandoned transactions result from blockchain network congestion or failure;"
+msgstr "  f) 区块链网络拥堵、故障等原因引起交易被抛弃；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:102
+msgid ""
+"the wallet address of yours or your counterparty’s is identified as special "
+"addresses, such as high-risk address, exchange address, ICO address, Token "
+"address etc."
+msgstr "  g) 您的地址或交易对方地址被识别为特殊地址, 如高风险地址、交易所地址、ICO 地址、Token地址等。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:103
+msgid ""
+"iv. You understand that NewPay is only a tool for transfer of Tokens. We "
+"shall be deemed to have fulfilled its obligations once you have finished the "
+"transfer and shall not be held liable for any other disputes."
+msgstr "（4）您知悉NewPay仅向您提供转账工具，在您使用NewPay完成转账后，我们即完成了当次服务的所有义务，我们对其他纠纷争议，不负担任何义务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:104
+msgid ""
+"f) Compliance. You understand that you shall abide by PRC laws, regulations "
+"and policies when you use NewPay or the DApps on NewPay."
+msgstr "合法合规。您知悉在NewPay进行操作时或利用NewPay上的DApp进行交易时，您应当遵循有关法律法规、国家政策的要求。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:105
+msgid ""
+"g) Notifications. NewPay may send notifications to you by web announcements, "
+"e-mails, text messages, phone calls, Notification Centre information, popup "
+"tips or client-end notices (e.g., information about your transfer or "
+"suggestions on certain operations) which you shall be aware of timely."
+msgstr "公告通知。NewPay会以网站公告、电子邮件、发送短信、电话、消息中心信息、弹窗提示或客户端通知等方式向您发送通知，例如通知您交易进展情况，或者提示您进行相关操作，请您及时予以关注。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:106
+msgid "h) Service fees and taxes."
+msgstr "服务费用与纳税义务："
+
+#: web/apps/welcome/templates/welcome/page_en.html:107
+msgid ""
+"i. NewPay does not charge you any service fees or handling fees for the time "
+"being. NewPay may reach an agreement with you or announce rules regarding "
+"service fees in the future;"
+msgstr "（1）NewPay暂时不向您收取任何形式的服务费或手续费，将来需对某些服务进行收费时将另行约定或公布规则；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:108
+msgid ""
+"ii. You need to pay gas when you transfer Tokens, the amount of which would "
+"be on your sole discretion and would be collected by certain blockchain "
+"system;"
+msgstr "（2）您使用NewPay进行转账时应支付矿工费，金额由您自行决定。矿工费由相关区块链系统收取；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:109
+msgid ""
+"iii. You understand that under some specific circumstances, your transfer of "
+"Tokens may fail due to instable network, but you may still be charged gas by "
+"certain blockchain system;"
+msgstr "（3）您知悉在特定情况下，因为您所处的环境及网络状态不稳定，导致您的转账操作未完成时，亦会被相关区块链系统收取矿工费；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:110
+msgid ""
+"iv. You shall bear all the applicable taxes and other expenses occurred due "
+"to your transactions on NewPay."
+msgstr "（4）您因在NewPay进行交易而发生的所有应纳税负及其它方面的费用均由您负责支付。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:113
+msgid "V. Risks"
+msgstr "五、 风险提示"
+
+#: web/apps/welcome/templates/welcome/page_en.html:114
+msgid ""
+"You understand and acknowledge that the blockchain technology is a field of "
+"innovation where the laws and regulations are not fully established. You may "
+"be faced with material risks including instability of technology or failure "
+"of Tokens redemption. You also understand that Tokens have much higher "
+"volatility comparing to other financial assets. You shall make investment "
+"decisions and hold or dispose of the Tokens in a reasonable way and "
+"corresponding to your financial status and risk preferences. You also "
+"acknowledge that the market information is captured from exchanges by NewPay "
+"and may not represent the latest or the best quotation of each Token."
+msgstr "您了解并知悉，由于数字代币领域的法律法规政策尚未健全，该领域的数字代币可能会产生无法兑现、技术不稳定等重大风险。且数字代币的价格波动幅度远高于其他金融资产。我们谨慎提醒您应当根据自身财务状况和风险偏好，理性选择持有或处置任何一种数字代币。NewPay提供的行情查看功能仅系抓取部分交易所的数字代币汇率信息的搜索结果，并不表示为最新行情或最佳报价。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:115
+msgid ""
+"If you or your counterparty fails to comply with this Agreement or fails to "
+"follow the instructions, tips or rules on the website or on the page of the "
+"transaction or payment, NewPay does not guarantee successful transfer of the "
+"Tokens and NewPay shall not be held liable for any of the consequences of "
+"such failure. If you or your counterparty has already received the payment "
+"in NewPay wallet or third-party wallet, you understand that transactions on "
+"blockchain are irreversible and irrevocable. You and your counterparty shall "
+"assume the liabilities and consequences of your transactions."
+msgstr "在使用NewPay服务时，若您或您的相对方未遵从本协议或相关网站说明、交易、支付页面中之操作提示、规则，NewPay并不保证交易会顺利完成，且NewPay不承担损害赔偿责任。若发生前述情形，而款项已先行入账您的或您的交易方的NewPay钱包或第三方钱包，您理解区块链操作具有的“不可逆”属性，以及相关交易具有“不可撤销”的特征，由您及您的相对方自行承担相应的风险后果。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:116
+msgid ""
+"When you use third-party-developed DApps integrated in NewPay, We strongly "
+"suggest you read this Agreement and NewPay’s Alert carefully, get familiar "
+"with the counterparty and the product information and evaluate the risks "
+"before you make transactions on such DApps. You understand that such "
+"transactions and corresponding contractual relationship are between you and "
+"your counterparty. NewPay shall not be held liable for any risks, "
+"responsibilities, losses or expenses occurred due to such transactions."
+msgstr "在您使用NewPay集成的第三方DApp服务或进行交易时，为了您的利益，我们建议您仔细阅读本协议及NewPay提示，了解交易对象及产品信息，谨慎评估风险后再采取行动。所有您在第三方DApp进行的交易行为系您的个人行为，有约束力的合同关系在您和您的相对方之间建立，与NewPay无关。NewPay对因您的交易行为所引起的一切风险、责任、损失、费用不承担任何责任。"
+
+msgid "It is your sole responsibility to make sure that your counterparty is a person with full capacity for civil acts and decide whether you shall transact with him/her."
+msgstr "您在交易过程中应当自行判断对方是否为完全民事行为能力人并自行决定是否与对方进行交易或转账给对方等，且您自行承担与此相关的所有风险。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:118
+msgid ""
+"You shall check the official blockchain system or other blockchain tools "
+"when you receive Alert such as “transaction failed” or “mining overtime” in "
+"order to avoid repetitive transfer. If you fail to follow this instruction, "
+"you shall bear the losses and expenses occurred due to such repetitive "
+"transfer."
+msgstr "在转账过程中，如果出现“交易失败”、“打包超时”等类似的异常信息提示时，您应通过相关区块链系统的官方途径或其他的区块链查询工具进行再次确认，以避免重复转账；否则，由此所引起的一切损失和费用应由您自行承担。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:119
+msgid ""
+"You understand that after you create or import wallet on NewPay, your "
+"Keystore, Private Key and Mnemonic Words are only stored on your mobile "
+"device and will not be stored in NewPay or on the servers of We. You may "
+"change another mobile device to use NewPay after you follow the instructions "
+"on NewPay to backup your wallet. If you lose your mobile device before you "
+"could write down or backup your Wallet Password, Private Key, Mnemonic Words "
+"or Keystore, you may lose your Tokens and We is unable to restore them. If "
+"your Wallet Password, Private Key, Mnemonic Words or Keystore is disclosed "
+"or the device which stores or holds your Wallet Password, Private Key, "
+"Mnemonic Words or Keystore is hacked or attacked, you may lose your Tokens "
+"and We is unable to restore them. You shall bear the foregoing losses on "
+"your own."
+msgstr "您理解当您在NewPay上创建或导入钱包之后，您的Keystore、私钥、助记词等信息仅存储在当前的这台移动设备中，不存储在NewPay或我们的服务器上。您可以按照NewPay提供的操作指南采取同步钱包等方式更换移动设备。但若您未保存或备份钱包密码、私钥、助记词、Keystore等信息且在您移动设备丢失的情况下，您的数字代币将因此丢失，我们无法为您找回，您需自行承担相应损失。若您在导出、保存或备份钱包密码、私钥、助记词、Keystore等信息的时候泄密，或保存或备份上述信息的设备或服务器被黑客攻击或控制等情况下，您的数字代币将因此丢失，我们无法为您找回，您需自行承担相应损失。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:120
+msgid ""
+"We suggest you backup your Wallet Password, Private Key, Mnemonic Words and "
+"Keystore when you create or import wallet by writing them down on papers or "
+"backup them in password management apps. Please do not use electronic "
+"methods such as screenshots, e-mails, note-taking apps in cell phones, text "
+"messages, WeChat or QQ to backup any of the above information."
+msgstr "我们建议您在创建或导入钱包时对您钱包的钱包密码、私钥、助记词及Keystore等信息做好安全备份。我们提请您注意，请不要采用以下备份方式：截图、邮件、记事本、短信、微信、QQ等电子备份方式。我们建议您在纸质记事本上抄写助记词和Keystore等信息，同时您亦可将电子数据保管至密码管理器。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:121
+msgid ""
+"In order to avoid potential security risks, we suggest you use NewPay in a "
+"secured network environment. Please do not use a jailbreak or Rooted mobile "
+"device."
+msgstr "我们建议您在安全的网络环境中使用NewPay，确保您的移动设备没有越狱或Root， 以避免可能存在的安全隐患。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:122
+msgid ""
+"Please be alert to frauds when you use NewPay. If you find any suspicious "
+"conducts, we encourage you to inform us immediately."
+msgstr "请您在使用我们的服务过程中，警惕非NewPay官方的诈骗行为。一旦发现此类行为，我们鼓励您第一时间告知我们。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:124
+msgid "VI. Change, Suspension, Termination of We Service"
+msgstr "六、 服务的变更、中断、终止"
+
+#: web/apps/welcome/templates/welcome/page_en.html:125
+msgid ""
+"You acknowledge and accept that We may, at its sole discretion, provide only "
+"a part of services for the time being, suspend certain services or provide "
+"new services in the future. When we change our services, your continuous use "
+"of NewPay is deemed as your acceptance of this Agreement and revisions of "
+"this Agreement."
+msgstr "您同意我们为保证自主业务经营权可以暂时提供部分服务功能，或于将来暂停部分服务功能或开通新的服务功能。当任何功能减少或者增加或者变化时，只要您仍然使用我们提供的服务，表示您仍然同意本协议或者本协议修正后的条款。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:126
+msgid ""
+"You shall first complete the Questionnaire and reach the score required by "
+"We before you use NewPay. The Questionnaire will check whether you have "
+"sufficient knowledge of blockchain, so as to avoid to the extent possible "
+"that you will not mishandle NewPay or cause any risks to the security of "
+"your Tokens. If you fail to pass the Questionnaire, We may refuse to provide "
+"all or part of the services on NewPay to you."
+msgstr "为保护您的数字代币安全，尽量避免您在不具备区块链基础知识的前提下使用NewPay而产生的误操作或由此带来的风险，您必须先通过能力测评问卷并达到我们所要求的合格分数才能使用NewPay服务，否则，我们有权限制或拒绝提供部分或全部的服务功能。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:127
+msgid ""
+"You understand that We may suspend services under the following "
+"circumstances:"
+msgstr "您理解存在如下情形时，我们将暂停提供服务："
+
+#: web/apps/welcome/templates/welcome/page_en.html:129
+msgid ""
+"a) due to the maintenance, upgrading, failure of equipment and blockchain "
+"system and the interruption of communications etc., which lead to the "
+"suspension of the operation of NewPay;"
+msgstr "（1）因设备、区块链系统维修、升级、故障和通信中断等技术原因而中断业务；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:130
+msgid ""
+"b) due to force majeure events including but not limited to typhoon, "
+"earthquake, tsunami, flood, power outage, war, or terrorist attacks, or "
+"computer viruses, Trojan Horse, hacker attacks, system instability or "
+"government behaviors and other reasons, We is unable to provide services or "
+"in We’ reasonable opinion, continuous provision of services would result in "
+"significant risks;"
+msgstr "（2）因台风、地震、海啸、洪水、停电、战争或恐怖袭击等不可抗力因素，病毒、木马、黑客攻击、系统不稳定或政府行为等原因，造成我们系统不能提供服务或我们合理认为继续提供服务会有较大风险的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:131
+msgid "c) due to other events which We cannot control or reasonably predicate."
+msgstr "（3）发生我们无法控制或合理预见的其他情形。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:133
+msgid ""
+"We reserves the right to unilaterally suspend or terminate all or part of "
+"the function of NewPay under the following circumstances:"
+msgstr "当您出现如下情况时，我们可单方面中止或终止您使用NewPay的部分或全部功能:"
+
+#: web/apps/welcome/templates/welcome/page_en.html:135
+msgid "a) death of Users;"
+msgstr "（1）用户死亡；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:136
+msgid "b) if you steal others’ wallets information or mobile devices;"
+msgstr "（2）盗用他人的钱包信息或移动设备；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:137
+msgid ""
+"c) if you provide false Personal Information on NewPay or cheat on "
+"Questionnaire;"
+msgstr "（3）填写个人信息时提供虚假信息、在回答能力测评问卷时非本人操作；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:138
+msgid "d) if you refuse to allow mandatory update of NewPay;"
+msgstr "（4）拒绝我们为提升NewPay功能而发起的强制更新操作；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:139
+msgid "e) if you use NewPay to commit illegal or criminal activities;"
+msgstr "（5）将NewPay用于违法或犯罪活动；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:140
+msgid "f) if you hinder the normal use of NewPay by other Users;"
+msgstr "（6）妨碍其他用户正常使用；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:141
+msgid "g) if you pretend to be staff or management personnel of We;"
+msgstr "（7）伪称我们的工作人员或管理人员；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:142
+msgid ""
+"h) if you threaten the normal operation of We computer system by attack, "
+"invasion, alternation or any other means;"
+msgstr "（8）攻击、侵入、更改或以任何其他方式威胁我们计算机系统的正常运作；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:143
+msgid "i) if you use NewPay to send spams;"
+msgstr "（9）利用NewPay宣传垃圾广告；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:144
+msgid "j) if you spread rumors which endanger the goodwill of We and NewPay;"
+msgstr "（10）散布谣言，损害我们和NewPay商誉；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:145
+msgid ""
+"k) if you conduct any illegal activities, breach this Agreement etc. or "
+"other circumstances under which We reasonably considers necessary to suspend "
+"services."
+msgstr "（11）违法行为，其他违反本协议的行为，及我们合理认为应当暂停功能的情形。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:147
+msgid ""
+"You are entitled to export your wallets within a reasonable amount of time "
+"if We changes, suspends or terminates its services."
+msgstr "当您与我们之间的服务关系变更、中断、终止时，您仍有权在合理时间内导出您钱包等信息。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:149
+msgid "VII. Your Representations and Warranties"
+msgstr "七、 您合法使用我们服务的承诺"
+
+#: web/apps/welcome/templates/welcome/page_en.html:150
+msgid ""
+"You shall comply with: 1) all applicable laws and regulations of PRC and 2) "
+"all applicable laws and regulations of the country or area you reside in. "
+"You shall not use NewPay for any unlawful purposes or by any unlawful means."
+msgstr "您应遵守中华人民共和国相关法律法规及您所居住的国家或地区的法律法规，不得将NewPay用于任何非法目的，也不得以任何非法方式使用我们服务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:151
+msgid ""
+"You shall not use NewPay to commit any illegal or unlawful activities, "
+"including but not limited to:"
+msgstr "您不得利用NewPay从事违法或犯罪的行为，包括但不限于："
+
+#: web/apps/welcome/templates/welcome/page_en.html:153
+msgid ""
+"a) activities opposing the basic principles set forth in the PRC’s "
+"Constitution, endangering national security, disclosing state secrets, "
+"overturning the government or undermining national unity;"
+msgstr "（1）反对宪法所确定的基本原则，危害国家安全、泄漏国家秘密、颠覆国家政权、破坏国家统一的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:154
+msgid ""
+"b) any illegal conducts, such as money laundering, illegal fund raising etc.;"
+msgstr "（2）从事任何违法犯罪行为，包括但不限于洗钱、非法集资等；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:155
+msgid ""
+"c) accessing We services, collecting or processing the content provided by "
+"We, intervening or attempting to intervene any Users, by the employment of "
+"any automated programs, software, network engines, web crawlers, web "
+"analytics tools, data mining tools or similar tools etc.;"
+msgstr "（3）通过使用任何自动化程序、软件、引擎、网络爬虫、网页分析工具、数据挖掘工具或类似工具，接入我们服务、收集或处理我们所提供的内容，干预或试图干预任何用户或任何其他方式接入我们服务的行为；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:156
+msgid ""
+"d) providing gambling information or inducing others to engage in gambling;"
+msgstr "（4）提供赌博资讯或以任何方式引诱他人参与赌博；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:157
+msgid "e) invading into others’ NewPay wallets to steal Tokens;"
+msgstr "（5）侵入他人NewPay钱包盗取数字代币；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:158
+msgid ""
+"f) engaging in any inaccurate or false transactions with the counterparty;"
+msgstr "（6）进行与交易对方宣称的交易内容不符的交易，或不真实的交易；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:159
+msgid ""
+"g) committing any activities which harms or attempts to harm NewPay service "
+"system and data;"
+msgstr "（7）从事任何侵害或可能侵害NewPay服务系统、数据之行为；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:160
+msgid "h) other activities which We has reason to believe are inappropriate."
+msgstr "（8）其他违法以及我们有正当理由认为不适当的行为。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:162
+msgid ""
+"You understand and accept that you shall be responsible for any violation of "
+"law (including but not limited to the regulations of the Customs and Tax) or "
+"for breach of this Agreement by you and shall indemnify We against the "
+"losses, the third-party claims or administrative penalties against We "
+"incurred by such violation or breach, including reasonable attorney’s fees."
+msgstr "您理解并同意，如因您违反有关法律（包括但不限于海关及税务方面的监管规定）或者本协议之规定，使我们遭受任何损失、受到任何第三方的索赔或任何行政管理部门的处罚，您应对我们进行赔偿，包括合理的律师费用。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:163
+msgid ""
+"You confirm that you will pay the service fees charged by We in time (if "
+"applicable). We reserves the right to suspend the services when the User "
+"fails to pay service fees (if applicable)."
+msgstr "您承诺按时缴纳我们的服务费用（如有），否则我们有权暂停或中止对您提供的服务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:165
+msgid "VIII. Privacy Policy"
+msgstr "八、 隐私条款"
+
+#: web/apps/welcome/templates/welcome/page_en.html:166
+msgid ""
+"NewPay Team. (“we”) respects and protects the privacy of Users (“you” or "
+"“Users”). We will collect and use your Personal Information, generated from "
+"your use of NewPay, in accordance with this Privacy Policy (“Policy”)."
+msgstr "NewPay Team（以下简称“我们”）尊重并保护用户（以下简称“您”或“用户”）的隐私，您使用NewPay时，我们将按照本隐私政策（以下简称“本政策”）收集、使用您的个人信息。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:167
+msgid ""
+"We recommends that you shall carefully read and understand the whole "
+"contents of this Policy before your use of the product (“NewPay”). "
+"Additionally, significant information including the Disclaimer is in bold "
+"form in this Policy. Definitions of key words in this Policy are consistent "
+"with those in the NewPay Terms of Service of We."
+msgstr "我们建议您在使用本产品之前仔细阅读并理解本政策全部内容, 针对免责声明等条款在内的重要信息将以加粗的形式体现。本政策有关关键词定义与我们《NewPay服务协议》保持一致。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:168
+msgid ""
+"We reserves the right to update this Policy online from time to time, and "
+"the new policy will immediately replace the older one once posted. In "
+"particular, if you do not accept the revised policies, please immediately "
+"stop your use of NewPay. Your continuous use of NewPay will be regarded as "
+"your acceptance of the revised policy. Furthermore, the revised policies "
+"will take into effect immediately upon being posted on NewPay."
+msgstr "本政策可由我们在线随时更新，更新后的政策一旦公布即代替原来的政策，如果您不接受修改后的条款，请立即停止使用NewPay，您继续使用NewPay将被视为接受修改后的政策。经修改的政策一经在NewPay上公布，立即自动生效。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:169
+msgid ""
+"You acknowledge and accept that this Policy and other relevant rules apply "
+"to NewPay and the DApps owned by We on NewPay."
+msgstr "您知悉本政策及其他有关规定适用于NewPay及NewPay上我们所自主拥有的DApp。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:171
+msgid "Information We Collect"
+msgstr "我们收集您的哪些信息。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:172
+msgid ""
+"We collect your information in order to provide the services you requested "
+"on NewPay, and we highly value the protection for your privacy. We strictly "
+"abide by the principle of “lawful, justifiable and necessary” during our "
+"collection of your information. You acknowledge that, if you do not provide "
+"us with necessary information, your user experiences on NewPay may be "
+"influenced."
+msgstr "请您知悉，我们收集您的以下信息是出于满足您在NewPay服务需要的目的，且我们十分重视对您隐私的保护。在我们收集您的信息时，将严格遵守“合法、正当、必要”的原则。且您知悉，若您不提供我们服务所需的相关信息，您在NewPay的服务体验可能因此而受到影响。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:173
+msgid ""
+"1）We may collect your Personal Information, including but not limited to "
+"your mobile device information, operation records, transaction records and "
+"wallet addresses."
+msgstr "我们将收集您的移动设备信息、操作记录、交易记录、钱包地址等个人信息。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:174
+msgid ""
+"2）You confirm that your Wallet Password, Private Key, Mnemonic Words, "
+"Keystore on NewPay are not stored or synchronized on We’ servers. We does "
+"not offer the service to restore your Wallet Password, Private Key, Mnemonic "
+"Words or Keystore."
+msgstr "您知悉：您在NewPay 上的钱包密码、私钥、助记词、Keystore并不存储或同步至我们服务器。我们不提供找回您的钱包密码、私钥、助记词、Keystore的服务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:175
+msgid ""
+"3）Apart from the foregoing provisions, when you are using specific function "
+"of NewPay, we may give you special notification to ask for more Personal "
+"Information. Your objection to provide more information will be regarded as "
+"your choice not to use this specific function of NewPay."
+msgstr "除上述内容之外，您知悉在您使用NewPay特定功能时，我们将在收集您的个人信息前向您作出特别提示，要求向您收集更多的个人信息。如您选择不同意，则视为您放弃使用NewPay该特定功能。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:176
+msgid ""
+"4）After you link to the third-party-developed DApps from NewPay, your "
+"Personal Information will be collected and held by the third-party-developed "
+"DApps instead of being collected or held by NewPay."
+msgstr "当您跳转到第三方DApp后，第三方DApp会向您收集个人信息。NewPay不持有第三方DApp向您收集的个人信息。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:177
+msgid ""
+"5）To the extent permitted by PRC laws and regulations, We may collect and "
+"use following Personal Information without your prior consent or "
+"authorization:"
+msgstr "在法律法规允许的范围内，我们可能会在以下情形中收集并使用您的个人信息无需征得您的授权同意："
+
+#: web/apps/welcome/templates/welcome/page_en.html:178
+msgid "a. information related to national security and national defense;"
+msgstr "（1） 与国家安全、国防安全有关的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:179
+msgid ""
+"b. information related to public security, public health, significant public "
+"interests;"
+msgstr "（2） 与公共安全、公共卫生、重大公共利益有关的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:180
+msgid ""
+"c. information related to criminal investigation, prosecution, trial and "
+"enforcement;"
+msgstr "（3） 与犯罪侦查、起诉、审判和判决执行等有关的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:181
+msgid "d. the Personal Information collected is publicized by yourself;"
+msgstr "（4） 所收集的个人信息是您自行向社会公众公开的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:182
+msgid ""
+"e. the Personal Information is collected from legally publicly disclosed "
+"information, such as legal news reports, government information disclosure "
+"and other channels;"
+msgstr "（5） 从合法公开披露的信息中收集您的个人信息，如合法的新闻报道，政府信息公开等渠道；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:183
+msgid ""
+"f. the Personal Information is necessary to maintain the security and "
+"compliance of services, such as to detect or to solve the malfunction of "
+"products and services;"
+msgstr "（6） 用于维护服务的安全和合规所必需的，例如发现、处理产品和服务的故障；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:184
+msgid "g. other circumstances prescribed by laws and regulations."
+msgstr "（7） 法律法规规定的其他情形。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:185
+msgid "6）We  translatecollect information in the following ways:"
+msgstr "我们收集信息的方式如下："
+
+#: web/apps/welcome/templates/welcome/page_en.html:186
+msgid ""
+"a. Information you give us. For example, you fill in your name, telephone "
+"number, or bank card number in “My Account” column or you provide your email "
+"address when submitting feedbacks, or you give extra information to us when "
+"you use our specific services."
+msgstr "（1） 您向我们提供信息。例如，您在“个人中心”页面中填写姓名、手机号码或银行卡号，或在反馈问题时提供邮件地址，或在使用我们的特定服务时，您额外向我们提供。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:187
+msgid ""
+"b. we collect information during your use of NewPay, including your mobile "
+"devices information and your operation records on NewPay etc."
+msgstr "（2） 我们在您使用NewPay的过程中获取信息，包括您移动设备信息以及您对NewPay的操作记录等信息；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:188
+msgid ""
+"c. we copy all or part of your transaction records on blockchain. However, "
+"Users shall refer to the blockchain system for the latest transaction "
+"records."
+msgstr "（3） 我们通过区块链系统，拷贝您全部或部分的交易记录。但交易记录以区块链系统的记载为准。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:189
+msgid "How We Use Your Information"
+msgstr "我们如何使用您的信息"
+
+#: web/apps/welcome/templates/welcome/page_en.html:190
+msgid ""
+"1）We may associate you with your wallet by the unique serial number of your "
+"mobile device."
+msgstr "我们通过您移动设备的唯一序列号，确认您与您的钱包的对应关系。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:191
+msgid ""
+"2）We may promptly push important notifications to you, such as software "
+"update, update of Terms of Service and this Policy."
+msgstr "我们将向您及时发送重要通知，如软件更新、服务协议及本政策条款的变更。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:192
+msgid ""
+"3）We deal with your feedbacks by using the Wallet Address and the mobile "
+"device information provided by you."
+msgstr "我们通过收集您公开的钱包地址和提供的移动设备信息来处理您向我们提交的反馈。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:193
+msgid ""
+"4）We may collect your Personal Information to conduct our internal audit, "
+"data analysis and research etc. to enhance our services."
+msgstr "我们收集您的个人信息进行我们内部审计、数据分析和研究等，以期不断提升我们的服务水平。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:194
+msgid ""
+"5）According to NewPay Terms of Service and other rules of We, We will "
+"manage and handle the use behaviors of Users through Users’ information."
+msgstr "依照《NewPay服务协议》及我们其他有关规定，我们将利用用户信息对用户的使用行为进行管理及处理。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:195
+msgid ""
+"6）We may use your information in accordance with laws, regulations and to "
+"cooperate with regulatory authorities."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/page_en.html:196
+msgid "How You Control Your Own Information"
+msgstr "法律法规规定及与监管机构配合的要求。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:197
+msgid ""
+"You are entitled to control your Personal Information provided to NewPay:"
+msgstr "您如何控制自己的信息"
+
+#: web/apps/welcome/templates/welcome/page_en.html:198
+msgid ""
+"1）You may import your other wallets into NewPay through synchronization of "
+"wallets and you may export your wallets from NewPay to other Tokens "
+"management wallets. NewPay will display the information of imported wallets "
+"to you."
+msgstr "您在NewPay中拥有以下对您个人信息自主控制权："
+
+#: web/apps/welcome/templates/welcome/page_en.html:199
+msgid ""
+"2）You may add or delete Tokens, transfer and collect Tokens using the "
+"“Assets” column."
+msgstr "您可以通过同步钱包的方式，将您的其他钱包导入NewPay中，或者将您在NewPay的钱包导入到其他数字代币管理钱包中。NewPay将向您显示导入钱包的信息。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:200
+msgid ""
+"3）You understand that you may handle the following operations in the "
+"“Profile” column on NewPay:"
+msgstr "您知悉您可以通过“资产”版块内容修改您的数字代币种类、进行转账及收款等活动。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:201
+msgid ""
+"In the “Feedback” column, you may submit any questions or suggestions for "
+"NewPay at any time. We are glad to communicate with you to improve our "
+"services."
+msgstr "在“提交反馈”中，您可以随时向我们提出您对NewPay问题及改进建议，我们将非常乐意与您沟通并积极改进我们的服务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:202
+msgid ""
+"When we collect information from you for a specific purpose, we will ask for "
+"your consent in advance to which you are entitled to refuse. However, you "
+"understand that when you refuse to give such consent, you also give up the "
+"choice to use specific services provided by NewPay."
+msgstr "您知悉当我们出于特定目的向您收集信息时，我们会提前给予您通知，您有权选择拒绝。但同时您知悉，当您选择拒绝提供有关信息时，即表示您放弃使用NewPay的有关服务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:203
+msgid ""
+"You acknowledge that since blockchain is an open source system, your "
+"transaction records are automatically public and transparent in the whole "
+"blockchain."
+msgstr "您知悉，您及我们对于您交易记录是否公开并没有控制权，因为基于区块链交易系统的开源属性，您的交易记录在整个区块链系统中公开透明。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:204
+msgid ""
+"You understand that after you link to the third-party-developed DApps from "
+"NewPay, the NewPay Terms of Service and NewPay Privacy Policy will no longer "
+"apply. You are encouraged to carefully review its privacy policies and "
+"related terms of service before you start to use the third-party-developed "
+"DApps."
+msgstr "您知悉当您使用NewPay的功能跳转至第三方DApp之后，我们的《NewPay服务协议》、《NewPay隐私政策》将不再适用，针对您在第三方DApp上对您个人信息的控制权问题，我们建议您在使用第三方DApp之前详细阅读并了解其隐私规则和有关用户服务协议等内容。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:205
+msgid ""
+"You are entitled to ask us to update, revise, and delete your relevant "
+"information."
+msgstr "您有权要求我们更新、更改、删除您的有关信息。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:206
+msgid ""
+"We reserve the right to collect your information without your prior "
+"authorization or consent according to the Article 6 of Section 1 of this "
+"Policy."
+msgstr "您知悉我们可以根据本政策第一条第6款的要求收集您的信息而无需获得您的授权同意。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:207
+msgid "Information We may Share or Transfer"
+msgstr "我们可能分享或传输您的信息"
+
+#: web/apps/welcome/templates/welcome/page_en.html:208
+msgid ""
+"1）The Personal Information collected and generated by We during its "
+"operation within the territory of PRC shall be stored within the territory "
+"of PRC. If we need to transfer your Personal Information abroad, we shall "
+"obtain your prior consent and conduct the cross-border data transfer in "
+"accordance with PRC laws, regulations and policies and undertake the "
+"confidentiality obligations to protect your Personal Information."
+msgstr "我们在中华人民共和国境内收集和产生的用户个人信息将存储在中华人民共和国境内的服务器上。若我们确需向境外传输您的个人信息，将在事前获得您的授权，且按照有关法律法规政策的要求进行跨境数据传输，并对您的个人信息履行保密义务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:209
+msgid ""
+"2）We will not share with or transfer your Personal Information to any third "
+"party without your prior consent, except for the following circumstances:"
+msgstr "未经您事先同意，我们不会将您的个人信息向任何第三方共享或转让，但以下情况除外："
+
+#: web/apps/welcome/templates/welcome/page_en.html:210
+msgid "a. you have expressly provided your prior consent or authorization;"
+msgstr "（1） 事先获得您明确的同意或授权；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:211
+msgid "b. the collected Personal Information is publicized by yourself;"
+msgstr "（2） 所收集的个人信息是您自行向社会公众公开的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:212
+msgid ""
+"c. the Personal Information is collected from public information which was "
+"legally disclosed, such as news (lawfully reported), government information "
+"disclosure and other channels;"
+msgstr "（3） 所收集的个人信息系从合法公开披露的信息中收集，如合法的新闻报道，政府信息公开等渠道；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:213
+msgid ""
+"d. we may share your Personal Information with our affiliates only when "
+"necessary and to the extent permitted by this Policy;"
+msgstr "（4） 与我们的关联方共享，我们只会共享必要的用户信息，且受本隐私条款中所声明的目的的约束；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:214
+msgid ""
+"e. in order to abide by applicable laws, regulations, legal procedures, and "
+"administrative or judiciary authorities;"
+msgstr "（5） 根据适用的法律法规、法律程序的要求、行政机关或司法机关的要求进行提供；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:215
+msgid ""
+"f. in the case of mergers and acquisitions, if transfer of Personal "
+"Information is involved, We may require the receivers of Personal "
+"Information to be continuously bound by this Policy."
+msgstr "（6） 在涉及合并、收购时，如涉及到个人信息转让，我们将要求个人信息接收方继续接受本政策的约束。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:216
+msgid "How We Protect Your Information"
+msgstr "我们如何保护您的信息"
+
+#: web/apps/welcome/templates/welcome/page_en.html:217
+msgid ""
+"1）If We terminates operation, We will stop the collection of your Personal "
+"Information in time, post the announcement on NewPay and delete or anonymize "
+"your Personal Information held by us within a reasonable period."
+msgstr "如我们停止运营，我们将及时停止继续收集您个人信息的活动，将停止运营的通知公告在NewPay上，并对所持有的您的个人信息在合理期限内进行删除或匿名化处理。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:218
+msgid ""
+"2）To protect your Personal Information, We may adopt data security "
+"techniques, improve internal compliance levels, provide security training "
+"for our staff, and set security authority for access to relevant data to "
+"protect your Personal Information."
+msgstr "为了保护您的个人信息，我们将采取数据安全技术措施，提升内部合规水平，增加内部员工信息安全培训，并对相关数据设置安全访问权限等方式安全保护您的隐私信息。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:219
+msgid ""
+"3）We will send you messages about information security in the "
+"“Notifications” column and update articles concerning the use of wallets and "
+"information protection in the “Support” column on NewPay for your reference."
+msgstr "我们将在NewPay“消息中心”中向您发送有关信息安全的消息，并不时在NewPay“帮助中心”版块更新钱包使用及信息保护的资料，供您参考。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:220
+msgid "Protection for the Minors"
+msgstr "对未成年人的保护"
+
+#: web/apps/welcome/templates/welcome/page_en.html:221
+msgid ""
+"The following special provisions apply to minors who are under the age of 18 "
+"years old:"
+msgstr "我们对保护未满18周岁的未成年人做出如下特别约定："
+
+#: web/apps/welcome/templates/welcome/page_en.html:222
+msgid ""
+"1）The minors shall not use NewPay without the guidance from their parents "
+"or guardians."
+msgstr "未成年人应当在父母或监护人指导下使用我们相关服务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:223
+msgid ""
+"2）The parents and guardians of the minors shall provide guidance to the "
+"minors on using NewPay after they read this Policy, NewPay Terms of Service "
+"and other relevant rules."
+msgstr "我们建议未成年人的父母和监护人应当在阅读本政策、《NewPay服务协议》及我们的其他有关规则的前提下，指导未成年人使用NewPay。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:224
+msgid ""
+"3）NewPay will ensure the confidentiality and security of the minors’ "
+"Personal Information in accordance with PRC laws and regulations."
+msgstr "NewPay将根据国家相关法律法规的规定保护未成年人的个人信息的保密性及安全性。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:225
+msgid "Disclaimer"
+msgstr "免责声明"
+
+#: web/apps/welcome/templates/welcome/page_en.html:226
+msgid ""
+"1）After you link to the third-party-developed DApps from NewPay, the "
+"privacy policies of the third-party-developed DApps will apply. The "
+"collection and use of your Personal Information by the third-party-developed "
+"DApps will be controlled neither by We, nor by this Policy. We is unable to "
+"guarantee that the third-party-developed DApps will definitely take Personal "
+"Information protection measures as required by We."
+msgstr "请您注意，您通过NewPay接入第三方DApp后，将适用该第三方DApp发布的隐私政策。该第三方DApp对您个人信息的收集和使用不为我们所控制，也不受本政策的约束。我们无法保证第三方DApp一定会按照我们的要求采取个人信息保护措施。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:227
+msgid ""
+"2）You shall carefully select and use the third-party-developed DApps and "
+"protect your Personal Information. We shall not be held liable for the "
+"privacy protection obligation of any third-party-developed DApps."
+msgstr "您应审慎选择和使用第三方DApp，并妥善保护好您的个人信息，我们对其他第三方DApp的隐私保护不负任何责任。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:228
+msgid ""
+"3）you acknowledge and accept that, to the maximum extent permitted by "
+"applicable law, we will adopt measures as reasonable as possible to protect "
+"your personal information under current techniques on an “as is”, “as "
+"available” and “with all faults” basis, to avoid the disclosure, tampering "
+"or damage of information. since we transfers data wirelessly, we makes no "
+"guarantee on the privacy and security of wireless internet data transferring."
+msgstr "我们将在现有技术水平条件下尽可能采取合理的安全措施来保护您的个人信息，以避免信息的泄露、篡改或者毁损。我们系利用无线方式传输数据，因此，我们无法确保通过无线网络传输数据的隐私性和安全性。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:229
+msgid "Miscellaneous"
+msgstr "其他"
+
+#: web/apps/welcome/templates/welcome/page_en.html:230
+msgid ""
+"1）If you are a User outside of PRC, you shall fully understand and conform "
+"to the laws, regulations and rules in your jurisdictions which are relevant "
+"to use of We."
+msgstr "如您是中华人民共和国以外的用户，您需全面了解并遵守您所在司法辖区与使用我们服务所有相关法律、法规及规则。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:231
+msgid ""
+"2）During your use of We services, if you come across any problems related "
+"to your Personal Information use, you may contact us through the submission "
+"of your feedbacks on NewPay."
+msgstr "您在使用我们服务过程中，如遇到任何有关个人信息使用的问题，您可以通过在NewPay提交反馈等方式联系我们。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:232
+msgid ""
+"3）You may access this Policy and other service rules of We on NewPay. We "
+"encourage you to check the Terms of Service and Privacy Policy of We each "
+"time you log onto NewPay."
+msgstr "您可以在NewPay中查看本政策及我们其他服务规则。我们鼓励您在每次访问NewPay时都查阅我们的服务协议及隐私政策。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:233
+msgid ""
+"4）This English version and other translated version of this Policy are "
+"provided for the convenience of Users, and are not intended to revise the "
+"original Chinese version of this Policy. If there is any discrepancy between "
+"the Chinese version and non-Chinese version of this Policy, the Chinese "
+"version shall prevail."
+msgstr "本政策的任何译文版本仅为方便用户而提供，无意对本政策的条款进行修改。如果本政策的中文版本与非中文版本之间存在冲突，应以中文版本为准。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:236
+msgid "IX. Disclaimer and Limitation of Liability"
+msgstr "九、免责及责任限制"
+
+#: web/apps/welcome/templates/welcome/page_en.html:237
+msgid "We only undertakes obligations expressly set forth in this Agreement."
+msgstr "我们仅对本协议中所列明的义务承担责任。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:238
+msgid ""
+"you acknowledge and accept that, to the maximum extent permitted by "
+"applicable prc law, newpay is provided on an “as is”, “as available” and "
+"“with all faults” basis. We shall not be held liable for malfunction of "
+"NewPay which results from the following reasons:"
+msgstr "您理解和同意，在法律所允许的范围内，我们只能按照现有的技术水平和条件提供服务。因下列原因导致NewPay无法正常提供服务，我们不承担责任："
+
+#: web/apps/welcome/templates/welcome/page_en.html:239
+msgid "a) system maintenance or upgrading of NewPay;"
+msgstr "（1）NewPay系统停机维护或升级；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:240
+msgid ""
+"b) force majeure, such as typhoon, earthquake, flood, lightning or terrorist "
+"attack etc.;"
+msgstr "（2）因台风、地震、洪水、雷电或恐怖袭击等不可抗力原因；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:241
+msgid ""
+"c) malfunction of your mobile device hardware and software, and failure of "
+"telecommunication lines and power supply lines;"
+msgstr "（3）您的移动设备软硬件和通信线路、供电线路出现故障的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:242
+msgid "d) your improper, unauthorized or unrecognized use of We services;"
+msgstr "（4）您操作不当或未通过我们授权或认可的方式使用我们服务的；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:243
+msgid ""
+"e) computer viruses, Trojan Horse, malicious program attacks, network "
+"congestion, system instability, system or equipment failure, "
+"telecommunication failure, power failure, banking issues, government acts "
+"etc.;"
+msgstr "（5）因病毒、木马、恶意程序攻击、网络拥堵、系统不稳定、系统或设备故障、通讯故障、电力故障、银行等原因或政府行为等原因；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:244
+msgid "f) any other reasons not imputed to We."
+msgstr "（6）非因我们的原因而引起的任何其它原因。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:245
+msgid "We shall not be held liable under the following circumstances:"
+msgstr "我们对以下情形不承担责任："
+
+#: web/apps/welcome/templates/welcome/page_en.html:246
+msgid ""
+"a) Users lose their mobile devices, delete NewPay applications and wallets "
+"without back-up, forget Wallet Passwords, Private Keys, Mnemonic Words, "
+"Keystores without back-up, which result in the loss of their Tokens;"
+msgstr "（1）因用户遗失移动设备、删除且未备份NewPay、删除且未备份钱包、钱包被盗或遗忘钱包密码、私钥、助记词、Keystore而导致的数字代币丢失；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:247
+msgid ""
+"b) Users disclose their Wallet Passwords, Private Keys, Mnemonic Words, "
+"Keystores, or lend or transfer their NewPay wallets to others, or authorize "
+"others to use their mobile devices or NewPay wallets, or download NewPay "
+"applications through unofficial channels, or use NewPay applications by "
+"other insecure means, which result in the loss of their Tokens;"
+msgstr "（2）因用户自行泄露钱包密码、私钥、助记词、Keystore，或借用、转让或授权他人使用自己的移动设备或NewPay钱包，或未通过我们官方渠道下载NewPay应用程序或其他不安全的方式使用NewPay应用程序导致的数字代币丢失；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:248
+msgid ""
+"c) Users mishandle NewPay (including but not limited to wrong address, "
+"failure of the node servers selected by you), which result in the loss of "
+"Tokens;"
+msgstr "（3）因用户误操作（包括但不限于您输错转账地址、您自身选择转账节点服务器的问题）导致的数字代币丢失；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:249
+msgid ""
+"d) Users are unfamiliar with the knowledge of blockchain and their "
+"mishandling of NewPay results in loss of their Tokens;"
+msgstr "（4）因用户不理解区块链技术的性质而进行误操作导致的数字代币丢失；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:250
+msgid ""
+"e) NewPay is unable to copy accurate transaction records due to system delay "
+"or blockchain instability etc.;"
+msgstr "（5）因时间滞后、区块链系统不稳定等原因导致我们拷贝用户在区块链上的交易记录发生偏差；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:251
+msgid ""
+"f) Users shall undertake the risks and consequences of their transactions on "
+"the third-party-developed DApps."
+msgstr "（6）用户在第三方DApp上操作产生的风险和后果。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:252
+msgid ""
+"You understand that NewPay is only an management tool for Tokens which is "
+"incapable to control the quality, security and legitimacy of products and "
+"services provided by the third-party-developed DApps, or the authenticity "
+"and accuracy of their information and their capabilities to fulfill the "
+"obligations under the agreements with you. You, at your sole discretion, "
+"decide whether to transact on the third-party-developed DApps. It is the "
+"third-party-developed DApps, instead of NewPay, that transact with you. We "
+"kindly remind you to carefully review the authenticity, legitimacy, and "
+"effectiveness of related information provided by the third-party-developed "
+"DApps before you decide to use the DApps. In addition, you shall also assume "
+"all the risks arising from the transactions between you and any third party "
+"exchanges."
+msgstr "您理解NewPay仅作为您数字代币管理的工具。我们不能控制第三方DApp提供的产品及服务的质量、安全或合法性，信息的真实性或准确性，以及相对方履行其在与您签订的协议项下的各项义务的能力。所有您在第三方DApp进行的交易行为系您的个人行为，有约束力的合同关系在您和您的相对方之间建立，与NewPay无关。我们提醒您应该通过自己的谨慎判断确定登录DApp及相关信息的真实性、合法性和有效性。您与任何第三方交易所产生的风险亦应由您自行承担。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:253
+msgid ""
+"You acknowledge that NewPay may provide services to you and your "
+"counterparties simultaneously and you agree to waive any actual or potential "
+"conflicts of interests and will not claim against We on such base or burden "
+"We with more responsibilities or duty of care."
+msgstr "我们可能同时为您及您的交易对手方提供服务，您同意对我们可能存在的该等行为予以明确豁免任何实际或潜在的利益冲突，并不得以此来主张我们在提供服务时存在法律上的瑕疵，也不因此而加重我们的责任或注意义务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:254
+msgid "We does not warrant that:"
+msgstr "我们不提供以下形式的保证："
+
+#: web/apps/welcome/templates/welcome/page_en.html:255
+msgid "a) services provided by We would satisfy all your needs;"
+msgstr "（1）我们服务将符合您的全部需求；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:256
+msgid ""
+"b) all techniques, products, services, information or other materials from "
+"We would meet your expectations;"
+msgstr "（2）您经由我们服务取得的任何技术、产品、服务、资讯将符合您的期望；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:257
+msgid ""
+"c) all the transaction information in digital tokens markets captured from "
+"the third party exchanges are prompt, accurate, complete, and reliable;"
+msgstr "（3）我们从第三方交易所抓取的数字代币市场交易行情等信息的及时性、准确性、完整性、可靠性做出保证；"
+
+#: web/apps/welcome/templates/welcome/page_en.html:258
+msgid ""
+"d) your counterparties on NewPay will perform their obligations in the "
+"transaction agreements with you timely."
+msgstr "（4）您在NewPay上的交易各方会及时履行其在与您达成的交易协议中各项义务。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:259
+msgid ""
+"You are aware that NewPay is only a tool for Users to manage their Tokens "
+"and to display transaction information. We does not provide legal, tax or "
+"investment advice. You shall seek advice from professional legal, tax, and "
+"investment advisors. In addition, We shall not be liable for any investment "
+"loss, data loss etc. during your use of our service."
+msgstr "您理解NewPay仅作为用户管理数字代币、显示交易信息的工具，我们不提供法律、税务或投资建议等服务。您应当自行向法律、税务、投资方面的专业人士寻求建议，且您在使用我们服务过程中所遭受的投资损失、数据损失等，我们概不负责。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:260
+msgid ""
+"You understand that we may change our entry standards, limit the range and "
+"ways to provide services for specific Users etc. at any time in accordance "
+"with PRC laws and regulations."
+msgstr "您理解根据有关中国政策法规的要求，我们可能不时更改我们的用户准入标准，限定向某一特定群体提供服务的范围和方式等。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:262
+msgid "X. Entire Agreement"
+msgstr "十、 完整协议"
+
+#: web/apps/welcome/templates/welcome/page_en.html:263
+msgid ""
+"This Agreement incorporates NewPay Terms of Service, NewPay Privacy Policy, "
+"and other rules (including contents in the “Support” column) posted by We "
+"from time to time."
+msgstr "本协议由《NewPay服务协议》、《NewPay隐私政策》及我们不时公布的各项规则（包括“帮助中心”的内容）组成。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:264
+msgid ""
+"If any provision of this Agreement is found by a court with competent "
+"jurisdiction to be invalid, the other provisions of this Agreement remain in "
+"full force and effect."
+msgstr "本协议部分内容被有管辖权的法院认定为违反或无效的，不因此影响其他内容的效力。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:265
+msgid ""
+"This English version and other translated version of this Agreement (if any) "
+"are provided for the convenience of Users, and are not intended to revise "
+"the Chinese version of this Agreement. If there is any discrepancy between "
+"the Chinese version and non-Chinese version of this Agreement, the Chinese "
+"version shall prevail."
+msgstr "本协议的任何译文版本仅为方便用户而提供，无意对本协议的条款进行修改。如果本协议的中文版本与非中文版本之间存在冲突，应以中文版本为准。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:267
+msgid "XI. Intellectual Property Rights Protection"
+msgstr "十一、 知识产权保护"
+
+#: web/apps/welcome/templates/welcome/page_en.html:268
+msgid ""
+"NewPay is an application developed and owned by We. The intellectual "
+"property rights of any contents displayed in NewPay (including this "
+"Agreement, announcements, articles, videos, audios, images, archives, "
+"information, materials, trademarks or logos) are owned by We or the third "
+"party licensors. Users can only use the NewPay applications and its contents "
+"for the purpose of holding and managing their Tokens. In particular, without "
+"prior written consent from NewPay or the third party licensors, no one shall "
+"use, modify, decompile, reproduce, publicly disseminate, alter, distribute, "
+"issue or publicly publish the abovementioned applications and contents."
+msgstr "NewPay系我们开发并拥有知识产权的应用程序。 NewPay中显示的任何内容（包括本协议、公告、文章、视频、音频、图片、档案、资讯、资料、商标或标识）的知识产权归我们或第三方权利人所有。用户仅可为持有和管理数字代币之目的使用NewPay应用程序及其中的内容。未经我们或第三方权利人的事先书面同意，任何人不得擅自使用、修改、反向编译、复制、公开传播、改变、散布、发行或公开发表上述应用程序及内容。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:270
+msgid "XII. Governing Law and Dispute Resolution"
+msgstr "十二、 法律适用与争议解决"
+
+#: web/apps/welcome/templates/welcome/page_en.html:271
+msgid ""
+"The validity, interpretation, alternation, enforcement, dispute resolution "
+"of this Agreement and its revised versions shall be governed and construed "
+"in accordance with the laws of PRC. Where there is no applicable law, this "
+"Agreement shall be interpreted by applicable commercial and/or industrial "
+"practices."
+msgstr "本协议及其修订版之效力、解释、变更、执行与争议解决均适用中华人民共和国法律，如无相关法律规定，则应当适用国际商业惯例和（或）行业惯例。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:272
+msgid ""
+"If any dispute or claim in connection with this Agreement arises between you "
+"and We, the parties shall first attempt to resolve the dispute or claim "
+"through amicable negotiations in good faith. If the parties cannot reach an "
+"agreement, either party may sue the other party at the competent court where "
+"We is located."
+msgstr "若您和我们之间发生任何纠纷或争议，首先应友好协商解决，协商不成的，任何一方可提交我们所在地有管辖权的人民法院管辖。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:274
+msgid "XIII. Miscellaneous"
+msgstr "十三、 其他"
+
+#: web/apps/welcome/templates/welcome/page_en.html:275
+msgid ""
+"If you live outside of PRC, you shall fully understand and conform to the "
+"laws, regulations and rules in your jurisdictions which are relevant to use "
+"of We services."
+msgstr "如您是中华人民共和国以外用户，您需全面了解并遵守您所在司法辖区与使用我们服务所有相关法律、法规及规则。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:276
+msgid ""
+"During your use of We services, if you come across any problems, you can "
+"contact us through the submission of your feedbacks on NewPay."
+msgstr "您在使用我们服务过程中，如遇到任何问题，您可以通过在NewPay提交反馈等方式联系我们。"
+
+#: web/apps/welcome/templates/welcome/page_en.html:277
+msgid ""
+"This Agreement is accessible for all Users on NewPay. We encourage you to "
+"read this Agreement each time you log onto NewPay."
+msgstr "您可以在NewPay中查看本协议。我们鼓励您在每次访问NewPay时都查阅我们的服务协议。"
 
 #: web/apps/welcome/templates/welcome/partner.html:6
 #: web/apps/welcome/templates/welcome/partner.html:13
@@ -4180,7 +5668,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: web/apps/zinnia/admin/entry.py:90 web/apps/zinnia/models/category.py:30
-#: web/apps/zinnia/models_bases/entry.py:78
+#: web/apps/zinnia/models_bases/entry.py:80
 msgid "title"
 msgstr ""
 
@@ -4317,7 +5805,7 @@ msgid "A category cannot be parent of itself."
 msgstr ""
 
 #: web/apps/zinnia/admin/forms.py:62 web/apps/zinnia/models/category.py:98
-#: web/apps/zinnia/models_bases/entry.py:499
+#: web/apps/zinnia/models_bases/entry.py:501
 msgid "categories"
 msgstr ""
 
@@ -4330,14 +5818,14 @@ msgid "en"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:25
-#: web/apps/zinnia/models_bases/entry.py:67
+#: web/apps/zinnia/models_bases/entry.py:69
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:22
 msgid "Blog"
 msgstr ""
 
 #: web/apps/zinnia/models/category.py:33
-#: web/apps/zinnia/models_bases/entry.py:81
+#: web/apps/zinnia/models_bases/entry.py:83
 msgid "slug"
 msgstr ""
 
@@ -4358,7 +5846,7 @@ msgid "language"
 msgstr "语言"
 
 #: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
-#: web/apps/zinnia/models_bases/entry.py:124
+#: web/apps/zinnia/models_bases/entry.py:126
 msgid "Entry type"
 msgstr "文章类型"
 
@@ -4378,173 +5866,173 @@ msgstr ""
 msgid "published"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:83
-#: web/apps/zinnia/models_bases/entry.py:108
+#: web/apps/zinnia/models_bases/entry.py:85
+#: web/apps/zinnia/models_bases/entry.py:110
 msgid "Used to build the entry's URL."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:88
 msgid "status"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:90
+#: web/apps/zinnia/models_bases/entry.py:92
 msgid "start publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:92
+#: web/apps/zinnia/models_bases/entry.py:94
 msgid "Start date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:95
+#: web/apps/zinnia/models_bases/entry.py:97
 msgid "end publication"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:97
+#: web/apps/zinnia/models_bases/entry.py:99
 msgid "End date of publication."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:102
+#: web/apps/zinnia/models_bases/entry.py:104
 msgid "sites"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:103
+#: web/apps/zinnia/models_bases/entry.py:105
 msgid "Sites where the entry will be published."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:106
+#: web/apps/zinnia/models_bases/entry.py:108
 msgid "creation date"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:111
+#: web/apps/zinnia/models_bases/entry.py:113
 msgid "last update"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:121
+#: web/apps/zinnia/models_bases/entry.py:123
 msgid "entry type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:128
+#: web/apps/zinnia/models_bases/entry.py:130
 msgid "entry_sub_type"
 msgstr "文章类型"
 
-#: web/apps/zinnia/models_bases/entry.py:135
+#: web/apps/zinnia/models_bases/entry.py:137
 msgid "show_in_home"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:250
+#: web/apps/zinnia/models_bases/entry.py:252
 msgid "entry"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:251
+#: web/apps/zinnia/models_bases/entry.py:253
 msgid "entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:265
+#: web/apps/zinnia/models_bases/entry.py:267
 msgid "content"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:307
+#: web/apps/zinnia/models_bases/entry.py:309
 msgid "comments enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:308
+#: web/apps/zinnia/models_bases/entry.py:310
 msgid "Allows comments if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:310
+#: web/apps/zinnia/models_bases/entry.py:312
 msgid "pingbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:311
+#: web/apps/zinnia/models_bases/entry.py:313
 msgid "Allows pingbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:313
+#: web/apps/zinnia/models_bases/entry.py:315
 msgid "trackbacks enabled"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:314
+#: web/apps/zinnia/models_bases/entry.py:316
 msgid "Allows trackbacks if checked."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:317
+#: web/apps/zinnia/models_bases/entry.py:319
 msgid "comment count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:319
+#: web/apps/zinnia/models_bases/entry.py:321
 msgid "pingback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:321
+#: web/apps/zinnia/models_bases/entry.py:323
 msgid "trackback count"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:405
+#: web/apps/zinnia/models_bases/entry.py:407
 msgid "related entries"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:423
+#: web/apps/zinnia/models_bases/entry.py:425
 msgid "excerpt"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:424
+#: web/apps/zinnia/models_bases/entry.py:426
 msgid "Used for search and SEO."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:457
+#: web/apps/zinnia/models_bases/entry.py:459
 msgid "image"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:459
+#: web/apps/zinnia/models_bases/entry.py:461
 msgid "Used for illustration."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:470
+#: web/apps/zinnia/models_bases/entry.py:472
 msgid "featured"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:485
+#: web/apps/zinnia/models_bases/entry.py:487
 msgid "authors"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:509
+#: web/apps/zinnia/models_bases/entry.py:511
 msgid "tags"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:528
+#: web/apps/zinnia/models_bases/entry.py:530
 msgid "login required"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:529
+#: web/apps/zinnia/models_bases/entry.py:531
 msgid "Only authenticated users can view the entry."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:541
+#: web/apps/zinnia/models_bases/entry.py:543
 msgid "password"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:542
+#: web/apps/zinnia/models_bases/entry.py:544
 msgid "Protects the entry with a password."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:554
+#: web/apps/zinnia/models_bases/entry.py:556
 msgid "content template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:556
-#: web/apps/zinnia/models_bases/entry.py:572
+#: web/apps/zinnia/models_bases/entry.py:558
+#: web/apps/zinnia/models_bases/entry.py:574
 msgid "Default template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:558
+#: web/apps/zinnia/models_bases/entry.py:560
 msgid "Template used to display the entry's content."
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:570
+#: web/apps/zinnia/models_bases/entry.py:572
 msgid "detail template"
 msgstr ""
 
-#: web/apps/zinnia/models_bases/entry.py:574
+#: web/apps/zinnia/models_bases/entry.py:576
 msgid "Template used to display the entry's detail page."
 msgstr ""
 
