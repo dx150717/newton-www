@@ -136,6 +136,9 @@ def show_wechat_view(request):
 def show_foundation_view(request):
     return render(request, 'welcome/foundation.html', locals())
 
+def show_term_of_service_view(request):
+    return render(request, 'welcome/term-of-service.html', locals())
+
 def show_404_page(request):
     return render(request, '404.html')
 

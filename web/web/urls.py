@@ -46,6 +46,7 @@ urlpatterns = patterns('',
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),
+                       url(r'^term-of-service/', 'welcome.views.show_term_of_service_view'),
 )
 
 handler404 = 'welcome.views.show_404_page'
