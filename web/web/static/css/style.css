@@ -1158,10 +1158,10 @@ canvas {display: block; vertical-align: top;}
 }
 .user-avator{width: 30px; border-radius: 15px; margin-top: -5px;}
 
-#countdown{background: url("../images/tokensale/tokensale_background.png") no-repeat; height: 720px; background-size: 100% 720px;}
-#countdown .token-title{padding-top: 136px;}
-#countdown .token-title h1{font-size: 60px; color: #fff;}
-#countdown .token-subtitle h3{font-size: 24px; color: #fff;}
+#countdown{background: url("../images/tokensale/tokensale_background.png") no-repeat; height: 520px; background-size: 100% 720px;}
+#countdown .countdown-title{padding-top: 70px;}
+#countdown .countdown-title h1{font-size: 60px; color: #fff;}
+#countdown .countdown-subtitle h3{font-size: 24px; color: #fff;}
 #countdown #tiles{display: flex; justify-content: center;padding-top: 18px;}
 #countdown #tiles #time{background: url("../images/tokensale/countdown_background.png")no-repeat; height: 161px; width: 129px;margin-left: 12px;margin-right: 12px;margin-bottom: 12px;}
 #countdown #tiles #time p{line-height: 161px; color: #f6f8fb; font-size: 60px;}
@@ -1170,13 +1170,13 @@ canvas {display: block; vertical-align: top;}
 #countdown #labels #time-label p{font-size: 24px; color: #7590c1;}
 #countdown #button-group{display: flex; justify-content: center;}
 #countdown #button-group{margin-top: 24px;}
-#countdown #button-group .buy-token-button-disable{display: inline-block; background: url("../images/tokensale/countdown_button_disable.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-right: 14px;}
-#countdown #button-group .buy-token-button-enable{display: inline-block; background: url("../images/tokensale/countdown_button_enable.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-right: 14px;}
+#countdown #button-group .join-test-button-disable{display: inline-block; background: url("../images/tokensale/countdown_button_disable.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-right: 14px;}
+#countdown #button-group .join-test-button-enable{display: inline-block; width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-right: 14px; background-color: black;border-radius: 20px;}
 #countdown #button-group .white-page{display: inline-block; background: url("../images/tokensale/whilepage_button.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-left: 14px;}
 @media (max-width:768px){
-    #countdown .token-title{padding-top: 100px;}
-    #countdown .token-title h1{font-size: 50px; color: #fff;}
-    #countdown .token-subtitle h3{font-size: 20px; color: #fff;}
+    #countdown .countdown-title{padding-top: 30px;}
+    #countdown .countdown-title h1{font-size: 50px; color: #fff;}
+    #countdown .countdown-subtitle h3{font-size: 20px; color: #fff;}
     #countdown #tiles{display: flex; justify-content: center;padding-top: 18px;}
     #countdown #tiles #time{background: url("../images/tokensale/countdown_background.png")no-repeat; height: 100px; width: 80px;border-radius: 20px; margin-left: 12px;margin-right: 12px;margin-bottom: 12px;}
     #countdown #tiles #time p{line-height: 100px; color: #f6f8fb; font-size: 40px;}

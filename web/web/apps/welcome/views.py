@@ -6,6 +6,7 @@ __doc__ = """  """
 import json
 import random
 import time
+import datetime
 
 from django.views import generic
 from django.shortcuts import render
@@ -62,7 +63,10 @@ def show_home_view(request):
             entry.urls = entry.get_absolute_url()
     # generate the captcha
     captcha_form = subscription_forms.SubscribeForm()
-
+    # countdown time
+    now = datetime.datetime.now()
+    delta_time = settings.FUND_START_DATE - now
+    delta_time = delta_time.total_seconds()
     return render(request, 'welcome/index.html', locals())
 
 def show_tech_view(request):

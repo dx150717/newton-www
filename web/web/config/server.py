@@ -166,3 +166,6 @@ CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/%s' % REDIS_DB_GLOBAL_WORKER
 CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
 CELERYD_HIJACK_ROOT_LOGGER = False
 CELERY_IMPORTS = ('tasks.task_email', 'tasks.task_blockchain')
+
+# countdown time
+FUND_START_DATE = datetime.datetime(2018, 9, 1, 0, 0)

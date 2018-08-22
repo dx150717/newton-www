@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block content %}
+
 <section id="intro" class="bg-gray">
     <div class="container">
       <div class="row relative">
@@ -19,11 +20,13 @@
         </div>
       </div>
     </div>
+</section>
 
-  </section>
 
+{% include "welcome/countdown.html" %}
+{% comment %}
 {% include "welcome/include-notice-token-exchange.html" %}
-
+{% endcomment %}
 {% include "welcome/include-feature.html" %}
 
 {% include "welcome/include-protocol.html" %}
