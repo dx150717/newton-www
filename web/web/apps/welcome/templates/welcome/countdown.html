@@ -1,15 +1,28 @@
 {% load i18n %}
 {% load utils %}
-<section id="countdown" class="section-list">
+
+{% if start_day %}
+    <section id="start_test" class="section-list">
+        <div class="container text-center">
+            <div class="countdown-title">
+                <h1>{% trans "TestNet is activated" %}</h1>
+            </div>
+            <div class="more" style="margin-top: 4%">
+                    <a href="https://developer.newtonproject.org">{% trans "Go to TestNet" %}</a>
+            </div>
+        </div>
+    </section>
+{% else %}
+    <section id="countdown" class="section-list">
     <div class="container text-center">
         <div class="countdown-title">
-            <h1>{% trans "Newton TestNet release countdown" %}</h1>
+            <h1>{% trans "Countdown of the TestNet launch" %}</h1>
         </div>
         <div class="countdown-subtitle">
             <h3></h3>
         </div>
         <script>
-        var delta_time = {{ delta_time|safe}}
+        var delta_time = {{ delta_time|safe }}
         </script>
         <div id="tiles">
             <div id="time"><p>0</p></div>
@@ -23,15 +36,10 @@
             <div id="time-label"><p>MINUTE</p></div>
             <div id="time-label"><p>SECOND</p></div>
         </div>
-        {% comment %}
-        <div id="button-group">
-            <div class="button-container">
-                <a id="join-test-button" class="join-test-button-disable">{% trans "Join Test" %}</a>
-            </div>
-        </div>
-        {% endcomment %}
     </div>
-</section>
+    </section>
+{% endif %}
+
 
 
 <script type="text/javascript">
@@ -45,11 +53,11 @@ $(function(){
     getCountdown();
     var id = setInterval(function(){ getCountdown();}, 1000);
     function getCountdown(){
-        if(totalSeconds < 0){
-            $("#join-test-button").addClass("join-test-button-enable")
-            $("#join-test-button")[0].setAttribute("href","https://developer.newtonproject.org")
-            return;
-        }
+        // if(totalSeconds < 0){
+        //     $("#join-test-button").addClass("join-test-button-enable")
+        //     $("#join-test-button")[0].setAttribute("href","https://developer.newtonproject.org")
+        //     return;
+        // }
         days = formatTime(parseInt(totalSeconds / 86400));
         temp = totalSeconds % 86400;
         hours = formatTime(parseInt(temp/3600));
