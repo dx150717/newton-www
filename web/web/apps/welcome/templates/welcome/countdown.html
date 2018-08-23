@@ -1,8 +1,9 @@
-
+{% load i18n %}
+{% load utils %}
 <section id="countdown" class="section-list">
     <div class="container text-center">
         <div class="countdown-title">
-            <h1>Test network is about to go online!</h1>
+            <h1>{% trans "Newton TestNet release countdown" %}</h1>
         </div>
         <div class="countdown-subtitle">
             <h3></h3>
@@ -22,11 +23,13 @@
             <div id="time-label"><p>MINUTE</p></div>
             <div id="time-label"><p>SECOND</p></div>
         </div>
+        {% comment %}
         <div id="button-group">
             <div class="button-container">
-                <a id="join-test-button" class="join-test-button-disable">Join Test</a>
+                <a id="join-test-button" class="join-test-button-disable">{% trans "Join Test" %}</a>
             </div>
         </div>
+        {% endcomment %}
     </div>
 </section>
 
