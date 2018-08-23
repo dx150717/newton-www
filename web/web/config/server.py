@@ -167,5 +167,3 @@ CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
 CELERYD_HIJACK_ROOT_LOGGER = False
 CELERY_IMPORTS = ('tasks.task_email', 'tasks.task_blockchain')
 
-# countdown time
-FUND_START_DATE = datetime.datetime(2018, 8, 31, 0, 0)
