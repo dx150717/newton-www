@@ -63,6 +63,14 @@ def show_home_view(request):
             entry.urls = entry.get_absolute_url()
     # generate the captcha
     captcha_form = subscription_forms.SubscribeForm()
+    # countdown time
+    start_day = False
+    now = datetime.datetime.now()
+    delta_time = settings.FUND_START_DATE - now
+    delta_time = delta_time.total_seconds()
+    if delta_time == 0:
+        start_day = True
+    # start_day = True
     return render(request, 'welcome/index.html', locals())
 
 def show_tech_view(request):
