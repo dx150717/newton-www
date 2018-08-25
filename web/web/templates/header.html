@@ -18,7 +18,7 @@
             </div><!-- /.logo -->
 
             <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
-                    <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">
                     <li>
                         <a href="/protocol/" {% language_change_header_style %}>{% trans "HEP" %}</a>
                     </li>
@@ -72,7 +72,7 @@
                     </li>
                 </ul>
 
-                <ul class="nav navbar-nav  navbar-right">
+                <ul class="nav navbar-nav navbar-right">
                     {% if request.user.is_authenticated %}
                         {% if not request.user.is_superuser %}
                             <li class="dropdown hidden-xs hidden-sm">
@@ -102,7 +102,6 @@
                     {% endif %}
                     <li class="language-drop-down visible-xs-block visible-sm-block">
                     </li>
-
                     <li class="dropdown language-drop-down hidden-xs hidden-sm">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <img src="{% version "images/languages/languages-icon/select-language.jpg" %}"/>
@@ -110,8 +109,21 @@
                             <img src="{% version "images/languages/languages-icon/arrow-down.jpg" %}"/>
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
-                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
+                         <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="right:100%;border-right:none;">
+                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:":7" %}
+                            <li>
+                                <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
+                                    {% if language_code|is_current_language %}
+                                    <span style="float: left" id="is_choice">
+                                    <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
+                                    </span>
+                                    {% endif %}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="border-left:none;left:0px;">
+                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:"7:" %}
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
                                     {% if language_code|is_current_language %}
@@ -125,19 +137,11 @@
                         </ul>
                     </li>
                 </ul>
-
             </div><!-- /.navbar -->
         </div>
     </nav>
 </header><!-- end -->
 <script>
-    $(".dropdown").mouseenter(function(){
-        $(this).addClass("open");
-    });
-    $(".dropdown .dropdown-menu").mouseleave(function(){
-        $(".dropdown").removeClass("open");
-    });
-    $(".dropdown").mouseleave(function(){
-        $(".dropdown").removeClass("open");
-    });
+
 </script>
+
