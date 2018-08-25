@@ -1311,22 +1311,23 @@ canvas {display: block; vertical-align: top;}
 .navbar-nav li.language-drop-down {
     margin-left: 20px;
     margin-top: 5px;
-    position: absolute;
 }
 li.language-drop-down ul.dropdown-menu li:first-child {
     border:0;
 }
-.language-drop-down .dropdown-menu{min-width: 150px; overflow: hidden; text-align: left; padding: 0; margin: 32px 0px 0px 0px; background: #f1f1f1; top: 25px; right: auto; position: relative}
+.language-drop-down .dropdown-menu{min-width: 150px; overflow: hidden; text-align: left; padding: 0; margin: 32px 0px 0px 0px; background: #f1f1f1; top: 39px; right: auto; position: absolute}
 .language-drop-down .dropdown-menu img{width: 22px; left: 0;}
 .language-drop-down .dropdown {position: absolute; top: 6px; right: 15%; width: 10%}
 .language-drop-down .dropdown-menu>li>a{padding: 2px 4px; margin: 2px 0; font-size: 14px}
 .language-drop-down .dropdown-menu>li>a .checked_icon {width: 10px;}
-.language-drop-down #dropdownLanguage {padding: 0 0 0 5px; border: 0; font-size: 14px; line-height: 22px; border: solid 1px #ccc;}
+.language-drop-down #dropdownLanguage {padding: 0 0 0 5px; border: 0; font-size: 14px; line-height: 25px; border: solid 1px #ccc;}
 .language-drop-down #dropdownLanguage img{width: 14px; margin-right: 6px}
 .language-drop-down #languge_icon {height: 100%}
 .language-drop-down .caret{display: none}
 .language-drop-down .btn-default{background-color: #fff}
 .language-drop-down .dropdown-menu li{margin: 0; padding: 0;}
+.language-drop-down .dropdown-menu {display: none;}
+.language-drop-down:hover .dropdown-menu {display: block;}
 @media(max-width:767px){
     .ad{display: none}
     .language-drop-down .dropdown {display: none}

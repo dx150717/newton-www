@@ -109,7 +109,7 @@
                             <img src="{% version "images/languages/languages-icon/arrow-down.jpg" %}"/>
                             <span class="caret"></span>
                         </button>
-                         <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                         <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="right:100%;border-right:none;">
                             {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:":7" %}
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
@@ -122,7 +122,7 @@
                             </li>
                             {% endfor %}
                         </ul>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                        <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="border-left:none;left:0px;">
                             {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:"7:" %}
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
