@@ -1160,11 +1160,11 @@ canvas {display: block; vertical-align: top;}
 
 #countdown{background: url("../images/countdown/banner.jpg") no-repeat; height: 768px; background-size: 100% 720px;}
 #countdown .countdown-title{padding-top: 150px;}
-#countdown .countdown-title h1{font-size: 82px; color: #fff; font-weight: 900;}
+#countdown .countdown-title h1{font-size: 82px; color: #fff; font-weight: 900; margin-bottom: 0;}
 #countdown .countdown-subtitle h3{font-size: 34px; color: #fff; font-weight: 400;}
-#countdown #tiles{display: flex; justify-content: center;padding-top: 18px;}
-#countdown #tiles #time{height: 130px; width: 120px;margin-left: 19px;margin-right: 19px;margin-bottom: 12px; background-color: #fff; border-radius:25px; opacity:0.7;}
-#countdown #tiles #time p{line-height: 130px; color: #333; font-size: 70px; font-weight: 600;}
+#countdown #tiles{display: flex; justify-content: center;padding-top: 50px;}
+#countdown #tiles #time{height: 122px; width: 120px;margin-left: 19px;margin-right: 19px;margin-bottom: 12px; background-color: #fff; border-radius:25px; opacity:0.7;}
+#countdown #tiles #time p{line-height: 122px; color: #333; font-size: 70px; font-weight: 600;}
 #countdown #labels{display: flex; justify-content: center;}
 #countdown #labels #time-label{margin-left: 13px; margin-right: 13px; width: 129px;}
 #countdown #labels #time-label p{font-size: 28px; color: #fff; font-weight: 600;}
@@ -1180,12 +1180,12 @@ canvas {display: block; vertical-align: top;}
 #start_test .more a:hover{color:#666;}
 #countdown .countdown-block{
     float: right;
-    margin-top: 3%;
+    margin-top: 0;
     margin-right:9%;
 }
 #start_test .countdown-block{
     float: right;
-    margin-top: 4%;
+    margin-top: 1%;
     margin-right:9%;
 }
 @media (max-width:768px){
@@ -1214,6 +1214,41 @@ canvas {display: block; vertical-align: top;}
     float: unset;
     margin: unset;
     }
+}
+@media (max-width:1440px){
+    #countdown .countdown-block{
+        float: right;
+        margin-top: 0;
+        margin-right:5%;
+    }
+    #countdown .countdown-title h1{font-size: 73px; color: #fff; font-weight: 900;}
+    #countdown .countdown-subtitle h3{font-size: 32px; color: #fff; font-weight: 400;}
+    #countdown #tiles #time{height: 100px; width: 100px;margin-left: 19px;margin-right: 19px;margin-bottom: 12px; background-color: #fff; border-radius:25px; opacity:0.7;}
+    #countdown #tiles #time p{line-height: 100px; color: #333; font-size: 60px; font-weight: 600;}
+    #countdown #labels #time-label{margin-left: 10px; margin-right: 10px; width: 120px;}
+    #countdown #labels #time-label p{font-size: 25px; color: #fff; font-weight: 600;}
+    #start_test .countdown-block{
+        float: right;
+        margin-top: 1%;
+        margin-right:2%;
+    }
+    #start_test .countdown-title h1{font-size: 74px; color: #fff; font-weight: 900;}
+    #start_test .countdown-subtitle h3{font-size: 32px; color: #fff; font-weight: 400;}
+}
+@media (max-width:1280px){
+    #countdown .countdown-block{
+        float: right;
+        margin-top: 0;
+        margin-right:2%;
+    }
+    #countdown .countdown-title h1{font-size: 66px; color: #fff; font-weight: 900;}
+    #countdown .countdown-subtitle h3{font-size: 30px; color: #fff; font-weight: 400;}
+    #countdown #tiles #time{height: 90px; width: 90px;margin-left: 19px;margin-right: 19px;margin-bottom: 12px; background-color: #fff; border-radius:25px; opacity:0.7;}
+    #countdown #tiles #time p{line-height: 90px; color: #333; font-size: 55px; font-weight: 600;}
+    #countdown #labels #time-label{margin-left: 8px; margin-right: 8px; width: 113px;}
+    #countdown #labels #time-label p{font-size: 22px; color: #fff; font-weight: 600;}
+    #start_test .countdown-title h1{font-size: 67px; color: #fff; font-weight: 900;}
+    #start_test .countdown-subtitle h3{font-size: 29px; color: #fff; font-weight: 400;}
 }
 
 #success .page-title{margin-bottom: 50px;}
