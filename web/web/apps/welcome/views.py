@@ -68,9 +68,8 @@ def show_home_view(request):
     now = datetime.datetime.now()
     delta_time = settings.FUND_START_DATE - now
     delta_time = delta_time.total_seconds()
-    if delta_time == 0:
+    if settings.FUND_START_DATE <= now:
         start_day = True
-    # start_day = True
     return render(request, 'welcome/index.html', locals())
 
 def show_tech_view(request):

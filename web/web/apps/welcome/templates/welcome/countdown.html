@@ -56,11 +56,10 @@ $(function(){
     getCountdown();
     var id = setInterval(function(){ getCountdown();}, 1000);
     function getCountdown(){
-        // if(totalSeconds < 0){
-        //     $("#join-test-button").addClass("join-test-button-enable")
-        //     $("#join-test-button")[0].setAttribute("href","https://developer.newtonproject.org")
-        //     return;
-        // }
+        if(totalSeconds < 0){
+            location.reload();
+            return;
+        }
         days = formatTime(parseInt(totalSeconds / 86400));
         temp = totalSeconds % 86400;
         hours = formatTime(parseInt(temp/3600));
