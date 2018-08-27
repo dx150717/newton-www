@@ -1188,33 +1188,6 @@ canvas {display: block; vertical-align: top;}
     margin-top: 1%;
     margin-right:9%;
 }
-@media (max-width:768px){
-    #countdown{background: url("../images/countdown/banner-mobile.jpg") no-repeat; height: 330px; background-size: 100% 330px;}
-    #countdown .countdown-title{padding-top: 75px;}
-    #countdown .countdown-title h1{font-size: 28px; color: #fff; margin-bottom: 6px;}
-    #countdown .countdown-subtitle h3{font-size: 20px; color: #fff;}
-    #countdown #tiles{display: flex; justify-content: center;padding-top: 17px;}
-    #countdown #tiles #time{height: 60px; width: 60px;border-radius: 10px; margin-left: 12px;margin-right: 12px;margin-bottom: 12px;}
-    #countdown #tiles #time p{line-height: 60px; color: #333; font-size: 33px;}
-    #countdown #labels{display: flex; justify-content: center;}
-    #countdown #labels #time-label{margin-left: 8px; margin-right: 8px; width: 70px;}
-    #countdown #labels #time-label p{font-size: 14px; color: #fff;}
-    #countdown #button-group{display: flex; justify-content: center;}
-    #countdown #button-group{margin-top: 24px;}
-    #countdown #button-group .button-container{display: flex; justify-content: space-between;}
-    #start_test{background: url("../images/countdown/banner-mobile.jpg") no-repeat; height: 330px; background-size: 100% 330px;}
-    #start_test .countdown-title{padding-top: 75px;}
-    #start_test .countdown-title h1{font-size: 34px; color: #fff;}
-    #start_test .countdown-subtitle h3{font-size: 20px; color: #fff;}
-    #countdown .countdown-block{
-        margin: unset;
-        float: unset;
-    }
-    #start_test .countdown-block{
-    float: unset;
-    margin: unset;
-    }
-}
 @media (max-width:1440px){
     #countdown .countdown-block{
         float: right;
@@ -1249,6 +1222,33 @@ canvas {display: block; vertical-align: top;}
     #countdown #labels #time-label p{font-size: 22px; color: #fff; font-weight: 600;}
     #start_test .countdown-title h1{font-size: 67px; color: #fff; font-weight: 900;}
     #start_test .countdown-subtitle h3{font-size: 29px; color: #fff; font-weight: 400;}
+}
+@media (max-width:768px){
+    #countdown{background: url("../images/countdown/banner-mobile.jpg") no-repeat; height: 330px; background-size: 100% 330px;}
+    #countdown .countdown-title{padding-top: 75px;}
+    #countdown .countdown-title h1{font-size: 28px; color: #fff; margin-bottom: 6px;}
+    #countdown .countdown-subtitle h3{font-size: 20px; color: #fff;}
+    #countdown #tiles{display: flex; justify-content: center;padding-top: 17px;}
+    #countdown #tiles #time{height: 60px; width: 60px;border-radius: 10px; margin-left: 12px;margin-right: 12px;margin-bottom: 12px;}
+    #countdown #tiles #time p{line-height: 60px; color: #333; font-size: 33px;}
+    #countdown #labels{display: flex; justify-content: center;}
+    #countdown #labels #time-label{margin-left: 8px; margin-right: 8px; width: 70px;}
+    #countdown #labels #time-label p{font-size: 14px; color: #fff;}
+    #countdown #button-group{display: flex; justify-content: center;}
+    #countdown #button-group{margin-top: 24px;}
+    #countdown #button-group .button-container{display: flex; justify-content: space-between;}
+    #start_test{background: url("../images/countdown/banner-mobile.jpg") no-repeat; height: 330px; background-size: 100% 330px;}
+    #start_test .countdown-title{padding-top: 75px;}
+    #start_test .countdown-title h1{font-size: 34px; color: #fff;}
+    #start_test .countdown-subtitle h3{font-size: 20px; color: #fff;}
+    #countdown .countdown-block{
+        margin: unset;
+        float: unset;
+    }
+    #start_test .countdown-block{
+        float: unset;
+        margin: unset;
+        }
 }
 
 #success .page-title{margin-bottom: 50px;}
