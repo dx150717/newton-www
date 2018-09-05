@@ -12,6 +12,7 @@
             </div>
         </div>
         <div class="dynamic-left col-md-4" style="margin-bottom: 5%;">
+        {% if entries_left %}
         {% for entry in entries_left %}
             {% if forloop.counter == 1 %}
             <a class="bigimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
@@ -29,16 +30,19 @@
             </div>
             {% endif %}
         {% endfor %}
+        {% endif %}
         </div>
         <div class="dynamic-right col-md-8">
             <div class="show-news">
                 <ul>
+                {% if entries_right %}
                 {% for entry in entries_right %}
                     <li>
                         <a href="{{ entry.urls }}" target="_blank"><span>{{ entry.title }}</span></a>
                         <span class="time">{{ entry.creation_date|date:"Y-m-d" }}</span>
                     </li>
                 {% endfor %}
+                {% endif %}
                 </ul>
             </div>
             <div class="more"><a href="/announcement/"><span>{% trans "MORE" %}</span></a></div>
