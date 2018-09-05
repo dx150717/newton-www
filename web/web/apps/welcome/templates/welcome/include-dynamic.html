@@ -15,14 +15,31 @@
         {% if entries_left %}
         {% for entry in entries_left %}
             {% if forloop.counter == 1 %}
+            {% if entry.image %}
             <a class="bigimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
                 <div class="shadow"></div>
                 <span class="time">{{ entry.creation_date|date:"Y-m-d" }}</span>
                 <span class="announcement-title">{{ entry.title }}</span>
             </a>
             {% else %}
+            <a class="bigimg" style="" href="{{ entry.urls }}">
+                <div class="shadow"></div>
+                <span class="time">{{ entry.creation_date|date:"Y-m-d" }}</span>
+                <span class="announcement-title">{{ entry.title }}</span>
+            </a>
+            {% endif %}
+            {% else %}
+            {% if entry.image %}
             <div>
                 <a class="smallimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
+                    <div class="shadow"></div>
+                    <span class="time">{{ entry.creation_date|date:"Y-m-d" }}</span>
+                    <span class="announcement-title">{{ entry.title }}</span>
+                </a>
+            </div>
+            {% endif %}
+            <div>
+                <a class="smallimg" style="" href="{{ entry.urls }}">
                     <div class="shadow"></div>
                     <span class="time">{{ entry.creation_date|date:"Y-m-d" }}</span>
                     <span class="announcement-title">{{ entry.title }}</span>
