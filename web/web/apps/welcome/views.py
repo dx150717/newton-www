@@ -56,7 +56,11 @@ def show_home_view(request):
         language = ENGLISH
     entry = EntryDetail()
     entries_left = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
+    if len(entries_left) < 3:
+        entries_left = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
     entries_right = entry.get_queryset().filter(language=language, status=PUBLISHED).order_by('-creation_date')[0:9]
+    if len(entries_right) < 9:
+        entries_right = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED).order_by('-creation_date')[0:9]
     if entries_right and entries_left:
         entries_right = list(entries_right)
         for entry_left in entries_left:
