@@ -57,26 +57,25 @@ def show_home_view(request):
     entry = EntryDetail()
     entries_left = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
     entries_right = entry.get_queryset().filter(language=language, status=PUBLISHED).order_by('-creation_date')[0:9]
-    logger.debug('entries_left:%s' % entries_left)
-    entries_right = list(entries_right)
-    for entry_left in entries_left:
-        for entry_right in entries_right:
-            if entry_left == entry_right:
-                entries_right.remove(entry_right)
-    logger.debug('entries_right:%s' % entries_right)
-    entries_right = entries_right[0:6]
-    for entry in entries_left:
-        if entry.entry_type == TYPE_ANNOUNCEMENT:
-            url = entry.get_absolute_url().replace('/blog/', '/announcement/')
-            entry.urls = url
-        else:
-            entry.urls = entry.get_absolute_url()
-    for entry in entries_right:
-        if entry.entry_type == TYPE_ANNOUNCEMENT:
-            url = entry.get_absolute_url().replace('/blog/', '/announcement/')
-            entry.urls = url
-        else:
-            entry.urls = entry.get_absolute_url()
+    if entries_right and entries_left:
+        entries_right = list(entries_right)
+        for entry_left in entries_left:
+            for entry_right in entries_right:
+                if entry_left == entry_right:
+                    entries_right.remove(entry_right)
+        entries_right = entries_right[0:6]
+        for entry in entries_left:
+            if entry.entry_type == TYPE_ANNOUNCEMENT:
+                url = entry.get_absolute_url().replace('/blog/', '/announcement/')
+                entry.urls = url
+            else:
+                entry.urls = entry.get_absolute_url()
+        for entry in entries_right:
+            if entry.entry_type == TYPE_ANNOUNCEMENT:
+                url = entry.get_absolute_url().replace('/blog/', '/announcement/')
+                entry.urls = url
+            else:
+                entry.urls = entry.get_absolute_url()
     # generate the captcha
     captcha_form = subscription_forms.SubscribeForm()
     # countdown time
