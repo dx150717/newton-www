@@ -18,16 +18,20 @@
                     <a class="bigimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
                         <div class="shadow"></div>
                     </a>
-                    <span class="announcement-title">{{ entry.title }}</span>
-                    <span class="time">{{ entry.creation_date|date:"Y-m-d" }}</span>
+                    <div class="news-word">
+                        <p class="announcement-title">{{ entry.title }}</p>
+                        <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
+                    </div>
                 </div>
             {% else %}
                 <div class="dynamic col-md-4">
                     <a class="bigimg" style="" href="{{ entry.urls }}">
                         <div class="shadow"></div>
                     </a>
-                    <span class="announcement-title">{{ entry.title }}</span>
-                    <span class="time">{{ entry.creation_date|date:"Y-m-d" }}</span>
+                    <div class="news-word">
+                        <p class="announcement-title">{{ entry.title }}</p>
+                        <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
+                    </div>
                 </div>
             {% endif %}
         {% endfor %}
