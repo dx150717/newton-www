@@ -296,6 +296,22 @@ canvas {display: block; vertical-align: top;}
 .feature-item:last-child dl dd {margin-bottom: 0;}
 .media-body{height: 400px;}
 .content .container{width: 100%;}
+
+#team .team-list .avatar:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -5%;
+}
+#team .team-list .avatar .intro p{
+    display: none;
+}
+#team .team-list .avatar:hover .intro p{
+    display: block;
+}
 /* Organization invester ---------------------------------------------------------------- */
 .organization-logo {
     width: 180px;
