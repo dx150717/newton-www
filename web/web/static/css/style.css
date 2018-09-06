@@ -902,7 +902,7 @@ canvas {display: block; vertical-align: top;}
 .index_community .container .row img{height: 30px; padding-right: 15px;}
 .index_community .container .row .line img{width: 44px; height: 30px;}
 .index_community .container .row .talk img{width: 58px; height: 40px;}
-.index_community .container .row .country{text-align: center;}
+.index_community .container .community_lower .region .country{text-align: center; padding-top: 5px; padding-bottom: 5px;}
 .index_community .container .region{
     border-color: #ddd;
 }
@@ -1000,7 +1000,7 @@ canvas {display: block; vertical-align: top;}
 .online-community .panel-footer{
     background-color: white;
 }
-
+.online-community .container .community_lower .region .country{text-align: center; padding-top: 5px; padding-bottom: 5px;}
 /* newpay */
 .newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.jpg) no-repeat top center; width:100%; height:711px;}
 .newpay_text{padding-bottom:120px;}
