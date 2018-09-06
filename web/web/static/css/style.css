@@ -301,16 +301,39 @@ canvas {display: block; vertical-align: top;}
     display: block;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.89);
-    width: 100%;
-    height: 100%;
+    width: 93%;
+    height: 93%;
     left: 0;
     top: -5%;
+    border-radius: 15px;
 }
 #team .team-list .avatar .intro p{
     display: none;
 }
 #team .team-list .avatar:hover .intro p{
     display: block;
+    height: 320px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+#team .team-list .media-body .man-intro{
+}
+#team .team-list .media-body a img{
+    width: 18px;
+    border-radius: unset;
+}
+@media(max-width: 768px){
+    #team .team-list .avatar:hover .intro{
+        width: 100%;
+        height: 110%;
+        padding: 5px;
+    }
+    #team .team-list .avatar:hover .intro p {
+        padding:unset;
+    }
 }
 /* Organization invester ---------------------------------------------------------------- */
 .organization-logo {
@@ -490,7 +513,7 @@ canvas {display: block; vertical-align: top;}
     .feature-item-wrap dl dd {min-height: 80px;}
     .team-item .avatar {width: 180px; height: 180px; margin-bottom: 15px;}
     .team-item .media-heading {margin-bottom: 20px;}
-    .team-item .media-intro {min-height: 110px; margin-bottom: 20px; padding: 0 25px;}
+    .team-item .media-intro {padding: 0 25px;}
     .contact-item-wrap {text-align: center;}
     .contact-item-wrap dl dt {margin-bottom: 20px;}
     .contact-item-wrap dl dt .icon-email {width: 42px;}
