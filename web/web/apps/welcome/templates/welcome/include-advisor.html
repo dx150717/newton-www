@@ -15,14 +15,20 @@
             <div class="team-item col-md-4 col-xs-12">
                 <div class="media">
                     <div class="media-body">
-                        <div class="avatar">
-                            <img class="media-object" src="{% version "images/advisor/1.jpg" %}" alt="{% trans "Han Feng" %}"/>
-                        </div>
-                        <h4 class="media-heading">{% trans "Han Feng" %}</h4>
-                        <div class="media-intro">
-                            {% trans "Co-founder of Elastos" %}<br/>
-                            {% trans "Visiting Scholar & Research Associate at Columbia University" %}<br/>
-                            {% trans "Advisor at Huawei Central Institute" %}
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <div class="intro">
+                                    <p>亦来云联合创始人、哥伦比亚大学访问研究员、前华为中央研究院区块链顾问。清华量子物理博士生，清华大学iCenter导师，万向区块链实验室丛书主编。在清华大学的互联网金融课程中讲授区块链。比特币基金会终生会员，曾任清华大学十五规划重点课题“基于网络(大数据)的创新人才评价和选拔”项目负责人，美国甲骨文教育基金会中国合伙人。</p>
+                                </div>
+                                <img class="media-object" src="{% version "images/advisor/1.jpg" %}" alt="{% trans "Han Feng" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Han Feng" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Co-founder of Elastos" %}<br/>
+                                {% trans "Visiting Scholar & Research Associate at Columbia University" %}<br/>
+                                {% trans "Advisor at Huawei Central Institute" %}
+                            </div>
+                            <p><a href="https://www.weibo.com/u/3178119113" target="_blank"><img src="{% version "images/social/weibo.png" %}" /></a></p>
                         </div>
                     </div>
                 </div>
@@ -47,13 +53,22 @@
             <div class="team-item col-md-4 col-xs-12">
                 <div class="media">
                     <div class="media-body">
-                        <div class="avatar">
-                            <img class="media-object" src="{% version "images/advisor/4.jpg" %}" alt="{% trans "Li Songbo" %}" />
-                        </div>
-                        <h4 class="media-heading">{% trans "Li Songbo" %}</h4>
-                        <div class="media-intro">
-                            {% trans "Former CTO of Sina (NASDAQ: SINA)" %}<br/>
-                            {% trans "Partner of DFJ Venture Capital" %}
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <div class="intro">
+                                    <p>前新浪网(NASDAQ: SINA)CTO、德丰杰风险投资合伙人。中国互联网知名人物，是新浪网元老级的管理高层。1996年4月加盟四通利方公司，参与创办了国内最早的商业中文网站利方在线。1998年起担任北京新浪网网络系统部部长，2000年-2003年任北美新浪网技术部经理，2004年任新浪集团副总裁。2005年出任新浪首席技术官至2013年，并于2013年4月离职出任德丰杰投资合伙人。</p>
+                                </div>
+                                <img class="media-object" src="{% version "images/advisor/4.jpg" %}" alt="{% trans "Li Songbo" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Li Songbo" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Former CTO of Sina (NASDAQ: SINA)" %}<br/>
+                                {% trans "Partner of DFJ Venture Capital" %}
+                            </div>
+                            <p>
+                                <a href="https://www.weibo.com/songboli" target="_blank"><img src="{% version "images/social/weibo.png" %}" /></a>
+                                <a href="https://www.linkedin.com/in/songbo" target="_blank"><img src="{% version "images/team/linkedin.png" %}" /></a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -62,51 +77,97 @@
             <div class="team-item col-md-4 col-xs-12">
                 <div class="media">
                     <div class="media-body">
-                        <div class="avatar">
-                            <img class="media-object" src="{% version "images/angels/9.jpg" %}" alt="{% trans "Hu Dinghe" %}" />
-                        </div>
-                        <h4 class="media-heading">{% trans "Hu Dinghe" %}</h4>
-                        <div class="media-intro">{% trans "Chairman of Elastos ecosystem board" %}<br/>{% trans "Previous President of Chongqing Lifan" %}</div>
-                    </div>
-                </div>
-            </div>
-            <div class="team-item col-md-4 col-xs-12">
-                <div class="media">
-                    <div class="media-body">
-                        <div class="avatar">
-                            <img class="media-object" src="{% version "images/advisor/3.jpg" %}" alt="{% trans "Gu Xueyong" %}" />
-                        </div>
-                        <h4 class="media-heading">{% trans "Gu Xueyong" %}</h4>
-                        <div class="media-intro">
-                            {% trans "Professor at Tsinghua University" %}<br/>
-                            {% trans "Director of International Relations at iCenter" %}
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <div class="intro">
+                                    <p>现任亦来云生态建设委员会主任、前重庆力帆总裁、清华大学五道口金融学院经济学博士，博士生导师。
+                                       全国青联委员，全国工商联执委、重庆市政协常委、重庆市工商联副主席、力帆控股总裁、西南大学校董，重庆粮食集团董事。 曾任中信银行总行行长助理兼重庆分行行长，中共宁夏自治区宣传部副部长。获全国五一劳动奖章、国务院特殊津贴等。</p>
+                                </div>
+                                <img class="media-object" src="{% version "images/angels/9.jpg" %}" alt="{% trans "Hu Dinghe" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Hu Dinghe" %}</h4>
+                            <div class="media-intro">{% trans "Chairman of Elastos ecosystem board" %}<br/>{% trans "Previous President of Chongqing Lifan" %}</div>
+                            <p>
+                                <a href="https://www.weibo.com/hudinghe" target="_blank"><img src="{% version "images/social/weibo.png" %}" /></a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="team-item col-md-4 col-xs-12">
                 <div class="media">
                     <div class="media-body">
-                        <div class="avatar">
-                            <img class="media-object" src="{% version "images/advisor/5.jpg" %}" alt="{% trans "Lee Willson" %}" />
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <div class="intro">
+                                    <p>清华大学副教授、麻省理工学院工程系统博士、明尼苏达大学机械工程本科与工业工程硕士。iCenter 国际交流部主任。
+                                        1995年至1997年在圣.保罗Integrity Solutions,Inc 做软件工程师；
+                                        1997年被美国New Resources公司聘为高级顾问；
+                                        1997年至2000年担任美国Advanced Information Solutions/Primix Solutions, Inc公司的首席顾问；
+                                        2001年在联合科技公司的研究中心担任价值链（Value Networks）的研究工程师；
+                                        2002年至2005年, 担任美国麻省理工学院的研究员及博士后研究员；
+                                        2006年11月到清华大学工业工程系任教，担任副教授职务；
+                                        2016年开始调任到清华基础工业训练中心，负责国际事务。
+                                       </p>
+                                </div>
+                                <img class="media-object" src="{% version "images/advisor/3.jpg" %}" alt="{% trans "Gu Xueyong" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Gu Xueyong" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Professor at Tsinghua University" %}<br/>
+                                {% trans "Director of International Relations at iCenter" %}
+                            </div>
                         </div>
-                        <h4 class="media-heading">{% trans "Lee Willson" %}</h4>
-                        <div class="media-intro">{% trans "Bitcoin Ambassador" %}</div>
                     </div>
                 </div>
             </div>
+
             <div class="team-item col-md-4 col-xs-12">
                 <div class="media">
                     <div class="media-body">
-                        <div class="avatar">
-                            <img class="media-object" src="{% version "images/advisor/6.png" %}" alt="{% trans "Theodore Gray" %}" />
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <div class="intro">
+                                    <p>世界区块链基金会创会永久主席，Blockchainzoo联合创始董事，世界卓越品牌大奖得主，央视「影响力人物」。2004年，作为全球华人青年企业家特别代表，在中国北京人民大会堂被中国国务院邀请与中国国务院领导人直接对话。唯一和华尔街传奇吉姆罗杰斯同台的演说家，投资家，旅行家，哲学家和作家。
+                                        少数在加密资产和区块链发言人中被全球高度认可的世界级人物，媒体为其冠名为比特币大使。
+                                       </p>
+                                </div>
+                                <img class="media-object" src="{% version "images/advisor/5.jpg" %}" alt="{% trans "Lee Willson" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Lee Willson" %}</h4>
+                            <div class="media-intro">{% trans "Bitcoin Ambassador" %}</div>
+                            <p>
+                                <a href="https://www.linkedin.com/in/lee-willson-778413113" target="_blank"><img src="{% version "images/team/linkedin.png" %}" /></a>
+                                <a href="https://twitter.com/willsontweet" target="_blank"><img src="{% version "images/social/twitter.svg" %}" /></a>
+                            </p>
                         </div>
-                        <h4 class="media-heading">{% trans "Theodore Gray" %}</h4>
-                        <div class="media-intro">
-                            {% trans "Co-Founder of Wolfram Research" %}<br/>
-                            {% trans "Creator of the Mathematica Notebook System" %}<br/>
-                            {% trans "Founder of Touch Press" %}<br/>
-                            {% trans "BAFTA Award winning author" %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <div class="intro">
+                                    <p>Wolfram Research联合创始人、Mathermatica Notebook System 作者、Touch Press 创始人和BAFTA（英国电影电视艺术学院）奖获得者。西奥多先生曾是美国著名科普杂志《大众科学》（Popular Science）的专栏作者，探索频道（Discovery Channel）节目的嘉宾。出版过包括《视觉之旅:神奇的化学元素》等多部著作。
+                                       </p>
+                                </div>
+                                <img class="media-object" src="{% version "images/advisor/6.png" %}" alt="{% trans "Theodore Gray" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Theodore Gray" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Co-Founder of Wolfram Research" %}<br/>
+                                {% trans "Creator of the Mathematica Notebook System" %}<br/>
+                                {% trans "Founder of Touch Press" %}<br/>
+                                {% trans "BAFTA Award winning author" %}
+                            </div>
+                            <p>
+                                <a href="https://www.linkedin.com/in/theodoreg" target="_blank"><img src="{% version "images/team/linkedin.png" %}" /></a>
+                                <a href="https://twitter.com/TheodoreGray" target="_blank"><img src="{% version "images/social/twitter.svg" %}" /></a>
+                            </p>
                         </div>
                     </div>
                 </div>

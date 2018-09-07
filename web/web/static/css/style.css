@@ -302,7 +302,7 @@ canvas {display: block; vertical-align: top;}
     position: absolute;
     background-color: rgba(255, 255, 255, 0.89);
     width: 93%;
-    height: 93%;
+    height: 100%;
     left: 0;
     top: -5%;
     border-radius: 15px;
@@ -335,6 +335,87 @@ canvas {display: block; vertical-align: top;}
         padding:unset;
     }
 }
+
+/*advisors*/
+#advisor .team-list .avatar:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 93%;
+    height: 100%;
+    left: 0;
+    top: -5%;
+    border-radius: 15px;
+}
+#advisor .team-list .avatar .intro p{
+    display: none;
+}
+#advisor .team-list .avatar:hover .intro p{
+    display: block;
+    height: 320px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+#advisor .team-list .media-body .man-intro{
+}
+#advisor .team-list .media-body a img{
+    width: 18px;
+    border-radius: unset;
+}
+@media(max-width: 768px){
+    #advisor .team-list .avatar:hover .intro{
+        width: 100%;
+        height: 110%;
+        padding: 5px;
+    }
+    #advisor .team-list .avatar:hover .intro p {
+        padding:unset;
+    }
+}
+
+/*CORNERSTONE INVESTORS*/
+#angels .team-list .avatar:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 93%;
+    height: 100%;
+    left: 0;
+    top: -5%;
+    border-radius: 15px;
+}
+#angels .team-list .avatar .intro p{
+    display: none;
+}
+#angels .team-list .avatar:hover .intro p{
+    display: block;
+    height: 320px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+#angels .team-list .media-body .man-intro{
+}
+#angels .team-list .media-body a img{
+    width: 18px;
+    border-radius: unset;
+}
+@media(max-width: 768px){
+    #angels .team-list .avatar:hover .intro{
+        width: 100%;
+        height: 110%;
+        padding: 5px;
+    }
+    #angels .team-list .avatar:hover .intro p {
+        padding:unset;
+    }
+}
+
 /* Organization invester ---------------------------------------------------------------- */
 .organization-logo {
     width: 180px;
