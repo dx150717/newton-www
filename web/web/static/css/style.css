@@ -461,6 +461,16 @@ canvas {display: block; vertical-align: top;}
 .feature-item-img .feature-img2{background-image:url(../images/features/icon-3.svg);}
 .feature-item-img .feature-img3{background-image:url(../images/features/icon-4.svg);}
 .feature-item-img .feature-img4{background-image:url(../images/features/icon-2.svg);}
+#feature .whitepaper-download{
+    float: left;
+    margin-bottom: 4%;
+}
+@media(max-width: 768px){
+    #feature .whitepaper-download{
+        margin-bottom: unset;
+    }
+}
+
 @media (max-width: 1199px) and (min-width: 992px){
     #intro {margin-bottom: 80px; position: unset;}
     #bgPic {background: url(../images/bg-pc.png) no-repeat center 167px; background-size: 85%;}
