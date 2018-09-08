@@ -773,6 +773,16 @@ canvas {display: block; vertical-align: top;}
 #technology .tech-intro{
     margin: 80px 30px;
     font-size: 20px;
+    text-align: justify;
+    color: #333;
+}
+@media(max-width: 768px){
+    #technology .tech-intro{
+        margin: 60px 10px;
+        font-size: 16px;
+        text-align: justify;
+        color: #333;
+    }
 }
 
 #protocol .fr{float:right; width:50%; text-align:center;}
