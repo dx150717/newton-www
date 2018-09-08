@@ -982,8 +982,7 @@ canvas {display: block; vertical-align: top;}
 .community {padding-bottom: 80px;}
 .community h2{font-weight: 500;font-size: 20px; color: #000;}
 .community .container .row img{height: 30px; padding-right: 20px;}
-.community .online-community .container .row .talk img{width: 58px; height: 40px;}
-.community .online-community .container .row span{font-size: 16px;font-weight: 500;color: #000;}
+.community .online-community .container .row span{font-size: 16px;font-weight: 500;color: #898989;}
 .community .container .row .item{padding-top: 20px; padding-bottom: 20px;}
 .community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .community .press p a{font-size: 20px; color: #666666;}
@@ -1024,13 +1023,10 @@ canvas {display: block; vertical-align: top;}
 .index_community h2{font-weight: 500;font-size: 20px; color: #000;}
 .index_community .container .row img{height: 30px; padding-right: 15px;}
 .index_community .container .row .line img{width: 44px; height: 30px;}
-.index_community .container .row .talk img{width: 58px; height: 40px;}
-.index_community .container .row .country{text-align: center;}
-.index_community .container .region{
-    border-color: #ddd;
-}
-.index_community .container .row span{font-size: 16px;font-weight: 500;color: #000;}
-.index_community .container .row .item{padding-top: 20px; padding-bottom: 20px; border-top: unset;}
+.index_community .container .row .talk img{}
+.index_community .container .community_lower .region .country{text-align: center; padding-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ddd;}
+.index_community .container .row span{font-size: 16px;font-weight: 500;color: #898989;}
+.index_community .container .row .item{padding-top: 20px; padding-bottom: 20px;}
 .index_community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .index_community .press p a{font-size: 20px; color: #666666;}
 .index_community .popover-title{white-space: nowrap;}
@@ -1063,14 +1059,19 @@ canvas {display: block; vertical-align: top;}
     padding-left: 10px;
 }
 .index_community .panel-body{
-    background-color: #ddd;
 }
 .index_community .panel-footer{
     background-color: white;
+    border-top: unset;
 }
 .index_community .container .region{
-    border-color: #ddd;
-    margin-right: -11px;
+    margin-right: -8px;
+}
+.index_community .community_lower .continent{
+    font-size: 20px;
+    margin: 13px;
+    color: #000;
+    font-weight: 600;
 }
 
 /*community page*/
@@ -1078,14 +1079,14 @@ canvas {display: block; vertical-align: top;}
 .online-community h2{font-weight: 500;font-size: 20px; color: #000;}
 .online-community .container .row img{height: 30px; padding-right: 15px;}
 .online-community .container .row .line img{width: 44px; height: 30px;}
-.online-community .container .row .talk img{width: 58px; height: 40px;}
+.online-community .container .row .talk img{}
 .online-community .container .row .country{text-align: center;}
 .online-community .container .region{
-    border-color: #ddd;
-    margin-right: -11px;
+    margin-right: -8px;
+    background-color: #f7f7f7;
 }
-.online-community .container .row span{font-size: 16px;font-weight: 500;color: #000;}
-.online-community .container .row .item{padding-top: 20px; padding-bottom: 20px;border-top: unset;}
+.online-community .container .row span{font-size: 16px;font-weight: 500;color: #898989;}
+.online-community .container .row .item{padding-top: 20px; padding-bottom: 20px;}
 .online-community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .online-community .press p a{font-size: 20px; color: #666666;}
 .online-community .popover-title{white-space: nowrap;}
@@ -1118,10 +1119,17 @@ canvas {display: block; vertical-align: top;}
     padding-left: 10px;
 }
 .online-community .panel-body{
-    background-color: #ddd;
 }
 .online-community .panel-footer{
-    background-color: white;
+    background-color: unset;
+    border-top: unset;
+}
+.online-community .container .community_lower .region .country{text-align: center; padding-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ddd;}
+.online-community .community_lower .continent{
+    font-size: 20px;
+    margin: 13px;
+    color: #000;
+    font-weight: 600;
 }
 
 /* newpay */
@@ -1538,12 +1546,12 @@ canvas {display: block; vertical-align: top;}
 }
 #news .dynamic .shadow{background-color: #000;width: 100%;height: 0; padding-bottom: 100%; opacity: 0.3;}
 #news .dynamic .announcement-title{color: #000;position: unset; bottom: 0;padding: 5px;font-size: 16px;}
-#news .dynamic .time{color: #000;text-align: right;top: 0;padding: 5px;font-size: 14px;}
+#news .dynamic .time{color: #AAAAAA;text-align: left;top: 0;padding: 5px;font-size: 14px;margin-bottom: unset;}
 #news .more{
     margin-bottom: 60px;
 }
 #news .news-word{
-    line-height: 40px;
+
 }
 @media(max-width:768px){
     #news .more{
