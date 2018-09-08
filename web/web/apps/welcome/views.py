@@ -81,7 +81,7 @@ def show_home_view(request):
     return render(request, 'welcome/index.html', locals())
 
 def show_tech_view(request):
-    return render(request, 'welcome/tech.html', locals())
+    return render(request, 'welcome/technology.html', locals())
 
 def show_team_view(request):
     return render(request, 'welcome/team.html', locals())    
