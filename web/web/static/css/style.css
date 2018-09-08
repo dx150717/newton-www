@@ -876,6 +876,38 @@ canvas {display: block; vertical-align: top;}
 .technology_text_NewPay{margin-top:110px;}
 .technology_icon4{width:338px; height:207px; margin-top:20px}
 
+#technology .page-block-title{
+    font-weight: 700;
+    font-size: 32px;
+    margin: 60px 0;
+    color: #333;
+}
+#technology .intro{
+    height: 380px;
+}
+#technology .page-upper .intro-img img{
+    height: 80px;
+}
+#technology .page-upper .intro-title{
+    font-size: 17px;
+    margin: 15px 0;
+    color: #333;
+}
+#technology .tech-intro{
+    margin: 80px 30px;
+    font-size: 20px;
+    text-align: justify;
+    color: #333;
+}
+@media(max-width: 768px){
+    #technology .tech-intro{
+        margin: 60px 10px;
+        font-size: 16px;
+        text-align: justify;
+        color: #333;
+    }
+}
+
 #protocol .fr{float:right; width:50%; text-align:center;}
 #protocol .fl{float:left; width:50%; text-align:left;}
 .protocol_text{padding:80px 0}

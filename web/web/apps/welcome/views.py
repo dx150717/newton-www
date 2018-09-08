@@ -80,6 +80,9 @@ def show_home_view(request):
         start_day = True
     return render(request, 'welcome/index.html', locals())
 
+def show_technology_view(request):
+    return render(request, 'welcome/technology.html', locals())
+
 def show_tech_view(request):
     return render(request, 'welcome/tech.html', locals())
 
