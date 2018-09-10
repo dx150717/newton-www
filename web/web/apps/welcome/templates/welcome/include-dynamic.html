@@ -19,8 +19,8 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="news-word">
-                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ entry.title }}</p></a>
                         <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
+                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ entry.title }}</p></a>
                     </div>
                 </div>
             {% else %}
@@ -29,8 +29,8 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="news-word">
-                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ entry.title }}</p></a>
                         <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
+                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ entry.title }}</p></a>
                     </div>
                 </div>
             {% endif %}

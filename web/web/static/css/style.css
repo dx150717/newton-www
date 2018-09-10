@@ -296,6 +296,129 @@ canvas {display: block; vertical-align: top;}
 .feature-item:last-child dl dd {margin-bottom: 0;}
 .media-body{height: 400px;}
 .content .container{width: 100%;}
+
+#team .team-list .avatar:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 93%;
+    height: 100%;
+    left: 10px;
+    top: -5%;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+#team .team-list .avatar .intro p{
+    display: none;
+}
+#team .team-list .avatar:hover .intro p{
+    display: block;
+    height: 320px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+#team .team-list .media-body .man-intro{
+}
+#team .team-list .media-body a img{
+    width: 18px;
+    border-radius: unset;
+}
+@media(max-width: 768px){
+    #team .team-list .avatar:hover .intro{
+        width: 100%;
+        height: 110%;
+        padding: 5px;
+    }
+    #team .team-list .avatar:hover .intro p {
+        padding:unset;
+    }
+}
+
+/*advisors*/
+#advisor .team-list .avatar:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 93%;
+    height: 100%;
+    left: 10px;
+    top: -5%;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+#advisor .team-list .avatar .intro p{
+    display: none;
+}
+#advisor .team-list .avatar:hover .intro p{
+    display: block;
+    height: 320px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+#advisor .team-list .media-body .man-intro{
+}
+#advisor .team-list .media-body a img{
+    width: 18px;
+    border-radius: unset;
+}
+@media(max-width: 768px){
+    #advisor .team-list .avatar:hover .intro{
+        width: 100%;
+        height: 110%;
+        padding: 5px;
+    }
+    #advisor .team-list .avatar:hover .intro p {
+        padding:unset;
+    }
+}
+
+/*CORNERSTONE INVESTORS*/
+#angels .team-list .avatar:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 93%;
+    height: 100%;
+    left: 10px;
+    top: -5%;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+#angels .team-list .avatar .intro p{
+    display: none;
+}
+#angels .team-list .avatar:hover .intro p{
+    display: block;
+    height: 320px;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+#angels .team-list .media-body .man-intro{
+}
+#angels .team-list .media-body a img{
+    width: 18px;
+    border-radius: unset;
+}
+@media(max-width: 768px){
+    #angels .team-list .avatar:hover .intro{
+        width: 100%;
+        height: 110%;
+        padding: 5px;
+    }
+    #angels .team-list .avatar:hover .intro p {
+        padding:unset;
+    }
+}
+
 /* Organization invester ---------------------------------------------------------------- */
 .organization-logo {
     width: 180px;
@@ -484,7 +607,7 @@ canvas {display: block; vertical-align: top;}
     .feature-item-wrap dl dd {min-height: 80px;}
     .team-item .avatar {width: 180px; height: 180px; margin-bottom: 15px;}
     .team-item .media-heading {margin-bottom: 20px;}
-    .team-item .media-intro {min-height: 110px; margin-bottom: 20px; padding: 0 25px;}
+    .team-item .media-intro {padding: 0 25px;}
     .contact-item-wrap {text-align: center;}
     .contact-item-wrap dl dt {margin-bottom: 20px;}
     .contact-item-wrap dl dt .icon-email {width: 42px;}
@@ -763,6 +886,38 @@ canvas {display: block; vertical-align: top;}
 .technology_text_NewPay{margin-top:110px;}
 .technology_icon4{width:338px; height:207px; margin-top:20px}
 
+#technology .page-block-title{
+    font-weight: 700;
+    font-size: 32px;
+    margin: 60px 0;
+    color: #333;
+}
+#technology .intro{
+    height: 380px;
+}
+#technology .page-upper .intro-img img{
+    height: 80px;
+}
+#technology .page-upper .intro-title{
+    font-size: 17px;
+    margin: 15px 0;
+    color: #333;
+}
+#technology .tech-intro{
+    margin: 80px 30px;
+    font-size: 20px;
+    text-align: justify;
+    color: #333;
+}
+@media(max-width: 768px){
+    #technology .tech-intro{
+        margin: 60px 10px;
+        font-size: 16px;
+        text-align: justify;
+        color: #333;
+    }
+}
+
 #protocol .fr{float:right; width:50%; text-align:center;}
 #protocol .fl{float:left; width:50%; text-align:left;}
 .protocol_text{padding:80px 0}
@@ -869,8 +1024,7 @@ canvas {display: block; vertical-align: top;}
 .community {padding-bottom: 80px;}
 .community h2{font-weight: 500;font-size: 20px; color: #000;}
 .community .container .row img{height: 30px; padding-right: 20px;}
-.community .online-community .container .row .talk img{width: 58px; height: 40px;}
-.community .online-community .container .row span{font-size: 16px;font-weight: 500;color: #000;}
+.community .online-community .container .row span{font-size: 16px;font-weight: 500;color: #898989;}
 .community .container .row .item{padding-top: 20px; padding-bottom: 20px;}
 .community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .community .press p a{font-size: 20px; color: #666666;}
@@ -911,13 +1065,10 @@ canvas {display: block; vertical-align: top;}
 .index_community h2{font-weight: 500;font-size: 20px; color: #000;}
 .index_community .container .row img{height: 30px; padding-right: 15px;}
 .index_community .container .row .line img{width: 44px; height: 30px;}
-.index_community .container .row .talk img{width: 58px; height: 40px;}
-.index_community .container .community_lower .region .country{text-align: center; padding-top: 5px; padding-bottom: 5px;}
-.index_community .container .region{
-    border-color: #ddd;
-}
-.index_community .container .row span{font-size: 16px;font-weight: 500;color: #000;}
-.index_community .container .row .item{padding-top: 20px; padding-bottom: 20px; border-top: unset;}
+.index_community .container .row .talk img{}
+.index_community .container .community_lower .region .country{text-align: center; padding-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ddd;}
+.index_community .container .row span{font-size: 16px;font-weight: 500;color: #898989;}
+.index_community .container .row .item{padding-top: 20px; padding-bottom: 20px;}
 .index_community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .index_community .press p a{font-size: 20px; color: #666666;}
 .index_community .popover-title{white-space: nowrap;}
@@ -950,14 +1101,19 @@ canvas {display: block; vertical-align: top;}
     padding-left: 10px;
 }
 .index_community .panel-body{
-    background-color: #ddd;
 }
 .index_community .panel-footer{
     background-color: white;
+    border-top: unset;
 }
 .index_community .container .region{
-    border-color: #ddd;
-    margin-right: -11px;
+    margin-right: -8px;
+}
+.index_community .community_lower .continent{
+    font-size: 20px;
+    margin: 13px;
+    color: #000;
+    font-weight: 600;
 }
 
 /*community page*/
@@ -965,14 +1121,14 @@ canvas {display: block; vertical-align: top;}
 .online-community h2{font-weight: 500;font-size: 20px; color: #000;}
 .online-community .container .row img{height: 30px; padding-right: 15px;}
 .online-community .container .row .line img{width: 44px; height: 30px;}
-.online-community .container .row .talk img{width: 58px; height: 40px;}
+.online-community .container .row .talk img{}
 .online-community .container .row .country{text-align: center;}
 .online-community .container .region{
-    border-color: #ddd;
-    margin-right: -11px;
+    margin-right: -8px;
+    background-color: #f7f7f7;
 }
-.online-community .container .row span{font-size: 16px;font-weight: 500;color: #000;}
-.online-community .container .row .item{padding-top: 20px; padding-bottom: 20px;border-top: unset;}
+.online-community .container .row span{font-size: 16px;font-weight: 500;color: #898989;}
+.online-community .container .row .item{padding-top: 20px; padding-bottom: 20px;}
 .online-community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .online-community .press p a{font-size: 20px; color: #666666;}
 .online-community .popover-title{white-space: nowrap;}
@@ -1005,12 +1161,19 @@ canvas {display: block; vertical-align: top;}
     padding-left: 10px;
 }
 .online-community .panel-body{
-    background-color: #ddd;
 }
 .online-community .panel-footer{
-    background-color: white;
+    background-color: unset;
+    border-top: unset;
 }
-.online-community .container .community_lower .region .country{text-align: center; padding-top: 5px; padding-bottom: 5px;}
+.online-community .container .community_lower .region .country{text-align: center; padding-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ddd;}
+.online-community .community_lower .continent{
+    font-size: 20px;
+    margin: 13px;
+    color: #000;
+    font-weight: 600;
+}
+
 /* newpay */
 .newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.jpg) no-repeat top center; width:100%; height:711px;}
 .newpay_text{padding-bottom:120px;}
@@ -1425,7 +1588,7 @@ canvas {display: block; vertical-align: top;}
 }
 #news .dynamic .shadow{background-color: #000;width: 100%;height: 0; padding-bottom: 100%; opacity: 0.3;}
 #news .dynamic .announcement-title{color: #000;position: unset; bottom: 0;padding: 5px;font-size: 16px;}
-#news .dynamic .time{color: #AAAAAA;text-align: left;top: 0;padding: 5px;font-size: 14px;}
+#news .dynamic .time{color: #AAAAAA;text-align: left;top: 0;padding: 5px;font-size: 14px;margin-bottom: unset;}
 #news .more{
     margin-bottom: 60px;
 }
