@@ -72,12 +72,12 @@ def show_home_view(request):
     # generate the captcha
     captcha_form = subscription_forms.SubscribeForm()
     # countdown time
-    start_day = False
-    now = datetime.datetime.now()
-    delta_time = settings.FUND_START_DATE - now
-    delta_time = delta_time.total_seconds()
-    if settings.FUND_START_DATE <= now:
-        start_day = True
+    # start_day = False
+    # now = datetime.datetime.now()
+    # delta_time = settings.FUND_START_DATE - now
+    # delta_time = delta_time.total_seconds()
+    # if settings.FUND_START_DATE <= now:
+    #     start_day = True
     return render(request, 'welcome/index.html', locals())
 
 def show_technology_view(request):

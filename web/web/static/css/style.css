@@ -271,10 +271,24 @@ canvas {display: block; vertical-align: top;}
     .arrow-only-pc{display: none;}
 }
 .hide{display: none;}
-#intro {background: url(../images/bg_map.svg) no-repeat center 100px; width: 100%; margin-top: 50px; padding-bottom: 130px;}
-#intro h1 {margin: 160px 0 27px; color: #333; position: relative;font-weight: bold; font-size: 60px; line-height: 1.2;}
-#intro p.sty1 {margin: 0 0 130px; color: #333; font-size: 40px; font-weight:100;}
+#intro {background: url(../images/bg_map.svg) no-repeat center 100px; width: 100%; margin-top: 50px; padding-bottom: 100px;}
+#intro h1 {margin: 130px 0 27px; color: #333; position: relative;font-weight: 400; font-size: 60px; line-height: 1.2;}
+#intro p.sty1 {margin: 0 0 30px; color: #333; font-size: 40px; font-weight:100;}
 #intro p.sty2, span.sty2 {color:#a4a4a4; margin: 0 0 10px; font-size: 30px; font-weight:100;}
+#intro .countdown-title h2{font-weight: 100; font-size: 40px; color: #333;}
+#intro .countdown-subtitle h3{color: #333;}
+#intro .start_button .announcement {}
+#intro .start_button .announcement a{font-weight:700; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
+#intro .start_button .announcement a:hover{color:#666;}
+#intro .start_button {margin-top: 50px;}
+@media(max-width: 768px) {
+    #intro .countdown-title h2{
+        font-size: 29px;
+    }
+    #intro .countdown-subtitle h3{
+        font-size: 20px;
+    }
+}
 .border-line:before {content:" "; margin-right:10px;margin-bottom:8px;;height: 2px; width: 50px;display:inline-block;}
 .border-line { margin: 0 0 60px; font-size: 30px; font-weight:100;}
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: 0 none; outline-offset: 0;}
@@ -675,8 +689,8 @@ canvas {display: block; vertical-align: top;}
     .sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li a{color: #fff;}
     .navbar-nav>li>.dropdown-menu li:first-child {border-bottom: 0 none;}
     #intro {padding-bottom: 50px; background-position:center 60px;   background-size:150%; margin-top: 50px;}
-    #intro h1 {margin:50px 0 30px; font-size: 36px; color: #555;}
-    #intro p.sty1 {font-size: 30px; margin-bottom:30px;}
+    #intro h1 {margin:25px 0 30px; font-size: 35px; color: #555;}
+    #intro p.sty1 {font-size: 29px; margin-bottom:30px;}
     #intro p.sty2, span.sty2 {font-size: 22px;}
     #intro .border-line{font-size: 22px; margin-bottom: 20px;}
     .download {padding-left: 40px; padding-right: 40px;}
@@ -1456,7 +1470,6 @@ canvas {display: block; vertical-align: top;}
 #countdown #button-group .white-page{display: inline-block; background: url("../images/tokensale/whilepage_button.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-left: 14px;}
 #countdown .announcement a{font-weight:300; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #fff; font-size:20px; line-height:50px; display:block; margin:20px auto; color:#fff}
 #countdown .announcement a:hover{color:#666;}
-#start_test {background: url("../images/countdown/banner-2.jpg") no-repeat; height: 600px; background-size:100% 600px;}
 #start_test .countdown-title{padding-top: 135px;}
 #start_test .countdown-title h1{font-size: 60px; color: #fff; font-weight: 100;}
 #start_test .countdown-subtitle h3{font-size: 34px; color: #fff; font-weight: 100;}
@@ -1468,9 +1481,6 @@ canvas {display: block; vertical-align: top;}
 #start_test .announcement a:hover{color:#666;}
 #countdown .countdown-block{
 }
-#start_test .countdown-block{
-    margin-top: 1%;
-}
 @media (max-width:1600px){
     #start_test .more{
         padding-right: 5%;
@@ -1481,8 +1491,6 @@ canvas {display: block; vertical-align: top;}
 }
 @media (max-width:1440px){
     #countdown{background: url("../images/countdown/banner-2.jpg") no-repeat; height: 510px; background-size: 100% 660px;}
-    #countdown .countdown-block{
-    }
     #countdown .countdown-title h1{font-size: 54px; color: #fff; font-weight: 100;}
     #countdown .countdown-title{padding-top: 62px;}
     #countdown .countdown-subtitle h3{font-size: 31px; color: #fff; font-weight: 100;}
@@ -1497,14 +1505,9 @@ canvas {display: block; vertical-align: top;}
     #start_test .countdown-subtitle h3{font-size: 31px; color: #fff; font-weight: 100; margin-bottom: 4%;}
     #start_test .more{padding-right:3%;}
     #start_test .announcement{padding-left: 3%;}
-    #start_test .countdown-block{
-        margin-top: 1%;
-    }
 }
 @media (max-width:1280px){
     #countdown{background: url("../images/countdown/banner-2.jpg") no-repeat; height: 460px; background-size: 100% 550px;}
-    #countdown .countdown-block{
-    }
     #countdown .countdown-title {padding-top:47px;}
     #countdown .countdown-title h1{font-size: 50px; color: #fff; font-weight: 100;}
     #countdown .countdown-subtitle h3{font-size: 29px; color: #fff; font-weight: 100;}
@@ -1552,10 +1555,6 @@ canvas {display: block; vertical-align: top;}
     #countdown .countdown-block{
         margin: unset;
         float: unset;
-    }
-    #start_test .countdown-block{
-        float: unset;
-        margin: unset;
     }
 }
 
