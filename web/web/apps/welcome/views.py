@@ -207,11 +207,15 @@ def show_foundation_view(request):
 def show_term_of_service_view(request):
     return render(request, 'welcome/term-of-service.html', locals())
 
+def show_wiki_view(request):
+    return render(request, 'welcome/wiki.html', locals())
+
 def show_404_page(request):
     return render(request, '404.html')
 
 def show_500_page(request):
     return render(request, '500.html')
+
 
 class AnnouncementView(generic.ListView):
     template_name = "welcome/announcement.html"
