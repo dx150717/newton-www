@@ -13,7 +13,7 @@ class PressModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
-    press_img_url = models.CharField(max_length=200)
+    press_img = models.FileField(upload_to='uploads/press/%Y/%m/%d')
     
     def __str__(self):
         return self.press_title

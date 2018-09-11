@@ -170,9 +170,9 @@
             </div>
             {% if presses %}
             {% for press in presses %}
-                {% if press.press_img_url %}
+                {% if press.press_img %}
                 <div class="col-md-3">
-                    <a class="event-img" style="background-image: url({{ press.press_img_url }});" href="{{ press.press_link }}">
+                    <a class="event-img" style="background-image: url({{ press.press_img.url }});" href="{{ press.press_link }}">
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
