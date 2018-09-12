@@ -315,7 +315,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -356,7 +356,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -397,7 +397,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -428,8 +428,32 @@ canvas {display: block; vertical-align: top;}
     width: 100%;
 }
 .organization-container {
-    height: 200px;
+    height: 250px;
 }
+#angels .team-list .organization-logo:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 93%;
+    height: 100%;
+    left: 10px;
+    top: -5%;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+#angels .team-list .organization-logo .intro{
+    display: none;
+}
+#angels .team-list .organization-logo:hover .intro p{
+    display: block;
+    height: 200px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-align: justify;
+}
+
 /* Partners ---------------------------------------------------------------- */
 .partner-bottom{padding-bottom: 60px;}
 .partners-list {vertical-align: middle;}
