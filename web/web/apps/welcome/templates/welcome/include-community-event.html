@@ -106,6 +106,7 @@
             </div>
         </div>
         {% endcomment %}
+
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Activity " %}</h2>
@@ -118,6 +119,7 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
+                        <p class="time">{{ activity_entry.creation_date|date:"Y-m-d" }}</p>
                         <a href="{{ activity_entry.urls }}"><p class="event-title">{{ activity_entry.title }}</p></a>
                     </div>
                 </div>
@@ -127,6 +129,7 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
+                        <p class="time">{{ activity_entry.creation_date|date:"Y-m-d" }}</p>
                         <a href="{{ activity_entry.urls }}"><p class="event-title">{{ activity_entry.title }}</p></a>
                     </div>
                 </div>
@@ -147,6 +150,7 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
+                        <p class="time">{{ operation_entry.creation_date|date:"Y-m-d" }}</p>
                         <a href="{{ operation_entry.urls }}"><p class="event-title">{{ operation_entry.title }}</p></a>
                     </div>
                 </div>
@@ -156,6 +160,7 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
+                        <p class="time">{{ operation_entry.creation_date|date:"Y-m-d" }}</p>
                         <a href="{{ operation_entry.urls }}"><p class="event-title">{{ operation_entry.title }}</p></a>
                     </div>
                 </div>
@@ -176,6 +181,7 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
+                        <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
                         <a href="{{ press.press_link }}"><p class="event-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
@@ -185,6 +191,7 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
+                        <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
                         <a href="{{ press.press_link }}"><p class="event-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
@@ -205,6 +212,7 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
+                        <p class="time">{{ blog_entry.creation_date|date:"Y-m-d" }}</p>
                         <a href="{{ blog_entry.urls }}"><p class="event-title">{{ blog_entry.title }}</p></a>
                     </div>
                 </div>
@@ -214,6 +222,7 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
+                        <p class="time">{{ blog_entry.creation_date|date:"Y-m-d" }}</p>
                         <a href="{{ blog_entry.urls }}"><p class="event-title">{{ blog_entry.title }}</p></a>
                     </div>
                 </div>
