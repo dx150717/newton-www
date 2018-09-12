@@ -1945,8 +1945,19 @@ input[name="expect_btc"], input[name="expect_ela"]{
     font-weight: 400;
     margin: 40px;
 }
+#wiki .wiki-info{
+    margin-top: 40px;
+}
+#wiki .wiki-info p{
+    margin-top: 12px;
+    color: #333;
+    font-size: 16px;
+}
 @media(max-width: 768px){
     #wiki div h2{
          font-size: 28px;
+    }
+    #wiki .page-title p{
+        font-size: 20px;
     }
 }
