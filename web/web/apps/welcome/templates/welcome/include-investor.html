@@ -411,6 +411,7 @@
             </div>
         </div>
         <div class="team-list row">
+            {% comment %}
             <div class="team-item col-md-4 col-xs-12 pull-left">
                 <div class="media">
                     <div class="media-body organization-container">
@@ -429,6 +430,7 @@
                     </div>
                 </div>
             </div>
+            {% endcomment %}
             <div class="team-item col-md-4 col-xs-12 pull-left">
                 <div class="media">
                     <div class="media-body organization-container">
@@ -438,7 +440,7 @@
                                     {% trans "BlockVC (BlockVanguard Capital) is a global leading blockchain VC and consultant researching institution. Its investment direction covers the basic public chain, application protocols and financial services in the blockchain ecosystem. The investment network covers Beijing. Singapore, London, Silicon Valley and other parts of the world, and has established close strategic partnerships with multinational top projects and investment research institutions." %}
                                 </p>
                             </div>
-                            <img class="media-object" style="width:150%;" src="{% version "images/angels/blockvc.png" %}" alt="{% trans "BLOCK VC" %}" />
+                            <img class="media-object" style="width:150%;margin-top:30px;margin-left:-15px;" src="{% version "images/angels/blockvc.png" %}" alt="{% trans "BLOCK VC" %}" />
                         </div>
                         <h4 class="media-heading" style="margin-top:55px;">{% trans "BLOCK VC" %}</h4>
                         <div class="media-intro">
@@ -457,15 +459,13 @@
                             </div>
                             <img class="media-object" src="{% version "images/angels/Jublilee.png" %}" alt="{% trans "Jublilee" %}" />
                         </div>
-                        <h4 class="media-heading">{% trans "Jublilee" %}</h4>
+                        <h4 class="media-heading" style="margin-top:50px;">{% trans "Jublilee" %}</h4>
                         <div class="media-intro">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="team-list row">
-        <div class="team-item col-md-4 col-xs-12 pull-left">
+            <div class="team-item col-md-4 col-xs-12 pull-left">
                 <div class="media">
                     <div class="media-body organization-container">
                         <div class="organization-logo">
