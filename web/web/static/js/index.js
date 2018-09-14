@@ -1,3 +1,5 @@
+import '../css/style.css'
+	
 var FAIL = 0
 var SUCCESS = 1
 var UNAUTH = 2
@@ -91,7 +93,7 @@ $(function () {
  * 
  * @param language { String } language code
  */
-function setLanguage(language) {
+window.setLanguage = function(language) {
 	var expires = "";
 	var days = 365;
 	var name = 'language';
@@ -111,10 +113,10 @@ function setLanguage(language) {
 		location.replace("/announcement/");
 	}
 	// load the nessary resource file
-	loadCurrentMessage();
+	loadCurrentMessage();                                                       
 }
 
-function changeLanguage(){
+window.changeLanguage = function(){
     var language_code = $("#id_select_language").val();
     setLanguage(language_code);
 }
@@ -155,7 +157,7 @@ $(window).resize(function () {
  * 
  * @param {boolean} isFlag mobile screen is false, pc screen is true.
  */
-function setDropdownListener(isFlag) {
+window.setDropdownListener = function(isFlag) {
 	if (isFlag) {
 		$(".dropdown")[0].addEventListener("mouseenter", openDropdown);
 		$(".dropdown")[0].addEventListener("mouseleave", closeDropdown);
@@ -164,13 +166,13 @@ function setDropdownListener(isFlag) {
 		$(".dropdown")[0].removeEventListener("mouseleave", closeDropdown);
 	}
 }
-function openDropdown() {
+window.openDropdown = function() {
 	$(".dropdown").addClass("open");
 }
-function closeDropdown() {
+window.closeDropdown = function() {
 	$(".dropdown").removeClass("open");
 }
-function changeToggle() {
+window.changeToggle = function() {
 	if($("#drop-panel").hasClass("collapsing")){
 		return;
 	}
@@ -281,7 +283,7 @@ function getErrorMessage(json)
 }
 
 
-function gotoTop(min_height){
+window.gotoTop = function(min_height){
     $("#gotoTop").click(
         function(){$('html,body').animate({scrollTop:0},700);
     }).hover(
