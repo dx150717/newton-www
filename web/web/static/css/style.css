@@ -943,17 +943,12 @@ canvas {display: block; vertical-align: top;}
 .protocol_text1{padding:90px 0 80px; text-align:center;}
 .protocol_text1 h2{color:#333; margin-bottom:15px; font-weight:700; font-size:30px;}
 .protocol_text1 p{color:#393939; font-size:18px; text-align: left;}
-.protocol_icon1{width:472px; height:285px;}
-.protocol_icon2{width:674px; height:95px;}
-.protocol_icon3{width:414px; height:301px; margin-top:60px}
-.protocol_icon4{width:408px; height:318px; margin-top:-20px}
-.protocol_icon5{width:349px; height:269px;}
-.protocol_icon6{width:281px; height:223px;}
-.protocol_icon7{width:343px; height:181px;}
+#protocol .protocol_icon{width: 100%;}
+
 @media (max-width: 767px) {
 .technology_list h1{margin:40px 0; font-size: 24px;}
 #technology .fr,#technology .fl,#protocol .fr,#protocol .fl{float:none; width:auto; text-align:center}
-#technology .fr img,#technology .fl img,#protocol .fr img,#protocol .fl img{width:70%; height:auto; text-align:center; padding:30px;}
+#technology .fr img,#technology .fl img,#protocol .fr img,#protocol .fl img{width:100%; height:auto; text-align:center;}
 #technology .col-sm-6,#protocol .col-sm-6{padding:0 5%;}
 .technology_text{padding-bottom:40px;}
 .technology_icon6{margin-top:0;}
