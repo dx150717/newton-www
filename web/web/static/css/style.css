@@ -333,7 +333,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -374,7 +374,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -415,7 +415,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -446,8 +446,32 @@ canvas {display: block; vertical-align: top;}
     width: 100%;
 }
 .organization-container {
-    height: 200px;
+    height: 250px;
 }
+#angels .team-list .organization-logo:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 93%;
+    height: 100%;
+    left: 10px;
+    top: -5%;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+#angels .team-list .organization-logo .intro{
+    display: none;
+}
+#angels .team-list .organization-logo:hover .intro p{
+    display: block;
+    height: 200px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-align: justify;
+}
+
 /* Partners ---------------------------------------------------------------- */
 .partner-bottom{padding-bottom: 60px;}
 .partners-list {vertical-align: middle;}
@@ -491,7 +515,7 @@ canvas {display: block; vertical-align: top;}
 .contact-item-wrap dl {margin-bottom: 25px;}
 /* Language */
 .language-span {background-repeat: no-repeat;background-size: 16px 16px;width: 16px;height: 16px; padding-left:20px; cursor: pointer; font-size: 10px;}
-.zh {background-image: url("../images/languages/zh.png")}
+.zh {background-image: url("../images/languages/zh-cn-m.png")}
 .us {background-image: url("../images/languages/us.png")}
 .footer span a{font-size: 12px;padding-top: 20px; padding-left: 20px;}
 /* Footer ----------------------------------------------------------- */
@@ -900,9 +924,9 @@ canvas {display: block; vertical-align: top;}
 .technology_list h1,.protocol_list h1{text-align:center; color:#333; font-size:32px; margin:60px 0; font-weight:700}
 .technology_text{padding-bottom:80px;}
 .technology_text p,.protocol_text p{color:#393939; margin-bottom:20px; font-size:18px;}
-.technology_icon6{margin-top:70px;}
+.technology_icon6{margin-top:30px;}
 .technology_text_NewPay{margin-top:110px;}
-.technology_icon4{width:338px; height:207px; margin-top:20px}
+
 
 #technology .page-block-title{
     font-weight: 700;
@@ -936,6 +960,8 @@ canvas {display: block; vertical-align: top;}
     }
 }
 
+#technology .technology_list .technology_text img{width: 100%;height: 100%}
+
 #protocol .fr{float:right; width:50%; text-align:center;}
 #protocol .fl{float:left; width:50%; text-align:left;}
 .protocol_text{padding:80px 0}
@@ -945,13 +971,8 @@ canvas {display: block; vertical-align: top;}
 .protocol_text1{padding:90px 0 80px; text-align:center;}
 .protocol_text1 h2{color:#333; margin-bottom:15px; font-weight:700; font-size:30px;}
 .protocol_text1 p{color:#393939; font-size:18px; text-align: left;}
-.protocol_icon1{width:472px; height:285px;}
-.protocol_icon2{width:674px; height:95px;}
-.protocol_icon3{width:414px; height:301px; margin-top:60px}
-.protocol_icon4{width:408px; height:318px; margin-top:-20px}
-.protocol_icon5{width:349px; height:269px;}
-.protocol_icon6{width:281px; height:223px;}
-.protocol_icon7{width:343px; height:181px;}
+#protocol .protocol_icon{width:100%;}
+
 @media (max-width: 767px) {
 .technology_list h1{margin:40px 0; font-size: 24px;}
 #technology .fr,#technology .fl,#protocol .fr,#protocol .fl{float:none; width:auto; text-align:center}
@@ -1078,6 +1099,29 @@ canvas {display: block; vertical-align: top;}
     }
 }
 
+/*community dynamic*/
+#community .event .event-img{
+    float: left;
+    width: 99%;
+    height: 0;
+    padding-bottom: 99%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+#community .event .event-title{color: #000;position: unset; bottom: 0;padding: 5px;font-size: 16px;}
+#community .event .shadow{background-color: #000;width: 100%;height: 0; padding-bottom: 100%; opacity: 0.3;}
+#community .event .dynamic-title h2{float: left;}
+#community .event .more-detail{
+    font-size: 16px;
+}
+#community .event .event-word .time{color: #AAAAAA;text-align: left;top: 0;padding: 5px;font-size: 14px;margin-bottom: unset;}
+@media(max-width: 768px){
+    #community .event .dynamic-title{
+        margin: auto;
+    }
+}
+
 /*index community*/
 .index_community {padding-bottom: 60px;}
 .index_community h2{font-weight: 500;font-size: 20px; color: #000;}
@@ -1132,6 +1176,11 @@ canvas {display: block; vertical-align: top;}
     margin: 13px;
     color: #000;
     font-weight: 600;
+}
+.index_community .community_lower .add{
+    font-size: 18px;
+    color: #333;
+    margin-top: 40px;
 }
 
 /*community page*/
@@ -1191,6 +1240,11 @@ canvas {display: block; vertical-align: top;}
     color: #000;
     font-weight: 600;
 }
+.online-community .community_lower .add{
+    font-size: 18px;
+    color: #333;
+    margin-top: 40px;
+}
 
 /* newpay */
 .newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.jpg) no-repeat top center; width:100%; height:711px;}
@@ -1199,6 +1253,8 @@ canvas {display: block; vertical-align: top;}
 .newpay_text h2{padding-left:10px; color:#333; font-size:32px;}
 .newpay_text p{padding-left:10px; color:#333; font-size:18px;}
 .newpay_text .col-sm-6{margin:120px 0 0;}
+#newpay .download{border-radius: 10px; margin-top:50px;}
+#newpay .download-button p{color: #333;font-size: 16px; margin-top: 10px;}
 @media(max-width:1199px) and (min-width: 992px){
 .newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.jpg) no-repeat top center; width:96%; height:700px;}
 .newpay_text{padding-bottom:80px;}
@@ -1889,5 +1945,27 @@ input[name="expect_btc"], input[name="expect_ela"]{
     margin-left: 10px;
     padding-left: 10px;
 }
-.checked_icon
 
+
+/*wiki page*/
+#wiki div h2{
+    color: #000;
+    font-weight: 400;
+    margin: 40px;
+}
+#wiki .wiki-info{
+    margin-top: 40px;
+}
+#wiki .wiki-info p{
+    margin-top: 12px;
+    color: #333;
+    font-size: 16px;
+}
+@media(max-width: 768px){
+    #wiki div h2{
+         font-size: 28px;
+    }
+    #wiki .page-title p{
+        font-size: 20px;
+    }
+}

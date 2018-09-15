@@ -25,7 +25,6 @@ logger = logging.getLogger(__name__)
 
 def show_home_view(request):
     language = translation.get_language()
-
     if language.startswith('zh'):
         language = CHINESE
     elif language.startswith('en'):
@@ -60,7 +59,6 @@ def show_home_view(request):
         language = ENGLISH
     entry = EntryDetail()
     entries = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
-    logger.debug('entries:%s' % entries)
     if len(entries) < 3:
         entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
     for entry in entries:
@@ -135,7 +133,59 @@ def show_newpay_view(request):
     return render(request, 'welcome/newpay.html', locals())
 
 def show_community_view(request):
-    presses = PressModel.objects.order_by('-created_at')[0:5]
+    presses = PressModel.objects.order_by('-created_at')[0:4]
+    language = translation.get_language()
+    if language.startswith('zh'):
+        language = CHINESE
+    elif language.startswith('en'):
+        language = ENGLISH
+    elif language.startswith('ko'):
+        language = KOREAN
+    elif language.startswith('ja'):
+        language = JAPANESE
+    elif language.startswith('ru'):
+        language = RUSSIAN
+    elif language.startswith('tr'):
+        language = TURKISH
+    elif language.startswith('es'):
+        language = SPANISH
+    elif language.startswith('fr'):
+        language = FRENCH
+    elif language.startswith('de'):
+        language = GERMAN
+    elif language.startswith('ar'):
+        language = ARABIC
+    elif language.startswith('nl'):
+        language = NETHERLAND
+    elif language.startswith('fi'):
+        language = FINNISH
+    elif language.startswith('id'):
+        language = INDONESIAN
+    elif language.startswith('it'):
+        language = ITALY
+    elif language.startswith('th'):
+        language = THAILAND
+    else:
+        language = ENGLISH
+    entry = EntryDetail()
+    # select activity entry object
+    activity_entries = entry.get_queryset().filter(language=language, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by('-creation_date')[0:4]
+    if len(activity_entries) < 4:
+        activity_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by('-creation_date')[0:4]
+    # select operation entry object
+    operation_entries = entry.get_queryset().filter(language=language, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by('-creation_date')[0:4]
+    if len(operation_entries) < 4:
+        operation_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by('-creation_date')[0:4]
+    # select blog entry object
+    blog_entries = entry.get_queryset().filter(language=language, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
+    if len(blog_entries) < 4:
+        blog_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
+    for activity_entry in activity_entries:
+        activity_entry.urls = activity_entry.get_absolute_url().replace('/blog/', '/announcement/')
+    for operation_entry in operation_entries:
+        operation_entry.urls = operation_entry.get_absolute_url().replace('/blog/', '/announcement/')
+    for blog_entry in blog_entries:
+        blog_entry.urls = blog_entry.get_absolute_url()
     return render(request, 'welcome/community.html', locals())
 
 def show_economy_view(request):
@@ -157,11 +207,15 @@ def show_foundation_view(request):
 def show_term_of_service_view(request):
     return render(request, 'welcome/term-of-service.html', locals())
 
+def show_wiki_view(request):
+    return render(request, 'welcome/wiki.html', locals())
+
 def show_404_page(request):
     return render(request, '404.html')
 
 def show_500_page(request):
     return render(request, '500.html')
+
 
 class AnnouncementView(generic.ListView):
     template_name = "welcome/announcement.html"
