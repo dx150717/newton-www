@@ -4,11 +4,11 @@ from django.conf import settings
 import datetime
 from django.http import HttpResponse
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,PUBLISHED,TYPE_BLOG,TYPE_ANNOUNCEMENT
+from zinnia.managers import PUBLISHED,TYPE_BLOG,TYPE_ANNOUNCEMENT
 
 def feed_latest(request):
 	entry = EntryDetail()
-	entries = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED).order_by('-creation_date')[:20]
+	entries = entry.get_queryset().filter(status=PUBLISHED).order_by('-creation_date')[:50]
 	for entry in entries:
 		if entry.entry_type == TYPE_ANNOUNCEMENT:
 			url = entry.get_absolute_url().replace('/blog/', '/announcement/')
