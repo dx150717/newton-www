@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "scene" %}
+{% endblock %}
+
+{% block content %}
+<section id="scene">
+	<div class="page-title">
+        <div class="container">
+            <p>{% trans "SCENE" %}</p>
+        </div>
+    </div>
+    <div class="container">
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+	    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+	    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+	    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+	  </ul>
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div role="tabpanel" class="tab-pane active" id="home">
+	    	<div class="nav nav-tabs col-md-1">
+	    		<div class="active"><a href="#aa" aria-controls="aa" role="tab" data-toggle="tab">aa</a></div>
+	    		<div><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">bb</a></div>
+	    		<div><a href="#cc" aria-controls="cc" role="tab" data-toggle="tab">cc</a></div>
+	    	</div>
+	    	<div class="tab-content col-md-11">
+	    		<div role='tabpanel' class="tab-pane active" id='aa'>aaa</div>
+	    		<div role='tabpanel' class="tab-pane" id='bb'>bbb</div>
+	    		<div role='tabpanel' class="tab-pane" id='cc'>ccc</div>
+	    	</div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="profile">222</div>
+	    <div role="tabpanel" class="tab-pane" id="messages">333</div>
+	    <div role="tabpanel" class="tab-pane" id="settings">444</div>
+	  </div>
+	</div>
+</section>
+{% endblock %}
