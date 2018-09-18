@@ -207,8 +207,11 @@ def show_foundation_view(request):
 def show_term_of_service_view(request):
     return render(request, 'welcome/term-of-service.html', locals())
 
-def show_wiki_view(request):
-    return render(request, 'welcome/wiki.html', locals())
+def show_addcommunity_view(request):
+    return render(request, 'welcome/addcommunity.html', locals())
+
+def show_sitemap_view(request):
+    return render(request, 'welcome/sitemap.html', locals())
 
 def show_404_page(request):
     return render(request, '404.html')

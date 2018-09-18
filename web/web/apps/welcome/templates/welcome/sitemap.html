@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "SITEMAP" %}
+{% endblock %}
+
+{% block content %}
+<section id="sitemap">
+	<div class="page-title">
+        <div class="container">
+            <p>{% trans "Sitemap" %}</p>
+        </div>
+    </div>
+    <div class="container info">
+    	<ul>
+    		<li style="margin-top:0;list-style-type:none;" class="col-md-4">
+    			<section class="region">
+    				<h3>{% trans "About Newton" %}</h3>
+    				<ul class="list">
+    					<li><a href="/">{% trans "Home" %}</a></li>
+    					<li><a href="/whitepaper/">{% trans "Whitepaper" %}</a></li>
+    					<li><a href="/newfund/">{% trans "NewFund" %}</a></li>
+    					<li><a href="/newpay/">{% trans "NewPay" %}</a></li>
+    					<li><a href="/team/">{% trans "Team" %}</a></li>
+    					<li><a href="/economy/">{% trans "Economy" %}</a></li>
+    					<li><a href="/joinus/">{% trans "Join Us" %}</a></li>
+    					<li><a href="/contact/">{% trans "Contact Us" %}</a></li>
+    					<li><a href="/mediakit/">{% trans "Media Kit" %}</a></li>
+    				</ul>
+    			</section>
+    		</li>
+
+    		<li style="margin-top:0;list-style-type:none;" class="col-md-4">
+    			<section class="region">
+    				<h3>{% trans "About Technology" %}</h3>
+    				<ul class="list">
+    					<li><a href="/technology/">{% trans "Technology" %}</a></li>
+    					<li><a href="/technology/hep/">{% trans "Hyper Exchange Protocol" %}</a></li>
+    					<li><a href="/technology/basic-tech/">{% trans "Basic Technology" %}</a></li>
+    				</ul>
+    			</section>
+    		</li>
+
+    		<li style="margin-top:0;list-style-type:none;" class="col-md-4">
+    			<section class="region">
+    				<h3>{% trans "About Community" %}</h3>
+    				<ul class="list">
+    					<li><a href="/community/">{% trans "Community" %}</a></li>
+    					<li><a href="/addcommunity/">{% trans "Add Community" %}</a></li>
+    					<li><a href="/announcement/">{% trans "Announcement" %}</a></li>
+    					<li><a href="/announcements/1/">{% trans "Operation" %}</a></li>
+    					<li><a href="/announcements/2/">{% trans "Weekly" %}</a></li>
+    					<li><a href="/announcements/3/">{% trans "Activity" %}</a></li>
+    					<li><a href="/blog/">{% trans "Blog" %}</a></li>
+    					<li><a href="/press/">{% trans "Press" %}</a></li>
+    					<li><a href="https://developer.newtonproject.org/">{% trans "Developer" %}</a></li>
+    					<li><a href="/faq/">{% trans "FAQ" %}</a></li>
+    				</ul>
+    			</section>
+    		</li>
+    		<li style="margin-top:0;list-style-type:none;" class="col-md-4">
+    			<section class="region">
+    				<h3>{% trans "Development" %}</h3>
+    				<ul class="list">
+    					<li><a href="/partner/">{% trans "Partner" %}</a></li>
+    				</ul>
+    			</section>
+    		</li>
+    		<li style="margin-top:0;list-style-type:none;" class="col-md-4">
+    			<section class="region">
+    				<h3>{% trans "Service Terms" %}</h3>
+    				<ul class="list">
+    					<li><a href="/copyright/">{% trans "Copyright" %}</a></li>
+    					<li><a href="/terms-of-use/">{% trans "Terms of Use" %}</a></li>
+    					<li><a href="/privacy/">{% trans "Privacy Policy" %}</a></li>
+    				</ul>
+    			</section>
+    		</li>
+    	</ul>
+	</div>
+</section>
+{% endblock %}
