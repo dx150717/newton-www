@@ -49,6 +49,7 @@ urlpatterns = patterns('',
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^term-of-service/', 'welcome.views.show_term_of_service_view'),
                        url(r'^wiki/', 'welcome.views.show_wiki_view'),
+                       url(r'^scene/', 'welcome.views.show_scene_view'),
 )
 
 handler404 = 'welcome.views.show_404_page'

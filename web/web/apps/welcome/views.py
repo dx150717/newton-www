@@ -132,6 +132,9 @@ def show_legal_view(request):
 def show_newpay_view(request):
     return render(request, 'welcome/newpay.html', locals())
 
+def show_scene_view(request):
+    return render(request, 'welcome/scene.html', locals())
+
 def show_community_view(request):
     presses = PressModel.objects.order_by('-created_at')[0:4]
     language = translation.get_language()
