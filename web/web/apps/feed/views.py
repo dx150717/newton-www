@@ -32,7 +32,6 @@ def feed_latest(request):
 		link="%s/feed/" % settings.BASE_URL,
 		description="newtonproject",
 		lastBuildDate=datetime.datetime.now(),
-		language='zh-CN',
 		docs='%s/about/' % settings.BASE_URL,
 		items=items)
 	rss.rss_attrs['xmlns:atom'] = 'http://www.w3.org/2005/Atom'
