@@ -1969,3 +1969,39 @@ input[name="expect_btc"], input[name="expect_ela"]{
         font-size: 20px;
     }
 }
+
+/*sitemap*/
+#sitemap .info{
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+#sitemap .info .region{
+    display: inline-block;
+    margin-bottom: 26px;
+    vertical-align: top;
+    z-index: 1;
+}
+#sitemap .info .region h3{
+    letter-spacing: 0em;
+    margin-bottom: 3px;
+    padding-right: 40px;
+    font-size: 24px;
+    line-height: 1.47059;
+    font-weight: 600;
+    color: #111;
+}
+#sitemap .info .region .list{
+    list-style-type: none;
+    padding-left: 5px;
+    color: #333;
+}
+#sitemap .info .region .list li{
+    margin-top: 0;
+    padding-bottom: 7px;
+    padding-right: 40px;
+}
+#sitemap .info .region .list li a{
+    text-decoration: none;
+    color: #0070c9;
+    font-size: 17px;
+}

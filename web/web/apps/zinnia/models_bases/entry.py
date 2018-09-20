@@ -33,7 +33,7 @@ from zinnia.settings import AUTO_CLOSE_TRACKBACKS_AFTER
 from zinnia.managers import entries_published
 from zinnia.managers import EntryPublishedManager
 from zinnia.managers import DRAFT, HIDDEN, PUBLISHED
-from zinnia.managers import CHINESE, ENGLISH, KOREAN, JAPANESE, RUSSIAN, TURKISH, SPANISH, FRENCH, GERMAN, ARABIC, NETHERLAND,FINNISH,INDONESIAN
+from zinnia.managers import CHINESE, ENGLISH, KOREAN, JAPANESE, RUSSIAN, TURKISH, SPANISH, FRENCH, GERMAN, ARABIC, NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND
 from zinnia.managers import TYPE_BLOG, TYPE_ANNOUNCEMENT, SUB_TYPE_ACTIVITY, SUB_TYPE_OPERATION, SUB_TYPE_WEEKLY
 from zinnia.url_shortener import get_url_shortener
 
@@ -62,7 +62,9 @@ class CoreEntry(models.Model):
         (ARABIC, "Arabic"),
         (NETHERLAND, "Netherland"),
         (FINNISH, "Finnish"),
-        (INDONESIAN, "Indonesian")
+        (INDONESIAN, "Indonesian"),
+        (ITALY, "Italy"),
+        (THAILAND, "Thailand")
     )
 
     ENTRY_TYPE_CHOICES = (

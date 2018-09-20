@@ -75,6 +75,10 @@ def entries_published(queryset):
         language = FINNISH
     elif language.startswith('id'):
         language = INDONESIAN
+    elif language.startswith('it'):
+        language = ITALY
+    elif language.startswith('th'):
+        language = THAILAND
     else:
         language = ENGLISH
         

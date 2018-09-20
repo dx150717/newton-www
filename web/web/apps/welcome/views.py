@@ -210,8 +210,11 @@ def show_foundation_view(request):
 def show_term_of_service_view(request):
     return render(request, 'welcome/term-of-service.html', locals())
 
-def show_wiki_view(request):
-    return render(request, 'welcome/wiki.html', locals())
+def show_addcommunity_view(request):
+    return render(request, 'welcome/addcommunity.html', locals())
+
+def show_sitemap_view(request):
+    return render(request, 'welcome/sitemap.html', locals())
 
 def show_404_page(request):
     return render(request, '404.html')
@@ -253,6 +256,10 @@ class AnnouncementView(generic.ListView):
             language = FINNISH
         elif language.startswith('id'):
             language = INDONESIAN
+        elif language.startswith('it'):
+            language = ITALY
+        elif language.startswith('th'):
+            language = THAILAND
         else:
             language = ENGLISH
             
@@ -297,6 +304,10 @@ class AnnouncementSubView(generic.ListView):
             language = FINNISH
         elif language.startswith('id'):
             language = INDONESIAN
+        elif language.startswith('it'):
+            language = ITALY
+        elif language.startswith('th'):
+            language = THAILAND
         else:
             language = ENGLISH
             
