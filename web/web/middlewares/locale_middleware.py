@@ -58,6 +58,8 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
                 return 'it'
             if language.find('th') >= 0:
                 return 'th'
+            if language.find('vi') >= 0:
+                return 'vi'
             return 'en'
         except Exception, inst:
             logger.exception('fail to get user language:%s' % str(inst))
