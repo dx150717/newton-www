@@ -72,12 +72,21 @@
 {% endblock %}
 
 {% block inline_js %}
-
+<script type="text/javascript">
+var video_player;
+$(document).ready(function(){  
+    videojs("newton-video", {}, function(){  
+        video_player = this;       
+        video_player.on('ended', function(){  
+            video_player.load();
+        });
+    });  
+});  
+</script>
 {% endblock %}
 
 {% block js %}
 <script src="{% version "js/subscription.js" %}"></script>
-</script>
 <script src="{% version "js/video.js" %}"></script>
 {% endblock %}
 
