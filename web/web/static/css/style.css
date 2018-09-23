@@ -271,10 +271,28 @@ canvas {display: block; vertical-align: top;}
     .arrow-only-pc{display: none;}
 }
 .hide{display: none;}
-#intro {background: url(../images/bg_map.svg) no-repeat center 100px; width: 100%; margin-top: 50px; padding-bottom: 130px;}
-#intro h1 {margin: 160px 0 27px; color: #333; position: relative;font-weight: bold; font-size: 60px; line-height: 1.2;}
-#intro p.sty1 {margin: 0 0 130px; color: #333; font-size: 40px; font-weight:100;}
+#intro {background: url(../images/bg_map.svg) no-repeat center 100px; width: 100%; margin-top: 50px; padding-bottom: 100px;}
+#intro h1 {margin: 130px 0 27px; color: #333; position: relative;font-weight: 400; font-size: 60px; line-height: 1.2;}
+#intro p.sty1 {margin: 0 0 70px; color: #333; font-size: 40px; font-weight:300;}
 #intro p.sty2, span.sty2 {color:#a4a4a4; margin: 0 0 10px; font-size: 30px; font-weight:100;}
+#intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333;}
+#intro .countdown-subtitle h3{color: #333; font-weight: 300;}
+#intro .start_button .announcement {}
+#intro .start_button .announcement a{font-weight:700; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
+#intro .start_button .announcement a:hover{color:#666;}
+#intro .start_button {margin-top: 20px;}
+@media(max-width: 768px) {
+    #intro .countdown-title h2{
+        font-size: 29px;
+        margin-bottom: 5px;
+    }
+    #intro .countdown-subtitle h3{
+        font-size: 20px;
+    }
+    #intro .start_button {
+        margin-top: -20px;
+    }
+}
 .border-line:before {content:" "; margin-right:10px;margin-bottom:8px;;height: 2px; width: 50px;display:inline-block;}
 .border-line { margin: 0 0 60px; font-size: 30px; font-weight:100;}
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: 0 none; outline-offset: 0;}
@@ -315,7 +333,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -356,7 +374,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -397,7 +415,7 @@ canvas {display: block; vertical-align: top;}
     display: block;
     height: 320px;
     margin-bottom: 15px;
-    text-align: left;
+    text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
@@ -428,8 +446,32 @@ canvas {display: block; vertical-align: top;}
     width: 100%;
 }
 .organization-container {
-    height: 200px;
+    height: 250px;
 }
+#angels .team-list .organization-logo:hover .intro{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.89);
+    width: 93%;
+    height: 100%;
+    left: 10px;
+    top: -5%;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+#angels .team-list .organization-logo .intro{
+    display: none;
+}
+#angels .team-list .organization-logo:hover .intro p{
+    display: block;
+    height: 200px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-align: justify;
+}
+
 /* Partners ---------------------------------------------------------------- */
 .partner-bottom{padding-bottom: 60px;}
 .partners-list {vertical-align: middle;}
@@ -473,7 +515,7 @@ canvas {display: block; vertical-align: top;}
 .contact-item-wrap dl {margin-bottom: 25px;}
 /* Language */
 .language-span {background-repeat: no-repeat;background-size: 16px 16px;width: 16px;height: 16px; padding-left:20px; cursor: pointer; font-size: 10px;}
-.zh {background-image: url("../images/languages/zh.png")}
+.zh {background-image: url("../images/languages/zh-cn-m.png")}
 .us {background-image: url("../images/languages/us.png")}
 .footer span a{font-size: 12px;padding-top: 20px; padding-left: 20px;}
 /* Footer ----------------------------------------------------------- */
@@ -584,6 +626,16 @@ canvas {display: block; vertical-align: top;}
 .feature-item-img .feature-img2{background-image:url(../images/features/icon-3.svg);}
 .feature-item-img .feature-img3{background-image:url(../images/features/icon-4.svg);}
 .feature-item-img .feature-img4{background-image:url(../images/features/icon-2.svg);}
+#feature .whitepaper-download{
+    float: left;
+    margin-bottom: 4%;
+}
+@media(max-width: 768px){
+    #feature .whitepaper-download{
+        margin-bottom: unset;
+    }
+}
+
 @media (max-width: 1199px) and (min-width: 992px){
     #intro {margin-bottom: 80px; position: unset;}
     #bgPic {background: url(../images/bg-pc.png) no-repeat center 167px; background-size: 85%;}
@@ -665,8 +717,8 @@ canvas {display: block; vertical-align: top;}
     .sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li a{color: #fff;}
     .navbar-nav>li>.dropdown-menu li:first-child {border-bottom: 0 none;}
     #intro {padding-bottom: 50px; background-position:center 60px;   background-size:150%; margin-top: 50px;}
-    #intro h1 {margin:50px 0 30px; font-size: 36px; color: #555;}
-    #intro p.sty1 {font-size: 30px; margin-bottom:30px;}
+    #intro h1 {margin:25px 0 30px; font-size: 35px; color: #555;}
+    #intro p.sty1 {font-size: 29px; margin-bottom:50px;}
     #intro p.sty2, span.sty2 {font-size: 22px;}
     #intro .border-line{font-size: 22px; margin-bottom: 20px;}
     .download {padding-left: 40px; padding-right: 40px;}
@@ -872,9 +924,9 @@ canvas {display: block; vertical-align: top;}
 .technology_list h1,.protocol_list h1{text-align:center; color:#333; font-size:32px; margin:60px 0; font-weight:700}
 .technology_text{padding-bottom:80px;}
 .technology_text p,.protocol_text p{color:#393939; margin-bottom:20px; font-size:18px;}
-.technology_icon6{margin-top:70px;}
+.technology_icon6{margin-top:30px;}
 .technology_text_NewPay{margin-top:110px;}
-.technology_icon4{width:338px; height:207px; margin-top:20px}
+
 
 #technology .page-block-title{
     font-weight: 700;
@@ -908,6 +960,8 @@ canvas {display: block; vertical-align: top;}
     }
 }
 
+#technology .technology_list .technology_text img{width: 100%;height: 100%}
+
 #protocol .fr{float:right; width:50%; text-align:center;}
 #protocol .fl{float:left; width:50%; text-align:left;}
 .protocol_text{padding:80px 0}
@@ -917,13 +971,8 @@ canvas {display: block; vertical-align: top;}
 .protocol_text1{padding:90px 0 80px; text-align:center;}
 .protocol_text1 h2{color:#333; margin-bottom:15px; font-weight:700; font-size:30px;}
 .protocol_text1 p{color:#393939; font-size:18px; text-align: left;}
-.protocol_icon1{width:472px; height:285px;}
-.protocol_icon2{width:674px; height:95px;}
-.protocol_icon3{width:414px; height:301px; margin-top:60px}
-.protocol_icon4{width:408px; height:318px; margin-top:-20px}
-.protocol_icon5{width:349px; height:269px;}
-.protocol_icon6{width:281px; height:223px;}
-.protocol_icon7{width:343px; height:181px;}
+#protocol .protocol_icon{width:100%;}
+
 @media (max-width: 767px) {
 .technology_list h1{margin:40px 0; font-size: 24px;}
 #technology .fr,#technology .fl,#protocol .fr,#protocol .fl{float:none; width:auto; text-align:center}
@@ -1050,6 +1099,29 @@ canvas {display: block; vertical-align: top;}
     }
 }
 
+/*community dynamic*/
+#community .event .event-img{
+    float: left;
+    width: 99%;
+    height: 0;
+    padding-bottom: 99%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+#community .event .event-title{color: #000;position: unset; bottom: 0;padding: 5px;font-size: 16px;}
+#community .event .shadow{background-color: #000;width: 100%;height: 0; padding-bottom: 100%; opacity: 0.3;}
+#community .event .dynamic-title h2{float: left;}
+#community .event .more-detail{
+    font-size: 16px;
+}
+#community .event .event-word .time{color: #AAAAAA;text-align: left;top: 0;padding: 5px;font-size: 14px;margin-bottom: unset;}
+@media(max-width: 768px){
+    #community .event .dynamic-title{
+        margin: auto;
+    }
+}
+
 /*index community*/
 .index_community {padding-bottom: 60px;}
 .index_community h2{font-weight: 500;font-size: 20px; color: #000;}
@@ -1104,6 +1176,11 @@ canvas {display: block; vertical-align: top;}
     margin: 13px;
     color: #000;
     font-weight: 600;
+}
+.index_community .community_lower .add{
+    font-size: 18px;
+    color: #333;
+    margin-top: 40px;
 }
 
 /*community page*/
@@ -1163,6 +1240,11 @@ canvas {display: block; vertical-align: top;}
     color: #000;
     font-weight: 600;
 }
+.online-community .community_lower .add{
+    font-size: 18px;
+    color: #333;
+    margin-top: 40px;
+}
 
 /* newpay */
 .newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.jpg) no-repeat top center; width:100%; height:711px;}
@@ -1171,6 +1253,8 @@ canvas {display: block; vertical-align: top;}
 .newpay_text h2{padding-left:10px; color:#333; font-size:32px;}
 .newpay_text p{padding-left:10px; color:#333; font-size:18px;}
 .newpay_text .col-sm-6{margin:120px 0 0;}
+#newpay .download{border-radius: 10px; margin-top:50px;}
+#newpay .download-button p{color: #333;font-size: 16px; margin-top: 10px;}
 @media(max-width:1199px) and (min-width: 992px){
 .newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.jpg) no-repeat top center; width:96%; height:700px;}
 .newpay_text{padding-bottom:80px;}
@@ -1446,7 +1530,6 @@ canvas {display: block; vertical-align: top;}
 #countdown #button-group .white-page{display: inline-block; background: url("../images/tokensale/whilepage_button.png") no-repeat;width: 175px;height: 41px; text-align: center;line-height: 41px;color: #fff; font-size: 16px;margin-left: 14px;}
 #countdown .announcement a{font-weight:300; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #fff; font-size:20px; line-height:50px; display:block; margin:20px auto; color:#fff}
 #countdown .announcement a:hover{color:#666;}
-#start_test {background: url("../images/countdown/banner-2.jpg") no-repeat; height: 600px; background-size:100% 600px;}
 #start_test .countdown-title{padding-top: 135px;}
 #start_test .countdown-title h1{font-size: 60px; color: #fff; font-weight: 100;}
 #start_test .countdown-subtitle h3{font-size: 34px; color: #fff; font-weight: 100;}
@@ -1458,9 +1541,6 @@ canvas {display: block; vertical-align: top;}
 #start_test .announcement a:hover{color:#666;}
 #countdown .countdown-block{
 }
-#start_test .countdown-block{
-    margin-top: 1%;
-}
 @media (max-width:1600px){
     #start_test .more{
         padding-right: 5%;
@@ -1471,8 +1551,6 @@ canvas {display: block; vertical-align: top;}
 }
 @media (max-width:1440px){
     #countdown{background: url("../images/countdown/banner-2.jpg") no-repeat; height: 510px; background-size: 100% 660px;}
-    #countdown .countdown-block{
-    }
     #countdown .countdown-title h1{font-size: 54px; color: #fff; font-weight: 100;}
     #countdown .countdown-title{padding-top: 62px;}
     #countdown .countdown-subtitle h3{font-size: 31px; color: #fff; font-weight: 100;}
@@ -1487,14 +1565,9 @@ canvas {display: block; vertical-align: top;}
     #start_test .countdown-subtitle h3{font-size: 31px; color: #fff; font-weight: 100; margin-bottom: 4%;}
     #start_test .more{padding-right:3%;}
     #start_test .announcement{padding-left: 3%;}
-    #start_test .countdown-block{
-        margin-top: 1%;
-    }
 }
 @media (max-width:1280px){
     #countdown{background: url("../images/countdown/banner-2.jpg") no-repeat; height: 460px; background-size: 100% 550px;}
-    #countdown .countdown-block{
-    }
     #countdown .countdown-title {padding-top:47px;}
     #countdown .countdown-title h1{font-size: 50px; color: #fff; font-weight: 100;}
     #countdown .countdown-subtitle h3{font-size: 29px; color: #fff; font-weight: 100;}
@@ -1542,10 +1615,6 @@ canvas {display: block; vertical-align: top;}
     #countdown .countdown-block{
         margin: unset;
         float: unset;
-    }
-    #start_test .countdown-block{
-        float: unset;
-        margin: unset;
     }
 }
 
@@ -1876,5 +1945,63 @@ input[name="expect_btc"], input[name="expect_ela"]{
     margin-left: 10px;
     padding-left: 10px;
 }
-.checked_icon
 
+
+/*wiki page*/
+#wiki div h2{
+    color: #000;
+    font-weight: 400;
+    margin: 40px;
+}
+#wiki .wiki-info{
+    margin-top: 40px;
+}
+#wiki .wiki-info p{
+    margin-top: 12px;
+    color: #333;
+    font-size: 16px;
+}
+@media(max-width: 768px){
+    #wiki div h2{
+         font-size: 28px;
+    }
+    #wiki .page-title p{
+        font-size: 20px;
+    }
+}
+
+/*sitemap*/
+#sitemap .info{
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+#sitemap .info .region{
+    display: inline-block;
+    margin-bottom: 26px;
+    vertical-align: top;
+    z-index: 1;
+}
+#sitemap .info .region h3{
+    letter-spacing: 0em;
+    margin-bottom: 3px;
+    padding-right: 40px;
+    font-size: 24px;
+    line-height: 1.47059;
+    font-weight: 600;
+    color: #111;
+}
+#sitemap .info .region .list{
+    list-style-type: none;
+    padding-left: 5px;
+    color: #333;
+}
+#sitemap .info .region .list li{
+    margin-top: 0;
+    padding-bottom: 7px;
+    padding-right: 40px;
+}
+#sitemap .info .region .list li a{
+    text-decoration: none;
+    color: #0070c9;
+    font-size: 17px;
+}

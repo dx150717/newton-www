@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Add Community" %}
+{% endblock %}
+
+{% block content %}
+<section id="wiki">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Create a Newton community with us" %}</p>
+        </div>
+    </div>
+    <div class="container wiki-info">
+        <p>{% trans "If you have successfully created or are creating the above community (or other), please let us know by email. Let us create Newton together!" %}</p>
+        <p>{% trans "The content of the email should include the following: name, city, mobile number, social application and account, social group link." %}</p>
+        <p>{% trans "Please send an email to: newton-community@newtonproject.org" %}</p>
+    </div>
+</section>
+{% endblock %}
