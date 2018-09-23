@@ -35,6 +35,8 @@
     </div>
 </section>
 
+{% include "welcome/include-video.html" %}
+
 {% comment %}
 {% include "welcome/countdown.html" %}
 {% endcomment %}
@@ -76,4 +78,9 @@
 {% block js %}
 <script src="{% version "js/subscription.js" %}"></script>
 </script>
+<script src="{% version "js/video.js" %}"></script>
+{% endblock %}
+
+{% block css %}
+<link href="{% version "css/video-js.css" %}" rel="stylesheet">
 {% endblock %}
