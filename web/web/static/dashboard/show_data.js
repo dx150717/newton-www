@@ -1,6 +1,6 @@
 function show_data(){
 	$.ajax({
-　　　　　　url: 'http://explorer.newtonproject.beta.diynova.com/dashboard',
+　　　　　　url: 'https://explorer.testnet.newtonproject.org/dashboard',
 　　　　　　type: 'GET',
 　　　　　　success: function (data) {
 			$('#transactions').html(data.total_transactions);
