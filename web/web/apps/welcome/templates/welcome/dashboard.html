@@ -32,7 +32,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}" style="height: 100%;">
-                                <img class="logo-pc" src="{% version "images/logo_new_style.svg" %}" alt="Newton" style="width: 75%;">
+                                <img class="logo-pc" src="{% version "images/logo_new_style.svg" %}" alt="Newton" style="width: 50%;">
                             </a>
                         </div>
                         <!-- /.col-lg-12 -->
@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="panel-footer text-center">
-                                    <span class="pull-center">Height</span>
+                                    <span class="pull-center">Block Height</span>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                         <div class="col-lg-8">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <span>Real-time Transaction Number</span>
+                                    <span>Number Of Transactions (1m)</span>
                                 </div>
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
@@ -104,14 +104,30 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <span>NewSensor</span>
+                                    <span style="float: right;">San Li Tun Office</span>
                                 </div>
-                                <div>
-                                    <p class="mbr-section-lead lead"><br>
-                                        <span>位置：三里屯办公室</span><br>
-                                        <br>
-                                        <span id="temp">温度: --度</span><br>
-                                        <span id="humd">湿度：--%</span><br>
-                                    </p>
+                                <div class="row" style="width: 100%;">
+                                    <div class="col-md-6">
+                                        <p class="text-success text-center" style="color: #333;margin-top: 20px;">
+                                            Temperature
+                                        </p>
+                                        <p class="text-center" style="font-size: 40px;color: #5cb85c;">
+                                            <span id="temp">
+                                            
+                                            </span>℃
+                                        </p>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-success text-center" style="color: #333;margin-top: 20px;">
+                                            Humidity
+                                        </p>
+                                        <p class="text-center" style="font-size: 40px;color: #5cb85c;">
+                                            <span id="humd">
+                                                
+                                            </span>%
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -136,8 +152,8 @@
           socket.on('data_message', function(msg){
             var temp=msg.T;
             var humd=msg.RH;
-            $('#temp').html("温度："+temp+"度");
-            $('#humd').html("湿度："+humd+"%");
+            $('#temp').html(temp);
+            $('#humd').html(humd);
           });
           show_data();
           window.setInterval('show_data()', 3000);
