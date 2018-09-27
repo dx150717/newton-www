@@ -1,8 +1,7 @@
 var data_list = [];
 function show_data(){
 	$.ajax({
-// 　　　　　　url: 'https://explorer.testnet.newtonproject.org/dashboard',
-		  url: 'http://explorer.newtonproject.beta.diynova.com/dashboard/',
+　　　　　　url: 'https://explorer.testnet.newtonproject.org/dashboard',
 　　　　　　type: 'GET',
 　　　　　　success: function (data) {
 			$('#transactions').html(data.total_transactions);
@@ -22,7 +21,7 @@ function show_chart(content, data_list) {
 		data_dict['time'] = b_time;
 		data_dict['transactions'] = content[k];
 		data_list.push(data_dict);
-		if (data_list.length > 1200){
+		if (data_list.length > 200){
 			data_list.splice(0, 1);
 		};
 	};
