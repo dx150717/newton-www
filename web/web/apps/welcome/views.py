@@ -213,6 +213,9 @@ def show_addcommunity_view(request):
 def show_sitemap_view(request):
     return render(request, 'welcome/sitemap.html', locals())
 
+def show_newstatus_view(request):
+    return render(request, 'welcome/newstatus.html', locals())
+
 def show_dashboard_view(request):
     return render(request, 'welcome/dashboard.html', locals())
 

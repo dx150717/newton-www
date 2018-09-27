@@ -51,6 +51,7 @@ urlpatterns = patterns('',
                        url(r'^addcommunity/', 'welcome.views.show_addcommunity_view'),
                        url(r'^sitemap/', 'welcome.views.show_sitemap_view'),
                        url(r'^feed/', 'feed.views.feed_latest'),
+                       url(r'^newstatus/', 'welcome.views.show_newstatus_view'),
                        url(r'^dashboard/', 'welcome.views.show_dashboard_view'),
 )
 
