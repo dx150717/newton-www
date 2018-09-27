@@ -76,6 +76,7 @@
                     </div>
                 </div>
                 <!-- /.col-lg-8 -->
+                {% comment %}
                 <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -105,6 +106,7 @@
                         </div>
                     </div>
                 </div>
+                {% endcomment %}
             </div>
         </div>
     </div>
@@ -112,13 +114,13 @@
 
 {% block inline_js %}
     <script>
-          var socket = io('http://cloud.diynova.com:8088');
-          socket.on('data_message', function(msg){
-            var temp=msg.T;
-            var humd=msg.RH;
-            $('#temp').html(temp);
-            $('#humd').html(humd);
-          });
+          // var socket = io('http://cloud.diynova.com:8088');
+          // socket.on('data_message', function(msg){
+          //   var temp=msg.T;
+          //   var humd=msg.RH;
+          //   $('#temp').html(temp);
+          //   $('#humd').html(humd);
+          // });
           show_data();
           window.setInterval('show_data()', 3000);
     </script>
