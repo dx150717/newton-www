@@ -145,7 +145,7 @@
     <script src="{% version "dashboard/show_data.js" %}"></script>
 
     <script>
-          var socket = io('http://cloud.diynova.com:8088');
+          var socket = io('https://cloud.diynova.com:8883');
           socket.on('data_message', function(msg){
             var temp=msg.T;
             var humd=msg.RH;
