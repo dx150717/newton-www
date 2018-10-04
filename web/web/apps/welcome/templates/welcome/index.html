@@ -12,8 +12,8 @@
     <div class="container">
       <div class="row relative">
         <div class="col-md-12 text-center">
-          <h1>{% trans "Everyone should benefit directly from economic growth" %}</h1>
-          <p class="sty1">{% trans "Newton: Infrastructure for the community economy" %}</p>
+          <h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>
+          <p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
             <div class="countdown-title">
                 <h2>{% trans "NewChain TestNet" %}</h2>
             </div>
@@ -34,6 +34,8 @@
       </div>
     </div>
 </section>
+
+{% include "welcome/include-video.html" %}
 
 {% comment %}
 {% include "welcome/countdown.html" %}
@@ -62,7 +64,7 @@
 {% include "welcome/include-index-community.html" %}
 <section id="sir" class="section">
   <div class="container"><img class="img-1" src="{% version "images/partners/bitmap.png" %}" width="200">
-      <p class="sty1">{% trans "To pay tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
+      <p class="sty1">{% trans "Paying tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
     <!-- end --> 
   </div>
 </section>
@@ -70,10 +72,24 @@
 {% endblock %}
 
 {% block inline_js %}
-
+<script type="text/javascript">
+var video_player;
+$(document).ready(function(){  
+    videojs("newton-video", {}, function(){  
+        video_player = this;       
+        video_player.on('ended', function(){  
+            video_player.load();
+        });
+    });  
+});  
+</script>
 {% endblock %}
 
 {% block js %}
 <script src="{% version "js/subscription.js" %}"></script>
-</script>
+<script src="{% version "js/video.js" %}"></script>
+{% endblock %}
+
+{% block css %}
+<link href="{% version "css/video-js.css" %}" rel="stylesheet">
 {% endblock %}

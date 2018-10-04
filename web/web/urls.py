@@ -49,9 +49,10 @@ urlpatterns = patterns('',
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^term-of-service/', 'welcome.views.show_term_of_service_view'),
                        url(r'^scene/', 'welcome.views.show_scene_view'),
-                       url(r'^addcommunity/', 'welcome.views.show_addcommunity_view'),
                        url(r'^sitemap/', 'welcome.views.show_sitemap_view'),
                        url(r'^feed/', 'feed.views.feed_latest'),
+                       url(r'^newstatus/', 'welcome.views.show_newstatus_view'),
+                       url(r'^dashboard/', 'welcome.views.show_dashboard_view'),
 )
 
 handler404 = 'welcome.views.show_404_page'
