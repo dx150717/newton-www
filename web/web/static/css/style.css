@@ -2033,6 +2033,10 @@ input[name="expect_btc"], input[name="expect_ela"]{
 .industry_text p{color:#393939; margin-bottom:20px; font-size:18px; padding-right:30px;}
 @media (max-width: 768px) {
     .industry_text p{padding-right:0px;}
+    #industry .industry_text{
+        padding: 0 5%;
+    }
+    #industry .industry_text h2{font-size: 23px;text-align: left;}
 }
 #industry .industry_list .row{
     padding: 80px 0;
@@ -2048,4 +2052,21 @@ input[name="expect_btc"], input[name="expect_ela"]{
 }
 #industry .intro{
     margin-bottom: 60px;
+}
+
+/*include industry of home page*/
+#index-industry .intro img{
+    width: 100%;
+}
+#index-industry .intro p{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+@media(max-width: 768px) {
+    #index-industry .title{
+        margin-bottom: 20px;        
+    }
 }
