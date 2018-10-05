@@ -15,13 +15,16 @@
     </div>
     <div class="container">
 	    <div class="industry_list">
-	        <div class="row">
+	        <div class="row" id="industry_anchor_1">
 	        	<div class="fl only-pc"><img src="{% version "images/industry/1.svg" %}" alt=""></div>
 		    	<div class="industry_text col-sm-6">
 		        	<h2>{% trans "Chain-commerce Retail" %}</h2>
 		        	<div class="fr only-mobile"><img src="{% version "images/industry/1.svg" %}" alt=""></div>
 		        	<p>{% trans "Under the corporate structure, the capital side's income has far exceeded the laborer's income, and a new generation of giant retail institutions developed along with computers and the Internet have accelerated the accumulation of wealth to capital. Blockchain-commerce is the basic business model of the human-machine community. Under this model, any behavior that positively contributes to the human-machine community will be rewarded. The Blockchain-commerce model is used in the retail industry to help reduce transaction costs, protect consumers’ privacy, and promote intelligent collaboration." %}</p>
 		    	</div>
+	      	</div>
+	      	<div class="app">
+	      		<p>{% trans "Application Scenarios" %}</p>
 	      	</div>
       		<div class="intro col-md-4">
       			<img src="{% version "images/industry/1-1.svg" %}">
@@ -43,14 +46,17 @@
 	<div class="bg-gray">
 		<div class="container">
 		    <div class="industry_list">
-		        <div class="row">
-		        	<div class="fr only-pc"><img src="{% version "images/industry/2.svg" %}" alt=""></div>
+		        <div class="row" id="industry_anchor_2">
+		        	<div class="fr only-pc right_img"><img src="{% version "images/industry/2.svg" %}" alt=""></div>
 			    	<div class="industry_text col-sm-6">
 			        	<h2>{% trans "Payment" %}</h2>
 			        	<div class="fl only-mobile"><img src="{% version "images/industry/2.svg" %}" alt=""></div>
 			        	<p>{% trans "Current transaction payment costs are higher, efficiency is lower, and flexibility is poor. A new generation of trading and payment systems will be built based on blockchain technology." %}</p>
 			    	</div>
 		      	</div>
+		      	<div class="app">
+	      			<p>{% trans "Application Scenarios" %}</p>
+	      		</div>
 		      	<div class="col-md-1"></div>
 	      		<div class="intro col-md-4">
 	      			<img src="{% version "images/industry/2-1.svg" %}">
@@ -69,7 +75,7 @@
   	</div>
   	<div class="container">
 	    <div class="industry_list">
-	        <div class="row">
+	        <div class="row" id="industry_anchor_3">
 	        	<div class="fl only-pc"><img src="{% version "images/industry/3.svg" %}" alt=""></div>
 		    	<div class="industry_text col-sm-6">
 		        	<h2>{% trans "Supply Chain" %}</h2>
@@ -77,6 +83,9 @@
 		        	<p>{% trans "Goods delivered to consumers usually go through logistics, warehousing, customs clearance, sales and many other processes. When there are after-sales services, a corresponding reverse process will be needed. The current supply chain process is opaque, and it is difficult for consumers to confirm the origin of goods, circulation information and so on, which is  a big problem for some industries such as counterfeits, pharmaceuticals, and luxury goods. Therefore, a credible supply chain system which is open to all stakeholders is very important." %}</p>
 		        	<p>{% trans "Through the combination of atomic hashing, NewIOT, NewChain and other technologies, the supply chain system will be credible, open and transparent, and generate more business innovations." %}</p>
 		    	</div>
+	      	</div>
+	      	<div class="app">
+	      		<p>{% trans "Application Scenarios" %}</p>
 	      	</div>
 	      	<div class="col-md-1"></div>
       		<div class="intro col-md-4">
@@ -96,13 +105,16 @@
 	<div class="bg-gray">
 		<div class="container">
 		    <div class="industry_list">
-		        <div class="row">
-		        	<div class="fr only-pc"><img src="{% version "images/industry/4.svg" %}" alt=""></div>
+		        <div class="row" id="industry_anchor_4">
+		        	<div class="fr only-pc right_img"><img src="{% version "images/industry/4.svg" %}" alt=""></div>
 			    	<div class="industry_text col-sm-6">
 			        	<h2>{% trans "Self-finance" %}</h2>
 			        	<div class="fl only-mobile"><img src="{% version "images/industry/4.svg" %}" alt=""></div>
 			        	<p>{% trans "The traditional financial service system has a large workload, long cycle, high cost and poor flexibility, and it is often difficult to serve small and medium-sized enterprises and individuals. Through digital identity and credit, a new type of self-financing system can be established." %}</p>
 			    	</div>
+		      	</div>
+		      	<div class="app">
+		      		<p>{% trans "Application Scenarios" %}</p>
 		      	</div>
 		      	<div class="col-md-1"></div>
 	      		<div class="intro col-md-4">
@@ -122,13 +134,16 @@
   	</div>
   	<div class="container">
 	    <div class="industry_list">
-	        <div class="row">
+	        <div class="row" id="industry_anchor_5">
 	        	<div class="fl only-pc"><img src="{% version "images/industry/5.svg" %}" alt=""></div>
 		    	<div class="industry_text col-sm-6">
 		        	<h2>{% trans "Games" %}</h2>
 		        	<div class="fr only-mobile"><img src="{% version "images/industry/5.svg" %}" alt=""></div>
 		        	<p>{% trans "Use blockchain technology to create a new gaming experience for users: users are both players and rule-making participants, and virtual game assets are owned by users." %}</p>
 		    	</div>
+	      	</div>
+	      	<div class="app">
+	      		<p>{% trans "Application Scenarios" %}</p>
 	      	</div>
 	      	<div class="col-md-1"></div>
       		<div class="intro col-md-4">
@@ -148,23 +163,26 @@
   	<div class="bg-gray">
 		<div class="container">
 		    <div class="industry_list">
-		        <div class="row">
-		        	<div class="fr only-pc"><img src="{% version "images/industry/6.svg" %}" alt=""></div>
+		        <div class="row" id="industry_anchor_6">
+		        	<div class="fr only-pc right_img"><img src="{% version "images/industry/6.svg" %}" alt=""></div>
 			    	<div class="industry_text col-sm-6">
 			        	<h2>{% trans "Agriculture" %}</h2>
 			        	<div class="fl only-mobile"><img src="{% version "images/industry/6.svg" %}" alt=""></div>
 			        	<p>{% trans "At present, there are widespread problems such as incomplete data and low degree of automation in agriculture. Blockchain combined with IoT technology can automatically collect, store and analyze agricultural production data, saving the high management costs of centralized systems, reducing post-maintenance costs, and helping to improve the intelligence and scale of agriculture." %}</p>
 			    	</div>
 		      	</div>
+		      	<div class="app">
+		      		<p>{% trans "Application Scenarios" %}</p>
+		      	</div>
 		      	<div class="col-md-1"></div>
 	      		<div class="intro col-md-4">
-	      			<img src="{% version "images/industry/6-1.png" %}">
+	      			<img src="{% version "images/industry/6-1.png" %}" style="height: 200px;">
 	  				<p class="intro-title">{% trans "Traceability of agricultural products" %}</p>
 	  				<p class="intro-info">{% trans "By introducing the IoT device which is compatible with NewIoT standard into the process of agricultural material circulation, agricultural production, agricultural product sales, the safety and efficiency of the whole process of agricultural production can be improved. Due to the non-tamperable nature of production data, it can be widely used in scientific research and anti-counterfeiting purposes." %}</p>
 	      		</div>
 	      		<div class="col-md-2"></div>
 	      		<div class="intro col-md-4">
-	      			<img src="{% version "images/industry/6-2.png" %}">
+	      			<img src="{% version "images/industry/6-2.png" %}" style="height: 200px;">
 	  				<p class="intro-title">{% trans "Intelligent planting" %}</p>
 	  				<p class="intro-info">{% trans "Through using the IoT sensor which is compatible with NewIoT standard, all-day monitoring of planting environment and crop growth can be realized. Combining NewAI to make intelligent decision-making on monitoring results, a complete intelligent planting system can be built to detect risks, stabilize production and increase income in time." %}</p>
 	      		</div>
@@ -174,13 +192,16 @@
   	</div>
   	<div class="container">
 	    <div class="industry_list">
-	        <div class="row">
+	        <div class="row" id="industry_anchor_7">
 	        	<div class="fl only-pc"><img src="{% version "images/industry/7.svg" %}" alt=""></div>
 		    	<div class="industry_text col-sm-6">
 		        	<h2>{% trans "Public Welfare" %}</h2>
 		        	<div class="fr only-mobile"><img src="{% version "images/industry/7.svg" %}" alt=""></div>
 		        	<p>{% trans "Blockchain technology has the characteristics of decentralization, high transparency and non-tamperability, so it meets the needs of the public welfare. The non-profit organization can store the whole process information such as fundraising, project progress, and recipient feedback on NewChain for donors and the public to check." %}</p>
 		    	</div>
+	      	</div>
+	      	<div class="app">
+	      		<p>{% trans "Application Scenarios" %}</p>
 	      	</div>
 	      	<div class="col-md-1"></div>
       		<div class="intro col-md-4">

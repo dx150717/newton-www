@@ -2011,7 +2011,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
     background: url(../images/titlebg/industry.svg) no-repeat left bottom;
 }
 #industry .page-title{
-    background-color: #4400B3;
+    background-color: #6F76C4;
 }
 #industry .fr{float:right; width:50%; text-align:left;}
 #industry .fl{float:left; width:50%; text-align:left;}
@@ -2024,7 +2024,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
     width: 100%;
 }
 #industry .industry_list img{
-    width: 90%;
+    width: 60%;
 }
 #industry .industry_text{
     padding: 0;
@@ -2049,11 +2049,32 @@ input[name="expect_btc"], input[name="expect_ela"]{
 }
 #industry .intro img{
     height: 260px;
+    margin-left: 60px;
+}
+@media(max-width: 768px) {
+    #industry .intro img{
+        height: 140px;
+    }
 }
 #industry .intro{
     margin-bottom: 60px;
 }
-
+#industry .industry_list .app p{
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+}
+#industry .industry_list .right_img img{
+    margin-left: 190px;
+}
+@media(max-width: 768px) {
+    #industry .industry_list .only-mobile img{
+        width: 90%;
+    }
+    #industry .industry_list .app p{
+        margin-bottom: 30px;
+    }
+}
 /*include industry of home page*/
 #index-industry .intro img{
     width: 100%;
@@ -2067,6 +2088,12 @@ input[name="expect_btc"], input[name="expect_ela"]{
 }
 @media(max-width: 768px) {
     #index-industry .title{
-        margin-bottom: 20px;        
+        margin-bottom: 30px;        
     }
+    #index-industry .intro p{
+        font-size: 13px;
+    }
+}
+#index-industry .intro:hover{
+    background-color: #DDDDDD;
 }
