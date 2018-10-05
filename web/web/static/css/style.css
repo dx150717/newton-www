@@ -2005,3 +2005,68 @@ input[name="expect_btc"], input[name="expect_ela"]{
     color: #0070c9;
     font-size: 17px;
 }
+
+/*industry page*/
+#industry .page-title .container{
+    background: url(../images/titlebg/industry.svg) no-repeat left bottom;
+}
+#industry .page-title{
+    background-color: #4400B3;
+}
+#industry .fr{float:right; width:50%; text-align:left;}
+#industry .fl{float:left; width:50%; text-align:left;}
+
+@media (max-width: 767px) {
+    #industry .fr,#industry .fl{float:none; width:auto; text-align:center}
+    #industry .fr img,#industry .fl img{width:70%; height:auto; text-align:center; padding:30px;}
+}
+#industry img{
+    width: 100%;
+}
+#industry .industry_list img{
+    width: 90%;
+}
+#industry .industry_text{
+    padding: 0;
+}
+#industry .industry_text h2{color:#333; margin:0 0 10px; padding:0; font-weight:700;}
+.industry_text p{color:#393939; margin-bottom:20px; font-size:18px; padding-right:30px;}
+@media (max-width: 768px) {
+    .industry_text p{padding-right:0px;}
+    #industry .industry_text{
+        padding: 0 5%;
+    }
+    #industry .industry_text h2{font-size: 23px;text-align: left;}
+}
+#industry .industry_list .row{
+    padding: 80px 0;
+}
+#industry .industry_list .intro .intro-title{
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin: 12px;
+}
+#industry .intro img{
+    height: 260px;
+}
+#industry .intro{
+    margin-bottom: 60px;
+}
+
+/*include industry of home page*/
+#index-industry .intro img{
+    width: 100%;
+}
+#index-industry .intro p{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+@media(max-width: 768px) {
+    #index-industry .title{
+        margin-bottom: 20px;        
+    }
+}

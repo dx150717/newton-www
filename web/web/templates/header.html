@@ -39,6 +39,9 @@
                     <li>
                         <a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
                     </li>
+                    <li>
+                        <a href="/scene/" {% language_change_header_style %}>{% trans "Industry" %}</a>
+                    </li>
 
                     {% if request.user.is_authenticated %}
                         {% if not request.user.is_superuser %}
