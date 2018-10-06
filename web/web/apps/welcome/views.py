@@ -135,8 +135,8 @@ def show_newpay_view(request):
 def show_scene_view(request):
     return render(request, 'welcome/scene.html', locals())
 
-def show_business_plan_view(request):
-    return render(request, 'welcome/business-plan.html', locals())
+def show_business_proposal_view(request):
+    return render(request, 'welcome/business-proposal.html', locals())
 
 def show_community_view(request):
     presses = PressModel.objects.order_by('-created_at')[0:4]

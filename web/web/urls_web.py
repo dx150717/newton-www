@@ -52,7 +52,7 @@ urlpatterns = patterns('',
                        url(r'^feed/', 'feed.views.feed_latest'),
                        url(r'^newstatus/', 'welcome.views.show_newstatus_view'),
                        url(r'^dashboard/', 'welcome.views.show_dashboard_view'),
-                       url(r'^business-plan/', 'welcome.views.show_business_plan_view'),
+                       url(r'^business-proposal/', 'welcome.views.show_business_proposal_view'),
 )
 
 handler404 = 'welcome.views.show_404_page'
