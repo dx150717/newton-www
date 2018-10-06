@@ -2026,6 +2026,12 @@ input[name="expect_btc"], input[name="expect_ela"]{
 #industry .industry_list img{
     width: 60%;
 }
+#industry .industry_list .intro img{
+    width: 40%;
+}
+#industry .industry_list .left-img img{
+    margin-left: 120px;
+}
 #industry .industry_text{
     padding: 0;
 }
@@ -2048,8 +2054,8 @@ input[name="expect_btc"], input[name="expect_ela"]{
     margin: 12px;
 }
 #industry .intro img{
-    height: 260px;
-    margin-left: 60px;
+    height: 150px;
+    margin-left: 110px;
 }
 @media(max-width: 768px) {
     #industry .intro img{
@@ -2065,7 +2071,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
     font-size: 24px;
 }
 #industry .industry_list .right_img img{
-    margin-left: 190px;
+    margin-left: 100px;
 }
 @media(max-width: 768px) {
     #industry .industry_list .only-mobile img{
