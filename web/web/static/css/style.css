@@ -82,7 +82,7 @@ h6, .f12 {font-size: 12px;}
 .title {padding: 40px 0 30px; font-weight: bold;}
 #partners .title{text-align: center;}
 .title strong {font-size: 24px; display: block; color: #000; line-height: 1;}
-.title span {display: inline-block; width: 20px; height: 2px; overflow: hidden; line-height: 1; position: relative; top: -18px;}
+/*.title span {display: inline-block; width: 20px; height: 2px; overflow: hidden; line-height: 1; position: relative; top: -18px;}*/
 .lp4 {letter-spacing: 4px;}
 .img-responsive {margin: 0 auto; width: auto;}
 .section {position: relative; z-index: 2; overflow: hidden;}
@@ -474,7 +474,7 @@ canvas {display: block; vertical-align: top;}
 
 /* Partners ---------------------------------------------------------------- */
 .partner-bottom{padding-bottom: 60px;}
-.partners-list {vertical-align: middle;}
+.partners-list {vertical-align: middle; padding-bottom: 30px;}
 .partners-list a {display: inline-block;}
 .partners-list img {margin: 0 50px 50px; display: inline-block; max-width: 100%; vertical-align: middle; height: 70px;}
 /* Timeline ---------------------------------------------------------------- */
@@ -729,7 +729,7 @@ canvas {display: block; vertical-align: top;}
     #partner .title{margin: 0; padding: 0}
     #partner {padding-bottom: 0;}
     .title,.title strong {font-size: 20px;}
-    .title span {font-size: 14px; margin-top: 0;}
+    .title span {font-size: 14px;}
     .feature-item {margin-bottom: 0;}
     .feature-item-img{padding-bottom: 0;}
     .feature-item-wrap ul{-webkit-padding-start: 10px; padding-bottom:0}

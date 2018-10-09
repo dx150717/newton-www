@@ -1,26 +1,26 @@
 {% load i18n %}
 {% load utils %}
 
-{% if entries %}
+{% if presses %}
 <section id="news" class="section">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="title text-center">
-                    <strong>{% trans "FEED" %}</strong>
+                    <strong>{% trans "Press" %}</strong>
                     <span></span>
                 </h2>
             </div>
         </div>
-        {% for entry in entries %}
-            {% if entry.image %}
+        {% for press in presses %}
+            {% if press.press_img %}
                 <div class="dynamic col-md-4">
-                    <a class="bigimg" style="background-image: url({{ entry.image.url }});" href="{{ entry.urls }}">
+                    <a class="bigimg" style="background-image: url({{ press.press_img.url }});" href="{{ press.press_link }}">
                         <div class="shadow"></div>
                     </a>
                     <div class="news-word">
-                        <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
-                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ entry.title }}</p></a>
+                        <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
+                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
             {% else %}
@@ -29,13 +29,13 @@
                         <div class="shadow"></div>
                     </a>
                     <div class="news-word">
-                        <p class="time">{{ entry.creation_date|date:"Y-m-d" }}</p>
-                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ entry.title }}</p></a>
+                        <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
+                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
             {% endif %}
         {% endfor %}
     </div>
-    <div class="more"><a href="/announcement/"><span>{% trans "MORE" %}</span></a></div>
+    <div class="more"><a href="/press/"><span>{% trans "MORE" %}</span></a></div>
 </section>
 {% endif %}

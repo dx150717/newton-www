@@ -57,16 +57,17 @@ def show_home_view(request):
         language = THAILAND
     else:
         language = ENGLISH
-    entry = EntryDetail()
-    entries = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
-    if len(entries) < 3:
-        entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
-    for entry in entries:
-        if entry.entry_type == TYPE_ANNOUNCEMENT:
-            url = entry.get_absolute_url().replace('/blog/', '/announcement/')
-            entry.urls = url
-        else:
-            entry.urls = entry.get_absolute_url()
+    presses = PressModel.objects.order_by('-created_at')[0:3]
+    # entry = EntryDetail()
+    # entries = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
+    # if len(entries) < 3:
+    #     entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
+    # for entry in entries:
+    #     if entry.entry_type == TYPE_ANNOUNCEMENT:
+    #         url = entry.get_absolute_url().replace('/blog/', '/announcement/')
+    #         entry.urls = url
+    #     else:
+    #         entry.urls = entry.get_absolute_url()
     # generate the captcha
     captcha_form = subscription_forms.SubscribeForm()
     # countdown time
@@ -221,6 +222,9 @@ def show_newstatus_view(request):
 
 def show_dashboard_view(request):
     return render(request, 'welcome/dashboard.html', locals())
+
+def show_join_partner_view(request):
+    return render(request, 'welcome/join-partner.html', locals())
 
 def show_404_page(request):
     return render(request, '404.html')
