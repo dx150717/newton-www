@@ -14,6 +14,17 @@
         </div>
     </div>
 
+    <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+        <div class="container">
+            <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}" style="margin-top: 7px;">
+                <img class="logo-pc" src="{% version "images/logo_new_style.svg" %}" alt="Newton" style="width: unset;"/>
+            </a>
+            <span>{% trans "Community" %}</span>
+
+            <div class="submit-button"><a href="https://wiki.newtonproject.org/wiki/Community_and_Meetups#Online_Community">{% trans "Add Community" %}</a></div>
+        </div>
+    </nav>
+
     {% include "welcome/include-community-event.html" %}
     {% comment %}
     <div class="press bg-gray">
@@ -104,11 +115,17 @@
             {% include "welcome/include-community-region.html" %}
         </div>
     </div>
-
-
 </section>
+{% endblock %}
 
-
+{% block css %}
+<style type="text/css">
+    #float-nav{display: none;}
+    #float-nav .container{text-align: center;}
+    #float-nav .container span{font-size: 22px;line-height: 44px;color: #333;}
+    #float-nav .submit-button{float: right; line-height: 44px;}
+    #float-nav .submit-button a{border: 1px solid #ccc; padding: 3px 5px; border-radius: 6px; background-color: #fff;}
+</style>
 {% endblock %}
 
 {% block inline_js %}
@@ -125,6 +142,26 @@
     });  
     $(function (){
     $("[data-toggle='popover']").popover();
+    });
+    
+    $(function () {
+        if (screen.width <= 768){
+            showNav();
+        }
+        else {
+            $(window).scroll(function(){
+                var height
+                var s = $(window).scrollTop();
+                if (s<280){
+                    // $(".NavBg").addClass("navFixed");
+                    $("#float-nav").hide();
+                }else{
+                    // $(".NavBg").removeClass("navFixed");
+                    $("#float-nav").show();
+                    $("#float-nav").addClass("navFixed");
+                    };
+            });
+        };
     });
 </script>
 {% endblock %}

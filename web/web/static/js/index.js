@@ -282,12 +282,26 @@ function getErrorMessage(json)
   return json.error_message;
 }
 
-$(window).scroll(function(){
-	var height
-	var s = $(window).scrollTop();
-	if (s>0){
-		$(".NavBg").addClass("navFixed");
-	}else{
-		$(".NavBg").removeClass("navFixed");
-		};
-});
+// window.show_nav = function(){
+// 	var height
+//     var s = $(window).scrollTop();
+//     console.log(s);
+//     if (s>0){
+//         $(".NavBg").addClass("navFixed");
+//     }else{
+//         $(".NavBg").removeClass("navFixed");
+//         };
+// }
+
+
+window.showNav = function() {
+	$(window).scroll(function(){
+	    var height
+	    var s = $(window).scrollTop();
+	    if (s>0){
+	        $(".NavBg").addClass("navFixed");
+	    }else{
+	        $(".NavBg").removeClass("navFixed");
+	        };
+	});
+}

@@ -9,10 +9,20 @@
 {% block content %}
 <section id="industry">
 	<div class="page-title">
-	<div class="container">
-	    <p>{% trans "Industry" %}</p>
-	</div>
+		<div class="container">
+		    <p>{% trans "Industry" %}</p>
+		</div>
     </div>
+    <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+    	<div class="container">
+    		<a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}" style="margin-top: 7px;">
+                <img class="logo-pc" src="{% version "images/logo_new_style.svg" %}" alt="Newton" style="width: unset;" />
+            </a>
+    		<span>{% trans "Industry" %}</span>
+
+    		<div class="submit-button"><a href="/business-proposal/">{% trans "Submit Your Business Proposal" %}</a></div>
+    	</div>
+    </nav>
     <div class="container">
 	    <div class="industry_list">
 	        <div class="row" id="industry_anchor_1">
@@ -230,4 +240,39 @@
 	    </div>
 	</div>
 </section>
+{% endblock %}
+
+{% block css %}
+<style type="text/css">
+	#float-nav{display: none;}
+	#float-nav .container{text-align: center;}
+	#float-nav .container span{font-size: 22px;line-height: 44px;color: #333;}
+	#float-nav .submit-button{float: right; line-height: 44px;}
+	#float-nav .submit-button a{border: 1px solid #ccc; padding: 3px 5px; border-radius: 6px; background-color: #fff;}
+</style>
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+	$(function () {
+		if (screen.width <= 768){
+			showNav();
+		}
+		else {
+			$(window).scroll(function(){
+			    var height
+			    var s = $(window).scrollTop();
+			    if (s<280){
+			        // $(".NavBg").addClass("navFixed");
+			        $("#float-nav").hide();
+			    }else{
+			        // $(".NavBg").removeClass("navFixed");
+			        $("#float-nav").show();
+			        $("#float-nav").addClass("navFixed");
+			        };
+			});
+		};
+	});
+	
+</script>
 {% endblock %}

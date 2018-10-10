@@ -76,6 +76,12 @@
 
 {% endblock %}
 
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
+{% endblock %}
+
 {% block css %}
 <link rel="stylesheet" href="{% version "css/whitepaper.css" %}">
 {% endblock %}
