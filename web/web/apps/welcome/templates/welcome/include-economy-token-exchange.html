@@ -4,7 +4,7 @@
     <div class="token-exchange">
     	<div class="row">
             <div class="col-md-12">
-                <h2 class="title text-center">
+                <h2 class="title text-center" style="margin-bottom: 30px;">
                     <strong>{% trans "Token Exchange" %}</strong><span></span>
                 </h2>
             </div>
@@ -58,6 +58,10 @@
 				</tr>
 			</table>
 		</div>
+		<div class="col-md-12 col-xs-12 text-center add"><p>{% trans "Havn't participated in KYC yet?" %}</p></div>
+        <div class="col-md-12 col-xs-12 more">
+            <a href="{{ settings.NEWTON_HOME_URL }}">{% trans "Join KYC" %}</a>
+        </div>
 		{% comment %}
 		<p class="text-center">
 			<a href="{{ settings.NEWTON_HOME_URL }}/user/" class="form-button">
