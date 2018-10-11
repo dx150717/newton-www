@@ -1,0 +1,115 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="token-exchange-notice">
+    <div class="container text-center token-exchange-pannel-container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "Token Exchange" %}</strong>
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="intro panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="huge"><span id="transactions">{% trans "First round of Token exchange" %}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-content text-center">
+                        <div class="one-top">
+                            <span class="value text-danger">500</span>
+                            <span class="key">{% trans "BTC" %}</span>
+                        </div>
+                        <div class="one-bottom">
+                            <p class="time-text">{% trans "March 1,2018 - April 30,2018" %}</p>
+                            <p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% trans "Finished" %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro col-md-4 col-sm-12">
+                <div class="intro panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="huge"><span id="transactions">{% trans "Second round of Token exchange" %}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-content text-center">
+                        <div class="two-top">
+                            <span class="value text-danger">3000</span>
+                            <span class="key">{% trans "BTC" %}</span>
+                            <p>{% trans "10,561 members from 89 countries have participated" %}</p>
+                        </div>
+                        <p class="time-text">{% trans "July 1,2018 - July 31,2018" %}</p>
+                        <p><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% trans "Finished" %}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro col-md-4 col-sm-12">
+                <div class="intro panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="huge"><span id="transactions">{% trans "Third round Token exchange" %}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-content text-center">
+                        <div class="three-top">
+                            <span class="value text-danger">{% trans "About to start" %}</span>
+                        </div>
+                        <div>
+                            <p class="time-text">{% trans "Estimate on October,2018" %}</p>
+                            <p>
+                                <a href="economy/" class="detail-link">
+                                    <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                                    {% trans "Details" %}
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-xs-12 text-center add"><p>{% trans "Havn't participated in KYC yet?" %}</p></div>
+        <div class="col-md-12 col-xs-12 more">
+            <a href="{{ settings.NEWTON_HOME_URL }}">{% trans "Join KYC" %}</a>
+        </div>
+    </div>
+</div>
+
+{% block css %}
+<style>
+    .token-exchange-pannel-container {padding-bottom: 10px;}
+    .page-title{background-color: #5c8dbd;}
+    .panel-heading span{position: unset; right: unset; top: unset; border: unset; width: unset; height: unset; display: unset; font-size: 20px;}
+    .panel-heading{padding: 10px 15px;}
+    .panel-default>.panel-heading{background-color: #f5f5f5;}
+    .panel-default{border-color: #ddd;}
+    .panel-content {padding: 10px;}
+    .panel-content .key {color: #303030; font-size: 16px;}
+    .panel-content .value {font-size: 22px;}
+    .glyphicon-ok {color: green; margin-right: 10px;}
+    a.detail-link {color: #337ab7;}
+    .glyphicon-arrow-right {color: #337ab7; margin-right: 10px;}
+    .time-text {color: #333; font-size: 14px;}
+    .add {font-size: 18px; color: #333;}
+    .add p{font-size: 15px; margin-bottom: -12px;}
+    .one-top{margin-top: 10px; margin-bottom: 20px;}
+    .two-top{margin-top: 10px; margin-bottom: -7px;}
+    .three-top{margin-top: 10px; margin-bottom: 22px;}
+    .two-top p{font-size: 13px;}
+    @media(max-width: 768px){
+            .title{margin-bottom: 30px;}
+    }
+</style>
+{% endblock %}

@@ -196,7 +196,7 @@ h6, .f12 {font-size: 12px;}
 .nav-logo img {max-width: 100%; display: inline-block; margin-right: 8px; height: 100%;}
 .nav-logo .logo-pc {display: inline-block;}
 .nav-logo .logo-mobile {display: none;}
-.sticky-navigation.NavBg {right: 0; left: 0; z-index: 1030 ; top: 0; background: #f7f7f7;}
+.sticky-navigation.NavBg {right: 0; left: 0; z-index: 1030 ; top: 0; background: #f7f7f7; border-bottom: 1px solid #ddd;}
 .navbar-header a{margin-top: 13px;}
 .navbar-nav li {padding: 15px 0 15px 0;}
 .sticky-navigation.NavBg .navbar-header a{margin-top: 9px;}
@@ -303,12 +303,12 @@ canvas {display: block; vertical-align: top;}
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: 0 none; outline-offset: 0;}
 .download a {position: relative; display: inline-block; width: 240px;line-height: 15px; height:50px; padding: 19px 0; background: #000; color: #fff; text-align: center;}
 .download a .f20 {font-size: 16px;}
-.feature-item {margin-bottom: 60px; text-align: center;}
+.feature-item {text-align: center;}
 .feature-item-wrap dl {margin-bottom: 0;}
 .feature-item-wrap dl dt {padding-top: 15px; font-size: 20px; color: #000; margin-bottom: 20px; height: 55px;}
 .feature-item-wrap dl dd {font-size: 16px; line-height: 1.6; text-align: left;}
 .feature-item-wrap ul {padding-top: 10px; padding-bottom: 10px;}
-.feature-item-wrap ul li {text-align: left; color: #000; font-size: 20px; font-weight: 700; list-style: none}
+.feature-item-wrap ul li {text-align: left; color: #000; font-size: 20px; font-weight: 700; list-style: none; height: 43px;}
 .feature-item-wrap ul p {text-align: left; margin-top: 10px; font-size: 16px; line-height: 1.5} 
 /* Team ---------------------------------------------------------------- */
 .avatar {display: inline-block; border-radius: 500px; overflow: hidden; width: 150px; height: 150px;}
