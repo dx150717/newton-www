@@ -15,7 +15,7 @@ from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN,ARABIC,NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND
+from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN,ARABIC,NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND
 from zinnia.managers import PUBLISHED
 
 from press.models import PressModel
@@ -187,12 +187,19 @@ def show_community_view(request):
     blog_entries = entry.get_queryset().filter(language=language, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
     if len(blog_entries) < 4:
         blog_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
+    # select community voice entry object
+    if language == CHINESE:
+        voice_entries = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
+    else:
+        voice_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
     for activity_entry in activity_entries:
         activity_entry.urls = activity_entry.get_absolute_url().replace('/blog/', '/announcement/')
     for operation_entry in operation_entries:
         operation_entry.urls = operation_entry.get_absolute_url().replace('/blog/', '/announcement/')
     for blog_entry in blog_entries:
         blog_entry.urls = blog_entry.get_absolute_url()
+    for voice_entry in voice_entries:
+        voice_entry.urls = voice_entry.get_absolute_url().replace('/blog/', '/community-voice/')
     return render(request, 'welcome/community.html', locals())
 
 def show_economy_view(request):
@@ -338,4 +345,13 @@ class AnnouncementDetailView(generic.DetailView):
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT)
         self.get_object(entries)
         return entries
-    
+
+class CommunityVoiceDetailView(generic.DetailView):
+    template_name = "welcome/community-voice-detail.html"
+    context_object_name = "entry"
+
+    def get_queryset(self):
+        entry = EntryDetail()
+        entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE)
+        self.get_object(entries)
+        return entries

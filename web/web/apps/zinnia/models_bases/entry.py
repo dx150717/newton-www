@@ -34,7 +34,7 @@ from zinnia.managers import entries_published
 from zinnia.managers import EntryPublishedManager
 from zinnia.managers import DRAFT, HIDDEN, PUBLISHED
 from zinnia.managers import CHINESE, ENGLISH, KOREAN, JAPANESE, RUSSIAN, TURKISH, SPANISH, FRENCH, GERMAN, ARABIC, NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND
-from zinnia.managers import TYPE_BLOG, TYPE_ANNOUNCEMENT, SUB_TYPE_ACTIVITY, SUB_TYPE_OPERATION, SUB_TYPE_WEEKLY
+from zinnia.managers import TYPE_BLOG, TYPE_ANNOUNCEMENT, TYPE_COMMUNITY_VOICE, SUB_TYPE_ACTIVITY, SUB_TYPE_OPERATION, SUB_TYPE_WEEKLY
 from zinnia.url_shortener import get_url_shortener
 
 
@@ -69,7 +69,8 @@ class CoreEntry(models.Model):
 
     ENTRY_TYPE_CHOICES = (
         (TYPE_BLOG, _('Blog')),
-        (TYPE_ANNOUNCEMENT, _('Announcement'))
+        (TYPE_ANNOUNCEMENT, _('Announcement')),
+        (TYPE_COMMUNITY_VOICE, _('Community_Voice')),
     )
 
     ENTRY_SUB_TYPE_CHOICES = (
