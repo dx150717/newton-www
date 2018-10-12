@@ -15,22 +15,22 @@
         {% for press in presses %}
             {% if press.press_img %}
                 <div class="dynamic col-md-4">
-                    <a class="bigimg" style="background-image: url({{ press.press_img.url }});" href="{{ press.press_link }}">
+                    <a class="bigimg" style="background-image: url({{ press.press_img.url }});" href="{{ press.press_link }}" target="_blank">
                         <div class="shadow"></div>
                     </a>
                     <div class="news-word">
                         <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
-                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ press.press_title }}</p></a>
+                        <a href="{{ entry.urls }}" target="_blank"><p class="announcement-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
             {% else %}
                 <div class="dynamic col-md-4">
-                    <a class="bigimg" style="" href="{{ entry.urls }}">
+                    <a class="bigimg" style="" href="{{ entry.urls }}" target="_blank">
                         <div class="shadow"></div>
                     </a>
                     <div class="news-word">
                         <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
-                        <a href="{{ entry.urls }}"><p class="announcement-title">{{ press.press_title }}</p></a>
+                        <a href="{{ entry.urls }}" target="_blank"><p class="announcement-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
             {% endif %}
