@@ -282,6 +282,8 @@ class AnnouncementView(generic.ListView):
             
         entry = EntryDetail()
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language, status=PUBLISHED)
+        if not entries:
+            entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=ENGLISH, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
             entry.urls = url
@@ -330,6 +332,8 @@ class AnnouncementSubView(generic.ListView):
             
         entry = EntryDetail()
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,entry_sub_type=entry_sub_type, status=PUBLISHED)
+        if not entries:
+            entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=ENGLISH,entry_sub_type=entry_sub_type, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
             entry.urls = url
