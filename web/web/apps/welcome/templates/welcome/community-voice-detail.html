@@ -14,31 +14,31 @@
 <section id="announcementdetail" class="section-list">
     <div class="page-title">
         <div class="container">
-            <p>{% trans "Community Voice" %}</p>
+            <p><a href="/community-voice/">{% trans "Community Voice" %}</a></p>
         </div>
     </div>
     <div class="container">
         <div class="content-area">
                 {% if entry %}
                 <div class="content">
-                        <div class="item">
-                            <div class="entry-item">
-                                <div class="details_text">
-                                    <h1>
-                                        {{ entry.title }}
-                                    </h1>
-                                </div>  
-                                <div class="entry-body">
-                                    <div class="entry-content">
-                                        <dd class="detail">                                        
-                                            {{ entry.html_content|safe }}
-                                        <div class="clearfix"></div>
-                                        </dd>
-                                    </div>
+                    <div class="item">
+                        <div class="entry-item">
+                            <div class="details_text">
+                                <h1>
+                                    {{ entry.title }}
+                                </h1>
+                            </div>  
+                            <div class="entry-body">
+                                <div class="entry-content">
+                                    <dd class="detail">                                        
+                                        {{ entry.html_content|safe }}
+                                    <div class="clearfix"></div>
+                                    </dd>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
                     <!-- {% if is_paginated %}
                     <div class="pagination-simple">

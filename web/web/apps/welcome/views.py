@@ -355,3 +355,53 @@ class CommunityVoiceDetailView(generic.DetailView):
         entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE)
         self.get_object(entries)
         return entries
+
+class CommunityVoiceView(generic.ListView):
+    template_name = "welcome/community-voice.html"
+    context_object_name = "entries"
+    paginate_by = 20
+    
+    def get_queryset(self):
+        language = translation.get_language()
+        if language.startswith('zh'):
+            language = CHINESE
+        elif language.startswith('en'):
+            language = ENGLISH
+        elif language.startswith('ko'):
+            language = KOREAN
+        elif language.startswith('ja'):
+            language = JAPANESE
+        elif language.startswith('ru'):
+            language = RUSSIAN
+        elif language.startswith('tr'):
+            language = TURKISH
+        elif language.startswith('es'):
+            language = SPANISH
+        elif language.startswith('fr'):
+            language = FRENCH
+        elif language.startswith('de'):
+            language = GERMAN
+        elif language.startswith('ar'):
+            language = ARABIC
+        elif language.startswith('nl'):
+            language = NETHERLAND
+        elif language.startswith('fi'):
+            language = FINNISH
+        elif language.startswith('id'):
+            language = INDONESIAN
+        elif language.startswith('it'):
+            language = ITALY
+        elif language.startswith('th'):
+            language = THAILAND
+        else:
+            language = ENGLISH
+            
+        entry = EntryDetail()
+        if language == CHINESE:
+            entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE,language=CHINESE, status=PUBLISHED)
+        else:
+            entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE,language=ENGLISH, status=PUBLISHED)
+        for entry in entries:
+            url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
+            entry.urls = url
+        return entries
