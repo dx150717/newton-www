@@ -107,11 +107,12 @@
         </div>
         {% endcomment %}
 
+        {% if activity_entries %}
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Activity " %}</h2>
             </div>
-            {% if activity_entries %}
+            
             {% for activity_entry in activity_entries %}
                 {% if activity_entry.image %}
                 <div class="col-md-3">
@@ -135,14 +136,15 @@
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/announcements/0/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+
+        {% if operation_entries %}
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Announcements" %}</h2>
             </div>
-            {% if operation_entries %}
             {% for operation_entry in operation_entries %}
                 {% if operation_entry.image %}
                 <div class="col-md-3">
@@ -166,14 +168,15 @@
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/announcements/1/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+
+        {% if presses %}
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Press" %}</h2>
             </div>
-            {% if presses %}
             {% for press in presses %}
                 {% if press.press_img %}
                 <div class="col-md-3">
@@ -197,14 +200,15 @@
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/press/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+
+        {% if blog_entries %}
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Blog" %}</h2>
             </div>
-            {% if blog_entries %}
             {% for blog_entry in blog_entries %}
                 {% if blog_entry.image %}
                 <div class="col-md-3">
@@ -228,14 +232,15 @@
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/blog/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+
+        {% if voice_entries %}
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Community Voice" %}</h2>
             </div>
-            {% if voice_entries %}
             {% for voice_entry in voice_entries %}
                 {% if voice_entry.image %}
                 <div class="col-md-3">
@@ -259,8 +264,9 @@
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/community-voice/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+        
     </div>
 </div>
