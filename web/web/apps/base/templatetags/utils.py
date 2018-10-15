@@ -332,7 +332,7 @@ def language_change_header_style():
     """
     try:
         language = translation.get_language()
-        if language in ['de', 'es', 'fr', 'nl', 'ru', 'fi', 'it']:
+        if language in ['de', 'es', 'fr', 'nl', 'ru', 'fi', 'it', 'pt']:
             return 'style="font-size:15px;"'
     except Exception, inst:
         logger.exception("fail to language_change_header_style:%s" % str(inst))
@@ -347,7 +347,7 @@ def russian_change_header_style():
     """
     try:
         language = translation.get_language()
-        if language in ['de', 'es', 'fr', 'nl', 'ru', 'fi', 'it']:
+        if language in ['de', 'es', 'fr', 'nl', 'ru', 'fi', 'it', 'pt']:
             return 'style="font-size:15px;"'
     except Exception, inst:
         logger.exception("fail to russian_change_header_style:%s" % str(inst))
