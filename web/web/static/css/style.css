@@ -211,7 +211,7 @@ h6, .f12 {font-size: 12px;}
 .navbar {margin-bottom: 0px;}
 .navbar-nav {float: left; margin: 0px !important; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
 .navbar-nav li {margin-left: 30px;}
-.navbar-nav li a {color: #000; padding: 8px 0 0; line-height: 20px; font-size: 18px; position: relative; background-color: transparent !important; -webkit-transition: all .8s ease; -moz-transition: all .8s ease; -o-transition: all .8s ease; transition: all .8s ease;}
+.navbar-nav li a {color: #000; padding: 8px 0 0; line-height: 20px; font-size: 15px; position: relative; background-color: transparent !important; -webkit-transition: all .8s ease; -moz-transition: all .8s ease; -o-transition: all .8s ease; transition: all .8s ease;}
 .navbar-nav li.active a, .navbar-nav li a:hover {color: #000;}
 .navbar-collapse{max-height: 1000px !important; height: 1000px !important;}
 .navbar-toggle {margin-right: 10px;  overflow: hidden;}
@@ -281,11 +281,13 @@ canvas {display: block; vertical-align: top;}
 #intro p.sty1 {margin: 0 0 70px; color: #333; font-size: 40px; font-weight:300;}
 #intro p.sty2, span.sty2 {color:#a4a4a4; margin: 0 0 10px; font-size: 30px; font-weight:100;}
 #intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333;}
-#intro .countdown-subtitle h3{color: #333; font-weight: 300;}
+#intro .countdown-subtitle h3{color: #333; font-weight: 300; margin-bottom: 30px;}
 #intro .start_button .announcement {}
 #intro .start_button .announcement a{font-weight:700; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
 #intro .start_button .announcement a:hover{color:#666;}
 #intro .start_button {margin-top: 20px;}
+#intro .support span{margin-right: 20px; color: #333;}
+#intro .support img{width: 35px;}
 @media(max-width: 768px) {
     #intro .countdown-title h2{
         font-size: 29px;
@@ -297,6 +299,8 @@ canvas {display: block; vertical-align: top;}
     #intro .start_button {
         margin-top: -20px;
     }
+    #intro .support img{width: 25px;}
+    #intro .support {margin-bottom: 28px;}
 }
 .border-line:before {content:" "; margin-right:10px;margin-bottom:8px;;height: 2px; width: 50px;display:inline-block;}
 .border-line { margin: 0 0 60px; font-size: 30px; font-weight:100;}
@@ -1737,7 +1741,7 @@ li.language-drop-down ul.dropdown-menu li:first-child {
 .language-drop-down .dropdown-menu>li>a{padding: 2px 4px; margin: 2px 0; font-size: 14px}
 .language-drop-down .dropdown-menu>li>a .checked_icon {width: 10px;}
 .language-drop-down #dropdownLanguage {padding: 0 0 0 5px; border: 0; font-size: 14px; line-height: 25px; border: solid 1px #ccc;}
-.language-drop-down #dropdownLanguage img{width: 14px; margin-right: 6px}
+.language-drop-down #dropdownLanguage img{width: 14px; margin-right: 6px; margin-bottom: 1px;}
 .language-drop-down #languge_icon {height: 100%}
 .language-drop-down .caret{display: none}
 .language-drop-down .btn-default{background-color: #fff}
@@ -2114,6 +2118,14 @@ input[name="expect_btc"], input[name="expect_ela"]{
     font-size: 20px;
     color: #333;
 }
+#index-industry .intro:hover{
+    background-color: #DDDDDD;
+}
+#index-industry .intro{
+    text-align: center;
+    height: 150px;
+    margin-bottom: 40px;
+}
 @media(max-width: 768px) {
     #index-industry .title{
         margin-bottom: 30px;        
@@ -2124,11 +2136,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
     #index-industry .intro img{
         width: 90%;
     }
-}
-#index-industry .intro:hover{
-    background-color: #DDDDDD;
-}
-#index-industry .intro{
-    text-align: center;
-    height: 150px;
+    #index-industry .intro{
+        margin-bottom: 0;
+    }
 }

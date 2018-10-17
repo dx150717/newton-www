@@ -20,20 +20,31 @@
             <div class="countdown-subtitle">
                 <h3>{% trans "Launch Time:2018-09-03 00:00(GMT)" %}</h3>
             </div>
+            <div class="support">
+              <span>{% trans "Supported System:" %}</span>
+              <a href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/android-2.png" %}" style="margin-right:55px;"></a>
+              <a href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/ios-3.png" %}"></a>
+            </div>
             <div class="row start_button">
-                <div class="col-md-2 col-lg-2"></div>
+                
+                {% comment %}
                 <div class="announcement col-md-4 col-lg-4">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/31/announcement-launching-newchain-testnet/" %}">{% trans "View More" %}</a>
                 </div>
-                <div class="more col-md-4 col-lg-4">
-                        <a href="https://developer.newtonproject.org">{% trans "Go to TestNet" %}</a>
+                {% endcomment %}
+                <div class="more col-md-12 col-lg-12">
+                        <a href="https://developer.newtonproject.org" target="_blank">{% trans "Download NewPay" %}</a>
                 </div>
-                <div class="col-md-2 col-lg-2"></div>
+                
             </div>
         </div>
       </div>
     </div>
 </section>
+
+{% comment %}
+{% include "welcome/include-activity.html" %}
+{% endcomment %}
 
 {% include "welcome/include-video.html" %}
 

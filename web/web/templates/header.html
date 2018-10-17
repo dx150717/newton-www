@@ -121,7 +121,7 @@
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
                                     {% if language_code|is_current_language %}
-                                    <span style="float: left" id="is_choice">
+                                    <span style="float: left;margin-right: 4px;" id="is_choice">
                                     <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
                                     </span>
                                     {% endif %}
@@ -134,7 +134,7 @@
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
                                     {% if language_code|is_current_language %}
-                                    <span style="float: left" id="is_choice">
+                                    <span style="float: left;margin-right: 4px;" id="is_choice">
                                     <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
                                     </span>
                                     {% endif %}
