@@ -280,7 +280,7 @@ canvas {display: block; vertical-align: top;}
 #intro h1 {margin: 130px 0 27px; color: #333; position: relative;font-weight: 400; font-size: 60px; line-height: 1.2;}
 #intro p.sty1 {margin: 0 0 70px; color: #333; font-size: 40px; font-weight:300;}
 #intro p.sty2, span.sty2 {color:#a4a4a4; margin: 0 0 10px; font-size: 30px; font-weight:100;}
-#intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333;}
+#intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333; margin-bottom: 30px;}
 #intro .countdown-subtitle h3{color: #333; font-weight: 300; margin-bottom: 55px;}
 #intro .start_button .announcement {}
 #intro .start_button .announcement a{font-weight:700; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
@@ -291,7 +291,7 @@ canvas {display: block; vertical-align: top;}
 @media(max-width: 768px) {
     #intro .countdown-title h2{
         font-size: 29px;
-        margin-bottom: 5px;
+        margin-bottom: 30px;
     }
     #intro .countdown-subtitle h3{
         font-size: 20px;
