@@ -1077,7 +1077,7 @@ canvas {display: block; vertical-align: top;}
 .community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .community .press p a{font-size: 20px; color: #666666;}
 .community .popover-title{white-space: nowrap;}
-.community .popover{top: -59px !important}
+.community .popover{top: -59px !important;}
 .community .popover-content{ text-align: center;}
 @media (max-width: 768px) {
 #announcement .announcement-type{ text-align: left;}
@@ -2138,5 +2138,23 @@ input[name="expect_btc"], input[name="expect_ela"]{
     }
     #index-industry .intro{
         margin-bottom: 0;
+    }
+}
+
+/*community map*/
+#map {
+    height: 500px;
+    width: 100%;
+}
+.country_label{
+    margin: 5px 0;
+    text-align: center;
+}
+.leaflet-popup-content a{
+    margin: 0 5px;
+}
+@media(max-width: 768px){
+    .community_map{
+        padding: unset;
     }
 }

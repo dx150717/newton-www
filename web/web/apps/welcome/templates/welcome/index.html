@@ -42,10 +42,6 @@
     </div>
 </section>
 
-{% comment %}
-{% include "welcome/include-activity.html" %}
-{% endcomment %}
-
 {% include "welcome/include-video.html" %}
 
 {% comment %}
@@ -89,14 +85,14 @@
 {% block inline_js %}
 <script type="text/javascript">
 var video_player;
-$(document).ready(function(){  
-    videojs("newton-video", {}, function(){  
-        video_player = this;       
-        video_player.on('ended', function(){  
+$(document).ready(function(){
+    videojs("newton-video", {}, function(){
+        video_player = this;
+        video_player.on('ended', function(){
             video_player.load();
         });
-    });  
-});  
+    });
+});
 
 showNav();
 </script>
@@ -109,4 +105,5 @@ showNav();
 
 {% block css %}
 <link href="{% version "css/video-js.css" %}" rel="stylesheet">
+<link href="{% version "leaflet/leaflet.css" %}" rel="stylesheet">
 {% endblock %}

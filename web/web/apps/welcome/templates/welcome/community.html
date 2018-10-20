@@ -84,7 +84,7 @@
         </div>
     </div>
 
-    <div class="online-community">
+    <div class="online-community" id="online-community">
         <div class="container">
             <h2>{% trans "Community" %}</h2>
             {% comment %}
@@ -126,24 +126,11 @@
     #float-nav .submit-button{float: right; line-height: 44px;}
     #float-nav .submit-button a{border: 1px solid #ccc; padding: 3px 5px; border-radius: 6px; background-color: #fff;}
 </style>
+<link href="{% version "css/video-js.css" %}" rel="stylesheet">
 {% endblock %}
 
 {% block inline_js %}
 <script>
-    $('body').on('click', function(event) {  
-    var target = $(event.target);
-    if (!target.hasClass('popover')  
-    && target.parent('.popover-content').length === 0  
-    && target.parent('.myPopover').length === 0  
-    && target.parent('.popover-title').length === 0  
-    && target.parent('.popover').length === 0 && target.attr("id") !== "wechat") {  
-    $('#wechat').popover('hide');  
-    }  
-    });  
-    $(function (){
-    $("[data-toggle='popover']").popover();
-    });
-    
     $(function () {
         if (screen.width <= 768){
             showNav();
