@@ -1,0 +1,144 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="container community_map">
+	<div id="map"></div>
+</div>
+
+
+
+
+{% block js %}
+<script src="{% version "leaflet/leaflet.js" %}"></script>
+<script src="{% version "leaflet/leaflet_providers.js" %}"></script>
+<script type="text/javascript">
+  var normalMap = L.tileLayer.chinaProvider('Google.Normal.Map', {
+        maxZoom: 18,
+        minZoom: 2
+    });
+
+
+  var map = L.map("map", {
+      center: [27.010755, 17.896445],
+      zoom: 2,
+      layers: [normalMap],
+      zoomControl: false
+  });
+
+  L.control.zoom({
+      zoomInTitle: 'magnify',
+      zoomOutTitle: 'shrink'
+  }).addTo(map);
+  
+  // China community
+  L.marker([39.932576, 116.452848]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "China" %}</p><a id="wechat2" onclick="javascript:void(0);" data-placement="left" data-toggle="popover" data-trigger="click| hover | focus | manual" data-html="true" data-animation="false" data-content="<img src=\'static/images/social/wechat-qrcode.jpg\' style=\'width:160px;height=160px;\'>"><img src="{% version "images/social/wechat.svg" %}" onclick="javascript:void(0);" style="width:30px;"/></a><a href="https://t.me/newtonprojectchinese" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"></a><a id="qq" onclick="javascript:void(0);" data-toggle="popover" data-trigger="click| hover | focus | manual" data-html="true" data-animation="false" data-content="<img src=\'static/images/social/qq-qrcode.png\' style=\'width:160px;height=160px;\'>"><img src="{% version "images/social/qq.png" %}" onclick="javascript:void(0);" style="width:30px;"/></a>');
+
+  // Japan community
+  L.marker([35.708561, 139.732096]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Japan" %}</p><a id="line" onclick="javascript:void(0);" data-placement="left" data-toggle="popover" data-trigger="click| hover | focus | manual" data-html="true" data-animation="false" data-content="<img style=\'height:160px;width:160px;\' src=\'static/images/social/line-qrcode.png\'/>"><img src="{% version "images/social/LINE.png" %}" onclick="javascript:void(0);" style="width:30px;"/></a><a href="https://t.me/joinchat/F-cvGBLA7ZLUw3wM6wzUrg" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a><a href="https://twitter.com/newtonprojectJ1" target="_blank"><img src="{% version "images/social/twitter.svg" %}" style="width:30px;"/></a>');
+
+  // Korea community
+  L.marker([37.550429, 126.992471]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Korea" %}</p><a href="https://t.me/newtonprojectkorea" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a><a id="talk" onclick="javascript:void(0);" data-toggle="popover" data-trigger="click| hover | focus | manual" data-html="true" data-animation="false" data-content="<img style=\'height:160px;width:160px;padding:0;\' src=\'static/images/social/kakao-qrcode-2.png\'/>"><img src="{% version "images/social/kakao.png" %}" onclick="javascript:void(0);" style="width:30px;"/></a>');
+
+  // Malaysia community
+  L.marker([3.138620, 101.686324]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Malaysia" %}</p><a href="https://t.me/newtonmy" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a><a href="https://m.me/join/AbbOw0eRt0eqEZHE" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a>');
+
+  // Thailand community
+  L.marker([13.748573, 100.503326]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Thailand" %}</p><p style="text-align:center;"><a href="https://m.me/join/Abbpe2kiet0KqwO8" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a></p>');
+
+  // India community
+  L.marker([28.614133, 77.208995]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "India" %}</p><a href="https://chat.whatsapp.com/0jbIS4DEmDq2z6ZMTWZPiT" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/Abb5wSVxOoqaOUmy" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a><a href="https://t.me/NewtonIndian" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // Israel community
+  L.marker([31.045332, 34.855429]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Israel" %}</p><a href="https://chat.whatsapp.com/8VtXZbpGXhgKFLmV5GqHyu" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/AbYxspUBd9Bbm_83" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a>');
+
+  // Vietnam community
+  L.marker([10.816099, 106.635643]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Vietnam" %}</p><a href="https://t.me/newtonVietnam" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+  
+  // Indonesia community
+  L.marker([-6.208754, 106.845938]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Indonesia" %}</p><a href="https://t.me/newtonindonesia" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // Saudi Arabia community
+  L.marker([24.714894, 46.672796]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Saudi Arabia" %}</p><a href="https://t.me/NewtonArabic" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // America The Bay Area community
+  L.marker([37.779736, -122.416615]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "America - The Bay Area" %}</p><a href="https://t.me/joinchat/HFyzCRJkhhic1qpRTuYRyQ" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // America New York community
+  L.marker([40.706641, -73.891109]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "America - New York" %}</p><a href="https://chat.whatsapp.com/5aYHlFvMwwg4v2ZJPBBORg" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/AbY-gL8HsFCv-MBQ" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a>');
+
+  // America Boston community
+  L.marker([42.304325, -71.082456]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "America - Boston" %}</p><a href="https://chat.whatsapp.com/79JIC3bm5kZ6NkRVicdJCv" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/AbZomHqBeAToqu_Q" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a>');
+
+  // America Chicago community
+  L.marker([41.874366, -87.649404]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "America - Chicago" %}</p><a href="https://chat.whatsapp.com/8AmwEOuaGi0EdA9vGw71m3" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/Abaff58Fue0TPECn" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a>');
+
+  // Canada community
+  L.marker([57.609532, -101.838636]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Canada" %}</p><a href="https://t.me/joinchat/HR02NRIVaFXCNkWNy7M7UQ" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a><a href="https://chat.whatsapp.com/3Pqw18aMRJwFNyIE8Dpnhh" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a>');
+
+  // Netherlands community
+  L.marker([52.370123, 4.899678]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Netherlands" %}</p><a href="https://t.me/newtonproject_nl" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // Sweden community
+  L.marker([59.330052, 18.068850]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Sweden" %}</p><a href="https://t.me/Newtonprojectsweden" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // Turkey community
+  L.marker([39.929933, 32.852141]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Turkey" %}</p><a href="https://t.me/newtonturkey" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // Russia community
+  L.marker([55.752194, 37.606096]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Russia" %}</p><a href="https://chat.whatsapp.com/2zoUbItfQTFLMnsvfwqGcG" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/AbZRIoPzcL6mECt1" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a><a href="https://t.me/newtonproject_ru" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // England community
+  L.marker([51.508002, -0.127833]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "England" %}</p><a href="https://chat.whatsapp.com/0EF4AmdqBO4CRIdnIeQuNq" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/AbbSQm2bE7qNutIT" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a><a href="https://t.me/Newtonproject_uk" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // Germany community
+  L.marker([52.516312, 13.405529]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Germany" %}</p><a href="https://chat.whatsapp.com/9OLkGjEduVDFHaIsGAbkvE" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/Abb5wSVxOoqaOUmy" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a><a href="https://t.me/newtongermany" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // Portugal community
+  L.marker([38.722721, -9.139447]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Portugal" %}</p><a href="https://chat.whatsapp.com/0amxvoEpep0KWJeejK7TpX" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/AbaZIN160EbKzzoY" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a>');
+
+  // Romania community
+  L.marker([44.434103, 26.098409]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Romania" %}</p><a href="https://t.me/newtonproject_ro" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // Serbia community
+  L.marker([44.790675, 20.453428]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Serbia" %}</p><a href="https://t.me/NewtonSerbia" target="_blank"><img src="{% version "images/social/telegram.svg" %}" style="width:30px;"/></a>');
+
+  // South America community
+  L.marker([-11.114277, -60.298892]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "South America" %}</p><a href="https://chat.whatsapp.com/4BJm995gnYa6b2vBqK7A5c" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/AbZche1knlGO5Hr4" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a>');
+
+  // Australia community
+  L.marker([-35.281571, 149.128908]).addTo(map)
+  .bindPopup('<p class="country_label">{% trans "Australia" %}</p><a href="https://chat.whatsapp.com/6ZAOXAZMyEkFEvWusCd7tS" target="_blank"><img src="{% version "images/social/whatsapp.png" %}" style="width:30px;"/></a><a href="https://m.me/join/AbYFyhHwt8bkPdSI" target="_blank"><img src="{% version "images/social/facebook.svg" %}" class="facebook" style="width:25px;"/></a>');
+
+  // .openPopup();
+</script>
+
+{% endblock %}
+	
+{% block css %}
+
+{% endblock %}
