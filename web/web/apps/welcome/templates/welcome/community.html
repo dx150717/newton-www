@@ -45,7 +45,7 @@
         </div>
     </div>
     {% endcomment %}
-    <div class="social-network">
+    <div class="social-network bg-gray">
         <div class="container">
             <h2>{% trans "Social Network" %}</h2>
             <div class="row">
@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div class="email-list bg-gray">
+    <div class="email-list">
         <div class="container">
             <h2>{% trans "Email List" %}</h2>
             <div class="row">
@@ -84,7 +84,7 @@
         </div>
     </div>
 
-    <div class="online-community" id="online-community">
+    <div class="online-community bg-gray" id="online-community">
         <div class="container">
             <h2>{% trans "Community" %}</h2>
             {% comment %}
@@ -115,6 +115,14 @@
             {% include "welcome/include-community-region.html" %}
         </div>
     </div>
+    <div class="container">
+        <div class="text-center add">
+            <p>{% trans "Create a Newton community with us" %}</p>
+        </div>
+        <div class="more">
+            <a href="https://wiki.newtonproject.org/wiki/Community_and_Meetups#Online_Community">{% trans "Add Community" %}</a>
+        </div>
+    </div>
 </section>
 {% endblock %}
 
@@ -131,6 +139,22 @@
 
 {% block inline_js %}
 <script>
+    $('body').on('click', function(event) {
+        var target = $(event.target);
+        if (!target.hasClass('popover')
+        && target.parent('.popover-content').length === 0
+        && target.parent('.myPopover').length === 0
+        && target.parent('.popover-title').length === 0
+        && target.parent('.popover').length === 0 ) {
+            // $('#wechat').popover('hide');
+            // $('#qq').popover('hide');
+            // $('#line').popover('hide');
+            // $('#talk').popover('hide');
+        };
+    });
+    $(function (){
+    $("[data-toggle='popover']").popover();
+    });
     $(function () {
         if (screen.width <= 768){
             showNav();

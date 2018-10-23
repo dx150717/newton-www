@@ -1077,7 +1077,7 @@ canvas {display: block; vertical-align: top;}
 .community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .community .press p a{font-size: 20px; color: #666666;}
 .community .popover-title{white-space: nowrap;}
-.community .popover{top: -59px !important;}
+.community .social-network .popover{top: -59px !important;}
 .community .popover-content{ text-align: center;}
 @media (max-width: 768px) {
 #announcement .announcement-type{ text-align: left;}
@@ -1137,7 +1137,6 @@ canvas {display: block; vertical-align: top;}
 .index_community .container .row img{height: 30px; padding-right: 15px;}
 .index_community .container .row .line img{width: 44px; height: 30px;}
 .index_community .container .row .talk img{}
-.index_community .container .community_lower .region .country{text-align: center; padding-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ddd;}
 .index_community .container .row span{font-size: 16px;font-weight: 500;color: #898989;}
 .index_community .container .row .item{padding-top: 20px; padding-bottom: 20px;}
 .index_community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
@@ -1171,26 +1170,7 @@ canvas {display: block; vertical-align: top;}
 .index_community .facebook{
     padding-left: 10px;
 }
-.index_community .panel-body{
-}
-.index_community .panel-footer{
-    background-color: white;
-    border-top: unset;
-}
-.index_community .container .region{
-    margin-right: -8px;
-}
-.index_community .community_lower .continent{
-    font-size: 20px;
-    margin: 13px;
-    color: #000;
-    font-weight: 600;
-}
-.index_community .community_lower .add{
-    font-size: 18px;
-    color: #333;
-    margin-top: 40px;
-}
+
 
 /*community page*/
 .online-community {padding-bottom: 60px;}
@@ -1200,15 +1180,19 @@ canvas {display: block; vertical-align: top;}
 .online-community .container .row .talk img{}
 .online-community .container .row .country{text-align: center;}
 .online-community .container .region{
-    margin-right: -8px;
-    background-color: #f7f7f7;
+    margin-bottom: 60px;
+}
+@media(max-width: 768px){
+    .online-community .container .region{
+        height: 70px;
+    }
 }
 .online-community .container .row span{font-size: 16px;font-weight: 500;color: #898989;}
 .online-community .container .row .item{padding-top: 20px; padding-bottom: 20px;}
 .online-community .social-network, .email-list, .online-community, .press{ padding-bottom: 30px; padding-top: 20px;}
 .online-community .press p a{font-size: 20px; color: #666666;}
 .online-community .popover-title{white-space: nowrap;}
-.online-community .popover{top: -59px !important}
+
 .online-community .popover-content{ text-align: center;}
 .online-community .event {
     padding-bottom: 30px;
@@ -1236,23 +1220,28 @@ canvas {display: block; vertical-align: top;}
 .online-community .facebook{
     padding-left: 10px;
 }
-.online-community .panel-body{
-}
-.online-community .panel-footer{
-    background-color: unset;
-    border-top: unset;
-}
-.online-community .container .community_lower .region .country{text-align: center; padding-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #ddd;}
+.online-community .container .community_lower .region .country{padding-top: 8px; padding-bottom: 8px; padding-left: 15px; font-size: 18px; color: #333; padding-bottom: 12px;}
 .online-community .community_lower .continent{
     font-size: 20px;
     margin: 13px;
     color: #000;
     font-weight: 600;
 }
-.online-community .community_lower .add{
+#community .add{
     font-size: 18px;
     color: #333;
     margin-top: 40px;
+}
+.online-community .community_lower .region .flag{
+    width: 80px;
+    float: left;
+    padding: unset;
+}
+.online-community .community_lower .region .region-right{
+    padding:unset;
+}
+.online-community .community_lower .region .region-right .item img{
+    height: 35px;
 }
 
 /* newpay */
