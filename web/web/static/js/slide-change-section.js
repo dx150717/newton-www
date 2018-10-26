@@ -57,6 +57,7 @@ function slidePartners (maxIndex, defaultIndex, sectionId) {
 $(document).ready(function(e) {
 	var windowWidth = $(window).width();
 	if (windowWidth < 768) {
+	    $("a").attr("data-ajax","false")
         slideFeature(3, 0, "#feature");
         slideNotice(3, 2, "#token-exchange-notice-section");
         slideIndustry(6, 0, "#index-industry");
