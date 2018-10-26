@@ -14,7 +14,7 @@
         </div>
         {% for press in presses %}
             {% if press.press_img %}
-                <div class="dynamic col-md-4 web-screen-press">
+                <div class="dynamic col-md-4">
                     <a class="bigimg" style="background-image: url({{ press.press_img.url }});" href="{{ press.press_link }}" target="_blank">
                         <div class="shadow"></div>
                     </a>
@@ -23,19 +23,6 @@
                         <a href="{{ entry.urls }}" target="_blank"><p class="announcement-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
-                <a class="bigimg mobile-screen-press" href="{{ press.press_link }}" target="_blank">
-                    <div class="dynamic col-xs-12" style="margin-bottom: 10px;">
-                        <div class="press-img-container col-xs-5">
-                            <img src="{{ press.press_img.url }}" alt="" style="width: 100%;">
-                        </div>
-                        <div class="news-word col-xs-7" style="padding-left: 0">
-                            <p class="time" style="padding-top: unset; padding-bottom: unset;">{{ press.created_at|date:"Y-m-d" }}</p>
-                            <p class="announcement-title" style="margin-bottom: 0;">
-                               <span style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;">{{ press.press_title }}</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
             {% else %}
                 <div class="dynamic col-md-4">
                     <a class="bigimg" style="" href="{{ entry.urls }}" target="_blank">
@@ -52,20 +39,3 @@
     <div class="more"><a href="/press/"><span>{% trans "MORE" %}</span></a></div>
 </section>
 {% endif %}
-
-<style>
-    .web-screen-press {
-        display: block;
-    }
-    .mobile-screen-press {
-        display: none;
-    }
-    @media (max-width: 768px) {
-        .web-screen-press {
-            display: none;
-        }
-        .mobile-screen-press {
-            display: block;
-        }
-    }
-</style>
