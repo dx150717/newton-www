@@ -1,8 +1,8 @@
 {% load i18n %}
 {% load utils %}
 
-<div class="token-exchange-notice">
-    <div class="container text-center token-exchange-pannel-container">
+<div class="token-exchange-notice" id="token-exchange-notice-section">
+    <div class="container text-center token-exchange-pannel-container slider-section">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="title text-center">
@@ -10,8 +10,8 @@
                 </h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
+        <div class="row slider-item-list">
+            <div class="col-md-4 col-sm-12 slider-item">
                 <a href="/economy/">
                     <div class="intro panel panel-default">
                         <div class="panel-heading">
@@ -35,7 +35,7 @@
                 </a>
             </div>
 
-            <div class="intro col-md-4 col-sm-12">
+            <div class="intro col-md-4 col-sm-12 slider-item">
                 <a href="/economy/">
                     <div class="intro panel panel-default">
                         <div class="panel-heading">
@@ -58,7 +58,7 @@
                 </a>
             </div>
 
-            <div class="intro col-md-4 col-sm-12">
+            <div class="intro col-md-4 col-sm-12 slider-item">
                 <a href="/economy/">
                     <div class="intro panel panel-default">
                         <div class="panel-heading">
@@ -83,6 +83,12 @@
                     </div>
                 </a>
             </div>
+
+            <ul class="slider-button-list">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
         <div class="col-md-12 col-xs-12 text-center add"><p>{% trans "Havn't participated in KYC yet?" %}</p></div>
         <div class="col-md-12 col-xs-12 more">
