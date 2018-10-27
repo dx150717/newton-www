@@ -67,7 +67,7 @@
                     <li class="visible-sm-block visible-xs-block">
                         <label for="select-input" class='select-label'>
                             <span >{% trans "Language" %}</span>
-                            <select name="" onchange="changeLanguage()" id="id_select_language">
+                            <select name="" onchange="changeLanguage()" id="id_select_language"  data-role="none">
                                 {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
                                 <option value="{{ language_code }}" {% if language_code|is_current_language %}selected="selected"{% endif %}>
                                     {{ language_name }}

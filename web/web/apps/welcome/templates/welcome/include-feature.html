@@ -2,7 +2,7 @@
 {% load utils %}
 
 <section id="feature" class="section bg-gray">
-    <div class="container">
+    <div class="container slider-section">
 
         <div class="row">
             <div class="col-md-12">
@@ -10,11 +10,11 @@
                     <strong>{% trans "Newton's Community Economy" %}</strong><span></span>
                 </h2>
             </div>
-        </div><!-- end -->
+        </div>
 
-        <div class="row">
+        <div class="row slider-item-list">
 
-            <div class="feature-item col-md-4 col-xs-12">
+            <div class="feature-item col-md-4 col-xs-12 slider-item default-slider-item">
                 <div class="feature-item-img">
                     <div class="feature-item-img"><span class="feature-img1"></span></div>
                 </div>
@@ -26,21 +26,9 @@
                         </dd>
                     </dl>
                 </div>
-            </div><!-- end -->
-   
-            <!--<div class="feature-item col-md-6 col-xs-12">-->
-                <!--<div class="feature-item-img">-->
-                    <!--<div class="feature-item-img"><span class="feature-img4"></span></div>-->
-                <!--</div>-->
-                <!--<div class="feature-item-wrap">-->
-                    <!--<dl>-->
-                        <!--<dt>{% trans "Smarter" %}</dt>-->
-                        <!--<dd {% arabic_change_style %}>{% trans "Personal credit can be automatically created in a free and open manner without authoritative intermediaries. This methodology will reduce human intervention and facilitate the coordination between people, between machines and between people and machines." %}</dd>-->
-                    <!--</dl>-->
-                <!--</div>-->
-            <!--</div>&lt;!&ndash; end &ndash;&gt;-->
-            <!--<div class="clearfix visible-md-block visible-lg-block"></div>-->
-            <div class="feature-item col-md-4 col-xs-12">
+            </div>
+
+            <div class="feature-item col-md-4 col-xs-12 slider-item">
                 <div class="feature-item-img">
                     <div class="feature-item-img"><span class="feature-img2"></span></div>
                 </div>
@@ -50,8 +38,9 @@
                         <dd {% arabic_change_style %}>{% trans "Replacing business intermediaries with technology protocols reduces transaction costs and rewards anyone who contributes to the transaction, like service providers, consumers and others connected by the value-based internet." %}</dd>
                     </dl>
                 </div>
-            </div><!-- end -->
-            <div class="feature-item col-md-4 col-xs-12">
+            </div>
+
+            <div class="feature-item col-md-4 col-xs-12 slider-item">
                 <div class="feature-item-img">
                     <div class="feature-item-img"><span class="feature-img3"></span></div>
                 </div>
@@ -61,7 +50,13 @@
                         <dd {% arabic_change_style %}>{% trans "The community economy managed by non-profit foundations will replace the monopoly of intermediary platforms managed by traditional for-profit organizations. Based on open, fair, and rational rules every contributor will benefit from, and become part of this economy." %}</dd>
                     </dl>
                 </div>
-            </div><!-- end -->
+            </div>
+
+            <ul class="slider-button-list">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
             <div class="more col-md-12 col-xs-12 whitepaper-download">
                 <a href="/whitepaper/" target="_self"><span class="f20">{% trans "White Paper" %}</span></a>
             </div>

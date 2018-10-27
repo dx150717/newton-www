@@ -1,8 +1,8 @@
 {% load i18n %}
 {% load utils %}
 
-<section class="section">
-    <div class="container">
+<section class="section protocol-section" id="protocal-section">
+    <div class="container slider-section">
 
         <div class="row">
             <div class="col-md-12">
@@ -11,13 +11,13 @@
                 </h2>
             </div>
         </div><!-- end -->
-        <div class="row">
+        <div class="row slider-item-list">
             <div class="feature-item col-md-4 col-xs-12 fr">
                 <div class="feature-item-wrap">
                     <img class="feature-icon" src="{% version "images/features/icon-6.svg" %}"/>
                 </div>
             </div>
-            <div class="feature-item col-md-4 col-xs-12">
+            <div class="feature-item col-md-4 col-xs-12 slider-item default-slider-item">
                 <div class="feature-item-wrap">
                     <ul>
                         <li {% arabic_change_style %}>{% trans "High performance" %}</li>
@@ -28,7 +28,7 @@
                     
                 </div>
             </div>
-            <div class="feature-item col-md-4 col-xs-12">
+            <div class="feature-item col-md-4 col-xs-12 slider-item">
                 <div class="feature-item-wrap">
                     <ul>
                         <li {% arabic_change_style %}>{% trans "Extensible" %}</li>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="visible-md visible-lg clearfix"></div>
-            <div class="feature-item col-md-4 col-xs-12">
+            <div class="feature-item col-md-4 col-xs-12 slider-item">
                 <div class="feature-item-wrap">
                     <ul>
                         <li {% arabic_change_style %}>{% trans "Technology of whole process stack" %}</li>
@@ -49,7 +49,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="feature-item col-md-4 col-xs-12">
+            <div class="feature-item col-md-4 col-xs-12 slider-item">
                 <div class="feature-item-wrap">
                     <ul>
                         <li {% arabic_change_style %}>{% trans "Friend to developers" %}</li>
@@ -59,6 +59,13 @@
                     </ul>
                 </div>
             </div>
+
+            <ul class="slider-button-list">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
             <div class="feature-item col-lg-12 col-xs-12" style="margin-bottom: 22px;">
                 <div class="feature-item-wrap">
                     <div class="more">
