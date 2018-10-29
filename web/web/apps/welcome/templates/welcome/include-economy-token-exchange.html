@@ -50,15 +50,19 @@
 				<tr>
 					<td>#3</td>
 					<td>{% trans "1.5&nbsp;billions" %}</td>
-					<td>TBD</td>
-					<td>TBD</td>
+					{% if arabic_read_style %}
+						<td>NEW 1,000,000 = BTC 1</td>
+					{% else %}
+						<td>1&nbsp;BTC&nbsp;=&nbsp;1,000,000&nbsp;NEW</td>
+					{% endif %}
+					<td>1500&nbsp;BTC</td>
 					<td>{% trans "No Lock" %}</td>
-					<td>{% trans "Estimate on October,2018" %}</td>
-					<td>{% trans "About to start" %}</td>
+					<td>{% trans "October 29，2018 - 2018 Q4" %}</td>
+					<td>{% trans "Is ongoing" %}</td>
 				</tr>
 			</table>
 		</div>
-		<div class="col-md-12 col-xs-12 text-center add"><p>{% trans "Havn't participated in KYC yet?" %}</p></div>
+		<div class="col-md-12 col-xs-12 text-center add"><p>{% trans "Haven't participated in KYC yet?" %}</p></div>
         <div class="col-md-12 col-xs-12 more" style="margin-bottom: 20px;">
             <a href="{{ settings.NEWTON_HOME_URL }}">{% trans "Join KYC" %}</a>
         </div>
