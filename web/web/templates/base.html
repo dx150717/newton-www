@@ -83,7 +83,7 @@
         {% endblock %}
 
 
-         <div role="main" id="main" class="main">
+         <div role="main" id="main" class="main" {% block main-style %}{% endblock %}>
              {% block content %}{% endblock %}
              <img id="gotoTop" src="{% version 'images/top.jpeg' %}" alt="">
          </div>
