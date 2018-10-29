@@ -99,7 +99,7 @@ LOGGING = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'newton',
+        'NAME': 'newton_www',
         'USER': 'root',
         'PASSWORD': ''
     },
