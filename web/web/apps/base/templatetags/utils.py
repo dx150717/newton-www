@@ -17,7 +17,6 @@ from django.utils.timezone import utc
 from django_countries.data import COUNTRIES
 
 from config import codes
-from django.utils import translation
 
 logger = logging.getLogger(__name__)
 
