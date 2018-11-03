@@ -62,9 +62,9 @@ def show_home_view(request):
     presses = PressModel.objects.order_by('-created_at')[0:3]
     entry = EntryDetail()
     if language == CHINESE:
-        entry_obj = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date')[0]
+        entry_obj = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date').first()
     else:
-        entry_obj = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date')[0]
+        entry_obj = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date').first()
     if entry_obj:
         url = entry_obj.get_absolute_url().replace('/blog/', '/announcement/')
         entry_obj.urls = url
