@@ -60,8 +60,14 @@ def show_home_view(request):
     else:
         language = ENGLISH
     presses = PressModel.objects.order_by('-created_at')[0:3]
-    # entry = EntryDetail()
-    # entries = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
+    entry = EntryDetail()
+    if language == CHINESE:
+        entry_obj = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date')[0]
+    else:
+        entry_obj = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date')[0]
+    if entry_obj:
+        url = entry_obj.get_absolute_url().replace('/blog/', '/announcement/')
+        entry_obj.urls = url
     # if len(entries) < 3:
     #     entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
     # for entry in entries:
@@ -71,7 +77,7 @@ def show_home_view(request):
     #     else:
     #         entry.urls = entry.get_absolute_url()
     # generate the captcha
-    captcha_form = subscription_forms.SubscribeForm()
+    # captcha_form = subscription_forms.SubscribeForm()
     # countdown time
     # start_day = False
     # now = datetime.datetime.now()

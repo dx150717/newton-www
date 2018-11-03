@@ -276,18 +276,16 @@ canvas {display: block; vertical-align: top;}
     .arrow-only-pc{display: none;}
 }
 .hide{display: none;}
-#intro {background: url(../images/bg_map.svg) no-repeat center 100px; width: 100%; margin-top: 30px; padding-bottom: 130px;}
+#intro {background: url(../images/bg_map.svg) no-repeat center 100px; width: 100%; margin-top: 30px; margin-bottom: 60px;}
 #intro h1 {margin: 130px 0 27px; color: #333; position: relative;font-weight: 400; font-size: 42px; line-height: 1.2;}
 #intro p.sty1 {margin: 0 0 70px; color: #333; font-size: 32px; font-weight:300;}
 #intro p.sty2, span.sty2 {color:#a4a4a4; margin: 0 0 10px; font-size: 30px; font-weight:100;}
-#intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333; margin-bottom: 30px;}
+#intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333; margin-bottom: 15px;}
 #intro .countdown-subtitle h3{color: #333; font-weight: 300; margin-bottom: 55px;}
 #intro .start_button .announcement {}
 #intro .start_button .announcement a{font-weight:700; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
 #intro .start_button .announcement a:hover{color:#666;}
 #intro .start_button {margin-top: -5px;}
-#intro .support span{margin-right: 12px; color: #333;}
-#intro .support img{width: 22px;}
 @media(max-width: 768px) {
     #intro .countdown-title h2{
         font-size: 29px;
@@ -299,8 +297,6 @@ canvas {display: block; vertical-align: top;}
     #intro .start_button {
         margin-top: -20px;
     }
-    #intro .support img{width: 25px;}
-    #intro .support {margin-bottom: 15px;}
 }
 .border-line:before {content:" "; margin-right:10px;margin-bottom:8px;;height: 2px; width: 50px;display:inline-block;}
 .border-line { margin: 0 0 60px; font-size: 30px; font-weight:100;}
@@ -725,7 +721,7 @@ canvas {display: block; vertical-align: top;}
     .navbar-brand {position: absolute; right: 0; left: 0; margin: auto; text-align: center;}
     .sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li a{color: #fff;}
     .navbar-nav>li>.dropdown-menu li:first-child {border-bottom: 0 none;}
-    #intro {padding-bottom: 50px; background-position:center 60px;   background-size:150%; margin-top: 50px;}
+    #intro {background-position:center 60px;   background-size:150%; margin-top: 50px; margin-bottom: 30px;}
     #intro h1 {margin:25px 0 30px; font-size: 30px; color: #555;}
     #intro p.sty1 {font-size: 26px; margin-bottom:50px;}
     #intro p.sty2, span.sty2 {font-size: 22px;}
@@ -2145,5 +2141,83 @@ input[name="expect_btc"], input[name="expect_ela"]{
 @media(max-width: 768px){
     .community_map{
         padding: unset;
+    }
+}
+
+/*index banner news column*/
+#intro .news-column{
+    background-color: rgba(61, 78, 97, 0.6);
+    margin-top: 55px;
+}
+#intro .news-column .news-one{
+    padding-top: 10px;
+    padding-bottom: 8px;
+    color:#dddd;
+}
+#intro .news-column .news-one span{
+    font-size: 16px;
+    margin-right: 30px;
+}
+#intro .news-column .news-one .support{
+    display: inline-block;
+}
+#intro .news-column .news-one .support a img{
+    margin-right:10px;
+    width:22px;
+}
+#intro .news-column .news-one .support span{
+    font-size: 16px;
+    margin-right: 20px;
+}
+#intro .news-column .news-one .download-newpay{
+    border: 1px solid #dddd;
+    padding: 4px;
+    border-radius: 8px;
+    color: #dddd;
+}
+#intro .news-column .news-one .download-newpay:hover{
+    color:#fff;
+}
+#intro .news-column .news-one:hover{
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+    color: #fff;
+}
+#intro .news-column .news-two{
+    padding-bottom: 8px;
+}
+#intro .news-column .news-two span{
+    color:#dddd;
+}
+#intro .news-column .news-two:hover{
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
+}
+#intro .news-column .news-two span:hover{
+    color: #fff;
+}
+#intro .news-column .news-two .news-title{
+    margin-right:20px;
+}
+@media (max-width: 768px) {
+    #intro .news-column{
+        margin-top: 25px;
+    }
+    #intro .news-column .news-one span{
+        font-size: 12px;
+        margin-right: 15px;
+    }
+    #intro .news-column .news-one .support span{
+        font-size: 12px;
+        margin-right: unset;
+    }
+    #intro .news-column .news-one .support a img{
+        margin-right: unset;
+    }
+    #intro .news-column .news-two{
+        font-size: 12px;
+    }
+    #intro .news-column .news-two .news-title{
+        margin-right:unset;
     }
 }
