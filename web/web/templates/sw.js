@@ -1,27 +1,33 @@
 // Register event listener for the 'push' event.
-self.addEventListener('push', function (event) {
-    // Retrieve the textual payload from event.data (a PushMessageData object).
-    // Other formats are supported (ArrayBuffer, Blob, JSON), check out the documentation
-    // on https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData.
-    const eventInfo = event.data.text();
-    const data = JSON.parse(eventInfo);
-    const head = data.head || 'New Notification';
-    const body = data.body || 'This is default content. Your notification didn\'t have one';
+self.addEventListener('push', function(event) {
+  // Retrieve the textual payload from event.data (a PushMessageData object).
+  // Other formats are supported (ArrayBuffer, Blob, JSON), check out the documentation
+  // on https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData.
+  let payload = event.data ? event.data.text() : {"head": "No Content", "body": "No Content", "icon": ""},
+    data = JSON.parse(payload),
+    head = data.head,
+    body = data.body,
+    icon = data.icon;
+    // If no url was received, it opens the home page of the website that sent the notification
+    // Whitout this, it would open undefined or the service worker file.
+    url = data.url ? data.url: self.location.origin;
 
-    // Keep the service worker alive until the notification is created.
-    event.waitUntil(
-        self.registration.showNotification(head, {
-            body: body,
-            icon: 'http://newfomo3d.dapps.newtonproject.dev.diynova.com/download/newfomo3d/Newton.jpg'
-        })
-    );
-});
-self.addEventListener('notificationclick', function(event) {
-  console.log('[Service Worker] Notification click Received.');
-
-  event.notification.close();
-
+  // Keep the service worker alive until the notification is created.
   event.waitUntil(
-      clients.openWindow('https://www.newtonproject.org/')
+    // Show a notification with title 'ServiceWorker Cookbook' and use the payload
+    // as the body.
+    self.registration.showNotification(head, {
+      body: body,
+      icon: icon,
+      data: {url: url}
+    })
+  );
+});
+
+self.addEventListener('notificationclick', function (event) {
+  event.waitUntil(
+    event.preventDefault(),
+    event.notification.close(),
+    self.clients.openWindow(event.notification.data.url)
   );
 });
