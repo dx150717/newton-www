@@ -5,7 +5,8 @@ from django.views.decorators.http import require_POST, require_GET
 from django.views.generic import TemplateView
 
 from .forms import WebPushForm, SubscriptionForm
-
+import logging
+logger = logging.getLogger(__name__)
 
 @require_POST
 @csrf_exempt
@@ -15,7 +16,7 @@ def save_info(request):
         post_data = json.loads(request.body.decode('utf-8'))
     except ValueError:
         return HttpResponse(status=400)
-
+    logger.debug('post_data:%s' % post_data)
     # Process the subscription data to mach with the model
     subscription_data = process_subscription_data(post_data)
     subscription_form = SubscriptionForm(subscription_data)
