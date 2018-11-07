@@ -95,6 +95,7 @@ LOGGING = {
     }
 }
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # database
 DATABASES = {
     'default': {
@@ -106,6 +107,12 @@ DATABASES = {
     'tokenexchange': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tokenexchange',
+        'USER': 'root',
+        'PASSWORD': ''
+    },
+    'webpush': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'newton_webpush',
         'USER': 'root',
         'PASSWORD': ''
     }

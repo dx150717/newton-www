@@ -51,6 +51,7 @@ DATABASE_ROUTERS = ['web.database_router.NewtonRouter']
 # database mapping
 DATABASE_APPS_MAPPING = {
     "tokenexchange":"tokenexchange",
+    "webpush":"webpush",
 }
 
 

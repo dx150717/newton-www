@@ -21,6 +21,13 @@ from zinnia.managers import PUBLISHED
 from press.models import PressModel
 from subscription import forms as subscription_forms
 
+from utils import http
+from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404
+from django.views.decorators.http import require_GET, require_POST
+from django.views.decorators.csrf import csrf_exempt
+from webpush import send_user_notification, send_group_notification
+
 logger = logging.getLogger(__name__)
 
 def show_home_view(request):
@@ -85,7 +92,10 @@ def show_home_view(request):
     # delta_time = delta_time.total_seconds()
     # if settings.FUND_START_DATE <= now:
     #     start_day = True
-    return render(request, 'welcome/index.html', locals())
+    webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
+    vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
+    user = request.user
+    return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key})
 
 def show_technology_view(request):
     return render(request, 'welcome/technology.html', locals())
@@ -364,6 +374,7 @@ class AnnouncementDetailView(generic.DetailView):
         self.get_object(entries)
         return entries
 
+
 class CommunityVoiceDetailView(generic.DetailView):
     template_name = "welcome/community-voice-detail.html"
     context_object_name = "entry"
@@ -373,6 +384,7 @@ class CommunityVoiceDetailView(generic.DetailView):
         entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE)
         self.get_object(entries)
         return entries
+
 
 class CommunityVoiceView(generic.ListView):
     template_name = "welcome/community-voice.html"
@@ -425,3 +437,36 @@ class CommunityVoiceView(generic.ListView):
             url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
             entry.urls = url
         return entries
+
+
+# @require_GET
+# def home(request):
+#     webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
+#     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
+#     user = request.user
+#     return render(request, 'webpush.html', {user: user, 'vapid_key': vapid_key})
+
+# @require_POST
+# @csrf_exempt
+# def send_push(request):
+#     try:
+#         logger.debug('start send push')
+#         body = request.body
+#         logger.debug('request.body:' + body)
+#         data = json.loads(body)
+#         logger.debug('data:%s' % data)
+#         if 'head' not in data or 'body' not in data or 'id' not in data:
+#             return JsonResponse(data={"message": "Invalid data format"})
+#         user_id = data['id']
+#         user = get_object_or_404(User, pk=user_id)
+#         payload = {
+#             'head': data['head'], 'body': data['body'],
+#             "icon": "https://i.imgur.com/dRDxiCQ.png", "url": "https://www.newtonproject.org",
+#         }
+#         logger.debug('user：%s' % user)
+#         logger.debug('payload：%s' % payload)
+#         send_group_notification(group_name='test_group', payload=payload, ttl=1000)
+#         return JsonResponse(data={"message": "Web push successful"})
+#     except Exception, inst:
+#         logger.error('send push failed:%s' % inst)
+#         return JsonResponse(data={"message": "An error occurred"})
