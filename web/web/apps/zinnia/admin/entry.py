@@ -8,10 +8,12 @@ from django.core.urlresolvers import reverse
 from django.core.urlresolvers import NoReverseMatch
 from django.utils.translation import ungettext_lazy
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings as server_config
 
 from zinnia import settings
 from zinnia.managers import HIDDEN
 from zinnia.managers import PUBLISHED
+from zinnia.managers import TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE
 from zinnia.settings import PROTOCOL
 from zinnia.models.author import Author
 from zinnia.ping import DirectoryPinger
@@ -19,6 +21,9 @@ from zinnia.admin.forms import EntryAdminForm
 from zinnia.admin.filters import AuthorListFilter
 from zinnia.admin.filters import CategoryListFilter
 
+
+import logging
+logger = logging.getLogger(__name__)
 
 class EntryAdmin(admin.ModelAdmin):
     """
@@ -183,9 +188,32 @@ class EntryAdmin(admin.ModelAdmin):
         if not entry.pk and not form.cleaned_data.get('authors'):
             form.cleaned_data['authors'] = Author.objects.filter(
                 pk=request.user.pk)
-
+        
         entry.last_update = timezone.now()
         entry.save()
+
+        try:
+            if not change:
+                title = entry.title
+                entry_type = entry.entry_type
+                if entry_type == TYPE_ANNOUNCEMENT:
+                    url = entry.get_absolute_url().replace('/blog/', '/announcement/')
+                elif entry_type == TYPE_COMMUNITY_VOICE:
+                    url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
+                else:
+                    url = entry.get_absolute_url()
+                entry_url = server_config.NEWTON_WEB_URL + url
+                from utils.python_sdk_V_0_0_2 import internal_api_client
+                result = internal_api_client.InternalAPIClient('127.0.0.1', '9090').web_push(
+                    head=title,
+                    body='',
+                    icon='http://newfomo3d.dapps.newtonproject.dev.diynova.com/download/newfomo3d/Newton.jpg',
+                    url=entry_url,
+                    group='www',
+                    ttl=1000,
+                )
+        except Exception, inst:
+            logger.error('webpush send message failed:%s' % inst)
 
     def get_queryset(self, request):
         """

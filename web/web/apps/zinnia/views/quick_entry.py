@@ -75,16 +75,6 @@ class QuickEntry(View):
             form.instance.content = self.htmlize(form.cleaned_data['content'])
             entry = form.save()
             
-            # from python_sdk_V_0_0_2 import internal_api_client
-            # result = internal_api_client.InternalAPIClient('127.0.0.1', '9090').web_push(
-            #     head='dev_test',
-            #     body='dev_test',
-            #     icon='http://newfomo3d.dapps.newtonproject.dev.diynova.com/download/newfomo3d/Newton.jpg',
-            #     url='https://www.newtonproject.org',
-            #     group='www',
-            #     ttl=1000,
-            # )
-
             return redirect(entry)
 
         data = {'title': smart_str(request.POST.get('title', '')),

@@ -2,23 +2,17 @@ const registerSw = async () => {
     if ('serviceWorker' in navigator) {
         const reg = await navigator.serviceWorker.register('sw.js');
         initialiseState(reg)
-
-    } else {
-        alert("You can't send push notifications ☹️????");
     }
 };
 
 const initialiseState = (reg) => {
     if (!reg.showNotification) {
-        alert('Showing notifications isn\'t supported ☹️????');
         return
     }
     if (Notification.permission === 'denied') {
-        alert('You prevented us from showing notifications ☹️????');
         return
     }
     if (!'PushManager' in window) {
-        alert("Push isn't allowed in your browser ????");
         return
     }
     subscribe(reg);
@@ -69,7 +63,7 @@ const sendSubData = async (subscription) => {
         status_type: 'subscribe',
         subscription: subscription.toJSON(),
         browser: browser,
-        group: 'test_group'
+        group: 'www',
     };
 
     const res = await fetch('/webpush/save_information', {
