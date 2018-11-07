@@ -30,5 +30,4 @@ class PushInformation(models.Model):
         else:
             raise FieldError('At least user or group should be present')
 
-    class META:
-        app_label = "webpush"
+
