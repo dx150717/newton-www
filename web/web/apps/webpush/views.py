@@ -5,8 +5,7 @@ from django.views.decorators.http import require_POST, require_GET
 from django.views.generic import TemplateView
 
 from .forms import WebPushForm, SubscriptionForm
-import logging
-logger = logging.getLogger(__name__)
+
 
 @require_POST
 @csrf_exempt
@@ -16,20 +15,20 @@ def save_info(request):
         post_data = json.loads(request.body.decode('utf-8'))
     except ValueError:
         return HttpResponse(status=400)
-    logger.debug('post_data:%s' % post_data)
     # Process the subscription data to mach with the model
     subscription_data = process_subscription_data(post_data)
     subscription_form = SubscriptionForm(subscription_data)
+    
     # pass the data through WebPushForm for validation purpose
     web_push_form = WebPushForm(post_data)
-
+    
     # Check if subscriptioninfo and the web push info bot are valid
     if subscription_form.is_valid() and web_push_form.is_valid():
         # Get the cleaned data in order to get status_type and group_name
         web_push_data = web_push_form.cleaned_data
         status_type = web_push_data.pop("status_type")
         group_name = web_push_data.pop("group")
-
+        
         # We at least need the user or group to subscribe for a notification
         if request.user.is_authenticated or group_name:
             # Save the subscription info with subscription data
@@ -38,7 +37,6 @@ def save_info(request):
             web_push_form.save_or_delete(
                 subscription=subscription, user=request.user,
                 status_type=status_type, group_name=group_name)
-
             # If subscribe is made, means object is created. So return 201
             if status_type == 'subscribe':
                 return HttpResponse(status=201)

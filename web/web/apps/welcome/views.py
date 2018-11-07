@@ -437,36 +437,3 @@ class CommunityVoiceView(generic.ListView):
             url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
             entry.urls = url
         return entries
-
-
-# @require_GET
-# def home(request):
-#     webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
-#     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
-#     user = request.user
-#     return render(request, 'webpush.html', {user: user, 'vapid_key': vapid_key})
-
-# @require_POST
-# @csrf_exempt
-# def send_push(request):
-#     try:
-#         logger.debug('start send push')
-#         body = request.body
-#         logger.debug('request.body:' + body)
-#         data = json.loads(body)
-#         logger.debug('data:%s' % data)
-#         if 'head' not in data or 'body' not in data or 'id' not in data:
-#             return JsonResponse(data={"message": "Invalid data format"})
-#         user_id = data['id']
-#         user = get_object_or_404(User, pk=user_id)
-#         payload = {
-#             'head': data['head'], 'body': data['body'],
-#             "icon": "https://i.imgur.com/dRDxiCQ.png", "url": "https://www.newtonproject.org",
-#         }
-#         logger.debug('user：%s' % user)
-#         logger.debug('payload：%s' % payload)
-#         send_group_notification(group_name='test_group', payload=payload, ttl=1000)
-#         return JsonResponse(data={"message": "Web push successful"})
-#     except Exception, inst:
-#         logger.error('send push failed:%s' % inst)
-#         return JsonResponse(data={"message": "An error occurred"})
