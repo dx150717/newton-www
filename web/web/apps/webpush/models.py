@@ -8,18 +8,12 @@ from django.conf import settings
 class Group(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
-    class META:
-        app_label = "webpush"
-
 
 class SubscriptionInfo(models.Model):
     browser = models.CharField(max_length=100)
     endpoint = models.URLField(max_length=255)
     auth = models.CharField(max_length=100)
     p256dh = models.CharField(max_length=100)
-
-    class META:
-        app_label = "webpush"
 
 
 class PushInformation(models.Model):
@@ -35,6 +29,3 @@ class PushInformation(models.Model):
             super(PushInformation, self).save(*args, **kwargs)
         else:
             raise FieldError('At least user or group should be present')
-
-    class META:
-        app_label = "webpush"
