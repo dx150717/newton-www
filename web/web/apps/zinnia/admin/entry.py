@@ -207,7 +207,7 @@ class EntryAdmin(admin.ModelAdmin):
                 result = internal_api_client.InternalAPIClient('127.0.0.1', '9090').web_push(
                     head=title,
                     body='',
-                    icon='http://newfomo3d.dapps.newtonproject.dev.diynova.com/download/newfomo3d/Newton.jpg',
+                    icon='https://www.newtonproject.dev.diynova.com/static/images/logo-new.png',
                     url=entry_url,
                     group='www',
                     ttl=1000,
