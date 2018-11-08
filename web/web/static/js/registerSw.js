@@ -58,7 +58,6 @@ const subscribe = async (reg) => {
 
 const sendSubData = async (subscription) => {
     const browser = navigator.userAgent.match(/(firefox|msie|chrome|safari|trident)/ig)[0].toLowerCase();
-    console.log("in sendSubData");
     const data = {
         status_type: 'subscribe',
         subscription: subscription.toJSON(),
@@ -75,11 +74,7 @@ const sendSubData = async (subscription) => {
         credentials: "include"
     });
 
-    handleResponse(res);
 };
 
-const handleResponse = (res) => {
-    console.log(res.status);
-};
 
 registerSw();
