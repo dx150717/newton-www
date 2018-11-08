@@ -202,7 +202,7 @@ class EntryAdmin(admin.ModelAdmin):
                     url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
                 else:
                     url = entry.get_absolute_url()
-                entry_url = server_config.NEWTON_WEB_URL + url
+                entry_url = server_config.NEWTON_WEB_URL + url + '?referrer=webpush'
                 from utils.python_sdk_V_0_0_2 import internal_api_client
                 result = internal_api_client.InternalAPIClient('127.0.0.1', '9090').web_push(
                     head=title,
