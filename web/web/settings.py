@@ -114,11 +114,6 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, "locale"),
 )
 
-WEBPUSH_SETTINGS = {
-   "VAPID_PUBLIC_KEY": "BMI6CuaoXispCyXjO34kEUcL_MacbKDgXG5xWneXvlDi-mOqyrkaFaZI3PteBB5KgmhspUWTS2rxlwkftwiNHJ4",
-   "VAPID_PRIVATE_KEY": "qi48KlUEzaUx_21KPWzgkaVDSyz-IyRLMKXxOPKbaPY",
-   "VAPID_ADMIN_EMAIL": "wuwenmin@diynova.com"
-}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/

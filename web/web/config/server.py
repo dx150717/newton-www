@@ -176,3 +176,10 @@ CELERY_IMPORTS = ('tasks.task_email', 'tasks.task_blockchain')
 
 # countdown time
 FUND_START_DATE = datetime.datetime(2018, 9, 03, 0, 0)
+
+
+WEBPUSH_SETTINGS = {
+   "VAPID_PUBLIC_KEY": "BMI6CuaoXispCyXjO34kEUcL_MacbKDgXG5xWneXvlDi-mOqyrkaFaZI3PteBB5KgmhspUWTS2rxlwkftwiNHJ4",
+   "VAPID_PRIVATE_KEY": "qi48KlUEzaUx_21KPWzgkaVDSyz-IyRLMKXxOPKbaPY",
+   "VAPID_ADMIN_EMAIL": "wuwenmin@diynova.com"
+}
