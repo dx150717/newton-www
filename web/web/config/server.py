@@ -110,12 +110,6 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': ''
     },
-    'webpush': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'newton_webpush',
-        'USER': 'root',
-        'PASSWORD': ''
-    }
 }
 
 # Cache
