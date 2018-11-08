@@ -9,11 +9,11 @@ from config import codes
 from config.common_settings import *
 from config.settings_label import *
 
-APPEND_SLASH = False
+APPEND_SLASH = True
 
 LOGGING_API_REQUEST = True
 
-STATIC_DEFAULT_VERSION = 303
+STATIC_DEFAULT_VERSION = 339
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -54,7 +54,7 @@ DATABASE_APPS_MAPPING = {
 }
 
 
-SUPPORT_LANGUAGES = (('id', 'Bahasa Indonesia'), ('de', 'Deutsch'), ('en', 'English'),  ('es', 'Español'), ('fr', 'Français'), ('it', 'Italiano'), ('nl', 'Nederlands'), ('tr', 'Türkçe'), ('ru', 'Pусский'), ('vi', 'Người việt nam'), ('fi', 'suomalainen'), ('ar', 'العربية'), ('th', 'ไทย'), ('ko', '한국어'), ('ja', '日本語'), ('zh-cn', '简体中文'))
+SUPPORT_LANGUAGES = (('id', 'Bahasa Indonesia'), ('de', 'Deutsch'), ('en', 'English'),  ('es', 'Español'), ('fr', 'Français'), ('it', 'Italiano'), ('nl', 'Nederlands'), ('tr', 'Türkçe'), ('ru', 'Pусский'), ('pt', 'Português'), ('vi', 'Người việt nam'), ('fi', 'suomalainen'), ('ar', 'العربية'), ('th', 'ไทย'), ('ko', '한국어'), ('ja', '日本語'), ('zh-cn', '简体中文'))
 
 
 # country settings

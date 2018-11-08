@@ -25,6 +25,9 @@
                     </li>
                     {% endcomment %}
                     <li>
+                        <a href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
+                    </li>
+                    <li>
                         <a href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
                     </li>
                     <li>
@@ -39,6 +42,7 @@
                     <li>
                         <a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
                     </li>
+                    
 
                     {% if request.user.is_authenticated %}
                         {% if not request.user.is_superuser %}
@@ -63,7 +67,7 @@
                     <li class="visible-sm-block visible-xs-block">
                         <label for="select-input" class='select-label'>
                             <span >{% trans "Language" %}</span>
-                            <select name="" onchange="changeLanguage()" id="id_select_language">
+                            <select name="" onchange="changeLanguage()" id="id_select_language"  data-role="none">
                                 {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
                                 <option value="{{ language_code }}" {% if language_code|is_current_language %}selected="selected"{% endif %}>
                                     {{ language_name }}
@@ -88,10 +92,10 @@
                             </li>
                         {% else %}
                             <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
+                                <a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
                             </li>
                             <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
+                                <a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
                             </li>
                         {% endif %}
                     {% else %}
@@ -117,7 +121,7 @@
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
                                     {% if language_code|is_current_language %}
-                                    <span style="float: left" id="is_choice">
+                                    <span style="float: left;margin-right: 4px;" id="is_choice">
                                     <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
                                     </span>
                                     {% endif %}
@@ -130,19 +134,21 @@
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
                                     {% if language_code|is_current_language %}
-                                    <span style="float: left" id="is_choice">
+                                    <span style="float: left;margin-right: 4px;" id="is_choice">
                                     <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
                                     </span>
                                     {% endif %}
                                 </a>
                             </li>
                             {% endfor %}
-                            <!-- <li>
+                            {% comment %}
+                            <li>
                                 <a>
                                     <span style="float: left;height:36px;">
                                     </span>
                                 </a>
-                            </li> -->
+                            </li>
+                            {% endcomment %}
                         </ul>
 
                     </li>

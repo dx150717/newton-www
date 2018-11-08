@@ -12,28 +12,55 @@
     <div class="container">
       <div class="row relative">
         <div class="col-md-12 text-center">
-          <h1>{% trans "Everyone should benefit directly from economic growth" %}</h1>
-          <p class="sty1">{% trans "Newton: Infrastructure for the community economy" %}</p>
+          <h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>
+          <p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
             <div class="countdown-title">
-                <h2>{% trans "NewChain TestNet" %}</h2>
+              <h2 style="font-size: 24px;">{% trans "The third round of Newton token exchange is currently under way." %}</h2>
             </div>
-            <div class="countdown-subtitle">
+            <!-- <div class="countdown-subtitle">
                 <h3>{% trans "Launch Time:2018-09-03 00:00(GMT)" %}</h3>
-            </div>
+            </div> -->
+            <!-- <div class="support">
+              <span>{% trans "Supported System:" %}</span>
+              <a href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/android-2.png" %}" style="margin-right:10px;"></a>
+              <a href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/ios-3.png" %}"></a>
+            </div> -->
             <div class="row start_button">
-                <div class="col-md-2 col-lg-2"></div>
-                <div class="announcement col-md-4 col-lg-4">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/31/announcement-launching-newchain-testnet/" %}">{% trans "View More" %}</a>
-                </div>
-                <div class="more col-md-4 col-lg-4">
-                        <a href="https://developer.newtonproject.org">{% trans "Go to TestNet" %}</a>
-                </div>
-                <div class="col-md-2 col-lg-2"></div>
+              {% comment %}
+              <div class="announcement col-md-4 col-lg-4">
+                      <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/31/announcement-launching-newchain-testnet/" %}">{% trans "View More" %}</a>
+              </div>
+              {% endcomment %}
+              <div class="more col-md-12 col-lg-12">
+                      <a href="{{ settings.NEWTON_HOME_URL }}" target="_blank">{% trans "Join KYC" %}</a>
+              </div>
             </div>
         </div>
       </div>
     </div>
+    <div class="news-column">
+      <div class="container">
+        <div class="news-one text-center">
+          <div class="support">
+            <a class="news-title" href="https://developer.newtonproject.org" target="_blank"><span>NewChain TestNet:</span></a>
+            <a class="newpay-android" href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/android-2.png" %}" ></a>
+            <a href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/ios-3.png" %}"></a>
+            <a class="download-newpay" href="https://developer.newtonproject.org" target="_blank">{% trans "Download" %}</a>
+          </div>
+        </div>
+        {% if entry_obj %}
+        <div class="news-two text-center">
+          <a href="{{ entry_obj.urls }}">
+            <span class="news-title">{{ entry_obj.title }}</span>
+            <span style="">{{ entry_obj.creation_date|date:"Y-m-d" }}</span>
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
 </section>
+
+{% include "welcome/include-video.html" %}
 
 {% comment %}
 {% include "welcome/countdown.html" %}
@@ -41,11 +68,15 @@
 
 {% include "welcome/include-feature.html" %}
 
-{% include "welcome/include-notice-token-exchange.html" %}
+{% include "welcome/include-intro-token-exchange.html" %}
+
+{% include "welcome/include-industry.html" %}
 
 {% include "welcome/include-protocol.html" %}
 
+{% comment %}
 {% include "welcome/include-technology.html" %}
+{% endcomment %}
 
 {% include "welcome/include-team.html" %}
 
@@ -62,7 +93,7 @@
 {% include "welcome/include-index-community.html" %}
 <section id="sir" class="section">
   <div class="container"><img class="img-1" src="{% version "images/partners/bitmap.png" %}" width="200">
-      <p class="sty1">{% trans "To pay tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
+      <p class="sty1">{% trans "Paying tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
     <!-- end --> 
   </div>
 </section>
@@ -70,10 +101,35 @@
 {% endblock %}
 
 {% block inline_js %}
+<script type="text/javascript">
+var video_player;
+$(document).ready(function(){
+    videojs("newton-video", {}, function(){
+        video_player = this;
+        video_player.on('ended', function(){
+            video_player.load();
+        });
+    });
+});
 
+showNav();
+</script>
 {% endblock %}
 
 {% block js %}
 <script src="{% version "js/subscription.js" %}"></script>
-</script>
+<script src="{% version "js/video.js" %}"></script>
+<script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>
+<script src="{% version "js/slide-change-section.js" %}"></script>
+{% endblock %}
+
+{% block css %}
+<link href="{% version "css/video-js.css" %}" rel="stylesheet">
+<link href="{% version "leaflet/leaflet.css" %}" rel="stylesheet">
+<link href="{% version "css/slide-change-section.css" %}" rel="stylesheet">
+<style>
+    .navbar {
+        position: fixed;
+    }
+</style>
 {% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Business Proposal" %}
+{% endblock %}
+
+{% block content %}
+<section id="wiki">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Submit Your Business Proposal" %}</p>
+        </div>
+    </div>
+    <div class="container wiki-info">
+        <p>{% trans "If you have innovative ideas, you can write a business proposal and tell us by email. Let us create Newton together!" %}</p>
+        <p>{% trans "The content of the email should include the following: name, contact information and business proposal." %}</p>
+        <p>{% trans "Please send an email to: newton-bd@newtonproject.org" %}</p>
+    </div>
+</section>
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
+{% endblock %}

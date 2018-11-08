@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "NewStatus" %}
+{% endblock %}
+
+{% block content %}
+    <div class="page-title">
+      <div class="container">
+          <p>{% trans "NewStatus" %}</p>
+      </div>
+    </div>
+    <div id="wrapper" style="margin-top:50px;margin-bottom: 100px;">
+        <div id="page-wrapper" class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="text-center">
+                                    <div class="huge"><span id="transactions">--</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <span class="pull-center">Transactions</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="text-center">
+                                    <div class="huge"><span id="height">--</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <span class="pull-center">Block Height</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="text-center">
+                                    <div class="huge"><span id="tps">--</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer text-center">
+                            <span class="pull-center">TPS</span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span>Number Of Transactions</span>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-area-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+                <!-- /.col-lg-8 -->
+
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span>NewSensor</span>
+                            <span style="float: right;">San Li Tun Office</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-xs-6">
+                                <p class="text-success text-center" style="color: #333;margin-top: 20px;">
+                                    Temperature
+                                </p>
+                                <p class="text-center" style="font-size: 40px;color: #5cb85c;">
+                                    <span id="temp">
+                                    </span>℃
+                                </p>
+
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <p class="text-success text-center" style="color: #333;margin-top: 20px;">
+                                    Humidity
+                                </p>
+                                <p class="text-center" style="font-size: 40px;color: #5cb85c;">
+                                    <span id="humd">
+                                    </span>%
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block inline_js %}
+    <script>
+          var socket = io('https://cloud.diynova.com:8883');
+          socket.on('data_message', function(msg){
+            var temp=msg.T;
+            var humd=msg.RH;
+            $('#temp').html(temp);
+            $('#humd').html(humd);
+          });
+          show_data();
+          window.setInterval('show_data()', 3000);
+          showNav();
+    </script>
+{% endblock %}
+
+{% block js %}
+    <script src="{% version "dashboard/raphael.min.js" %}"></script>
+    <script src="{% version "dashboard/morris.js" %}"></script>
+    <script src="{% version "dashboard/sb-admin-2.js" %}"></script>
+    <script src="{% version "dashboard/socket.io.js" %}"></script>
+    <script src="{% version "dashboard/show_data.js" %}"></script>
+{% endblock %}
+
+{% block css %}
+    <link href="{% version "dashboard/sb-admin-2.css" %}" rel="stylesheet">
+    <link href="{% version "dashboard/morris.css" %}" rel="stylesheet">
+    <link href="{% version "dashboard/show_data.css" %}" rel="stylesheet">
+{% endblock %}

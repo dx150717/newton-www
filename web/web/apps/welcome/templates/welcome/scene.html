@@ -3,42 +3,281 @@
 {% load utils %}
 
 {% block title %}
-{% trans "scene" %}
+{% trans "industry" %}
 {% endblock %}
 
 {% block content %}
-<section id="scene">
+<section id="industry">
 	<div class="page-title">
-        <div class="container">
-            <p>{% trans "SCENE" %}</p>
-        </div>
+		<div class="container">
+		    <p>{% trans "Industry" %}</p>
+		</div>
     </div>
+    <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+    	<div class="container">
+    		<a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}" style="margin-top: 7px;">
+                <img class="logo-pc" src="{% version "images/logo_new_style.svg" %}" alt="Newton" style="width: unset;" />
+            </a>
+    		<span>{% trans "Industry" %}</span>
+
+    		<div class="submit-button"><a href="/business-proposal/">{% trans "Submit Your Business Proposal" %}</a></div>
+    	</div>
+    </nav>
     <div class="container">
-	  <!-- Nav tabs -->
-	  <ul class="nav nav-tabs" role="tablist">
-	    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-	    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-	    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-	    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-	  </ul>
-	  <!-- Tab panes -->
-	  <div class="tab-content">
-	    <div role="tabpanel" class="tab-pane active" id="home">
-	    	<div class="nav nav-tabs col-md-1">
-	    		<div class="active"><a href="#aa" aria-controls="aa" role="tab" data-toggle="tab">aa</a></div>
-	    		<div><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">bb</a></div>
-	    		<div><a href="#cc" aria-controls="cc" role="tab" data-toggle="tab">cc</a></div>
-	    	</div>
-	    	<div class="tab-content col-md-11">
-	    		<div role='tabpanel' class="tab-pane active" id='aa'>aaa</div>
-	    		<div role='tabpanel' class="tab-pane" id='bb'>bbb</div>
-	    		<div role='tabpanel' class="tab-pane" id='cc'>ccc</div>
-	    	</div>
+	    <div class="industry_list">
+	        <div class="row" id="industry_anchor_1">
+	        	<div class="fl only-pc left-img"><img src="{% version "images/industry/1.svg" %}" alt=""></div>
+		    	<div class="industry_text col-sm-6">
+		        	<h2>{% trans "Chain-commerce Retail" %}</h2>
+		        	<div class="fr only-mobile"><img src="{% version "images/industry/1.svg" %}" alt=""></div>
+		        	<p>{% trans "Under the corporate structure, the capital side's income has far exceeded the laborer's income, and a new generation of giant retail institutions developed along with computers and the Internet have accelerated the accumulation of wealth to capital. Blockchain-commerce is the basic business model of the human-machine community. Under this model, any behavior that positively contributes to the human-machine community will be rewarded. The Blockchain-commerce model is used in the retail industry to help reduce transaction costs, protect consumers’ privacy, and promote intelligent collaboration." %}</p>
+		    	</div>
+	      	</div>
+	      	<div class="app">
+	      		<p>{% trans "Application Scenarios" %}</p>
+	      	</div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/1-1.svg" %}">
+  				<p class="intro-title">{% trans "NewMall" %}</p>
+  				<p class="intro-info">{% trans "In NewMall, as there is no profit-seeking intermediaries, the transaction cost of the sellers will be greatly reduced, and consumers, service providers and other participants can get the incentive of Newton token according to their contribution value (NewForce)." %}</p>
+      		</div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/1-2.svg" %}">
+  				<p class="intro-title">{% trans "New digital asset management" %}</p>
+  				<p class="intro-info">{% trans "As a new digital asset of users, consumer data can be managed by NewPay. Users truly own data and can control the data by authorizing and pricing the data.Uninformed data leakage is prohibited." %}</p>
+      		</div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/1-3.svg" %}">
+  				<p class="intro-title">{% trans "Precise advertisement service" %}</p>
+  				<p class="intro-info">{% trans "Users can set whether to accept marketing information in NewPay, as well as the type of information required, price range, etc. Marketing advertisers set marketing plans through various marketing smart contract templates built into the system, including: target users, incentive models, settlement methods, and djustment rules. Merchants can achieve accurate advertising and peer-to-peer settlement with users, avoiding advertising fraud." %}</p>
+      		</div>
 	    </div>
-	    <div role="tabpanel" class="tab-pane" id="profile">222</div>
-	    <div role="tabpanel" class="tab-pane" id="messages">333</div>
-	    <div role="tabpanel" class="tab-pane" id="settings">444</div>
-	  </div>
+	</div>
+	<div class="bg-gray">
+		<div class="container">
+		    <div class="industry_list">
+		        <div class="row" id="industry_anchor_2">
+		        	<div class="col-md-1"></div>
+		        	<div class="fr only-pc right_img col-md-6"><img src="{% version "images/industry/2.svg" %}" alt=""></div>
+			    	<div class="industry_text col-sm-6 col-md-5">
+			        	<h2>{% trans "Payment" %}</h2>
+			        	<div class="fl only-mobile"><img src="{% version "images/industry/2.svg" %}" alt=""></div>
+			        	<p>{% trans "Current transaction payment costs are higher, efficiency is lower, and flexibility is poor. A new generation of trading and payment systems will be built based on blockchain technology." %}</p>
+			    	</div>
+		      	</div>
+		      	<div class="app">
+	      			<p>{% trans "Application Scenarios" %}</p>
+	      		</div>
+		      	<div class="col-md-1"></div>
+	      		<div class="intro col-md-4">
+	      			<img src="{% version "images/industry/2-1.svg" %}">
+	  				<p class="intro-title">{% trans "Global payment" %}</p>
+	  				<p class="intro-info">{% trans "With the global distribution of NewChain infrastructure and NewPay payment tools, simple and convenient cross-border transactions can be achieved with very low transaction costs." %}</p>
+	      		</div>
+	      		<div class="col-md-2"></div>
+	      		<div class="intro col-md-4">
+	      			<img src="{% version "images/industry/2-2.svg" %}">
+	  				<p class="intro-title">{% trans "Ultra-micropayment" %}</p>
+	  				<p class="intro-info">{% trans "IoT devices, i.e. NewIoT, can access NewChain at very low cost, and smart contracts can be established between devices to achieve automatic settlement and payment, thus meeting the high frequency requirements in ultra-micro payment scenarios." %}</p>
+	      		</div>
+	      		<div class="col-md-1"></div>
+		    </div>
+	  	</div>
+  	</div>
+  	<div class="container">
+	    <div class="industry_list">
+	        <div class="row" id="industry_anchor_3">
+	        	<div class="fl only-pc left-img"><img src="{% version "images/industry/3.svg" %}" alt=""></div>
+		    	<div class="industry_text col-sm-6">
+		        	<h2>{% trans "Supply Chain" %}</h2>
+		        	<div class="fr only-mobile"><img src="{% version "images/industry/3.svg" %}" alt=""></div>
+		        	<p>{% trans "Goods delivered to consumers usually go through logistics, warehousing, customs clearance, sales and many other processes. When there are after-sales services, a corresponding reverse process will be needed. The current supply chain process is opaque, and it is difficult for consumers to confirm the origin of goods, circulation information and so on, which is  a big problem for some industries such as counterfeits, pharmaceuticals, and luxury goods. Therefore, a credible supply chain system which is open to all stakeholders is very important." %}</p>
+		        	<p>{% trans "Through the combination of atomic hashing, NewIOT, NewChain and other technologies, the supply chain system will be credible, open and transparent, and generate more business innovations." %}</p>
+		    	</div>
+	      	</div>
+	      	<div class="app">
+	      		<p>{% trans "Application Scenarios" %}</p>
+	      	</div>
+	      	<div class="col-md-1"></div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/3-1.svg" %}">
+  				<p class="intro-title">{% trans "Anti-counterfeiting and traceability" %}</p>
+  				<p class="intro-info">{% trans "Through atomic hashing, NewIoT and other technologies, the product’s the origin, latitude and longitude, physical characteristics and other data will be  uploaded into the blockchain to prove product’s origin and the integrity of the product packaging, thereby ensuring the credibility of the commodity logistics process." %}</p>
+      		</div>
+      		<div class="col-md-2"></div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/3-2.svg" %}">
+  				<p class="intro-title">{% trans "Supply chain financing" %}</p>
+  				<p class="intro-info">{% trans "Suppliers record their transaction data through blockchain technology, and share data with financing parties to obtain corresponding funds. Since the business data is not tamperable, it will help speed up the financing of suppliers and reduce the risk of default." %}</p>
+      		</div>
+      		<div class="col-md-1"></div>
+	    </div>
+  	</div>
+	<div class="bg-gray">
+		<div class="container">
+		    <div class="industry_list">
+		        <div class="row" id="industry_anchor_4">
+		        	<div class="col-md-1"></div>
+		        	<div class="fr only-pc right_img col-md-6"><img src="{% version "images/industry/4.svg" %}" alt=""></div>
+			    	<div class="industry_text col-sm-6 col-md-5">
+			        	<h2>{% trans "Self-finance" %}</h2>
+			        	<div class="fl only-mobile"><img src="{% version "images/industry/4.svg" %}" alt=""></div>
+			        	<p>{% trans "The traditional financial service system has a large workload, long cycle, high cost and poor flexibility, and it is often difficult to serve small and medium-sized enterprises and individuals. Through digital identity and credit, a new type of self-financing system can be established." %}</p>
+			    	</div>
+		      	</div>
+		      	<div class="app">
+		      		<p>{% trans "Application Scenarios" %}</p>
+		      	</div>
+		      	<div class="col-md-1"></div>
+	      		<div class="intro col-md-4">
+	      			<img src="{% version "images/industry/4-1.svg" %}">
+	  				<p class="intro-title">{% trans "Corporate and personal credit" %}</p>
+	  				<p class="intro-info">{% trans "Corporates and individuals establish a consistent credit system based on NewID, and third parties can only get credit data through authorization." %}</p>
+	      		</div>
+	      		<div class="col-md-2"></div>
+	      		<div class="intro col-md-4">
+	      			<img src="{% version "images/industry/4-2.svg" %}">
+	  				<p class="intro-title">{% trans "Asset securitization" %}</p>
+	  				<p class="intro-info">{% trans "Through smart contract templates, financial organizations can create financial products that do not require human involvement. With NewChain-based token tools, various assets can be easily valued by tokens or coverted to correspongding amount tokens." %}</p>
+	      		</div>
+	      		<div class="col-md-1"></div>
+		    </div>
+	  	</div>
+  	</div>
+  	<div class="container">
+	    <div class="industry_list">
+	        <div class="row" id="industry_anchor_5">
+	        	<div class="fl only-pc left-img"><img src="{% version "images/industry/5.svg" %}" alt=""></div>
+		    	<div class="industry_text col-sm-6">
+		        	<h2>{% trans "Games" %}</h2>
+		        	<div class="fr only-mobile"><img src="{% version "images/industry/5.svg" %}" alt=""></div>
+		        	<p>{% trans "Use blockchain technology to create a new gaming experience for users: users are both players and rule-making participants, and virtual game assets are owned by users." %}</p>
+		    	</div>
+	      	</div>
+	      	<div class="app">
+	      		<p>{% trans "Application Scenarios" %}</p>
+	      	</div>
+	      	<div class="col-md-1"></div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/5-1.svg" %}">
+  				<p class="intro-title">{% trans "Virtual game asset automated trading" %}</p>
+  				<p class="intro-info">{% trans "Through the cross-chain and oracle technology provided by NewChain, virtual items in various games can be easily recorded on the blockchain for automated trading." %}</p>
+      		</div>
+      		<div class="col-md-2"></div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/5-2.svg" %}">
+  				<p class="intro-title">{% trans "Transparent rules of the game" %}</p>
+  				<p class="intro-info">{% trans "Game developers can easily create algorithmic and transparent game logic through NewChain related smart contract tools to improve the fairness and transparency of the game." %}</p>
+      		</div>
+      		<div class="col-md-1"></div>
+	    </div>
+  	</div>
+  	<div class="bg-gray">
+		<div class="container">
+		    <div class="industry_list">
+		        <div class="row" id="industry_anchor_6">
+		        	<div class="col-md-1"></div>
+		        	<div class="fr only-pc right_img col-md-6"><img src="{% version "images/industry/6.svg" %}" alt=""></div>
+			    	<div class="industry_text col-sm-6 col-md-5">
+			        	<h2>{% trans "Agriculture" %}</h2>
+			        	<div class="fl only-mobile"><img src="{% version "images/industry/6.svg" %}" alt=""></div>
+			        	<p>{% trans "At present, there are widespread problems such as incomplete data and low degree of automation in agriculture. Blockchain combined with IoT technology can automatically collect, store and analyze agricultural production data, saving the high management costs of centralized systems, reducing post-maintenance costs, and helping to improve the intelligence and scale of agriculture." %}</p>
+			    	</div>
+		      	</div>
+		      	<div class="app">
+		      		<p>{% trans "Application Scenarios" %}</p>
+		      	</div>
+		      	<div class="col-md-1"></div>
+	      		<div class="intro col-md-4">
+	      			<img src="{% version "images/industry/6-1.png" %}">
+	  				<p class="intro-title">{% trans "Traceability of agricultural products" %}</p>
+	  				<p class="intro-info">{% trans "By introducing the IoT device which is compatible with NewIoT standard into the process of agricultural material circulation, agricultural production, agricultural product sales, the safety and efficiency of the whole process of agricultural production can be improved. Due to the non-tamperable nature of production data, it can be widely used in scientific research and anti-counterfeiting purposes." %}</p>
+	      		</div>
+	      		<div class="col-md-2"></div>
+	      		<div class="intro col-md-4">
+	      			<img src="{% version "images/industry/6-2.png" %}">
+	  				<p class="intro-title">{% trans "Intelligent planting" %}</p>
+	  				<p class="intro-info">{% trans "Through using the IoT sensor which is compatible with NewIoT standard, all-day monitoring of planting environment and crop growth can be realized. Combining NewAI to make intelligent decision-making on monitoring results, a complete intelligent planting system can be built to detect risks, stabilize production and increase income in time." %}</p>
+	      		</div>
+	      		<div class="col-md-1"></div>
+		    </div>
+	  	</div>
+  	</div>
+
+  	<div class="container">
+	    <div class="industry_list">
+	        <div class="row" id="industry_anchor_7">
+	        	<div class="fl only-pc left-img"><img src="{% version "images/industry/7.svg" %}" alt=""></div>
+		    	<div class="industry_text col-sm-6">
+		        	<h2>{% trans "Public Welfare" %}</h2>
+		        	<div class="fr only-mobile"><img src="{% version "images/industry/7.svg" %}" alt=""></div>
+		        	<p>{% trans "Blockchain technology has the characteristics of decentralization, high transparency and non-tamperability, so it meets the needs of the public welfare. The non-profit organization can store the whole process information such as fundraising, project progress, and recipient feedback on NewChain for donors and the public to check." %}</p>
+		    	</div>
+	      	</div>
+	      	<div class="app">
+	      		<p>{% trans "Application Scenarios" %}</p>
+	      	</div>
+	      	<div class="col-md-1"></div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/7-1.svg" %}">
+  				<p class="intro-title">{% trans "Public welfare audit" %}</p>
+  				<p class="intro-info">{% trans "Public welfare activities require public welfare audits to improve efficiency and maintain trust. With NewChain, NewID technology and agreements, every donation will be available to be traced. Public welfare organizations can track the situation of the rescue recipients through relevant tools, which helps to enhance the fairness and transparency of public welfare." %}</p>
+      		</div>
+      		<div class="col-md-2"></div>
+      		<div class="intro col-md-4">
+      			<img src="{% version "images/industry/7-2.svg" %}">
+  				<p class="intro-title">{% trans "Wildlife protection" %}</p>
+  				<p class="intro-info">{% trans "Using NewIoT technology, rare wildlife resources data can be recorded on NewChain, so that the location and physical indicators of each specific animal can be traced, thus providing key information for the research work such as migration tracking and combating poaching and trafficking." %}</p>
+      		</div>
+      		<div class="col-md-1"></div>
+	    </div>
+  	</div>
+  	<div style="background-color: #DDDDDD;">
+	  	<div class="container">
+		  	<div class="feature-item col-lg-12 col-xs-12" style="background-color: #DDDDDD; padding: 40px 0;">
+			    <div class="feature-item-wrap">
+			    	<p style="color: #333;font-size:24px;margin: 24px 0;">{% trans "If you have innovative ideas?" %}</p>
+			        <div class="more">
+			            <a href="/business-proposal/">{% trans "Submit Your Business Proposal" %}</a>
+			        </div>
+			    </div>
+			</div>
+		</div>
 	</div>
 </section>
+{% endblock %}
+
+{% block css %}
+<style type="text/css">
+	#float-nav{display: none;}
+	#float-nav .container{text-align: center;}
+	#float-nav .container span{font-size: 22px;line-height: 44px;color: #333;}
+	#float-nav .submit-button{float: right; line-height: 44px;}
+	#float-nav .submit-button a{border: 1px solid #ccc; padding: 3px 5px; border-radius: 6px; background-color: #fff;}
+</style>
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+	$(function () {
+		if (screen.width <= 768){
+			showNav();
+		}
+		else {
+			$(window).scroll(function(){
+			    var height
+			    var s = $(window).scrollTop();
+			    if (s<280){
+			        // $(".NavBg").addClass("navFixed");
+			        $("#float-nav").hide();
+			    }else{
+			        // $(".NavBg").removeClass("navFixed");
+			        $("#float-nav").show();
+			        $("#float-nav").addClass("navFixed");
+			        };
+			});
+		};
+	});
+	
+</script>
 {% endblock %}

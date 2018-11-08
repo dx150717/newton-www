@@ -47,7 +47,7 @@
             </div>
             <div class="intro col-md-3">
                 <div class="intro-img text-center"><img src="{% version "images/technology/04.svg" %}" alt=""></div>
-                <div class="intro-title text-center"><span>{% trans "Trading and payment" %}</span></div>
+                <div class="intro-title text-center"><span>{% trans "Trading And Payment" %}</span></div>
                 <div class="intro-info"><p {% arabic_change_style %}>{% trans "The Newton trading and payment platform will enable a user to define transactions using the built-in smart contract templates and rule engine. This enables the user to include: multi-party transactions based on complex business rules, settlement rules." %}<a href="/technology/hep/#protocol_Tradingpayment"><span>&nbsp;&nbsp;&nbsp;&nbsp;{% trans "more" %}</span></a></p></div>
 
             </div>
@@ -131,4 +131,7 @@
 {% endblock %}
 
 {% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
 {% endblock %}

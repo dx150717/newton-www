@@ -47,9 +47,15 @@ urlpatterns = patterns('',
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^term-of-service/', 'welcome.views.show_term_of_service_view'),
-                       url(r'^addcommunity/', 'welcome.views.show_addcommunity_view'),
+                       url(r'^solutions/', 'welcome.views.show_scene_view'),
                        url(r'^sitemap/', 'welcome.views.show_sitemap_view'),
                        url(r'^feed/', 'feed.views.feed_latest'),
+                       url(r'^newstatus/', 'welcome.views.show_newstatus_view'),
+                       url(r'^dashboard/', 'welcome.views.show_dashboard_view'),
+                       url(r'^business-proposal/', 'welcome.views.show_business_proposal_view'),
+                       url(r'^join-partner/', 'welcome.views.show_join_partner_view'),
+                       url(r'^community-voice/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)', views.CommunityVoiceDetailView.as_view()),
+                       url(r'^community-voice/$', views.CommunityVoiceView.as_view()),
 )
 
 handler404 = 'welcome.views.show_404_page'

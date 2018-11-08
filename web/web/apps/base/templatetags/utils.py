@@ -17,7 +17,6 @@ from django.utils.timezone import utc
 from django_countries.data import COUNTRIES
 
 from config import codes
-from django.utils import translation
 
 logger = logging.getLogger(__name__)
 
@@ -332,8 +331,8 @@ def language_change_header_style():
     """
     try:
         language = translation.get_language()
-        if language in ['de', 'es', 'fr', 'nl', 'ru', 'fi']:
-            return 'style="font-size:16px;"'
+        if language in ['de', 'es', 'fr', 'nl', 'ru', 'fi', 'it', 'pt']:
+            return 'style="font-size:15px;"'
     except Exception, inst:
         logger.exception("fail to language_change_header_style:%s" % str(inst))
         return ""
@@ -347,8 +346,8 @@ def russian_change_header_style():
     """
     try:
         language = translation.get_language()
-        if language == 'ru':
-            return 'style="font-size:16px;"'
+        if language in ['de', 'es', 'fr', 'nl', 'ru', 'fi', 'it', 'pt']:
+            return 'style="font-size:15px;"'
     except Exception, inst:
         logger.exception("fail to russian_change_header_style:%s" % str(inst))
         return ""

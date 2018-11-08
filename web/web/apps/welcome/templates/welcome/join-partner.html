@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Join Partner" %}
+{% endblock %}
+
+{% block content %}
+<section id="wiki">
+    <div class="page-title join-partner">
+        <div class="container">
+            <span>{% trans "Apply to join Newton United Business Organization" %}</span>
+        </div>
+    </div>
+    <div class="container wiki-info">
+        <p>{% trans "If your company would like to join Newton United Business Organization, please submit your application by email. Let’s create Newton together!" %}</p>
+        <p>{% trans "Please send an email to: newton-bd@newtonproject.org" %}</p>
+    </div>
+</section>
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
+{% endblock %}

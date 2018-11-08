@@ -14,12 +14,33 @@
         </div>
     </div>
 </section>
+
 {% include "welcome/include-partner.html" %}
+
 {% endblock %}
 
 {% block inline_js %}
 <script type="text/javascript">
     $("#construction").addClass("bg-gray");
-    $("#organization").removeClass("bg-gray")
+    $("#organization").removeClass("bg-gray");
+    showNav();
 </script>
+{% endblock %}
+
+{% block js %}
+<script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>
+<script src="{% version "js/slide-change-section.js" %}"></script>
+{% endblock %}
+
+{% block css %}
+<link href="{% version "css/slide-change-section.css" %}" rel="stylesheet">
+<style>
+    .navbar {
+        position: fixed;
+    }
+</style>
+{% endblock %}
+
+{% block main-style %}
+style="min-height:unset;"
 {% endblock %}

@@ -15,7 +15,7 @@ from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN,ARABIC,NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND
+from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN,ARABIC,NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND,PORTUGUESE
 from zinnia.managers import PUBLISHED
 
 from press.models import PressModel
@@ -55,20 +55,29 @@ def show_home_view(request):
         language = ITALY
     elif language.startswith('th'):
         language = THAILAND
+    elif language.startswith('pt'):
+        language = PORTUGUESE
     else:
         language = ENGLISH
+    presses = PressModel.objects.order_by('-created_at')[0:3]
     entry = EntryDetail()
-    entries = entry.get_queryset().filter(language=language, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
-    if len(entries) < 3:
-        entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
-    for entry in entries:
-        if entry.entry_type == TYPE_ANNOUNCEMENT:
-            url = entry.get_absolute_url().replace('/blog/', '/announcement/')
-            entry.urls = url
-        else:
-            entry.urls = entry.get_absolute_url()
+    if language == CHINESE:
+        entry_obj = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date').first()
+    else:
+        entry_obj = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date').first()
+    if entry_obj:
+        url = entry_obj.get_absolute_url().replace('/blog/', '/announcement/')
+        entry_obj.urls = url
+    # if len(entries) < 3:
+    #     entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
+    # for entry in entries:
+    #     if entry.entry_type == TYPE_ANNOUNCEMENT:
+    #         url = entry.get_absolute_url().replace('/blog/', '/announcement/')
+    #         entry.urls = url
+    #     else:
+    #         entry.urls = entry.get_absolute_url()
     # generate the captcha
-    captcha_form = subscription_forms.SubscribeForm()
+    # captcha_form = subscription_forms.SubscribeForm()
     # countdown time
     # start_day = False
     # now = datetime.datetime.now()
@@ -132,6 +141,12 @@ def show_legal_view(request):
 def show_newpay_view(request):
     return render(request, 'welcome/newpay.html', locals())
 
+def show_scene_view(request):
+    return render(request, 'welcome/scene.html', locals())
+
+def show_business_proposal_view(request):
+    return render(request, 'welcome/business-proposal.html', locals())
+
 def show_community_view(request):
     presses = PressModel.objects.order_by('-created_at')[0:4]
     language = translation.get_language()
@@ -165,6 +180,8 @@ def show_community_view(request):
         language = ITALY
     elif language.startswith('th'):
         language = THAILAND
+    elif language.startswith('pt'):
+        language = PORTUGUESE
     else:
         language = ENGLISH
     entry = EntryDetail()
@@ -180,12 +197,19 @@ def show_community_view(request):
     blog_entries = entry.get_queryset().filter(language=language, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
     if len(blog_entries) < 4:
         blog_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
+    # select community voice entry object
+    if language == CHINESE:
+        voice_entries = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
+    else:
+        voice_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
     for activity_entry in activity_entries:
         activity_entry.urls = activity_entry.get_absolute_url().replace('/blog/', '/announcement/')
     for operation_entry in operation_entries:
         operation_entry.urls = operation_entry.get_absolute_url().replace('/blog/', '/announcement/')
     for blog_entry in blog_entries:
         blog_entry.urls = blog_entry.get_absolute_url()
+    for voice_entry in voice_entries:
+        voice_entry.urls = voice_entry.get_absolute_url().replace('/blog/', '/community-voice/')
     return render(request, 'welcome/community.html', locals())
 
 def show_economy_view(request):
@@ -207,11 +231,17 @@ def show_foundation_view(request):
 def show_term_of_service_view(request):
     return render(request, 'welcome/term-of-service.html', locals())
 
-def show_addcommunity_view(request):
-    return render(request, 'welcome/addcommunity.html', locals())
-
 def show_sitemap_view(request):
     return render(request, 'welcome/sitemap.html', locals())
+
+def show_newstatus_view(request):
+    return render(request, 'welcome/newstatus.html', locals())
+
+def show_dashboard_view(request):
+    return render(request, 'welcome/dashboard.html', locals())
+
+def show_join_partner_view(request):
+    return render(request, 'welcome/join-partner.html', locals())
 
 def show_404_page(request):
     return render(request, '404.html')
@@ -257,11 +287,15 @@ class AnnouncementView(generic.ListView):
             language = ITALY
         elif language.startswith('th'):
             language = THAILAND
+        elif language.startswith('pt'):
+            language = PORTUGUESE
         else:
             language = ENGLISH
             
         entry = EntryDetail()
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language, status=PUBLISHED)
+        if not entries:
+            entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=ENGLISH, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
             entry.urls = url
@@ -305,11 +339,15 @@ class AnnouncementSubView(generic.ListView):
             language = ITALY
         elif language.startswith('th'):
             language = THAILAND
+        elif language.startswith('pt'):
+            language = PORTUGUESE
         else:
             language = ENGLISH
             
         entry = EntryDetail()
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,entry_sub_type=entry_sub_type, status=PUBLISHED)
+        if not entries:
+            entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=ENGLISH,entry_sub_type=entry_sub_type, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/','/announcement/')
             entry.urls = url
@@ -325,4 +363,65 @@ class AnnouncementDetailView(generic.DetailView):
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT)
         self.get_object(entries)
         return entries
+
+class CommunityVoiceDetailView(generic.DetailView):
+    template_name = "welcome/community-voice-detail.html"
+    context_object_name = "entry"
+
+    def get_queryset(self):
+        entry = EntryDetail()
+        entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE)
+        self.get_object(entries)
+        return entries
+
+class CommunityVoiceView(generic.ListView):
+    template_name = "welcome/community-voice.html"
+    context_object_name = "entries"
+    paginate_by = 20
     
+    def get_queryset(self):
+        language = translation.get_language()
+        if language.startswith('zh'):
+            language = CHINESE
+        elif language.startswith('en'):
+            language = ENGLISH
+        elif language.startswith('ko'):
+            language = KOREAN
+        elif language.startswith('ja'):
+            language = JAPANESE
+        elif language.startswith('ru'):
+            language = RUSSIAN
+        elif language.startswith('tr'):
+            language = TURKISH
+        elif language.startswith('es'):
+            language = SPANISH
+        elif language.startswith('fr'):
+            language = FRENCH
+        elif language.startswith('de'):
+            language = GERMAN
+        elif language.startswith('ar'):
+            language = ARABIC
+        elif language.startswith('nl'):
+            language = NETHERLAND
+        elif language.startswith('fi'):
+            language = FINNISH
+        elif language.startswith('id'):
+            language = INDONESIAN
+        elif language.startswith('it'):
+            language = ITALY
+        elif language.startswith('th'):
+            language = THAILAND
+        elif language.startswith('pt'):
+            language = PORTUGUESE
+        else:
+            language = ENGLISH
+            
+        entry = EntryDetail()
+        if language == CHINESE:
+            entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE,language=CHINESE, status=PUBLISHED)
+        else:
+            entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE,language=ENGLISH, status=PUBLISHED)
+        for entry in entries:
+            url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
+            entry.urls = url
+        return entries

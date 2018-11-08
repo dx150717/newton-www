@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load utils %}
 
-<div class="event bg-gray">
+<div class="event">
     <div class="container">
         {% comment %}
         <h2>{% trans "Coming Events" %}</h2>
@@ -107,11 +107,12 @@
         </div>
         {% endcomment %}
 
+        {% if activity_entries %}
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Activity " %}</h2>
             </div>
-            {% if activity_entries %}
+            
             {% for activity_entry in activity_entries %}
                 {% if activity_entry.image %}
                 <div class="col-md-3">
@@ -135,14 +136,15 @@
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/announcements/0/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+
+        {% if operation_entries %}
         <div class="row">
             <div class="row dynamic-title">
-                <h2>{% trans "Announcement" %}</h2>
+                <h2>{% trans "Announcements" %}</h2>
             </div>
-            {% if operation_entries %}
             {% for operation_entry in operation_entries %}
                 {% if operation_entry.image %}
                 <div class="col-md-3">
@@ -166,45 +168,47 @@
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/announcements/1/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+
+        {% if presses %}
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Press" %}</h2>
             </div>
-            {% if presses %}
             {% for press in presses %}
                 {% if press.press_img %}
                 <div class="col-md-3">
-                    <a class="event-img" style="background-image: url({{ press.press_img.url }});" href="{{ press.press_link }}">
+                    <a class="event-img" style="background-image: url({{ press.press_img.url }});" href="{{ press.press_link }}" target="_blank">
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
                         <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
-                        <a href="{{ press.press_link }}"><p class="event-title">{{ press.press_title }}</p></a>
+                        <a href="{{ press.press_link }}" target="_blank"><p class="event-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
                 {% else %}
                 <div class="col-md-3">
-                    <a class="event-img" style="" href="{{ press.press_link }}">
+                    <a class="event-img" style="" href="{{ press.press_link }}" target="_blank">
                         <div class="shadow"></div>
                     </a>
                     <div class="event-word">
                         <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
-                        <a href="{{ press.press_link }}"><p class="event-title">{{ press.press_title }}</p></a>
+                        <a href="{{ press.press_link }}" target="_blank"><p class="event-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/press/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+
+        {% if blog_entries %}
         <div class="row">
             <div class="row dynamic-title">
                 <h2>{% trans "Blog" %}</h2>
             </div>
-            {% if blog_entries %}
             {% for blog_entry in blog_entries %}
                 {% if blog_entry.image %}
                 <div class="col-md-3">
@@ -228,8 +232,41 @@
                 </div>
                 {% endif %}
             {% endfor %}
-            {% endif %}
             <div class="col-md-12 more"><a href="/blog/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
         </div>
+        {% endif %}
+
+        {% if voice_entries %}
+        <div class="row">
+            <div class="row dynamic-title">
+                <h2>{% trans "Community Voice" %}</h2>
+            </div>
+            {% for voice_entry in voice_entries %}
+                {% if voice_entry.image %}
+                <div class="col-md-3">
+                    <a class="event-img" style="background-image: url({{ voice_entry.image.url }});" href="{{ voice_entry.urls }}">
+                        <div class="shadow"></div>
+                    </a>
+                    <div class="event-word">
+                        <p class="time">{{ voice_entry.creation_date|date:"Y-m-d" }}</p>
+                        <a href="{{ voice_entry.urls }}"><p class="event-title">{{ voice_entry.title }}</p></a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="col-md-3">
+                    <a class="event-img" style="" href="{{ voice_entry.urls }}">
+                        <div class="shadow"></div>
+                    </a>
+                    <div class="event-word">
+                        <p class="time">{{ voice_entry.creation_date|date:"Y-m-d" }}</p>
+                        <a href="{{ voice_entry.urls }}"><p class="event-title">{{ voice_entry.title }}</p></a>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+            <div class="col-md-12 more"><a href="/community-voice/" class="more-detail"><span>{% trans "MORE" %}</span></a></div>
+        </div>
+        {% endif %}
+        
     </div>
 </div>
