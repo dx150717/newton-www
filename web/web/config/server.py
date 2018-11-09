@@ -177,3 +177,7 @@ WEBPUSH_SETTINGS = {
    "VAPID_PRIVATE_KEY": "qi48KlUEzaUx_21KPWzgkaVDSyz-IyRLMKXxOPKbaPY",
    "VAPID_ADMIN_EMAIL": "wuwenmin@diynova.com"
 }
+
+INTERNAL_API_HOST_IP = '127.0.0.1'
+INTERNAL_API_HOST_PORT = '9090'
+WEBPUSH_ICON = 'https://www.newtonproject.org/static/images/logo-new.png'

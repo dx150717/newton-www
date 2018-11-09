@@ -377,10 +377,10 @@ class EntryAdmin(admin.ModelAdmin):
                     else:
                         url = entry.get_absolute_url()
                     entry_url = server_config.NEWTON_WEB_URL + url + '?referrer=webpush'
-                    result = internal_api_client.InternalAPIClient('127.0.0.1', '9090').web_push(
+                    result = internal_api_client.InternalAPIClient(server_config.INTERNAL_API_HOST_IP, server_config.INTERNAL_API_HOST_PORT).web_push(
                         head=title,
                         body='',
-                        icon='https://www.newtonproject.org/static/images/logo-new.png',
+                        icon=server_config.WEBPUSH_ICON,
                         url=entry_url,
                         group='www',
                         ttl=1000,
