@@ -18,6 +18,12 @@
             </div><!-- /.logo -->
 
             <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
+                <form action="/search/" method="get" data-ajax="false" class="search_form_mobile visible-sm-block visible-xs-block">
+                    <input type="text" name="q" placeholder="{% trans "search articles" %}" autocomplete="off" class="search_input_mobile">
+                    <button type="submit" class="search_button_mobile">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </form>
                 <ul class="nav navbar-nav">
                     {% comment %}
                     <li>
@@ -221,5 +227,34 @@
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         outline: none;
+    }
+
+    .search_form_mobile {
+        text-align: center;
+        height: 35px;
+    }
+
+    .search_form_mobile .search_input_mobile {
+        height: 35px;
+        width: 80%;
+        padding-left: 10px;
+        padding-right: 40px;
+        outline: none;
+    }
+
+    .search_form_mobile .search_button_mobile {
+        position: relative;
+        bottom: 35px;
+        left: 117px;
+        height: 35px;
+        width: 35px;
+        background-color: #eee;
+        border: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .navbar-collapse {
+            padding-top: 0;
+        }
     }
 </style>

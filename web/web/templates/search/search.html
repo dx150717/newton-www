@@ -91,7 +91,7 @@
         height: 30px;
         vertical-align: bottom;
         position: relative;
-        right: 20px;
+        right: 5px;
     }
 
     .search_page .result_length {
@@ -132,11 +132,19 @@
     }
 
     @media (max-width: 768px) {
+        .search_page .page-title p {
+            line-height: 180px;
+        }
+
+        .search_page .search_page_form {
+            bottom: 66px;
+        }
+
         .search_page .search_page_form input {
             width: 200px;
         }
+
         .search_page .search_page_form button {
-            right: 4px;
             border: 2px;
         }
     }
