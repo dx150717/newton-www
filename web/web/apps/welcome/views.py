@@ -79,6 +79,7 @@ def show_home_view(request):
             url = entry_obj.get_absolute_url().replace('/blog/', '/community-voice/')
         else:
             url = entry_obj.get_absolute_url()
+
         entry_obj.urls = url
     # if len(entries) < 3:
     #     entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
@@ -100,7 +101,7 @@ def show_home_view(request):
     webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
     user = request.user
-    return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key})
+    return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key, 'presses': presses, 'entry_obj': entry_obj})
 
 def show_technology_view(request):
     return render(request, 'welcome/technology.html', locals())
