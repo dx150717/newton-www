@@ -180,4 +180,3 @@ WEBPUSH_SETTINGS = {
 
 INTERNAL_API_HOST_IP = '127.0.0.1'
 INTERNAL_API_HOST_PORT = '9090'
-WEBPUSH_ICON = 'https://www.newtonproject.org/static/images/logo-new.png'

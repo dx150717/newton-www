@@ -380,7 +380,7 @@ class EntryAdmin(admin.ModelAdmin):
                     result = internal_api_client.InternalAPIClient(server_config.INTERNAL_API_HOST_IP, server_config.INTERNAL_API_HOST_PORT).web_push(
                         head=title,
                         body='',
-                        icon=server_config.WEBPUSH_ICON,
+                        icon=server_config.NEWTON_WEB_URL + '/static/images/logo-new.png',
                         url=entry_url,
                         group='www',
                         ttl=1000,
