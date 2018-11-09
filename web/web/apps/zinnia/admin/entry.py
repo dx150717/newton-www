@@ -67,7 +67,7 @@ class EntryAdmin(admin.ModelAdmin):
     actions = ['make_mine', 'make_published', 'make_hidden',
                'close_comments', 'close_pingbacks', 'close_trackbacks',
                'ping_directories', 'put_on_top',
-               'mark_featured', 'unmark_featured']
+               'mark_featured', 'unmark_featured', 'send_webpush']
     actions_on_top = True
     actions_on_bottom = True
 
@@ -191,29 +191,6 @@ class EntryAdmin(admin.ModelAdmin):
         
         entry.last_update = timezone.now()
         entry.save()
-
-        try:
-            if not change:
-                title = entry.title
-                entry_type = entry.entry_type
-                if entry_type == TYPE_ANNOUNCEMENT:
-                    url = entry.get_absolute_url().replace('/blog/', '/announcement/')
-                elif entry_type == TYPE_COMMUNITY_VOICE:
-                    url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
-                else:
-                    url = entry.get_absolute_url()
-                entry_url = server_config.NEWTON_WEB_URL + url + '?referrer=webpush'
-                from utils.python_sdk_V_0_0_2 import internal_api_client
-                result = internal_api_client.InternalAPIClient('127.0.0.1', '9090').web_push(
-                    head=title,
-                    body='',
-                    icon='https://www.newtonproject.dev.diynova.com/static/images/logo-new.png',
-                    url=entry_url,
-                    group='www',
-                    ttl=1000,
-                )
-        except Exception, inst:
-            logger.error('webpush send message failed:%s' % inst)
 
     def get_queryset(self, request):
         """
@@ -385,3 +362,28 @@ class EntryAdmin(admin.ModelAdmin):
                         {'directory': directory, 'success': success})
     ping_directories.short_description = _(
         'Ping Directories for selected entries')
+
+    def send_webpush(self, request, queryset):
+        from utils.python_sdk_V_0_0_2 import internal_api_client
+        for entry in queryset:
+            try:
+                if entry.status == PUBLISHED:
+                    title = entry.title
+                    entry_type = entry.entry_type
+                    if entry_type == TYPE_ANNOUNCEMENT:
+                        url = entry.get_absolute_url().replace('/blog/', '/announcement/')
+                    elif entry_type == TYPE_COMMUNITY_VOICE:
+                        url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
+                    else:
+                        url = entry.get_absolute_url()
+                    entry_url = server_config.NEWTON_WEB_URL + url + '?referrer=webpush'
+                    result = internal_api_client.InternalAPIClient('127.0.0.1', '9090').web_push(
+                        head=title,
+                        body='',
+                        icon='https://www.newtonproject.org/static/images/logo-new.png',
+                        url=entry_url,
+                        group='www',
+                        ttl=1000,
+                    )
+            except Exception, inst:
+                logger.error('webpush send message failed:%s' % inst)
