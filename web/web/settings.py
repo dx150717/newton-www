@@ -77,6 +77,7 @@ INSTALLED_APPS = (
     # new admin
     'help',
 
+    'webpush',
 )
 
 MIDDLEWARE_CLASSES = (
