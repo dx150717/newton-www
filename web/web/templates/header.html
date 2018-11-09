@@ -152,12 +152,74 @@
                         </ul>
 
                     </li>
+
+                    <li class="toolbar-item hidden-xs hidden-sm">
+                        <a href="javascript:void(0);" id="id_search_icon_container">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true" id="id_search_icon"></span>
+                        </a>
+                        <form action="/search/" method="get" data-ajax="false">
+                            <input type="text" class="search_input" id="id_search_input" name="q" placeholder="{% trans "search articles" %}" autocomplete="off">
+                            <button type="submit" class="search_btn" id="id_search_btn">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </li>
+
                 </ul>
             </div><!-- /.navbar -->
         </div>
     </nav>
 </header><!-- end -->
 <script>
-
+    var inputStatus = false;
+    $("#id_search_icon_container").click(function () {
+        if ($(this).children("span").hasClass("glyphicon-search") && inputStatus == false) {
+            $("#id_search_input").val("");
+            $(this).parent("li").siblings().hide();
+            $("#id_search_input").fadeIn();
+            $("#id_search_btn").fadeIn();
+            $("#id_search_icon").removeClass("glyphicon-search").addClass("glyphicon-remove");
+            inputStatus = true;
+        } else if ($(this).children("span").hasClass("glyphicon-remove") && inputStatus == true) {
+            $("#id_search_input").fadeOut();
+            $("#id_search_btn").fadeOut();
+            $(this).parent("li").siblings().fadeIn();
+            $("#id_search_icon").removeClass("glyphicon-remove").addClass("glyphicon-search");
+            $("#id_search_input").val("");
+            inputStatus = false;
+        }
+    });
 </script>
 
+<style>
+    input.search_input {
+        display: none;
+        position: absolute;
+        right: 24px;
+        bottom: 2px;
+        height: 30px;
+        width: 230px;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-width: 0;
+        background-color: #e3e3e3;
+        padding: 5px 20px;
+        outline: none;
+        cursor: auto;
+    }
+
+    button.search_btn {
+        display: none;
+        height: 30px;
+        position: absolute;
+        right: 24px;
+        bottom: 2px;
+        border: none;
+        background-color: #e3e3e3;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        outline: none;
+    }
+</style>

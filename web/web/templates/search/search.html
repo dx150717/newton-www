@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+{% load highlight %}
+
+{% block title %}
+{% trans "Search result" %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block content %}
+<section class="section-list search_page" id="id_search_page">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Search Result" %}</p>
+            <form action="/search/" method="get" class="search_page_form">
+                <input type="text" name="q">
+                <button type="submit">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="result_length container">
+        {{ page|length }}{% trans " Results:" %}
+    </div>
+    <div class="search_result_container container">
+        <ul>
+            {% for result in page %}
+                <li>
+                    <a href="/{{ result.object.entry_type | transfer_entry_type }}/{{ result.object.creation_date | transfer_creation_date }}/{{ result.object.slug }}/" target="_blank">
+                        <span class="search_result_title">
+                            {% highlight result.object.title with query max_length 40 %}
+                        </span>
+                    </a><br>
+                    <span class="search_result_content">
+                        {% highlight result.object.content with query max_length 200 %}
+                    </span>
+                    <br>
+                </li>
+
+            {% empty %}
+                {% trans "Your search returns no results." %}
+            {% endfor %}
+
+            {% if page.has_previous or page.has_next %}
+                <div>
+                    {% if page.has_previous %}
+                        <a href="?q={{ query }}&page={{ page.previous_page_number }}">
+                    {% endif %}
+                            « {% trans "Previous" %}
+                    {% if page.has_previous %}
+                        </a>
+                    {% endif %}
+                    |
+                    {% if page.has_next %}
+                        <a href="?q={{ query }}&page={{ page.next_page_number }}">
+                    {% endif %}
+                        {% trans "Next" %} »
+                    {% if page.has_next %}</a>{% endif %}
+                </div>
+            {% endif %}
+        </ul>
+    </div>
+</section>
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
+{% endblock %}
+
+{% block css %}
+<style>
+    .search_page .search_page_form {
+        bottom: 102px;
+        position: relative;
+    }
+
+    .search_page .search_page_form input {
+        height: 30px;
+        width: 300px;
+        outline: none;
+    }
+
+    .search_page .search_page_form button {
+        height: 30px;
+        vertical-align: bottom;
+        position: relative;
+        right: 20px;
+    }
+
+    .search_page .result_length {
+        height: 30px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    .search_page .search_result_container {
+        padding-top: 10px;
+    }
+
+    .search_page .search_result_container ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .search_page .search_result_container li {
+        padding-bottom: 20px;
+    }
+
+    .search_page .search_result_container li .search_result_title {
+        color: #337ab7;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: underline;
+        line-height: 16px;
+    }
+
+    .highlighted {
+        color: #a94442;
+    }
+
+    @media (max-width: 991px) {
+        .search_page .search_page_form {
+            bottom: 75px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .search_page .search_page_form input {
+            width: 200px;
+        }
+        .search_page .search_page_form button {
+            right: 4px;
+            border: 2px;
+        }
+    }
+</style>
+{% endblock %}

@@ -18,6 +18,8 @@ from django_countries.data import COUNTRIES
 
 from config import codes
 
+from zinnia.managers import TYPE_BLOG, TYPE_ANNOUNCEMENT, TYPE_COMMUNITY_VOICE
+
 logger = logging.getLogger(__name__)
 
 register = template.Library()
@@ -354,3 +356,30 @@ def russian_change_header_style():
 
 
 register.simple_tag(russian_change_header_style)
+
+
+@register.filter(name='transfer_entry_type')
+def transfer_entry_type(entry_type):
+    """transfer entry type to full name
+    """
+    try:
+        if TYPE_BLOG == entry_type:
+            return "blog"
+        elif TYPE_ANNOUNCEMENT == entry_type:
+            return "announcement"
+        elif TYPE_COMMUNITY_VOICE == entry_type:
+            return "community-voice"
+    except Exception, inst:
+        logger.exception(str(inst))
+        return ""
+
+
+@register.filter(name='transfer_creation_date')
+def transfer_creation_date(creation_date):
+    """transfer entry type to full name
+    """
+    try:
+        return creation_date.strftime('%Y/%m/%d')
+    except Exception, inst:
+        logger.exception(str(inst))
+        return ""
