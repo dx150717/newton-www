@@ -102,13 +102,15 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'newton_www',
         'USER': 'root',
-        'PASSWORD': ''
+        'PASSWORD': '',
+        'OPTIONS': {'charset': 'utf8mb4'},
     },
     'tokenexchange': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tokenexchange',
         'USER': 'root',
-        'PASSWORD': ''
+        'PASSWORD': '',
+        'OPTIONS': {'charset': 'utf8mb4'},
     },
 }
 
