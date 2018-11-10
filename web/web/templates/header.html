@@ -159,8 +159,8 @@
 
                     </li>
 
-                    <li class="toolbar-item hidden-xs hidden-sm">
-                        <a href="javascript:void(0);" id="id_search_icon_container">
+                    <li class="toolbar-item hidden-xs hidden-sm" style="margin-bottom: 3px;">
+                        <a href="javascript:void(0);" id="id_search_icon_container" style="padding-top: 9px;">
                             <span class="glyphicon glyphicon-search" aria-hidden="true" id="id_search_icon"></span>
                         </a>
                         <form action="/search/" method="get" data-ajax="false">
@@ -176,85 +176,9 @@
         </div>
     </nav>
 </header><!-- end -->
+
+<link rel="stylesheet" href="{% version "css/search-bar.css" %}">
+<script type="text/javascript" src="{% version "js/search-bar.js" %}"></script>
 <script>
-    var inputStatus = false;
-    $("#id_search_icon_container").click(function () {
-        if ($(this).children("span").hasClass("glyphicon-search") && inputStatus == false) {
-            $("#id_search_input").val("");
-            $(this).parent("li").siblings().hide();
-            $("#id_search_input").fadeIn();
-            $("#id_search_btn").fadeIn();
-            $("#id_search_icon").removeClass("glyphicon-search").addClass("glyphicon-remove");
-            inputStatus = true;
-        } else if ($(this).children("span").hasClass("glyphicon-remove") && inputStatus == true) {
-            $("#id_search_input").fadeOut();
-            $("#id_search_btn").fadeOut();
-            $(this).parent("li").siblings().fadeIn();
-            $("#id_search_icon").removeClass("glyphicon-remove").addClass("glyphicon-search");
-            $("#id_search_input").val("");
-            inputStatus = false;
-        }
-    });
+    initSearchBar();
 </script>
-
-<style>
-    input.search_input {
-        display: none;
-        position: absolute;
-        right: 24px;
-        bottom: 2px;
-        height: 30px;
-        width: 230px;
-        border-bottom-left-radius: 15px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        border-width: 0;
-        background-color: #e3e3e3;
-        padding: 5px 20px;
-        outline: none;
-        cursor: auto;
-    }
-
-    button.search_btn {
-        display: none;
-        height: 30px;
-        position: absolute;
-        right: 24px;
-        bottom: 2px;
-        border: none;
-        background-color: #e3e3e3;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        outline: none;
-    }
-
-    .search_form_mobile {
-        text-align: center;
-        height: 35px;
-    }
-
-    .search_form_mobile .search_input_mobile {
-        height: 35px;
-        width: 80%;
-        padding-left: 10px;
-        padding-right: 40px;
-        outline: none;
-    }
-
-    .search_form_mobile .search_button_mobile {
-        position: relative;
-        bottom: 35px;
-        left: 117px;
-        height: 35px;
-        width: 35px;
-        background-color: #eee;
-        border: none;
-    }
-
-    @media only screen and (max-width: 768px) {
-        .navbar-collapse {
-            padding-top: 0;
-        }
-    }
-</style>
