@@ -8,10 +8,12 @@ from django.core.urlresolvers import reverse
 from django.core.urlresolvers import NoReverseMatch
 from django.utils.translation import ungettext_lazy
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings as server_config
 
 from zinnia import settings
 from zinnia.managers import HIDDEN
 from zinnia.managers import PUBLISHED
+from zinnia.managers import TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE
 from zinnia.settings import PROTOCOL
 from zinnia.models.author import Author
 from zinnia.ping import DirectoryPinger
@@ -19,6 +21,9 @@ from zinnia.admin.forms import EntryAdminForm
 from zinnia.admin.filters import AuthorListFilter
 from zinnia.admin.filters import CategoryListFilter
 
+
+import logging
+logger = logging.getLogger(__name__)
 
 class EntryAdmin(admin.ModelAdmin):
     """
@@ -62,7 +67,7 @@ class EntryAdmin(admin.ModelAdmin):
     actions = ['make_mine', 'make_published', 'make_hidden',
                'close_comments', 'close_pingbacks', 'close_trackbacks',
                'ping_directories', 'put_on_top',
-               'mark_featured', 'unmark_featured']
+               'mark_featured', 'unmark_featured', 'send_webpush']
     actions_on_top = True
     actions_on_bottom = True
 
@@ -183,7 +188,7 @@ class EntryAdmin(admin.ModelAdmin):
         if not entry.pk and not form.cleaned_data.get('authors'):
             form.cleaned_data['authors'] = Author.objects.filter(
                 pk=request.user.pk)
-
+        
         entry.last_update = timezone.now()
         entry.save()
 
@@ -357,3 +362,28 @@ class EntryAdmin(admin.ModelAdmin):
                         {'directory': directory, 'success': success})
     ping_directories.short_description = _(
         'Ping Directories for selected entries')
+
+    def send_webpush(self, request, queryset):
+        from utils.python_sdk_V_0_0_2 import internal_api_client
+        for entry in queryset:
+            try:
+                if entry.status == PUBLISHED:
+                    title = entry.title
+                    entry_type = entry.entry_type
+                    if entry_type == TYPE_ANNOUNCEMENT:
+                        url = entry.get_absolute_url().replace('/blog/', '/announcement/')
+                    elif entry_type == TYPE_COMMUNITY_VOICE:
+                        url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
+                    else:
+                        url = entry.get_absolute_url()
+                    entry_url = server_config.NEWTON_WEB_URL + url + '?referrer=webpush'
+                    result = internal_api_client.InternalAPIClient(server_config.INTERNAL_API_HOST_IP, server_config.INTERNAL_API_HOST_PORT).web_push(
+                        head=title,
+                        body='',
+                        icon=server_config.NEWTON_WEB_URL + '/static/images/logo-new.png',
+                        url=entry_url,
+                        group='www',
+                        ttl=1000,
+                    )
+            except Exception, inst:
+                logger.error('webpush send message failed:%s' % inst)

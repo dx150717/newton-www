@@ -21,6 +21,13 @@ from zinnia.managers import PUBLISHED
 from press.models import PressModel
 from subscription import forms as subscription_forms
 
+from utils import http
+from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404
+from django.views.decorators.http import require_GET, require_POST
+from django.views.decorators.csrf import csrf_exempt
+from webpush import send_user_notification, send_group_notification
+
 logger = logging.getLogger(__name__)
 
 def show_home_view(request):
@@ -62,11 +69,17 @@ def show_home_view(request):
     presses = PressModel.objects.order_by('-created_at')[0:3]
     entry = EntryDetail()
     if language == CHINESE:
-        entry_obj = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date').first()
+        entry_obj = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED).order_by('-creation_date').first()
     else:
-        entry_obj = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT).order_by('-creation_date').first()
+        entry_obj = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED).order_by('-creation_date').first()
     if entry_obj:
-        url = entry_obj.get_absolute_url().replace('/blog/', '/announcement/')
+        if entry_obj.entry_type == TYPE_ANNOUNCEMENT:
+            url = entry_obj.get_absolute_url().replace('/blog/', '/announcement/')
+        elif entry_obj.entry_type == TYPE_COMMUNITY_VOICE:
+            url = entry_obj.get_absolute_url().replace('/blog/', '/community-voice/')
+        else:
+            url = entry_obj.get_absolute_url()
+
         entry_obj.urls = url
     # if len(entries) < 3:
     #     entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
@@ -85,7 +98,10 @@ def show_home_view(request):
     # delta_time = delta_time.total_seconds()
     # if settings.FUND_START_DATE <= now:
     #     start_day = True
-    return render(request, 'welcome/index.html', locals())
+    webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
+    vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
+    user = request.user
+    return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key, 'presses': presses, 'entry_obj': entry_obj})
 
 def show_technology_view(request):
     return render(request, 'welcome/technology.html', locals())
@@ -364,6 +380,7 @@ class AnnouncementDetailView(generic.DetailView):
         self.get_object(entries)
         return entries
 
+
 class CommunityVoiceDetailView(generic.DetailView):
     template_name = "welcome/community-voice-detail.html"
     context_object_name = "entry"
@@ -373,6 +390,7 @@ class CommunityVoiceDetailView(generic.DetailView):
         entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE)
         self.get_object(entries)
         return entries
+
 
 class CommunityVoiceView(generic.ListView):
     template_name = "welcome/community-voice.html"

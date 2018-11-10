@@ -2,6 +2,10 @@
 {% load i18n %}
 {% load utils %}
 
+{% block webpush %}
+<meta name="vapid-key" content="{{ vapid_key }}">
+{% endblock %}
+
 {% block title %}
 {% trans "Home" %}
 {% endblock %}
@@ -121,6 +125,7 @@ showNav();
 <script src="{% version "js/video.js" %}"></script>
 <script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>
 <script src="{% version "js/slide-change-section.js" %}"></script>
+<script src="{% version "js/registerSw.js" %}" type="application/x-javascript"></script>
 {% endblock %}
 
 {% block css %}

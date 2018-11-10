@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.views.static import serve as serve_static
 from django.views.decorators.cache import never_cache
 from django.views.generic import TemplateView, RedirectView
+from django.conf.urls.static import static
 
 from welcome import views
 
@@ -58,7 +59,10 @@ urlpatterns = patterns('',
                        url(r'^community-voice/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)', views.CommunityVoiceDetailView.as_view()),
                        url(r'^community-voice/$', views.CommunityVoiceView.as_view()),
                        url(r'^search/', include('haystack.urls')),
-)
+                       # web push
+                       url(r'^webpush/', include('webpush.urls')),
+                       url(r'sw.js', TemplateView.as_view(template_name='sw.js', content_type='application/x-javascript')),
+) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'welcome.views.show_404_page'
 handler500 = 'welcome.views.show_500_page'

@@ -78,6 +78,7 @@ INSTALLED_APPS = (
     'help',
     'haystack',
 
+    'webpush',
 )
 
 MIDDLEWARE_CLASSES = (

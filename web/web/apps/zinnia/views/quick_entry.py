@@ -74,6 +74,7 @@ class QuickEntry(View):
         if form.is_valid():
             form.instance.content = self.htmlize(form.cleaned_data['content'])
             entry = form.save()
+            
             return redirect(entry)
 
         data = {'title': smart_str(request.POST.get('title', '')),
