@@ -95,20 +95,21 @@ LOGGING = {
     }
 }
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'newton_www',
         'USER': 'root',
-        'PASSWORD': ''
+        'PASSWORD': '',
     },
     'tokenexchange': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tokenexchange',
         'USER': 'root',
-        'PASSWORD': ''
-    }
+        'PASSWORD': '',
+    },
 }
 
 # Cache
@@ -169,3 +170,13 @@ CELERY_IMPORTS = ('tasks.task_email', 'tasks.task_blockchain')
 
 # countdown time
 FUND_START_DATE = datetime.datetime(2018, 9, 03, 0, 0)
+
+
+WEBPUSH_SETTINGS = {
+   "VAPID_PUBLIC_KEY": "BMI6CuaoXispCyXjO34kEUcL_MacbKDgXG5xWneXvlDi-mOqyrkaFaZI3PteBB5KgmhspUWTS2rxlwkftwiNHJ4",
+   "VAPID_PRIVATE_KEY": "qi48KlUEzaUx_21KPWzgkaVDSyz-IyRLMKXxOPKbaPY",
+   "VAPID_ADMIN_EMAIL": "wuwenmin@diynova.com"
+}
+
+INTERNAL_API_HOST_IP = '127.0.0.1'
+INTERNAL_API_HOST_PORT = '9090'
