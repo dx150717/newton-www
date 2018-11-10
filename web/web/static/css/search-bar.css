@@ -10,6 +10,10 @@ a.search_icon_container {
     left: 42px;
 }
 
+input.search_input::placeholder {
+    color: #999;
+}
+
 input.search_input {
     display: none;
     position: absolute;
