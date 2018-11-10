@@ -21,25 +21,24 @@
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                 </button>
             </form>
+        <div class="result_length">
+            {{ page|length }}{% trans " Results" %}
+        </div>
         </div>
     </div>
 
-    <div class="result_length container">
-        {{ page|length }}{% trans " Results:" %}
-    </div>
     <div class="search_result_container container">
         <ul>
             {% for result in page %}
                 <li>
                     <a href="/{{ result.object.entry_type | transfer_entry_type }}/{{ result.object.creation_date | transfer_creation_date }}/{{ result.object.slug }}/" target="_blank">
                         <span class="search_result_title">
-                            {% highlight result.object.title with query max_length 40 %}
+                            {{ result.object.title }}
                         </span>
                     </a><br>
-                    <span class="search_result_content">
+                    <p class="search_result_content">
                         {% highlight result.object.content with query max_length 200 %}
-                    </span>
-                    <br>
+                    </p>
                 </li>
 
             {% empty %}
