@@ -60,6 +60,10 @@ input::placeholder {
     border-bottom: 1px solid #d5d5d5;
 }
 
+.search_page .search_result_container li:last-child {
+    border-bottom: none;
+}
+
 .search_page .search_result_container li .search_result_title {
     color: #303030;
     font-size: 18px;
