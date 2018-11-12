@@ -15,7 +15,7 @@ from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN,ARABIC,NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND,PORTUGUESE
+from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN,ARABIC,NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND,PORTUGUESE,VIETNAMESE
 from zinnia.managers import PUBLISHED
 
 from press.models import PressModel
@@ -64,6 +64,8 @@ def show_home_view(request):
         language = THAILAND
     elif language.startswith('pt'):
         language = PORTUGUESE
+    elif language.startswith('vi'):
+        language = VIETNAMESE
     else:
         language = ENGLISH
     presses = PressModel.objects.order_by('-created_at')[0:3]
@@ -198,6 +200,8 @@ def show_community_view(request):
         language = THAILAND
     elif language.startswith('pt'):
         language = PORTUGUESE
+    elif language.startswith('vi'):
+        language = VIETNAMESE
     else:
         language = ENGLISH
     entry = EntryDetail()
@@ -305,6 +309,8 @@ class AnnouncementView(generic.ListView):
             language = THAILAND
         elif language.startswith('pt'):
             language = PORTUGUESE
+        elif language.startswith('vi'):
+            language = VIETNAMESE
         else:
             language = ENGLISH
             
@@ -357,6 +363,8 @@ class AnnouncementSubView(generic.ListView):
             language = THAILAND
         elif language.startswith('pt'):
             language = PORTUGUESE
+        elif language.startswith('vi'):
+            language = VIETNAMESE
         else:
             language = ENGLISH
             
@@ -431,6 +439,8 @@ class CommunityVoiceView(generic.ListView):
             language = THAILAND
         elif language.startswith('pt'):
             language = PORTUGUESE
+        elif language.startswith('vi'):
+            language = VIETNAMESE
         else:
             language = ENGLISH
             

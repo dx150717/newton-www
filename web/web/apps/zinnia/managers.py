@@ -23,6 +23,7 @@ INDONESIAN = 12
 ITALY = 13
 THAILAND = 14
 PORTUGUESE = 15
+VIETNAMESE = 16
 
 TYPE_BLOG = 0
 TYPE_ANNOUNCEMENT = 1
@@ -82,6 +83,8 @@ def entries_published(queryset):
         language = THAILAND
     elif language.startswith('pt'):
         language = PORTUGUESE
+    elif language.startswith('vi'):
+        language = VIETNAMESE
     else:
         language = ENGLISH
         

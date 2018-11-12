@@ -58,6 +58,8 @@ class LocaleFromPostMiddleware(locale.LocaleMiddleware):
                 return 'it'
             if language.find('th') >= 0:
                 return 'th'
+            if language.find('vi') >= 0:
+                return 'vi'
             if language.find('pt') >= 0:
                 return 'pt'
             return 'en'

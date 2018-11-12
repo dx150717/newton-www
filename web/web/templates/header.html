@@ -135,7 +135,7 @@
                         </button>
 
                          <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="right:100%;border-right:none;">
-                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:":8" %}
+                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:":9" %}
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
                                     {% if language_code|is_current_language %}
@@ -148,7 +148,7 @@
                             {% endfor %}
                         </ul>
                         <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="border-left:none;left:0px;">
-                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:"8:" %}
+                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:"9:" %}
                             <li>
                                 <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
                                     {% if language_code|is_current_language %}
@@ -159,14 +159,14 @@
                                 </a>
                             </li>
                             {% endfor %}
-                            {% comment %}
+                            
                             <li>
                                 <a>
                                     <span style="float: left;height:36px;">
                                     </span>
                                 </a>
                             </li>
-                            {% endcomment %}
+                            
                         </ul>
 
                     </li>
