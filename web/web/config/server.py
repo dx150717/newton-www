@@ -132,15 +132,6 @@ CACHES = {
     },
 }
 
-
-# search
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'backends.whoosh_cn_backend.WhooshEngine',
-        'PATH': '/Users/yuwei/liuchao/newtonproject/search_www/'
-    },
-}
-
 # email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = False
@@ -180,3 +171,11 @@ WEBPUSH_SETTINGS = {
 
 INTERNAL_API_HOST_IP = '127.0.0.1'
 INTERNAL_API_HOST_PORT = '9090'
+
+# search
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'backends.whoosh_cn_backend.WhooshEngine',
+        'PATH': '/Users/yuwei/liuchao/newtonproject/search_www/',
+    },
+}
