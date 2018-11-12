@@ -57,6 +57,29 @@ DATABASE_APPS_MAPPING = {
 SUPPORT_LANGUAGES = (('id', 'Bahasa Indonesia'), ('de', 'Deutsch'), ('en', 'English'),  ('es', 'Español'), ('fr', 'Français'), ('it', 'Italiano'), ('nl', 'Nederlands'), ('tr', 'Türkçe'), ('ru', 'Pусский'), ('pt', 'Português'), ('vi', 'Người việt nam'), ('fi', 'suomalainen'), ('ar', 'العربية'), ('th', 'ไทย'), ('ko', '한국어'), ('ja', '日本語'), ('zh-cn', '简体中文'))
 
 
+from config import codes
+
+LANGUAGE_LIST = (
+    ("zh", codes.EntryLanguage.CHINESE.value),
+    ("en", codes.EntryLanguage.ENGLISH.value),
+    ("ko", codes.EntryLanguage.KOREAN.value),
+    ("ja", codes.EntryLanguage.JAPANESE.value),
+    ("ru", codes.EntryLanguage.RUSSIAN.value),
+    ("tr", codes.EntryLanguage.TURKISH.value),
+    ("es", codes.EntryLanguage.SPANISH.value),
+    ("fr", codes.EntryLanguage.FRENCH.value),
+    ("de", codes.EntryLanguage.GERMAN.value),
+    ("ar", codes.EntryLanguage.ARABIC.value),
+    ("nl", codes.EntryLanguage.NETHERLAND.value),
+    ("fi", codes.EntryLanguage.FINNISH.value),
+    ("id", codes.EntryLanguage.INDONESIAN.value),
+    ("it", codes.EntryLanguage.ITALY.value),
+    ("th", codes.EntryLanguage.THAILAND.value),
+    ("pt", codes.EntryLanguage.PORTUGUESE.value),
+    ("vi", codes.EntryLanguage.VIETNAMESE.value),
+)
+
+
 # country settings
 COUNTRIES_FIRST = []
 

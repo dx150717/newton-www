@@ -77,8 +77,8 @@ INSTALLED_APPS = (
     # new admin
     'help',
     'haystack',
-
     'webpush',
+    'search',
 )
 
 MIDDLEWARE_CLASSES = (
