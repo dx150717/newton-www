@@ -27,14 +27,12 @@
         <ul>
             {% for result in items %}
                 <li>
-                    <p>
-                        <span>{{ result.object.last_update|date:"Y-m-d H:i:s" }}</span>
-                    </p>
                     <a href="/{{ result.object.entry_type | transfer_entry_type }}/{{ result.object.creation_date | transfer_creation_date }}/{{ result.object.slug }}/" target="_blank">
                         <span class="search_result_title">
                             {{ result.object.title }}
                         </span>
-                    </a><br>
+                    </a>
+                    <span class="pull-right">{{ result.object.last_update|date:"Y-m-d H:i:s" }}</span>
                     <p class="search_result_content">
                         {% highlight result.object.content with search_query max_length 200 %}
                     </p>
