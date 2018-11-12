@@ -76,6 +76,7 @@ INSTALLED_APPS = (
     'ishuman',
     # new admin
     'help',
+    'haystack',
 
     'webpush',
 )

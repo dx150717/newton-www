@@ -1,0 +1,119 @@
+/* Search result page style */
+input::placeholder {
+    color: #999;
+}
+
+.search_page .page-title p {
+    line-height: 190px;
+}
+
+.search_page .search_page_form {
+    bottom: 35px;
+    position: relative;
+}
+
+.search_page .search_page_form input {
+    height: 30px;
+    width: 300px;
+    outline: none;
+    color: #333;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border: none;
+    position: relative;
+    left: 13px;
+    padding: 0 25px;
+}
+
+.search_page .search_page_form button {
+    height: 30px;
+    vertical-align: bottom;
+    position: relative;
+    border-radius: 15px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.search_page .result_length {
+    height: 30px;
+    font-size: 12px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.search_page .search_result_container {
+    padding-top: 10px;
+}
+
+.search_page .search_result_container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.search_page .search_result_container li {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.search_page .search_result_container li:last-child {
+    border-bottom: none;
+}
+
+.search_page .search_result_container li .search_result_title {
+    color: #303030;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.search_page .search_result_container li .search_result_title:hover {
+    text-decoration: underline;
+}
+
+.search_page .search_result_container li .search_result_content {
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+.search_page .search_result_container .no_result_tip {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.highlighted {
+    color: #a94442;
+}
+
+.search_page .search_page_paginator {
+    text-align: center;
+    margin: 30px auto;
+}
+
+@media (max-width: 991px) {
+    .search_page .search_page_form {
+        bottom: 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search_page .page-title p {
+        line-height: 140px;
+    }
+
+    .search_page .search_page_form {
+        bottom: 20px;
+    }
+
+    .search_page .search_page_form input {
+        width: 200px;
+    }
+
+    .search_page .search_page_form button {
+        border: 2px;
+    }
+}

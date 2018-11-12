@@ -18,6 +18,12 @@
             </div><!-- /.logo -->
 
             <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
+                <form action="/search/" method="get" data-ajax="false" class="search_form_mobile visible-xs-block">
+                    <input type="text" name="q" placeholder="{% trans "search articles" %}" autocomplete="off" class="search_input_mobile">
+                    <button type="submit" class="search_button_mobile">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </form>
                 <ul class="nav navbar-nav">
                     {% comment %}
                     <li>
@@ -79,6 +85,18 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="toolbar-item hidden-xs hidden-sm" style="margin-bottom: 3px;">
+                        <a href="javascript:void(0);" id="id_search_icon_container" style="padding-top: 9px;">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true" id="id_search_icon"></span>
+                        </a>
+                        <form action="/search/" method="get" data-ajax="false" id="id_search_from">
+                            <input type="text" class="search_input" id="id_search_input" name="q" placeholder="{% trans "search articles" %}" autocomplete="off">
+                            <button type="submit" class="search_btn" id="id_search_btn">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </li>
+
                     {% if request.user.is_authenticated %}
                         {% if not request.user.is_superuser %}
                             <li class="dropdown hidden-xs hidden-sm">
@@ -152,12 +170,15 @@
                         </ul>
 
                     </li>
+
                 </ul>
             </div><!-- /.navbar -->
         </div>
     </nav>
 </header><!-- end -->
+
+<link rel="stylesheet" href="{% version "css/search-bar.css" %}">
+<script type="text/javascript" src="{% version "js/search-bar.js" %}"></script>
 <script>
-
+    initSearchBar();
 </script>
-
