@@ -26,7 +26,7 @@ class IdListView(generic.ListView):
     def get_queryset(self):
         try:
             language = translation.get_language()
-            language_code = 0
+            language_code = 1
             for language_item in settings.LANGUAGE_LIST:
                 if language.startswith(language_item[0]):
                     language_code = language_item[1]
