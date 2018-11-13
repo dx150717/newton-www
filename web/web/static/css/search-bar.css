@@ -57,6 +57,7 @@ button.search_btn {
     padding-left: 10px;
     padding-right: 40px;
     outline: none;
+    border: unset;
 }
 
 .search_form_mobile .search_button_mobile {
@@ -66,7 +67,7 @@ button.search_btn {
     height: 35px;
     width: 35px;
     background-color: #fff;
-    border: none;
+    border: unset;
 }
 
 @media only screen and (max-width: 768px) {
