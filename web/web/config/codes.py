@@ -166,3 +166,23 @@ class UserCenterActivePage(Enum):
 class SubscriptionEmailType(Enum):
     AVAILABLE = 0
     SPAM = 1
+
+
+class EntryLanguage(Enum):
+    CHINESE = 0
+    ENGLISH = 1
+    KOREAN = 2
+    JAPANESE = 3
+    RUSSIAN = 4
+    TURKISH = 5
+    SPANISH = 6
+    FRENCH = 7
+    GERMAN = 8
+    ARABIC = 9
+    NETHERLAND = 10
+    FINNISH = 11
+    INDONESIAN = 12
+    ITALY = 13
+    THAILAND = 14
+    PORTUGUESE = 15
+    VIETNAMESE = 16

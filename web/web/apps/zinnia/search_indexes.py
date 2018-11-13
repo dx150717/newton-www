@@ -11,6 +11,8 @@ from zinnia.models.entry import Entry
 
 class EntryIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
+    last_update = indexes.DateTimeField(model_attr='last_update')
+    language = indexes.IntegerField(model_attr='language')
 
     def get_model(self):
         return Entry

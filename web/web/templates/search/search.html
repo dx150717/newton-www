@@ -14,25 +14,27 @@
         <div class="container">
             <p>{% trans "Search Result" %}</p>
             <form action="/search/" method="get" class="search_page_form">
-                <input type="text" name="q" placeholder="{% if query %}{{ query }}{% else %}{% trans "search articles" %}{% endif %}">
+                <input type="text" name="q" placeholder="{% if search_query %}{{ search_query }}{% else %}{% trans "search articles" %}{% endif %}">
                 <button type="submit">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                 </button>
             </form>
+            <span class="result_length">{{ paginator.count }}{% trans " Results" %}</span>
         </div>
     </div>
 
     <div class="search_result_container container">
         <ul>
-            {% for result in page %}
+            {% for result in items %}
                 <li>
                     <a href="/{{ result.object.entry_type | transfer_entry_type }}/{{ result.object.creation_date | transfer_creation_date }}/{{ result.object.slug }}/" target="_blank">
                         <span class="search_result_title">
                             {{ result.object.title }}
                         </span>
-                    </a><br>
+                    </a>
+                    <span class="pull-right">{{ result.object.last_update|date:"Y-m-d H:i:s" }}</span>
                     <p class="search_result_content">
-                        {% highlight result.object.content with query max_length 200 %}
+                        {% highlight result.object.content with search_query max_length 200 %}
                     </p>
                 </li>
 
@@ -43,7 +45,7 @@
             {% if page.has_previous or page.has_next %}
                 <div class="search_page_paginator">
                     {% if page.has_previous %}
-                        <a href="?q={{ query }}&page={{ page.previous_page_number }}">
+                        <a href="?q={{ search_query }}&page={{ page.previous_page_number }}">
                     {% endif %}
                             « {% trans "Previous" %}
                     {% if page.has_previous %}
@@ -51,10 +53,30 @@
                     {% endif %}
                     |
                     {% if page.has_next %}
-                        <a href="?q={{ query }}&page={{ page.next_page_number }}">
+                        <a href="?q={{ search_query }}&page={{ page.next_page_number }}">
                     {% endif %}
                         {% trans "Next" %} »
                     {% if page.has_next %}</a>{% endif %}
+                </div>
+            {% endif %}
+
+            {% if is_paginated %}
+                <div class="search_page_paginator">
+                    {% if page_obj.has_previous %}
+                        <a href="?q={{ search_query }}&page={{ page_obj.previous_page_number }}">
+                    {% endif %}
+                            « {% trans "Previous" %}
+                    {% if page_obj.has_previous %}
+                        </a>
+                    {% endif %}
+                    |
+                    {% if page_obj.has_next %}
+                        <a href="?q={{ search_query }}&page={{ page_obj.next_page_number }}">
+                    {% endif %}
+                            {% trans "Next" %} »
+                    {% if page_obj.has_next %}
+                        </a>
+                    {% endif %}
                 </div>
             {% endif %}
         </ul>

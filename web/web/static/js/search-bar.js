@@ -9,6 +9,7 @@ function initSearchBar () {
             $("#id_search_input").val("");
             $(this).parent("li").siblings().hide();
             $("#id_search_input").fadeIn();
+            $("#id_search_input").focus();
             $("#id_search_btn").fadeIn();
             $("#id_search_icon").removeClass("glyphicon-search").addClass("glyphicon-remove");
             inputStatus = true;
