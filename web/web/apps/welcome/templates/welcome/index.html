@@ -74,6 +74,8 @@
 
 {% include "welcome/include-intro-token-exchange.html" %}
 
+{% include "welcome/include-events.html" %}
+
 {% include "welcome/include-industry.html" %}
 
 {% include "welcome/include-protocol.html" %}
@@ -126,12 +128,14 @@ showNav();
 <script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>
 <script src="{% version "js/slide-change-section.js" %}"></script>
 <script src="{% version "js/registerSw.js" %}" type="application/x-javascript"></script>
+<script src="{% version "js/events.js" %}"></script>
 {% endblock %}
 
 {% block css %}
 <link href="{% version "css/video-js.css" %}" rel="stylesheet">
 <link href="{% version "leaflet/leaflet.css" %}" rel="stylesheet">
 <link href="{% version "css/slide-change-section.css" %}" rel="stylesheet">
+<link rel="stylesheet" href="{% version "css/events.css" %}">
 <style>
     .navbar {
         position: fixed;

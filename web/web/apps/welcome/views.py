@@ -103,7 +103,8 @@ def show_home_view(request):
     webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
     user = request.user
-    return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key, 'presses': presses, 'entry_obj': entry_obj})
+    current_month = datetime.date.today().strftime("%B %Y")
+    return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key, 'presses': presses, 'entry_obj': entry_obj,  "current_month": current_month})
 
 def show_technology_view(request):
     return render(request, 'welcome/technology.html', locals())

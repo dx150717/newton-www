@@ -1,0 +1,63 @@
+/* Events page style */
+.events .events-pannel-container {
+    padding-bottom: 20px;
+}
+
+.events .select-month {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.events .select-month .select-month-btn {
+    color: #303030;
+    background: #f7f7f7;
+    outline: unset;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    line-height: unset;
+}
+
+.events .select-month .current-month {
+    min-width: 125px;
+    display: inline-block;
+}
+
+.events .events-list {
+    display: none;
+}
+
+.events .events-list .event_container {
+    background-size: 100% 100%;
+    border: unset;
+}
+
+.events .events-list .event_container .panel-body {
+    min-height: 180px;
+}
+
+.events .events-list .event_container .panel-footer {
+    min-height: 130px;
+    text-align: left;
+    background: #fff;
+    border-top: unset;
+}
+
+.events .events-list .event_container .panel-footer .date-container-month {
+     margin-bottom: unset;
+     color: red;
+     font-size:14px;
+}
+
+.events .events-list .event_container .panel-footer .date-container-date,
+.events .events-list .event_container .panel-footer .event-title {
+    font-size: 20px;
+    margin-bottom: unset;
+}
+
+.events .events-list .event_container .panel-footer .event-time,
+.events .events-list .event_container .panel-footer .event-location {
+    font-size:12px;
+    margin-bottom: unset;
+}
