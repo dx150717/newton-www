@@ -3,6 +3,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.sites.models import Site
 from django.utils import translation
+from django.conf import settings
+
 DRAFT = 0
 HIDDEN = 1
 PUBLISHED = 2
@@ -51,49 +53,18 @@ def entries_published(queryset):
     """
     now = timezone.now()
     language = translation.get_language()
-    if language.startswith('zh'):
-        language = CHINESE
-    elif language.startswith('en'):
-        language = ENGLISH
-    elif language.startswith('ko'):
-        language = KOREAN
-    elif language.startswith('ja'):
-        language = JAPANESE
-    elif language.startswith('ru'):
-        language = RUSSIAN
-    elif language.startswith('tr'):
-        language = TURKISH
-    elif language.startswith('es'):
-        language = SPANISH
-    elif language.startswith('fr'):
-        language = FRENCH
-    elif language.startswith('de'):
-        language = GERMAN
-    elif language.startswith('ar'):
-        language = ARABIC
-    elif language.startswith('nl'):
-        language = NETHERLAND
-    elif language.startswith('fi'):
-        language = FINNISH
-    elif language.startswith('id'):
-        language = INDONESIAN
-    elif language.startswith('it'):
-        language = ITALY
-    elif language.startswith('th'):
-        language = THAILAND
-    elif language.startswith('pt'):
-        language = PORTUGUESE
-    elif language.startswith('vi'):
-        language = VIETNAMESE
-    else:
-        language = ENGLISH
+    language_code = ENGLISH
+    for language_item in settings.LANGUAGE_LIST:
+        if language.startswith(language_item[0]):
+            language_code = language_item[1]
+            break
         
     return queryset.filter(
         models.Q(start_publication__lte=now) |
         models.Q(start_publication=None),
         models.Q(end_publication__gt=now) |
         models.Q(end_publication=None),
-        status=PUBLISHED, sites=Site.objects.get_current(), language=language,entry_type=TYPE_BLOG)
+        status=PUBLISHED, sites=Site.objects.get_current(), language=language_code, entry_type=TYPE_BLOG)
 
 class EntryPublishedManager(models.Manager):
     """
