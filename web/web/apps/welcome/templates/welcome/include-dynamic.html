@@ -20,7 +20,7 @@
                     </a>
                     <div class="news-word">
                         <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
-                        <a href="{{ entry.urls }}" target="_blank"><p class="announcement-title">{{ press.press_title }}</p></a>
+                        <a href="{{ press.press_link }}" target="_blank"><p class="announcement-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
             {% else %}
@@ -30,7 +30,7 @@
                     </a>
                     <div class="news-word">
                         <p class="time">{{ press.created_at|date:"Y-m-d" }}</p>
-                        <a href="{{ entry.urls }}" target="_blank"><p class="announcement-title">{{ press.press_title }}</p></a>
+                        <a href="{{ press.press_link }}" target="_blank"><p class="announcement-title">{{ press.press_title }}</p></a>
                     </div>
                 </div>
             {% endif %}
