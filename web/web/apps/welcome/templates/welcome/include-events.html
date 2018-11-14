@@ -2,17 +2,20 @@
 {% load utils %}
 
 <div class="events section" id="events-section">
-    <div class="container text-center events-pannel-container">
+    <div class="container text-center events-panel-container">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="title text-center">
                     <strong>{% trans "Newton Calendar" %}</strong>
                     <div class="select-month">
-                        <button class="select-month-btn" id="id_passed_events">{% trans "PASSED" %}</button>
-                        <button class="glyphicon glyphicon-chevron-left select-month-btn" id="id_prev_month"></button>
-                        <span class="current-month" id="id_current_month">{{ current_month }}</span>
-                        <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month"></button>
-                        <button class="select-month-btn" id="id_coming_events">{% trans "UPCOMING" %}</button>
+                        <button class="select-month-btn hidden-xs events-pass-btn" id="id_passed_events">{% trans "PASSED" %}</button>
+                        <div class="button-container">
+                            <button class="glyphicon glyphicon-chevron-left select-month-btn" id="id_prev_month"></button>
+                            <span class="current-month" id="id_current_month">{{ current_month }}</span>
+                            <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month"></button>
+                        </div>
+                        <button class="select-month-btn hidden-md hidden-sm hidden-lg events-pass-btn" id="id_passed_events_mobile">{% trans "PASSED" %}</button>
+                        <button class="select-month-btn events-pass-btn" id="id_coming_events">{% trans "UPCOMING" %}</button>
                     </div>
                 </h2>
             </div>
@@ -25,11 +28,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">徐继哲的晚餐</p>
                                 <p class="event-time">2018-10-23 18:30</p>
                                 <p class="event-location">活动内容：徐继哲邀请4位优秀内容创作者共进晚餐</p>
@@ -44,11 +47,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-广州站”邀您出席</p>
                                 <p class="event-time">2018年8月29日下午19：00</p>
                                 <p class="event-location">牛顿创始人徐继哲先生将发表演讲。现场还将安排抽奖环节。</p>
@@ -63,11 +66,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-东京站”沙龙邀您出席</p>
                                 <p class="event-time">2018-10-23 18:30 ‐ 20:30</p>
                                 <p class="event-location">牛顿项目创始人徐继哲先生、牛顿顾问胡定核博士将出席此次活动。</p>
@@ -82,11 +85,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">徐继哲的晚餐</p>
                                 <p class="event-time">2018-10-23 18:30</p>
                                 <p class="event-location">活动内容：徐继哲邀请4位优秀内容创作者共进晚餐</p>
@@ -101,11 +104,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-广州站”邀您出席</p>
                                 <p class="event-time">2018年8月29日下午19：00</p>
                                 <p class="event-location">牛顿创始人徐继哲先生将发表演讲。现场还将安排抽奖环节。</p>
@@ -120,11 +123,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-东京站”沙龙邀您出席</p>
                                 <p class="event-time">2018-10-23 18:30 ‐ 20:30</p>
                                 <p class="event-location">牛顿项目创始人徐继哲先生、牛顿顾问胡定核博士将出席此次活动。</p>
@@ -142,11 +145,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">徐继哲的晚餐</p>
                                 <p class="event-time">2018-10-23 18:30</p>
                                 <p class="event-location">活动内容：徐继哲邀请4位优秀内容创作者共进晚餐</p>
@@ -161,11 +164,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-广州站”邀您出席</p>
                                 <p class="event-time">2018年8月29日下午19：00</p>
                                 <p class="event-location">牛顿创始人徐继哲先生将发表演讲。现场还将安排抽奖环节。</p>
@@ -180,11 +183,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-东京站”沙龙邀您出席</p>
                                 <p class="event-time">2018-10-23 18:30 ‐ 20:30</p>
                                 <p class="event-location">牛顿项目创始人徐继哲先生、牛顿顾问胡定核博士将出席此次活动。</p>
@@ -202,11 +205,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-东京站”沙龙邀您出席</p>
                                 <p class="event-time">2018-10-23 18:30 ‐ 20:30</p>
                                 <p class="event-location">牛顿项目创始人徐继哲先生、牛顿顾问胡定核博士将出席此次活动。</p>
@@ -221,11 +224,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">徐继哲的晚餐</p>
                                 <p class="event-time">2018年11月24日晚</p>
                                 <p class="event-location">活动内容：徐继哲邀请4位优秀内容创作者共进晚餐</p>
@@ -240,11 +243,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-广州站”邀您出席</p>
                                 <p class="event-time">2018年8月29日下午19：00</p>
                                 <p class="event-location">牛顿创始人徐继哲先生将发表演讲。现场还将安排抽奖环节。</p>
@@ -262,11 +265,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-广州站”邀您出席</p>
                                 <p class="event-time">2018年8月29日下午19：00</p>
                                 <p class="event-location">牛顿创始人徐继哲先生将发表演讲。现场还将安排抽奖环节。</p>
@@ -281,11 +284,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-东京站”沙龙邀您出席</p>
                                 <p class="event-time">2018-10-23 18:30</p>
                                 <p class="event-location">牛顿项目创始人徐继哲先生、牛顿顾问胡定核博士将出席此次活动。</p>
@@ -300,11 +303,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">徐继哲的晚餐</p>
                                 <p class="event-time">2018-10-23 18:30</p>
                                 <p class="event-location">活动内容：徐继哲邀请4位优秀内容创作者共进晚餐</p>
@@ -323,11 +326,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">徐继哲的晚餐</p>
                                 <p class="event-time">2018-10-23 18:30</p>
                                 <p class="event-location">活动内容：徐继哲邀请4位优秀内容创作者共进晚餐</p>
@@ -342,11 +345,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-东京站”沙龙邀您出席</p>
                                 <p class="event-time">2018-10-23 18:30 ‐ 20:30</p>
                                 <p class="event-location">牛顿项目创始人徐继哲先生、牛顿顾问胡定核博士将出席此次活动。</p>
@@ -361,11 +364,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-广州站”邀您出席</p>
                                 <p class="event-time">2018年8月29日下午19：00</p>
                                 <p class="event-location">牛顿创始人徐继哲先生将发表演讲。现场还将安排抽奖环节。</p>
@@ -380,11 +383,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">徐继哲的晚餐</p>
                                 <p class="event-time">2018-10-23 18:30</p>
                                 <p class="event-location">活动内容：徐继哲邀请4位优秀内容创作者共进晚餐</p>
@@ -399,11 +402,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-东京站”沙龙邀您出席</p>
                                 <p class="event-time">2018-10-23 18:30 ‐ 20:30</p>
                                 <p class="event-location">牛顿项目创始人徐继哲先生、牛顿顾问胡定核博士将出席此次活动。</p>
@@ -418,11 +421,11 @@
                         <div class="panel-body">
                         </div>
                         <div class="panel-footer">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">Nov</p>
                                 <p class="date-container-date">12</p>
                             </div>
-                            <div class="col-md-10">
+                            <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">“牛顿全球百城巡讲-广州站”邀您出席</p>
                                 <p class="event-time">2018年8月29日下午19：00</p>
                                 <p class="event-location">牛顿创始人徐继哲先生将发表演讲。现场还将安排抽奖环节。</p>

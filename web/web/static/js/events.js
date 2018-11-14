@@ -52,6 +52,11 @@ function initEvents() {
         $("#id_events_list_" + year + "_" + monthIndexChange.toString()).show().siblings("div.events-list").hide();
     });
 
+
+    $("#id_passed_events_mobile").click(function() {
+        $("#id_events_list_passed").show().siblings("div.events-list").hide();
+    });
+
     $("#id_passed_events").click(function() {
         $("#id_events_list_passed").show().siblings("div.events-list").hide();
     });

@@ -1,5 +1,5 @@
 /* Events page style */
-.events .events-pannel-container {
+.events .events-panel-container {
     padding-bottom: 20px;
 }
 
@@ -17,6 +17,10 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     line-height: unset;
+}
+
+.events .select-month .select-month-btn.events-pass-btn {
+    min-width: 105px;
 }
 
 .events .select-month .current-month {
@@ -60,4 +64,24 @@
 .events .events-list .event_container .panel-footer .event-location {
     font-size:12px;
     margin-bottom: unset;
+}
+
+@media (min-width: 768px) {
+    .events .select-month .button-container {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 768px) {
+    .events .events-panel-container {
+        padding-bottom: unset;
+    }
+
+    .events .select-month .button-container {
+        margin-bottom: 15px;
+    }
+
+    .events .select-month .current-month {
+        min-width: 140px;
+    }
 }
