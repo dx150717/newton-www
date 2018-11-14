@@ -176,6 +176,6 @@ INTERNAL_API_HOST_PORT = '9090'
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'backends.whoosh_cn_backend.WhooshEngine',
-        'PATH': '/Users/yuwei/liuchao/newtonproject/search_www/',
+        'PATH': '/Users/newton/search_www/',
     },
 }

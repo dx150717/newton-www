@@ -15,7 +15,7 @@ from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE,KOREAN,JAPANESE,RUSSIAN,TURKISH,SPANISH,FRENCH,GERMAN,ARABIC,NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND,PORTUGUESE,VIETNAMESE
+from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE
 from zinnia.managers import PUBLISHED
 
 from press.models import PressModel
@@ -32,45 +32,14 @@ logger = logging.getLogger(__name__)
 
 def show_home_view(request):
     language = translation.get_language()
-    if language.startswith('zh'):
-        language = CHINESE
-    elif language.startswith('en'):
-        language = ENGLISH
-    elif language.startswith('ko'):
-        language = KOREAN
-    elif language.startswith('ja'):
-        language = JAPANESE
-    elif language.startswith('ru'):
-        language = RUSSIAN
-    elif language.startswith('tr'):
-        language = TURKISH
-    elif language.startswith('es'):
-        language = SPANISH
-    elif language.startswith('fr'):
-        language = FRENCH
-    elif language.startswith('de'):
-        language = GERMAN
-    elif language.startswith('ar'):
-        language = ARABIC
-    elif language.startswith('nl'):
-        language = NETHERLAND
-    elif language.startswith('fi'):
-        language = FINNISH
-    elif language.startswith('id'):
-        language = INDONESIAN
-    elif language.startswith('it'):
-        language = ITALY
-    elif language.startswith('th'):
-        language = THAILAND
-    elif language.startswith('pt'):
-        language = PORTUGUESE
-    elif language.startswith('vi'):
-        language = VIETNAMESE
-    else:
-        language = ENGLISH
+    language_code = ENGLISH
+    for language_item in settings.LANGUAGE_LIST:
+        if language.startswith(language_item[0]):
+            language_code = language_item[1]
+            break
     presses = PressModel.objects.order_by('-created_at')[0:3]
     entry = EntryDetail()
-    if language == CHINESE:
+    if language_code == CHINESE:
         entry_obj = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED).order_by('-creation_date').first()
     else:
         entry_obj = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED).order_by('-creation_date').first()
@@ -81,7 +50,6 @@ def show_home_view(request):
             url = entry_obj.get_absolute_url().replace('/blog/', '/community-voice/')
         else:
             url = entry_obj.get_absolute_url()
-
         entry_obj.urls = url
     # if len(entries) < 3:
     #     entries = entry.get_queryset().filter(language=ENGLISH, show_in_home=True, status=PUBLISHED).order_by('-creation_date')[0:3]
@@ -168,57 +136,26 @@ def show_business_proposal_view(request):
 def show_community_view(request):
     presses = PressModel.objects.order_by('-created_at')[0:4]
     language = translation.get_language()
-    if language.startswith('zh'):
-        language = CHINESE
-    elif language.startswith('en'):
-        language = ENGLISH
-    elif language.startswith('ko'):
-        language = KOREAN
-    elif language.startswith('ja'):
-        language = JAPANESE
-    elif language.startswith('ru'):
-        language = RUSSIAN
-    elif language.startswith('tr'):
-        language = TURKISH
-    elif language.startswith('es'):
-        language = SPANISH
-    elif language.startswith('fr'):
-        language = FRENCH
-    elif language.startswith('de'):
-        language = GERMAN
-    elif language.startswith('ar'):
-        language = ARABIC
-    elif language.startswith('nl'):
-        language = NETHERLAND
-    elif language.startswith('fi'):
-        language = FINNISH
-    elif language.startswith('id'):
-        language = INDONESIAN
-    elif language.startswith('it'):
-        language = ITALY
-    elif language.startswith('th'):
-        language = THAILAND
-    elif language.startswith('pt'):
-        language = PORTUGUESE
-    elif language.startswith('vi'):
-        language = VIETNAMESE
-    else:
-        language = ENGLISH
+    language_code = ENGLISH
+    for language_item in settings.LANGUAGE_LIST:
+        if language.startswith(language_item[0]):
+            language_code = language_item[1]
+            break
     entry = EntryDetail()
     # select activity entry object
-    activity_entries = entry.get_queryset().filter(language=language, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by('-creation_date')[0:4]
+    activity_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by('-creation_date')[0:4]
     if len(activity_entries) < 4:
         activity_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by('-creation_date')[0:4]
     # select operation entry object
-    operation_entries = entry.get_queryset().filter(language=language, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by('-creation_date')[0:4]
+    operation_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by('-creation_date')[0:4]
     if len(operation_entries) < 4:
         operation_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by('-creation_date')[0:4]
     # select blog entry object
-    blog_entries = entry.get_queryset().filter(language=language, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
+    blog_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
     if len(blog_entries) < 4:
         blog_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
     # select community voice entry object
-    if language == CHINESE:
+    if language_code == CHINESE:
         voice_entries = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
     else:
         voice_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
@@ -277,49 +214,17 @@ class AnnouncementView(generic.ListView):
     
     def get_queryset(self):
         language = translation.get_language()
-        if language.startswith('zh'):
-            language = CHINESE
-        elif language.startswith('en'):
-            language = ENGLISH
-        elif language.startswith('ko'):
-            language = KOREAN
-        elif language.startswith('ja'):
-            language = JAPANESE
-        elif language.startswith('ru'):
-            language = RUSSIAN
-        elif language.startswith('tr'):
-            language = TURKISH
-        elif language.startswith('es'):
-            language = SPANISH
-        elif language.startswith('fr'):
-            language = FRENCH
-        elif language.startswith('de'):
-            language = GERMAN
-        elif language.startswith('ar'):
-            language = ARABIC
-        elif language.startswith('nl'):
-            language = NETHERLAND
-        elif language.startswith('fi'):
-            language = FINNISH
-        elif language.startswith('id'):
-            language = INDONESIAN
-        elif language.startswith('it'):
-            language = ITALY
-        elif language.startswith('th'):
-            language = THAILAND
-        elif language.startswith('pt'):
-            language = PORTUGUESE
-        elif language.startswith('vi'):
-            language = VIETNAMESE
-        else:
-            language = ENGLISH
-            
+        language_code = ENGLISH
+        for language_item in settings.LANGUAGE_LIST:
+            if language.startswith(language_item[0]):
+                language_code = language_item[1]
+                break
         entry = EntryDetail()
-        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language, status=PUBLISHED)
+        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT, language=language_code, status=PUBLISHED)
         if not entries:
-            entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=ENGLISH, status=PUBLISHED)
+            entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT, language=ENGLISH, status=PUBLISHED)
         for entry in entries:
-            url = entry.get_absolute_url().replace('/blog/','/announcement/')
+            url = entry.get_absolute_url().replace('/blog/', '/announcement/')
             entry.urls = url
         return entries
 
@@ -331,45 +236,13 @@ class AnnouncementSubView(generic.ListView):
     def get_queryset(self):
         entry_sub_type = int(self.request.path.split("/")[2])
         language = translation.get_language()
-        if language.startswith('zh'):
-            language = CHINESE
-        elif language.startswith('en'):
-            language = ENGLISH
-        elif language.startswith('ko'):
-            language = KOREAN
-        elif language.startswith('ja'):
-            language = JAPANESE
-        elif language.startswith('ru'):
-            language = RUSSIAN
-        elif language.startswith('tr'):
-            language = TURKISH
-        elif language.startswith('es'):
-            language = SPANISH
-        elif language.startswith('fr'):
-            language = FRENCH
-        elif language.startswith('de'):
-            language = GERMAN
-        elif language.startswith('ar'):
-            language = ARABIC
-        elif language.startswith('nl'):
-            language = NETHERLAND
-        elif language.startswith('fi'):
-            language = FINNISH
-        elif language.startswith('id'):
-            language = INDONESIAN
-        elif language.startswith('it'):
-            language = ITALY
-        elif language.startswith('th'):
-            language = THAILAND
-        elif language.startswith('pt'):
-            language = PORTUGUESE
-        elif language.startswith('vi'):
-            language = VIETNAMESE
-        else:
-            language = ENGLISH
-            
+        language_code = ENGLISH
+        for language_item in settings.LANGUAGE_LIST:
+            if language.startswith(language_item[0]):
+                language_code = language_item[1]
+                break
         entry = EntryDetail()
-        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language,entry_sub_type=entry_sub_type, status=PUBLISHED)
+        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language_code,entry_sub_type=entry_sub_type, status=PUBLISHED)
         if not entries:
             entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=ENGLISH,entry_sub_type=entry_sub_type, status=PUBLISHED)
         for entry in entries:
@@ -407,45 +280,13 @@ class CommunityVoiceView(generic.ListView):
     
     def get_queryset(self):
         language = translation.get_language()
-        if language.startswith('zh'):
-            language = CHINESE
-        elif language.startswith('en'):
-            language = ENGLISH
-        elif language.startswith('ko'):
-            language = KOREAN
-        elif language.startswith('ja'):
-            language = JAPANESE
-        elif language.startswith('ru'):
-            language = RUSSIAN
-        elif language.startswith('tr'):
-            language = TURKISH
-        elif language.startswith('es'):
-            language = SPANISH
-        elif language.startswith('fr'):
-            language = FRENCH
-        elif language.startswith('de'):
-            language = GERMAN
-        elif language.startswith('ar'):
-            language = ARABIC
-        elif language.startswith('nl'):
-            language = NETHERLAND
-        elif language.startswith('fi'):
-            language = FINNISH
-        elif language.startswith('id'):
-            language = INDONESIAN
-        elif language.startswith('it'):
-            language = ITALY
-        elif language.startswith('th'):
-            language = THAILAND
-        elif language.startswith('pt'):
-            language = PORTUGUESE
-        elif language.startswith('vi'):
-            language = VIETNAMESE
-        else:
-            language = ENGLISH
-            
+        language_code = ENGLISH
+        for language_item in settings.LANGUAGE_LIST:
+            if language.startswith(language_item[0]):
+                language_code = language_item[1]
+                break
         entry = EntryDetail()
-        if language == CHINESE:
+        if language_code == CHINESE:
             entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE,language=CHINESE, status=PUBLISHED)
         else:
             entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE,language=ENGLISH, status=PUBLISHED)
