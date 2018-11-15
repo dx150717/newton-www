@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "NEP" %}
+{% endblock %}
+
+{% block content %}
+<section id="nep" class="section-list section nep">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Newton Evolution Proposal" %}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="nep-list">
+            <div class="col-md-5 nep-block">
+                <h3>NEP - 1</h3>
+                <div class="nep-intro"><span>{% trans "For the sake of Newton token (NEW)'s scarcity and reasonable liquidity, getting opinions and suggestions from all parties involved, we propose to modify the releasing rules of Newton Foundation's  tokens." %}</span></div>
+                <div class="nep-left">
+                    <p>{% trans "Draft:" %}</p>
+                    <!--<p>{% trans "Published:" %}</p>-->
+                </div>
+                <div class="nep-right">
+                    <div>
+                        <a class="nep-official" style="padding-left: unset;margin-right: 20px;" href="{% version "NEP/NEP-1.pdf" %}" download="NEP-1.pdf">中文</a>
+                        {% comment %}
+                        <span class="nep-official" style="color: #ccc;padding-left: unset;margin-bottom: 10px;">English</span>
+                        {% endcomment %}
+                    </div>
+                    <!--<div>-->
+                        <!--<a class="nep-draft" style="padding-left: unset;margin-right: 20px;" href="{% version "NEP/NEP-1.pdf" %}" download="NEP-1.pdf">中文</a>-->
+                        <!--<span class="nep-draft" style="color: #ccc;padding-left: unset;margin-bottom: 10px;">English</span>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5 nep-block">
+                <h3>NEP - 0</h3>
+                <div class="nep-intro"><span>{% trans "For the sake of the open, transparent governance, we have proposed compiling all suggestions related to the Newton Project using the Newton Evolution Proposal (NEP) template for unified numbering and management. The proposals are then put to the community for broader discussion, getting opinions and suggestions from all parties involved before forming final conclusions." %}</span></div>
+                <div class="nep-left">
+                    <p>{% trans "Published:" %}</p>
+                    <p>{% trans "Draft:" %}</p>
+                </div>
+                <div class="nep-right">
+                    <div>
+                        <a class="nep-draft" style="padding-left: unset;margin-right: 20px;" href="{% version "NEP/NEP-0.pdf" %}" download="NEP-0.pdf">中文</a>
+                        {% comment %}
+                        <span class="nep-draft" style="color: #ccc;padding-left: unset;margin-bottom: 10px;">English</span>
+                        {% endcomment %}
+                    </div>
+                    <div>
+                        <a class="nep-official" style="padding-left: unset;margin-right: 20px;" href="{% version "NEP/NEP-0.pdf" %}" download="NEP-0.pdf">中文</a>
+                        {% comment %}
+                        <span class="nep-official" style="color: #ccc;padding-left: unset;margin-bottom: 10px;">English</span>
+                        {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
+{% endblock %}
+
+{% block main-style %}
+style=""
+{% endblock %}

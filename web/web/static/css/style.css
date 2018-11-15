@@ -197,20 +197,20 @@ h6, .f12 {font-size: 12px;}
 .nav-logo .logo-pc {display: inline-block;}
 .nav-logo .logo-mobile {display: none;}
 .sticky-navigation.NavBg {right: 0; left: 0; z-index: 1030 ; top: 0; background: #f7f7f7; border-bottom: 1px solid #ddd;}
-.navbar-header a{margin-top: 13px;}
+.navbar-header a{}
 .navbar-nav li {padding: 15px 0 15px 0;}
-.sticky-navigation.NavBg .navbar-header a{margin-top: 9px;}
+.sticky-navigation.NavBg .navbar-header a{}
 .sticky-navigation.NavBg .navbar-nav li {padding: 6px 0 6px;}
 .sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li{margin: 5px;}
 .sticky-navigation.NavBg .navbar-nav li a {color: #333;}
 .sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li a {color: #000; margin: 5px; text-align: left;}
 .sticky-navigation.NavBg .iconfont{color: #333;}
 .divider{background: #e5e5e5; height: 1px; padding: 0 !important;}
-.nav-logo {padding: 0px 10px; height: 30px; overflow: hidden;}
+.nav-logo {padding: 0px 10px; overflow: hidden;}
 .nav-logo:focus {outline: none;}
 .navbar {margin-bottom: 0px;}
 .navbar-nav {float: left; margin: 0px !important; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out;}
-.navbar-nav li {margin-left: 30px;}
+.navbar-nav li {margin-left: 25px;}
 .navbar-nav li a {color: #000; padding: 8px 0 0; line-height: 20px; font-size: 15px; position: relative; background-color: transparent !important; -webkit-transition: all .8s ease; -moz-transition: all .8s ease; -o-transition: all .8s ease; transition: all .8s ease;}
 .navbar-nav li.active a, .navbar-nav li a:hover {color: #000;}
 .navbar-collapse{max-height: 1000px !important; height: 1000px !important;}
@@ -280,7 +280,7 @@ canvas {display: block; vertical-align: top;}
 #intro h1 {margin: 130px 0 27px; color: #333; position: relative;font-weight: 400; font-size: 42px; line-height: 1.2;}
 #intro p.sty1 {margin: 0 0 70px; color: #333; font-size: 32px; font-weight:300;}
 #intro p.sty2, span.sty2 {color:#a4a4a4; margin: 0 0 10px; font-size: 30px; font-weight:100;}
-#intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333; margin-bottom: 15px;}
+#intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333; margin-bottom: 10px; margin-top: 25px;}
 #intro .countdown-subtitle h3{color: #333; font-weight: 300; margin-bottom: 55px;}
 #intro .start_button .announcement {}
 #intro .start_button .announcement a{font-weight:700; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
@@ -2148,11 +2148,13 @@ input[name="expect_btc"], input[name="expect_ela"]{
 #intro .news-column{
     background-color: rgba(61, 78, 97, 0.6);
     margin-top: 55px;
+    padding-top: 12px;
+    padding-bottom: 9px;
 }
 #intro .news-column .news-one{
-    padding-top: 10px;
-    padding-bottom: 8px;
+    padding-top: 8px;
     color:#dddd;
+    padding-left: 330px;
 }
 #intro .news-column .news-one span{
     font-size: 16px;
@@ -2170,10 +2172,11 @@ input[name="expect_btc"], input[name="expect_ela"]{
 #intro .news-column .news-one .support a img{
     margin-right:10px;
     width:22px;
+    padding-bottom: 2px;
 }
 #intro .news-column .news-one .support span{
-    font-size: 16px;
-    margin-right: 20px;
+    font-size: 15px;
+    margin-right: 15px;
 }
 #intro .news-column .news-one .download-newpay{
     border: 1px solid #dddd;
@@ -2190,7 +2193,8 @@ input[name="expect_btc"], input[name="expect_ela"]{
     color: #fff;
 }
 #intro .news-column .news-two{
-    padding-bottom: 8px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
 #intro .news-column .news-two span{
     color:#dddd;
@@ -2199,11 +2203,28 @@ input[name="expect_btc"], input[name="expect_ela"]{
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
 }
-#intro .news-column .news-two span:hover{
+#intro .news-column .news-two:hover span{
     color: #fff;
 }
+#intro .news-column .news-two a{
+    color: #ddd;
+}
 #intro .news-column .news-two .news-title{
-    margin-right:20px;
+}
+#intro .news-column .news-banner{
+    padding-left: 330px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#intro .news-column .news-banner .news-more{
+    color: #ddd;
+    font-size: 13px;
+    margin-left: 15px;
+}
+#intro .news-column .news-banner .news-more:hover{
+    color: #fff;
+    -webkit-transform: translateY(-1px);
+    transform: translateY(-1px);
 }
 @media (max-width: 768px) {
     #intro .news-column{
@@ -2218,12 +2239,97 @@ input[name="expect_btc"], input[name="expect_ela"]{
         margin-right: unset;
     }
     #intro .news-column .news-one .support a img{
-        margin-right: unset;
     }
     #intro .news-column .news-two{
         font-size: 12px;
     }
     #intro .news-column .news-two .news-title{
         margin-right:unset;
+    }
+    #intro .news-column .news-banner{
+        padding-left: unset;
+        position: relative;
+    }
+    #intro .news-column .news-banner .news-mobile-hide{
+        display: none;
+    }
+    #intro .news-column .news-banner .news-more{
+        right: 7px;
+        font-size: 12px;
+        position: absolute;
+        bottom: 10px;
+    }
+    #intro .news-column .news-one{
+        padding-left: unset;
+    }
+    #intro .news-column .news-one .download-newpay{
+        font-size: 12px;
+    }
+}
+
+/*NEP page*/
+.nep .page-title .container{background: url(../images/titlebg/terms-bg.svg) no-repeat left bottom}
+
+#nep .sub_title{font-size: 40px; color: #666;}
+
+#nep .nep-block{
+    padding: 20px 20px 40px 20px;
+    box-shadow: 0 0 10px 2px #e2e2e2;
+    margin: 50px 0;
+    height: 372px;
+}
+
+#nep .nep-block h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 500;
+    font-size: 30px
+}
+#nep .nep-block .nep-intro{
+    color: #8f9da6;
+    font-size: 16px;
+    height: 170px;
+}
+#nep .nep-block .nep-official{
+    color: #333;
+    font-size: 15px;
+    padding-left: unset;
+}
+#nep .nep-block .nep-draft{
+    color: #333;
+    font-size: 15px;
+    padding-left: unset;
+}
+#nep .page-title p{
+    font-size: 43px;
+}
+#nep .nep-block .nep-official:hover{
+    color: #aaa;
+}
+#nep .nep-block .nep-draft:hover{
+    color: #aaa;
+}
+#nep .nep-block .nep-left{
+    display: inline-block;
+    margin-right: 22px;
+}
+#nep .nep-block .nep-right{
+    display: inline-block;
+}
+#nep .nep-block .nep-right div{
+    padding-bottom: 8px;
+}
+@media (max-width: 768px) {
+    #nep .page-title p{
+        font-size: 23px;
+    }
+    #nep .nep-block{
+        margin: 30px 0;
+        height: unset;
+    }
+    #nep .nep-block .nep-intro{
+        margin-bottom: 60px;
+        height: unset;
     }
 }
