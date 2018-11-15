@@ -25,17 +25,22 @@ function initEvents() {
         var year = currentMonthYear[1];
         var monthIndex = monthArray.indexOf(month);
         var monthIndexChange;
-        if (monthIndex==11) {
+        if (monthIndex==5 && year=="2018") {
             return;
         };
         if (!(monthIndex==1)) {
             monthIndexChange = monthIndex - 1;
-            monthChange = monthArray[monthIndexChange];
         } else {
             monthIndexChange = 12;
             monthChange = "December";
             year = (parseInt(year) - 1).toString();
         };
+        if (monthIndex==10 && year=="2018") {
+            monthIndexChange = 8;
+        } else if (monthIndex==8 && year=="2018") {
+            monthIndexChange = 6;
+        }
+        monthChange = monthArray[monthIndexChange];
         $("#id_current_month").text(monthChange + " " + year);
         $("#id_events_list_" + year + "_" + monthIndexChange.toString()).show().siblings("div.events-list").hide();
     });
@@ -54,12 +59,17 @@ function initEvents() {
         };
         if (!(monthIndex==12)) {
             monthIndexChange = monthIndex + 1;
-            monthChange = monthArray[monthIndexChange];
         } else {
             monthIndexChange = 1;
             monthChange = "January";
             year = (parseInt(year) + 1).toString();
         }
+        if (monthIndex==6 && year=="2018") {
+            monthIndexChange = 8;
+        } else if (monthIndex==8 && year=="2018") {
+            monthIndexChange = 10;
+        }
+        monthChange = monthArray[monthIndexChange];
         $("#id_current_month").text(monthChange + " " + year);
         $("#id_events_list_" + year + "_" + monthIndexChange.toString()).show().siblings("div.events-list").hide();
     });
