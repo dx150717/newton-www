@@ -17,10 +17,17 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     line-height: unset;
+    border-style: unset;
+    border: solid 1px #d3d3d3;
 }
 
 .events .select-month .select-month-btn.events-pass-btn {
     min-width: 105px;
+}
+
+.events .select-month .select-month-btn.events-pass-btn.active {
+    background-color: #303030;
+    color: #fff;
 }
 
 .events .select-month .current-month {

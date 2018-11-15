@@ -17,6 +17,9 @@ function initEvents() {
         monthArray[12] = "December";
 
     $("#id_prev_month").click(function() {
+        $("#id_coming_events").removeClass("active");
+        $("#id_passed_events").removeClass("active");
+        $("#id_passed_events_mobile").removeClass("active");
         var currentMonthYear = $("#id_current_month").text().split(" ");
         var month = currentMonthYear[0];
         var year = currentMonthYear[1];
@@ -38,6 +41,9 @@ function initEvents() {
     });
 
     $("#id_next_month").click(function() {
+        $("#id_coming_events").removeClass("active");
+        $("#id_passed_events").removeClass("active");
+        $("#id_passed_events_mobile").removeClass("active");
         var currentMonthYear = $("#id_current_month").text().split(" ");
         var month = currentMonthYear[0];
         var year = currentMonthYear[1];
@@ -60,14 +66,21 @@ function initEvents() {
 
 
     $("#id_passed_events_mobile").click(function() {
+        $(this).addClass("active");
+        $("#id_coming_events").removeClass("active");
         $("#id_events_list_passed").show().siblings("div.events-list").hide();
     });
 
     $("#id_passed_events").click(function() {
+        $(this).addClass("active");
+        $("#id_coming_events").removeClass("active");
         $("#id_events_list_passed").show().siblings("div.events-list").hide();
     });
 
     $("#id_coming_events").click(function() {
+        $(this).addClass("active");
+        $("#id_passed_events").removeClass("active");
+        $("#id_passed_events_mobile").removeClass("active");
         $("#id_events_list_coming").show().siblings("div.events-list").hide();
     });
 };
