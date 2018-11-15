@@ -22,6 +22,9 @@ function initEvents() {
         var year = currentMonthYear[1];
         var monthIndex = monthArray.indexOf(month);
         var monthIndexChange;
+        if (monthIndex==11) {
+            return;
+        };
         if (!(monthIndex==1)) {
             monthIndexChange = monthIndex - 1;
             monthChange = monthArray[monthIndexChange];
@@ -29,7 +32,7 @@ function initEvents() {
             monthIndexChange = 12;
             monthChange = "December";
             year = (parseInt(year) - 1).toString();
-        }
+        };
         $("#id_current_month").text(monthChange + " " + year);
         $("#id_events_list_" + year + "_" + monthIndexChange.toString()).show().siblings("div.events-list").hide();
     });
@@ -40,6 +43,9 @@ function initEvents() {
         var year = currentMonthYear[1];
         var monthIndex = monthArray.indexOf(month);
         var monthIndexChange;
+        if (monthIndex==12) {
+            return;
+        };
         if (!(monthIndex==12)) {
             monthIndexChange = monthIndex + 1;
             monthChange = monthArray[monthIndexChange];

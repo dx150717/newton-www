@@ -32,7 +32,19 @@
     display: none;
 }
 
+.events .events-list a {
+    cursor: unset;
+}
+
+.events #id_events_list_passed.events-list a {
+    cursor: pointer;
+}
+
 .events .events-list .event_container {
+    border: unset;
+}
+
+.events .events-list .event_container .panel-body {
     background-size: 100% 100%;
     border: unset;
 }
