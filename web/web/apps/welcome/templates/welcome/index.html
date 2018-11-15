@@ -39,40 +39,41 @@
               <a href="{{ settings.NEWTON_HOME_URL }}" target="_blank">{% trans "Join KYC" %}</a>
             </div>
           </div>
-          <div class="countdown-title">
-            <h2 style="font-size: 24px;">{% trans "NewChain TestNet Launched" %}</h2>
-          </div>
-          <div class="more col-md-12 col-lg-12">
-              <a href="" target="_blank">{% trans "Download NewPay" %}</a>
-            </div>
+          <!--<div class="countdown-title">-->
+            <!--<h2 style="font-size: 24px;">{% trans "NewChain TestNet Launched" %}</h2>-->
+          <!--</div>-->
+          <!--<div class="more col-md-12 col-lg-12">-->
+            <!--<a href="" target="_blank">{% trans "Download NewPay" %}</a>-->
+          <!--</div>-->
         </div>
       </div>
     </div>
     <div class="news-column">
-      <div class="container">
-        <!--<div class="news-one text-center">-->
-          <!--<div class="support">-->
-            <!--<a class="news-title" href="https://developer.newtonproject.org" target="_blank"><span>NewChain TestNet:</span></a>-->
-            <!--<a class="newpay-android" href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/android-2.png" %}" ></a>-->
-            <!--<a href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/ios-3.png" %}"></a>-->
-            <!--<a class="download-newpay" href="https://developer.newtonproject.org" target="_blank">{% trans "Download" %}</a>-->
-          <!--</div>-->
-        <!--</div>-->
+      <div class="container" style="">
+        <div class="news-one">
+          <div class="support">
+            <!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
+            <a class="news-title" href="https://developer.newtonproject.org" target="_blank"><span>NewChain TestNet:</span></a>
+            <a class="newpay-android" href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/android-2.png" %}" ></a>
+            <a href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/ios-3.png" %}"></a>
+            <a class="download-newpay" href="https://developer.newtonproject.org" target="_blank">{% trans "Download" %}</a>
+          </div>
+        </div>
 
         <div class="news-banner">
           {% if operation_entry %}
           <div class="news-two">
-            <img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">
+            <!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
             <a href="{{ operation_entry.urls }}">
               <span class="news-title">{{ operation_entry.title }}</span>
-              <span class="news-mobile-hide">•</span>
-              <span class="news-mobile-hide">{{ operation_entry.creation_date|date:"Y-m-d" }}</span>
+              <span class="">•</span>
+              <span class="">{{ operation_entry.creation_date|date:"Y-m-d" }}</span>
             </a>
           </div>
           {% endif %}
           {% if blog_entry %}
           <div class="news-two news-mobile-hide">
-            <img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">
+            <!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
             <a href="{{ blog_entry.urls }}">
               <span class="news-title">{{ blog_entry.title }}</span>
               <span>•</span>
@@ -82,7 +83,7 @@
           {% endif %}
           {% if banner_press %}
           <div class="news-two news-mobile-hide">
-            <img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">
+            <!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
             <a href="{{ banner_press.press_link }}">
               <span class="news-title">{{ banner_press.press_title }}</span>
               <span>•</span>
@@ -90,7 +91,7 @@
             </a>
           </div>
           {% endif %}
-          <a href="/announcement/" class="news-more"><span>More...</span></a>
+          <!--<a href="/announcement/" class="news-more"><span>{% trans "More..." %}</span></a>-->
         </div>
       </div>
     </div>
