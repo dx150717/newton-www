@@ -6,7 +6,13 @@ body {font-size: 14px; line-height: 1.42857143; color: #333; background-color: #
 code, kbd, pre, samp {font-family: monospace, monospace; font-size: 1em}
 button, input, select, textarea {font-size: inherit; line-height: inherit}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-weight: 500; line-height: 1.1; color: inherit}
-body {font-family: PingFang SC,SimSun,Microsoft YaHei,Lantinghei SC,Helvetica Neue,Helvetica,Arial,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif"; color: #888; overflow-x: hidden; margin: auto;}
+body {font-family: "PingFang SC","SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif; color: #888; overflow-x: hidden; margin: auto;}
+body:lang(zh-CN) {font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;}
+body:lang(ja) {font-family: "SF Pro JP","SF Pro Display","SF Pro Icons","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ","Meiryo","ＭＳ Ｐゴシック","Helvetica Neue","Helvetica","Arial",sans-serif;}
+body:lang(ko) {font-family: "SF Pro KR","SF Pro Display","SF Pro Icons","Apple Gothic","HY Gulim","MalgunGothic","HY Dotum","Lexi Gulim","Helvetica Neue","Helvetica","Arial",sans-serif}
+body:lang(ar) {font-family: "SF Pro AR","SF Pro Gulf","SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;}
+body:lang(th) {font-family: "SF Pro TH","SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif}
+
 .clearlist, .clearlist li {list-style: none; padding: 0; margin: 0; background: none;}
 .btn-lg {border-radius: 0; font-family: 'Roboto', sans-serif;}
 ::-moz-selection {
@@ -86,7 +92,7 @@ h6, .f12 {font-size: 12px;}
         margin-bottom: 30px;
     }
 }
-.title strong {font-size: 24px; display: block; color: #000; line-height: 1;}
+.title strong {font-size: 24px; display: block; color: #000; line-height: 1;font-weight: 500;}
 /*.title span {display: inline-block; width: 20px; height: 2px; overflow: hidden; line-height: 1; position: relative; top: -18px;}*/
 .lp4 {letter-spacing: 4px;}
 .img-responsive {margin: 0 auto; width: auto;}
@@ -105,7 +111,7 @@ h6, .f12 {font-size: 12px;}
     white-space: nowrap;
     line-height: 260px;
     color: #fff;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 34px;
     margin-bottom: 0;
 }
@@ -283,7 +289,7 @@ canvas {display: block; vertical-align: top;}
 #intro .countdown-title h2{font-weight: 300; font-size: 40px; color: #333; margin-bottom: 10px; margin-top: 25px;}
 #intro .countdown-subtitle h3{color: #333; font-weight: 300; margin-bottom: 55px;}
 #intro .start_button .announcement {}
-#intro .start_button .announcement a{font-weight:700; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
+#intro .start_button .announcement a{font-weight:500; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
 #intro .start_button .announcement a:hover{color:#666;}
 #intro .start_button {margin-top: -5px;}
 @media(max-width: 768px) {
@@ -305,10 +311,10 @@ canvas {display: block; vertical-align: top;}
 .download a .f20 {font-size: 16px;}
 .feature-item {text-align: center;}
 .feature-item-wrap dl {margin-bottom: 0;}
-.feature-item-wrap dl dt {padding-top: 15px; font-size: 20px; color: #000; margin-bottom: 20px; height: 55px;}
+.feature-item-wrap dl dt {padding-top: 15px; font-size: 20px; color: #000; margin-bottom: 20px; height: 55px;font-weight: 500;}
 .feature-item-wrap dl dd {font-size: 16px; line-height: 1.6; text-align: left;}
 .feature-item-wrap ul {padding-top: 10px; padding-bottom: 10px;}
-.feature-item-wrap ul li {text-align: left; color: #000; font-size: 20px; font-weight: 700; list-style: none; height: 43px;}
+.feature-item-wrap ul li {text-align: left; color: #000; font-size: 20px; font-weight: 500; list-style: none; height: 43px;}
 .feature-item-wrap ul p {text-align: left; margin-top: 10px; font-size: 16px; line-height: 1.5} 
 /* Team ---------------------------------------------------------------- */
 .avatar {display: inline-block; border-radius: 500px; overflow: hidden; width: 150px; height: 150px;}
@@ -495,7 +501,7 @@ canvas {display: block; vertical-align: top;}
 .entry-lg .date-lg {font-size: 12px;}
 .entry-lg .date-lg .date-top {display: inline-block; position: relative; left: 15px; margin-left: -50px; bottom: 32px;}
 .entry-lg .date-lg .date-bottom {display: inline-block; position: relative; bottom: -55px; left: 15px; margin-left: -50px;}
-.entry-lg dl dt {font-size: 12px; color: #000; margin-bottom: 5px;}
+.entry-lg dl dt {font-size: 12px; color: #000; margin-bottom: 5px;font-weight: 500;}
 .entry-lg dl dd {font-size: 14px; text-align: left; color: #666;}
 .entry-lg .delay .date-lg dl dd {color: #ccc;}
 .timeline {position: relative; display: none;}
@@ -505,7 +511,7 @@ canvas {display: block; vertical-align: top;}
 .entry .date {float: left; height: 20px; line-height: 20px; width: 0; padding-right: 18px; text-align: right; position: relative; margin: 0;}
 .entry .date:before {content: ''; position: absolute; width: 12px; height: 12px; border: 3px solid #797979; background-color: #fff; border-radius: 100%; top: 6px; right: 0; z-index: 99;}
 .entry .delay .date:before {content: ''; position: absolute; width: 12px; height: 12px; border: 3px solid #6666; background-color: #fff; border-radius: 100%; top: 6px; right: 0; z-index: 99;}
-.entry .body dl dt {font-size: 17px; color: #000; margin-bottom: 5px;}
+.entry .body dl dt {font-size: 17px; color: #000; margin-bottom: 5px;font-weight: 500;}
 .entry .body  dd {font-size: 14px; color: #666;}
 .entry .delay dd {color: #ccc;}
 .entry .date {font-size: 12px;}
@@ -538,7 +544,7 @@ canvas {display: block; vertical-align: top;}
 .footer h4 {
     color: #333;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.8;
 }
 .footer a {
@@ -656,7 +662,7 @@ canvas {display: block; vertical-align: top;}
     .team-item .media-heading {margin-bottom: 20px;}
     .team-item .media-intro {padding: 0 25px;}
     .contact-item-wrap {text-align: center;}
-    .contact-item-wrap dl dt {margin-bottom: 20px;}
+    .contact-item-wrap dl dt {margin-bottom: 20px;font-weight: 500;}
     .contact-item-wrap dl dt .icon-email {width: 42px;}
     .contact-item-wrap dl dt .icon-telegram {width: 47px;}
     .contact-item-wrap dl dt .icon-weixin {width: 49px;}
@@ -691,7 +697,7 @@ canvas {display: block; vertical-align: top;}
     --x-height-multiplier: 0.342;
     --baseline-multiplier: 0.22;
     font-family: "m-font","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
     font-size: 42px;
     margin-left: -2.63px;
@@ -730,12 +736,12 @@ canvas {display: block; vertical-align: top;}
     .title {margin:0; padding:40px 0 0}
     #partner .title{margin: 0; padding: 0}
     #partner {padding-bottom: 0;}
-    .title,.title strong {font-size: 20px;}
+    .title,.title strong {font-size: 20px;font-weight: 500;}
     .title span {font-size: 14px;}
     .feature-item {margin-bottom: 0;}
     .feature-item-img{padding-bottom: 0;}
     .feature-item-wrap ul{-webkit-padding-start: 10px; padding-bottom:0}
-    .feature-item-wrap dl dt {padding-top: 0; font-size: 18px; margin-bottom: 10px; text-align: center;}
+    .feature-item-wrap dl dt {padding-top: 0; font-size: 18px; margin-bottom: 10px; text-align: center;font-weight: 500;}
     .feature-item-wrap dl dd {font-size: 14px; line-height: 1.6; margin-bottom: 30px; padding: 0 10px;}
     .avatar {width: 120px; height: 120px; margin-bottom: 15px;}
     .team-item {margin-bottom: 35px;}
@@ -746,7 +752,7 @@ canvas {display: block; vertical-align: top;}
     .partners-list img {margin: 0 20px 30px;}
     .partners-list .separator {display: inline;}
     .contact-item .contact-item-wrap {padding: 0;}
-    .contact-item-wrap dl dt {display: inline-block; vertical-align: middle; margin-left: 10px; margin-right: 10px;}
+    .contact-item-wrap dl dt {display: inline-block; vertical-align: middle; margin-left: 10px; margin-right: 10px;font-weight: 500;}
     .contact-item-wrap dl dd {display: inline-block; vertical-align: middle; font-size: 16px; color: #000;}
     #footer {border-top: 1px solid #eee; font-size: 12px; padding: 20px 0 18px; background-color: #272727;}
     .subscription-button {margin-top: 10px;}
@@ -756,7 +762,7 @@ canvas {display: block; vertical-align: top;}
     .container{padding-left: 15px;padding-right: 15px;}
     #blog-list dd{padding-left: 10px; padding-right: 10px;}
     #blog-list .item{margin-bottom: 10px;}
-    #blog-list .blog-title dt {line-height: 1.5; padding-left: 8px;}
+    #blog-list .blog-title dt {line-height: 1.5; padding-left: 8px;font-weight: 500;}
     .zinnia .entry-content p{line-height: 1.5;}
     .details_text h1{font-size: 24px;}
     #blog-list .item{padding-left: 2px; padding-right: 2px;}
@@ -832,7 +838,7 @@ canvas {display: block; vertical-align: top;}
 .page-box .pagination .lbf-pagination-jump .lbf-pagination-go {font: 12px/34px PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif; display: inline-block; width: 34px; height: 34px; transition: color .3s, border .3s; text-align: center; vertical-align: middle; border: 1px solid #000;}
 .page-box .pagination .lbf-pagination-jump .lbf-pagination-go:hover {border: 1px solid #000}
 .more{text-align:center}
-.more a{font-weight:700; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
+.more a{font-weight:500; width: 300px; height: 50px; border-radius: 25px; border: solid 2px #000000; font-size:14px; line-height:50px; display:block; margin:20px auto; color:#000}
 .more a:hover{color:#666;}
 /**subscribe*/
 #subscribe .title{padding:20px 0 0; margin-bottom:10px; margin-top: 20px !important;}
@@ -923,7 +929,7 @@ canvas {display: block; vertical-align: top;}
 #technology .fl{float:left; width:50%; text-align:center;}
 #technology .col-sm-6,#protocol .col-sm-6{padding:0}
 #technology .bg-gray,#protocol .bg-gray{background-color:#f8f9fb}
-.technology_list h1,.protocol_list h1{text-align:center; color:#333; font-size:32px; margin:60px 0; font-weight:700}
+.technology_list h1,.protocol_list h1{text-align:center; color:#333; font-size:32px; margin:60px 0; font-weight:500}
 .technology_text{padding-bottom:80px;}
 .technology_text p,.protocol_text p{color:#393939; margin-bottom:20px; font-size:18px;}
 .technology_icon6{margin-top:30px;}
@@ -931,7 +937,7 @@ canvas {display: block; vertical-align: top;}
 
 
 #technology .page-block-title{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 32px;
     margin: 60px 0;
     color: #333;
@@ -969,9 +975,9 @@ canvas {display: block; vertical-align: top;}
 .protocol_text{padding:80px 0}
 .protocol_text p{padding-right:30px;}
 .protocol_list h1{margin-bottom:0}
-.protocol_text h2{color:#333; margin:0 0 10px; padding:0; font-weight:700;}
+.protocol_text h2{color:#333; margin:0 0 10px; padding:0; font-weight:500;}
 .protocol_text1{padding:90px 0 80px; text-align:center;}
-.protocol_text1 h2{color:#333; margin-bottom:15px; font-weight:700; font-size:30px;}
+.protocol_text1 h2{color:#333; margin-bottom:15px; font-weight:500; font-size:30px;}
 .protocol_text1 p{color:#393939; font-size:18px; text-align: left;}
 #protocol .protocol_icon{width:100%;}
 
@@ -1317,7 +1323,7 @@ canvas {display: block; vertical-align: top;}
 .form-button{display:inline-block; width: 304px; height: 48px; border-radius: 4px; font-size:14px; background-color: #292929; text-align:center; color:#fff; line-height:48px;}
 
 .error .alert{width: 300px; height: 60px;}
-.error .alert strong{line-height: 30px;}
+.error .alert strong{line-height: 30px;font-weight: 500;}
 #login .page-title{margin-bottom: 50px}
 #login .ajax-error{margin-left: -15px;}
 #login .hidden{display: none;}
@@ -2043,7 +2049,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
 #industry .industry_text{
     padding: 0;
 }
-#industry .industry_text h2{color:#333; margin:0 0 10px; padding:0; font-weight:700;}
+#industry .industry_text h2{color:#333; margin:0 0 10px; padding:0; font-weight:500;}
 .industry_text p{color:#393939; margin-bottom:20px; font-size:18px; padding-right:30px;}
 @media (max-width: 768px) {
     .industry_text p{padding-right:0px;}
