@@ -6,7 +6,7 @@ body {font-size: 14px; line-height: 1.42857143; color: #333; background-color: #
 code, kbd, pre, samp {font-family: monospace, monospace; font-size: 1em}
 button, input, select, textarea {font-size: inherit; line-height: inherit}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-weight: 500; line-height: 1.1; color: inherit}
-body {font-family: PingFang SC,SimSun,Microsoft YaHei,Lantinghei SC,Helvetica Neue,Helvetica,Arial,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif"; color: #888; overflow-x: hidden; margin: auto;}
+body {font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif; color: #888; overflow-x: hidden; margin: auto;}
 .clearlist, .clearlist li {list-style: none; padding: 0; margin: 0; background: none;}
 .btn-lg {border-radius: 0; font-family: 'Roboto', sans-serif;}
 ::-moz-selection {
@@ -2366,6 +2366,6 @@ input[name="expect_btc"], input[name="expect_ela"]{
 .newpay-gray{background-color: #f7f7f7}
 }
 
-:lang(zh) {
-    font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
-}
+/*:lang(zh-CN) {*/
+    /*font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;*/
+/*}*/
