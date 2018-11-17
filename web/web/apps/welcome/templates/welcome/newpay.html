@@ -15,7 +15,8 @@
     {% endcomment %}
     <div style="background-color: #f4f4f4">
         <div class="container">
-            <div class="newpay_bg"></div>
+            <!--<div class="newpay_bg"></div>-->
+            <img class="newpay-background" src="{% version "images/newpay/newpay_bg.png" %}" alt="">
         </div>
     </div>
     <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
@@ -121,7 +122,7 @@
     </div>
     <div class="container newpay-two">
         <div class="col-md-5 newpay-left">
-            <img src="{% version "images/newpay/3.png" %}" alt="" width="300px;">
+            <img src="{% version "images/newpay/2.png" %}" alt="">
         </div>
         <div class="col-md-7 newpay-right">
             <div class="newpay-text col-md-6">
@@ -130,12 +131,45 @@
                 <p> {% trans "Support for micro-payments;" %}</p>
                 <p> {% trans "Extremely fast transaction confirmation." %}</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 newpay-icon">
                 <img src="{% version "images/newpay/newpay_icon_2.png" %}" alt="">
             </div>
         </div>
     </div>
-
+    <div style="background-color: #f4f4f4;">
+        <div class="container newpay-one">
+            <div class="col-md-8 newpay-left">
+                <div class="col-md-4 newpay-icon">
+                    <img src="{% version "images/newpay/newpay_icon_3.png" %}" alt="">
+                </div>
+                <div class="col-md-8 newpay-text">
+                    <h2>{% trans "Joint Login" %}</h2>
+                        <p>{% trans "Log in multiple Dapps using a unified identity;" %}</p>
+                        <p> {% trans "Dapp management and permission control;" %}</p>
+                        <p> {% trans "Security audit." %}</p>
+                </div>
+            </div>
+            <div class="col-md-4 newpay-right">
+                <img src="{% version "images/newpay/3.png" %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container newpay-four">
+        <div class="col-md-4 newpay-left">
+            <img src="{% version "images/newpay/4.png" %}" alt="">
+        </div>
+        <div class="col-md-8 newpay-right">
+            <div class="newpay-text col-md-7">
+                <h2>{% trans "Payment" %}</h2>
+                <p>{% trans "Support cross-border transactions;" %}</p>
+                <p> {% trans "Support for micro-payments;" %}</p>
+                <p> {% trans "Extremely fast transaction confirmation." %}</p>
+            </div>
+            <div class="col-md-5 newpay-icon">
+                <img src="{% version "images/newpay/newpay_icon_4.png" %}" alt="">
+            </div>
+        </div>
+    </div>
 
 
 </section>
