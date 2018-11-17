@@ -186,3 +186,4 @@ class EntryLanguage(Enum):
     THAILAND = 14
     PORTUGUESE = 15
     VIETNAMESE = 16
+    ROMANIA = 17

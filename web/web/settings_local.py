@@ -53,11 +53,25 @@ DATABASE_APPS_MAPPING = {
     "tokenexchange":"tokenexchange",
 }
 
-
-SUPPORT_LANGUAGES = (('id', 'Bahasa Indonesia'), ('de', 'Deutsch'), ('en', 'English'),  ('es', 'Español'), ('fr', 'Français'), ('it', 'Italiano'), ('nl', 'Nederlands'), ('tr', 'Türkçe'), ('ru', 'Pусский'), ('pt', 'Português'), ('vi', 'Người việt nam'), ('fi', 'suomalainen'), ('ar', 'العربية'), ('th', 'ไทย'), ('ko', '한국어'), ('ja', '日本語'), ('zh-cn', '简体中文'))
-
-
-from config import codes
+SUPPORT_LANGUAGES = (
+    ('id', 'Bahasa Indonesia'),
+    ('de', 'Deutsch'),
+    ('en', 'English'),
+    ('es', 'Español'),
+    ('fr', 'Français'),
+    ('it', 'Italiano'),
+    ('nl', 'Nederlands'),
+    ('ro', 'românesc'),
+    ('tr', 'Türkçe'),
+    ('ru', 'Pусский'),
+    ('pt', 'Português'),
+    ('vi', 'Người việt nam'),
+    ('fi', 'suomalainen'),
+    ('ar', 'العربية'),
+    ('th', 'ไทย'),
+    ('ko', '한국어'),
+    ('ja', '日本語'),
+    ('zh-cn', '简体中文'))
 
 LANGUAGE_LIST = (
     ("zh", codes.EntryLanguage.CHINESE.value),
@@ -77,8 +91,8 @@ LANGUAGE_LIST = (
     ("th", codes.EntryLanguage.THAILAND.value),
     ("pt", codes.EntryLanguage.PORTUGUESE.value),
     ("vi", codes.EntryLanguage.VIETNAMESE.value),
+    ("ro", codes.EntryLanguage.ROMANIA.value),
 )
-
 
 # country settings
 COUNTRIES_FIRST = []

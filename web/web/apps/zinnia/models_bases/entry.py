@@ -11,6 +11,7 @@ from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils import timezone
+from config import codes
 from django.utils import translation
 import django_comments as comments
 from django_comments.models import CommentFlag
@@ -33,7 +34,7 @@ from zinnia.settings import AUTO_CLOSE_TRACKBACKS_AFTER
 from zinnia.managers import entries_published
 from zinnia.managers import EntryPublishedManager
 from zinnia.managers import DRAFT, HIDDEN, PUBLISHED
-from zinnia.managers import CHINESE, ENGLISH, KOREAN, JAPANESE, RUSSIAN, TURKISH, SPANISH, FRENCH, GERMAN, ARABIC, NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND,PORTUGUESE,VIETNAMESE
+from zinnia.managers import CHINESE, ENGLISH, KOREAN, JAPANESE, RUSSIAN, TURKISH, SPANISH, FRENCH, GERMAN, ARABIC, NETHERLAND,FINNISH,INDONESIAN,ITALY,THAILAND,PORTUGUESE,VIETNAMESE,ROMANIA
 from zinnia.managers import TYPE_BLOG, TYPE_ANNOUNCEMENT, TYPE_COMMUNITY_VOICE, SUB_TYPE_ACTIVITY, SUB_TYPE_OPERATION, SUB_TYPE_WEEKLY
 from zinnia.url_shortener import get_url_shortener
 
@@ -67,6 +68,7 @@ class CoreEntry(models.Model):
         (THAILAND, "Thailand"),
         (PORTUGUESE, "Portuguese"),
         (VIETNAMESE, "Vietnamese"),
+        (ROMANIA, "Romania"),
     )
 
     ENTRY_TYPE_CHOICES = (
