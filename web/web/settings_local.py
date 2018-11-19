@@ -61,7 +61,7 @@ SUPPORT_LANGUAGES = (
     ('fr', 'Français'),
     ('it', 'Italiano'),
     ('nl', 'Nederlands'),
-    ('ro', 'Românesc'),
+    ('ro', 'Română'),
     ('tr', 'Türkçe'),
     ('ru', 'Pусский'),
     ('pt', 'Português'),
