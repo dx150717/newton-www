@@ -44,15 +44,39 @@ function slideNotice (maxIndex, defaultIndex, sectionId) {
 
 function slideIndustry (maxIndex, defaultIndex, sectionId) {
     slideChangeSection(maxIndex, defaultIndex, sectionId);
-}
+};
 
 function slideProtocol (maxIndex, defaultIndex, sectionId) {
     slideChangeSection(maxIndex, defaultIndex, sectionId);
-}
+};
 
 function slidePartners (maxIndex, defaultIndex, sectionId) {
     slideChangeSection(maxIndex, defaultIndex, sectionId);
-}
+};
+
+function slideEventsPassed (maxIndex, defaultIndex, sectionId) {
+    slideChangeSection(maxIndex, defaultIndex, sectionId);
+};
+
+function slideEventsJun (maxIndex, defaultIndex, sectionId) {
+    slideChangeSection(maxIndex, defaultIndex, sectionId);
+};
+
+function slideEventsAug (maxIndex, defaultIndex, sectionId) {
+    slideChangeSection(maxIndex, defaultIndex, sectionId);
+};
+
+function slideEventsNov (maxIndex, defaultIndex, sectionId) {
+    slideChangeSection(maxIndex, defaultIndex, sectionId);
+};
+
+function slideEventsDec (maxIndex, defaultIndex, sectionId) {
+    slideChangeSection(maxIndex, defaultIndex, sectionId);
+};
+
+function slideEventsComing (maxIndex, defaultIndex, sectionId) {
+    slideChangeSection(maxIndex, defaultIndex, sectionId);
+};
 
 $(document).ready(function(e) {
 	var windowWidth = $(window).width();
@@ -62,6 +86,12 @@ $(document).ready(function(e) {
         slideNotice(3, 2, "#token-exchange-notice-section");
         slideIndustry(6, 0, "#index-industry");
         slideProtocol(4, 0, "#protocal-section");
-        slidePartners(7, 0, "#partners")
+        slidePartners(7, 0, "#partners");
+        slideEventsPassed(6, 0, "#id_events_list_passed");
+        slideEventsJun(2, 0, "#id_events_list_2018_6");
+        slideEventsAug(2, 0, "#id_events_list_2018_8");
+        slideEventsNov(4, 0, "#id_events_list_2018_11");
+        slideEventsDec(3, 0, "#id_events_list_2018_12");
+        slideEventsComing(5, 0, "#id_events_list_coming");
 	}
 });
