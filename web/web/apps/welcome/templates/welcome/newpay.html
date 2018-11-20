@@ -104,7 +104,7 @@
         <div class="container newpay-one">
             <div class="col-md-8 newpay-left">
                 <div class="col-md-4 newpay-icon">
-                    <img src="{% version "images/newpay/newpay_icon_1.png" %}" alt="">
+                    <img class="lazy" data-original="{% version "images/newpay/newpay_icon_1.png" %}" src="{% version "images/grey.gif" %}" alt="">
                 </div>
                 <div class="col-md-8 newpay-text">
                     <h2>{% trans "Digital Identity and Credit" %}</h2>
@@ -205,6 +205,10 @@
 </style>
 {% endblock %}
 
+{% block js %}
+<script src="{% version "js/jquery.lazyload.min.js" %}"></script>
+{% endblock %}
+
 {% block inline_js %}
 <script type="text/javascript">
     $(function () {
@@ -228,5 +232,6 @@
         }
         ;
     });
+    $('img.lazy').lazyload();
 </script>
 {% endblock %}
