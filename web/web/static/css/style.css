@@ -2324,7 +2324,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
     font-size: 16px;
 }
 #newpay .newpay-one .newpay-left{
-    margin-top: 105px;
+    margin-top: 110px;
 }
 #newpay .newpay-one .newpay-right img{
     width: 300px;
@@ -2349,6 +2349,16 @@ input[name="expect_btc"], input[name="expect_ela"]{
 #newpay .newpay-two .newpay-left img{
     width: 475px;
 }
+#newpay .newpay-three .newpay-left{
+    margin-top: 160px;
+}
+#newpay .newpay-three .newpay-right img{
+    width: 300px;
+    margin-top: 30px;
+}
+#newpay .newpay-three .newpay-left .newpay-icon{
+    margin-top: 25px;
+}
 #newpay .newpay-four .newpay-text{
     text-align: right;
 }
@@ -2358,10 +2368,11 @@ input[name="expect_btc"], input[name="expect_ela"]{
     margin-left: 60px;
 }
 #newpay .newpay-four .newpay-right{
-    margin-top: 200px;
+    margin-top: 105px;
 }
 #newpay .newpay-four .newpay-icon img{
     margin-left: 50px;
+    margin-top: 20px;
 }
 @media(max-width:1199px) and (min-width: 992px){
 .newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.png) no-repeat top center; width:96%; height:700px;}
@@ -2415,7 +2426,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
     }
     #newpay .newpay-one .newpay-right img{
         width: 265px;
-        margin-left: 12px;
+        margin-left: 15px;
     }
     #newpay .newpay-two {
         height: 500px;
@@ -2436,6 +2447,12 @@ input[name="expect_btc"], input[name="expect_ela"]{
     #newpay .newpay-two .newpay-left img{
         width: 315px;
     }
+    #newpay .newpay-three .newpay-text{
+        text-align: center;
+    }
+    #newpay .newpay-three .newpay-left{
+        margin-top: 55px;
+    }
     #newpay .newpay-four .newpay-left img{
         width: 260px;
         margin-top: unset;
@@ -2445,14 +2462,14 @@ input[name="expect_btc"], input[name="expect_ela"]{
     #newpay .newpay-four .newpay-right{
         margin-top: unset;
         float: right;
-        top: -385px;
+        top: -280px;
     }
     #newpay .newpay-four{
-        height: 784px;
+        height: 666px;
     }
     #newpay .newpay-four .newpay-left{
         float: left;
-        top: 353px;
+        top: 350px;
         margin-left: 20px;
     }
     #newpay .newpay-four .newpay-text{
