@@ -109,9 +109,13 @@
 
 {% include "welcome/include-intro-token-exchange.html" %}
 
+{% include "welcome/include-intro-token-exchange-mobile.html" %}
+
 {% include "welcome/include-events.html" %}
 
 {% include "welcome/include-industry.html" %}
+
+{% include "welcome/include-industry-mobile.html" %}
 
 {% include "welcome/include-protocol.html" %}
 
@@ -160,18 +164,42 @@ showNav();
 {% block js %}
 <script src="{% version "js/subscription.js" %}"></script>
 <script src="{% version "js/video.js" %}"></script>
-<script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>
+<!--<script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>-->
 <script src="{% version "js/slide-change-section.js" %}"></script>
 <script src="{% version "js/registerSw.js" %}" type="application/x-javascript"></script>
 <script src="{% version "js/events.js" %}"></script>
 <script src="{% version "js/jquery.lazyload.min.js" %}"></script>
+<script src="{% version "js/swiper.min.js" %}" type="text/javascript"></script>
+<script>
+    $('img.lazy').lazyload();
+    var swiper1 = new Swiper('.swiper-container1', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      initialSlide :2,
+      pagination: {
+        el: '.swiper-pagination1',
+        clickable: true,
+      }
+    });
+    var swiper2 = new Swiper('.swiper-container2', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination2',
+        clickable: true,
+      }
+    });
+</script>
 {% endblock %}
 
 {% block css %}
 <link href="{% version "css/video-js.css" %}" rel="stylesheet">
 <link href="{% version "leaflet/leaflet.css" %}" rel="stylesheet">
 <link href="{% version "css/slide-change-section.css" %}" rel="stylesheet">
-<link rel="stylesheet" href="{% version "css/events.css" %}">
+<link href="{% version "css/events.css" %}" rel="stylesheet">
+<link href="{% version "css/swiper.min.css" %}" rel="stylesheet">
 <style>
     .navbar {
         position: fixed;

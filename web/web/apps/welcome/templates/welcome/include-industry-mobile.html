@@ -1,0 +1,79 @@
+{% load i18n %}
+{% load utils %}
+
+<section id="index-industry" class="bg-gray index-industry index-industry-mobile section">
+	<div class="container slider-section">
+		<div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "Industry Application" %}</strong>
+                </h2>
+            </div>
+        </div>
+        <div class="swiper-container2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide intro">
+                    <a href="/solutions/#industry_anchor_1"><img src="{% version "images/industry/industry-1.svg" %}"></a>
+                    <p>{% trans "Chain-commerce Retail" %}</p>
+                </div>
+                <div class="swiper-slide intro">
+                    <a href="/solutions/#industry_anchor_2"><img src="{% version "images/industry/industry-2.svg" %}"></a>
+                    <p>{% trans "Payment" %}</p>
+                </div>
+                <div class="swiper-slide intro">
+                    <a href="/solutions/#industry_anchor_3"><img src="{% version "images/industry/industry-3.svg" %}"></a>
+                    <p>{% trans "Supply Chain" %}</p>
+                </div>
+                <div class="swiper-slide intro">
+                    <a href="/solutions/#industry_anchor_4"><img src="{% version "images/industry/industry-4.svg" %}"></a>
+                    <p>{% trans "Self-finance" %}</p>
+                </div>
+                <div class="swiper-slide intro">
+                    <a href="/solutions/#industry_anchor_5"><img src="{% version "images/industry/industry-5.svg" %}"></a>
+                    <p>{% trans "Games" %}</p>
+                </div>
+                <div class="swiper-slide intro">
+                    <a href="/solutions/#industry_anchor_6"><img src="{% version "images/industry/industry-6.svg" %}"></a>
+                    <p>{% trans "Agriculture" %}</p>
+                </div>
+            </div>
+            <div class="swiper-pagination2"></div>
+        </div>
+        <div class="feature-item col-lg-12 col-xs-12" style="margin-bottom: 22px;">
+            <div class="feature-item-wrap">
+                <div class="more">
+                    <a href="/solutions/">{% trans "MORE" %}</a>
+                </div>
+            </div>
+        </div>
+	</div>
+</section>
+
+{% block css %}
+<style>
+    .index-industry .swiper-slide{
+        text-align: center;
+    }
+    .index-industry .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+        text-align: center;
+    }
+    .swiper-container2{
+        height: 250px;
+    }
+    .index-industry .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+    }
+    .index-industry .swiper-pagination-bullet-active{
+        background: #868383;
+    }
+    .index-industry-mobile{
+        display: none;
+    }
+    @media (max-width: 768px){
+        .index-industry-mobile{
+            display: block;
+        }
+    }
+</style>
+{% endblock %}

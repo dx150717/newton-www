@@ -1,0 +1,155 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="token-exchange-notice-mobile section bg-gray">
+    <div class="container text-center token-exchange-pannel-container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "Token Exchange" %}</strong>
+                </h2>
+            </div>
+        </div>
+        <div class="swiper-container1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="/economy/">
+                        <div class="intro panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="text-center">
+                                        <div class="huge"><span id="transactions"># 1</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line-between"></div>
+                            <div class="panel-content text-center">
+                                <div class="one-top">
+                                    <span class="value text-danger">500</span>
+                                    <span class="key">{% trans "BTC" %}</span>
+                                </div>
+                                <div class="one-bottom">
+                                    <p class="time-text">{% trans "March 1,2018 - April 30,2018" %}</p>
+                                    <p style="margin-bottom: 48px;"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% trans "Finished" %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="intro swiper-slide">
+                    <a href="/economy/">
+                        <div class="intro panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="text-center">
+                                        <div class="huge"><span id="transactions"># 2</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line-between"></div>
+                            <div class="panel-content text-center">
+                                <div class="two-top">
+                                    <span class="value text-danger">3000</span>
+                                    <span class="key">{% trans "BTC" %}</span>
+                                    <p>{% trans "10,561 members from 89 countries have participated" %}</p>
+                                </div>
+                                <p class="time-text">{% trans "July 1,2018 - July 31,2018" %}</p>
+                                <p style="margin-bottom: 47px;"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>{% trans "Finished" %}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="intro swiper-slide">
+                    <a href="/economy/#economy-token-exchange">
+                        <div class="intro panel panel-default">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="text-center">
+                                        <div class="huge"><span id="transactions">{% trans "# 3" %}</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="line-between"></div>
+                            <div class="panel-content text-center">
+                                <div class="three-top">
+                                    <span class="value text-danger">1500</span>
+                                    <span class="key">{% trans "BTC" %}</span>
+                                </div>
+                                <div>
+                                    <p class="time-text">{% trans "October 29，2018 - 2018 Q4" %}</p>
+                                    <p class="three-progress">{% trans "In Progress" %}</p>
+                                    <p style="color: #337ab7;">
+                                        <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                                        {% trans "Details" %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination1"></div>
+        </div>
+        <div class="col-md-12 col-xs-12 text-center add"><p>{% trans "Haven't participated in KYC yet?" %}</p></div>
+        <div class="col-md-12 col-xs-12 more">
+            <a href="{{ settings.NEWTON_HOME_URL }}">{% trans "Join KYC" %}</a>
+        </div>
+    </div>
+</div>
+
+{% block css %}
+<style>
+    .token-exchange-pannel-container {padding-bottom: 20px;}
+    .page-title{background-color: #5c8dbd;}
+    .panel-heading span{position: unset; right: unset; top: unset; border: unset; width: unset; height: unset; display: unset; font-size: 20px;}
+    .panel-heading{padding: 10px 15px;}
+    .token-exchange-notice-mobile .panel-default>.panel-heading{border:unset;}
+    .token-exchange-notice-mobile .panel-default{border-color: #ddd;border: unset;background-color: #f7f7f7;}
+    .panel-content {padding: 10px;}
+    .panel-content .key {color: #303030; font-size: 16px;}
+    .panel-content .value {font-size: 22px;}
+    .glyphicon-ok {color: green; margin-right: 10px;}
+    a.detail-link {color: #337ab7;}
+    .glyphicon-arrow-right {color: #337ab7; margin-right: 10px;}
+    .time-text {color: #333; font-size: 14px;}
+    .add {font-size: 18px; color: #333;}
+    .add p{font-size: 15px; margin-bottom: -12px;}
+    .one-top{margin-top: 10px; margin-bottom: 20px;}
+    .two-top{margin-top: 10px; margin-bottom: -7px;}
+    .three-top{margin-top: 10px; margin-bottom: 20px;}
+    .two-top p{font-size: 13px;margin-top: 0px;margin-bottom: 10px;}
+    .three-progress{margin-bottom:10px;font-size:20px;color:#a94442;}
+    .line-between{
+        width:200px;
+        height:2px;
+        margin:0 auto;
+        padding:0;
+        background-color:#eae8e8;
+        overflow:hidden;
+    }
+    .token-exchange-notice-mobile{
+        display: none;
+    }
+    .token-exchange-notice-mobile .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 0 10px;
+    }
+    .token-exchange-notice-mobile .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+    }
+    .token-exchange-notice-mobile .swiper-pagination-bullet-active{
+        background: #868383;
+    }
+    .token-exchange-notice-mobile .swiper-pagination1{
+        position: unset;
+    }
+    @media(max-width: 768px){
+        .title{margin-bottom: 30px;}
+        .add{margin-top: 32px;}
+        .token-exchange-notice-mobile{display:block}
+    }
+</style>
+{% endblock %}
+
