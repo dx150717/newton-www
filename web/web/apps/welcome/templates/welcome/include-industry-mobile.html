@@ -13,27 +13,27 @@
         <div class="swiper-container2">
             <div class="swiper-wrapper">
                 <div class="swiper-slide intro">
-                    <a href="/solutions/#industry_anchor_1"><img src="{% version "images/industry/industry-1.svg" %}"></a>
+                    <a href="/solutions/#industry_anchor_1"><img class="lazy" src="{% version "images/industry/industry-1.svg" %}"></a>
                     <p>{% trans "Chain-commerce Retail" %}</p>
                 </div>
                 <div class="swiper-slide intro">
-                    <a href="/solutions/#industry_anchor_2"><img src="{% version "images/industry/industry-2.svg" %}"></a>
+                    <a href="/solutions/#industry_anchor_2"><img class="lazy" src="{% version "images/industry/industry-2.svg" %}"></a>
                     <p>{% trans "Payment" %}</p>
                 </div>
                 <div class="swiper-slide intro">
-                    <a href="/solutions/#industry_anchor_3"><img src="{% version "images/industry/industry-3.svg" %}"></a>
+                    <a href="/solutions/#industry_anchor_3"><img class="lazy" src="{% version "images/industry/industry-3.svg" %}"></a>
                     <p>{% trans "Supply Chain" %}</p>
                 </div>
                 <div class="swiper-slide intro">
-                    <a href="/solutions/#industry_anchor_4"><img src="{% version "images/industry/industry-4.svg" %}"></a>
+                    <a href="/solutions/#industry_anchor_4"><img class="lazy" src="{% version "images/industry/industry-4.svg" %}"></a>
                     <p>{% trans "Self-finance" %}</p>
                 </div>
                 <div class="swiper-slide intro">
-                    <a href="/solutions/#industry_anchor_5"><img src="{% version "images/industry/industry-5.svg" %}"></a>
+                    <a href="/solutions/#industry_anchor_5"><img class="lazy" src="{% version "images/industry/industry-5.svg" %}"></a>
                     <p>{% trans "Games" %}</p>
                 </div>
                 <div class="swiper-slide intro">
-                    <a href="/solutions/#industry_anchor_6"><img src="{% version "images/industry/industry-6.svg" %}"></a>
+                    <a href="/solutions/#industry_anchor_6"><img class="lazy" src="{% version "images/industry/industry-6.svg" %}"></a>
                     <p>{% trans "Agriculture" %}</p>
                 </div>
             </div>
@@ -56,12 +56,16 @@
     }
     .swiper-container2{
         height: 250px;
+        overflow: hidden;
     }
     .index-industry-mobile{
         display: none;
     }
     .swiper-pagination2{
         position: relative;
+    }
+    #main #index-industry .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+        bottom: 16px;
     }
     @media (max-width: 768px){
         .index-industry-mobile{

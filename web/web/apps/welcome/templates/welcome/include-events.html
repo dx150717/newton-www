@@ -14,14 +14,13 @@
                             <span class="current-month" id="id_current_month">{{ current_month }}</span>
                             <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month"></button>
                         </div>
-                        <button class="select-month-btn hidden-md hidden-sm hidden-lg events-pass-btn" id="id_passed_events_mobile">{% trans "PAST" %}</button>
                         <button class="select-month-btn events-pass-btn" id="id_coming_events">{% trans "UPCOMING" %}</button>
                     </div>
                 </h2>
             </div>
         </div>
 
-        <div class="events-list" id="id_events_list_passed">
+        <div class="events-list events-list-pc" id="id_events_list_passed">
             <div class="slider-section">
                 <div class="slider-item-list">
                     <div class="col-md-4 col-xs-12 slider-item default-slider-item">
@@ -151,7 +150,7 @@
             </ul>
         </div>
 
-        <div class="events-list" id="id_events_list_2018_5">
+        <div class="events-list events-list-pc" id="id_events_list_2018_5">
             <div class="col-md-4 col-xs-12">
                 <a href="{% trans "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-defining-business-order-new-economy-era-sincerely-invites-you-join-us/" %}">
                     <div class="panel panel-default event_container">
@@ -173,7 +172,7 @@
             </div>
         </div>
 
-        <div class="events-list" id="id_events_list_2018_6">
+        <div class="events-list events-list-pc" id="id_events_list_2018_6">
             <div class="slider-section">
                 <div class="slider-item-list">
                     <div class="col-md-4 col-xs-12 slider-item default-slider-item">
@@ -222,7 +221,7 @@
             </ul>
         </div>
 
-        <div class="events-list" id="id_events_list_2018_8">
+        <div class="events-list events-list-pc" id="id_events_list_2018_8">
             <div class="slider-section">
                 <div class="slider-item-list">
                     <div class="col-md-4 col-xs-12 slider-item default-slider-item">
@@ -271,7 +270,7 @@
             </ul>
         </div>
 
-        <div class="events-list" id="id_events_list_2018_10">
+        <div class="events-list events-list-pc" id="id_events_list_2018_10">
             <div class="col-md-4 col-xs-12">
                 <a href="{% trans "https://www.newtonproject.org/announcement/2018/10/17/newtons-global-100-cities-tour-tokyo-station-salon/" %}">
                     <div class="panel panel-default event_container">
@@ -292,7 +291,7 @@
                 </a>
             </div>
         </div>
-        <div class="events-list" id="id_events_list_2018_11" style="display: block;">
+        <div class="events-list events-list-pc" id="id_events_list_2018_11" style="display: block;">
             <div class="slider-section">
                 <div class="slider-item-list">
                     <div class="col-md-4 col-xs-12 slider-item default-slider-item">
@@ -382,7 +381,7 @@
             </ul>
         </div>
 
-        <div class="events-list" id="id_events_list_2018_12">
+        <div class="events-list events-list-pc" id="id_events_list_2018_12">
             <div class="slider-section">
                 <div class="slider-item-list">
                     <div class="col-md-4 col-xs-12 slider-item default-slider-item">
@@ -451,7 +450,7 @@
             </ul>
         </div>
 
-        <div class="events-list" id="id_events_list_coming">
+        <div class="events-list events-list-pc" id="id_events_list_coming">
             <div class="slider-section">
                 <div class="slider-item-list">
                     <div class="col-md-4 col-xs-12 slider-item default-slider-item">
@@ -566,13 +565,3 @@
         </div>
     </div>
 </div>
-
-{% block css %}
-<style>
-    @media(max-width: 768px) {
-        .events-pc {
-            display: none;
-        }
-    }
-</style>
-{% endblock %}
