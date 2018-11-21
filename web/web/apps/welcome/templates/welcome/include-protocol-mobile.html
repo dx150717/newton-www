@@ -1,0 +1,86 @@
+{% load i18n %}
+{% load utils %}
+
+<section class="section protocol-section protocol-section-mobile" id="protocal-section">
+    <div class="container slider-section">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "Technology" %}</strong><span></span>
+                </h2>
+            </div>
+        </div><!-- end -->
+        <div class="row">
+            <div class="feature-item col-md-4 col-xs-12 fr">
+                <div class="feature-item-wrap">
+                    <img class="feature-icon lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/features/icon-6.svg" %}"/>
+                </div>
+            </div>
+            <div class="swiper-container10">
+                <div class="swiper-wrapper">
+                    <div class="feature-item col-md-4 col-xs-12 swiper-slide">
+                        <div class="feature-item-wrap">
+                            <ul>
+                                <li {% arabic_change_style %}>{% trans "High performance" %}</li>
+                                <p {% arabic_change_style %}>
+                                    {% trans "NewChain main chain can process more than 5,000 transactions continuously each second, can support the operational requirements of e-commerce, Internet of things and other high-frequency trading scenarios." %}
+                                </p>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="feature-item col-md-4 col-xs-12 swiper-slide">
+                        <div class="feature-item-wrap">
+                            <ul>
+                                <li {% arabic_change_style %}>{% trans "Extensible" %}</li>
+                                <p {% arabic_change_style %}>
+                                    {% trans "NewChain can support BTC, ETH and other mainstream blockchain networks with no limit." %}
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item col-md-4 col-xs-12 swiper-slide">
+                        <div class="feature-item-wrap">
+                            <ul>
+                                <li {% arabic_change_style %}>{% trans "Technology of whole process stack" %}</li>
+                                <p {% arabic_change_style %}>
+                                    {% trans "The technology of whole process stack realizes the whole process technology solution from the atomic world to the real world, from hardware design to application layer software development through basic technology and super exchange protocol." %}
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-item col-md-4 col-xs-12 swiper-slide">
+                        <div class="feature-item-wrap">
+                            <ul>
+                                <li {% arabic_change_style %}>{% trans "Friend to developers" %}</li>
+                                <p {% arabic_change_style %}>
+                                    {% trans "With NewStudio as the core development tool chain,the  developers can develop DApp without programming foundation." %}
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination10"></div>
+            </div>
+            <div class="feature-item col-lg-12 col-xs-12" style="margin-bottom: 22px;">
+                <div class="feature-item-wrap">
+                    <div class="more">
+                        <a href="/technology/">{% trans "MORE" %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</section><!-- end -->
+{% block css %}
+<style>
+    @media(min-width: 769px){
+        .protocol-section-mobile{
+            display: none;
+        }
+    }
+</style>
+{% endblock %}

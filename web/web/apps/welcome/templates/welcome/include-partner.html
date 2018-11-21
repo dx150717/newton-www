@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load utils %}
 
-<section id="partners">
+<section id="partners" class="partners-list-pc">
     <div id="organization" class="partners-list bg-gray section">
         <div class="container slider-section">
             <p class="title">
@@ -9,43 +9,42 @@
             </p>
             <div class="row slider-item-list">
                 <div class="col-md-3 col-sm-6 col-xs-12 slider-item default-slider-item">
-                    <img src="{% version "images/partners/haolemai.png" %}"/>
+                    <img class="lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/partners/haolemai.png" %}"/>
                 </div>
                 <div class="clearfix visible-sm-block"></div>
                 <div class="col-md-3 col-sm-6 col-xs-12 slider-item">
-                    <img src="{% version "images/partners/lanke.png" %}"/>
+                    <img class="lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/partners/lanke.png" %}"/>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 slider-item">
-                    <img src="{% version "images/partners/higo.png" %}"/>
+                    <img class="lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/partners/higo.png" %}"/>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 slider-item">
-                    <img src="{% version "images/partners/quwan.png" %}"/>
+                    <img class="lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/partners/quwan.png" %}"/>
                 </div>
                 <div class="clearfix visible-lg-block visible-md-block visible-sm-block"></div>
                 
                 <div class="col-md-3 col-sm-6 col-xs-12 slider-item">
-                    <img src="{% version "images/partners/zjorient.png" %}"/>
+                    <img class="lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/partners/zjorient.png" %}"/>
                 </div>
                 <div class="clearfix visible-sm-block"></div>
                 <div class="col-md-3 col-sm-6 col-xs-12 slider-item">
-                    <img src="{% version "images/partners/maibaobao.png" %}"/>
+                    <img class="lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/partners/maibaobao.png" %}"/>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 slider-item">
-                    <img src="{% version "images/partners/xijie.png" %}"/>
+                    <img class="lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/partners/xijie.png" %}"/>
                 </div>
-
-                <ul class="slider-button-list">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
             </div>
         </div>
         <div class="more"><a href="/join-partner/"><span>{% trans "Apply to join us" %}</span></a></div>
     </div>
 </section><!-- end -->
 
+{% block css %}
+<style>
+    @media(max-width: 768px){
+        .partners-list-pc{
+            display: none;
+        }
+    }
+</style>
+{% endblock %}

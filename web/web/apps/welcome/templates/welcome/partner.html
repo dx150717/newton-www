@@ -17,6 +17,8 @@
 
 {% include "welcome/include-partner.html" %}
 
+{% include "welcome/include-partner-mobile.html" %}
+
 {% endblock %}
 
 {% block inline_js %}
@@ -24,16 +26,24 @@
     $("#construction").addClass("bg-gray");
     $("#organization").removeClass("bg-gray");
     showNav();
+    var swiper11 = new Swiper('.swiper-container11', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination11',
+        clickable: true,
+      }
+    });
 </script>
 {% endblock %}
 
 {% block js %}
-<script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>
-<script src="{% version "js/slide-change-section.js" %}"></script>
+<script src="{% version "js/swiper.min.js" %}" type="text/javascript"></script>
 {% endblock %}
 
 {% block css %}
-<link href="{% version "css/slide-change-section.css" %}" rel="stylesheet">
+<link href="{% version "css/swiper.min.css" %}" rel="stylesheet">
 <style>
     .navbar {
         position: fixed;

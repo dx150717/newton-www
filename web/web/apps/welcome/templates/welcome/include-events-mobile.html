@@ -1,29 +1,29 @@
 {% load i18n %}
 {% load utils %}
 
-<div class="events events-pc section" id="events-section">
+<div class="events events-mobile section" id="events-section">
     <div class="container text-center events-panel-container">
         <div class="row">
             <div class="col-md-12">
                 <h2 class="title text-center">
                     <strong>{% trans "Newton Calendar" %}</strong>
                     <div class="select-month">
-                        <button class="select-month-btn hidden-xs events-pass-btn" id="id_passed_events">{% trans "PAST" %}</button>
                         <div class="button-container">
-                            <button class="glyphicon glyphicon-chevron-left select-month-btn" id="id_prev_month"></button>
-                            <span class="current-month" id="id_current_month">{{ current_month }}</span>
-                            <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month"></button>
+                            <button class="glyphicon glyphicon-chevron-left select-month-btn" id="id_prev_month_mobile"></button>
+                            <span class="current-month" id="id_current_month_mobile">{{ current_month }}</span>
+                            <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month_mobile"></button>
                         </div>
-                        <button class="select-month-btn events-pass-btn" id="id_coming_events">{% trans "UPCOMING" %}</button>
+                        <button class="select-month-btn hidden-md hidden-sm hidden-lg events-pass-btn" id="id_passed_events_mobile">{% trans "PAST" %}</button>
+                        <button class="select-month-btn events-pass-btn" id="id_coming_events_mobile">{% trans "UPCOMING" %}</button>
                     </div>
                 </h2>
             </div>
         </div>
-
-        <div class="events-list events-list-pc" id="id_events_list_passed">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
+    <div class="event-mobile-section">
+        <div class="events-list" id="id_events_list_2018_11_mobile">
+            <div class="swiper-container5">
+                <div class="swiper-wrapper">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/open.jpg" %}')">
@@ -42,7 +42,91 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
+                        <a>
+                            <div class="panel panel-default event_container">
+                                <div class="panel-body" style="background-image: url('{% version "images/events/double.jpg" %}')">
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <p class="date-container-month">Nov</p>
+                                        <p class="date-container-date">20</p>
+                                    </div>
+                                    <div class="col-md-10 col-sm-10 col-xs-10">
+                                        <p class="event-title">{% trans "What Does the Double 11 Shopping Day Have to Do with Me?" %}</p>
+                                        <p class="event-time">2018-11-20 14:00-16:00</p>
+                                        <p class="event-location">{% trans "Newton advisor and Bitcoin Ambassador Lee Willson will attend 'What Does the Double 11 Shopping Day Have to Do with Me?' meet up in Kuala Lumpur." %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-12 swiper-slide">
+                        <a>
+                            <div class="panel panel-default event_container">
+                                <div class="panel-body" style="background-image: url('{% version "images/events/party.png" %}')">
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <p class="date-container-month">Nov</p>
+                                        <p class="date-container-date">23</p>
+                                    </div>
+                                    <div class="col-md-10 col-sm-10 col-xs-10">
+                                        <p class="event-title">NewClub Top 50 Party</p>
+                                        <p class="event-time">2018-11-23</p>
+                                        <p class="event-location">{% trans "The NewClub Top 50 party in Beijing with 50 community members." %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-12 swiper-slide">
+                        <a>
+                            <div class="panel panel-default event_container">
+                                <div class="panel-body" style="background-image: url('{% version "images/events/dinner.jpg" %}')">
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <p class="date-container-month">Nov</p>
+                                        <p class="date-container-date">24</p>
+                                    </div>
+                                    <div class="col-md-10 col-sm-10 col-xs-10">
+                                        <p class="event-title">{% trans "Dinner with Xu Jizhe" %}</p>
+                                        <p class="event-time">2018-11-24</p>
+                                        <p class="event-location">{% trans "Newton founder Xu will invite four outstanding “community voices” to dinner." %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination5"></div>
+            </div>
+        </div>
+
+        <div class="events-list" id="id_events_list_passed_mobile">
+            <div class="swiper-container4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide col-md-4 col-xs-12">
+                        <a>
+                            <div class="panel panel-default event_container">
+                                <div class="panel-body" style="background-image: url('{% version "images/events/open.jpg" %}')">
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <p class="date-container-month">Nov</p>
+                                        <p class="date-container-date">16</p>
+                                    </div>
+                                    <div class="col-md-10 col-sm-10 col-xs-10">
+                                        <p class="event-title">{% trans "Newton Community Open House" %}</p>
+                                        <p class="event-time">2018-11-16 13:00-21:00</p>
+                                        <p class="event-location">{% trans "Invite 10 community members to visit NewSpace Sanlitun." %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide col-md-4 col-xs-12">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/10/17/newtons-global-100-cities-tour-tokyo-station-salon/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/Tokyo.jpg" %}')">
@@ -61,7 +145,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="swiper-slide col-md-4 col-xs-12">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/22/newton-global-100-cities-tour-guangzhou-station-meetup-welcome-you-join/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/guangzhou.jpg" %}')">
@@ -80,8 +164,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-12 col-xs-12"></div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="swiper-slide col-md-4 col-xs-12">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/09/newton-global-100-cities-tour-shenzhen-station-meetup/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/shenzhen.jpg" %}')">
@@ -100,7 +183,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="swiper-slide col-md-4 col-xs-12">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/06/19/june-23rd-newton-beijing-meet-sincerely-invites-you-join-us/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/beijing2.jpg" %}')">
@@ -119,7 +202,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="swiper-slide col-md-4 col-xs-12">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/06/14/newton-meet-shijiazhuang-station-welcome-you-join/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/shijiazhuang.jpg" %}')">
@@ -139,18 +222,11 @@
                         </a>
                     </div>
                 </div>
+                <div class="swiper-pagination4"></div>
             </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
         </div>
 
-        <div class="events-list events-list-pc" id="id_events_list_2018_5">
+        <div class="events-list" id="id_events_list_2018_5_mobile">
             <div class="col-md-4 col-xs-12">
                 <a href="{% trans "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-defining-business-order-new-economy-era-sincerely-invites-you-join-us/" %}">
                     <div class="panel panel-default event_container">
@@ -172,10 +248,10 @@
             </div>
         </div>
 
-        <div class="events-list events-list-pc" id="id_events_list_2018_6">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
+        <div class="events-list" id="id_events_list_2018_6_mobile">
+            <div class="swiper-container7">
+                <div class="swiper-wrapper">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/06/19/june-23rd-newton-beijing-meet-sincerely-invites-you-join-us/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/beijing2.jpg" %}')">
@@ -194,7 +270,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/06/14/newton-meet-shijiazhuang-station-welcome-you-join/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/shijiazhuang.jpg" %}')">
@@ -214,17 +290,15 @@
                         </a>
                     </div>
                 </div>
+                <div class="swiper-pagination7"></div>
             </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-            </ul>
+
         </div>
 
-        <div class="events-list events-list-pc" id="id_events_list_2018_8">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
+        <div class="events-list" id="id_events_list_2018_8_mobile">
+            <div class="swiper-container8">
+                <div class="swiper-wrapper">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/22/newton-global-100-cities-tour-guangzhou-station-meetup-welcome-you-join/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/guangzhou.jpg" %}')">
@@ -243,7 +317,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/09/newton-global-100-cities-tour-shenzhen-station-meetup/" %}">
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/shenzhen.jpg" %}')">
@@ -263,14 +337,11 @@
                         </a>
                     </div>
                 </div>
+                <div class="swiper-pagination8"></div>
             </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-            </ul>
         </div>
 
-        <div class="events-list events-list-pc" id="id_events_list_2018_10">
+        <div class="events-list" id="id_events_list_2018_10_mobile">
             <div class="col-md-4 col-xs-12">
                 <a href="{% trans "https://www.newtonproject.org/announcement/2018/10/17/newtons-global-100-cities-tour-tokyo-station-salon/" %}">
                     <div class="panel panel-default event_container">
@@ -291,100 +362,12 @@
                 </a>
             </div>
         </div>
-        <div class="events-list events-list-pc" id="id_events_list_2018_11" style="display: block;">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/open.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">16</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Community Open House" %}</p>
-                                        <p class="event-time">2018-11-16 13:00-21:00</p>
-                                        <p class="event-location">{% trans "Invite 10 community members to visit NewSpace Sanlitun." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/double.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">20</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "What Does the Double 11 Shopping Day Have to Do with Me?" %}</p>
-                                        <p class="event-time">2018-11-20 14:00-16:00</p>
-                                        <p class="event-location">{% trans "Newton advisor and Bitcoin Ambassador Lee Willson will attend 'What Does the Double 11 Shopping Day Have to Do with Me?' meet up in Kuala Lumpur." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/party.png" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">23</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">NewClub Top 50 Party</p>
-                                        <p class="event-time">2018-11-23</p>
-                                        <p class="event-location">{% trans "The NewClub Top 50 party in Beijing with 50 community members." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-12 col-xs-12"></div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/dinner.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">24</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Dinner with Xu Jizhe" %}</p>
-                                        <p class="event-time">2018-11-24</p>
-                                        <p class="event-location">{% trans "Newton founder Xu will invite four outstanding “community voices” to dinner." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
 
-        <div class="events-list events-list-pc" id="id_events_list_2018_12">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
+
+        <div class="events-list" id="id_events_list_2018_12_mobile">
+            <div class="swiper-container9">
+                <div class="swiper-wrapper">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/jiedian.jpg" %}')">
@@ -403,7 +386,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/night.jpg" %}')">
@@ -422,7 +405,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/macao.jpg" %}')">
@@ -442,18 +425,14 @@
                         </a>
                     </div>
                 </div>
+                <div class="swiper-pagination9"></div>
             </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
         </div>
 
-        <div class="events-list events-list-pc" id="id_events_list_coming">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
+        <div class="events-list" id="id_events_list_coming_mobile">
+            <div class="swiper-container6">
+                <div class="swiper-wrapper">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/double.jpg" %}')">
@@ -472,7 +451,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/party.png" %}')">
@@ -491,7 +470,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/dinner.jpg" %}')">
@@ -510,8 +489,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-12 col-xs-12"></div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/jiedian.jpg" %}')">
@@ -530,7 +508,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
+                    <div class="col-md-4 col-xs-12 swiper-slide">
                         <a>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{% version "images/events/night.jpg" %}')">
@@ -550,16 +528,10 @@
                         </a>
                     </div>
                 </div>
+                <div class="swiper-pagination6"></div>
             </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
         </div>
-
+    </div>
         <div class="col-md-12 col-xs-12 more">
             <a href="/announcements/0/">{% trans "All Events" %}</a>
         </div>

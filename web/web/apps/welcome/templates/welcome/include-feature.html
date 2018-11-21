@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load utils %}
 
-<section id="feature" class="section">
+<section id="feature" class="section feature-pc">
     <div class="container slider-section">
 
         <div class="row">
@@ -13,7 +13,6 @@
         </div>
 
         <div class="row slider-item-list">
-
             <div class="feature-item col-md-4 col-xs-12 slider-item default-slider-item">
                 <div class="feature-item-img">
                     <div class="feature-item-img"><span class="feature-img1"></span></div>
@@ -64,3 +63,13 @@
 
     </div>
 </section><!-- end -->
+
+{% block css %}
+<style>
+    @media (max-width: 768px){
+        .feature-pc{
+            display: none;
+        }
+    }
+</style>
+{% endblock %}

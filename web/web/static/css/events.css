@@ -35,9 +35,6 @@
     display: inline-block;
 }
 
-.events .events-list {
-    display: none;
-}
 
 .events .events-list a {
     cursor: unset;
@@ -87,7 +84,12 @@
 .events .events-list .event_container .panel-footer .event-location {
     margin-bottom: 10px;
 }
-
+.events-mobile{
+    display: none;
+}
+.events-list-pc{
+    display: none;
+}
 @media (min-width: 768px) {
     .events .select-month .button-container {
         display: inline-block;
@@ -114,5 +116,27 @@
 
     .events .events-list .event_container .panel-body {
         min-height: 150px;
+    }
+    .events .events-list {
+        display: block;
+        height: 400px;
+    }
+    .events .events-list:lang(zh-cn) {
+        display: block;
+        height: 331px;
+    }
+    .events-pc {
+        display: none;
+    }
+    .events-mobile {
+        display: block;
+    }
+    .event-mobile-section{
+        height: 400px;
+        overflow: hidden;
+    }
+    .event-mobile-section:lang(zh-cn){
+        height: 331px;
+        overflow: hidden;
     }
 }

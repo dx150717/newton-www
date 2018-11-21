@@ -1,7 +1,7 @@
 {% load i18n %}
 {% load utils %}
 
-<section class="section protocol-section" id="protocal-section">
+<section class="section protocol-section protocol-section-pc" id="protocal-section">
     <div class="container slider-section">
 
         <div class="row">
@@ -14,7 +14,7 @@
         <div class="row slider-item-list">
             <div class="feature-item col-md-4 col-xs-12 fr">
                 <div class="feature-item-wrap">
-                    <img class="feature-icon" src="{% version "images/features/icon-6.svg" %}"/>
+                    <img class="feature-icon lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/features/icon-6.svg" %}"/>
                 </div>
             </div>
             <div class="feature-item col-md-4 col-xs-12 slider-item default-slider-item">
@@ -78,3 +78,12 @@
     </div>
     
 </section><!-- end -->
+{% block css %}
+<style>
+    @media(max-width: 768px){
+        .protocol-section-pc{
+            display: none;
+        }
+    }
+</style>
+{% endblock %}
