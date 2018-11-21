@@ -1,0 +1,80 @@
+{% load i18n %}
+{% load utils %}
+
+<section id="feature" class="section feature-mobile">
+    <div class="container slider-section">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    <strong>{% trans "Newton's Community Economy" %}</strong><span></span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="swiper-container3">
+                <div class="swiper-wrapper">
+                    <div class="feature-item swiper-slide">
+                        <div class="feature-item-img">
+                            <div class="feature-item-img"><span class="feature-img1"></span></div>
+                        </div>
+                        <div class="feature-item-wrap">
+                            <dl>
+                                <dt>{% trans "Users Own Their Own Data" %}</dt>
+                                <dd {% arabic_change_style %}>
+                                    {% trans "Users secure and control their personal data through cryptography, and can manage their personal credit. Users share profits produced by their data in a pre-agreed manner." %}
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="feature-item swiper-slide">
+                        <div class="feature-item-img">
+                            <div class="feature-item-img"><span class="feature-img2"></span></div>
+                        </div>
+                        <div class="feature-item-wrap">
+                            <dl>
+                                <dt>{% trans "More Effective Incentive Mechanisms" %}</dt>
+                                <dd {% arabic_change_style %}>{% trans "Replacing business intermediaries with technology protocols reduces transaction costs and rewards anyone who contributes to the transaction, like service providers, consumers and others connected by the value-based internet." %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="feature-item swiper-slide">
+                        <div class="feature-item-img">
+                            <div class="feature-item-img"><span class="feature-img3"></span></div>
+                        </div>
+                        <div class="feature-item-wrap">
+                            <dl>
+                                <dt>{% trans "New organization structures and cooperation models" %}</dt>
+                                <dd {% arabic_change_style %}>{% trans "The community economy managed by non-profit foundations will replace the monopoly of intermediary platforms managed by traditional for-profit organizations. Based on open, fair, and rational rules every contributor will benefit from, and become part of this economy." %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination3"></div>
+            </div>
+            <div class="more col-md-12 col-xs-12 whitepaper-download">
+                <a href="/whitepaper/" target="_self"><span class="f20">{% trans "White Paper" %}</span></a>
+            </div>
+        </div>
+
+    </div>
+</section><!-- end -->
+
+{% block css %}
+<style>
+    .feature-mobile{
+        display: none;
+    }
+    .feature-mobile .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+        text-align: center;
+    }
+    @media (max-width: 768px){
+        .feature-mobile{
+            display: block;
+        }
+    }
+</style>
+{% endblock %}

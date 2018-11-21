@@ -107,6 +107,8 @@
 
 {% include "welcome/include-feature.html" %}
 
+{% include "welcome/include-feature-mobile.html" %}
+
 {% include "welcome/include-intro-token-exchange.html" %}
 
 {% include "welcome/include-intro-token-exchange-mobile.html" %}
@@ -188,6 +190,15 @@ showNav();
       loop: true,
       pagination: {
         el: '.swiper-pagination2',
+        clickable: true,
+      }
+    });
+    var swiper3 = new Swiper('.swiper-container3', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination3',
         clickable: true,
       }
     });
