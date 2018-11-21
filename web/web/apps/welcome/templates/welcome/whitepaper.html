@@ -14,8 +14,26 @@
         </div>
     </div>
     <div class="container">
-        <div class="download_list">
+        <div class="download_list text-center">
+            <h2 class="whitepaper-title text-center bold">{% trans "White Paper" %} V0.6</h2>
+            <span>{% trans "Latest Version：" %}2018-11-19</span>
+            <div class="download-but">
+                <div class="raw">
+                    <div class="col-md-4 col-sm-6 p10 text-center">
+                        <a href="{% version "whitepaper/newton-whitepaper-0.6-release-english.pdf" %}" download="newton-whitepaper-0.6-release-english.pdf">English White Paper</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p10 text-center">
+                        <a href="{% version "whitepaper/newton-whitepaper-0.6-release.pdf" %}" download="newton-whitepaper-0.6-release.pdf">中文白皮书</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line-between"></div>
+    <div class="container">
+        <div class="download_list text-center">
             <h2 class="whitepaper-title text-center bold">{% trans "White Paper" %} V0.5</h2>
+            <span>{% trans "History Version：" %}2018-07-18</span>
             <div class="download-but">
                 <div class="raw">
                     <div class="col-md-4 col-sm-6 p10 text-center">
@@ -70,21 +88,6 @@
                     </div>
                     <div class="col-md-4 col-sm-6 p10 text-center">
                         <a href="{% version "whitepaper/newton-whitepaper-0.5-release-finnish.pdf" %}" download="newton-whitepaper-0.5-release-finnish.pdf">Suomen valkoinen kirja</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="download_list">
-            <h2 class="whitepaper-title text-center bold">{% trans "White Paper" %} V0.6</h2>
-            <div class="download-but">
-                <div class="raw">
-                    <div class="col-md-4 col-sm-6 p10 text-center">
-                        <a href="{% version "whitepaper/newton-whitepaper-0.6-release-english.pdf" %}" download="newton-whitepaper-0.6-release-english.pdf">English White Paper</a>
-                    </div>
-                    <div class="col-md-4 col-sm-6 p10 text-center">
-                        <a href="{% version "whitepaper/newton-whitepaper-0.6-release.pdf" %}" download="newton-whitepaper-0.6-release.pdf">中文白皮书</a>
                     </div>
                 </div>
             </div>

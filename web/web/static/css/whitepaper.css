@@ -6,3 +6,50 @@
     margin-top: 80px;
     color: #333;
 }
+#whitepaper .download_list{
+    position: relative;
+}
+#whitepaper .download_list span{
+    position: absolute;
+    bottom: 7px;
+    left: 715px;
+}
+#whitepaper .line-between{
+    width:800px;
+    height:1px;
+    margin:0 auto;
+    padding:0;
+    background-color:#D5D5D5;
+    overflow:hidden;
+    margin-top: 70px;
+    margin-bottom: -15px;
+}
+@media (max-width: 1199px) and (min-width: 992px){
+    #whitepaper .download_list span{
+        left: 605px;
+    }
+    #whitepaper .line-between{
+        width: 650px;
+    }
+}
+@media (max-width: 991px) and (min-width: 769px){
+    #whitepaper .download_list span{
+        left: 500px;
+    }
+    #whitepaper .line-between{
+        width: 500px;
+    }
+}
+@media (max-width: 768px){
+    #whitepaper .download_list span{
+        position: unset;
+    }
+    #whitepaper .line-between{
+        width: 300px;
+        margin-top: 45px;
+        margin-bottom: -35px;
+    }
+    #whitepaper .download-but{
+        margin-top: 20px;
+    }
+}
