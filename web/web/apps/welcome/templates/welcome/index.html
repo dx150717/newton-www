@@ -113,7 +113,9 @@
 
 {% include "welcome/include-intro-token-exchange-mobile.html" %}
 
-{% include "welcome/include-events.html" %}
+<!--{% include "welcome/include-events.html" %}-->
+
+{% include "welcome/include-events-mobile.html" %}
 
 {% include "welcome/include-industry.html" %}
 
@@ -199,6 +201,15 @@ showNav();
       loop: true,
       pagination: {
         el: '.swiper-pagination3',
+        clickable: true,
+      }
+    });
+    var swiper4 = new Swiper('.swiper-container4', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination4',
         clickable: true,
       }
     });
