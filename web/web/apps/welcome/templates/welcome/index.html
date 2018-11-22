@@ -145,9 +145,8 @@
 
 {% include "welcome/include-index-community.html" %}
 <section id="sir" class="section">
-  <div class="container"><img class="img-1 lazy" src="{% version "images/grey.gif" %}" data-original="{% version "images/partners/bitmap.png" %}" width="200">
+  <div class="container"><img class="img-1 lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/partners/bitmap.png" %}" width="200">
     <p class="sty1">{% trans "Paying tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
-    <!-- end --> 
   </div>
 </section>
 
@@ -179,7 +178,9 @@ showNav();
 <script src="{% version "js/jquery.lazyload.min.js" %}"></script>
 <script src="{% version "js/swiper.min.js" %}" type="text/javascript"></script>
 <script>
-    $('img.lazy').lazyload();
+    $('img.lazy').lazyload({
+        threshold:200
+    });
     var swiper1 = new Swiper('.swiper-container1', {
       slidesPerView: 1,
       spaceBetween: 0,
