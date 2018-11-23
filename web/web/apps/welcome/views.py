@@ -219,6 +219,9 @@ def show_join_partner_view(request):
 def show_nep_view(request):
     return render(request, 'welcome/nep.html', locals())
 
+def show_cnc_view(request):
+    return render(request, 'welcome/cnc.html', locals())
+
 def show_404_page(request):
     return render(request, '404.html')
 
