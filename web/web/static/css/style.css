@@ -2494,12 +2494,31 @@ input[name="expect_btc"], input[name="expect_ela"]{
 
 /* newton community node summit */
 #summit .summit-banner{
-    background :url(../images/meeting/banner-bg.png) no-repeat center center;
+    background :url(../images/meeting/meeting-new-bg.jpg) no-repeat center center;
 }
 #summit .summit-title span{
     font-size: 24px;
     font-weight: 300;
     color: #455a64;
+}
+#summit .about .summit-title span{
+    color: #ffffff
+}
+#summit .about .line{
+    background-color: #ffffff;
+}
+#summit .about .summit-content p{
+    color: #ffffff;
+    font-weight: lighter;
+}
+#summit .summit-flow .summit-title span{
+    color: #ffffff
+}
+#summit .summit-flow .line{
+    background-color: #ffffff;
+}
+#summit .summit-flow .summit-content span{
+    color: #ffffff;
 }
 #summit .line {
     width:120px;
@@ -2516,4 +2535,17 @@ input[name="expect_btc"], input[name="expect_ela"]{
 #summit .summit-content span{
     Letter-spacing: 0.1em;
 }
-
+#summit .team-item .media-heading{
+    margin-bottom: 10px;
+}
+#summit .media-intro{
+    font-size: 13px;
+    color: #868686;
+}
+#intro .summit-news{
+    margin-top: 50px;
+    background: url(../images/meeting/gradientbar.svg) no-repeat center center;
+    padding: 1em 16px;
+    font-size: 1.2em;
+    color: white;
+}

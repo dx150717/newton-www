@@ -10,30 +10,55 @@
 <section id="summit">
     <div class="summit-banner">
         <div class="container">
-            <img src="{% version 'images/meeting/banner-top.png' %}" alt="" style="width:100%">
+            <div class="text-center">
+                <img src="{% version 'images/meeting/meeting-new-top.png' %}" alt="">
+            </div>
+            <div class="about">
+                <div class="summit-title text-center">
+                    <div class="line"></div>
+                    <span>{% trans "Introduction" %}</span>
+                    <div class="line"></div>
+                </div>
+                <div class="summit-content">
+                    <p>{% trans "On December 11, 2018, Newton will hold its first community node conference at the MGM Cotai, Macao. The theme of this conference is “Gravity”. Just as everything in the universe attracts each other, our common philosophy eventually attracts us all to one space." %}</p>
+                    <p>{% trans "During the conference, we will release news about community governance, technical progress, product design, and our business ecosystem. We will invite important community members to jointly discuss the progress of the project." %}</p>
+                    <p>{% trans "We have invited Newton Project participants, advisors, media partners, and strategic partners from all over the world to cooperate with this great project, and will invite industry giants, community founders, and senior politicians to participate." %}</p>
+                    <p>{% trans "This global Newton node conference will re-introduce the Newton Project, strengthen the community, reflect on the past, look forward to the future, and greatly promote the development of the project." %}</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="container">
-        <div class="about">
-            <div class="summit-title text-center">
-                <div class="line"></div>
-                <span>{% trans "关于大会" %}</span>
-                <div class="line"></div>
-            </div>
-            <div class="summit-content">
-                <span>{% trans "2018年12月11日，牛顿将在澳门路氹美狮美高梅酒店举办首届社群节点大会。本次会议以“万有引力”为主题，同宇宙万物互相吸引，我们共同的理念终把我们吸引到同一个物理空间。大会将发布社群治理、技术进展、产品形态、生态发展等方面的一系列进展，也将邀请牛顿社群重要成员共同探讨项目的发展。此次大会已经邀请了来自世界各地的牛顿项目的参与者、顾问、媒体朋友、战略合作伙伴共襄盛举，也会邀请多位行业大咖、社群创始人和政界资深人士共同交流。通过本次牛顿全球节点大会，让全世界重新认识牛顿项目，加强社区的共识，回顾过往，展望未来，积极推动牛顿项目的下一步发展。" %}</span>
+    <div class="summit-banner-mobile">
+        <img src="{% version 'images/meeting/meeting-banner-mobile.jpg' %}" style="width: 100%" alt="">
+        <div class="summit-bg">
+            <div class="container">
+                <div class="about">
+                    <div class="summit-title text-center">
+                        <div class="line"></div>
+                        <span>{% trans "Introduction" %}</span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="summit-content">
+                        <p>{% trans "On December 11, 2018, Newton will hold its first community node conference at the MGM Cotai, Macao. The theme of this conference is “Gravity”. Just as everything in the universe attracts each other, our common philosophy eventually attracts us all to one space." %}</p>
+                        <p>{% trans "During the conference, we will release news about community governance, technical progress, product design, and our business ecosystem. We will invite important community members to jointly discuss the progress of the project." %}</p>
+                        <p>{% trans "We have invited Newton Project participants, advisors, media partners, and strategic partners from all over the world to cooperate with this great project, and will invite industry giants, community founders, and senior politicians to participate." %}</p>
+                        <p>{% trans "This global Newton node conference will re-introduce the Newton Project, strengthen the community, reflect on the past, look forward to the future, and greatly promote the development of the project." %}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
     <div class="bg-gray">
         <div class="container">
             <div class="guest">
                 <div class="summit-title text-center">
                     <div class="line"></div>
-                    <span>{% trans "邀请嘉宾" %}</span>
+                    <span>{% trans "Guest List" %}</span>
                     <div class="line"></div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -46,7 +71,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -59,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -72,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -85,7 +110,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -101,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -114,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -130,7 +155,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -143,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -161,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -174,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -187,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -200,7 +225,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -216,7 +241,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -231,7 +256,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -247,7 +272,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -262,7 +287,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -271,13 +296,13 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Chen Shi" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "科创航天创始人" %}
+                                    科创航天创始人
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -286,13 +311,13 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Yu Jingdong" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "中植企业集团 督察审计中心 风控总监" %}<br/>
+                                    中植企业集团督察审计中心风控总监<br/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -301,13 +326,13 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Song Wei" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "理想梧桐集团 总裁" %}<br/>
+                                    理想梧桐集团总裁<br/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -316,13 +341,13 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Xie Zhongliang" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "一乡一品科技产业有限公司总经理" %}<br/>
+                                    一乡一品科技产业有限公司总经理<br/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -331,13 +356,13 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Zhong Chunsheng" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "重粮集团" %}<br/>
+                                    重粮集团<br/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -346,13 +371,13 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Ren Zheng" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "共识实验室合伙人" %}<br/>
+                                    共识实验室合伙人<br/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -361,13 +386,13 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Tong Yang" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "金色财经合伙人" %}<br/>
+                                    金色财经合伙人<br/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -376,13 +401,13 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Zeng Bibing" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "BlockVC合伙人" %}<br/>
+                                    BlockVC合伙人<br/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="team-item col-md-4 col-xs-12">
+                <div class="team-item col-md-4 col-xs-6">
                     <div class="media">
                         <div class="media-body">
                             <div class="man-intro">
@@ -391,7 +416,7 @@
                                 </div>
                                 <h4 class="media-heading">{% trans "Sun Jian" %}</h4>
                                 <div class="media-intro">
-                                    {% trans "JLAB创始人" %}<br/>
+                                    JLAB创始人<br/>
                                 </div>
                             </div>
                         </div>
@@ -400,43 +425,45 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="summit-flow">
-            <div class="summit-title text-center">
-                <div class="line"></div>
-                <span>{% trans "会议流程" %}</span>
-                <div class="line"></div>
-            </div>
-            <div class="flow-content">
-                <div class="first-day">
-                    <div class="flow-day">
-                         <span>{% trans "12月11日" %}</span>
-                    </div>
-                    <div class="col-md-3 flow-left">
-                        <p>{% trans "上午" %}</p>
-                        <p>{% trans "下午" %}</p>
-                        <p>{% trans "晚上" %}</p>
-                    </div>
-                    <div class="flow-line"></div>
-                    <div class="col-md-6 flow-right">
-                        <p>{% trans "牛顿生态发布会" %}</p>
-                        <p>{% trans "牛顿社群节点大会" %}</p>
-                        <p>{% trans "牛顿社区晚宴" %}</p>
-                    </div>
+    <div class="summit-bg">
+        <div class="container">
+            <div class="summit-flow">
+                <div class="summit-title text-center">
+                    <div class="line"></div>
+                    <span>{% trans "Agenda" %}</span>
+                    <div class="line"></div>
                 </div>
-                <div class="second-day">
-                    <div class="flow-day">
-                         <span>{% trans "12月12日" %}</span>
+                <div class="flow-content">
+                    <div class="first-day">
+                        <div class="flow-day">
+                             <span>{% trans "December 11" %}</span>
+                        </div>
+                        <div class="col-md-3 col-xs-4 flow-left">
+                            <p>{% trans "Morning" %}</p>
+                            <p>{% trans "Afternoon" %}</p>
+                            <p>{% trans "Night" %}</p>
+                        </div>
+                        <div class="flow-line"></div>
+                        <div class="col-md-6 col-xs-7 flow-right">
+                            <p>{% trans "Newton Ecosystem" %}</p>
+                            <p>{% trans "Newton Community Node Conference" %}</p>
+                            <p>{% trans "Newton Community Dinner" %}</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 flow-left">
-                        <p style="height: 160px;">{% trans "上午" %}</p>
-                        <p>{% trans "晚上" %}</p>
-                    </div>
-                    <div class="flow-line"></div>
-                    <div class="col-md-6 flow-right">
-                        <p>{% trans "A组分论坛：中古与东盟清洁能源合作圆桌会" %}</p>
-                        <p>{% trans "B组分论坛：智慧能源与能源区块链技术创新峰会" %}</p>
-                        <p>{% trans "奠定新经济————牛顿之夜" %}</p>
+                    <div class="second-day">
+                        <div class="flow-day">
+                             <span>{% trans "December 12" %}</span>
+                        </div>
+                        <div class="col-md-3 col-xs-4 flow-left">
+                            <p class="second-morning">{% trans "Morning" %}</p>
+                            <p>{% trans "Night" %}</p>
+                        </div>
+                        <div class="flow-line"></div>
+                        <div class="col-md-6 col-xs-7 flow-right">
+                            <p>{% trans "Session A: China-ASEAN Clean Energy Cooperation Panel" %}</p>
+                            <p>{% trans "Session B: Smart Energy & Energy Blockchain Technology Innovation Summit" %}</p>
+                            <p>{% trans "The Inception of New Economy - Newton Night" %}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -447,19 +474,19 @@
             <div class="summit-partner">
                 <div class="summit-title text-center">
                     <div class="line"></div>
-                    <span>{% trans "合作伙伴" %}</span>
+                    <span>{% trans "Partner" %}</span>
                     <div class="line"></div>
                 </div>
                 <div class="partner-content">
-                    <div class="col-md-4 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}" >
+                    <div class="col-md-4 text-center wemerge">
+                        <img src="{% version "images/meeting/Wemerge.svg" %}">
                     </div>
-                    <div class="col-md-4 text-center">
-                        <img src="{% version "images/meeting/huoxingcaijing.png" %}" style="width:250px;margin-top:50px;">
+                    <div class="col-md-4 text-center huoxing">
+                        <img src="{% version "images/meeting/huoxingcaijing.png" %}">
                     </div>
-                    <div class="col-md-4 text-center">
-                        <img src="{% version "images/meeting/yueliang.png" %}" style="width:100px;">
-                        <h4 class="media-heading">{% trans "月亮星火社区" %}</h4>
+                    <div class="col-md-4 text-center yueliang">
+                        <img src="{% version "images/meeting/yueliang.png" %}">
+                        <h4 class="media-heading">{% trans "BC SPARK" %}</h4>
                     </div>
                 </div>
             </div>
@@ -471,6 +498,12 @@
 {% endblock %}
 {% block css %}
 <style>
+    .summit-bg{
+        background-color: #010c34;
+    }
+    #summit .summit-banner img{
+        height: 100%;
+    }
     .summit-title{
         margin-bottom: 40px;
     }
@@ -487,32 +520,43 @@
         margin: 60px 0;
     }
     #summit .summit-partner .media-heading{
-        font-size: 18px;
+        font-size: 16px;
         color: #636363;
         font-weight: 400;
-        margin-top: 13px;
+        margin-top: 32px;
         margin-left: 16px;
     }
     .partner-content:after{
-                clear: both;
-                content: "";
-                width: 0;
-                height: 0;
-                display: block;
-                visibility: hidden;
-            }
+        clear: both;
+        content: "";
+        width: 0;
+        height: 0;
+        display: block;
+        visibility: hidden;
+    }
+    .partner-content .wemerge img{
+        width: 150px;
+    }
+    .partner-content .huoxing img{
+        width: 160px;
+        margin-top: 50px;
+    }
+    .partner-content .yueliang img{
+        width: 60px;
+    }
     .first-day .flow-left{
         margin-left: 18%;
     }
     .first-day .flow-left p{
         font-size: 18px;
         height: 80px;
-        color: #1c313a;
+        color: white;
     }
     .first-day .flow-right p{
         font-size: 18px;
         height: 80px;
         font-weight: 300;
+        color: white;
     }
     .flow-day{
         margin-top: 20px;
@@ -522,9 +566,27 @@
         font-size: 40px;
         margin-left: 19%;
         font-weight: 200;
-        color: #1c313a;
+        color: white;
     }
     .flow-line{
+        width: 1px;
+        height: 210px;
+        background-color:#D5D5D5;
+        margin: auto 3% auto 0;
+        padding: 0;
+        overflow: hidden;
+        float: left;
+    }
+    .second-day .flow-line:lang(zh){
+        width: 1px;
+        height: 210px;
+        background-color:#D5D5D5;
+        margin: auto 3% auto 0;
+        padding: 0;
+        overflow: hidden;
+        float: left;
+    }
+    .second-day .flow-line{
         width: 1px;
         height: 210px;
         background-color:#D5D5D5;
@@ -539,12 +601,25 @@
     .second-day .flow-left p{
         font-size: 18px;
         height: 80px;
-        color: #1c313a;
+        color: white;
+    }
+    .second-day .flow-right p:lang(zh) {
+        font-size: 18px;
+        height: 80px;
+        font-weight: 300;
+        color: white;
     }
     .second-day .flow-right p{
         font-size: 18px;
         height: 80px;
         font-weight: 300;
+        color: white;
+    }
+    .second-day .flow-left .second-morning:lang(zh){
+        height: 170px;
+    }
+    .second-day .flow-left .second-morning{
+        height: 170px;
     }
     .bottom-line{
         height: 2px;
@@ -553,5 +628,110 @@
         margin: 0 auto;
         overflow: hidden;
     }
+    .guest .media-body{
+        height: 350px;
+    }
+    @media(min-width: 768px) {
+        .summit-banner-mobile{
+            display: none;
+        }
+    }
+    @media(max-width: 768px) {
+        .second-day .flow-right p{
+            font-size: 17px;
+            height: 130px;
+            font-weight: 300;
+            color: white;
+        }
+        .summit-banner{
+            display: none;
+        }
+        #summit .team-item{
+            padding: unset;
+            margin-bottom: unset;
+            height: 280px;
+        }
+        #summit .about{
+            margin-top: unset;
+        }
+        .guest .media-body{
+            height: auto;
+        }
+        #summit .summit-banner img{
+            width: 100%;
+        }
+        #summit .line{
+            width: 40px;
+        }
+        #summit .summit-content{
+            padding: 0 5px;
+        }
+        #summit .summit-content p{
+            Letter-spacing: 0.2em;
+        }
+        .team-item:last-child{
+            margin-bottom: 35px;
+        }
+        .flow-day span{
+            font-size: 32px;
+            margin-left: 3%;
+        }
+        .first-day .flow-left{
+            margin-left: unset;
+        }
+        .second-day .flow-left{
+            margin-left: unset;
+        }
+        .partner-content .huoxing{
+            margin-bottom: 15%;
+        }
+        #summit .about .line{
+            width: 28px;
+            margin-bottom: 6px;
+        }
+        #summit .about .summit-title span{
+            font-size: 20px;
+        }
+        #summit .media-intro{
+            font-size: 12px;
+        }
+        .second-day .flow-line:lang(zh){
+            width: 1px;
+            height: 210px;
+            background-color:#D5D5D5;
+            margin: auto 3% auto 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+        }
+        .second-day .flow-line{
+            width: 1px;
+            height: 340px;
+            background-color:#D5D5D5;
+            margin: auto 3% auto 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+        }
+        .second-day .flow-right p:lang(zh) {
+            font-size: 18px;
+            height: 80px;
+            font-weight: 300;
+            color: white;
+        }
+        .second-day .flow-left .second-morning:lang(zh){
+            height: 170px;
+        }
+        .second-day .flow-left .second-morning{
+            height: 270px;
+        }
+    }
 </style>
+{% endblock %}
+
+
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
 {% endblock %}
