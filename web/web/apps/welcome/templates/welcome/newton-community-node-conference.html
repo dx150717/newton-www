@@ -48,7 +48,14 @@
             </div>
         </div>
     </div>
-
+    <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+        <div class="container meeting-nav">
+            <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
+                <img class="logo-pc lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/newton-logo.svg" %}" alt="Newton" style="width: unset;"/>
+            </a>
+            <span>{% trans "2018 Newton Community Node Conference" %}</span>
+        </div>
+    </nav>
 
     <div class="bg-gray">
         <div class="container">
@@ -631,6 +638,13 @@
     .guest .media-body{
         height: 350px;
     }
+    .meeting-nav{
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: normal;
+        color: #333;
+    }
     @media(min-width: 768px) {
         .summit-banner-mobile{
             display: none;
@@ -732,6 +746,28 @@
 
 {% block inline_js %}
 <script type="text/javascript">
-    showNav();
+    // showNav();
+    $(function () {
+        if (screen.width <= 768) {
+            showNav();
+            $("#float-nav").hide();
+        }
+        else {
+            $(window).scroll(function () {
+                var height;
+                var s = $(window).scrollTop();
+                if (s < 750) {
+                    // $(".NavBg").addClass("navFixed");
+                    $("#float-nav").hide();
+                } else {
+                    // $(".NavBg").removeClass("navFixed");
+                    $("#float-nav").show();
+                    $("#float-nav").addClass("navFixed");
+                }
+                ;
+            });
+        }
+        ;
+    });
 </script>
 {% endblock %}
