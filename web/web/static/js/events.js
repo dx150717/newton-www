@@ -29,11 +29,7 @@ function initEvents() {
         var year = currentMonthYear[1];
         var monthIndex = monthArray.indexOf(month);
         var monthIndexChange;
-
-        console.log("#id_events_list_" + year + "_" + monthIndex.toString())
-        console.log(startEventId)
-
-        if ("#id_events_list_" + year + "_" + monthIndex.toString() == startEventId) {
+        if ("id_events_list_" + year + "_" + monthIndex.toString() == startEventId) {
             return;
         };
         if (!(monthIndex==1)) {
@@ -52,6 +48,7 @@ function initEvents() {
         $("#id_current_month").text(monthChange + " " + year);
         showDom.show().siblings("div.events-list").hide();
     });
+
     $("#id_prev_month_mobile").click(function() {
         $("#id_coming_events_mobile").removeClass("active");
         $("#id_passed_events_mobile").removeClass("active");
@@ -60,7 +57,7 @@ function initEvents() {
         var year = currentMonthYear[1];
         var monthIndex = monthArray.indexOf(month);
         var monthIndexChange;
-        if (monthIndex==5 && year=="2018") {
+        if ("id_events_list_" + year + "_" + monthIndex.toString() == startEventId) {
             return;
         };
         if (!(monthIndex==1)) {
@@ -89,7 +86,7 @@ function initEvents() {
         var year = currentMonthYear[1];
         var monthIndex = monthArray.indexOf(month);
         var monthIndexChange;
-        if (monthIndex==12) {
+        if ("id_events_list_" + year + "_" + monthIndex.toString() == endEventId) {
             return;
         };
         if (!(monthIndex==12)) {
@@ -108,6 +105,7 @@ function initEvents() {
         $("#id_current_month").text(monthChange + " " + year);
         $("#id_events_list_" + year + "_" + monthIndexChange.toString()).show().siblings("div.events-list").hide();
     });
+
     $("#id_next_month_mobile").click(function() {
         $("#id_coming_events_mobile").removeClass("active");
         $("#id_passed_events_mobile").removeClass("active");
@@ -116,7 +114,7 @@ function initEvents() {
         var year = currentMonthYear[1];
         var monthIndex = monthArray.indexOf(month);
         var monthIndexChange;
-        if (monthIndex==12) {
+        if ("id_events_list_" + year + "_" + monthIndex.toString() == endEventId) {
             return;
         };
         if (!(monthIndex==12)) {
@@ -162,6 +160,20 @@ function initEvents() {
         $("#id_passed_events_mobile").removeClass("active");
         $("#id_events_list_coming_mobile").show().siblings("div.events-list").hide();
     });
+
+    for (i=0; i < eventsListMonthly.length; i++) {
+        var yearStr = eventsListMonthly[i].id.split("_")[3];
+        var monthStr = eventsListMonthly[i].id.split("_")[4];
+        new Swiper('.swiper-container' + '-' + yearStr + '-' + monthStr, {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination' + '-' + yearStr + '-' + monthStr,
+            clickable: true,
+          }
+        });
+    };
 };
 
 initEvents();

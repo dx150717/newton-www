@@ -15,7 +15,7 @@
                             <span class="current-month" id="id_current_month">{{ current_month | format_current_month }}</span>
                             <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month"></button>
                         </div>
-                        <button class="select-month-btn events-pass-btn" id="id_coming_events">{% trans "UPCOMING" %}</button>
+                        <button class="select-month-btn events-pass-btn active" id="id_coming_events">{% trans "UPCOMING" %}</button>
                     </div>
                 </h2>
             </div>
@@ -23,10 +23,10 @@
         <div class="events-list events-list-pc" id="id_events_list_passed">
             {% for pass_event in past_events_list %}
             <div class="col-md-4 col-xs-12">
-                <a href="{{ pass_event.event_link }}">
+                <a {% if pass_event.event_link %}href="{{ pass_event.event_link }}"{% endif %}>
                     <div class="panel panel-default event_container">
                         <div class="panel-body" style="background-image: url('{{ pass_event.event_img.url }}')"></div>
-                        <div class="panel-footer">
+                        <div class="panel-footer row">
                             <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">{{ pass_event.event_date | format_event_month }}</p>
                                 <p class="date-container-date">{{ pass_event.event_date.day }}</p>
@@ -44,14 +44,14 @@
         </div>
 
         {% for event_month, event_month_item in event_items %}
-            <div class="events-list events-list-pc events-list-monthly" id="id_events_list_{{ event_month.year }}_{{ event_month.month }}" {% if event_month.year == current_month.year and event_month.month == current_month.month %} style="display: block" {% endif %}>
+            <div class="events-list events-list-pc events-list-monthly" id="id_events_list_{{ event_month.year }}_{{ event_month.month }}">
                 {% for event_item in event_month_item %}
                     <div class="col-md-4 col-xs-12">
-                        <a href="{{ event_item.event_link }}">
+                        <a {% if event_item.event_link %}href="{{ event_item.event_link }}"{% endif %}>
                             <div class="panel panel-default event_container">
                                 <div class="panel-body" style="background-image: url('{{ event_item.event_img.url }}')">
                                 </div>
-                                <div class="panel-footer">
+                                <div class="panel-footer row">
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                         <p class="date-container-month">{{ event_item.event_date | format_event_month }}</p>
                                         <p class="date-container-date">{{ event_item.event_date.day }}</p>
@@ -69,13 +69,13 @@
             </div>
         {% endfor %}
 
-        <div class="events-list events-list-pc" id="id_events_list_coming">
+        <div class="events-list events-list-pc" id="id_events_list_coming" style="display: block;">
             {% for coming_event in coming_events_list %}
             <div class="col-md-4 col-xs-12">
-                <a href="{{ pass_event.event_link }}">
+                <a {% if coming_event.event_link %}href="{{ coming_event.event_link }}"{% endif %}>
                     <div class="panel panel-default event_container">
                         <div class="panel-body" style="background-image: url('{{ coming_event.event_img.url }}')"></div>
-                        <div class="panel-footer">
+                        <div class="panel-footer row">
                             <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">{{ coming_event.event_date | format_event_month }}</p>
                                 <p class="date-container-date">{{ coming_event.event_date.day }}</p>

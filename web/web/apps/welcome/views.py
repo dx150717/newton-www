@@ -95,7 +95,7 @@ def show_home_view(request):
     past_events_list = events_models.EventModel.objects.filter(
         event_language=language_code, event_date__lte=datetime.date.today()).order_by("-event_date")[:6]
     coming_events_list = events_by_language.filter(event_date__gte=datetime.date.today())[:6]
-    month_list = events_models.EventModel.objects.dates("event_date", "month")
+    month_list = events_by_language.dates("event_date", "month")
     for each_month in month_list:
         last_day = calendar.monthrange(each_month.year, each_month.month)[-1]
         last_day_month = each_month.replace(day=last_day)
