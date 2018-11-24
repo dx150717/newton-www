@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load utils %}
+{% load welcome_tags %}
 
 <div class="events events-pc section" id="events-section">
     <div class="container text-center events-panel-container">
@@ -11,7 +12,7 @@
                         <button class="select-month-btn hidden-xs events-pass-btn" id="id_passed_events">{% trans "PAST" %}</button>
                         <div class="button-container">
                             <button class="glyphicon glyphicon-chevron-left select-month-btn" id="id_prev_month"></button>
-                            <span class="current-month" id="id_current_month">{{ current_month }}</span>
+                            <span class="current-month" id="id_current_month">{{ current_month | format_current_month }}</span>
                             <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month"></button>
                         </div>
                         <button class="select-month-btn events-pass-btn" id="id_coming_events">{% trans "UPCOMING" %}</button>
@@ -19,545 +20,76 @@
                 </h2>
             </div>
         </div>
-
         <div class="events-list events-list-pc" id="id_events_list_passed">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/open.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">16</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Community Open House" %}</p>
-                                        <p class="event-time">2018-11-16 13:00-21:00</p>
-                                        <p class="event-location">{% trans "Invite 10 community members to visit NewSpace Sanlitun." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/10/17/newtons-global-100-cities-tour-tokyo-station-salon/" %}">
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/Tokyo.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Oct</p>
-                                        <p class="date-container-date">23</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton’s Global 100 Cities Tour – Tokyo Station" %}</p>
-                                        <p class="event-time">2018-10-23 18:30-20:30</p>
-                                        <p class="event-location">{% trans "This meet-up was organized by BlockTec and COIN OTAKU and was the first appearance of the Newton project team in Japan." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/22/newton-global-100-cities-tour-guangzhou-station-meetup-welcome-you-join/" %}">
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/guangzhou.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Aug</p>
-                                        <p class="date-container-date">29</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Global 100-City Tour - Guangzhou Station" %}</p>
-                                        <p class="event-time">2018-08-29 19:00-21:00</p>
-                                        <p class="event-location">{% trans "Newton founder Mr. Jizhe Xu attended this salon and give speech." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-12 col-xs-12"></div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/09/newton-global-100-cities-tour-shenzhen-station-meetup/" %}">
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/shenzhen.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Aug</p>
-                                        <p class="date-container-date">18</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Global 100 Cities Tour - Shenzhen station" %}</p>
-                                        <p class="event-time">2018-08-18 14:00-18:00</p>
-                                        <p class="event-location">{% trans "This event was organized by the WEMERGE and Liandong Media，World Blockchain Foundation." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/06/19/june-23rd-newton-beijing-meet-sincerely-invites-you-join-us/" %}">
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/beijing2.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Jun</p>
-                                        <p class="date-container-date">23</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Beijing Meetup (Phase Ⅱ)" %}</p>
-                                        <p class="event-time">2018-06-23 14:00-18:00</p>
-                                        <p class="event-location">{% trans "Newton founder Mr. Jizhe Xu, and Newton advisor Mr. Lee Willson attended this salon and give speech." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/06/14/newton-meet-shijiazhuang-station-welcome-you-join/" %}">
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/shijiazhuang.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Jun</p>
-                                        <p class="date-container-date">16</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Meet-up Shijiazhuang station" %}</p>
-                                        <p class="event-time">2018-06-16 14:00-18:00</p>
-                                        <p class="event-location">{% trans "Explaining how Newton’s economic model ensures everyone to benefit from economic growth." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-
-        <div class="events-list events-list-pc" id="id_events_list_2018_5">
+            {% for pass_event in past_events_list %}
             <div class="col-md-4 col-xs-12">
-                <a href="{% trans "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-re-defining-business-order-new-economy-era-sincerely-invites-you-join-us/" %}">
+                <a href="{{ pass_event.event_link }}">
                     <div class="panel panel-default event_container">
-                        <div class="panel-body" style="background-image: url('{% version "images/events/beijing1.jpg" %}')">
-                        </div>
+                        <div class="panel-body" style="background-image: url('{{ pass_event.event_img.url }}')"></div>
                         <div class="panel-footer">
                             <div class="col-md-2 col-sm-2 col-xs-2">
-                                <p class="date-container-month">May</p>
-                                <p class="date-container-date">19</p>
+                                <p class="date-container-month">{{ pass_event.event_date | format_event_month }}</p>
+                                <p class="date-container-date">{{ pass_event.event_date.day }}</p>
                             </div>
                             <div class="col-md-10 col-sm-10 col-xs-10">
-                                <p class="event-title">{% trans "Newton Meet-up (Beijing)" %}</p>
-                                <p class="event-time">2018-05-19 14:00-18:00</p>
-                                <p class="event-location">{% trans "Newton founder Jizhe Xu, co-founder Shubin Li, and Newton advisor and angel investor Xueyong Gu, attended this salon and gave speech." %}</p>
+                                <p class="event-title">{{ pass_event.event_title }}</p>
+                                <p class="event-time">{{ pass_event.event_during }}</p>
+                                <p class="event-location">{{ pass_event.event_summary }}</p>
                             </div>
                         </div>
                     </div>
                 </a>
             </div>
+            {% endfor %}
         </div>
 
-        <div class="events-list events-list-pc" id="id_events_list_2018_6">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/06/19/june-23rd-newton-beijing-meet-sincerely-invites-you-join-us/" %}">
+        {% for event_month, event_month_item in event_items %}
+            <div class="events-list events-list-pc events-list-monthly" id="id_events_list_{{ event_month.year }}_{{ event_month.month }}" {% if event_month.year == current_month.year and event_month.month == current_month.month %} style="display: block" {% endif %}>
+                {% for event_item in event_month_item %}
+                    <div class="col-md-4 col-xs-12">
+                        <a href="{{ event_item.event_link }}">
                             <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/beijing2.jpg" %}')">
+                                <div class="panel-body" style="background-image: url('{{ event_item.event_img.url }}')">
                                 </div>
                                 <div class="panel-footer">
                                     <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Jun</p>
-                                        <p class="date-container-date">23</p>
+                                        <p class="date-container-month">{{ event_item.event_date | format_event_month }}</p>
+                                        <p class="date-container-date">{{ event_item.event_date.day }}</p>
                                     </div>
                                     <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Beijing Meetup (Phase Ⅱ)" %}</p>
-                                        <p class="event-time">2018-06-23 14:00-18:00</p>
-                                        <p class="event-location">{% trans "Newton founder Mr. Jizhe Xu, and Newton advisor Mr. Lee Willson attended this salon and give speech." %}</p>
+                                        <p class="event-title">{{ event_item.event_title }}</p>
+                                        <p class="event-time">{{ event_item.event_during }}</p>
+                                        <p class="event-location">{{ event_item.event_summary }}</p>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/06/14/newton-meet-shijiazhuang-station-welcome-you-join/" %}">
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/shijiazhuang.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Jun</p>
-                                        <p class="date-container-date">16</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Meet-up Shijiazhuang station" %}</p>
-                                        <p class="event-time">2018-06-16 14:00-18:00</p>
-                                        <p class="event-location">{% trans "Explaining how Newton’s economic model ensures everyone to benefit from economic growth." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-
-        <div class="events-list events-list-pc" id="id_events_list_2018_8">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/22/newton-global-100-cities-tour-guangzhou-station-meetup-welcome-you-join/" %}">
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/guangzhou.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Aug</p>
-                                        <p class="date-container-date">29</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Global 100-City Tour - Guangzhou Station" %}</p>
-                                        <p class="event-time">2018-08-29 19:00-21:00</p>
-                                        <p class="event-location">{% trans "Newton founder Mr. Jizhe Xu attended this salon and give speech." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a href="{% trans "https://www.newtonproject.org/announcement/2018/08/09/newton-global-100-cities-tour-shenzhen-station-meetup/" %}">
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/shenzhen.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Aug</p>
-                                        <p class="date-container-date">18</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Global 100 Cities Tour - Shenzhen station" %}</p>
-                                        <p class="event-time">2018-08-18 14:00-18:00</p>
-                                        <p class="event-location">{% trans "This event was organized by the WEMERGE and Liandong Media，World Blockchain Foundation." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-
-        <div class="events-list events-list-pc" id="id_events_list_2018_10">
-            <div class="col-md-4 col-xs-12">
-                <a href="{% trans "https://www.newtonproject.org/announcement/2018/10/17/newtons-global-100-cities-tour-tokyo-station-salon/" %}">
-                    <div class="panel panel-default event_container">
-                        <div class="panel-body" style="background-image: url('{% version "images/events/Tokyo.jpg" %}')">
-                        </div>
-                        <div class="panel-footer">
-                            <div class="col-md-2 col-sm-2 col-xs-2">
-                                <p class="date-container-month">Oct</p>
-                                <p class="date-container-date">23</p>
-                            </div>
-                            <div class="col-md-10 col-sm-10 col-xs-10">
-                                <p class="event-title">{% trans "Newton’s Global 100 Cities Tour – Tokyo Station" %}</p>
-                                <p class="event-time">2018-10-23 18:30-20:30</p>
-                                <p class="event-location">{% trans "This meet-up was organized by BlockTec and COIN OTAKU and was the first appearance of the Newton project team in Japan." %}</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="events-list events-list-pc" id="id_events_list_2018_11" style="display: block;">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/open.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">16</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Community Open House" %}</p>
-                                        <p class="event-time">2018-11-16 13:00-21:00</p>
-                                        <p class="event-location">{% trans "Invite 10 community members to visit NewSpace Sanlitun." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/double.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">20</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "What Does the Double 11 Shopping Day Have to Do with Me?" %}</p>
-                                        <p class="event-time">2018-11-20 14:00-16:00</p>
-                                        <p class="event-location">{% trans "Newton advisor and Bitcoin Ambassador Lee Willson will attend 'What Does the Double 11 Shopping Day Have to Do with Me?' meet up in Kuala Lumpur." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/party.png" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">23</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">NewClub Top 50 Party</p>
-                                        <p class="event-time">2018-11-23</p>
-                                        <p class="event-location">{% trans "The NewClub Top 50 party in Beijing with 50 community members." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-12 col-xs-12"></div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/dinner.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">24</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Dinner with Xu Jizhe" %}</p>
-                                        <p class="event-time">2018-11-24</p>
-                                        <p class="event-location">{% trans "Newton founder Xu will invite four outstanding “community voices” to dinner." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-
-        <div class="events-list events-list-pc" id="id_events_list_2018_12">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/jiedian.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Dec</p>
-                                        <p class="date-container-date">11</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton’s first Social Networking Conference" %}</p>
-                                        <p class="event-time">2018-12-11</p>
-                                        <p class="event-location">{% trans "Giving community nodes, ecosystem partners, and media to the chance to promote Newton’s vision and technology." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/night.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Dec</p>
-                                        <p class="date-container-date">12</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Night" %}</p>
-                                        <p class="event-time">2018-12-12 18:00-22:00</p>
-                                        <p class="event-location">{% trans "Newton Night" %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/macao.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Dec</p>
-                                        <p class="date-container-date">12</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "The 7th International Forum for Clean Energy (Macao)" %}</p>
-                                        <p class="event-time">2018-12-12 ~ 2018-12-13</p>
-                                        <p class="event-location">{% trans "Newton founder Xu Jizhe confirmed his attendance at the 7th International Forum for Clean Energy (Macao)." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+        {% endfor %}
 
         <div class="events-list events-list-pc" id="id_events_list_coming">
-            <div class="slider-section">
-                <div class="slider-item-list">
-                    <div class="col-md-4 col-xs-12 slider-item default-slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/double.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">20</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "What Does the Double 11 Shopping Day Have to Do with Me?" %}</p>
-                                        <p class="event-time">2018-11-20 14:00-16:00</p>
-                                        <p class="event-location">{% trans "Newton advisor and Bitcoin Ambassador Lee Willson will attend 'What Does the Double 11 Shopping Day Have to Do with Me?' meet up in Kuala Lumpur." %}</p>
-                                    </div>
-                                </div>
+            {% for coming_event in coming_events_list %}
+            <div class="col-md-4 col-xs-12">
+                <a href="{{ pass_event.event_link }}">
+                    <div class="panel panel-default event_container">
+                        <div class="panel-body" style="background-image: url('{{ coming_event.event_img.url }}')"></div>
+                        <div class="panel-footer">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                <p class="date-container-month">{{ coming_event.event_date | format_event_month }}</p>
+                                <p class="date-container-date">{{ coming_event.event_date.day }}</p>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/party.png" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">23</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">NewClub Top 50 Party</p>
-                                        <p class="event-time">2018-11-23</p>
-                                        <p class="event-location">{% trans "The NewClub Top 50 party in Beijing with 50 community members." %}</p>
-                                    </div>
-                                </div>
+                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                <p class="event-title">{{ coming_event.event_title }}</p>
+                                <p class="event-time">{{ coming_event.event_during }}</p>
+                                <p class="event-location">{{ coming_event.event_summary }}</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/dinner.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Nov</p>
-                                        <p class="date-container-date">24</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Dinner with Xu Jizhe" %}</p>
-                                        <p class="event-time">2018-11-24</p>
-                                        <p class="event-location">{% trans "Newton founder Xu will invite four outstanding “community voices” to dinner." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-12 col-xs-12"></div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/jiedian.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Dec</p>
-                                        <p class="date-container-date">11</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton’s first Social Networking Conference" %}</p>
-                                        <p class="event-time">2018-12-11</p>
-                                        <p class="event-location">{% trans "Giving community nodes, ecosystem partners, and media to the chance to promote Newton’s vision and technology." %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xs-12 slider-item">
-                        <a>
-                            <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{% version "images/events/night.jpg" %}')">
-                                </div>
-                                <div class="panel-footer">
-                                    <div class="col-md-2 col-sm-2 col-xs-2">
-                                        <p class="date-container-month">Dec</p>
-                                        <p class="date-container-date">12</p>
-                                    </div>
-                                    <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <p class="event-title">{% trans "Newton Night" %}</p>
-                                        <p class="event-time">2018-12-12 18:00-22:00</p>
-                                        <p class="event-location">{% trans "Newton Night" %}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                </a>
             </div>
-            <ul class="slider-button-list">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            {% endfor %}
         </div>
 
         <div class="col-md-12 col-xs-12 more">

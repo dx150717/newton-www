@@ -8,6 +8,8 @@ import random
 import time
 import datetime
 import logging
+import calendar
+
 from django.views import generic
 from django.shortcuts import render
 from django.conf import settings
@@ -27,8 +29,10 @@ from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_GET, require_POST
 from django.views.decorators.csrf import csrf_exempt
 from webpush import send_user_notification, send_group_notification
+from events import models as events_models
 
 logger = logging.getLogger(__name__)
+
 
 def show_home_view(request):
     language = translation.get_language()
@@ -83,11 +87,33 @@ def show_home_view(request):
     webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
     user = request.user
-    current_month = datetime.date.today().strftime("%B %Y")
+    # events
+    event_items = []
+    month_range_list = []
+    current_month = datetime.date.today()
+    events_by_language = events_models.EventModel.objects.filter(event_language=language_code).order_by("event_date")
+    past_events_list = events_models.EventModel.objects.filter(
+        event_language=language_code, event_date__lte=datetime.date.today()).order_by("-event_date")[:6]
+    coming_events_list = events_by_language.filter(event_date__gte=datetime.date.today())[:6]
+    month_list = events_models.EventModel.objects.dates("event_date", "month")
+    for each_month in month_list:
+        last_day = calendar.monthrange(each_month.year, each_month.month)[-1]
+        last_day_month = each_month.replace(day=last_day)
+        month_range_list.append((each_month, last_day_month))
+    for month_range in month_range_list:
+        event_items.append(
+            (
+                month_range[0],
+                events_by_language.filter(event_date__gte=month_range[0], event_date__lte=month_range[1])
+            )
+        )
     return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key, 'presses': presses,
                                                   'activity_entry': activity_entry, 'operation_entry': operation_entry,
                                                   'blog_entry': blog_entry, 'banner_press': banner_press,
-                                                  "current_month": current_month})
+                                                  "current_month": current_month, "event_items": event_items,
+                                                  "month_list": month_list,
+                                                  "past_events_list": past_events_list,
+                                                  "coming_events_list": coming_events_list})
 
 def show_technology_view(request):
     return render(request, 'welcome/technology.html', locals())
