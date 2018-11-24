@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="masthead_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1280 10" enable-background="new 0 0 1280 10" preserveAspectRatio="none">
+
+	<linearGradient id="mastGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+		<stop stop-color="rgb(236,30,36)" offset="0%" id="left">
+			<animate attributeName="stop-color" dur="8s" values="rgb(159,53,147);rgb(10,117,231);rgb(58,126,192);rgb(97,197,191);rgb(0,150,128);rgb(108,130,69);rgb(205,219,40);rgb(255,199,8);rgb(236,30,36);rgb(184,32,37);rgb(243,124,32);rgb(159,53,147);" repeatCount="indefinite" />
+		</stop>
+		<stop stop-color="rgb(243,124,32)" offset="100%" id="right">
+			<animate attributeName="stop-color" dur="8s" values="rgb(10,117,231);rgb(58,126,192);rgb(97,197,191);rgb(0,150,128);rgb(108,130,69);rgb(205,219,40);rgb(255,199,8);rgb(236,30,36);rgb(184,32,37);rgb(243,124,32);rgb(159,53,147);rgb(10,117,231);" repeatCount="indefinite" />
+		</stop>
+	</linearGradient>
+	<rect id="masthead" x="0" y="0" width="100%" height="100%" style="fill:url(#mastGradient)" />
+</svg>
