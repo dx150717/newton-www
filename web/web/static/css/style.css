@@ -723,7 +723,7 @@ canvas {display: block; vertical-align: top;}
     .navbar-brand {position: absolute; right: 0; left: 0; margin: auto; text-align: center;}
     .sticky-navigation.NavBg .navbar-nav>li>.dropdown-menu li a{color: #fff;}
     .navbar-nav>li>.dropdown-menu li:first-child {border-bottom: 0 none;}
-    #intro {background-position:center 60px;   background-size:150%; margin-top: 50px; margin-bottom: 30px;}
+    #intro {background-position:center 60px;   background-size:150%; margin-top: 93px; margin-bottom: 30px;}
     #intro h1 {margin:25px 0 30px; font-size: 30px; color: #555;}
     #intro p.sty1 {font-size: 26px; margin-bottom:50px;}
     #intro p.sty2, span.sty2 {font-size: 22px;}
@@ -2509,7 +2509,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
 }
 #summit .about .summit-content p{
     color: #ffffff;
-    font-weight: lighter;
+    font-weight: normal;
 }
 #summit .summit-flow .summit-title span{
     color: #ffffff
@@ -2542,10 +2542,26 @@ input[name="expect_btc"], input[name="expect_ela"]{
     font-size: 13px;
     color: #868686;
 }
-#intro .summit-news{
-    margin-top: 50px;
+#normal .summit-news{
     background: url(../images/meeting/gradientbar.svg) no-repeat center center;
     padding: 1em 16px;
     font-size: 1.2em;
     color: white;
+}
+@media (min-width: 768px) {
+    .summit-news-mobile{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .summit-news{
+        display: none;
+    }
+    #normal .summit-news-mobile{
+        background: url(../images/meeting/gradientbar.svg) no-repeat center center;
+        padding: 0.3em 0;
+        font-size: 1.2em;
+        color: white;
+        line-height: 1.1em;
+    }
 }

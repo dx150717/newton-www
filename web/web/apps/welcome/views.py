@@ -84,10 +84,11 @@ def show_home_view(request):
     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
     user = request.user
     current_month = datetime.date.today().strftime("%B %Y")
+    is_index = True
     return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key, 'presses': presses,
                                                   'activity_entry': activity_entry, 'operation_entry': operation_entry,
                                                   'blog_entry': blog_entry, 'banner_press': banner_press,
-                                                  "current_month": current_month})
+                                                  "current_month": current_month, "is_index": is_index})
 
 def show_technology_view(request):
     return render(request, 'welcome/technology.html', locals())
@@ -219,8 +220,8 @@ def show_join_partner_view(request):
 def show_nep_view(request):
     return render(request, 'welcome/nep.html', locals())
 
-def show_cnc_view(request):
-    return render(request, 'welcome/cnc.html', locals())
+def show_newton_community_node_conference_view(request):
+    return render(request, 'welcome/newton-community-node-conference.html', locals())
 
 def show_404_page(request):
     return render(request, '404.html')

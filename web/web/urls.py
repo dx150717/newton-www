@@ -62,7 +62,7 @@ urlpatterns = patterns('',
                        url(r'^community-voice/$', views.CommunityVoiceView.as_view()),
                        url(r'^search/', include('search.urls')),
                        url(r'^nep/', 'welcome.views.show_nep_view'),
-                       url(r'^cnc/', 'welcome.views.show_cnc_view'),
+                       url(r'^newton-community-node-conference/', 'welcome.views.show_newton_community_node_conference_view'),
                        # web push
                        url(r'^webpush/', include('webpush.urls')),
                        url(r'sw.js', TemplateView.as_view(template_name='sw.js', content_type='application/x-javascript')),
