@@ -8,16 +8,399 @@
 
 {% block content %}
 <section id="summit">
+    <img src="{% version 'images/meeting/meeting.png' %}" alt="" style="width:100%">
     <div class="container">
-        <img src="{% version 'images/meeting/meeting-en.png' %}" alt="" style="width:100%">
+
         <div class="about">
-            <div class="title">
-
+            <div class="title text-center">
+                <div class="line"></div>
+                <span>{% trans "关于大会" %}</span>
+                <div class="line"></div>
             </div>
-            <div class="content">
-
+            <div class="summit-content">
+                <span>{% trans "2018年12月11日，牛顿将在澳门路氹美狮美高梅酒店举办首届社群节点大会。本次会议以“万有引力”为主题，同宇宙万物互相吸引，我们共同的理念终把我们吸引到同一个物理空间。大会将发布社群治理、技术进展、产品形态、生态发展等方面的一系列进展，也将邀请牛顿社群重要成员共同探讨项目的发展。此次大会已经邀请了来自世界各地的牛顿项目的参与者、顾问、媒体朋友、战略合作伙伴共襄盛举，也会邀请多位行业大咖、社群创始人和政界资深人士共同交流。通过本次牛顿全球节点大会，让全世界重新认识牛顿项目，加强社区的共识，回顾过往，展望未来，积极推动牛顿项目的下一步发展。" %}</span>
             </div>
         </div>
+        <div class="guest">
+            <div class="title text-center">
+                <div class="line"></div>
+                <span>{% trans "邀请嘉宾" %}</span>
+                <div class="line"></div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/team/1.jpg" %}" alt="{% trans "Xu Jizhe" %}">
+                            </div>
+                            <h4 class="media-heading">{% trans "Xu Jizhe" %}</h4>
+                            <div class="media-intro">{% trans "Founder" %}<br/>{% trans "Founder of Zeuux (A Community for Free Software Usage)" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object" src="{% version "images/team/2.jpg" %}" alt="{% trans "Li Shubin" %}">
+                            </div>
+                            <h4 class="media-heading">{% trans "Li Shubin" %}</h4>
+                            <div class="media-intro">{% trans "Co-founder" %}<br/>{% trans "Founder and CEO of OKbuy" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object" src="{% version "images/team/xiawu.jpg" %}" alt="{% trans "Xia Wu" %}">
+                            </div>
+                            <h4 class="media-heading">{% trans "Xia Wu" %}</h4>
+                            <div class="media-intro" style="padding:unset;">{% trans "Joint Chief Architect" %}<br/>{% trans "Co-founder of Zeuux (A Community for Free Software Usage)" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object" src="{% version "images/team/mengguang.jpg" %}" alt="{% trans "Meng Guang" %}">
+                            </div>
+                            <h4 class="media-heading">{% trans "Meng Guang" %}</h4>
+                            <div class="media-intro">{% trans "Joint Chief Architect" %}<br/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/advisor/1.jpg" %}" alt="{% trans "Han Feng" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Han Feng" %}</h4>
+                            <div class="media-intro" style="padding: unset; width: 102%;">
+                                {% trans "Visiting Scholar & Research Associate at Columbia University" %}<br/>
+                                {% trans "Advisor at Huawei Central Institute" %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/angels/9.jpg" %}" alt="{% trans "Hu Dinghe" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Hu Dinghe" %}</h4>
+                            <div class="media-intro">{% trans "President of Yuntu Capital" %}<br/>{% trans "Previous President of Chongqing Lifan" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/advisor/3.jpg" %}" alt="{% trans "Gu Xueyong" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Gu Xueyong" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Professor at Tsinghua University" %}<br/>
+                                {% trans "Director of International Relations at iCenter" %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/advisor/5.jpg" %}" alt="{% trans "Lee Willson" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Lee Willson" %}</h4>
+                            <div class="media-intro">{% trans "Bitcoin Ambassador" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/advisor/6.png" %}" alt="{% trans "Theodore Gray" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Theodore Gray" %}</h4>
+                            <div class="media-intro" style="padding: unset;">
+                                {% trans "Co-Founder of Wolfram Research" %}<br/>
+                                {% trans "Creator of the Mathematica Notebook System" %}<br/>
+                                {% trans "Founder of Touch Press" %}<br/>
+                                {% trans "BAFTA Award winning author" %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/angels/1.jpg" %}" alt="{% trans "Liu Jun" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Liu Jun" %}</h4>
+                            <div class="media-intro" style="padding:unset;">{% trans "Co-Founder of Lightinthebox (NYSE:LITB)" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/angels/2.jpg" %}" alt="{% trans "Guo Feng" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Guo Feng" %}</h4>
+                            <div class="media-intro">{% trans "Founder of kela.cn" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/angels/8.jpg" %}" alt="{% trans "Ye Haifeng" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Ye Haifeng" %}</h4>
+                            <div class="media-intro">{% trans "Founder of mbaobao.com" %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/angels/11.jpg" %}" alt="{% trans "Wang Feng" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Wang Feng" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Founder of linekong.com" %}<br/>
+                                {% trans "Founder of huoxing24.com" %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/angels/12.jpg" %}" alt="{% trans "Stewie Zhu" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Stewie Zhu" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Founder and CEO of Distributed Credit Chain" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/angels/14.png" %}" alt="{% trans "Shi Junchao" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Shi Junchao" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Senior gem jade appraiser." %}<br/>
+                                {% trans "Deputy secretary general of xinjiang hetian jade industry association." %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/angels/15.png" %}" alt="{% trans "Guo Hongchi" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Guo Hongchi" %}</h4>
+                            <div class="media-intro">
+                                {% trans "Founder of xijie.com" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/chenshi.jpg" %}" alt="{% trans "Chen Shi" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Chen Shi" %}</h4>
+                            <div class="media-intro">
+                                {% trans "科创航天创始人" %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/yujingdong.jpg" %}" alt="{% trans "Yu Jingdong" %}" />
+                            </div>
+                            <h4 class="media-heading">{% trans "Yu Jingdong" %}</h4>
+                            <div class="media-intro">
+                                {% trans "中植企业集团 督察审计中心 风控总监" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/songwei.jpg" %}" alt="{% trans "Song Wei" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Song Wei" %}</h4>
+                            <div class="media-intro">
+                                {% trans "理想梧桐集团 总裁" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/xiezhongliang.jpg" %}" alt="{% trans "Xie Zhongliang" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Xie Zhongliang" %}</h4>
+                            <div class="media-intro">
+                                {% trans "一乡一品科技产业有限公司总经理" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/zhongchunsheng.jpg" %}" alt="{% trans "Zhong Chunsheng" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Zhong Chunsheng" %}</h4>
+                            <div class="media-intro">
+                                {% trans "重粮集团" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/renzheng.jpg" %}" alt="{% trans "Ren Zheng" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Ren Zheng" %}</h4>
+                            <div class="media-intro">
+                                {% trans "共识实验室合伙人" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/tongyang.jpg" %}" alt="{% trans "Tong Yang" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Tong Yang" %}</h4>
+                            <div class="media-intro">
+                                {% trans "金色财经合伙人" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/zengbibing.jpg" %}" alt="{% trans "Zeng Bibing" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Zeng Bibing" %}</h4>
+                            <div class="media-intro">
+                                {% trans "BlockVC合伙人" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-item col-md-4 col-xs-12">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="man-intro">
+                            <div class="avatar">
+                                <img class="media-object lazy" src="{% version "images/meeting/sunjian.jpg" %}" alt="{% trans "Sun Jian" %}"/>
+                            </div>
+                            <h4 class="media-heading">{% trans "Sun Jian" %}</h4>
+                            <div class="media-intro">
+                                {% trans "JLAB创始人" %}<br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="summit-flow">
+            <div class="title text-center">
+                <div class="line"></div>
+                <span>{% trans "会议流程" %}</span>
+                <div class="line"></div>
+            </div>
+            <div></div>
+        </div>
+
     </div>
 </section>
 {% endblock %}
