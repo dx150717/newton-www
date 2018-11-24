@@ -96,10 +96,14 @@
          
          <!-- jquery lib -->
 <!--          <script src="{% version "js/jquery-2.1.4.min.js" %}" type="text/javascript"></script> -->
+         <script src="{% version "js/jquery.lazyload.min.js" %}"></script>
          <script src="{% version "js/jquery-validate.js" %}" type="text/javascript"></script>
          <script src="{% version "js/jquery-validate-additional-methods.js" %}" type="text/javascript"></script>
          <script src="{% version "js/nsprogress.js" %}" type="text/javascript"></script>
          <script type="text/javascript">
+             $('img.lazy').lazyload({
+                    threshold:200
+                });
              window.gotoTop = function(min_height){
                 $("#gotoTop").click(
                     function(){$('html,body').animate({scrollTop:0},700);

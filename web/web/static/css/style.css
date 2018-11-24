@@ -2493,17 +2493,18 @@ input[name="expect_btc"], input[name="expect_ela"]{
 }
 
 /* newton community node summit */
-#summit .banner{
-    background :url(../images/meeting/meeting-en.png) no-repeat left bottom;
-    background-size: 100%;
+#summit .summit-banner{
+    background :url(../images/meeting/banner-bg.png) no-repeat center center;
 }
-#summit .title span{
-    font-size: 26px;
+#summit .summit-title span{
+    font-size: 24px;
+    font-weight: 300;
+    color: #455a64;
 }
 #summit .line {
-    width:70px;
-    height:3px;
-    background-color:#D5D5D5;
+    width:120px;
+    height:1px;
+    background-color:#455a64;
     display: inline-block;
     margin-bottom: 9px;
     margin-left: 12px;
@@ -2512,3 +2513,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
 #summit .summit-content{
     padding: 0 100px;
 }
+#summit .summit-content span{
+    Letter-spacing: 0.1em;
+}
+
