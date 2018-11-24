@@ -93,7 +93,11 @@ def show_home_view(request):
     current_month = datetime.date.today()
     events_by_language = events_models.EventModel.objects.filter(event_language=language_code).order_by("event_date")
     past_events_list = events_models.EventModel.objects.filter(
-        event_language=language_code, event_date__lte=datetime.date.today()).order_by("-event_date")[:6]
+        event_language=language_code, event_date__lt=datetime.date.today()).order_by("-event_date")[:6]
+    if not events_by_language:
+        events_by_language = events_models.EventModel.objects.filter(event_language=ENGLISH).order_by("event_date")
+        past_events_list = events_models.EventModel.objects.filter(
+            event_language=ENGLISH, event_date__lt=datetime.date.today()).order_by("-event_date")[:6]
     coming_events_list = events_by_language.filter(event_date__gte=datetime.date.today())[:6]
     month_list = events_by_language.dates("event_date", "month")
     for each_month in month_list:
