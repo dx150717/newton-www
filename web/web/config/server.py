@@ -23,7 +23,7 @@ THUMBNAIL_DEBUG = False
 DOMAIN = 'localhost'
 BASE_URL = 'http://localhost:8000'
 MEDIA_URL = 'http://localhost:8000/filestorage/'
-MEDIA_ROOT = './'
+MEDIA_ROOT = 'web/'
 
 #session settings
 SESSION_COOKIE_AGE = 7200

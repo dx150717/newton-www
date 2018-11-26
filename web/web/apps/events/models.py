@@ -8,7 +8,7 @@ from django.db import models
 from django.utils import timezone
 
 from config import codes
-
+from utils import storage
 
 class EventModel(models.Model):
     """
@@ -23,8 +23,10 @@ class EventModel(models.Model):
     event_during = models.CharField(max_length=200, verbose_name=u'活动持续时间')
     event_date = models.DateField(default=timezone.now, verbose_name=u'活动开始日期')
     event_summary = models.TextField(verbose_name=u'活动简介')
-    event_img = models.FileField(upload_to='uploads/event/%Y/%m/%d', verbose_name=u'活动图片')
-    event_link = models.CharField(max_length=200, null=True, blank=True, verbose_name=u'活动链接')
+    content = models.TextField(verbose_name=u'活动内容(选填)', null=True, blank=True)
+    event_img = models.FileField(upload_to=storage.hashfile_upload_to("event_img", path_prefix='events'),
+                                 verbose_name=u'活动图片')
+    event_link = models.CharField(max_length=200, null=True, blank=True, verbose_name=u'活动链接(选填)')
     event_language = models.IntegerField(choices=LANGUAGE_CHOICES, verbose_name=u'选择语言')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -34,5 +36,5 @@ class EventModel(models.Model):
         return self.event_title
 
     class Meta:
-        verbose_name = u'活动'
+        verbose_name = "Events"
         verbose_name_plural = verbose_name
