@@ -57,6 +57,7 @@ urlpatterns = patterns('',
                        url(r'^community-voice/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)', views.CommunityVoiceDetailView.as_view()),
                        url(r'^community-voice/$', views.CommunityVoiceView.as_view()),
                        url(r'^nep/', 'welcome.views.show_nep_view'),
+                       url(r'^cnc/', 'welcome.views.show_cnc_view'),
 )
 
 handler404 = 'welcome.views.show_404_page'

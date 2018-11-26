@@ -1,0 +1,774 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Newton Community Node Summit" %}
+{% endblock %}
+
+{% block content %}
+<section id="summit">
+    <div class="summit-banner">
+        <div class="container">
+            <div class="text-center">
+                <img src="{% version 'images/meeting/meeting-new-top.png' %}" alt="">
+            </div>
+            <div class="about">
+                <div class="summit-title text-center">
+                    <div class="line"></div>
+                    <span>{% trans "About The Conference" %}</span>
+                    <div class="line"></div>
+                </div>
+                <div class="summit-content">
+                    <p>{% trans "On December 11, 2018, Newton will hold its first community node conference at the MGM Cotai, Macao. The theme of this conference is “Gravitation”. Just as everything in the universe attracts each other, our common philosophy eventually attracts us all to one space." %}</p>
+                    <p>{% trans "During the conference, we will release news about community governance, technical progress, product design, and our business ecosystem. We will invite important community members to jointly discuss the progress of the project." %}</p>
+                    <p>{% trans "We have invited Newton Project participants, advisors, media partners, and strategic partners from all over the world to cooperate with this great project, and will invite industry giants, community founders, and senior politicians to participate." %}</p>
+                    <p>{% trans "This global Newton node conference will re-introduce the Newton Project, strengthen the community, reflect on the past, look forward to the future, and greatly promote the development of the project." %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="summit-banner-mobile">
+        <img src="{% version 'images/meeting/meeting-banner-mobile.jpg' %}" style="width: 100%" alt="">
+        <div class="summit-bg">
+            <div class="container">
+                <div class="about">
+                    <div class="summit-title text-center">
+                        <div class="line"></div>
+                        <span>{% trans "About The Conference" %}</span>
+                        <div class="line"></div>
+                    </div>
+                    <div class="summit-content">
+                        <p>{% trans "On December 11, 2018, Newton will hold its first community node conference at the MGM Cotai, Macao. The theme of this conference is “Gravitation”. Just as everything in the universe attracts each other, our common philosophy eventually attracts us all to one space." %}</p>
+                        <p>{% trans "During the conference, we will release news about community governance, technical progress, product design, and our business ecosystem. We will invite important community members to jointly discuss the progress of the project." %}</p>
+                        <p>{% trans "We have invited Newton Project participants, advisors, media partners, and strategic partners from all over the world to cooperate with this great project, and will invite industry giants, community founders, and senior politicians to participate." %}</p>
+                        <p>{% trans "This global Newton node conference will re-introduce the Newton Project, strengthen the community, reflect on the past, look forward to the future, and greatly promote the development of the project." %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+        <div class="container meeting-nav">
+            <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
+                <img class="logo-pc lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/newton-logo.svg" %}" alt="Newton" style="width: unset;"/>
+            </a>
+            <span>{% trans "2018 Newton Community Node Conference" %}</span>
+        </div>
+    </nav>
+
+    <div class="bg-gray">
+        <div class="container">
+            <div class="guest">
+                <div class="summit-title text-center">
+                    <div class="line"></div>
+                    <span>{% trans "Invite Guests" %}</span>
+                    <div class="line"></div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/team/1.jpg" %}" alt="{% trans "Xu Jizhe" %}">
+                                </div>
+                                <h4 class="media-heading">{% trans "Xu Jizhe" %}</h4>
+                                <div class="media-intro">{% trans "Founder of Newton" %}<br/>{% trans "Founder of Zeuux (A Community for Free Software Usage)" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object" src="{% version "images/team/2.jpg" %}" alt="{% trans "Li Shubin" %}">
+                                </div>
+                                <h4 class="media-heading">{% trans "Li Shubin" %}</h4>
+                                <div class="media-intro">{% trans "Co-founder of Newton" %}<br/>{% trans "Founder and CEO of OKbuy" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object" src="{% version "images/team/xiawu.jpg" %}" alt="{% trans "Xia Wu" %}">
+                                </div>
+                                <h4 class="media-heading">{% trans "Xia Wu" %}</h4>
+                                <div class="media-intro" style="padding:unset;">{% trans "Joint Chief Architect" %}<br/>{% trans "Co-founder of Zeuux (A Community for Free Software Usage)" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object" src="{% version "images/team/mengguang.jpg" %}" alt="{% trans "Meng Guang" %}">
+                                </div>
+                                <h4 class="media-heading">{% trans "Meng Guang" %}</h4>
+                                <div class="media-intro">{% trans "Joint Chief Architect" %}<br/></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/advisor/1.jpg" %}" alt="{% trans "Han Feng" %}"/>
+                                </div>
+                                <h4 class="media-heading">{% trans "Han Feng" %}</h4>
+                                <div class="media-intro" style="padding: unset; width: 102%;">
+                                    {% trans "Visiting Scholar & Research Associate at Columbia University" %}<br/>
+                                    {% trans "Advisor at Huawei Central Institute" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/angels/9.jpg" %}" alt="{% trans "Hu Dinghe" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Hu Dinghe" %}</h4>
+                                <div class="media-intro">{% trans "President of Yuntu Capital" %}<br/>{% trans "Previous President of Chongqing Lifan" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/advisor/3.jpg" %}" alt="{% trans "Gu Xueyong" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Gu Xueyong" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Professor at Tsinghua University" %}<br/>
+                                    {% trans "Director of International Relations at iCenter" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/advisor/5.jpg" %}" alt="{% trans "Lee Willson" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Lee Willson" %}</h4>
+                                <div class="media-intro">{% trans "Bitcoin Ambassador" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/advisor/6.png" %}" alt="{% trans "Theodore Gray" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Theodore Gray" %}</h4>
+                                <div class="media-intro" style="padding: unset;">
+                                    {% trans "Co-Founder of Wolfram Research" %}<br/>
+                                    {% trans "Creator of the Mathematica Notebook System" %}<br/>
+                                    {% trans "Founder of Touch Press" %}<br/>
+                                    {% trans "BAFTA Award winning author" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/angels/1.jpg" %}" alt="{% trans "Liu Jun" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Liu Jun" %}</h4>
+                                <div class="media-intro" style="padding:unset;">{% trans "Co-Founder of Lightinthebox (NYSE:LITB)" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/angels/2.jpg" %}" alt="{% trans "Guo Feng" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Guo Feng" %}</h4>
+                                <div class="media-intro">{% trans "Founder of kela.cn" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/angels/8.jpg" %}" alt="{% trans "Ye Haifeng" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Ye Haifeng" %}</h4>
+                                <div class="media-intro">{% trans "Founder of mbaobao.com" %}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/angels/11.jpg" %}" alt="{% trans "Wang Feng" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Wang Feng" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Founder of linekong.com" %}<br/>
+                                    {% trans "Founder of huoxing24.com" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/angels/12.jpg" %}" alt="{% trans "Stewie Zhu" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Stewie Zhu" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Founder and CEO of Distributed Credit Chain" %}<br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/angels/14.png" %}" alt="{% trans "Shi Junchao" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Shi Junchao" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Senior gem jade appraiser." %}<br/>
+                                    {% trans "Deputy secretary general of xinjiang hetian jade industry association." %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/angels/15.png" %}" alt="{% trans "Guo Hongchi" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Guo Hongchi" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Founder of xijie.com" %}<br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/chenshi.jpg" %}" alt="{% trans "Chen Shi" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Chen Shi" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "KCSA founder" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/yujingdong.jpg" %}" alt="{% trans "Yu Jingdong" %}" />
+                                </div>
+                                <h4 class="media-heading">{% trans "Yu Jingdong" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Zhongzhi Enterprise Group Audit Inspection Center Risk Controller" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/songwei.jpg" %}" alt="{% trans "Song Wei" %}"/>
+                                </div>
+                                <h4 class="media-heading">{% trans "Song Wei" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "IDB Group President" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/xiezhongliang.jpg" %}" alt="{% trans "Xie Zhongliang" %}"/>
+                                </div>
+                                <h4 class="media-heading">{% trans "Xie Zhongliang" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "One Town One Product Technology Industry Co. General Manager" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/zhongchunsheng.jpg" %}" alt="{% trans "Zhong Chunsheng" %}"/>
+                                </div>
+                                <h4 class="media-heading">{% trans "Zhong Chunsheng" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Chongqing Grain Group" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/renzheng.jpg" %}" alt="{% trans "Ren Zheng" %}"/>
+                                </div>
+                                <h4 class="media-heading">{% trans "Ren Zheng" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Consensus Lab partner" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/tongyang.jpg" %}" alt="{% trans "Tong Yang" %}"/>
+                                </div>
+                                <h4 class="media-heading">{% trans "Tong Yang" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "Gold Finance partner" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/zengbibing.jpg" %}" alt="{% trans "Zeng Bibing" %}"/>
+                                </div>
+                                <h4 class="media-heading">{% trans "Zeng Bibing" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "BlockVC partner" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item col-md-4 col-xs-6">
+                    <div class="media">
+                        <div class="media-body">
+                            <div class="man-intro">
+                                <div class="avatar">
+                                    <img class="media-object lazy" src="{% version "images/meeting/sunjian.jpg" %}" alt="{% trans "Sun Jian" %}"/>
+                                </div>
+                                <h4 class="media-heading">{% trans "Sun Jian" %}</h4>
+                                <div class="media-intro">
+                                    {% trans "JLAB founder" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="summit-bg">
+        <div class="container">
+            <div class="summit-flow">
+                <div class="summit-title text-center">
+                    <div class="line"></div>
+                    <span>{% trans "Meeting Process" %}</span>
+                    <div class="line"></div>
+                </div>
+                <div class="flow-content">
+                    <div class="first-day">
+                        <div class="flow-day">
+                             <span>{% trans "December 11" %}</span>
+                        </div>
+                        <div class="col-md-3 col-xs-4 flow-left">
+                            <p>{% trans "Morning" %}</p>
+                            <p>{% trans "Afternoon" %}</p>
+                            <p>{% trans "Night" %}</p>
+                        </div>
+                        <div class="flow-line"></div>
+                        <div class="col-md-6 col-xs-7 flow-right">
+                            <p>{% trans "Newton Ecosystem Conference" %}</p>
+                            <p>{% trans "Newton Community Node Conference" %}</p>
+                            <p>{% trans "Newton Community Dinner" %}</p>
+                        </div>
+                    </div>
+                    <div class="second-day">
+                        <div class="flow-day">
+                             <span>{% trans "December 12" %}</span>
+                        </div>
+                        <div class="col-md-3 col-xs-4 flow-left">
+                            <p class="second-morning">{% trans "Morning" %}</p>
+                            <p>{% trans "Night" %}</p>
+                        </div>
+                        <div class="flow-line"></div>
+                        <div class="col-md-6 col-xs-7 flow-right">
+                            <p>{% trans "Sub-forum A: China-ASEAN Clean Energy Cooperation Roundtable" %}</p>
+                            <p>{% trans "Sub-forum B: Smart Energy and Energy Blockchain Innovation Summit" %}</p>
+                            <p>{% trans "Creating a New Economy: Newton Night" %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray">
+        <div class="container">
+            <div class="summit-partner">
+                <div class="summit-title text-center">
+                    <div class="line"></div>
+                    <span>{% trans "Partner" %}</span>
+                    <div class="line"></div>
+                </div>
+                <div class="partner-content">
+                    <div class="col-md-4 text-center wemerge">
+                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                    </div>
+                    <div class="col-md-4 text-center huoxing">
+                        <img src="{% version "images/meeting/huoxingcaijing.png" %}">
+                    </div>
+                    <div class="col-md-4 text-center yueliang">
+                        <img src="{% version "images/meeting/yueliang.png" %}">
+                        <h4 class="media-heading">{% trans "BC SPARK" %}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-line"></div>
+
+</section>
+{% endblock %}
+{% block css %}
+<style>
+    .summit-bg{
+        background-color: #010c34;
+    }
+    #summit .summit-banner img{
+        height: 100%;
+    }
+    .summit-title{
+        margin-bottom: 40px;
+    }
+    #summit .about{
+        margin: 60px 0;
+    }
+    #summit .guest{
+        margin: 60px 0;
+    }
+    #summit .summit-flow{
+        margin: 60px 0;
+    }
+    #summit .summit-partner{
+        margin: 60px 0;
+    }
+    #summit .summit-partner .media-heading{
+        font-size: 16px;
+        color: #636363;
+        font-weight: 400;
+        margin-top: 32px;
+        margin-left: 16px;
+    }
+    .partner-content:after{
+        clear: both;
+        content: "";
+        width: 0;
+        height: 0;
+        display: block;
+        visibility: hidden;
+    }
+    .partner-content .wemerge img{
+        width: 150px;
+    }
+    .partner-content .huoxing img{
+        width: 160px;
+        margin-top: 50px;
+    }
+    .partner-content .yueliang img{
+        width: 60px;
+    }
+    .first-day .flow-left{
+        margin-left: 18%;
+    }
+    .first-day .flow-left p{
+        font-size: 18px;
+        height: 80px;
+        color: white;
+    }
+    .first-day .flow-right p{
+        font-size: 18px;
+        height: 80px;
+        font-weight: 300;
+        color: white;
+    }
+    .flow-day{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .flow-day span{
+        font-size: 40px;
+        margin-left: 19%;
+        font-weight: 200;
+        color: white;
+    }
+    .flow-line{
+        width: 1px;
+        height: 210px;
+        background-color:#D5D5D5;
+        margin: auto 3% auto 0;
+        padding: 0;
+        overflow: hidden;
+        float: left;
+    }
+    .second-day .flow-line:lang(zh){
+        width: 1px;
+        height: 210px;
+        background-color:#D5D5D5;
+        margin: auto 3% auto 0;
+        padding: 0;
+        overflow: hidden;
+        float: left;
+    }
+    .second-day .flow-line{
+        width: 1px;
+        height: 210px;
+        background-color:#D5D5D5;
+        margin: auto 3% auto 0;
+        padding: 0;
+        overflow: hidden;
+        float: left;
+    }
+    .second-day .flow-left{
+        margin-left: 18%;
+    }
+    .second-day .flow-left p{
+        font-size: 18px;
+        height: 80px;
+        color: white;
+    }
+    .second-day .flow-right p:lang(zh) {
+        font-size: 18px;
+        height: 80px;
+        font-weight: 300;
+        color: white;
+    }
+    .second-day .flow-right p{
+        font-size: 18px;
+        height: 80px;
+        font-weight: 300;
+        color: white;
+    }
+    .second-day .flow-left .second-morning:lang(zh){
+        height: 170px;
+    }
+    .second-day .flow-left .second-morning{
+        height: 170px;
+    }
+    .bottom-line{
+        height: 2px;
+        width: 100%;
+        background-color: #eee;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .guest .media-body{
+        height: 350px;
+    }
+    .meeting-nav{
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: normal;
+        color: #333;
+    }
+    @media(min-width: 768px) {
+        .summit-banner-mobile{
+            display: none;
+        }
+    }
+    @media(max-width: 768px) {
+        .second-day .flow-right p{
+            font-size: 17px;
+            height: 130px;
+            font-weight: 300;
+            color: white;
+        }
+        .summit-banner{
+            display: none;
+        }
+        #summit .team-item{
+            padding: unset;
+            margin-bottom: unset;
+            height: 280px;
+        }
+        #summit .about{
+            margin-top: unset;
+        }
+        .guest .media-body{
+            height: auto;
+        }
+        #summit .summit-banner img{
+            width: 100%;
+        }
+        #summit .line{
+            width: 40px;
+        }
+        #summit .summit-content{
+            padding: 0 5px;
+        }
+        #summit .summit-content p{
+            Letter-spacing: 0.2em;
+        }
+        .team-item:last-child{
+            margin-bottom: 35px;
+        }
+        .flow-day span{
+            font-size: 32px;
+            margin-left: 3%;
+        }
+        .first-day .flow-left{
+            margin-left: unset;
+        }
+        .second-day .flow-left{
+            margin-left: unset;
+        }
+        .partner-content .huoxing{
+            margin-bottom: 15%;
+        }
+        #summit .about .line{
+            width: 28px;
+            margin-bottom: 6px;
+        }
+        #summit .about .summit-title span{
+            font-size: 20px;
+        }
+        #summit .media-intro{
+            font-size: 12px;
+        }
+        .second-day .flow-line:lang(zh){
+            width: 1px;
+            height: 210px;
+            background-color:#D5D5D5;
+            margin: auto 3% auto 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+        }
+        .second-day .flow-line{
+            width: 1px;
+            height: 340px;
+            background-color:#D5D5D5;
+            margin: auto 3% auto 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+        }
+        .second-day .flow-right p:lang(zh) {
+            font-size: 18px;
+            height: 80px;
+            font-weight: 300;
+            color: white;
+        }
+        .second-day .flow-left .second-morning:lang(zh){
+            height: 170px;
+        }
+        .second-day .flow-left .second-morning{
+            height: 270px;
+        }
+    }
+</style>
+{% endblock %}
+
+
+{% block inline_js %}
+<script type="text/javascript">
+    // showNav();
+    $(function () {
+        if (screen.width <= 768) {
+            showNav();
+            $("#float-nav").hide();
+        }
+        else {
+            $("#float-nav").hide();
+            $(window).scroll(function () {
+                var height;
+                var s = $(window).scrollTop();
+                if (s < 750) {
+                    // $(".NavBg").addClass("navFixed");
+                    $("#float-nav").hide();
+                } else {
+                    // $(".NavBg").removeClass("navFixed");
+                    $("#float-nav").show();
+                    $("#float-nav").addClass("navFixed");
+                }
+                ;
+            });
+        }
+        ;
+    });
+</script>
+{% endblock %}

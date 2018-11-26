@@ -22,6 +22,7 @@
         </div>
         <div class="events-list events-list-pc" id="id_events_list_passed">
             {% for pass_event in past_events_list %}
+
             <div class="col-md-4 col-xs-12">
                 <a {% if pass_event.event_link %}href="{{ pass_event.event_link }}"{% endif %}>
                     <div class="panel panel-default event_container">
@@ -90,6 +91,7 @@
                 </a>
             </div>
             {% endfor %}
+
         </div>
 
         <div class="col-md-12 col-xs-12 more">
