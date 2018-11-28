@@ -16,8 +16,6 @@ from events.settings import ENTRY_BASE_MODEL
 if ENTRY_BASE_MODEL == 'events.models_bases.entry.AbstractEntry':
     admin.site.register(Entry, EntryAdmin)
 
-admin.site.register(Category, CategoryAdmin)
-
 class EntryAdminTinyMCEMixin(object):
     """
     Mixin adding TinyMCE for editing Entry.content field.
