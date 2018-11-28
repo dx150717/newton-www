@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Events" %}
+{% endblock %}
+
+{% block content %}
+<section id="announcement" class="section-list">
+    <div class="page-title">
+        <div class="container">
+            <p>{% trans "Events" %}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content-area">
+                {% if entries %}
+                {% for entry in entries %}
+                <div class="content">
+                    <div class="item">
+                        <div class="entry-item">
+                            <div class="entry-title">
+                                <dt>
+                                    <a href="{{ entry.urls }}" class="title" title="{{ entry.title }}" rel="bookmark">
+                                        {{ entry.title }}
+                                    </a>
+                                </dt>
+                            </div>  
+                            <div class="entry-body">
+                                <div class="entry-content">
+                                    <dd class="summary">
+                                        <a href="{{ entry.urls }}" title="{{ entry.title }}" rel="bookmark">
+                                        {{ entry.html_preview|safe }}
+                                        </a>
+                                    </dd>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% if is_paginated %}
+                
+                <div class="pagination-simple">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+                {% endif %}
+                <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+                {% endif %}
+                </div>
+                {% endif %}
+                {% else %}
+                <p>{% trans "No entrys" %}</p>
+                {% endif %}
+        </div>
+</section>
+
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
+{% endblock %}

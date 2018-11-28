@@ -10,7 +10,7 @@ from config import codes
 
 
 class EventsView(generic.ListView):
-    template_name = "welcome/announcement.html"
+    template_name = "welcome/events.html"
     context_object_name = "entries"
     paginate_by = 20
 
@@ -30,7 +30,7 @@ class EventsView(generic.ListView):
 
 
 class EventsDetailView(generic.DetailView):
-    template_name = "welcome/announcement-detail.html"
+    template_name = "welcome/events-detail.html"
     context_object_name = "entry"
 
     def get_queryset(self):
