@@ -61,7 +61,7 @@ class MPTTFilteredSelectMultiple(widgets.FilteredSelectMultiple):
         """
         static = staticfiles_storage.url
         js = (static('admin/js/core.js'),
-              static('events/admin/mptt/js/mptt_m2m_selectbox.js'),
+              static('zinnia/admin/mptt/js/mptt_m2m_selectbox.js'),
               static('admin/js/SelectFilter2.js'))
 
 
@@ -102,7 +102,7 @@ class TagAutoComplete(widgets.AdminTextInputWidget):
         TagAutoComplete's Media.
         """
         static = lambda x: staticfiles_storage.url(
-            'events/admin/select2/%s' % x)
+            'zinnia/admin/select2/%s' % x)
 
         css = {
             'all': (static('css/select2.css'),)

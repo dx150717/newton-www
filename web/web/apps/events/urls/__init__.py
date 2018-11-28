@@ -6,7 +6,7 @@ from django.conf.urls import patterns
 from django.utils.translation import ugettext_lazy
 
 from events.settings import TRANSLATED_URLS
-
+from events import views
 
 def i18n_url(url, translate=TRANSLATED_URLS):
     """
@@ -16,8 +16,8 @@ def i18n_url(url, translate=TRANSLATED_URLS):
         return ugettext_lazy(url)
     return url
 
-_ = i18n_url
 
+_ = i18n_url
 urlpatterns = patterns(
     '',
     url(_(r'^feeds/'), include('events.urls.feeds')),
@@ -29,6 +29,10 @@ urlpatterns = patterns(
     url(_(r'^sitemap/'), include('events.urls.sitemap')),
     url(_(r'^trackback/'), include('events.urls.trackback')),
     url(_(r'^comments/'), include('events.urls.comments')),
+
+    url(r'^$', views.EventsView.as_view()),
+    url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)',
+        views.EventsDetailView.as_view()),
     url(r'^', include('events.urls.entries')),
     url(r'^', include('events.urls.archives')),
     url(r'^', include('events.urls.shortlink')),
