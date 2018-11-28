@@ -24,9 +24,9 @@
             {% for pass_event in past_events_list %}
 
             <div class="col-md-4 col-xs-12">
-                <a {% if pass_event.event_link %}href="{{ pass_event.event_link }}"{% endif %}>
+                <a {{ pass_event | get_event_url }}>
                     <div class="panel panel-default event_container">
-                        <div class="panel-body" style="background-image: url('{{ pass_event.event_img.url }}')"></div>
+                        <div class="panel-body" style="background-image: url('{{ pass_event.image.url }}')"></div>
                         <div class="panel-footer row">
                             <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">{{ pass_event.event_date | format_event_month }}</p>
@@ -48,9 +48,9 @@
             <div class="events-list events-list-pc events-list-monthly" id="id_events_list_{{ event_month.year }}_{{ event_month.month }}">
                 {% for event_item in event_month_item %}
                     <div class="col-md-4 col-xs-12">
-                        <a {% if event_item.event_link %}href="{{ event_item.event_link }}"{% endif %}>
+                        <a {{ event_item | get_event_url }}>
                             <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{{ event_item.event_img.url }}')">
+                                <div class="panel-body" style="background-image: url('{{ event_item.image.url }}')">
                                 </div>
                                 <div class="panel-footer row">
                                     <div class="col-md-2 col-sm-2 col-xs-2">
@@ -73,9 +73,9 @@
         <div class="events-list events-list-pc" id="id_events_list_coming" style="display: block;">
             {% for coming_event in coming_events_list %}
             <div class="col-md-4 col-xs-12">
-                <a {% if coming_event.event_link %}href="{{ coming_event.event_link }}"{% endif %}>
+                <a {{ coming_event | get_event_url }}>
                     <div class="panel panel-default event_container">
-                        <div class="panel-body" style="background-image: url('{{ coming_event.event_img.url }}')"></div>
+                        <div class="panel-body" style="background-image: url('{{ coming_event.image.url }}')"></div>
                         <div class="panel-footer row">
                             <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">{{ coming_event.event_date | format_event_month }}</p>
@@ -95,7 +95,7 @@
         </div>
 
         <div class="col-md-12 col-xs-12 more">
-            <a href="/announcements/0/">{% trans "All Events" %}</a>
+            <a href="/events/">{% trans "All Events" %}</a>
         </div>
     </div>
 </div>

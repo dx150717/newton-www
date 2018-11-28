@@ -30,3 +30,15 @@ def format_event_month(date_time):
     except Exception, inst:
         logger.exception("fail to format current month: %s" % str(inst))
         return ""
+
+
+@register.filter(name='get_event_url')
+def get_event_url(event):
+    """format upgrade message"""
+    try:
+        if event.event_link:
+            return 'target=_blank href=%s' % event.event_link
+        return 'target=_blank href=%s' % event.get_absolute_url()
+    except Exception, inst:
+        logger.exception("fail to get event url: %s" % str(inst))
+        return ""
