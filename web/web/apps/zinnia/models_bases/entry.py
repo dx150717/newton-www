@@ -11,6 +11,7 @@ from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils import timezone
+from django.conf import settings as django_settings
 from config import codes
 from django.utils import translation
 import django_comments as comments
@@ -49,27 +50,6 @@ class CoreEntry(models.Model):
     STATUS_CHOICES = ((DRAFT, _('draft')),
                       (HIDDEN, _('hidden')),
                       (PUBLISHED, _('published')))
-    
-    LANGUAGE_CHOICES = (
-        (CHINESE, "Chinese"),
-        (ENGLISH, "English"),
-        (KOREAN, "Korean"),
-        (JAPANESE, "Japanese"),
-        (RUSSIAN, "Russian"),
-        (TURKISH, "Turkish"),
-        (SPANISH, "Spanish"),
-        (FRENCH, "French"),
-        (GERMAN, "German"),
-        (ARABIC, "Arabic"),
-        (NETHERLAND, "Netherland"),
-        (FINNISH, "Finnish"),
-        (INDONESIAN, "Indonesian"),
-        (ITALY, "Italy"),
-        (THAILAND, "Thailand"),
-        (PORTUGUESE, "Portuguese"),
-        (VIETNAMESE, "Vietnamese"),
-        (ROMANIA, "Romania"),
-    )
 
     ENTRY_TYPE_CHOICES = (
         (TYPE_BLOG, _('Blog')),
@@ -121,7 +101,7 @@ class CoreEntry(models.Model):
 
     language = models.IntegerField(
         _('Language'),
-        choices=LANGUAGE_CHOICES,default=CHINESE,
+        choices=django_settings.LANGUAGE_CHOICES,default=CHINESE,
         db_index=True, 
         help_text=_('Language')
     )

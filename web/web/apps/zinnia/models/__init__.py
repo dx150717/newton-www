@@ -18,7 +18,8 @@ __all__ = [Entry.__name__,
            Category.__name__]
 
 # Register the comment moderator on Entry
-moderator.register(Entry, EntryCommentModerator)
+if Entry not in moderator._registry:
+    moderator.register(Entry, EntryCommentModerator)
 
 # Connect the signals
 connect_entry_signals()

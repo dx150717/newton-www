@@ -94,6 +94,26 @@ LANGUAGE_LIST = (
     ("ro", codes.EntryLanguage.ROMANIA.value),
 )
 
+LANGUAGE_CHOICES = (
+    (codes.EntryLanguage.CHINESE.value, "Chinese"),
+    (codes.EntryLanguage.ENGLISH.value, "English"),
+    (codes.EntryLanguage.KOREAN.value, "Korean"),
+    (codes.EntryLanguage.JAPANESE.value, "Japanese"),
+    (codes.EntryLanguage.RUSSIAN.value, "Russian"),
+    (codes.EntryLanguage.TURKISH.value, "Turkish"),
+    (codes.EntryLanguage.SPANISH.value, "Spanish"),
+    (codes.EntryLanguage.FRENCH.value, "French"),
+    (codes.EntryLanguage.GERMAN.value, "German"),
+    (codes.EntryLanguage.ARABIC.value, "Arabic"),
+    (codes.EntryLanguage.NETHERLAND.value, "Netherland"),
+    (codes.EntryLanguage.FINNISH.value, "Finnish"),
+    (codes.EntryLanguage.INDONESIAN.value, "Indonesian"),
+    (codes.EntryLanguage.ITALY.value, "Italy"),
+    (codes.EntryLanguage.THAILAND.value, "Thailand"),
+    (codes.EntryLanguage.PORTUGUESE.value, "Portuguese"),
+    (codes.EntryLanguage.VIETNAMESE.value, "Vietnamese"),
+    (codes.EntryLanguage.ROMANIA.value, "Romania"),
+)
 # country settings
 COUNTRIES_FIRST = []
 
