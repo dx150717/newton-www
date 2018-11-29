@@ -44,33 +44,16 @@ def show_home_view(request):
             break
     presses = PressModel.objects.order_by('-created_at')[0:3]
     entry = EntryDetail()
-    if language_code == codes.EntryLanguage.CHINESE.value:
-        activity_entry = entry.get_queryset().filter(language=codes.EntryLanguage.CHINESE.value, status=PUBLISHED,
-                                                     entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by(
-            '-creation_date').first()
-    else:
-        activity_entry = entry.get_queryset().filter(language=codes.EntryLanguage.ENGLISH.value, status=PUBLISHED,
-                                                     entry_type=TYPE_ANNOUNCEMENT,
-                                                     entry_sub_type=0).order_by('-creation_date').first()
+    activity_entry = entry.get_queryset().filter(language=language_code, status=PUBLISHED,
+                                                 entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by(
+        '-creation_date').first()
     # select operation entry object
-    if language_code == codes.EntryLanguage.CHINESE.value:
-        operation_entry = entry.get_queryset().filter(language=codes.EntryLanguage.CHINESE.value, status=PUBLISHED,
-                                                      entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by(
-            '-creation_date').first()
-    else:
-        operation_entry = entry.get_queryset().filter(language=codes.EntryLanguage.ENGLISH.value, status=PUBLISHED,
-                                                      entry_type=TYPE_ANNOUNCEMENT,
-                                                      entry_sub_type__in=[1, 2]).order_by('-creation_date').first()
+    operation_entry = entry.get_queryset().filter(language=language_code, status=PUBLISHED,
+                                                  entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by(
+        '-creation_date').first()
     # select blog entry object
-    if language_code == codes.EntryLanguage.CHINESE.value:
-        blog_entry = entry.get_queryset().filter(language=codes.EntryLanguage.CHINESE.value, status=PUBLISHED,
-                                                 entry_type=TYPE_BLOG).order_by(
-            '-creation_date').first()
-    else:
-        blog_entry = entry.get_queryset().filter(language=codes.EntryLanguage.ENGLISH.value, status=PUBLISHED,
-                                                 entry_type=TYPE_BLOG).order_by(
-            '-creation_date').first()
-
+    blog_entry = entry.get_queryset().filter(language=language_code, status=PUBLISHED,
+                                             entry_type=TYPE_BLOG).order_by('-creation_date').first()
     if activity_entry:
         activity_entry.urls = activity_entry.get_absolute_url().replace('/blog/', '/announcement/')
     if operation_entry:
@@ -78,16 +61,6 @@ def show_home_view(request):
     if blog_entry:
         blog_entry.urls = blog_entry.get_absolute_url()
     banner_press = PressModel.objects.order_by('-created_at').first()
-
-    # generate the captcha
-    # captcha_form = subscription_forms.SubscribeForm()
-    # countdown time
-    # start_day = False
-    # now = datetime.datetime.now()
-    # delta_time = settings.FUND_START_DATE - now
-    # delta_time = delta_time.total_seconds()
-    # if settings.FUND_START_DATE <= now:
-    #     start_day = True
     webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
     user = request.user
