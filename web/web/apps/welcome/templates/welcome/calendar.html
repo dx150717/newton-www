@@ -1,0 +1,91 @@
+{% load utils %}
+<div id='calendar'></div>
+
+{% block js %}
+<script src="{% version "js/moment.min.js" %}"></script>
+<script src="{% version "js/fullcalendar.js" %}"></script>
+<script >
+$('#calendar').fullCalendar({
+        defaultView: 'month',
+        height: 'auto',
+        header: {
+                  left: '',
+                  center: 'prev title next',
+                  right: ''
+                },
+        displayEventTime:true,
+        displayEventEnd:true,
+        weekMode:"liquid",
+        aspectRatio:2,
+        allDaySlot:false,
+        timeFormat: 'HH:mm',
+        locale:'zh-cn',
+    })
+
+function drawCalendar(data) {
+    $('#calendar').fullCalendar('removeEvents');
+    var events=[];
+    for(var i=0, len=data.length; i<len; i++){
+        var timeDate=data[i];
+        var isallDay=true;
+        if(timeDate["end"] !=null && timeDate["start"] != null){
+            if(moment(timeDate["start"].replace(" ","T")).format("HH:mm") !== "00:00" || moment(timeDate["end"].replace(" ","T")).format("HH:mm") !== "00:00"){
+                isallDay = false;
+            }
+        }
+        var item={
+            title : timeDate["title"],
+            start : timeDate["start"].replace(" ","T"),
+            className : "event-bar",
+            allDay :  isallDay,
+            end : timeDate["end"]==null ? "" : timeDate["end"].replace(" ","T"),
+            backgroundColor : getCalendarColor(timeDate["user"]),
+            user : timeDate["user"],
+        };
+        events.push(item);
+    }
+    $('#calendar').fullCalendar('addEventSource', events);
+}
+
+function getCalendarColor(user) {
+    if (user=="operation") {
+        return "#e2e3e4";
+    } else if (user=="meet-up") {
+        return "deepskyblue"
+    }
+}
+
+var data = [
+    {
+        "title": "",
+        "start": "2018-11-13",
+        "end": "2018-11-13",
+        "user": "operation",
+    },
+    {
+        "title": "xxxxxxx",
+        "start": "2018-11-18 00:00",
+        "end": "2018-11-18 20:00",
+        "user": "meet-up",
+    },
+    {
+        "title": "xxxxxxx",
+        "start": "2018-11-23 00:00",
+        "end": "2018-11-23 20:00",
+        "user": "operation",
+    },
+    {
+        "title": "xxxxxxx",
+        "start": "2018-12-13 00:00",
+        "end": "2018-12-13 20:00",
+        "user": "operation",
+    },
+]
+
+drawCalendar(data);
+</script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% version "css/fullcalendar.css" %}">
+{% endblock %}
