@@ -15,7 +15,7 @@ from django.http import HttpResponse
 from django.core.cache import cache
 from django.utils import translation
 from zinnia.views.entries import EntryDetail
-from zinnia.managers import CHINESE,ENGLISH,TYPE_BLOG,TYPE_ANNOUNCEMENT,TYPE_COMMUNITY_VOICE
+from zinnia.managers import CHINESE, ENGLISH, TYPE_BLOG, TYPE_ANNOUNCEMENT, TYPE_COMMUNITY_VOICE
 from zinnia.managers import PUBLISHED
 
 from press.models import PressModel
@@ -30,6 +30,7 @@ from webpush import send_user_notification, send_group_notification
 
 logger = logging.getLogger(__name__)
 
+
 def show_home_view(request):
     language = translation.get_language()
     language_code = ENGLISH
@@ -39,28 +40,15 @@ def show_home_view(request):
             break
     presses = PressModel.objects.order_by('-created_at')[0:3]
     entry = EntryDetail()
-    if language_code == CHINESE:
-        activity_entry = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED,
-                                                       entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by(
+    activity_entry = entry.get_queryset().filter(language=language_code, status=PUBLISHED,
+                                                 entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by(
             '-creation_date').first()
-    else:
-        activity_entry = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT,
-                                                       entry_sub_type=0).order_by('-creation_date').first()
     # select operation entry object
-    if language_code == CHINESE:
-        operation_entry = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED,
-                                                        entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by(
+    operation_entry = entry.get_queryset().filter(language=language_code, status=PUBLISHED,
+                                                  entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by(
             '-creation_date').first()
-    else:
-        operation_entry = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED,
-                                                        entry_type=TYPE_ANNOUNCEMENT,
-                                                        entry_sub_type__in=[1, 2]).order_by('-creation_date').first()
     # select blog entry object
-    if language_code == CHINESE:
-        blog_entry = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_BLOG).order_by(
-            '-creation_date').first()
-    else:
-        blog_entry = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_BLOG).order_by(
+    blog_entry = entry.get_queryset().filter(language=language_code, status=PUBLISHED, entry_type=TYPE_BLOG).order_by(
             '-creation_date').first()
 
     if activity_entry:
@@ -70,16 +58,6 @@ def show_home_view(request):
     if blog_entry:
         blog_entry.urls = blog_entry.get_absolute_url()
     banner_press = PressModel.objects.order_by('-created_at').first()
-
-    # generate the captcha
-    # captcha_form = subscription_forms.SubscribeForm()
-    # countdown time
-    # start_day = False
-    # now = datetime.datetime.now()
-    # delta_time = settings.FUND_START_DATE - now
-    # delta_time = delta_time.total_seconds()
-    # if settings.FUND_START_DATE <= now:
-    #     start_day = True
     webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
     user = request.user
@@ -90,65 +68,86 @@ def show_home_view(request):
                                                   'blog_entry': blog_entry, 'banner_press': banner_press,
                                                   "current_month": current_month, "is_index": is_index})
 
+
 def show_technology_view(request):
     return render(request, 'welcome/technology.html', locals())
+
 
 def show_tech_view(request):
     return render(request, 'welcome/tech.html', locals())
 
+
 def show_team_view(request):
-    return render(request, 'welcome/team.html', locals())    
+    return render(request, 'welcome/team.html', locals())
+
 
 def show_about_view(request):
     return render(request, 'welcome/about.html', locals())
 
+
 def show_joinus_view(request):
     return render(request, 'welcome/joinus.html', locals())
+
 
 def show_contact_view(request):
     return render(request, 'welcome/contact.html', locals())
 
+
 def show_register_view(request):
     return render(request, 'welcome/register.html', locals())
+
 
 def show_mediakit_view(request):
     return render(request, 'welcome/mediakit.html', locals())
 
+
 def show_protocol_view(request):
     return render(request, 'welcome/protocol.html', locals())
 
+
 def show_roadmap_view(request):
     return render(request, 'welcome/roadmap.html', locals())
-    
+
+
 def show_partner_view(request):
     return render(request, 'welcome/partner.html', locals())
-    
+
+
 def show_announcement_view(request):
     return render(request, 'welcome/announcement.html', locals())
-    
+
+
 def show_foundation_view(request):
     return render(request, 'welcome/foundation.html', locals())
-    
+
+
 def show_copyright_view(request):
     return render(request, 'welcome/copyright.html', locals())
-    
+
+
 def show_terms_of_use_view(request):
     return render(request, 'welcome/terms-of-use.html', locals())
-    
+
+
 def show_privacy_view(request):
     return render(request, 'welcome/privacy.html', locals())
-    
+
+
 def show_legal_view(request):
     return render(request, 'welcome/legal.html', locals())
+
 
 def show_newpay_view(request):
     return render(request, 'welcome/newpay.html', locals())
 
+
 def show_scene_view(request):
     return render(request, 'welcome/scene.html', locals())
 
+
 def show_business_proposal_view(request):
     return render(request, 'welcome/business-proposal.html', locals())
+
 
 def show_community_view(request):
     presses = PressModel.objects.order_by('-created_at')[0:4]
@@ -160,22 +159,33 @@ def show_community_view(request):
             break
     entry = EntryDetail()
     # select activity entry object
-    activity_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by('-creation_date')[0:4]
+    activity_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED,
+                                                   entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by(
+        '-creation_date')[0:4]
     if len(activity_entries) < 4:
-        activity_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by('-creation_date')[0:4]
+        activity_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT,
+                                                       entry_sub_type=0).order_by('-creation_date')[0:4]
     # select operation entry object
-    operation_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by('-creation_date')[0:4]
+    operation_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED,
+                                                    entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by(
+        '-creation_date')[0:4]
     if len(operation_entries) < 4:
-        operation_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_ANNOUNCEMENT, entry_sub_type__in=[1, 2]).order_by('-creation_date')[0:4]
+        operation_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED,
+                                                        entry_type=TYPE_ANNOUNCEMENT,
+                                                        entry_sub_type__in=[1, 2]).order_by('-creation_date')[0:4]
     # select blog entry object
-    blog_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
+    blog_entries = entry.get_queryset().filter(language=language_code, status=PUBLISHED, entry_type=TYPE_BLOG).order_by(
+        '-creation_date')[0:4]
     if len(blog_entries) < 4:
-        blog_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_BLOG).order_by('-creation_date')[0:4]
+        blog_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_BLOG).order_by(
+            '-creation_date')[0:4]
     # select community voice entry object
     if language_code == CHINESE:
-        voice_entries = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED, entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
+        voice_entries = entry.get_queryset().filter(language=CHINESE, status=PUBLISHED,
+                                                    entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
     else:
-        voice_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED, entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
+        voice_entries = entry.get_queryset().filter(language=ENGLISH, status=PUBLISHED,
+                                                    entry_type=TYPE_COMMUNITY_VOICE).order_by('-creation_date')[0:4]
     for activity_entry in activity_entries:
         activity_entry.urls = activity_entry.get_absolute_url().replace('/blog/', '/announcement/')
     for operation_entry in operation_entries:
@@ -186,6 +196,7 @@ def show_community_view(request):
         voice_entry.urls = voice_entry.get_absolute_url().replace('/blog/', '/community-voice/')
     return render(request, 'welcome/community.html', locals())
 
+
 def show_economy_view(request):
     language = translation.get_language()
     arabic_read_style = False
@@ -193,38 +204,50 @@ def show_economy_view(request):
         arabic_read_style = True
     return render(request, 'welcome/economy.html', locals())
 
+
 def show_whitepaper_view(request):
     return render(request, 'welcome/whitepaper.html', locals())
-        
+
+
 def show_wechat_view(request):
     return render(request, 'welcome/wechat.html', locals())
+
 
 def show_foundation_view(request):
     return render(request, 'welcome/foundation.html', locals())
 
+
 def show_term_of_service_view(request):
     return render(request, 'welcome/term-of-service.html', locals())
+
 
 def show_sitemap_view(request):
     return render(request, 'welcome/sitemap.html', locals())
 
+
 def show_newstatus_view(request):
     return render(request, 'welcome/newstatus.html', locals())
+
 
 def show_dashboard_view(request):
     return render(request, 'welcome/dashboard.html', locals())
 
+
 def show_join_partner_view(request):
     return render(request, 'welcome/join-partner.html', locals())
+
 
 def show_nep_view(request):
     return render(request, 'welcome/nep.html', locals())
 
+
 def show_newton_community_node_conference_view(request):
     return render(request, 'welcome/newton-community-node-conference.html', locals())
 
+
 def show_404_page(request):
     return render(request, '404.html')
+
 
 def show_500_page(request):
     return render(request, '500.html')
@@ -234,7 +257,7 @@ class AnnouncementView(generic.ListView):
     template_name = "welcome/announcement.html"
     context_object_name = "entries"
     paginate_by = 20
-    
+
     def get_queryset(self):
         language = translation.get_language()
         language_code = ENGLISH
@@ -251,11 +274,12 @@ class AnnouncementView(generic.ListView):
             entry.urls = url
         return entries
 
+
 class AnnouncementSubView(generic.ListView):
     template_name = "welcome/announcement.html"
     context_object_name = "entries"
     paginate_by = 20
-    
+
     def get_queryset(self):
         entry_sub_type = int(self.request.path.split("/")[2])
         language = translation.get_language()
@@ -265,11 +289,13 @@ class AnnouncementSubView(generic.ListView):
                 language_code = language_item[1]
                 break
         entry = EntryDetail()
-        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=language_code,entry_sub_type=entry_sub_type, status=PUBLISHED)
+        entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT, language=language_code,
+                                              entry_sub_type=entry_sub_type, status=PUBLISHED)
         if not entries:
-            entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT,language=ENGLISH,entry_sub_type=entry_sub_type, status=PUBLISHED)
+            entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT, language=ENGLISH,
+                                                  entry_sub_type=entry_sub_type, status=PUBLISHED)
         for entry in entries:
-            url = entry.get_absolute_url().replace('/blog/','/announcement/')
+            url = entry.get_absolute_url().replace('/blog/', '/announcement/')
             entry.urls = url
         return entries
 
@@ -277,7 +303,7 @@ class AnnouncementSubView(generic.ListView):
 class AnnouncementDetailView(generic.DetailView):
     template_name = "welcome/announcement-detail.html"
     context_object_name = "entry"
-    
+
     def get_queryset(self):
         entry = EntryDetail()
         entries = entry.get_queryset().filter(entry_type=TYPE_ANNOUNCEMENT)
@@ -300,7 +326,7 @@ class CommunityVoiceView(generic.ListView):
     template_name = "welcome/community-voice.html"
     context_object_name = "entries"
     paginate_by = 20
-    
+
     def get_queryset(self):
         language = translation.get_language()
         language_code = ENGLISH
@@ -310,9 +336,9 @@ class CommunityVoiceView(generic.ListView):
                 break
         entry = EntryDetail()
         if language_code == CHINESE:
-            entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE,language=CHINESE, status=PUBLISHED)
+            entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE, language=CHINESE, status=PUBLISHED)
         else:
-            entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE,language=ENGLISH, status=PUBLISHED)
+            entries = entry.get_queryset().filter(entry_type=TYPE_COMMUNITY_VOICE, language=ENGLISH, status=PUBLISHED)
         for entry in entries:
             url = entry.get_absolute_url().replace('/blog/', '/community-voice/')
             entry.urls = url

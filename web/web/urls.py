@@ -10,7 +10,6 @@ from django.conf.urls.static import static
 from welcome import views
 from search import views as search_views
 
-
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -26,7 +25,8 @@ urlpatterns = patterns('',
                        url(r'^blog/', include('zinnia.urls', namespace='zinnia')),
                        url(r'^announcement/$', views.AnnouncementView.as_view()),
                        url(r'^announcements/(?P<entry_sub_type>\d{1})/$', views.AnnouncementSubView.as_view()),
-                       url(r'^announcement/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)', views.AnnouncementDetailView.as_view()),
+                       url(r'^announcement/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)',
+                           views.AnnouncementDetailView.as_view()),
                        url(r'^about/', 'welcome.views.show_about_view'),
                        url(r'^joinus/', 'welcome.views.show_joinus_view'),
                        url(r'^contact/', 'welcome.views.show_contact_view'),
@@ -42,11 +42,11 @@ urlpatterns = patterns('',
                        url(r'^tinymce/zinnia/', include('zinnia_tinymce.urls')),
                        url(r'^tinymce/', include('tinymce.urls')),
                        url(r'^comments/', include('django_comments.urls')),
-                       url(r'^subscribe/',include('subscription.urls')),
-                       url(r'^press/',include('press.urls')),
-                       url(r'^faq/',include('faq.urls')),
-                       url(r'^ishuman/',include('ishuman.urls')),
-                       url(r'^help/',include('help.urls')),
+                       url(r'^subscribe/', include('subscription.urls')),
+                       url(r'^press/', include('press.urls')),
+                       url(r'^faq/', include('faq.urls')),
+                       url(r'^ishuman/', include('ishuman.urls')),
+                       url(r'^help/', include('help.urls')),
                        # admin
                        url(r'^admin/tools/', include('admin_tools.urls')),
                        url(r'^admin/', include(admin.site.urls)),
@@ -58,15 +58,18 @@ urlpatterns = patterns('',
                        url(r'^dashboard/', 'welcome.views.show_dashboard_view'),
                        url(r'^business-proposal/', 'welcome.views.show_business_proposal_view'),
                        url(r'^join-partner/', 'welcome.views.show_join_partner_view'),
-                       url(r'^community-voice/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)', views.CommunityVoiceDetailView.as_view()),
+                       url(r'^community-voice/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)',
+                           views.CommunityVoiceDetailView.as_view()),
                        url(r'^community-voice/$', views.CommunityVoiceView.as_view()),
                        url(r'^search/', include('search.urls')),
                        url(r'^nep/', 'welcome.views.show_nep_view'),
                        url(r'^event/newton-summit-2018/', 'welcome.views.show_newton_community_node_conference_view'),
                        # web push
                        url(r'^webpush/', include('webpush.urls')),
-                       url(r'sw.js', TemplateView.as_view(template_name='sw.js', content_type='application/x-javascript')),
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                       url(r'^events/', include('events.urls', namespace='events')),
+                       url(r'sw.js',
+                           TemplateView.as_view(template_name='sw.js', content_type='application/x-javascript')),
+                       ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'welcome.views.show_404_page'
 handler500 = 'welcome.views.show_500_page'
