@@ -1,0 +1,76 @@
+/* Events list style */
+
+.events-list .page-title {
+    background-color:rgb(240, 211, 109);
+}
+
+.events-list .no-entry-tip {
+    text-align: center;
+}
+
+.events-list .page-title .container {
+    background: url(../images/titlebg/announcement-bg-2.svg) no-repeat left bottom;
+}
+
+.events-list .container.events-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.events-list .events-title {
+    font-size: 28px;
+    border-bottom: solid 2px #bbb;
+    text-align: left;
+    letter-spacing: 2px;
+    padding-left: 0.5em;
+}
+
+.events-list .events-title span {
+}
+
+.events-list .entry-item {
+    box-shadow: 5px 3px 15px 10px #f7f7f7;
+    margin: 35px 15px;
+    padding: 1em;
+}
+
+.events-list .entry-item .entry-title {
+    font-size: 18px;
+    border-bottom: solid 2px #ccc;
+    padding-bottom: 5px;
+}
+
+.events-list .entry-item .entry-title a {
+    color: #888;
+    padding-top: unset;
+    padding-bottom: unset;
+}
+
+.events-list .entry-item .entry-body {
+    padding-top: 10px;
+}
+
+.events-list .entry-item .entry-body .entry-image img {
+    width: 100%;
+}
+
+.events-list .entry-item .entry-body .entry-content {
+}
+
+.events-list .entry-item .entry-body .entry-content p {
+}
+
+.events-list .calendar-title {
+    text-align: center;
+    font-size: 28px;
+}
+
+@media (min-width: 768px) {
+    .events-list .container.events-container {
+        padding-top: 50px;
+    }
+
+    .events-list .entry-item .entry-body .entry-content {
+        padding-top: 30px;
+    }
+}
