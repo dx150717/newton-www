@@ -32,8 +32,9 @@
                         <div class="col-md-4 col-xs-12 swiper-slide">
                             <a {{ coming_event | get_event_url }}>
                                 <div class="panel panel-default event_container">
-                                    <div class="panel-body" style="background-image: url('{{ coming_event.image.url }}')">
-                                    </div>
+                                    {% if coming_event.image %}
+                                    <div class="panel-body" style="background-image: url('{{ coming_event.image.url }}')"></div>
+                                    {% endif %}
                                     <div class="panel-footer row">
                                         <div class="col-md-2 col-sm-2 col-xs-2">
                                             <p class="date-container-month">{{ coming_event.event_date | format_event_month }}</p>
@@ -64,8 +65,9 @@
                         <div class="swiper-slide col-md-4 col-xs-12">
                             <a {{ pass_event | get_event_url }}>
                                 <div class="panel panel-default event_container">
-                                    <div class="panel-body" style="background-image: url('{{ pass_event.image.url }}')">
-                                    </div>
+                                    {% if pass_event.image %}
+                                    <div class="panel-body" style="background-image: url('{{ pass_event.image.url }}')"></div>
+                                    {% endif %}
                                     <div class="panel-footer row">
                                         <div class="col-md-2 col-sm-2 col-xs-2">
                                             <p class="date-container-month">{{ pass_event.event_date | format_event_month }}</p>
@@ -100,8 +102,9 @@
                     <div class="col-md-4 col-xs-12 swiper-slide">
                         <a {{ event_item | get_event_url }}>
                             <div class="panel panel-default event_container">
-                                <div class="panel-body" style="background-image: url('{{ event_item.image.url }}')">
-                                </div>
+                                {% if event_item.image %}
+                                <div class="panel-body" style="background-image: url('{{ event_item.image.url }}')"></div>
+                                {% endif %}
                                 <div class="panel-footer row">
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                         <p class="date-container-month">{{ event_item.event_date | format_event_month }}</p>
