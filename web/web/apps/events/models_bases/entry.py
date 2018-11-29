@@ -259,7 +259,7 @@ class CoreEntry(models.Model):
         ordering = ['-creation_date']
         get_latest_by = 'creation_date'
         verbose_name = _('Events')
-        verbose_name_plural = _('entries')
+        verbose_name_plural = _('Events')
         index_together = [['slug', 'creation_date'],
                           ['status', 'creation_date',
                            'start_publication', 'end_publication','language','entry_type','entry_sub_type']]
