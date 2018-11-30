@@ -65,6 +65,10 @@
     font-size: 28px;
 }
 
+.events-list .calendar-container .fc-header-toolbar {
+    border-bottom: solid 2px #bbb;
+}
+
 .events-list .calendar-container .fc-header-toolbar .fc-center .fc-button {
     background: unset;
     border: none;
@@ -77,6 +81,11 @@
 .events-list .calendar-container .fc-header-toolbar .fc-center h2 {
     font-size: 18px;
     font-weight: 700;
+    min-width: 140px;
+}
+
+.events-list .calendar-container .fc-view-container {
+    box-shadow: 5px 3px 15px 10px #f7f7f7;
 }
 
 .events-list .calendar-container .fc-view-container th,
@@ -89,6 +98,43 @@
 
 .events-list .calendar-container .fc-view-container td .fc-day-number {
     float: unset;
+}
+
+.events-list .calendar-container .fc-view-container .fc-head .fc-row,
+.events-list .calendar-container .fc-basic-view .fc-body .fc-row {
+    min-height: 2em;
+}
+
+.events-list .calendar-container .fc-unthemed td.fc-today {
+    background: unset;
+    color: #00a04a;
+}
+
+.events-list .calendar-container .fc-unthemed td.fc-today:hover {
+    color: unset;
+}
+
+.events-list .calendar-container .fc table {
+    font-size: 18px;
+}
+
+.events-list .calendar-container .fc-event-container .fc-event {
+    line-height: 0;
+}
+
+.events-list .calendar-container .fc-event-container a.fc-event {
+    margin-top: -2em;
+    padding-top: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-width: 2px;
+    background-color: unset;
+}
+
+.events-list .calendar-container .fc-scroller.fc-day-grid-container {
+    overflow: unset !important;
 }
 
 @media (min-width: 768px) {

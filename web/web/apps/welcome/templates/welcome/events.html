@@ -15,7 +15,7 @@
     </div>
     <div class="container events-container row">
         {% if entries %}
-        <div class="col-md-8 col-sm-8 col-xs-12">
+        <div class="col-md-8 col-sm-12">
 
             {% if coming_entries %}
             <div class="events-title">
@@ -25,14 +25,14 @@
             <div class="entry-item">
                 <div class="entry-title">
                     <dt>
-                        <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" rel="bookmark">
+                        <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" target="_blank">
                             {{ coming_entry.title }}
                         </a>
                     </dt>
                 </div>
                 <div class="entry-body row">
                     <div class="entry-image col-md-6 col-sm-6 col-xs-12">
-                        <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" rel="bookmark">
+                        <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" target="_blank">
                             <img src="{{ coming_entry.image.url }}" alt="">
                         </a>
                     </div>
@@ -56,14 +56,14 @@
             <div class="entry-item">
                 <div class="entry-title">
                     <dt>
-                        <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" rel="bookmark">
+                        <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
                             {{ passed_entry.title }}
                         </a>
                     </dt>
                 </div>
                 <div class="entry-body row">
                     <div class="entry-image col-md-6 col-sm-6 col-xs-12">
-                        <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" rel="bookmark">
+                        <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
                             <img src="{{ passed_entry.image.url }}" alt="">
                         </a>
                     </div>
@@ -93,7 +93,7 @@
             {% endif %}
         </div>
 
-        <div class="col-md-4 col-sm-4 col-xs-0">
+        <div class="col-md-4 col-sm-0">
             <div class="calendar-title">
                 <span>{% trans "Events Dates" %}</span>
             </div>
@@ -108,11 +108,6 @@
     </div>
 </section>
 
-{% endblock %}
-
-{% block inline_js %}
-<script type="text/javascript">
-</script>
 {% endblock %}
 
 {% block css %}
