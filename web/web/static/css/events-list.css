@@ -127,14 +127,17 @@
 }
 
 .events-list .calendar-container .fc-event-container a.fc-event {
-    margin-top: -36px;
-    padding-top: 43px;
-    border-bottom-left-radius: 43px;
-    border-bottom-right-radius: 43px;
-    border-top-left-radius: 43px;
-    border-top-right-radius: 43px;
+    width: 30px;
+    margin-top: -30px;
+    padding-top: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     border-width: 2px;
     background-color: unset;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .events-list .calendar-container .fc-scroller.fc-day-grid-container {
