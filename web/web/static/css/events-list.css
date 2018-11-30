@@ -36,7 +36,6 @@
 
 .events-list .entry-item .entry-title {
     font-size: 18px;
-    border-bottom: solid 2px #ccc;
     padding-bottom: 5px;
 }
 
@@ -58,6 +57,11 @@
 }
 
 .events-list .entry-item .entry-body .entry-content p {
+}
+
+.events-list .entry-item .entry-body .entry-content p.entry-title {
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .events-list .calendar-title {
@@ -102,7 +106,7 @@
 
 .events-list .calendar-container .fc-view-container .fc-head .fc-row,
 .events-list .calendar-container .fc-basic-view .fc-body .fc-row {
-    min-height: 2em;
+    min-height: 50px;
 }
 
 .events-list .calendar-container .fc-unthemed td.fc-today {
@@ -123,12 +127,12 @@
 }
 
 .events-list .calendar-container .fc-event-container a.fc-event {
-    margin-top: -2em;
-    padding-top: 2em;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
+    margin-top: -36px;
+    padding-top: 43px;
+    border-bottom-left-radius: 43px;
+    border-bottom-right-radius: 43px;
+    border-top-left-radius: 43px;
+    border-top-right-radius: 43px;
     border-width: 2px;
     background-color: unset;
 }
@@ -141,8 +145,26 @@
     .events-list .container.events-container {
         padding-top: 50px;
     }
+}
 
-    .events-list .entry-item .entry-body .entry-content {
-        padding-top: 30px;
+@media (max-width: 1200px) {
+    .events-list .calendar-container .fc-event-container a.fc-event {
+        margin-top: -32px;
+        padding-top: 33px;
+        border-bottom-left-radius: 33px;
+        border-bottom-right-radius: 33px;
+        border-top-left-radius: 33px;
+        border-top-right-radius: 33px;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-list .container.events-container {
+        padding-top: 3em;
+    }
+
+    .events-list .container .events-wrapper {
+        padding-left: unset;
+        padding-right: unset;
     }
 }

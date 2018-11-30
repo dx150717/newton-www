@@ -15,7 +15,7 @@
     </div>
     <div class="container events-container row">
         {% if entries %}
-        <div class="col-md-8 col-sm-12 col-xs-12">
+        <div class="col-md-8 col-sm-12 col-xs-12 events-wrapper">
 
             {% if coming_entries %}
             <div class="events-title">
@@ -23,13 +23,6 @@
             </div>
             {% for coming_entry in coming_entries %}
             <div class="entry-item">
-                <div class="entry-title">
-                    <dt>
-                        <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" target="_blank">
-                            {{ coming_entry.title }}
-                        </a>
-                    </dt>
-                </div>
                 <div class="entry-body row">
                     <div class="entry-image col-md-6 col-sm-6 col-xs-12">
                         <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" target="_blank">
@@ -37,6 +30,11 @@
                         </a>
                     </div>
                     <div class="entry-content col-md-6 col-sm-6 col-xs-12">
+                        <p class="entry-title">
+                            <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
+                                {{ coming_entry.title }}
+                            </a>
+                        </p>
                         <p>{% trans "Date:" %} {{ coming_entry.event_during }}</p>
                         <p>{% trans "Addr:" %} {{ coming_entry.event_location }}</p>
                         {% if coming_entry.tags %}
@@ -54,13 +52,6 @@
             </div>
             {% for passed_entry in passed_entries %}
             <div class="entry-item">
-                <div class="entry-title">
-                    <dt>
-                        <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
-                            {{ passed_entry.title }}
-                        </a>
-                    </dt>
-                </div>
                 <div class="entry-body row">
                     <div class="entry-image col-md-6 col-sm-6 col-xs-12">
                         <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
@@ -68,6 +59,11 @@
                         </a>
                     </div>
                     <div class="entry-content col-md-6 col-sm-6 col-xs-12">
+                        <p class="entry-title">
+                            <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
+                                {{ passed_entry.title }}
+                            </a>
+                        </p>
                         <p>{% trans "Date:" %} {{ passed_entry.event_during }}</p>
                         <p>{% trans "Addr:" %} {{ passed_entry.event_location }}</p>
                         {% if coming_entry.tags %}

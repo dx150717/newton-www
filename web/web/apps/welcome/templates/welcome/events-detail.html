@@ -12,18 +12,12 @@
 
 {% block content %}
 <section class="section-list event-detail">
-    <div class="page-title">
-        <div class="container">
-            <p>{% trans "Events" %}</p>
-        </div>
-    </div>
-
     <div class="container event-detail-container">
         <div class="event-summary row">
-            <div class="col-md-8 col-sm-8 col-xs-12 event-image">
+            <div class="col-md-6 col-sm-6 col-xs-12 event-image">
                 <img src="{{ entry.image.url }}" alt="">
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12 event-info">
+            <div class="col-md-6 col-sm-6 col-xs-12 event-info">
                 <p class="entry-title">{{ entry.title }}</p>
                 <p class="entry-info-sub-title">{% trans "Date:" %}</p>
                 <p class="entry-info-content">{{ entry.event_during }}</p>

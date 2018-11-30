@@ -34,10 +34,9 @@ function initCalendar() {
         locale:'zh-cn',
         events: events_data,
         eventClick: function(event) {
-            console.log("event: " + event.url)
             if (event.url) {
-              window.href.location(event.url);
-              return false;
+                window.location.href = event.url;
+                return false;
             }
         }
     })
