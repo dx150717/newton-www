@@ -15,7 +15,7 @@
     </div>
     <div class="container events-container row">
         {% if entries %}
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-8 col-sm-12 col-xs-12">
 
             {% if coming_entries %}
             <div class="events-title">
@@ -93,7 +93,7 @@
             {% endif %}
         </div>
 
-        <div class="col-md-4 col-sm-0">
+        <div class="col-md-4 hidden-sm hidden-xs">
             <div class="calendar-title">
                 <span>{% trans "Events Dates" %}</span>
             </div>
@@ -112,4 +112,10 @@
 
 {% block css %}
 <link rel="stylesheet" href="{% version "css/events-list.css" %}">
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
 {% endblock %}

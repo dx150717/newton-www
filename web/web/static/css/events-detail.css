@@ -1,0 +1,68 @@
+/* Events detail style */
+.event-detail .page-title {
+    background-color:rgb(240, 211, 109);
+}
+
+.event-detail .page-title .container {
+    background: url(../images/titlebg/announcement-bg-2.svg) no-repeat left bottom;
+}
+
+.event-detail .event-summary .event-image img {
+    width: 100%;
+}
+
+.event-detail .event-summary .event-info .entry-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.event-detail .event-summary .event-info .entry-info-sub-title {
+    font-weight: 600;
+    color: #333;
+}
+
+.event-detail .event-content dd p {
+    text-align: left;
+    --x-height-multiplier: 0.375;
+    --baseline-multiplier: 0.17;
+    font-weight: 400;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: #6F7287;
+}
+
+.event-detail .event-content {
+    padding-top: 30px;
+    border-top: solid 1px #bbb;
+}
+
+.event-detail .event-content dd p img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .event-detail .container.event-detail-container {
+        max-width: 980px;
+        padding: 50px 30px;
+        box-shadow: 5px 3px 15px 10px #f7f7f7;
+        margin-top: 10px;
+    }
+
+    .event-detail .event-summary .event-info {
+        padding-top: 3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-detail .event-summary .event-image {
+        padding-left: unset;
+        padding-right: unset;
+    }
+}
