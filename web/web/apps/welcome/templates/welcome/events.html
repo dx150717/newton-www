@@ -31,7 +31,7 @@
                     </div>
                     <div class="entry-content col-md-6 col-sm-6 col-xs-12">
                         <p class="entry-title">
-                            <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
+                            <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" target="_blank">
                                 {{ coming_entry.title }}
                             </a>
                         </p>
@@ -66,7 +66,7 @@
                         </p>
                         <p>{% trans "Date:" %} {{ passed_entry.event_during }}</p>
                         <p>{% trans "Addr:" %} {{ passed_entry.event_location }}</p>
-                        {% if coming_entry.tags %}
+                        {% if passed_entry.tags %}
                         <p>{% trans "Tags:" %} {{ passed_entry.tags }}</p>
                         {% endif %}
                     </div>

@@ -53,6 +53,8 @@ class EventsView(generic.ListView):
             entries = entry.get_queryset().filter(q).filter(language=codes.EntryLanguage.ENGLISH.value,).order_by("-event_date")
         for entry in entries:
             url = entry.get_absolute_url()
+            if entry.event_link:
+                url = entry.event_link
             entry.urls = url
         return entries
 
