@@ -55,7 +55,10 @@ class EventsView(generic.ListView):
             url = entry.get_absolute_url()
             if entry.event_link:
                 url = entry.event_link
-            entry.urls = url
+            elif not entry.content:
+                url = None
+            if url:
+                entry.urls = url
         return entries
 
 

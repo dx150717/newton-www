@@ -25,13 +25,13 @@
             <div class="entry-item">
                 <div class="entry-body row">
                     <div class="entry-image col-md-6 col-sm-6 col-xs-12">
-                        <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" target="_blank">
+                        <a {% if coming_entry.urls %}href="{{ coming_entry.urls }}"{% endif %} class="title" title="{{ coming_entry.title }}" target="_blank">
                             <img src="{{ coming_entry.image.url }}" alt="">
                         </a>
                     </div>
                     <div class="entry-content col-md-6 col-sm-6 col-xs-12">
                         <p class="entry-title">
-                            <a href="{{ coming_entry.urls }}" class="title" title="{{ coming_entry.title }}" target="_blank">
+                            <a {% if coming_entry.urls %}href="{{ coming_entry.urls }}"{% endif %} class="title" title="{{ coming_entry.title }}" target="_blank">
                                 {{ coming_entry.title }}
                             </a>
                         </p>
@@ -54,13 +54,13 @@
             <div class="entry-item">
                 <div class="entry-body row">
                     <div class="entry-image col-md-6 col-sm-6 col-xs-12">
-                        <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
+                        <a {% if passed_entry.urls %}href="{{ passed_entry.urls }}"{% endif %} class="title" title="{{ passed_entry.title }}" target="_blank">
                             <img src="{{ passed_entry.image.url }}" alt="">
                         </a>
                     </div>
                     <div class="entry-content col-md-6 col-sm-6 col-xs-12">
                         <p class="entry-title">
-                            <a href="{{ passed_entry.urls }}" class="title" title="{{ passed_entry.title }}" target="_blank">
+                            <a {% if passed_entry.urls %}href="{{ passed_entry.urls }}"{% endif %} class="title" title="{{ passed_entry.title }}" target="_blank">
                                 {{ passed_entry.title }}
                             </a>
                         </p>

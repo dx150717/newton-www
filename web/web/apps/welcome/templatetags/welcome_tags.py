@@ -48,7 +48,8 @@ def get_event_url(event):
     try:
         if event.event_link:
             return 'target=_blank href=%s' % event.event_link
-        return 'target=_blank href=%s' % event.get_absolute_url()
+        elif event.content:
+            return 'target=_blank href=%s' % event.get_absolute_url()
     except Exception, inst:
         logger.exception("fail to get event url: %s" % str(inst))
         return ""
