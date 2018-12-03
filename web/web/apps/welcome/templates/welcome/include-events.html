@@ -33,6 +33,7 @@
                             <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">{{ pass_event.event_date | format_event_month }}</p>
                                 <p class="date-container-date">{{ pass_event.event_date.day }}</p>
+                                <p class="date-container-weekday">{{ pass_event.event_date | format_event_weekday }}</p>
                             </div>
                             <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">{{ pass_event.title }}</p>
@@ -59,6 +60,7 @@
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                         <p class="date-container-month">{{ event_item.event_date | format_event_month }}</p>
                                         <p class="date-container-date">{{ event_item.event_date.day }}</p>
+                                        <p class="date-container-weekday">{{ event_item.event_date | format_event_weekday }}</p>
                                     </div>
                                     <div class="col-md-10 col-sm-10 col-xs-10">
                                         <p class="event-title">{{ event_item.title }}</p>
@@ -85,6 +87,7 @@
                             <div class="col-md-2 col-sm-2 col-xs-2">
                                 <p class="date-container-month">{{ coming_event.event_date | format_event_month }}</p>
                                 <p class="date-container-date">{{ coming_event.event_date.day }}</p>
+                                <p class="date-container-weekday">{{ coming_event.event_date | format_event_weekday }}</p>
                             </div>
                             <div class="col-md-10 col-sm-10 col-xs-10">
                                 <p class="event-title">{{ coming_event.title }}</p>

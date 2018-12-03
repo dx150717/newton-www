@@ -28,7 +28,17 @@ def format_event_month(date_time):
     try:
         return date_time.strftime("%b")
     except Exception, inst:
-        logger.exception("fail to format current month: %s" % str(inst))
+        logger.exception("fail to format event month: %s" % str(inst))
+        return ""
+
+
+@register.filter(name='format_event_weekday')
+def format_event_weekday(date_time):
+    """format upgrade message"""
+    try:
+        return date_time.strftime("%a").upper()
+    except Exception, inst:
+        logger.exception("fail to format event weekday: %s" % str(inst))
         return ""
 
 
