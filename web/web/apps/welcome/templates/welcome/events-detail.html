@@ -15,7 +15,9 @@
     <div class="container event-detail-container">
         <div class="event-summary row">
             <div class="col-md-6 col-sm-6 col-xs-12 event-image">
+                {% if entry.image %}
                 <img src="{{ entry.image.url }}" alt="">
+                {% endif %}
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12 event-info">
                 <p class="entry-title">{{ entry.title }}</p>

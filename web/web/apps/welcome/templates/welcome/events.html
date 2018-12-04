@@ -26,7 +26,9 @@
                 <div class="entry-body row">
                     <div class="entry-image col-md-6 col-sm-6 col-xs-12">
                         <a {% if coming_entry.urls %}href="{{ coming_entry.urls }}"{% endif %} class="title" title="{{ coming_entry.title }}" target="_blank">
+                            {% if coming_entry.image %}
                             <img src="{{ coming_entry.image.url }}" alt="">
+                            {% endif %}
                         </a>
                     </div>
                     <div class="entry-content col-md-6 col-sm-6 col-xs-12">
@@ -55,7 +57,9 @@
                 <div class="entry-body row">
                     <div class="entry-image col-md-6 col-sm-6 col-xs-12">
                         <a {% if passed_entry.urls %}href="{{ passed_entry.urls }}"{% endif %} class="title" title="{{ passed_entry.title }}" target="_blank">
+                            {% if passed_entry.image %}
                             <img src="{{ passed_entry.image.url }}" alt="">
+                            {% endif %}
                         </a>
                     </div>
                     <div class="entry-content col-md-6 col-sm-6 col-xs-12">
