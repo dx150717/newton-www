@@ -1,5 +1,7 @@
 {% load utils %}
-<div id='calendar'></div>
+<div id='calendar'>
+    <img src="{% version "images/loading.gif" %}" alt="" class="loading center-block" style="width: 50%; height: auto;">
+</div>
 
 {% block js %}
 <script src="{% version "js/moment.min.js" %}"></script>

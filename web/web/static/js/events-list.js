@@ -15,9 +15,10 @@ function initCalendar() {
         }
     });
 
-    console.log("events_data: " + events_data)
-
     $('#calendar').fullCalendar({
+        eventAfterAllRender: function (view) {
+            $("#calendar .loading").hide();
+        },
         defaultView: 'month',
         height: 'auto',
         header: {
