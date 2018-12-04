@@ -28,6 +28,8 @@
                     <div class="panel panel-default event_container">
                         {% if pass_event.image %}
                         <div class="panel-body" style="background-image: url('{{ pass_event.image.url }}')"></div>
+                        {% else %}
+                        <div class="panel-body" style="background-image: url({% version "images/events/events-default.jpg" %})"></div>
                         {% endif %}
                         <div class="panel-footer row">
                             <div class="col-md-2 col-sm-2 col-xs-2">
@@ -55,6 +57,8 @@
                             <div class="panel panel-default event_container">
                                 {% if event_item.image %}
                                 <div class="panel-body" style="background-image: url('{{ event_item.image.url }}')"></div>
+                                {% else %}
+                                <div class="panel-body" style="background-image: url({% version "images/events/events-default.jpg" %})"></div>
                                 {% endif %}
                                 <div class="panel-footer row">
                                     <div class="col-md-2 col-sm-2 col-xs-2">
@@ -82,6 +86,8 @@
                     <div class="panel panel-default event_container">
                         {% if coming_event.image %}
                         <div class="panel-body" style="background-image: url('{{ coming_event.image.url }}')"></div>
+                        {% else %}
+                        <div class="panel-body" style="background-image: url({% version "images/events/events-default.jpg" %})"></div>
                         {% endif %}
                         <div class="panel-footer row">
                             <div class="col-md-2 col-sm-2 col-xs-2">

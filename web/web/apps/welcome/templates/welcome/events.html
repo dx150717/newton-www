@@ -28,6 +28,8 @@
                         <a {% if coming_entry.urls %}href="{{ coming_entry.urls }}"{% endif %} class="title" title="{{ coming_entry.title }}" target="_blank">
                             {% if coming_entry.image %}
                             <img src="{{ coming_entry.image.url }}" alt="">
+                            {% else %}
+                            <div class="panel-body" style="background-image: url({% version "images/events/events-default.jpg" %})"></div>
                             {% endif %}
                         </a>
                     </div>
@@ -59,6 +61,8 @@
                         <a {% if passed_entry.urls %}href="{{ passed_entry.urls }}"{% endif %} class="title" title="{{ passed_entry.title }}" target="_blank">
                             {% if passed_entry.image %}
                             <img src="{{ passed_entry.image.url }}" alt="">
+                            {% else %}
+                            <div class="panel-body" style="background-image: url({% version "images/events/events-default.jpg" %})"></div>
                             {% endif %}
                         </a>
                     </div>
