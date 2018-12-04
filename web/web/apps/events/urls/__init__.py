@@ -33,6 +33,7 @@ urlpatterns = patterns(
     url(r'^$', views.EventsView.as_view()),
     url(r'^(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[-\w]+)',
         views.EventsDetailView.as_view()),
+    url(r'^datelist/$', views.get_events_date),
     url(r'^', include('events.urls.entries')),
     url(r'^', include('events.urls.archives')),
     url(r'^', include('events.urls.shortlink')),

@@ -35,11 +35,6 @@
     display: inline-block;
 }
 
-
-.events .events-list a {
-    cursor: unset;
-}
-
 .events #id_events_list_passed.events-list a {
     cursor: pointer;
 }
@@ -61,6 +56,8 @@
     text-align: left;
     background: #fff;
     border-top: unset;
+    height: 180px;
+    overflow: hidden;
 }
 
 .events .events-list .event_container .panel-footer .date-container-month {
@@ -73,6 +70,10 @@
 .events .events-list .event_container .panel-footer .event-title {
     font-size: 20px;
     margin-bottom: unset;
+}
+
+.events .events-list .event_container .panel-footer .date-container-weekday {
+    font-size:14px;
 }
 
 .events .events-list .event_container .panel-footer .event-time,
@@ -117,6 +118,10 @@
     .events .events-list .event_container .panel-body {
         min-height: 150px;
     }
+
+    .events .events-list .event_container .panel-footer {
+        height: 250px;
+    }
     .events .events-list {
         display: block;
         height: 400px;
@@ -135,8 +140,28 @@
         height: 400px;
         overflow: hidden;
     }
+
+    .event-mobile-section .swiper-slide {
+        height: 380px;
+        overflow: hidden;
+    }
+
     .event-mobile-section:lang(zh-cn){
         height: 331px;
         overflow: hidden;
+    }
+
+    .event-mobile-section .swiper-slide:lang(zh-cn) {
+        height: 311px;
+        overflow: hidden;
+    }
+
+    .event-mobile-section .swiper-slide .event-location:lang(zh-cn) {
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .events-mobile .events-list .swiper-pagination-bullets {
+        margin-top: 10px;
     }
 }

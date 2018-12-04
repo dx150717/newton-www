@@ -7,58 +7,107 @@
 {% endblock %}
 
 {% block content %}
-<section id="announcement" class="section-list">
+<section class="section-list events-list">
     <div class="page-title">
         <div class="container">
-            <p>{% trans "Events" %}</p>
+            <p>{% trans "All Events" %}</p>
         </div>
     </div>
-    <div class="container">
-        <div class="content-area">
-                {% if entries %}
-                {% for entry in entries %}
-                <div class="content">
-                    <div class="item">
-                        <div class="entry-item">
-                            <div class="entry-title">
-                                <dt>
-                                    <a href="{{ entry.urls }}" class="title" title="{{ entry.title }}" rel="bookmark">
-                                        {{ entry.title }}
-                                    </a>
-                                </dt>
-                            </div>  
-                            <div class="entry-body">
-                                <div class="entry-content">
-                                    <dd class="summary">
-                                        <a href="{{ entry.urls }}" title="{{ entry.title }}" rel="bookmark">
-                                        {{ entry.html_preview|safe }}
-                                        </a>
-                                    </dd>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="container events-container row">
+        {% if entries %}
+        <div class="col-md-8 col-sm-12 col-xs-12 events-wrapper">
+
+            {% if coming_entries %}
+            <div class="events-title">
+                <span>{% trans "UPCOMING" %}</span>
+            </div>
+            {% for coming_entry in coming_entries %}
+            <div class="entry-item">
+                <div class="entry-body row">
+                    <div class="entry-image col-md-6 col-sm-6 col-xs-12">
+                        <a {% if coming_entry.urls %}href="{{ coming_entry.urls }}"{% endif %} class="title" title="{{ coming_entry.title }}" target="_blank">
+                            <img src="{{ coming_entry.image.url }}" alt="">
+                        </a>
+                    </div>
+                    <div class="entry-content col-md-6 col-sm-6 col-xs-12">
+                        <p class="entry-title">
+                            <a {% if coming_entry.urls %}href="{{ coming_entry.urls }}"{% endif %} class="title" title="{{ coming_entry.title }}" target="_blank">
+                                {{ coming_entry.title }}
+                            </a>
+                        </p>
+                        <p>{% trans "Date:" %} {{ coming_entry.event_during }}</p>
+                        <p>{% trans "Addr:" %} {{ coming_entry.event_location }}</p>
+                        {% if coming_entry.tags %}
+                        <p>{% trans "Tags:" %} {{ coming_entry.tags }}</p>
+                        {% endif %}
                     </div>
                 </div>
-                {% endfor %}
-                {% if is_paginated %}
-                
-                <div class="pagination-simple">
-                {% if page_obj.has_previous %}
-                    <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
-                {% endif %}
-                <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
-                {% endif %}
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            {% if passed_entries %}
+            <div class="events-title">
+                <span>{% trans "PAST" %}</span>
+            </div>
+            {% for passed_entry in passed_entries %}
+            <div class="entry-item">
+                <div class="entry-body row">
+                    <div class="entry-image col-md-6 col-sm-6 col-xs-12">
+                        <a {% if passed_entry.urls %}href="{{ passed_entry.urls }}"{% endif %} class="title" title="{{ passed_entry.title }}" target="_blank">
+                            <img src="{{ passed_entry.image.url }}" alt="">
+                        </a>
+                    </div>
+                    <div class="entry-content col-md-6 col-sm-6 col-xs-12">
+                        <p class="entry-title">
+                            <a {% if passed_entry.urls %}href="{{ passed_entry.urls }}"{% endif %} class="title" title="{{ passed_entry.title }}" target="_blank">
+                                {{ passed_entry.title }}
+                            </a>
+                        </p>
+                        <p>{% trans "Date:" %} {{ passed_entry.event_during }}</p>
+                        <p>{% trans "Addr:" %} {{ passed_entry.event_location }}</p>
+                        {% if passed_entry.tags %}
+                        <p>{% trans "Tags:" %} {{ passed_entry.tags }}</p>
+                        {% endif %}
+                    </div>
                 </div>
-                {% endif %}
-                {% else %}
-                <p>{% trans "No entrys" %}</p>
-                {% endif %}
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            {% if is_paginated %}
+
+            <div class="pagination-simple">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">{% trans "previous" %}</a>
+            {% endif %}
+            <span class="current">{{ page_obj.number }}/{{ paginator.num_pages }}</span>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">{% trans "next" %}</a>
+            {% endif %}
+            </div>
+            {% endif %}
         </div>
+
+        <div class="col-md-4 hidden-sm hidden-xs">
+            <div class="calendar-title">
+                <span>{% trans "Events Dates" %}</span>
+            </div>
+            <div class="calendar-container">
+                {% include "welcome/calendar.html" %}
+            </div>
+        </div>
+
+        {% else %}
+        <p class="no-entry-tip">{% trans "No entrys" %}</p>
+        {% endif %}
+    </div>
 </section>
 
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% version "css/events-list.css" %}">
 {% endblock %}
 
 {% block inline_js %}

@@ -1,0 +1,15 @@
+{% load utils %}
+<div id='calendar'></div>
+
+{% block js %}
+<script src="{% version "js/moment.min.js" %}"></script>
+<script src="{% version "js/fullcalendar.js" %}"></script>
+<script src="{% version "js/events-list.js" %}"></script>
+<script type="text/javascript">
+    initCalendar();
+</script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% version "css/fullcalendar.css" %}">
+{% endblock %}
