@@ -456,15 +456,6 @@
                     <div class="line"></div>
                     <div class="schedule-container">
                         <table>
-                            <caption>{% trans "Dec. 10" %}</caption>
-                            <tr>
-                                <th style="vertical-align: middle;">10:00 - 22:00</th>
-                                <td style="vertical-align: middle;">{% trans "Check-in" %}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="schedule-container">
-                        <table>
                             <caption>{% trans "Dec. 11" %}</caption>
                             <tr>
                                 <th class="hidden-xs"></th>
@@ -563,16 +554,16 @@
                     <div class="line"></div>
                 </div>
                 <div class="partner-content">
-                    <div class="col-md-3 col-xs-6 text-center" style="padding-top: 35px;">
+                    <div class="col-md-3 col-xs-6 text-center co-media limit-height" style="padding-top: 35px;">
                         <img src="{% version "images/meeting/ifce.png" %}">
                     </div>
-                    <div class="col-md-3 col-xs-6 visible-xs text-center" style="padding-top: 40px;">
+                    <div class="col-md-3 col-xs-6 visible-xs co-media limit-height" style="padding-top: 40px;">
                         <img src="{% version "images/meeting/huoxingcaijing.png" %}">
                     </div>
-                    <div class="col-md-3 col-xs-6 text-center">
+                    <div class="col-md-3 col-xs-6 text-center co-media">
                         <img src="{% version "images/meeting/Wemerge.svg" %}">
                     </div>
-                    <div class="col-md-3 col-xs-6 text-center">
+                    <div class="col-md-3 col-xs-6 text-center co-media">
                         <img src="{% version "images/meeting/yueliang.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 hidden-xs text-center" style="padding-top: 55px;">
@@ -591,7 +582,7 @@
                         <img src="{% version "images/meeting/co-media/jinse.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/co-media/bishijie.png" %}">
+                        <img src="{% version "images/meeting/co-media/bishijie.png" %}" style="width: 70%;">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
                         <img src="{% version "images/meeting/co-media/buluoke.png" %}">
@@ -840,16 +831,6 @@
         display: block;
         visibility: hidden;
     }
-    .partner-content .wemerge img{
-        width: 150px;
-    }
-    .partner-content .huoxing img{
-        width: 160px;
-        margin-top: 50px;
-    }
-    .partner-content .yueliang img{
-        width: 60px;
-    }
     .partner-content>div {
         height: 180px;
         vertical-align: middle;
@@ -1057,6 +1038,13 @@
         }
         .second-day .flow-left{
             margin-left: unset;
+        }
+        .partner-content>div.co-media {
+            height: 130px;
+        }
+        .partner-content>div.co-media.limit-height {
+            height: 100px;
+            padding-top: unset !important;
         }
         .partner-content .huoxing{
             margin-bottom: 15%;
