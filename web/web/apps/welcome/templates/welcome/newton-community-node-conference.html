@@ -454,41 +454,104 @@
                     <div class="line"></div>
                     <span>{% trans "Meeting Process" %}</span>
                     <div class="line"></div>
-                </div>
-                <div class="flow-content">
-                    <div class="first-day">
-                        <div class="flow-day">
-                             <span>{% trans "December 11" %}</span>
-                        </div>
-                        <div class="col-md-3 col-xs-4 flow-left">
-                            <p>{% trans "Morning" %}</p>
-                            <p>{% trans "Afternoon" %}</p>
-                            <p>{% trans "Night" %}</p>
-                        </div>
-                        <div class="flow-line"></div>
-                        <div class="col-md-6 col-xs-7 flow-right">
-                            <p>{% trans "Newton Ecosystem Conference" %}</p>
-                            <p>{% trans "Newton Community Node Conference" %}</p>
-                            <p>{% trans "Newton Community Dinner" %}</p>
-                        </div>
+                    <div class="schedule-container">
+                        <table>
+                            <caption>{% trans "Dec. 10" %}</caption>
+                            <tr>
+                                <th style="vertical-align: middle;">10:00 - 22:00</th>
+                                <td style="vertical-align: middle;">{% trans "Check-in" %}</td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="second-day">
-                        <div class="flow-day">
-                             <span>{% trans "December 12" %}</span>
-                        </div>
-                        <div class="col-md-3 col-xs-4 flow-left">
-                            <p class="second-morning">{% trans "Morning" %}</p>
-                            <p>{% trans "Night" %}</p>
-                        </div>
-                        <div class="flow-line"></div>
-                        <div class="col-md-6 col-xs-7 flow-right">
-                            <p>{% trans "Sub-forum A: China-ASEAN Clean Energy Cooperation Roundtable" %}</p>
-                            <p>{% trans "Sub-forum B: Smart Energy and Energy Blockchain Innovation Summit" %}</p>
-                            <p>{% trans "Creating a New Economy: Newton Night" %}</p>
-                        </div>
+                    <div class="schedule-container">
+                        <table>
+                            <caption>{% trans "Dec. 11" %}</caption>
+                            <tr>
+                                <th class="hidden-xs"></th>
+                                <th class="sub-title hidden-xs">{% trans "Newton briefing" %}</th>
+                                <th class="sub-title visible-xs" colspan="2">{% trans "Newton briefing" %}</th>
+                            </tr>
+                            <tr>
+                                <th>9:30 - 10:00</th>
+                                <td><p>{% trans "On-site sign in" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>10:00 - 11:50</th>
+                                <td><p>{% trans "Introduction to Newton's ecosystem" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>11:50 - 12:00</th>
+                                <td><p>{% trans "Group photo" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>12:00 - 13:30</th>
+                                <td><p>{% trans "Lunch" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">14:10 - 15:00</th>
+                                <td><p>{% trans "Roundtable: Newton community governance and incentives" %}</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>{% trans "Roundtable: How to use Newton technology" %}</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>{% trans "Roundtable: Rebuilding the blockchain value chain in the cold winter" %}</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>{% trans "Roundtable: From improvement to change, from industry to ecology" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>15:00 - 17:00</th>
+                                <td><p>{% trans "Exchange & Tea break" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>19:00 - 21:30</th>
+                                <td><p>{% trans "Newton community dinner" %}</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="schedule-container">
+                        <table>
+                            <caption>{% trans "Dec. 12" %}</caption>
+                            <tr>
+                                <th class="hidden-xs"></th>
+                                <th class="sub-title hidden-xs">{% trans "International Forum for Clean Energy" %}</th>
+                                <th class="sub-title visible-xs" colspan="2">
+                                    {% trans "International Forum for Clean Energy" %}
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>9:00 - 12:00</th>
+                                <td><p>{% trans "Forum opening session" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>14:30 - 15:00</th>
+                                <td><p>{% trans "Newton Project representative topic sharing" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>15:00 - 18:30</th>
+                                <td><p>{% trans "Other topics" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th class="hidden-xs"></th>
+                                <th class="sub-title hidden-xs">{% trans "Newton Night" %}</th>
+                                <th class="sub-title visible-xs" colspan="2">{% trans "Newton Night" %}</th>
+                            </tr>
+                            <tr>
+                                <th>18:40 - 19:10</th>
+                                <td><p>{% trans "Dinner: Guests take seats and receive gifts" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>19:10 - 19:20</th>
+                                <td><p>{% trans "Dinner: Speech by guest representative" %}</p></td>
+                            </tr>
+                            <tr>
+                                <th>19:20 - 21:30</th>
+                                <td><p>{% trans "Dinner: Newton Night: building the foundation for a new economy" %}</p></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     <div class="bg-gray">
@@ -500,8 +563,11 @@
                     <div class="line"></div>
                 </div>
                 <div class="partner-content">
-                    <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                    <div class="col-md-3 col-xs-6 text-center" style="padding-top: 35px;">
+                        <img src="{% version "images/meeting/ifce.png" %}">
+                    </div>
+                    <div class="col-md-3 col-xs-6 visible-xs text-center" style="padding-top: 40px;">
+                        <img src="{% version "images/meeting/huoxingcaijing.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
                         <img src="{% version "images/meeting/Wemerge.svg" %}">
@@ -509,7 +575,7 @@
                     <div class="col-md-3 col-xs-6 text-center">
                         <img src="{% version "images/meeting/yueliang.png" %}">
                     </div>
-                    <div class="col-md-3 col-xs-6 text-center">
+                    <div class="col-md-3 col-xs-6 hidden-xs text-center" style="padding-top: 55px;">
                         <img src="{% version "images/meeting/huoxingcaijing.png" %}">
                     </div>
                 </div>
@@ -520,33 +586,33 @@
                     <span>{% trans "Special Invited Media" %}</span>
                     <div class="line"></div>
                 </div>
-                <div class="partner-content">
+                <div class="partner-content strategic-media">
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/co-media/jinse.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/co-media/bishijie.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/co-media/buluoke.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/co-media/31qu.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/co-media/blockbeats.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/co-media/shenlian.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/co-media/weilai.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/co-media/walianwang.png" %}">
                     </div>
-                    <div class="col-md-4 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                    <div class="col-md-4 col-xs-6 text-center">
+                        <img src="{% version "images/meeting/co-media/daxiang.png" %}">
                     </div>
                 </div>
             </div>
@@ -556,99 +622,99 @@
                     <span>{% trans "Strategic Cooperative media" %}</span>
                     <div class="line"></div>
                 </div>
-                <div class="partner-content">
+                <div class="partner-content strategic-media">
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/11.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/2.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/3.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/4.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/5.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/6.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/7.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/8.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/9.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/10.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/1.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/12.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/13.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/14.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/15.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/16.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/17.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/18.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/19.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/20.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/21.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/22.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/23.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/24.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/25.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/26.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/27.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/28.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/29.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/30.png" %}">
                     </div>
-                    <div class="col-md-4 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                    <div class="col-md-4 col-xs-6 text-center">
+                        <img src="{% version "images/meeting/media/31.png" %}">
                     </div>
                 </div>
             </div>
@@ -658,75 +724,75 @@
                     <span>{% trans "Support Media" %}</span>
                     <div class="line"></div>
                 </div>
-                <div class="partner-content">
+                <div class="partner-content strategic-media">
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/01.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/02.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/03.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/04.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/05.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/06.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/07.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/08.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/09.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/10.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/11.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/12.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/13.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/14.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/15.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/16.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/17.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/18.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/19.png" %}">
                     </div>
                     <div class="col-md-3 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/20.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/21.png" %}">
                     </div>
                     <div class="col-md-4 col-xs-6 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                        <img src="{% version "images/meeting/media/22.png" %}">
                     </div>
-                    <div class="col-md-4 text-center">
-                        <img src="{% version "images/meeting/Wemerge.svg" %}">
+                    <div class="col-md-4 col-xs-6 text-center">
+                        <img src="{% version "images/meeting/media/23.png" %}">
                     </div>
                 </div>
             </div>
@@ -797,6 +863,55 @@
     .partner-content>div>img {
         max-width: 100%;
         max-height: 100%;
+    }
+    .strategic-media>div {
+        height: 100px;
+    }
+    .strategic-media>div>img {
+        max-width: 80%;
+        max-height: 100%;
+    }
+    .schedule-container {
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    .schedule-container table {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        font-size: 18px;
+    }
+    .schedule-container table caption {
+        font-size: 40px;
+        font-weight: 200;
+        color: #fff;
+        padding-left: 50px;
+    }
+    .schedule-container table tbody tr {
+        width: 50%;
+    }
+    .schedule-container table tbody td,
+    .schedule-container table tbody th {
+        height: 80px;
+        vertical-align: top;
+    }
+    .schedule-container table tbody th.sub-title {
+        vertical-align: middle;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .schedule-container table tbody th {
+        width: 40%;
+        padding-left: 50px;
+    }
+    .schedule-container table tbody td {
+        border-left: solid 1px;
+        width: 60%;
+        text-align: left;
+        padding-left: 50px;
+    }
+    .schedule-container table tbody td>p {
+        margin-bottom: 50px;
     }
     .first-day .flow-left{
         margin-left: 18%;
@@ -985,6 +1100,28 @@
         }
         .second-day .flow-left .second-morning{
             height: 270px;
+        }
+        .schedule-container table {
+            width: 90%;
+        }
+        .schedule-container table tbody th {
+            width: 45%;
+            padding-left: unset;
+        }
+        .schedule-container table tbody td {
+            padding-left: 10px;
+        }
+        .schedule-container table tbody th.sub-title {
+            width: 100%;
+            text-align: center;
+        }
+        .schedule-container table caption {
+            padding-left: unset;
+            text-align: center;
+        }
+        #summit .summit-partner {
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
     }
 </style>
