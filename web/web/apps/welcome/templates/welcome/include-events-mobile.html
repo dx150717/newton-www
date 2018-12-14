@@ -14,53 +14,14 @@
                             <span class="current-month" id="id_current_month_mobile">{{ current_month | format_current_month }}</span>
                             <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month_mobile"></button>
                         </div>
-                        <button class="select-month-btn hidden-md hidden-sm hidden-lg events-pass-btn" id="id_passed_events_mobile">{% trans "PAST" %}</button>
-                        <button class="select-month-btn events-pass-btn active" id="id_coming_events_mobile">{% trans "UPCOMING" %}</button>
+                        <button class="select-month-btn hidden-md hidden-sm hidden-lg events-pass-btn active" id="id_passed_events_mobile">{% trans "PAST" %}</button>
+                        <button class="select-month-btn events-pass-btn" id="id_coming_events_mobile">{% trans "UPCOMING" %}</button>
                     </div>
                 </h2>
             </div>
         </div>
 
         <div class="event-mobile-section">
-
-            <div class="events-list" id="id_events_list_coming_mobile">
-                {% if coming_events_list|length > 1 %}
-                <div class="swiper-container6">
-                    <div class="swiper-wrapper">
-                {% endif %}
-                        {% for coming_event in coming_events_list %}
-                        <div class="col-md-4 col-xs-12 swiper-slide">
-                            <a {{ coming_event | get_event_url }}>
-                                <div class="panel panel-default event_container">
-                                    {% if coming_event.image %}
-                                    <div class="panel-body" style="background-image: url('{{ coming_event.image.url }}')"></div>
-                                    {% else %}
-                                    <div class="panel-body" style="background-image: url({% version "images/events/events-default.jpg" %})"></div>
-                                    {% endif %}
-                                    <div class="panel-footer row">
-                                        <div class="col-md-2 col-sm-2 col-xs-2">
-                                            <p class="date-container-month">{{ coming_event.event_date | format_event_month }}</p>
-                                            <p class="date-container-date">{{ coming_event.event_date.day }}</p>
-                                            <p class="date-container-weekday">
-                                                {{ coming_event.event_date | format_event_weekday }}
-                                            </p>
-                                        </div>
-                                        <div class="col-md-10 col-sm-10 col-xs-10">
-                                            <p class="event-title">{{ coming_event.title }}</p>
-                                            <p class="event-time">{{ coming_event.event_during }}</p>
-                                            <p class="event-location">{{ coming_event.event_summary }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        {% endfor %}
-                {% if coming_events_list|length > 1 %}
-                    </div>
-                    <div class="swiper-pagination6"></div>
-                </div>
-                {% endif %}
-            </div>
 
             <div class="events-list" id="id_events_list_passed_mobile">
                 <div class="swiper-container4">
@@ -144,6 +105,45 @@
                 {% endif %}
             </div>
             {% endfor %}
+
+            <div class="events-list" id="id_events_list_coming_mobile">
+                {% if coming_events_list|length > 1 %}
+                <div class="swiper-container6">
+                    <div class="swiper-wrapper">
+                {% endif %}
+                        {% for coming_event in coming_events_list %}
+                        <div class="col-md-4 col-xs-12 swiper-slide">
+                            <a {{ coming_event | get_event_url }}>
+                                <div class="panel panel-default event_container">
+                                    {% if coming_event.image %}
+                                    <div class="panel-body" style="background-image: url('{{ coming_event.image.url }}')"></div>
+                                    {% else %}
+                                    <div class="panel-body" style="background-image: url({% version "images/events/events-default.jpg" %})"></div>
+                                    {% endif %}
+                                    <div class="panel-footer row">
+                                        <div class="col-md-2 col-sm-2 col-xs-2">
+                                            <p class="date-container-month">{{ coming_event.event_date | format_event_month }}</p>
+                                            <p class="date-container-date">{{ coming_event.event_date.day }}</p>
+                                            <p class="date-container-weekday">
+                                                {{ coming_event.event_date | format_event_weekday }}
+                                            </p>
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-xs-10">
+                                            <p class="event-title">{{ coming_event.title }}</p>
+                                            <p class="event-time">{{ coming_event.event_during }}</p>
+                                            <p class="event-location">{{ coming_event.event_summary }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                {% if coming_events_list|length > 1 %}
+                    </div>
+                    <div class="swiper-pagination6"></div>
+                </div>
+                {% endif %}
+            </div>
 
         </div>
 

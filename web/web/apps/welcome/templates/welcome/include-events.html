@@ -15,11 +15,12 @@
                             <span class="current-month" id="id_current_month">{{ current_month | format_current_month }}</span>
                             <button class="glyphicon glyphicon-chevron-right select-month-btn" id="id_next_month"></button>
                         </div>
-                        <button class="select-month-btn events-pass-btn active" id="id_coming_events">{% trans "UPCOMING" %}</button>
+                        <button class="select-month-btn events-pass-btn" id="id_coming_events">{% trans "UPCOMING" %}</button>
                     </div>
                 </h2>
             </div>
         </div>
+
         <div class="events-list events-list-pc" id="id_events_list_passed">
             {% for pass_event in past_events_list %}
 
@@ -51,6 +52,9 @@
 
         {% for event_month, event_month_item in event_items %}
             <div class="events-list events-list-pc events-list-monthly" id="id_events_list_{{ event_month.year }}_{{ event_month.month }}">
+                <script>
+                    $("#id_events_list_2018_12").css("display", "block");
+                </script>
                 {% for event_item in event_month_item %}
                     <div class="col-md-4 col-xs-12">
                         <a {{ event_item | get_event_url }}>
@@ -79,7 +83,7 @@
             </div>
         {% endfor %}
 
-        <div class="events-list events-list-pc" id="id_events_list_coming" style="display: block;">
+        <div class="events-list events-list-pc" id="id_events_list_coming">
             {% for coming_event in coming_events_list %}
             <div class="col-md-4 col-xs-12">
                 <a {{ coming_event | get_event_url }}>
