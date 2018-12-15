@@ -15,12 +15,13 @@
 <section id="intro" class="bg-gray">
 
     <div class="container">
-      <div class="row relative">
-        <div class="col-md-12 text-center" style="padding-top: 60px;">
-          <h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>
-          <p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
+        <div class="row relative">
+            <div class="col-md-12 text-center" style="padding-top: 60px;">
+                <h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>
+                <p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
+            </div>
         </div>
-      </div>
+        {% include "welcome/counter.html" %}
     </div>
     <div class="news-column">
       <div class="container">
@@ -260,6 +261,7 @@ showNav();
 <link href="{% version "css/slide-change-section.css" %}" rel="stylesheet">
 <link href="{% version "css/events.css" %}" rel="stylesheet">
 <link href="{% version "css/swiper.min.css" %}" rel="stylesheet">
+<link href="{% version "css/counter.css" %}" rel="stylesheet">
 <style>
     .navbar {
         position: fixed;

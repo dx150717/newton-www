@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="counter-container">
+    <div class="counter-title">
+        {% trans "NewChain mainnet will be launched in" %}
+    </div>
+    <div class="counter-time">
+        <table>
+            <thead>
+                <tr>
+                    <th id="id_counter_days"></th>
+                    <th id="id_counter_hours"></th>
+                    <th id="id_counter_minutes"></th>
+                    <th id="id_counter_seconds"></th>
+                    <script src="{% version "js/counter.js" %}"></script>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>DAYS</td>
+                    <td>HOURS</td>
+                    <td>MINUTES</td>
+                    <td>SECONDS</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
