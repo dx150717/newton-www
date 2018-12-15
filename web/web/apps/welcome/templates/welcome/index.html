@@ -21,20 +21,12 @@
                 <p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
             </div>
         </div>
-        {% include "welcome/counter.html" %}
+
+        {% include "welcome/include-index-announce.html" %}
+
     </div>
     <div class="news-column">
       <div class="container">
-        <div class="news-one">
-          <div class="support">
-            <!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
-            <a class="news-title" href="https://developer.newtonproject.org" target="_blank"><span>NewChain TestNet:</span></a>
-            <a class="newpay-android" href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/android-2.png" %}" ></a>
-            <a href="https://developer.newtonproject.org" target="_blank"><img src="{% version "images/ios-3.png" %}"></a>
-            <a class="download-newpay" href="https://developer.newtonproject.org" target="_blank">{% trans "Download" %}</a>
-          </div>
-        </div>
-
         <div class="news-banner">
           {% if operation_entry %}
           <div class="news-two">
@@ -262,6 +254,7 @@ showNav();
 <link href="{% version "css/events.css" %}" rel="stylesheet">
 <link href="{% version "css/swiper.min.css" %}" rel="stylesheet">
 <link href="{% version "css/counter.css" %}" rel="stylesheet">
+<link href="{% version "css/index-announce.css" %}" rel="stylesheet">
 <style>
     .navbar {
         position: fixed;
