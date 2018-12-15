@@ -36,7 +36,6 @@ function initCounter () {
 
     intervalId = window.setInterval(function() {
         timeDelta = timeDelta - 1000;
-        console.log(timeDelta);
         computeCounter(timeDelta);
     }, 1000, timeDelta);
 };
