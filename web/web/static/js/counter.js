@@ -4,8 +4,13 @@ function initCounter () {
     var nowDate = new Date();
     var endDate = new Date(2018, 11, 18, 08, 00, 00);
     var timeDelta = endDate - nowDate;
+    var intervalId;
 
     function computeCounter(timeDelta) {
+        if (timeDelta < 0) {
+            timeDelta = 0;
+            window.clearInterval(intervalId);
+        }
         var days = Math.floor(timeDelta / (60 * 60 * 24 * 1000));
         var leftHours = timeDelta % (60 * 60 * 24 * 1000);
         var hours = Math.floor(leftHours / (60 * 60 * 1000));
@@ -29,8 +34,9 @@ function initCounter () {
 
     computeCounter(timeDelta);
 
-    window.setInterval(function() {
+    intervalId = window.setInterval(function() {
         timeDelta = timeDelta - 1000;
+        console.log(timeDelta);
         computeCounter(timeDelta);
     }, 1000, timeDelta);
 };
