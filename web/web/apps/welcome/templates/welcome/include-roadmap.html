@@ -56,11 +56,19 @@
                 </div>
             </div>
             <div class="entry-lg">
+                <div class="date-lg">
+                    <dl class="date-bottom">
+                        <dt>2018.12</dt>
+                        <dd>{% trans "Newton's main chain and NewPay officially launched." %}</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="entry-lg">
                 <div class="delay">
                     <div class="date-lg">
-                        <dl class="date-bottom">
-                            <dt>2018 Q4</dt>
-                            <dd>{% trans "Newton's main chain and NewPay officially launched." %}</dd>
+                        <dl class="date-top">
+                            <dt>2019.1</dt>
+
                             <dd>{% trans "The NewMall was officially launched." %}</dd>
                         </dl>
                     </div>
@@ -107,11 +115,17 @@
                 </div>
             </div>
             <div class="entry">
+                <div class="date"></div>
+                <div class="body">
+                    <dt>2018.12</dt>
+                        <dd>{% trans "Newton's main chain and NewPay officially launched." %}</dd>
+                </div>
+            </div>
+            <div class="entry">
                 <div class="delay">
                     <div class="date"></div>
                     <div class="body">
-                        <dt>2018 Q4</dt>
-                        <dd>{% trans "Newton's main chain and NewPay officially launched." %}</dd>
+                        <dt>2019.1</dt>
                         <dd>{% trans "The NewMall was officially launched." %}</dd>
                     </div>
                 </div>
@@ -121,4 +135,16 @@
 
     </div>
 </section>
+
+<style>
+    .entry-lg .date-lg {
+        width: 150px;
+    }
+
+    @media (max-width: 1199px) and (min-width: 992px) {
+        .entry-lg .date-lg {
+            width: 125px;
+        }
+    }
+</style>
 <!-- end -->
