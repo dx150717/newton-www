@@ -19,6 +19,7 @@
             <img class="newpay-background" src="{% version "images/newpay/newpay_bg.png" %}" alt="">
         </div>
     </div>
+    {% comment %}
     <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
         <div class="container">
             <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
@@ -29,7 +30,6 @@
             </div>
         </div>
     </nav>
-    {% comment %}
     <div class="container text-center download-button more">
         <div>NewPay</div>
         <h3>{% trans "Digital wallet in Newton's economy" %}</h3>
@@ -222,6 +222,7 @@
 
 {% block inline_js %}
 <script type="text/javascript">
+    showNav();
     $(function () {
         $('[data-toggle="popover"]').popover();
 
