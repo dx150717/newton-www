@@ -179,6 +179,3 @@ HAYSTACK_CONNECTIONS = {
         'PATH': '/Users/yuwei/liuchao/search_www/',
     },
 }
-
-# explorer url
-NEWTON_EXPLORER_URL = "https://explorer.testnet.newtonproject.org/"

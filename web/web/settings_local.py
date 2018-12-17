@@ -126,3 +126,6 @@ ELA_TESTNET_EXPLORER = 'https://blockchain-beta.elastos.org'
 # haystack settings
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
+
+# explorer url
+NEWTON_EXPLORER_URL = "https://explorer.newtonproject.org/"
