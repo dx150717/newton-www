@@ -5,9 +5,15 @@
 }
 
 .announce-container .announce-title {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     color: #303030;
+}
+
+.announce-container .announce-subtitle {
+    font-size: 24px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
 
 .announce-container .announce-content {
@@ -58,6 +64,12 @@
 @media (max-width: 768px) {
     .announce-container .announce-title {
         font-size: 18px;
+    }
+
+    .announce-container .announce-subtitle {
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 5px;
     }
 
     .announce-container .announce-content table {
