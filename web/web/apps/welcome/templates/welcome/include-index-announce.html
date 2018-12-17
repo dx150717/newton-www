@@ -11,15 +11,23 @@
                 <tr>
                     <td>
                         <a href="">
+                            {% if language == "zh-cn" %}
+                            <img src="{% version "images/download-logo/app-store-zh.svg" %}" alt="">
+                            {% else %}
                             <img src="{% version "images/download-logo/app-store-en.svg" %}" alt="">
+                            {% endif %}
                         </a>
                     </td>
                     <td>
                         <a href="">
+                            {% if language == "zh-cn" %}
+                            <img src="{% version "images/download-logo/google-play-zh.png" %}" alt="">
+                            {% else %}
                             <img src="{% version "images/download-logo/google-play-en.png" %}" alt="">
+                            {% endif %}
                         </a>
                     </td>
-                    <td>
+                    <td class="qr-container">
                         <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-qr.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
                             <span class="glyphicon glyphicon-qrcode qrcode-thumbnail"></span>
                         </a>

@@ -35,12 +35,24 @@
 }
 
 .announce-container .announce-content table td .qrcode-thumbnail {
-    font-size: 34px;
+    font-size: 39px;
     color: #303030;
 }
 
 .announce-container .announce-content table td .qrcode-img {
 
+}
+
+.announce-container .announce-content table td.qr-container {
+    text-align: left;
+    padding-left: 30px;
+    height: 40px;
+}
+
+@media (min-width: 768px) {
+    .announce-container .announce-content {
+        padding-left: 87px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -53,7 +65,10 @@
     }
 
     .announce-container .announce-content table td {
-        width: 33%;
+        width: 50%;
     }
 
+    .announce-container .announce-content table td.qr-container {
+        display: none;
+    }
 }

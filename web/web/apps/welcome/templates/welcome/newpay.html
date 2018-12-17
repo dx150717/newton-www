@@ -44,7 +44,9 @@
     </div>
     {% endcomment %}
 
+    <div class="download-button-container">
     {% include "welcome/include-index-announce.html" %}
+    </div>
 
     {% comment %}
     <div class="container">
@@ -206,6 +208,10 @@
         padding: 3px 5px;
         border-radius: 6px;
         background-color: #fff;
+    }
+    .download-button-container {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 </style>
 <link href="{% version "css/index-announce.css" %}" rel="stylesheet">
