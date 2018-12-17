@@ -26,11 +26,21 @@
 
 .announce-container .announce-content table td a {
     display: inline-block;
+    height: 40px;
 }
 
 .announce-container .announce-content table td img {
-    width: 90%;
-    height: auto;
+    width: auto;
+    height: 100%;
+}
+
+.announce-container .announce-content table td .qrcode-thumbnail {
+    font-size: 34px;
+    color: #303030;
+}
+
+.announce-container .announce-content table td .qrcode-img {
+
 }
 
 @media (max-width: 768px) {

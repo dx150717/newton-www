@@ -29,6 +29,7 @@
             </div>
         </div>
     </nav>
+    {% comment %}
     <div class="container text-center download-button more">
         <div>NewPay</div>
         <h3>{% trans "Digital wallet in Newton's economy" %}</h3>
@@ -41,6 +42,10 @@
         </p>
         <!--<p>{% trans "Click the button to download NewPay to participate in the beta!" %}</p>-->
     </div>
+    {% endcomment %}
+
+    {% include "welcome/include-index-announce.html" %}
+
     {% comment %}
     <div class="container">
         <div class="newpay_list">
@@ -203,6 +208,7 @@
         background-color: #fff;
     }
 </style>
+<link href="{% version "css/index-announce.css" %}" rel="stylesheet">
 {% endblock %}
 
 {% block js %}
@@ -211,6 +217,8 @@
 {% block inline_js %}
 <script type="text/javascript">
     $(function () {
+        $('[data-toggle="popover"]').popover();
+
         if (screen.width <= 768) {
             showNav();
 
@@ -229,8 +237,7 @@
                 }
                 ;
             });
-        }
-        ;
+        };
     });
 </script>
 {% endblock %}
