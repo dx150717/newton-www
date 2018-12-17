@@ -2,12 +2,19 @@
 {% load utils %}
 
 <div class="announce-container">
+    {% if is_index %}
     <div class="announce-title">
         {% trans "NewChain mainnet is now launched" %}
     </div>
     <div class="announce-subtitle">
         {% trans "Download NewPay digital wallet to join Newton's economy" %}
     </div>
+    {% else %}
+    <div class="container text-center download-button more">
+        <div>NewPay</div>
+        <h3>{% trans "Digital wallet in Newton's economy" %}</h3>
+    </div>
+    {% endif %}
     <div class="announce-content">
         <table>
             <tbody>
@@ -31,7 +38,7 @@
                         </a>
                     </td>
                     <td class="qr-container">
-                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-download-dev.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
+                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-qr-dev.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
                             <span class="glyphicon glyphicon-qrcode qrcode-thumbnail"></span>
                         </a>
                     </td>
