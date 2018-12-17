@@ -129,3 +129,7 @@ HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
 
 # explorer url
 NEWTON_EXPLORER_URL = "https://explorer.newtonproject.org/"
+
+# newpay download url
+NEWPAY_FOR_ANDROID_GOOGLE_DOWNLOAD_URL = ""
+NEWPAY_FOR_IOS_DOWNLOAD_URL = ""
