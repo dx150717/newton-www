@@ -3,17 +3,17 @@
 
 <div class="announce-container">
     <div class="announce-title">
-        {% trans "NewChain mainnet has been launched" %}
+        {% trans "NewChain mainnet is now launched" %}
     </div>
     <div class="announce-subtitle">
-        {% trans "NewChain mainnet has been launched" %}
+        {% trans "Download NewPay digital wallet to join Newton's economy" %}
     </div>
     <div class="announce-content">
         <table>
             <tbody>
                 <tr>
                     <td>
-                        <a href="">
+                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title data-content='{% trans "Coming soon" %}' data-container="body" data-placement="bottom">
                             {% if language == "zh-cn" %}
                             <img src="{% version "images/download-logo/app-store-zh.svg" %}" alt="">
                             {% else %}
@@ -22,7 +22,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="">
+                        <a>
                             {% if language == "zh-cn" %}
                             <img src="{% version "images/download-logo/google-play-zh.png" %}" alt="">
                             {% else %}
@@ -31,7 +31,7 @@
                         </a>
                     </td>
                     <td class="qr-container">
-                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-qr.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
+                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-download-dev.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
                             <span class="glyphicon glyphicon-qrcode qrcode-thumbnail"></span>
                         </a>
                     </td>
