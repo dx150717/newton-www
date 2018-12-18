@@ -67,6 +67,7 @@ urlpatterns = patterns('',
                        # web push
                        url(r'^webpush/', include('webpush.urls')),
                        url(r'^events/', include('events.urls', namespace='events')),
+                       url(r'^download/', include('download.urls')),
                        url(r'sw.js',
                            TemplateView.as_view(template_name='sw.js', content_type='application/x-javascript')),
                        ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

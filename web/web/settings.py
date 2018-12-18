@@ -80,6 +80,7 @@ INSTALLED_APPS = (
     'webpush',
     'search',
     'events',
+    'download',
 )
 
 MIDDLEWARE_CLASSES = (

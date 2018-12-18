@@ -126,3 +126,7 @@ ELA_TESTNET_EXPLORER = 'https://blockchain-beta.elastos.org'
 # haystack settings
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
+
+# newpay download url
+NEWPAY_FOR_ANDROID_GOOGLE_DOWNLOAD_URL = ""
+NEWPAY_FOR_IOS_DOWNLOAD_URL = ""
