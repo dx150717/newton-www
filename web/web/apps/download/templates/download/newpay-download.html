@@ -38,6 +38,14 @@
 		#en h6{line-height:50px;margin-top:15px;}
 		#zh .ios {margin-left: 50px; margin-right: 50px;}
 		#zh a.ios {margin-left: auto; margin-right: auto;}
+		#zh a.android,
+		#zh a.ios,
+		#zh p.ios,
+		#en a.android,
+		#en a.ios,
+		#en p.ios {
+			display: none;
+		}
 		#zh .ios.reason {font-size: 24px; color: #888;}
 		#zh .ios.account-title {font-size: 28px}
 		#zh .ios.account-container {background-color: #f3f3f3; margin: 50px; padding: 30px; text-align: center;}
@@ -70,7 +78,7 @@
 		<div id="en">
 			<h2>NewPay</h2>
 			<p class="android">Click button to download NewPay</p>
-			<a href="{{ settings.NEWPAY_FOR_ANDROID_ALI_DOWNLOAD_URL }}" class="android">NewPay for Android</a>
+			<a href="{{ settings.NEWPAY_FOR_ANDROID_ALI_SG_DOWNLOAD_URL }}" class="android">NewPay for Android</a>
             <p class="ios">NewPay for iOS is coming soon</p>
             <a class="ios">Coming soon</a>
 			<div id="enMask">
@@ -93,6 +101,7 @@
 		if(isAndroid){
 			for (i=0; i<iOSButtons.length; i++) {
 				iOSButtons[i].style.display = 'none';
+				androidButtons[i].style.display = 'block';
 			};
 			if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i)=="micromessenger"){
 				enMask.style.display = 'block';
@@ -103,6 +112,7 @@
 		if(isiOS) {
 			for (i=0; i<androidButtons.length; i++) {
 				androidButtons[i].style.display = 'none';
+				iOSButtons[i].style.display = 'block';
 			};
 		}
 
