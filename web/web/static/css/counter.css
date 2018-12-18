@@ -1,0 +1,50 @@
+/* Counter style */
+
+.counter-container {
+    text-align: center;
+}
+
+.counter-container .counter-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #303030;
+}
+
+.counter-container .counter-time table {
+    margin: auto;
+}
+
+.counter-container .counter-time {
+    padding-top: 15px;
+}
+
+.counter-container .counter-time table th,
+.counter-container .counter-time table td {
+    text-align: center;
+    min-width: 100px;
+}
+
+.counter-container .counter-time table th {
+    font-size: 54px;
+    font-weight: 100;
+}
+
+@media (max-width: 768px) {
+    .counter-container .counter-title {
+        font-size: 18px;
+    }
+
+    .counter-container .counter-time table {
+        width: 100%;
+    }
+
+    .counter-container .counter-time table th,
+    .counter-container .counter-time table td {
+        min-width: unset;
+        width: 25%;
+    }
+
+    .counter-container .counter-time table th {
+        font-size: 42px;
+    }
+}

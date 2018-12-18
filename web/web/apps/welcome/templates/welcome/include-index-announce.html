@@ -1,0 +1,49 @@
+{% load i18n %}
+{% load utils %}
+
+<div class="announce-container">
+    {% if is_index %}
+    <div class="announce-title">
+        {% trans "NewChain mainnet is now launched" %}
+    </div>
+    <div class="announce-subtitle">
+        {% trans "Download NewPay digital wallet to join Newton's economy" %}
+    </div>
+    {% else %}
+    <div class="container text-center download-button more">
+        <div>NewPay</div>
+        <h3>{% trans "Digital wallet in Newton's economy" %}</h3>
+    </div>
+    {% endif %}
+    <div class="announce-content">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title data-content='{% trans "Coming soon" %}' data-container="body" data-placement="bottom">
+                            {% if language == "zh-cn" %}
+                            <img src="{% version "images/download-logo/app-store-zh.svg" %}" alt="">
+                            {% else %}
+                            <img src="{% version "images/download-logo/app-store-en.svg" %}" alt="">
+                            {% endif %}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{ settings.NEWPAY_FOR_ANDROID_GOOGLE_DOWNLOAD_URL }}">
+                            {% if language == "zh-cn" %}
+                            <img src="{% version "images/download-logo/google-play-zh.png" %}" alt="">
+                            {% else %}
+                            <img src="{% version "images/download-logo/google-play-en.png" %}" alt="">
+                            {% endif %}
+                        </a>
+                    </td>
+                    <td class="qr-container">
+                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-qr-rels.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
+                            <span class="glyphicon glyphicon-qrcode qrcode-thumbnail"></span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

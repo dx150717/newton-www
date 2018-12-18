@@ -98,7 +98,7 @@ def show_home_view(request):
                                                   "month_list": month_list,
                                                   "past_events_list": past_events_list,
                                                   "coming_events_list": coming_events_list,
-                                                  "is_index": is_index})
+                                                  "is_index": is_index, "language": language})
 
 
 def show_technology_view(request):
@@ -170,6 +170,7 @@ def show_legal_view(request):
 
 
 def show_newpay_view(request):
+    language = translation.get_language()
     return render(request, 'welcome/newpay.html', locals())
 
 

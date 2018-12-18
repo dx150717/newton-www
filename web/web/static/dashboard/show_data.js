@@ -1,7 +1,7 @@
 var data_list = [];
 function show_data(){
 	$.ajax({
-　　　　　　url: 'https://explorer.testnet.newtonproject.org/dashboard',
+　　　　　　url: 'https://explorer.newtonproject.org/dashboard',
 　　　　　　type: 'GET',
 　　　　　　success: function (data) {
 			$('#transactions').html(data.total_transactions);
