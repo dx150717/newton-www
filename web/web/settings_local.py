@@ -13,7 +13,7 @@ APPEND_SLASH = True
 
 LOGGING_API_REQUEST = True
 
-STATIC_DEFAULT_VERSION = 380
+STATIC_DEFAULT_VERSION = 381
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -131,5 +131,5 @@ HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
 NEWTON_EXPLORER_URL = "https://explorer.newtonproject.org/"
 
 # newpay download url
-NEWPAY_FOR_ANDROID_GOOGLE_DOWNLOAD_URL = ""
+NEWPAY_FOR_ANDROID_GOOGLE_DOWNLOAD_URL = "https://play.google.com/store/apps/details?id=org.newtonproject.newpay.android.release"
 NEWPAY_FOR_IOS_DOWNLOAD_URL = ""
