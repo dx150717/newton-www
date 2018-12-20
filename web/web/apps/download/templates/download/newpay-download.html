@@ -43,9 +43,7 @@
 		#zh p.ios,
 		#en a.android,
 		#en a.ios,
-		#en p.ios,
-		#zh p.download_title,
-		#en p.download_title {
+		#en p.ios {
 			display: none;
 		}
 		#zh .ios.reason {font-size: 24px; color: #888;}
@@ -143,7 +141,6 @@
 		var en = document.getElementById('en');
 
 		if(isAndroid){
-			document.getElementsByClassName('download_title')[0].style.display = 'block';
 			for (i=0; i<iOSButtons.length; i++) {
 				iOSButtons[i].style.display = 'none';
 			};
@@ -159,7 +156,6 @@
 		}
 
 		if(isiOS) {
-			document.getElementsByClassName('download_title')[0].style.display = 'block';
 			for (i=0; i<androidButtons.length; i++) {
 				androidButtons[i].style.display = 'none';
 			};

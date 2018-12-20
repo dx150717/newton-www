@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load utils %}
+
+{% block title %}
+{% trans "Guide" %}
+{% endblock %}
+
+{% block content %}
+<section id="terms" class="section-list">
+    <div class="page-title">
+      <div class="container">
+          <p>{% trans "Newpay Download Guide" %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="guides-list" style="text-align: center; padding-top: 50px;">
+            <p class="ios reason">由于中国区App Store政策限制，下载NewPay钱包需要使用海外账户登录海外App Store下载</p>
+			<p class="ios account-title">以下是免费的海外App Store账号供您使用</p>
+			<div class="ios account-container">
+				<div>
+					<p>香港账户：s9nuj284@icloud.com</p>
+					<p>密码：Newton112233</p>
+				</div>
+				<div>
+					<p>美国账户： j7m13d8@icloud.com</p>
+					<p>密码：Newton112233</p>
+				</div>
+				<div style="margin-bottom: unset;">
+					<p>新加坡账户：sg5ecaq@icloud.com</p>
+					<p>密码：Newton112233</p>
+				</div>
+			</div>
+			<p class="ios warning">
+				为了防止您的手机信息泄露，请您务必不要使用</br>上方Apple ID登录iCloud，使用参考Apple ID下载过APP后，请您及时退出该账号。
+			</p>
+			<div class="ios guide">
+				<p style="font-size: 18px; color: #333;">iPhone更换App Store账号教程</p>
+				<div class="image-container">
+					<img src="{% version "images/newpay-guide/111.png" %}" alt="">
+					<p class="tip">1. 点击蓝色App Store 图标进入应用</p>
+				<div class="image-container">
+					<img src="{% version "images/newpay-guide/222.png" %}" alt="">
+					<p class="tip">2. 在Today页面点击右上角图标进入账户页面</p>
+				</div>
+				<div class="image-container">
+					<img src="{% version "images/newpay-guide/333.png" %}" alt="">
+					<p class="tip">3. 进入账户后，点击退出登录</p>
+				</div>
+				<div class="image-container">
+					<img src="{% version "images/newpay-guide/444.png" %}" alt="">
+					<p class="tip">4. 将App Store账号和密码填写进去（建议复制），输入后点击登录</p>
+				</div>
+				<div class="image-container">
+					<p class="tip">5. 登录成功后，去App Store搜索“NewPay”点击获取按钮即可下载</p>
+				</div>
+				</div>
+			</div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
+
+{% block inline_js %}
+<script type="text/javascript">
+    showNav();
+</script>
+{% endblock %}
+
+{% block css %}
+<style>
+
+.ios.reason {font-size: 16px; color: #888;}
+.ios.account-title {font-size: 18px; color: #333;}
+.ios.account-container {background-color: #f3f3f3; padding: 30px; text-align: center; width: 400px; margin:50px auto; margin-top: 20px;}
+.ios.account-container>div {margin-bottom: 30px; display: inline-block; margin-bottom: 30px; margin-left: auto; margin-right: auto; min-width: 400px;}
+.ios.account-container>div p {margin-bottom: unset; font-size: 16px; text-align: left; line-height: unset; color: #333;}
+.ios.warning {color: red; font-size: 16px; line-height: 1.5em; margin-bottom: 30px;}
+.ios.guide .image-container {text-align: center;}
+.ios.guide .tip {font-size: 16px; color: #888; line-height: unset; margin-bottom: 25px;}
+.ios.guide img {max-width: 300px; height: auto;}
+</style>
+{% endblock %}

@@ -10,4 +10,5 @@ from . import views
 
 urlpatterns = patterns('',
                        url(r'^newpay/mainnet/$', views.show_newpay_download_view),
+                       url(r'^newpay/guide/$', views.show_newpay_guide_view),
                        )
