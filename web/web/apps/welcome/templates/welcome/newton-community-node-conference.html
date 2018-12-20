@@ -74,7 +74,8 @@
 
     <div class="bg-gray">
         <div class="container">
-            <div class="guest">
+            <div class="guest review-container">
+                {% comment %}
                 <div class="summit-title text-center">
                     <div class="line"></div>
                     <span>{% trans "Reports" %}</span>
@@ -124,18 +125,79 @@
                         <img src="" alt="">
                     </div>
                 </div>
+                {% endcomment %}
 
                 <div class="summit-title text-center">
                     <div class="line"></div>
                     <span>{% trans "Videos" %}</span>
                     <div class="line"></div>
                 </div>
-                <div class="video-list-container">
-                    <div class="big-video-container"></div>
-                    <div class="small-video-container"></div>
-                    <div class="small-video-container"></div>
-                    <div class="small-video-container"></div>
-                    <div class="small-video-container"></div>
+                <div class="video-list-container row">
+                    <div class="big-video-container col-md-12 col-sm-12 col-xs-12">
+                        <a videohref="https://newton-video.oss-cn-beijing.aliyuncs.com/B2%20-%20Panel%20-%20How%20To%20Use%20Newton%E2%80%99s%20Technology%20To%20Fix%20The%20World.mp4" class="video_link" data-toggle="modal" data-target="#videoModal">
+                            <img  src="{% version "images/meeting/videos/A.jpg" %}"/>
+                        </a>
+                    </div>
+                    <div class="big-video-container col-md-12 col-sm-12 col-xs-12">
+                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/A.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                            <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/B2%20-%20Panel%20-%20How%20To%20Use%20Newton%E2%80%99s%20Technology%20To%20Fix%20The%20World.mp4" type='video/mp4' />
+                            <p class="vjs-no-js">
+                              To view this video please enable JavaScript, and consider upgrading to a web browser that
+                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <div class="video-title text-center">
+                            {% trans "2018 Newton Community Node Conference - Main Event" %}
+                        </div>
+                    </div>
+                    <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
+                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B1.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                            <source src="" type='video/mp4' />
+                            <p class="vjs-no-js">
+                              To view this video please enable JavaScript, and consider upgrading to a web browser that
+                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <div class="video-title text-center">
+                            {% trans "PANEL A: Newton Community Governance and Incentives" %}
+                        </div>
+                    </div>
+                    <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
+                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B2.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                            <source src="" type='video/mp4' />
+                            <p class="vjs-no-js">
+                              To view this video please enable JavaScript, and consider upgrading to a web browser that
+                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <div class="video-title text-center">
+                            {% trans "PANEL B: How To Use Newton’s Technology To Fix The World" %}
+                        </div>
+                    </div>
+                    <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
+                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B3.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                            <source src="" type='video/mp4' />
+                            <p class="vjs-no-js">
+                              To view this video please enable JavaScript, and consider upgrading to a web browser that
+                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <div class="video-title text-center">
+                            {% trans "PANEL C: Rebuilding The Blockchain Value Proposition In The Cold Winter" %}
+                        </div>
+                    </div>
+                    <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
+                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B4.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                            <source src="" type='video/mp4' />
+                            <p class="vjs-no-js">
+                              To view this video please enable JavaScript, and consider upgrading to a web browser that
+                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                        <div class="video-title text-center">
+                            {% trans "PANEL D: From Improvement To Change, From Industry To Ecology" %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -904,6 +966,29 @@
     <div class="bottom-line"></div>
 
 </section>
+
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+
+            <div class="modal-body">
+            ...
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 {% block css %}
 <style>
@@ -1100,6 +1185,18 @@
         font-weight: normal;
         color: #333;
     }
+    .review-container .video-list-container {
+        width: 50%;
+        margin: auto;
+    }
+    .review-container .video-list-container .video-js {
+        width: 100%;
+        height: auto;
+    }
+    .review-container .video-list-container .big-video-container,
+    .review-container .video-list-container .small-video-container {
+        margin-bottom: 20px;
+    }
     @media(min-width: 768px) {
         .summit-banner-mobile{
             display: none;
@@ -1232,6 +1329,9 @@
         #summit .line:lang(en) {
             display: none;
         }
+        .review-container .video-list-container {
+            width: 100%;
+        }
     }
 </style>
 {% endblock %}
@@ -1262,6 +1362,22 @@
             });
         }
         ;
+    });
+    $(".video_link").click(function() {
+        var myPlayer = videojs('my-video');
+        var videoUrl = $(this).attr("videohref");
+        videojs("my-video", {}, function() {
+            window.myPlayer = this;
+            $("#mymoda .video-con #my-video source").attr("src", videoUrl);
+            myPlayer.src(videoUrl);
+            myPlayer.load(videoUrl);
+            myPlayer.play();
+        });
+        $(".click-modal").click();
+    });
+
+    $('#mymoda').on('hidden.bs.modal', function() {
+        myPlayer.pause();
     });
 </script>
 {% endblock %}
