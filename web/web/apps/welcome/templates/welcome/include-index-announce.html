@@ -38,19 +38,16 @@
                         </a>
                     </td>
                     <td class="qr-container">
-                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-qr-dev.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
+                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-qr-beta.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
                             <span class="glyphicon glyphicon-qrcode qrcode-thumbnail"></span>
                         </a>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <p style="height: 40px; text-align: right;" class="visible-xs">
-            <span style="display: inline-block; width: 50%; text-align: center; padding-top: 5px; font-size: 12px;">
-                {% trans "or" %}
-            </span>
-            <br/>
-            <a href="/download/newpay/mainnet/" style="text-decoration: underline; font-size: 14px; display: inline-block; width: 50%; text-align: center; height: 100%; color: #888; padding-right: 10px;">
+        <p style="height: 40px; text-align: center;" class="visible-xs">
+            <a href="/download/newpay/mainnet/" style="text-decoration: underline; font-size: 14px; display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;">
+                <img src="{% version "images/download-logo/newpay-download-icon.svg" %}" alt="" style="height: 100%; vertical-align: sub; padding-right: 10px;">
                 {% trans "Download NewPay" %}
             </a>
         </p>
