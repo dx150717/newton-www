@@ -132,4 +132,4 @@ NEWTON_EXPLORER_URL = "https://explorer.newtonproject.org/"
 
 # newpay download url
 NEWPAY_FOR_ANDROID_GOOGLE_DOWNLOAD_URL = "https://play.google.com/store/apps/details?id=org.newtonproject.newpay.android.release"
-NEWPAY_FOR_IOS_DOWNLOAD_URL = ""
+NEWPAY_FOR_IOS_DOWNLOAD_URL = "https://itunes.apple.com/app/newpay/id1439660801"
