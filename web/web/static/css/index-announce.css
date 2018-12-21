@@ -1,0 +1,95 @@
+/* Announce style */
+
+.announce-container {
+    text-align: center;
+}
+
+.announce-container .announce-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #303030;
+}
+
+.announce-container .announce-subtitle {
+    font-size: 24px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.announce-container .announce-content {
+    padding-top: 15px;
+}
+
+.announce-container .announce-content table {
+    margin: auto;
+}
+
+.announce-container .announce-content table td {
+    display: inline-block;
+    text-align: center;
+    width: 140px;
+}
+
+.announce-container .announce-content table td a {
+    display: inline-block;
+    height: 40px;
+}
+
+.announce-container .announce-content table td img {
+    width: auto;
+    height: 100%;
+}
+
+.announce-container .announce-content table td .qrcode-thumbnail {
+    font-size: 39px;
+    color: #303030;
+}
+
+.announce-container .announce-content table td .qrcode-img {
+
+}
+
+.announce-container .announce-content table td.qr-container {
+    text-align: left;
+    padding-left: 15px;
+    height: 40px;
+}
+
+@media (min-width: 768px) {
+    .announce-container .announce-content {
+        padding-left: 70px;
+    }
+
+    #newpay .announce-container .announce-content:lang(zh) {
+        padding-left: 57px;
+    }
+}
+
+@media (max-width: 768px) {
+    .announce-container .announce-title {
+        font-size: 18px;
+    }
+
+    .announce-container .announce-content {
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+
+    .announce-container .announce-subtitle {
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    .announce-container .announce-content table {
+        width: 100%;
+    }
+
+    .announce-container .announce-content table td {
+        width: 45%;
+    }
+
+    .announce-container .announce-content table td.qr-container {
+        display: none;
+    }
+}

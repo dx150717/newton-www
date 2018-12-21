@@ -19,6 +19,7 @@
             <img class="newpay-background" src="{% version "images/newpay/newpay_bg.png" %}" alt="">
         </div>
     </div>
+    {% comment %}
     <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
         <div class="container">
             <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
@@ -41,6 +42,12 @@
         </p>
         <!--<p>{% trans "Click the button to download NewPay to participate in the beta!" %}</p>-->
     </div>
+    {% endcomment %}
+
+    <div class="download-button-container">
+    {% include "welcome/include-index-announce.html" %}
+    </div>
+
     {% comment %}
     <div class="container">
         <div class="newpay_list">
@@ -202,7 +209,12 @@
         border-radius: 6px;
         background-color: #fff;
     }
+    .download-button-container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 </style>
+<link href="{% version "css/index-announce.css" %}" rel="stylesheet">
 {% endblock %}
 
 {% block js %}
@@ -210,7 +222,10 @@
 
 {% block inline_js %}
 <script type="text/javascript">
+    showNav();
     $(function () {
+        $('[data-toggle="popover"]').popover();
+
         if (screen.width <= 768) {
             showNav();
 
@@ -229,8 +244,7 @@
                 }
                 ;
             });
-        }
-        ;
+        };
     });
 </script>
 {% endblock %}

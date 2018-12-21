@@ -52,6 +52,9 @@
                     <li>
                         <a href="/nep/" {% language_change_header_style %}>{% trans "NEP" %}</a>
                     </li>
+                    <li>
+                        <a href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
+                    </li>
 
 
                     {% if request.user.is_authenticated %}
@@ -241,6 +244,9 @@
                     <li>
                         <a href="/nep/" {% language_change_header_style %}>{% trans "NEP" %}</a>
                     </li>
+                    <li>
+                        <a href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
+                    </li>
 
 
                     {% if request.user.is_authenticated %}
@@ -375,11 +381,20 @@
     background-color: #008cd7;
     background: #008cd7;
 }
+
 </style>
 <![endif]-->
 {% endif %}
 
+<style>
 
+@media (max-width: 768px) {
+    nav.navbar.sticky-navigation.NavBg {
+        max-height: 900px;
+        overflow-y: scroll;
+    };
+}
+</style>
 
 <link rel="stylesheet" href="{% version "css/search-bar.css" %}">
 <script type="text/javascript" src="{% version "js/search-bar.js" %}"></script>

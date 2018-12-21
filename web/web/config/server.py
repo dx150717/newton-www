@@ -179,3 +179,7 @@ HAYSTACK_CONNECTIONS = {
         'PATH': '/Users/yuwei/liuchao/search_www/',
     },
 }
+
+# newpay download url
+NEWPAY_FOR_ANDROID_ALI_DOWNLOAD_URL = "https://newton-release.oss-cn-beijing.aliyuncs.com/newpay-0.2-50-WWWRelease-201812171848.apk"
+NEWPAY_FOR_ANDROID_ALI_SG_DOWNLOAD_URL = "https://newton-release-sg.oss-ap-southeast-1.aliyuncs.com/newpay-0.2-50-WWWRelease-201812171848.apk"
