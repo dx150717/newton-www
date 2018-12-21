@@ -6,6 +6,10 @@
 {% trans "Newton Community Node Summit" %}
 {% endblock %}
 
+{% block require_js %}
+<script src='{% version "js/video.js" %}'></script>
+{% endblock %}
+
 {% comment %}
 {% block notice %}
 <a href="https://suanzao.llkeji.com/weixin/courseInfo/?invitationAppId=188304&id=28842&fromType=2&isSeries=0&seriesid=0&channel=0&wechatShareType=friend&code=081VN11k2NGVyD0q9t0k2NR21k2VN11f&state=STATE&appid=wxca88f6de7df4debb" id="normal">
@@ -75,6 +79,7 @@
     <div class="bg-gray">
         <div class="container">
             <div class="guest review-container">
+
                 {% comment %}
                 <div class="summit-title text-center">
                     <div class="line"></div>
@@ -85,7 +90,7 @@
                     <div class="press-container">
                         <div class="image-container">
                             <a href="">
-                                <img src="" alt="">
+                                <img src="{% version "images/meeting/report/report-bear.png" %}" alt="">
                             </a>
                         </div>
                         <div class="summary-container">
@@ -96,7 +101,7 @@
                     <div class="press-container">
                         <div class="image-container">
                             <a href="">
-                                <img src="" alt="">
+                                <img src="{% version "images/meeting/report/report-node.png" %}" alt="">
                             </a>
                         </div>
                         <div class="summary-container">
@@ -134,66 +139,41 @@
                 </div>
                 <div class="video-list-container row">
                     <div class="big-video-container col-md-12 col-sm-12 col-xs-12">
-                        <a videohref="https://newton-video.oss-cn-beijing.aliyuncs.com/B2%20-%20Panel%20-%20How%20To%20Use%20Newton%E2%80%99s%20Technology%20To%20Fix%20The%20World.mp4" class="video_link" data-toggle="modal" data-target="#videoModal">
-                            <img  src="{% version "images/meeting/videos/A.jpg" %}"/>
+                        <a class="video_link" id="id_video_link1" data-toggle="modal" data-target="#videoModal1">
+                            <img  src="{% version "images/meeting/videos/A-2.jpg" %}"/>
                         </a>
-                    </div>
-                    <div class="big-video-container col-md-12 col-sm-12 col-xs-12">
-                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/A.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
-                            <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/B2%20-%20Panel%20-%20How%20To%20Use%20Newton%E2%80%99s%20Technology%20To%20Fix%20The%20World.mp4" type='video/mp4' />
-                            <p class="vjs-no-js">
-                              To view this video please enable JavaScript, and consider upgrading to a web browser that
-                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                            </p>
-                        </video>
                         <div class="video-title text-center">
                             {% trans "2018 Newton Community Node Conference - Main Event" %}
                         </div>
                     </div>
                     <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
-                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B1.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
-                            <source src="" type='video/mp4' />
-                            <p class="vjs-no-js">
-                              To view this video please enable JavaScript, and consider upgrading to a web browser that
-                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                            </p>
-                        </video>
+                        <a class="video_link" id="id_video_link2" data-toggle="modal" data-target="#videoModal2">
+                            <img  src="{% version "images/meeting/videos/B1-2.jpg" %}"/>
+                        </a>
                         <div class="video-title text-center">
                             {% trans "PANEL A: Newton Community Governance and Incentives" %}
                         </div>
                     </div>
                     <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
-                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B2.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
-                            <source src="" type='video/mp4' />
-                            <p class="vjs-no-js">
-                              To view this video please enable JavaScript, and consider upgrading to a web browser that
-                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                            </p>
-                        </video>
+                        <a class="video_link" id="id_video_link3" data-toggle="modal" data-target="#videoModal3">
+                            <img  src="{% version "images/meeting/videos/B2-2.jpg" %}"/>
+                        </a>
                         <div class="video-title text-center">
                             {% trans "PANEL B: How To Use Newton’s Technology To Fix The World" %}
                         </div>
                     </div>
                     <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
-                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B3.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
-                            <source src="" type='video/mp4' />
-                            <p class="vjs-no-js">
-                              To view this video please enable JavaScript, and consider upgrading to a web browser that
-                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                            </p>
-                        </video>
+                        <a class="video_link" id="id_video_link4" data-toggle="modal" data-target="#videoModal4">
+                            <img  src="{% version "images/meeting/videos/B3-2.jpg" %}"/>
+                        </a>
                         <div class="video-title text-center">
                             {% trans "PANEL C: Rebuilding The Blockchain Value Proposition In The Cold Winter" %}
                         </div>
                     </div>
                     <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
-                        <video class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B4.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
-                            <source src="" type='video/mp4' />
-                            <p class="vjs-no-js">
-                              To view this video please enable JavaScript, and consider upgrading to a web browser that
-                              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                            </p>
-                        </video>
+                        <a class="video_link" id="id_video_link5" data-toggle="modal" data-target="#videoModal5">
+                            <img  src="{% version "images/meeting/videos/B4-2.jpg" %}"/>
+                        </a>
                         <div class="video-title text-center">
                             {% trans "PANEL D: From Improvement To Change, From Industry To Ecology" %}
                         </div>
@@ -967,23 +947,111 @@
 
 </section>
 
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+<div class="modal fade" id="videoModal1" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="bold text-center">
+                    {% trans "2018 Newton Community Node Conference - Main Event" %}
+                </h4>
+                <video id="node-video1" class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/A.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                    <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/A%20-%202018%20Newton%20Community%20Node%20Conference%20Main%20Event.mp4" type='video/mp4' />
+                    <p class="vjs-no-js">
+                      To view this video please enable JavaScript, and consider upgrading to a web browser that
+                      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>
             </div>
+        </div>
+    </div>
+</div>
 
-            <div class="modal-body">
-            ...
+<div class="modal fade" id="videoModal2" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="bold text-center">
+                    {% trans "PANEL A: Newton Community Governance and Incentives" %}
+                </h4>
+                <video id="node-video2"  class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B1.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                    <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/B1%20-%20Panel%20-%20Newton%20Community%20Governance%20and%20Incentives.mp4" type='video/mp4' />
+                    <p class="vjs-no-js">
+                      To view this video please enable JavaScript, and consider upgrading to a web browser that
+                      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>
             </div>
+        </div>
+    </div>
+</div>
 
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+<div class="modal fade" id="videoModal3" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="bold text-center">
+                    {% trans "PANEL B: How To Use Newton’s Technology To Fix The World" %}
+                </h4>
+                <video id="node-video3"  class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B2.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                    <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/B2%20-%20Panel%20-%20How%20To%20Use%20Newton%E2%80%99s%20Technology%20To%20Fix%20The%20World.mp4" type='video/mp4' />
+                    <p class="vjs-no-js">
+                      To view this video please enable JavaScript, and consider upgrading to a web browser that
+                      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="videoModal4" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="bold text-center">
+                    {% trans "PANEL C: Rebuilding The Blockchain Value Proposition In The Cold Winter" %}
+                </h4>
+                <video id="node-video4"  class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B3.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                    <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/B3%20-%20Panel%20-%20Rebuilding%20The%20Blockchain%20Value%20Proposition%20In%20The%20Cold%20Winter.mp4" type='video/mp4' />
+                    <p class="vjs-no-js">
+                      To view this video please enable JavaScript, and consider upgrading to a web browser that
+                      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="videoModal5" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="bold text-center">
+                    {% trans "PANEL D: From Improvement To Change, From Industry To Ecology" %}
+                </h4>
+                <video id="node-video5"  class="video-js vjs-big-play-centered" controls preload="meta" poster="{% version "images/meeting/videos/B4.jpg" %}" data-setup='' style="margin-left:auto;margin-right:auto;cursor: pointer;">
+                    <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/B4%20-%20Panel%20-%20From%20Improvement%20To%20Change%2C%20From%20Industry%20To%20Ecology.mp4" type='video/mp4' />
+                    <p class="vjs-no-js">
+                      To view this video please enable JavaScript, and consider upgrading to a web browser that
+                      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>
             </div>
         </div>
     </div>
@@ -991,6 +1059,7 @@
 
 {% endblock %}
 {% block css %}
+<link href="{% version "css/video-js.css" %}" rel="stylesheet">
 <style>
     .summit-bg{
         background-color: #010c34;
@@ -1185,6 +1254,9 @@
         font-weight: normal;
         color: #333;
     }
+    #summit .guest.review-container {
+        margin-bottom: unset;
+    }
     .review-container .video-list-container {
         width: 50%;
         margin: auto;
@@ -1196,6 +1268,26 @@
     .review-container .video-list-container .big-video-container,
     .review-container .video-list-container .small-video-container {
         margin-bottom: 20px;
+    }
+    .review-container .video-list-container .video_link {
+        width: 100%;
+        display: block;
+    }
+    .review-container .video-list-container .video_link img {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal.fade {
+        top: 20%;
+    }
+    .modal .modal-header div.video-js {
+        width: 100%;
+        height: 325px;
+    }
+    .modal .modal-header video.video-js {
+        width: 100%;
+        height: auto;
     }
     @media(min-width: 768px) {
         .summit-banner-mobile{
@@ -1332,12 +1424,18 @@
         .review-container .video-list-container {
             width: 100%;
         }
+        .modal .modal-header .video-js {
+            width: 100%;
+            height: 300px;
+        }
+        .modal .modal-header div.video-js {
+            height: 300px;
+        }
     }
 </style>
 {% endblock %}
 
-
-{% block inline_js %}
+{% block js %}
 <script type="text/javascript">
     // showNav();
     $(function () {
@@ -1360,24 +1458,89 @@
                 }
                 ;
             });
-        }
-        ;
-    });
-    $(".video_link").click(function() {
-        var myPlayer = videojs('my-video');
-        var videoUrl = $(this).attr("videohref");
-        videojs("my-video", {}, function() {
-            window.myPlayer = this;
-            $("#mymoda .video-con #my-video source").attr("src", videoUrl);
-            myPlayer.src(videoUrl);
-            myPlayer.load(videoUrl);
-            myPlayer.play();
-        });
-        $(".click-modal").click();
+        };
     });
 
-    $('#mymoda').on('hidden.bs.modal', function() {
+    $("#id_video_link1").click(function() {
+        var myPlayer = videojs('node-video1');
+        var videoUrl = $("#node-video1 source").attr("src");
+        videojs("node-video1", {}, function() {
+            window.myPlayer = this;
+            myPlayer.src(videoUrl);
+            myPlayer.load(videoUrl);
+            myPlayer.play();
+        });
+    });
+
+    $('#videoModal1').on('hidden.bs.modal', function() {
+        var myPlayer = videojs('node-video1');
         myPlayer.pause();
     });
+
+    $("#id_video_link2").click(function() {
+        var myPlayer = videojs('node-video2');
+        var videoUrl = $("#node-video2 source").attr("src");
+        videojs("node-video2", {}, function() {
+            window.myPlayer = this;
+            myPlayer.src(videoUrl);
+            myPlayer.load(videoUrl);
+            myPlayer.play();
+        });
+    });
+
+    $('#videoModal2').on('hidden.bs.modal', function() {
+        var myPlayer = videojs('node-video2');
+        myPlayer.pause();
+    });
+
+    $("#id_video_link3").click(function() {
+        var myPlayer = videojs('node-video3');
+        var videoUrl = $("#node-video3 source").attr("src");
+        videojs("node-video3", {}, function() {
+            window.myPlayer = this;
+            myPlayer.src(videoUrl);
+            myPlayer.load(videoUrl);
+            myPlayer.play();
+        });
+    });
+
+    $('#videoModal3').on('hidden.bs.modal', function() {
+        var myPlayer = videojs('node-video3');
+        myPlayer.pause();
+    });
+
+    $("#id_video_link4").click(function() {
+        var myPlayer = videojs('node-video4');
+        var videoUrl = $("#node-video4 source").attr("src");
+        videojs("node-video4", {}, function() {
+            window.myPlayer = this;
+            myPlayer.src(videoUrl);
+            myPlayer.load(videoUrl);
+            myPlayer.play();
+        });
+    });
+
+    $('#videoModal4').on('hidden.bs.modal', function() {
+        var myPlayer = videojs('node-video4');
+        myPlayer.pause();
+    });
+
+    $("#id_video_link5").click(function() {
+        var myPlayer = videojs('node-video5');
+        var videoUrl = $("#node-video5 source").attr("src");
+        videojs("node-video5", {}, function() {
+            window.myPlayer = this;
+            myPlayer.src(videoUrl);
+            myPlayer.load(videoUrl);
+            myPlayer.play();
+        });
+    });
+
+    $('#videoModal5').on('hidden.bs.modal', function() {
+        var myPlayer = videojs('node-video5');
+        myPlayer.pause();
+    });
+
 </script>
 {% endblock %}
+
