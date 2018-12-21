@@ -12,9 +12,8 @@
 var u = navigator.userAgent;
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
 if (isiOS) {
-    console.log("is ios")
     var scriptNode = document.createElement("script");
-    scriptNode.setAttribute("src", "http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_jq.js");
+    scriptNode.setAttribute("src", "{% version "js/tvp.player_v2-jq.js" %}");
     document.head.appendChild(scriptNode);
 }
 </script>
