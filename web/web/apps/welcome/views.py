@@ -275,6 +275,10 @@ def show_nep_view(request):
 
 
 def show_newton_community_node_conference_view(request):
+    is_chinese = False
+    language = translation.get_language()
+    if language.startswith("zh"):
+        is_chinese = True
     return render(request, 'welcome/newton-community-node-conference.html', locals())
 
 

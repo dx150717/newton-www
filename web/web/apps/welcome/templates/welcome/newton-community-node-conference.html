@@ -80,6 +80,7 @@
         <div class="container">
             <div class="guest review-container">
 
+                {% if is_chinese %}
                 <div class="summit-title text-center">
                     <div class="line"></div>
                     <span>{% trans "Reports" %}</span>
@@ -113,6 +114,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
 
                 {% comment %}
                 <div class="summit-title text-center">
@@ -138,7 +140,7 @@
 
                 <div class="summit-title text-center">
                     <div class="line"></div>
-                    <span>{% trans "Videos" %}</span>
+                    <span>{% trans "Event Videos" %}</span>
                     <div class="line"></div>
                 </div>
                 <div class="video-list-container row">
