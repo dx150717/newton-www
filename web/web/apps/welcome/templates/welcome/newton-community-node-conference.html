@@ -87,26 +87,30 @@
                     <div class="line"></div>
                 </div>
                 <div class="press-list-container">
-                    <div class="press-container">
-                        <div class="image-container">
+                    <div class="press-container row" style="margin-bottom: 30px;">
+                        <div class="image-container col-md-5">
                             <a href="">
                                 <img src="{% version "images/meeting/report/report-bear.png" %}" alt="">
                             </a>
                         </div>
-                        <div class="summary-container">
-                            <p class="press-title"></p>
-                            <p class="press-time"></p>
+                        <div class="summary-container col-md-7">
+                            <a href="">
+                                <p class="press-title">{% trans "熊市兴奋剂：牛顿2018牛顿澳门社群节点大会即将召开" %}</p>
+                            </a>
+                            <p class="press-time">{% trans "Date:" %} 2018-12-15</p>
                         </div>
                     </div>
-                    <div class="press-container">
-                        <div class="image-container">
+                    <div class="press-container row">
+                        <div class="image-container col-md-5">
                             <a href="">
                                 <img src="{% version "images/meeting/report/report-node.png" %}" alt="">
                             </a>
                         </div>
-                        <div class="summary-container">
-                            <p class="press-title"></p>
-                            <p class="press-time"></p>
+                        <div class="summary-container col-md-7">
+                            <a href="">
+                                <p class="press-title">{% trans "牛顿社群于12月11日在澳门举行“2018年牛顿社群节点大会”" %}</p>
+                            </a>
+                            <p class="press-time">{% trans "Date:" %} 2018-12-15</p>
                         </div>
                     </div>
                 </div>
@@ -146,7 +150,7 @@
                             {% trans "2018 Newton Community Node Conference - Main Event" %}
                         </div>
                     </div>
-                    <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
+                    <div class="small-video-container col-md-3 col-sm-12 col-xs-12">
                         <a class="video_link" id="id_video_link2" data-toggle="modal" data-target="#videoModal2">
                             <img  src="{% version "images/meeting/videos/B1-2.jpg" %}"/>
                         </a>
@@ -154,7 +158,7 @@
                             {% trans "PANEL A: Newton Community Governance and Incentives" %}
                         </div>
                     </div>
-                    <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
+                    <div class="small-video-container col-md-3 col-sm-12 col-xs-12">
                         <a class="video_link" id="id_video_link3" data-toggle="modal" data-target="#videoModal3">
                             <img  src="{% version "images/meeting/videos/B2-2.jpg" %}"/>
                         </a>
@@ -162,7 +166,7 @@
                             {% trans "PANEL B: How To Use Newton’s Technology To Fix The World" %}
                         </div>
                     </div>
-                    <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
+                    <div class="small-video-container col-md-3 col-sm-12 col-xs-12">
                         <a class="video_link" id="id_video_link4" data-toggle="modal" data-target="#videoModal4">
                             <img  src="{% version "images/meeting/videos/B3-2.jpg" %}"/>
                         </a>
@@ -170,7 +174,7 @@
                             {% trans "PANEL C: Rebuilding The Blockchain Value Proposition In The Cold Winter" %}
                         </div>
                     </div>
-                    <div class="small-video-container col-md-6 col-sm-12 col-xs-12">
+                    <div class="small-video-container col-md-3 col-sm-12 col-xs-12">
                         <a class="video_link" id="id_video_link5" data-toggle="modal" data-target="#videoModal5">
                             <img  src="{% version "images/meeting/videos/B4-2.jpg" %}"/>
                         </a>
@@ -1258,7 +1262,7 @@
         margin-bottom: unset;
     }
     .review-container .video-list-container {
-        width: 50%;
+        width: 80%;
         margin: auto;
     }
     .review-container .video-list-container .video-js {
@@ -1268,6 +1272,11 @@
     .review-container .video-list-container .big-video-container,
     .review-container .video-list-container .small-video-container {
         margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .review-container .video-list-container .video-title {
+        padding-top: 5px;
     }
     .review-container .video-list-container .video_link {
         width: 100%;
@@ -1283,11 +1292,28 @@
     }
     .modal .modal-header div.video-js {
         width: 100%;
-        height: 325px;
+        height: 500px;
     }
     .modal .modal-header video.video-js {
         width: 100%;
         height: auto;
+    }
+
+    .press-list-container {
+        width: 60%;
+        margin: auto;
+        margin-bottom: 60px;
+    }
+    .press-list-container .press-container .image-container img {
+        width: 100%;
+        height: auto;
+    }
+    .press-list-container .press-container .summary-container .press-title {
+        color: #888;
+        padding-top: unset;
+        padding-bottom: unset;
+        font-size: 18px;
+        font-weight: 700;
     }
     @media(min-width: 768px) {
         .summit-banner-mobile{
@@ -1298,6 +1324,15 @@
         }
         .strategic-media.special-media img {
             max-width: 60%;
+        }
+        .modal.fade {
+            top: 0;
+        }
+        .modal-dialog {
+            width: 60%;
+        }
+        .review-container .video-list-container .big-video-container .video-title {
+            font-size: 18px;
         }
     }
     @media(max-width: 768px) {
