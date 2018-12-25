@@ -1,0 +1,70 @@
+{% load i18n %}
+{% load utils %}
+
+<div id="splashmask" class="hidewrapper" >
+  <div id="cardClose" onclick="hideSplash()">×</div>
+  <div class="splashctn">
+    <div id="cardctn">
+      <div class="header" id="cardHeader" >
+        <div class="cardtitle" id="cardtitle" >
+          <img src="{% version "images/card/bg-title.png" %}"></img>
+          {% if language == "zh-cn" %}
+          <h2>牛顿 <span>1</span> 周年</h2>
+          <h4>一如既往 全力以赴</h4>
+          {% else %}
+          <h2 style="font-size:2em; line-height:2em;">Newton turns <span style="font-size:2em">1</span></h2>
+          <h4 style="font-size:2em; line-height:1em;">Above &amp; Beyond</h4>
+          {% endif %}
+          <!-- English
+          <h2 style="font-size:3em; line-height:3em;">Above & Beyond</h2>
+          <h4 style="line-height:1em;">Newton is 1 year old</h4>
+           -->
+          <img src="{% version "images/card/bg-02.png" %}" class="off-y" onclick="randomBg()"></img>
+        </div>
+      </div>
+      <a onclick="hideSplash()" href="javascript:void(0);" class="cardbtn">
+        {% trans "Enter Website" %}
+      </a>
+    </div>
+  </div>
+  <div class="">
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+        <img class="newflake" src="{% version "images/card/newflake.png" %}"></img>
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+      <div class="snowflake">
+        <img class="newflake" src="{% version "images/card/newflake.png" %}"></img>
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        <img class="newflake" src="{% version "images/card/newflake.png" %}"></img>
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+      <div class="snowflake">
+        <img class="newflake" src="{% version "images/card/newflake.png" %}"></img>
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+      <div class="snowflake">
+        ❅
+      </div>
+      <div class="snowflake">
+        ❆
+      </div>
+    </div>
+  </div>
+</div>

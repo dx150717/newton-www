@@ -12,6 +12,7 @@
 
 {% block content %}
 
+{% include "welcome/include-index-card.html" %}
 <section id="intro" class="bg-gray">
 
     <div class="container">
@@ -123,7 +124,7 @@
 <script type="text/javascript">
 var video_player;
 $(document).ready(function(){
-    videojs("newton-video", {}, function(){
+    videojs("newton-video-1", {}, function(){
         video_player = this;
         video_player.on('ended', function(){
             video_player.load();
@@ -136,6 +137,7 @@ showNav();
 {% endblock %}
 
 {% block js %}
+<script type="text/javascript" src="{% version 'js/index-card.js' %}"></script>
 <script src="{% version "js/subscription.js" %}"></script>
 <script src="{% version "js/video.js" %}"></script>
 <!--<script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>-->
@@ -143,6 +145,8 @@ showNav();
 <script src="{% version "js/registerSw.js" %}" type="application/x-javascript"></script>
 <script src="{% version "js/swiper.min.js" %}" type="text/javascript"></script>
 <script src="{% version "js/events.js" %}"></script>
+<script src="{% version "js/index-video.js" %}"></script>
+
 <script>
     var swiper1 = new Swiper('.swiper-container1', {
       slidesPerView: 1,
@@ -255,6 +259,8 @@ showNav();
 <link href="{% version "css/swiper.min.css" %}" rel="stylesheet">
 <link href="{% version "css/counter.css" %}" rel="stylesheet">
 <link href="{% version "css/index-announce.css" %}" rel="stylesheet">
+<link href="{% version "css/index-card.css" %}" rel="stylesheet">
+<link href="{% version "css/index-video.css" %}" rel="stylesheet">
 <style>
     .navbar {
         position: fixed;
