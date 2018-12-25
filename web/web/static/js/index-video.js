@@ -27,8 +27,8 @@ function initIndexVideos () {
             video.setVid("n0814ugqh49");
             var player =new tvp.Player();
             player.create({
-                width:"100%",
-                height:185,
+                width:320,
+                height:215,
                 video:video,
                 modId:"node-video-tencent2",
                 autoplay:true,
