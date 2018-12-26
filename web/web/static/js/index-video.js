@@ -23,19 +23,26 @@ function initIndexVideos () {
                 videoPlayer2.play();
             });
         } else {
+            $("#newton-video-2").hide();
+            $("#newton-video-1").hide();
+            $("#node-video-tencent2").show();
             var video = new tvp.VideoInfo();
             video.setVid("n0814ugqh49");
-            var player =new tvp.Player();
-            player.create({
+            var tencentPlayer =new tvp.Player();
+            tencentPlayer.create({
                 width:320,
                 height:215,
                 video:video,
                 modId:"node-video-tencent2",
                 autoplay:true,
+                pic:"{% version 'images/meeting/videos/A.jpg' %}",
             });
-            player.onplay = function () {
+            tencentPlayer.onplay = function () {
                 $("#video-tab-1").click(function () {
-                    player.pause();
+                    tencentPlayer.pause();
+                    $("#node-video-tencent2").hide();
+                    $("#newton-video-2").hide();
+                    $("#newton-video-1").show();
                 });
             }
         }
