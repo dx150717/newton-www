@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-30 15:12+0000\n"
+"POT-Creation-Date: 2019-01-25 13:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -567,7 +567,7 @@ msgstr "语言"
 #: web/apps/faq/models.py:26 web/apps/zinnia/models/category.py:49
 #: web/apps/zinnia/models_bases/entry.py:103
 #: web/apps/zinnia/models_bases/entry.py:106 web/templates/header.html:83
-#: web/templates/header.html.py:277
+#: web/templates/header.html.py:278
 msgid "Language"
 msgstr "语言"
 
@@ -1703,8 +1703,8 @@ msgstr ""
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
 #: web/templates/header.html:70 web/templates/header.html.py:78
 #: web/templates/header.html:124 web/templates/header.html.py:132
-#: web/templates/header.html:264 web/templates/header.html.py:272
-#: web/templates/header.html:318 web/templates/header.html.py:326
+#: web/templates/header.html:265 web/templates/header.html.py:273
+#: web/templates/header.html:319 web/templates/header.html.py:327
 msgid "Login"
 msgstr "登录"
 
@@ -1744,7 +1744,7 @@ msgstr ""
 #: web/apps/zinnia/templates/zinnia/sitemap.html:11
 #: web/apps/zinnia/templates/zinnia/skeleton.html:70
 #: web/apps/zinnia/templates/zinnia/skeleton.html:71
-#: web/templates/footer.html:47
+#: web/templates/footer.html:44
 msgid "Sitemap"
 msgstr "网站地图"
 
@@ -2088,7 +2088,7 @@ msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:6 web/apps/faq/templates/faq/faq.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:76
-#: web/templates/footer.html:31
+#: web/templates/footer.html:28
 msgid "FAQ"
 msgstr ""
 
@@ -2322,7 +2322,7 @@ msgstr "验证Email"
 #: web/apps/welcome/templates/welcome/about.html:6
 #: web/apps/welcome/templates/welcome/about.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:20
-#: web/templates/footer.html:41
+#: web/templates/footer.html:38
 msgid "ABOUT"
 msgstr "关于"
 
@@ -2478,7 +2478,7 @@ msgstr "社群声音"
 #: web/apps/welcome/templates/welcome/sitemap.html:70
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:45 web/templates/header.html.py:239
+#: web/templates/header.html:45 web/templates/header.html.py:240
 msgid "Community"
 msgstr "社群"
 
@@ -2511,7 +2511,7 @@ msgstr "与我们一起创建牛顿社群"
 #: web/apps/welcome/templates/welcome/contact.html:13
 #: web/apps/welcome/templates/welcome/contact.html:19
 #: web/apps/welcome/templates/welcome/sitemap.html:26
-#: web/templates/footer.html:45
+#: web/templates/footer.html:42
 msgid "Contact Us"
 msgstr "联系我们"
 
@@ -2594,7 +2594,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:93
-#: web/templates/footer.html:54
+#: web/templates/footer.html:51
 msgid "Copyright"
 msgstr "版权声明"
 
@@ -2849,14 +2849,14 @@ msgstr "距离 NewChain 主网上线还有"
 #: web/apps/welcome/templates/welcome/dashboard.html:9
 #: web/apps/welcome/templates/welcome/newstatus.html:6
 #: web/apps/welcome/templates/welcome/newstatus.html:12
-#: web/templates/footer.html:29
+#: web/templates/footer.html:26
 msgid "NewStatus"
 msgstr "NewStatus"
 
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:54
-#: web/templates/header.html:48 web/templates/header.html.py:242
+#: web/templates/header.html:48 web/templates/header.html.py:243
 msgid "Economy"
 msgstr "经济体"
 
@@ -2983,7 +2983,6 @@ msgstr "韩锋"
 #: web/apps/welcome/templates/welcome/include-advisor.html:29
 #: web/apps/welcome/templates/welcome/include-investor.html:109
 #: web/apps/welcome/templates/welcome/include-investor.html:116
-#: web/apps/welcome/templates/welcome/include-team.html:29
 msgid "Co-founder of Elastos"
 msgstr "亦来云联合创始人"
 
@@ -3230,6 +3229,32 @@ msgstr "Touch Press 创始人"
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:332
 msgid "BAFTA Award winning author"
 msgstr "BAFTA（英国电影电视艺术学院）奖获得者"
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:192
+#: web/apps/welcome/templates/welcome/include-advisor.html:196
+#: web/apps/welcome/templates/welcome/include-advisor.html:198
+msgid "Masanari Koike"
+msgstr "小池政就"
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:193
+msgid ""
+"Masanari Koike has a PhD of technology management from Tokyo University’s "
+"Graduate School of Engineering, a master’s of foreign policy and "
+"international economics from the School of Advanced International Studies, "
+"John Hopkins University (US), and a bachelor’s in economics from Sophia "
+"University, Japan. He has served as a member of the Japanese House of "
+"Representatives, Assistant Professor of International Relations in Nihon "
+"University, and Assistant Professor at the Tokyo University Graduate School "
+"of Engineering. He has also worked for the UK think tank Demos, the US law "
+"firm Deway, and Marubeni Corporation (Japan). He has extensively researched "
+"Chinese-Japanese technological and industrial relations.'"
+msgstr "小池政就为东京大学工学研究院科技管理系博士，美国约翰斯·霍普金斯大学高级国际研究学院美国外交政策和国际经济学硕士，日本上智大学经济学学士。曾担任日本国会众议院议员、日本大学国际关系系副教授、东京大学工学研究院助理教授。曾就职于英国智库Demos、美国杜威律师事务所及日本丸红株式会社。多年来从事中国和日本的技术发展与产业政策相关研究以及中日有好关系建设。"
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:200
+msgid ""
+"Visiting Fellow at the Department of Social Sciences, Research Center for "
+"Japanese Studies, Tsinghua University"
+msgstr "清华大学日本研究中心社会科学系客座研究员"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:8
 msgid "Token Metrics"
@@ -3788,7 +3813,6 @@ msgstr "链商零售"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:21
 #: web/apps/welcome/templates/welcome/include-industry.html:20
-#: web/apps/welcome/templates/welcome/newpay.html:139
 #: web/apps/welcome/templates/welcome/scene.html:63
 msgid "Payment"
 msgstr "支付"
@@ -3936,12 +3960,13 @@ msgstr ""
 "商务行业协会会长。"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:187
+#, fuzzy, python-format
 msgid ""
 "In 2007, during the booming stage of e-commerce, Ye established mbaobao.com, "
 "becoming China's most famous online bag and suitcase brand. In 2013, he "
 "established Haifeng Zhicheng Investment Management Co and over the past five "
 "years accumulated 5 super capital Angel venture funds and invested in nearly "
-"70 projects. These have refinancing rate as high as 58%, and have hatched a "
+"70 projects. These have refinancing rate as high as 58%%, and have hatched a "
 "number of high-quality enterprises with high growth rates."
 msgstr ""
 "2007年，叶海峰创立麦包包，在电商在中国兴起的阶段，迅速成为国内箱包电商标志性"
@@ -4269,7 +4294,7 @@ msgstr "申请加入"
 #: web/apps/welcome/templates/welcome/include-protocol.html:10
 #: web/apps/welcome/templates/welcome/sitemap.html:35
 #: web/apps/welcome/templates/welcome/technology.html:13
-#: web/templates/header.html:39 web/templates/header.html.py:233
+#: web/templates/header.html:39 web/templates/header.html.py:234
 msgid "Technology"
 msgstr "技术"
 
@@ -4368,8 +4393,12 @@ msgid "Newton's main chain and NewPay officially launched."
 msgstr "牛顿主链和NewPay钱包正式上线"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:72
-#: web/apps/welcome/templates/welcome/include-roadmap.html:129
 msgid "The NewMall will officially launch."
+msgstr "NewMall 正式上线"
+
+#: web/apps/welcome/templates/welcome/include-roadmap.html:129
+#, fuzzy
+msgid "The NewMall was officially launched."
 msgstr "NewMall 正式上线"
 
 #: web/apps/welcome/templates/welcome/include-team.html:9
@@ -4618,7 +4647,7 @@ msgid "What is Newton"
 msgstr "牛顿简介"
 
 #: web/apps/welcome/templates/welcome/include-video.html:28
-#: web/apps/welcome/templates/welcome/index.html:22
+#: web/apps/welcome/templates/welcome/index.html:21
 msgid "Newton: Infrastructure for the Community Economy"
 msgstr "牛顿：社群经济基础设施"
 
@@ -4626,7 +4655,6 @@ msgstr "牛顿：社群经济基础设施"
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:84
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:604
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:605
-#: web/templates/header.html:195
 msgid "2018 Newton Community Node Conference"
 msgstr "2018 牛顿社群节点大会"
 
@@ -4636,15 +4664,15 @@ msgid ""
 "MGM Cotai, Macao."
 msgstr "2018年12月11日，牛顿在澳门路氹美狮美高梅酒店举办首届社群节点大会。"
 
-#: web/apps/welcome/templates/welcome/index.html:21
+#: web/apps/welcome/templates/welcome/index.html:20
 msgid "Everyone Should Benefit Directly from Economic Growth"
 msgstr "每一个人都应该从经济增长中受益"
 
-#: web/apps/welcome/templates/welcome/index.html:65
+#: web/apps/welcome/templates/welcome/index.html:64
 msgid "More..."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/index.html:118
+#: web/apps/welcome/templates/welcome/index.html:117
 msgid ""
 "Paying tribute to Sir Isaac Newton, the great scientist who made a "
 "significant impact on our lives!"
@@ -4672,7 +4700,7 @@ msgstr "招聘"
 
 #: web/apps/welcome/templates/welcome/joinus.html:17
 #: web/apps/welcome/templates/welcome/sitemap.html:25
-#: web/templates/footer.html:44
+#: web/templates/footer.html:41
 msgid "Join Us"
 msgstr "加入我们"
 
@@ -5467,7 +5495,7 @@ msgstr "法律信息"
 #: web/apps/welcome/templates/welcome/mediakit.html:6
 #: web/apps/welcome/templates/welcome/mediakit.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:27
-#: web/templates/footer.html:46
+#: web/templates/footer.html:43
 msgid "Media Kit"
 msgstr "媒体资源"
 
@@ -5520,7 +5548,7 @@ msgid "Poster in English"
 msgstr "英文海报"
 
 #: web/apps/welcome/templates/welcome/nep.html:6 web/templates/header.html:54
-#: web/templates/header.html.py:248
+#: web/templates/header.html.py:249
 msgid "NEP"
 msgstr "牛顿改进提案"
 
@@ -5571,7 +5599,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
 #: web/apps/welcome/templates/welcome/sitemap.html:45
-#: web/templates/header.html:42 web/templates/header.html.py:236
+#: web/templates/header.html:42 web/templates/header.html.py:237
 msgid "NewPay"
 msgstr ""
 
@@ -5582,35 +5610,48 @@ msgid "Digital Identity and Credit"
 msgstr "数字身份与信用"
 
 #: web/apps/welcome/templates/welcome/newpay.html:121
-msgid "Create and manage DID (Decentralized IDs);"
+#, fuzzy
+msgid "Create and manage decentralized ID's"
 msgstr "创建和管理DID(Decentralized IDs)；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:122
-msgid "Set privacy mode for personal information;"
+#, fuzzy
+msgid "Set privacy preferences for personal information;"
 msgstr "设置个人信息隐私模式；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:123
-msgid "Transaction information management;"
+#, fuzzy
+msgid "Transaction management;"
 msgstr "交易信息管理；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:124
-msgid "Transaction information sharing pricing and benefit;"
-msgstr "交易信息共享定价及收益；"
+#, fuzzy
+msgid "Set pricing and benefits for sharing transaction information"
+msgstr "设置个人信息隐私模式；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:125
-msgid "Digital asset management, including NEW, BTC, ETH, etc."
+#, fuzzy
+msgid "Digital asset management, including NEW, BTC, ETH, etc"
 msgstr "数字资产管理，包括NEW、BTC、ETH等。"
 
+#: web/apps/welcome/templates/welcome/newpay.html:139
+#, fuzzy
+msgid "Payments"
+msgstr "支付"
+
 #: web/apps/welcome/templates/welcome/newpay.html:140
-msgid "Support cross-border transactions;"
+#, fuzzy
+msgid "Cross-border transactions;"
 msgstr "支持跨境交易；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:141
-msgid "Support for micro-payments;"
+#, fuzzy
+msgid "Micro-payments;"
 msgstr "支持超小额度支付；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:142
-msgid "Extremely fast transaction confirmation."
+#, fuzzy
+msgid "Rapid transaction confirmation."
 msgstr "极快的交易确认速度。"
 
 #: web/apps/welcome/templates/welcome/newpay.html:156
@@ -5618,32 +5659,37 @@ msgid "Joint Login"
 msgstr "联合登录"
 
 #: web/apps/welcome/templates/welcome/newpay.html:157
-msgid "Log in multiple Dapps using a unified identity;"
+#, fuzzy
+msgid "Log into multiple Dapps with one unified identity"
 msgstr "使用统一身份登录多个Dapp；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:158
-msgid "Dapp management and permission control;"
+#, fuzzy
+msgid "Dapp management and permission control"
 msgstr "Dapp管理和权限控制；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:159
-msgid "Security audit."
+#, fuzzy
+msgid "Security audit"
 msgstr "安全审计。"
 
 #: web/apps/welcome/templates/welcome/newpay.html:173
-msgid "Application Support"
+#, fuzzy
+msgid "App Support"
 msgstr "内置应用"
 
 #: web/apps/welcome/templates/welcome/newpay.html:174
-msgid "Built-in support for free and open-source applications;"
+#, fuzzy
+msgid "Free and open-source apps"
 msgstr "支持采用自由开源方式发布的内置应用；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:175
-msgid "Built-in support for purchases within applications;"
-msgstr "支持内置应用购买；"
+msgid "In-app purchases"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:176
-msgid "Built-in support for development tools of applications."
-msgstr "内置应用开发工具支持。"
+msgid "App development tools"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
 msgid "Newton Community Node Conference"
@@ -5964,7 +6010,7 @@ msgstr "暂无媒体报道"
 #: web/apps/welcome/templates/welcome/privacy.html:13
 #: web/apps/welcome/templates/welcome/privacy.html:19
 #: web/apps/welcome/templates/welcome/sitemap.html:95
-#: web/templates/footer.html:56
+#: web/templates/footer.html:53
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
@@ -6464,7 +6510,7 @@ msgstr "行业"
 
 #: web/apps/welcome/templates/welcome/scene.html:13
 #: web/apps/welcome/templates/welcome/scene.html:21
-#: web/templates/header.html:36 web/templates/header.html.py:230
+#: web/templates/header.html:36 web/templates/header.html.py:231
 msgid "Industry"
 msgstr "行业"
 
@@ -6809,7 +6855,7 @@ msgid "Whitepaper"
 msgstr "白皮书"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:24
-#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:43
+#: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:40
 msgid "Team"
 msgstr "团队"
 
@@ -6830,7 +6876,7 @@ msgid "NEWFUND"
 msgstr "生态发展基金"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:62
-#: web/templates/header.html:51 web/templates/header.html.py:245
+#: web/templates/header.html:51 web/templates/header.html.py:246
 msgid "NewFund"
 msgstr "生态发展基金"
 
@@ -6840,6 +6886,7 @@ msgid "COMMUNITY"
 msgstr "社群治理"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:75
+#: web/templates/footer.html:25
 msgid "Developer"
 msgstr "开发者"
 
@@ -6849,14 +6896,14 @@ msgid "DEVELOPMENT"
 msgstr "发展规划"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:91
-#: web/templates/footer.html:52
+#: web/templates/footer.html:49
 msgid "SERVICE TERMS"
 msgstr "服务条款"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:94
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
-#: web/templates/footer.html:55
+#: web/templates/footer.html:52
 msgid "Terms of Use"
 msgstr "使用条款"
 
@@ -9646,47 +9693,39 @@ msgstr ""
 msgid "Learn more"
 msgstr "了解更多"
 
-#: web/templates/footer.html:30
+#: web/templates/footer.html:27
 msgid "Wiki"
 msgstr ""
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
 #: web/templates/header.html:63 web/templates/header.html.py:114
-#: web/templates/header.html:257 web/templates/header.html.py:308
+#: web/templates/header.html:258 web/templates/header.html.py:309
 msgid "User Center"
 msgstr "用户中心"
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
 #: web/templates/header.html:64 web/templates/header.html.py:115
-#: web/templates/header.html:258 web/templates/header.html.py:309
+#: web/templates/header.html:259 web/templates/header.html.py:310
 msgid "LogOut"
 msgstr "退出"
 
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
 #: web/templates/header.html:67 web/templates/header.html.py:75
 #: web/templates/header.html:121 web/templates/header.html.py:129
-#: web/templates/header.html:261 web/templates/header.html.py:269
-#: web/templates/header.html:315 web/templates/header.html.py:323
+#: web/templates/header.html:262 web/templates/header.html.py:270
+#: web/templates/header.html:316 web/templates/header.html.py:324
 msgid "Register"
 msgstr "注册"
 
 #: web/templates/header.html:23 web/templates/header.html.py:101
-#: web/templates/header.html:217 web/templates/header.html.py:295
+#: web/templates/header.html:218 web/templates/header.html.py:296
 #: web/templates/search/search.html:17
 msgid "search articles"
 msgstr "搜索文章"
 
-#: web/templates/header.html:57 web/templates/header.html.py:251
+#: web/templates/header.html:57 web/templates/header.html.py:252
 msgid "NewExplorer"
 msgstr ""
-
-#: web/templates/header.html:195
-msgid "December 11-12 · Macau, China"
-msgstr "12月11-12日 中国 澳门"
-
-#: web/templates/header.html:198
-msgid "December 11-12 · 2018 Newton Community Node Conference · Macau, China"
-msgstr "12月11-12日 · 2018牛顿社群节点大会 · 中国澳门"
 
 #: web/templates/admin/change_form.html:33
 msgid "History"
@@ -9752,6 +9791,22 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
+
+#~ msgid "Transaction information sharing pricing and benefit;"
+#~ msgstr "交易信息共享定价及收益；"
+
+#~ msgid "Built-in support for purchases within applications;"
+#~ msgstr "支持内置应用购买；"
+
+#~ msgid "Built-in support for development tools of applications."
+#~ msgstr "内置应用开发工具支持。"
+
+#~ msgid "December 11-12 · Macau, China"
+#~ msgstr "12月11-12日 中国 澳门"
+
+#~ msgid ""
+#~ "December 11-12 · 2018 Newton Community Node Conference · Macau, China"
+#~ msgstr "12月11-12日 · 2018牛顿社群节点大会 · 中国澳门"
 
 #~ msgid "Chairman of Elastos ecosystem board"
 #~ msgstr "亦来云生态建设委员会主任"
