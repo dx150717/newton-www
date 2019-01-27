@@ -527,7 +527,7 @@ msgstr ""
 #: web/apps/zinnia/templates/zinnia/entry_archive.html:7
 #: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:24
 msgid "Blog"
-msgstr ""
+msgstr "בלוג"
 
 #: web/apps/events/models/category.py:26
 #: web/apps/welcome/templates/welcome/announcement-detail.html:9
@@ -537,7 +537,7 @@ msgstr ""
 #: web/apps/zinnia/models/category.py:26
 #: web/apps/zinnia/models_bases/entry.py:56
 msgid "Announcement"
-msgstr ""
+msgstr "הודעות"
 
 #: web/apps/events/models/category.py:33
 #: web/apps/events/models_bases/entry.py:65
@@ -2091,7 +2091,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:76
 #: web/templates/footer.html:28
 msgid "FAQ"
-msgstr ""
+msgstr "שאלות נפוצות"
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
@@ -2115,7 +2115,7 @@ msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:42
 msgid "No FAQ"
-msgstr ""
+msgstr "לא שאלות נפוצות"
 
 #: web/apps/help/templates/help/security.html:6
 msgid "Secu"
@@ -2153,7 +2153,7 @@ msgstr ""
 
 #: web/apps/press/models.py:22
 msgid "press"
-msgstr ""
+msgstr "לחץ על"
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -2317,7 +2317,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:20
 #: web/templates/footer.html:38
 msgid "ABOUT"
-msgstr ""
+msgstr "אודות"
 
 #: web/apps/welcome/templates/welcome/about.html:19
 msgid "Infrastructure of protocol-based economy"
@@ -2402,23 +2402,23 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:24
 msgid "All"
-msgstr ""
+msgstr "כל"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
 #: web/apps/zinnia/models_bases/entry.py:62
 msgid "Operation"
-msgstr ""
+msgstr "המבצע"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
 #: web/apps/zinnia/models_bases/entry.py:63
 msgid "Weekly"
-msgstr ""
+msgstr "שבועית"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
 #: web/apps/welcome/templates/welcome/include-community-event.html:10
 #: web/apps/zinnia/models_bases/entry.py:61
 msgid "Activity"
-msgstr ""
+msgstr "פעילות"
 
 #: web/apps/welcome/templates/welcome/business-proposal.html:6
 msgid "Business Proposal"
@@ -2428,7 +2428,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/scene.html:23
 #: web/apps/welcome/templates/welcome/scene.html:241
 msgid "Submit Your Business Proposal"
-msgstr ""
+msgstr "שלחולנו הצעה עסקית"
 
 #: web/apps/welcome/templates/welcome/business-proposal.html:17
 msgid ""
@@ -2471,11 +2471,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/community.html:125
 #: web/apps/welcome/templates/welcome/sitemap.html:71
 msgid "Add Community"
-msgstr ""
+msgstr "הוסף קהילה"
 
 #: web/apps/welcome/templates/welcome/community.html:51
 msgid "Social Network"
-msgstr ""
+msgstr "רשת חברתית"
 
 #: web/apps/welcome/templates/welcome/community.html:60
 #: web/apps/welcome/templates/welcome/include-community-region.html:15
@@ -2486,11 +2486,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:79
 msgid "Email List"
-msgstr ""
+msgstr "רשימת דואל"
 
 #: web/apps/welcome/templates/welcome/community.html:122
 msgid "Create a Newton community with us"
-msgstr ""
+msgstr "צור קהילת ניוטון איתנו"
 
 #: web/apps/welcome/templates/welcome/contact.html:6
 #: web/apps/welcome/templates/welcome/contact.html:13
@@ -2498,53 +2498,57 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:26
 #: web/templates/footer.html:42
 msgid "Contact Us"
-msgstr ""
+msgstr "צור קשר"
 
 #: web/apps/welcome/templates/welcome/contact.html:21
 msgid ""
 "Web Site: <a href='https://www.newtonproject.org' target='_blank'>https://"
 "www.newtonproject.org"
-msgstr ""
+msgstr "אתר אינטרנט:<a href='https://www.newtonproject.org' target='_blank'>https://'www.newtonproject.org'</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:22
 msgid "Email:"
-msgstr ""
+msgstr "דואל"
 
 #: web/apps/welcome/templates/welcome/contact.html:24
 msgid ""
 "Whitepaper : <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
-msgstr ""
+msgstr "נייר:<a href='mailto:newton-whitepaper@newtonproject.org'>newton-whitepaper@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:25
 msgid ""
 "Global Community : <a href='mailto:newton-community@newtonproject."
 "org'>newton-community@newtonproject.org</a>"
-msgstr ""
+msgstr "הקהילה הגלובלית:<a href='mailto:newton-community@newtonproject.org'>newton-community@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:26
 msgid ""
 "Newton Token Exchange : <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
-msgstr ""
+msgstr "ניוטון Token Exchange: <a href='mailto:newton-ir@newtonproject.org'>newton-"
+"ir@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:27
 msgid ""
 "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
-msgstr ""
+msgstr "יחסי ציבור: <a href='mailto:newton-pr@newtonproject.org'>newton-"
+"pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:28
 msgid ""
 "NewFund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
-msgstr ""
+msgstr "NewFund: <a href='mailto:newton-fund@newtonproject.org'>newton-"
+"fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:29
 msgid ""
 "Council : <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
-msgstr ""
+msgstr "המועצה: <a href='mailto:newton-council@newtonproject.org'>newton-"
+"council@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:30
 msgid ""
@@ -2556,14 +2560,14 @@ msgstr ""
 msgid ""
 "Other Contacts : <a href='mailto:contact@newtonproject."
 "org'>contact@newtonproject.org</a>"
-msgstr ""
+msgstr "אחר אנשי קשר:<a href='mailto:contact@newtonproject.org'>contact@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:93
 #: web/templates/footer.html:51
 msgid "Copyright"
-msgstr ""
+msgstr "זכויות יוצרים"
 
 #: web/apps/welcome/templates/welcome/copyright.html:20
 msgid ""
@@ -2795,7 +2799,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-partner-mobile.html:8
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "Joint Business Organization"
-msgstr ""
+msgstr "משותפת ארגון עסקי משותף"
 
 #: web/apps/welcome/templates/welcome/events-detail.html:26
 #: web/apps/welcome/templates/welcome/events.html:42
@@ -2819,13 +2823,13 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-events-mobile.html:18
 #: web/apps/welcome/templates/welcome/include-events.html:18
 msgid "UPCOMING"
-msgstr ""
+msgstr "אירועים קרובים"
 
 #: web/apps/welcome/templates/welcome/events.html:55
 #: web/apps/welcome/templates/welcome/include-events-mobile.html:17
 #: web/apps/welcome/templates/welcome/include-events.html:12
 msgid "PAST"
-msgstr ""
+msgstr "אירועים קודמים"
 
 #: web/apps/welcome/templates/welcome/events.html:102
 msgid "Events Dates"
@@ -2837,11 +2841,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:13
 msgid "Newton Eco Development Fund"
-msgstr ""
+msgstr "קרן הפיתוח האקולוגית של נ יוטון"
 
 #: web/apps/welcome/templates/welcome/foundation.html:19
 msgid "Fund positioning"
-msgstr ""
+msgstr "קרן מיצוב"
 
 #: web/apps/welcome/templates/welcome/foundation.html:24
 msgid ""
@@ -2853,7 +2857,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:32
 msgid "Funding source"
-msgstr ""
+msgstr "מקור מימון"
 
 #: web/apps/welcome/templates/welcome/foundation.html:37
 msgid ""
@@ -2861,22 +2865,22 @@ msgid ""
 "investors. The fund is managed by a professional GP. By becoming a NewFund "
 "LP, investors can  share the growth of the Newton economy and the blockchain "
 "industry."
-msgstr ""
+msgstr "NewFundמגיע בעיקר קרן ניוטון ניוטון משקיעים פרטיים. הקרן מנוהלת על ידי רופא מקצועי. על ידי הפיכתה שלNewFund LP, המשקיעים יכולים לחלוק את הצמיחה של הכלכלה ניוטון תעשיית blockchain."
 
 #: web/apps/welcome/templates/welcome/foundation.html:45
 msgid "Fund management"
-msgstr ""
+msgstr "ניהול הקרן"
 
 #: web/apps/welcome/templates/welcome/foundation.html:50
 msgid ""
 "NewFund will be managed it in the form of joint governance and shared "
 "enjoyment, conducting global cooperation business, and establish a special "
 "token fund with top talents and institutions in the industry."
-msgstr ""
+msgstr "ניופנד ינוהל על ידי ממשל משותף והנאה משותפת, ניהול עסקי שיתוף פעולה גלובליים, והקמת קרן סמלים מיוחדת עם כישורים ומוסדות מובילים בתעשייה."
 
 #: web/apps/welcome/templates/welcome/foundation.html:58
 msgid "Direction of investment"
-msgstr ""
+msgstr "כיוון ההשקעה של"
 
 #: web/apps/welcome/templates/welcome/foundation.html:63
 msgid ""
@@ -2885,11 +2889,11 @@ msgid ""
 "the commercial infrastructure, general services, application layers and "
 "peripheral services. At the same time, it will also set up accelerators to "
 "help ecological projects."
-msgstr ""
+msgstr "NewFundהמשימה העיקרית היא לפתח את הכלכלה של ניוטון. היא תשתמש כספים, טכנולוגיה, קהילה ומשאבים אחרים כדי לתמוך בכל המערכת האקולוגית של התשתית המסחרית, שירותים כלליים, שכבות יישומים ושירותים היקפיים. יחד עם זאת, היא גם תקים מאיצים כדי לסייע בפרויקטים אקולוגיים."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
 msgid "ADVISORS"
-msgstr ""
+msgstr "יועצים"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:21
 #: web/apps/welcome/templates/welcome/include-advisor.html:25
@@ -2907,7 +2911,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:109
 #: web/apps/welcome/templates/welcome/include-investor.html:116
 msgid "Co-founder of Elastos"
-msgstr ""
+msgstr "מייסד שותף של אלסטוס"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:23
 #: web/apps/welcome/templates/welcome/include-investor.html:110
@@ -2928,13 +2932,13 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:117
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:271
 msgid "Visiting Scholar & Research Associate at Columbia University"
-msgstr ""
+msgstr "עמית מחקר עמית מחקר באוניברסיטת קולומביה"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:31
 #: web/apps/welcome/templates/welcome/include-investor.html:118
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:272
 msgid "Advisor at Huawei Central Institute"
-msgstr ""
+msgstr "יועץ במרכז הוואי המרכזי"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:63
 #: web/apps/welcome/templates/welcome/include-advisor.html:69
@@ -2950,7 +2954,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:134
 #: web/apps/welcome/templates/welcome/include-investor.html:143
 msgid "Former CTO of Sina (NASDAQ: SINA)"
-msgstr ""
+msgstr "סמנכל של סינה (NASDAQ: SINA)"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:65
 #: web/apps/welcome/templates/welcome/include-investor.html:135
@@ -2968,12 +2972,12 @@ msgid ""
 "(North America). In 2004, he became Vice President of Sina Group. before "
 "serving as the company's CEO from 2005 to 2013. In April 2013, he left Sina "
 "and worked as a partner of Draper Fisher Jurvetson Venture Capital."
-msgstr ""
+msgstr "שותף של Draper Fisher Jurvetsonקרן הון סיכון בכירSongboלי הוא סלבריטאי אינטרנט בסין, מנהל בכיר של סינה. באפריל 1996, הוא הצטרף לחברהSitonglifangוהשתתף בהקמת האתר המסחרי הסיני המוקדם ביותר, Lifang Online. ב -1998 כיהן כראש מחלקת מערכות רשת סינא. בשנים 2000-2003 כיהן כמנהל מחלקת טכנולוגיית רשת סינא (צפון אמריקה). בשנת 2004 הוא מונה לסגן נשיא סינא. במהלך השנים 2005 עד 2013 הוא שימש כמנכ\"ל סינא. בחודש אפריל 2013, הוא עזב את סינא ועבד כשותף של דראפר פישרJurvetsonהון סיכון."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:74
 #: web/apps/welcome/templates/welcome/include-investor.html:144
 msgid "Partner of DFJ Venture Capital"
-msgstr ""
+msgstr "שותף של DFJ קרן הון סיכון"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:92
 #: web/apps/welcome/templates/welcome/include-advisor.html:96
@@ -3011,7 +3015,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:218
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:286
 msgid "Previous President of Chongqing Lifan"
-msgstr ""
+msgstr "לשעבר הנשיא של צ 'ונגצ' Lifan"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:115
 #: web/apps/welcome/templates/welcome/include-advisor.html:119
@@ -3041,13 +3045,13 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:170
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:300
 msgid "Professor at Tsinghua University"
-msgstr ""
+msgstr "פרופסור באוניברסיטת Tsinghua"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:124
 #: web/apps/welcome/templates/welcome/include-investor.html:171
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:301
 msgid "Director of International Relations at iCenter"
-msgstr ""
+msgstr "מנהל קשרי חוץ בiCenter"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:138
 #: web/apps/welcome/templates/welcome/include-advisor.html:143
@@ -3066,7 +3070,7 @@ msgid ""
 "Lee is Founding President of the World Blockchain Foundation, winner of 2017 "
 "World’s Best Brands Award and Co-founding Director of Blockchainzoo. In 2018 "
 "has was named as one of CCTV's “Top Influencers”."
-msgstr ""
+msgstr "נשיא מייסד קרן World Blockchain, הזוכה בפרס Best Brands לשנת 2017. מייסד שותף של בלוקצ'ייןזו. 2018 טלוויזיה במעגל סגור \"המשפיעים ביותר\".הוזמן על ידי מועצת המדינה בסין בשנת 2004 כנציג המיוחד של יזמים סינים צעירים לדיאלוג ישיר עם ראשי מועצת המדינה באולם הגדול של העם בבייג'ינג. דוברי הציבור היחיד, משקיע, נוסע, פילוסוף וסופר לחלוק את הבמה עם וול סטריט האגדה ג'ים רוג'רס. העולם הראשון של Bitcoin בעולם סיור התקשורת בשם אותו כמו שגריר Bitcoin."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:140
 #: web/apps/welcome/templates/welcome/include-investor.html:236
@@ -3101,93 +3105,93 @@ msgid ""
 "Popular Science magazine and a guest on the Discovery Channel. He has "
 "published several books including 'The Elements: A Visual Exploration of "
 "Every Known Atom in the Universe.'"
-msgstr ""
+msgstr "מייסד שותף של וולפרם מחקר, מחברMathermatica Notebook System, מייסד מגע העיתונות BAFTA (הבריטי הקולנוע וטלוויזיה אמנויות האקדמיה) זוכה בפרס. בנוסף, מר תיאודור היה בעל טור של המגזין \"מדע פופולרי\" ואורח של תוכנית ערוץ דיסקברי. הוא פרסם גם כמה ספרים, כולל \"אלמנטים: חקירה ויזואלית של כל אטום ידוע ביקום\" וכן הלאה."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:171
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:329
 msgid "Co-Founder of Wolfram Research"
-msgstr ""
+msgstr "מייסד שותף של וולפרם מחקר"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:172
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:330
 msgid "Creator of the Mathematica Notebook System"
-msgstr ""
+msgstr "הבורא של Mathematica מחברת מערכת"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:173
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:331
 msgid "Founder of Touch Press"
-msgstr ""
+msgstr "מייסד של מגע הקש"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:174
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:332
 msgid "BAFTA Award winning author"
-msgstr ""
+msgstr "BAFTA עטורת הסופר מחבר"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:8
 msgid "Token Metrics"
-msgstr ""
+msgstr "מדדי"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:10
 msgid "Total Supply:"
-msgstr ""
+msgstr "סך הכל אספקה:"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:16
 msgid "Actor"
-msgstr ""
+msgstr "שחקן"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:17
 msgid "Proportion"
-msgstr ""
+msgstr "יחס"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:18
 msgid "Amount"
-msgstr ""
+msgstr "סכום"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:19
 msgid "Description"
-msgstr ""
+msgstr "תיאור"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:22
 msgid "Founding Team"
-msgstr ""
+msgstr "צוות מייסד"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:24
 msgid "10 billions"
-msgstr ""
+msgstr "10 מיליארדים"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:27
 msgid "Incentives for founding team;"
-msgstr ""
+msgstr "תמריצים עבור המייסדים צוות;"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:28
 msgid ""
 "The first year is the lock period. From the second year, every month 1/24 of "
 "the total amount will be unlocked."
-msgstr ""
+msgstr "השנה הראשונה היא תקופת המנעול. מהשנה השנייה, כל חודש 1/24 מהסכום הכולל יהיה נעול."
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:34
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:9
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:9
 msgid "Token Exchange"
-msgstr ""
+msgstr "בורסת טוקן"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:39
 #: web/apps/welcome/templates/welcome/include-allocation.html:53
 msgid "15 billions"
-msgstr ""
+msgstr "15 מיליארדים"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:42
 msgid "For foundation's initial operation."
-msgstr ""
+msgstr "לפעילות ראשונית של הקרן."
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:48
 msgid "Foundation"
-msgstr ""
+msgstr "קרן"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:56
 msgid "For foundation's later operation;"
-msgstr ""
+msgstr "לפעולה מאוחרת יותר של הקרן;"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:57
 msgid ""
@@ -3197,15 +3201,15 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:68
 msgid "60 billions"
-msgstr ""
+msgstr "60 מיליארדים"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:71
 msgid "Incentives for community;"
-msgstr ""
+msgstr "תמריצים לקהילה;"
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:72
 msgid "Unlock in later fifty years."
-msgstr ""
+msgstr "הנעילה חמישים שנה מאוחר יותר."
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:36
 #: web/apps/welcome/templates/welcome/include-community-event.html:68
@@ -3230,37 +3234,37 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-community-map.html:35
 #: web/apps/welcome/templates/welcome/include-community-region.html:10
 msgid "China"
-msgstr ""
+msgstr "סין"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:39
 #: web/apps/welcome/templates/welcome/include-community-region.html:25
 msgid "Japan"
-msgstr ""
+msgstr "יפן"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:43
 #: web/apps/welcome/templates/welcome/include-community-region.html:40
 msgid "Korea"
-msgstr ""
+msgstr "קוריאה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:47
 #: web/apps/welcome/templates/welcome/include-community-region.html:52
 msgid "Malaysia"
-msgstr ""
+msgstr "מלזיה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:51
 #: web/apps/welcome/templates/welcome/include-community-region.html:64
 msgid "Thailand"
-msgstr ""
+msgstr "תאילנד"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:55
 #: web/apps/welcome/templates/welcome/include-community-region.html:76
 msgid "India"
-msgstr ""
+msgstr "הודו"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:59
 #: web/apps/welcome/templates/welcome/include-community-region.html:91
 msgid "Israel"
-msgstr ""
+msgstr "ישראל"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:63
 #: web/apps/welcome/templates/welcome/include-community-region.html:106
@@ -3280,61 +3284,61 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-community-map.html:75
 #: web/apps/welcome/templates/welcome/include-community-region.html:155
 msgid "America - The Bay Area"
-msgstr ""
+msgstr "אמריקה - אזור המפרץ"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:79
 #: web/apps/welcome/templates/welcome/include-community-region.html:166
 msgid "America - New York"
-msgstr ""
+msgstr "אמריקה - ניו יורק"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:83
 #: web/apps/welcome/templates/welcome/include-community-region.html:180
 msgid "America - Boston"
-msgstr ""
+msgstr "אמריקה - בוסטון"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:87
 #: web/apps/welcome/templates/welcome/include-community-region.html:194
 msgid "America - Chicago"
-msgstr ""
+msgstr "אמריקה - שיקגו"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:91
 #: web/apps/welcome/templates/welcome/include-community-region.html:208
 msgid "Canada"
-msgstr ""
+msgstr "קנדה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:95
 #: web/apps/welcome/templates/welcome/include-community-region.html:224
 msgid "Netherlands"
-msgstr ""
+msgstr "הולנד"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:99
 #: web/apps/welcome/templates/welcome/include-community-region.html:235
 msgid "Sweden"
-msgstr ""
+msgstr "שוודיה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:103
 #: web/apps/welcome/templates/welcome/include-community-region.html:246
 msgid "Turkey"
-msgstr ""
+msgstr "טורקיה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:107
 #: web/apps/welcome/templates/welcome/include-community-region.html:257
 msgid "Russia"
-msgstr ""
+msgstr "רוסיה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:111
 msgid "England"
-msgstr ""
+msgstr "אנגליה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:115
 #: web/apps/welcome/templates/welcome/include-community-region.html:291
 msgid "Germany"
-msgstr ""
+msgstr "גרמניה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:119
 #: web/apps/welcome/templates/welcome/include-community-region.html:306
 msgid "Portugal"
-msgstr ""
+msgstr "פורטוגל"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:123
 #: web/apps/welcome/templates/welcome/include-community-region.html:318
@@ -3350,7 +3354,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-community-region.html:450
 #: web/apps/welcome/templates/welcome/include-community-region.html:454
 msgid "South America"
-msgstr ""
+msgstr "דרום אמריקה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:135
 #: web/apps/welcome/templates/welcome/include-community-region.html:466
@@ -3360,7 +3364,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-community-map.html:139
 #: web/apps/welcome/templates/welcome/include-community-region.html:437
 msgid "Australia"
-msgstr ""
+msgstr "אוסטרליה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:143
 #: web/apps/welcome/templates/welcome/include-community-region.html:354
@@ -3409,7 +3413,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-region.html:5
 msgid "Asia"
-msgstr ""
+msgstr "אסיה"
 
 #: web/apps/welcome/templates/welcome/include-community-region.html:18
 #: web/apps/welcome/templates/welcome/include-community-region.html:33
@@ -3423,11 +3427,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-region.html:151
 msgid "North America"
-msgstr ""
+msgstr "צפון אמריקה"
 
 #: web/apps/welcome/templates/welcome/include-community-region.html:220
 msgid "Europe"
-msgstr ""
+msgstr "אירופה"
 
 #: web/apps/welcome/templates/welcome/include-community-region.html:274
 msgid "United Kingdom"
@@ -3451,7 +3455,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-region.html:433
 msgid "Oceania"
-msgstr ""
+msgstr "אוקיאניה"
 
 #: web/apps/welcome/templates/welcome/include-community-region.html:473
 msgid "Africa"
@@ -3459,7 +3463,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:16
 msgid "Round"
-msgstr ""
+msgstr "עגול"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:17
 msgid "NEW"
@@ -3467,7 +3471,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:18
 msgid "Ratio"
-msgstr ""
+msgstr "יחס"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:19
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:29
@@ -3483,15 +3487,15 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:20
 msgid "Lock Time"
-msgstr ""
+msgstr "זמן נעילה"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:21
 msgid "Duration"
-msgstr ""
+msgstr "משך"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:22
 msgid "Status"
-msgstr ""
+msgstr "מצב"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:26
 msgid "7.5&nbsp;billions"
@@ -3499,13 +3503,13 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:33
 msgid "1 Year"
-msgstr ""
+msgstr "1 שנה"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:34
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:32
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:30
 msgid "March 1,2018 - April 30,2018"
-msgstr ""
+msgstr "במרץ 1,2018 - אפריל 30,2018"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:35
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:48
@@ -3517,7 +3521,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:55
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:85
 msgid "Finished"
-msgstr ""
+msgstr "סיים"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:39
 msgid "6&nbsp;billions"
@@ -3526,13 +3530,13 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:46
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:62
 msgid "No Lock"
-msgstr ""
+msgstr "ללא נעילה"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:57
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:54
 msgid "July 1,2018 - July 31,2018"
-msgstr ""
+msgstr "יולי 1,2018 - 31,2018 יולי"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:52
 msgid "1.5&nbsp;billions"
@@ -3559,12 +3563,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-events-mobile.html:10
 #: web/apps/welcome/templates/welcome/include-events.html:10
 msgid "Newton Calendar"
-msgstr ""
+msgstr "לוח השנה של ניוטון"
 
 #: web/apps/welcome/templates/welcome/include-events-mobile.html:151
 #: web/apps/welcome/templates/welcome/include-events.html:116
 msgid "All Events"
-msgstr ""
+msgstr "כל האירועים"
 
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:10
 #: web/apps/welcome/templates/welcome/include-feature.html:10
@@ -3655,7 +3659,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-index-community.html:9
 msgid "GLOBAL COMMUNITY"
-msgstr ""
+msgstr "קהילה עולמית"
 
 #: web/apps/welcome/templates/welcome/include-index-community.html:44
 msgid "More Community"
@@ -3664,20 +3668,20 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:9
 #: web/apps/welcome/templates/welcome/include-industry.html:9
 msgid "Industry Application"
-msgstr ""
+msgstr "יישום בתעשייה"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:17
 #: web/apps/welcome/templates/welcome/include-industry.html:16
 #: web/apps/welcome/templates/welcome/scene.html:31
 msgid "Chain-commerce Retail"
-msgstr ""
+msgstr "שרשרת מסחר קמעונאי"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:21
 #: web/apps/welcome/templates/welcome/include-industry.html:20
 #: web/apps/welcome/templates/welcome/newpay.html:139
 #: web/apps/welcome/templates/welcome/scene.html:63
 msgid "Payment"
-msgstr ""
+msgstr "תשלום;"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:25
 #: web/apps/welcome/templates/welcome/include-industry.html:24
@@ -3691,24 +3695,24 @@ msgstr "שרשרת אספקה"
 #: web/apps/welcome/templates/welcome/include-industry.html:28
 #: web/apps/welcome/templates/welcome/scene.html:123
 msgid "Self-finance"
-msgstr ""
+msgstr "מימון עצמי"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:33
 #: web/apps/welcome/templates/welcome/include-industry.html:32
 #: web/apps/welcome/templates/welcome/scene.html:152
 msgid "Games"
-msgstr ""
+msgstr "גיימינג"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:37
 #: web/apps/welcome/templates/welcome/include-industry.html:36
 #: web/apps/welcome/templates/welcome/scene.html:182
 msgid "Agriculture"
-msgstr ""
+msgstr "חקלאות"
 
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:55
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:52
 msgid "10,561 members from 89 countries have participated"
-msgstr ""
+msgstr "10,561 חברים מתוך 89 מדינות השתתפו עד כה"
 
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:70
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:67
@@ -3717,7 +3721,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:9
 msgid "CORNERSTONE INVESTORS"
-msgstr ""
+msgstr "CORNERSTONE משקיעים"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:22
 #: web/apps/welcome/templates/welcome/include-investor.html:26
@@ -3738,7 +3742,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:29
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:346
 msgid "Co-Founder of Lightinthebox (NYSE:LITB)"
-msgstr ""
+msgstr "מייסד שותף שלLightinthebox (NYSE: LITB)"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:43
 #: web/apps/welcome/templates/welcome/include-investor.html:47
@@ -3759,7 +3763,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:50
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:359
 msgid "Founder of kela.cn"
-msgstr ""
+msgstr "מייסד Kela.cn"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:65
 #: web/apps/welcome/templates/welcome/include-investor.html:69
@@ -3785,11 +3789,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:73
 msgid "Founder of meilishuo.com"
-msgstr ""
+msgstr "מייסדmeilishuo.com"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:74
 msgid "CEO of HIGO"
-msgstr ""
+msgstr "מנכ\"לשל HIGO"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:185
 #: web/apps/welcome/templates/welcome/include-investor.html:190
@@ -3803,7 +3807,7 @@ msgstr ""
 msgid ""
 "Founder of mbaobao.com and Founding partner of Haifeng Zhicheng Investment "
 "Management. Previously President of Jiaxing E-commerce Association."
-msgstr ""
+msgstr "מייסד mbaobao.com. מייסד שותף של Haifeng Zhichengניהול השקעות ושות 'בע\"מ נשיא Jiaxing מסחר אלקטרוני האגודה."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:187
 #, python-format
@@ -3814,12 +3818,12 @@ msgid ""
 "years accumulated 5 super capital Angel venture funds and invested in nearly "
 "70 projects. These have refinancing rate as high as 58%%, and have hatched a "
 "number of high-quality enterprises with high growth rates."
-msgstr ""
+msgstr "בשנת 2007, במהלך שלב המרד של מסחר אלקטרוני בתעשייה, הוא הקים mbaobao.com, הופך את שקית האינטרנט המפורסם ביותר מזוודה המותג בסין. בשנת 2013, הוא הקים Haifeng Zhichengניהול השקעות ושות 'בע\"מ במשך חמש השנים האחרונות, שנצברו 5 הון הוןהון סיכון אנג'ל קרנות, השקיעו כמעט 70 פרויקטים. שיעור המימון מחדש הוא גבוה כמו 58%, ויש לו בקע מספר ארגונים באיכות גבוהה עם שיעור צמיחה גבוה."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:193
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:372
 msgid "Founder of mbaobao.com"
-msgstr ""
+msgstr "מייסד mbaobao.com"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:258
 #: web/apps/welcome/templates/welcome/include-investor.html:262
@@ -3841,17 +3845,17 @@ msgid ""
 "and consumer electronics. Linekong Interactive won “Forbes 2015 China Mobile "
 "Internet Top 30” and Wang also won Fortune Magazine's “2016 China Business "
 "Pioneer Top 50.”"
-msgstr ""
+msgstr "מייסדLinekongאינטראקטיב קבוצת ושות 'בע\"מ מייסד Huoxing24.com. פנג וואנג בוגר אוניברסיטת פקין כמו MBA עם 20 שנות ניסיון בתעשיית האינטרנט. בשנת 2007 מארס, וואנג הקימהLinekongאשר עבר דרך תקופות משחק אינטרנט שונים. הוא נקרא \"שחקן המשחק המתוחכם ביותר\". לאחרLinekongהושק בשנת 2014, הציע וואנג את אסטרטגיית הפיתוח של \"טריניטי של סרטים, קומיקס ומשחקים\" ולהתמקד Pan בידור. הארגון כולל: Linekongמשחק, Linekong Studio וLinekongטכנולוגיה שלושה עסקים ומפיצה על המשחק, בידור וידאו ומוצרי חשמל. Linekongאינטראקטיב זכה \"2015 Forbes China Mobile אינטרנט העליון 30\" וואנג זכה גם \"2016 סין העסק פיוניר הדף 50\" ב Fortune."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:266
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:386
 msgid "Founder of linekong.com"
-msgstr ""
+msgstr "מייסד linekong.com"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:267
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:387
 msgid "Founder of huoxing24.com"
-msgstr ""
+msgstr "מייסד huoxing24.com"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:283
 #: web/apps/welcome/templates/welcome/include-investor.html:289
@@ -3882,7 +3886,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:293
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:402
 msgid "Founder and CEO of Distributed Credit Chain"
-msgstr ""
+msgstr "מייסד ומנכ\"ל"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:313
 #: web/apps/welcome/templates/welcome/include-investor.html:317
@@ -3902,17 +3906,17 @@ msgid ""
 "basis and experience in market practices. His mission is to deliver "
 "different cultures and engage in teaching and appraisal of jewellery and "
 "jade."
-msgstr ""
+msgstr "ג'ונצ'או שי הוא יועץ בכיר ואמן שמאי, המוזמנים המומחים של CCTV-2 YiChuiDingYin, חבר מערכת העריכה של הסינים jade annals, סגן מזכיר של שינג 'יאנגHetianתעשיית ירקן, שמאי כללי panjiayuan.com. כמומחה צעיר, שי הקדיש את עצמו לשוק החזית במשך עשרות שנים. הוא מפורסם על הבסיס התיאורטי העמוק שלו וניסיון בפועל בשוק. הוא אמר כי המשימה שלו היא למסור תרבות שונים ולעסוק בהוראה והערכה של תכשיטים ו ירקן."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:321
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:417
 msgid "Senior gem jade appraiser."
-msgstr ""
+msgstr "מעריך בכיר של אבני חן."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:322
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:418
 msgid "Deputy secretary general of xinjiang hetian jade industry association."
-msgstr ""
+msgstr "סגן המזכיר של שינגיאנגhetianירקן תעשיית העמותה."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:339
 #: web/apps/welcome/templates/welcome/include-investor.html:344
@@ -3924,7 +3928,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:340
 msgid "Founder of Xijie.com"
-msgstr ""
+msgstr "מייסד xijie.com"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:341
 msgid ""
@@ -3932,7 +3936,7 @@ msgid ""
 "established soit.com.cn in 2003. He became Vice President of Shopex in 2007 "
 "and joined SK Telecom in 2008. After Guo leaving qianxun.com in 2009, he "
 "established Xijie.com, with a focus on selling sportswear and sporting goods."
-msgstr ""
+msgstr "Hongchi Guo הראשון שהציג את הרעיון של שירות \"תשלום מראש\" כאשר הוא הקים soit.com.cn בשנת 2003. הוא הפך סגן נשיאshopexבשנת 2007 והצטרף SK תקשורת בשנת 2008. לאחר עזיבת גואו מqianxun. com בשנת 2009, הוא הקים Xijie.com אשר מתמקדת במכירתמוצרי לבוש ספורט, מוצרי ספורט וכן הלאה."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:348
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:433
@@ -3945,7 +3949,7 @@ msgid ""
 "established in 2017 and was formerly known as the Jiuding Blockchain "
 "Laboratory. The company has invested in a total of 50 projects including "
 "exchanges, wallets, media, incubators, market software, and token projects."
-msgstr ""
+msgstr "JLAB הוא מותג השקעות התמקדות בענף blockchain. היא הוקמה בשנת 2017 ו היה ידוע בעבר בשםJiuding Blockchain מעבדה. החברה השקיעה בסך הכל 50 פרויקטים כולל חילופי, ארנקים, מדיה, חממות, תוכנות השוק, פרויקטים אסימון.צוות JLAB הוא בעיקר מJiudingהשקעות, Zero2IPO הקבוצה Shanda ההון, עם משרדים בבייג 'ינג, שנחאי, סן פרנסיסקו, סיאול וסינגפור."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:368
 msgid ""
@@ -3969,7 +3973,7 @@ msgid ""
 "infrastructure in asset circulation. Its emphasis is laid on global projects "
 "and projects powered by illustrious science & technology enterprises as well "
 "as listed corporations."
-msgstr ""
+msgstr "Consensus Lab הוא מוסד השקעות מקצועי ביוזמתו של פרד וואנג, מייסד מארס פיננסים, ויוצר במשותף על ידי מספר רב של ידוענים ואנשי מקצוע מצטיינים בתעשיית הבלוקים. כיסוי ההשקעה, הדגירה ומחקר בכל הממדים, היא מתרכזת בטכנולוגיית הליבה ב blockchain, כלכלה סמלית, ותשתית במחזור הנכס. הדגש מושם על פרויקטים גלובליים ופרויקטים המופעלים על ידי ארגונים מדעיים וטכנולוגיים מפוארים כמו גם תאגידים רשומים."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:388
 #: web/apps/welcome/templates/welcome/include-investor.html:390
@@ -3984,7 +3988,7 @@ msgid ""
 "best quality projects at early stage. It is able to provide comprehensive, "
 "life-cycle quality services for potential blockchain entrepreneurship "
 "projects at any stage of the market."
-msgstr ""
+msgstr "קבוצת ג'נסיס היא מוסד פיננסי מוביל אשר מורכב ההון ג'נסיס, מעבדה Genesis ובנק ההשקעות ג'נסיס. היא מתמקדת בהשקעות הון סיכון בתעשיית הבלוקצ'יין ומחויבת לכרות את הפרויקטים האיכותיים ביותר בשלב מוקדם. היא מסוגלת לספק שירותי איכות חיים מקיפים ומעולים לפרויקטים אפשריים בתחום היזמות, בכל שלב בשוק."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:405
 #: web/apps/welcome/templates/welcome/include-investor.html:407
@@ -4000,7 +4004,7 @@ msgid ""
 "London, Silicon Valley and other parts of the world, and has established "
 "close strategic partnerships with multinational top projects and investment "
 "research institutions."
-msgstr ""
+msgstr "BlockVC (BlockVanguardהון) היא מובילה עולמי Blockchain VC ו יועץ מחקר מוסד. כיוון ההשקעה שלה מכסה את הרשת הציבורית הבסיסית, פרוטוקולי יישום ושירותים פיננסיים במערכת האקולוגית blockchain. רשת ההשקעות מכסה את בייג'ינג. סינגפור, לונדון, עמק הסיליקון וחלקים אחרים של העולם, והקים שותפויות אסטרטגיות הדוקות עם פרויקטים מובילים רב לאומיים ומוסדות מחקר להשקעות."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:445
 #: web/apps/welcome/templates/welcome/include-investor.html:447
@@ -4017,7 +4021,7 @@ msgid ""
 "consumer upgrade. In 2018, JCM launched its first blockchain fund to invest "
 "in the future and make our contributions to the long-term development of "
 "blockchain technology."
-msgstr ""
+msgstr "Jublilee Capital Management היא קרן הון הסיכון של סינגפור, אשר נוסדה על ידי מנהל קרן מנוסה ויזמים מוצלחים הן סינגפור והן סין. נוסדה בסינגפור עם פרספקטיבות גלובליות אמיתיות, JCM שואפת לזהות, להשקיע ולהעצים סטארט-אפים ויזמים מבטיחים ממגוון רחב יותר כולל AI, רובוטיקה, Fintech ושדרוג הצרכן. בשנת 2018, JCM השיקה את קרן הבלוקים הראשונה להשקיע בעתיד ולהפוך את התרומות שלנו לפיתוח לטווח ארוך של הטכנולוגיה blockchain."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:462
 #: web/apps/welcome/templates/welcome/include-investor.html:464
@@ -4032,13 +4036,13 @@ msgid ""
 "community covers more than 50,000 members. Through the high-quality flow of "
 "the Elastos community, it can provide investment and financing, brand "
 "promotion, community operation and other services for ecological projects."
-msgstr ""
+msgstr "אלסטוס הון קהילתי (ELA FUNDUND LTD) היא קרן קהילתית להשקעות אקולוגיות ביוזמת המשקיעים הפרטיים של אלסטוס ונרשמת בסינגפור, תוך התמקדות בפרויקט האסטוס האקולוגי. קהילת הקרן מכסה יותר מ -50,000 חברים. באמצעות זרימת האיכות הגבוהה של קהילת אלסטוס, היא יכולה לספק השקעות ומימון, קידום המותג, פעילות קהילתית ושירותים אחרים עבור פרויקטים אקולוגיים."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:477
 msgid ""
 "Our mission is to deeply participate in project operations and share project "
 "development dividends."
-msgstr ""
+msgstr "המשימה שלנו היא לקחת חלק עמוק בפעולות הפרויקט ולשתף דיבידנדים פיתוח הפרויקט."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:480
 #: web/apps/welcome/templates/welcome/include-investor.html:482
@@ -4050,7 +4054,7 @@ msgid ""
 "WEMERGE – The Investment Strategists in Blockchain – was established in "
 "Singapore with operational offices in China, Malaysia and the SEA region and "
 "listed on Bankor Network."
-msgstr ""
+msgstr "WEMERGE–האסטרטגים של ההשקעות בבלוקצ'יין - הוקמה בסינגפור, בבעלותה משרדים תפעוליים בסין, מלזיה ואזור דרום-מזרח אסיהוהיא רשומהברשת בנקור."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:495
 msgid ""
@@ -4058,7 +4062,7 @@ msgid ""
 "across the globe. Moreover, we provide the means for anyone to become a "
 "smarter investor by using our effective and comprehensive WEMERGE Investment "
 "Strategy (WIS), as well as our global community ecosystem."
-msgstr ""
+msgstr "אנו מתמקדים בהאצת צמיחתם של תיקי בלוקצ'ייןבעלי פרופיל גבוה ברחבי העולם. בנוסף, אנו מספקים לכולם את האמצעים להפוך למשקיעים חכמים יותר בעזרת אסטרטגיית ההשקעות WEMERGE(WIS) היעילה והמקיפה שלנו, ובעזרתהקהילה הגלובלית שלנו."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:498
 #: web/apps/welcome/templates/welcome/include-investor.html:500
@@ -4080,12 +4084,12 @@ msgstr "הצג פרטים"
 #: web/apps/welcome/templates/welcome/include-partner-mobile.html:8
 #: web/apps/welcome/templates/welcome/include-partner.html:8
 msgid "The total sales in 2019 will exceed $500 million"
-msgstr ""
+msgstr "סך המכירות בשנת 2019 יעלה על 500 מיליון דולר"
 
 #: web/apps/welcome/templates/welcome/include-partner-mobile.html:37
 #: web/apps/welcome/templates/welcome/include-partner.html:38
 msgid "Apply to join us"
-msgstr ""
+msgstr "החל על הצטרף אלינו הצטרפות"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:10
 #: web/apps/welcome/templates/welcome/include-protocol.html:10
@@ -4098,7 +4102,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:25
 #: web/apps/welcome/templates/welcome/include-protocol.html:23
 msgid "High performance"
-msgstr ""
+msgstr "ביצועים גבוהים"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:27
 #: web/apps/welcome/templates/welcome/include-protocol.html:25
@@ -4106,24 +4110,24 @@ msgid ""
 "NewChain main chain can process more than 5,000 transactions continuously "
 "each second, can support the operational requirements of e-commerce, "
 "Internet of things and other high-frequency trading scenarios."
-msgstr ""
+msgstr "השרשרת הראשית שלNewChainמסוגלת לעבד מעל ל-5,000 עסקאות ברציפות כל שנייה, ולתמוך בדרישות התפעוליות של מסחר אלקטרוני, באינטרנט של הדברים ובתרחישי מסחר נפוצים אחרים."
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:36
 #: web/apps/welcome/templates/welcome/include-protocol.html:34
 msgid "Extensible"
-msgstr ""
+msgstr "ניתן להרחבה"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:38
 #: web/apps/welcome/templates/welcome/include-protocol.html:36
 msgid ""
 "NewChain can support BTC, ETH and other mainstream blockchain networks with "
 "no limit."
-msgstr ""
+msgstr "NewChain יכול לתמוך ב- BTC, ETH וברשתות בלוקצ'יין מוכרות אחרות ללא הגבלה."
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:46
 #: web/apps/welcome/templates/welcome/include-protocol.html:45
 msgid "Technology of whole process stack"
-msgstr ""
+msgstr "טכנולוגיית התהליך המלא"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:48
 #: web/apps/welcome/templates/welcome/include-protocol.html:47
@@ -4132,19 +4136,19 @@ msgid ""
 "solution from the atomic world to the real world, from hardware design to "
 "application layer software development through basic technology and super "
 "exchange protocol."
-msgstr ""
+msgstr "טכנולוגייתהתהליך המלאמממשת את הפתרון הטכנולוגי של המעבר מהעולם האטומי לעולם האמיתי, החל בתכנוןהחומרה ועדלפיתוח תוכנה של שכבת היישום באמצעות טכנולוגיה בסיסית ופרוטוקול המרה."
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:56
 #: web/apps/welcome/templates/welcome/include-protocol.html:55
 msgid "Friend to developers"
-msgstr ""
+msgstr "ידידותי למתכנתים"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:58
 #: web/apps/welcome/templates/welcome/include-protocol.html:57
 msgid ""
 "With NewStudio as the core development tool chain,the  developers can "
 "develop DApp without programming foundation."
-msgstr ""
+msgstr "בעזרתNewStudioהמשמשבתור שרשרת כלי פיתוח הליבה, המתכנתים יכולים לפתח DApp ללא צורך בתשתית קוד."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:9
 msgid "ROADMAP"
@@ -4153,47 +4157,47 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-roadmap.html:21
 #: web/apps/welcome/templates/welcome/include-roadmap.html:85
 msgid "Newton project was officially launched."
-msgstr ""
+msgstr "פרויקט ניוטון הושק רשמית."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:29
 #: web/apps/welcome/templates/welcome/include-roadmap.html:92
 msgid "Newton website was officially launched."
-msgstr ""
+msgstr "אתר ניוטון הושק רשמית."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:30
 #: web/apps/welcome/templates/welcome/include-roadmap.html:93
 msgid "The first round of token exchange."
-msgstr ""
+msgstr "הסיבוב הראשון של חילופי אסימון"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
 #: web/apps/welcome/templates/welcome/include-roadmap.html:100
 msgid "The second round of token exchange."
-msgstr ""
+msgstr "בסיבוב השני של חילופי אסימון"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:46
 #: web/apps/welcome/templates/welcome/include-roadmap.html:107
 msgid "Newton Testnet officially launched."
-msgstr ""
+msgstr "ניוטוןTestnetרשמית השיקה"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:54
 #: web/apps/welcome/templates/welcome/include-roadmap.html:114
 msgid "The third round of token exchange."
-msgstr ""
+msgstr "בסיבוב השלישי של חילופי האסימון"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:62
 #: web/apps/welcome/templates/welcome/include-roadmap.html:121
 msgid "Newton's main chain and NewPay officially launched."
-msgstr ""
+msgstr "ניוטון הראשי של הרשתNewPayהשיקה רשמית"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:72
 #: web/apps/welcome/templates/welcome/include-roadmap.html:129
 msgid "The NewMall was officially launched."
-msgstr ""
+msgstr "ה- NewMallהושק רשמית."
 
 #: web/apps/welcome/templates/welcome/include-team.html:9
 #: web/apps/welcome/templates/welcome/team.html:13
 msgid "TEAM"
-msgstr ""
+msgstr "הצוות"
 
 #: web/apps/welcome/templates/welcome/include-team.html:21
 #: web/apps/welcome/templates/welcome/include-team.html:26
@@ -4205,7 +4209,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:22
 msgid "Founder & Chairman of Newton"
-msgstr ""
+msgstr "מייסד ויו\"ר ניוטון"
 
 #: web/apps/welcome/templates/welcome/include-team.html:23
 msgid ""
@@ -4213,7 +4217,7 @@ msgid ""
 "protocol through innovations such as blockchain and IoT, with the vision "
 "that “Everyone should benefit directly from economic growth”. In 2017, Xu "
 "made an angel investment in Elastos, and became the company's co-founder."
-msgstr ""
+msgstr "בינואר 2018, הקיםJizhe Xu פרויקט ניוטון, בכדי לפתח פרוטוקול חילופי היפר בא\"צעות חידושים טכנולוגיים כגון Blockchain, IoT, מימוש חזון \"כל אחד צריך להפיק תועלת ישירה מהצמיחה הכלכלית\". בשנת 2017, Jizhe Xu לעשות השקעה המלאך בElastos, והפך את מייסד שותף שלElastos."
 
 #: web/apps/welcome/templates/welcome/include-team.html:24
 msgid ""
@@ -4221,16 +4225,16 @@ msgid ""
 "founded the Zeuux Community to promote the Free Software movement in China, "
 "popularizing the technology, law, and community culture to connect Chinese "
 "and global communities."
-msgstr ""
+msgstr "ראש הטכנולוגיה לשעבר של סינא מייל בSina.com.CTOשל OKBUY.com. נוסדה הקהילהZeuuxכדי לקדם את תנועת התוכנה החופשית בסין מאז 2005, popularising את הטכנולוגיה, את החוק, ואת התרבות הקהילתית, כדי לחבר את הקהילה הסינית עם הקהילה העולמית."
 
 #: web/apps/welcome/templates/welcome/include-team.html:29
 msgid "Founder"
-msgstr ""
+msgstr "מייסד"
 
 #: web/apps/welcome/templates/welcome/include-team.html:29
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:218
 msgid "Founder of Zeuux (A Community for Free Software Usage)"
-msgstr ""
+msgstr "ומייסד של זאוקס (קהילה לשימוש בתוכנה חופשית)"
 
 #: web/apps/welcome/templates/welcome/include-team.html:45
 #: web/apps/welcome/templates/welcome/include-team.html:49
@@ -4243,7 +4247,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-team.html:46
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:231
 msgid "Co-founder of Newton"
-msgstr ""
+msgstr "מייסד שותף של ניוטון"
 
 #: web/apps/welcome/templates/welcome/include-team.html:47
 msgid ""
@@ -4251,16 +4255,16 @@ msgid ""
 "University of China in 2002, and in 2017 he established the e-commerce site "
 "Okbuy.com, gaining several investment rounds from Sequoia Capital, Intel, "
 "DFJ, Tencent and other famous VC organizations."
-msgstr ""
+msgstr "סובין לי, המייסד של Okbuy.com, סיים את אוניברסיטת תקשורת של סין בשנת 2002. הוא הקים את אתר המסחר האלקטרוני Okbuy.com בשנת 2007 בהצלחה זכה מספר סיבובים השקעות סקויה קפיטל, אינטל, DFJ, טנסנט ושאר VC המפורסם או ארגונים."
 
 #: web/apps/welcome/templates/welcome/include-team.html:52
 msgid "Co-founder"
-msgstr ""
+msgstr "מייסד"
 
 #: web/apps/welcome/templates/welcome/include-team.html:52
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:231
 msgid "Founder and CEO of OKbuy"
-msgstr ""
+msgstr "ומייסד שלOKbuy"
 
 #: web/apps/welcome/templates/welcome/include-team.html:68
 #: web/apps/welcome/templates/welcome/include-team.html:72
@@ -4272,7 +4276,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Joint Chief Architect of Newton"
-msgstr ""
+msgstr "אדריכל ראשי משותף של ניוטון"
 
 #: web/apps/welcome/templates/welcome/include-team.html:70
 msgid ""
@@ -4287,12 +4291,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:244
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:257
 msgid "Joint Chief Architect"
-msgstr ""
+msgstr "ארכיטקט ראשי"
 
 #: web/apps/welcome/templates/welcome/include-team.html:75
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:244
 msgid "Co-founder of Zeuux (A Community for Free Software Usage)"
-msgstr ""
+msgstr "מייסד שותף שלZeuux (קהילה לשימוש בתוכנה חופשית)"
 
 #: web/apps/welcome/templates/welcome/include-team.html:94
 #: web/apps/welcome/templates/welcome/include-team.html:98
@@ -4360,7 +4364,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/tech.html:13
 #: web/apps/welcome/templates/welcome/technology.html:80
 msgid "Basic Technology"
-msgstr ""
+msgstr "טכנולוגיה בסיסית"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:24
 #: web/apps/welcome/templates/welcome/tech.html:18
@@ -4379,7 +4383,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/tech.html:45
 #: web/apps/welcome/templates/welcome/technology.html:96
 msgid "Atom Hashing"
-msgstr ""
+msgstr "Atom Hashing"
 
 #: web/apps/welcome/templates/welcome/include-technology.html:36
 msgid ""
@@ -4453,13 +4457,13 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/join-partner.html:13
 msgid "Apply to join Newton United Business Organization"
-msgstr ""
+msgstr "ל Newton United Business Organization"
 
 #: web/apps/welcome/templates/welcome/join-partner.html:17
 msgid ""
 "If your company would like to join Newton United Business Organization, "
 "please submit your application by email. Let’s create Newton together!"
-msgstr ""
+msgstr "אם החברה שלך רוצה להצטרף Newton United Business Organization, אנא הגש את בקשתך בדוא\"ל. בואו ליצור ניוטון יחד!"
 
 #: web/apps/welcome/templates/welcome/joinus.html:6
 msgid "Jobs"
@@ -4469,28 +4473,28 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:25
 #: web/templates/footer.html:41
 msgid "Join Us"
-msgstr ""
+msgstr "הצטרף אלינו"
 
 #: web/apps/welcome/templates/welcome/joinus.html:23
 msgid "About Newton Project"
-msgstr ""
+msgstr "אודות פרוייקט ניוטון"
 
 #: web/apps/welcome/templates/welcome/joinus.html:25
 msgid ""
 "We are committed to building an efficient, collaborative, low-cost, highly "
 "automated business infrastructure ecosystem."
-msgstr ""
+msgstr "אנו מחויבים לבניית שיתוף פעולה יעיל , עלות נמוכה, אוטומטיות מאוד תשתית עסקית אקולוגית."
 
 #: web/apps/welcome/templates/welcome/joinus.html:28
 msgid "OUR CULTURE"
-msgstr ""
+msgstr "התרבות שלנו"
 
 #: web/apps/welcome/templates/welcome/joinus.html:30
 msgid ""
 "We believe in the free, open and inclusive culture advocated by the "
 "philosophy of free and open source. Decentralization is the core of our "
 "values."
-msgstr ""
+msgstr "אנו מאמינים בתרבות החופשית, הפתוחה והכוללת, המכוונת על ידי הפילוסופיה של קוד פתוח וקוד פתוח. ביזור הוא הליבה של הערכים שלנו."
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
 msgid ""
@@ -4498,17 +4502,17 @@ msgid ""
 "software community. We work with professionals in the fields of e-commerce, "
 "finance, media, etc. We hope that in the future more talents and "
 "professionals will join us."
-msgstr ""
+msgstr "נכון לעכשיו, ניוטון מורכב של כשרונות העליון מקהילת תוכנה חופשית וקוד פתוח. אנו עובדים עם אנשי מקצוע בתחומי המסחר האלקטרוני, הפיננסים, התקשורת וכו '. אנו מקווים שבעתיד יתחברו אלינו יותר כשרונות ואנשי מקצוע."
 
 #: web/apps/welcome/templates/welcome/joinus.html:36
 msgid ""
 "In addition, developers around the world can join Newton through remote "
 "office. You don't have to worry about space limitations."
-msgstr ""
+msgstr "בנוסף, מפתחים ברחבי העולם יכולים להצטרף ניוטון דרך משרד מרוחק. אתה לא צריך לדאוג לגבי מגבלות מקום."
 
 #: web/apps/welcome/templates/welcome/joinus.html:38
 msgid "WHO WE ARE LOOKING FOR"
-msgstr ""
+msgstr "מי אנחנו מחפשים"
 
 #: web/apps/welcome/templates/welcome/joinus.html:40
 msgid ""
@@ -4517,34 +4521,34 @@ msgid ""
 "We also need professionals in the fields of currency theory, economic "
 "models, asset management, financial innovation, etc. We are happy to work "
 "with volunteers and enthusiasts specialized in any field."
-msgstr ""
+msgstr "אנחנו צריכים כישרונות טכניים במערכות מבוזרות, מערכות הפעלה, אלגוריתמים הצפנה, בלוקצ'יין, פיתוח סלולרי, עיצוב מוצר, וכו 'אנחנו גם צריכים אנשי מקצוע בתחומי תורת המטבע, מודלים כלכליים, ניהול נכסים, חדשנות פיננסית, וכו' אנו שמחים לעבוד עם מתנדבים וחובבים המתמחים בכל תחום."
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
 msgid ""
 "We need everyone to be passionate and confident in decentralized business, "
 "because Newton has a close impact on everyone’s life."
-msgstr ""
+msgstr "אנחנו צריכים שכולם יהיו נלהבים ובטוחים בעסקים מבוזרים, כי לניוטון יש השפעה קרובה על החיים של כולם."
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
 msgid ""
 "In addition, we will use NEW to pay part of the salary, which is a condition "
 "that must be accepted."
-msgstr ""
+msgstr "בנוסף, נשתמש חדש לשלם חלק המשכורת, וזה תנאי זה חייב להתקבל."
 
 #: web/apps/welcome/templates/welcome/joinus.html:49
 msgid "Currently open positions"
-msgstr ""
+msgstr "פוזיציות פתוחות כרגע"
 
 #: web/apps/welcome/templates/welcome/joinus.html:51
 msgid ""
 "We currently open the following positions. If you are interested, please "
 "send your resume to the email: <a href='mailto:newton-hr@newtonproject."
 "org'>newton-hr@newtonproject.org</a>"
-msgstr ""
+msgstr "אנו פותחים את הפוזיציות הבאות. אם אתה מעוניין, אנא שלח את קורות החיים שלך לדוא\"ל: <a href='mailto:newton-hr@newtonproject.org'>newton-hr@newtonproject.org</org>"
 
 #: web/apps/welcome/templates/welcome/joinus.html:58
 msgid "Senior R&D Engineer"
-msgstr ""
+msgstr "מהנדס בכיר למו\"פ"
 
 #: web/apps/welcome/templates/welcome/joinus.html:65
 #: web/apps/welcome/templates/welcome/joinus.html:103
@@ -4557,17 +4561,17 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:372
 #: web/apps/welcome/templates/welcome/joinus.html:410
 msgid "Job description:"
-msgstr ""
+msgstr "תיאור התפקיד:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:67
 msgid "Being responsible for the design and development of the Newton system."
-msgstr ""
+msgstr "אחראי על עיצוב ופיתוח מערכת ניוטון."
 
 #: web/apps/welcome/templates/welcome/joinus.html:68
 msgid ""
 "Being responsible for researching the latest technologies in the industry "
 "and applying them to Newtonian system improvements."
-msgstr ""
+msgstr "להיות אחראי על מחקר הטכנולוגיות העדכניות ביותר בתעשייה וליישם אותם שיפורים מערכת ניוטונית."
 
 #: web/apps/welcome/templates/welcome/joinus.html:70
 #: web/apps/welcome/templates/welcome/joinus.html:114
@@ -4580,53 +4584,53 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:380
 #: web/apps/welcome/templates/welcome/joinus.html:418
 msgid "Qualifications:"
-msgstr ""
+msgstr "הסמכה:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:72
 msgid ""
 "Bachelor’s degree or above, applicants majored in computer science or "
 "related professions will be prioritized."
-msgstr ""
+msgstr "תואר ראשון ומעלה, מועמדים לתואר ראשון במדעי המחשב או מקצועות קשורים יקבלו עדיפות."
 
 #: web/apps/welcome/templates/welcome/joinus.html:73
 msgid "More than 5 years of software development experience."
-msgstr ""
+msgstr "יותר מ 5 שנים של ניסיון בפיתוח תוכנה."
 
 #: web/apps/welcome/templates/welcome/joinus.html:74
 msgid ""
 "Skilled in a variety of programming languages (Java，Go，C++，Rust，Kotlin)."
-msgstr ""
+msgstr "מיומן במגוון שפות תכנות (Java, Go, C + +, Rust, Kotlin)."
 
 #: web/apps/welcome/templates/welcome/joinus.html:75
 msgid ""
 "Being familiar with the principles of software security, can apply security "
 "standards to research and development."
-msgstr ""
+msgstr "בהיותנו מכירים את עקרונות אבטחת התוכנה, ניתן ליישם תקני אבטחה למחקר ופיתוח."
 
 #: web/apps/welcome/templates/welcome/joinus.html:76
 msgid ""
 "Good English reading ability, being able to read English technical documents "
 "smoothly."
-msgstr ""
+msgstr "יכולת קריאה טובה באנגלית, יכולת לקרוא מסמכים טכניים באנגלית בצורה חלקה."
 
 #: web/apps/welcome/templates/welcome/joinus.html:78
 #: web/apps/welcome/templates/welcome/joinus.html:120
 msgid "Preferred Skills:"
-msgstr ""
+msgstr "מיומנויות מועדפות:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:80
 #: web/apps/welcome/templates/welcome/joinus.html:122
 msgid "Blockchain related system R&D experience."
-msgstr ""
+msgstr "חוויית מחקר ופיתוח של מערכת בלוקצ'יין."
 
 #: web/apps/welcome/templates/welcome/joinus.html:81
 #: web/apps/welcome/templates/welcome/joinus.html:123
 msgid "Distributed network system development experience."
-msgstr ""
+msgstr "רשת מבוזרת ניסיון בפיתוח מערכת."
 
 #: web/apps/welcome/templates/welcome/joinus.html:83
 msgid "Recruitment number: 5 people "
-msgstr ""
+msgstr "מספר עובדים: 5 אנשים"
 
 #: web/apps/welcome/templates/welcome/joinus.html:84
 #: web/apps/welcome/templates/welcome/joinus.html:125
@@ -4639,7 +4643,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:391
 #: web/apps/welcome/templates/welcome/joinus.html:430
 msgid "Working Location: Sanlitun SOHO, Chaoyang District, Beijing"
-msgstr ""
+msgstr "מיקום עבודה: Sanlitun SOHO, מחוז צ'אויאנג, בייג'ינג"
 
 #: web/apps/welcome/templates/welcome/joinus.html:85
 #: web/apps/welcome/templates/welcome/joinus.html:126
@@ -4652,7 +4656,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:392
 #: web/apps/welcome/templates/welcome/joinus.html:431
 msgid "Payments: Salary to be discussed"
-msgstr ""
+msgstr "תשלומים: דיון לגבי השכר"
 
 #: web/apps/welcome/templates/welcome/joinus.html:96
 msgid "Blockchain Engineer"
@@ -4708,116 +4712,116 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:139
 msgid "Full-stack Web Developer"
-msgstr ""
+msgstr "מלא מחסנית Web Developer"
 
 #: web/apps/welcome/templates/welcome/joinus.html:148
 msgid ""
 "Writing well-designed, testable, efficient code by using best software "
 "development practices;"
-msgstr ""
+msgstr "כתיבה מתוכננת היטב, לבדיקה, קוד יעיל באמצעות שיטות פיתוח תוכנה הטובה ביותר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:149
 msgid ""
 "Creating website layout/user interface by using standard HTML/CSS practices;"
-msgstr ""
+msgstr "יצירת פריסת אתר / ממשק משתמש באמצעות שיטות HTML / CSS סטנדרטיות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:150
 msgid "Building web-based backends and micro-services;"
-msgstr ""
+msgstr "בנייתbackendersמבוססי אינטרנט ושירותי מיקרו;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:151
 msgid ""
 "Staying up-to-date with emerging technologies/industry trends and apply them "
 "into operations and activities;"
-msgstr ""
+msgstr "להישאר מעודכן עם טכנולוגיות מתפתחות / מגמות בתעשייה וליישם אותם פעולות ופעילויות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:152
 msgid "Cooperation with designers to create intended visual design. "
-msgstr ""
+msgstr "שיתוף פעולה עם מעצבים ליצור עיצוב חזותי מיועד."
 
 #: web/apps/welcome/templates/welcome/joinus.html:156
 msgid ""
 "Proven work experience with React or other modern Frontend Javascript "
 "Framework;"
-msgstr ""
+msgstr "ניסיון עבודה מוכחת עם React או אחר Frontend מודרניתJavascript Framework;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:157
 msgid "Experience with Python/Django/Node.js;"
-msgstr ""
+msgstr "ניסיון עם Python / Django / Node.js;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:158
 msgid "Experience in writing frontend and backend unit and integration tests;"
-msgstr ""
+msgstr "ניסיון בכתיבת חזית ובדיקות יחידה ובדיקות אינטגרציה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:159
 msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
-msgstr ""
+msgstr "כישורי תכנות מובילים וידע מעמיק של HTML / CSS מודרני;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:160
 msgid ""
 "A solid understanding of how web applications work including security, "
 "session management, and best development practices;"
-msgstr ""
+msgstr "הבנה מוצקה של האופן שבו יישומי אינטרנט פועלים, כולל אבטחה, ניהול פגישות, ושיטות הפיתוח הטובות ביותר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:161
 msgid ""
 "Strong organizational skills to juggle multiple tasks within the constraints "
 "of timelines and budgets with business acumen;"
-msgstr ""
+msgstr "מיומנויות ארגוניות חזקות ללהטט משימות מרובות במסגרת אילוצים של צירי זמן ותקציבים עם החוש העסקי;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:162
 msgid ""
 "Ability to work and thrive in a fast-paced environment, learn rapidly and "
 "master diverse web technologies and techniques;"
-msgstr ""
+msgstr "היכולת לעבוד ולשגשג בסביבה המהיר, ללמוד במהירות לשלוט טכנולוגיות אינטרנט מגוונות וטכניקות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:163
 msgid ""
 "Bachelor’s or master’s degree in computer science or relevant experience;"
-msgstr ""
+msgstr "תואר ראשון או תואר שני במדעי המחשב או ניסיון רלוונטי;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:177
 msgid "Communication Specialist"
-msgstr ""
+msgstr "מומחה תקשורת:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:186
 msgid ""
 "Delivering customer service and technical support on email/Facebook/Twitter;"
-msgstr ""
+msgstr "מתן שירות לקוחות ותמיכה טכנית על דואר אלקטרוני / Facebook / Twitter;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:187
 msgid "Communicating feedback and process suggestions of customers;"
-msgstr ""
+msgstr "תקשורת משוב והצעות תהליך של לקוחות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:188
 msgid ""
 "Identifying causes of dissatisfaction, and providing ways for improvement;"
-msgstr ""
+msgstr "זיהוי הגורמים לאי-שביעות רצון, ומתן דרכים לשיפור;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:189
 msgid "Filling reports on enquiry summaries and improvement areas;"
-msgstr ""
+msgstr "מילוי דוחות על סיכומי חקירה ואזורי שיפור;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:190
 msgid ""
 "Ensure that all enquiries on social media are in compliance with all "
 "internal and external regulations, policies and guidelines;"
-msgstr ""
+msgstr "ודא שכל השאלות על מדיה חברתית עומדות בכל התקנות, במדיניות ובהנחיות הפנימיות והחיצוניות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:194
 #: web/apps/welcome/templates/welcome/joinus.html:305
 msgid "Bachelor’s degree or above;"
-msgstr ""
+msgstr "תואר ראשון ומעלה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:195
 msgid "Preferably with 2 years of work experience in customer service;"
-msgstr ""
+msgstr "רצוי עם 2 שנות ניסיון בעבודה בשירות הלקוחות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:196
 msgid ""
 "Must speak and write fluent English and Chinese with good presentation, "
 "communication and computer skills;"
-msgstr ""
+msgstr "חייב לדבר ולכתוב אנגלית שוטפת וסינית עם מצגת טובה, תקשורת ומיומנויות מחשב;מוטיבציה עצמית ויכולת לעבוד באופן עצמאי;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:197
 msgid "Self-motivated and able to work independently;"
@@ -4825,204 +4829,204 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:211
 msgid "Developer Relations Advocate"
-msgstr ""
+msgstr "יחסי פיתוח תפקיד עו\"ד"
 
 #: web/apps/welcome/templates/welcome/joinus.html:220
 msgid ""
 "Content creation, distribution and analysis tutorials, developer guides, "
 "newsletters, sample apps, client libraries;"
-msgstr ""
+msgstr "יצירת תוכן, הפצה וניתוח מדריכים, מדריכים למפתחים, עלונים, יישומי מדגם, ספריות לקוחות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:221
 msgid ""
 "Creating and implementing detailed annual, monthly and weekly plans for "
 "promotion/engagement activities;"
-msgstr ""
+msgstr "יצירת והטמעה של תוכניות שנתיות, חודשיות ושבועיות מפורטות לפעילויות קידום / מעורבות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:222
 msgid ""
 "Organizing and coordinating marketing  engagement activities including "
 "social media campaigns, youtube broadcasts, progress reports;"
-msgstr ""
+msgstr "ארגון ותיאום של פעילויות שיווקיות, כולל מסעות פרסום במדיה חברתית, שידורי YouTube, דו\"חות התקדמות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:223
 msgid "Content sourcing from 3rd parties, distribution and analytics;"
-msgstr ""
+msgstr "תוכן המקור מ -3 צדדים, הפצה וניתוח;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:224
 msgid "Provide help and support to the organizers of community meetups;"
-msgstr ""
+msgstr "לספק עזרה ותמיכה למארגני המפגשים הקהילתיים;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:229
 msgid ""
 "Must be fluent in both spoken and written English with good presentation, "
 "communication and computer skills;"
-msgstr ""
+msgstr "חייב להיות שוטף באנגלית מדוברת וכתובת עם מצגת טובה, תקשורת ומיומנויות מחשב;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:230
 msgid "Experience in writing tutorials, guides, API docs and sample apps;"
-msgstr ""
+msgstr "ניסיון בכתיבת מדריכים, מדריכים, מסמכים של ממשק API ואפליקציות לדוגמה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:231
 msgid "Experience in writing code in C++/JavaScript;"
-msgstr ""
+msgstr "ניסיון בכתיבת קוד ב- C ++ / JavaScript;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:232
 msgid ""
 "Preferably with 2 years of working experience in IT industry customer "
 "support role;"
-msgstr ""
+msgstr "רצוי עם 2 שנות ניסיון בעבודה בענף ה- IT בתעשייה תפקיד התמיכה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:233
 msgid "Self-motivated and able to work independently."
-msgstr ""
+msgstr "מוטיבציה עצמית ויכולת לעבוד באופן עצמאי."
 
 #: web/apps/welcome/templates/welcome/joinus.html:250
 msgid "Senior UX Designer"
-msgstr ""
+msgstr "בכיר UX מעצב"
 
 #: web/apps/welcome/templates/welcome/joinus.html:259
 msgid ""
 "Translating concepts into user flows, wireframes, mockups and prototypes "
 "that lead to intuitive user experiences;"
-msgstr ""
+msgstr "תרגום מושגים לתוך תזרימי משתמש, wireframes, mockupsו אבי טיפוס המוביל חוויות משתמש אינטואיטיבי;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:260
 msgid "Identifying design problems and devise elegant solutions;"
-msgstr ""
+msgstr "זיהוי בעיות תכנון ופיתוח פתרונות אלגנטיים;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:261
 msgid ""
 "Taking a user-centered design approach and rapidly test and iterate your "
 "designs;"
-msgstr ""
+msgstr "נטילת גישת עיצוב ממוקדת-משתמש ובדיקה מהירה ועיצובים של העיצובים שלך;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:262
 msgid "Collaborating with other team members and stakeholders;"
-msgstr ""
+msgstr "שיתוף פעולה עם חברי צוות ובעלי עניין אחרים;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:266
 msgid ""
 "Three or more years of UX design experience. Preference will be given to "
 "candidates who have experience designing complex solutions for complete "
 "digital environments;"
-msgstr ""
+msgstr "שלוש שנים או יותר של ניסיון בעיצוב UX. עדיפות תינתן למועמדים בעלי ניסיון בתכנון פתרונות מורכבים לסביבות דיגיטליות שלמות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
 msgid ""
 "Expertise in UX softwares such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
-msgstr ""
+msgstr "מומחיות בתוכנות UX כגון Sketch, InVision, UXPin, Framer או Marvel App. מיומנויות React בסיסיות, SCSS או JavaScript הן יתרון;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:268
 msgid ""
 "Ability to work with clients, understand their specifications and design "
 "complete user experiences that fulfills their needs and vision;"
-msgstr ""
+msgstr "יכולת לעבוד עם לקוחות, להבין מפרטים שלהם ולעצב חוויות משתמש מלא שממלא את הצרכים שלהם ואת החזון;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:269
 msgid ""
 "Extensive experience in using UX design best practices to design solutions, "
 "and a deep understanding of mobile-first and responsive design;"
-msgstr ""
+msgstr "ניסיון רב בשימוש בשיטות מומלצות לתכנון UX לעיצוב פתרונות, והבנה מעמיקה של העיצוב הנייד-הראשון והיענות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:270
 msgid ""
 "A solid grasp of user-centered design (UCD), planning and conducting user "
 "research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
 "usability and accessibility concerns;"
-msgstr ""
+msgstr "תפיסה מוצקה של תכנון המשתמש במרכז (UCD), תכנון וביצוע מחקר משתמש, בדיקות משתמשים, בדיקות A / B, אב טיפוס מהיר, ניתוח היוריסטי, שימושיות ונושאים הקשורים לנגישות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:271
 msgid ""
 "Ability to clearly and effectively communicate design processes, ideas, and "
 "solutions to teams and clients;"
-msgstr ""
+msgstr "היכולת לתקשר בצורה ברורה ויעילה תהליכי עיצוב, רעיונות ופתרונות לצוותים ולקוחות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:272
 msgid "Be open to receiving feedback and constructive criticism;"
-msgstr ""
+msgstr "להיות פתוח לקבלת משוב וביקורת בונה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:273
 msgid "Be passionate about resolving user pain points through great design."
-msgstr ""
+msgstr "להיות תשוקה לפתרון נקודות כאב המשתמש באמצעות עיצוב נהדר."
 
 #: web/apps/welcome/templates/welcome/joinus.html:288
 msgid "Product Manager"
-msgstr ""
+msgstr "מנהל מוצר"
 
 #: web/apps/welcome/templates/welcome/joinus.html:297
 msgid ""
 "Understanding the development of the industry and its customer requirements, "
 "form product need specification;"
-msgstr ""
+msgstr "הבנת הפיתוח של התעשייה ואת דרישות הלקוח שלה, טופס המוצר צריך מפרט;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:298
 msgid ""
 "Designing product UE from requirements document, clearly and accurately "
 "communicate demands to developing engineers;"
-msgstr ""
+msgstr "עיצוב המוצר UE ממסמך הדרישות, ברור ומדויק לתקשר דרישות מהנדסים מתפתחים;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:299
 msgid "Managing changes in product demand during product development;"
-msgstr ""
+msgstr "ניהול שינויים בביקוש למוצרים במהלך פיתוח מוצרים;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:300
 msgid "Confirming the product satisfies all needs during product testing;"
-msgstr ""
+msgstr "אישור המוצר עונה על כל הצרכים במהלך בדיקות המוצר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:301
 msgid ""
 "After releasing the product, tracking customers' usage and timely find "
 "problems."
-msgstr ""
+msgstr "לאחר שחרור המוצר, מעקב אחר השימוש בלקוחות ובעיות בזמן."
 
 #: web/apps/welcome/templates/welcome/joinus.html:306
 msgid ""
 "Three years or more of experience in designing e-commerce industry products;"
-msgstr ""
+msgstr "שלוש שנים או יותר של ניסיון בעיצוב מוצרים בתעשיית המסחר האלקטרוני;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:307
 msgid "Proficient with product prototype designing tools;"
-msgstr ""
+msgstr "בקיאים עם אב טיפוס המוצר עיצוב כלי;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:308
 msgid "Familiar with mobile UX design;"
-msgstr ""
+msgstr "היכרות עם עיצוב UX נייד;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:309
 msgid ""
 "Good technical background in creating rich user experience through "
 "technology;"
-msgstr ""
+msgstr "רקע טכני טוב ביצירת חווית משתמש עשירה באמצעות טכנולוגיה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:310
 msgid "Good level of English, fluent in reading English documents."
-msgstr ""
+msgstr "רמה טובה של אנגלית, שוטפת בקריאת מסמכים באנגלית."
 
 #: web/apps/welcome/templates/welcome/joinus.html:325
 msgid "Android R&D Engineer"
-msgstr ""
+msgstr "אנדרואיד מו\"פ מהנדס"
 
 #: web/apps/welcome/templates/welcome/joinus.html:334
 msgid ""
 "Responsible for the development of Android client product, helping other "
 "developers grow and make progress;"
-msgstr ""
+msgstr "אחראי על פיתוח של מוצר הלקוח אנדרואיד, עוזר למפתחים אחרים לגדול ולעשות התקדמות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
 "Participating in the analysis and design of products based on client "
 "requirements, cooperating with UI designers to complete initial testing "
 "based on product design;"
-msgstr ""
+msgstr "השתתפות בניתוח ועיצוב מוצרים על פי דרישות הלקוח, בשיתוף פעולה עם מעצבי ממשק משתמש כדי להשלים את הבדיקה הראשונית על בסיס עיצוב המוצר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:336
 msgid ""
 "Responsible for the development of subsequent iteration versions of the "
 "product, and continuously optimizing the quality, performance, and user "
 "experience of products."
-msgstr ""
+msgstr "אחראי על פיתוח גרסאות איטרציה עוקבות של המוצר, ומייעל באופן רציף את איכות, הביצועים וחווית המשתמש של המוצרים."
 
 #: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
@@ -5030,200 +5034,200 @@ msgid ""
 "years experience in Practical Android development experience; Familiar with "
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
-msgstr ""
+msgstr "לפחות 3 שנות ניסיון בפיתוח Java מקצועי; לפחות 2 שנות ניסיון חוויית פיתוח מעשית של אנדרואיד; הכרת מאפיינים ותכונות פיתוח של מסופים ניידים של Android; מסוגל לפתור בעיות נפוצות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:341
 msgid ""
 "Familiar with Android components and session; Be able to reasonably allocate "
 "resources in the available session;"
-msgstr ""
+msgstr "היכרות עם רכיבי Android והפעלה; להיות מסוגל להקצות משאבים סבירים בפגישה זמין;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:342
 msgid ""
 "Familiar with common controls & custom controls, event mechanisms and "
 "gesture operations;"
-msgstr ""
+msgstr "היכרות עם פקדים נפוצים & בקרות מותאמות אישית, מנגנוני האירוע פעולות מחווה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:343
 msgid ""
 "Proficient in Android performance & memory optimization; good at solving "
 "system crashes & compatibility, memory leaks & overflow;"
-msgstr ""
+msgstr "בקיאים בביצועים ואופטימיזציה של Android; טוב בפתרון קריסות מערכת & תאימות, זיכרון leaks & overflow;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:344
 msgid "Familiar with Android network communication mechanism, Json analysis;"
-msgstr ""
+msgstr "מכירים את מנגנון התקשורת של רשת Android, ניתוח Json;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:345
 msgid "Familiar with Android common layout, animation and effect;"
-msgstr ""
+msgstr "מכיר את הפריסה הנפוצה של Android, הנפשה ואפקט;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:346
 msgid ""
 "Familiar with Android platform screen adaptation and version compatibility;"
-msgstr ""
+msgstr "היכרות עם הסתגלות המסך פלטפורמת אנדרואיד תאימות גירסה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:347
 msgid ""
 "Competent to work independently; Experienced in analyzing & re-writing "
 "Android source code;"
-msgstr ""
+msgstr "מוסמך לעבוד באופן עצמאי; מנוסה בניתוח & כתיבה מחדש קוד המקור אנדרואיד;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:348
 msgid ""
 "Excellent communication skills with team work spirit, work seriously and "
 "actively, rigorous and responsible;"
-msgstr ""
+msgstr "מיומנויות תקשורת מצוינות עם צוות עבודה רוח, עבודה ברצינות ובאופן פעיל, קפדני ואחראי;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:349
 msgid "Experienced in the application of open source framework is preferred;"
-msgstr ""
+msgstr "מנוסה ביישום של מסגרת קוד פתוח הוא המועדף;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:350
 msgid ""
 "Familiar with Android testing tools & process, experienced in cross "
 "application coding test."
-msgstr ""
+msgstr "היכרות עם כלי בדיקה אנדרואיד & תהליך, מנוסה בין יישום קידוד הבדיקה קידוד."
 
 #: web/apps/welcome/templates/welcome/joinus.html:365
 msgid "IOS Developer"
-msgstr ""
+msgstr "IOS Developer"
 
 #: web/apps/welcome/templates/welcome/joinus.html:374
 msgid ""
 "Assisting the product manager to analyze and organize the customer's need, "
 "and make the product requirements document;"
-msgstr ""
+msgstr "סיוע מנהל המוצר לנתח ולארגן את הצורך של הלקוח, ולהכין את מסמך דרישות המוצר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:375
 msgid ""
 "Depending on the product requirements document, designing an iOS App system  "
 "architecture;"
-msgstr ""
+msgstr "בהתאם למסמך דרישות המוצר, עיצוב ארכיטקטורת מערכת ההפעלה של iOS;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:376
 msgid ""
 "Depending on the system architecture design, conducting iOS App-related "
 "program  development;"
-msgstr ""
+msgstr "בהתאם לעיצוב הארכיטקטורה של המערכת, ניהול iOS הקשורים בנושא פיתוח התוכנית;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
 msgid ""
 "Depending on the product requirements document, conducting an overall test "
 "on  the iOS app;"
-msgstr ""
+msgstr "בהתאם למסמך דרישות המוצר, ביצוע בדיקה כוללת באפליקציית iOS;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:378
 msgid ""
 "According to customers’ feedback, continuously revising and improving the "
 "iOS app."
-msgstr ""
+msgstr "על פי משוב הלקוחות, כל הזמן מתעדכן ומשפר את אפליקציית iOS."
 
 #: web/apps/welcome/templates/welcome/joinus.html:382
 #: web/apps/welcome/templates/welcome/joinus.html:420
 msgid ""
 "Bachelors’ degree or above, graduated in computer science or related major;"
-msgstr ""
+msgstr "תואר ראשון ומעלה, בוגרת מדעי המחשב או מגמה קשורה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:383
 msgid ""
 "At least 2 years working experience in computer software, or more than 1 "
 "year working experience in iOS App development;"
-msgstr ""
+msgstr "לפחות 2 שנות ניסיון בעבודה בתוכנת מחשב, או יותר מ 1 שנות ניסיון בעבודה בפיתוח iOS App;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:384
 msgid "Familiar with Swift or Objective C programming language;"
-msgstr ""
+msgstr "הכרת שפת תכנות מהירה או אובייקטיבית C;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:385
 msgid ""
 "Familiar with the iOS's platform software development model and system "
 "architecture;"
-msgstr ""
+msgstr "מכיר את פלטפורמת iOS פלטפורמת פיתוח תוכנה וארכיטקטורת המערכת;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:386
 msgid ""
 "Familiar with common data structures and algorithms, has a persistent "
 "pursuit of new technologies;"
-msgstr ""
+msgstr "היכרות עם מבני נתונים ואלגוריתמים משותפים, קיום מעקב מתמיד אחר טכנולוגיות חדשות;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:387
 msgid "Good at using technology to create a good user experience;"
-msgstr ""
+msgstr "בעל יכולות שימוש בטכנולוגיה כדי ליצור חוויית משתמש טובה;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:388
 msgid "Good English level, able to read English technical documents smoothly."
-msgstr ""
+msgstr "אנגלית ברמה טובה, מסוגל לקרוא מסמכים טכניים באנגלית בצורה חלקה."
 
 #: web/apps/welcome/templates/welcome/joinus.html:403
 msgid "Front-end Web Developer"
-msgstr ""
+msgstr "Front-Web Web Developer"
 
 #: web/apps/welcome/templates/welcome/joinus.html:412
 msgid ""
 "Assisting the product manager, analyzing and organizing the customer's need, "
 "and making the product requirements document;"
-msgstr ""
+msgstr "סיוע למנהל המוצר, ניתוח וארגון צרכי הלקוח, ועריכת מסמך דרישות המוצר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
 "Depending on the product requirements document, designing the architecture "
 "of the website front-end;"
-msgstr ""
+msgstr "בהתאם למסמך דרישות המוצר, עיצוב הארכיטקטורה של קדמת האתר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:414
 msgid ""
 "Depending on the design draft provided by the UI designer, completing the "
 "production of the website page;"
-msgstr ""
+msgstr "בהתאם טיוטת העיצוב שסופק על ידי מעצב ממשק המשתמש, השלמת הייצור של אתר האינטרנט;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
 msgid ""
 "According to the product requirements document, completing the development "
 "of the sites’ front-end interactive part of the program;"
-msgstr ""
+msgstr "על פי מסמך דרישות המוצר, השלמת הפיתוח של החלק האינטראקטיבי של החלק הקדמי של אתר התוכנית;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:416
 msgid ""
 "According to consumer’s feedback, correcting the front end issues of the "
 "website."
-msgstr ""
+msgstr "על פי המשוב של הצרכן, תיקון הסוגיות הקדמיות של האתר."
 
 #: web/apps/welcome/templates/welcome/joinus.html:421
 msgid ""
 "2+ years working experience in computer software, more than 1 year "
 "experience in front end development of the website;"
-msgstr ""
+msgstr "2 + שנות ניסיון בעבודה בתוכנת מחשב, יותר מ 1 שנה ניסיון בפיתוח מול סוף של האתר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:422
 msgid ""
 "Familiar with AI and Photoshop software, can create web pages based on UI "
 "design drafts;"
-msgstr ""
+msgstr "היכרות עם AI ו Photoshop התוכנה, ניתן ליצור דפי אינטרנט המבוססים על טיוטות עיצוב ממשק המשתמש;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:423
 msgid "Familiar with HTML5, CSS, Javascript programming language;"
-msgstr ""
+msgstr "הכרת HTML5, CSS, שפת התכנותJavascript;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:424
 msgid ""
 "Familiar with website front-end development framework such as jQuery and "
 "Bootstrap;"
-msgstr ""
+msgstr "היכרות עם מסגרת פיתוח חזיתית של האתר, כגון jQuery ו- Bootstrap;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:425
 msgid ""
 "Familiar with the principles of responsive Web design, with practical "
 "experience;"
-msgstr ""
+msgstr "הכרת עקרונות עיצוב אתרים עם ניסיון מעשי;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:426
 msgid "Skillfully use existing technology to set up the best user experience;"
-msgstr ""
+msgstr "שימוש בטכנולוגיה הקיימת כדי להגדיר את חוויית המשתמש הטובה ביותר;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:427
 msgid "Good English level, able to read English technical documents."
-msgstr ""
+msgstr "אנגלית ברמה טובה, מסוגלות קריאת מסמכים טכניים באנגלית."
 
 #: web/apps/welcome/templates/welcome/legal.html:6
 #: web/apps/welcome/templates/welcome/legal.html:13
@@ -5235,7 +5239,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:27
 #: web/templates/footer.html:43
 msgid "Media Kit"
-msgstr ""
+msgstr "מדיה"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:23
 msgid ""
@@ -5243,23 +5247,23 @@ msgid ""
 "logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
 "symbolizing his great contribution and perfect integration of finance and "
 "technology."
-msgstr ""
+msgstr "הלוגו של ניוטון הוא שילוב של סמל חצץ ואת קצה מטבע מרופט. לוגו זה מכבד את המדען הגדול ואת חלוץ המטבע סר אייזיק ניוטון, המסמל את תרומתו הגדולה ואת שילוב מושלם של כספים וטכנולוגיה."
 
 #: web/apps/welcome/templates/welcome/mediakit.html:28
 msgid "Download Logo"
-msgstr ""
+msgstr "הורד לוגו"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:47
 msgid "Chinese Poster"
-msgstr ""
+msgstr "פוסטר סינית"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:55
 msgid "English Poster"
-msgstr ""
+msgstr "פוסטר אנגלית"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:63
 msgid "Korean Poster"
-msgstr ""
+msgstr "פוסטר קוריאנית"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:74
 msgid "Newton Logo"
@@ -5290,7 +5294,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/nep.html:13 web/templates/footer.html:22
 msgid "Newton Evolution Proposal"
-msgstr ""
+msgstr "הצעת אבולוציית ניוטון"
 
 #: web/apps/welcome/templates/welcome/nep.html:19
 msgid ""
@@ -5342,67 +5346,67 @@ msgstr "זהות דיגיטלית ואשראי"
 
 #: web/apps/welcome/templates/welcome/newpay.html:121
 msgid "Create and manage DID (Decentralized IDs);"
-msgstr ""
+msgstr "יצירה וניהול של DID (מזהים מבוזרים);"
 
 #: web/apps/welcome/templates/welcome/newpay.html:122
 msgid "Set privacy mode for personal information;"
-msgstr ""
+msgstr "הגדרת מצב פרטיות עבור מידע אישי;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:123
 msgid "Transaction information management;"
-msgstr ""
+msgstr "ניהול מידע על עסקאות;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:124
 msgid "Transaction information sharing pricing and benefit;"
-msgstr ""
+msgstr "שיתוף מידע העסקה תמחור תועלת;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:125
 msgid "Digital asset management, including NEW, BTC, ETH, etc."
-msgstr ""
+msgstr "ניהול נכסים דיגיטליים, כולל NEW, BTC, ETH, וכו"
 
 #: web/apps/welcome/templates/welcome/newpay.html:140
 msgid "Support cross-border transactions;"
-msgstr ""
+msgstr "'עסקאות בינלאומיות תמיכה"
 
 #: web/apps/welcome/templates/welcome/newpay.html:141
 msgid "Support for micro-payments;"
-msgstr ""
+msgstr "תמיכה במיקרו-תשלומים;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:142
 msgid "Extremely fast transaction confirmation."
-msgstr ""
+msgstr "אישור עסקה מהיר ביותר."
 
 #: web/apps/welcome/templates/welcome/newpay.html:156
 msgid "Joint Login"
-msgstr ""
+msgstr "התחברות משותפת"
 
 #: web/apps/welcome/templates/welcome/newpay.html:157
 msgid "Log in multiple Dapps using a unified identity;"
-msgstr ""
+msgstr "התחברותDappsב-מרובה באמצעות זהות מאוחדת;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:158
 msgid "Dapp management and permission control;"
-msgstr ""
+msgstr "ניהול DAP בקרת הרשאה;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:159
 msgid "Security audit."
-msgstr ""
+msgstr "ביקורת ביטחונית."
 
 #: web/apps/welcome/templates/welcome/newpay.html:173
 msgid "Application Support"
-msgstr ""
+msgstr "תמיכה ביישומים תמיכה"
 
 #: web/apps/welcome/templates/welcome/newpay.html:174
 msgid "Built-in support for free and open-source applications;"
-msgstr ""
+msgstr "מובנית ביישומי קוד פתוח וחופשי;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:175
 msgid "Built-in support for purchases within applications;"
-msgstr ""
+msgstr "תמיכה מובנית ברכישות בתוך יישומים;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:176
 msgid "Built-in support for development tools of applications."
-msgstr ""
+msgstr "תמיכה מובנית עבור כלי פיתוח של יישומים"
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
 msgid "Newton Community Node Conference"
@@ -5695,7 +5699,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:85
 #: web/templates/footer.html:15
 msgid "Partner"
-msgstr ""
+msgstr "שותף"
 
 #: web/apps/welcome/templates/welcome/press.html:6
 #: web/apps/welcome/templates/welcome/press.html:13
@@ -5716,7 +5720,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:95
 #: web/templates/footer.html:53
 msgid "Privacy Policy"
-msgstr ""
+msgstr "מדיניות פרטיות"
 
 #: web/apps/welcome/templates/welcome/privacy.html:20
 msgid ""
@@ -6019,13 +6023,13 @@ msgid ""
 "digital identity. Digital assets include; cryptocurrencies, personal data, "
 "personal credit and anything that exists in a binary format and come with "
 "the right to use."
-msgstr ""
+msgstr "משתמשים יכולים לנהל ולשלוט בגישה אל הנכסים הדיגיטליים שלהם באמצעות זהות דיגיטלית. נכסים דיגיטליים כוללים; cryptocurrencies, נתונים אישיים, אשראי אישי וכל דבר שקיים בפורמט בינארי ומגיע עם הזכות להשתמש."
 
 #: web/apps/welcome/templates/welcome/protocol.html:24
 msgid ""
 "Users can control and set different privacy modes for corresponding digital "
 "assets, and price the digital assets."
-msgstr ""
+msgstr "משתמשים יכולים לשלוט ולהגדיר מצבי פרטיות שונים עבור הנכסים הדיגיטליים המתאימים, ואת מחיר הנכסים הדיגיטליים."
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
 #: web/apps/welcome/templates/welcome/technology.html:40
@@ -6034,7 +6038,7 @@ msgid ""
 "identity for commodities over the whole network. Through this digital "
 "identity a user can check the relevant information on any commodity at any "
 "time."
-msgstr ""
+msgstr "באמצעות טכניקות כגון \"Atom Hashing\" אנו יכולים ליצור זהות דיגיטלית ייחודית עבור סחורות על פני הרשת כולה. באמצעות הזהות הדיגיטלית המשתמש יכול לבדוק את המידע הרלוונטי על כל סחורה בכל עת."
 
 #: web/apps/welcome/templates/welcome/protocol.html:38
 msgid ""
@@ -6042,14 +6046,14 @@ msgid ""
 "Chain, that information will be stored on the Newton blockchain. This "
 "ensures no tampering with the data once it is stored on the Newton "
 "blockchain."
-msgstr ""
+msgstr "לאחר מידע על כל פעולה של מוצר נכנס ניוטון שרשרת אספקה, כי המידע יהיה מאוחסן על blockchain ניוטון. זה מבטיח לא לחבל עם הנתונים לאחר מאוחסן על הבלוק ניוטון."
 
 #: web/apps/welcome/templates/welcome/protocol.html:39
 msgid ""
 "Through smart contract Newton can pre-set commercial exchanging rules to "
 "realize automatic insurance claims and property rights transfer. This will "
 "reduce the transaction costs and promote cooperation efficiency."
-msgstr ""
+msgstr "באמצעות חוזה חכם ניוטון יכול מראש להגדיר כללי החליפין המסחרי כדי לממש תביעות ביטוח אוטומטי העברת זכויות רכוש. זה יקטין את עלויות העסקה ולקדם את יעילות שיתוף הפעולה."
 
 #: web/apps/welcome/templates/welcome/protocol.html:50
 #: web/apps/welcome/templates/welcome/technology.html:44
@@ -6062,14 +6066,14 @@ msgid ""
 "Advertisers can set marketing plans through various built-in marketing smart "
 "contract templates in the system. This includes incentive modes, settlement "
 "modes, and dynamic price adjusting rules."
-msgstr "המפרסמים יכולים להגדיר תוכניות שיווק באמצעות מובנית שונים שיווק חכמים תבניות חכמות במערכת."
+msgstr "המפרסמים יכולים להגדיר תוכניות שיווק באמצעות מובנית שונים שיווק חכמים תבניות חכמות במערכת. זה כולל מצבי תמריץ, מצבי סליקה וכללים דינמיים של התאמת מחירים"
 
 #: web/apps/welcome/templates/welcome/protocol.html:53
 msgid ""
 "Advertisers can audit ongoing and completed marketing contracts. By calling "
 "out the NewAI system, an advertiser can conduct market research before "
 "marketing activities, and analyze the results after the marketing activities."
-msgstr ""
+msgstr "המפרסמים יכולים לבדוק חוזים שיווקיים שוטפים ומבוצעים. על ידי קריאת מערכתNewAI, מפרסם יכול לנהל מחקר שוק לפני פעילויות שיווק, ולנתח את התוצאות לאחר הפעילות השיווקית."
 
 #: web/apps/welcome/templates/welcome/protocol.html:64
 #: web/apps/welcome/templates/welcome/technology.html:50
@@ -6083,19 +6087,19 @@ msgid ""
 "This enables the user to include: multi-party transactions based on complex "
 "business rules, settlement rules, smart insurance contracts, smart financial "
 "contracts, and external chain service."
-msgstr ""
+msgstr "המסחר בפלטפורמת התשלום של ניוטון יאפשר למשתמש להגדיר עסקאות באמצעות מובנית חכמים תבניות חכמים מנוע הכלל. זה מאפשר למשתמש לכלול: עסקאות רב צדדי על בסיס כללי עסקים מורכבים, כללי ההתנחלות. "
 
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
 "Newton supports cross-border transactions, micropayments, lightning "
 "settlements and more, providing comprehensive online and offline payment "
 "tools."
-msgstr ""
+msgstr "ניוטון תומך עסקאות חוצות גבולות, תשלומים מיקרו, שימוש ברשת הלייטנינגועוד,בכדי לספק כלי תשלום מקוון ולא מקוון."
 
 #: web/apps/welcome/templates/welcome/protocol.html:79
 #: web/apps/welcome/templates/welcome/technology.html:56
 msgid "Reliable physical tunnel"
-msgstr ""
+msgstr "מנהרה פיזית אמינה"
 
 #: web/apps/welcome/templates/welcome/protocol.html:81
 #: web/apps/welcome/templates/welcome/technology.html:57
@@ -6104,12 +6108,12 @@ msgid ""
 "reliable physical tunnel protocol and define manufacturing specifications of "
 "related equipment. Any third party can manufacture safety equipment "
 "according to the protocol specification."
-msgstr ""
+msgstr "על בסיס טכנולוגיותNewChainו- NewIoTניוטון מסוגלת לעצב פרוטוקול מנהרה פיזי אמין ולהגדיר את מפרט הייצור של ציוד נלווה. כל צד שלישי יכול לייצר ציוד בטיחות על פי מפרט הפרוטוקול."
 
 #: web/apps/welcome/templates/welcome/protocol.html:93
 #: web/apps/welcome/templates/welcome/technology.html:62
 msgid "Automatic finance"
-msgstr ""
+msgstr "מימון אוטומטי"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
 msgid ""
@@ -6118,39 +6122,39 @@ msgid ""
 "identity and credit, KYC information, staking the Newton token, contract "
 "rules and external chain service. The system will automatically match smart "
 "financial contracts and automatically complete transactional matching."
-msgstr ""
+msgstr "מפתחים יכולים להגדיר חוזים פיננסיים חכמים המבוססים על מובנית תבניות חוזה חכם על; ביטוח, הלוואות והשקעות, לרבות זהות דיגיטלית ואשראי, מידע KYC. "
 
 #: web/apps/welcome/templates/welcome/protocol.html:107
 #: web/apps/welcome/templates/welcome/technology.html:68
 msgid "NNIO"
-msgstr ""
+msgstr "NNIO"
 
 #: web/apps/welcome/templates/welcome/protocol.html:109
 #: web/apps/welcome/templates/welcome/technology.html:69
 msgid ""
 "Developers can access NewNET through the NNIO (NewNET IO) protocol, using "
 "storage services, computing services and domain names."
-msgstr ""
+msgstr "מפתחייכולים לגשת ל- Newnetבאמצעות פרוטוקול NNIO (New IO), באמצעות שירותי אחסון, שירותי מחשוב ושמות מתחם."
 
 #: web/apps/welcome/templates/welcome/protocol.html:110
 msgid ""
 "Through smart storage contracts, smart computing contracts, smart domain "
 "name contracts, developers can quickly and innovatively develop applications."
-msgstr ""
+msgstr "באמצעות חוזי אחסון חכמים, חוזי מחשוב חכמים, חוזי שמות מתחם חכם, מפתחים יכולים לפתח יישומים במהירות ובאופן חדשני."
 
 #: web/apps/welcome/templates/welcome/roadmap.html:6
 msgid "Roadmap"
-msgstr ""
+msgstr "מפת דרכים"
 
 #: web/apps/welcome/templates/welcome/scene.html:6
 msgid "industry"
-msgstr ""
+msgstr "תעשייה"
 
 #: web/apps/welcome/templates/welcome/scene.html:13
 #: web/apps/welcome/templates/welcome/scene.html:21
 #: web/templates/header.html:36 web/templates/header.html.py:231
 msgid "Industry"
-msgstr ""
+msgstr "תעשייה"
 
 #: web/apps/welcome/templates/welcome/scene.html:33
 msgid ""
@@ -6163,7 +6167,7 @@ msgid ""
 "Blockchain-commerce model is used in the retail industry to help reduce "
 "transaction costs, protect consumers’ privacy, and promote intelligent "
 "collaboration."
-msgstr ""
+msgstr "תחת המבנה הארגוני המסורתי של חברות, רווחי הוןעלו בהרבה על הכנסה מעבודה. דור חדש של מוסדות מסחריים ענקיים שהתפתחו יחד עם המחשביםוהאינטרנט האיץ את צבירת רווחי ההון.הבלוקצ'ייןהוא המודל העסקי הבסיסי של קהילתאדם-מכונה. לפי מודל זה, כל התנהגות אשר תורמת לקהילתאדם-מכונהתתוגמל. מודל הבלוקצ'יין משמש בתעשייה הקמעונאית להפחתת עלויות העסקה, להגנה על פרטיות הצרכנים ולקידום שיתוף פעולה חכם."
 
 #: web/apps/welcome/templates/welcome/scene.html:37
 #: web/apps/welcome/templates/welcome/scene.html:69
@@ -6185,22 +6189,22 @@ msgid ""
 "cost of the sellers will be greatly reduced, and consumers, service "
 "providers and other participants can get the incentive of Newton token "
 "according to their contribution value (NewForce)."
-msgstr ""
+msgstr "ב-NewMall, שבה אין מתווכים המבקשים רווח, עלות העסקה של המוכרים מופחת באופן משמעותי, וצרכנים, נותני שירות ומשתתפים אחרים יכולים לקבל תמריץ בצורה של טוקן ניוטון בהתאם לערך תרומתם (NewForce)."
 
 #: web/apps/welcome/templates/welcome/scene.html:46
 msgid "New digital asset management"
-msgstr ""
+msgstr "ניהול נכסים דיגיטליים חדשים"
 
 #: web/apps/welcome/templates/welcome/scene.html:47
 msgid ""
 "As a new digital asset of users, consumer data can be managed by NewPay. "
 "Users truly own data and can control the data by authorizing and pricing the "
 "data.Uninformed data leakage is prohibited."
-msgstr ""
+msgstr "נכס דיגיטלי חדש של משתמשים, נתוני הצרכנים יכולים להיות מנוהלים על ידי NewPay. משתמשים מחזיקים בנתונים משלהםויכולים לשלוט בהם על ידי מתן הרשאהותמחור. הדלפת נתונים ללא הרשאההינה אסורה."
 
 #: web/apps/welcome/templates/welcome/scene.html:51
 msgid "Precise advertisement service"
-msgstr ""
+msgstr "שירות פרסום ממוקד"
 
 #: web/apps/welcome/templates/welcome/scene.html:52
 msgid ""
@@ -6210,29 +6214,29 @@ msgid ""
 "into the system, including: target users, incentive models, settlement "
 "methods, and djustment rules. Merchants can achieve accurate advertising and "
 "peer-to-peer settlement with users, avoiding advertising fraud."
-msgstr ""
+msgstr "המשתמשים יכולים להחליט האם לקבל פרסומות שיווקיות ב- NewPay, כמו גם את סוג המידע הדרוש להם, טווח המחירים וכו'. המפרסמים יכולים לקבוע תוכניות שיווק באמצעות תבניות שיווק חכמות שונות המוכללות במערכת, כולל: משתמשייעד, מודלים של תמריצים, שיטותהסדרים וכללים דינמיים להתאמת מחירים. הסוחרים יכולים להשיג פרסום מדויק והסדרי עמית לעמית עם משתמשים, ובכך להימנע מתרמיות פרסום."
 
 #: web/apps/welcome/templates/welcome/scene.html:65
 msgid ""
 "Current transaction payment costs are higher, efficiency is lower, and "
 "flexibility is poor. A new generation of trading and payment systems will be "
 "built based on blockchain technology."
-msgstr ""
+msgstr "העלויות שלתשלומיהעסקאותהנוכחיות הן גבוהות יותר, היעילות נמוכה יותר וכך גם הגמישות. דור חדש של מערכות מסחר ותשלום ייבנה על בסיס טכנולוגיית הבלוקצ'יין."
 
 #: web/apps/welcome/templates/welcome/scene.html:74
 msgid "Global payment"
-msgstr ""
+msgstr "תשלום גלובלי"
 
 #: web/apps/welcome/templates/welcome/scene.html:75
 msgid ""
 "With the global distribution of NewChain infrastructure and NewPay payment "
 "tools, simple and convenient cross-border transactions can be achieved with "
 "very low transaction costs."
-msgstr ""
+msgstr "עם הפצתה העולמית של תשתית ה-NewChain וכלי התשלום של NewPay, ניתן יהיה לבצע עסקאות פשוטות ונוחות מכל מקום בעולם בעלויות נמוכות מאוד."
 
 #: web/apps/welcome/templates/welcome/scene.html:80
 msgid "Ultra-micropayment"
-msgstr ""
+msgstr "תשלום מיקרו אולטרה"
 
 #: web/apps/welcome/templates/welcome/scene.html:81
 msgid ""
@@ -6240,7 +6244,7 @@ msgid ""
 "contracts can be established between devices to achieve automatic settlement "
 "and payment, thus meeting the high frequency requirements in ultra-micro "
 "payment scenarios."
-msgstr ""
+msgstr "מכשירי IoT, כלומר NewIoT, מסוגלים לגשת אל ה-NewChainבעלות נמוכה מאוד ולהקים חוזים חכמים עם מכשירים אחרים במטרה להשיג הסדרים ותשלומים אוטומטיים, ובכך לעמוד במהירות העסקאות הכוללות תשלום מיקרו-אולטרה."
 
 #: web/apps/welcome/templates/welcome/scene.html:94
 msgid ""
@@ -6252,18 +6256,18 @@ msgid ""
 "problem for some industries such as counterfeits, pharmaceuticals, and "
 "luxury goods. Therefore, a credible supply chain system which is open to all "
 "stakeholders is very important."
-msgstr ""
+msgstr "סחורות בדרך כלל עוברות דרך מתווכים רבים, כגון לוגיסטיקה, אחסנה, שחרור מהמכס, מכירות, ועוד, לפני מסירתן לצרכנים.כאשר קיים שירות לאחר המכירה, נדרש תהליך הפוך מקביל. רשתות האספקה הנוכחיות כמעט ומעולם לא היו פתוחות ושקופות. קשה לצרכנים ללמוד את מקור הסחורות, מידע על הפצתן וכו', דבר המהווה בעיה רצינית מאוד כשמדובר בתעשיות כגון זייפני סחורות, תרופות ומוצרי מותרות. לכן, שרשרת אספקהאמינה אשר פתוחה ושקופה לכל בעלי העניין הינה משמעותיתביותר."
 
 #: web/apps/welcome/templates/welcome/scene.html:95
 msgid ""
 "Through the combination of atomic hashing, NewIOT, NewChain and other "
 "technologies, the supply chain system will be credible, open and "
 "transparent, and generate more business innovations."
-msgstr ""
+msgstr "באמצעות שילוב של atomic hashing, NewIOT, NewChain וטכנולוגיות אחרות, שרשרת האספקה תהיה אמינה, פתוחה ושקופה, ותפיק חידושים עסקיים רבים יותר."
 
 #: web/apps/welcome/templates/welcome/scene.html:104
 msgid "Anti-counterfeiting and traceability"
-msgstr ""
+msgstr "מאבק בזיופים ועקיבות "
 
 #: web/apps/welcome/templates/welcome/scene.html:105
 msgid ""
@@ -6272,11 +6276,11 @@ msgid ""
 "be  uploaded into the blockchain to prove product’s origin and the integrity "
 "of the product packaging, thereby ensuring the credibility of the commodity "
 "logistics process."
-msgstr ""
+msgstr "באמצעותatomic hashing,NewIoT וטכנולוגיות אחרות - מקורו, מאפייניוהפיזיים ונתוניוהנוספיםשל המוצר יועלו אלהבלוקצ'יין כדי להוכיח את מקור המוצר ואת שלמות האריזה שלו, ובכך להבטיח את אמינות הלוגיסטיקה."
 
 #: web/apps/welcome/templates/welcome/scene.html:110
 msgid "Supply chain financing"
-msgstr ""
+msgstr "מימון שרשרת האספקה"
 
 #: web/apps/welcome/templates/welcome/scene.html:111
 msgid ""
@@ -6284,7 +6288,7 @@ msgid ""
 "share data with financing parties to obtain corresponding funds. Since the "
 "business data is not tamperable, it will help speed up the financing of "
 "suppliers and reduce the risk of default."
-msgstr ""
+msgstr "הספקים מתעדים ושומרים את נתוני העסקאות שלהם בעזרת טכנולוגיית הבלוקצ'יין, ומשתפים נתונים עם גורמימימון לקבלת כספים. מאחר והנתונים העסקיים אינם טמפרביליים, הדבר יעזור להאיץ את תהליך המימון של ספקים ולהקטין את הסיכון לאי תשלום חובות."
 
 #: web/apps/welcome/templates/welcome/scene.html:125
 msgid ""
@@ -6292,21 +6296,21 @@ msgid ""
 "high cost and poor flexibility, and it is often difficult to serve small and "
 "medium-sized enterprises and individuals. Through digital identity and "
 "credit, a new type of self-financing system can be established."
-msgstr ""
+msgstr "מערכת השירות הפיננסי המסורתיתמתאפיינת בעומס עבודה גדול,מחזורים ארוכים, עלויותגבוהות וגמישות ירודה הגורמיםלעיתים קרובות לקשיים בשירות ארגונים בינוניים וקטנים ואנשים פרטיים.באמצעות זהות ואשראי דיגיטליים, ניתן להקים מערכת חדשה של מימון עצמי."
 
 #: web/apps/welcome/templates/welcome/scene.html:134
 msgid "Corporate and personal credit"
-msgstr ""
+msgstr "אשראי אישי ועסקי"
 
 #: web/apps/welcome/templates/welcome/scene.html:135
 msgid ""
 "Corporates and individuals establish a consistent credit system based on "
 "NewID, and third parties can only get credit data through authorization."
-msgstr ""
+msgstr "תאגידים ויחידים משתמשיםבצורה עקבית במערכת אשראי המבוססת על NewID, וגורמי צד-שלישי יכולים לקבל נתוני אשראי רק בתנאי שיש להם הרשאהלכך."
 
 #: web/apps/welcome/templates/welcome/scene.html:140
 msgid "Asset securitization"
-msgstr ""
+msgstr "איגוח נכסים"
 
 #: web/apps/welcome/templates/welcome/scene.html:141
 msgid ""
@@ -6314,36 +6318,36 @@ msgid ""
 "financial products that do not require human involvement. With NewChain-"
 "based token tools, various assets can be easily valued by tokens or coverted "
 "to correspongding amount tokens."
-msgstr ""
+msgstr "באמצעות תבניות של חוזים חכמים, ארגונים פיננסיים יכולים ליצור מוצרים פיננסיים שאינם דורשים מעורבות אנושית. בעזרת כלי טוקנים מבוססי NewChain, נכסים שונים יכולים להיות מוערכים בקלות על ידי טוקנים או מומריםלטוקנים אחרים באותה כמות."
 
 #: web/apps/welcome/templates/welcome/scene.html:154
 msgid ""
 "Use blockchain technology to create a new gaming experience for users: users "
 "are both players and rule-making participants, and virtual game assets are "
 "owned by users."
-msgstr ""
+msgstr "השתמשו בטכנולוגיית בלוקצ'יין כדי ליצור חוויית גיימינג חדשה עבור המשתמשים: משתמשים הם גם שחקנים וגם מקבלי החלטות, והם הבעלים של נכסי המשחקים הוירטואליים."
 
 #: web/apps/welcome/templates/welcome/scene.html:163
 msgid "Virtual game asset automated trading"
-msgstr ""
+msgstr "מסחר אוטומטי שלנכסי משחקיםוירטואליים"
 
 #: web/apps/welcome/templates/welcome/scene.html:164
 msgid ""
 "Through the cross-chain and oracle technology provided by NewChain, virtual "
 "items in various games can be easily recorded on the blockchain for "
 "automated trading."
-msgstr ""
+msgstr "באמצעות שרשרת המסחר וטכנולוגייתOracle המסופקת על ידי NewChain, ניתן לתעד בקלות פריטים וירטואליים במשחקים שונים על גביהבלוקצ'יין למטרות מסחר אוטומטי."
 
 #: web/apps/welcome/templates/welcome/scene.html:169
 msgid "Transparent rules of the game"
-msgstr ""
+msgstr "חוקי משחק שקופים"
 
 #: web/apps/welcome/templates/welcome/scene.html:170
 msgid ""
 "Game developers can easily create algorithmic and transparent game logic "
 "through NewChain related smart contract tools to improve the fairness and "
 "transparency of the game."
-msgstr ""
+msgstr "מפתחי משחקים יכולים ליצור בקלות לוגיקת משחק אלגוריתמית ושקופה באמצעות כלי החוזה החכםשלNewChainעל מנת לשפר את ההגינות והשקיפות של המשחק."
 
 #: web/apps/welcome/templates/welcome/scene.html:184
 msgid ""
@@ -6353,11 +6357,11 @@ msgid ""
 "saving the high management costs of centralized systems, reducing post-"
 "maintenance costs, and helping to improve the intelligence and scale of "
 "agriculture."
-msgstr ""
+msgstr "קיימות כיום בחקלאות בעיות נרחבות כגון נתונים לא מלאים ואוטומציה נמוכה. בלוקצ'יין, בשילוב עם טכנולוגיית IoT, מסוגלת לאסוף, לאחסן ולנתח באופן אוטומטי נתוניייצור חקלאי, ובכך לחסוך בעלויות ניהול גבוהות של מערכות ריכוזיות, לצמצם עלויות לאחר תחזוקה,לעזור לשפר את המודיעין ולהגדיל את היקף החקלאות."
 
 #: web/apps/welcome/templates/welcome/scene.html:193
 msgid "Traceability of agricultural products"
-msgstr ""
+msgstr "עקיבות של מוצרים חקלאיים"
 
 #: web/apps/welcome/templates/welcome/scene.html:194
 msgid ""
@@ -6367,11 +6371,11 @@ msgid ""
 "of agricultural production can be improved. Due to the non-tamperable nature "
 "of production data, it can be widely used in scientific research and anti-"
 "counterfeiting purposes."
-msgstr ""
+msgstr "על ידי שילוב מכשיר ה-IoT אשר תואם תקן NewIoTבתהליך של מחזור חומריםחקלאיים, ייצור חקלאיומכירות מוצרים חקלאיים, ניתן יהיה לשפר את הבטיחות והיעילות של כל תהליך הייצור החקלאי. בשל אופי נתוני הייצור אשר אינו טמפרבילי, ניתן יהיה להשתמשבובאופן נרחב במחקר מדעי ולמניעת זיופים."
 
 #: web/apps/welcome/templates/welcome/scene.html:199
 msgid "Intelligent planting"
-msgstr ""
+msgstr "נטיעה חכמה"
 
 #: web/apps/welcome/templates/welcome/scene.html:200
 msgid ""
@@ -6380,11 +6384,11 @@ msgid ""
 "Combining NewAI to make intelligent decision-making on monitoring results, a "
 "complete intelligent planting system can be built to detect risks, stabilize "
 "production and increase income in time."
-msgstr ""
+msgstr "באמצעות חיישן ה-IoT אשר תואם תקן NewIoT, ניתן לבצע ניטור יומי של סביבת הנטיעה והצמיחה של היבול. בזכות שילוב NewAI לקבלת החלטות חכמותבהתבסס על תוצאות ניטור, ניתן יהיה לבנות מערכת נטיעה חכמה לזיהוי סיכונים, ייצוב הייצור והגדלת ההכנסות."
 
 #: web/apps/welcome/templates/welcome/scene.html:212
 msgid "Public Welfare"
-msgstr ""
+msgstr "רווחת הציבור"
 
 #: web/apps/welcome/templates/welcome/scene.html:214
 msgid ""
@@ -6393,11 +6397,11 @@ msgid ""
 "welfare. The non-profit organization can store the whole process information "
 "such as fundraising, project progress, and recipient feedback on NewChain "
 "for donors and the public to check."
-msgstr ""
+msgstr "לטכנולוגייתבלוקצ'יין מאפייני ביזור, שקיפות גבוהה ואי-טמפרביליות, כך שהיא עונה על צרכי הרווחה הציבורית. ארגון ללא מטרת רווח יכול לאחסן את כל המידע על תהליכים כגון גיוס כספים, התקדמות פרויקטים ומשוביםעל גבי ה-NewChainלשקיפות מלאה בפני התורמים ובפני הציבור."
 
 #: web/apps/welcome/templates/welcome/scene.html:223
 msgid "Public welfare audit"
-msgstr ""
+msgstr "ביקורת רווחה ציבורית"
 
 #: web/apps/welcome/templates/welcome/scene.html:224
 msgid ""
@@ -6407,11 +6411,11 @@ msgid ""
 "organizations can track the situation of the rescue recipients through "
 "relevant tools, which helps to enhance the fairness and transparency of "
 "public welfare."
-msgstr ""
+msgstr "פעילויות רווחה ציבוריות מחייבות ביקורת ציבורית לשיפור היעילות ולשמירה על אמון. עםהטכנולוגיות והחוזים של NewChain ו-  NewID, ניתן יהיה לתעד ולעקוב אחר כל תרומה. ארגוני רווחה ציבוריים יוכלו לעקוב אחר מצב מקבלי הסיוע באמצעות כלים ייעודיים, אשר מסייעים להגברת ההוגנות והשקיפות של רווחת הציבור."
 
 #: web/apps/welcome/templates/welcome/scene.html:229
 msgid "Wildlife protection"
-msgstr ""
+msgstr "הגנה על חיות הבר"
 
 #: web/apps/welcome/templates/welcome/scene.html:230
 msgid ""
@@ -6419,11 +6423,11 @@ msgid ""
 "NewChain, so that the location and physical indicators of each specific "
 "animal can be traced, thus providing key information for the research work "
 "such as migration tracking and combating poaching and trafficking."
-msgstr ""
+msgstr "באמצעות שימוש בטכנולוגייתNewIoT, ניתן יהיה לתעד ולשמור נתונים אודות חיות בר נדירותב- NewChain. כך,יהיה אפשרי לעקוב אחר המיקום והמדדים הפיזיים של כל חיה ספציפית, ובכך לספק מידע מפתח עבור מחקר, כגון מעקב אחר נדידת מיניםומאבק בציד ובסחר בעלי חיים."
 
 #: web/apps/welcome/templates/welcome/scene.html:239
 msgid "If you have innovative ideas?"
-msgstr ""
+msgstr "יש לכם רעיונות חדשניים?"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:6
 msgid "SITEMAP"
@@ -6463,29 +6467,29 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:68
 #: web/templates/footer.html:20
 msgid "COMMUNITY"
-msgstr ""
+msgstr "קהילה"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:75
 #: web/templates/footer.html:25
 msgid "Developer"
-msgstr ""
+msgstr "מפתח"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:83
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
-msgstr ""
+msgstr "פיתוח"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:91
 #: web/templates/footer.html:49
 msgid "SERVICE TERMS"
-msgstr ""
+msgstr "תנאי שימוש"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:94
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
 #: web/templates/footer.html:52
 msgid "Terms of Use"
-msgstr ""
+msgstr "תנאי שימוש"
 
 #: web/apps/welcome/templates/welcome/tech.html:6
 msgid "BASIC TECH"
@@ -6501,7 +6505,7 @@ msgid ""
 "main chain and sub-chains, and between sub-chains. The NewChain provides a "
 "third-party developer the option and opportunity to create a new sub-chain "
 "after staking a certain amount of Newton tokens and passing the verification."
-msgstr ""
+msgstr "לניו-צ'יין תהיה רשת ראשית ורשתות משנה. הרשת הראשית תתמוך בניהול חשבונות, ניהול סמלים של ניוטון, ניהול שרשרת משנה, ניהול רשת ועוד."
 
 #: web/apps/welcome/templates/welcome/tech.html:23
 msgid ""
@@ -6511,13 +6515,13 @@ msgid ""
 "exchange protocol. The system built-in smart contract templates provide an "
 "effortless development and deployment of any application on the Newton "
 "NewChain."
-msgstr ""
+msgstr "NewVMתואם לתקןWebasembly, התומך בשפות תכנות כלליות כגון C / C ++, Java, Python, TypeScript ועוד. המערכת מספקת מובנית תבניות חוזה חכם עבור פרוטוקול היפר היפר. מערכת מובנית תבניות חוזה חכם לספק פיתוח ופריסה מאמץ של כל יישום על ניוטוןNewChain."
 
 #: web/apps/welcome/templates/welcome/tech.html:24
 msgid ""
 "NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum "
 "security of all assets within the Newton ecosphere."
-msgstr ""
+msgstr "NewChainמשתמשת טבעת LWE נגד אלגוריתם הצפנה קוונטית כדי להבטיח אבטחה מקסימלית של כל הנכסים בתוך אקוסטרה ניוטון."
 
 #: web/apps/welcome/templates/welcome/tech.html:36
 msgid ""
@@ -6532,7 +6536,7 @@ msgid ""
 "task. Through NewChain a decentralized network domain name service is fully "
 "supported. The ease of use of NewNET will increase through the blockchain "
 "technology."
-msgstr ""
+msgstr "ה- Newnetמורכב ממספר רב של צמתים הפועלים ברשת פתוחה המספקת שירותי אחסון אמינים ותומכים במסד נתונים מלא של SQL ובשפות תכנות כלליות שונות. באמצעות ארכיטקטורה גמישה מבוזרת שלהNewnetהוא מסוגל ישירות לארח את שירותי האינטרנט הנפוץ ביותר של היום. למפתחים יש יכולת לשחרר כל משימת חישוב לצמתים ברשת הפתוחה. הצמתים יכולים לבחור את משימת החישוב המתאימה בהתאם ליכולות שלהם (חומרה), ולאחר מכן לקבל את התמריצים המתאימים לאחר השלמת המשימה. באמצעותNewChainרשת מבוזרת שירות שם תחום נתמך באופן מלא. קלות השימוש שלNewnetיגדל באמצעות הטכנולוגיה blockchain."
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
@@ -6544,7 +6548,7 @@ msgid ""
 "algorithms Newton can create a unique identification and authentic right for "
 "any digital asset. The whole process is repeatable, verifiable and fault-"
 "tolerant."
-msgstr ""
+msgstr "באמצעות היכרויות רדיומטריות, PCA, ראיית מכונה וטכנולוגיית למידה עמוקה ניוטון יכול במהירות לחלץ מאפיינים מרובים של נכס חומר מסוים."
 
 #: web/apps/welcome/templates/welcome/tech.html:62
 #: web/apps/welcome/templates/welcome/technology.html:102
@@ -6552,7 +6556,7 @@ msgid ""
 "NewIoT is a general conception for a category of technologies that includes; "
 "blockchain fog computing, communication protocols between IoT devices and "
 "gateways and NewChain IoT devices developing specifications."
-msgstr ""
+msgstr "NewIoTהיא תפיסה כללית לקטגוריה של טכנולוגיות הכוללות; בלוק מחשוב ערפל, פרוטוקולי תקשורת בין התקני IoT לשערים ומכשיריםNewChain IoT בפיתוח מפרטים."
 
 #: web/apps/welcome/templates/welcome/tech.html:63
 msgid ""
@@ -6561,7 +6565,7 @@ msgid ""
 "Ethernet/fiber, 3G/4G/5G, NB-IoT, IoT communication protocol such as BLE, Wi-"
 "Fi, ZigBee, and more. The IoT device store the collected information into "
 "NewChain through the gateway."
-msgstr ""
+msgstr "לשער יש יכולות מחשוב ואחסון רבות עם צמתים מובנים בבלוקים, תמיכה בשיטות גישה מרובה לאינטרנט, כולל; Ethernet / סיבים, 3G / 4G / 5G, NB-IoT, IoT פרוטוקול תקשורת כגון BLE, Wi-Fi, ZigBee ועוד. התקן ה- IoT מאחסן את המידע שנאסף ב- NewChainדרך השער."
 
 #: web/apps/welcome/templates/welcome/tech.html:72
 #: web/apps/welcome/templates/welcome/technology.html:106
@@ -6574,7 +6578,7 @@ msgid ""
 "from three aspects; data, algorithm model, and execution engine. By using "
 "these three aspects the Newton NewAI closely connects the data suppliers, "
 "algorithm model developers and operating system providers together."
-msgstr ""
+msgstr "NewAI (בינה מלאכותית מבוזרת) מקדם את הפיתוח של AI משלושה היבטים; נתונים, מודל אלגוריתם ומנוע ביצוע. באמצעות שלושת ההיבטים ניוטוןNewAIמקשר את ספקי נתונים, מפתחי אלגוריתם מודל וספקי מערכת ההפעלה יחד."
 
 #: web/apps/welcome/templates/welcome/tech.html:77
 msgid ""
@@ -6582,14 +6586,14 @@ msgid ""
 "suppliers, including multidimensional data formats, data fragmentation, data "
 "compression, data encryption, etc. User private data safety will be "
 "protected by the k-anonymity, ε--differential privacy and other methods."
-msgstr ""
+msgstr "חברתNewAIמספקת תקני נתונים מורשים לגישה למשתמשים ולספקי נתונים, כולל פורמטים רב-ממדיים של נתונים, פיצול נתונים, דחיסת נתונים, הצפנת נתונים וכו'. בטיחות נתונים פרטית של המשתמש תהיה מוגנת על-ידי k-anonymity, ε - הפרדת פרטיות ושיטות אחרות."
 
 #: web/apps/welcome/templates/welcome/tech.html:78
 msgid ""
 "NewAI uses docker container to run artificial intelligence computing "
 "software such as Tensorflow, Caffe. It encourages data suppliers to provide "
 "long-term service through multi-factor weighting profit distribution method."
-msgstr ""
+msgstr "NewAIמשתמש מיכל מעגן להפעלת תוכנות מחשוב בינה מלאכותית כגוןTensorflow, Caffe. זה מעודד ספקי נתונים לספק שירות לטווח ארוך באמצעות רב משקל שיקול שיטת חלוקת הרווח."
 
 #: web/apps/welcome/templates/welcome/technology.html:6
 msgid "TECH"
@@ -6607,7 +6611,7 @@ msgid ""
 "We will develop a series of basic technologies to support the  hyper "
 "exchange protocol,which is the basic commercial protocol cluster supporting "
 "the upper-layer application operations."
-msgstr ""
+msgstr "מסגרת הטכנולוגיה של ניוטון מורכבת משלוש שכבות: שכבת הטכנולוגיה הבסיסית, שכבת הפרוטוקול היפר, ואת שכבת היישום. שכבת הטכנולוגיה הבסיסית כוללתNewChain, Newnet, Atom Hashing, NewIoTו- NewAI; את היפר החליפין שכבת פרוטוקול כולל זהות דיגיטלית אשראי, שרשרת האספקה, שיווק דיגיטלי, עסקאות ותשלומים, תעלות פיזיות מהימנות, שרשרת האספקה ו NNIO, וכו 'שכבת היישום כולל ארנקים, קניונים, לוגיסטיקה, כספים וביטוח. אנו נפתח סדרה של טכנולוגיות בסיסיות שיתמכו בפרוטוקול חילופי היפר, שהוא אשכול פרוטוקול מסחרי בסיסי התומך בפעולות היישום של השכבות העליונות."
 
 #: web/apps/welcome/templates/welcome/technology.html:35
 #: web/apps/welcome/templates/welcome/technology.html:40
@@ -6622,7 +6626,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/technology.html:102
 #: web/apps/welcome/templates/welcome/technology.html:107
 msgid "more"
-msgstr ""
+msgstr "עוד"
 
 #: web/apps/welcome/templates/welcome/technology.html:51
 msgid ""
@@ -6644,27 +6648,27 @@ msgid ""
 "NewChain will have a main chain and sub-chains structure. The main chain "
 "will support account management, Newton token management, sub-chain "
 "management, network governance and more."
-msgstr ""
+msgstr "לניו-צ'יין תהיה רשת ראשית ורשתות משנה. הרשת הראשית תתמוך בניהול חשבונות, ניהול סמלים של ניוטון, ניהול שרשרת משנה, ניהול רשת ועוד."
 
 #: web/apps/welcome/templates/welcome/technology.html:92
 msgid ""
 "NewNET consists of a large number of nodes that run on an open network "
 "providing reliable storage services and supporting a full SQL database and "
 "various general programming languages."
-msgstr ""
+msgstr "ה- Newnetמורכב ממספר רב של צמתים הפועלים ברשת פתוחה המספקת שירותי אחסון אמינים ותומכים במסד נתונים מלא של SQL ובשפות תכנות כלליות שונות. "
 
 #: web/apps/welcome/templates/welcome/technology.html:97
 msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning "
 "technology Newton can quickly extract multiple characteristics of a certain "
 "material asset."
-msgstr ""
+msgstr "באמצעות היכרויות רדיומטריות, PCA, ראיית מכונה וטכנולוגיית למידה עמוקה ניוטון יכול במהירות לחלץ מאפיינים מרובים של נכס חומר מסוים."
 
 #: web/apps/welcome/templates/welcome/technology.html:107
 msgid ""
 "NewAI (Distributed Artificial Intelligence) promotes the development of AI "
 "from three aspects; data, algorithm model, and execution engine."
-msgstr ""
+msgstr "NewAI (בינה מלאכותית מבוזרת) מקדם את הפיתוח של AI משלושה היבטים; נתונים, מודל אלגוריתם ומנוע ביצוע."
 
 #: web/apps/welcome/templates/welcome/term-of-service.html:9
 #: web/apps/welcome/templates/welcome/term-of-service.html:15
@@ -8888,7 +8892,7 @@ msgstr ""
 
 #: web/templates/search/search.html:58 web/templates/search/search.html:76
 msgid "Next"
-msgstr ""
+msgstr "הבא"
 
 #: web/utils/validators.py:52
 msgid "Unsupported file extension."
