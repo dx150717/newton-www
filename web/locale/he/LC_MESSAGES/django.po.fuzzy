@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: web/apps/base/templatetags/utils.py:79
 #, python-format
@@ -82,7 +83,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:76
 #: web/templates/footer.html:28
 msgid "FAQ"
-msgstr "Câu hỏi thường gặp"
+msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
@@ -144,7 +145,7 @@ msgstr ""
 
 #: web/apps/press/models.py:22
 msgid "press"
-msgstr "Báo chí"
+msgstr ""
 
 #: web/apps/sphinxdoc/models.py:20
 msgid "Used in the URL for the project. Must be unique."
@@ -266,7 +267,7 @@ msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:25
 msgid "Email Address"
-msgstr "Địa chỉ mail"
+msgstr ""
 
 #: web/apps/subscription/templates/subscription/include-subscription.html:26
 msgid "SUBSCRIBE"
@@ -321,7 +322,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:20
 #: web/templates/footer.html:38
 msgid "ABOUT"
-msgstr "Thông tin"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/about.html:19
 msgid "Infrastructure of protocol-based economy"
@@ -393,7 +394,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/announcement-detail.html:17
 #: web/apps/welcome/templates/welcome/events-detail.html:9
 msgid "Announcement"
-msgstr "Thông báo"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement-detail.html:55
 #: web/apps/welcome/templates/welcome/announcement.html:81
@@ -409,25 +410,24 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:72
 #: web/templates/footer.html:23
 msgid "Announcements"
-msgstr "Thông báo"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:24
 msgid "All"
-msgstr "Tất cả"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#| msgid "Operation"
 msgid "Operations"
-msgstr "Điều hành"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
 msgid "Weekly"
-msgstr "Hàng tuần"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
 #: web/apps/welcome/templates/welcome/include-community-event.html:10
 msgid "Activity"
-msgstr "Hoạt động"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/business-proposal.html:6
 msgid "Business Proposal"
@@ -436,28 +436,24 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/business-proposal.html:13
 #: web/apps/welcome/templates/welcome/scene.html:23
 msgid "Submit Your Business Proposal"
-msgstr "Gửi đề xuất kinh doanh của bạn"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/business-proposal.html:17
 msgid ""
 "If you have innovative ideas, you can write a business proposal and tell us "
 "by email. Let us create Newton together!"
 msgstr ""
-"Nếu bạn có ý tưởng sáng tạo, bạn có thể viết đề xuất kinh doanh và cho chúng "
-"tôi biết bằng email. Chúng ta hãy cùng nhau tạo ra Newton!"
 
 #: web/apps/welcome/templates/welcome/business-proposal.html:18
 msgid ""
 "The content of the email should include the following: name, contact "
 "information and business proposal."
 msgstr ""
-"Nội dung của email phải bao gồm: tên, thông tin liên hệ và đề xuất kinh "
-"doanh."
 
 #: web/apps/welcome/templates/welcome/business-proposal.html:19
 #: web/apps/welcome/templates/welcome/join-partner.html:18
 msgid "Please send an email to: newton-bd@newtonproject.org"
-msgstr "Vui lòng gửi email đến: newton-bd@newtonproject.org"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community-voice-detail.html:9
 #: web/apps/welcome/templates/welcome/community-voice-detail.html:17
@@ -465,7 +461,7 @@ msgstr "Vui lòng gửi email đến: newton-bd@newtonproject.org"
 #: web/apps/welcome/templates/welcome/community-voice.html:13
 #: web/apps/welcome/templates/welcome/include-community-event.html:139
 msgid "Community Voice"
-msgstr "Cộng đồng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:6
 #: web/apps/welcome/templates/welcome/community.html:13
@@ -477,17 +473,17 @@ msgstr "Cộng đồng"
 #: web/apps/welcome/templates/welcome/wechat.html:13
 #: web/templates/header.html:45 web/templates/header.html:240
 msgid "Community"
-msgstr "Cộng đồng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:24
 #: web/apps/welcome/templates/welcome/community.html:125
 #: web/apps/welcome/templates/welcome/sitemap.html:71
 msgid "Add Community"
-msgstr "Thêm Cộng Đồng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:51
 msgid "Social Network"
-msgstr "Mạng xã hội"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:60
 #: web/apps/welcome/templates/welcome/include-community-region.html:15
@@ -498,11 +494,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:79
 msgid "Email List"
-msgstr "Danh sách email"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/community.html:122
 msgid "Create a Newton community with us"
-msgstr "Tạo cộng đồng Newton với chúng tôi"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/contact.html:6
 #: web/apps/welcome/templates/welcome/contact.html:13
@@ -510,117 +506,72 @@ msgstr "Tạo cộng đồng Newton với chúng tôi"
 #: web/apps/welcome/templates/welcome/sitemap.html:26
 #: web/templates/footer.html:42
 msgid "Contact Us"
-msgstr "Liên hệ với chúng tôi"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/contact.html:21
-#| msgid ""
-#| "Web Site: <a href='https://www.newtonproject.org' target='_blank'>https://"
-#| "www.newtonproject.org"
 msgid ""
 "Website: <a href='https://www.newtonproject.org' target='_blank'>https://www."
 "newtonproject.org"
 msgstr ""
-"Trang web: <a href='https://www.newtonproject.org' target='_blank'>https://"
-"www.newtonproject.org"
 
 #: web/apps/welcome/templates/welcome/contact.html:22
 msgid "Email:"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/contact.html:24
-#| msgid ""
-#| "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-#| "pr@newtonproject.org</a>"
 msgid ""
 "White Paper: <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
 msgstr ""
-"Quan hệ công chúng : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-"pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:25
-#| msgid ""
-#| "Global Community : <a href='mailto:newton-community@newtonproject."
-#| "org'>newton-community@newtonproject.org</a>"
 msgid ""
 "Global Community: <a href='mailto:newton-community@newtonproject.org'>newton-"
 "community@newtonproject.org</a>"
 msgstr ""
-"Cộng đồng toàn cầu : <a href='mailto:newton-community@newtonproject."
-"org'>newton-community@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:26
-#| msgid ""
-#| "Newton Token Exchange : <a href='mailto:newton-ir@newtonproject."
-#| "org'>newton-ir@newtonproject.org</a>"
 msgid ""
 "Newton Token Exchange: <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
 msgstr ""
-"Sàn giao dịch Newton token : <a href='mailto:newton-ir@newtonproject."
-"org'>newton-ir@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:27
-#| msgid ""
-#| "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-#| "pr@newtonproject.org</a>"
 msgid ""
 "Public Relations: <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
 msgstr ""
-"Quan hệ công chúng : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-"pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:28
-#| msgid ""
-#| "NewFund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
-#| "fund@newtonproject.org</a>"
 msgid ""
 "NewFund: <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
 msgstr ""
-"Quỹ dự án Newton : <a href='mailto:newton-fund@newtonproject.org'>newton-"
-"fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:29
-#| msgid ""
-#| "Council : <a href='mailto:newton-council@newtonproject.org'>newton-"
-#| "council@newtonproject.org</a>"
 msgid ""
 "Council: <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
 msgstr ""
-"Hội đồng : <a href='mailto:newton-council@newtonproject.org'>newton-"
-"council@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:30
-#| msgid ""
-#| "NewFund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
-#| "fund@newtonproject.org</a>"
 msgid ""
 "Events: <a href='mailto:newton-event@newtonproject.org'>newton-"
 "event@newtonproject.org</a>"
 msgstr ""
-"Quỹ dự án Newton : <a href='mailto:newton-fund@newtonproject.org'>newton-"
-"fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:31
-#| msgid ""
-#| "Other Contacts : <a href='mailto:contact@newtonproject."
-#| "org'>contact@newtonproject.org</a>"
 msgid ""
 "Other Contacts: <a href='mailto:contact@newtonproject."
 "org'>contact@newtonproject.org</a>"
 msgstr ""
-"Liên hệ : <a href='mailto:contact@newtonproject.org'>contact@newtonproject."
-"org</a>"
 
 #: web/apps/welcome/templates/welcome/copyright.html:6
 #: web/apps/welcome/templates/welcome/copyright.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:93
 #: web/templates/footer.html:51
 msgid "Copyright"
-msgstr "Bản quyền"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/copyright.html:20
 msgid ""
@@ -814,7 +765,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/countdown.html:10
 msgid "Launch Time:2018-09-03 00:00(GMT)"
-msgstr "Ra Mắt : 2018-09-03 00:00(GMT)"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/countdown.html:15
 msgid ""
@@ -824,11 +775,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/countdown.html:15
 msgid "View More"
-msgstr "Xem Chi Tiết"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/countdown.html:18
 msgid "Go to TestNet"
-msgstr "Tham gia TestNet"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/counter.html:6
 msgid "NewChain mainnet will be launched in"
@@ -851,11 +802,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:54
 #: web/templates/header.html:48 web/templates/header.html:243
 msgid "Economy"
-msgstr "Kinh tế"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/economy.html:28
 msgid "Joint Business Organization"
-msgstr "Các Tổ Chức Kinh Doanh Hợp Tác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/events-detail.html:26
 #: web/apps/welcome/templates/welcome/events.html:42
@@ -903,85 +854,49 @@ msgid "NewFund"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:13
-#| msgid "Newton Eco Development Fund"
 msgid "Newton Ecosystem Development Fund"
-msgstr "Quỹ phát triển sinh thái Newton"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:19
-#| msgid "Fund positioning"
 msgid "Fund Positioning"
-msgstr "Định vị quỹ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:24
-#| msgid ""
-#| "NewFund is a blockchain FOF (Fund of Fund) under the Newton Foundation. "
-#| "It aims to encourage more people to participate in the development of "
-#| "Newton's business ecosystem and ensure that all parties share economic "
-#| "growth dividends through innovative incentive mechanisms."
 msgid ""
 "NewFund is a blockchain FOF (Fund of Funds) under the Newton Foundation. It "
 "aims to encourage more people to participate in the development of Newton's "
 "business ecosystem and ensure that all parties share dividends of economic "
 "growth through innovative incentive mechanisms."
 msgstr ""
-"NewFund là một FOF blockchain (Quỹ của Quỹ) theo Quỹ Newton. Nó nhằm mục "
-"đích khuyến khích nhiều người tham gia vào sự phát triển hệ sinh thái kinh "
-"doanh của Newton và đảm bảo rằng tất cả các bên chia sẻ cổ tức tăng trưởng "
-"kinh tế thông qua các cơ chế khuyến khích sáng tạo."
 
 #: web/apps/welcome/templates/welcome/foundation.html:32
-#| msgid "Funding source"
 msgid "Funding Source"
-msgstr "Nguồn tài trợ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:37
-#| msgid ""
-#| "NewFund comes mainly from the Newton Foundation and Newton private equity "
-#| "investors. The fund is managed by a professional GP. By becoming a "
-#| "NewFund LP, investors can  share the growth of the Newton economy and the "
-#| "blockchain industry."
 msgid ""
 "NewFund comes primarily from the Newton Foundation and Newton's private "
 "equity investors. The fund is managed by a professional GP. By becoming a "
 "NewFund LP, investors can share in the growth of the Newton economy and the "
 "blockchain industry."
 msgstr ""
-"NewFund chủ yếu đến từ Quỹ Newton và các nhà đầu tư tư nhân Newton. Quỹ được "
-"quản lý bởi một chuyên gia GP. Bằng cách trở thành một NewFund LP, các nhà "
-"đầu tư có thể chia sẻ sự phát triển của nền kinh tế Newton và ngành công "
-"nghiệp blockchain."
 
 #: web/apps/welcome/templates/welcome/foundation.html:45
-#| msgid "Fund management"
 msgid "Fund Management"
-msgstr "Quản lý quỹ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:50
-#| msgid ""
-#| "NewFund will be managed it in the form of joint governance and shared "
-#| "enjoyment, conducting global cooperation business, and establish a "
-#| "special token fund with top talents and institutions in the industry."
 msgid ""
 "NewFund will be managed in the form of joint governance and shared "
 "enjoyment, conducting global cooperation and establishing a special token "
 "fund with top talent and institutions from the industry."
 msgstr ""
-"NewFund sẽ quản lý nó dưới hình thức quản trị chung và hưởng thụ chung, tiến "
-"hành kinh doanh hợp tác toàn cầu, và thiết lập một quỹ đặc biệt với các tài "
-"năng và tổ chức hàng đầu trong ngành."
 
 #: web/apps/welcome/templates/welcome/foundation.html:58
-#| msgid "Direction of investment"
 msgid "Direction of Investment"
-msgstr "Hướng đầu tư"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:63
-#| msgid ""
-#| "NewFund's main mission is to develop Newton's economy. It will use funds, "
-#| "technology, community and other resources to support the entire ecosystem "
-#| "of the commercial infrastructure, general services, application layers "
-#| "and peripheral services. At the same time, it will also set up "
-#| "accelerators to help ecological projects."
 msgid ""
 "NewFund's mission is to develop Newton's economy. It will use funds, "
 "technology, community and other resources to support the entire ecosystem of "
@@ -989,15 +904,10 @@ msgid ""
 "peripheral services. At the same time, it will also set up accelerators to "
 "help ecosystem projects."
 msgstr ""
-"Nhiệm vụ chính của NewFund là phát triển nền kinh tế của Newton. Nó sẽ sử "
-"dụng quỹ, công nghệ, cộng đồng và các nguồn lực khác để hỗ trợ toàn bộ hệ "
-"sinh thái của cơ sở hạ tầng thương mại, dịch vụ tổng hợp, tầng ứng dụng và "
-"dịch vụ ngoại vi. Đồng thời, nó cũng sẽ thiết lập các máy gia tốc để giúp "
-"các dự án sinh thái."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:9
 msgid "ADVISORS"
-msgstr "Người tư vấn"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:21
 #: web/apps/welcome/templates/welcome/include-advisor.html:25
@@ -1015,7 +925,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:109
 #: web/apps/welcome/templates/welcome/include-investor.html:116
 msgid "Co-founder of Elastos"
-msgstr "Đồng sáng lập Elastos"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:23
 #: web/apps/welcome/templates/welcome/include-investor.html:110
@@ -1031,28 +941,18 @@ msgid ""
 "talents based on Internet (big data)”. He also served as the Chinese partner "
 "of the Oracle Education Foundation of the United States."
 msgstr ""
-"Han Feng là một học giả và nhà nghiên cứu thỉnh giảng tại Đại học Columbia "
-"và cựu cố vấn Blockchain tại Viện Trung tâm Huawei. Ông có bằng tiến sĩ về "
-"vật lý lượng tử từ Đại học Thanh Hoa và là một gia sư tại trường đại học "
-"Icenter. Ông cũng là biên tập viên của loạt sách Wanxiang Blockchain Labs. "
-"Han dạy blockchain trong khóa học tài chính Internet tại Đại học Thanh Hoa "
-"và có một thành viên lâu năm của nền tảng Bitcoin. Trước đó, ông đã lãnh đạo "
-"dự án nghiên cứu quan trọng của Kế hoạch 5 năm lần thứ 19 của Trung Quốc "
-"trong 'Đánh giá và lựa chọn tài năng sáng tạo của Đại học Thanh Hoa dựa trên "
-"Internet (dữ liệu lớn)'. Ông cũng từng là đối tác tại Trung Quốc của Quỹ "
-"Giáo dục Oracle Hoa Kỳ."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:30
 #: web/apps/welcome/templates/welcome/include-investor.html:117
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:271
 msgid "Visiting Scholar & Research Associate at Columbia University"
-msgstr "Học giả Thăm Vấn & Nghiên cứu tại Đại học Columbia"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:31
 #: web/apps/welcome/templates/welcome/include-investor.html:118
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:272
 msgid "Advisor at Huawei Central Institute"
-msgstr "Nhà tư vấn của Học viên trung tâm của Huawei"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:63
 #: web/apps/welcome/templates/welcome/include-advisor.html:69
@@ -1068,12 +968,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-investor.html:134
 #: web/apps/welcome/templates/welcome/include-investor.html:143
 msgid "Former CTO of Sina (NASDAQ: SINA)"
-msgstr "Trước kia là CTO của Sina (NASDAQ:SINA)"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:65
 #: web/apps/welcome/templates/welcome/include-investor.html:135
 msgid "Partner at Draper Fisher Jurvetson Venture Capital"
-msgstr "Đối tác của Quỹ đầu tư liên doanh DFJ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:66
 #: web/apps/welcome/templates/welcome/include-investor.html:136
@@ -1087,20 +987,11 @@ msgid ""
 "serving as the company's CEO from 2005 to 2013. In April 2013, he left Sina "
 "and worked as a partner of Draper Fisher Jurvetson Venture Capital."
 msgstr ""
-"Li Songbo là một người nổi tiếng trên internet ở Trung Quốc và là quản lý "
-"cấp cao tại Sina. Năm 1996, ông gia nhập Công ty Sitonglifang và tham gia "
-"vào việc thành lập trang web thương mại đầu tiên của Trung Quốc, Lifang "
-"Online. Năm 1998, ông phục vụ như bộ trưởng bộ phận hệ thống mạng của Bộ "
-"trưởng Sina và từ 2000 đến 2003 từng là giám đốc bộ phận công nghệ mạng của "
-"Sina (Bắc Mỹ). Năm 2004, ông trở thành Phó Chủ tịch Tập đoàn Sina. trước khi "
-"phục vụ với tư cách là CEO của công ty từ năm 2005 đến năm 2013. Vào tháng 4 "
-"năm 2013, ông rời Sina và làm việc với tư cách là đối tác của Draper Fisher "
-"Jurvetson Venture Capital."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:74
 #: web/apps/welcome/templates/welcome/include-investor.html:144
 msgid "Partner of DFJ Venture Capital"
-msgstr "Đối tác của Quỹ đầu tư liên doanh DFJ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:92
 #: web/apps/welcome/templates/welcome/include-advisor.html:96
@@ -1127,28 +1018,18 @@ msgid ""
 "Propaganda Department of Ningxia Autonomous Region, and President of Lifan "
 "Industry Group."
 msgstr ""
-"Hu Dinghe có bằng Tiến sĩ Kinh tế tại Trường Tài chính PBC và là một gia sư "
-"tiến sĩ tại Đại học Thanh Hoa. Ông đã nhận được Huân chương Lao động 'Ngày 1 "
-"tháng 5' và Hội đồng Nhà nước, và là thành viên của Ủy ban Quốc gia CPPCC, "
-"cũng như là Giám đốc Liên minh Công nghiệp và Thương mại Quốc gia Trung "
-"Quốc, Phó Chủ tịch Liên minh Công nghiệp và Thương mại Quốc gia Trùng Khánh. "
-"Ông cũng từng là Giám đốc của Tập đoàn Hạt Chongqing, Giám đốc Đại học Tây "
-"Nam, Cựu Trợ lý Chủ tịch Ngân hàng CITIC Trung Quốc và Chủ tịch Chi nhánh "
-"Trùng Khánh, nguyên Thứ trưởng Bộ Tuyên truyền Khu tự trị Ninh Hạ, và Chủ "
-"tịch Tập đoàn Công nghiệp Lifan."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:99
 #: web/apps/welcome/templates/welcome/include-investor.html:218
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:286
-#| msgid "Newton Eco Development Fund"
 msgid "Newton Eco Development Fund Manager"
-msgstr "Quỹ phát triển sinh thái Newton"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:99
 #: web/apps/welcome/templates/welcome/include-investor.html:218
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:286
 msgid "Previous President of Chongqing Lifan"
-msgstr "Cựu chủ tịch của Chongqing Lifan"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:115
 #: web/apps/welcome/templates/welcome/include-advisor.html:119
@@ -1173,25 +1054,18 @@ msgid ""
 "Corporation, MIT, and the Department of Industrial Engineering at Tsinghua "
 "University."
 msgstr ""
-"Gu Xueyong là Phó Giáo sư tại Đại học Thanh Hoa và có bằng Tiến sĩ về Hệ "
-"thống Kỹ thuật của Viện Công nghệ Massachusetts và bằng Thạc sĩ Cơ khí của "
-"Đại học Minnesota. Ông là Giám đốc Sở giao dịch quốc tế của iCenter tại Đại "
-"học Thanh Hoa. Trước đây, ông đã từng làm việc tại các giải pháp toàn vẹn "
-"của St Paul, New Resources, Primix Solutions, Trung tâm nghiên cứu của "
-"United Technologies Corporation, MIT và Khoa Kỹ thuật công nghiệp tại Đại "
-"học Thanh Hoa."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:123
 #: web/apps/welcome/templates/welcome/include-investor.html:170
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:300
 msgid "Professor at Tsinghua University"
-msgstr "Giáo sư của trường đại học Tsinghua"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:124
 #: web/apps/welcome/templates/welcome/include-investor.html:171
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:301
 msgid "Director of International Relations at iCenter"
-msgstr "Gám đốc quan hệ quốc tế của Icenter"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:138
 #: web/apps/welcome/templates/welcome/include-advisor.html:143
@@ -1211,10 +1085,6 @@ msgid ""
 "World’s Best Brands Award and Co-founding Director of Blockchainzoo. In 2018 "
 "has was named as one of CCTV's “Top Influencers”."
 msgstr ""
-"Lee là Chủ tịch sáng lập của Tổ chức Blockchain Thế giới, người chiến thắng "
-"Giải thưởng Thương hiệu Tốt nhất Thế giới năm 2017 và Giám đốc sáng lập "
-"Blockchainzoo. Năm 2018 đã được đặt tên là một trong những 'Top Influencers' "
-"của CCTV."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:140
 #: web/apps/welcome/templates/welcome/include-investor.html:236
@@ -1226,19 +1096,12 @@ msgid ""
 "Wall Street legend Jim Rogers. After initiating the world’s first Bitcoin "
 "World Tour, the media named him as a Bitcoin Ambassador."
 msgstr ""
-"Lee đã tham dự Hội đồng Nhà nước Trung Quốc với tư cách là đại diện đặc biệt "
-"của các Doanh nhân trẻ Trung Quốc và đã có các cuộc đối thoại trực tiếp với "
-"các nhà lãnh đạo Hội đồng Nhà nước tại Đại sảnh Nhân dân ở Bắc Kinh. Anh là "
-"diễn giả, nhà đầu tư, du khách, nhà triết học và nhà văn duy nhất để chia sẻ "
-"sân khấu với huyền thoại Jim Rogers của Phố Wall. Sau khi bắt đầu Thế giới "
-"Bitcoin đầu tiên của thế giới, các phương tiện truyền thông đặt tên ông là "
-"một Đại sứ Bitcoin."
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:146
 #: web/apps/welcome/templates/welcome/include-investor.html:242
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:315
 msgid "Bitcoin Ambassador"
-msgstr "Đại sứ bitcoin"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:163
 #: web/apps/welcome/templates/welcome/include-advisor.html:167
@@ -1257,120 +1120,110 @@ msgid ""
 "published several books including 'The Elements: A Visual Exploration of "
 "Every Known Atom in the Universe.'"
 msgstr ""
-"Theodore Grey là người đồng sáng lập Wolfram Research, tác giả của "
-"Mathematica Notebook System, người sáng lập Touch Press và người chiến thắng "
-"giải thưởng BAFTA (Học viện điện ảnh và truyền hình Mỹ). Gray cũng từng là "
-"chuyên mục trong tạp chí Popular Science và là khách mời trên kênh "
-"Discovery. Ông đã xuất bản một số cuốn sách bao gồm cả 'Các yếu tố: Một khám "
-"phá trực quan của mỗi loại Nguyên Tử đã biết trong vũ trụ.'"
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:171
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:329
 msgid "Co-Founder of Wolfram Research"
-msgstr "Đồng sáng lập Nghiên cứu Wolfram"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:172
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:330
 msgid "Creator of the Mathematica Notebook System"
-msgstr "Tác giả của hệ thống máy tính xách tay Mathematica"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:173
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:331
 msgid "Founder of Touch Press"
-msgstr "Người sáng lập Touch Press"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-advisor.html:174
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:332
 msgid "BAFTA Award winning author"
-msgstr "Tác giả đoạt giải BAFTA"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:8
 msgid "Token Metrics"
-msgstr "Số liệu mã thông báo"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:10
 msgid "Total Supply:"
-msgstr "Tổng cung:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:16
 msgid "Actor"
-msgstr "Thành phần"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:17
 msgid "Proportion"
-msgstr "Tỷ lệ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:18
 msgid "Amount"
-msgstr "Số lượng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:19
 msgid "Description"
-msgstr "Mô tả"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:22
 msgid "Founding Team"
-msgstr "Nhóm Sáng Lập"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:24
 msgid "10 billions"
-msgstr "10 tỷ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:27
 msgid "Incentives for founding team;"
-msgstr "Ưu đãi cho nhóm sáng lập;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:28
 msgid ""
 "The first year is the lock period. From the second year, every month 1/24 of "
 "the total amount will be unlocked."
 msgstr ""
-"Năm đầu tiên là thời gian khóa. Từ năm thứ hai, mỗi tháng 1/24 tổng số tiền "
-"sẽ được mở khóa."
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:34
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:8
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:9
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:9
 msgid "Token Exchange"
-msgstr "Token Exchange"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:39
 #: web/apps/welcome/templates/welcome/include-allocation.html:53
 msgid "15 billions"
-msgstr "15 tỷ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:42
 msgid "For foundation's initial operation."
-msgstr "Dành cho hoạt động ban đầu của Tổ Chức."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:48
 msgid "Foundation"
-msgstr "Tổ chức"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:56
 msgid "For foundation's later operation;"
-msgstr "Dành cho hoạt động về sau của Tổ Chức."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:57
 msgid ""
 "1/5 of the total amount is immediately unlocked, the rest will be unlocked "
 "1/36 every month."
 msgstr ""
-"1/5 tổng số tiền được mở khóa ngay lập tức, số tiền còn lại sẽ được mở khóa "
-"1/36 mỗi tháng."
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:68
 msgid "60 billions"
-msgstr "60 tỷ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:71
 msgid "Incentives for community;"
-msgstr "Ưu đãi cho cộng đồng;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-allocation.html:72
 msgid "Unlock in later fifty years."
-msgstr "Mở khóa sau năm mươi năm."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:36
 #: web/apps/welcome/templates/welcome/include-community-event.html:68
@@ -1384,7 +1237,7 @@ msgstr "Mở khóa sau năm mươi năm."
 #: web/apps/welcome/templates/welcome/include-protocol.html:72
 #: web/apps/welcome/templates/welcome/include-technology.html:66
 msgid "MORE"
-msgstr "Khác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:75
 #: web/apps/welcome/templates/welcome/include-dynamic.html:10
@@ -1392,7 +1245,7 @@ msgstr "Khác"
 #: web/apps/welcome/templates/welcome/press.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:74
 msgid "Press"
-msgstr "Báo chí"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-event.html:107
 #: web/apps/welcome/templates/welcome/sitemap.html:73
@@ -1632,7 +1485,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:16
 msgid "Round"
-msgstr "Vòng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:17
 msgid "NEW"
@@ -1640,7 +1493,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:18
 msgid "Ratio"
-msgstr "Tỷ Lệ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:19
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:29
@@ -1656,29 +1509,29 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:20
 msgid "Lock Time"
-msgstr "Thời gian khóa"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:21
 msgid "Duration"
-msgstr "Khoảng thời gian"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:22
 msgid "Status"
-msgstr "Trạng thái"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:26
 msgid "7.5&nbsp;billions"
-msgstr "7.5&nbsp;tỷ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:33
 msgid "1 Year"
-msgstr "1 năm"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:34
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:32
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:30
 msgid "March 1,2018 - April 30,2018"
-msgstr "March 1,2018 - April 30,2018"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:35
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:48
@@ -1690,26 +1543,26 @@ msgstr "March 1,2018 - April 30,2018"
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:55
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:85
 msgid "Finished"
-msgstr "Đã xong"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:39
 msgid "6&nbsp;billions"
-msgstr "6&nbsp;tỷ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:46
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:62
 msgid "No Lock"
-msgstr "Không khóa"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:57
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:54
 msgid "July 1,2018 - July 31,2018"
-msgstr "July 1,2018 - July 31,2018"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:52
 msgid "1.5&nbsp;billions"
-msgstr "1.5&nbsp;tỷ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:59
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:78
@@ -1742,12 +1595,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:10
 #: web/apps/welcome/templates/welcome/include-feature.html:10
 msgid "Newton's Community Economy"
-msgstr "Cộng Đồng Kinh Tế Của Newton"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:24
 #: web/apps/welcome/templates/welcome/include-feature.html:22
 msgid "Users Own Their Own Data"
-msgstr "Người dùng sở hữu dữ liệu riêng của họ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:26
 msgid ""
@@ -1755,13 +1608,10 @@ msgid ""
 "manage their personal credit. Users share profits produced by their data in "
 "a pre-agreed manner."
 msgstr ""
-"Người dùng bảo mật và kiểm soát dữ liệu cá nhân của họ thông qua mật mã và "
-"có thể quản lý tín dụng cá nhân của họ. Người dùng chia sẻ lợi nhuận được "
-"tạo ra bởi dữ liệu của họ theo cách được thỏa thuận trước."
 
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:38
 msgid "More Effective Incentive Mechanisms"
-msgstr "Các cơ chế khuyến khích hiệu quả hơn"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:39
 msgid ""
@@ -1770,14 +1620,10 @@ msgid ""
 "like service providers, consumers and others connected by the value-based "
 "internet."
 msgstr ""
-"Thay thế trung gian kinh doanh bằng giao thức công nghệ làm giảm chi phí "
-"giao dịch và thưởng cho bất kỳ ai đóng góp vào giao dịch, như nhà cung cấp "
-"dịch vụ, người tiêu dùng và những người khác được kết nối bằng giá trị dựa "
-"trên internet."
 
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:50
 msgid "New organization structures and cooperation models"
-msgstr "Cấu trúc tổ chức mới và mô hình hợp tác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:51
 msgid ""
@@ -1786,10 +1632,6 @@ msgid ""
 "organizations. Based on open, fair, and rational rules every contributor "
 "will benefit from, and become part of this economy."
 msgstr ""
-"Nền kinh tế cộng đồng được quản lý bởi các tổ chức phi lợi nhuận sẽ thay thế "
-"sự độc quyền của các nền tảng trung gian được quản lý bởi các tổ chức truyền "
-"thống vì lợi nhuận. Dựa trên các quy tắc mở, công bằng và hợp lý mà mọi "
-"người đóng góp sẽ hưởng lợi từ, và trở thành một phần của nền kinh tế này."
 
 #: web/apps/welcome/templates/welcome/include-feature-mobile.html:59
 #: web/apps/welcome/templates/welcome/include-feature.html:60
@@ -1799,64 +1641,37 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/whitepaper.html:18
 #: web/apps/welcome/templates/welcome/whitepaper.html:90
 msgid "White Paper"
-msgstr "Bản Cáo Bạch"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature.html:24
-#| msgid ""
-#| "Users secure and control their personal data through cryptography, and "
-#| "can manage their personal credit. Users share profits produced by their "
-#| "data in a pre-agreed manner."
 msgid ""
 "Users secure and control their personal data through cryptography, and "
 "manage their personal credit and share profits produced by their data in a "
 "pre-agreed manner."
 msgstr ""
-"Người dùng bảo mật và kiểm soát dữ liệu cá nhân của họ thông qua mật mã và "
-"có thể quản lý tín dụng cá nhân của họ. Người dùng chia sẻ lợi nhuận được "
-"tạo ra bởi dữ liệu của họ theo cách được thỏa thuận trước."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:36
-#| msgid "More Effective Incentive Mechanisms"
 msgid "Better Incentive Mechanisms"
-msgstr "Các cơ chế khuyến khích hiệu quả hơn"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature.html:37
-#| msgid ""
-#| "Replacing business intermediaries with technology protocols reduces "
-#| "transaction costs and rewards anyone who contributes to the transaction, "
-#| "like service providers, consumers and others connected by the value-based "
-#| "internet."
 msgid ""
 "Replacing middlemen with technology reduces transaction costs and rewards "
 "anyone who contributes to the transaction, whether they're service "
 "providers, consumers or others connected by the value-based internet."
 msgstr ""
-"Thay thế trung gian kinh doanh bằng giao thức công nghệ làm giảm chi phí "
-"giao dịch và thưởng cho bất kỳ ai đóng góp vào giao dịch, như nhà cung cấp "
-"dịch vụ, người tiêu dùng và những người khác được kết nối bằng giá trị dựa "
-"trên internet."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:48
-#| msgid "New organization structures and cooperation models"
 msgid "New Organization and Cooperation Models"
-msgstr "Cấu trúc tổ chức mới và mô hình hợp tác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-feature.html:49
-#| msgid ""
-#| "The community economy managed by non-profit foundations will replace the "
-#| "monopoly of intermediary platforms managed by traditional for-profit "
-#| "organizations. Based on open, fair, and rational rules every contributor "
-#| "will benefit from, and become part of this economy."
 msgid ""
 "The community economy managed by non-profit foundations will replace the "
 "monopolies of middlemen managed by traditional for-profit organizations. "
 "Based on open, fair, and rational rules, every contributor will benefit "
 "from, and become part of this economy."
 msgstr ""
-"Nền kinh tế cộng đồng được quản lý bởi các tổ chức phi lợi nhuận sẽ thay thế "
-"sự độc quyền của các nền tảng trung gian được quản lý bởi các tổ chức truyền "
-"thống vì lợi nhuận. Dựa trên các quy tắc mở, công bằng và hợp lý mà mọi "
-"người đóng góp sẽ hưởng lợi từ, và trở thành một phần của nền kinh tế này."
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:7
 msgid "NewChain mainnet is now launched"
@@ -1893,32 +1708,29 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-index-community.html:9
 msgid "GLOBAL COMMUNITY"
-msgstr "CỘNG ĐỒNG TOÀN CẦU"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-index-community.html:44
-#| msgid "COMMUNITY"
 msgid "MORE COMMUNITY"
-msgstr "Cộng đồng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:9
 #: web/apps/welcome/templates/welcome/include-industry.html:9
-#| msgid "Industry Application"
 msgid "Industry Applications"
-msgstr "Ứng dụng công nghiệp"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:17
 #: web/apps/welcome/templates/welcome/include-industry.html:16
 #: web/apps/welcome/templates/welcome/scene.html:31
 msgid "Chain-commerce Retail"
-msgstr "Chuỗi Thương mại bán lẻ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:21
 #: web/apps/welcome/templates/welcome/include-industry.html:20
 #: web/apps/welcome/templates/welcome/newpay.html:139
 #: web/apps/welcome/templates/welcome/scene.html:63
-#| msgid "Payment"
 msgid "Payments"
-msgstr "Thanh toán"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:25
 #: web/apps/welcome/templates/welcome/include-industry.html:24
@@ -1926,12 +1738,12 @@ msgstr "Thanh toán"
 #: web/apps/welcome/templates/welcome/scene.html:92
 #: web/apps/welcome/templates/welcome/technology.html:39
 msgid "Supply Chain"
-msgstr "Chuỗi Cung Ứng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:29
 #: web/apps/welcome/templates/welcome/include-industry.html:28
 msgid "Self-finance"
-msgstr "Tự quản lý Tài Chính"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:33
 #: web/apps/welcome/templates/welcome/include-industry.html:32
@@ -1942,13 +1754,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-industry.html:36
 #: web/apps/welcome/templates/welcome/scene.html:182
 msgid "Agriculture"
-msgstr "Nông nghiệp"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:55
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:52
-#| msgid "10,561 members from 89 countries have participated"
 msgid "10,561 participants from 89 countries"
-msgstr "10,561 thành viên đến từ 89 quốc gia đã tham dự"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:70
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:67
@@ -1957,7 +1768,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:9
 msgid "CORNERSTONE INVESTORS"
-msgstr "CÁC NHÀ ĐẦU TƯ ĐẶT NỀN TẢNG"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:22
 #: web/apps/welcome/templates/welcome/include-investor.html:26
@@ -1974,14 +1785,11 @@ msgid ""
 "President at Zhuoyue. Liu has an MBA from Tongji University and EMBA from "
 "Cheung Kong."
 msgstr ""
-"Đồng sáng lập Lightinthebox (NYSE:LITB). Trước đây là Chủ tịch Zhejiang "
-"Orient Hayner, Đối tác tại Fusion Capital, CTO của Dangdang và Phó Chủ tịch "
-"tại Zhuoyue. Liu có bằng MBA của Đại học Tongji và EMBA từ Cheung Kong."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:29
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:346
 msgid "Co-Founder of Lightinthebox (NYSE:LITB)"
-msgstr "Đồng sáng lập của Lightinthebox"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:43
 #: web/apps/welcome/templates/welcome/include-investor.html:47
@@ -1998,15 +1806,11 @@ msgid ""
 "Africa, with a new sales model combining office sales with network sales, "
 "leaving out  high admission fees and retail links."
 msgstr ""
-"Người sáng lập của Kela và salala.com. Kela là thương hiệu trang sức chuyên "
-"nghiệp đầu tiên tham gia vào thương mại điện tử ở Trung Quốc và mua kim "
-"cương trực tiếp từ Nam Phi, với mô hình bán hàng mới kết hợp doanh số bán "
-"hàng văn phòng với mạng lưới bán hàng."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:50
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:359
 msgid "Founder of kela.cn"
-msgstr "Nhà sáng lập của Kela.cn"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:65
 #: web/apps/welcome/templates/welcome/include-investor.html:69
@@ -2029,27 +1833,14 @@ msgid ""
 "the first stop of foreign designer brands landing in China. Xu Yirong's "
 "mission is to make the Chinese best aesthetic designers in the world."
 msgstr ""
-"Xu Yirong tốt nghiệp Đại học Bắc Kinh và Đại học Stanford, trước khi gia "
-"nhập Viện Morton nổi tiếng thế giới của IBM tại Thung lũng Silicon. Ông đã "
-"xuất bản nhiều bài báo, và trao 5 bằng sáng chế với các nhà khoa học máy "
-"tính khác. Xu bắt đầu công cụ đọc tin tức cá nhân đầu tiên của Trung Quốc "
-"Zhuaxia, thu hút một nhóm người dùng cao cấp trung thành, trước khi tiếp tục "
-"thiết lập meilishuo.com, giới thiệu tương tác trực tuyến xã hội với ngành "
-"thời trang, trở thành mạng xã hội thời trang nhanh nổi tiếng nhất của Trung "
-"Quốc và nền tảng thương mại, ảnh hưởng đến ý thức thời trang của phụ nữ trẻ "
-"Trung Quốc, với hơn 40 triệu người dùng hoạt động mỗi và gần 6 tỷ RMB doanh "
-"thu hàng năm. Năm 2014, ông thành lập cửa hàng mua sắm toàn cầu thời trang "
-"HIGO của Trung Quốc, đây là điểm dừng đầu tiên của các thương hiệu thiết kế "
-"nước ngoài đổ bộ vào Trung Quốc. Nhiệm vụ của Xu Yirong là làm cho các nhà "
-"thiết kế thẩm mỹ tốt nhất Trung Quốc trên thế giới."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:73
 msgid "Founder of meilishuo.com"
-msgstr "Nhà sáng lập của meillshuo.com"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:74
 msgid "CEO of HIGO"
-msgstr "CEO của HIGO"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:185
 #: web/apps/welcome/templates/welcome/include-investor.html:190
@@ -2064,19 +1855,9 @@ msgid ""
 "Founder of mbaobao.com and Founding partner of Haifeng Zhicheng Investment "
 "Management. Previously President of Jiaxing E-commerce Association."
 msgstr ""
-"Người sáng lập mbaobao.com và là đối tác sáng lập của Haifeng Zhicheng "
-"Investment Management. Trước đây là Chủ tịch Hiệp hội Thương mại điện tử Gia "
-"Hưng."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:187
-#| msgid ""
-#| "In 2007, during the booming stage of e-commerce, Ye established mbaobao."
-#| "com, becoming China's most famous online bag and suitcase brand. In 2013, "
-#| "he established Haifeng Zhicheng Investment Management Co and over the "
-#| "past five years accumulated 5 super capital Angel venture funds and "
-#| "invested in nearly 70 projects. These have refinancing rate as high as "
-#| "58%%, and have hatched a number of high-quality enterprises with high "
-#| "growth rates."
+#, python-format
 msgid ""
 "In 2007, during the booming stage of e-commerce, Ye established mbaobao.com, "
 "becoming China's most famous online bag and suitcase brand. In 2013, he "
@@ -2085,17 +1866,11 @@ msgid ""
 "70 projects. These have refinancing rate as high as 58%%, and have hatched a "
 "number of high-quality enterprises with high growth rates."
 msgstr ""
-"Năm 2007, trong giai đoạn bùng nổ của thương mại điện tử, Ye đã thành lập "
-"mbaobao.com, trở thành thương hiệu túi xách và vali trực tuyến nổi tiếng "
-"nhất của Trung Quốc. Trong năm 2013, ông thành lập Công ty Quản lý Đầu tư "
-"Haifeng Zhicheng và trong 5 năm qua đã tích lũy được 5 quỹ đầu tư mạo hiểm "
-"Angel và đầu tư vào gần 70 dự án. Đây là tỷ lệ tái cấp vốn cao tới 58% và đã "
-"nở một số doanh nghiệp chất lượng cao với tốc độ tăng trưởng cao."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:193
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:372
 msgid "Founder of mbaobao.com"
-msgstr "Sáng lập của mbaombao.com"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:258
 #: web/apps/welcome/templates/welcome/include-investor.html:262
@@ -2118,26 +1893,16 @@ msgid ""
 "Internet Top 30” and Wang also won Fortune Magazine's “2016 China Business "
 "Pioneer Top 50.”"
 msgstr ""
-"Người sáng lập Linekong Interactive Group và Huoxing24.com, Feng Wang tốt "
-"nghiệp MBA tại Đại học Bắc Kinh và có 20 năm kinh nghiệm trong ngành "
-"internet. Wang đã được gọi là 'người chơi trò chơi tinh vi nhất'. Sau khi ra "
-"mắt Linekong vào năm 2014, Wang đề xuất chiến lược phát triển “bộ ba phim, "
-"truyện tranh và trò chơi” và tập trung vào Pan Entertainment. Doanh nghiệp "
-"này bao gồm: Linekong Game, Linekong Studio và Linekong Technology - ba "
-"doanh nghiệp phân phối trò chơi, giải trí video và điện tử tiêu dùng. "
-"Linekong Interactive chiến thắng “Forbes 2015 China Mobile Internet Top 30” "
-"và Wang cũng giành được “Tạp chí Pioneer Top 50 của Trung Quốc năm 2016” của "
-"Tạp chí Fortune."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:266
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:386
 msgid "Founder of linekong.com"
-msgstr "Sáng lập Linekong.com"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:267
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:387
 msgid "Founder of huoxing24.com"
-msgstr "Sáng lập huoxing24.com"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:283
 #: web/apps/welcome/templates/welcome/include-investor.html:289
@@ -2149,11 +1914,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:284
 msgid "Founder and CEO at DCC"
-msgstr "Nhà sáng lập và CEO của Okbuy"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:285
 msgid "Founder of TN Tech"
-msgstr "Nhà sáng lập của Kela.cn"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:286
 msgid ""
@@ -2164,17 +1929,11 @@ msgid ""
 "technology enterprise. While there, Zhu led development of online credit "
 "systems for over 10 trust funds with billions of dollars in loans each year."
 msgstr ""
-"Stewie Zhu tốt nghiệp Cử nhân Tài chính và Ngân hàng của Trường Kinh tế Luân "
-"Đôn, bằng Thạc sĩ Kinh tế Tài chính của Đại học Oxford và bằng Thạc sĩ về "
-"Thống kê từ Yale. Trước khi thành lập DCC, Zhu là CEO tại TN Tech, doanh "
-"nghiệp công nghệ tài chính hàng đầu của SaaS. Trong khi đó, Zhu đã dẫn đầu "
-"phát triển hệ thống tín dụng trực tuyến cho hơn 10 quỹ tín thác với hàng tỷ "
-"đô la cho các khoản vay mỗi năm."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:293
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:402
 msgid "Founder and CEO of Distributed Credit Chain"
-msgstr "Sáng lập và CEO của Distributed Credit Chain"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:313
 #: web/apps/welcome/templates/welcome/include-investor.html:317
@@ -2185,15 +1944,6 @@ msgid "Shi Junchao"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:314
-#| msgid ""
-#| "Shi Junchao is a senior jade and art appraiser, an invited expert on "
-#| "CCTV-2's YiChuiDingYin, the editorial committee member of Chinese jade "
-#| "annals, deputy secretary of Xinjiang Hetian Jade Industry Association, "
-#| "and General Appraiser from panjiayuan.com. Shi has devoted himself in the "
-#| "forefront market for decades and is famous for his profound theoretical "
-#| "basis and experience in market practices. His mission is to deliver "
-#| "different cultures and engage in teaching and appraisal of jewellery and "
-#| "jade."
 msgid ""
 "Shi Junchao is a senior jade and art appraiser, an invited expert on "
 "CCTV-2's YiChuiDingYin, the editorial committee member of Chinese jade "
@@ -2203,26 +1953,16 @@ msgid ""
 "basis and experience in market practices. His mission is to deliver "
 "different cultures and engage in teaching and appraisal of jewelry and jade."
 msgstr ""
-"Shi Junchao là một chuyên gia đánh giá nghệ thuật và ngọc bích cao cấp, một "
-"chuyên gia được mời về YiChuiDingYin của CCTV-2, thành viên ban biên tập của "
-"ngọc bích Trung Quốc, phó thư ký Hiệp hội Công nghiệp Jade Hetian Tân Cương "
-"và Tổng Giám đốc từ panjiayuan.com. Shi đã cống hiến mình trong thị trường "
-"hàng đầu trong nhiều thập kỷ và nổi tiếng với cơ sở lý thuyết sâu sắc và "
-"kinh nghiệm của mình trong thực tiễn thị trường. Nhiệm vụ của ông là cung "
-"cấp các nền văn hóa khác nhau và tham gia vào việc giảng dạy và thẩm định đồ "
-"trang sức và ngọc bích."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:321
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:417
 msgid "Senior gem jade appraiser."
-msgstr "Nhà phê bình ngọc đá quý cao cấp"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:322
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:418
-#| msgid ""
-#| "Deputy secretary general of xinjiang hetian jade industry association."
 msgid "Deputy secretary general of Xinjiang Hetian jade industry association."
-msgstr "Phó tổng thư kí của Hiệp hội đá quý Xinjiang Hetian"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:339
 #: web/apps/welcome/templates/welcome/include-investor.html:344
@@ -2234,7 +1974,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:340
 msgid "Founder of Xijie.com"
-msgstr "Nhà sáng lập của xijie.com"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:341
 msgid ""
@@ -2243,11 +1983,6 @@ msgid ""
 "and joined SK Telecom in 2008. After Guo leaving qianxun.com in 2009, he "
 "established Xijie.com, with a focus on selling sportswear and sporting goods."
 msgstr ""
-"Guo Hongchi lần đầu tiên đưa ra ý tưởng “dịch vụ thanh toán trước” khi ông "
-"thành lập soit.com.cn vào năm 2003. Ông trở thành Phó Chủ tịch Shopex năm "
-"2007 và gia nhập SK Telecom vào năm 2008. Sau khi Quách rời qianxun.com năm "
-"2009, ông đã thành lập Xijie.com, tập trung vào bán đồ thể thao và đồ thể "
-"thao."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:348
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:433
@@ -2261,11 +1996,6 @@ msgid ""
 "Laboratory. The company has invested in a total of 50 projects including "
 "exchanges, wallets, media, incubators, market software, and token projects."
 msgstr ""
-"JLAB là một thương hiệu đầu tư tập trung vào ngành công nghiệp blockchain. "
-"Nó được thành lập vào năm 2017 và trước đây được gọi là Phòng thí nghiệm "
-"Blockchain Jiuding. Công ty đã đầu tư vào tổng cộng 50 dự án bao gồm trao "
-"đổi, ví, phương tiện truyền thông, vườn ươm, phần mềm thị trường và các dự "
-"án mã thông báo."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:368
 msgid ""
@@ -2273,9 +2003,6 @@ msgid ""
 "Capital, with offices in Beijing, Shanghai, San Francisco, Seoul and "
 "Singapore."
 msgstr ""
-"Nhóm của JLAB chủ yếu từ Jiuding Investment, Zero2IPO Group và Shanda "
-"Capital, với các văn phòng ở Bắc Kinh, Thượng Hải, San Francisco, Seoul và "
-"Singapore."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:371
 #: web/apps/welcome/templates/welcome/include-investor.html:373
@@ -2293,14 +2020,6 @@ msgid ""
 "and projects powered by illustrious science & technology enterprises as well "
 "as listed corporations."
 msgstr ""
-"Consensus Lab là một tổ chức đầu tư chuyên nghiệp được khởi xướng bởi Fred "
-"Wang, người sáng lập Mars Finance, và được thành lập bởi một số lượng lớn "
-"các nhân vật nổi tiếng và các học viên xuất sắc trong ngành công nghiệp "
-"blockchain. Bao gồm đầu tư, ủ bệnh và nghiên cứu ở mọi khía cạnh, nó tập "
-"trung vào công nghệ cốt lõi trong blockchain, kinh tế mã thông báo và cơ sở "
-"hạ tầng trong lưu thông tài sản. Sự nhấn mạnh của nó được đặt trên các dự án "
-"và dự án toàn cầu được cung cấp bởi các doanh nghiệp khoa học và công nghệ "
-"lừng lẫy cũng như các tập đoàn được liệt kê."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:388
 #: web/apps/welcome/templates/welcome/include-investor.html:390
@@ -2316,12 +2035,6 @@ msgid ""
 "life-cycle quality services for potential blockchain entrepreneurship "
 "projects at any stage of the market."
 msgstr ""
-"Genesis Group là một tổ chức tài chính hàng đầu bao gồm vốn Genesis, phòng "
-"thí nghiệm Genesis và ngân hàng đầu tư Genesis. Nó tập trung vào đầu tư vốn "
-"mạo hiểm trong ngành công nghiệp blockchain và cam kết khai thác các dự án "
-"chất lượng tốt nhất ở giai đoạn đầu. Nó có thể cung cấp các dịch vụ chất "
-"lượng toàn diện, vòng đời cho các dự án kinh doanh blockchain tiềm năng ở "
-"bất kỳ giai đoạn nào của thị trường."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:405
 #: web/apps/welcome/templates/welcome/include-investor.html:407
@@ -2338,12 +2051,6 @@ msgid ""
 "close strategic partnerships with multinational top projects and investment "
 "research institutions."
 msgstr ""
-"BlockVC (BlockVanguard Capital) là một tổ chức nghiên cứu và tư vấn nghiên "
-"cứu hàng đầu thế giới. Hướng đầu tư của nó bao gồm các chuỗi công cộng cơ "
-"bản, các giao thức ứng dụng và các dịch vụ tài chính trong hệ sinh thái "
-"blockchain. Mạng lưới đầu tư bao gồm Bắc Kinh. Singapore, London, Thung lũng "
-"Silicon và các nơi khác trên thế giới và đã thiết lập quan hệ đối tác chiến "
-"lược chặt chẽ với các dự án đa quốc gia và các tổ chức nghiên cứu đầu tư."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:445
 #: web/apps/welcome/templates/welcome/include-investor.html:447
@@ -2351,15 +2058,6 @@ msgid "BLOCK VC"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:459
-#| msgid ""
-#| "Jublilee Capital Management is a Singapore-based Venture Capital fund, "
-#| "which is founded by experienced fund manager and successful entrepreneurs "
-#| "from both Singapore and China. Established in Singapore with true global "
-#| "perspectives, JCM is aiming to identify, invest and empower promising "
-#| "start-ups and entrepreneurs from a wider range including AI, Robotics, "
-#| "Fintech and consumer upgrade. In 2018, JCM launched its first blockchain "
-#| "fund to invest in the future and make our contributions to the long-term "
-#| "development of blockchain technology."
 msgid ""
 "Jubilee Capital Management is a Singapore-based Venture Capital fund, which "
 "is founded by experienced fund manager and successful entrepreneurs from "
@@ -2370,14 +2068,6 @@ msgid ""
 "in the future and make our contributions to the long-term development of "
 "blockchain technology."
 msgstr ""
-"Jublilee Capital Management là một quỹ đầu tư mạo hiểm có trụ sở tại "
-"Singapore, được thành lập bởi người quản lý quỹ có kinh nghiệm và các doanh "
-"nhân thành đạt từ cả Singapore và Trung Quốc. Được thành lập tại Singapore "
-"với những quan điểm toàn cầu thực sự, JCM đang hướng tới việc xác định, đầu "
-"tư và trao quyền cho các doanh nghiệp khởi nghiệp đầy hứa hẹn từ một phạm vi "
-"rộng hơn bao gồm AI, Robotics, Fintech và nâng cấp người tiêu dùng. Vào năm "
-"2018, JCM đã phát động quỹ blockchain đầu tiên để đầu tư vào tương lai và "
-"đóng góp cho sự phát triển lâu dài của công nghệ blockchain."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:462
 msgid "Jublilee"
@@ -2388,14 +2078,6 @@ msgid "Jubilee"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:476
-#| msgid ""
-#| "Elastos Community Capital (ELA FOUNDTION LTD. ) is a community eco-"
-#| "investment fund initiated by Elastos’ private equity investors and "
-#| "registered in Singapore, focusing on the Elastos eco-project. The "
-#| "foundation community covers more than 50,000 members. Through the high-"
-#| "quality flow of the Elastos community, it can provide investment and "
-#| "financing, brand promotion, community operation and other services for "
-#| "ecological projects."
 msgid ""
 "Elastos Community Capital (ELA FOUNDATION LTD. ) is a community ecosystem-"
 "investment fund initiated by Elastos’ private equity investors and "
@@ -2405,20 +2087,12 @@ msgid ""
 "financing, brand promotion, community operation and other services for "
 "ecological projects."
 msgstr ""
-"Elastos Community Capital (ELA FOUNDTION LTD.) Là quỹ đầu tư sinh thái cộng "
-"đồng do các nhà đầu tư cổ phần tư nhân của Elastos khởi xướng và đăng ký tại "
-"Singapore, tập trung vào dự án sinh thái Elastos. Cộng đồng nền tảng bao gồm "
-"hơn 50.000 thành viên. Thông qua dòng chảy chất lượng cao của cộng đồng "
-"Elastos, nó có thể cung cấp đầu tư và tài trợ, xúc tiến thương hiệu, hoạt "
-"động cộng đồng và các dịch vụ khác cho các dự án sinh thái."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:477
 msgid ""
 "Our mission is to deeply participate in project operations and share project "
 "development dividends."
 msgstr ""
-"Nhiệm vụ của chúng tôi là tham gia sâu vào các hoạt động của dự án và chia "
-"sẻ cổ tức phát triển dự án."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:480
 #: web/apps/welcome/templates/welcome/include-investor.html:482
@@ -2431,9 +2105,6 @@ msgid ""
 "Singapore with operational offices in China, Malaysia and the SEA region and "
 "listed on Bankor Network."
 msgstr ""
-"WEMERGE - Các nhà chiến lược đầu tư trong Blockchain - được thành lập tại "
-"Singapore với các văn phòng hoạt động tại Trung Quốc, Malaysia và khu vực "
-"SEA và được liệt kê trên mạng Bankor."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:495
 msgid ""
@@ -2442,11 +2113,6 @@ msgid ""
 "smarter investor by using our effective and comprehensive WEMERGE Investment "
 "Strategy (WIS), as well as our global community ecosystem."
 msgstr ""
-"Mục tiêu của chúng tôi là đẩy nhanh tốc độ tăng trưởng của danh mục "
-"blockchain cao cấp trên toàn cầu. Hơn nữa, chúng tôi cung cấp phương tiện "
-"cho bất kỳ ai trở thành một nhà đầu tư thông minh hơn bằng cách sử dụng "
-"Chiến lược đầu tư WEMERGE hiệu quả và toàn diện (WIS) của chúng tôi, cũng "
-"như hệ sinh thái cộng đồng toàn cầu của chúng tôi."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:498
 #: web/apps/welcome/templates/welcome/include-investor.html:500
@@ -2455,27 +2121,25 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:6
 msgid "The third round of Newton's token exchange is coming soon."
-msgstr "Trao đổi token vòng thứ 3 của Newton sắp ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:7
 msgid "October,2018"
-msgstr "Tháng 10, 2018"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:9
 msgid "View Details"
-msgstr "Xem Chi Tiết"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-partner-mobile.html:8
 #: web/apps/welcome/templates/welcome/include-partner.html:8
-#| msgid "Joint Business Organization"
 msgid "Joint Business Organizations"
-msgstr "Các Tổ Chức Kinh Doanh Hợp Tác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-partner-mobile.html:8
 #: web/apps/welcome/templates/welcome/include-partner.html:8
-#| msgid "The total sales in 2019 will exceed $500 million"
 msgid "Total sales in 2019 will exceed $500 million"
-msgstr "Tổng doanh số trong năm 2019 sẽ vượt quá 500 triệu đô la"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-partner-mobile.html:37
 #: web/apps/welcome/templates/welcome/include-partner.html:38
@@ -2489,45 +2153,32 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/technology.html:13
 #: web/templates/header.html:39 web/templates/header.html:234
 msgid "Technology"
-msgstr "Công Nghệ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:25
 #: web/apps/welcome/templates/welcome/include-protocol.html:23
-#| msgid "High performance"
 msgid "High Performance"
-msgstr "Hiệu suất cao"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:27
 #: web/apps/welcome/templates/welcome/include-protocol.html:25
-#| msgid ""
-#| "NewChain main chain can process more than 5,000 transactions continuously "
-#| "each second, can support the operational requirements of e-commerce, "
-#| "Internet of things and other high-frequency trading scenarios."
 msgid ""
 "NewChain's main chain can process over 5,000 transactions continuously each "
 "second, and supports the operational requirements of e-commerce, the "
 "Internet of Things, and other high-frequency trading scenarios."
 msgstr ""
-"Mạng chính của NewChain có thể xử lý hơn 5,000 giao dịch liên tục mỗi giây, "
-"đáp ứng được các yêu cầu hoạt động của thương mại điện tử, Internet Vạn Vật "
-"(Internet of Things) và các mô hình giao dịch tần suất lớn khác."
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:36
 #: web/apps/welcome/templates/welcome/include-protocol.html:34
 msgid "Extensible"
-msgstr "Khả năng mở rộng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:38
 #: web/apps/welcome/templates/welcome/include-protocol.html:36
-#| msgid ""
-#| "NewChain can support BTC, ETH and other mainstream blockchain networks "
-#| "with no limit."
 msgid ""
 "NewChain supports BTC, ETH and other mainstream blockchain networks with no "
 "limits."
 msgstr ""
-"NewChain hỗ trợ cả BTC, ETH và một số mạng lưới blockchain chính khác, không "
-"giới hạn."
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:46
 #: web/apps/welcome/templates/welcome/include-protocol.html:45
@@ -2536,107 +2187,81 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:48
 #: web/apps/welcome/templates/welcome/include-protocol.html:47
-#| msgid ""
-#| "The technology of whole process stack realizes the whole process "
-#| "technology solution from the atomic world to the real world, from "
-#| "hardware design to application layer software development through basic "
-#| "technology and super exchange protocol."
 msgid ""
 "Newton's full process stack offers technology solutions from the atomic "
 "world to the real world, from hardware design to application layer software "
 "development through basic technology and our hyper exchange protocol."
 msgstr ""
-"Công nghệ quy trình tổng thể kết hợp đưa ra giải pháp công nghệ cho toàn bộ "
-"quá trình từ thế giới nguyên tử cho đến thế giới thực tế, từ thiết kế phần "
-"cứng đến việc phát triển các phần mềm ứng dụng lớp thông qua công nghệ cơ "
-"bản và các giao thức siêu trao đổi."
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:56
 #: web/apps/welcome/templates/welcome/include-protocol.html:55
-#| msgid "Developer"
 msgid "Developer Friendly"
-msgstr "Nhà Phát Triển"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:58
 #: web/apps/welcome/templates/welcome/include-protocol.html:57
-#| msgid ""
-#| "With NewStudio as the core development tool chain,the  developers can "
-#| "develop DApp without programming foundation."
 msgid ""
 "Using NewStudio as our core development toolchain, anyone can develop "
 "distributed apps without programming experience."
 msgstr ""
-"Sử dụng NewStudio làm công cụ phát triển lõi của chuỗi, các nhà phát triển "
-"có thể phát triển các Dapp mà không cần sử dụng đến các nền tảng lập trình."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:9
 msgid "ROADMAP"
-msgstr "LỘ TRÌNH"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:21
-#| msgid "Newton project was officially launched."
 msgid "Newton project officially launched."
-msgstr "Dự án Newton được chính thức ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:29
-#| msgid "Newton website was officially launched."
 msgid "Newton website launched."
-msgstr "Trang Web Newton được chính thức ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:30
 #: web/apps/welcome/templates/welcome/include-roadmap.html:93
-#| msgid "The first round of token exchange."
 msgid "First round of token exchange."
-msgstr "Vòng trao đổi mã thông báo đầu tiên."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
 #: web/apps/welcome/templates/welcome/include-roadmap.html:100
-#| msgid "The second round of token exchange."
 msgid "Second round of token exchange."
-msgstr "Vòng trao đổi mã thông báo thứ hai."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:46
-#| msgid "Newton Testnet officially launched."
 msgid "Newton Testnet launched."
-msgstr "Newton Testnet chính thức ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:54
 #: web/apps/welcome/templates/welcome/include-roadmap.html:114
-#| msgid "The third round of token exchange."
 msgid "Third round of token exchange."
-msgstr "Vòng trao đổi mã thông báo thứ ba."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:62
 #: web/apps/welcome/templates/welcome/include-roadmap.html:121
-#| msgid "Newton's main chain and NewPay officially launched."
 msgid "Newton's main chain and NewPay launched."
-msgstr "Chuỗi chính và ví chính của Newton được chính thức ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:72
 #: web/apps/welcome/templates/welcome/include-roadmap.html:129
-#| msgid "The NewMall was officially launched."
 msgid "NewMall launched."
-msgstr "NewMall được chính thức ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:85
-#| msgid "Newton project was officially launched."
 msgid "The Newton Project was officially launched."
-msgstr "Dự án Newton được chính thức ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:92
-#| msgid "Newton website was officially launched."
 msgid "Newton's website was launched."
-msgstr "Trang Web Newton được chính thức ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:107
-#| msgid "Newton Testnet officially launched."
 msgid "Newton's Testnet launched."
-msgstr "Newton Testnet chính thức ra mắt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:9
 #: web/apps/welcome/templates/welcome/team.html:13
 msgid "TEAM"
-msgstr "Đội"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:21
 #: web/apps/welcome/templates/welcome/include-team.html:26
@@ -2657,10 +2282,6 @@ msgid ""
 "that “Everyone should benefit directly from economic growth”. In 2017, Xu "
 "made an angel investment in Elastos, and became the company's co-founder."
 msgstr ""
-"Vào năm 2018, Xu Jizhe đã thiết lập Dự án Newton để phát triển siêu một giao "
-"thức trao đổi thông qua các sáng kiến như blockchain và IoT, với tầm nhìn "
-"“Mọi người nên hưởng lợi trực tiếp từ tăng trưởng kinh tế”. Vào năm 2017, Xu "
-"đã đầu tư vào Elastos và trở thành người đồng sáng lập của công ty."
 
 #: web/apps/welcome/templates/welcome/include-team.html:24
 msgid ""
@@ -2669,19 +2290,15 @@ msgid ""
 "popularizing the technology, law, and community culture to connect Chinese "
 "and global communities."
 msgstr ""
-"Trước đây là Trưởng phòng Công nghệ tại Sina Mail và CTO của Okbuy.com, năm "
-"2005 Xu đã thành lập Cộng đồng Zeuux để thúc đẩy phong trào Phần mềm Tự do ở "
-"Trung Quốc, phổ biến công nghệ, luật và văn hóa cộng đồng để kết nối cộng "
-"đồng Trung Quốc và toàn cầu."
 
 #: web/apps/welcome/templates/welcome/include-team.html:29
 msgid "Founder"
-msgstr "Sáng lập"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:29
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:218
 msgid "Founder of Zeuux (A Community for Free Software Usage)"
-msgstr "Nhà sáng lập của Zeuux (Cộng đồng hướng dẫn sử dụng phần mềm miễn phí)"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:45
 #: web/apps/welcome/templates/welcome/include-team.html:49
@@ -2703,19 +2320,15 @@ msgid ""
 "Okbuy.com, gaining several investment rounds from Sequoia Capital, Intel, "
 "DFJ, Tencent and other famous VC organizations."
 msgstr ""
-"Li Shubin, người đồng sáng lập Okbuy.com, tốt nghiệp Đại học Truyền thông "
-"Trung Quốc năm 2002, và năm 2017 anh thành lập trang web thương mại điện tử "
-"Okbuy.com, đạt được một số vòng đầu tư từ Sequoia Capital, Intel, DFJ, "
-"Tencent và các tổ chức VC nổi tiếng khác."
 
 #: web/apps/welcome/templates/welcome/include-team.html:52
 msgid "Co-founder"
-msgstr "Đồng sáng lập"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:52
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:231
 msgid "Founder and CEO of OKbuy"
-msgstr "Nhà sáng lập và CEO của Okbuy"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:68
 #: web/apps/welcome/templates/welcome/include-team.html:72
@@ -2727,7 +2340,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:69
 msgid "Joint Chief Architect of Newton"
-msgstr "Kiến trúc sư trưởng của Newton"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:70
 msgid ""
@@ -2735,9 +2348,6 @@ msgid ""
 "Okbuy.com. He has extensive experience in development management of free "
 "software, e-commerce, and blockchain technology."
 msgstr ""
-"Xia Wu là người đồng sáng lập của cộng đồng Zeuux và trước đó đã từng làm "
-"việc cho Okbuy.com. Ông có nhiều kinh nghiệm về quản lý phát triển phần mềm "
-"tự do, thương mại điện tử và công nghệ blockchain."
 
 #: web/apps/welcome/templates/welcome/include-team.html:75
 #: web/apps/welcome/templates/welcome/include-team.html:95
@@ -2745,12 +2355,12 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:244
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:257
 msgid "Joint Chief Architect"
-msgstr "Kiến trúc sư trưởng chung"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:75
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:244
 msgid "Co-founder of Zeuux (A Community for Free Software Usage)"
-msgstr "Đồng sáng lập Zeuux (Cộng đồng sử dụng phần mềm miễn phí)"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-team.html:94
 #: web/apps/welcome/templates/welcome/include-team.html:98
@@ -2767,10 +2377,6 @@ msgid ""
 "intelligent hardware. He previously worked at Sina.com, Sina Weibo, China "
 "Mobile, Okbuy, and Diynova, among others."
 msgstr ""
-"Meng Guang là kiến trúc sư hoạt động và lập trình viên cao cấp của Newton, "
-"với nhiều kinh nghiệm trong thương mại điện tử, cũng như là một chuyên gia "
-"về IoT và phần cứng thông minh. Trước đây, anh đã từng làm việc tại Sina."
-"com, Sina Weibo, China Mobile, Okbuy và Diynova."
 
 #: web/apps/welcome/templates/welcome/include-tech-chain.html:10
 msgid "Multiple Blockchain"
@@ -2822,7 +2428,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/tech.html:13
 #: web/apps/welcome/templates/welcome/technology.html:80
 msgid "Basic Technology"
-msgstr "Công nghệ Cơ bản"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-technology.html:24
 #: web/apps/welcome/templates/welcome/tech.html:18
@@ -2836,9 +2442,6 @@ msgid ""
 "multiple consensus mechanisms and data structures, ensuring safe asset "
 "transactions between the main chain and sub-chains, and between sub-chains."
 msgstr ""
-"NewChain sử dụng một chuỗi chính và thiết kế chuỗi phụ. Chuỗi phụ hỗ trợ "
-"nhiều cơ chế đồng thuận và cấu trúc dữ liệu, đảm bảo giao dịch tài sản an "
-"toàn giữa chuỗi chính và chuỗi phụ và cũng như giữa các chuỗi phụ."
 
 #: web/apps/welcome/templates/welcome/include-technology.html:34
 #: web/apps/welcome/templates/welcome/tech.html:45
@@ -2851,8 +2454,6 @@ msgid ""
 "Atom Hashing generates unique hash IDs by using technologies like "
 "radiometric dating, PCA, machine vision, and deep learning."
 msgstr ""
-"Atom Hashing tạo ra các mã băm duy nhất bằng cách sử dụng các công nghệ như "
-"Adiometric Dating, PCA, Machine Vision, và Deep Learning."
 
 #: web/apps/welcome/templates/welcome/include-technology.html:45
 #: web/apps/welcome/templates/welcome/tech.html:32
@@ -2865,7 +2466,6 @@ msgid ""
 "NewNET is an open cloud computing network, consisting of a large number of "
 "nodes."
 msgstr ""
-"NewNET là một mạng điện toán đám mây mở, bao gồm một số lượng lớn các nút."
 
 #: web/apps/welcome/templates/welcome/include-technology.html:55
 #: web/apps/welcome/templates/welcome/tech.html:58
@@ -2878,9 +2478,6 @@ msgid ""
 "NewIoT enables blockchain fog computing, communication protocols between IoT "
 "devices and gateways, and NewChain IoT device development specifications."
 msgstr ""
-"NewIoT cho phép tính toán Fog Computing Blockchain, các giao thức truyền "
-"thông giữa các thiết bị IoT và các cổng, và các đặc tả phát triển thiết bị "
-"NewChain IoT."
 
 #: web/apps/welcome/templates/welcome/include-video.html:27
 msgid "What is Newton"
@@ -2889,15 +2486,14 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-video.html:28
 #: web/apps/welcome/templates/welcome/index.html:21
 msgid "Newton: Infrastructure for the Community Economy"
-msgstr "Newton: Cơ sở hạ tầng cho nền kinh tế cộng đồng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-video.html:33
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:84
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:604
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:605
-#| msgid "Newton's Community Economy"
 msgid "2018 Newton Community Node Conference"
-msgstr "Cộng Đồng Kinh Tế Của Newton"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-video.html:34
 msgid ""
@@ -2915,7 +2511,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/index.html:20
 msgid "Everyone Should Benefit Directly from Economic Growth"
-msgstr "Mọi người được hưởng lợi trực tiếp từ sự phát triển của nền kinh tế "
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/index.html:64
 msgid "More..."
@@ -2926,24 +2522,20 @@ msgid ""
 "Paying tribute to Sir Isaac Newton, the great scientist who made a "
 "significant impact on our lives!"
 msgstr ""
-"Tỏ lòng tôn kính tới Ngài Isaac Newton, nhà khoa học vĩ đại đã tạo ra một "
-"tác động đáng kể đến cuộc sống của chúng ta!"
 
 #: web/apps/welcome/templates/welcome/join-partner.html:6
 msgid "Join Partner"
-msgstr "Đối tác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/join-partner.html:13
 msgid "Apply to join Newton United Business Organization"
-msgstr "Nộp đơn xin tham gia Newton United Business Organization"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/join-partner.html:17
 msgid ""
 "If your company would like to join Newton United Business Organization, "
 "please submit your application by email. Let’s create Newton together!"
 msgstr ""
-"Nếu công ty của bạn muốn tham gia Tổ chức kinh doanh Newton United, vui lòng "
-"gửi đơn đăng ký của bạn qua email. Hãy cùng nhau tạo Newton!"
 
 #: web/apps/welcome/templates/welcome/joinus.html:6
 msgid "Jobs"
@@ -2953,76 +2545,48 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:25
 #: web/templates/footer.html:41
 msgid "Join Us"
-msgstr "Tham gia với chúng tôi"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:23
-#| msgid "About Newton Project"
 msgid "About the Newton Project"
-msgstr "Giới thiệu về Newton Project"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:25
 msgid ""
 "We are committed to building an efficient, collaborative, low-cost, highly "
 "automated business infrastructure ecosystem."
 msgstr ""
-"Chúng tôi cam kết xây dựng một hệ sinh thái cơ sở hạ tầng kinh doanh hiệu "
-"quả, hợp tác, chi phí thấp và tự động hóa cao."
 
 #: web/apps/welcome/templates/welcome/joinus.html:28
 msgid "OUR CULTURE"
-msgstr "VĂN HÓA CỦA CHÚNG TÔI"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:30
-#| msgid ""
-#| "We believe in the free, open and inclusive culture advocated by the "
-#| "philosophy of free and open source. Decentralization is the core of our "
-#| "values."
 msgid ""
 "We believe in the free, open and inclusive culture advocated by the "
 "philosophy of free and open source software. Decentralization is at the core "
 "of our values."
 msgstr ""
-"Chúng tôi tin vào nền văn hóa tự do, mở và hòa nhập được ủng hộ bởi triết lý "
-"của nguồn mở và tự do. Phân cấp là cốt lõi của các giá trị của chúng tôi."
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
-#| msgid ""
-#| "Currently, Newton consists of top talents from the free and open source "
-#| "software community. We work with professionals in the fields of e-"
-#| "commerce, finance, media, etc. We hope that in the future more talents "
-#| "and professionals will join us."
 msgid ""
 "Currently, Newton consists of top talent from the free and open source "
 "software community. We work with professionals in the fields of e-commerce, "
 "finance, media, etc and hope that in the future more talent and "
 "professionals will join us."
 msgstr ""
-"Hiện nay Newton bao gồm các tài năng hàng đầu từ cộng đồng phần mềm tự do và "
-"nguồn mở, chúng tôi làm việc với các chuyên gia trong lĩnh vực thương mại "
-"điện tử, tài chính, truyền thông, v.v."
 
 #: web/apps/welcome/templates/welcome/joinus.html:36
-#| msgid ""
-#| "In addition, developers around the world can join Newton through remote "
-#| "office. You don't have to worry about space limitations."
 msgid ""
 "In addition, developers around the world can join Newton through a remote "
 "office. You don't have to worry about space limitations."
 msgstr ""
-"Ngoài ra, các nhà phát triển trên toàn thế giới có thể xây dựng newton thông "
-"qua văn phòng từ xa. Bạn không phải lo lắng về giới hạn về không gian."
 
 #: web/apps/welcome/templates/welcome/joinus.html:38
 msgid "WHO WE ARE LOOKING FOR"
-msgstr "AI LÀ NGƯỜI CHÚNG TÔI ĐANG TÌM KIẾM"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:40
-#| msgid ""
-#| "We need technical talents in distributed systems, operating systems, "
-#| "encryption algorithms, blockchain, mobile development, product design, "
-#| "etc. We also need professionals in the fields of currency theory, "
-#| "economic models, asset management, financial innovation, etc. We are "
-#| "happy to work with volunteers and enthusiasts specialized in any field."
 msgid ""
 "We need technical talent in distributed systems, operating systems, "
 "encryption algorithms, blockchain, mobile development, product design, etc. "
@@ -3030,54 +2594,31 @@ msgid ""
 "models, asset management, financial innovation, etc. We are happy to work "
 "with volunteers and enthusiasts specializing in any field."
 msgstr ""
-"Chúng tôi cần tài năng kỹ thuật trong hệ thống phân tán, hệ điều hành, thuật "
-"toán mã hóa, blockchain, phát triển di động, thiết kế sản phẩm, v.v. Chúng "
-"tôi cần các chuyên gia trong lĩnh vực lý thuyết tiền tệ, mô hình kinh tế, "
-"quản lý tài sản, đổi mới tài chính, v.v. Chúng tôi rất vui được làm việc với "
-"các tình nguyện viên và những người đam mê chuyên ngành trong bất kỳ lĩnh "
-"vực nào."
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
-#| msgid ""
-#| "We need everyone to be passionate and confident in decentralized "
-#| "business, because Newton has a close impact on everyone’s life."
 msgid ""
 "We need everyone to be passionate and confident in decentralized business, "
 "because Newton has a big impact on everyone’s life."
 msgstr ""
-"Chúng tôi cần những người nhiệt tình và tự tin trong ngành kinh doanh phi "
-"tập trung, bởi vì Newton có ảnh hưởng gần gũi đến cuộc sống của mọi người ."
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
-#| msgid ""
-#| "In addition, we will use NEW to pay part of the salary, which is a "
-#| "condition that must be accepted."
 msgid "In addition, we will use NEW to pay part of the salary."
 msgstr ""
-"Ngoài ra, chúng tôi sẽ sử dụng NEW để trả một phần tiền lương, đó là điều "
-"kiện phải được chấp nhận."
 
 #: web/apps/welcome/templates/welcome/joinus.html:49
 msgid "Currently open positions"
-msgstr "Vị trí đang còn ứng tuyển"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:51
-#| msgid ""
-#| "We currently open the following positions. If you are interested, please "
-#| "send your resume to the email: <a href='mailto:newton-hr@newtonproject."
-#| "org'>newton-hr@newtonproject.org</a>"
 msgid ""
 "We currently have the following positions open. If you are interested, "
 "please send your resume to: <a href='mailto:newton-hr@newtonproject."
 "org'>newton-hr@newtonproject.org</a>"
 msgstr ""
-"Chúng tôi hiện đang mở các vị trí sau. Nếu bạn quan tâm, vui lòng gửi sơ yếu "
-"lý lịch của bạn đến email:<a href='mailto:newton-hr@newtonproject."
-"org'>newton-hr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/joinus.html:58
 msgid "Senior R&D Engineer"
-msgstr "Kỹ sư Nghiên cứu và phát triển R&D cấp cao"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:65
 #: web/apps/welcome/templates/welcome/joinus.html:103
@@ -3090,24 +2631,17 @@ msgstr "Kỹ sư Nghiên cứu và phát triển R&D cấp cao"
 #: web/apps/welcome/templates/welcome/joinus.html:372
 #: web/apps/welcome/templates/welcome/joinus.html:410
 msgid "Job description:"
-msgstr "Mô tả công việc:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:67
-#| msgid ""
-#| "Being responsible for the design and development of the Newton system."
 msgid "Responsible for the design and development of the Newton system."
-msgstr "Chịu trách nhiệm thiết kế và phát triển hệ thống Newton."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:68
-#| msgid ""
-#| "Being responsible for researching the latest technologies in the industry "
-#| "and applying them to Newtonian system improvements."
 msgid ""
 "Responsible for researching the latest technologies in the industry and "
 "applying them to improving the Newton system."
 msgstr ""
-"Chịu trách nhiệm nghiên cứu các công nghệ mới nhất trong ngành và áp dụng "
-"chúng vào các cải tiến hệ thống Newton."
 
 #: web/apps/welcome/templates/welcome/joinus.html:70
 #: web/apps/welcome/templates/welcome/joinus.html:114
@@ -3120,56 +2654,39 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:380
 #: web/apps/welcome/templates/welcome/joinus.html:418
 msgid "Qualifications:"
-msgstr "Trình độ chuyên môn:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:72
-#| msgid ""
-#| "Bachelor’s degree or above, applicants majored in computer science or "
-#| "related professions will be prioritized."
 msgid ""
 "Bachelor’s degree or above, applicants who majored in computer science or "
 "related professions will be prioritized."
 msgstr ""
-"Bằng cử nhân trở lên, ứng viên chuyên ngành khoa học máy tính hoặc ngành "
-"nghề có liên quan sẽ được ưu tiên."
 
 #: web/apps/welcome/templates/welcome/joinus.html:73
-#| msgid "More than 5 years of software development experience."
 msgid "Over 5 years of software development experience."
-msgstr "Hơn 5 năm kinh nghiệm phát triển phần mềm."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:74
 msgid ""
 "Skilled in a variety of programming languages (Java，Go，C++，Rust，Kotlin)."
 msgstr ""
-"Có kỹ năng bằng nhiều ngôn ngữ lập trình (Java , Go ，C ++ ,Rust ， Kotlin)."
 
 #: web/apps/welcome/templates/welcome/joinus.html:75
-#| msgid ""
-#| "Being familiar with the principles of software security, can apply "
-#| "security standards to research and development."
 msgid ""
 "Familiar with the principles of software security, can apply security "
 "standards to research and development."
 msgstr ""
-"Làm quen với nguyên tắc bảo mật phần mềm, có thể áp dụng các tiêu chuẩn bảo "
-"mật cho nghiên cứu và phát triển."
 
 #: web/apps/welcome/templates/welcome/joinus.html:76
-#| msgid ""
-#| "Good English reading ability, being able to read English technical "
-#| "documents smoothly."
 msgid ""
 "Good English reading ability, able to read English technical documents "
 "smoothly."
 msgstr ""
-"Khả năng đọc tiếng Anh tốt, có thể đọc tài liệu kỹ thuật tiếng Anh một cách "
-"trôi chảy."
 
 #: web/apps/welcome/templates/welcome/joinus.html:78
 #: web/apps/welcome/templates/welcome/joinus.html:120
 msgid "Preferred Skills:"
-msgstr "Điều kiện tuyển dụng ưu tiên:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:80
 msgid "R&D experience in blockchain-related systems."
@@ -3178,11 +2695,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/joinus.html:81
 #: web/apps/welcome/templates/welcome/joinus.html:123
 msgid "Distributed network system development experience."
-msgstr "Kinh nghiệm phát triển hệ thống mạng lưới phân tán."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:83
 msgid "Recruitment number: 5 people "
-msgstr "Số tuyển dụng: 5 người"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:84
 #: web/apps/welcome/templates/welcome/joinus.html:125
@@ -3195,7 +2712,7 @@ msgstr "Số tuyển dụng: 5 người"
 #: web/apps/welcome/templates/welcome/joinus.html:391
 #: web/apps/welcome/templates/welcome/joinus.html:430
 msgid "Working Location: Sanlitun SOHO, Chaoyang District, Beijing"
-msgstr "Vị trí: Bắc Kinh - Quận Triều Dương Sanlitun SOHO D2503"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:85
 #: web/apps/welcome/templates/welcome/joinus.html:126
@@ -3207,9 +2724,8 @@ msgstr "Vị trí: Bắc Kinh - Quận Triều Dương Sanlitun SOHO D2503"
 #: web/apps/welcome/templates/welcome/joinus.html:354
 #: web/apps/welcome/templates/welcome/joinus.html:392
 #: web/apps/welcome/templates/welcome/joinus.html:431
-#| msgid "Payments: Salary to be discussed"
 msgid "Payment: Salary to be discussed"
-msgstr "Thanh toán: Mức lương sẽ được thảo luận"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:96
 msgid "Blockchain Engineer"
@@ -3224,7 +2740,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:107
 msgid "Job Responsibilities:"
-msgstr "Trách nhiệm công việc:"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:109
 msgid ""
@@ -3260,270 +2776,210 @@ msgid "Computer Science or related degree."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:122
-#| msgid "Blockchain related system R&D experience."
 msgid "Blockchain-related system R&D experience."
-msgstr "Kinh nghiệm nghiên cứu và phát triển liên quan đến Blockchain"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:127
-#| msgid ""
-#| "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-#| "pr@newtonproject.org</a>"
 msgid ""
 "Contact: <a href=mailto:newton-hr@newtonproject.org>newton-hr@newtonproject."
 "org</a>"
 msgstr ""
-"Quan hệ công chúng : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-"pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/joinus.html:139
 msgid "Full-stack Web Developer"
-msgstr "Nhà phát triển Web"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:148
 msgid ""
 "Writing well-designed, testable, efficient code by using best software "
 "development practices;"
 msgstr ""
-"Thiết kế tốt, kiểm tra, mã hiệu quả bằng cách sử dụng phát triển phần mềm "
-"tốt nhất;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:149
 msgid ""
 "Creating website layout/user interface by using standard HTML/CSS practices;"
 msgstr ""
-"Tạo bố cục trang web / giao diện người dùng bằng cách sử dụng các thực hành "
-"HTML / CSS chuẩn;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:150
 msgid "Building web-based backends and micro-services;"
-msgstr "Xây dựng các chương trình phụ trợ dựa trên web và các dịch vụ vi mô;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:151
 msgid ""
 "Staying up-to-date with emerging technologies/industry trends and apply them "
 "into operations and activities;"
 msgstr ""
-"Tiếp tục cắm vào các xu hướng công nghệ / ngành công nghiệp mới nổi và áp "
-"dụng chúng vào các hoạt động và hoạt động;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:152
 msgid "Cooperation with designers to create intended visual design. "
 msgstr ""
-"Hợp tác với các nhà thiết kế để phù hợp với mục đích thiết kế trực quan."
 
 #: web/apps/welcome/templates/welcome/joinus.html:156
-#| msgid ""
-#| "Proven work experience with React or other modern Frontend Javascript "
-#| "Framework;"
 msgid ""
 "Proven work experience with React or other modern front-end Javascript "
 "Framework;"
 msgstr ""
-"Đã được chứng minh kinh nghiệm làm việc với React hoặc trên các mã nguồn "
-"Javascript hiện đại khác;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:157
 msgid "Experience with Python/Django/Node.js;"
-msgstr "Kinh nghiệm với Python / Django / Node.js;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:158
-#| msgid ""
-#| "Experience in writing frontend and backend unit and integration tests;"
 msgid ""
 "Experience in writing front-end and back-end unit and integration tests;"
-msgstr "Kinh nghiệm viết với frontend và backend và kiểm tra tích hợp;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:159
 msgid "Top-notch programming skills and in-depth knowledge of modern HTML/CSS;"
 msgstr ""
-"Kỹ năng lập trình hàng đầu và kiến thức chuyên sâu về HTML / CSS hiện đại;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:160
 msgid ""
 "A solid understanding of how web applications work including security, "
 "session management, and best development practices;"
 msgstr ""
-"Hiểu rõ về cách các ứng dụng web hoạt động bao gồm bảo mật, quản lý phiên và "
-"các phương pháp phát triển tốt nhất;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:161
 msgid ""
 "Strong organizational skills to juggle multiple tasks within the constraints "
 "of timelines and budgets with business acumen;"
 msgstr ""
-"Kỹ năng tổ chức mạnh mẽ để sắp xếp nhiều nhiệm vụ trong thời gian ngắn và "
-"ngân sách với sự nhạy bén trong kinh doanh;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:162
 msgid ""
 "Ability to work and thrive in a fast-paced environment, learn rapidly and "
 "master diverse web technologies and techniques;"
 msgstr ""
-"Khả năng làm việc và phát triển mạnh trong môi trường có nhịp độ nhanh, học "
-"nhanh và nắm vững các công nghệ và kỹ thuật web đa dạng;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:163
 msgid ""
 "Bachelor’s or master’s degree in computer science or relevant experience;"
 msgstr ""
-"Cử nhân hoặc thạc sĩ về khoa học máy tính hoặc kinh nghiệm có liên quan;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:177
 msgid "Communication Specialist"
-msgstr "Chuyên gia truyền thông"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:186
 msgid ""
 "Delivering customer service and technical support on email/Facebook/Twitter;"
 msgstr ""
-"Cung cấp dịch vụ khách hàng và hỗ trợ kỹ thuật trên email / facebook / "
-"twitter;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:187
-#| msgid "Communicating feedback and process suggestions of customers;"
 msgid "Communicating feedback and processing suggestions of customers;"
-msgstr "Truyền đạt phản hồi của khách hàng và các đề xuất quy trình;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:188
 msgid ""
 "Identifying causes of dissatisfaction, and providing ways for improvement;"
 msgstr ""
-"Xác định nguyên nhân của sự không hài lòng, và cung cấp các cách để cải "
-"thiện;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:189
-#| msgid "Filling reports on enquiry summaries and improvement areas;"
 msgid "Filling in reports on inquiry summaries and improvement areas;"
-msgstr "Chuẩn bị các báo cáo tóm tắt về yêu cầu và khu vực cải tiến;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:190
-#| msgid ""
-#| "Ensure that all enquiries on social media are in compliance with all "
-#| "internal and external regulations, policies and guidelines;"
 msgid ""
 "Ensuring that all inquiries on social media are in compliance with all "
 "internal and external regulations, policies and guidelines;"
 msgstr ""
-"Đảm bảo tất cả các yêu cầu tại kênh truyền thông xã hội tuân thủ tất cả các "
-"quy định, chính sách và hướng dẫn nội bộ và bên ngoài;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:194
 #: web/apps/welcome/templates/welcome/joinus.html:305
 msgid "Bachelor’s degree or above;"
-msgstr "Bằng cử nhân trở lên;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:195
-#| msgid "Preferably with 2 years of work experience in customer service;"
 msgid "Preferably 2 years of work experience in customer service;"
 msgstr ""
-"Tốt hơn với 2 năm kinh nghiệm làm việc trong vai trò hỗ trợ khách hàng;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:196
 msgid ""
 "Must speak and write fluent English and Chinese with good presentation, "
 "communication and computer skills;"
 msgstr ""
-"PHẢI nói thông thạo tiếng Anh và viết tiếng Anh và tiếng Trung với trình bày "
-"tốt, kỹ năng giao tiếp và máy tính;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:197
 msgid "Self-motivated and able to work independently;"
-msgstr "Tự vận động và có khả năng làm việc độc lập;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:211
 msgid "Developer Relations Advocate"
-msgstr "Hỗ trợ nhà phát triển đối với khách hàng, cộng đồng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:220
 msgid ""
 "Content creation, distribution and analysis tutorials, developer guides, "
 "newsletters, sample apps, client libraries;"
 msgstr ""
-"Tạo và phân phối nội dung và phân tích - hướng dẫn, dành cho nhà phát triển, "
-"bản tin, ứng dụng mẫu, thư viện khách hàng;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:221
 msgid ""
 "Creating and implementing detailed annual, monthly and weekly plans for "
 "promotion/engagement activities;"
 msgstr ""
-"Tạo và thực hiện các kế hoạch chi tiết hàng năm, hàng tháng và hàng tuần cho "
-"các hoạt động vận động / tham gia;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:222
-#| msgid ""
-#| "Organizing and coordinating marketing  engagement activities including "
-#| "social media campaigns, youtube broadcasts, progress reports;"
 msgid ""
 "Organizing and coordinating marketing  engagement activities including "
 "social media campaigns, YouTube broadcasts, progress reports;"
 msgstr ""
-"Tổ chức và điều phối các hoạt động tương tác tiếp thị bao gồm các chiến dịch "
-"truyền thông xã hội, phát sóng trên youtube, báo cáo tiến độ;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:223
 msgid "Content sourcing from 3rd parties, distribution and analytics;"
-msgstr "Nội dung tìm nguồn cung ứng từ bên thứ ba, phân phối và phân tích;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:224
 msgid "Provide help and support to the organizers of community meetups;"
-msgstr "Tham gia và hỗ trợ các nhà tổ chức họp mặt cộng đồng;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:229
 msgid ""
 "Must be fluent in both spoken and written English with good presentation, "
 "communication and computer skills;"
 msgstr ""
-"PHẢI nói thông thạo và viết tiếng Anh với kỹ năng thuyết trình, giao tiếp và "
-"máy tính tốt;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:230
 msgid "Experience in writing tutorials, guides, API docs and sample apps;"
-msgstr "Kinh nghiệm viết hướng dẫn, hướng dẫn, tài liệu API, ứng dụng mẫu;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:231
 msgid "Experience in writing code in C++/JavaScript;"
-msgstr "Kinh nghiệm viết mã bằng C ++ / JavaScript;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:232
 msgid ""
 "Preferably with 2 years of working experience in IT industry customer "
 "support role;"
 msgstr ""
-"Tốt hơn với 2 năm kinh nghiệm làm việc trong lĩnh vực hỗ trợ khách hàng "
-"ngành CNTT;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:233
 msgid "Self-motivated and able to work independently."
-msgstr "Tự vận động và có thể làm việc độc lập."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:250
 msgid "Senior UX Designer"
-msgstr "Nhà thiết kế UX cấp cao"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:259
 msgid ""
 "Translating concepts into user flows, wireframes, mockups and prototypes "
 "that lead to intuitive user experiences;"
 msgstr ""
-"Chuyển thể các mô hình thành luồng người dùng, wireframes, mockups và các "
-"nguyên mẫu mà giúp người dùng trải nghiệm được trực quan;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:260
 msgid "Identifying design problems and devise elegant solutions;"
-msgstr "Xác định các vấn đề thiết kế và đưa ra các giải pháp tốt;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:261
 msgid ""
 "Taking a user-centered design approach and rapidly test and iterate your "
 "designs;"
 msgstr ""
-"Sử dụng phương pháp thiết kế tập trung vào người dùng và nhanh chóng kiểm "
-"tra lại các thiết kế;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:262
 msgid "Collaborating with other team members and stakeholders;"
-msgstr "Phối hợp với các thành viên khác trong nhóm và các bên liên quan;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:266
 msgid ""
@@ -3531,37 +2987,24 @@ msgid ""
 "candidates who have experience designing complex solutions for complete "
 "digital environments;"
 msgstr ""
-"Ba năm kinh nghiệm thiết kế UX. Ưu tiên sẽ được trao cho các ứng viên có "
-"kinh nghiệm thiết kế các giải pháp phức tạp cho môi trường kỹ thuật số hoàn "
-"chỉnh;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
-#| msgid ""
-#| "Expertise in UX softwares such as Sketch, InVision, UXPin, Framer, or "
-#| "Marvel App. Basic React, SCSS, or JavaScript skills are a plus;"
 msgid ""
 "Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
 msgstr ""
-"Chuyên môn trong phần mềm UX như Sketch, InVision, UXPin, Framer hoặc Marvel "
-"App. Các kỹ năng phản ứng cơ bản, SCSS hoặc JavaScript là một lợi thế;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:268
 msgid ""
 "Ability to work with clients, understand their specifications and design "
 "complete user experiences that fulfills their needs and vision;"
 msgstr ""
-"Khả năng làm việc với khách hàng để hiểu các yêu cầu chi tiết và thiết kế "
-"trải nghiệm người dùng hoàn chỉnh đáp ứng nhu cầu và tầm nhìn của khách hàng;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:269
 msgid ""
 "Extensive experience in using UX design best practices to design solutions, "
 "and a deep understanding of mobile-first and responsive design;"
 msgstr ""
-"Trải nghiệm sâu rộng trong việc sử dụng các phương pháp hay nhất về thiết kế "
-"UX để thiết kế các giải pháp và hiểu biết sâu sắc về thiết kế di động và đầu "
-"tiên;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:270
 msgid ""
@@ -3569,107 +3012,83 @@ msgid ""
 "research, user testing, A/B testing, rapid prototyping, heuristic analysis, "
 "usability and accessibility concerns;"
 msgstr ""
-"Một nắm vững của người dùng làm trung tâm thiết kế (UCD), lập kế hoạch và "
-"tiến hành nghiên cứu người dùng, kiểm tra người dùng, thử nghiệm A / B, tạo "
-"mẫu nhanh, phân tích heuristic, khả năng sử dụng và khả năng tiếp cận mối "
-"quan tâm;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:271
 msgid ""
 "Ability to clearly and effectively communicate design processes, ideas, and "
 "solutions to teams and clients;"
 msgstr ""
-"Khả năng truyền đạt rõ ràng và hiệu quả các quy trình thiết kế, ý tưởng và "
-"giải pháp cho các nhóm và khách hàng;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:272
 msgid "Be open to receiving feedback and constructive criticism;"
-msgstr "Hãy cởi mở để nhận phản hồi và phê bình mang tính xây dựng;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:273
 msgid "Be passionate about resolving user pain points through great design."
 msgstr ""
-"Hãy đam mê giải quyết các điểm đau của người dùng thông qua thiết kế tuyệt "
-"vời."
 
 #: web/apps/welcome/templates/welcome/joinus.html:288
 msgid "Product Manager"
-msgstr "Giám đốc sản phẩm"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:297
 msgid ""
 "Understanding the development of the industry and its customer requirements, "
 "form product need specification;"
 msgstr ""
-"Hiểu sự phát triển của ngành công nghiệp và yêu cầu của khách hàng, hình "
-"thức sản phẩm cần đặc điểm kỹ thuật;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:298
 msgid ""
 "Designing product UE from requirements document, clearly and accurately "
 "communicate demands to developing engineers;"
 msgstr ""
-"Thiết kế sản phẩm UE theo yêu cầu tài liệu, giao tiếp rõ ràng và chính xác "
-"nhu cầu với các kỹ sư đang phát triển;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:299
 msgid "Managing changes in product demand during product development;"
 msgstr ""
-"Quản lý các thay đổi nhu cầu sản phẩm trong quá trình phát triển sản phẩm;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:300
 msgid "Confirming the product satisfies all needs during product testing;"
 msgstr ""
-"Xác nhận nhu cầu sản phẩm thực hiện trong quá trình thử nghiệm sản phẩm;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:301
-#| msgid ""
-#| "After releasing the product, tracking customers' usage and timely find "
-#| "problems."
 msgid ""
 "After releasing the product, tracking customers' usage and timely finding "
 "problems."
 msgstr ""
-"Sau khi sản phẩm được phát hành, theo dõi việc sử dụng của khách hàng và các "
-"vấn đề tìm thấy kịp thời."
 
 #: web/apps/welcome/templates/welcome/joinus.html:306
 msgid ""
 "Three years or more of experience in designing e-commerce industry products;"
 msgstr ""
-"Hơn 3 năm kinh nghiệm thiết kế sản phẩm công nghiệp thương mại điện tử;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:307
 msgid "Proficient with product prototype designing tools;"
-msgstr "Thành thạo với các công cụ thiết kế nguyên mẫu sản phẩm;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:308
 msgid "Familiar with mobile UX design;"
-msgstr "Thiết kế UX di động quen thuộc;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:309
 msgid ""
 "Good technical background in creating rich user experience through "
 "technology;"
 msgstr ""
-"Nền tảng kỹ thuật tốt với việc tạo trải nghiệm người dùng phong phú theo "
-"công nghệ;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:310
 msgid "Good level of English, fluent in reading English documents."
-msgstr "Trình độ tiếng Anh tốt, đọc tài liệu tiếng Anh lưu loát."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:325
 msgid "Android R&D Engineer"
-msgstr "Kỹ sư R & D Android"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:334
 msgid ""
 "Responsible for the development of Android client product, helping other "
 "developers grow and make progress;"
 msgstr ""
-"Chịu trách nhiệm cho sự phát triển của sản phẩm đối với khách hàng sử dụng "
-"Android, giúp các nhà phát triển khác phát triển và tiến bộ;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:335
 msgid ""
@@ -3677,9 +3096,6 @@ msgid ""
 "requirements, cooperating with UI designers to complete initial testing "
 "based on product design;"
 msgstr ""
-"Tham gia vào việc phân tích và thiết kế sản phẩm dựa trên yêu cầu của khách "
-"hàng, hợp tác với các nhà thiết kế giao diện người dùng để hoàn thành thử "
-"nghiệm ban đầu dựa trên thiết kế sản phẩm;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:336
 msgid ""
@@ -3687,9 +3103,6 @@ msgid ""
 "product, and continuously optimizing the quality, performance, and user "
 "experience of products."
 msgstr ""
-"Chịu trách nhiệm về việc phát triển các phiên bản lặp lại tiếp theo của sản "
-"phẩm và liên tục tối ưu hóa chất lượng, hiệu suất và trải nghiệm người dùng "
-"của sản phẩm."
 
 #: web/apps/welcome/templates/welcome/joinus.html:340
 msgid ""
@@ -3698,306 +3111,198 @@ msgid ""
 "characteristics and development features of Android mobile terminals; Able "
 "to solve common problems;"
 msgstr ""
-"Hơn 3 năm kinh nghiệm trong phát triển Java chuyên nghiệp; Hơn 2 năm kinh "
-"nghiệm trong kinh nghiệm phát triển Android thực tế; Quen thuộc với đặc điểm "
-"và tính năng phát triển của thiết bị đầu cuối di động Android; Có khả năng "
-"giải quyết các vấn đề chung."
 
 #: web/apps/welcome/templates/welcome/joinus.html:341
 msgid ""
 "Familiar with Android components and session; Be able to reasonably allocate "
 "resources in the available session;"
 msgstr ""
-"Quen thuộc với các thành phần và phiên làm việc của Android; Có thể phân bổ "
-"hợp lý tài nguyên trong phiên có sẵn."
 
 #: web/apps/welcome/templates/welcome/joinus.html:342
-#| msgid ""
-#| "Familiar with common controls & custom controls, event mechanisms and "
-#| "gesture operations;"
 msgid ""
 "Familiar with common and custom controls, event mechanisms and gesture "
 "operations;"
 msgstr ""
-"Quen thuộc với các điều khiển chung và điều khiển tùy chỉnh, cơ chế sự kiện "
-"và hoạt động cử chỉ;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:343
-#| msgid ""
-#| "Proficient in Android performance & memory optimization; good at solving "
-#| "system crashes & compatibility, memory leaks & overflow;"
 msgid ""
 "Proficient in Android performance and memory optimization; good at solving "
 "system crashes and compatibility, memory leaks and overflow;"
 msgstr ""
-"Thành thạo về Android và tối ưu hóa bộ nhớ; giải quyết tốt sự cố và khả năng "
-"tương thích của hệ thống, rò rỉ bộ nhớ và tràn bộ nhớ."
 
 #: web/apps/welcome/templates/welcome/joinus.html:344
-#| msgid ""
-#| "Familiar with Android network communication mechanism, Json analysis;"
 msgid "Familiar with Android network communication mechanism, JSON analysis;"
 msgstr ""
-"Thích nghi với cơ chế giao tiếp trên mạng lưới Android, phân tích Json;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:345
 msgid "Familiar with Android common layout, animation and effect;"
-msgstr "Thích nghi với các layout, hình ảnh động và hiệu ứng trên Android;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:346
 msgid ""
 "Familiar with Android platform screen adaptation and version compatibility;"
 msgstr ""
-"Thích nghi với Android trên nàm hình và khả năng tương thích với phiên bản;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:347
 msgid ""
 "Competent to work independently; Experienced in analyzing & re-writing "
 "Android source code;"
 msgstr ""
-"Có khả năng làm việc độc lập; Có kinh nghiệm trong việc phân tích và viết "
-"lại mã nguồn Android."
 
 #: web/apps/welcome/templates/welcome/joinus.html:348
-#| msgid ""
-#| "Excellent communication skills with team work spirit, work seriously and "
-#| "actively, rigorous and responsible;"
 msgid ""
 "Excellent communication skills and teamwork, work seriously and actively, "
 "rigorous and responsible;"
 msgstr ""
-"Kỹ năng giao tiếp tốt với tinh thần làm việc nhóm, làm việc nghiêm túc và "
-"tích cực, có trách nhiệm."
 
 #: web/apps/welcome/templates/welcome/joinus.html:349
-#| msgid ""
-#| "Experienced in the application of open source framework is preferred;"
 msgid "Experience in the application of open source framework is preferred;"
-msgstr "Có kinh nghiệm trong việc áp dụng khung nguồn mở được ưa thích;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:350
-#| msgid ""
-#| "Familiar with Android testing tools & process, experienced in cross "
-#| "application coding test."
 msgid ""
 "Familiar with Android testing tools and process, experienced in cross "
 "application coding test."
 msgstr ""
-"Quen thuộc với các công cụ và quy trình thử nghiệm Android, có kinh nghiệm "
-"về kiểm tra mã hóa ứng dụng chéo."
 
 #: web/apps/welcome/templates/welcome/joinus.html:365
 msgid "IOS Developer"
-msgstr "Nhà phát triển iOS"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:374
-#| msgid ""
-#| "Assisting the product manager to analyze and organize the customer's "
-#| "need, and make the product requirements document;"
 msgid ""
 "Assisting the product manager to analyze and organize the customer's needs, "
 "and create the product requirements document;"
 msgstr ""
-"Giúp người quản lý sản phẩm phân tích và tổ chức nhu cầu của khách hàng và "
-"tạo tài liệu yêu cầu về sản phẩm."
 
 #: web/apps/welcome/templates/welcome/joinus.html:375
-#| msgid ""
-#| "Depending on the product requirements document, designing an iOS App "
-#| "system  architecture;"
 msgid ""
 "Depending on the product requirements document, designing an iOS App system "
 "architecture;"
 msgstr ""
-"Tùy thuộc vào tài liệu yêu cầu sản phẩm để thiết kế trên hệ thống iOS App."
 
 #: web/apps/welcome/templates/welcome/joinus.html:376
-#| msgid ""
-#| "Depending on the system architecture design, conducting iOS App-related "
-#| "program  development;"
 msgid ""
 "Depending on the system architecture design, conducting iOS app-related "
 "program development;"
 msgstr ""
-"Tùy thuộc vào thiết kế kiến trúc hệ thống để tiến hành phát triển chương "
-"trình liên quan đến ứng dụng iOS."
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
-#| msgid ""
-#| "Depending on the product requirements document, conducting an overall "
-#| "test on  the iOS app;"
 msgid ""
 "Depending on the product requirements document, conducting overall testing "
 "of the iOS app;"
 msgstr ""
-" Tùy thuộc vào tài liệu yêu cầu sản phẩm để tiến hành kiểm tra tổng thể trên "
-"ứng dụng iOS."
 
 #: web/apps/welcome/templates/welcome/joinus.html:378
 msgid ""
 "According to customers’ feedback, continuously revising and improving the "
 "iOS app."
 msgstr ""
-"Theo phản hồi của khách hàng, ứng dụng iOS được sửa đổi và cải tiến liên tục."
 
 #: web/apps/welcome/templates/welcome/joinus.html:382
 #: web/apps/welcome/templates/welcome/joinus.html:420
 msgid ""
 "Bachelors’ degree or above, graduated in computer science or related major;"
 msgstr ""
-"Cử nhân hoặc cao hơn, tốt nghiệp ngành khoa học máy tính hoặc chuyên ngành "
-"liên quan."
 
 #: web/apps/welcome/templates/welcome/joinus.html:383
 msgid ""
 "At least 2 years working experience in computer software, or more than 1 "
 "year working experience in iOS App development;"
 msgstr ""
-"Hơn 2 năm kinh nghiệm làm việc trong phần mềm máy tính, hoặc hơn 1 năm kinh "
-"nghiệm làm việc trong phát triển ứng dụng iOS."
 
 #: web/apps/welcome/templates/welcome/joinus.html:384
 msgid "Familiar with Swift or Objective C programming language;"
-msgstr "Quen thuộc với ngôn ngữ lập trình Swift hoặc Objective C."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:385
-#| msgid ""
-#| "Familiar with the iOS's platform software development model and system "
-#| "architecture;"
 msgid ""
 "Familiar with the iOS platform software development model and system "
 "architecture;"
 msgstr ""
-"Quen thuộc với mô hình phát triển phần mềm nền tảng và kiến trúc hệ thống "
-"của iOS."
 
 #: web/apps/welcome/templates/welcome/joinus.html:386
 msgid ""
 "Familiar with common data structures and algorithms, has a persistent "
 "pursuit of new technologies;"
 msgstr ""
-"Quen thuộc với các cấu trúc và thuật toán dữ liệu phổ biến, có sự theo đuổi "
-"liên tục các công nghệ mới."
 
 #: web/apps/welcome/templates/welcome/joinus.html:387
 msgid "Good at using technology to create a good user experience;"
-msgstr "Sử dụng công nghệ tốt để tạo trải nghiệm người dùng tốt."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:388
 msgid "Good English level, able to read English technical documents smoothly."
 msgstr ""
-"Tốt trình độ tiếng Anh, có thể đọc tài liệu kỹ thuật tiếng Anh một cách trơn "
-"tru."
 
 #: web/apps/welcome/templates/welcome/joinus.html:403
 msgid "Front-end Web Developer"
-msgstr "Nhà phát triển web Front-end"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:412
-#| msgid ""
-#| "Assisting the product manager, analyzing and organizing the customer's "
-#| "need, and making the product requirements document;"
 msgid ""
 "Assisting the product manager, analyzing and organizing the customer's "
 "needs, and creating the product requirements document;"
 msgstr ""
-"Hỗ trợ người quản lý sản phẩm, phân tích và tổ chức nhu cầu của khách hàng "
-"và tạo tài liệu yêu cầu sản phẩm."
 
 #: web/apps/welcome/templates/welcome/joinus.html:413
 msgid ""
 "Depending on the product requirements document, designing the architecture "
 "of the website front-end;"
 msgstr ""
-"Tùy thuộc vào tài liệu yêu cầu sản phẩm để thiết kế kiến trúc của trang web "
-"front-end."
 
 #: web/apps/welcome/templates/welcome/joinus.html:414
 msgid ""
 "Depending on the design draft provided by the UI designer, completing the "
 "production of the website page;"
 msgstr ""
-"Tùy thuộc vào bản phác thảo thiết kế do nhà thiết kế giao diện người dùng "
-"cung cấp để hoàn thành việc sản xuất trang web."
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
-#| msgid ""
-#| "According to the product requirements document, completing the "
-#| "development of the sites’ front-end interactive part of the program;"
 msgid ""
 "According to the product requirements document, completing the development "
 "of the sites’ front-end interaction;"
 msgstr ""
-"Theo tài liệu yêu cầu sản phẩm, hãy hoàn thành việc phát triển phần tương "
-"tác đầu cuối của trang web của chương trình."
 
 #: web/apps/welcome/templates/welcome/joinus.html:416
-#| msgid ""
-#| "According to consumer’s feedback, correcting the front end issues of the "
-#| "website."
 msgid ""
 "According to consumers' feedback, correcting front-end issues of the website."
 msgstr ""
-"Theo phản hồi của người tiêu dùng để sửa các vấn đề giao diện người dùng của "
-"trang web."
 
 #: web/apps/welcome/templates/welcome/joinus.html:421
-#| msgid ""
-#| "2+ years working experience in computer software, more than 1 year "
-#| "experience in front end development of the website;"
 msgid ""
 "2+ years working experience in computer software, more than 1 year "
 "experience in front-end web development;"
 msgstr ""
-"hơn 2 năm kinh nghiệm làm việc trong phần mềm máy tính, hơn 1 năm kinh "
-"nghiệm trong front end phát triển của trang web."
 
 #: web/apps/welcome/templates/welcome/joinus.html:422
-#| msgid ""
-#| "Familiar with AI and Photoshop software, can create web pages based on UI "
-#| "design drafts;"
 msgid ""
 "Familiar with Adobe Illustrator and Photoshop software, can create web pages "
 "based on UI design drafts;"
 msgstr ""
-"Quen thuộc với phần mềm AI và Photoshop, có thể tạo các trang web dựa trên "
-"bản phác thảo thiết kế giao diện người dùng."
 
 #: web/apps/welcome/templates/welcome/joinus.html:423
-#| msgid "Familiar with HTML5, CSS, Javascript programming language;"
 msgid "Familiar with HTML5, CSS, Javascript;"
-msgstr "Quen thuộc với HTML5, CSS, ngôn ngữ lập trình Javascript."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:424
-#| msgid ""
-#| "Familiar with website front-end development framework such as jQuery and "
-#| "Bootstrap;"
 msgid ""
 "Familiar with front-end web development frameworks such as jQuery and "
 "Bootstrap;"
 msgstr ""
-"Quen thuộc với khuôn khổ phát triển front-end của trang web như jQuery và "
-"Bootstrap."
 
 #: web/apps/welcome/templates/welcome/joinus.html:425
-#| msgid ""
-#| "Familiar with the principles of responsive Web design, with practical "
-#| "experience;"
 msgid ""
 "Familiar with the principles of responsive web design, with practical "
 "experience;"
-msgstr "Quen thuộc với nguyên tắc thiết kế web, với kinh nghiệm thực tế."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:426
 msgid "Skillfully use existing technology to set up the best user experience;"
 msgstr ""
-"Khéo léo sử dụng công nghệ hiện có để thiết lập trải nghiệm người dùng tốt "
-"nhất."
 
 #: web/apps/welcome/templates/welcome/joinus.html:427
-#| msgid "Good English level, able to read English technical documents."
 msgid "Good English ability, able to read English technical documents."
-msgstr "Trình độ tiếng Anh tốt, có thể đọc tài liệu kỹ thuật tiếng Anh."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/legal.html:6
 #: web/apps/welcome/templates/welcome/legal.html:13
@@ -4009,40 +3314,31 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:27
 #: web/templates/footer.html:43
 msgid "Media Kit"
-msgstr "Phương tiện truyền thông"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:23
-#| msgid ""
-#| "Newton logo is a combination of calculus symbol and ridged coin edge. "
-#| "This logo honors the great scientist and coinage pioneer Sir Isaac "
-#| "Newton, symbolizing his great contribution and perfect integration of "
-#| "finance and technology."
 msgid ""
 "Newton's logo is a combination of a calculus symbol and ridged coin edge. "
 "This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
 "symbolizing his great contribution and perfect integration of finance and "
 "technology."
 msgstr ""
-"Logo Newton là một sự kết hợp của biểu tượng tính toán với cạnh của đồng xu. "
-"Logo này tôn vinh nhà khoa học vĩ đại và tiên phong - Ngài Isaac Newton với "
-"phát minh đúc Tiền Xu của ông, tượng trưng cho sự đóng góp to lớn của ông và "
-"sự tích hợp hoàn hảo của tài chính và công nghệ."
 
 #: web/apps/welcome/templates/welcome/mediakit.html:28
 msgid "Download Logo"
-msgstr "Tải xuống biểu trưng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:47
 msgid "Chinese Poster"
-msgstr "Poster Trung Quốc"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:55
 msgid "English Poster"
-msgstr "Poster tiếng Anh"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:63
 msgid "Korean Poster"
-msgstr "Poster Hàn Quốc"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/mediakit.html:74
 msgid "Newton Logo"
@@ -4121,76 +3417,63 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/protocol.html:21
 #: web/apps/welcome/templates/welcome/technology.html:34
 msgid "Digital Identity and Credit"
-msgstr "Danh Tính Số Và Tín Dụng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:121
-#| msgid "Create and manage DID (Decentralized IDs);"
 msgid "Create and manage decentralized ID's"
-msgstr "Tạo và quản lý DID (ID phân cấp);"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:122
-#| msgid "Set privacy mode for personal information;"
 msgid "Set privacy preferences for personal information;"
-msgstr "Đặt chế độ riêng tư cho thông tin cá nhân;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:123
-#| msgid "Transaction information management;"
 msgid "Transaction management;"
-msgstr "Quản lý thông tin giao dịch;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:124
-#| msgid "Set privacy mode for personal information;"
 msgid "Set pricing and benefits for sharing transaction information"
-msgstr "Đặt chế độ riêng tư cho thông tin cá nhân;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:125
-#| msgid "Digital asset management, including NEW, BTC, ETH, etc."
 msgid "Digital asset management, including NEW, BTC, ETH, etc"
-msgstr "Quản lý tài sản kỹ thuật số, bao gồm NEW, BTC, ETH, v.v."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:140
-#| msgid "Support cross-border transactions;"
 msgid "Cross-border transactions;"
-msgstr "Hỗ trợ giao dịch xuyên biên giới;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:141
-#| msgid "Support for micro-payments;"
 msgid "Micro-payments;"
-msgstr "Hỗ trợ thanh toán nhỏ lẻ;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:142
-#| msgid "Extremely fast transaction confirmation."
 msgid "Rapid transaction confirmation."
-msgstr "Xác nhận giao dịch cực nhanh."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:156
 msgid "Joint Login"
-msgstr "Đăng nhập chung"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:157
-#| msgid "Log in multiple Dapps using a unified identity;"
 msgid "Log into multiple Dapps with one unified identity"
-msgstr "Đăng nhập nhiều Dapps bằng cách sử dụng một danh tính thống nhất;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:158
-#| msgid "Dapp management and permission control;"
 msgid "Dapp management and permission control"
-msgstr "Quản lý và kiểm soát quyền của Dapp;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:159
-#| msgid "Security audit."
 msgid "Security audit"
-msgstr "Kiểm toán an ninh."
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:173
-#| msgid "Application Support"
 msgid "App Support"
-msgstr "Hỗ trợ ứng dụng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:174
-#| msgid "Built-in support for free and open-source applications;"
 msgid "Free and open-source apps"
-msgstr "Hỗ trợ tích hợp cho các ứng dụng mã nguồn mở và miễn phí;"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:175
 msgid "In-app purchases"
@@ -4201,15 +3484,13 @@ msgid "App development tools"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
-#| msgid "Newton's Community Economy"
 msgid "Newton Community Node Conference"
-msgstr "Cộng Đồng Kinh Tế Của Newton"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:47
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:66
-#| msgid "About Newton Project"
 msgid "About The Conference"
-msgstr "Giới thiệu về Newton Project"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:51
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:70
@@ -4292,9 +3573,8 @@ msgid "Invite Guests"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:218
-#| msgid "Founder of kela.cn"
 msgid "Founder of Newton"
-msgstr "Nhà sáng lập của Kela.cn"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:444
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:446
@@ -4302,9 +3582,8 @@ msgid "Chen Shi"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:448
-#| msgid "Co-founder"
 msgid "KCSA founder"
-msgstr "Đồng sáng lập"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:459
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:461
@@ -4357,9 +3636,8 @@ msgid "Tong Yang"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:538
-#| msgid "Join Partner"
 msgid "Gold Finance partner"
-msgstr "Đối tác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:549
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:551
@@ -4376,9 +3654,8 @@ msgid "Sun Jian"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:568
-#| msgid "Co-founder"
 msgid "JLAB founder"
-msgstr "Đồng sáng lập"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:579
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:581
@@ -4390,9 +3667,8 @@ msgid "Genesis CEO"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:597
-#| msgid "In Progress"
 msgid "Meeting Process"
-msgstr "Báo chí"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:601
 msgid "Dec. 11"
@@ -4435,14 +3711,12 @@ msgid "Panel: From Improvement to Innovation;<br/>From Industry to Ecosystem"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:642
-#| msgid "Social Network"
 msgid "Social Networking"
-msgstr "Mạng xã hội"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:646
-#| msgid "Newton's Community Economy"
 msgid "Newton Community Dinner"
-msgstr "Cộng Đồng Kinh Tế Của Newton"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:652
 msgid "Dec. 12"
@@ -4498,18 +3772,16 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/partner.html:6
 #: web/apps/welcome/templates/welcome/partner.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:85
-#| msgid "Partner"
 msgid "Partners"
-msgstr "Đối tác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/press.html:29
 msgid "Details"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/press.html:47
-#| msgid "press"
 msgid "No press"
-msgstr "Báo chí"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:6
 #: web/apps/welcome/templates/welcome/privacy.html:13
@@ -4517,7 +3789,7 @@ msgstr "Báo chí"
 #: web/apps/welcome/templates/welcome/sitemap.html:95
 #: web/templates/footer.html:53
 msgid "Privacy Policy"
-msgstr "Chính sách riêng tư"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/privacy.html:20
 msgid ""
@@ -4811,7 +4083,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:36
 #: web/apps/welcome/templates/welcome/technology.html:28
 msgid "Hyper Exchange Protocol"
-msgstr "Giao thức Hyper Exchange"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
@@ -4820,18 +4092,12 @@ msgid ""
 "personal credit and anything that exists in a binary format and come with "
 "the right to use."
 msgstr ""
-"Người dùng có thể quản lý và kiểm soát quyền truy cập vào nội dung kỹ thuật "
-"số của mình bằng cách sử dụng danh tính kỹ thuật số. Tài sản kỹ thuật số bao "
-"gồm; tiền điện tử, dữ liệu cá nhân, tín dụng cá nhân và bất kỳ thứ gì tồn "
-"tại ở định dạng nhị phân và đi kèm với quyền sử dụng."
 
 #: web/apps/welcome/templates/welcome/protocol.html:24
 msgid ""
 "Users can control and set different privacy modes for corresponding digital "
 "assets, and price the digital assets."
 msgstr ""
-"Người dùng có thể kiểm soát và đặt các chế độ riêng tư khác nhau cho các tài "
-"sản kỹ thuật số tương ứng và định giá tài sản kỹ thuật số."
 
 #: web/apps/welcome/templates/welcome/protocol.html:37
 msgid ""
@@ -4840,10 +4106,6 @@ msgid ""
 "identity a user can check the relevant information on any commodity at any "
 "time."
 msgstr ""
-"Bằng cách sử dụng các kỹ thuật như 'Atom Hashing', chúng tôi có thể tạo ra "
-"một danh tính kỹ thuật số duy nhất cho các mặt hàng trên toàn bộ mạng. Thông "
-"qua danh tính kỹ thuật số này, người dùng có thể kiểm tra thông tin liên "
-"quan trên bất kỳ hàng hóa nào vào bất kỳ lúc nào."
 
 #: web/apps/welcome/templates/welcome/protocol.html:38
 msgid ""
@@ -4852,9 +4114,6 @@ msgid ""
 "ensures no tampering with the data once it is stored on the Newton "
 "blockchain."
 msgstr ""
-"Một khi thông tin về từng hoạt động của một sản phẩm đi vào chuỗi cung ứng "
-"Newton, thông tin đó sẽ được lưu trữ trên blockchain Newton. Điều này đảm "
-"bảo không làm xáo trộn dữ liệu khi nó được lưu trữ trên blockchain Newton."
 
 #: web/apps/welcome/templates/welcome/protocol.html:39
 msgid ""
@@ -4862,15 +4121,11 @@ msgid ""
 "realize automatic insurance claims and property rights transfer. This will "
 "reduce the transaction costs and promote cooperation efficiency."
 msgstr ""
-"Thông qua hợp đồng thông minh, Newton có thể thiết lập trước các quy tắc "
-"trao đổi thương mại để thực hiện các yêu cầu bảo hiểm tự động và chuyển giao "
-"quyền sở hữu. Điều này sẽ giảm chi phí giao dịch và thúc đẩy hiệu quả hợp "
-"tác."
 
 #: web/apps/welcome/templates/welcome/protocol.html:50
 #: web/apps/welcome/templates/welcome/technology.html:44
 msgid "Digital Marketing"
-msgstr "Tiếp thị kỹ thuật số"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:52
 msgid ""
@@ -4878,9 +4133,6 @@ msgid ""
 "contract templates in the system. This includes incentive modes, settlement "
 "modes, and dynamic price adjusting rules."
 msgstr ""
-"Nhà quảng cáo có thể đặt kế hoạch tiếp thị thông qua các mẫu hợp đồng tiếp "
-"thị thông minh tích hợp khác nhau trong hệ thống. Điều này bao gồm các chế "
-"độ ưu đãi, phương thức thanh toán và quy tắc điều chỉnh giá năng động."
 
 #: web/apps/welcome/templates/welcome/protocol.html:53
 msgid ""
@@ -4888,15 +4140,11 @@ msgid ""
 "out the NewAI system, an advertiser can conduct market research before "
 "marketing activities, and analyze the results after the marketing activities."
 msgstr ""
-"Nhà quảng cáo có thể kiểm tra các hợp đồng tiếp thị đang diễn ra và hoàn "
-"thành. Bằng cách gọi ra hệ thống NewAI, một nhà quảng cáo có thể tiến hành "
-"nghiên cứu thị trường trước các hoạt động tiếp thị và phân tích kết quả sau "
-"các hoạt động tiếp thị."
 
 #: web/apps/welcome/templates/welcome/protocol.html:64
 #: web/apps/welcome/templates/welcome/technology.html:50
 msgid "Trading And Payment"
-msgstr "Giao dịch và thanh toán"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:66
 msgid ""
@@ -4906,12 +4154,6 @@ msgid ""
 "business rules, settlement rules, smart insurance contracts, smart financial "
 "contracts, and external chain service."
 msgstr ""
-"Nền tảng giao dịch và thanh toán Newton sẽ cho phép người dùng xác định các "
-"giao dịch bằng cách sử dụng các mẫu hợp đồng thông minh và công cụ quy tắc "
-"được tích hợp sẵn. Điều này cho phép người dùng bao gồm: các giao dịch đa "
-"bên dựa trên các quy tắc kinh doanh phức tạp, quy tắc thanh toán, hợp đồng "
-"bảo hiểm thông minh, hợp đồng tài chính thông minh và dịch vụ chuỗi bên "
-"ngoài."
 
 #: web/apps/welcome/templates/welcome/protocol.html:67
 msgid ""
@@ -4919,13 +4161,10 @@ msgid ""
 "settlements and more, providing comprehensive online and offline payment "
 "tools."
 msgstr ""
-"Newton hỗ trợ các giao dịch xuyên biên giới, micropayments, thanh toán Mạng "
-"Lightning và nhiều hơn nữa, cung cấp các công cụ thanh toán trực tuyến và "
-"ngoại tuyến toàn diện."
 
 #: web/apps/welcome/templates/welcome/protocol.html:79
 msgid "Reliable physical tunnel"
-msgstr "Đường hầm tự nhiên đáng tin cậy"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:81
 msgid ""
@@ -4934,23 +4173,12 @@ msgid ""
 "related equipment. Any third party can manufacture safety equipment "
 "according to the protocol specification."
 msgstr ""
-"Dựa trên công nghệ NewChain và NewIoT Newton có khả năng thiết kế một giao "
-"thức đường hầm vật lý đáng tin cậy và xác định thông số kỹ thuật sản xuất "
-"của các thiết bị liên quan. Bất kỳ bên thứ ba nào cũng có thể sản xuất thiết "
-"bị an toàn theo đặc tả giao thức. "
 
 #: web/apps/welcome/templates/welcome/protocol.html:93
 msgid "Automatic finance"
-msgstr "Tài chính tự động"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
-#| msgid ""
-#| "Developers can define smart financial contracts based on the built-in "
-#| "smart contract templates on; insurance, lending and investment, including "
-#| "digital identity and credit, KYC information, staking the Newton token, "
-#| "contract rules and external chain service. The system will automatically "
-#| "match smart financial contracts and automatically complete transactional "
-#| "matching."
 msgid ""
 "Developers can define smart financial contracts based on the built-in smart "
 "contract templates on; insurance, lending and investment, including digital "
@@ -4958,11 +4186,6 @@ msgid ""
 "rules and external chain service. The system will automatically match smart "
 "financial contracts and automatically complete transaction matching."
 msgstr ""
-"Các nhà phát triển có thể xác định các hợp đồng tài chính thông minh dựa "
-"trên các mẫu hợp đồng thông minh tích hợp sẵn; bảo hiểm, cho vay và đầu tư, "
-"bao gồm danh tính và tín dụng số, thông tin KYC, đặt mã thông báo Newton, "
-"các quy định hợp đồng và dịch vụ chuỗi bên ngoài. Hệ thống sẽ tự động khớp "
-"các hợp đồng tài chính thông minh và tự động hoàn tất giao dịch khớp lệnh."
 
 #: web/apps/welcome/templates/welcome/protocol.html:107
 #: web/apps/welcome/templates/welcome/technology.html:68
@@ -4975,40 +4198,25 @@ msgid ""
 "Developers can access NewNET through the NNIO (NewNET IO) protocol, using "
 "storage services, computing services and domain names."
 msgstr ""
-"Các nhà phát triển có thể truy cập NewNET thông qua giao thức NNIO (NewNET "
-"IO), sử dụng dịch vụ lưu trữ, dịch vụ tính toán và tên miền."
 
 #: web/apps/welcome/templates/welcome/protocol.html:110
 msgid ""
 "Through smart storage contracts, smart computing contracts, smart domain "
 "name contracts, developers can quickly and innovatively develop applications."
 msgstr ""
-"Thông qua các hợp đồng lưu trữ thông minh, hợp đồng điện toán thông minh, "
-"hợp đồng tên miền thông minh, các nhà phát triển có thể nhanh chóng và sáng "
-"tạo phát triển các ứng dụng."
 
 #: web/apps/welcome/templates/welcome/roadmap.html:6
 msgid "Roadmap"
-msgstr "LỘ TRÌNH"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:6
 #: web/apps/welcome/templates/welcome/scene.html:13
 #: web/apps/welcome/templates/welcome/scene.html:21
 #: web/templates/header.html:36 web/templates/header.html:231
 msgid "Industry"
-msgstr "Công nghiệp"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:33
-#| msgid ""
-#| "Under the corporate structure, the capital side's income has far exceeded "
-#| "the laborer's income, and a new generation of giant retail institutions "
-#| "developed along with computers and the Internet have accelerated the "
-#| "accumulation of wealth to capital. Blockchain-commerce is the basic "
-#| "business model of the human-machine community. Under this model, any "
-#| "behavior that positively contributes to the human-machine community will "
-#| "be rewarded. The Blockchain-commerce model is used in the retail industry "
-#| "to help reduce transaction costs, protect consumers’ privacy, and promote "
-#| "intelligent collaboration."
 msgid ""
 "Under the control of corporations, income from capital far exceeds income "
 "from labor, and a new generation of internet-based retail giants is "
@@ -5018,14 +4226,6 @@ msgid ""
 "retail to reduce transaction costs, protect consumers’ privacy, and promote "
 "intelligent collaboration."
 msgstr ""
-"Theo cơ cấu doanh nghiệp, thu nhập của vốn đã vượt xa thu nhập của người lao "
-"động, và một thế hệ mới của các tổ chức bán lẻ khổng lồ được phát triển cùng "
-"với máy tính và Internet đã đẩy nhanh sự tích lũy của cải sang vốn. "
-"Blockchain thương mại là mô hình kinh doanh cơ bản của cộng đồng giữa người "
-"và máy móc. Theo mô hình này, bất kỳ hành vi nào đóng góp tích cực vào cộng "
-"đồng  giữa người và máy móc sẽ được thưởng. Mô hình Blockchain thương mại "
-"được sử dụng trong ngành bán lẻ để giúp giảm chi phí giao dịch, bảo vệ quyền "
-"riêng tư của người tiêu dùng và tăng cường hợp tác thông minh."
 
 #: web/apps/welcome/templates/welcome/scene.html:37
 #: web/apps/welcome/templates/welcome/scene.html:69
@@ -5035,61 +4235,37 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/scene.html:188
 #: web/apps/welcome/templates/welcome/scene.html:218
 msgid "Application Scenarios"
-msgstr "Hỗ trợ ứng dụng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:41
 msgid "NewMall"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:42
-#| msgid ""
-#| "In NewMall, as there is no profit-seeking intermediaries, the transaction "
-#| "cost of the sellers will be greatly reduced, and consumers, service "
-#| "providers and other participants can get the incentive of Newton token "
-#| "according to their contribution value (NewForce)."
 msgid ""
 "Since NewMall has no profit-seeking middlemen, transaction costs for sellers "
 "are greatly reduced, and consumers, service providers and other participants "
 "can get NEW tokens as an incentive based on how much they contribute (that "
 "is, their NewForce)."
 msgstr ""
-"Tại NewMall, vì không có trung gian tìm kiếm lợi nhuận, chi phí giao dịch "
-"của người bán sẽ giảm đáng kể và người tiêu dùng, nhà cung cấp dịch vụ và "
-"những người tham gia khác có thể nhận được khuyến khích của Newton token "
-"theo giá trị đóng góp của họ (NewForce)."
 
 #: web/apps/welcome/templates/welcome/scene.html:46
 msgid "New Digital Asset Management"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:47
-#| msgid ""
-#| "As a new digital asset of users, consumer data can be managed by NewPay. "
-#| "Users truly own data and can control the data by authorizing and pricing "
-#| "the data.Uninformed data leakage is prohibited."
 msgid ""
 "User data is a new digital asset controlled by the users' themselves, and "
 "can be managed with the NewPay app. Users truly own their data and can "
 "control it by authorizing and selling third-party use at a price they set "
 "themselves. Uninformed data leakage is prohibited."
 msgstr ""
-"Là tài sản kỹ thuật số mới của người dùng, dữ liệu người tiêu dùng có thể "
-"được quản lý bởi NewPay. Người dùng thực sự sở hữu dữ liệu và có thể kiểm "
-"soát dữ liệu bằng cách cho phép và định giá dữ liệu."
 
 #: web/apps/welcome/templates/welcome/scene.html:51
 msgid "Targeted Advertising"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:52
-#| msgid ""
-#| "Users can set whether to accept marketing information in NewPay, as well "
-#| "as the type of information required, price range, etc. Marketing "
-#| "advertisers set marketing plans through various marketing smart contract "
-#| "templates built into the system, including: target users, incentive "
-#| "models, settlement methods, and djustment rules. Merchants can achieve "
-#| "accurate advertising and peer-to-peer settlement with users, avoiding "
-#| "advertising fraud."
 msgid ""
 "Users can set whether to accept marketing promotions in NewPay, as well as "
 "the type of information required, price range, etc. Advertisers set "
@@ -5098,78 +4274,38 @@ msgid ""
 "adjustment rules. Merchants can achieve pinpointed advertising and peer-to-"
 "peer settlement with users, avoiding advertising fraud."
 msgstr ""
-"Người dùng có thể đặt xem có chấp nhận thông tin tiếp thị trong NewPay hay "
-"không, cũng như loại thông tin bắt buộc, phạm vi giá, v.v. Nhà quảng cáo "
-"tiếp thị đặt kế hoạch tiếp thị thông qua các mẫu hợp đồng tiếp thị thông "
-"minh khác nhau được tích hợp vào hệ thống, bao gồm: phương pháp và quy tắc "
-"djustment. Người bán có thể đạt được quảng cáo chính xác và giải quyết ngang "
-"hàng với người dùng, tránh gian lận quảng cáo."
 
 #: web/apps/welcome/templates/welcome/scene.html:65
-#| msgid ""
-#| "Current transaction payment costs are higher, efficiency is lower, and "
-#| "flexibility is poor. A new generation of trading and payment systems will "
-#| "be built based on blockchain technology."
 msgid ""
 "Under current e-commerce, transaction costs are high, efficiency is low, and "
 "flexibility is poor. A new generation of trading and payment systems will be "
 "built based on blockchain technology."
 msgstr ""
-"Chi phí thanh toán giao dịch hiện tại cao hơn, hiệu quả thấp hơn và tính "
-"linh hoạt kém. Một thế hệ mới của hệ thống giao dịch và thanh toán sẽ được "
-"xây dựng dựa trên công nghệ blockchain."
 
 #: web/apps/welcome/templates/welcome/scene.html:74
-#| msgid "Payment"
 msgid "Global Payments"
-msgstr "Thanh toán"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:75
-#| msgid ""
-#| "With the global distribution of NewChain infrastructure and NewPay "
-#| "payment tools, simple and convenient cross-border transactions can be "
-#| "achieved with very low transaction costs."
 msgid ""
 "With the global distribution of NewChain infrastructure and NewPay payment "
 "tools, cross-border transactions become simple and convenient, with very low "
 "transaction costs."
 msgstr ""
-"Với việc phân phối toàn cầu các cơ sở hạ tầng NewChain và các công cụ thanh "
-"toán NewPay, các giao dịch xuyên biên giới đơn giản và thuận tiện có thể đạt "
-"được với chi phí giao dịch rất thấp."
 
 #: web/apps/welcome/templates/welcome/scene.html:80
-#| msgid "Payment"
 msgid "Nanopayments"
-msgstr "Thanh toán"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:81
-#| msgid ""
-#| "IoT devices, i.e. NewIoT, can access NewChain at very low cost, and smart "
-#| "contracts can be established between devices to achieve automatic "
-#| "settlement and payment, thus meeting the high frequency requirements in "
-#| "ultra-micro payment scenarios."
 msgid ""
 "Internet of Things devices, namely NewIoT, can access NewChain at very low "
 "cost, and smart contracts can be established between devices to achieve "
 "automatic settlement and payment, thus meeting the high frequency "
 "requirements of nanopayment scenarios."
 msgstr ""
-"Các thiết bị IoT, tức là NewIoT, có thể truy cập NewChain với chi phí rất "
-"thấp và các hợp đồng thông minh có thể được thiết lập giữa các thiết bị để "
-"đạt được thanh toán tự động và thanh toán, do đó đáp ứng các yêu cầu tần số "
-"cao trong các trường hợp thanh toán siêu vi mô."
 
 #: web/apps/welcome/templates/welcome/scene.html:94
-#| msgid ""
-#| "Goods delivered to consumers usually go through logistics, warehousing, "
-#| "customs clearance, sales and many other processes. When there are after-"
-#| "sales services, a corresponding reverse process will be needed. The "
-#| "current supply chain process is opaque, and it is difficult for consumers "
-#| "to confirm the origin of goods, circulation information and so on, which "
-#| "is  a big problem for some industries such as counterfeits, "
-#| "pharmaceuticals, and luxury goods. Therefore, a credible supply chain "
-#| "system which is open to all stakeholders is very important."
 msgid ""
 "Goods delivered to consumers usually go through logistics, warehousing, "
 "customs clearance, sales and many other processes. When there are after-"
@@ -5180,200 +4316,106 @@ msgid ""
 "Therefore, a credible supply chain system which is open to all stakeholders "
 "is vital."
 msgstr ""
-"Hàng hóa giao cho người tiêu dùng thường đi qua hậu cần, kho bãi, thông "
-"quan, bán hàng và nhiều quy trình khác. Khi có các dịch vụ sau bán hàng, cần "
-"có quy trình ngược lại tương ứng. Quá trình chuỗi cung ứng hiện tại không rõ "
-"ràng, và người tiêu dùng khó xác nhận nguồn gốc hàng hóa, thông tin lưu "
-"thông, vv… là một vấn đề lớn đối với một số ngành như hàng giả, dược phẩm và "
-"hàng xa xỉ. Do đó, một hệ thống chuỗi cung ứng đáng tin cậy dành cho tất cả "
-"các bên liên quan là rất quan trọng."
 
 #: web/apps/welcome/templates/welcome/scene.html:95
-#| msgid ""
-#| "Through the combination of atomic hashing, NewIOT, NewChain and other "
-#| "technologies, the supply chain system will be credible, open and "
-#| "transparent, and generate more business innovations."
 msgid ""
 "Through the combination of atom hashing, NewIOT, NewChain and other "
 "technologies, the supply chain can be credible, open, and transparent, and "
 "generate more business innovation."
 msgstr ""
-"Thông qua sự kết hợp giữa băm nguyên tử, NewIOT, NewChain và các công nghệ "
-"khác, hệ thống chuỗi cung ứng sẽ đáng tin cậy, cởi mở và minh bạch, đồng "
-"thời tạo ra nhiều đổi mới kinh doanh hơn."
 
 #: web/apps/welcome/templates/welcome/scene.html:104
-#| msgid "Anti-counterfeiting and traceability"
 msgid "Anti-Counterfeiting and Traceability"
-msgstr "Chống Hàng Giả và Truy Xuất Nguồn Gốc"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:105
-#| msgid ""
-#| "Through atomic hashing, NewIoT and other technologies, the product’s the "
-#| "origin, latitude and longitude, physical characteristics and other data "
-#| "will be  uploaded into the blockchain to prove product’s origin and the "
-#| "integrity of the product packaging, thereby ensuring the credibility of "
-#| "the commodity logistics process."
 msgid ""
 "Through atom hashing, NewIoT and other technologies, a product’s origin, "
 "location, physical characteristics and other data will be uploaded to the "
 "blockchain to prove the product’s origin and the integrity of the packaging, "
 "ensuring the credibility of the logistics process."
 msgstr ""
-"Thông qua băm nguyên tử, NewIoT và các công nghệ khác, nguồn gốc, vĩ độ và "
-"kinh độ, đặc điểm vật lý và dữ liệu khác sẽ được tải lên blockchain để chứng "
-"minh nguồn gốc của sản phẩm và tính toàn vẹn của bao bì sản phẩm, đảm bảo độ "
-"tin cậy của quy trình hậu cần hàng hóa ."
 
 #: web/apps/welcome/templates/welcome/scene.html:110
-#| msgid "Supply chain financing"
 msgid "Supply Chain Financing"
-msgstr "Chuỗi cung ứng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:111
-#| msgid ""
-#| "Suppliers record their transaction data through blockchain technology, "
-#| "and share data with financing parties to obtain corresponding funds. "
-#| "Since the business data is not tamperable, it will help speed up the "
-#| "financing of suppliers and reduce the risk of default."
 msgid ""
 "Suppliers record their transaction data on the blockchain and share it with "
 "financing parties to obtain corresponding funds. Since the business data is "
 "tamper-proof, the financing of suppliers can be accelerated and the risk of "
 "default reduced."
 msgstr ""
-"Các nhà cung cấp ghi lại dữ liệu giao dịch của họ thông qua công nghệ "
-"blockchain và chia sẻ dữ liệu với các bên tài chính để nhận được các khoản "
-"tiền tương ứng. Vì dữ liệu kinh doanh không phải là giả mạo, nó sẽ giúp tăng "
-"tốc độ tài trợ của các nhà cung cấp và giảm nguy cơ mặc định."
 
 #: web/apps/welcome/templates/welcome/scene.html:123
-#| msgid "Self-finance"
 msgid "Self-Finance"
-msgstr "Tự quản lý Tài Chính"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:125
-#| msgid ""
-#| "The traditional financial service system has a large workload, long "
-#| "cycle, high cost and poor flexibility, and it is often difficult to serve "
-#| "small and medium-sized enterprises and individuals. Through digital "
-#| "identity and credit, a new type of self-financing system can be "
-#| "established."
 msgid ""
 "Traditional financial services have a large workload, long cycles, high "
 "costs and poor flexibility, and it is often difficult to serve small and "
 "medium-sized enterprises and individuals. Through digital identity and "
 "credit, a new type of self-financing system can be established."
 msgstr ""
-"Hệ thống dịch vụ tài chính truyền thống có khối lượng công việc lớn, chu kỳ "
-"dài, chi phí cao và tính linh hoạt kém, và thường khó phục vụ các doanh "
-"nghiệp và cá nhân vừa và nhỏ. Thông qua nhận dạng và tín dụng số, một loại "
-"hệ thống tự tài trợ mới có thể được thiết lập."
 
 #: web/apps/welcome/templates/welcome/scene.html:134
-#| msgid "Corporate and personal credit"
 msgid "Corporate and Personal Credit"
-msgstr "Tín Dụng Doanh Nghiệp và Cá Nhân"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:135
-#| msgid ""
-#| "Corporates and individuals establish a consistent credit system based on "
-#| "NewID, and third parties can only get credit data through authorization."
 msgid ""
 "Corporations and individuals can establish a consistent credit system based "
 "on NewID, and third parties can only get credit data via authorization."
 msgstr ""
-"Các công ty và cá nhân thiết lập một hệ thống tín dụng nhất quán dựa trên "
-"NewID và các bên thứ ba chỉ có thể nhận được dữ liệu tín dụng thông qua ủy "
-"quyền."
 
 #: web/apps/welcome/templates/welcome/scene.html:140
-#| msgid "Asset securitization"
 msgid "Asset Securitization"
-msgstr "Đảm bảo Tài Sản"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:141
-#| msgid ""
-#| "Through smart contract templates, financial organizations can create "
-#| "financial products that do not require human involvement. With NewChain-"
-#| "based token tools, various assets can be easily valued by tokens or "
-#| "coverted to correspongding amount tokens."
 msgid ""
 "Through smart contract templates, financial organizations can create "
 "financial products that do not require human involvement. With NewChain-"
 "based token tools, assets can be easily valued by tokens or converted to a "
 "corresponding amount of tokens."
 msgstr ""
-"Thông qua các mẫu hợp đồng thông minh, các tổ chức tài chính có thể tạo ra "
-"các sản phẩm tài chính không yêu cầu sự tham gia của con người. Với các công "
-"cụ mã thông báo dựa trên NewChain, các tài sản khác nhau có thể dễ dàng được "
-"đánh giá bằng mã thông báo hoặc được chuyển đổi thành mã thông báo hiệu "
-"chỉnh."
 
 #: web/apps/welcome/templates/welcome/scene.html:152
 msgid "Gaming"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:154
-#| msgid ""
-#| "Use blockchain technology to create a new gaming experience for users: "
-#| "users are both players and rule-making participants, and virtual game "
-#| "assets are owned by users."
 msgid ""
 "Using blockchain technology, a new gaming experience can be created where "
 "users are both players and rule-making participants, and virtual game assets "
 "are owned directly by users."
 msgstr ""
-"Sử dụng công nghệ blockchain để tạo trải nghiệm chơi trò chơi mới cho người "
-"dùng: người dùng vừa là người chơi vừa là người tham gia quy tắc và tài sản "
-"trò chơi ảo thuộc sở hữu của người dùng."
 
 #: web/apps/welcome/templates/welcome/scene.html:163
-#| msgid "Virtual game asset automated trading"
 msgid "In-Game Asset Automated Trading"
-msgstr "Giao dịch tự động tài sản trò chơi Ảo"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:164
-#| msgid ""
-#| "Through the cross-chain and oracle technology provided by NewChain, "
-#| "virtual items in various games can be easily recorded on the blockchain "
-#| "for automated trading."
 msgid ""
 "Through the cross-chain and oracle technology provided by NewChain, virtual "
 "items from games can be easily recorded on the blockchain for automated "
 "trading."
 msgstr ""
-"Thông qua công nghệ cross-chain và oracle được cung cấp bởi NewChain, các "
-"vật phẩm ảo trong các trò chơi khác nhau có thể dễ dàng được ghi lại trên "
-"blockchain để giao dịch tự động."
 
 #: web/apps/welcome/templates/welcome/scene.html:169
-#| msgid "Transparent rules of the game"
 msgid "Transparent Game Rules"
-msgstr "Các quy tắc minh bạch của trò chơi"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:170
-#| msgid ""
-#| "Game developers can easily create algorithmic and transparent game logic "
-#| "through NewChain related smart contract tools to improve the fairness and "
-#| "transparency of the game."
 msgid ""
 "Game developers can easily create algorithmic and transparent game logic "
 "through NewChain-related smart contract tools to improve fairness and "
 "transparency."
 msgstr ""
-"Các nhà phát triển trò chơi có thể dễ dàng tạo ra logic trò chơi thuật toán "
-"và minh bạch thông qua các công cụ hợp đồng thông minh liên quan đến "
-"NewChain để cải thiện tính công bằng và minh bạch của trò chơi."
 
 #: web/apps/welcome/templates/welcome/scene.html:184
-#| msgid ""
-#| "At present, there are widespread problems such as incomplete data and low "
-#| "degree of automation in agriculture. Blockchain combined with IoT "
-#| "technology can automatically collect, store and analyze agricultural "
-#| "production data, saving the high management costs of centralized systems, "
-#| "reducing post-maintenance costs, and helping to improve the intelligence "
-#| "and scale of agriculture."
 msgid ""
 "Agriculture faces widespread problems such as incomplete data and low degree "
 "of automation in agriculture. Blockchain, combined with IoT technology can "
@@ -5382,25 +4424,12 @@ msgid ""
 "maintenance costs, and helping to improve the intelligence and scale of "
 "agriculture."
 msgstr ""
-"Hiện nay, có những vấn đề phổ biến như dữ liệu không đầy đủ và mức độ tự "
-"động hóa thấp trong nông nghiệp. Blockchain kết hợp với công nghệ IoT có thể "
-"tự động thu thập, lưu trữ và phân tích dữ liệu sản xuất nông nghiệp, tiết "
-"kiệm chi phí quản lý cao của hệ thống tập trung, giảm chi phí bảo trì và "
-"giúp cải thiện trí thông minh và quy mô nông nghiệp."
 
 #: web/apps/welcome/templates/welcome/scene.html:193
-#| msgid "Traceability of agricultural products"
 msgid "Tracing Agricultural Products"
-msgstr "Truy xuất nguồn gốc của các sản phẩm nông nghiệp"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:194
-#| msgid ""
-#| "By introducing the IoT device which is compatible with NewIoT standard "
-#| "into the process of agricultural material circulation, agricultural "
-#| "production, agricultural product sales, the safety and efficiency of the "
-#| "whole process of agricultural production can be improved. Due to the non-"
-#| "tamperable nature of production data, it can be widely used in scientific "
-#| "research and anti-counterfeiting purposes."
 msgid ""
 "By introducing IoT devices compatible with NewIoT into agricultural material "
 "circulation, production, and product sales, the safety and efficiency of the "
@@ -5408,25 +4437,12 @@ msgid ""
 "proof nature of production data, it can be widely used for scientific "
 "research and anti-counterfeiting purposes."
 msgstr ""
-"Bằng cách giới thiệu thiết bị IoT tương thích với tiêu chuẩn NewIoT trong "
-"quá trình lưu thông nguyên liệu nông nghiệp, sản xuất nông nghiệp, bán nông "
-"sản, sự an toàn và hiệu quả của toàn bộ quá trình sản xuất nông nghiệp có "
-"thể được cải thiện. Do tính chất không thể giả mạo của dữ liệu sản xuất, nó "
-"có thể được sử dụng rộng rãi trong nghiên cứu khoa học và mục đích chống "
-"hàng giả."
 
 #: web/apps/welcome/templates/welcome/scene.html:199
-#| msgid "Intelligent planting"
 msgid "Intelligent Planting"
-msgstr "Trồng trọt thông minh"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:200
-#| msgid ""
-#| "Through using the IoT sensor which is compatible with NewIoT standard, "
-#| "all-day monitoring of planting environment and crop growth can be "
-#| "realized. Combining NewAI to make intelligent decision-making on "
-#| "monitoring results, a complete intelligent planting system can be built "
-#| "to detect risks, stabilize production and increase income in time."
 msgid ""
 "Through IoT sensors compatible with NewIoT, all-day monitoring of planting "
 "environments and crop growth can be realized. Combining NewAI to make "
@@ -5434,92 +4450,50 @@ msgid ""
 "planting system can be built to detect risks, stabilize production and "
 "increase income over time."
 msgstr ""
-"Thông qua việc sử dụng cảm biến IoT tương thích với tiêu chuẩn NewIoT, việc "
-"giám sát môi trường trồng và phát triển cây trồng cả ngày có thể được thực "
-"hiện. Kết hợp NewAI để đưa ra quyết định thông minh về kết quả giám sát, một "
-"hệ thống trồng thông minh hoàn chỉnh có thể được xây dựng để phát hiện rủi "
-"ro, ổn định sản xuất và tăng thu nhập kịp thời."
 
 #: web/apps/welcome/templates/welcome/scene.html:212
 msgid "Public Welfare"
-msgstr "Phúc lợi công cộng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:214
-#| msgid ""
-#| "Blockchain technology has the characteristics of decentralization, high "
-#| "transparency and non-tamperability, so it meets the needs of the public "
-#| "welfare. The non-profit organization can store the whole process "
-#| "information such as fundraising, project progress, and recipient feedback "
-#| "on NewChain for donors and the public to check."
 msgid ""
 "Blockchain technology is decentralized, highly transparent and tamper-proof, "
 "so it meets the needs of the public welfare. Non-profit organizations can "
 "store the whole process information such as fundraising, project progress, "
 "and recipient feedback on NewChain for donors and the public to check."
 msgstr ""
-"Công nghệ Blockchain có đặc điểm phân cấp, minh bạch cao và không giả mạo, "
-"do đó, nó đáp ứng nhu cầu của phúc lợi công cộng. Tổ chức phi lợi nhuận có "
-"thể lưu trữ toàn bộ thông tin quy trình như gây quỹ, tiến độ dự án và phản "
-"hồi của người nhận trên NewChain cho các nhà tài trợ và công chúng để kiểm "
-"tra."
 
 #: web/apps/welcome/templates/welcome/scene.html:223
-#| msgid "Public Welfare"
 msgid "Public Welfare Audit"
-msgstr "Phúc lợi công cộng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:224
-#| msgid ""
-#| "Public welfare activities require public welfare audits to improve "
-#| "efficiency and maintain trust. With NewChain, NewID technology and "
-#| "agreements, every donation will be available to be traced. Public welfare "
-#| "organizations can track the situation of the rescue recipients through "
-#| "relevant tools, which helps to enhance the fairness and transparency of "
-#| "public welfare."
 msgid ""
 "Public welfare activities require audits to improve efficiency and maintain "
 "trust. With NewChain, NewID technology and agreements, every donation can be "
 "traced. Public welfare organizations can track the situation of the rescue "
 "recipients through relevant tools, enhancing fairness and transparency."
 msgstr ""
-"Các hoạt động phúc lợi công cộng yêu cầu kiểm toán phúc lợi công cộng để "
-"nâng cao hiệu quả và duy trì lòng tin. Với NewChain, công nghệ và thỏa thuận "
-"của NewID, mọi khoản đóng góp sẽ có sẵn để được truy tìm. Các tổ chức phúc "
-"lợi công cộng có thể theo dõi tình hình của những người nhận giải cứu thông "
-"qua các công cụ liên quan, giúp tăng cường sự công bằng và minh bạch về phúc "
-"lợi công cộng."
 
 #: web/apps/welcome/templates/welcome/scene.html:229
-#| msgid "Wildlife protection"
 msgid "Wildlife Protection"
-msgstr "Bảo vệ động vật hoang dã"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:230
-#| msgid ""
-#| "Using NewIoT technology, rare wildlife resources data can be recorded on "
-#| "NewChain, so that the location and physical indicators of each specific "
-#| "animal can be traced, thus providing key information for the research "
-#| "work such as migration tracking and combating poaching and trafficking."
 msgid ""
 "Using NewIoT technology, rare wildlife data can be recorded on NewChain, so "
 "that the location and physical indicators of each specific animal can be "
 "traced, providing key information for research such as migration tracking "
 "and combating poaching and trafficking."
 msgstr ""
-"Sử dụng công nghệ NewIoT, dữ liệu tài nguyên động vật hoang dã quý hiếm có "
-"thể được ghi lại trên NewChain để có thể truy tìm vị trí và chỉ số vật lý "
-"của từng động vật cụ thể, cung cấp thông tin quan trọng cho công việc nghiên "
-"cứu như theo dõi di chuyển và chống săn trộm và buôn bán."
 
 #: web/apps/welcome/templates/welcome/scene.html:239
-#| msgid "If you have innovative ideas?"
 msgid "Have an Innovative Idea?"
-msgstr "Nếu bạn có ý tưởng sáng tạo?"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:241
-#| msgid "Submit Your Business Proposal"
 msgid "Send Us Your Business Proposal"
-msgstr "Gửi đề xuất kinh doanh của bạn"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:6
 msgid "SITEMAP"
@@ -5533,11 +4507,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:24
 #: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:40
 msgid "Team"
-msgstr "Đội"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:33
 msgid "TECHNOLOGY"
-msgstr "Công Nghệ"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:43
 msgid "NEWPAY"
@@ -5545,7 +4519,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:52
 msgid "ECONOMY"
-msgstr "Kinh tế"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:60
 msgid "NEWFUND"
@@ -5554,17 +4528,16 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:68
 #: web/templates/footer.html:20
 msgid "COMMUNITY"
-msgstr "Cộng đồng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:75
-#| msgid "Developer"
 msgid "Developers"
-msgstr "Nhà Phát Triển"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:83
 #: web/templates/footer.html:8
 msgid "DEVELOPMENT"
-msgstr "Phát triển"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:91
 msgid "TERMS OF SERVICE"
@@ -5575,7 +4548,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/terms-of-use.html:13
 #: web/templates/footer.html:52
 msgid "Terms of Use"
-msgstr "Điều khoản sử dụng"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/tech.html:6
 msgid "BASIC TECH"
@@ -5592,23 +4565,8 @@ msgid ""
 "third-party developer the option and opportunity to create a new sub-chain "
 "after staking a certain amount of Newton tokens and passing the verification."
 msgstr ""
-"NewChain sẽ có một chuỗi chính và cấu trúc chuỗi phụ. Chuỗi chính sẽ hỗ trợ "
-"quản lý tài khoản, quản lý mã thông báo Newton, quản lý chuỗi phụ, quản trị "
-"mạng và hơn thế nữa. Chuỗi phụ sẽ hỗ trợ các hệ thống dịch vụ cụ thể như "
-"giao thức siêu trao đổi, nhiều cơ chế đồng thuận và cấu trúc dữ liệu, đảm "
-"bảo giao dịch tài sản giữa chuỗi chính và chuỗi phụ và giữa các chuỗi phụ "
-"với nhau. NewChain cung cấp cho nhà phát triển bên thứ ba tùy chọn và cơ hội "
-"để tạo chuỗi phụ mới sau khi bắt đầu một số lượng nhất định mã thông báo "
-"Newton và chuyển qua xác minh."
 
 #: web/apps/welcome/templates/welcome/tech.html:23
-#| msgid ""
-#| "NewVM is compatible with the Webassembly standard, supporting various "
-#| "general programming languages such as C/C++, Java, Python, TypeScript, "
-#| "and more. The system provides built-in smart contract templates for the "
-#| "hyper exchange protocol. The system built-in smart contract templates "
-#| "provide an effortless development and deployment of any application on "
-#| "the Newton NewChain."
 msgid ""
 "NewVM is compatible with the WebAssembly standard, supporting various "
 "general programming languages such as C/C++, Java, Python, TypeScript, and "
@@ -5617,23 +4575,12 @@ msgid ""
 "effortless development and deployment of any application on the Newton "
 "NewChain."
 msgstr ""
-"NewVM tương thích với tiêu chuẩn Webassembly, hỗ trợ các ngôn ngữ lập trình "
-"chung khác nhau như C / C ++, Java, Python, TypeScript, và nhiều hơn nữa. Hệ "
-"thống cung cấp các mẫu hợp đồng thông minh tích hợp cho giao thức trao đổi "
-"siêu. Các mẫu hợp đồng thông minh được tích hợp sẵn của hệ thống cung cấp sự "
-"phát triển và triển khai dễ dàng của bất kỳ ứng dụng nào trên Newton "
-"NewChain."
 
 #: web/apps/welcome/templates/welcome/tech.html:24
-#| msgid ""
-#| "NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure "
-#| "maximum security of all assets within the Newton ecosphere."
 msgid ""
 "NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum "
 "security of all assets within the Newton ecosystem."
 msgstr ""
-"NewChain sử dụng thuật toán mã hóa chống lượng tử Ring-LWE để đảm bảo an "
-"toàn tối đa cho tất cả các tài sản trong môi trường sống của Newton."
 
 #: web/apps/welcome/templates/welcome/tech.html:36
 msgid ""
@@ -5649,16 +4596,6 @@ msgid ""
 "supported. The ease of use of NewNET will increase through the blockchain "
 "technology."
 msgstr ""
-"NewNET bao gồm một số lượng lớn các nút chạy trên một mạng mở cung cấp các "
-"dịch vụ lưu trữ đáng tin cậy và hỗ trợ cơ sở dữ liệu SQL đầy đủ và các ngôn "
-"ngữ lập trình chung khác nhau. Thông qua kiến trúc linh hoạt và phi tập "
-"trung, NewNET có thể trực tiếp lưu trữ các dịch vụ web được sử dụng rộng rãi "
-"nhất hiện nay. Nhà phát triển có khả năng phát hành bất kỳ tác vụ tính toán "
-"nào cho các nút trong mạng mở. Sau đó, các nút có thể chọn nhiệm vụ tính "
-"toán tương ứng theo khả năng (phần cứng) của chính chúng, sau đó nhận được "
-"các ưu đãi tương ứng sau khi hoàn thành nhiệm vụ. Thông qua NewChain một "
-"dịch vụ tên miền mạng phi tập trung được hỗ trợ đầy đủ. Tính dễ sử dụng của "
-"NewNET sẽ tăng thông qua công nghệ blockchain."
 
 #: web/apps/welcome/templates/welcome/tech.html:49
 msgid ""
@@ -5671,14 +4608,6 @@ msgid ""
 "any digital asset. The whole process is repeatable, verifiable and fault-"
 "tolerant."
 msgstr ""
-"Bằng cách sử dụng các công nghệ như Radiometric Dating, PCA, Machine Vision, "
-"và Deep Learning, Newton có thể nhanh chóng trích xuất nhiều đặc điểm của "
-"một tài sản vật chất nhất định, bao gồm; trọng lượng, thể tích, kích thước, "
-"hình dạng, kết cấu, tính chất quang học, tính chất phóng xạ, thuộc tính "
-"nhiệt động lực học và một loạt các tính năng ngẫu nhiên tùy chỉnh. Sau đó, "
-"dựa trên các dữ liệu đặc trưng và các thuật toán Newton có thể tạo ra một "
-"định danh duy nhất và quyền xác thực cho bất kỳ tài sản kỹ thuật số nào. "
-"Toàn bộ quá trình có thể lặp lại, có thể xác minh và chịu lỗi."
 
 #: web/apps/welcome/templates/welcome/tech.html:62
 msgid ""
@@ -5686,9 +4615,6 @@ msgid ""
 "blockchain fog computing, communication protocols between IoT devices and "
 "gateways and NewChain IoT devices developing specifications."
 msgstr ""
-"NewIoT là một khái niệm chung cho một loại công nghệ bao gồm; blockchain fog "
-"computing, các giao thức truyền thông giữa các thiết bị IoT và các cổng và "
-"các thiết bị IOT của NewChain đang phát triển các đặc tả kỹ thuật."
 
 #: web/apps/welcome/templates/welcome/tech.html:63
 msgid ""
@@ -5698,11 +4624,6 @@ msgid ""
 "Fi, ZigBee, and more. The IoT device store the collected information into "
 "NewChain through the gateway."
 msgstr ""
-"Cổng này có khả năng lưu trữ và tính toán mạnh mẽ với các nút blockchain "
-"tích hợp sẵn, hỗ trợ nhiều phương thức truy cập Internet bao gồm; Ethernet / "
-"fiber, 3G / 4G / 5G, NB-IoT, giao thức truyền thông IoT như BLE, Wi-Fi, "
-"ZigBee và nhiều hơn nữa. Thiết bị IoT lưu trữ thông tin được thu thập vào "
-"NewChain thông qua cổng."
 
 #: web/apps/welcome/templates/welcome/tech.html:72
 #: web/apps/welcome/templates/welcome/technology.html:106
@@ -5716,10 +4637,6 @@ msgid ""
 "these three aspects the Newton NewAI closely connects the data suppliers, "
 "algorithm model developers and operating system providers together."
 msgstr ""
-"NewAI (Trí tuệ nhân tạo phân tán) thúc đẩy sự phát triển của AI từ ba khía "
-"cạnh; dữ liệu, mô hình thuật toán và công cụ thực thi. Bằng cách sử dụng ba "
-"khía cạnh này, Newton NewAI kết nối chặt chẽ các nhà cung cấp dữ liệu, các "
-"nhà phát triển mô hình thuật toán và các nhà cung cấp hệ điều hành với nhau."
 
 #: web/apps/welcome/templates/welcome/tech.html:77
 msgid ""
@@ -5728,37 +4645,15 @@ msgid ""
 "compression, data encryption, etc. User private data safety will be "
 "protected by the k-anonymity, ε--differential privacy and other methods."
 msgstr ""
-"NewAI cung cấp các tiêu chuẩn dữ liệu được ủy quyền để truy cập người dùng "
-"và các nhà cung cấp dữ liệu, bao gồm định dạng dữ liệu đa chiều, phân mảnh "
-"dữ liệu, nén dữ liệu, mã hóa dữ liệu, v.v."
 
 #: web/apps/welcome/templates/welcome/tech.html:78
-#| msgid ""
-#| "NewAI uses docker container to run artificial intelligence computing "
-#| "software such as Tensorflow, Caffe. It encourages data suppliers to "
-#| "provide long-term service through multi-factor weighting profit "
-#| "distribution method."
 msgid ""
 "NewAI uses docker container to run artificial intelligence computing "
 "software such as TensorFlow, Caffe. It encourages data suppliers to provide "
 "long-term service through multi-factor weighting profit distribution method."
 msgstr ""
-"NewAI sử dụng container docker để chạy phần mềm tính toán trí tuệ nhân tạo "
-"như Tensorflow, Caffe. Nó khuyến khích các nhà cung cấp dữ liệu cung cấp "
-"dịch vụ dài hạn thông qua phương pháp phân phối lợi nhuận trọng số đa yếu tố."
 
 #: web/apps/welcome/templates/welcome/technology.html:19
-#| msgid ""
-#| "The Newton technology framework consists of three layers: the basic "
-#| "technology layer, the hyper exchange protocol layer, and the application "
-#| "layer. The basic technology layer includes NewChain, NewNET, Atom "
-#| "Hashing, NewIoT and NewAI; the hyper exchange protocol layer includes "
-#| "digital identity and credit, supply chain, digital marketing, "
-#| "transactions and payments, trusted physical channels, supply chain and "
-#| "NNIO, etc. The application layer includes wallets, malls, logistics, "
-#| "finance and insurance. We will develop a series of basic technologies to "
-#| "support the  hyper exchange protocol,which is the basic commercial "
-#| "protocol cluster supporting the upper-layer application operations."
 msgid ""
 "Newton's technology framework consists of three layers: the basic technology "
 "layer, the hyper exchange protocol layer, and the application layer. The "
@@ -5771,32 +4666,13 @@ msgid ""
 "protocol, which is the basic commercial protocol cluster supporting upper-"
 "layer application operations."
 msgstr ""
-"Khung công nghệ Newton bao gồm ba lớp: lớp công nghệ cơ bản, lớp giao thức "
-"siêu trao đổi (Hyper Exchange Protocol) và lớp ứng dụng. Lớp công nghệ cơ "
-"bản (Basic technology)  bao gồm NewChain, NewNET, Atom Hashing, NewIoT và "
-"NewAI; lớp giao thức siêu trao đổi (Hyper Exchange Protocol)  bao gồm nhận "
-"dạng số và tín dụng, chuỗi cung ứng, tiếp thị kỹ thuật số, giao dịch và "
-"thanh toán, kênh vật lý đáng tin cậy, chuỗi cung ứng và NNIO, vv Lớp ứng "
-"dụng bao gồm ví, trung tâm mua sắm, hậu cần, tài chính và bảo hiểm. Chúng "
-"tôi sẽ phát triển một loạt các công nghệ cơ bản để hỗ trợ giao thức siêu "
-"trao đổi (Hyper Exchange Protocol) , đó là cụm giao thức thương mại cơ bản "
-"hỗ trợ các hoạt động ứng dụng lớp trên."
 
 #: web/apps/welcome/templates/welcome/technology.html:35
-#| msgid ""
-#| "Users can manage and control access to their digital assets by using a "
-#| "digital identity. Digital assets include; cryptocurrencies, personal "
-#| "data, personal credit and anything that exists in a binary format and "
-#| "come with the right to use."
 msgid ""
 "Users use their digital identity to manage and control access to their "
 "digital assets, including cryptocurrencies, personal data, personal credit "
 "and any binary content they have the right to use."
 msgstr ""
-"Người dùng có thể quản lý và kiểm soát quyền truy cập vào nội dung kỹ thuật "
-"số của mình bằng cách sử dụng danh tính kỹ thuật số. Tài sản kỹ thuật số bao "
-"gồm; tiền điện tử, dữ liệu cá nhân, tín dụng cá nhân và bất kỳ thứ gì tồn "
-"tại ở định dạng nhị phân và đi kèm với quyền sử dụng."
 
 #: web/apps/welcome/templates/welcome/technology.html:35
 #: web/apps/welcome/templates/welcome/technology.html:40
@@ -5811,159 +4687,83 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/technology.html:102
 #: web/apps/welcome/templates/welcome/technology.html:107
 msgid "more"
-msgstr "khác"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/technology.html:40
-#| msgid ""
-#| "By using such techniques as “Atom Hashing” we can create a unique digital "
-#| "identity for commodities over the whole network. Through this digital "
-#| "identity a user can check the relevant information on any commodity at "
-#| "any time."
 msgid ""
 "By using techniques like <em>Atom Hashing</em> we create a unique digital "
 "identity for commodities across the whole network, allowing users to check "
 "any information on any commodity at any time."
 msgstr ""
-"Bằng cách sử dụng các kỹ thuật như 'Atom Hashing', chúng tôi có thể tạo ra "
-"một danh tính kỹ thuật số duy nhất cho các mặt hàng trên toàn bộ mạng. Thông "
-"qua danh tính kỹ thuật số này, người dùng có thể kiểm tra thông tin liên "
-"quan trên bất kỳ hàng hóa nào vào bất kỳ lúc nào."
 
 #: web/apps/welcome/templates/welcome/technology.html:45
-#| msgid ""
-#| "Advertisers can set marketing plans through various built-in marketing "
-#| "smart contract templates in the system. This includes incentive modes, "
-#| "settlement modes, and dynamic price adjusting rules."
 msgid ""
 "Advertising plans can be set through built-in marketing smart contract "
 "templates, including incentive models, settlement models, and dynamic "
 "pricing rules."
 msgstr ""
-"Nhà quảng cáo có thể đặt kế hoạch tiếp thị thông qua các mẫu hợp đồng tiếp "
-"thị thông minh tích hợp khác nhau trong hệ thống. Điều này bao gồm các chế "
-"độ ưu đãi, phương thức thanh toán và quy tắc điều chỉnh giá năng động."
 
 #: web/apps/welcome/templates/welcome/technology.html:51
-#| msgid ""
-#| "The Newton trading and payment platform will enable a user to define "
-#| "transactions using the built-in smart contract templates and rule engine. "
-#| "This enables the user to include: multi-party transactions based on "
-#| "complex business rules, settlement rules."
 msgid ""
 "Newton's trading and payment platform lets users define transactions using "
 "the built-in smart contract templates and rule engine, including multi-party "
 "transactions based on complex business rules and settlement rules."
 msgstr ""
-"Nền tảng giao dịch và thanh toán Newton sẽ cho phép người dùng xác định các "
-"giao dịch bằng cách sử dụng các mẫu hợp đồng thông minh và công cụ quy tắc "
-"được tích hợp sẵn. Điều này cho phép người dùng bao gồm: các giao dịch đa "
-"bên dựa trên các quy tắc kinh doanh phức tạp."
 
 #: web/apps/welcome/templates/welcome/technology.html:56
-#| msgid "Reliable physical tunnel"
 msgid "Secure Physical Tunnel"
-msgstr "Đường hầm tự nhiên đáng tin cậy"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/technology.html:57
-#| msgid ""
-#| "Based on NewChain and NewIoT technologies Newton is capable of designing "
-#| "a reliable physical tunnel protocol and define manufacturing "
-#| "specifications of related equipment. Any third party can manufacture "
-#| "safety equipment according to the protocol specification."
 msgid ""
 "With NewChain and NewIoT technologies, Newton offers a reliable physical "
 "tunnel protocol, allowing secure delivery of physical assets. Any third "
 "party can manufacture safety equipment according to the open specification."
 msgstr ""
-"Dựa trên công nghệ NewChain và NewIoT Newton có khả năng thiết kế một giao "
-"thức đường hầm vật lý đáng tin cậy và xác định thông số kỹ thuật sản xuất "
-"của các thiết bị liên quan. Bất kỳ bên thứ ba nào cũng có thể sản xuất thiết "
-"bị an toàn theo đặc tả giao thức. "
 
 #: web/apps/welcome/templates/welcome/technology.html:62
-#| msgid "Automatic finance"
 msgid "Automatic Finance"
-msgstr "Tài chính tự động"
+msgstr ""
 
 #: web/apps/welcome/templates/welcome/technology.html:63
-#| msgid ""
-#| "Developers can define smart financial contracts based on the built-in "
-#| "smart contract templates on; insurance, lending and investment, including "
-#| "digital identity and credit, KYC information."
 msgid ""
 "Developers can define smart financial contracts based on built-in smart "
 "contract templates for insurance, lending and investment, including digital "
 "identity and credit and KYC information."
 msgstr ""
-"Các nhà phát triển có thể xác định các hợp đồng tài chính thông minh dựa "
-"trên các mẫu hợp đồng thông minh tích hợp sẵn; bảo hiểm, cho vay và đầu tư, "
-"bao gồm danh tính và tín dụng số, thông tin KYC."
 
 #: web/apps/welcome/templates/welcome/technology.html:87
-#| msgid ""
-#| "NewChain will have a main chain and sub-chains structure. The main chain "
-#| "will support account management, Newton token management, sub-chain "
-#| "management, network governance and more."
 msgid ""
 "NewChain offers a main chain and sub-chains. The main chain supports account "
 "management, NEW token management, sub-chain management, network governance "
 "and more."
 msgstr ""
-"NewChain sẽ có một chuỗi chính và cấu trúc chuỗi phụ. Chuỗi chính sẽ hỗ trợ "
-"quản lý tài khoản, quản lý mã thông báo Newton, quản lý chuỗi phụ, quản trị "
-"mạng và hơn thế nữa."
 
 #: web/apps/welcome/templates/welcome/technology.html:92
-#| msgid ""
-#| "NewNET consists of a large number of nodes that run on an open network "
-#| "providing reliable storage services and supporting a full SQL database "
-#| "and various general programming languages."
 msgid ""
 "NewNET consists of a large number of nodes that run on an open network, "
 "providing reliable storage services and supporting a full SQL database and "
 "general programming languages."
 msgstr ""
-"NewNET bao gồm một số lượng lớn các nút chạy trên một mạng mở cung cấp các "
-"dịch vụ lưu trữ đáng tin cậy và hỗ trợ cơ sở dữ liệu SQL đầy đủ và các ngôn "
-"ngữ lập trình chung khác nhau."
 
 #: web/apps/welcome/templates/welcome/technology.html:97
-#| msgid ""
-#| "By using radiometric dating, PCA, machine vision, and deep learning "
-#| "technology Newton can quickly extract multiple characteristics of a "
-#| "certain material asset."
 msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning Newton "
 "can quickly extract multiple characteristics of material assets."
 msgstr ""
-"Bằng cách sử dụng các công nghệ như Radiometric Dating, PCA, Machine Vision, "
-"và Deep Learning, Newton có thể nhanh chóng trích xuất nhiều đặc điểm của "
-"một tài sản vật chất nhất định."
 
 #: web/apps/welcome/templates/welcome/technology.html:102
-#| msgid ""
-#| "NewIoT enables blockchain fog computing, communication protocols between "
-#| "IoT devices and gateways, and NewChain IoT device development "
-#| "specifications."
 msgid ""
 "NewIoT is Newton's IoT infrastructure, including blockchain fog computing, "
 "communication protocols between IoT devices and gateways, and NewChain IoT "
 "device specifications."
 msgstr ""
-"NewIoT cho phép tính toán Fog Computing Blockchain, các giao thức truyền "
-"thông giữa các thiết bị IoT và các cổng, và các đặc tả phát triển thiết bị "
-"NewChain IoT."
 
 #: web/apps/welcome/templates/welcome/technology.html:107
-#| msgid ""
-#| "NewAI (Distributed Artificial Intelligence) promotes the development of "
-#| "AI from three aspects; data, algorithm model, and execution engine."
 msgid ""
 "NewAI (Distributed Artificial Intelligence) promotes the development of AI "
 "from data, algorithm models, and execution engines."
 msgstr ""
-"NewAI (Trí tuệ nhân tạo phân tán) thúc đẩy sự phát triển của AI từ ba khía "
-"cạnh; dữ liệu, mô hình thuật toán và công cụ thực thi."
 
 #: web/apps/welcome/templates/welcome/term-of-service.html:9
 #: web/apps/welcome/templates/welcome/term-of-service.html:15
@@ -8125,11 +6925,11 @@ msgstr ""
 
 #: web/templates/footer.html:15
 msgid "Partner"
-msgstr "Đối tác"
+msgstr ""
 
 #: web/templates/footer.html:25
 msgid "Developer"
-msgstr "Nhà Phát Triển"
+msgstr ""
 
 #: web/templates/footer.html:27
 msgid "Wiki"
@@ -8137,7 +6937,7 @@ msgstr ""
 
 #: web/templates/footer.html:49
 msgid "SERVICE TERMS"
-msgstr "Điều khoản dịch vụ"
+msgstr ""
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
 #: web/templates/header.html:63 web/templates/header.html:114
@@ -8157,7 +6957,7 @@ msgstr ""
 #: web/templates/header.html:262 web/templates/header.html:270
 #: web/templates/header.html:316 web/templates/header.html:324
 msgid "Register"
-msgstr "Đăng ký"
+msgstr ""
 
 #: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
 #: web/templates/header.html:70 web/templates/header.html:78
@@ -8165,7 +6965,7 @@ msgstr "Đăng ký"
 #: web/templates/header.html:265 web/templates/header.html:273
 #: web/templates/header.html:319 web/templates/header.html:327
 msgid "Login"
-msgstr "Đăng nhập"
+msgstr ""
 
 #: web/templates/header.html:23 web/templates/header.html:101
 #: web/templates/header.html:218 web/templates/header.html:296
@@ -8214,109 +7014,3 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr ""
-
-#~ msgid "Chairman of Elastos ecosystem board"
-#~ msgstr "Chủ tịch của hội đồng sinh thái Elastors"
-
-#~ msgid "Haven't participated in KYC yet?"
-#~ msgstr "Chưa thực hiện KYC?"
-
-#~ msgid "Join KYC"
-#~ msgstr "Tham gia với chúng tôi"
-
-#~ msgid "More Community"
-#~ msgstr "Cộng đồng"
-
-#~ msgid "Apply to join us"
-#~ msgstr "Đăng ký tham gia với chúng tôi"
-
-#~ msgid "Technology of whole process stack"
-#~ msgstr "Công nghệ quy trình tổng thể kết hợp"
-
-#~ msgid "Friend to developers"
-#~ msgstr "Nhà phát triển web Front-end"
-
-#~ msgid "The third round of Newton token exchange is currently under way."
-#~ msgstr "Vòng trao đổi Newton token thứ ba sẽ sớm ra mắt."
-
-#~ msgid "Download"
-#~ msgstr "Tải về"
-
-#~ msgid "Click the button to download NewPay to participate in the beta!"
-#~ msgstr "Nhấp vào nút để tải xuống NewPay để tham gia phiên bản beta!"
-
-#~ msgid "Transaction information sharing pricing and benefit;"
-#~ msgstr "Giá và lợi ích chia sẻ thông tin giao dịch;"
-
-#~ msgid "Built-in support for purchases within applications;"
-#~ msgstr "Hỗ trợ tích hợp cho các giao dịch mua trong ứng dụng;"
-
-#~ msgid "Built-in support for development tools of applications."
-#~ msgstr "Hỗ trợ tích hợp cho các công cụ phát triển ứng dụng."
-
-#~ msgid "PRESS"
-#~ msgstr "Báo chí"
-
-#~ msgid "industry"
-#~ msgstr "Công nghiệp"
-
-#~ msgid "Ultra-micropayment"
-#~ msgstr "Hỗ trợ thanh toán nhỏ lẻ;"
-
-#~ msgid "Community_Voice"
-#~ msgstr "Cộng đồng"
-
-#~ msgid "FEED"
-#~ msgstr "SỰ KIỆN"
-
-#~ msgid "Smarter"
-#~ msgstr "Thông minh hơn"
-
-#~ msgid ""
-#~ "Personal credit can be automatically created in a free and open manner "
-#~ "without authoritative intermediaries. This methodology will reduce human "
-#~ "intervention and facilitate the coordination between people, between "
-#~ "machines and between people and machines."
-#~ msgstr ""
-#~ "Tín dụng cá nhân có thể được tạo tự động một cách tự do và cởi mở mà "
-#~ "không cần trung gian có thẩm quyền. Cách thông minh này sẽ giảm bớt can "
-#~ "thiệp của con người và tạo thuận lợi cho sự phối hợp giữa con người, giữa "
-#~ "máy móc và giữa con người và máy móc."
-
-#~ msgid "Joint Ecological Construction"
-#~ msgstr "Xây dựng hệ sinh thái chung"
-
-#~ msgid ""
-#~ "With digital identities, users can easily manage their own digital assets."
-#~ msgstr ""
-#~ "Người dùng có thể quản lý và kiểm soát quyền truy cập vào tài sản kỹ "
-#~ "thuật số của mình bằng cách sử dụng cách thức nhận dạng điện tử hóa."
-
-#~ msgid ""
-#~ "By using techniques such as 'atom hashing', we can create a unique "
-#~ "digital identity for commodities of the whole network."
-#~ msgstr ""
-#~ "Bằng cách sử dụng các kỹ thuật có tên là 'Atom Hashing', chúng tôi có thể "
-#~ "tạo một phương thức nhận dạng kĩ thuật số duy nhất cho các mặt hàng trên "
-#~ "toàn bộ mạng lưới. "
-
-#~ msgid ""
-#~ "Advertisers can set marketing plans through various built-in marketing "
-#~ "smart contract templates in the system."
-#~ msgstr ""
-#~ "Nhà quảng cáo có thể đặt kế hoạch tiếp thị thông qua các mẫu hợp đồng "
-#~ "tiếp thị thông minh được tích hợp khác nhau trong hệ thống."
-
-#~ msgid ""
-#~ "By using radiometric dating, PCA, machine vision, and deep learning "
-#~ "technology, the hashing ID is generated."
-#~ msgstr ""
-#~ "Bằng cách sử dụng Atom hashing, PCA, tầm nhìn của máy móc và công nghệ "
-#~ "tiếp thu nhanh, "
-
-#~ msgid ""
-#~ "NewNET, which consists of a large number of nodes, is an open cloud "
-#~ "computing network."
-#~ msgstr ""
-#~ "NewNet, bao gồm một số lượng lớn các nút, là một mạng mở cung cấp các "
-#~ "dịch vụ lưu trữ đáng tin cậy, "
