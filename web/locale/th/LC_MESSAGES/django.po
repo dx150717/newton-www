@@ -2423,9 +2423,8 @@ msgstr ""
 msgid "Co-founder"
 msgstr "ผู้ร่วมก่อตั้ง"
 
-#: web/apps/welcome/templates/welcome/include-team.html:52
-#: web/apps/welcome/templates/welcome/newton-community-node-conference.html:231
-msgid "Founder and CEO of OKbuy"
+#: web/apps/welcome/templates/welcome/include-team.html:33
+msgid "Founder of OKbuy"
 msgstr "ผู้ก่อตั้งและประธานบริษัท OKbuy"
 
 #: web/apps/welcome/templates/welcome/include-team.html:68
@@ -4923,11 +4922,6 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:60
 msgid "NEWFUND"
 msgstr ""
-
-#: web/apps/welcome/templates/welcome/sitemap.html:68
-#: web/templates/footer.html:20
-msgid "COMMUNITY"
-msgstr "คอมมูนิตี้"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:75
 #| msgid "IOS Developer"
@@ -7545,73 +7539,392 @@ msgid ""
 "and numbers."
 msgstr ""
 
-#~ msgid "Chairman of Elastos ecosystem board"
-#~ msgstr "ประธานคณะกรรมการของ Elastos"
+#: web/apps/zinnia/models_bases/entry.py:113
+msgid "last update"
+msgstr ""
 
-#~ msgid "Smarter"
-#~ msgstr "ได้ประโยชน์มากขึ้น"
+#: web/apps/zinnia/models_bases/entry.py:123
+msgid "entry type"
+msgstr ""
 
-#~ msgid ""
-#~ "Personal credit can be automatically created in a free and open manner "
-#~ "without authoritative intermediaries. This methodology will reduce human "
-#~ "intervention and facilitate the coordination between people, between "
-#~ "machines and between people and machines."
-#~ msgstr ""
-#~ "เครดิตส่วนบุคคลจะถูกสร้างได้ง่ายขึ้น "
-#~ "ไม่มีค่าใช้จ่ายและไม่ต้องผ่านคนกลางให้ยุ่งยากวิธีนี้จะช่วยลดการใช้คนเข้ามาดำเนินการและอำนวยความสะดวกให้การสื่อสารระหว่างมนุษย์ด้วยกันเอง, "
-#~ "ระหว่างเครื่องจักร และระหว่างมนุษย์กับเครื่องจักร"
+#: web/apps/zinnia/models_bases/entry.py:130
+msgid "entry_sub_type"
+msgstr ""
 
-#~ msgid "July 1,2018"
-#~ msgstr "1 กรกฎาคม 2018"
+#: web/apps/zinnia/models_bases/entry.py:137
+msgid "show_in_home"
+msgstr ""
 
-#~ msgid "July 31,2018"
-#~ msgstr "31 กรกฎาคม 2018"
+#: web/apps/zinnia/models_bases/entry.py:252
+msgid "entry"
+msgstr ""
 
-#~ msgid "Joint Ecological Construction"
-#~ msgstr "ทีมสร้างระบบที่ทำงานร่วมกัน"
+#: web/apps/zinnia/models_bases/entry.py:253
+msgid "entries"
+msgstr ""
 
-#~ msgid ""
-#~ "With digital identities, users can easily manage their own digital assets."
-#~ msgstr ""
-#~ "ผู้ใช้สามารถจัดการและควบคุมการเข้าถึงสินทรัพย์ทางดิจิตอลโดยการใช้อัตลักษณ์ทางดิจิตอล "
-#~ "สินทรัพย์ดิจิตอลได้แก่ สกุลเงินดิจิตอล ข้อมูลส่วนบุคคล เครดิตส่วนบุคคล เป็นต้น"
+#: web/apps/zinnia/models_bases/entry.py:267
+msgid "content"
+msgstr ""
 
-#~ msgid ""
-#~ "Using 'atom hashing', we can create unique digital identities for "
-#~ "commodities over the whole network."
-#~ msgstr ""
-#~ "การใช้เทคนิคที่ชื่อ “Atom Hashing” "
-#~ "จะสามารถสร้างอัตลักษณ์ทางดิจิตอลที่เป็นเอกลักษณ์เฉพาะสำหรับสินค้าโภคภัณฑ์ได้ทั้งเครือข่าย  "
-#~ "การใช้อัตลักษณ์ทางดิจิตอลจะทำให้สามารถตรวจสอบข้อมูลของสินค้าโภคภัณฑ์ได้ทุกเวลา"
+#: web/apps/zinnia/models_bases/entry.py:309
+msgid "comments enabled"
+msgstr ""
 
-#~ msgid ""
-#~ "Advertisers can set marketing plans through the system's built-in smart "
-#~ "contract marketing templates."
-#~ msgstr ""
-#~ "คนทำโฆษณาสามารถวางแผนการตลาดโดยใช้สมาร์ท "
-#~ "คอนแทร็กที่มีการติดตั้งแบบร่างสำเร็จของแผนการตลาดไว้แล้ว เช่น แบบการสร้างแรงจูงใจ "
-#~ "แบบการชำระเงิน และวิธีปรับราคาสินค้าแบบยืดหยุ่น"
+#: web/apps/zinnia/models_bases/entry.py:310
+msgid "Allows comments if checked."
+msgstr ""
 
-#~ msgid "Marketing Specialist"
-#~ msgstr "ผู้เชียวชาญด้ารการตลาด"
+#: web/apps/zinnia/models_bases/entry.py:312
+msgid "pingbacks enabled"
+msgstr ""
 
-#~ msgid "Founder of WuZhou Online"
-#~ msgstr "ผู้ก่อตั้ง WuZhou Online"
+#: web/apps/zinnia/models_bases/entry.py:313
+msgid "Allows pingbacks if checked."
+msgstr ""
 
-#~ msgid "Transaction information sharing pricing and benefit;"
-#~ msgstr "การกำหนดราคาการแลกเปลี่ยนของข้อมูลและการได้รับประโยชน์จากการแชร์ข้อมูล"
+#: web/apps/zinnia/models_bases/entry.py:315
+msgid "trackbacks enabled"
+msgstr ""
 
-#~ msgid "Built-in support for purchases within applications;"
-#~ msgstr "สนับสนุนการซื้อแอพพลิเคชั่น"
+#: web/apps/zinnia/models_bases/entry.py:316
+msgid "Allows trackbacks if checked."
+msgstr ""
 
-#~ msgid "Built-in support for development tools of applications."
-#~ msgstr "สนับสนุนเครื่องมือในการพัฒนาแอพพลิเคชั่น"
+#: web/apps/zinnia/models_bases/entry.py:319
+msgid "comment count"
+msgstr ""
 
-#~ msgid "PRESS"
-#~ msgstr "สื่อ"
+#: web/apps/zinnia/models_bases/entry.py:321
+msgid "pingback count"
+msgstr ""
 
-#~ msgid "Reset"
-#~ msgstr "รีเซ็ท"
+#: web/apps/zinnia/models_bases/entry.py:323
+msgid "trackback count"
+msgstr ""
 
-#~ msgid "BLOG"
-#~ msgstr "บล็อก"
+#: web/apps/zinnia/models_bases/entry.py:407
+msgid "related entries"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:425
+msgid "excerpt"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:426
+msgid "Used for search and SEO."
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:459
+msgid "image"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:461
+msgid "Used for illustration."
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:472
+msgid "featured"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:487
+msgid "authors"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:511
+msgid "tags"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:530
+msgid "login required"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:531
+msgid "Only authenticated users can view the entry."
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:543
+msgid "password"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:544
+msgid "Protects the entry with a password."
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:556
+msgid "content template"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:558
+#: web/apps/zinnia/models_bases/entry.py:574
+msgid "Default template"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:560
+msgid "Template used to display the entry's content."
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:572
+msgid "detail template"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:576
+msgid "Template used to display the entry's detail page."
+msgstr ""
+
+#: web/apps/zinnia/templates/400.html:6
+msgid "Error 400"
+msgstr ""
+
+#: web/apps/zinnia/templates/400.html:10 web/apps/zinnia/templates/400.html:15
+msgid "Bad request"
+msgstr ""
+
+#: web/apps/zinnia/templates/400.html:17
+msgid "Sorry, but the request was malformed."
+msgstr ""
+
+#: web/apps/zinnia/templates/403.html:6
+msgid "Error 403"
+msgstr ""
+
+#: web/apps/zinnia/templates/403.html:10 web/apps/zinnia/templates/403.html:15
+msgid "Permission denied"
+msgstr ""
+
+#: web/apps/zinnia/templates/403.html:17
+msgid "Sorry, but you don't have the permission to do this action."
+msgstr ""
+
+#: web/apps/zinnia/templates/404.html:6
+msgid "Error 404"
+msgstr ""
+
+#: web/apps/zinnia/templates/404.html:10 web/apps/zinnia/templates/404.html:15
+msgid "Page not found"
+msgstr ""
+
+#: web/apps/zinnia/templates/404.html:17
+msgid "Sorry, but the requested page could not be found."
+msgstr ""
+
+#: web/apps/zinnia/templates/500.html:6
+msgid "Error 500"
+msgstr ""
+
+#: web/apps/zinnia/templates/500.html:10 web/apps/zinnia/templates/500.html:15
+msgid "Server error"
+msgstr ""
+
+#: web/apps/zinnia/templates/500.html:17
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:9
+#: web/apps/zinnia/templates/zinnia/author_list.html:19
+#: web/apps/zinnia/templates/zinnia/category_list.html:18
+#: web/apps/zinnia/templates/zinnia/tag_list.html:18
+#: web/apps/zinnia/templates/zinnia/tags/authors.html:8
+#: web/apps/zinnia/templates/zinnia/tags/categories_tree.html:6
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:7
+#, python-format
+msgid "%(entry_count)s entry"
+msgid_plural "%(entry_count)s entries"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:14
+#: web/apps/zinnia/templates/zinnia/tags/entries_popular.html:8
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:16
+#, python-format
+msgid "%(comment_count)s comment"
+msgid_plural "%(comment_count)s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:21
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:13
+#, python-format
+msgid "%(category_count)s category"
+msgid_plural "%(category_count)s categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:24
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:19
+#, python-format
+msgid "%(pingback_count)s pingback"
+msgid_plural "%(pingback_count)s pingbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:29
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:10
+#, python-format
+msgid "%(tag_count)s tag"
+msgid_plural "%(tag_count)s tags"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:32
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:22
+#, python-format
+msgid "%(trackback_count)s trackback"
+msgid_plural "%(trackback_count)s trackbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:37
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:4
+#, python-format
+msgid "%(author_count)s author"
+msgid_plural "%(author_count)s authors"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:42
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:25
+#, python-format
+msgid "%(reject_count)s rejected item"
+msgid_plural "%(reject_count)s rejected items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:47
+msgid "Statistics"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:49
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:28
+#, python-format
+msgid "%(entries_per_month)s entries per month"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:54
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:31
+#, python-format
+msgid "%(words_per_entry)s words per entry"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:57
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:34
+#, python-format
+msgid "%(words_per_comment)s words per comment"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:62
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:37
+#, python-format
+msgid "%(comments_per_entry)s comments per entry"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:65
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:40
+#, python-format
+msgid "%(linkbacks_per_entry)s linkbacks per entry"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:6
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:261
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:262
+msgid "Edit the entry"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:9
+#: web/apps/zinnia/templates/comments/zinnia_entry_preview.html:25
+#: web/apps/zinnia/templates/feeds/comment_title.html:2
+#: web/apps/zinnia/templates/feeds/discussion_title.html:2
+#: web/apps/zinnia/templates/feeds/pingback_title.html:2
+#: web/apps/zinnia/templates/feeds/trackback_title.html:2
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:23
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:52
+msgctxt "on date"
+msgid "on"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:15
+#: web/apps/zinnia/templates/comments/zinnia/entry/form.html:31
+msgid "Preview"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:22
+#: web/apps/zinnia/templates/zinnia/tags/entries_draft.html:9
+msgid "No draft entries."
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:31
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:32
+msgid "View all draft entries"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:10
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:6
+#: web/apps/zinnia/templates/zinnia/tags/linkbacks_recent.html:7
+msgid "in"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:13
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:8
+msgid "Comment on"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:22
+msgid "Edit the comment"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:23
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:18
+msgid "Edit"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:30
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:15
+msgid "No comments yet."
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:39
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:40
+msgid "Manage the comments"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:7
+msgid "made a linkback on"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:17
+msgid "Edit the linkback"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:25
+#: web/apps/zinnia/templates/zinnia/tags/linkbacks_recent.html:16
+msgid "No linkbacks yet."
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/content_stats.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/content_stats.html:8
+msgid "Today"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/draft_entries.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/draft_entries.html:8
+msgid "Draft entries"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:5
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:6
+msgid "Quick publishing"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:9
+msgid "Title"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:33
+msgid "Save as draft"
+msgstr ""
+
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
+msgid "Reset"
+msgstr "รีเซ็ท"

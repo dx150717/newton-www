@@ -17,72 +17,1439 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: web/apps/base/templatetags/utils.py:79
+#: web/apps/admin_tools/dashboard/dashboards.py:86
+#: web/apps/admin_tools/menu/menus.py:100
+msgid "Dashboard"
+msgstr "控制面板"
+
+#: web/apps/admin_tools/dashboard/dashboards.py:229
+msgid "Quick links"
+msgstr "快捷方式"
+
+#: web/apps/admin_tools/dashboard/dashboards.py:235
+msgid "Return to site"
+msgstr "返回"
+
+#: web/apps/admin_tools/dashboard/dashboards.py:236
+#: web/apps/admin_tools/theming/templates/admin/base.html:46
+msgid "Change password"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/dashboards.py:238
+#: web/apps/admin_tools/theming/templates/admin/base.html:53
+#: web/apps/events/templates/comments/zinnia/entry/form.html:26
+#: web/apps/zinnia/templates/comments/zinnia/entry/form.html:26
+msgid "Log out"
+msgstr "退出"
+
+#: web/apps/admin_tools/dashboard/dashboards.py:244
+#: web/apps/admin_tools/dashboard/modules.py:424
+#: web/apps/admin_tools/menu/menus.py:103
+msgid "Applications"
+msgstr "应用"
+
+#: web/apps/admin_tools/dashboard/dashboards.py:250
+#: web/apps/admin_tools/menu/menus.py:107
+msgid "Administration"
+msgstr "管理"
+
+#: web/apps/admin_tools/dashboard/dashboards.py:255
+#: web/apps/admin_tools/dashboard/dashboards.py:310
+#: web/apps/admin_tools/dashboard/modules.py:592
+msgid "Recent Actions"
+msgstr "最近操作"
+
+#: web/apps/admin_tools/dashboard/modules.py:343
+msgid "Links"
+msgstr "链接"
+
+#: web/apps/admin_tools/dashboard/modules.py:645
+msgid "No recent actions."
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/modules.py:691
+msgid "RSS Feed"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/dashboard.html:62
+msgid "Modules"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/modules/app_list.html:13
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/modules/model_list.html:11
+#: web/templates/admin/change_form.html:21
+msgid "Add"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/modules/app_list.html:14
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/modules/model_list.html:12
+msgid "Change"
+msgstr ""
+
+#: web/apps/admin_tools/menu/items.py:326
+msgid "Bookmarks"
+msgstr ""
+
+#: web/apps/admin_tools/menu/templates/admin/base_site.html:4
+msgid "Newton site admin"
+msgstr ""
+
+#: web/apps/admin_tools/menu/templates/admin/base_site.html:16
+msgid "administration"
+msgstr ""
+
+#: web/apps/admin_tools/menu/templates/admin_tools/menu/menu.html:32
+msgid "Please enter a name for the bookmark"
+msgstr ""
+
+#: web/apps/admin_tools/theming/templates/admin/base.html:33
+msgid "Welcome,"
+msgstr ""
+
+#: web/apps/admin_tools/theming/templates/admin/base.html:38
+msgid "Documentation"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:68 web/apps/events/admin/forms.py:66
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:25
+#: web/apps/events/templates/zinnia/tag_list.html:6
+#: web/apps/events/templates/zinnia/tags/tag_cloud.html:4
+#: web/apps/zinnia/breadcrumbs.py:68 web/apps/zinnia/admin/forms.py:66
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:25
+#: web/apps/zinnia/templates/zinnia/tag_list.html:6
+#: web/apps/zinnia/templates/zinnia/tags/tag_cloud.html:4
+msgid "Tags"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:71
+#: web/apps/events/templates/zinnia/author_list.html:6
+#: web/apps/zinnia/breadcrumbs.py:71
+#: web/apps/zinnia/templates/zinnia/author_list.html:6
+msgid "Authors"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:75 web/apps/events/admin/entry.py:55
+#: web/apps/events/admin/forms.py:60
+#: web/apps/events/templates/zinnia/category_list.html:6
+#: web/apps/zinnia/breadcrumbs.py:75 web/apps/zinnia/admin/forms.py:60
+#: web/apps/zinnia/templates/zinnia/category_list.html:6
+msgid "Categories"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:100 web/apps/zinnia/breadcrumbs.py:100
 #, python-format
-msgid "%(duration)d minute"
+msgid "Page %s"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:81
+#: web/apps/events/breadcrumbs.py:128 web/apps/zinnia/breadcrumbs.py:128
 #, python-format
-msgid "%(duration)d hour"
+msgid "Week %s"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:122
+#: web/apps/events/feeds.py:175
+#: web/apps/events/templates/zinnia/entry_archive.html:4
+#: web/apps/zinnia/feeds.py:175
+#: web/apps/zinnia/templates/zinnia/entry_archive.html:4
+msgid "Latest entries"
+msgstr ""
+
+#: web/apps/events/feeds.py:181 web/apps/zinnia/feeds.py:181
 #, python-format
-msgid "%(hour)d hour ago"
+msgid "The latest entries for the site %s"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:125
+#: web/apps/events/feeds.py:211 web/apps/zinnia/feeds.py:211
 #, python-format
-msgid "%(minute)d minute ago"
+msgid "Entries for the category %s"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:127
+#: web/apps/events/feeds.py:217 web/apps/zinnia/feeds.py:217
 #, python-format
-msgid "%(second)d second ago"
+msgid "The latest entries for the category %s"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:161
+#: web/apps/events/feeds.py:247 web/apps/zinnia/feeds.py:247
 #, python-format
-msgid "%.f hour"
+msgid "Entries for author %s"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:192
-msgid "unfilled"
+#: web/apps/events/feeds.py:253 web/apps/zinnia/feeds.py:253
+#, python-format
+msgid "The latest entries by %s"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:198
-#: web/apps/base/templatetags/utils.py:205
-msgid "Yes"
+#: web/apps/events/feeds.py:284 web/apps/zinnia/feeds.py:284
+#, python-format
+msgid "Entries for the tag %s"
 msgstr ""
 
-#: web/apps/base/templatetags/utils.py:199
-#: web/apps/base/templatetags/utils.py:206
-msgid "No"
+#: web/apps/events/feeds.py:290 web/apps/zinnia/feeds.py:290
+#, python-format
+msgid "The latest entries for the tag %s"
 msgstr ""
 
-#: web/apps/download/templates/download/newpay-guide.html:6
-msgid "Guide"
+#: web/apps/events/feeds.py:323 web/apps/zinnia/feeds.py:323
+#, python-format
+msgid "Results of the search for '%s'"
+msgstr ""
+
+#: web/apps/events/feeds.py:329 web/apps/zinnia/feeds.py:329
+#, python-format
+msgid "The entries containing the pattern '%s'"
+msgstr ""
+
+#: web/apps/events/feeds.py:394 web/apps/zinnia/feeds.py:394
+msgid "Latest discussions"
+msgstr ""
+
+#: web/apps/events/feeds.py:400 web/apps/zinnia/feeds.py:400
+#, python-format
+msgid "The latest discussions for the site %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:433 web/apps/zinnia/feeds.py:433
+#, python-format
+msgid "Discussions on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:439 web/apps/zinnia/feeds.py:439
+#, python-format
+msgid "The latest discussions for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:466 web/apps/zinnia/feeds.py:466
+#, python-format
+msgid "Comments on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:472 web/apps/zinnia/feeds.py:472
+#, python-format
+msgid "The latest comments for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:516 web/apps/zinnia/feeds.py:516
+#, python-format
+msgid "Pingbacks on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:522 web/apps/zinnia/feeds.py:522
+#, python-format
+msgid "The latest pingbacks for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:548 web/apps/zinnia/feeds.py:548
+#, python-format
+msgid "Trackbacks on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:554 web/apps/zinnia/feeds.py:554
+#, python-format
+msgid "The latest trackbacks for the entry %s"
+msgstr ""
+
+#: web/apps/events/moderator.py:66 web/apps/events/moderator.py:88
+#: web/apps/events/moderator.py:111 web/apps/zinnia/moderator.py:66
+#: web/apps/zinnia/moderator.py:88 web/apps/zinnia/moderator.py:111
+#, python-format
+msgid "[%(site)s] New comment posted on \"%(title)s\""
+msgstr ""
+
+#: web/apps/events/admin/category.py:34 web/apps/zinnia/admin/category.py:34
+msgid "tree path"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:35
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:17
+#: web/apps/zinnia/admin/entry.py:35
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:17
+msgid "Content"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:38 web/apps/zinnia/admin/entry.py:37
+msgid "Publication"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:42
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:4
+#: web/apps/zinnia/admin/entry.py:41
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:4
+msgid "Discussions"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:46 web/apps/zinnia/admin/entry.py:45
+msgid "Privacy"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:49 web/apps/zinnia/admin/entry.py:48
+msgid "Templates"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:52 web/apps/zinnia/admin/entry.py:51
+msgid "Metadatas"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:87 web/apps/zinnia/admin/entry.py:83
+#, python-format
+msgid "%(title)s (%(word_count)i words)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:94 web/apps/zinnia/admin/entry.py:90
+#, python-format
+msgid "%(title)s (%(reactions)i reaction)"
+msgid_plural "%(title)s (%(reactions)i reactions)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/admin/entry.py:99 web/apps/events/models/category.py:30
+#: web/apps/events/models_bases/entry.py:62 web/apps/zinnia/admin/entry.py:95
+#: web/apps/zinnia/models/category.py:30
+#: web/apps/zinnia/models_bases/entry.py:67
+msgid "title"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:115 web/apps/zinnia/admin/entry.py:111
+msgid "author(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:130 web/apps/zinnia/admin/entry.py:126
+msgid "category(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:143 web/apps/zinnia/admin/entry.py:139
+msgid "tag(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:158 web/apps/zinnia/admin/entry.py:154
+msgid "site(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:171 web/apps/zinnia/admin/entry.py:167
+msgid "short url"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:179 web/apps/zinnia/admin/entry.py:175
+msgid "is visible"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:263 web/apps/zinnia/admin/entry.py:259
+msgid "The selected entries now belong to you."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:264 web/apps/zinnia/admin/entry.py:260
+msgid "Set the entries to the user"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:273 web/apps/zinnia/admin/entry.py:269
+msgid "The selected entries are now marked as published."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:274 web/apps/zinnia/admin/entry.py:270
+msgid "Set entries selected as published"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:282 web/apps/zinnia/admin/entry.py:278
+msgid "The selected entries are now marked as hidden."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:283 web/apps/zinnia/admin/entry.py:279
+msgid "Set entries selected as hidden"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:291 web/apps/zinnia/admin/entry.py:287
+msgid "Comments are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:292 web/apps/zinnia/admin/entry.py:288
+msgid "Close the comments for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:301 web/apps/zinnia/admin/entry.py:297
+msgid "Pingbacks are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:303 web/apps/zinnia/admin/entry.py:299
+msgid "Close the pingbacks for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:311 web/apps/zinnia/admin/entry.py:307
+msgid "Trackbacks are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:313 web/apps/zinnia/admin/entry.py:309
+msgid "Close the trackbacks for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:322 web/apps/zinnia/admin/entry.py:318
+msgid "The selected entries are now set at the current date."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:324 web/apps/zinnia/admin/entry.py:320
+msgid "Put the selected entries on top at the current date"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:332 web/apps/zinnia/admin/entry.py:328
+msgid "Selected entries are now marked as featured."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:333 web/apps/zinnia/admin/entry.py:329
+msgid "Mark selected entries as featured"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:341 web/apps/zinnia/admin/entry.py:337
+msgid "Selected entries are no longer marked as featured."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:343 web/apps/zinnia/admin/entry.py:339
+msgid "Unmark selected entries as featured"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:364 web/apps/zinnia/admin/entry.py:360
+#, python-format
+msgid "%(directory)s directory succesfully pinged %(success)d entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:368 web/apps/zinnia/admin/entry.py:364
+msgid "Ping Directories for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/filters.py:29 web/apps/zinnia/admin/filters.py:29
+#, python-format
+msgid "%(item)s (%(count)i entry)"
+msgid_plural "%(item)s (%(count)i entries)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/admin/filters.py:50 web/apps/zinnia/admin/filters.py:50
+msgid "published authors"
+msgstr ""
+
+#: web/apps/events/admin/filters.py:61 web/apps/zinnia/admin/filters.py:61
+msgid "published categories"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:25 web/apps/zinnia/admin/forms.py:25
+msgid "Parent category"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:27 web/apps/zinnia/admin/forms.py:27
+msgid "No parent category"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:44 web/apps/zinnia/admin/forms.py:44
+msgid "A category cannot be parent of itself."
+msgstr ""
+
+#: web/apps/events/admin/forms.py:62 web/apps/events/models/category.py:98
+#: web/apps/events/models_bases/entry.py:510 web/apps/zinnia/admin/forms.py:62
+#: web/apps/zinnia/models/category.py:98
+#: web/apps/zinnia/models_bases/entry.py:488
+msgid "categories"
+msgstr ""
+
+#: web/apps/events/models/category.py:20 web/apps/zinnia/models/category.py:20
+msgid "zh_CN"
+msgstr ""
+
+#: web/apps/events/models/category.py:21 web/apps/zinnia/models/category.py:21
+msgid "en"
+msgstr ""
+
+#: web/apps/events/models/category.py:25
+#: web/apps/events/templates/zinnia/entry_archive.html:7
+#: web/apps/events/templatetags/zinnia.py:359
+#: web/apps/welcome/templates/welcome/include-community-event.html:107
+#: web/apps/welcome/templates/welcome/sitemap.html:73
+#: web/apps/zinnia/models/category.py:25
+#: web/apps/zinnia/models_bases/entry.py:55
+#: web/apps/zinnia/templates/zinnia/entry_archive.html:7
+#: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:24
+msgid "Blog"
+msgstr ""
+
+#: web/apps/events/models/category.py:33
+#: web/apps/events/models_bases/entry.py:65
+#: web/apps/zinnia/models/category.py:33
+#: web/apps/zinnia/models_bases/entry.py:70
+msgid "slug"
+msgstr ""
+
+#: web/apps/events/models/category.py:34 web/apps/zinnia/models/category.py:34
+msgid "Used to build the category's URL."
+msgstr ""
+
+#: web/apps/events/models/category.py:37 web/apps/zinnia/models/category.py:37
+msgid "description"
+msgstr ""
+
+#: web/apps/events/models/category.py:43 web/apps/zinnia/models/category.py:43
+msgid "parent category"
+msgstr ""
+
+#: web/apps/events/models/category.py:46 web/apps/zinnia/models/category.py:46
+msgid "language"
+msgstr "语言"
+
+#: web/apps/events/models/category.py:49
+#: web/apps/events/models_bases/entry.py:98
+#: web/apps/events/models_bases/entry.py:101 web/apps/faq/models.py:23
+#: web/apps/faq/models.py:26 web/apps/zinnia/models/category.py:49
+#: web/apps/zinnia/models_bases/entry.py:103
+#: web/apps/zinnia/models_bases/entry.py:106 web/templates/header.html:83
+#: web/templates/header.html.py:278
+msgid "Language"
+msgstr "语言"
+
+#: web/apps/events/models/category.py:53 web/apps/events/models/category.py:56
+#: web/apps/events/models_bases/entry.py:108
+#: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
+#: web/apps/zinnia/models_bases/entry.py:113
+msgid "Entry type"
+msgstr "文章类型"
+
+#: web/apps/events/models/category.py:97 web/apps/zinnia/models/category.py:97
+msgid "category"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:49
+#: web/apps/zinnia/models_bases/entry.py:50
+msgid "draft"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:50
+#: web/apps/zinnia/models_bases/entry.py:51
+msgid "hidden"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:51
+#: web/apps/zinnia/models_bases/entry.py:52
+msgid "published"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:67
+#: web/apps/events/models_bases/entry.py:92
+#: web/apps/zinnia/models_bases/entry.py:72
+#: web/apps/zinnia/models_bases/entry.py:97
+msgid "Used to build the entry's URL."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:70
+#: web/apps/zinnia/models_bases/entry.py:75
+msgid "status"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:79
+msgid "start publication"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:76
+#: web/apps/zinnia/models_bases/entry.py:81
+msgid "Start date of publication."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:79
+#: web/apps/zinnia/models_bases/entry.py:84
+msgid "end publication"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:81
+#: web/apps/zinnia/models_bases/entry.py:86
+msgid "End date of publication."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:91
+msgid "sites"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:87
+#: web/apps/zinnia/models_bases/entry.py:92
+msgid "Sites where the entry will be published."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:90
+#: web/apps/zinnia/models_bases/entry.py:95
+msgid "creation date"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:95
+#: web/apps/zinnia/models_bases/entry.py:100
+msgid "last update"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:105
+#: web/apps/zinnia/models_bases/entry.py:110
+msgid "entry type"
+msgstr "文章类型"
+
+#: web/apps/events/models_bases/entry.py:112
+#: web/apps/zinnia/models_bases/entry.py:117
+msgid "entry_sub_type"
+msgstr "文章类型"
+
+#: web/apps/events/models_bases/entry.py:119
+#: web/apps/zinnia/models_bases/entry.py:124
+msgid "show_in_home"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:126
+msgid "Events during"
+msgstr "活动持续时间"
+
+#: web/apps/events/models_bases/entry.py:131
+msgid "Events start date"
+msgstr "活动开始日期"
+
+#: web/apps/events/models_bases/entry.py:136
+msgid "Events summary"
+msgstr "活动简介"
+
+#: web/apps/events/models_bases/entry.py:141
+msgid "Events link"
+msgstr "活动链接"
+
+#: web/apps/events/models_bases/entry.py:148
+msgid "Events location"
+msgstr "举办地址"
+
+#: web/apps/events/models_bases/entry.py:276
+#: web/apps/zinnia/models_bases/entry.py:254
+msgid "content"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:318
+#: web/apps/zinnia/models_bases/entry.py:296
+msgid "comments enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:319
+#: web/apps/zinnia/models_bases/entry.py:297
+msgid "Allows comments if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:321
+#: web/apps/zinnia/models_bases/entry.py:299
+msgid "pingbacks enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:322
+#: web/apps/zinnia/models_bases/entry.py:300
+msgid "Allows pingbacks if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:324
+#: web/apps/zinnia/models_bases/entry.py:302
+msgid "trackbacks enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:325
+#: web/apps/zinnia/models_bases/entry.py:303
+msgid "Allows trackbacks if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:328
+#: web/apps/zinnia/models_bases/entry.py:306
+msgid "comment count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:330
+#: web/apps/zinnia/models_bases/entry.py:308
+msgid "pingback count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:332
+#: web/apps/zinnia/models_bases/entry.py:310
+msgid "trackback count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:416
+#: web/apps/zinnia/models_bases/entry.py:394
+msgid "related entries"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:434
+#: web/apps/zinnia/models_bases/entry.py:412
+msgid "excerpt"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:435
+#: web/apps/zinnia/models_bases/entry.py:413
+msgid "Used for search and SEO."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:468
+#: web/apps/zinnia/models_bases/entry.py:446
+msgid "image"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:470
+#: web/apps/zinnia/models_bases/entry.py:448
+msgid "Used for illustration."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:481
+#: web/apps/zinnia/models_bases/entry.py:459
+msgid "featured"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:496
+#: web/apps/zinnia/models_bases/entry.py:474
+msgid "authors"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:520
+#: web/apps/zinnia/models_bases/entry.py:498
+msgid "tags"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:539
+#: web/apps/zinnia/models_bases/entry.py:517
+msgid "login required"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:540
+#: web/apps/zinnia/models_bases/entry.py:518
+msgid "Only authenticated users can view the entry."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:552
+#: web/apps/zinnia/models_bases/entry.py:530
+msgid "password"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:553
+#: web/apps/zinnia/models_bases/entry.py:531
+msgid "Protects the entry with a password."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:565
+#: web/apps/zinnia/models_bases/entry.py:543
+msgid "content template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:567
+#: web/apps/events/models_bases/entry.py:583
+#: web/apps/zinnia/models_bases/entry.py:545
+#: web/apps/zinnia/models_bases/entry.py:561
+msgid "Default template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:569
+#: web/apps/zinnia/models_bases/entry.py:547
+msgid "Template used to display the entry's content."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:581
+#: web/apps/zinnia/models_bases/entry.py:559
+msgid "detail template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:585
+#: web/apps/zinnia/models_bases/entry.py:563
+msgid "Template used to display the entry's detail page."
+msgstr ""
+
+#: web/apps/events/templates/400.html:6 web/apps/zinnia/templates/400.html:6
+msgid "Error 400"
+msgstr ""
+
+#: web/apps/events/templates/400.html:10 web/apps/events/templates/400.html:15
+#: web/apps/zinnia/templates/400.html:10 web/apps/zinnia/templates/400.html:15
+msgid "Bad request"
+msgstr ""
+
+#: web/apps/events/templates/400.html:17 web/apps/zinnia/templates/400.html:17
+msgid "Sorry, but the request was malformed."
+msgstr ""
+
+#: web/apps/events/templates/403.html:6 web/apps/zinnia/templates/403.html:6
+msgid "Error 403"
+msgstr ""
+
+#: web/apps/events/templates/403.html:10 web/apps/events/templates/403.html:15
+#: web/apps/zinnia/templates/403.html:10 web/apps/zinnia/templates/403.html:15
+msgid "Permission denied"
+msgstr ""
+
+#: web/apps/events/templates/403.html:17 web/apps/zinnia/templates/403.html:17
+msgid "Sorry, but you don't have the permission to do this action."
+msgstr ""
+
+#: web/apps/events/templates/404.html:6 web/apps/zinnia/templates/404.html:6
+msgid "Error 404"
+msgstr ""
+
+#: web/apps/events/templates/404.html:10 web/apps/events/templates/404.html:15
+#: web/apps/zinnia/templates/404.html:10 web/apps/zinnia/templates/404.html:15
+msgid "Page not found"
+msgstr ""
+
+#: web/apps/events/templates/404.html:17 web/apps/zinnia/templates/404.html:17
+msgid "Sorry, but the requested page could not be found."
+msgstr ""
+
+#: web/apps/events/templates/500.html:6 web/apps/zinnia/templates/500.html:6
+msgid "Error 500"
+msgstr ""
+
+#: web/apps/events/templates/500.html:10 web/apps/events/templates/500.html:15
+#: web/apps/zinnia/templates/500.html:10 web/apps/zinnia/templates/500.html:15
+msgid "Server error"
+msgstr ""
+
+#: web/apps/events/templates/500.html:17 web/apps/zinnia/templates/500.html:17
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:3
+#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:61
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:3
+msgid "Contents"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:9
+#: web/apps/events/templates/zinnia/author_list.html:19
+#: web/apps/events/templates/zinnia/category_list.html:18
+#: web/apps/events/templates/zinnia/tag_list.html:18
+#: web/apps/events/templates/zinnia/tags/authors.html:8
+#: web/apps/events/templates/zinnia/tags/categories_tree.html:6
+#: web/apps/events/templates/zinnia/tags/statistics.html:7
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:9
+#: web/apps/zinnia/templates/zinnia/author_list.html:19
+#: web/apps/zinnia/templates/zinnia/category_list.html:18
+#: web/apps/zinnia/templates/zinnia/tag_list.html:18
+#: web/apps/zinnia/templates/zinnia/tags/authors.html:8
+#: web/apps/zinnia/templates/zinnia/tags/categories_tree.html:6
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:7
+#, python-format
+msgid "%(entry_count)s entry"
+msgid_plural "%(entry_count)s entries"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:14
+#: web/apps/events/templates/zinnia/tags/entries_popular.html:8
+#: web/apps/events/templates/zinnia/tags/statistics.html:16
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:14
+#: web/apps/zinnia/templates/zinnia/tags/entries_popular.html:8
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:16
+#, python-format
+msgid "%(comment_count)s comment"
+msgid_plural "%(comment_count)s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:21
+#: web/apps/events/templates/zinnia/tags/statistics.html:13
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:21
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:13
+#, python-format
+msgid "%(category_count)s category"
+msgid_plural "%(category_count)s categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:24
+#: web/apps/events/templates/zinnia/tags/statistics.html:19
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:24
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:19
+#, python-format
+msgid "%(pingback_count)s pingback"
+msgid_plural "%(pingback_count)s pingbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:29
+#: web/apps/events/templates/zinnia/tags/statistics.html:10
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:29
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:10
+#, python-format
+msgid "%(tag_count)s tag"
+msgid_plural "%(tag_count)s tags"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:32
+#: web/apps/events/templates/zinnia/tags/statistics.html:22
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:32
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:22
+#, python-format
+msgid "%(trackback_count)s trackback"
+msgid_plural "%(trackback_count)s trackbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:37
+#: web/apps/events/templates/zinnia/tags/statistics.html:4
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:37
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:4
+#, python-format
+msgid "%(author_count)s author"
+msgid_plural "%(author_count)s authors"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:42
+#: web/apps/events/templates/zinnia/tags/statistics.html:25
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:42
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:25
+#, python-format
+msgid "%(reject_count)s rejected item"
+msgid_plural "%(reject_count)s rejected items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:47
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:47
+msgid "Statistics"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:49
+#: web/apps/events/templates/zinnia/tags/statistics.html:28
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:49
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:28
+#, python-format
+msgid "%(entries_per_month)s entries per month"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:54
+#: web/apps/events/templates/zinnia/tags/statistics.html:31
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:54
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:31
+#, python-format
+msgid "%(words_per_entry)s words per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:57
+#: web/apps/events/templates/zinnia/tags/statistics.html:34
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:57
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:34
+#, python-format
+msgid "%(words_per_comment)s words per comment"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:62
+#: web/apps/events/templates/zinnia/tags/statistics.html:37
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:62
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:37
+#, python-format
+msgid "%(comments_per_entry)s comments per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:65
+#: web/apps/events/templates/zinnia/tags/statistics.html:40
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:65
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:40
+#, python-format
+msgid "%(linkbacks_per_entry)s linkbacks per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:6
+#: web/apps/events/templates/zinnia/entry_detail_base.html:261
+#: web/apps/events/templates/zinnia/entry_detail_base.html:262
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:6
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:261
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:262
+msgid "Edit the entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:9
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:25
+#: web/apps/events/templates/feeds/comment_title.html:2
+#: web/apps/events/templates/feeds/discussion_title.html:2
+#: web/apps/events/templates/feeds/pingback_title.html:2
+#: web/apps/events/templates/feeds/trackback_title.html:2
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:23
+#: web/apps/events/templates/zinnia/entry_detail_base.html:52
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:9
+#: web/apps/zinnia/templates/comments/zinnia_entry_preview.html:25
+#: web/apps/zinnia/templates/feeds/comment_title.html:2
+#: web/apps/zinnia/templates/feeds/discussion_title.html:2
+#: web/apps/zinnia/templates/feeds/pingback_title.html:2
+#: web/apps/zinnia/templates/feeds/trackback_title.html:2
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:23
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:52
+msgctxt "on date"
+msgid "on"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:15
+#: web/apps/events/templates/comments/zinnia/entry/form.html:31
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:15
+#: web/apps/zinnia/templates/comments/zinnia/entry/form.html:31
+msgid "Preview"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:22
+#: web/apps/events/templates/zinnia/tags/entries_draft.html:9
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:22
+#: web/apps/zinnia/templates/zinnia/tags/entries_draft.html:9
+msgid "No draft entries."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:31
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:32
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:31
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:32
+msgid "View all draft entries"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:10
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:6
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:7
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:10
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:6
+#: web/apps/zinnia/templates/zinnia/tags/linkbacks_recent.html:7
+msgid "in"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:13
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:13
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:8
+msgid "Comment on"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:22
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:22
+msgid "Edit the comment"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:23
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:18
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:23
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:18
+msgid "Edit"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:30
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:15
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:30
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:15
+msgid "No comments yet."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:39
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:40
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:39
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:40
+msgid "Manage the comments"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:7
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:7
+msgid "made a linkback on"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:17
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:17
+msgid "Edit the linkback"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:25
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:16
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:25
+#: web/apps/zinnia/templates/zinnia/tags/linkbacks_recent.html:16
+msgid "No linkbacks yet."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/content_stats.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/content_stats.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/content_stats.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/content_stats.html:8
+msgid "Today"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/draft_entries.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/draft_entries.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/draft_entries.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/draft_entries.html:8
+msgid "Draft entries"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:5
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:5
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:6
+msgid "Quick publishing"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:9
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:9
+msgid "Title"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:33
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:33
+msgid "Save as draft"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:34
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
+msgid "Reset"
+msgstr "重置密码"
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:35
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:35
+msgid "Publish"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/recent_comments.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/recent_comments.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/recent_comments.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/recent_comments.html:8
+msgid "Recent comments"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/recent_linkbacks.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/recent_linkbacks.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/recent_linkbacks.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/recent_linkbacks.html:8
+msgid "Recent linkbacks"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:1
+#: web/apps/events/templates/comments/comment_notification_email.txt:1
+#: web/apps/events/templates/comments/comment_reply_email.txt:1
+#: web/apps/events/templates/zinnia/entry_list.html:21
+#: web/apps/zinnia/templates/comments/comment_authors_email.txt:1
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:1
+#: web/apps/zinnia/templates/comments/comment_reply_email.txt:1
+#: web/apps/zinnia/templates/zinnia/entry_list.html:21
+msgid "Author"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:3
+#: web/apps/events/templates/comments/comment_notification_email.txt:5
+#: web/apps/events/templates/comments/comment_reply_email.txt:3
+#: web/apps/zinnia/templates/comments/comment_authors_email.txt:3
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:5
+#: web/apps/zinnia/templates/comments/comment_reply_email.txt:3
+msgid "Comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:6
+#: web/apps/events/templates/comments/comment_notification_email.txt:8
+#: web/apps/events/templates/comments/comment_reply_email.txt:6
+#: web/apps/zinnia/templates/comments/comment_authors_email.txt:6
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:8
+#: web/apps/zinnia/templates/comments/comment_reply_email.txt:6
+msgid "View this comment"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:4
+#: web/apps/events/templates/zinnia/password.html:9
+#: web/apps/zinnia/templates/zinnia/password.html:4
+#: web/apps/zinnia/templates/zinnia/password.html:9
+msgid "Password required"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:13
+#: web/apps/zinnia/templates/zinnia/password.html:13
+msgid "The password provided is not valid. Please try again."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:17
+#: web/apps/zinnia/templates/zinnia/password.html:17
+msgid "You need to provide a password to view this entry."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:24
+#: web/apps/zinnia/templates/zinnia/password.html:24
+msgid "Password"
+msgstr "密码"
+
+#: web/apps/events/templates/zinnia/password.html:29
+#: web/apps/zinnia/templates/zinnia/password.html:29
+msgid "Valid"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:4
+#: web/apps/events/templates/zinnia/sitemap.html:11
+#: web/apps/events/templates/zinnia/skeleton.html:70
+#: web/apps/events/templates/zinnia/skeleton.html:71
+#: web/apps/welcome/templates/welcome/sitemap.html:13
+#: web/apps/zinnia/templates/zinnia/sitemap.html:4
+#: web/apps/zinnia/templates/zinnia/sitemap.html:11
+#: web/apps/zinnia/templates/zinnia/skeleton.html:70
+#: web/apps/zinnia/templates/zinnia/skeleton.html:71
+#: web/templates/footer.html:44
+msgid "Sitemap"
+msgstr "网站地图"
+
+#: web/apps/events/templates/zinnia/sitemap.html:6
+#: web/apps/zinnia/templates/zinnia/sitemap.html:6
+msgid "Sitemap of the weblog"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:14
+#: web/apps/zinnia/templates/zinnia/sitemap.html:14
+msgid "Entries per categories"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:23
+#: web/apps/zinnia/templates/zinnia/sitemap.html:23
+msgid "comment"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:12
+#: web/apps/zinnia/templates/zinnia/skeleton.html:12
+msgid "Just another Zinnia weblog."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:55
+#: web/apps/zinnia/templates/zinnia/skeleton.html:55
+msgid "BLOG"
+msgstr "博客"
+
+#: web/apps/events/templates/zinnia/skeleton.html:62
+#: web/apps/zinnia/templates/zinnia/skeleton.html:62
+msgid "Useful links"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:65
+#: web/apps/events/templates/zinnia/skeleton.html:66
+#: web/apps/zinnia/templates/zinnia/skeleton.html:65
+#: web/apps/zinnia/templates/zinnia/skeleton.html:66
+msgid "Weblog index"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:77
+#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:66
+#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:68
+#: web/apps/zinnia/templates/zinnia/skeleton.html:77
+msgid "Search"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:4
+#: web/apps/events/templates/zinnia/tag_list.html:11
+#: web/apps/zinnia/templates/zinnia/tag_list.html:4
+#: web/apps/zinnia/templates/zinnia/tag_list.html:11
+msgid "Tag list"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:17
+#: web/apps/zinnia/templates/zinnia/tag_list.html:17
+#, python-format
+msgid "Show all entries tagged by %(tag)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:22
+#: web/apps/zinnia/templates/zinnia/tag_list.html:22
+msgid "No tags yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/categories.html:4
+#: web/apps/zinnia/templates/zinnia/tags/categories.html:4
+msgid "Column"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/categories.html:12
+#: web/apps/zinnia/templates/zinnia/tags/categories.html:12
+#, python-format
+msgid ""
+"\n"
+"    (%(entry_count)s)\n"
+"\n"
+"    "
+msgid_plural ""
+"\n"
+"\n"
+"    "
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/zinnia/tags/entries_popular.html:7
+#: web/apps/zinnia/templates/zinnia/tags/entries_popular.html:7
+#, python-format
+msgid "Comments on %(object)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/entries_similar.html:9
+#: web/apps/zinnia/templates/zinnia/tags/entries_similar.html:9
+msgid "No similar entries."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:9
+#: web/apps/zinnia/templates/zinnia/tags/linkbacks_recent.html:9
+msgid "Linkback on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:15
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:15
+msgid "More recent entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:25
+#: web/apps/events/templates/zinnia/tags/pagination.html:38
+#: web/apps/events/templates/zinnia/tags/pagination.html:52
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:25
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:38
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:52
+msgid "Entries page"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:61
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:61
+msgid "More old entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/search_form.html:4
+#: web/apps/zinnia/templates/zinnia/tags/search_form.html:4
+msgid "Keywords..."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/search_form.html:6
+#: web/apps/zinnia/templates/zinnia/tags/search_form.html:6
+msgid ""
+"You can use - to exclude words or phrases, &quot;double quotes&quot; for "
+"exact phrases and the AND/OR boolean operators combined with parenthesis for "
+"complex queries."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/tag_cloud.html:11
+#: web/apps/zinnia/templates/zinnia/tags/tag_cloud.html:11
+#, python-format
+msgid "%(entry_count)s entry tagged by %(tag)s"
+msgid_plural "%(entry_count)s entries tagged by %(tag)s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/tests/test_views.py:586 web/apps/events/views/search.py:30
+#: web/apps/zinnia/tests/test_views.py:586 web/apps/zinnia/views/search.py:30
+msgid "The pattern is too short"
+msgstr ""
+
+#: web/apps/events/tests/test_views.py:590 web/apps/events/views/search.py:34
+#: web/apps/zinnia/tests/test_views.py:590 web/apps/zinnia/views/search.py:34
+msgid "No pattern to search found"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:23 web/apps/zinnia/urls/__init__.py:23
+msgid "^feeds/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:24 web/apps/zinnia/urls/__init__.py:24
+msgid "^tags/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:25 web/apps/zinnia/urls/__init__.py:25
+msgid "^authors/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:26 web/apps/zinnia/urls/__init__.py:26
+msgid "^categories/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:27 web/apps/zinnia/urls/__init__.py:27
+msgid "^search/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:28 web/apps/zinnia/urls/__init__.py:28
+msgid "^random/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:29 web/apps/zinnia/urls/__init__.py:29
+msgid "^sitemap/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:30 web/apps/zinnia/urls/__init__.py:30
+msgid "^trackback/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:31 web/apps/zinnia/urls/__init__.py:31
+msgid "^comments/"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:18 web/apps/zinnia/urls/archives.py:18
+msgid "^page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:27 web/apps/zinnia/urls/archives.py:27
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:33 web/apps/zinnia/urls/archives.py:33
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/week/(?P<week>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:36 web/apps/zinnia/urls/archives.py:36
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/week/(?P<week>\\d+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:45 web/apps/zinnia/urls/archives.py:45
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/(?P<month>\\d{2})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:54 web/apps/zinnia/urls/archives.py:54
+#, python-brace-format
+msgid ""
+"^(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:61 web/apps/zinnia/urls/archives.py:61
+msgid "^today/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:64 web/apps/zinnia/urls/archives.py:64
+msgid "^today/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/authors.py:15 web/apps/zinnia/urls/authors.py:15
+msgid "^(?P<username>[.+-@\\w]+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/categories.py:15 web/apps/zinnia/urls/categories.py:15
+msgid "^(?P<path>[-\\/\\w]+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/comments.py:11 web/apps/zinnia/urls/comments.py:11
+msgid "^success/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:23 web/apps/zinnia/urls/feeds.py:23
+msgid "^discussions/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:26 web/apps/zinnia/urls/feeds.py:26
+msgid "^search/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:29 web/apps/zinnia/urls/feeds.py:29
+msgid "^tags/(?P<tag>[^/]+(?u))/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:32 web/apps/zinnia/urls/feeds.py:32
+msgid "^authors/(?P<username>[.+-@\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:35 web/apps/zinnia/urls/feeds.py:35
+msgid "^categories/(?P<path>[-\\/\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:38 web/apps/zinnia/urls/feeds.py:38
+#, python-brace-format
+msgid ""
+"^discussions/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:42 web/apps/zinnia/urls/feeds.py:42
+#, python-brace-format
+msgid ""
+"^comments/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-guide.html:13
 msgid "Newpay Download Guide"
 msgstr "NewPay 下载指南"
-
-#: web/apps/faq/models.py:23 web/apps/faq/models.py:26
-#: web/templates/header.html:83 web/templates/header.html:278
-msgid "Language"
-msgstr "语言"
-
-#: web/apps/faq/models.py:33
-msgid "faq"
-msgstr ""
-
-#: web/apps/faq/templates/faq/faq.html:6 web/apps/faq/templates/faq/faq.html:13
-#: web/apps/welcome/templates/welcome/sitemap.html:76
-#: web/templates/footer.html:28
-msgid "FAQ"
-msgstr ""
 
 #: web/apps/faq/templates/faq/faq.html:33
 #: web/apps/welcome/templates/welcome/announcement-detail.html:46
@@ -153,88 +1520,6 @@ msgstr ""
 #: web/apps/press/models.py:22
 msgid "press"
 msgstr "媒体报道"
-
-#: web/apps/sphinxdoc/models.py:20
-msgid "Used in the URL for the project. Must be unique."
-msgstr ""
-
-#: web/apps/sphinxdoc/models.py:23
-msgid "Directory that contains Sphinx' <tt>conf.py</tt>."
-msgstr ""
-
-#: web/apps/sphinxdoc/models.py:27
-msgid "project"
-msgstr ""
-
-#: web/apps/sphinxdoc/models.py:28
-msgid "projects"
-msgstr ""
-
-#: web/apps/sphinxdoc/models.py:61
-msgid "document"
-msgstr ""
-
-#: web/apps/sphinxdoc/models.py:62
-msgid "documents"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:10
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:46
-#, python-format
-msgid "%(project_name)s documentation"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:19
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:38
-msgid "Prev:"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:23
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:42
-msgid "Next:"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:53
-msgid "Last update:"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:61
-msgid "Contents"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:66
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:68
-msgid "Search"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/genindex.html:5
-msgid "General Index"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/genindex.html:30
-msgid "[Link]"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/modindex.html:5
-msgid "Module Index"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/project_list.html:4
-#: web/apps/sphinxdoc/templates/sphinxdoc/project_list.html:8
-msgid "Documentation Overview"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/search.html:5
-msgid "Search results:"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/search.html:14
-msgid "No results found."
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/search.html:18
-msgid "No search query entered."
-msgstr ""
 
 #: web/apps/subscription/admin.py:31 web/apps/subscription/admin.py:32
 msgid "Set emails as spam"
@@ -1302,6 +2587,32 @@ msgstr "Touch Press 创始人"
 msgid "BAFTA Award winning author"
 msgstr "BAFTA（英国电影电视艺术学院）奖获得者"
 
+#: web/apps/welcome/templates/welcome/include-advisor.html:192
+#: web/apps/welcome/templates/welcome/include-advisor.html:196
+#: web/apps/welcome/templates/welcome/include-advisor.html:198
+msgid "Masanari Koike"
+msgstr "小池政就"
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:193
+msgid ""
+"Masanari Koike has a PhD of technology management from Tokyo University’s "
+"Graduate School of Engineering, a master’s of foreign policy and "
+"international economics from the School of Advanced International Studies, "
+"John Hopkins University (US), and a bachelor’s in economics from Sophia "
+"University, Japan. He has served as a member of the Japanese House of "
+"Representatives, Assistant Professor of International Relations in Nihon "
+"University, and Assistant Professor at the Tokyo University Graduate School "
+"of Engineering. He has also worked for the UK think tank Demos, the US law "
+"firm Deway, and Marubeni Corporation (Japan). He has extensively researched "
+"Chinese-Japanese technological and industrial relations.'"
+msgstr "小池政就为东京大学工学研究院科技管理系博士，美国约翰斯·霍普金斯大学高级国际研究学院美国外交政策和国际经济学硕士，日本上智大学经济学学士。曾担任日本国会众议院议员、日本大学国际关系系副教授、东京大学工学研究院助理教授。曾就职于英国智库Demos、美国杜威律师事务所及日本丸红株式会社。多年来从事中国和日本的技术发展与产业政策相关研究以及中日有好关系建设。"
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:200
+msgid ""
+"Visiting Fellow at the Department of Social Sciences, Research Center for "
+"Japanese Studies, Tsinghua University"
+msgstr "清华大学日本研究中心社会科学系客座研究员"
+
 #: web/apps/welcome/templates/welcome/include-allocation.html:8
 msgid "Token Metrics"
 msgstr "通证分配"
@@ -1407,12 +2718,6 @@ msgstr "更多"
 #: web/apps/welcome/templates/welcome/sitemap.html:74
 msgid "Press"
 msgstr "媒体报道"
-
-#: web/apps/welcome/templates/welcome/include-community-event.html:107
-#: web/apps/welcome/templates/welcome/sitemap.html:73
-#: web/templates/footer.html:24
-msgid "Blog"
-msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:35
 #: web/apps/welcome/templates/welcome/include-community-region.html:10
@@ -1918,7 +3223,6 @@ msgstr "链商零售"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:21
 #: web/apps/welcome/templates/welcome/include-industry.html:20
-#: web/apps/welcome/templates/welcome/newpay.html:139
 #: web/apps/welcome/templates/welcome/scene.html:63
 #| msgid "Payment"
 msgid "Payments"
@@ -2066,20 +3370,12 @@ msgstr ""
 "商务行业协会会长。"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:187
-#| msgid ""
-#| "In 2007, during the booming stage of e-commerce, Ye established mbaobao."
-#| "com, becoming China's most famous online bag and suitcase brand. In 2013, "
-#| "he established Haifeng Zhicheng Investment Management Co and over the "
-#| "past five years accumulated 5 super capital Angel venture funds and "
-#| "invested in nearly 70 projects. These have refinancing rate as high as "
-#| "58%, and have hatched a number of high-quality enterprises with high "
-#| "growth rates."
 msgid ""
 "In 2007, during the booming stage of e-commerce, Ye established mbaobao.com, "
 "becoming China's most famous online bag and suitcase brand. In 2013, he "
 "established Haifeng Zhicheng Investment Management Co and over the past five "
 "years accumulated 5 super capital Angel venture funds and invested in nearly "
-"70 projects. These have refinancing rate as high as 58%%, and have hatched a "
+"70 projects. These have refinancing rate as high as 58%, and have hatched a "
 "number of high-quality enterprises with high growth rates."
 msgstr ""
 "2007年，叶海峰创立麦包包，在电商在中国兴起的阶段，迅速成为国内箱包电商标志性"
@@ -2566,6 +3862,9 @@ msgid "Newton's main chain and NewPay launched."
 msgstr "牛顿主链和NewPay钱包正式上线"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:72
+msgid "The NewMall will officially launch."
+msgstr "NewMall 正式上线"
+
 #: web/apps/welcome/templates/welcome/include-roadmap.html:129
 #| msgid "The NewMall was officially launched."
 msgid "NewMall launched."
@@ -2665,8 +3964,8 @@ msgstr "联合创始人"
 
 #: web/apps/welcome/templates/welcome/include-team.html:52
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:231
-msgid "Founder and CEO of OKbuy"
-msgstr "好乐买创始人、CEO"
+msgid "Founder of OKbuy"
+msgstr "好乐买创始人"
 
 #: web/apps/welcome/templates/welcome/include-team.html:68
 #: web/apps/welcome/templates/welcome/include-team.html:72
@@ -3938,42 +5237,34 @@ msgid "Digital Identity and Credit"
 msgstr "数字身份与信用"
 
 #: web/apps/welcome/templates/welcome/newpay.html:121
-#| msgid "Create and manage DID (Decentralized IDs);"
 msgid "Create and manage decentralized ID's"
 msgstr "创建和管理DID(Decentralized IDs)；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:122
-#| msgid "Set privacy mode for personal information;"
 msgid "Set privacy preferences for personal information;"
 msgstr "设置个人信息隐私模式；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:123
-#| msgid "Transaction information management;"
 msgid "Transaction management;"
 msgstr "交易信息管理；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:124
-#| msgid "Set privacy mode for personal information;"
 msgid "Set pricing and benefits for sharing transaction information"
 msgstr "设置个人信息隐私模式；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:125
-#| msgid "Digital asset management, including NEW, BTC, ETH, etc."
 msgid "Digital asset management, including NEW, BTC, ETH, etc"
 msgstr "数字资产管理，包括NEW、BTC、ETH等。"
 
 #: web/apps/welcome/templates/welcome/newpay.html:140
-#| msgid "Support cross-border transactions;"
 msgid "Cross-border transactions;"
 msgstr "支持跨境交易；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:141
-#| msgid "Support for micro-payments;"
 msgid "Micro-payments;"
 msgstr "支持超小额度支付；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:142
-#| msgid "Extremely fast transaction confirmation."
 msgid "Rapid transaction confirmation."
 msgstr "极快的交易确认速度。"
 
@@ -3982,37 +5273,32 @@ msgid "Joint Login"
 msgstr "联合登录"
 
 #: web/apps/welcome/templates/welcome/newpay.html:157
-#| msgid "Log in multiple Dapps using a unified identity;"
 msgid "Log into multiple Dapps with one unified identity"
 msgstr "使用统一身份登录多个Dapp；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:158
-#| msgid "Dapp management and permission control;"
 msgid "Dapp management and permission control"
 msgstr "Dapp管理和权限控制；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:159
-#| msgid "Security audit."
 msgid "Security audit"
 msgstr "安全审计。"
 
 #: web/apps/welcome/templates/welcome/newpay.html:173
-#| msgid "Application Support"
 msgid "App Support"
 msgstr "内置应用"
 
 #: web/apps/welcome/templates/welcome/newpay.html:174
-#| msgid "Built-in support for free and open-source applications;"
 msgid "Free and open-source apps"
 msgstr "支持采用自由开源方式发布的内置应用；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:175
 msgid "In-app purchases"
-msgstr ""
+msgstr "应用内支付；"
 
 #: web/apps/welcome/templates/welcome/newpay.html:176
 msgid "App development tools"
-msgstr ""
+msgstr "应用开发工具"
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
 msgid "Newton Community Node Conference"
@@ -4846,7 +6132,6 @@ msgstr "路线图"
 #: web/apps/welcome/templates/welcome/scene.html:6
 #: web/apps/welcome/templates/welcome/scene.html:13
 #: web/apps/welcome/templates/welcome/scene.html:21
-#: web/templates/header.html:36 web/templates/header.html:231
 msgid "Industry"
 msgstr "行业"
 
@@ -5331,15 +6616,6 @@ msgstr "有创新性的想法？"
 msgid "Send Us Your Business Proposal"
 msgstr "提交商业计划书"
 
-#: web/apps/welcome/templates/welcome/sitemap.html:6
-msgid "SITEMAP"
-msgstr "网站地图"
-
-#: web/apps/welcome/templates/welcome/sitemap.html:13
-#: web/templates/footer.html:44
-msgid "Sitemap"
-msgstr "网站地图"
-
 #: web/apps/welcome/templates/welcome/sitemap.html:24
 #: web/apps/welcome/templates/welcome/team.html:6 web/templates/footer.html:40
 msgid "Team"
@@ -5356,10 +6632,6 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:52
 msgid "ECONOMY"
 msgstr "经济体"
-
-#: web/apps/welcome/templates/welcome/sitemap.html:60
-msgid "NEWFUND"
-msgstr "生态发展基金"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:68
 #: web/templates/footer.html:20
@@ -5378,7 +6650,7 @@ msgstr "发展规划"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:91
 msgid "TERMS OF SERVICE"
-msgstr ""
+msgstr "服务条款"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:94
 #: web/apps/welcome/templates/welcome/terms-of-use.html:6
@@ -8352,37 +9624,6 @@ msgstr "不存在页面。"
 msgid "System Error."
 msgstr "系统错误。"
 
-#: web/templates/admin/change_form.html:21
-msgid "Add"
-msgstr ""
-
-#: web/templates/admin/change_form.html:33
-msgid "History"
-msgstr ""
-
-#: web/templates/admin/change_form.html:35
-msgid "View on site"
-msgstr ""
-
-#: web/templates/admin/change_form.html:46
-#: web/templates/admin/change_list.html:67
-msgid "Please correct the error below."
-msgstr ""
-
-#: web/templates/admin/change_form.html:46
-#: web/templates/admin/change_list.html:67
-msgid "Please correct the errors below."
-msgstr ""
-
-#: web/templates/admin/change_list.html:58
-#, python-format
-msgid "Add %(name)s"
-msgstr ""
-
-#: web/templates/admin/change_list.html:78
-msgid "Filter"
-msgstr ""
-
 #: web/templates/base.html:11
 msgid ""
 "Newton-Infrastructure of protocol-based economy,We are committed to creating "
@@ -8479,14 +9720,10 @@ msgid "SERVICE TERMS"
 msgstr "服务条款"
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:63 web/templates/header.html:114
-#: web/templates/header.html:258 web/templates/header.html:309
 msgid "User Center"
 msgstr "用户中心"
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:64 web/templates/header.html:115
-#: web/templates/header.html:259 web/templates/header.html:310
 msgid "LogOut"
 msgstr "退出"
 
@@ -8512,8 +9749,35 @@ msgstr "登录"
 msgid "search articles"
 msgstr "搜索文章"
 
-#: web/templates/header.html:57 web/templates/header.html:252
+#: web/templates/header.html:57 web/templates/header.html.py:252
 msgid "NewExplorer"
+msgstr ""
+
+#: web/templates/admin/change_form.html:33
+msgid "History"
+msgstr ""
+
+#: web/templates/admin/change_form.html:35
+msgid "View on site"
+msgstr ""
+
+#: web/templates/admin/change_form.html:46
+#: web/templates/admin/change_list.html:67
+msgid "Please correct the error below."
+msgstr ""
+
+#: web/templates/admin/change_form.html:46
+#: web/templates/admin/change_list.html:67
+msgid "Please correct the errors below."
+msgstr ""
+
+#: web/templates/admin/change_list.html:58
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: web/templates/admin/change_list.html:78
+msgid "Filter"
 msgstr ""
 
 #: web/templates/search/search.html:7
@@ -8553,617 +9817,3 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
-
-#~ msgid "Dashboard"
-#~ msgstr "控制面板"
-
-#~ msgid "Quick links"
-#~ msgstr "快捷方式"
-
-#~ msgid "Return to site"
-#~ msgstr "返回"
-
-#~ msgid "Log out"
-#~ msgstr "退出"
-
-#~ msgid "Applications"
-#~ msgstr "应用"
-
-#~ msgid "Administration"
-#~ msgstr "管理"
-
-#~ msgid "Recent Actions"
-#~ msgstr "最近操作"
-
-#~ msgid "Links"
-#~ msgstr "链接"
-
-#~ msgid "language"
-#~ msgstr "语言"
-
-#~ msgid "Entry type"
-#~ msgstr "文章类型"
-
-#~ msgid "entry type"
-#~ msgstr "文章类型"
-
-#~ msgid "entry_sub_type"
-#~ msgstr "文章类型"
-
-#~ msgid "Events during"
-#~ msgstr "活动持续时间"
-
-#~ msgid "Events start date"
-#~ msgstr "活动开始日期"
-
-#~ msgid "Events summary"
-#~ msgstr "活动简介"
-
-#~ msgid "Events link"
-#~ msgstr "活动链接"
-
-#~ msgid "Events location"
-#~ msgstr "举办地址"
-
-#~ msgid "Reset"
-#~ msgstr "重置密码"
-
-#~ msgid "Password"
-#~ msgstr "密码"
-
-#~ msgid "BLOG"
-#~ msgstr "博客"
-
-#~ msgid "FUND"
-#~ msgstr "基金"
-
-#~ msgid "All Events"
-#~ msgstr "全部活动"
-
-#~ msgid "More Community"
-#~ msgstr "更多社群"
-
-#~ msgid "Apply to join us"
-#~ msgstr "申请加入"
-
-#~ msgid "Technology of whole process stack"
-#~ msgstr "全流程技术栈"
-
-#~ msgid "Friend to developers"
-#~ msgstr "开发者友好"
-
-#~ msgid "The first round of token exchange."
-#~ msgstr "第一轮通证交换"
-
-#~ msgid "The second round of token exchange."
-#~ msgstr "第二轮通证交换"
-
-#~ msgid "Contact:<a>newton-hr@newtonproject.org</a>"
-#~ msgstr "联系方式：<a>newton-hr@newtonproject.org</a>"
-
-#~ msgid "Transaction information sharing pricing and benefit;"
-#~ msgstr "交易信息共享定价及收益；"
-
-#~ msgid "Built-in support for purchases within applications;"
-#~ msgstr "支持内置应用购买；"
-
-#~ msgid "Built-in support for development tools of applications."
-#~ msgstr "内置应用开发工具支持。"
-
-#~ msgid "PRESS"
-#~ msgstr "媒体报道"
-
-#~ msgid "industry"
-#~ msgstr "行业"
-
-#~ msgid "Precise advertisement service"
-#~ msgstr "精准广告投放"
-
-#~ msgid "Ultra-micropayment"
-#~ msgstr "超小额支付"
-
-#~ msgid "Whitepaper"
-#~ msgstr "白皮书"
-
-#~ msgid "TECH"
-#~ msgstr "技术"
-
-#~ msgid "Community_Voice"
-#~ msgstr "社群声音"
-
-#~ msgid "December 11-12 · Macau, China"
-#~ msgstr "12月11-12日 中国 澳门"
-
-#~ msgid ""
-#~ "December 11-12 · 2018 Newton Community Node Conference · Macau, China"
-#~ msgstr "12月11-12日 · 2018牛顿社群节点大会 · 中国澳门"
-
-#~ msgid "Chairman of Elastos ecosystem board"
-#~ msgstr "亦来云生态建设委员会主任"
-
-#~ msgid "Passed Events"
-#~ msgstr "往期活动"
-
-#~ msgid ""
-#~ "The 'Newton Global 100-City Tour - Guangzhou Station' Salon successfully "
-#~ "concluded"
-#~ msgstr "“牛顿全球百城巡讲 – 广州站”沙龙圆满落幕"
-
-#~ msgid "2018-08-29, 19:00-21:00 CST"
-#~ msgstr "2018年8月29日下午19:00-21:00"
-
-#~ msgid ""
-#~ "EGO Community,Floor 28, West Wing, Keyun Road, Tianhe District, Guangzhou "
-#~ "City, Guangdong Province,P.R.China"
-#~ msgstr "广州市天河区科韵路12号信息方圆E时光西座28楼微谷众创社区"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/08/30/guangzhoumeetup-/"
-#~ msgstr ""
-#~ "https://www.newtonproject.org/announcement/2018/08/30/guangzhoumeetup/"
-
-#~ msgid "Detail"
-#~ msgstr "详情"
-
-#~ msgid ""
-#~ "“Newton Global 100-City Tour - Guangzhou station” meetup welcome you to "
-#~ "join"
-#~ msgstr "“牛顿全球百城巡讲 - 广州站”邀您出席"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/08/22/newton-global-100-"
-#~ "cities-tour-guangzhou-station-meetup-welcome-you-join/"
-#~ msgstr ""
-#~ "https://www.newtonproject.org/announcement/2018/08/20/"
-#~ "guangzhoumeetupannounce/"
-
-#~ msgid ""
-#~ "'Newton Global 100-City Tour - Shenzhen Station' meet-up successfully "
-#~ "concluded"
-#~ msgstr "“牛顿全球百城巡讲 - 深圳站”圆满落幕"
-
-#~ msgid "2018-08-18, 14:00-18:00 CST"
-#~ msgstr "2018年8月18日下午14:00-18:00"
-
-#~ msgid ""
-#~ "7th Floor, Building 5B, Software Industry Base, Nanshan District, "
-#~ "Shenzhen, Guangdong, China"
-#~ msgstr "广东深圳市南山区软件产业基地5B栋7层"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/08/20/newton-global-100-"
-#~ "city-tour-shenzhen-station-meet-successfully-concluded/"
-#~ msgstr ""
-#~ "https://www.newtonproject.org/announcement/2018/08/20/shenzhenmeetup/"
-
-#~ msgid "Newton 'Global Hundred cities Tour' -Shenzhen Station"
-#~ msgstr "牛顿'全球百城巡讲'-深圳站"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/08/09/newton-global-100-"
-#~ "cities-tour-shenzhen-station-meetup"
-#~ msgstr "https://www.newtonproject.org/announcement/2018/08/09/-/"
-
-#~ msgid "Newton Beijing Meetup (Phase Ⅱ)"
-#~ msgstr "“牛顿线下交流会-北京站第二期”邀您参加"
-
-#~ msgid "2018-06-23, 14:00-18:00 CST"
-#~ msgstr "2018年6月23日下午14:00-18:00"
-
-#~ msgid ""
-#~ "2nd Floor, Tower A, Dinghao Electronics Building, Zhongguancun Street, "
-#~ "Haidian District, Beijing"
-#~ msgstr "北京市海淀区中关村大街甲1号鼎好电子大厦A座2层"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/06/19/june-23rd-newton-"
-#~ "beijing-meet-sincerely-invites-you-join-us/"
-#~ msgstr ""
-#~ "https://www.newtonproject.org/announcement/2018/06/19/meet-up-beijing-623/"
-
-#~ msgid "Newton Meetup Shijiazhuang station successfully ended"
-#~ msgstr "“牛顿河北线下交流会-石家庄站”圆满落幕"
-
-#~ msgid "2018-06-16, 14:00-18:00 CST"
-#~ msgstr "2018年6月16日下午14:00-18:00"
-
-#~ msgid ""
-#~ "4th floor of Yuetai Hotel, northeast corner of the intersection of Youyi "
-#~ "North Street and Xinhua Road, Shijiazhuang, Hebei Province"
-#~ msgstr "河北省石家庄市友谊北大街与新华路交叉口东北角悦泰大酒店四层"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/06/14/newton-meet-"
-#~ "shijiazhuang-station-welcome-you-join/"
-#~ msgstr ""
-#~ "https://www.newtonproject.org/announcement/2018/06/13/newton-shijiazhuang-"
-#~ "meetup/"
-
-#~ msgid "Newton offline Meetup (Beijing) successfully ended"
-#~ msgstr "牛顿线下见面会-北京站"
-
-#~ msgid "2018-05-19, 14:00-18:00 CST"
-#~ msgstr "2018年6月16日下午14:00-18:00"
-
-#~ msgid ""
-#~ "Chaoke Coffee, Floor 1, Block C, Building 40, Xingfu Square, Xingfu Second"
-#~ msgstr "北京市朝阳区新东路幸福二村首开幸福广场40号楼C座一层潮客咖啡"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/05/18/newton-meet-beijing-"
-#~ "re-defining-business-order-new-economy-era-sincerely-invites-you-join-us/"
-#~ msgstr ""
-#~ "https://www.newtonproject.org/announcement/2018/05/18/newton-meetup-"
-#~ "beijing-518/"
-
-#~ msgid "FEED"
-#~ msgstr "动态"
-
-#~ msgid "Estimate on October,2018"
-#~ msgstr "预计2018年10月"
-
-#~ msgid "About to start"
-#~ msgstr "即将开始"
-
-#~ msgid "Smarter"
-#~ msgstr "更智能"
-
-#~ msgid ""
-#~ "Personal credit can be automatically created in a free and open manner "
-#~ "without authoritative intermediaries. This methodology will reduce human "
-#~ "intervention and facilitate the coordination between people, between "
-#~ "machines and between people and machines."
-#~ msgstr ""
-#~ "在没有权威中介的前提下，以自由开放的方式自动化生产信用，这会让人与人之间，"
-#~ "机器与机器之间，人与机器之间更好地协作，降低人为干预的因素，更加自动化和智"
-#~ "能化。"
-
-#~ msgid "Joint Ecological Construction"
-#~ msgstr "联合生态建设"
-
-#~ msgid ""
-#~ "With digital identities, users can easily manage their own digital assets."
-#~ msgstr "运用数字身份，用户可以方便管理自己的数字资产。"
-
-#~ msgid ""
-#~ "Using 'atom hashing', we can create unique digital identities for "
-#~ "commodities over the whole network."
-#~ msgstr "通过运用原子哈希等技术为商品建立全网唯一数字身份。"
-
-#~ msgid ""
-#~ "Advertisers can set marketing plans through the system's built-in smart "
-#~ "contract marketing templates."
-#~ msgstr "广告主通过系统内置的各种营销类智能合约模版设定营销方案。"
-
-#~ msgid "The Newton main chain and wallet was officially launched."
-#~ msgstr "牛顿主链和钱包正式上线"
-
-#~ msgid "Yu Zhang"
-#~ msgstr "张羽"
-
-#~ msgid "Marketing expert"
-#~ msgstr "营销专家"
-
-#~ msgid ""
-#~ "The founder of Beijing WuZhou Online Information Technology Limited "
-#~ "Company, is experienced in enterprise management, investment and "
-#~ "financing, new media marketing for 25 years. He has created the "
-#~ "chinaemail.com serving for over 20000 enterprises, and founded the 12818."
-#~ "com, which provides financial services with several fund companies, "
-#~ "securities companies and insurance companies. Mr. Zhang has focused on "
-#~ "the research and practice of new media marketing and fan economy since "
-#~ "2013, and helped more than 3000 enterprises to better use new media. More "
-#~ "than 200 companies stand out from their own fields. As the committee "
-#~ "member of the Internet society of China, Mr. Zhang has won the self-"
-#~ "discipline award of the Internet society of China."
-#~ msgstr ""
-#~ "北京五洲在线信息技术有限公司创始人，从业25年，具有丰富的企业管理经验、投资"
-#~ "理财经验、新媒体营销经验。创办的中国邮箱网为20000多家企业提供电子邮件服"
-#~ "务。创办的中华理财网给国内一些基金公司、证券公司、保险公司提供理财系统服"
-#~ "务。2013年至今专注于新媒体营销和粉丝经济的研究和实践，助力3000多家企业运用"
-#~ "好新媒体，让200多个专业型网红在各自领域脱颖而出。张羽是中国互联网协会理"
-#~ "事，曾获得互联网协会自律奖。"
-
-#~ msgid "Zhang Yu"
-#~ msgstr "张羽"
-
-#~ msgid "Marketing Specialist"
-#~ msgstr "营销专家"
-
-#~ msgid "Founder of WuZhou Online"
-#~ msgstr "五洲在线创始人"
-
-#~ msgid "English"
-#~ msgstr "英文"
-
-#~ msgid "Chinese"
-#~ msgstr "中文"
-
-#~ msgid "Japanese"
-#~ msgstr "日语"
-
-#~ msgid "Coming Events"
-#~ msgstr "活动预告"
-
-#~ msgid "Waiting"
-#~ msgstr "尚未开始"
-
-#~ msgid "Activity "
-#~ msgstr "活动"
-
-#~ msgid "more >>"
-#~ msgstr "更多 >>"
-
-#~ msgid ""
-#~ "If you have successfully created or are creating the above community (or "
-#~ "other), please let us know by email. Let us create Newton together!"
-#~ msgstr ""
-#~ "如果您已成功创建或正在创建以上社群（或其它），请发送邮件告诉我们。让我们一"
-#~ "起共创牛顿！"
-
-#~ msgid ""
-#~ "The content of the email should include the following: name, city, mobile "
-#~ "number, social application and account, social group link."
-#~ msgstr ""
-#~ "邮件内容应包含以下内容：姓名、城市、手机号、社交应用和账号、社交群链接。"
-
-#~ msgid "Please send an email to: newton-community@newtonproject.org"
-#~ msgstr "邮件请发送至：newton-community@newtonproject.org"
-
-#~ msgid "Download NewPay"
-#~ msgstr "NewPay 官方下载"
-
-#~ msgid "Click the button to download NewPay to participate in the beta!"
-#~ msgstr "点击按钮,下载NewPay参与测试！"
-
-#~ msgid ""
-#~ "Elements Capital was founded by Mr. Niu Junling and Mr. Qu Xingchen from "
-#~ "Huachuang Investment. It is a cryptocurrency international hedge fund "
-#~ "with investment teams in Asia, North America and Europe. Its main "
-#~ "investment sectors include primary market investment, secondary market "
-#~ "quantitative investment, blockchain project incubation, etc. The main "
-#~ "investment projects are: Bts Etp Bch Hsr Sky Qtum Ae Eos Elastos Efinity "
-#~ "Winchain Matrix Rsk Algorand Newton Coinmex"
-#~ msgstr ""
-#~ "主要投资板块包括一级市场投资、二级市场量化投资、区块链项目孵化等主要投资项"
-#~ "目有：bts etp bch hsr sky qtum ae eos elastos dfinity winchain matrix rsk "
-#~ "algorand newton coinmex"
-
-#~ msgid ""
-#~ "Its primary market investment direction mainly includes: industry public "
-#~ "chain, killer application, blockchain infrastructure, cross-chain "
-#~ "technology, distributed storage, and exchange."
-#~ msgstr ""
-#~ "一级市场投资方向：行业公链、杀手级应用 、区块链基础设施、跨链技术、分布式"
-#~ "存储、交易所"
-
-#~ msgid "Elements"
-#~ msgstr "Elements"
-
-#~ msgid "Third round Token exchange"
-#~ msgstr "第三轮通证交换"
-
-#~ msgid "Haven't participated in KYC yet?"
-#~ msgstr "还没有KYC?"
-
-#~ msgid "Join KYC"
-#~ msgstr "参加KYC"
-
-#~ msgid "NewPay Supported System:"
-#~ msgstr "NewPay 支持系统:"
-
-#~ msgid "NewChain TestNet Launched"
-#~ msgstr "NewChain TestNet 已启动"
-
-#~ msgid "In Progress"
-#~ msgstr "正在进行"
-
-#~ msgid "The third round of Newton token exchange is currently under way."
-#~ msgstr "第三轮通证交换正在进行"
-
-#~ msgid "Download"
-#~ msgstr "下载"
-
-#~ msgid "Newton Community Open House"
-#~ msgstr "牛顿社群开放日"
-
-#~ msgid "Invite 10 community members to visit NewSpace Sanlitun."
-#~ msgstr "邀请10名社群朋友参观访问NewSpace Sanlitun。"
-
-#~ msgid "What Does the Double 11 Shopping Day Have to Do with Me?"
-#~ msgstr "《双11的千亿神话关你X事?!》"
-
-#~ msgid ""
-#~ "Newton advisor and Bitcoin Ambassador Lee Willson will attend 'What Does "
-#~ "the Double 11 Shopping Day Have to Do with Me?' meet up in Kuala Lumpur."
-#~ msgstr ""
-#~ "牛顿顾问、比特币大使willson将吉隆坡出席《双11的千亿神话关你X事?!》交流会 "
-#~ "- 2019区块链面面观并做主题演讲。"
-
-#~ msgid "Dinner with Xu Jizhe"
-#~ msgstr "徐继哲的晚餐"
-
-#~ msgid ""
-#~ "Newton founder Xu will invite four outstanding “community voices” to "
-#~ "dinner."
-#~ msgstr "牛顿创始人徐继哲邀请4位“社群声音”优秀内容创作者共进晚餐。"
-
-#~ msgid "The NewClub Top 50 party in Beijing with 50 community members."
-#~ msgstr "邀请50名社群朋友在北京聚会。"
-
-#~ msgid "Newton’s first Social Networking Conference"
-#~ msgstr "牛顿首届社群节点大会"
-
-#~ msgid ""
-#~ "Giving community nodes, ecosystem partners, and media to the chance to "
-#~ "promote Newton’s vision and technology."
-#~ msgstr ""
-#~ "邀请社群节点、商业生态合作伙伴、媒体朋友等出席，旨在推广牛顿愿景、技术，链"
-#~ "接社群节点。"
-
-#~ msgid "The 7th International Forum for Clean Energy (Macao)"
-#~ msgstr "第七届国际清洁能源论坛(澳门)"
-
-#~ msgid ""
-#~ "Newton founder Xu Jizhe confirmed his attendance at the 7th International "
-#~ "Forum for Clean Energy (Macao)."
-#~ msgstr ""
-#~ "牛顿为该论坛协办单位，创始人徐继哲将发表主题演讲并参加分组圆桌讨论。"
-
-#~ msgid "Newton Night"
-#~ msgstr "牛顿之夜年会"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/10/17/newtons-global-100-"
-#~ "cities-tour-tokyo-station-salon/"
-#~ msgstr "https://www.newtonproject.org/announcement/2018/10/04/-/"
-
-#~ msgid "Newton’s Global 100 Cities Tour – Tokyo Station"
-#~ msgstr "牛顿全球百城巡讲-东京站"
-
-#~ msgid ""
-#~ "This meet-up was organized by BlockTec and COIN OTAKU and was the first "
-#~ "appearance of the Newton project team in Japan."
-#~ msgstr ""
-#~ "此次活动由BlockTec主办、日本知名垂直媒体COIN OTAKU协办，也是牛顿项目团队在"
-#~ "日本的首次亮相。"
-
-#~ msgid "Newton Global 100-City Tour - Guangzhou Station"
-#~ msgstr "牛顿全球百城巡讲-广州站"
-
-#~ msgid "Newton founder Mr. Jizhe Xu attended this salon and give speech."
-#~ msgstr "牛顿创始人徐继哲先生发表演讲。"
-
-#~ msgid ""
-#~ "https://www.newtonproject.org/announcement/2018/08/09/newton-global-100-"
-#~ "cities-tour-shenzhen-station-meetup/"
-#~ msgstr "https://www.newtonproject.org/announcement/2018/08/09/shenzhen-/"
-
-#~ msgid "Newton Global 100 Cities Tour - Shenzhen station"
-#~ msgstr "牛顿全球百城巡讲-深圳站"
-
-#~ msgid ""
-#~ "This event was organized by the WEMERGE and Liandong Media，World "
-#~ "Blockchain Foundation."
-#~ msgstr "由牛顿社区成员微合社区主办、链动传媒和世界区块链基金协办。"
-
-#~ msgid ""
-#~ "Newton founder Mr. Jizhe Xu, and Newton advisor Mr. Lee Willson attended "
-#~ "this salon and give speech."
-#~ msgstr ""
-#~ "牛顿创始人徐继哲先生、牛顿顾问和天使投资人Lee Willson先生参加并会发表演"
-#~ "讲。"
-
-#~ msgid "Newton Meet-up Shijiazhuang station"
-#~ msgstr "牛顿河北线下交流会-石家庄站"
-
-#~ msgid ""
-#~ "Explaining how Newton’s economic model ensures everyone to benefit from "
-#~ "economic growth."
-#~ msgstr ""
-#~ "从社区视角讲述牛顿的业务经济模型如何让参与牛顿经济体的每一位成员都能够从经"
-#~ "济增长中受益。"
-
-#~ msgid "Newton Meet-up (Beijing)"
-#~ msgstr "Newton Meetup Beijing牛顿线下见面会"
-
-#~ msgid ""
-#~ "Newton founder Jizhe Xu, co-founder Shubin Li, and Newton advisor and "
-#~ "angel investor Xueyong Gu, attended this salon and gave speech."
-#~ msgstr ""
-#~ "牛顿创始人徐继哲、牛顿联合创始人李树斌、牛顿顾问及天使投资人顾学雍参加并发"
-#~ "表主题演讲。"
-
-#~ msgid "President of Yuntu Capital"
-#~ msgstr "云图资本董事长"
-
-#~ msgid "Morning"
-#~ msgstr "上午"
-
-#~ msgid "Afternoon"
-#~ msgstr "下午"
-
-#~ msgid "Night"
-#~ msgstr "晚上"
-
-#~ msgid "Newton Ecosystem Conference"
-#~ msgstr "牛顿生态发布会"
-
-#~ msgid "Sub-forum A: China-ASEAN Clean Energy Cooperation Roundtable"
-#~ msgstr "A组分论坛：中国与东盟清洁能源合作圆桌会"
-
-#~ msgid "Sub-forum B: Smart Energy and Energy Blockchain Innovation Summit"
-#~ msgstr "B组分论坛：智慧能源与能源区块链技术创新峰会"
-
-#~ msgid "Creating a New Economy: Newton Night"
-#~ msgstr "奠基新经济——牛顿之夜"
-
-#~ msgid "BC SPARK"
-#~ msgstr "月亮星火社区"
-
-#~ msgid "Dec. 10"
-#~ msgstr "12月10日"
-
-#~ msgid "Check-in"
-#~ msgstr "嘉宾签到入住"
-
-#~ msgid "On-site sign in"
-#~ msgstr "现场签到"
-
-#~ msgid "Introduction to Newton's ecosystem"
-#~ msgstr "牛顿生态介绍"
-
-#~ msgid "Group photo"
-#~ msgstr "大合影"
-
-#~ msgid "Host opening"
-#~ msgstr "主持人开场"
-
-#~ msgid "Newton briefing"
-#~ msgstr "牛顿发布会"
-
-#~ msgid "Roundtable: Newton community governance and incentives"
-#~ msgstr "圆桌论坛：牛顿社群治理和激励"
-
-#~ msgid "Roundtable: How to use Newton technology"
-#~ msgstr "圆桌论坛：如何使用牛顿的技术来修复世界"
-
-#~ msgid ""
-#~ "Roundtable: Rebuilding the blockchain value proposition in the cold winter"
-#~ msgstr "圆桌论坛：寒冬中，重塑区块链价值逻辑"
-
-#~ msgid "Roundtable: From improvement to change, from industry to ecology"
-#~ msgstr "圆桌论坛：从改良到变革，从行业到生态"
-
-#~ msgid "Exchange & Tea break"
-#~ msgstr "现场交流+茶歇"
-
-#~ msgid "Newton community dinner"
-#~ msgstr "牛顿社群晚宴"
-
-#~ msgid "International Forum for Clean Energy"
-#~ msgstr "国际清洁能源论坛"
-
-#~ msgid "Forum opening session"
-#~ msgstr "国际清洁能源论坛全体大会"
-
-#~ msgid "Newton Project representative topic sharing"
-#~ msgstr "牛顿项目代表主题分享"
-
-#~ msgid "Other topics"
-#~ msgstr "其他分享内容"
-
-#~ msgid "Dinner: Guests take seats and receive gifts"
-#~ msgstr "晚宴：嘉宾入席，礼物领取"
-
-#~ msgid "Dinner: Speech by guest representative"
-#~ msgstr "晚宴：嘉宾代表致辞"
-
-#~ msgid "Dinner: Newton Night: building the foundation for a new economy"
-#~ msgstr "晚宴：奠基新经济——牛顿之夜"
-
-#~ msgid "Gravitation · Newton Community Node Conference Live"
-#~ msgstr "万有引力 · 牛顿社群节点大会直播"
-
-#~ msgid "Coming soon"
-#~ msgstr "即将上线"
