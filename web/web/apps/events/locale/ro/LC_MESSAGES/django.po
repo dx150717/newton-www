@@ -1,0 +1,1568 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-28 16:48+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
+
+#: web/apps/events/admin/category.py:34
+msgid "tree path"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:35
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:17
+msgid "Content"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:38
+msgid "Publication"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:42
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:4
+msgid "Discussions"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:46
+msgid "Privacy"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:49
+msgid "Templates"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:52
+msgid "Metadatas"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:55 web/apps/events/admin/forms.py:60
+#: web/apps/events/breadcrumbs.py:75
+#: web/apps/events/templates/zinnia/category_list.html:6
+msgid "Categories"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:87
+#, python-format
+msgid "%(title)s (%(word_count)i words)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:94
+#, python-format
+msgid "%(title)s (%(reactions)i reaction)"
+msgid_plural "%(title)s (%(reactions)i reactions)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/admin/entry.py:99 web/apps/events/models/category.py:30
+#: web/apps/events/models_bases/entry.py:62
+msgid "title"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:115
+msgid "author(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:130
+msgid "category(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:143
+msgid "tag(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:158
+msgid "site(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:171
+msgid "short url"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:179
+msgid "is visible"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:263
+msgid "The selected entries now belong to you."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:264
+msgid "Set the entries to the user"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:273
+msgid "The selected entries are now marked as published."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:274
+msgid "Set entries selected as published"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:282
+msgid "The selected entries are now marked as hidden."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:283
+msgid "Set entries selected as hidden"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:291
+msgid "Comments are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:292
+msgid "Close the comments for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:301
+msgid "Pingbacks are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:303
+msgid "Close the pingbacks for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:311
+msgid "Trackbacks are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:313
+msgid "Close the trackbacks for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:322
+msgid "The selected entries are now set at the current date."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:324
+msgid "Put the selected entries on top at the current date"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:332
+msgid "Selected entries are now marked as featured."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:333
+msgid "Mark selected entries as featured"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:341
+msgid "Selected entries are no longer marked as featured."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:343
+msgid "Unmark selected entries as featured"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:364
+#, python-format
+msgid "%(directory)s directory succesfully pinged %(success)d entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:368
+msgid "Ping Directories for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/filters.py:29
+#, python-format
+msgid "%(item)s (%(count)i entry)"
+msgid_plural "%(item)s (%(count)i entries)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/admin/filters.py:50
+msgid "published authors"
+msgstr ""
+
+#: web/apps/events/admin/filters.py:61
+msgid "published categories"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:25
+msgid "Parent category"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:27
+msgid "No parent category"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:44
+msgid "A category cannot be parent of itself."
+msgstr ""
+
+#: web/apps/events/admin/forms.py:62 web/apps/events/models/category.py:98
+#: web/apps/events/models_bases/entry.py:510
+msgid "categories"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:66 web/apps/events/breadcrumbs.py:68
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:25
+#: web/apps/events/templates/zinnia/tag_list.html:6
+#: web/apps/events/templates/zinnia/tags/tag_cloud.html:4
+msgid "Tags"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:71
+#: web/apps/events/templates/zinnia/author_list.html:6
+msgid "Authors"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:100
+#, python-format
+msgid "Page %s"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:128
+#, python-format
+msgid "Week %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:175
+#: web/apps/events/templates/zinnia/entry_archive.html:4
+msgid "Latest entries"
+msgstr ""
+
+#: web/apps/events/feeds.py:181
+#, python-format
+msgid "The latest entries for the site %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:211
+#, python-format
+msgid "Entries for the category %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:217
+#, python-format
+msgid "The latest entries for the category %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:247
+#, python-format
+msgid "Entries for author %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:253
+#, python-format
+msgid "The latest entries by %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:284
+#, python-format
+msgid "Entries for the tag %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:290
+#, python-format
+msgid "The latest entries for the tag %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:323
+#, python-format
+msgid "Results of the search for '%s'"
+msgstr ""
+
+#: web/apps/events/feeds.py:329
+#, python-format
+msgid "The entries containing the pattern '%s'"
+msgstr ""
+
+#: web/apps/events/feeds.py:394
+msgid "Latest discussions"
+msgstr ""
+
+#: web/apps/events/feeds.py:400
+#, python-format
+msgid "The latest discussions for the site %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:433
+#, python-format
+msgid "Discussions on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:439
+#, python-format
+msgid "The latest discussions for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:466
+#, python-format
+msgid "Comments on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:472
+#, python-format
+msgid "The latest comments for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:516
+#, python-format
+msgid "Pingbacks on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:522
+#, python-format
+msgid "The latest pingbacks for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:548
+#, python-format
+msgid "Trackbacks on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:554
+#, python-format
+msgid "The latest trackbacks for the entry %s"
+msgstr ""
+
+#: web/apps/events/models/category.py:20
+msgid "zh_CN"
+msgstr ""
+
+#: web/apps/events/models/category.py:21
+msgid "en"
+msgstr ""
+
+#: web/apps/events/models/category.py:25
+#: web/apps/events/templates/zinnia/entry_archive.html:7
+#: web/apps/events/templatetags/zinnia.py:359
+msgid "Blog"
+msgstr ""
+
+#: web/apps/events/models/category.py:26
+msgid "Announcement"
+msgstr ""
+
+#: web/apps/events/models/category.py:33
+#: web/apps/events/models_bases/entry.py:65
+msgid "slug"
+msgstr ""
+
+#: web/apps/events/models/category.py:34
+msgid "Used to build the category's URL."
+msgstr ""
+
+#: web/apps/events/models/category.py:37
+msgid "description"
+msgstr ""
+
+#: web/apps/events/models/category.py:43
+msgid "parent category"
+msgstr ""
+
+#: web/apps/events/models/category.py:46
+msgid "language"
+msgstr ""
+
+#: web/apps/events/models/category.py:49
+#: web/apps/events/models_bases/entry.py:98
+#: web/apps/events/models_bases/entry.py:101
+msgid "Language"
+msgstr ""
+
+#: web/apps/events/models/category.py:53 web/apps/events/models/category.py:56
+#: web/apps/events/models_bases/entry.py:108
+msgid "Entry type"
+msgstr ""
+
+#: web/apps/events/models/category.py:97
+msgid "category"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:49
+msgid "draft"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:50
+msgid "hidden"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:51
+msgid "published"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:54
+#: web/apps/events/models_bases/entry.py:58
+#: web/apps/events/models_bases/entry.py:261
+#: web/apps/events/models_bases/entry.py:262
+msgid "Events"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:67
+#: web/apps/events/models_bases/entry.py:92
+msgid "Used to build the entry's URL."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:70
+msgid "status"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:74
+msgid "start publication"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:76
+msgid "Start date of publication."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:79
+msgid "end publication"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:81
+msgid "End date of publication."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:86
+msgid "sites"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:87
+msgid "Sites where the entry will be published."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:90
+msgid "creation date"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:95
+msgid "last update"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:105
+msgid "entry type"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:112
+msgid "entry_sub_type"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:119
+msgid "show_in_home"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:126
+msgid "Events during"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:131
+msgid "Events start date"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:136
+msgid "Events summary"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:141
+msgid "Events link"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:148
+msgid "Events location"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:276
+msgid "content"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:318
+msgid "comments enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:319
+msgid "Allows comments if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:321
+msgid "pingbacks enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:322
+msgid "Allows pingbacks if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:324
+msgid "trackbacks enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:325
+msgid "Allows trackbacks if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:328
+msgid "comment count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:330
+msgid "pingback count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:332
+msgid "trackback count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:416
+msgid "related entries"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:434
+msgid "excerpt"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:435
+msgid "Used for search and SEO."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:468
+msgid "image"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:470
+msgid "Used for illustration."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:481
+msgid "featured"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:496
+msgid "authors"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:520
+msgid "tags"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:539
+msgid "login required"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:540
+msgid "Only authenticated users can view the entry."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:552
+msgid "password"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:553
+msgid "Protects the entry with a password."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:565
+msgid "content template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:567
+#: web/apps/events/models_bases/entry.py:583
+msgid "Default template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:569
+msgid "Template used to display the entry's content."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:581
+msgid "detail template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:585
+msgid "Template used to display the entry's detail page."
+msgstr ""
+
+#: web/apps/events/moderator.py:66 web/apps/events/moderator.py:88
+#: web/apps/events/moderator.py:111
+#, python-format
+msgid "[%(site)s] New comment posted on \"%(title)s\""
+msgstr ""
+
+#: web/apps/events/templates/400.html:6
+msgid "Error 400"
+msgstr ""
+
+#: web/apps/events/templates/400.html:10 web/apps/events/templates/400.html:15
+msgid "Bad request"
+msgstr ""
+
+#: web/apps/events/templates/400.html:17
+msgid "Sorry, but the request was malformed."
+msgstr ""
+
+#: web/apps/events/templates/403.html:6
+msgid "Error 403"
+msgstr ""
+
+#: web/apps/events/templates/403.html:10 web/apps/events/templates/403.html:15
+msgid "Permission denied"
+msgstr ""
+
+#: web/apps/events/templates/403.html:17
+msgid "Sorry, but you don't have the permission to do this action."
+msgstr ""
+
+#: web/apps/events/templates/404.html:6
+msgid "Error 404"
+msgstr ""
+
+#: web/apps/events/templates/404.html:10 web/apps/events/templates/404.html:15
+msgid "Page not found"
+msgstr ""
+
+#: web/apps/events/templates/404.html:17
+msgid "Sorry, but the requested page could not be found."
+msgstr ""
+
+#: web/apps/events/templates/500.html:6
+msgid "Error 500"
+msgstr ""
+
+#: web/apps/events/templates/500.html:10 web/apps/events/templates/500.html:15
+msgid "Server error"
+msgstr ""
+
+#: web/apps/events/templates/500.html:17
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:3
+msgid "Contents"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:9
+#: web/apps/events/templates/zinnia/author_list.html:19
+#: web/apps/events/templates/zinnia/category_list.html:18
+#: web/apps/events/templates/zinnia/tag_list.html:18
+#: web/apps/events/templates/zinnia/tags/authors.html:8
+#: web/apps/events/templates/zinnia/tags/categories_tree.html:6
+#: web/apps/events/templates/zinnia/tags/statistics.html:7
+#, python-format
+msgid "%(entry_count)s entry"
+msgid_plural "%(entry_count)s entries"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:14
+#: web/apps/events/templates/zinnia/tags/entries_popular.html:8
+#: web/apps/events/templates/zinnia/tags/statistics.html:16
+#, python-format
+msgid "%(comment_count)s comment"
+msgid_plural "%(comment_count)s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:21
+#: web/apps/events/templates/zinnia/tags/statistics.html:13
+#, python-format
+msgid "%(category_count)s category"
+msgid_plural "%(category_count)s categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:24
+#: web/apps/events/templates/zinnia/tags/statistics.html:19
+#, python-format
+msgid "%(pingback_count)s pingback"
+msgid_plural "%(pingback_count)s pingbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:29
+#: web/apps/events/templates/zinnia/tags/statistics.html:10
+#, python-format
+msgid "%(tag_count)s tag"
+msgid_plural "%(tag_count)s tags"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:32
+#: web/apps/events/templates/zinnia/tags/statistics.html:22
+#, python-format
+msgid "%(trackback_count)s trackback"
+msgid_plural "%(trackback_count)s trackbacks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:37
+#: web/apps/events/templates/zinnia/tags/statistics.html:4
+#, python-format
+msgid "%(author_count)s author"
+msgid_plural "%(author_count)s authors"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:42
+#: web/apps/events/templates/zinnia/tags/statistics.html:25
+#, python-format
+msgid "%(reject_count)s rejected item"
+msgid_plural "%(reject_count)s rejected items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:47
+msgid "Statistics"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:49
+#: web/apps/events/templates/zinnia/tags/statistics.html:28
+#, python-format
+msgid "%(entries_per_month)s entries per month"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:54
+#: web/apps/events/templates/zinnia/tags/statistics.html:31
+#, python-format
+msgid "%(words_per_entry)s words per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:57
+#: web/apps/events/templates/zinnia/tags/statistics.html:34
+#, python-format
+msgid "%(words_per_comment)s words per comment"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:62
+#: web/apps/events/templates/zinnia/tags/statistics.html:37
+#, python-format
+msgid "%(comments_per_entry)s comments per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:65
+#: web/apps/events/templates/zinnia/tags/statistics.html:40
+#, python-format
+msgid "%(linkbacks_per_entry)s linkbacks per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:6
+#: web/apps/events/templates/zinnia/entry_detail_base.html:261
+#: web/apps/events/templates/zinnia/entry_detail_base.html:262
+msgid "Edit the entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:9
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:25
+#: web/apps/events/templates/feeds/comment_title.html:2
+#: web/apps/events/templates/feeds/discussion_title.html:2
+#: web/apps/events/templates/feeds/pingback_title.html:2
+#: web/apps/events/templates/feeds/trackback_title.html:2
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:23
+#: web/apps/events/templates/zinnia/entry_detail_base.html:52
+msgctxt "on date"
+msgid "on"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:15
+#: web/apps/events/templates/comments/zinnia/entry/form.html:31
+msgid "Preview"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:22
+#: web/apps/events/templates/zinnia/tags/entries_draft.html:9
+msgid "No draft entries."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:31
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:32
+msgid "View all draft entries"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:10
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:6
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:7
+msgid "in"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:13
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:8
+msgid "Comment on"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:22
+msgid "Edit the comment"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:23
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:18
+msgid "Edit"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:30
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:15
+msgid "No comments yet."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:39
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:40
+msgid "Manage the comments"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:7
+msgid "made a linkback on"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:17
+msgid "Edit the linkback"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:25
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:16
+msgid "No linkbacks yet."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/content_stats.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/content_stats.html:8
+msgid "Today"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/draft_entries.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/draft_entries.html:8
+msgid "Draft entries"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:5
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:6
+msgid "Quick publishing"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:9
+msgid "Title"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:33
+msgid "Save as draft"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:34
+msgid "Reset"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:35
+msgid "Publish"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/recent_comments.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/recent_comments.html:8
+msgid "Recent comments"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/recent_linkbacks.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/recent_linkbacks.html:8
+msgid "Recent linkbacks"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:1
+#: web/apps/events/templates/comments/comment_notification_email.txt:1
+#: web/apps/events/templates/comments/comment_reply_email.txt:1
+#: web/apps/events/templates/zinnia/entry_list.html:21
+msgid "Author"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:3
+#: web/apps/events/templates/comments/comment_notification_email.txt:5
+#: web/apps/events/templates/comments/comment_reply_email.txt:3
+msgid "Comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:6
+#: web/apps/events/templates/comments/comment_notification_email.txt:8
+#: web/apps/events/templates/comments/comment_reply_email.txt:6
+msgid "View this comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:2
+msgid "Email"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:3
+msgid "IP"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:10
+msgid "Flag this comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:12
+msgid "Delete this comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:14
+msgid "Approve this comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/form.html:11
+msgid "Post your comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/form.html:26
+msgid "Comment as"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/form.html:26
+msgid "Log out"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/form.html:30
+msgid "Post"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:4
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:9
+msgid "Thanks for your comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:11
+msgid "Your comment needs to be approved before getting displayed."
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:19
+#, python-format
+msgid "Back to %(title)s"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:26
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:27
+msgid "Return to entry list"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:4
+msgid "Comment preview"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:10
+msgid "Please correct following error."
+msgid_plural "Please correct following errors."
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:12
+msgid "Preview of the comment"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:25
+#: web/apps/events/templates/zinnia/entry_detail_base.html:54
+msgid "Written on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:94
+#: web/apps/events/templates/zinnia/entry_detail_base.html:124
+#, python-format
+msgid "%(percent)s%% of %(object)s still remains to read."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:96
+#: web/apps/events/templates/zinnia/entry_detail_base.html:126
+msgid "Continue reading"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/author_list.html:4
+#: web/apps/events/templates/zinnia/author_list.html:11
+msgid "Author list"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/author_list.html:17
+#: web/apps/events/templates/zinnia/tags/authors.html:6
+#, python-format
+msgid "Show all %(author)s's entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/author_list.html:23
+#: web/apps/events/templates/zinnia/tags/authors.html:12
+msgid "No authors yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/base.html:16
+msgid "RSS Feed of latest entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/base.html:17
+msgid "RSS Feed of latest discussions"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/category_list.html:4
+#: web/apps/events/templates/zinnia/category_list.html:11
+msgid "Category list"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/category_list.html:17
+#: web/apps/events/templates/zinnia/tags/categories.html:11
+#: web/apps/events/templates/zinnia/tags/categories_tree.html:5
+#, python-format
+msgid "Show all entries in %(category)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/category_list.html:23
+#: web/apps/events/templates/zinnia/tags/categories_tree.html:16
+msgid "No categories yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_day.html:4
+#: web/apps/events/templates/zinnia/entry_archive_day.html:6
+#: web/apps/events/templates/zinnia/entry_archive_day.html:11
+#: web/apps/events/templates/zinnia/entry_archive_day.html:28
+#: web/apps/events/templates/zinnia/entry_archive_month.html:4
+#: web/apps/events/templates/zinnia/entry_archive_month.html:6
+#: web/apps/events/templates/zinnia/entry_archive_month.html:11
+#: web/apps/events/templates/zinnia/entry_archive_month.html:37
+#: web/apps/events/templates/zinnia/entry_archive_today.html:22
+#: web/apps/events/templates/zinnia/entry_archive_week.html:42
+#: web/apps/events/templates/zinnia/entry_archive_year.html:4
+#: web/apps/events/templates/zinnia/entry_archive_year.html:6
+#: web/apps/events/templates/zinnia/entry_archive_year.html:11
+#: web/apps/events/templates/zinnia/tags/entries_archives.html:3
+#: web/apps/events/templates/zinnia/tags/entries_archives.html:9
+#: web/apps/events/templates/zinnia/tags/entries_archives_link.html:2
+#: web/apps/events/templates/zinnia/tags/entries_archives_tree.html:4
+#: web/apps/events/templates/zinnia/tags/entries_archives_tree.html:7
+#: web/apps/events/templates/zinnia/tags/entries_archives_tree.html:14
+#: web/apps/events/templates/zinnia/tags/entries_archives_tree.html:24
+msgid "Archives"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_day.html:16
+#: web/apps/events/templates/zinnia/entry_archive_today.html:16
+msgid "Previous day"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_day.html:22
+msgid "Next day"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_day.html:35
+#: web/apps/events/templates/zinnia/entry_archive_week.html:30
+#: web/apps/events/templates/zinnia/entry_archive_week.html:38
+#, python-format
+msgid "Week %(week_number)s of %(year)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_month.html:16
+#: web/apps/events/templates/zinnia/entry_archive_week.html:17
+msgid "Daily archives"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_month.html:26
+msgid "Previous month"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_month.html:32
+msgid "Next month"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_today.html:4
+#: web/apps/events/templates/zinnia/entry_archive_today.html:6
+#: web/apps/events/templates/zinnia/entry_archive_today.html:11
+msgid "Today archives"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_week.html:4
+#: web/apps/events/templates/zinnia/entry_archive_week.html:6
+#: web/apps/events/templates/zinnia/entry_archive_week.html:11
+#, python-format
+msgid "Archives week %(week_number)s of %(year)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_week.html:27
+msgid "Previous week"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_week.html:35
+msgid "Next week"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_year.html:15
+#: web/apps/events/templates/zinnia/sitemap.html:37
+msgid "Monthly archives"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_year.html:25
+msgid "Previous year"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_year.html:31
+msgid "Next year"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:22
+msgid "RSS Feed of discussions on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:24
+msgid "RSS Feed of comments on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:26
+msgid "RSS Feed of pingbacks on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:28
+msgid "RSS Feed of trackbacks on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:213
+msgid "Next entry"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:225
+msgid "Previous entry"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:237
+msgid "Related entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:4
+msgid "Latest entries for"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:4
+msgid "the category"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:4
+msgid "the tag"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:4
+msgid "the author"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:6
+msgid "page"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:11
+#: web/apps/events/templates/zinnia/entry_list.html:14
+#: web/apps/events/templates/zinnia/entry_list.html:17
+#, python-format
+msgid "RSS feed of %(object)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:21
+msgid "Category"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:21
+msgid "Tag"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:23
+msgid "Page"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:31
+#, python-format
+msgid "Category archives: %(category)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:41
+#, python-format
+msgid "Tag archives: %(tag)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:46
+#, python-format
+msgid "Author archives: %(author)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:58
+#: web/apps/events/templates/zinnia/sitemap.html:29
+#: web/apps/events/templates/zinnia/tags/entries_featured.html:9
+#: web/apps/events/templates/zinnia/tags/entries_popular.html:12
+#: web/apps/events/templates/zinnia/tags/entries_random.html:9
+#: web/apps/events/templates/zinnia/tags/entries_recent.html:9
+msgid "No entries yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:78
+#: web/apps/events/templates/zinnia/entry_list.html:79
+msgid "Edit the category"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:85
+#: web/apps/events/templates/zinnia/entry_list.html:86
+msgid "Edit the tag"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:92
+#: web/apps/events/templates/zinnia/entry_list.html:93
+msgid "Edit the author"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_search.html:4
+#: web/apps/events/templates/zinnia/entry_search.html:6
+#: web/apps/events/templates/zinnia/entry_search.html:18
+#, python-format
+msgid "Search results for '%(pattern)s'"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_search.html:11
+#: web/apps/events/templates/zinnia/entry_search.html:24
+#: web/apps/events/templates/zinnia/entry_search.html:25
+#, python-format
+msgid "RSS feed of search results for '%(pattern)s'"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_search.html:32
+#, python-format
+msgid "%(entry_count)s entry found"
+msgid_plural "%(entry_count)s entries found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/zinnia/entry_search.html:43
+msgid "Nothing found."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/login.html:4
+#: web/apps/events/templates/zinnia/login.html:9
+msgid "Login required"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/login.html:13
+msgid "Your username and password didn't match. Please try again."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/login.html:17
+msgid "You need to be connected to view this entry."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/login.html:34
+msgid "Login"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:4
+#: web/apps/events/templates/zinnia/password.html:9
+msgid "Password required"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:13
+msgid "The password provided is not valid. Please try again."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:17
+msgid "You need to provide a password to view this entry."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:24
+msgid "Password"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:29
+msgid "Valid"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:4
+#: web/apps/events/templates/zinnia/sitemap.html:11
+#: web/apps/events/templates/zinnia/skeleton.html:70
+#: web/apps/events/templates/zinnia/skeleton.html:71
+msgid "Sitemap"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:6
+msgid "Sitemap of the weblog"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:14
+msgid "Entries per categories"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:23
+msgid "comment"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:6
+msgid "Newton"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:12
+msgid "Just another Zinnia weblog."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:55
+msgid "BLOG"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:62
+msgid "Useful links"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:65
+#: web/apps/events/templates/zinnia/skeleton.html:66
+msgid "Weblog index"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:77
+msgid "Search"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:4
+#: web/apps/events/templates/zinnia/tag_list.html:11
+msgid "Tag list"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:17
+#, python-format
+msgid "Show all entries tagged by %(tag)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:22
+msgid "No tags yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/categories.html:4
+msgid "Column"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/categories.html:12
+#, python-format
+msgid ""
+"\n"
+"    (%(entry_count)s)\n"
+"\n"
+"    "
+msgid_plural ""
+"\n"
+"\n"
+"    "
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/templates/zinnia/tags/entries_popular.html:7
+#, python-format
+msgid "Comments on %(object)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/entries_similar.html:9
+msgid "No similar entries."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:9
+msgid "Linkback on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:15
+msgid "More recent entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:25
+#: web/apps/events/templates/zinnia/tags/pagination.html:38
+#: web/apps/events/templates/zinnia/tags/pagination.html:52
+msgid "Entries page"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:61
+msgid "More old entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/search_form.html:4
+msgid "Keywords..."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/search_form.html:6
+msgid ""
+"You can use - to exclude words or phrases, &quot;double quotes&quot; for "
+"exact phrases and the AND/OR boolean operators combined with parenthesis for "
+"complex queries."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/tag_cloud.html:11
+#, python-format
+msgid "%(entry_count)s entry tagged by %(tag)s"
+msgid_plural "%(entry_count)s entries tagged by %(tag)s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/apps/events/tests/test_views.py:586 web/apps/events/views/search.py:30
+msgid "The pattern is too short"
+msgstr ""
+
+#: web/apps/events/tests/test_views.py:590 web/apps/events/views/search.py:34
+msgid "No pattern to search found"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:23
+msgid "^feeds/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:24
+msgid "^tags/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:25
+msgid "^authors/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:26
+msgid "^categories/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:27
+msgid "^search/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:28
+msgid "^random/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:29
+msgid "^sitemap/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:30
+msgid "^trackback/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:31
+msgid "^comments/"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:18
+msgid "^page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:27
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:33
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/week/(?P<week>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:36
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/week/(?P<week>\\d+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:45
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/(?P<month>\\d{2})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:54
+#, python-brace-format
+msgid ""
+"^(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:61
+msgid "^today/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:64
+msgid "^today/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/authors.py:15
+msgid "^(?P<username>[.+-@\\w]+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/categories.py:15
+msgid "^(?P<path>[-\\/\\w]+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/comments.py:11
+msgid "^success/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:23
+msgid "^discussions/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:26
+msgid "^search/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:29
+msgid "^tags/(?P<tag>[^/]+(?u))/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:32
+msgid "^authors/(?P<username>[.+-@\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:35
+msgid "^categories/(?P<path>[-\\/\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:38
+#, python-brace-format
+msgid ""
+"^discussions/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:42
+#, python-brace-format
+msgid ""
+"^comments/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:46
+#, python-brace-format
+msgid ""
+"^pingbacks/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:50
+#, python-brace-format
+msgid ""
+"^trackbacks/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/quick_entry.py:11
+msgid "^quick-entry/$"
+msgstr ""
+
+#: web/apps/events/urls/tags.py:18
+msgid "^(?P<tag>[^/]+(?u))/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/views/mixins/entry_preview.py:27
+msgid "No entry found matching the query"
+msgstr ""
+
+#: web/apps/events/views/tags.py:48
+#, python-format
+msgid "No Tag found matching \"%s\"."
+msgstr ""
+
+#: web/apps/events/xmlrpc/metaweblog.py:48
+msgid "Username is incorrect."
+msgstr ""
+
+#: web/apps/events/xmlrpc/metaweblog.py:50
+msgid "Password is invalid."
+msgstr ""
+
+#: web/apps/events/xmlrpc/metaweblog.py:52
+msgid "User account unavailable."
+msgstr ""
+
+#: web/apps/events/xmlrpc/metaweblog.py:55
+#, python-format
+msgid "User cannot %s."
+msgstr ""
+
+#: web/apps/events/xmlrpc/pingback.py:116
+msgid "No title"
+msgstr ""
