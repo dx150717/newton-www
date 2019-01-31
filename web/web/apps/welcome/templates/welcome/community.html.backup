@@ -14,73 +14,6 @@
         </div>
     </div>
 
-	<h1>Right now, just putting developer icon grid here as a test run</h1>
-
-<div class="container">
-            <div class="intro col-md-3">
-                <div class="intro-img text-center"><img src="{% version "/static/images/install.svg" %}" alt="" height=150></div>
-                <div class="intro-title text-center"><span>{% trans "Install Software" %}</span></div>
-				<div class="intro-info"><p>{% trans "Newton supports OS X, Windows, and Linux, and is easy to install" %}<div class="submit-button"><a href="/install">{% trans "Install" %}</a></div></div>
-            </div>
-            <div class="intro col-md-3">
-                <div class="intro-img text-center"><img src="{% version "/static/images/tutorial.svg" %}" alt="" height=150></div>
-                <div class="intro-title text-center"><span>{% trans "Get Started" %}</span></div>
-				<div class="intro-info"><p {% arabic_change_style %}>{% trans "Build a simple Dapp in minutes. Learn advanced concepts and techniques" %}<div class="submit-button"><a href="/docs/tutorial">{% trans "Start Tutorial" %}</a></div></div>
-            </div>
-            <div class="intro col-md-3">
-                <div class="intro-img text-center"><img src="{% version "/static/images/setup.svg" %}" alt="" height=150></div>
-                <div class="intro-title text-center"><span>{% trans "Dig Deeper" %}</span></div>
-                <div class="intro-info"><p {% arabic_change_style %}>{% trans "Best practices for production-ready smart contracts and Dapps" %}<div class="submit-button"><a href    ="/docs/guide">{% trans "Read Guide" %}</a></div></div>
-
-            </div>
-            <div class="intro col-md-3">
-                <div class="intro-img text-center"><img src="{% version "static/images/git.svg" %}" alt="" height=150></div>
-                <div class="intro-title text-center"><span>{% trans "See the Code" %}</span></div>
-                <div class="intro-info"><p {% arabic_change_style %}>{% trans "All of our code, all of our projects, all in one place and free for you to use" %}<div class="submit-button"><a href    ="http://gitlab.newtonproject.org">{% trans "Browse Repo" %}</a></div></div>
-
-            </div>
-            <div class="intro col-md-3">
-                <div class="intro-img text-center"><img src="{% version "static/images/bug.svg" %}" alt="" height=150></div>
-                <div class="intro-title text-center"><span>{% trans "Squash Bugs" %}</span></div>
-                <div class="intro-info"><p {% arabic_change_style %}>{% trans "Make Newton's software even better" %}<div class="submit-button"><a href    ="">{% trans "Install" %}</a></div></div>
-
-            </div>
-            <div class="intro col-md-3">
-                <div class="intro-img text-center"><img src="{% version "static/images/support.svg" %}" alt="" height=150></div>
-                <div class="intro-title text-center"><span>{% trans "Get Support" %}</span></div>
-                <div class="intro-info"><p {% arabic_change_style %}>{% trans "Check out official forums, mailing lists, and RocketChat" %}<div class="submit-button"><a href    ="/support">{% trans "Get Help" %}</a></div></div>
-
-            </div>
-            <div class="intro col-md-3">
-                <div class="intro-img text-center"><img src="{% version "static/images/partner.svg" %}" alt="" height=150></div>
-                <div class="intro-title text-center"><span>{% trans "Partner with Newton" %}</span></div>
-                <div class="intro-info"><p {% arabic_change_style %}>{% trans "Developers can access NewNET through the NNIO (NewNET IO) protocol, using storage services, computing services and domain names." %}<div class="submit-button"><a href    ="/partnerships">{% trans "Contact Us" %}</a></div></div>
-
-            </div>
-            
-			<div class="intro col-md-3">
-                <div class="intro-img text-center"><img src="{% version "static/images/job.svg" %}" alt="" height=150></div>
-                <div class="intro-title text-center"><span>{% trans "Find a Job" %}</span></div>
-                <div class="intro-info"><p {% arabic_change_style %}>{% trans "Put your skills to use with Newton and our partners" %}<div class="submit-button"><a href    ="/partnerships">{% trans "See Listings" %}</a></div></div>
-
-            </div>
-        
-		
-		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <nav id="float-nav" class="navbar navbar-custom sticky-navigation NavBg bg-gray">
         <div class="container">
             <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
@@ -91,7 +24,28 @@
             <div class="submit-button"><a href="https://wiki.newtonproject.org/wiki/Community_and_Meetups#Online_Community">{% trans "Add Community" %}</a></div>
         </div>
     </nav>
-	<div class="social-network bg-gray">
+
+    {% include "welcome/include-community-event.html" %}
+    {% comment %}
+    <div class="press bg-gray">
+        <div class="container">
+            <h2>{% trans "Press" %}</h2>
+            <div>
+                {% if presses %}
+                {% for press in presses %}
+                <p><a href="{{ press.press_link }}" target="_blank">{{ press.press_title }} >> </a><span>({{press.created_at | date:'Y-m-d'}} , {{ press.press_partner }})</span></p>
+                {% if forloop.counter == 5 %}
+                <p><a href="/press/">{% trans "MORE" %}>></a></p>
+                {% endif %}
+                {% endfor %}
+                {% else %}
+                <p></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
+    <div class="social-network bg-gray">
         <div class="container">
             <h2>{% trans "Social Network" %}</h2>
             <div class="row">
@@ -119,9 +73,7 @@
             </div>
         </div>
     </div>
-{% include "welcome/include-community-map.html" %}
-    {% include "welcome/include-community-event.html" %}
-       <div class="email-list">
+    <div class="email-list">
         <div class="container">
             <h2>{% trans "Email List" %}</h2>
             <div class="row">
