@@ -59,6 +59,7 @@ SUPPORT_LANGUAGES = (
     ('en', 'English'),
     ('es', 'Español'),
     ('fr', 'Français'),
+    ('he', 'עברית'),
     ('it', 'Italiano'),
     ('nl', 'Nederlands'),
     ('ro', 'Română'),
@@ -92,6 +93,7 @@ LANGUAGE_LIST = (
     ("pt", codes.EntryLanguage.PORTUGUESE.value),
     ("vi", codes.EntryLanguage.VIETNAMESE.value),
     ("ro", codes.EntryLanguage.ROMANIA.value),
+    ("he", codes.EntryLanguage.HEBREW.value),
 )
 
 LANGUAGE_CHOICES = (
@@ -113,6 +115,7 @@ LANGUAGE_CHOICES = (
     (codes.EntryLanguage.PORTUGUESE.value, "Portuguese"),
     (codes.EntryLanguage.VIETNAMESE.value, "Vietnamese"),
     (codes.EntryLanguage.ROMANIA.value, "Romania"),
+    (codes.EntryLanguage.HEBREW.value, "Hebrew"),
 )
 # country settings
 COUNTRIES_FIRST = []

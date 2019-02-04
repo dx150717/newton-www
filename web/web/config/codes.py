@@ -187,3 +187,4 @@ class EntryLanguage(Enum):
     PORTUGUESE = 15
     VIETNAMESE = 16
     ROMANIA = 17
+    HEBREW = 18
