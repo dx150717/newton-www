@@ -7,7 +7,7 @@ __author__ = 'tony.liu@diynova.com'
 
 from haystack import indexes
 from zinnia.models.entry import Entry
-
+from zinnia.managers import DRAFT, HIDDEN, PUBLISHED
 
 class EntryIndex(indexes.SearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
@@ -19,4 +19,4 @@ class EntryIndex(indexes.SearchIndex, indexes.Indexable):
 
     def index_queryset(self, using=None):
         """Used when the entire index for model is updated."""
-        return self.get_model().objects.all()
+        return self.get_model().objects.filter(status=PUBLISHED)
