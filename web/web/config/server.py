@@ -135,20 +135,20 @@ CACHES = {
 # email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = False
-EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST = ''
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'cumtbliu@163.com'
-EMAIL_HOST_PASSWORD = '025103a'
-FROM_EMAIL = 'cumtbliu@163.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+FROM_EMAIL = ''
 # captcha settings
-GOOGLE_SITE_KEY = '6LddrlUUAAAAACpdea_F7GTRBCzkYBoInup9WJPv'
-GOOGLE_SECRET_KEY = "6LddrlUUAAAAAJDVSNQcnVsBJeDXSdToo_Gu2qvb"
-TENCENT_CAPTCHA_APP_ID = '2075015244'
-TENCENT_CAPTCHA_APP_SECRET = '0alyS6l5dhGmH32EX4zIQaw**'
+GOOGLE_SITE_KEY = ''
+GOOGLE_SECRET_KEY = ""
+TENCENT_CAPTCHA_APP_ID = ''
+TENCENT_CAPTCHA_APP_SECRET = ''
 # multiple domain
-NEWTON_WEB_URL = 'http://localhost:8000'
-NEWTON_HOME_URL = 'http://home.test.newtonproject.org:8000'
-NEWTON_GRAVITY_URL = 'http://gravity.test.newtonproject.org:8000'
+NEWTON_WEB_URL = ''
+NEWTON_HOME_URL = ''
+NEWTON_GRAVITY_URL = ''
 
 # celery settings
 import djcelery
@@ -164,9 +164,9 @@ FUND_START_DATE = datetime.datetime(2018, 9, 03, 0, 0)
 
 
 WEBPUSH_SETTINGS = {
-   "VAPID_PUBLIC_KEY": "BMI6CuaoXispCyXjO34kEUcL_MacbKDgXG5xWneXvlDi-mOqyrkaFaZI3PteBB5KgmhspUWTS2rxlwkftwiNHJ4",
-   "VAPID_PRIVATE_KEY": "qi48KlUEzaUx_21KPWzgkaVDSyz-IyRLMKXxOPKbaPY",
-   "VAPID_ADMIN_EMAIL": "wuwenmin@diynova.com"
+   "VAPID_PUBLIC_KEY": "",
+   "VAPID_PRIVATE_KEY": "",
+   "VAPID_ADMIN_EMAIL": ""
 }
 
 INTERNAL_API_HOST_IP = '127.0.0.1'
@@ -176,12 +176,12 @@ INTERNAL_API_HOST_PORT = '9090'
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'backends.whoosh_cn_backend.WhooshEngine',
-        'PATH': '/Users/yuwei/liuchao/search_www/',
+        'PATH': '/data/newton-storage/search_www/',
     },
 }
 
 # newpay download url
-NEWPAY_FOR_ANDROID_ALI_DOWNLOAD_URL = "https://newton-release.oss-cn-beijing.aliyuncs.com/newpay-0.2-50-WWWRelease-201812171848.apk"
-NEWPAY_FOR_ANDROID_ALI_SG_DOWNLOAD_URL = "https://newton-release-sg.oss-ap-southeast-1.aliyuncs.com/newpay-0.2-50-WWWRelease-201812171848.apk"
+NEWPAY_FOR_ANDROID_ALI_DOWNLOAD_URL = ""
+NEWPAY_FOR_ANDROID_ALI_SG_DOWNLOAD_URL = ""
 NEWTON_NEWPAY_ANDROID_URL = ""
 NEWTON_NEWPAY_IOS_URL = ""
