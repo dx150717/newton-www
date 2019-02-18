@@ -1,0 +1,59 @@
+{% load i18n %}
+{% load utils %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="keywords" content="{% trans "Newton,NewPay,Download" %}"/>
+        <title>{% trans "NewPay Download" %}</title>
+        <!-- Fav and touch icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <!-- CSS -->
+        <!-- HTML5 IE Enabling Script -->
+        <link rel="shortcut icon" href="{% version "images/logo-new.png" %}" type="image/x-icon" />
+    	<!--==== style css ====-->
+        <link href="{% version "css/bootstrap.min.css" %}" rel="stylesheet" />
+        <link href="{% version "css/download.css" %}" rel="stylesheet" />
+        <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116218760-1"></script>
+    </head>
+    <body>
+        <div role="main" id="main" class="container">
+            <div class="logo">
+                <p class="text-center">
+                    <img src="{% version "images/img_logo_newton_white.png" %}" />
+                </p>
+            </div>
+
+            <div class="title white-font">
+                <p class="text-center">{% trans "You are invited to join <br/>Newton" %}</p>
+            </div>
+
+            <div class="invite text-center white-font">
+                <p class="key">{% trans "Invitation Code" %}</p>
+                <p class="code">
+                   {{ code }}
+                </p>
+                <p class="description">
+                    {% trans "You can create your NewID in NewPay <br/>to join the Newton Community Economy <br/>by using the invitation code" %}
+                </p>
+            </div>
+
+            <div class="action">
+                <p class="text-center">
+                    <a href="{{ settings.NEWTON_NEWPAY_ANDROID_URL }}" class="btn btn-default" id="id_android_btn" style="display:none;">{% trans "Download NewPay-TestNet Android" %}</a>
+                    <a href="{{ settings.NEWTON_NEWPAY_IOS_URL }}" class="btn btn-default" id="id_ios_btn" style="display:none;">
+                        {% trans "Download NewPay-TestNet iOS on TestFlight" %}</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <script type="text/javascript" src="{% version "js/download.js" %}"></script>
+
+    </body>
+</html>
+
