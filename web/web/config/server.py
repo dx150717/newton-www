@@ -183,3 +183,5 @@ HAYSTACK_CONNECTIONS = {
 # newpay download url
 NEWPAY_FOR_ANDROID_ALI_DOWNLOAD_URL = "https://newton-release.oss-cn-beijing.aliyuncs.com/newpay-0.2-50-WWWRelease-201812171848.apk"
 NEWPAY_FOR_ANDROID_ALI_SG_DOWNLOAD_URL = "https://newton-release-sg.oss-ap-southeast-1.aliyuncs.com/newpay-0.2-50-WWWRelease-201812171848.apk"
+NEWTON_NEWPAY_ANDROID_URL = ""
+NEWTON_NEWPAY_IOS_URL = ""
