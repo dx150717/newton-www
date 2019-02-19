@@ -2,6 +2,7 @@
 
 import logging
 from haystack.query import SearchQuerySet
+from haystack.inputs import AutoQuery
 
 from django.utils import translation
 from django.views import generic
@@ -32,7 +33,7 @@ class IdListView(generic.ListView):
                     language_code = language_item[1]
                     break
             search_query = self.request.GET.get("q")
-            items = SearchQuerySet().filter(content=search_query, language=language_code).order_by("-last_update")
+            items = SearchQuerySet().filter(content=AutoQuery(search_query), language=language_code).order_by("-last_update")
             return items
         except Exception, inst:
             logger.exception("fail to show id list:%s" % str(inst))
