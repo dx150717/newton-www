@@ -12,7 +12,7 @@ function showAliyunVideoForIOS() {
     video:video,
     modId:"node-video-tencent2",
     autoplay:false,
-    pic:"{% version 'images/meeting/videos/A.jpg' %}",
+    pic:"/static/images/meeting/videos/A.jpg"
   });
   tencentPlayer.onplay = function () {
     $("#video-tab-1").click(function () {
