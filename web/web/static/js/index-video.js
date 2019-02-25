@@ -51,6 +51,7 @@ function initIndexVideos () {
           showAliyunVideoForIOS();
         }
     });
+  showAliyunVideoForIOS();
 }
 
 
