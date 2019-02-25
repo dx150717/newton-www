@@ -1,5 +1,5 @@
 /* index page videos js */
-function showAliyunVideoForIOS() {
+function showAliyunVideoForIOS(autoplay) {
   $("#newton-video-2").hide();
   $("#newton-video-1").hide();
   $("#node-video-tencent2").show();
@@ -11,8 +11,7 @@ function showAliyunVideoForIOS() {
     height:215,
     video:video,
     modId:"node-video-tencent2",
-    autoplay:false,
-    pic:"https://www.newtonproject.org/static/images/meeting/videos/A.jpg"
+    autoplay:autoplay
   });
   tencentPlayer.onplay = function () {
     $("#video-tab-1").click(function () {
@@ -48,10 +47,10 @@ function initIndexVideos () {
                 videoPlayer2.play();
             });
         } else {
-          showAliyunVideoForIOS();
+          showAliyunVideoForIOS(true);
         }
     });
-  showAliyunVideoForIOS();
+  showAliyunVideoForIOS(false);
 }
 
 
