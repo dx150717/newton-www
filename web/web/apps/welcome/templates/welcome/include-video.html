@@ -13,7 +13,7 @@
             </video>
 
             <video id="newton-video-2" class="video-js vjs-big-play-centered" controls preload="none" poster="{% version "images/meeting/videos/A.jpg" %}" data-setup="" style="margin-left:auto;margin-right:auto;cursor: pointer;">
-                <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/A%20-%202018%20Newton%20Community%20Node%20Conference%20Main%20Event%20compress.mp4" type='video/mp4' />
+                <source src="https://newton-video.oss-cn-beijing.aliyuncs.com/macao-2019-a.mp4" type="video/mp4" />
                 <p class="vjs-no-js">
                     To view this video please enable JavaScript, and consider upgrading to a web browser that
                     <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -39,13 +39,3 @@
         
     </div>
 </section>
-
-<script>
-    var u = navigator.userAgent;
-    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-    if (isiOS) {
-        var scriptNode = document.createElement("script");
-        scriptNode.setAttribute("src", "{% version "js/tvp.player_v2-jq.js" %}");
-        document.head.appendChild(scriptNode);
-    }
-</script>
