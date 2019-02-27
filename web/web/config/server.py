@@ -59,18 +59,18 @@ LOGGING = {
         },
     },
     'handlers': {
-        'syslog': {
-            'level': LOGGING_LEVEL,
-            'class': 'logging.handlers.SysLogHandler',
-            'facility': SysLogHandler.LOG_LOCAL2,
-            'formatter': 'verbose',
-            'address': syslog_path,
-        },
-        'sentry': {
-            'level': LOGGING_LEVEL_SENTRY,
-            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
-            'tags': {'custom-tag': 'x'},
-        },
+#        'syslog': {
+#            'level': LOGGING_LEVEL,
+#            'class': 'logging.handlers.SysLogHandler',
+#            'facility': SysLogHandler.LOG_LOCAL2,
+#            'formatter': 'verbose',
+#            'address': syslog_path,
+#        },
+#        'sentry': {
+#            'level': LOGGING_LEVEL_SENTRY,
+#            'class': 'raven.contrib.django.raven_compat.handlers.SentryHandler',
+#            'tags': {'custom-tag': 'x'},
+#        },
         'console':{
             'level':'DEBUG',
             'class':'logging.StreamHandler',
