@@ -12,6 +12,25 @@ apt-get update && cat package.txt|xargs apt-get install -y --force-yes
 virtualenv ve && source ve/bin/activate
 pip install -r web/requirements.txt
 ```
+# Configure Database on local desktop
+## create database
+```
+$mysql
+mysql>create database newton_www default character set utf8;
+```
+## change the configuration file
+open web/web/config/server.py for changing your database account.
+The original is the following,
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'newton_www',
+        'USER': 'root', 
+        'PASSWORD': '',
+    },
+}
+```
 
 # Run
 ```

@@ -104,12 +104,6 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '',
     },
-    'tokenexchange': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tokenexchange',
-        'USER': 'root',
-        'PASSWORD': '',
-    },
 }
 
 # Cache
