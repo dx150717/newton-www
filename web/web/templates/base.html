@@ -26,6 +26,21 @@
 		<link href="{% version "css/bootstrap.min.css" %}" rel="stylesheet" />
         <link href="{% version "css/libs/nsprogress/nsprogress.css" %}" rel="stylesheet" />
 <!--         <link rel="stylesheet" type="text/css" href="{% version "css/style.css" %}" /> -->
+		<style>
+    .navbar {
+        position: fixed;
+    }
+    @media (max-width: 768px) {
+        #intro .news-column {
+            margin-top: unset;
+        }
+    }
+
+	.navbar-nav {
+		flex-direction: row !important; 
+	}
+</style>
+
         <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
         <script src="{% version "js/qrcode.min.js" %}"></script>
         <script>var zhMessages = "{% version 'js/jquery-validate-messages.zh.js' %}"</script>
