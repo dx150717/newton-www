@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 16:48+0700\n"
+"POT-Creation-Date: 2019-03-02 11:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,112 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: web/apps/admin_tools/dashboard/dashboards.py:86
+#: web/apps/admin_tools/menu/menus.py:100
+msgid "Dashboard"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/dashboards.py:229
+msgid "Quick links"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/dashboards.py:235
+msgid "Return to site"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/dashboards.py:236
+#: web/apps/admin_tools/theming/templates/admin/base.html:46
+msgid "Change password"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/dashboards.py:238
+#: web/apps/admin_tools/theming/templates/admin/base.html:53
+#: web/apps/events/templates/comments/zinnia/entry/form.html:26
+#: web/apps/zinnia/templates/comments/zinnia/entry/form.html:26
+msgid "Log out"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/dashboards.py:244
+#: web/apps/admin_tools/dashboard/modules.py:424
+#: web/apps/admin_tools/menu/menus.py:103
+#, fuzzy
+msgid "Applications"
+msgstr "Ứng dụng công nghiệp"
+
+#: web/apps/admin_tools/dashboard/dashboards.py:250
+#: web/apps/admin_tools/menu/menus.py:107
+msgid "Administration"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/dashboards.py:255
+#: web/apps/admin_tools/dashboard/dashboards.py:310
+#: web/apps/admin_tools/dashboard/modules.py:592
+msgid "Recent Actions"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/modules.py:343
+msgid "Links"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/modules.py:645
+msgid "No recent actions."
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/modules.py:691
+msgid "RSS Feed"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/templates/admin/app_index.html:9
+#: web/apps/admin_tools/theming/templates/admin/base.html:62
+#: web/apps/welcome/templates/welcome/index.html:10
+#: web/apps/welcome/templates/welcome/register.html:6
+#: web/apps/welcome/templates/welcome/sitemap.html:22
+#: web/templates/admin/change_form.html:18
+#: web/templates/admin/change_list.html:40
+msgid "Home"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/dashboard.html:62
+msgid "Modules"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/modules/app_list.html:13
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/modules/model_list.html:11
+#: web/templates/admin/change_form.html:21
+msgid "Add"
+msgstr ""
+
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/modules/app_list.html:14
+#: web/apps/admin_tools/dashboard/templates/admin_tools/dashboard/modules/model_list.html:12
+msgid "Change"
+msgstr ""
+
+#: web/apps/admin_tools/menu/items.py:326
+msgid "Bookmarks"
+msgstr ""
+
+#: web/apps/admin_tools/menu/templates/admin/base_site.html:4
+#, fuzzy
+msgid "Newton site admin"
+msgstr "Trang Web Newton được chính thức ra mắt."
+
+#: web/apps/admin_tools/menu/templates/admin/base_site.html:16
+msgid "administration"
+msgstr ""
+
+#: web/apps/admin_tools/menu/templates/admin_tools/menu/menu.html:32
+msgid "Please enter a name for the bookmark"
+msgstr ""
+
+#: web/apps/admin_tools/theming/templates/admin/base.html:33
+msgid "Welcome,"
+msgstr ""
+
+#: web/apps/admin_tools/theming/templates/admin/base.html:38
+#, fuzzy
+msgid "Documentation"
+msgstr "Tổ chức"
 
 #: web/apps/base/templatetags/utils.py:79
 #, python-format
@@ -61,6 +167,42 @@ msgstr ""
 msgid "No"
 msgstr ""
 
+#: web/apps/download/templates/download/newpay-download-invite.html:9
+#: web/apps/download/templates/download/newpay-download.html:9
+msgid "Newton,NewPay,Download"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download-invite.html:10
+#: web/apps/download/templates/download/newpay-download.html:10
+#, fuzzy
+msgid "NewPay Download"
+msgstr "Tải về"
+
+#: web/apps/download/templates/download/newpay-download-invite.html:32
+#: web/apps/download/templates/download/newpay-download.html:32
+msgid "You are invited to join <br/>Newton"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download-invite.html:36
+msgid "Invitation Code"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download-invite.html:41
+msgid ""
+"You can create your NewID in NewPay <br/>to join the Newton Community "
+"Economy <br/>by using the invitation code"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download-invite.html:47
+#: web/apps/download/templates/download/newpay-download.html:37
+msgid "Download NewPay Android"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download-invite.html:49
+#: web/apps/download/templates/download/newpay-download.html:39
+msgid "Download NewPay iOS"
+msgstr ""
+
 #: web/apps/download/templates/download/newpay-guide.html:6
 msgid "Guide"
 msgstr ""
@@ -69,9 +211,1910 @@ msgstr ""
 msgid "Newpay Download Guide"
 msgstr ""
 
-#: web/apps/faq/models.py:23 web/apps/faq/models.py:26
-#: web/templates/header.html:83 web/templates/header.html:278
+#: web/apps/events/breadcrumbs.py:68 web/apps/events/admin/forms.py:66
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:25
+#: web/apps/events/templates/zinnia/tag_list.html:6
+#: web/apps/events/templates/zinnia/tags/tag_cloud.html:4
+#: web/apps/zinnia/breadcrumbs.py:68 web/apps/zinnia/admin/forms.py:66
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:25
+#: web/apps/zinnia/templates/zinnia/tag_list.html:6
+#: web/apps/zinnia/templates/zinnia/tags/tag_cloud.html:4
+msgid "Tags"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:71
+#: web/apps/events/templates/zinnia/author_list.html:6
+#: web/apps/zinnia/breadcrumbs.py:71
+#: web/apps/zinnia/templates/zinnia/author_list.html:6
+msgid "Authors"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:75 web/apps/events/admin/entry.py:55
+#: web/apps/events/admin/forms.py:60
+#: web/apps/events/templates/zinnia/category_list.html:6
+#: web/apps/zinnia/breadcrumbs.py:75 web/apps/zinnia/admin/forms.py:60
+#: web/apps/zinnia/templates/zinnia/category_list.html:6
+msgid "Categories"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:100 web/apps/zinnia/breadcrumbs.py:100
+#, python-format
+msgid "Page %s"
+msgstr ""
+
+#: web/apps/events/breadcrumbs.py:128 web/apps/zinnia/breadcrumbs.py:128
+#, fuzzy, python-format
+msgid "Week %s"
+msgstr "Hàng tuần"
+
+#: web/apps/events/feeds.py:175
+#: web/apps/events/templates/zinnia/entry_archive.html:4
+#: web/apps/zinnia/feeds.py:175
+#: web/apps/zinnia/templates/zinnia/entry_archive.html:4
+msgid "Latest entries"
+msgstr ""
+
+#: web/apps/events/feeds.py:181 web/apps/zinnia/feeds.py:181
+#, python-format
+msgid "The latest entries for the site %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:211 web/apps/zinnia/feeds.py:211
+#, python-format
+msgid "Entries for the category %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:217 web/apps/zinnia/feeds.py:217
+#, python-format
+msgid "The latest entries for the category %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:247 web/apps/zinnia/feeds.py:247
+#, python-format
+msgid "Entries for author %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:253 web/apps/zinnia/feeds.py:253
+#, python-format
+msgid "The latest entries by %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:284 web/apps/zinnia/feeds.py:284
+#, python-format
+msgid "Entries for the tag %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:290 web/apps/zinnia/feeds.py:290
+#, python-format
+msgid "The latest entries for the tag %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:323 web/apps/zinnia/feeds.py:323
+#, python-format
+msgid "Results of the search for '%s'"
+msgstr ""
+
+#: web/apps/events/feeds.py:329 web/apps/zinnia/feeds.py:329
+#, python-format
+msgid "The entries containing the pattern '%s'"
+msgstr ""
+
+#: web/apps/events/feeds.py:394 web/apps/zinnia/feeds.py:394
+msgid "Latest discussions"
+msgstr ""
+
+#: web/apps/events/feeds.py:400 web/apps/zinnia/feeds.py:400
+#, python-format
+msgid "The latest discussions for the site %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:433 web/apps/zinnia/feeds.py:433
+#, python-format
+msgid "Discussions on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:439 web/apps/zinnia/feeds.py:439
+#, python-format
+msgid "The latest discussions for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:466 web/apps/zinnia/feeds.py:466
+#, python-format
+msgid "Comments on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:472 web/apps/zinnia/feeds.py:472
+#, python-format
+msgid "The latest comments for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:516 web/apps/zinnia/feeds.py:516
+#, python-format
+msgid "Pingbacks on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:522 web/apps/zinnia/feeds.py:522
+#, python-format
+msgid "The latest pingbacks for the entry %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:548 web/apps/zinnia/feeds.py:548
+#, python-format
+msgid "Trackbacks on %s"
+msgstr ""
+
+#: web/apps/events/feeds.py:554 web/apps/zinnia/feeds.py:554
+#, python-format
+msgid "The latest trackbacks for the entry %s"
+msgstr ""
+
+#: web/apps/events/moderator.py:66 web/apps/events/moderator.py:88
+#: web/apps/events/moderator.py:111 web/apps/zinnia/moderator.py:66
+#: web/apps/zinnia/moderator.py:88 web/apps/zinnia/moderator.py:111
+#, python-format
+msgid "[%(site)s] New comment posted on \"%(title)s\""
+msgstr ""
+
+#: web/apps/events/admin/category.py:34 web/apps/zinnia/admin/category.py:34
+msgid "tree path"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:35
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:17
+#: web/apps/zinnia/admin/entry.py:35
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:17
+msgid "Content"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:38 web/apps/zinnia/admin/entry.py:37
+#, fuzzy
+msgid "Publication"
+msgstr "Trình độ chuyên môn:"
+
+#: web/apps/events/admin/entry.py:42
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:4
+#: web/apps/zinnia/admin/entry.py:41
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:4
+msgid "Discussions"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:46 web/apps/zinnia/admin/entry.py:45
+#, fuzzy
+msgid "Privacy"
+msgstr "Chính sách riêng tư"
+
+#: web/apps/events/admin/entry.py:49 web/apps/zinnia/admin/entry.py:48
+msgid "Templates"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:52 web/apps/zinnia/admin/entry.py:51
+msgid "Metadatas"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:87 web/apps/zinnia/admin/entry.py:83
+#, python-format
+msgid "%(title)s (%(word_count)i words)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:94 web/apps/zinnia/admin/entry.py:90
+#, python-format
+msgid "%(title)s (%(reactions)i reaction)"
+msgid_plural "%(title)s (%(reactions)i reactions)"
+msgstr[0] ""
+
+#: web/apps/events/admin/entry.py:99 web/apps/events/models/category.py:30
+#: web/apps/events/models_bases/entry.py:62 web/apps/zinnia/admin/entry.py:95
+#: web/apps/zinnia/models/category.py:30
+#: web/apps/zinnia/models_bases/entry.py:67
+msgid "title"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:115 web/apps/zinnia/admin/entry.py:111
+msgid "author(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:130 web/apps/zinnia/admin/entry.py:126
+msgid "category(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:143 web/apps/zinnia/admin/entry.py:139
+msgid "tag(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:158 web/apps/zinnia/admin/entry.py:154
+msgid "site(s)"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:171 web/apps/zinnia/admin/entry.py:167
+msgid "short url"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:179 web/apps/zinnia/admin/entry.py:175
+msgid "is visible"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:263 web/apps/zinnia/admin/entry.py:259
+msgid "The selected entries now belong to you."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:264 web/apps/zinnia/admin/entry.py:260
+msgid "Set the entries to the user"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:273 web/apps/zinnia/admin/entry.py:269
+msgid "The selected entries are now marked as published."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:274 web/apps/zinnia/admin/entry.py:270
+msgid "Set entries selected as published"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:282 web/apps/zinnia/admin/entry.py:278
+msgid "The selected entries are now marked as hidden."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:283 web/apps/zinnia/admin/entry.py:279
+msgid "Set entries selected as hidden"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:291 web/apps/zinnia/admin/entry.py:287
+msgid "Comments are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:292 web/apps/zinnia/admin/entry.py:288
+msgid "Close the comments for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:301 web/apps/zinnia/admin/entry.py:297
+msgid "Pingbacks are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:303 web/apps/zinnia/admin/entry.py:299
+msgid "Close the pingbacks for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:311 web/apps/zinnia/admin/entry.py:307
+msgid "Trackbacks are now closed for selected entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:313 web/apps/zinnia/admin/entry.py:309
+msgid "Close the trackbacks for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:322 web/apps/zinnia/admin/entry.py:318
+msgid "The selected entries are now set at the current date."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:324 web/apps/zinnia/admin/entry.py:320
+msgid "Put the selected entries on top at the current date"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:332 web/apps/zinnia/admin/entry.py:328
+msgid "Selected entries are now marked as featured."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:333 web/apps/zinnia/admin/entry.py:329
+msgid "Mark selected entries as featured"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:341 web/apps/zinnia/admin/entry.py:337
+msgid "Selected entries are no longer marked as featured."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:343 web/apps/zinnia/admin/entry.py:339
+msgid "Unmark selected entries as featured"
+msgstr ""
+
+#: web/apps/events/admin/entry.py:364 web/apps/zinnia/admin/entry.py:360
+#, python-format
+msgid "%(directory)s directory succesfully pinged %(success)d entries."
+msgstr ""
+
+#: web/apps/events/admin/entry.py:368 web/apps/zinnia/admin/entry.py:364
+msgid "Ping Directories for selected entries"
+msgstr ""
+
+#: web/apps/events/admin/filters.py:29 web/apps/zinnia/admin/filters.py:29
+#, python-format
+msgid "%(item)s (%(count)i entry)"
+msgid_plural "%(item)s (%(count)i entries)"
+msgstr[0] ""
+
+#: web/apps/events/admin/filters.py:50 web/apps/zinnia/admin/filters.py:50
+msgid "published authors"
+msgstr ""
+
+#: web/apps/events/admin/filters.py:61 web/apps/zinnia/admin/filters.py:61
+msgid "published categories"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:25 web/apps/zinnia/admin/forms.py:25
+msgid "Parent category"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:27 web/apps/zinnia/admin/forms.py:27
+msgid "No parent category"
+msgstr ""
+
+#: web/apps/events/admin/forms.py:44 web/apps/zinnia/admin/forms.py:44
+msgid "A category cannot be parent of itself."
+msgstr ""
+
+#: web/apps/events/admin/forms.py:62 web/apps/events/models/category.py:98
+#: web/apps/events/models_bases/entry.py:510 web/apps/zinnia/admin/forms.py:62
+#: web/apps/zinnia/models/category.py:98
+#: web/apps/zinnia/models_bases/entry.py:488
+msgid "categories"
+msgstr ""
+
+#: web/apps/events/models/category.py:20 web/apps/zinnia/models/category.py:20
+msgid "zh_CN"
+msgstr ""
+
+#: web/apps/events/models/category.py:21 web/apps/zinnia/models/category.py:21
+msgid "en"
+msgstr ""
+
+#: web/apps/events/models/category.py:25
+#: web/apps/events/templates/zinnia/entry_archive.html:7
+#: web/apps/events/templatetags/zinnia.py:359
+#: web/apps/welcome/templates/welcome/include-community-event.html:107
+#: web/apps/welcome/templates/welcome/sitemap.html:73
+#: web/apps/zinnia/models/category.py:25
+#: web/apps/zinnia/models_bases/entry.py:55
+#: web/apps/zinnia/templates/zinnia/entry_archive.html:7
+#: web/apps/zinnia/templatetags/zinnia.py:359 web/templates/footer.html:24
+msgid "Blog"
+msgstr ""
+
+#: web/apps/events/models/category.py:26
+#: web/apps/welcome/templates/welcome/announcement-detail.html:9
+#: web/apps/welcome/templates/welcome/announcement-detail.html:17
+#: web/apps/welcome/templates/welcome/events-detail.html:9
+#: web/apps/zinnia/models/category.py:26
+#: web/apps/zinnia/models_bases/entry.py:56
+msgid "Announcement"
+msgstr "Thông báo"
+
+#: web/apps/events/models/category.py:33
+#: web/apps/events/models_bases/entry.py:65
+#: web/apps/zinnia/models/category.py:33
+#: web/apps/zinnia/models_bases/entry.py:70
+msgid "slug"
+msgstr ""
+
+#: web/apps/events/models/category.py:34 web/apps/zinnia/models/category.py:34
+msgid "Used to build the category's URL."
+msgstr ""
+
+#: web/apps/events/models/category.py:37 web/apps/zinnia/models/category.py:37
+#, fuzzy
+msgid "description"
+msgstr "Mô tả"
+
+#: web/apps/events/models/category.py:43 web/apps/zinnia/models/category.py:43
+msgid "parent category"
+msgstr ""
+
+#: web/apps/events/models/category.py:46 web/apps/zinnia/models/category.py:46
+msgid "language"
+msgstr ""
+
+#: web/apps/events/models/category.py:49
+#: web/apps/events/models_bases/entry.py:98
+#: web/apps/events/models_bases/entry.py:101 web/apps/faq/models.py:23
+#: web/apps/faq/models.py:26 web/apps/zinnia/models/category.py:49
+#: web/apps/zinnia/models_bases/entry.py:103
+#: web/apps/zinnia/models_bases/entry.py:106 web/templates/header.html:83
+#: web/templates/header.html.py:275
 msgid "Language"
+msgstr ""
+
+#: web/apps/events/models/category.py:53 web/apps/events/models/category.py:56
+#: web/apps/events/models_bases/entry.py:108
+#: web/apps/zinnia/models/category.py:53 web/apps/zinnia/models/category.py:56
+#: web/apps/zinnia/models_bases/entry.py:113
+msgid "Entry type"
+msgstr ""
+
+#: web/apps/events/models/category.py:97 web/apps/zinnia/models/category.py:97
+msgid "category"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:49
+#: web/apps/zinnia/models_bases/entry.py:50
+msgid "draft"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:50
+#: web/apps/zinnia/models_bases/entry.py:51
+msgid "hidden"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:51
+#: web/apps/zinnia/models_bases/entry.py:52
+msgid "published"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:54
+#: web/apps/events/models_bases/entry.py:58
+#: web/apps/events/models_bases/entry.py:261
+#: web/apps/events/models_bases/entry.py:262
+#: web/apps/welcome/templates/welcome/events.html:6
+#: web/apps/welcome/templates/welcome/events.html:13
+msgid "Events"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:67
+#: web/apps/events/models_bases/entry.py:92
+#: web/apps/zinnia/models_bases/entry.py:72
+#: web/apps/zinnia/models_bases/entry.py:97
+msgid "Used to build the entry's URL."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:70
+#: web/apps/zinnia/models_bases/entry.py:75
+#, fuzzy
+msgid "status"
+msgstr "Trạng thái"
+
+#: web/apps/events/models_bases/entry.py:74
+#: web/apps/zinnia/models_bases/entry.py:79
+#, fuzzy
+msgid "start publication"
+msgstr "Ứng dụng công nghiệp"
+
+#: web/apps/events/models_bases/entry.py:76
+#: web/apps/zinnia/models_bases/entry.py:81
+msgid "Start date of publication."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:79
+#: web/apps/zinnia/models_bases/entry.py:84
+#, fuzzy
+msgid "end publication"
+msgstr "Ứng dụng công nghiệp"
+
+#: web/apps/events/models_bases/entry.py:81
+#: web/apps/zinnia/models_bases/entry.py:86
+msgid "End date of publication."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:86
+#: web/apps/zinnia/models_bases/entry.py:91
+msgid "sites"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:87
+#: web/apps/zinnia/models_bases/entry.py:92
+msgid "Sites where the entry will be published."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:90
+#: web/apps/zinnia/models_bases/entry.py:95
+msgid "creation date"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:95
+#: web/apps/zinnia/models_bases/entry.py:100
+msgid "last update"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:105
+#: web/apps/zinnia/models_bases/entry.py:110
+msgid "entry type"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:112
+#: web/apps/zinnia/models_bases/entry.py:117
+msgid "entry_sub_type"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:119
+#: web/apps/zinnia/models_bases/entry.py:124
+msgid "show_in_home"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:126
+msgid "Events during"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:131
+msgid "Events start date"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:136
+msgid "Events summary"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:141
+msgid "Events link"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:148
+msgid "Events location"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:276
+#: web/apps/zinnia/models_bases/entry.py:254
+msgid "content"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:318
+#: web/apps/zinnia/models_bases/entry.py:296
+msgid "comments enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:319
+#: web/apps/zinnia/models_bases/entry.py:297
+msgid "Allows comments if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:321
+#: web/apps/zinnia/models_bases/entry.py:299
+msgid "pingbacks enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:322
+#: web/apps/zinnia/models_bases/entry.py:300
+msgid "Allows pingbacks if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:324
+#: web/apps/zinnia/models_bases/entry.py:302
+msgid "trackbacks enabled"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:325
+#: web/apps/zinnia/models_bases/entry.py:303
+msgid "Allows trackbacks if checked."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:328
+#: web/apps/zinnia/models_bases/entry.py:306
+msgid "comment count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:330
+#: web/apps/zinnia/models_bases/entry.py:308
+msgid "pingback count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:332
+#: web/apps/zinnia/models_bases/entry.py:310
+msgid "trackback count"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:416
+#: web/apps/zinnia/models_bases/entry.py:394
+msgid "related entries"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:434
+#: web/apps/zinnia/models_bases/entry.py:412
+msgid "excerpt"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:435
+#: web/apps/zinnia/models_bases/entry.py:413
+msgid "Used for search and SEO."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:468
+#: web/apps/zinnia/models_bases/entry.py:446
+msgid "image"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:470
+#: web/apps/zinnia/models_bases/entry.py:448
+msgid "Used for illustration."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:481
+#: web/apps/zinnia/models_bases/entry.py:459
+msgid "featured"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:496
+#: web/apps/zinnia/models_bases/entry.py:474
+msgid "authors"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:520
+#: web/apps/zinnia/models_bases/entry.py:498
+msgid "tags"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:539
+#: web/apps/zinnia/models_bases/entry.py:517
+msgid "login required"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:540
+#: web/apps/zinnia/models_bases/entry.py:518
+msgid "Only authenticated users can view the entry."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:552
+#: web/apps/zinnia/models_bases/entry.py:530
+msgid "password"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:553
+#: web/apps/zinnia/models_bases/entry.py:531
+msgid "Protects the entry with a password."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:565
+#: web/apps/zinnia/models_bases/entry.py:543
+msgid "content template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:567
+#: web/apps/events/models_bases/entry.py:583
+#: web/apps/zinnia/models_bases/entry.py:545
+#: web/apps/zinnia/models_bases/entry.py:561
+msgid "Default template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:569
+#: web/apps/zinnia/models_bases/entry.py:547
+msgid "Template used to display the entry's content."
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:581
+#: web/apps/zinnia/models_bases/entry.py:559
+msgid "detail template"
+msgstr ""
+
+#: web/apps/events/models_bases/entry.py:585
+#: web/apps/zinnia/models_bases/entry.py:563
+msgid "Template used to display the entry's detail page."
+msgstr ""
+
+#: web/apps/events/templates/400.html:6 web/apps/zinnia/templates/400.html:6
+msgid "Error 400"
+msgstr ""
+
+#: web/apps/events/templates/400.html:10 web/apps/events/templates/400.html:15
+#: web/apps/zinnia/templates/400.html:10 web/apps/zinnia/templates/400.html:15
+msgid "Bad request"
+msgstr ""
+
+#: web/apps/events/templates/400.html:17 web/apps/zinnia/templates/400.html:17
+msgid "Sorry, but the request was malformed."
+msgstr ""
+
+#: web/apps/events/templates/403.html:6 web/apps/zinnia/templates/403.html:6
+msgid "Error 403"
+msgstr ""
+
+#: web/apps/events/templates/403.html:10 web/apps/events/templates/403.html:15
+#: web/apps/zinnia/templates/403.html:10 web/apps/zinnia/templates/403.html:15
+msgid "Permission denied"
+msgstr ""
+
+#: web/apps/events/templates/403.html:17 web/apps/zinnia/templates/403.html:17
+msgid "Sorry, but you don't have the permission to do this action."
+msgstr ""
+
+#: web/apps/events/templates/404.html:6 web/apps/zinnia/templates/404.html:6
+msgid "Error 404"
+msgstr ""
+
+#: web/apps/events/templates/404.html:10 web/apps/events/templates/404.html:15
+#: web/apps/zinnia/templates/404.html:10 web/apps/zinnia/templates/404.html:15
+msgid "Page not found"
+msgstr ""
+
+#: web/apps/events/templates/404.html:17 web/apps/zinnia/templates/404.html:17
+msgid "Sorry, but the requested page could not be found."
+msgstr ""
+
+#: web/apps/events/templates/500.html:6 web/apps/zinnia/templates/500.html:6
+msgid "Error 500"
+msgstr ""
+
+#: web/apps/events/templates/500.html:10 web/apps/events/templates/500.html:15
+#: web/apps/zinnia/templates/500.html:10 web/apps/zinnia/templates/500.html:15
+msgid "Server error"
+msgstr ""
+
+#: web/apps/events/templates/500.html:17 web/apps/zinnia/templates/500.html:17
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:3
+#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:61
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:3
+msgid "Contents"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:9
+#: web/apps/events/templates/zinnia/author_list.html:19
+#: web/apps/events/templates/zinnia/category_list.html:18
+#: web/apps/events/templates/zinnia/tag_list.html:18
+#: web/apps/events/templates/zinnia/tags/authors.html:8
+#: web/apps/events/templates/zinnia/tags/categories_tree.html:6
+#: web/apps/events/templates/zinnia/tags/statistics.html:7
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:9
+#: web/apps/zinnia/templates/zinnia/author_list.html:19
+#: web/apps/zinnia/templates/zinnia/category_list.html:18
+#: web/apps/zinnia/templates/zinnia/tag_list.html:18
+#: web/apps/zinnia/templates/zinnia/tags/authors.html:8
+#: web/apps/zinnia/templates/zinnia/tags/categories_tree.html:6
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:7
+#, python-format
+msgid "%(entry_count)s entry"
+msgid_plural "%(entry_count)s entries"
+msgstr[0] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:14
+#: web/apps/events/templates/zinnia/tags/entries_popular.html:8
+#: web/apps/events/templates/zinnia/tags/statistics.html:16
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:14
+#: web/apps/zinnia/templates/zinnia/tags/entries_popular.html:8
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:16
+#, python-format
+msgid "%(comment_count)s comment"
+msgid_plural "%(comment_count)s comments"
+msgstr[0] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:21
+#: web/apps/events/templates/zinnia/tags/statistics.html:13
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:21
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:13
+#, python-format
+msgid "%(category_count)s category"
+msgid_plural "%(category_count)s categories"
+msgstr[0] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:24
+#: web/apps/events/templates/zinnia/tags/statistics.html:19
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:24
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:19
+#, python-format
+msgid "%(pingback_count)s pingback"
+msgid_plural "%(pingback_count)s pingbacks"
+msgstr[0] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:29
+#: web/apps/events/templates/zinnia/tags/statistics.html:10
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:29
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:10
+#, python-format
+msgid "%(tag_count)s tag"
+msgid_plural "%(tag_count)s tags"
+msgstr[0] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:32
+#: web/apps/events/templates/zinnia/tags/statistics.html:22
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:32
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:22
+#, python-format
+msgid "%(trackback_count)s trackback"
+msgid_plural "%(trackback_count)s trackbacks"
+msgstr[0] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:37
+#: web/apps/events/templates/zinnia/tags/statistics.html:4
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:37
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:4
+#, python-format
+msgid "%(author_count)s author"
+msgid_plural "%(author_count)s authors"
+msgstr[0] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:42
+#: web/apps/events/templates/zinnia/tags/statistics.html:25
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:42
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:25
+#, python-format
+msgid "%(reject_count)s rejected item"
+msgid_plural "%(reject_count)s rejected items"
+msgstr[0] ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:47
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:47
+#, fuzzy
+msgid "Statistics"
+msgstr "Trạng thái"
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:49
+#: web/apps/events/templates/zinnia/tags/statistics.html:28
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:49
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:28
+#, python-format
+msgid "%(entries_per_month)s entries per month"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:54
+#: web/apps/events/templates/zinnia/tags/statistics.html:31
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:54
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:31
+#, python-format
+msgid "%(words_per_entry)s words per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:57
+#: web/apps/events/templates/zinnia/tags/statistics.html:34
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:57
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:34
+#, python-format
+msgid "%(words_per_comment)s words per comment"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:62
+#: web/apps/events/templates/zinnia/tags/statistics.html:37
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:62
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:37
+#, python-format
+msgid "%(comments_per_entry)s comments per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_content_stats.html:65
+#: web/apps/events/templates/zinnia/tags/statistics.html:40
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_content_stats.html:65
+#: web/apps/zinnia/templates/zinnia/tags/statistics.html:40
+#, python-format
+msgid "%(linkbacks_per_entry)s linkbacks per entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:6
+#: web/apps/events/templates/zinnia/entry_detail_base.html:261
+#: web/apps/events/templates/zinnia/entry_detail_base.html:262
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:6
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:261
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:262
+msgid "Edit the entry"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:9
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:25
+#: web/apps/events/templates/feeds/comment_title.html:2
+#: web/apps/events/templates/feeds/discussion_title.html:2
+#: web/apps/events/templates/feeds/pingback_title.html:2
+#: web/apps/events/templates/feeds/trackback_title.html:2
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:23
+#: web/apps/events/templates/zinnia/entry_detail_base.html:52
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:9
+#: web/apps/zinnia/templates/comments/zinnia_entry_preview.html:25
+#: web/apps/zinnia/templates/feeds/comment_title.html:2
+#: web/apps/zinnia/templates/feeds/discussion_title.html:2
+#: web/apps/zinnia/templates/feeds/pingback_title.html:2
+#: web/apps/zinnia/templates/feeds/trackback_title.html:2
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:23
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:52
+msgctxt "on date"
+msgid "on"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:15
+#: web/apps/events/templates/comments/zinnia/entry/form.html:31
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:15
+#: web/apps/zinnia/templates/comments/zinnia/entry/form.html:31
+msgid "Preview"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:22
+#: web/apps/events/templates/zinnia/tags/entries_draft.html:9
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:22
+#: web/apps/zinnia/templates/zinnia/tags/entries_draft.html:9
+msgid "No draft entries."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:31
+#: web/apps/events/templates/admin/zinnia/widgets/_draft_entries.html:32
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:31
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_draft_entries.html:32
+msgid "View all draft entries"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:10
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:6
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:7
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:10
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:6
+#: web/apps/zinnia/templates/zinnia/tags/linkbacks_recent.html:7
+msgid "in"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:13
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:13
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:8
+#, fuzzy
+msgid "Comment on"
+msgstr "Cộng đồng"
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:22
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:22
+msgid "Edit the comment"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:23
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:18
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:23
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:18
+msgid "Edit"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:30
+#: web/apps/events/templates/zinnia/tags/comments_recent.html:15
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:30
+#: web/apps/zinnia/templates/zinnia/tags/comments_recent.html:15
+msgid "No comments yet."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:39
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_comments.html:40
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:39
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_comments.html:40
+msgid "Manage the comments"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:7
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:7
+msgid "made a linkback on"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:17
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:17
+msgid "Edit the linkback"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/_recent_linkbacks.html:25
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:16
+#: web/apps/zinnia/templates/admin/zinnia/widgets/_recent_linkbacks.html:25
+#: web/apps/zinnia/templates/zinnia/tags/linkbacks_recent.html:16
+msgid "No linkbacks yet."
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/content_stats.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/content_stats.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/content_stats.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/content_stats.html:8
+msgid "Today"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/draft_entries.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/draft_entries.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/draft_entries.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/draft_entries.html:8
+msgid "Draft entries"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:5
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:5
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:6
+msgid "Quick publishing"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:9
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:9
+msgid "Title"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:33
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:33
+msgid "Save as draft"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:34
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:34
+msgid "Reset"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/quickpost.html:35
+#: web/apps/zinnia/templates/admin/zinnia/widgets/quickpost.html:35
+msgid "Publish"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/recent_comments.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/recent_comments.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/recent_comments.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/recent_comments.html:8
+msgid "Recent comments"
+msgstr ""
+
+#: web/apps/events/templates/admin/zinnia/widgets/recent_linkbacks.html:6
+#: web/apps/events/templates/admin/zinnia/widgets/recent_linkbacks.html:8
+#: web/apps/zinnia/templates/admin/zinnia/widgets/recent_linkbacks.html:6
+#: web/apps/zinnia/templates/admin/zinnia/widgets/recent_linkbacks.html:8
+msgid "Recent linkbacks"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:1
+#: web/apps/events/templates/comments/comment_notification_email.txt:1
+#: web/apps/events/templates/comments/comment_reply_email.txt:1
+#: web/apps/events/templates/zinnia/entry_list.html:21
+#: web/apps/zinnia/templates/comments/comment_authors_email.txt:1
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:1
+#: web/apps/zinnia/templates/comments/comment_reply_email.txt:1
+#: web/apps/zinnia/templates/zinnia/entry_list.html:21
+msgid "Author"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:3
+#: web/apps/events/templates/comments/comment_notification_email.txt:5
+#: web/apps/events/templates/comments/comment_reply_email.txt:3
+#: web/apps/zinnia/templates/comments/comment_authors_email.txt:3
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:5
+#: web/apps/zinnia/templates/comments/comment_reply_email.txt:3
+#, fuzzy
+msgid "Comment"
+msgstr "Cộng đồng"
+
+#: web/apps/events/templates/comments/comment_authors_email.txt:6
+#: web/apps/events/templates/comments/comment_notification_email.txt:8
+#: web/apps/events/templates/comments/comment_reply_email.txt:6
+#: web/apps/zinnia/templates/comments/comment_authors_email.txt:6
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:8
+#: web/apps/zinnia/templates/comments/comment_reply_email.txt:6
+msgid "View this comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:2
+#: web/apps/subscription/forms.py:6
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:2
+msgid "Email"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:3
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:3
+msgid "IP"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:10
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:10
+msgid "Flag this comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:12
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:12
+msgid "Delete this comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/comment_notification_email.txt:14
+#: web/apps/zinnia/templates/comments/comment_notification_email.txt:14
+msgid "Approve this comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:4
+#: web/apps/zinnia/templates/comments/zinnia_entry_preview.html:4
+#, fuzzy
+msgid "Comment preview"
+msgstr "Cộng đồng"
+
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:10
+#: web/apps/zinnia/templates/comments/zinnia_entry_preview.html:10
+msgid "Please correct following error."
+msgid_plural "Please correct following errors."
+msgstr[0] ""
+
+#: web/apps/events/templates/comments/zinnia_entry_preview.html:12
+#: web/apps/zinnia/templates/comments/zinnia_entry_preview.html:12
+msgid "Preview of the comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/form.html:11
+#: web/apps/zinnia/templates/comments/zinnia/entry/form.html:11
+msgid "Post your comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/form.html:26
+#: web/apps/zinnia/templates/comments/zinnia/entry/form.html:26
+#, fuzzy
+msgid "Comment as"
+msgstr "Cộng đồng"
+
+#: web/apps/events/templates/comments/zinnia/entry/form.html:30
+#: web/apps/zinnia/templates/comments/zinnia/entry/form.html:30
+msgid "Post"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:4
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:9
+#: web/apps/zinnia/templates/comments/zinnia/entry/posted.html:4
+#: web/apps/zinnia/templates/comments/zinnia/entry/posted.html:9
+msgid "Thanks for your comment"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:11
+#: web/apps/zinnia/templates/comments/zinnia/entry/posted.html:11
+msgid "Your comment needs to be approved before getting displayed."
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:19
+#: web/apps/zinnia/templates/comments/zinnia/entry/posted.html:19
+#, python-format
+msgid "Back to %(title)s"
+msgstr ""
+
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:26
+#: web/apps/events/templates/comments/zinnia/entry/posted.html:27
+#: web/apps/zinnia/templates/comments/zinnia/entry/posted.html:26
+#: web/apps/zinnia/templates/comments/zinnia/entry/posted.html:27
+msgid "Return to entry list"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:25
+#: web/apps/events/templates/zinnia/entry_detail_base.html:54
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:25
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:54
+msgid "Written on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:94
+#: web/apps/events/templates/zinnia/entry_detail_base.html:124
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:94
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:124
+#, python-format
+msgid "%(percent)s%% of %(object)s still remains to read."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/_entry_detail_base.html:96
+#: web/apps/events/templates/zinnia/entry_detail_base.html:126
+#: web/apps/zinnia/templates/zinnia/_entry_detail_base.html:96
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:126
+msgid "Continue reading"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/author_list.html:4
+#: web/apps/events/templates/zinnia/author_list.html:11
+#: web/apps/zinnia/templates/zinnia/author_list.html:4
+#: web/apps/zinnia/templates/zinnia/author_list.html:11
+msgid "Author list"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/author_list.html:17
+#: web/apps/events/templates/zinnia/tags/authors.html:6
+#: web/apps/zinnia/templates/zinnia/author_list.html:17
+#: web/apps/zinnia/templates/zinnia/tags/authors.html:6
+#, python-format
+msgid "Show all %(author)s's entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/author_list.html:23
+#: web/apps/events/templates/zinnia/tags/authors.html:12
+#: web/apps/zinnia/templates/zinnia/author_list.html:23
+#: web/apps/zinnia/templates/zinnia/tags/authors.html:12
+msgid "No authors yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/base.html:16
+#: web/apps/zinnia/templates/zinnia/base.html:16
+msgid "RSS Feed of latest entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/base.html:17
+#: web/apps/zinnia/templates/zinnia/base.html:17
+msgid "RSS Feed of latest discussions"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/category_list.html:4
+#: web/apps/events/templates/zinnia/category_list.html:11
+#: web/apps/zinnia/templates/zinnia/category_list.html:4
+#: web/apps/zinnia/templates/zinnia/category_list.html:11
+msgid "Category list"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/category_list.html:17
+#: web/apps/events/templates/zinnia/tags/categories.html:11
+#: web/apps/events/templates/zinnia/tags/categories_tree.html:5
+#: web/apps/zinnia/templates/zinnia/category_list.html:17
+#: web/apps/zinnia/templates/zinnia/tags/categories.html:11
+#: web/apps/zinnia/templates/zinnia/tags/categories_tree.html:5
+#, python-format
+msgid "Show all entries in %(category)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/category_list.html:23
+#: web/apps/events/templates/zinnia/tags/categories_tree.html:16
+#: web/apps/zinnia/templates/zinnia/category_list.html:23
+#: web/apps/zinnia/templates/zinnia/tags/categories_tree.html:16
+msgid "No categories yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_day.html:4
+#: web/apps/events/templates/zinnia/entry_archive_day.html:6
+#: web/apps/events/templates/zinnia/entry_archive_day.html:11
+#: web/apps/events/templates/zinnia/entry_archive_day.html:28
+#: web/apps/events/templates/zinnia/entry_archive_month.html:4
+#: web/apps/events/templates/zinnia/entry_archive_month.html:6
+#: web/apps/events/templates/zinnia/entry_archive_month.html:11
+#: web/apps/events/templates/zinnia/entry_archive_month.html:37
+#: web/apps/events/templates/zinnia/entry_archive_today.html:22
+#: web/apps/events/templates/zinnia/entry_archive_week.html:42
+#: web/apps/events/templates/zinnia/entry_archive_year.html:4
+#: web/apps/events/templates/zinnia/entry_archive_year.html:6
+#: web/apps/events/templates/zinnia/entry_archive_year.html:11
+#: web/apps/events/templates/zinnia/tags/entries_archives.html:3
+#: web/apps/events/templates/zinnia/tags/entries_archives.html:9
+#: web/apps/events/templates/zinnia/tags/entries_archives_link.html:2
+#: web/apps/events/templates/zinnia/tags/entries_archives_tree.html:4
+#: web/apps/events/templates/zinnia/tags/entries_archives_tree.html:7
+#: web/apps/events/templates/zinnia/tags/entries_archives_tree.html:14
+#: web/apps/events/templates/zinnia/tags/entries_archives_tree.html:24
+#: web/apps/zinnia/templates/zinnia/entry_archive_day.html:4
+#: web/apps/zinnia/templates/zinnia/entry_archive_day.html:6
+#: web/apps/zinnia/templates/zinnia/entry_archive_day.html:11
+#: web/apps/zinnia/templates/zinnia/entry_archive_day.html:28
+#: web/apps/zinnia/templates/zinnia/entry_archive_month.html:4
+#: web/apps/zinnia/templates/zinnia/entry_archive_month.html:6
+#: web/apps/zinnia/templates/zinnia/entry_archive_month.html:11
+#: web/apps/zinnia/templates/zinnia/entry_archive_month.html:37
+#: web/apps/zinnia/templates/zinnia/entry_archive_today.html:22
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:42
+#: web/apps/zinnia/templates/zinnia/entry_archive_year.html:4
+#: web/apps/zinnia/templates/zinnia/entry_archive_year.html:6
+#: web/apps/zinnia/templates/zinnia/entry_archive_year.html:11
+#: web/apps/zinnia/templates/zinnia/tags/entries_archives.html:3
+#: web/apps/zinnia/templates/zinnia/tags/entries_archives.html:9
+#: web/apps/zinnia/templates/zinnia/tags/entries_archives_link.html:2
+#: web/apps/zinnia/templates/zinnia/tags/entries_archives_tree.html:4
+#: web/apps/zinnia/templates/zinnia/tags/entries_archives_tree.html:7
+#: web/apps/zinnia/templates/zinnia/tags/entries_archives_tree.html:14
+#: web/apps/zinnia/templates/zinnia/tags/entries_archives_tree.html:24
+msgid "Archives"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_day.html:16
+#: web/apps/events/templates/zinnia/entry_archive_today.html:16
+#: web/apps/zinnia/templates/zinnia/entry_archive_day.html:16
+#: web/apps/zinnia/templates/zinnia/entry_archive_today.html:16
+msgid "Previous day"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_day.html:22
+#: web/apps/zinnia/templates/zinnia/entry_archive_day.html:22
+msgid "Next day"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_day.html:35
+#: web/apps/events/templates/zinnia/entry_archive_week.html:30
+#: web/apps/events/templates/zinnia/entry_archive_week.html:38
+#: web/apps/zinnia/templates/zinnia/entry_archive_day.html:35
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:30
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:38
+#, python-format
+msgid "Week %(week_number)s of %(year)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_month.html:16
+#: web/apps/events/templates/zinnia/entry_archive_week.html:17
+#: web/apps/zinnia/templates/zinnia/entry_archive_month.html:16
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:17
+msgid "Daily archives"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_month.html:26
+#: web/apps/zinnia/templates/zinnia/entry_archive_month.html:26
+msgid "Previous month"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_month.html:32
+#: web/apps/zinnia/templates/zinnia/entry_archive_month.html:32
+msgid "Next month"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_today.html:4
+#: web/apps/events/templates/zinnia/entry_archive_today.html:6
+#: web/apps/events/templates/zinnia/entry_archive_today.html:11
+#: web/apps/zinnia/templates/zinnia/entry_archive_today.html:4
+#: web/apps/zinnia/templates/zinnia/entry_archive_today.html:6
+#: web/apps/zinnia/templates/zinnia/entry_archive_today.html:11
+msgid "Today archives"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_week.html:4
+#: web/apps/events/templates/zinnia/entry_archive_week.html:6
+#: web/apps/events/templates/zinnia/entry_archive_week.html:11
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:4
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:6
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:11
+#, python-format
+msgid "Archives week %(week_number)s of %(year)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_week.html:27
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:27
+msgid "Previous week"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_week.html:35
+#: web/apps/zinnia/templates/zinnia/entry_archive_week.html:35
+msgid "Next week"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_year.html:15
+#: web/apps/events/templates/zinnia/sitemap.html:37
+#: web/apps/zinnia/templates/zinnia/entry_archive_year.html:15
+#: web/apps/zinnia/templates/zinnia/sitemap.html:37
+msgid "Monthly archives"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_year.html:25
+#: web/apps/zinnia/templates/zinnia/entry_archive_year.html:25
+msgid "Previous year"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_archive_year.html:31
+#: web/apps/zinnia/templates/zinnia/entry_archive_year.html:31
+msgid "Next year"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:22
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:22
+msgid "RSS Feed of discussions on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:24
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:24
+msgid "RSS Feed of comments on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:26
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:26
+msgid "RSS Feed of pingbacks on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:28
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:28
+msgid "RSS Feed of trackbacks on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:213
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:213
+msgid "Next entry"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:225
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:225
+msgid "Previous entry"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_detail_base.html:237
+#: web/apps/zinnia/templates/zinnia/entry_detail_base.html:237
+msgid "Related entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:4
+#: web/apps/zinnia/templates/zinnia/entry_list.html:4
+msgid "Latest entries for"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:4
+#: web/apps/zinnia/templates/zinnia/entry_list.html:4
+msgid "the category"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:4
+#: web/apps/zinnia/templates/zinnia/entry_list.html:4
+msgid "the tag"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:4
+#: web/apps/zinnia/templates/zinnia/entry_list.html:4
+msgid "the author"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:6
+#: web/apps/zinnia/templates/zinnia/entry_list.html:6
+msgid "page"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:11
+#: web/apps/events/templates/zinnia/entry_list.html:14
+#: web/apps/events/templates/zinnia/entry_list.html:17
+#: web/apps/zinnia/templates/zinnia/entry_list.html:11
+#: web/apps/zinnia/templates/zinnia/entry_list.html:14
+#: web/apps/zinnia/templates/zinnia/entry_list.html:17
+#, python-format
+msgid "RSS feed of %(object)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:21
+#: web/apps/zinnia/templates/zinnia/entry_list.html:21
+msgid "Category"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:21
+#: web/apps/zinnia/templates/zinnia/entry_list.html:21
+msgid "Tag"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:23
+#: web/apps/zinnia/templates/zinnia/entry_list.html:23
+msgid "Page"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:31
+#: web/apps/zinnia/templates/zinnia/entry_list.html:31
+#, python-format
+msgid "Category archives: %(category)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:41
+#: web/apps/zinnia/templates/zinnia/entry_list.html:41
+#, python-format
+msgid "Tag archives: %(tag)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:46
+#: web/apps/zinnia/templates/zinnia/entry_list.html:46
+#, python-format
+msgid "Author archives: %(author)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:58
+#: web/apps/events/templates/zinnia/sitemap.html:29
+#: web/apps/events/templates/zinnia/tags/entries_featured.html:9
+#: web/apps/events/templates/zinnia/tags/entries_popular.html:12
+#: web/apps/events/templates/zinnia/tags/entries_random.html:9
+#: web/apps/events/templates/zinnia/tags/entries_recent.html:9
+#: web/apps/zinnia/templates/zinnia/entry_list.html:58
+#: web/apps/zinnia/templates/zinnia/sitemap.html:29
+#: web/apps/zinnia/templates/zinnia/tags/entries_featured.html:9
+#: web/apps/zinnia/templates/zinnia/tags/entries_popular.html:12
+#: web/apps/zinnia/templates/zinnia/tags/entries_random.html:9
+#: web/apps/zinnia/templates/zinnia/tags/entries_recent.html:9
+msgid "No entries yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:78
+#: web/apps/events/templates/zinnia/entry_list.html:79
+#: web/apps/zinnia/templates/zinnia/entry_list.html:78
+#: web/apps/zinnia/templates/zinnia/entry_list.html:79
+msgid "Edit the category"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:85
+#: web/apps/events/templates/zinnia/entry_list.html:86
+#: web/apps/zinnia/templates/zinnia/entry_list.html:85
+#: web/apps/zinnia/templates/zinnia/entry_list.html:86
+msgid "Edit the tag"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_list.html:92
+#: web/apps/events/templates/zinnia/entry_list.html:93
+#: web/apps/zinnia/templates/zinnia/entry_list.html:92
+#: web/apps/zinnia/templates/zinnia/entry_list.html:93
+msgid "Edit the author"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_search.html:4
+#: web/apps/events/templates/zinnia/entry_search.html:6
+#: web/apps/events/templates/zinnia/entry_search.html:18
+#: web/apps/zinnia/templates/zinnia/entry_search.html:4
+#: web/apps/zinnia/templates/zinnia/entry_search.html:6
+#: web/apps/zinnia/templates/zinnia/entry_search.html:18
+#, python-format
+msgid "Search results for '%(pattern)s'"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_search.html:11
+#: web/apps/events/templates/zinnia/entry_search.html:24
+#: web/apps/events/templates/zinnia/entry_search.html:25
+#: web/apps/zinnia/templates/zinnia/entry_search.html:11
+#: web/apps/zinnia/templates/zinnia/entry_search.html:24
+#: web/apps/zinnia/templates/zinnia/entry_search.html:25
+#, python-format
+msgid "RSS feed of search results for '%(pattern)s'"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/entry_search.html:32
+#: web/apps/zinnia/templates/zinnia/entry_search.html:32
+#, python-format
+msgid "%(entry_count)s entry found"
+msgid_plural "%(entry_count)s entries found"
+msgstr[0] ""
+
+#: web/apps/events/templates/zinnia/entry_search.html:43
+#: web/apps/zinnia/templates/zinnia/entry_search.html:43
+msgid "Nothing found."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/login.html:4
+#: web/apps/events/templates/zinnia/login.html:9
+#: web/apps/zinnia/templates/zinnia/login.html:4
+#: web/apps/zinnia/templates/zinnia/login.html:9
+msgid "Login required"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/login.html:13
+#: web/apps/zinnia/templates/zinnia/login.html:13
+msgid "Your username and password didn't match. Please try again."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/login.html:17
+#: web/apps/zinnia/templates/zinnia/login.html:17
+msgid "You need to be connected to view this entry."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/login.html:34
+#: web/apps/zinnia/templates/zinnia/login.html:34
+#: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
+#: web/templates/header.html:70 web/templates/header.html.py:78
+#: web/templates/header.html:124 web/templates/header.html.py:132
+#: web/templates/header.html:262 web/templates/header.html.py:270
+#: web/templates/header.html:316 web/templates/header.html.py:324
+msgid "Login"
+msgstr "Đăng nhập"
+
+#: web/apps/events/templates/zinnia/password.html:4
+#: web/apps/events/templates/zinnia/password.html:9
+#: web/apps/zinnia/templates/zinnia/password.html:4
+#: web/apps/zinnia/templates/zinnia/password.html:9
+msgid "Password required"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:13
+#: web/apps/zinnia/templates/zinnia/password.html:13
+msgid "The password provided is not valid. Please try again."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:17
+#: web/apps/zinnia/templates/zinnia/password.html:17
+msgid "You need to provide a password to view this entry."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:24
+#: web/apps/zinnia/templates/zinnia/password.html:24
+msgid "Password"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/password.html:29
+#: web/apps/zinnia/templates/zinnia/password.html:29
+msgid "Valid"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:4
+#: web/apps/events/templates/zinnia/sitemap.html:11
+#: web/apps/events/templates/zinnia/skeleton.html:70
+#: web/apps/events/templates/zinnia/skeleton.html:71
+#: web/apps/welcome/templates/welcome/sitemap.html:13
+#: web/apps/zinnia/templates/zinnia/sitemap.html:4
+#: web/apps/zinnia/templates/zinnia/sitemap.html:11
+#: web/apps/zinnia/templates/zinnia/skeleton.html:70
+#: web/apps/zinnia/templates/zinnia/skeleton.html:71
+#: web/templates/footer.html:44
+msgid "Sitemap"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:6
+#: web/apps/zinnia/templates/zinnia/sitemap.html:6
+msgid "Sitemap of the weblog"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:14
+#: web/apps/zinnia/templates/zinnia/sitemap.html:14
+msgid "Entries per categories"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/sitemap.html:23
+#: web/apps/zinnia/templates/zinnia/sitemap.html:23
+msgid "comment"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:6
+#: web/apps/welcome/templates/welcome/dashboard.html:9
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:17
+#: web/templates/email-template.html:32
+msgid "Newton"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:12
+#: web/apps/zinnia/templates/zinnia/skeleton.html:12
+msgid "Just another Zinnia weblog."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:55
+#: web/apps/zinnia/templates/zinnia/skeleton.html:55
+msgid "BLOG"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:62
+#: web/apps/zinnia/templates/zinnia/skeleton.html:62
+msgid "Useful links"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:65
+#: web/apps/events/templates/zinnia/skeleton.html:66
+#: web/apps/zinnia/templates/zinnia/skeleton.html:65
+#: web/apps/zinnia/templates/zinnia/skeleton.html:66
+msgid "Weblog index"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/skeleton.html:77
+#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:66
+#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:68
+#: web/apps/zinnia/templates/zinnia/skeleton.html:77
+msgid "Search"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:4
+#: web/apps/events/templates/zinnia/tag_list.html:11
+#: web/apps/zinnia/templates/zinnia/tag_list.html:4
+#: web/apps/zinnia/templates/zinnia/tag_list.html:11
+msgid "Tag list"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:17
+#: web/apps/zinnia/templates/zinnia/tag_list.html:17
+#, python-format
+msgid "Show all entries tagged by %(tag)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tag_list.html:22
+#: web/apps/zinnia/templates/zinnia/tag_list.html:22
+msgid "No tags yet."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/categories.html:4
+#: web/apps/zinnia/templates/zinnia/tags/categories.html:4
+msgid "Column"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/categories.html:12
+#: web/apps/zinnia/templates/zinnia/tags/categories.html:12
+#, python-format
+msgid ""
+"\n"
+"    (%(entry_count)s)\n"
+"\n"
+"    "
+msgid_plural ""
+"\n"
+"\n"
+"    "
+msgstr[0] ""
+
+#: web/apps/events/templates/zinnia/tags/entries_popular.html:7
+#: web/apps/zinnia/templates/zinnia/tags/entries_popular.html:7
+#, python-format
+msgid "Comments on %(object)s"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/entries_similar.html:9
+#: web/apps/zinnia/templates/zinnia/tags/entries_similar.html:9
+msgid "No similar entries."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/linkbacks_recent.html:9
+#: web/apps/zinnia/templates/zinnia/tags/linkbacks_recent.html:9
+msgid "Linkback on"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:15
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:15
+msgid "More recent entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:25
+#: web/apps/events/templates/zinnia/tags/pagination.html:38
+#: web/apps/events/templates/zinnia/tags/pagination.html:52
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:25
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:38
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:52
+msgid "Entries page"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/pagination.html:61
+#: web/apps/zinnia/templates/zinnia/tags/pagination.html:61
+msgid "More old entries"
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/search_form.html:4
+#: web/apps/zinnia/templates/zinnia/tags/search_form.html:4
+msgid "Keywords..."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/search_form.html:6
+#: web/apps/zinnia/templates/zinnia/tags/search_form.html:6
+msgid ""
+"You can use - to exclude words or phrases, &quot;double quotes&quot; for "
+"exact phrases and the AND/OR boolean operators combined with parenthesis for "
+"complex queries."
+msgstr ""
+
+#: web/apps/events/templates/zinnia/tags/tag_cloud.html:11
+#: web/apps/zinnia/templates/zinnia/tags/tag_cloud.html:11
+#, python-format
+msgid "%(entry_count)s entry tagged by %(tag)s"
+msgid_plural "%(entry_count)s entries tagged by %(tag)s"
+msgstr[0] ""
+
+#: web/apps/events/tests/test_views.py:586 web/apps/events/views/search.py:30
+#: web/apps/zinnia/tests/test_views.py:586 web/apps/zinnia/views/search.py:30
+msgid "The pattern is too short"
+msgstr ""
+
+#: web/apps/events/tests/test_views.py:590 web/apps/events/views/search.py:34
+#: web/apps/zinnia/tests/test_views.py:590 web/apps/zinnia/views/search.py:34
+msgid "No pattern to search found"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:23 web/apps/zinnia/urls/__init__.py:23
+msgid "^feeds/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:24 web/apps/zinnia/urls/__init__.py:24
+msgid "^tags/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:25 web/apps/zinnia/urls/__init__.py:25
+msgid "^authors/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:26 web/apps/zinnia/urls/__init__.py:26
+msgid "^categories/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:27 web/apps/zinnia/urls/__init__.py:27
+msgid "^search/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:28 web/apps/zinnia/urls/__init__.py:28
+msgid "^random/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:29 web/apps/zinnia/urls/__init__.py:29
+msgid "^sitemap/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:30 web/apps/zinnia/urls/__init__.py:30
+msgid "^trackback/"
+msgstr ""
+
+#: web/apps/events/urls/__init__.py:31 web/apps/zinnia/urls/__init__.py:31
+msgid "^comments/"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:18 web/apps/zinnia/urls/archives.py:18
+msgid "^page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:27 web/apps/zinnia/urls/archives.py:27
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:33 web/apps/zinnia/urls/archives.py:33
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/week/(?P<week>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:36 web/apps/zinnia/urls/archives.py:36
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/week/(?P<week>\\d+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:45 web/apps/zinnia/urls/archives.py:45
+#, python-brace-format
+msgid "^(?P<year>\\d{4})/(?P<month>\\d{2})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:54 web/apps/zinnia/urls/archives.py:54
+#, python-brace-format
+msgid ""
+"^(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:61 web/apps/zinnia/urls/archives.py:61
+msgid "^today/$"
+msgstr ""
+
+#: web/apps/events/urls/archives.py:64 web/apps/zinnia/urls/archives.py:64
+msgid "^today/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/authors.py:15 web/apps/zinnia/urls/authors.py:15
+msgid "^(?P<username>[.+-@\\w]+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/categories.py:15 web/apps/zinnia/urls/categories.py:15
+msgid "^(?P<path>[-\\/\\w]+)/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/urls/comments.py:11 web/apps/zinnia/urls/comments.py:11
+msgid "^success/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:23 web/apps/zinnia/urls/feeds.py:23
+msgid "^discussions/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:26 web/apps/zinnia/urls/feeds.py:26
+msgid "^search/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:29 web/apps/zinnia/urls/feeds.py:29
+msgid "^tags/(?P<tag>[^/]+(?u))/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:32 web/apps/zinnia/urls/feeds.py:32
+msgid "^authors/(?P<username>[.+-@\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:35 web/apps/zinnia/urls/feeds.py:35
+msgid "^categories/(?P<path>[-\\/\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:38 web/apps/zinnia/urls/feeds.py:38
+#, python-brace-format
+msgid ""
+"^discussions/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:42 web/apps/zinnia/urls/feeds.py:42
+#, python-brace-format
+msgid ""
+"^comments/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:46 web/apps/zinnia/urls/feeds.py:46
+#, python-brace-format
+msgid ""
+"^pingbacks/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/feeds.py:50 web/apps/zinnia/urls/feeds.py:50
+#, python-brace-format
+msgid ""
+"^trackbacks/(?P<year>\\d{4})/(?P<month>\\d{2})/(?P<day>\\d{2})/(?P<slug>[-"
+"\\w]+)/$"
+msgstr ""
+
+#: web/apps/events/urls/quick_entry.py:11
+#: web/apps/zinnia/urls/quick_entry.py:11
+msgid "^quick-entry/$"
+msgstr ""
+
+#: web/apps/events/urls/tags.py:18 web/apps/zinnia/urls/tags.py:18
+msgid "^(?P<tag>[^/]+(?u))/page/(?P<page>\\d+)/$"
+msgstr ""
+
+#: web/apps/events/views/tags.py:48 web/apps/zinnia/views/tags.py:48
+#, python-format
+msgid "No Tag found matching \"%s\"."
+msgstr ""
+
+#: web/apps/events/views/mixins/entry_preview.py:27
+#: web/apps/zinnia/views/mixins/entry_preview.py:27
+msgid "No entry found matching the query"
+msgstr ""
+
+#: web/apps/events/xmlrpc/metaweblog.py:48
+#: web/apps/zinnia/xmlrpc/metaweblog.py:48
+msgid "Username is incorrect."
+msgstr ""
+
+#: web/apps/events/xmlrpc/metaweblog.py:50
+#: web/apps/zinnia/xmlrpc/metaweblog.py:50
+msgid "Password is invalid."
+msgstr ""
+
+#: web/apps/events/xmlrpc/metaweblog.py:52
+#: web/apps/zinnia/xmlrpc/metaweblog.py:52
+msgid "User account unavailable."
+msgstr ""
+
+#: web/apps/events/xmlrpc/metaweblog.py:55
+#: web/apps/zinnia/xmlrpc/metaweblog.py:55
+#, python-format
+msgid "User cannot %s."
+msgstr ""
+
+#: web/apps/events/xmlrpc/pingback.py:116
+#: web/apps/zinnia/xmlrpc/pingback.py:116
+msgid "No title"
 msgstr ""
 
 #: web/apps/faq/models.py:33
@@ -190,15 +2233,6 @@ msgstr ""
 msgid "Last update:"
 msgstr ""
 
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:61
-msgid "Contents"
-msgstr ""
-
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:66
-#: web/apps/sphinxdoc/templates/sphinxdoc/documentation.html:68
-msgid "Search"
-msgstr ""
-
 #: web/apps/sphinxdoc/templates/sphinxdoc/genindex.html:5
 msgid "General Index"
 msgstr ""
@@ -232,48 +2266,8 @@ msgstr ""
 msgid "Set emails as spam"
 msgstr ""
 
-#: web/apps/subscription/forms.py:6
-msgid "Email"
-msgstr ""
-
 #: web/apps/subscription/models.py:20
 msgid "Subscribed emails"
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/confirm.html:6
-msgid "Subscription Confirmation"
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/confirm.html:17
-msgid "Subscribe Successed!"
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/confirm.html:18
-msgid "Your subscription to our list has been confirmed."
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/confirm.html:19
-msgid "Thank you for subscribing!"
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/include-subscription.html:10
-msgid "SUBSCRIBE TO US"
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/include-subscription.html:14
-msgid "Subscribe to Newton updates, or miss the juiciest bits!"
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/include-subscription.html:25
-msgid "Email Address"
-msgstr "Địa chỉ mail"
-
-#: web/apps/subscription/templates/subscription/include-subscription.html:26
-msgid "SUBSCRIBE"
-msgstr ""
-
-#: web/apps/subscription/templates/subscription/include-subscription.html:29
-msgid "We won't share your email address or send you any spam."
 msgstr ""
 
 #: web/apps/subscription/views.py:39
@@ -310,6 +2304,42 @@ msgstr ""
 
 #: web/apps/subscription/views.py:92
 msgid "NewtonProject Notifications: Please Confirm Subscription"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/confirm.html:6
+msgid "Subscription Confirmation"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/confirm.html:17
+msgid "Subscribe Successed!"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/confirm.html:18
+msgid "Your subscription to our list has been confirmed."
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/confirm.html:19
+msgid "Thank you for subscribing!"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:10
+msgid "SUBSCRIBE TO US"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:14
+msgid "Subscribe to Newton updates, or miss the juiciest bits!"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:25
+msgid "Email Address"
+msgstr "Địa chỉ mail"
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:26
+msgid "SUBSCRIBE"
+msgstr ""
+
+#: web/apps/subscription/templates/subscription/include-subscription.html:29
+msgid "We won't share your email address or send you any spam."
 msgstr ""
 
 #: web/apps/verification/models.py:22
@@ -389,12 +2419,6 @@ msgid ""
 "For technical, business, governance, economic or general questions, contact"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/announcement-detail.html:9
-#: web/apps/welcome/templates/welcome/announcement-detail.html:17
-#: web/apps/welcome/templates/welcome/events-detail.html:9
-msgid "Announcement"
-msgstr "Thông báo"
-
 #: web/apps/welcome/templates/welcome/announcement-detail.html:55
 #: web/apps/welcome/templates/welcome/announcement.html:81
 #: web/apps/welcome/templates/welcome/community-voice-detail.html:55
@@ -416,16 +2440,17 @@ msgid "All"
 msgstr "Tất cả"
 
 #: web/apps/welcome/templates/welcome/announcement.html:27
-#| msgid "Operation"
 msgid "Operations"
 msgstr "Điều hành"
 
 #: web/apps/welcome/templates/welcome/announcement.html:30
+#: web/apps/zinnia/models_bases/entry.py:63
 msgid "Weekly"
 msgstr "Hàng tuần"
 
 #: web/apps/welcome/templates/welcome/announcement.html:33
 #: web/apps/welcome/templates/welcome/include-community-event.html:10
+#: web/apps/zinnia/models_bases/entry.py:61
 msgid "Activity"
 msgstr "Hoạt động"
 
@@ -475,7 +2500,7 @@ msgstr "Cộng đồng"
 #: web/apps/welcome/templates/welcome/sitemap.html:70
 #: web/apps/welcome/templates/welcome/wechat.html:6
 #: web/apps/welcome/templates/welcome/wechat.html:13
-#: web/templates/header.html:45 web/templates/header.html:240
+#: web/templates/header.html:45 web/templates/header.html.py:237
 msgid "Community"
 msgstr "Cộng đồng"
 
@@ -513,9 +2538,6 @@ msgid "Contact Us"
 msgstr "Liên hệ với chúng tôi"
 
 #: web/apps/welcome/templates/welcome/contact.html:21
-#| msgid ""
-#| "Web Site: <a href='https://www.newtonproject.org' target='_blank'>https://"
-#| "www.newtonproject.org"
 msgid ""
 "Website: <a href='https://www.newtonproject.org' target='_blank'>https://www."
 "newtonproject.org"
@@ -528,9 +2550,6 @@ msgid "Email:"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/contact.html:24
-#| msgid ""
-#| "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-#| "pr@newtonproject.org</a>"
 msgid ""
 "White Paper: <a href='mailto:newton-whitepaper@newtonproject.org'>newton-"
 "whitepaper@newtonproject.org</a>"
@@ -539,9 +2558,6 @@ msgstr ""
 "pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:25
-#| msgid ""
-#| "Global Community : <a href='mailto:newton-community@newtonproject."
-#| "org'>newton-community@newtonproject.org</a>"
 msgid ""
 "Global Community: <a href='mailto:newton-community@newtonproject.org'>newton-"
 "community@newtonproject.org</a>"
@@ -550,9 +2566,6 @@ msgstr ""
 "org'>newton-community@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:26
-#| msgid ""
-#| "Newton Token Exchange : <a href='mailto:newton-ir@newtonproject."
-#| "org'>newton-ir@newtonproject.org</a>"
 msgid ""
 "Newton Token Exchange: <a href='mailto:newton-ir@newtonproject.org'>newton-"
 "ir@newtonproject.org</a>"
@@ -561,9 +2574,6 @@ msgstr ""
 "org'>newton-ir@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:27
-#| msgid ""
-#| "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-#| "pr@newtonproject.org</a>"
 msgid ""
 "Public Relations: <a href='mailto:newton-pr@newtonproject.org'>newton-"
 "pr@newtonproject.org</a>"
@@ -572,9 +2582,6 @@ msgstr ""
 "pr@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:28
-#| msgid ""
-#| "NewFund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
-#| "fund@newtonproject.org</a>"
 msgid ""
 "NewFund: <a href='mailto:newton-fund@newtonproject.org'>newton-"
 "fund@newtonproject.org</a>"
@@ -583,9 +2590,6 @@ msgstr ""
 "fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:29
-#| msgid ""
-#| "Council : <a href='mailto:newton-council@newtonproject.org'>newton-"
-#| "council@newtonproject.org</a>"
 msgid ""
 "Council: <a href='mailto:newton-council@newtonproject.org'>newton-"
 "council@newtonproject.org</a>"
@@ -594,9 +2598,6 @@ msgstr ""
 "council@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:30
-#| msgid ""
-#| "NewFund : <a href='mailto:newton-fund@newtonproject.org'>newton-"
-#| "fund@newtonproject.org</a>"
 msgid ""
 "Events: <a href='mailto:newton-event@newtonproject.org'>newton-"
 "event@newtonproject.org</a>"
@@ -605,9 +2606,6 @@ msgstr ""
 "fund@newtonproject.org</a>"
 
 #: web/apps/welcome/templates/welcome/contact.html:31
-#| msgid ""
-#| "Other Contacts : <a href='mailto:contact@newtonproject."
-#| "org'>contact@newtonproject.org</a>"
 msgid ""
 "Other Contacts: <a href='mailto:contact@newtonproject."
 "org'>contact@newtonproject.org</a>"
@@ -841,15 +2839,10 @@ msgstr ""
 msgid "NewStatus"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/dashboard.html:9
-#: web/templates/base.html:17 web/templates/email-template.html:32
-msgid "Newton"
-msgstr ""
-
 #: web/apps/welcome/templates/welcome/economy.html:6
 #: web/apps/welcome/templates/welcome/economy.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:54
-#: web/templates/header.html:48 web/templates/header.html:243
+#: web/templates/header.html:48 web/templates/header.html.py:240
 msgid "Economy"
 msgstr "Kinh tế"
 
@@ -875,11 +2868,6 @@ msgstr ""
 msgid "Tags:"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/events.html:6
-#: web/apps/welcome/templates/welcome/events.html:13
-msgid "Events"
-msgstr ""
-
 #: web/apps/welcome/templates/welcome/events.html:22
 #: web/apps/welcome/templates/welcome/include-events-mobile.html:18
 #: web/apps/welcome/templates/welcome/include-events.html:18
@@ -898,26 +2886,19 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:6
 #: web/apps/welcome/templates/welcome/sitemap.html:62
-#: web/templates/header.html:51 web/templates/header.html:246
+#: web/templates/header.html:51 web/templates/header.html.py:243
 msgid "NewFund"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/foundation.html:13
-#| msgid "Newton Eco Development Fund"
 msgid "Newton Ecosystem Development Fund"
 msgstr "Quỹ phát triển sinh thái Newton"
 
 #: web/apps/welcome/templates/welcome/foundation.html:19
-#| msgid "Fund positioning"
 msgid "Fund Positioning"
 msgstr "Định vị quỹ"
 
 #: web/apps/welcome/templates/welcome/foundation.html:24
-#| msgid ""
-#| "NewFund is a blockchain FOF (Fund of Fund) under the Newton Foundation. "
-#| "It aims to encourage more people to participate in the development of "
-#| "Newton's business ecosystem and ensure that all parties share economic "
-#| "growth dividends through innovative incentive mechanisms."
 msgid ""
 "NewFund is a blockchain FOF (Fund of Funds) under the Newton Foundation. It "
 "aims to encourage more people to participate in the development of Newton's "
@@ -930,16 +2911,10 @@ msgstr ""
 "kinh tế thông qua các cơ chế khuyến khích sáng tạo."
 
 #: web/apps/welcome/templates/welcome/foundation.html:32
-#| msgid "Funding source"
 msgid "Funding Source"
 msgstr "Nguồn tài trợ"
 
 #: web/apps/welcome/templates/welcome/foundation.html:37
-#| msgid ""
-#| "NewFund comes mainly from the Newton Foundation and Newton private equity "
-#| "investors. The fund is managed by a professional GP. By becoming a "
-#| "NewFund LP, investors can  share the growth of the Newton economy and the "
-#| "blockchain industry."
 msgid ""
 "NewFund comes primarily from the Newton Foundation and Newton's private "
 "equity investors. The fund is managed by a professional GP. By becoming a "
@@ -952,15 +2927,10 @@ msgstr ""
 "nghiệp blockchain."
 
 #: web/apps/welcome/templates/welcome/foundation.html:45
-#| msgid "Fund management"
 msgid "Fund Management"
 msgstr "Quản lý quỹ"
 
 #: web/apps/welcome/templates/welcome/foundation.html:50
-#| msgid ""
-#| "NewFund will be managed it in the form of joint governance and shared "
-#| "enjoyment, conducting global cooperation business, and establish a "
-#| "special token fund with top talents and institutions in the industry."
 msgid ""
 "NewFund will be managed in the form of joint governance and shared "
 "enjoyment, conducting global cooperation and establishing a special token "
@@ -971,17 +2941,10 @@ msgstr ""
 "năng và tổ chức hàng đầu trong ngành."
 
 #: web/apps/welcome/templates/welcome/foundation.html:58
-#| msgid "Direction of investment"
 msgid "Direction of Investment"
 msgstr "Hướng đầu tư"
 
 #: web/apps/welcome/templates/welcome/foundation.html:63
-#| msgid ""
-#| "NewFund's main mission is to develop Newton's economy. It will use funds, "
-#| "technology, community and other resources to support the entire ecosystem "
-#| "of the commercial infrastructure, general services, application layers "
-#| "and peripheral services. At the same time, it will also set up "
-#| "accelerators to help ecological projects."
 msgid ""
 "NewFund's mission is to develop Newton's economy. It will use funds, "
 "technology, community and other resources to support the entire ecosystem of "
@@ -1140,7 +3103,6 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/include-advisor.html:99
 #: web/apps/welcome/templates/welcome/include-investor.html:218
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:286
-#| msgid "Newton Eco Development Fund"
 msgid "Newton Eco Development Fund Manager"
 msgstr "Quỹ phát triển sinh thái Newton"
 
@@ -1284,6 +3246,32 @@ msgstr "Người sáng lập Touch Press"
 msgid "BAFTA Award winning author"
 msgstr "Tác giả đoạt giải BAFTA"
 
+#: web/apps/welcome/templates/welcome/include-advisor.html:192
+#: web/apps/welcome/templates/welcome/include-advisor.html:196
+#: web/apps/welcome/templates/welcome/include-advisor.html:198
+msgid "Masanari Koike"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:193
+msgid ""
+"Masanari Koike has a PhD of technology management from Tokyo University’s "
+"Graduate School of Engineering, a master’s of foreign policy and "
+"international economics from the School of Advanced International Studies, "
+"John Hopkins University (US), and a bachelor’s in economics from Sophia "
+"University, Japan. He has served as a member of the Japanese House of "
+"Representatives, Assistant Professor of International Relations in Nihon "
+"University, and Assistant Professor at the Tokyo University Graduate School "
+"of Engineering. He has also worked for the UK think tank Demos, the US law "
+"firm Deway, and Marubeni Corporation (Japan). He has extensively researched "
+"Chinese-Japanese technological and industrial relations.'"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-advisor.html:200
+msgid ""
+"Visiting Fellow at the Department of Social Sciences, Research Center for "
+"Japanese Studies, Tsinghua University"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-allocation.html:8
 msgid "Token Metrics"
 msgstr "Số liệu mã thông báo"
@@ -1393,12 +3381,6 @@ msgstr "Khác"
 #: web/apps/welcome/templates/welcome/sitemap.html:74
 msgid "Press"
 msgstr "Báo chí"
-
-#: web/apps/welcome/templates/welcome/include-community-event.html:107
-#: web/apps/welcome/templates/welcome/sitemap.html:73
-#: web/templates/footer.html:24
-msgid "Blog"
-msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:35
 #: web/apps/welcome/templates/welcome/include-community-region.html:10
@@ -1802,10 +3784,6 @@ msgid "White Paper"
 msgstr "Bản Cáo Bạch"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:24
-#| msgid ""
-#| "Users secure and control their personal data through cryptography, and "
-#| "can manage their personal credit. Users share profits produced by their "
-#| "data in a pre-agreed manner."
 msgid ""
 "Users secure and control their personal data through cryptography, and "
 "manage their personal credit and share profits produced by their data in a "
@@ -1816,16 +3794,10 @@ msgstr ""
 "tạo ra bởi dữ liệu của họ theo cách được thỏa thuận trước."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:36
-#| msgid "More Effective Incentive Mechanisms"
 msgid "Better Incentive Mechanisms"
 msgstr "Các cơ chế khuyến khích hiệu quả hơn"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:37
-#| msgid ""
-#| "Replacing business intermediaries with technology protocols reduces "
-#| "transaction costs and rewards anyone who contributes to the transaction, "
-#| "like service providers, consumers and others connected by the value-based "
-#| "internet."
 msgid ""
 "Replacing middlemen with technology reduces transaction costs and rewards "
 "anyone who contributes to the transaction, whether they're service "
@@ -1837,16 +3809,10 @@ msgstr ""
 "trên internet."
 
 #: web/apps/welcome/templates/welcome/include-feature.html:48
-#| msgid "New organization structures and cooperation models"
 msgid "New Organization and Cooperation Models"
 msgstr "Cấu trúc tổ chức mới và mô hình hợp tác"
 
 #: web/apps/welcome/templates/welcome/include-feature.html:49
-#| msgid ""
-#| "The community economy managed by non-profit foundations will replace the "
-#| "monopoly of intermediary platforms managed by traditional for-profit "
-#| "organizations. Based on open, fair, and rational rules every contributor "
-#| "will benefit from, and become part of this economy."
 msgid ""
 "The community economy managed by non-profit foundations will replace the "
 "monopolies of middlemen managed by traditional for-profit organizations. "
@@ -1879,14 +3845,6 @@ msgstr ""
 msgid "没有海外Apple ID如何下载?"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-index-announce.html:66
-msgid "NewPay-Desktop for MacOS"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-index-announce.html:66
-msgid "NewPay-Desktop for Windows"
-msgstr ""
-
 #: web/apps/welcome/templates/welcome/include-index-card.html:26
 msgid "Enter Website"
 msgstr ""
@@ -1896,13 +3854,11 @@ msgid "GLOBAL COMMUNITY"
 msgstr "CỘNG ĐỒNG TOÀN CẦU"
 
 #: web/apps/welcome/templates/welcome/include-index-community.html:44
-#| msgid "COMMUNITY"
 msgid "MORE COMMUNITY"
 msgstr "Cộng đồng"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:9
 #: web/apps/welcome/templates/welcome/include-industry.html:9
-#| msgid "Industry Application"
 msgid "Industry Applications"
 msgstr "Ứng dụng công nghiệp"
 
@@ -1916,7 +3872,6 @@ msgstr "Chuỗi Thương mại bán lẻ"
 #: web/apps/welcome/templates/welcome/include-industry.html:20
 #: web/apps/welcome/templates/welcome/newpay.html:139
 #: web/apps/welcome/templates/welcome/scene.html:63
-#| msgid "Payment"
 msgid "Payments"
 msgstr "Thanh toán"
 
@@ -1946,7 +3901,6 @@ msgstr "Nông nghiệp"
 
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:55
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:52
-#| msgid "10,561 members from 89 countries have participated"
 msgid "10,561 participants from 89 countries"
 msgstr "10,561 thành viên đến từ 89 quốc gia đã tham dự"
 
@@ -2069,21 +4023,14 @@ msgstr ""
 "Hưng."
 
 #: web/apps/welcome/templates/welcome/include-investor.html:187
-#| msgid ""
-#| "In 2007, during the booming stage of e-commerce, Ye established mbaobao."
-#| "com, becoming China's most famous online bag and suitcase brand. In 2013, "
-#| "he established Haifeng Zhicheng Investment Management Co and over the "
-#| "past five years accumulated 5 super capital Angel venture funds and "
-#| "invested in nearly 70 projects. These have refinancing rate as high as "
-#| "58%%, and have hatched a number of high-quality enterprises with high "
-#| "growth rates."
+#, fuzzy
 msgid ""
 "In 2007, during the booming stage of e-commerce, Ye established mbaobao.com, "
 "becoming China's most famous online bag and suitcase brand. In 2013, he "
 "established Haifeng Zhicheng Investment Management Co and over the past five "
 "years accumulated 5 super capital Angel venture funds and invested in nearly "
-"70 projects. These have refinancing rate as high as 58%%, and have hatched a "
-"number of high-quality enterprises with high growth rates."
+"70 projects. These have refinancing rate as high as 58 percent, and have "
+"hatched a number of high-quality enterprises with high growth rates."
 msgstr ""
 "Năm 2007, trong giai đoạn bùng nổ của thương mại điện tử, Ye đã thành lập "
 "mbaobao.com, trở thành thương hiệu túi xách và vali trực tuyến nổi tiếng "
@@ -2185,15 +4132,6 @@ msgid "Shi Junchao"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:314
-#| msgid ""
-#| "Shi Junchao is a senior jade and art appraiser, an invited expert on "
-#| "CCTV-2's YiChuiDingYin, the editorial committee member of Chinese jade "
-#| "annals, deputy secretary of Xinjiang Hetian Jade Industry Association, "
-#| "and General Appraiser from panjiayuan.com. Shi has devoted himself in the "
-#| "forefront market for decades and is famous for his profound theoretical "
-#| "basis and experience in market practices. His mission is to deliver "
-#| "different cultures and engage in teaching and appraisal of jewellery and "
-#| "jade."
 msgid ""
 "Shi Junchao is a senior jade and art appraiser, an invited expert on "
 "CCTV-2's YiChuiDingYin, the editorial committee member of Chinese jade "
@@ -2219,8 +4157,6 @@ msgstr "Nhà phê bình ngọc đá quý cao cấp"
 
 #: web/apps/welcome/templates/welcome/include-investor.html:322
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:418
-#| msgid ""
-#| "Deputy secretary general of xinjiang hetian jade industry association."
 msgid "Deputy secretary general of Xinjiang Hetian jade industry association."
 msgstr "Phó tổng thư kí của Hiệp hội đá quý Xinjiang Hetian"
 
@@ -2351,15 +4287,6 @@ msgid "BLOCK VC"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:459
-#| msgid ""
-#| "Jublilee Capital Management is a Singapore-based Venture Capital fund, "
-#| "which is founded by experienced fund manager and successful entrepreneurs "
-#| "from both Singapore and China. Established in Singapore with true global "
-#| "perspectives, JCM is aiming to identify, invest and empower promising "
-#| "start-ups and entrepreneurs from a wider range including AI, Robotics, "
-#| "Fintech and consumer upgrade. In 2018, JCM launched its first blockchain "
-#| "fund to invest in the future and make our contributions to the long-term "
-#| "development of blockchain technology."
 msgid ""
 "Jubilee Capital Management is a Singapore-based Venture Capital fund, which "
 "is founded by experienced fund manager and successful entrepreneurs from "
@@ -2388,14 +4315,6 @@ msgid "Jubilee"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-investor.html:476
-#| msgid ""
-#| "Elastos Community Capital (ELA FOUNDTION LTD. ) is a community eco-"
-#| "investment fund initiated by Elastos’ private equity investors and "
-#| "registered in Singapore, focusing on the Elastos eco-project. The "
-#| "foundation community covers more than 50,000 members. Through the high-"
-#| "quality flow of the Elastos community, it can provide investment and "
-#| "financing, brand promotion, community operation and other services for "
-#| "ecological projects."
 msgid ""
 "Elastos Community Capital (ELA FOUNDATION LTD. ) is a community ecosystem-"
 "investment fund initiated by Elastos’ private equity investors and "
@@ -2467,13 +4386,11 @@ msgstr "Xem Chi Tiết"
 
 #: web/apps/welcome/templates/welcome/include-partner-mobile.html:8
 #: web/apps/welcome/templates/welcome/include-partner.html:8
-#| msgid "Joint Business Organization"
 msgid "Joint Business Organizations"
 msgstr "Các Tổ Chức Kinh Doanh Hợp Tác"
 
 #: web/apps/welcome/templates/welcome/include-partner-mobile.html:8
 #: web/apps/welcome/templates/welcome/include-partner.html:8
-#| msgid "The total sales in 2019 will exceed $500 million"
 msgid "Total sales in 2019 will exceed $500 million"
 msgstr "Tổng doanh số trong năm 2019 sẽ vượt quá 500 triệu đô la"
 
@@ -2487,22 +4404,17 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/sitemap.html:35
 #: web/apps/welcome/templates/welcome/technology.html:6
 #: web/apps/welcome/templates/welcome/technology.html:13
-#: web/templates/header.html:39 web/templates/header.html:234
+#: web/templates/header.html:39 web/templates/header.html.py:231
 msgid "Technology"
 msgstr "Công Nghệ"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:25
 #: web/apps/welcome/templates/welcome/include-protocol.html:23
-#| msgid "High performance"
 msgid "High Performance"
 msgstr "Hiệu suất cao"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:27
 #: web/apps/welcome/templates/welcome/include-protocol.html:25
-#| msgid ""
-#| "NewChain main chain can process more than 5,000 transactions continuously "
-#| "each second, can support the operational requirements of e-commerce, "
-#| "Internet of things and other high-frequency trading scenarios."
 msgid ""
 "NewChain's main chain can process over 5,000 transactions continuously each "
 "second, and supports the operational requirements of e-commerce, the "
@@ -2519,9 +4431,6 @@ msgstr "Khả năng mở rộng"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:38
 #: web/apps/welcome/templates/welcome/include-protocol.html:36
-#| msgid ""
-#| "NewChain can support BTC, ETH and other mainstream blockchain networks "
-#| "with no limit."
 msgid ""
 "NewChain supports BTC, ETH and other mainstream blockchain networks with no "
 "limits."
@@ -2536,11 +4445,6 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:48
 #: web/apps/welcome/templates/welcome/include-protocol.html:47
-#| msgid ""
-#| "The technology of whole process stack realizes the whole process "
-#| "technology solution from the atomic world to the real world, from "
-#| "hardware design to application layer software development through basic "
-#| "technology and super exchange protocol."
 msgid ""
 "Newton's full process stack offers technology solutions from the atomic "
 "world to the real world, from hardware design to application layer software "
@@ -2553,15 +4457,11 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:56
 #: web/apps/welcome/templates/welcome/include-protocol.html:55
-#| msgid "Developer"
 msgid "Developer Friendly"
 msgstr "Nhà Phát Triển"
 
 #: web/apps/welcome/templates/welcome/include-protocol-mobile.html:58
 #: web/apps/welcome/templates/welcome/include-protocol.html:57
-#| msgid ""
-#| "With NewStudio as the core development tool chain,the  developers can "
-#| "develop DApp without programming foundation."
 msgid ""
 "Using NewStudio as our core development toolchain, anyone can develop "
 "distributed apps without programming experience."
@@ -2574,62 +4474,51 @@ msgid "ROADMAP"
 msgstr "LỘ TRÌNH"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:21
-#| msgid "Newton project was officially launched."
 msgid "Newton project officially launched."
 msgstr "Dự án Newton được chính thức ra mắt."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:29
-#| msgid "Newton website was officially launched."
 msgid "Newton website launched."
 msgstr "Trang Web Newton được chính thức ra mắt."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:30
-#: web/apps/welcome/templates/welcome/include-roadmap.html:93
-#| msgid "The first round of token exchange."
+#: web/apps/welcome/templates/welcome/include-roadmap.html:92
 msgid "First round of token exchange."
 msgstr "Vòng trao đổi mã thông báo đầu tiên."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:38
-#: web/apps/welcome/templates/welcome/include-roadmap.html:100
-#| msgid "The second round of token exchange."
+#: web/apps/welcome/templates/welcome/include-roadmap.html:99
 msgid "Second round of token exchange."
 msgstr "Vòng trao đổi mã thông báo thứ hai."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:46
-#| msgid "Newton Testnet officially launched."
 msgid "Newton Testnet launched."
 msgstr "Newton Testnet chính thức ra mắt."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:54
-#: web/apps/welcome/templates/welcome/include-roadmap.html:114
-#| msgid "The third round of token exchange."
+#: web/apps/welcome/templates/welcome/include-roadmap.html:113
 msgid "Third round of token exchange."
 msgstr "Vòng trao đổi mã thông báo thứ ba."
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:62
-#: web/apps/welcome/templates/welcome/include-roadmap.html:121
-#| msgid "Newton's main chain and NewPay officially launched."
+#: web/apps/welcome/templates/welcome/include-roadmap.html:120
 msgid "Newton's main chain and NewPay launched."
 msgstr "Chuỗi chính và ví chính của Newton được chính thức ra mắt."
 
-#: web/apps/welcome/templates/welcome/include-roadmap.html:72
-#: web/apps/welcome/templates/welcome/include-roadmap.html:129
-#| msgid "The NewMall was officially launched."
+#: web/apps/welcome/templates/welcome/include-roadmap.html:71
+#: web/apps/welcome/templates/welcome/include-roadmap.html:128
 msgid "NewMall launched."
 msgstr "NewMall được chính thức ra mắt."
 
-#: web/apps/welcome/templates/welcome/include-roadmap.html:85
-#| msgid "Newton project was officially launched."
+#: web/apps/welcome/templates/welcome/include-roadmap.html:84
 msgid "The Newton Project was officially launched."
 msgstr "Dự án Newton được chính thức ra mắt."
 
-#: web/apps/welcome/templates/welcome/include-roadmap.html:92
-#| msgid "Newton website was officially launched."
+#: web/apps/welcome/templates/welcome/include-roadmap.html:91
 msgid "Newton's website was launched."
 msgstr "Trang Web Newton được chính thức ra mắt."
 
-#: web/apps/welcome/templates/welcome/include-roadmap.html:107
-#| msgid "Newton Testnet officially launched."
+#: web/apps/welcome/templates/welcome/include-roadmap.html:106
 msgid "Newton's Testnet launched."
 msgstr "Newton Testnet chính thức ra mắt."
 
@@ -2713,6 +4602,7 @@ msgid "Co-founder"
 msgstr "Đồng sáng lập"
 
 #: web/apps/welcome/templates/welcome/include-team.html:52
+#: web/apps/welcome/templates/welcome/newton-community-node-conference.html:231
 msgid "Founder of OKbuy"
 msgstr "Nhà sáng lập và CEO của Okbuy"
 
@@ -2881,36 +4771,27 @@ msgstr ""
 "thông giữa các thiết bị IoT và các cổng, và các đặc tả phát triển thiết bị "
 "NewChain IoT."
 
-#: web/apps/welcome/templates/welcome/include-video.html:27
-msgid "What is Newton"
-msgstr ""
-
 #: web/apps/welcome/templates/welcome/include-video.html:28
-#: web/apps/welcome/templates/welcome/index.html:21
-msgid "Newton: Infrastructure for the Community Economy"
-msgstr "Newton: Cơ sở hạ tầng cho nền kinh tế cộng đồng"
-
-#: web/apps/welcome/templates/welcome/include-video.html:33
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:84
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:604
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:605
-#| msgid "Newton's Community Economy"
 msgid "2018 Newton Community Node Conference"
 msgstr "Cộng Đồng Kinh Tế Của Newton"
 
-#: web/apps/welcome/templates/welcome/include-video.html:34
+#: web/apps/welcome/templates/welcome/include-video.html:29
 msgid ""
 "On December 11, 2018, Newton held its first community node conference at the "
 "MGM Cotai, Macao."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/index.html:10
-#: web/apps/welcome/templates/welcome/register.html:6
-#: web/apps/welcome/templates/welcome/sitemap.html:22
-#: web/templates/admin/change_form.html:18
-#: web/templates/admin/change_list.html:40
-msgid "Home"
+#: web/apps/welcome/templates/welcome/include-video.html:34
+msgid "What is Newton"
 msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-video.html:35
+#: web/apps/welcome/templates/welcome/index.html:21
+msgid "Newton: Infrastructure for the Community Economy"
+msgstr "Newton: Cơ sở hạ tầng cho nền kinh tế cộng đồng"
 
 #: web/apps/welcome/templates/welcome/index.html:20
 msgid "Everyone Should Benefit Directly from Economic Growth"
@@ -2955,7 +4836,6 @@ msgid "Join Us"
 msgstr "Tham gia với chúng tôi"
 
 #: web/apps/welcome/templates/welcome/joinus.html:23
-#| msgid "About Newton Project"
 msgid "About the Newton Project"
 msgstr "Giới thiệu về Newton Project"
 
@@ -2972,10 +4852,6 @@ msgid "OUR CULTURE"
 msgstr "VĂN HÓA CỦA CHÚNG TÔI"
 
 #: web/apps/welcome/templates/welcome/joinus.html:30
-#| msgid ""
-#| "We believe in the free, open and inclusive culture advocated by the "
-#| "philosophy of free and open source. Decentralization is the core of our "
-#| "values."
 msgid ""
 "We believe in the free, open and inclusive culture advocated by the "
 "philosophy of free and open source software. Decentralization is at the core "
@@ -2985,11 +4861,6 @@ msgstr ""
 "của nguồn mở và tự do. Phân cấp là cốt lõi của các giá trị của chúng tôi."
 
 #: web/apps/welcome/templates/welcome/joinus.html:33
-#| msgid ""
-#| "Currently, Newton consists of top talents from the free and open source "
-#| "software community. We work with professionals in the fields of e-"
-#| "commerce, finance, media, etc. We hope that in the future more talents "
-#| "and professionals will join us."
 msgid ""
 "Currently, Newton consists of top talent from the free and open source "
 "software community. We work with professionals in the fields of e-commerce, "
@@ -3001,9 +4872,6 @@ msgstr ""
 "điện tử, tài chính, truyền thông, v.v."
 
 #: web/apps/welcome/templates/welcome/joinus.html:36
-#| msgid ""
-#| "In addition, developers around the world can join Newton through remote "
-#| "office. You don't have to worry about space limitations."
 msgid ""
 "In addition, developers around the world can join Newton through a remote "
 "office. You don't have to worry about space limitations."
@@ -3016,12 +4884,6 @@ msgid "WHO WE ARE LOOKING FOR"
 msgstr "AI LÀ NGƯỜI CHÚNG TÔI ĐANG TÌM KIẾM"
 
 #: web/apps/welcome/templates/welcome/joinus.html:40
-#| msgid ""
-#| "We need technical talents in distributed systems, operating systems, "
-#| "encryption algorithms, blockchain, mobile development, product design, "
-#| "etc. We also need professionals in the fields of currency theory, "
-#| "economic models, asset management, financial innovation, etc. We are "
-#| "happy to work with volunteers and enthusiasts specialized in any field."
 msgid ""
 "We need technical talent in distributed systems, operating systems, "
 "encryption algorithms, blockchain, mobile development, product design, etc. "
@@ -3037,9 +4899,6 @@ msgstr ""
 "vực nào."
 
 #: web/apps/welcome/templates/welcome/joinus.html:43
-#| msgid ""
-#| "We need everyone to be passionate and confident in decentralized "
-#| "business, because Newton has a close impact on everyone’s life."
 msgid ""
 "We need everyone to be passionate and confident in decentralized business, "
 "because Newton has a big impact on everyone’s life."
@@ -3048,9 +4907,6 @@ msgstr ""
 "tập trung, bởi vì Newton có ảnh hưởng gần gũi đến cuộc sống của mọi người ."
 
 #: web/apps/welcome/templates/welcome/joinus.html:46
-#| msgid ""
-#| "In addition, we will use NEW to pay part of the salary, which is a "
-#| "condition that must be accepted."
 msgid "In addition, we will use NEW to pay part of the salary."
 msgstr ""
 "Ngoài ra, chúng tôi sẽ sử dụng NEW để trả một phần tiền lương, đó là điều "
@@ -3061,10 +4917,6 @@ msgid "Currently open positions"
 msgstr "Vị trí đang còn ứng tuyển"
 
 #: web/apps/welcome/templates/welcome/joinus.html:51
-#| msgid ""
-#| "We currently open the following positions. If you are interested, please "
-#| "send your resume to the email: <a href='mailto:newton-hr@newtonproject."
-#| "org'>newton-hr@newtonproject.org</a>"
 msgid ""
 "We currently have the following positions open. If you are interested, "
 "please send your resume to: <a href='mailto:newton-hr@newtonproject."
@@ -3092,15 +4944,10 @@ msgid "Job description:"
 msgstr "Mô tả công việc:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:67
-#| msgid ""
-#| "Being responsible for the design and development of the Newton system."
 msgid "Responsible for the design and development of the Newton system."
 msgstr "Chịu trách nhiệm thiết kế và phát triển hệ thống Newton."
 
 #: web/apps/welcome/templates/welcome/joinus.html:68
-#| msgid ""
-#| "Being responsible for researching the latest technologies in the industry "
-#| "and applying them to Newtonian system improvements."
 msgid ""
 "Responsible for researching the latest technologies in the industry and "
 "applying them to improving the Newton system."
@@ -3122,9 +4969,6 @@ msgid "Qualifications:"
 msgstr "Trình độ chuyên môn:"
 
 #: web/apps/welcome/templates/welcome/joinus.html:72
-#| msgid ""
-#| "Bachelor’s degree or above, applicants majored in computer science or "
-#| "related professions will be prioritized."
 msgid ""
 "Bachelor’s degree or above, applicants who majored in computer science or "
 "related professions will be prioritized."
@@ -3133,7 +4977,6 @@ msgstr ""
 "nghề có liên quan sẽ được ưu tiên."
 
 #: web/apps/welcome/templates/welcome/joinus.html:73
-#| msgid "More than 5 years of software development experience."
 msgid "Over 5 years of software development experience."
 msgstr "Hơn 5 năm kinh nghiệm phát triển phần mềm."
 
@@ -3144,9 +4987,6 @@ msgstr ""
 "Có kỹ năng bằng nhiều ngôn ngữ lập trình (Java , Go ，C ++ ,Rust ， Kotlin)."
 
 #: web/apps/welcome/templates/welcome/joinus.html:75
-#| msgid ""
-#| "Being familiar with the principles of software security, can apply "
-#| "security standards to research and development."
 msgid ""
 "Familiar with the principles of software security, can apply security "
 "standards to research and development."
@@ -3155,9 +4995,6 @@ msgstr ""
 "mật cho nghiên cứu và phát triển."
 
 #: web/apps/welcome/templates/welcome/joinus.html:76
-#| msgid ""
-#| "Good English reading ability, being able to read English technical "
-#| "documents smoothly."
 msgid ""
 "Good English reading ability, able to read English technical documents "
 "smoothly."
@@ -3206,7 +5043,6 @@ msgstr "Vị trí: Bắc Kinh - Quận Triều Dương Sanlitun SOHO D2503"
 #: web/apps/welcome/templates/welcome/joinus.html:354
 #: web/apps/welcome/templates/welcome/joinus.html:392
 #: web/apps/welcome/templates/welcome/joinus.html:431
-#| msgid "Payments: Salary to be discussed"
 msgid "Payment: Salary to be discussed"
 msgstr "Thanh toán: Mức lương sẽ được thảo luận"
 
@@ -3259,14 +5095,10 @@ msgid "Computer Science or related degree."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/joinus.html:122
-#| msgid "Blockchain related system R&D experience."
 msgid "Blockchain-related system R&D experience."
 msgstr "Kinh nghiệm nghiên cứu và phát triển liên quan đến Blockchain"
 
 #: web/apps/welcome/templates/welcome/joinus.html:127
-#| msgid ""
-#| "Public Relations : <a href='mailto:newton-pr@newtonproject.org'>newton-"
-#| "pr@newtonproject.org</a>"
 msgid ""
 "Contact: <a href=mailto:newton-hr@newtonproject.org>newton-hr@newtonproject."
 "org</a>"
@@ -3311,9 +5143,6 @@ msgstr ""
 "Hợp tác với các nhà thiết kế để phù hợp với mục đích thiết kế trực quan."
 
 #: web/apps/welcome/templates/welcome/joinus.html:156
-#| msgid ""
-#| "Proven work experience with React or other modern Frontend Javascript "
-#| "Framework;"
 msgid ""
 "Proven work experience with React or other modern front-end Javascript "
 "Framework;"
@@ -3326,8 +5155,6 @@ msgid "Experience with Python/Django/Node.js;"
 msgstr "Kinh nghiệm với Python / Django / Node.js;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:158
-#| msgid ""
-#| "Experience in writing frontend and backend unit and integration tests;"
 msgid ""
 "Experience in writing front-end and back-end unit and integration tests;"
 msgstr "Kinh nghiệm viết với frontend và backend và kiểm tra tích hợp;"
@@ -3379,7 +5206,6 @@ msgstr ""
 "twitter;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:187
-#| msgid "Communicating feedback and process suggestions of customers;"
 msgid "Communicating feedback and processing suggestions of customers;"
 msgstr "Truyền đạt phản hồi của khách hàng và các đề xuất quy trình;"
 
@@ -3391,14 +5217,10 @@ msgstr ""
 "thiện;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:189
-#| msgid "Filling reports on enquiry summaries and improvement areas;"
 msgid "Filling in reports on inquiry summaries and improvement areas;"
 msgstr "Chuẩn bị các báo cáo tóm tắt về yêu cầu và khu vực cải tiến;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:190
-#| msgid ""
-#| "Ensure that all enquiries on social media are in compliance with all "
-#| "internal and external regulations, policies and guidelines;"
 msgid ""
 "Ensuring that all inquiries on social media are in compliance with all "
 "internal and external regulations, policies and guidelines;"
@@ -3412,7 +5234,6 @@ msgid "Bachelor’s degree or above;"
 msgstr "Bằng cử nhân trở lên;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:195
-#| msgid "Preferably with 2 years of work experience in customer service;"
 msgid "Preferably 2 years of work experience in customer service;"
 msgstr ""
 "Tốt hơn với 2 năm kinh nghiệm làm việc trong vai trò hỗ trợ khách hàng;"
@@ -3450,9 +5271,6 @@ msgstr ""
 "các hoạt động vận động / tham gia;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:222
-#| msgid ""
-#| "Organizing and coordinating marketing  engagement activities including "
-#| "social media campaigns, youtube broadcasts, progress reports;"
 msgid ""
 "Organizing and coordinating marketing  engagement activities including "
 "social media campaigns, YouTube broadcasts, progress reports;"
@@ -3535,9 +5353,6 @@ msgstr ""
 "chỉnh;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:267
-#| msgid ""
-#| "Expertise in UX softwares such as Sketch, InVision, UXPin, Framer, or "
-#| "Marvel App. Basic React, SCSS, or JavaScript skills are a plus;"
 msgid ""
 "Expertise in UX software such as Sketch, InVision, UXPin, Framer, or Marvel "
 "App. Basic React, SCSS, or JavaScript skills are a plus;"
@@ -3622,9 +5437,6 @@ msgstr ""
 "Xác nhận nhu cầu sản phẩm thực hiện trong quá trình thử nghiệm sản phẩm;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:301
-#| msgid ""
-#| "After releasing the product, tracking customers' usage and timely find "
-#| "problems."
 msgid ""
 "After releasing the product, tracking customers' usage and timely finding "
 "problems."
@@ -3711,9 +5523,6 @@ msgstr ""
 "hợp lý tài nguyên trong phiên có sẵn."
 
 #: web/apps/welcome/templates/welcome/joinus.html:342
-#| msgid ""
-#| "Familiar with common controls & custom controls, event mechanisms and "
-#| "gesture operations;"
 msgid ""
 "Familiar with common and custom controls, event mechanisms and gesture "
 "operations;"
@@ -3722,9 +5531,6 @@ msgstr ""
 "và hoạt động cử chỉ;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:343
-#| msgid ""
-#| "Proficient in Android performance & memory optimization; good at solving "
-#| "system crashes & compatibility, memory leaks & overflow;"
 msgid ""
 "Proficient in Android performance and memory optimization; good at solving "
 "system crashes and compatibility, memory leaks and overflow;"
@@ -3733,8 +5539,6 @@ msgstr ""
 "tương thích của hệ thống, rò rỉ bộ nhớ và tràn bộ nhớ."
 
 #: web/apps/welcome/templates/welcome/joinus.html:344
-#| msgid ""
-#| "Familiar with Android network communication mechanism, Json analysis;"
 msgid "Familiar with Android network communication mechanism, JSON analysis;"
 msgstr ""
 "Thích nghi với cơ chế giao tiếp trên mạng lưới Android, phân tích Json;"
@@ -3758,9 +5562,6 @@ msgstr ""
 "lại mã nguồn Android."
 
 #: web/apps/welcome/templates/welcome/joinus.html:348
-#| msgid ""
-#| "Excellent communication skills with team work spirit, work seriously and "
-#| "actively, rigorous and responsible;"
 msgid ""
 "Excellent communication skills and teamwork, work seriously and actively, "
 "rigorous and responsible;"
@@ -3769,15 +5570,10 @@ msgstr ""
 "tích cực, có trách nhiệm."
 
 #: web/apps/welcome/templates/welcome/joinus.html:349
-#| msgid ""
-#| "Experienced in the application of open source framework is preferred;"
 msgid "Experience in the application of open source framework is preferred;"
 msgstr "Có kinh nghiệm trong việc áp dụng khung nguồn mở được ưa thích;"
 
 #: web/apps/welcome/templates/welcome/joinus.html:350
-#| msgid ""
-#| "Familiar with Android testing tools & process, experienced in cross "
-#| "application coding test."
 msgid ""
 "Familiar with Android testing tools and process, experienced in cross "
 "application coding test."
@@ -3790,9 +5586,6 @@ msgid "IOS Developer"
 msgstr "Nhà phát triển iOS"
 
 #: web/apps/welcome/templates/welcome/joinus.html:374
-#| msgid ""
-#| "Assisting the product manager to analyze and organize the customer's "
-#| "need, and make the product requirements document;"
 msgid ""
 "Assisting the product manager to analyze and organize the customer's needs, "
 "and create the product requirements document;"
@@ -3801,9 +5594,6 @@ msgstr ""
 "tạo tài liệu yêu cầu về sản phẩm."
 
 #: web/apps/welcome/templates/welcome/joinus.html:375
-#| msgid ""
-#| "Depending on the product requirements document, designing an iOS App "
-#| "system  architecture;"
 msgid ""
 "Depending on the product requirements document, designing an iOS App system "
 "architecture;"
@@ -3811,9 +5601,6 @@ msgstr ""
 "Tùy thuộc vào tài liệu yêu cầu sản phẩm để thiết kế trên hệ thống iOS App."
 
 #: web/apps/welcome/templates/welcome/joinus.html:376
-#| msgid ""
-#| "Depending on the system architecture design, conducting iOS App-related "
-#| "program  development;"
 msgid ""
 "Depending on the system architecture design, conducting iOS app-related "
 "program development;"
@@ -3822,9 +5609,6 @@ msgstr ""
 "trình liên quan đến ứng dụng iOS."
 
 #: web/apps/welcome/templates/welcome/joinus.html:377
-#| msgid ""
-#| "Depending on the product requirements document, conducting an overall "
-#| "test on  the iOS app;"
 msgid ""
 "Depending on the product requirements document, conducting overall testing "
 "of the iOS app;"
@@ -3860,9 +5644,6 @@ msgid "Familiar with Swift or Objective C programming language;"
 msgstr "Quen thuộc với ngôn ngữ lập trình Swift hoặc Objective C."
 
 #: web/apps/welcome/templates/welcome/joinus.html:385
-#| msgid ""
-#| "Familiar with the iOS's platform software development model and system "
-#| "architecture;"
 msgid ""
 "Familiar with the iOS platform software development model and system "
 "architecture;"
@@ -3893,9 +5674,6 @@ msgid "Front-end Web Developer"
 msgstr "Nhà phát triển web Front-end"
 
 #: web/apps/welcome/templates/welcome/joinus.html:412
-#| msgid ""
-#| "Assisting the product manager, analyzing and organizing the customer's "
-#| "need, and making the product requirements document;"
 msgid ""
 "Assisting the product manager, analyzing and organizing the customer's "
 "needs, and creating the product requirements document;"
@@ -3920,9 +5698,6 @@ msgstr ""
 "cung cấp để hoàn thành việc sản xuất trang web."
 
 #: web/apps/welcome/templates/welcome/joinus.html:415
-#| msgid ""
-#| "According to the product requirements document, completing the "
-#| "development of the sites’ front-end interactive part of the program;"
 msgid ""
 "According to the product requirements document, completing the development "
 "of the sites’ front-end interaction;"
@@ -3931,9 +5706,6 @@ msgstr ""
 "tác đầu cuối của trang web của chương trình."
 
 #: web/apps/welcome/templates/welcome/joinus.html:416
-#| msgid ""
-#| "According to consumer’s feedback, correcting the front end issues of the "
-#| "website."
 msgid ""
 "According to consumers' feedback, correcting front-end issues of the website."
 msgstr ""
@@ -3941,9 +5713,6 @@ msgstr ""
 "trang web."
 
 #: web/apps/welcome/templates/welcome/joinus.html:421
-#| msgid ""
-#| "2+ years working experience in computer software, more than 1 year "
-#| "experience in front end development of the website;"
 msgid ""
 "2+ years working experience in computer software, more than 1 year "
 "experience in front-end web development;"
@@ -3952,9 +5721,6 @@ msgstr ""
 "nghiệm trong front end phát triển của trang web."
 
 #: web/apps/welcome/templates/welcome/joinus.html:422
-#| msgid ""
-#| "Familiar with AI and Photoshop software, can create web pages based on UI "
-#| "design drafts;"
 msgid ""
 "Familiar with Adobe Illustrator and Photoshop software, can create web pages "
 "based on UI design drafts;"
@@ -3963,14 +5729,10 @@ msgstr ""
 "bản phác thảo thiết kế giao diện người dùng."
 
 #: web/apps/welcome/templates/welcome/joinus.html:423
-#| msgid "Familiar with HTML5, CSS, Javascript programming language;"
 msgid "Familiar with HTML5, CSS, Javascript;"
 msgstr "Quen thuộc với HTML5, CSS, ngôn ngữ lập trình Javascript."
 
 #: web/apps/welcome/templates/welcome/joinus.html:424
-#| msgid ""
-#| "Familiar with website front-end development framework such as jQuery and "
-#| "Bootstrap;"
 msgid ""
 "Familiar with front-end web development frameworks such as jQuery and "
 "Bootstrap;"
@@ -3979,9 +5741,6 @@ msgstr ""
 "Bootstrap."
 
 #: web/apps/welcome/templates/welcome/joinus.html:425
-#| msgid ""
-#| "Familiar with the principles of responsive Web design, with practical "
-#| "experience;"
 msgid ""
 "Familiar with the principles of responsive web design, with practical "
 "experience;"
@@ -3994,7 +5753,6 @@ msgstr ""
 "nhất."
 
 #: web/apps/welcome/templates/welcome/joinus.html:427
-#| msgid "Good English level, able to read English technical documents."
 msgid "Good English ability, able to read English technical documents."
 msgstr "Trình độ tiếng Anh tốt, có thể đọc tài liệu kỹ thuật tiếng Anh."
 
@@ -4011,11 +5769,6 @@ msgid "Media Kit"
 msgstr "Phương tiện truyền thông"
 
 #: web/apps/welcome/templates/welcome/mediakit.html:23
-#| msgid ""
-#| "Newton logo is a combination of calculus symbol and ridged coin edge. "
-#| "This logo honors the great scientist and coinage pioneer Sir Isaac "
-#| "Newton, symbolizing his great contribution and perfect integration of "
-#| "finance and technology."
 msgid ""
 "Newton's logo is a combination of a calculus symbol and ridged coin edge. "
 "This logo honors the great scientist and coinage pioneer Sir Isaac Newton, "
@@ -4066,7 +5819,7 @@ msgid "Poster in English"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/nep.html:6 web/templates/header.html:54
-#: web/templates/header.html:249
+#: web/templates/header.html.py:246
 msgid "NEP"
 msgstr ""
 
@@ -4112,7 +5865,7 @@ msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:5
 #: web/apps/welcome/templates/welcome/sitemap.html:45
-#: web/templates/header.html:42 web/templates/header.html:237
+#: web/templates/header.html:42 web/templates/header.html.py:234
 msgid "NewPay"
 msgstr ""
 
@@ -4123,42 +5876,34 @@ msgid "Digital Identity and Credit"
 msgstr "Danh Tính Số Và Tín Dụng"
 
 #: web/apps/welcome/templates/welcome/newpay.html:121
-#| msgid "Create and manage DID (Decentralized IDs);"
 msgid "Create and manage decentralized ID's"
 msgstr "Tạo và quản lý DID (ID phân cấp);"
 
 #: web/apps/welcome/templates/welcome/newpay.html:122
-#| msgid "Set privacy mode for personal information;"
 msgid "Set privacy preferences for personal information;"
 msgstr "Đặt chế độ riêng tư cho thông tin cá nhân;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:123
-#| msgid "Transaction information management;"
 msgid "Transaction management;"
 msgstr "Quản lý thông tin giao dịch;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:124
-#| msgid "Set privacy mode for personal information;"
 msgid "Set pricing and benefits for sharing transaction information"
 msgstr "Đặt chế độ riêng tư cho thông tin cá nhân;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:125
-#| msgid "Digital asset management, including NEW, BTC, ETH, etc."
 msgid "Digital asset management, including NEW, BTC, ETH, etc"
 msgstr "Quản lý tài sản kỹ thuật số, bao gồm NEW, BTC, ETH, v.v."
 
 #: web/apps/welcome/templates/welcome/newpay.html:140
-#| msgid "Support cross-border transactions;"
 msgid "Cross-border transactions;"
 msgstr "Hỗ trợ giao dịch xuyên biên giới;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:141
-#| msgid "Support for micro-payments;"
 msgid "Micro-payments;"
 msgstr "Hỗ trợ thanh toán nhỏ lẻ;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:142
-#| msgid "Extremely fast transaction confirmation."
 msgid "Rapid transaction confirmation."
 msgstr "Xác nhận giao dịch cực nhanh."
 
@@ -4167,27 +5912,22 @@ msgid "Joint Login"
 msgstr "Đăng nhập chung"
 
 #: web/apps/welcome/templates/welcome/newpay.html:157
-#| msgid "Log in multiple Dapps using a unified identity;"
 msgid "Log into multiple Dapps with one unified identity"
 msgstr "Đăng nhập nhiều Dapps bằng cách sử dụng một danh tính thống nhất;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:158
-#| msgid "Dapp management and permission control;"
 msgid "Dapp management and permission control"
 msgstr "Quản lý và kiểm soát quyền của Dapp;"
 
 #: web/apps/welcome/templates/welcome/newpay.html:159
-#| msgid "Security audit."
 msgid "Security audit"
 msgstr "Kiểm toán an ninh."
 
 #: web/apps/welcome/templates/welcome/newpay.html:173
-#| msgid "Application Support"
 msgid "App Support"
 msgstr "Hỗ trợ ứng dụng"
 
 #: web/apps/welcome/templates/welcome/newpay.html:174
-#| msgid "Built-in support for free and open-source applications;"
 msgid "Free and open-source apps"
 msgstr "Hỗ trợ tích hợp cho các ứng dụng mã nguồn mở và miễn phí;"
 
@@ -4200,13 +5940,11 @@ msgid "App development tools"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
-#| msgid "Newton's Community Economy"
 msgid "Newton Community Node Conference"
 msgstr "Cộng Đồng Kinh Tế Của Newton"
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:47
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:66
-#| msgid "About Newton Project"
 msgid "About The Conference"
 msgstr "Giới thiệu về Newton Project"
 
@@ -4291,7 +6029,6 @@ msgid "Invite Guests"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:218
-#| msgid "Founder of kela.cn"
 msgid "Founder of Newton"
 msgstr "Nhà sáng lập của Kela.cn"
 
@@ -4301,7 +6038,6 @@ msgid "Chen Shi"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:448
-#| msgid "Co-founder"
 msgid "KCSA founder"
 msgstr "Đồng sáng lập"
 
@@ -4356,7 +6092,6 @@ msgid "Tong Yang"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:538
-#| msgid "Join Partner"
 msgid "Gold Finance partner"
 msgstr "Đối tác"
 
@@ -4375,7 +6110,6 @@ msgid "Sun Jian"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:568
-#| msgid "Co-founder"
 msgid "JLAB founder"
 msgstr "Đồng sáng lập"
 
@@ -4389,7 +6123,6 @@ msgid "Genesis CEO"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:597
-#| msgid "In Progress"
 msgid "Meeting Process"
 msgstr "Báo chí"
 
@@ -4434,12 +6167,10 @@ msgid "Panel: From Improvement to Innovation;<br/>From Industry to Ecosystem"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:642
-#| msgid "Social Network"
 msgid "Social Networking"
 msgstr "Mạng xã hội"
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:646
-#| msgid "Newton's Community Economy"
 msgid "Newton Community Dinner"
 msgstr "Cộng Đồng Kinh Tế Của Newton"
 
@@ -4497,7 +6228,6 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/partner.html:6
 #: web/apps/welcome/templates/welcome/partner.html:13
 #: web/apps/welcome/templates/welcome/sitemap.html:85
-#| msgid "Partner"
 msgid "Partners"
 msgstr "Đối tác"
 
@@ -4506,7 +6236,6 @@ msgid "Details"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/press.html:47
-#| msgid "press"
 msgid "No press"
 msgstr "Báo chí"
 
@@ -4943,13 +6672,6 @@ msgid "Automatic finance"
 msgstr "Tài chính tự động"
 
 #: web/apps/welcome/templates/welcome/protocol.html:95
-#| msgid ""
-#| "Developers can define smart financial contracts based on the built-in "
-#| "smart contract templates on; insurance, lending and investment, including "
-#| "digital identity and credit, KYC information, staking the Newton token, "
-#| "contract rules and external chain service. The system will automatically "
-#| "match smart financial contracts and automatically complete transactional "
-#| "matching."
 msgid ""
 "Developers can define smart financial contracts based on the built-in smart "
 "contract templates on; insurance, lending and investment, including digital "
@@ -4993,21 +6715,11 @@ msgstr "LỘ TRÌNH"
 #: web/apps/welcome/templates/welcome/scene.html:6
 #: web/apps/welcome/templates/welcome/scene.html:13
 #: web/apps/welcome/templates/welcome/scene.html:21
-#: web/templates/header.html:36 web/templates/header.html:231
+#: web/templates/header.html:36 web/templates/header.html.py:228
 msgid "Industry"
 msgstr "Công nghiệp"
 
 #: web/apps/welcome/templates/welcome/scene.html:33
-#| msgid ""
-#| "Under the corporate structure, the capital side's income has far exceeded "
-#| "the laborer's income, and a new generation of giant retail institutions "
-#| "developed along with computers and the Internet have accelerated the "
-#| "accumulation of wealth to capital. Blockchain-commerce is the basic "
-#| "business model of the human-machine community. Under this model, any "
-#| "behavior that positively contributes to the human-machine community will "
-#| "be rewarded. The Blockchain-commerce model is used in the retail industry "
-#| "to help reduce transaction costs, protect consumers’ privacy, and promote "
-#| "intelligent collaboration."
 msgid ""
 "Under the control of corporations, income from capital far exceeds income "
 "from labor, and a new generation of internet-based retail giants is "
@@ -5041,11 +6753,6 @@ msgid "NewMall"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:42
-#| msgid ""
-#| "In NewMall, as there is no profit-seeking intermediaries, the transaction "
-#| "cost of the sellers will be greatly reduced, and consumers, service "
-#| "providers and other participants can get the incentive of Newton token "
-#| "according to their contribution value (NewForce)."
 msgid ""
 "Since NewMall has no profit-seeking middlemen, transaction costs for sellers "
 "are greatly reduced, and consumers, service providers and other participants "
@@ -5062,10 +6769,6 @@ msgid "New Digital Asset Management"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:47
-#| msgid ""
-#| "As a new digital asset of users, consumer data can be managed by NewPay. "
-#| "Users truly own data and can control the data by authorizing and pricing "
-#| "the data.Uninformed data leakage is prohibited."
 msgid ""
 "User data is a new digital asset controlled by the users' themselves, and "
 "can be managed with the NewPay app. Users truly own their data and can "
@@ -5081,14 +6784,6 @@ msgid "Targeted Advertising"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:52
-#| msgid ""
-#| "Users can set whether to accept marketing information in NewPay, as well "
-#| "as the type of information required, price range, etc. Marketing "
-#| "advertisers set marketing plans through various marketing smart contract "
-#| "templates built into the system, including: target users, incentive "
-#| "models, settlement methods, and djustment rules. Merchants can achieve "
-#| "accurate advertising and peer-to-peer settlement with users, avoiding "
-#| "advertising fraud."
 msgid ""
 "Users can set whether to accept marketing promotions in NewPay, as well as "
 "the type of information required, price range, etc. Advertisers set "
@@ -5105,10 +6800,6 @@ msgstr ""
 "hàng với người dùng, tránh gian lận quảng cáo."
 
 #: web/apps/welcome/templates/welcome/scene.html:65
-#| msgid ""
-#| "Current transaction payment costs are higher, efficiency is lower, and "
-#| "flexibility is poor. A new generation of trading and payment systems will "
-#| "be built based on blockchain technology."
 msgid ""
 "Under current e-commerce, transaction costs are high, efficiency is low, and "
 "flexibility is poor. A new generation of trading and payment systems will be "
@@ -5119,15 +6810,10 @@ msgstr ""
 "xây dựng dựa trên công nghệ blockchain."
 
 #: web/apps/welcome/templates/welcome/scene.html:74
-#| msgid "Payment"
 msgid "Global Payments"
 msgstr "Thanh toán"
 
 #: web/apps/welcome/templates/welcome/scene.html:75
-#| msgid ""
-#| "With the global distribution of NewChain infrastructure and NewPay "
-#| "payment tools, simple and convenient cross-border transactions can be "
-#| "achieved with very low transaction costs."
 msgid ""
 "With the global distribution of NewChain infrastructure and NewPay payment "
 "tools, cross-border transactions become simple and convenient, with very low "
@@ -5138,16 +6824,10 @@ msgstr ""
 "được với chi phí giao dịch rất thấp."
 
 #: web/apps/welcome/templates/welcome/scene.html:80
-#| msgid "Payment"
 msgid "Nanopayments"
 msgstr "Thanh toán"
 
 #: web/apps/welcome/templates/welcome/scene.html:81
-#| msgid ""
-#| "IoT devices, i.e. NewIoT, can access NewChain at very low cost, and smart "
-#| "contracts can be established between devices to achieve automatic "
-#| "settlement and payment, thus meeting the high frequency requirements in "
-#| "ultra-micro payment scenarios."
 msgid ""
 "Internet of Things devices, namely NewIoT, can access NewChain at very low "
 "cost, and smart contracts can be established between devices to achieve "
@@ -5160,15 +6840,6 @@ msgstr ""
 "cao trong các trường hợp thanh toán siêu vi mô."
 
 #: web/apps/welcome/templates/welcome/scene.html:94
-#| msgid ""
-#| "Goods delivered to consumers usually go through logistics, warehousing, "
-#| "customs clearance, sales and many other processes. When there are after-"
-#| "sales services, a corresponding reverse process will be needed. The "
-#| "current supply chain process is opaque, and it is difficult for consumers "
-#| "to confirm the origin of goods, circulation information and so on, which "
-#| "is  a big problem for some industries such as counterfeits, "
-#| "pharmaceuticals, and luxury goods. Therefore, a credible supply chain "
-#| "system which is open to all stakeholders is very important."
 msgid ""
 "Goods delivered to consumers usually go through logistics, warehousing, "
 "customs clearance, sales and many other processes. When there are after-"
@@ -5188,10 +6859,6 @@ msgstr ""
 "các bên liên quan là rất quan trọng."
 
 #: web/apps/welcome/templates/welcome/scene.html:95
-#| msgid ""
-#| "Through the combination of atomic hashing, NewIOT, NewChain and other "
-#| "technologies, the supply chain system will be credible, open and "
-#| "transparent, and generate more business innovations."
 msgid ""
 "Through the combination of atom hashing, NewIOT, NewChain and other "
 "technologies, the supply chain can be credible, open, and transparent, and "
@@ -5202,17 +6869,10 @@ msgstr ""
 "thời tạo ra nhiều đổi mới kinh doanh hơn."
 
 #: web/apps/welcome/templates/welcome/scene.html:104
-#| msgid "Anti-counterfeiting and traceability"
 msgid "Anti-Counterfeiting and Traceability"
 msgstr "Chống Hàng Giả và Truy Xuất Nguồn Gốc"
 
 #: web/apps/welcome/templates/welcome/scene.html:105
-#| msgid ""
-#| "Through atomic hashing, NewIoT and other technologies, the product’s the "
-#| "origin, latitude and longitude, physical characteristics and other data "
-#| "will be  uploaded into the blockchain to prove product’s origin and the "
-#| "integrity of the product packaging, thereby ensuring the credibility of "
-#| "the commodity logistics process."
 msgid ""
 "Through atom hashing, NewIoT and other technologies, a product’s origin, "
 "location, physical characteristics and other data will be uploaded to the "
@@ -5225,16 +6885,10 @@ msgstr ""
 "tin cậy của quy trình hậu cần hàng hóa ."
 
 #: web/apps/welcome/templates/welcome/scene.html:110
-#| msgid "Supply chain financing"
 msgid "Supply Chain Financing"
 msgstr "Chuỗi cung ứng"
 
 #: web/apps/welcome/templates/welcome/scene.html:111
-#| msgid ""
-#| "Suppliers record their transaction data through blockchain technology, "
-#| "and share data with financing parties to obtain corresponding funds. "
-#| "Since the business data is not tamperable, it will help speed up the "
-#| "financing of suppliers and reduce the risk of default."
 msgid ""
 "Suppliers record their transaction data on the blockchain and share it with "
 "financing parties to obtain corresponding funds. Since the business data is "
@@ -5247,17 +6901,10 @@ msgstr ""
 "tốc độ tài trợ của các nhà cung cấp và giảm nguy cơ mặc định."
 
 #: web/apps/welcome/templates/welcome/scene.html:123
-#| msgid "Self-finance"
 msgid "Self-Finance"
 msgstr "Tự quản lý Tài Chính"
 
 #: web/apps/welcome/templates/welcome/scene.html:125
-#| msgid ""
-#| "The traditional financial service system has a large workload, long "
-#| "cycle, high cost and poor flexibility, and it is often difficult to serve "
-#| "small and medium-sized enterprises and individuals. Through digital "
-#| "identity and credit, a new type of self-financing system can be "
-#| "established."
 msgid ""
 "Traditional financial services have a large workload, long cycles, high "
 "costs and poor flexibility, and it is often difficult to serve small and "
@@ -5270,14 +6917,10 @@ msgstr ""
 "hệ thống tự tài trợ mới có thể được thiết lập."
 
 #: web/apps/welcome/templates/welcome/scene.html:134
-#| msgid "Corporate and personal credit"
 msgid "Corporate and Personal Credit"
 msgstr "Tín Dụng Doanh Nghiệp và Cá Nhân"
 
 #: web/apps/welcome/templates/welcome/scene.html:135
-#| msgid ""
-#| "Corporates and individuals establish a consistent credit system based on "
-#| "NewID, and third parties can only get credit data through authorization."
 msgid ""
 "Corporations and individuals can establish a consistent credit system based "
 "on NewID, and third parties can only get credit data via authorization."
@@ -5287,16 +6930,10 @@ msgstr ""
 "quyền."
 
 #: web/apps/welcome/templates/welcome/scene.html:140
-#| msgid "Asset securitization"
 msgid "Asset Securitization"
 msgstr "Đảm bảo Tài Sản"
 
 #: web/apps/welcome/templates/welcome/scene.html:141
-#| msgid ""
-#| "Through smart contract templates, financial organizations can create "
-#| "financial products that do not require human involvement. With NewChain-"
-#| "based token tools, various assets can be easily valued by tokens or "
-#| "coverted to correspongding amount tokens."
 msgid ""
 "Through smart contract templates, financial organizations can create "
 "financial products that do not require human involvement. With NewChain-"
@@ -5314,10 +6951,6 @@ msgid "Gaming"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/scene.html:154
-#| msgid ""
-#| "Use blockchain technology to create a new gaming experience for users: "
-#| "users are both players and rule-making participants, and virtual game "
-#| "assets are owned by users."
 msgid ""
 "Using blockchain technology, a new gaming experience can be created where "
 "users are both players and rule-making participants, and virtual game assets "
@@ -5328,15 +6961,10 @@ msgstr ""
 "trò chơi ảo thuộc sở hữu của người dùng."
 
 #: web/apps/welcome/templates/welcome/scene.html:163
-#| msgid "Virtual game asset automated trading"
 msgid "In-Game Asset Automated Trading"
 msgstr "Giao dịch tự động tài sản trò chơi Ảo"
 
 #: web/apps/welcome/templates/welcome/scene.html:164
-#| msgid ""
-#| "Through the cross-chain and oracle technology provided by NewChain, "
-#| "virtual items in various games can be easily recorded on the blockchain "
-#| "for automated trading."
 msgid ""
 "Through the cross-chain and oracle technology provided by NewChain, virtual "
 "items from games can be easily recorded on the blockchain for automated "
@@ -5347,15 +6975,10 @@ msgstr ""
 "blockchain để giao dịch tự động."
 
 #: web/apps/welcome/templates/welcome/scene.html:169
-#| msgid "Transparent rules of the game"
 msgid "Transparent Game Rules"
 msgstr "Các quy tắc minh bạch của trò chơi"
 
 #: web/apps/welcome/templates/welcome/scene.html:170
-#| msgid ""
-#| "Game developers can easily create algorithmic and transparent game logic "
-#| "through NewChain related smart contract tools to improve the fairness and "
-#| "transparency of the game."
 msgid ""
 "Game developers can easily create algorithmic and transparent game logic "
 "through NewChain-related smart contract tools to improve fairness and "
@@ -5366,13 +6989,6 @@ msgstr ""
 "NewChain để cải thiện tính công bằng và minh bạch của trò chơi."
 
 #: web/apps/welcome/templates/welcome/scene.html:184
-#| msgid ""
-#| "At present, there are widespread problems such as incomplete data and low "
-#| "degree of automation in agriculture. Blockchain combined with IoT "
-#| "technology can automatically collect, store and analyze agricultural "
-#| "production data, saving the high management costs of centralized systems, "
-#| "reducing post-maintenance costs, and helping to improve the intelligence "
-#| "and scale of agriculture."
 msgid ""
 "Agriculture faces widespread problems such as incomplete data and low degree "
 "of automation in agriculture. Blockchain, combined with IoT technology can "
@@ -5388,18 +7004,10 @@ msgstr ""
 "giúp cải thiện trí thông minh và quy mô nông nghiệp."
 
 #: web/apps/welcome/templates/welcome/scene.html:193
-#| msgid "Traceability of agricultural products"
 msgid "Tracing Agricultural Products"
 msgstr "Truy xuất nguồn gốc của các sản phẩm nông nghiệp"
 
 #: web/apps/welcome/templates/welcome/scene.html:194
-#| msgid ""
-#| "By introducing the IoT device which is compatible with NewIoT standard "
-#| "into the process of agricultural material circulation, agricultural "
-#| "production, agricultural product sales, the safety and efficiency of the "
-#| "whole process of agricultural production can be improved. Due to the non-"
-#| "tamperable nature of production data, it can be widely used in scientific "
-#| "research and anti-counterfeiting purposes."
 msgid ""
 "By introducing IoT devices compatible with NewIoT into agricultural material "
 "circulation, production, and product sales, the safety and efficiency of the "
@@ -5415,17 +7023,10 @@ msgstr ""
 "hàng giả."
 
 #: web/apps/welcome/templates/welcome/scene.html:199
-#| msgid "Intelligent planting"
 msgid "Intelligent Planting"
 msgstr "Trồng trọt thông minh"
 
 #: web/apps/welcome/templates/welcome/scene.html:200
-#| msgid ""
-#| "Through using the IoT sensor which is compatible with NewIoT standard, "
-#| "all-day monitoring of planting environment and crop growth can be "
-#| "realized. Combining NewAI to make intelligent decision-making on "
-#| "monitoring results, a complete intelligent planting system can be built "
-#| "to detect risks, stabilize production and increase income in time."
 msgid ""
 "Through IoT sensors compatible with NewIoT, all-day monitoring of planting "
 "environments and crop growth can be realized. Combining NewAI to make "
@@ -5444,12 +7045,6 @@ msgid "Public Welfare"
 msgstr "Phúc lợi công cộng"
 
 #: web/apps/welcome/templates/welcome/scene.html:214
-#| msgid ""
-#| "Blockchain technology has the characteristics of decentralization, high "
-#| "transparency and non-tamperability, so it meets the needs of the public "
-#| "welfare. The non-profit organization can store the whole process "
-#| "information such as fundraising, project progress, and recipient feedback "
-#| "on NewChain for donors and the public to check."
 msgid ""
 "Blockchain technology is decentralized, highly transparent and tamper-proof, "
 "so it meets the needs of the public welfare. Non-profit organizations can "
@@ -5463,18 +7058,10 @@ msgstr ""
 "tra."
 
 #: web/apps/welcome/templates/welcome/scene.html:223
-#| msgid "Public Welfare"
 msgid "Public Welfare Audit"
 msgstr "Phúc lợi công cộng"
 
 #: web/apps/welcome/templates/welcome/scene.html:224
-#| msgid ""
-#| "Public welfare activities require public welfare audits to improve "
-#| "efficiency and maintain trust. With NewChain, NewID technology and "
-#| "agreements, every donation will be available to be traced. Public welfare "
-#| "organizations can track the situation of the rescue recipients through "
-#| "relevant tools, which helps to enhance the fairness and transparency of "
-#| "public welfare."
 msgid ""
 "Public welfare activities require audits to improve efficiency and maintain "
 "trust. With NewChain, NewID technology and agreements, every donation can be "
@@ -5489,16 +7076,10 @@ msgstr ""
 "lợi công cộng."
 
 #: web/apps/welcome/templates/welcome/scene.html:229
-#| msgid "Wildlife protection"
 msgid "Wildlife Protection"
 msgstr "Bảo vệ động vật hoang dã"
 
 #: web/apps/welcome/templates/welcome/scene.html:230
-#| msgid ""
-#| "Using NewIoT technology, rare wildlife resources data can be recorded on "
-#| "NewChain, so that the location and physical indicators of each specific "
-#| "animal can be traced, thus providing key information for the research "
-#| "work such as migration tracking and combating poaching and trafficking."
 msgid ""
 "Using NewIoT technology, rare wildlife data can be recorded on NewChain, so "
 "that the location and physical indicators of each specific animal can be "
@@ -5511,22 +7092,15 @@ msgstr ""
 "cứu như theo dõi di chuyển và chống săn trộm và buôn bán."
 
 #: web/apps/welcome/templates/welcome/scene.html:239
-#| msgid "If you have innovative ideas?"
 msgid "Have an Innovative Idea?"
 msgstr "Nếu bạn có ý tưởng sáng tạo?"
 
 #: web/apps/welcome/templates/welcome/scene.html:241
-#| msgid "Submit Your Business Proposal"
 msgid "Send Us Your Business Proposal"
 msgstr "Gửi đề xuất kinh doanh của bạn"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:6
 msgid "SITEMAP"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/sitemap.html:13
-#: web/templates/footer.html:44
-msgid "Sitemap"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/sitemap.html:24
@@ -5556,7 +7130,6 @@ msgid "COMMUNITY"
 msgstr "Cộng đồng"
 
 #: web/apps/welcome/templates/welcome/sitemap.html:75
-#| msgid "Developer"
 msgid "Developers"
 msgstr "Nhà Phát Triển"
 
@@ -5601,13 +7174,6 @@ msgstr ""
 "Newton và chuyển qua xác minh."
 
 #: web/apps/welcome/templates/welcome/tech.html:23
-#| msgid ""
-#| "NewVM is compatible with the Webassembly standard, supporting various "
-#| "general programming languages such as C/C++, Java, Python, TypeScript, "
-#| "and more. The system provides built-in smart contract templates for the "
-#| "hyper exchange protocol. The system built-in smart contract templates "
-#| "provide an effortless development and deployment of any application on "
-#| "the Newton NewChain."
 msgid ""
 "NewVM is compatible with the WebAssembly standard, supporting various "
 "general programming languages such as C/C++, Java, Python, TypeScript, and "
@@ -5624,9 +7190,6 @@ msgstr ""
 "NewChain."
 
 #: web/apps/welcome/templates/welcome/tech.html:24
-#| msgid ""
-#| "NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure "
-#| "maximum security of all assets within the Newton ecosphere."
 msgid ""
 "NewChain uses Ring-LWE anti-quantum encryption algorithm to ensure maximum "
 "security of all assets within the Newton ecosystem."
@@ -5732,11 +7295,6 @@ msgstr ""
 "dữ liệu, nén dữ liệu, mã hóa dữ liệu, v.v."
 
 #: web/apps/welcome/templates/welcome/tech.html:78
-#| msgid ""
-#| "NewAI uses docker container to run artificial intelligence computing "
-#| "software such as Tensorflow, Caffe. It encourages data suppliers to "
-#| "provide long-term service through multi-factor weighting profit "
-#| "distribution method."
 msgid ""
 "NewAI uses docker container to run artificial intelligence computing "
 "software such as TensorFlow, Caffe. It encourages data suppliers to provide "
@@ -5747,17 +7305,6 @@ msgstr ""
 "dịch vụ dài hạn thông qua phương pháp phân phối lợi nhuận trọng số đa yếu tố."
 
 #: web/apps/welcome/templates/welcome/technology.html:19
-#| msgid ""
-#| "The Newton technology framework consists of three layers: the basic "
-#| "technology layer, the hyper exchange protocol layer, and the application "
-#| "layer. The basic technology layer includes NewChain, NewNET, Atom "
-#| "Hashing, NewIoT and NewAI; the hyper exchange protocol layer includes "
-#| "digital identity and credit, supply chain, digital marketing, "
-#| "transactions and payments, trusted physical channels, supply chain and "
-#| "NNIO, etc. The application layer includes wallets, malls, logistics, "
-#| "finance and insurance. We will develop a series of basic technologies to "
-#| "support the  hyper exchange protocol,which is the basic commercial "
-#| "protocol cluster supporting the upper-layer application operations."
 msgid ""
 "Newton's technology framework consists of three layers: the basic technology "
 "layer, the hyper exchange protocol layer, and the application layer. The "
@@ -5782,11 +7329,6 @@ msgstr ""
 "hỗ trợ các hoạt động ứng dụng lớp trên."
 
 #: web/apps/welcome/templates/welcome/technology.html:35
-#| msgid ""
-#| "Users can manage and control access to their digital assets by using a "
-#| "digital identity. Digital assets include; cryptocurrencies, personal "
-#| "data, personal credit and anything that exists in a binary format and "
-#| "come with the right to use."
 msgid ""
 "Users use their digital identity to manage and control access to their "
 "digital assets, including cryptocurrencies, personal data, personal credit "
@@ -5813,11 +7355,6 @@ msgid "more"
 msgstr "khác"
 
 #: web/apps/welcome/templates/welcome/technology.html:40
-#| msgid ""
-#| "By using such techniques as “Atom Hashing” we can create a unique digital "
-#| "identity for commodities over the whole network. Through this digital "
-#| "identity a user can check the relevant information on any commodity at "
-#| "any time."
 msgid ""
 "By using techniques like <em>Atom Hashing</em> we create a unique digital "
 "identity for commodities across the whole network, allowing users to check "
@@ -5829,10 +7366,6 @@ msgstr ""
 "quan trên bất kỳ hàng hóa nào vào bất kỳ lúc nào."
 
 #: web/apps/welcome/templates/welcome/technology.html:45
-#| msgid ""
-#| "Advertisers can set marketing plans through various built-in marketing "
-#| "smart contract templates in the system. This includes incentive modes, "
-#| "settlement modes, and dynamic price adjusting rules."
 msgid ""
 "Advertising plans can be set through built-in marketing smart contract "
 "templates, including incentive models, settlement models, and dynamic "
@@ -5843,11 +7376,6 @@ msgstr ""
 "độ ưu đãi, phương thức thanh toán và quy tắc điều chỉnh giá năng động."
 
 #: web/apps/welcome/templates/welcome/technology.html:51
-#| msgid ""
-#| "The Newton trading and payment platform will enable a user to define "
-#| "transactions using the built-in smart contract templates and rule engine. "
-#| "This enables the user to include: multi-party transactions based on "
-#| "complex business rules, settlement rules."
 msgid ""
 "Newton's trading and payment platform lets users define transactions using "
 "the built-in smart contract templates and rule engine, including multi-party "
@@ -5859,16 +7387,10 @@ msgstr ""
 "bên dựa trên các quy tắc kinh doanh phức tạp."
 
 #: web/apps/welcome/templates/welcome/technology.html:56
-#| msgid "Reliable physical tunnel"
 msgid "Secure Physical Tunnel"
 msgstr "Đường hầm tự nhiên đáng tin cậy"
 
 #: web/apps/welcome/templates/welcome/technology.html:57
-#| msgid ""
-#| "Based on NewChain and NewIoT technologies Newton is capable of designing "
-#| "a reliable physical tunnel protocol and define manufacturing "
-#| "specifications of related equipment. Any third party can manufacture "
-#| "safety equipment according to the protocol specification."
 msgid ""
 "With NewChain and NewIoT technologies, Newton offers a reliable physical "
 "tunnel protocol, allowing secure delivery of physical assets. Any third "
@@ -5880,15 +7402,10 @@ msgstr ""
 "bị an toàn theo đặc tả giao thức. "
 
 #: web/apps/welcome/templates/welcome/technology.html:62
-#| msgid "Automatic finance"
 msgid "Automatic Finance"
 msgstr "Tài chính tự động"
 
 #: web/apps/welcome/templates/welcome/technology.html:63
-#| msgid ""
-#| "Developers can define smart financial contracts based on the built-in "
-#| "smart contract templates on; insurance, lending and investment, including "
-#| "digital identity and credit, KYC information."
 msgid ""
 "Developers can define smart financial contracts based on built-in smart "
 "contract templates for insurance, lending and investment, including digital "
@@ -5899,10 +7416,6 @@ msgstr ""
 "bao gồm danh tính và tín dụng số, thông tin KYC."
 
 #: web/apps/welcome/templates/welcome/technology.html:87
-#| msgid ""
-#| "NewChain will have a main chain and sub-chains structure. The main chain "
-#| "will support account management, Newton token management, sub-chain "
-#| "management, network governance and more."
 msgid ""
 "NewChain offers a main chain and sub-chains. The main chain supports account "
 "management, NEW token management, sub-chain management, network governance "
@@ -5913,10 +7426,6 @@ msgstr ""
 "mạng và hơn thế nữa."
 
 #: web/apps/welcome/templates/welcome/technology.html:92
-#| msgid ""
-#| "NewNET consists of a large number of nodes that run on an open network "
-#| "providing reliable storage services and supporting a full SQL database "
-#| "and various general programming languages."
 msgid ""
 "NewNET consists of a large number of nodes that run on an open network, "
 "providing reliable storage services and supporting a full SQL database and "
@@ -5927,10 +7436,6 @@ msgstr ""
 "ngữ lập trình chung khác nhau."
 
 #: web/apps/welcome/templates/welcome/technology.html:97
-#| msgid ""
-#| "By using radiometric dating, PCA, machine vision, and deep learning "
-#| "technology Newton can quickly extract multiple characteristics of a "
-#| "certain material asset."
 msgid ""
 "By using radiometric dating, PCA, machine vision, and deep learning Newton "
 "can quickly extract multiple characteristics of material assets."
@@ -5940,10 +7445,6 @@ msgstr ""
 "một tài sản vật chất nhất định."
 
 #: web/apps/welcome/templates/welcome/technology.html:102
-#| msgid ""
-#| "NewIoT enables blockchain fog computing, communication protocols between "
-#| "IoT devices and gateways, and NewChain IoT device development "
-#| "specifications."
 msgid ""
 "NewIoT is Newton's IoT infrastructure, including blockchain fog computing, "
 "communication protocols between IoT devices and gateways, and NewChain IoT "
@@ -5954,9 +7455,6 @@ msgstr ""
 "NewChain IoT."
 
 #: web/apps/welcome/templates/welcome/technology.html:107
-#| msgid ""
-#| "NewAI (Distributed Artificial Intelligence) promotes the development of "
-#| "AI from three aspects; data, algorithm model, and execution engine."
 msgid ""
 "NewAI (Distributed Artificial Intelligence) promotes the development of AI "
 "from data, algorithm models, and execution engines."
@@ -7986,6 +9484,23 @@ msgstr ""
 msgid "History Version："
 msgstr ""
 
+#: web/apps/zinnia/models_bases/entry.py:57
+msgid "Community_Voice"
+msgstr "Cộng đồng"
+
+#: web/apps/zinnia/models_bases/entry.py:62
+#, fuzzy
+msgid "Operation"
+msgstr "Điều hành"
+
+#: web/apps/zinnia/models_bases/entry.py:239
+msgid "entry"
+msgstr ""
+
+#: web/apps/zinnia/models_bases/entry.py:240
+msgid "entries"
+msgstr ""
+
 #: web/config/settings_label.py:13
 msgid "Operation failed"
 msgstr ""
@@ -8022,37 +9537,6 @@ msgstr ""
 msgid "System Error."
 msgstr ""
 
-#: web/templates/admin/change_form.html:21
-msgid "Add"
-msgstr ""
-
-#: web/templates/admin/change_form.html:33
-msgid "History"
-msgstr ""
-
-#: web/templates/admin/change_form.html:35
-msgid "View on site"
-msgstr ""
-
-#: web/templates/admin/change_form.html:46
-#: web/templates/admin/change_list.html:67
-msgid "Please correct the error below."
-msgstr ""
-
-#: web/templates/admin/change_form.html:46
-#: web/templates/admin/change_list.html:67
-msgid "Please correct the errors below."
-msgstr ""
-
-#: web/templates/admin/change_list.html:58
-#, python-format
-msgid "Add %(name)s"
-msgstr ""
-
-#: web/templates/admin/change_list.html:78
-msgid "Filter"
-msgstr ""
-
 #: web/templates/base.html:11
 msgid ""
 "Newton-Infrastructure of protocol-based economy,We are committed to creating "
@@ -8071,7 +9555,7 @@ msgid ""
 "Intelligent Contract,Open Source Community,Digital Assets,token"
 msgstr ""
 
-#: web/templates/captcha.html:8 web/templates/captcha.html:18
+#: web/templates/captcha.html:8 web/templates/captcha.html.py:18
 msgid "Verification Code"
 msgstr ""
 
@@ -8139,41 +9623,60 @@ msgid "SERVICE TERMS"
 msgstr "Điều khoản dịch vụ"
 
 #: web/templates/header-no-menu.html:22 web/templates/header-no-menu.html:41
-#: web/templates/header.html:63 web/templates/header.html:114
-#: web/templates/header.html:258 web/templates/header.html:309
+#: web/templates/header.html:63 web/templates/header.html.py:114
+#: web/templates/header.html:255 web/templates/header.html.py:306
 msgid "User Center"
 msgstr ""
 
 #: web/templates/header-no-menu.html:23 web/templates/header-no-menu.html:42
-#: web/templates/header.html:64 web/templates/header.html:115
-#: web/templates/header.html:259 web/templates/header.html:310
+#: web/templates/header.html:64 web/templates/header.html.py:115
+#: web/templates/header.html:256 web/templates/header.html.py:307
 msgid "LogOut"
 msgstr ""
 
 #: web/templates/header-no-menu.html:26 web/templates/header-no-menu.html:47
-#: web/templates/header.html:67 web/templates/header.html:75
-#: web/templates/header.html:121 web/templates/header.html:129
-#: web/templates/header.html:262 web/templates/header.html:270
-#: web/templates/header.html:316 web/templates/header.html:324
+#: web/templates/header.html:67 web/templates/header.html.py:75
+#: web/templates/header.html:121 web/templates/header.html.py:129
+#: web/templates/header.html:259 web/templates/header.html.py:267
+#: web/templates/header.html:313 web/templates/header.html.py:321
 msgid "Register"
 msgstr "Đăng ký"
 
-#: web/templates/header-no-menu.html:29 web/templates/header-no-menu.html:50
-#: web/templates/header.html:70 web/templates/header.html:78
-#: web/templates/header.html:124 web/templates/header.html:132
-#: web/templates/header.html:265 web/templates/header.html:273
-#: web/templates/header.html:319 web/templates/header.html:327
-msgid "Login"
-msgstr "Đăng nhập"
-
-#: web/templates/header.html:23 web/templates/header.html:101
-#: web/templates/header.html:218 web/templates/header.html:296
+#: web/templates/header.html:23 web/templates/header.html.py:101
+#: web/templates/header.html:215 web/templates/header.html.py:293
 #: web/templates/search/search.html:17
 msgid "search articles"
 msgstr ""
 
-#: web/templates/header.html:57 web/templates/header.html:252
+#: web/templates/header.html:57 web/templates/header.html.py:249
 msgid "NewExplorer"
+msgstr ""
+
+#: web/templates/admin/change_form.html:33
+msgid "History"
+msgstr ""
+
+#: web/templates/admin/change_form.html:35
+msgid "View on site"
+msgstr ""
+
+#: web/templates/admin/change_form.html:46
+#: web/templates/admin/change_list.html:67
+msgid "Please correct the error below."
+msgstr ""
+
+#: web/templates/admin/change_form.html:46
+#: web/templates/admin/change_list.html:67
+msgid "Please correct the errors below."
+msgstr ""
+
+#: web/templates/admin/change_list.html:58
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: web/templates/admin/change_list.html:78
+msgid "Filter"
 msgstr ""
 
 #: web/templates/search/search.html:7
@@ -8238,9 +9741,6 @@ msgstr ""
 #~ msgid "The third round of Newton token exchange is currently under way."
 #~ msgstr "Vòng trao đổi Newton token thứ ba sẽ sớm ra mắt."
 
-#~ msgid "Download"
-#~ msgstr "Tải về"
-
 #~ msgid "Click the button to download NewPay to participate in the beta!"
 #~ msgstr "Nhấp vào nút để tải xuống NewPay để tham gia phiên bản beta!"
 
@@ -8261,9 +9761,6 @@ msgstr ""
 
 #~ msgid "Ultra-micropayment"
 #~ msgstr "Hỗ trợ thanh toán nhỏ lẻ;"
-
-#~ msgid "Community_Voice"
-#~ msgstr "Cộng đồng"
 
 #~ msgid "FEED"
 #~ msgstr "SỰ KIỆN"
