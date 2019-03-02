@@ -19,6 +19,7 @@ PROJECT_ROOT = os.path.join(BASE_DIR, "web")
 
 # Add the individual app package path
 sys.path.insert(0, os.path.join(PROJECT_ROOT, "apps"))
+sys.path.insert(0, os.path.join(BASE_DIR, "sdk"))
 sys.path.insert(0, PROJECT_ROOT)
 
 # Quick-start development settings - unsuitable for production

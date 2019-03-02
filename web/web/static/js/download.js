@@ -6,6 +6,7 @@ if (isAndroid) {
   $('#id_android_btn').show();
 } else if (isiOS) {
   $('#id_ios_btn').show();
+  $('#id_note').show();
 } else {
   $('#id_android_btn,#id_ios_btn').addClass('small-btn');
   $('#id_android_btn').show();
