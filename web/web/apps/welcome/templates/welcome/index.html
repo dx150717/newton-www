@@ -25,7 +25,7 @@
 			{% include "welcome/include-index-announce.html" %}
 
 		</div>
-		<div class="news-column">
+		<!--<div class="news-column">-->
 			<div class="container">
 				<div class="news-banner">
 					{% if operation_entry %}
@@ -79,10 +79,14 @@
 	<!--{% include "welcome/include-intro-token-exchange.html" %}-->
 
 	<!--{% include "welcome/include-intro-token-exchange-mobile.html" %}-->
+	
+	{% comment %}
 
 	{% include "welcome/include-events.html" %}
 
 	{% include "welcome/include-events-mobile.html" %}
+
+	{% endcomment %}
 
 	{% include "welcome/include-industry.html" %}
 
@@ -112,11 +116,16 @@
 	{% include "welcome/include-dynamic.html" %}
 
 	{% include "welcome/include-index-community.html" %}
+
+	{% comment %}
+
 	<section id="sir" class="section">
 		<div class="container"><img class="img-1 lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/partners/bitmap.png" %}" width="200">
 			<p class="sty1">{% trans "Paying tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
 		</div>
 	</section>
+
+	{% endcomment %}
 
 {% endblock %}
 
