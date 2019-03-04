@@ -3,271 +3,271 @@
 {% load utils %}
 
 {% block webpush %}
-<meta name="vapid-key" content="{{ vapid_key }}">
+	<meta name="vapid-key" content="{{ vapid_key }}">
 {% endblock %}
 
 {% block title %}
-{% trans "Home" %}
+	{% trans "Home" %}
 {% endblock %}
 
 {% block content %}
 
-<section id="intro" class="bg-gray">
+	<section id="intro" class="bg-gray">
 
-    <div class="container">
-        <div class="row relative">
-            <div class="col-md-12 text-center" style="padding-top: 60px;">
-                <h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>
-                <p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
-            </div>
-        </div>
+		<div class="container">
+			<div class="row relative">
+				<div class="col-md-12 text-center" style="padding-top: 60px;">
+					<h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>
+					<p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
+				</div>
+			</div>
 
-        {% include "welcome/include-index-announce.html" %}
+			{% include "welcome/include-index-announce.html" %}
 
-    </div>
-    <div class="news-column">
-      <div class="container">
-        <div class="news-banner">
-          {% if operation_entry %}
-          <div class="news-two">
-            <!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
-            <a href="{{ operation_entry.urls }}">
-              <span class="news-title">{{ operation_entry.title }}</span>
-              <span class="">•</span>
-              <span class="">{{ operation_entry.creation_date|date:"Y-m-d" }}</span>
-            </a>
-          </div>
-          {% endif %}
-          {% if blog_entry %}
-          <div class="news-two news-mobile-hide">
-            <!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
-            <a href="{{ blog_entry.urls }}">
-              <span class="news-title">{{ blog_entry.title }}</span>
-              <span>•</span>
-              <span style="">{{ blog_entry.creation_date|date:"Y-m-d" }}</span>
-            </a>
-          </div>
-          {% endif %}
-          {% comment %}
-          {% if banner_press %}
-          <div class="news-two news-mobile-hide">
-            <!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
-            <a href="{{ banner_press.press_link }}">
-              <span class="news-title">{{ banner_press.press_title }}</span>
-              <span>•</span>
-              <span style="">{{ banner_press.created_at|date:"Y-m-d" }}</span>
-            </a>
-          </div>
-          {% endif %}
-          {% endcomment %}
-          <!--<a href="/announcement/" class="news-more"><span>{% trans "More..." %}</span></a>-->
-        </div>
-      </div>
-    </div>
-</section>
+		</div>
+		<div class="news-column">
+			<div class="container">
+				<div class="news-banner">
+					{% if operation_entry %}
+						<div class="news-two">
+							<!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
+							<a href="{{ operation_entry.urls }}">
+								<span class="news-title">{{ operation_entry.title }}</span>
+								<span class="">•</span>
+								<span class="">{{ operation_entry.creation_date|date:"Y-m-d" }}</span>
+							</a>
+						</div>
+					{% endif %}
+					{% if blog_entry %}
+						<div class="news-two news-mobile-hide">
+							<!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
+							<a href="{{ blog_entry.urls }}">
+								<span class="news-title">{{ blog_entry.title }}</span>
+								<span>•</span>
+								<span style="">{{ blog_entry.creation_date|date:"Y-m-d" }}</span>
+							</a>
+						</div>
+					{% endif %}
+					{% comment %}
+						{% if banner_press %}
+							<div class="news-two news-mobile-hide">
+								<!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
+								<a href="{{ banner_press.press_link }}">
+									<span class="news-title">{{ banner_press.press_title }}</span>
+									<span>•</span>
+									<span style="">{{ banner_press.created_at|date:"Y-m-d" }}</span>
+								</a>
+							</div>
+						{% endif %}
+					{% endcomment %}
+					<!--<a href="/announcement/" class="news-more"><span>{% trans "More..." %}</span></a>-->
+				</div>
+			</div>
+		</div>
+	</section>
 
-{% include "welcome/include-video.html" %}
+	{% include "welcome/include-video.html" %}
 
-{% comment %}
-{% include "welcome/countdown.html" %}
-{% endcomment %}
+	{% comment %}
+		{% include "welcome/countdown.html" %}
+	{% endcomment %}
 
-{% include "welcome/include-feature.html" %}
+	{% include "welcome/include-feature.html" %}
 
-{% include "welcome/include-feature-mobile.html" %}
+	{% include "welcome/include-feature-mobile.html" %}
 
-{% include "welcome/include-intro-token-exchange.html" %}
+	{% include "welcome/include-intro-token-exchange.html" %}
 
-{% include "welcome/include-intro-token-exchange-mobile.html" %}
+	{% include "welcome/include-intro-token-exchange-mobile.html" %}
 
-{% include "welcome/include-events.html" %}
+	{% include "welcome/include-events.html" %}
 
-{% include "welcome/include-events-mobile.html" %}
+	{% include "welcome/include-events-mobile.html" %}
 
-{% include "welcome/include-industry.html" %}
+	{% include "welcome/include-industry.html" %}
 
-{% include "welcome/include-industry-mobile.html" %}
+	{% include "welcome/include-industry-mobile.html" %}
 
-{% include "welcome/include-protocol.html" %}
+	{% include "welcome/include-protocol.html" %}
 
-{% include "welcome/include-protocol-mobile.html" %}
+	{% include "welcome/include-protocol-mobile.html" %}
 
-{% comment %}
-{% include "welcome/include-technology.html" %}
-{% endcomment %}
+	{% comment %}
+		{% include "welcome/include-technology.html" %}
+	{% endcomment %}
 
-{% include "welcome/include-team.html" %}
+	{% include "welcome/include-team.html" %}
 
-{% include "welcome/include-advisor.html" %}
+	{% include "welcome/include-advisor.html" %}
 
-{% include "welcome/include-investor.html" %}
+	{% include "welcome/include-investor.html" %}
 
-{% include "welcome/include-roadmap.html" %}
+	{% include "welcome/include-roadmap.html" %}
 
-{% include "welcome/include-partner.html" %}
+	{% include "welcome/include-partner.html" %}
 
-{% include "welcome/include-partner-mobile.html" %}
+	{% include "welcome/include-partner-mobile.html" %}
 
-{% include "welcome/include-dynamic.html" %}
+	{% include "welcome/include-dynamic.html" %}
 
-{% include "welcome/include-index-community.html" %}
-<section id="sir" class="section">
-  <div class="container"><img class="img-1 lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/partners/bitmap.png" %}" width="200">
-    <p class="sty1">{% trans "Paying tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
-  </div>
-</section>
+	{% include "welcome/include-index-community.html" %}
+	<section id="sir" class="section">
+		<div class="container"><img class="img-1 lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/partners/bitmap.png" %}" width="200">
+			<p class="sty1">{% trans "Paying tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
+		</div>
+	</section>
 
 {% endblock %}
 
 {% block inline_js %}
-<script type="text/javascript">
-var video_player;
+	<script type="text/javascript">
+		var video_player;
 $(document).ready(function(){
-    videojs("newton-video-1", {}, function(){
-        video_player = this;
-        video_player.on('ended', function(){
-            video_player.load();
-        });
-    });
+	videojs("newton-video-1", {}, function(){
+		video_player = this;
+		video_player.on('ended', function(){
+			video_player.load();
+		});
+	});
 });
 
 showNav();
-</script>
+	</script>
 {% endblock %}
 
 {% block js %}
-<script type="text/javascript" src="{% version 'js/index-card.js' %}"></script>
-<script src="{% version "js/subscription.js" %}"></script>
-<script src="{% version "js/video.js" %}"></script>
-<!--<script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>-->
-<!--<script src="{% version "js/slide-change-section.js" %}"></script>-->
-<script src="{% version "js/registerSw.js" %}" type="application/x-javascript"></script>
-<script src="{% version "js/swiper.min.js" %}" type="text/javascript"></script>
-<script src="{% version "js/events.js" %}"></script>
-<script src="{% version "js/index-video.js" %}"></script>
+	<script type="text/javascript" src="{% version 'js/index-card.js' %}"></script>
+	<script src="{% version "js/subscription.js" %}"></script>
+	<script src="{% version "js/video.js" %}"></script>
+	<!--<script src="{% version "js/jquery.mobile-1.4.5.min.js" %}"></script>-->
+	<!--<script src="{% version "js/slide-change-section.js" %}"></script>-->
+	<script src="{% version "js/registerSw.js" %}" type="application/x-javascript"></script>
+	<script src="{% version "js/swiper.min.js" %}" type="text/javascript"></script>
+	<script src="{% version "js/events.js" %}"></script>
+	<script src="{% version "js/index-video.js" %}"></script>
 
-<script>
-    var swiper1 = new Swiper('.swiper-container1', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      initialSlide :2,
-      pagination: {
-        el: '.swiper-pagination1',
-        clickable: true,
-      }
-    });
-    var swiper2 = new Swiper('.swiper-container2', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination2',
-        clickable: true,
-      }
-    });
-    var swiper3 = new Swiper('.swiper-container3', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination3',
-        clickable: true,
-      }
-    });
-    var swiper4 = new Swiper('.swiper-container4', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination4',
-        clickable: true,
-      }
-    });
-    var swiper5 = new Swiper('.swiper-container5', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination5',
-        clickable: true,
-      }
-    });
-    var swiper6 = new Swiper('.swiper-container6', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination6',
-        clickable: true,
-      }
-    });
-    var swiper7 = new Swiper('.swiper-container7', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination7',
-        clickable: true,
-      }
-    });
-    var swiper8 = new Swiper('.swiper-container8', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination8',
-        clickable: true,
-      }
-    });
-    var swiper9 = new Swiper('.swiper-container9', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination9',
-        clickable: true,
-      }
-    });
-    var swiper10 = new Swiper('.swiper-container10', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination10',
-        clickable: true,
-      }
-    });
-    var swiper11 = new Swiper('.swiper-container11', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination11',
-        clickable: true,
-      }
-    });
-</script>
+	<script>
+		var swiper1 = new Swiper('.swiper-container1', {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			loop: true,
+			initialSlide :2,
+			pagination: {
+				el: '.swiper-pagination1',
+				clickable: true,
+			}
+		});
+var swiper2 = new Swiper('.swiper-container2', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination2',
+		clickable: true,
+	}
+});
+var swiper3 = new Swiper('.swiper-container3', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination3',
+		clickable: true,
+	}
+});
+var swiper4 = new Swiper('.swiper-container4', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination4',
+		clickable: true,
+	}
+});
+var swiper5 = new Swiper('.swiper-container5', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination5',
+		clickable: true,
+	}
+});
+var swiper6 = new Swiper('.swiper-container6', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination6',
+		clickable: true,
+	}
+});
+var swiper7 = new Swiper('.swiper-container7', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination7',
+		clickable: true,
+	}
+});
+var swiper8 = new Swiper('.swiper-container8', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination8',
+		clickable: true,
+	}
+});
+var swiper9 = new Swiper('.swiper-container9', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination9',
+		clickable: true,
+	}
+});
+var swiper10 = new Swiper('.swiper-container10', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination10',
+		clickable: true,
+	}
+});
+var swiper11 = new Swiper('.swiper-container11', {
+	slidesPerView: 1,
+	spaceBetween: 0,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination11',
+		clickable: true,
+	}
+});
+	</script>
 {% endblock %}
 
 {% block css %}
-<link href="{% version "css/video-js.css" %}" rel="stylesheet">
-<link href="{% version "leaflet/leaflet.css" %}" rel="stylesheet">
-<link href="{% version "css/slide-change-section.css" %}" rel="stylesheet">
-<link href="{% version "css/events.css" %}" rel="stylesheet">
-<link href="{% version "css/swiper.min.css" %}" rel="stylesheet">
-<link href="{% version "css/counter.css" %}" rel="stylesheet">
-<link href="{% version "css/index-announce.css" %}" rel="stylesheet">
-<link href="{% version "css/index-card.css" %}" rel="stylesheet">
-<link href="{% version "css/index-video.css" %}" rel="stylesheet">
-<style>
-    .navbar {
-        position: fixed;
-    }
-    @media (max-width: 768px) {
-        #intro .news-column {
-            margin-top: unset;
-        }
-    }
-</style>
+	<link href="{% version "css/video-js.css" %}" rel="stylesheet">
+	<link href="{% version "leaflet/leaflet.css" %}" rel="stylesheet">
+	<link href="{% version "css/slide-change-section.css" %}" rel="stylesheet">
+	<link href="{% version "css/events.css" %}" rel="stylesheet">
+	<link href="{% version "css/swiper.min.css" %}" rel="stylesheet">
+	<link href="{% version "css/counter.css" %}" rel="stylesheet">
+	<link href="{% version "css/index-announce.css" %}" rel="stylesheet">
+	<link href="{% version "css/index-card.css" %}" rel="stylesheet">
+	<link href="{% version "css/index-video.css" %}" rel="stylesheet">
+	<style>
+.navbar {
+	position: fixed;
+}
+		@media (max-width: 768px) {
+			#intro .news-column {
+				margin-top: unset;
+			}
+		}
+	</style>
 {% endblock %}
