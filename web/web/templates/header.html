@@ -2,401 +2,440 @@
 {% load utils %}
 
 {% if not is_index %}
-<header id="normal">
-    <div class="navFixed"></div>
-    <nav class="navbar navbar-custom sticky-navigation NavBg bg-gray">
-        <div class="container">
+	<header id="normal">
+		<div class="navFixed"></div>
+		<nav class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+			<div class="container">
 
-            <div class="navbar-header">
-                <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
-                    <img class="logo-pc" src="{% version "images/newton-logo.svg" %}" alt="Newton"/>
-                </a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" onclick="changeToggle()">
-                    <span class="sr-only">Toggle navigation</span>
-                    <i class="iconfont toggle-nav"></i>
-                </button>
+				<div class="navbar-header">
+					<a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
+						<img class="logo-pc" src="{% version "images/newton-logo.svg" %}" alt="Newton"/>
+					</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" onclick="changeToggle()">
+						<span class="sr-only">Toggle navigation</span>
+						<i class="iconfont toggle-nav"></i>
+					</button>
 
-            </div><!-- /.logo -->
+				</div><!-- /.logo -->
 
-            <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
-                <form action="/search/" method="get" data-ajax="false" class="search_form_mobile visible-xs-block">
-                    <input type="text" name="q" placeholder="{% trans "search articles" %}" autocomplete="off" class="search_input_mobile">
-                    <button type="submit" class="search_button_mobile">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    </button>
-                </form>
-                <ul class="nav navbar-nav">
-                    {% comment %}
-                    <li>
-                        <a href="/protocol/" {% language_change_header_style %}>{% trans "HEP" %}</a>
-                    </li>
-                    {% endcomment %}
-                    <li>
-                        <a href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
-                    </li>
-                    <li>
-                        <a href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
-                    </li>
-                    <li>
-                        <a href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
-                    </li>
-                    <li>
-                        <a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
-                    </li>
-                    <li>
-                        <a href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
-                    </li>
-                    <li>
-                        <a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
-                    </li>
-                    <li>
-                        <a href="/nep/" {% language_change_header_style %}>{% trans "NEP" %}</a>
-                    </li>
-                    <li>
-                        <a href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
-                    </li>
+				<div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
+					<form action="/search/" method="get" data-ajax="false" class="search_form_mobile visible-xs-block">
+						<input type="text" name="q" placeholder="{% trans "search articles" %}" autocomplete="off" class="search_input_mobile">
+						<button type="submit" class="search_button_mobile">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+					</form>
+					<ul class="nav navbar-nav">
+						{% comment %}
+							<li>
+								<a href="/protocol/" {% language_change_header_style %}>{% trans "HEP" %}</a>
+							</li>
+						{% endcomment %}
+						<li>
+							<a href="/about/" {% language_change_header_style %}>{% trans "About" %}</a>
+						</li>
+						<li>
+							<a href="/about/faq/" {% language_change_header_style %}>{% trans "FAQ" %}</a>
+						</li>
+						<li>
+							<a href="/download/" {% language_change_header_style %}>{% trans "Download" %}</a>
+						</li>
+						<li>
+							<a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
+						</li>
+						<li>
+							<a href="/developers/" {% language_change_header_style %}>{% trans "Developers" %}</a>
+						</li>
+						<li>
+							<a href="/contact/" {% language_change_header_style %}>{% trans "Contact" %}</a>
+						</li>
+						{% comment %}
+						<li>
+							<a href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
+						</li>
+						<li>
+							<a href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
+						</li>
+						<li>
+							<a href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
+						</li>
+						<li>
+							<a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
+						</li>
+						<li>
+							<a href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
+						</li>
+						<li>
+							<a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
+						</li>
+						<li>
+							<a href="/nep/" {% language_change_header_style %}>{% trans "NEP" %}</a>
+						</li>
+						<li>
+							<a href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
+						</li>
 
+					{% endcomment %}
 
-                    {% if request.user.is_authenticated %}
-                        {% if not request.user.is_superuser %}
-                            <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                            <li class="visible-xs-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
-                        {% else %}
-                            <li class="visible-sm-block visible-xs-block">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                            </li>
-                            <li class="visible-sm-block visible-xs-block">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                            </li>
-                        {% endif %}
-                    {% else %}
-                    <li class="visible-sm-block visible-xs-block">
-                        <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                    </li>
-                    <li class="visible-sm-block visible-xs-block">
-                        <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                    </li>
-                    {% endif %}
-                    <li class="visible-sm-block visible-xs-block">
-                        <label for="select-input" class='select-label'>
-                            <span >{% trans "Language" %}</span>
-                            <select name="" onchange="changeLanguage()" id="id_select_language"  data-role="none">
-                                {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
-                                <option value="{{ language_code }}" {% if language_code|is_current_language %}selected="selected"{% endif %}>
-                                    {{ language_name }}
-                                </option>
-                                {% endfor %}
-                            </select>
-                        </label>
-                    </li>
-                </ul>
+						{% if request.user.is_authenticated %}
+							{% if not request.user.is_superuser %}
+								<li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+								<li class="visible-xs-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
+							{% else %}
+								<li class="visible-sm-block visible-xs-block">
+									<a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
+								</li>
+								<li class="visible-sm-block visible-xs-block">
+									<a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
+								</li>
+							{% endif %}
+						{% else %}
+							<li class="visible-sm-block visible-xs-block">
+								<a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
+							</li>
+							<li class="visible-sm-block visible-xs-block">
+								<a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
+							</li>
+						{% endif %}
+						<li class="visible-sm-block visible-xs-block">
+							<label for="select-input" class='select-label'>
+								<span >{% trans "Language" %}</span>
+								<select name="" onchange="changeLanguage()" id="id_select_language"  data-role="none">
+									{% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
+										<option value="{{ language_code }}" {% if language_code|is_current_language %}selected="selected"{% endif %}>
+										{{ language_name }}
+										</option>
+									{% endfor %}
+								</select>
+							</label>
+						</li>
+					</ul>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="toolbar-item hidden-xs hidden-sm" style="margin-bottom: 3px;">
-                        <a href="javascript:void(0);" id="id_search_icon_container" style="padding-top: 9px;">
-                            <span class="glyphicon glyphicon-search" aria-hidden="true" id="id_search_icon"></span>
-                        </a>
-                        <form action="/search/" method="get" data-ajax="false" id="id_search_from">
-                            <input type="text" class="search_input" id="id_search_input" name="q" placeholder="{% trans "search articles" %}" autocomplete="off">
-                            <button type="submit" class="search_btn" id="id_search_btn">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            </button>
-                        </form>
-                    </li>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="toolbar-item hidden-xs hidden-sm" style="margin-bottom: 3px;">
+							<a href="javascript:void(0);" id="id_search_icon_container" style="padding-top: 9px;">
+								<span class="glyphicon glyphicon-search" aria-hidden="true" id="id_search_icon"></span>
+							</a>
+							<form action="/search/" method="get" data-ajax="false" id="id_search_from">
+								<input type="text" class="search_input" id="id_search_input" name="q" placeholder="{% trans "search articles" %}" autocomplete="off">
+								<button type="submit" class="search_btn" id="id_search_btn">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</form>
+						</li>
 
-                    {% if request.user.is_authenticated %}
-                        {% if not request.user.is_superuser %}
-                            <li class="dropdown hidden-xs hidden-sm">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
-                                <ul class="dropdown-menu hidden-xs hidden-sm">
-                                    <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                                    <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
-                                </ul>
-                                </a>
-                            </li>
-                        {% else %}
-                            <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
-                            </li>
-                            <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
-                            </li>
-                        {% endif %}
-                    {% else %}
-                        <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
-                        </li>
-                        <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
-                        </li>
-                    {% endif %}
-                    <li class="language-drop-down visible-xs-block visible-sm-block">
-                    </li>
-                    <li class="dropdown language-drop-down hidden-xs hidden-sm">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <img src="{% version "images/languages/languages-icon/select-language.jpg" %}"/>
-                            {{ request | show_language_code}}
-                            <img src="{% version "images/languages/languages-icon/arrow-down.jpg" %}"/>
-                            <span class="caret"></span>
-                        </button>
+						{% if request.user.is_authenticated %}
+							{% if not request.user.is_superuser %}
+								<li class="dropdown hidden-xs hidden-sm">
+									<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+										<span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
+										<ul class="dropdown-menu hidden-xs hidden-sm">
+											<li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+											<li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
+										</ul>
+									</a>
+								</li>
+							{% else %}
+								<li class="toolbar-item hidden-xs hidden-sm">
+									<a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
+								</li>
+								<li class="toolbar-item hidden-xs hidden-sm">
+									<a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
+								</li>
+							{% endif %}
+						{% else %}
+							<li class="toolbar-item hidden-xs hidden-sm">
+								<a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
+							</li>
+							<li class="toolbar-item hidden-xs hidden-sm">
+								<a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
+							</li>
+						{% endif %}
+						<li class="language-drop-down visible-xs-block visible-sm-block">
+						</li>
+						<li class="dropdown language-drop-down hidden-xs hidden-sm">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								<img src="{% version "images/languages/languages-icon/select-language.jpg" %}"/>
+								{{ request | show_language_code}}
+								<img src="{% version "images/languages/languages-icon/arrow-down.jpg" %}"/>
+								<span class="caret"></span>
+							</button>
 
-                         <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="right:100%;border-right:none;">
-                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:":10" %}
-                            <li>
-                                <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
-                                    {% if language_code|is_current_language %}
-                                    <span style="float: left;margin-right: 4px;" id="is_choice">
-                                    <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
-                                    </span>
-                                    {% endif %}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="border-left:none;left:0px;">
-                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:"10:" %}
-                            <li>
-                                <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
-                                    {% if language_code|is_current_language %}
-                                    <span style="float: left;margin-right: 4px;" id="is_choice">
-                                    <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
-                                    </span>
-                                    {% endif %}
-                                </a>
-                            </li>
-                            {% endfor %}
-                            <li>
-                                <a>
-                                    <span style="float: left;height:36px;">
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
+							<ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="right:100%;border-right:none;">
+								{% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:":10" %}
+									<li>
+										<a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
+											{% if language_code|is_current_language %}
+												<span style="float: left;margin-right: 4px;" id="is_choice">
+													<img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
+												</span>
+											{% endif %}
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+							<ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="border-left:none;left:0px;">
+								{% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:"10:" %}
+									<li>
+										<a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
+											{% if language_code|is_current_language %}
+												<span style="float: left;margin-right: 4px;" id="is_choice">
+													<img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
+												</span>
+											{% endif %}
+										</a>
+									</li>
+								{% endfor %}
+								<li>
+									<a>
+										<span style="float: left;height:36px;">
+										</span>
+									</a>
+								</li>
+							</ul>
 
-                    </li>
+						</li>
 
-                </ul>
-            </div><!-- /.navbar -->
-        </div>
-    </nav>
-</header>
+					</ul>
+				</div><!-- /.navbar -->
+			</div>
+		</nav>
+	</header>
 {% else %}
-<header id="normal">
-    <div class="navFixed"></div>
-    <nav class="navbar navbar-custom sticky-navigation NavBg bg-gray">
-        {% comment %}
-        <a href="/event/newton-summit-2018/">
-            <div class="summit-news-mobile text-center">
-                <span>{% trans "2018 Newton Community Node Conference" %}<br>{% trans "December 11-12 · Macau, China" %}</span>
-            </div>
-            <div class="summit-news text-center">
-                <span>{% trans "December 11-12 · 2018 Newton Community Node Conference · Macau, China" %}</span>
-            </div>
-        </a>
-        {% endcomment %}
-        <div class="container">
+	<header id="normal">
+		<div class="navFixed"></div>
+		<nav class="navbar navbar-custom sticky-navigation NavBg bg-gray">
+			{% comment %}
+				<a href="/event/newton-summit-2018/">
+					<div class="summit-news-mobile text-center">
+						<span>{% trans "2018 Newton Community Node Conference" %}<br>{% trans "December 11-12 · Macau, China" %}</span>
+					</div>
+					<div class="summit-news text-center">
+						<span>{% trans "December 11-12 · 2018 Newton Community Node Conference · Macau, China" %}</span>
+					</div>
+				</a>
+			{% endcomment %}
+			<div class="container">
 
-            <div class="navbar-header">
-                <a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
-                    <img class="logo-pc" src="{% version "images/newton-logo.svg" %}" alt="Newton"/>
-                </a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" onclick="changeToggle()">
-                    <span class="sr-only">Toggle navigation</span>
-                    <i class="iconfont toggle-nav"></i>
-                </button>
+				<div class="navbar-header">
+					<a class="navbar-brand nav-logo page-scroll" href="{{ settings.NEWTON_WEB_URL }}">
+						<img class="logo-pc" src="{% version "images/newton-logo.svg" %}" alt="Newton"/>
+					</a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" onclick="changeToggle()">
+						<span class="sr-only">Toggle navigation</span>
+						<i class="iconfont toggle-nav"></i>
+					</button>
 
-            </div><!-- /.logo -->
+				</div><!-- /.logo -->
 
-            <div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
-                <form action="/search/" method="get" data-ajax="false" class="search_form_mobile visible-xs-block">
-                    <input type="text" name="q" placeholder="{% trans "search articles" %}" autocomplete="off" class="search_input_mobile">
-                    <button type="submit" class="search_button_mobile">
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    </button>
-                </form>
-                <ul class="nav navbar-nav">
-                    {% comment %}
-                    <li>
-                        <a href="/protocol/" {% language_change_header_style %}>{% trans "HEP" %}</a>
-                    </li>
-                    {% endcomment %}
-                    <li>
-                        <a href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
-                    </li>
-                    <li>
-                        <a href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
-                    </li>
-                    <li>
-                        <a href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
-                    </li>
-                    <li>
-                        <a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
-                    </li>
-                    <li>
-                        <a href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
-                    </li>
-                    <li>
-                        <a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
-                    </li>
-                    <li>
-                        <a href="/nep/" {% language_change_header_style %}>{% trans "NEP" %}</a>
-                    </li>
-                    <li>
-                        <a href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
-                    </li>
+				<div id="drop-panel" class="collapse navbar-collapse navbar-main-collapse">
+					<form action="/search/" method="get" data-ajax="false" class="search_form_mobile visible-xs-block">
+						<input type="text" name="q" placeholder="{% trans "search articles" %}" autocomplete="off" class="search_input_mobile">
+						<button type="submit" class="search_button_mobile">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+					</form>
+					<ul class="nav navbar-nav">
+						{% comment %}
+							<li>
+								<a href="/protocol/" {% language_change_header_style %}>{% trans "HEP" %}</a>
+							</li>
+						{% endcomment %}
+						<li>
+							<a href="/about/" {% language_change_header_style %}>{% trans "About" %}</a>
+						</li>
+						<li>
+							<a href="/about/faq/" {% language_change_header_style %}>{% trans "FAQ" %}</a>
+						</li>
+						<li>
+							<a href="/download/" {% language_change_header_style %}>{% trans "Download" %}</a>
+						</li>
+						<li>
+							<a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
+						</li>
+						<li>
+							<a href="/developers/" {% language_change_header_style %}>{% trans "Developers" %}</a>
+						</li>
+						<li>
+							<a href="/contact/" {% language_change_header_style %}>{% trans "Contact" %}</a>
+						</li>
+						{% comment %}
+						<li>
+							<a href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
+						</li>
+						<li>
+							<a href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
+						</li>
+						<li>
+							<a href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
+						</li>
+						<li>
+							<a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
+						</li>
+						<li>
+							<a href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
+						</li>
+						<li>
+							<a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
+						</li>
+						<li>
+							<a href="/nep/" {% language_change_header_style %}>{% trans "NEP" %}</a>
+						</li>
+						<li>
+							<a href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
+						</li>
+						{% endcomment %}
 
+						{% if request.user.is_authenticated %}
+							{% if not request.user.is_superuser %}
+								<li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+								<li class="visible-xs-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
+							{% else %}
+								<li class="visible-sm-block visible-xs-block">
+									<a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
+								</li>
+								<li class="visible-sm-block visible-xs-block">
+									<a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
+								</li>
+							{% endif %}
+						{% else %}
+							<li class="visible-sm-block visible-xs-block">
+								<a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
+							</li>
+							<li class="visible-sm-block visible-xs-block">
+								<a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
+							</li>
+						{% endif %}
+						<li class="visible-sm-block visible-xs-block">
+							<label for="select-input" class='select-label'>
+								<span >{% trans "Language" %}</span>
+								<select name="" onchange="changeLanguage()" id="id_select_language"  data-role="none">
+									{% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
+										<option value="{{ language_code }}" {% if language_code|is_current_language %}selected="selected"{% endif %}>
+										{{ language_name }}
+										</option>
+									{% endfor %}
+								</select>
+							</label>
+						</li>
+					</ul>
 
-                    {% if request.user.is_authenticated %}
-                        {% if not request.user.is_superuser %}
-                            <li class="visible-sm-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                            <li class="visible-xs-block visible-xs-block"><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
-                        {% else %}
-                            <li class="visible-sm-block visible-xs-block">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                            </li>
-                            <li class="visible-sm-block visible-xs-block">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                            </li>
-                        {% endif %}
-                    {% else %}
-                    <li class="visible-sm-block visible-xs-block">
-                        <a href="{{ settings.NEWTON_HOME_URL }}/register/">{% trans "Register" %}</a>
-                    </li>
-                    <li class="visible-sm-block visible-xs-block">
-                        <a href="{{ settings.NEWTON_HOME_URL }}/login/">{% trans "Login" %}</a>
-                    </li>
-                    {% endif %}
-                    <li class="visible-sm-block visible-xs-block">
-                        <label for="select-input" class='select-label'>
-                            <span >{% trans "Language" %}</span>
-                            <select name="" onchange="changeLanguage()" id="id_select_language"  data-role="none">
-                                {% for language_code, language_name in settings.SUPPORT_LANGUAGES %}
-                                <option value="{{ language_code }}" {% if language_code|is_current_language %}selected="selected"{% endif %}>
-                                    {{ language_name }}
-                                </option>
-                                {% endfor %}
-                            </select>
-                        </label>
-                    </li>
-                </ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="toolbar-item hidden-xs hidden-sm" style="margin-bottom: 3px;">
+							<a href="javascript:void(0);" id="id_search_icon_container" style="padding-top: 9px;">
+								<span class="glyphicon glyphicon-search" aria-hidden="true" id="id_search_icon"></span>
+							</a>
+							<form action="/search/" method="get" data-ajax="false" id="id_search_from">
+								<input type="text" class="search_input" id="id_search_input" name="q" placeholder="{% trans "search articles" %}" autocomplete="off">
+								<button type="submit" class="search_btn" id="id_search_btn">
+									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+								</button>
+							</form>
+						</li>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="toolbar-item hidden-xs hidden-sm" style="margin-bottom: 3px;">
-                        <a href="javascript:void(0);" id="id_search_icon_container" style="padding-top: 9px;">
-                            <span class="glyphicon glyphicon-search" aria-hidden="true" id="id_search_icon"></span>
-                        </a>
-                        <form action="/search/" method="get" data-ajax="false" id="id_search_from">
-                            <input type="text" class="search_input" id="id_search_input" name="q" placeholder="{% trans "search articles" %}" autocomplete="off">
-                            <button type="submit" class="search_btn" id="id_search_btn">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                            </button>
-                        </form>
-                    </li>
+						{% if request.user.is_authenticated %}
+							{% if not request.user.is_superuser %}
+								<li class="dropdown hidden-xs hidden-sm">
+									<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+										<span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
+										<ul class="dropdown-menu hidden-xs hidden-sm">
+											<li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
+											<li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
+										</ul>
+									</a>
+								</li>
+							{% else %}
+								<li class="toolbar-item hidden-xs hidden-sm">
+									<a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
+								</li>
+								<li class="toolbar-item hidden-xs hidden-sm">
+									<a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
+								</li>
+							{% endif %}
+						{% else %}
+							<li class="toolbar-item hidden-xs hidden-sm">
+								<a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
+							</li>
+							<li class="toolbar-item hidden-xs hidden-sm">
+								<a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
+							</li>
+						{% endif %}
+						<li class="language-drop-down visible-xs-block visible-sm-block">
+						</li>
+						<li class="dropdown language-drop-down hidden-xs hidden-sm">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								<img src="{% version "images/languages/languages-icon/select-language.jpg" %}"/>
+								{{ request | show_language_code}}
+								<img src="{% version "images/languages/languages-icon/arrow-down.jpg" %}"/>
+								<span class="caret"></span>
+							</button>
 
-                    {% if request.user.is_authenticated %}
-                        {% if not request.user.is_superuser %}
-                            <li class="dropdown hidden-xs hidden-sm">
-                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <span><img class="user-avator" src="{% version "images/default_avator.png" %}"/></span>
-                                <ul class="dropdown-menu hidden-xs hidden-sm">
-                                    <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/user/">{% trans "User Center" %}</a></li>
-                                    <li><a style="color:black;" href="{{ settings.NEWTON_HOME_URL }}/logout/">{% trans "LogOut" %}</a></li>
-                                </ul>
-                                </a>
-                            </li>
-                        {% else %}
-                            <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
-                            </li>
-                            <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
-                            </li>
-                        {% endif %}
-                    {% else %}
-                        <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
-                        </li>
-                        <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
-                        </li>
-                    {% endif %}
-                    <li class="language-drop-down visible-xs-block visible-sm-block">
-                    </li>
-                    <li class="dropdown language-drop-down hidden-xs hidden-sm">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <img src="{% version "images/languages/languages-icon/select-language.jpg" %}"/>
-                            {{ request | show_language_code}}
-                            <img src="{% version "images/languages/languages-icon/arrow-down.jpg" %}"/>
-                            <span class="caret"></span>
-                        </button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="right:100%;border-right:none;">
+								{% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:":10" %}
+									<li>
+										<a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
+											{% if language_code|is_current_language %}
+												<span style="float: left;margin-right: 4px;" id="is_choice">
+													<img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
+												</span>
+											{% endif %}
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+							<ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="border-left:none;left:0px;">
+								{% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:"10:" %}
+									<li>
+										<a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
+											{% if language_code|is_current_language %}
+												<span style="float: left;margin-right: 4px;" id="is_choice">
+													<img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
+												</span>
+											{% endif %}
+										</a>
+									</li>
+								{% endfor %}
 
-                         <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="right:100%;border-right:none;">
-                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:":10" %}
-                            <li>
-                                <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
-                                    {% if language_code|is_current_language %}
-                                    <span style="float: left;margin-right: 4px;" id="is_choice">
-                                    <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
-                                    </span>
-                                    {% endif %}
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownLanguage" style="border-left:none;left:0px;">
-                            {% for language_code, language_name in settings.SUPPORT_LANGUAGES|slice:"10:" %}
-                            <li>
-                                <a href="#" onclick="setLanguage('{{ language_code }}');">{{ language_name }}
-                                    {% if language_code|is_current_language %}
-                                    <span style="float: left;margin-right: 4px;" id="is_choice">
-                                    <img src="{% version "images/languages/languages-icon/checked.jpg" %}" alt="" class="checked_icon">
-                                    </span>
-                                    {% endif %}
-                                </a>
-                            </li>
-                            {% endfor %}
-                            
-                            <li>
-                                <a>
-                                    <span style="float: left;height:36px;">
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
+								<li>
+									<a>
+										<span style="float: left;height:36px;">
+										</span>
+									</a>
+								</li>
+							</ul>
 
-                    </li>
+						</li>
 
-                </ul>
-            </div><!-- /.navbar -->
-        </div>
-    </nav>
-</header>
-<!--[if IE]>
-<style>
-#normal .summit-news{
-    background-color: #008cd7;
-    background: #008cd7;
-}
+					</ul>
+				</div><!-- /.navbar -->
+			</div>
+		</nav>
+	</header>
+	<!--[if IE]>
+		<style>
+		#normal .summit-news{
+		background-color: #008cd7;
+		background: #008cd7;
+		}
 
-</style>
-<![endif]-->
+		</style>
+	<![endif]-->
 {% endif %}
 
 <style>
 
 @media (max-width: 768px) {
-    nav.navbar.sticky-navigation.NavBg {
-        max-height: 900px;
-        overflow-y: scroll;
-    };
+	nav.navbar.sticky-navigation.NavBg {
+		max-height: 900px;
+		overflow-y: scroll;
+	};
 }
 </style>
 
 <link rel="stylesheet" href="{% version "css/search-bar.css" %}">
 <script type="text/javascript" src="{% version "js/search-bar.js" %}"></script>
 <script>
-    initSearchBar();
+	initSearchBar();
 </script>
 
 
