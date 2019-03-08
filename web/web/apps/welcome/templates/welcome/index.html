@@ -11,58 +11,58 @@
 {% endblock %}
 
 {% block content %}
-{% include "welcome/include-header.html" %} 
+	{% include "welcome/include-header.html" %} 
 	<section id="intro" class="bg-gray">
 
 		<div class="container">
-			<div class="row relative">
-				<div class="col-md-12 text-center" style="padding-top: 60px;">
-					<h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>
-					<p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
-				</div>
-			</div>
+			<!--<div class="row relative">-->
+				<!--<div class="col-md-12 text-center" style="padding-top: 60px;">-->
+					<!--<h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>-->
+					<!--<p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>-->
+				<!--</div>-->
+			<!--</div>-->
 
 			{% include "welcome/include-index-announce.html" %}
 
 		</div>
 		<!--<div class="news-column">-->
-			<div class="container">
-				<div class="news-banner">
-					{% if operation_entry %}
-						<div class="news-two">
-							<!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
-							<a href="{{ operation_entry.urls }}">
-								<span class="news-title">{{ operation_entry.title }}</span>
-								<span class="">•</span>
-								<span class="">{{ operation_entry.creation_date|date:"Y-m-d" }}</span>
-							</a>
-						</div>
-					{% endif %}
-					{% if blog_entry %}
+		<div class="container">
+			<div class="news-banner">
+				{% if operation_entry %}
+					<div class="news-two">
+						<!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
+						<a href="{{ operation_entry.urls }}">
+							<span class="news-title">{{ operation_entry.title }}</span>
+							<span class="">•</span>
+							<span class="">{{ operation_entry.creation_date|date:"Y-m-d" }}</span>
+						</a>
+					</div>
+				{% endif %}
+				{% if blog_entry %}
+					<div class="news-two news-mobile-hide">
+						<!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
+						<a href="{{ blog_entry.urls }}">
+							<span class="news-title">{{ blog_entry.title }}</span>
+							<span>•</span>
+							<span style="">{{ blog_entry.creation_date|date:"Y-m-d" }}</span>
+						</a>
+					</div>
+				{% endif %}
+				{% comment %}
+					{% if banner_press %}
 						<div class="news-two news-mobile-hide">
 							<!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
-							<a href="{{ blog_entry.urls }}">
-								<span class="news-title">{{ blog_entry.title }}</span>
+							<a href="{{ banner_press.press_link }}">
+								<span class="news-title">{{ banner_press.press_title }}</span>
 								<span>•</span>
-								<span style="">{{ blog_entry.creation_date|date:"Y-m-d" }}</span>
+								<span style="">{{ banner_press.created_at|date:"Y-m-d" }}</span>
 							</a>
 						</div>
 					{% endif %}
-					{% comment %}
-						{% if banner_press %}
-							<div class="news-two news-mobile-hide">
-								<!--<img src="{% version "images/arrow.svg" %}" alt="" style="width:10px;margin-bottom:3px;">-->
-								<a href="{{ banner_press.press_link }}">
-									<span class="news-title">{{ banner_press.press_title }}</span>
-									<span>•</span>
-									<span style="">{{ banner_press.created_at|date:"Y-m-d" }}</span>
-								</a>
-							</div>
-						{% endif %}
-					{% endcomment %}
-					<!--<a href="/announcement/" class="news-more"><span>{% trans "More..." %}</span></a>-->
-				</div>
+				{% endcomment %}
+				<!--<a href="/announcement/" class="news-more"><span>{% trans "More..." %}</span></a>-->
 			</div>
+		</div>
 		</div>
 	</section>
 
@@ -79,12 +79,12 @@
 	<!--{% include "welcome/include-intro-token-exchange.html" %}-->
 
 	<!--{% include "welcome/include-intro-token-exchange-mobile.html" %}-->
-	
+
 	{% comment %}
 
-	{% include "welcome/include-events.html" %}
+		{% include "welcome/include-events.html" %}
 
-	{% include "welcome/include-events-mobile.html" %}
+		{% include "welcome/include-events-mobile.html" %}
 
 	{% endcomment %}
 
@@ -119,11 +119,11 @@
 
 	{% comment %}
 
-	<section id="sir" class="section">
-		<div class="container"><img class="img-1 lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/partners/bitmap.png" %}" width="200">
-			<p class="sty1">{% trans "Paying tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
-		</div>
-	</section>
+		<section id="sir" class="section">
+			<div class="container"><img class="img-1 lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/partners/bitmap.png" %}" width="200">
+				<p class="sty1">{% trans "Paying tribute to Sir Isaac Newton, the great scientist who made a significant impact on our lives!" %}</p>
+			</div>
+		</section>
 
 	{% endcomment %}
 
@@ -274,10 +274,10 @@ var swiper11 = new Swiper('.swiper-container11', {
 .navbar {
 	position: fixed;
 }
-		@media (max-width: 768px) {
-			#intro .news-column {
-				margin-top: unset;
+			@media (max-width: 768px) {
+				#intro .news-column {
+					margin-top: unset;
+				}
 			}
-		}
 	</style>
 {% endblock %}
