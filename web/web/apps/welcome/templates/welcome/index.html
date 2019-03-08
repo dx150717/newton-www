@@ -10,22 +10,22 @@
 	{% trans "Home" %}
 {% endblock %}
 
-	{% include "welcome/include-header.html" %} 
+{% include "welcome/include-header.html" %} 
 {% block content %}
 	<!--<section id="intro" class="bg-gray">-->
 
-		<!--<div class="container">-->
-			<!--<div class="row relative">-->
-			<!--<div class="col-md-12 text-center" style="padding-top: 60px;">-->
-			<!--<h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>-->
-			<!--<p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>-->
-			<!--</div>-->
-			<!--</div>-->
+	<!--<div class="container">-->
+	<!--<div class="row relative">-->
+	<!--<div class="col-md-12 text-center" style="padding-top: 60px;">-->
+	<!--<h1>{% trans "Everyone Should Benefit Directly from Economic Growth" %}</h1>-->
+	<!--<p class="sty1">{% trans "Newton: Infrastructure for the Community Economy" %}</p>-->
+	<!--</div>-->
+	<!--</div>-->
 
-			<!--{% include "welcome/include-index-announce.html" %}-->
+	<!--{% include "welcome/include-index-announce.html" %}-->
 
-		<!--</div>-->
-		<!--<div class="news-column">-->
+	<!--</div>-->
+	<!--<div class="news-column">-->
 	<!--</section>-->
 
 	{% include "welcome/include-video.html" %}
@@ -236,10 +236,10 @@ var swiper11 = new Swiper('.swiper-container11', {
 .navbar {
 	position: fixed;
 }
-					@media (max-width: 768px) {
-						#intro .news-column {
-							margin-top: unset;
+						@media (max-width: 768px) {
+							#intro .news-column {
+								margin-top: unset;
+							}
 						}
-					}
 	</style>
 {% endblock %}
