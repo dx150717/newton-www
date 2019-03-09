@@ -1,2 +1,41 @@
 {% load i18n %}
 {% load utils %}
+<h2>New section - testing video</h2>
+<section class="section bg-gray" style="padding-top:50px;padding-bottom:60px;text-align:center; items-align:center">
+	<div class="container row video-container">
+		<div class="col-md-8 col-sm-12 col-xs-12">
+			<video id="newton-video-1" class="video-js vjs-big-play-centered" controls preload="none" poster="{% version "images/whats-newton.jpeg" %}" data-setup="" style="margin-left:auto;margin-right:auto;cursor: pointer;display: none;">
+				<source src="https://www.newtonproject.org/filestorage/uploads/newton-introduction.mp4" type="video/mp4" />
+				<p class="vjs-no-js">
+				To view this video please enable JavaScript, and consider upgrading to a web browser that
+				<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+				</p>
+			</video>
+
+			<video id="newton-video-2" class="video-js vjs-big-play-centered" controls preload="none" poster="{% version "images/meeting/videos/A.jpg" %}" data-setup="" style="margin-left:auto;margin-right:auto;cursor: pointer;">
+				<source src="https://newton-video.oss-cn-beijing.aliyuncs.com/macao-2019-a.mp4" type="video/mp4" />
+				<p class="vjs-no-js">
+				To view this video please enable JavaScript, and consider upgrading to a web browser that
+				<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+				</p>
+			</video>
+			<div id="node-video-tencent2"></div>
+		</div>
+
+		<div class="tabs-container col-md-4 col-sm-12 col-xs-12">
+			<div class="tab-container padding-top-10 col-md-12 col-xs-6">
+				<a id="video-tab-2">
+					<p class="video-title"><span class="glyphicon glyphicon-play-circle" style="font-size: 1.2em; line-height: 1.1em; vertical-align: text-top;"></span>&nbsp;&nbsp;{% trans "2018 Newton Community Node Conference" %}</p>
+					<p class="summary hidden-xs">{% trans "On December 11, 2018, Newton held its first community node conference at the MGM Cotai, Macao." %}</p>
+				</a>
+			</div>
+			<div class="tab-container padding-bottom-10 col-md-12 col-xs-6">
+				<a id="video-tab-1">
+					<p class="video-title"><span class="glyphicon glyphicon-play-circle" style="font-size: 1.2em; line-height: 1.1em; vertical-align: text-top;"></span>&nbsp;&nbsp;{% trans "What is Newton" %}</p>
+					<p class="summary hidden-xs">{% trans "Newton: Infrastructure for the Community Economy" %}</p>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</section>
