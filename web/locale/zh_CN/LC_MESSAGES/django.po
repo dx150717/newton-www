@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-09 10:16+0000\n"
+"POT-Creation-Date: 2019-03-10 10:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3806,11 +3806,14 @@ msgid "Digital wallet in Newton's economy"
 msgstr "牛顿经济体中的数字钱包"
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:50
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:29
 msgid "Download NewPay APK"
 msgstr "NewPay APK 官方下载"
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:55
 #: web/apps/welcome/templates/welcome/include-index-announce.html:62
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:33
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:41
 msgid "没有海外Apple ID如何下载?"
 msgstr ""
 
@@ -3839,7 +3842,6 @@ msgstr "链商零售"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:21
 #: web/apps/welcome/templates/welcome/include-industry.html:20
-#: web/apps/welcome/templates/welcome/newpay.html:139
 #: web/apps/welcome/templates/welcome/scene.html:63
 msgid "Payments"
 msgstr "支付"
@@ -5618,75 +5620,53 @@ msgstr ""
 msgid "NewPay"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:120
-#: web/apps/welcome/templates/welcome/protocol.html:21
-#: web/apps/welcome/templates/welcome/technology.html:34
-msgid "Digital Identity and Credit"
-msgstr "数字身份与信用"
+#: web/apps/welcome/templates/welcome/newpay.html:15
+msgid "The Digital Wallet of Newton Community Economy"
+msgstr "牛顿社群经济体的数字钱包<br/>闪电结算 社群治理 挖矿即收益"
 
-#: web/apps/welcome/templates/welcome/newpay.html:121
-msgid "Create and manage decentralized ID's"
-msgstr "创建和管理DID(Decentralized IDs)；"
+#: web/apps/welcome/templates/welcome/newpay.html:23
+msgid "newpay-screenshot.png"
+msgstr "newpay-screenshot-zh.png"
 
-#: web/apps/welcome/templates/welcome/newpay.html:122
-msgid "Set privacy preferences for personal information;"
-msgstr "设置个人信息隐私模式；"
+#: web/apps/welcome/templates/welcome/newpay.html:43
+msgid "Digital Wallet on NewChain"
+msgstr "NewChain 上的数字钱包"
 
-#: web/apps/welcome/templates/welcome/newpay.html:123
-msgid "Transaction management;"
-msgstr "交易信息管理；"
+#: web/apps/welcome/templates/welcome/newpay.html:44
+msgid "NewPay is your reliable digital wallet of <strong>NEW</strong>"
+msgstr "NewPay 是您可靠的数字钱包<br/>闪电结算的特性支持各种支付场景"
 
-#: web/apps/welcome/templates/welcome/newpay.html:124
-msgid "Set pricing and benefits for sharing transaction information"
-msgstr "设置个人信息隐私模式；"
+#: web/apps/welcome/templates/welcome/newpay.html:59
+msgid "Community Governance"
+msgstr "社群治理"
 
-#: web/apps/welcome/templates/welcome/newpay.html:125
-msgid "Digital asset management, including NEW, BTC, ETH, etc"
-msgstr "数字资产管理，包括NEW、BTC、ETH等。"
+#: web/apps/welcome/templates/welcome/newpay.html:60
+msgid ""
+"Vote to take part in community governance and receive incentives in "
+"<strong>NEW</strong>."
+msgstr "参与社群节点投票和竞选<br/>进行牛顿社群治理并收获<strong>NEW</strong>的激励"
 
-#: web/apps/welcome/templates/welcome/newpay.html:140
-msgid "Cross-border transactions;"
-msgstr "支持跨境交易；"
+#: web/apps/welcome/templates/welcome/newpay.html:78
+msgid "Mining"
+msgstr "挖矿即收益"
 
-#: web/apps/welcome/templates/welcome/newpay.html:141
-msgid "Micro-payments;"
-msgstr "支持超小额度支付；"
+#: web/apps/welcome/templates/welcome/newpay.html:79
+msgid "Mining means rewards."
+msgstr "参与牛顿经济体的活动为牛顿经济体作贡献"
 
-#: web/apps/welcome/templates/welcome/newpay.html:142
-msgid "Rapid transaction confirmation."
-msgstr "极快的交易确认速度。"
+#: web/apps/welcome/templates/welcome/newpay.html:80
+msgid ""
+"Contribute to Newton's economy and get your <strong>NEW</strong> incentives."
+msgstr "即可获得<strong>NEW</strong>的激励"
 
-#: web/apps/welcome/templates/welcome/newpay.html:156
-msgid "Joint Login"
-msgstr "联合登录"
+#: web/apps/welcome/templates/welcome/newpay.html:95
+msgid "Brand New User Interface"
+msgstr "焕然一新的界面"
 
-#: web/apps/welcome/templates/welcome/newpay.html:157
-msgid "Log into multiple Dapps with one unified identity"
-msgstr "使用统一身份登录多个Dapp；"
-
-#: web/apps/welcome/templates/welcome/newpay.html:158
-msgid "Dapp management and permission control"
-msgstr "Dapp管理和权限控制；"
-
-#: web/apps/welcome/templates/welcome/newpay.html:159
-msgid "Security audit"
-msgstr "安全审计。"
-
-#: web/apps/welcome/templates/welcome/newpay.html:173
-msgid "App Support"
-msgstr "内置应用"
-
-#: web/apps/welcome/templates/welcome/newpay.html:174
-msgid "Free and open-source apps"
-msgstr "支持采用自由开源方式发布的内置应用；"
-
-#: web/apps/welcome/templates/welcome/newpay.html:175
-msgid "In-app purchases"
-msgstr "应用内支付；"
-
-#: web/apps/welcome/templates/welcome/newpay.html:176
-msgid "App development tools"
-msgstr "应用开发工具"
+#: web/apps/welcome/templates/welcome/newpay.html:96
+msgid ""
+"Our fresh user interface is more refined, elegant, and efficient than ever."
+msgstr "我们全新设计的用户界面<br/>简洁 优雅 高效"
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
 msgid "Newton Community Node Conference"
@@ -6354,6 +6334,11 @@ msgstr "超级交换协议"
 #: web/apps/welcome/templates/welcome/technology.html:28
 msgid "Hyper Exchange Protocol"
 msgstr "超级交换协议"
+
+#: web/apps/welcome/templates/welcome/protocol.html:21
+#: web/apps/welcome/templates/welcome/technology.html:34
+msgid "Digital Identity and Credit"
+msgstr "数字身份与信用"
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
@@ -9839,6 +9824,54 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
+
+#~ msgid "Create and manage decentralized ID's"
+#~ msgstr "创建和管理DID(Decentralized IDs)；"
+
+#~ msgid "Set privacy preferences for personal information;"
+#~ msgstr "设置个人信息隐私模式；"
+
+#~ msgid "Transaction management;"
+#~ msgstr "交易信息管理；"
+
+#~ msgid "Set pricing and benefits for sharing transaction information"
+#~ msgstr "设置个人信息隐私模式；"
+
+#~ msgid "Digital asset management, including NEW, BTC, ETH, etc"
+#~ msgstr "数字资产管理，包括NEW、BTC、ETH等。"
+
+#~ msgid "Cross-border transactions;"
+#~ msgstr "支持跨境交易；"
+
+#~ msgid "Micro-payments;"
+#~ msgstr "支持超小额度支付；"
+
+#~ msgid "Rapid transaction confirmation."
+#~ msgstr "极快的交易确认速度。"
+
+#~ msgid "Joint Login"
+#~ msgstr "联合登录"
+
+#~ msgid "Log into multiple Dapps with one unified identity"
+#~ msgstr "使用统一身份登录多个Dapp；"
+
+#~ msgid "Dapp management and permission control"
+#~ msgstr "Dapp管理和权限控制；"
+
+#~ msgid "Security audit"
+#~ msgstr "安全审计。"
+
+#~ msgid "App Support"
+#~ msgstr "内置应用"
+
+#~ msgid "Free and open-source apps"
+#~ msgstr "支持采用自由开源方式发布的内置应用；"
+
+#~ msgid "In-app purchases"
+#~ msgstr "应用内支付；"
+
+#~ msgid "App development tools"
+#~ msgstr "应用开发工具"
 
 #~ msgid "Co-founder of Elastos"
 #~ msgstr "亦来云联合创始人"

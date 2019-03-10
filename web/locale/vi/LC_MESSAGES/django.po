@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-09 10:16+0000\n"
+"POT-Creation-Date: 2019-03-10 10:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3794,11 +3794,14 @@ msgid "Digital wallet in Newton's economy"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:50
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:29
 msgid "Download NewPay APK"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:55
 #: web/apps/welcome/templates/welcome/include-index-announce.html:62
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:33
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:41
 msgid "没有海外Apple ID如何下载?"
 msgstr ""
 
@@ -3827,7 +3830,6 @@ msgstr "Chuỗi Thương mại bán lẻ"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:21
 #: web/apps/welcome/templates/welcome/include-industry.html:20
-#: web/apps/welcome/templates/welcome/newpay.html:139
 #: web/apps/welcome/templates/welcome/scene.html:63
 msgid "Payments"
 msgstr "Thanh toán"
@@ -5793,74 +5795,55 @@ msgstr ""
 msgid "NewPay"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:120
-#: web/apps/welcome/templates/welcome/protocol.html:21
-#: web/apps/welcome/templates/welcome/technology.html:34
-msgid "Digital Identity and Credit"
-msgstr "Danh Tính Số Và Tín Dụng"
+#: web/apps/welcome/templates/welcome/newpay.html:15
+#, fuzzy
+msgid "The Digital Wallet of Newton Community Economy"
+msgstr "Cộng Đồng Kinh Tế Của Newton"
 
-#: web/apps/welcome/templates/welcome/newpay.html:121
-msgid "Create and manage decentralized ID's"
-msgstr "Tạo và quản lý DID (ID phân cấp);"
-
-#: web/apps/welcome/templates/welcome/newpay.html:122
-msgid "Set privacy preferences for personal information;"
-msgstr "Đặt chế độ riêng tư cho thông tin cá nhân;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:123
-msgid "Transaction management;"
-msgstr "Quản lý thông tin giao dịch;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:124
-msgid "Set pricing and benefits for sharing transaction information"
-msgstr "Đặt chế độ riêng tư cho thông tin cá nhân;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:125
-msgid "Digital asset management, including NEW, BTC, ETH, etc"
-msgstr "Quản lý tài sản kỹ thuật số, bao gồm NEW, BTC, ETH, v.v."
-
-#: web/apps/welcome/templates/welcome/newpay.html:140
-msgid "Cross-border transactions;"
-msgstr "Hỗ trợ giao dịch xuyên biên giới;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:141
-msgid "Micro-payments;"
-msgstr "Hỗ trợ thanh toán nhỏ lẻ;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:142
-msgid "Rapid transaction confirmation."
-msgstr "Xác nhận giao dịch cực nhanh."
-
-#: web/apps/welcome/templates/welcome/newpay.html:156
-msgid "Joint Login"
-msgstr "Đăng nhập chung"
-
-#: web/apps/welcome/templates/welcome/newpay.html:157
-msgid "Log into multiple Dapps with one unified identity"
-msgstr "Đăng nhập nhiều Dapps bằng cách sử dụng một danh tính thống nhất;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:158
-msgid "Dapp management and permission control"
-msgstr "Quản lý và kiểm soát quyền của Dapp;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:159
-msgid "Security audit"
-msgstr "Kiểm toán an ninh."
-
-#: web/apps/welcome/templates/welcome/newpay.html:173
-msgid "App Support"
-msgstr "Hỗ trợ ứng dụng"
-
-#: web/apps/welcome/templates/welcome/newpay.html:174
-msgid "Free and open-source apps"
-msgstr "Hỗ trợ tích hợp cho các ứng dụng mã nguồn mở và miễn phí;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:175
-msgid "In-app purchases"
+#: web/apps/welcome/templates/welcome/newpay.html:23
+msgid "newpay-screenshot.png"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:176
-msgid "App development tools"
+#: web/apps/welcome/templates/welcome/newpay.html:43
+#, fuzzy
+msgid "Digital Wallet on NewChain"
+msgstr "Tiếp thị kỹ thuật số"
+
+#: web/apps/welcome/templates/welcome/newpay.html:44
+msgid "NewPay is your reliable digital wallet of <strong>NEW</strong>"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:59
+#, fuzzy
+msgid "Community Governance"
+msgstr "Cộng đồng"
+
+#: web/apps/welcome/templates/welcome/newpay.html:60
+msgid ""
+"Vote to take part in community governance and receive incentives in "
+"<strong>NEW</strong>."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:78
+msgid "Mining"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:79
+msgid "Mining means rewards."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:80
+msgid ""
+"Contribute to Newton's economy and get your <strong>NEW</strong> incentives."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:95
+msgid "Brand New User Interface"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:96
+msgid ""
+"Our fresh user interface is more refined, elegant, and efficient than ever."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
@@ -6477,6 +6460,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/technology.html:28
 msgid "Hyper Exchange Protocol"
 msgstr "Giao thức Hyper Exchange"
+
+#: web/apps/welcome/templates/welcome/protocol.html:21
+#: web/apps/welcome/templates/welcome/technology.html:34
+msgid "Digital Identity and Credit"
+msgstr "Danh Tính Số Và Tín Dụng"
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
@@ -9653,6 +9641,48 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr ""
+
+#~ msgid "Create and manage decentralized ID's"
+#~ msgstr "Tạo và quản lý DID (ID phân cấp);"
+
+#~ msgid "Set privacy preferences for personal information;"
+#~ msgstr "Đặt chế độ riêng tư cho thông tin cá nhân;"
+
+#~ msgid "Transaction management;"
+#~ msgstr "Quản lý thông tin giao dịch;"
+
+#~ msgid "Set pricing and benefits for sharing transaction information"
+#~ msgstr "Đặt chế độ riêng tư cho thông tin cá nhân;"
+
+#~ msgid "Digital asset management, including NEW, BTC, ETH, etc"
+#~ msgstr "Quản lý tài sản kỹ thuật số, bao gồm NEW, BTC, ETH, v.v."
+
+#~ msgid "Cross-border transactions;"
+#~ msgstr "Hỗ trợ giao dịch xuyên biên giới;"
+
+#~ msgid "Micro-payments;"
+#~ msgstr "Hỗ trợ thanh toán nhỏ lẻ;"
+
+#~ msgid "Rapid transaction confirmation."
+#~ msgstr "Xác nhận giao dịch cực nhanh."
+
+#~ msgid "Joint Login"
+#~ msgstr "Đăng nhập chung"
+
+#~ msgid "Log into multiple Dapps with one unified identity"
+#~ msgstr "Đăng nhập nhiều Dapps bằng cách sử dụng một danh tính thống nhất;"
+
+#~ msgid "Dapp management and permission control"
+#~ msgstr "Quản lý và kiểm soát quyền của Dapp;"
+
+#~ msgid "Security audit"
+#~ msgstr "Kiểm toán an ninh."
+
+#~ msgid "App Support"
+#~ msgstr "Hỗ trợ ứng dụng"
+
+#~ msgid "Free and open-source apps"
+#~ msgstr "Hỗ trợ tích hợp cho các ứng dụng mã nguồn mở và miễn phí;"
 
 #~ msgid "Co-founder of Elastos"
 #~ msgstr "Đồng sáng lập Elastos"

@@ -1,5 +1,3 @@
-import '../css/style.css'
-	
 var FAIL = 0
 var SUCCESS = 1
 var UNAUTH = 2

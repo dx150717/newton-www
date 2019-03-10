@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-09 10:16+0000\n"
+"POT-Creation-Date: 2019-03-10 10:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3827,11 +3827,14 @@ msgid "Digital wallet in Newton's economy"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:50
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:29
 msgid "Download NewPay APK"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:55
 #: web/apps/welcome/templates/welcome/include-index-announce.html:62
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:33
+#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:41
 msgid "没有海外Apple ID如何下载?"
 msgstr ""
 
@@ -3860,7 +3863,6 @@ msgstr "Comerțul cu amănuntul în lanț"
 
 #: web/apps/welcome/templates/welcome/include-industry-mobile.html:21
 #: web/apps/welcome/templates/welcome/include-industry.html:20
-#: web/apps/welcome/templates/welcome/newpay.html:139
 #: web/apps/welcome/templates/welcome/scene.html:63
 msgid "Payments"
 msgstr "Plata"
@@ -5857,75 +5859,55 @@ msgstr ""
 msgid "NewPay"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:120
-#: web/apps/welcome/templates/welcome/protocol.html:21
-#: web/apps/welcome/templates/welcome/technology.html:34
-msgid "Digital Identity and Credit"
-msgstr "Identitatea Digitala  și Creditul"
+#: web/apps/welcome/templates/welcome/newpay.html:15
+#, fuzzy
+msgid "The Digital Wallet of Newton Community Economy"
+msgstr "Economia Comunitatii Newton"
 
-#: web/apps/welcome/templates/welcome/newpay.html:121
-msgid "Create and manage decentralized ID's"
-msgstr "Creați și gestionați DID (ID-uri descentralizate);"
-
-#: web/apps/welcome/templates/welcome/newpay.html:122
-msgid "Set privacy preferences for personal information;"
-msgstr "Setați modul de confidențialitate pentru informațiile personale;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:123
-msgid "Transaction management;"
-msgstr "Gestionarea informațiilor despre tranzacții;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:124
-msgid "Set pricing and benefits for sharing transaction information"
-msgstr "Setați modul de confidențialitate pentru informațiile personale;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:125
-msgid "Digital asset management, including NEW, BTC, ETH, etc"
-msgstr ""
-"Gestionarea digitală a activelor, inclusiv cele de tip NEW, BTC, ETH etc."
-
-#: web/apps/welcome/templates/welcome/newpay.html:140
-msgid "Cross-border transactions;"
-msgstr "Acceptă tranzacțiile transfrontaliere;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:141
-msgid "Micro-payments;"
-msgstr "Suport pentru micro-plăți;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:142
-msgid "Rapid transaction confirmation."
-msgstr "Confirmare extrem de rapidă a tranzacției."
-
-#: web/apps/welcome/templates/welcome/newpay.html:156
-msgid "Joint Login"
-msgstr "Autentificare comună"
-
-#: web/apps/welcome/templates/welcome/newpay.html:157
-msgid "Log into multiple Dapps with one unified identity"
-msgstr "Conectați mai multe Dapps folosind o identitate unificată;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:158
-msgid "Dapp management and permission control"
-msgstr "Gestionarea Dapp și controlul accesului;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:159
-msgid "Security audit"
-msgstr "Audit de securitate."
-
-#: web/apps/welcome/templates/welcome/newpay.html:173
-msgid "App Support"
-msgstr "Suport pentru aplicații"
-
-#: web/apps/welcome/templates/welcome/newpay.html:174
-msgid "Free and open-source apps"
-msgstr "Suport Încorporat gratuit și open-source;"
-
-#: web/apps/welcome/templates/welcome/newpay.html:175
-msgid "In-app purchases"
+#: web/apps/welcome/templates/welcome/newpay.html:23
+msgid "newpay-screenshot.png"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:176
-msgid "App development tools"
+#: web/apps/welcome/templates/welcome/newpay.html:43
+#, fuzzy
+msgid "Digital Wallet on NewChain"
+msgstr "Marketing Digital"
+
+#: web/apps/welcome/templates/welcome/newpay.html:44
+msgid "NewPay is your reliable digital wallet of <strong>NEW</strong>"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:59
+#, fuzzy
+msgid "Community Governance"
+msgstr "Comunitate"
+
+#: web/apps/welcome/templates/welcome/newpay.html:60
+msgid ""
+"Vote to take part in community governance and receive incentives in "
+"<strong>NEW</strong>."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:78
+msgid "Mining"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:79
+msgid "Mining means rewards."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:80
+msgid ""
+"Contribute to Newton's economy and get your <strong>NEW</strong> incentives."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:95
+msgid "Brand New User Interface"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:96
+msgid ""
+"Our fresh user interface is more refined, elegant, and efficient than ever."
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
@@ -6543,6 +6525,11 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/technology.html:28
 msgid "Hyper Exchange Protocol"
 msgstr "Protocolul Hyper Exchange"
+
+#: web/apps/welcome/templates/welcome/protocol.html:21
+#: web/apps/welcome/templates/welcome/technology.html:34
+msgid "Digital Identity and Credit"
+msgstr "Identitatea Digitala  și Creditul"
 
 #: web/apps/welcome/templates/welcome/protocol.html:23
 msgid ""
@@ -9744,6 +9731,49 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr ""
+
+#~ msgid "Create and manage decentralized ID's"
+#~ msgstr "Creați și gestionați DID (ID-uri descentralizate);"
+
+#~ msgid "Set privacy preferences for personal information;"
+#~ msgstr "Setați modul de confidențialitate pentru informațiile personale;"
+
+#~ msgid "Transaction management;"
+#~ msgstr "Gestionarea informațiilor despre tranzacții;"
+
+#~ msgid "Set pricing and benefits for sharing transaction information"
+#~ msgstr "Setați modul de confidențialitate pentru informațiile personale;"
+
+#~ msgid "Digital asset management, including NEW, BTC, ETH, etc"
+#~ msgstr ""
+#~ "Gestionarea digitală a activelor, inclusiv cele de tip NEW, BTC, ETH etc."
+
+#~ msgid "Cross-border transactions;"
+#~ msgstr "Acceptă tranzacțiile transfrontaliere;"
+
+#~ msgid "Micro-payments;"
+#~ msgstr "Suport pentru micro-plăți;"
+
+#~ msgid "Rapid transaction confirmation."
+#~ msgstr "Confirmare extrem de rapidă a tranzacției."
+
+#~ msgid "Joint Login"
+#~ msgstr "Autentificare comună"
+
+#~ msgid "Log into multiple Dapps with one unified identity"
+#~ msgstr "Conectați mai multe Dapps folosind o identitate unificată;"
+
+#~ msgid "Dapp management and permission control"
+#~ msgstr "Gestionarea Dapp și controlul accesului;"
+
+#~ msgid "Security audit"
+#~ msgstr "Audit de securitate."
+
+#~ msgid "App Support"
+#~ msgstr "Suport pentru aplicații"
+
+#~ msgid "Free and open-source apps"
+#~ msgstr "Suport Încorporat gratuit și open-source;"
 
 #~ msgid "Co-founder of Elastos"
 #~ msgstr "Co-fondator al Elastos"

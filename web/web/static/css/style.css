@@ -2307,174 +2307,122 @@ input[name="expect_btc"], input[name="expect_ela"]{
 }
 
 /* newpay */
-.newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.png) no-repeat top center; width:100%; height:711px;}
-#newpay .newpay-background{
-    width: 100%;
+.newpay-head{
+    background:url(../images/newpay/head-bg-desktop.png) no-repeat top center;
+    width:100%;
 }
-#newpay .download{border-radius: 10px; margin-top:50px;}
-#newpay .download-button p{color: #333;font-size: 16px; margin-top: 10px;}
-#newpay .download-button div{font-size: 28px;font-weight: 500;margin-top: 25px;color: #333;}
-#newpay .download-button h3{font-size: 28px;font-weight: 300;}
-#newpay .download-button p{margin-top: unset;margin-bottom: 25px;}
-#newpay .newpay-text h2{
-    font-size: 32px;
-    color: #333;
-    font-weight: 400;
+.newpay-head .title {
+    padding-top: 190px;
+    padding-bottom: 0;
+    font-size: 55px;
+    color: #000;
 }
-#newpay .newpay-text p{
-    font-size: 16px;
+.newpay-head .slogan {
+    font-size: 24px;
 }
-#newpay .newpay-one .newpay-left{
-    margin-top: 110px;
-}
-#newpay .newpay-one .newpay-right img{
-    width: 300px;
-    margin-top: 30px;
-}
-#newpay .newpay-one .newpay-left .newpay-icon{
-    margin-top: 25px;
-}
-#newpay .newpay-two .newpay-text{
+.newpay-head .screenshot {
     text-align: right;
+    margin-right: 80px;
 }
-#newpay .newpay-two .newpay-right{
-    margin-top: 105px;
-}
-#newpay .newpay-two .newpay-right img{
-    margin-left: 35px;
-    margin-top: 15px;
-}
-#newpay .newpay-two .newpay-left{
-    margin-top: 90px;
-}
-#newpay .newpay-two .newpay-left img{
-    width: 475px;
-}
-#newpay .newpay-three .newpay-left{
-    margin-top: 160px;
-}
-#newpay .newpay-three .newpay-right img{
+.newpay-head .screenshot img {
+    padding-top: 122px;
     width: 300px;
-    margin-top: 30px;
 }
-#newpay .newpay-three .newpay-left .newpay-icon{
-    margin-top: 25px;
+.newpay-head .download-container {
+    margin-top: 115px;
 }
-#newpay .newpay-four .newpay-text{
-    text-align: right;
+.newpay-head .download-container .item {
+    float:left;
+    display:inline;
+    padding-right: 15px;
 }
-#newpay .newpay-four .newpay-left img{
-    width: 320px;
-    margin-top: 42px;
-    margin-left: 60px;
+.newpay-head .download-container .item .ios-button {
+    width: 120px;
+    height: 40px;
 }
-#newpay .newpay-four .newpay-right{
-    margin-top: 105px;
+.newpay-head .download-container .item .android-button {
+    width: 135px;
+    height: 40px;
 }
-#newpay .newpay-four .newpay-icon img{
-    margin-left: 50px;
-    margin-top: 20px;
+.newpay-head .download-container .item .qrcode-thumbnail {
+    font-size: 40px;
 }
-@media(max-width:1199px) and (min-width: 992px){
-.newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.png) no-repeat top center; width:96%; height:700px;}
-.newpay_text{padding-bottom:80px;}
-.newpay_text .col-sm-6{padding:0}
-.newpay_text .col-sm-4{text-align:right}
-.newpay_text img{width:120px; height:120px;}
-.newpay_text h2{padding-left:0; color: #333; font-size:26px;}
-.newpay_text p{padding-left:0; color: #333; font-size:18px;}
-.newpay_text .col-sm-6{margin:80px 0 0;}
+
+.newpay-summary {
+
 }
+.newpay-summary img {
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+.newpay-summary .text {
+    margin-top: 190px;
+}
+.newpay-summary .text h2 {
+    color:#272727;
+    font-weight: bold;
+}
+.newpay-summary .text p {
+    color:#63727D;
+}
+.newpay-summary .left-text {
+    margin-left: 100px;
+    margin-top: 190px;
+}
+
 @media(max-width:991px) and (min-width: 768px){
-.newpay_bg{background:#F7F7F7 url(../images/newpay/newpay_bg.png) no-repeat top center; width:100%; height:600px;}
-.newpay_text{padding-bottom:60px;}
-.newpay_text .col-sm-6{padding:0}
-.newpay_text .col-sm-4{text-align:right}
-.newpay_text img{width:80px; height:80px;}
-.newpay_text h2{padding-left:0; font-size:26px;}
-.newpay_text p{padding-left:0; font-size:18px;}
-.newpay_text .col-sm-6{margin:60px 0 0;}
+
 }
 @media only screen and (max-width : 768px) {
-    .newpay_bg{background:#F4F4F4  url(../images/newpay/newpay_mobile_bg.jpg) no-repeat top center; background-size:346px 290px; width:100%; height:290px;}
-    .newpay_text{padding-bottom:30px;}
-    .newpay_text .col-sm-6{padding:0}
-    .newpay_text .col-sm-4{margin-bottom:15px}
-    .newpay_text img{width:80px; height:80px;}
-    .newpay_text p{padding-left:0; font-size:18px;}
-    .newpay_text .col-sm-6{margin:0; padding-top: 30px;padding-bottom: 30px}
-    .newpay-gray{background-color: #f7f7f7}
-    #newpay .newpay-one .newpay-text{
+    .newpay-head .title {
+        padding-top:90px;
         text-align: center;
     }
-    #newpay .download-button div{
-        font-size: 23px;
+    .newpay-head .slogan {
+        text-align: center;
     }
-    #newpay .download-button h3{
-        font-size: 24px;
+    .newpay-head .screenshot {
+        margin-right: 0;
+        text-align: center;
     }
-    #newpay .newpay-icon{
+    .newpay-head .screenshot img {
+        width: 80%;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .newpay-head .download-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .newpay-head .download-container .item {
+        display: block;
+        float: unset;
+        text-align: center;
+    }
+    .newpay-head .download-container .item .qrcode-thumbnail {
         display: none;
     }
-    #newpay .newpay-one .newpay-left{
+    .newpay-summary {
+        padding-bottom: 50px;
+    }
+    .newpay-summary img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 80% !important;
+    }
+    .newpay-summary .text {
+        text-align: center;
         margin-top: 50px;
     }
-    #newpay .newpay-text h2{
-        font-size: 25px;
+    .newpay-summary .text h2 {
+        font-size: 24px;
+        font-weight: bold;
     }
-    #newpay .newpay-text p{
-        font-size: 16px;
+    .newpay-summary .text p {
     }
-    #newpay .newpay-one .newpay-right img{
-        width: 265px;
-        margin-left: 15px;
-    }
-    #newpay .newpay-two {
-        height: 500px;
-    }
-    #newpay .newpay-two .newpay-text{
-        text-align: center;
-    }
-    #newpay .newpay-two .newpay-left{
-        margin-top: unset;
-        float: left;
-        top: 274px;
-    }
-    #newpay .newpay-two .newpay-right{
-        margin-top: unset;
-        float: right;
-        bottom: 175px;
-    }
-    #newpay .newpay-two .newpay-left img{
-        width: 315px;
-    }
-    #newpay .newpay-three .newpay-text{
-        text-align: center;
-    }
-    #newpay .newpay-three .newpay-left{
-        margin-top: 55px;
-    }
-    #newpay .newpay-four .newpay-left img{
-        width: 260px;
-        margin-top: unset;
-        margin-left: unset;
-        float: left;
-    }
-    #newpay .newpay-four .newpay-right{
-        margin-top: unset;
-        float: right;
-        top: -280px;
-    }
-    #newpay .newpay-four{
-        height: 666px;
-    }
-    #newpay .newpay-four .newpay-left{
-        float: left;
-        top: 350px;
-        margin-left: 20px;
-    }
-    #newpay .newpay-four .newpay-text{
-        text-align: center;
+    .newpay-summary .left-text {
+        margin: unset;
+        margin-top: 50px;
     }
 }
 
