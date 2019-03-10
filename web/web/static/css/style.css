@@ -1,3 +1,8 @@
+@font-face {
+    font-family: opensans-light;
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+
 @charset "utf-8";
 /* Global Styles */
 body, html {height: 100%; width: 100%; max-width: 100%;}
@@ -5,7 +10,7 @@ html {font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adj
 body {font-size: 14px; line-height: 1.42857143; color: #333; background-color: #fff}.clearlist, .clearlist li {list-style: none; padding: 0; margin: 0; background: none;}
 code, kbd, pre, samp {font-family: monospace, monospace; font-size: 1em}
 button, input, select, textarea {font-size: inherit; line-height: inherit}
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-weight: 500; line-height: 1.1; color: inherit}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-family: opensans-light; font-weight: 500; line-height: 1.1; color: inherit}
 body {font-family: "PingFang SC","SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif; color: #888; overflow-x: hidden; margin: auto;}
 body:lang(zh-CN) {font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;}
 body:lang(ko) {font-family: "SF Pro KR","SF Pro Display","SF Pro Icons","Apple Gothic","HY Gulim","MalgunGothic","HY Dotum","Lexi Gulim","Helvetica Neue","Helvetica","Arial",sans-serif}
@@ -19,11 +24,6 @@ body:lang(th) {font-family: "SF Pro TH","SF Pro Display","SF Pro Icons","Helveti
     background:#29282b;
 }
 
-@font-face {
-    font-family: opensans-light;
-    src: url(../fonts/OpenSans-Light.ttf);
-}
-
 ::-webkit-selection {
     color: #fff;
     background:#29282b;
@@ -35,7 +35,7 @@ a:hover, a:focus {-moz-outline: none; outline: none; text-decoration: none;}
 .c-gray {color: #D8D8D8;}
 .btn-lg {border-radius: 0; font-family: 'Roboto', sans-serif;}
 .btn-block+.btn-block {margin-top: 20px;}
-h1, h2, h3, h4, h5, h6 {font-weight: 100; margin:0; padding:0; margin-bottom: 20px; line-height: 1.4;}
+         h1, h2, h3, h4, h5, h6 {font-weight: 100; margin:0; padding:0; margin-bottom: 20px; line-height: 1.4;font-family:opensans-light}
 .f200 {font-size: 200px;}
 .h1 {font-size: 70px;}
 .h2 {font-size: 50px;}

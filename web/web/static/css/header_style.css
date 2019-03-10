@@ -1,8 +1,14 @@
+@font-face {
+    font-family: opensans-light;
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+
 #intro_animation {
     height: 70vh;
     }
 
 #intro_text {
+        font-family: opensans-light;
 	color: #fff;
 	width: 100%;
 	height: auto;
@@ -19,6 +25,7 @@
 
 #intro_text h2 {
         margin-top: 10vh;
+        font-family: opensans-light;
 }
 
 #intro_text button {
