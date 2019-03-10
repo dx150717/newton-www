@@ -18,6 +18,12 @@ body:lang(th) {font-family: "SF Pro TH","SF Pro Display","SF Pro Icons","Helveti
     color: #fff;
     background:#29282b;
 }
+
+@font-face {
+    font-family: opensans-light;
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+
 ::-webkit-selection {
     color: #fff;
     background:#29282b;
@@ -2568,7 +2574,3 @@ input[name="expect_btc"], input[name="expect_ela"]{
     }
 }
 
-@fontface {
-    font-family: opensans-light
-    src: url(../fonts/OpenSans-Light.ttf)
-}
