@@ -18,14 +18,22 @@ def show_newpay_download_view(request):
     client = internal_api_client.InternalAPIClient(settings.INTERNAL_API_HOST_IP, settings.INTERNAL_API_HOST_PORT)
     # ios
     ios_url = ''
-    result = client.query_upgrade_data(1, 1).upgrade_data
+    result = None
+    try:
+        result = client.query_upgrade_data(1, 1).upgrade_data
+    except Exception, inst:
+        logger.error("fail to query upgrade:%s" % str(inst))
     if result:
         ios_url = result[0].download_url
     if not ios_url:
         ios_url = settings.NEWTON_NEWPAY_IOS_URL
     # android
     android_url = ''
-    result = client.query_upgrade_data(2, 1).upgrade_data
+    result = None
+    try:
+        result = client.query_upgrade_data(2, 1).upgrade_data
+    except Exception, inst:
+        logger.error("fail to query upgrade:%s" % str(inst))
     if result:
         android_url = result[0].download_url
     if not android_url:

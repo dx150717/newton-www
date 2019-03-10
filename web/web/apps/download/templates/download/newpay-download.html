@@ -1,76 +1,67 @@
+{% extends "base.html" %}
 {% load i18n %}
 {% load utils %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <meta name="keywords" content="{% trans "Newton,NewPay,Download" %}"/>
-        <title>{% trans "NewPay Download" %}</title>
-        <!-- Fav and touch icons -->
-        <meta name="apple-mobile-web-app-capable" content="yes"/>
-        <!-- CSS -->
-        <!-- HTML5 IE Enabling Script -->
-        <link rel="shortcut icon" href="{% version "images/logo-new.png" %}" type="image/x-icon" />
-    	<!--==== style css ====-->
-        <link href="{% version "css/bootstrap.min.css" %}" rel="stylesheet" />
-        <link href="{% version "css/download.css" %}" rel="stylesheet" />
-        <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116218760-1"></script>
-    </head>
-    <body>
-        <div role="main" id="main" class="container">
-            <div class="logo">
-                <p class="text-center">
-                    <img src="{% version "images/logo-512.png" %}" />
-                </p>
-            </div>
+{% block title %}
+{% trans "NewPay" %}
+{% endblock %}
 
-            <div class="title">
-                <p class="text-center">{% trans "You are invited to join <br/>Newton" %}</p>
-            </div>
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% version "css/download.css" %}" />
+{% endblock %}
 
-            <div class="action">
-                <p class="text-center">
-                    <a href="{{ android_url }}" class="btn btn-default" id="id_android_btn" style="display:none;">{% trans "Download NewPay Android" %}</a>
-                    <a href="{{ ios_url }}" class="btn btn-default" id="id_ios_btn" style="display:none;">
-                        {% trans "Download NewPay iOS" %}
-                    </a>
-                </p>
-            </div>
+{% block content %}
+<div role="main" id="main" class="container bg-dot-img newpay-download">
+    <div class="circle-logo">
+        <p class="text-center">
+            <img src="{% version "images/logo-512.png" %}" />
+        </p>
+    </div>
 
+    <div class="title">
+        <h2 class="name text-center">{% trans "NewPay" %}</h2>
+        <p class="slogan text-center">
+            {% trans "The Digital Wallet of Newton Community Economy" %}
+        </p>
+    </div>
+
+    <div class="action">
+        <p class="text-center">
+            <a href="{{ android_url }}" class="btn btn-default" id="id_android_btn" style="display:none;">{% trans "Download NewPay Android" %}</a>
+            <a href="{{ ios_url }}" class="btn btn-default" id="id_ios_btn" style="display:none;">
+                {% trans "Download NewPay iOS" %}
+            </a>
+        </p>
+    </div>
+
+    {% if is_zh %}
+    {% include "download/include-newpay-download-china-note.html" %}
+    <div id="zh-mask" class="zh-mask">
+        <img src="{% version "images/newpay/mask-zh.png" %}" />
+    </div>
+    {% else %}
+    <div id="en-mask" style="en-mask">
+        <img src="{% version "images/newpay/mask-en.png" %}" />
+    </div>
+    {% endif %}
+</div>
+
+<script type="text/javascript" src="{% version "js/download.js" %}"></script>
+
+<script language="javascript">
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    var zhMask = document.getElementById('zh-mask');
+    var enMask = document.getElementById('en-mask');
+
+    if (isAndroid) {
+        if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger") {
             {% if is_zh %}
-            {% include "download/include-newpay-download-china-note.html" %}
-            <div id="zh-mask" class="zh-mask">
-	            <img src="{% version "images/newpay/mask-zh.png" %}" />
-            </div>
+            zhMask.style.display = 'block';
             {% else %}
-            <div id="en-mask" style="en-mask">
-		        <img src="{% version "images/newpay/mask-en.png" %}" />
-	        </div>
+            enMask.style.display = 'block';
             {% endif %}
-        </div>
-
-        <script type="text/javascript" src="{% version "js/download.js" %}"></script>
-
-        <script language="javascript">
-            var u = navigator.userAgent;
-            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-            var zhMask = document.getElementById('zh-mask');
-            var enMask = document.getElementById('en-mask');
-    
-            if (isAndroid) {
-                if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger") {
-                    {% if is_zh %}
-                    zhMask.style.display = 'block';
-                    {% else %}
-                    enMask.style.display = 'block';
-                    {% endif %}
-                }
-            }
-        </script>
-    </body>
-</html>
+        }
+    }
+</script>
+{% endblock %}

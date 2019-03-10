@@ -7,25 +7,44 @@ body {
 .white-font {
     color: #ffffff;
 }
-.logo {
+.bg-dot-img {
+    background:url(../images/newpay/head-bg-desktop.png) no-repeat top center;
 }
-.logo img {
-    width: 180px;
+.newpay-download .logo {
+}
+.newpay-download .logo img {
+    width: 125px;
+    margin-bottom: 40px;
     margin-top: 20px;
+ }
+.newpay-download .circle-logo img {
+    width: 125px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: #979797;
+    border: 1px solid;
+    border-radius: 20px;
+}
+.newpay-download .title {
+    font-size: 30px;
     margin-bottom: 40px;
+    padding-top:0;
 }
-.title {
-    font-size: 1.5em;
-    margin-bottom: 40px;
+.newpay-download .title .name {
+    color: #272727;
 }
-.invite {
+.newpay-download .title .slogan {
+    font-size: 16px;
+    color:#666666;
 }
-.invite .key {
+.newpay-download .invite {
+}
+.newpay-download .invite .key {
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-.invite .code {
+.newpay-download .invite .code {
     font-size: 20px;
     background-color: #ffffff;
     color: #000;
@@ -34,14 +53,14 @@ body {
     margin-right: auto;
     border-radius: 15px;
 }
-.invite .description {
+.newpay-download .invite .description {
     margin-top: 30px;
     font-size: 16px;
 }
-.action {
+.newpay-download .action {
     margin-top: 100px;
 }
-.action .btn {
+.newpay-download .action .btn {
     background-color: #191919;
     color: #fff;
     border: 0;
@@ -49,17 +68,17 @@ body {
     width: 320px;
 }
 
-.action .small-btn {
+.newpay-download .action .small-btn {
     width: 300px;
     margin-right: 10px;
 }
 
-.zh-mask{display:none;position:fixed;width:100%;height:2000px;background:rgba(0,0,0,0.6);top:0;left:0;z-index:10;}
-.zh-mask img{margin-left:15px;margin-top:40px;width:95%;}
-.en-mask{display:none;position:fixed;width:100%;height:2000px;background:rgba(0,0,0,0.6);top:0;left:0;z-index:10;}
-.en-mask img{margin-left:15px;margin-top:40px;width:95%;}
+.newpay-download .zh-mask{display:none;position:fixed;width:100%;height:2000px;background:rgba(0,0,0,0.6);top:0;left:0;z-index:10;}
+.newpay-download .zh-mask img{margin-left:15px;margin-top:40px;width:95%;}
+.newpay-download .en-mask{display:none;position:fixed;width:100%;height:2000px;background:rgba(0,0,0,0.6);top:0;left:0;z-index:10;}
+.newpay-download .en-mask img{margin-left:15px;margin-top:40px;width:95%;}
 
-.note { display:none; }
-.guide {}
-.guide img { width: 100%;}
-.account {}
+.newpay-download .note { display:none; }
+.newpay-download .guide {}
+.newpay-download .guide img { width: 100%;}
+.newpay-download .account {}
