@@ -2311,14 +2311,21 @@ input[name="expect_btc"], input[name="expect_ela"]{
     background:url(../images/newpay/head-bg-desktop.png) no-repeat top center;
     width:100%;
 }
+.newpay-head .container {
+    padding-left: 80px;
+}
 .newpay-head .title {
-    padding-top: 190px;
+    padding-top: 150px;
     padding-bottom: 0;
     font-size: 55px;
     color: #000;
+    font-weight: 500;
 }
 .newpay-head .slogan {
     font-size: 24px;
+    font-weight: lighter;
+    line-height: 40px;
+    font-weight: lighter;
 }
 .newpay-head .screenshot {
     text-align: right;
@@ -2329,7 +2336,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
     width: 300px;
 }
 .newpay-head .download-container {
-    margin-top: 115px;
+    margin-top: 80px;
 }
 .newpay-head .download-container .item {
     float:left;
@@ -2347,23 +2354,35 @@ input[name="expect_btc"], input[name="expect_ela"]{
 .newpay-head .download-container .item .qrcode-thumbnail {
     font-size: 40px;
 }
+.newpay-head .guide-link {
+    height: 40px;
+    text-align: left; 
+    padding-right: 200px;
+}
 
 .newpay-summary {
-
+    width: 1000px;
 }
 .newpay-summary img {
     margin-top: 120px;
     margin-bottom: 50px;
+    width: 300px;
 }
 .newpay-summary .text {
     margin-top: 190px;
 }
 .newpay-summary .text h2 {
     color:#272727;
-    font-weight: bold;
+    font-weight: 400;
 }
 .newpay-summary .text p {
-    color:#63727D;
+    color: #63727D;
+    font-size: 18px;
+    font-weight: lighter;
+    line-height: 30px;
+}
+.newpay-summary .text p strong {
+    font-weight: 300;
 }
 .newpay-summary .left-text {
     margin-left: 100px;
@@ -2374,12 +2393,19 @@ input[name="expect_btc"], input[name="expect_ela"]{
 
 }
 @media only screen and (max-width : 768px) {
+    .newpay-head .container {
+        padding-left: 20px;
+    }
     .newpay-head .title {
-        padding-top:90px;
+        padding-top:60px;
         text-align: center;
+        font-size: 40px;
     }
     .newpay-head .slogan {
         text-align: center;
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 24px;
     }
     .newpay-head .screenshot {
         margin-right: 0;
@@ -2403,10 +2429,13 @@ input[name="expect_btc"], input[name="expect_ela"]{
         display: none;
     }
     .newpay-summary {
+        width: auto;
+    }
+    .newpay-summary {
         padding-bottom: 50px;
     }
     .newpay-summary img {
-        margin-top: 20px;
+        margin-top: 40px;
         margin-bottom: 20px;
         width: 80% !important;
     }
@@ -2419,6 +2448,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
         font-weight: bold;
     }
     .newpay-summary .text p {
+        font-size: 16px;
     }
     .newpay-summary .left-text {
         margin: unset;

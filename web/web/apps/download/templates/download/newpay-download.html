@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<div role="main" id="main" class="container bg-dot-img newpay-download">
+<div role="main" id="main" class="container bg-dot-img newpay-download newpay-head">
     <div class="circle-logo">
         <p class="text-center">
             <img src="{% version "images/logo-512.png" %}" />
@@ -24,13 +24,8 @@
         </p>
     </div>
 
-    <div class="action">
-        <p class="text-center">
-            <a href="{{ android_url }}" class="btn btn-default" id="id_android_btn" style="display:none;">{% trans "Download NewPay Android" %}</a>
-            <a href="{{ ios_url }}" class="btn btn-default" id="id_ios_btn" style="display:none;">
-                {% trans "Download NewPay iOS" %}
-            </a>
-        </p>
+    <div class="action download-container">
+        {% include "welcome/include-newpay-download-button.html" %}
     </div>
 
     {% if is_zh %}
@@ -39,7 +34,7 @@
         <img src="{% version "images/newpay/mask-zh.png" %}" />
     </div>
     {% else %}
-    <div id="en-mask" style="en-mask">
+    <div id="en-mask" class="en-mask">
         <img src="{% version "images/newpay/mask-en.png" %}" />
     </div>
     {% endif %}

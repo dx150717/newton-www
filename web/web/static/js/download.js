@@ -12,3 +12,4 @@ if (isAndroid) {
   $('#id_android_btn').show();
   $('#id_ios_btn').show();
 }
+$('[data-toggle="popover"]').popover();

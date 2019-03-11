@@ -17,10 +17,11 @@ body {
     margin-bottom: 40px;
     margin-top: 20px;
  }
+.newpay-download .circle-logo {
+    margin-top: 80px;
+}
 .newpay-download .circle-logo img {
-    width: 125px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 80px;
     border-color: #979797;
     border: 1px solid;
     border-radius: 20px;
@@ -80,5 +81,36 @@ body {
 
 .newpay-download .note { display:none; }
 .newpay-download .guide {}
-.newpay-download .guide img { width: 100%;}
+.newpay-download .guide img { width: 80%;}
 .newpay-download .account {}
+
+.bg-blue .note {
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #fefefe;
+}
+.bg-blue .note h5 {
+    line-height: 24px;
+}
+.bg-blue .note .well {
+    color: #333;
+}
+
+.newpay-head .download-container {
+    text-align: center;
+}
+.newpay-head .download-container .item {
+    float: unset;
+    display: inline-block;
+}
+.newpay-head .download-container .item .qrcode-thumbnail {
+    vertical-align: middle;
+}
+.newpay-head .guide-link {
+    padding-right: 0;
+}
+@media only screen and (max-width : 768px) {
+    .newpay-head .action {
+        margin-top: 60px;
+    }
+}

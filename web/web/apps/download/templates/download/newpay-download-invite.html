@@ -44,16 +44,39 @@
 
             <div class="action">
                 <p class="text-center">
-                    <a href="{{ android_url }}" class="btn btn-default" id="id_android_btn" style="display:none;">{% trans "Download NewPay Android" %}</a>
-                    <a href="{{ ios_url }}" class="btn btn-default" id="id_ios_btn" style="display:none;">
-                        {% trans "Download NewPay iOS" %}</a>
+                    <a href="/newpay/" class="btn btn-default" id="id_android_btn">{% trans "Download NewPay" %}
+                    </a>
                 </p>
             </div>
             
         </div>
-
+        {% if is_zh %}
+        <div id="zh-mask" class="zh-mask">
+            <img src="{% version "images/newpay/mask-zh.png" %}" />
+        </div>
+        {% else %}
+        <div id="en-mask" class="en-mask">
+            <img src="{% version "images/newpay/mask-en.png" %}" />
+        </div>
+        {% endif %}
         <script type="text/javascript" src="{% version "js/download.js" %}"></script>
+        <script language="javascript">
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            var zhMask = document.getElementById('zh-mask');
+            var enMask = document.getElementById('en-mask');
 
+            if (isAndroid) {
+                if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger") {
+                    {% if is_zh %}
+                    zhMask.style.display = 'block';
+                    {% else %}
+                    enMask.style.display = 'block';
+                    {% endif %}
+                }
+            }
+        </script>
     </body>
 </html>
 
