@@ -31,7 +31,7 @@
 </div>
 
 {% if language == "zh-cn" %}
-<p class="hidden-xs guide-link">
+<p class="guide-link">
     <a href="/download/newpay/guide/" class="appstore-download" target="_blank">
         {% trans "没有海外Apple ID如何下载?" %}
     </a>
@@ -45,9 +45,11 @@
 
     if (isiOS) {
         $(".google-download").hide();
+        $(".appstore-download").show();
     };
 
     if (isAndroid) {
         $(".appstore-download").hide();
+        $(".google-download").show();
     };
 </script>
