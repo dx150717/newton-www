@@ -1,0 +1,75 @@
+{% load i18n %}
+{% load utils %}
+
+<section id="feature" class="section feature-pc">
+    <div class="container slider-section">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title text-center">
+                    {% trans "Why Newton?" %}
+                </h2>
+            </div>
+        </div>
+
+        <div class="row slider-item-list">
+            <div class="feature-item col-md-4 col-xs-12 slider-item default-slider-item">
+                <div class="feature-item-img">
+                    <div class="feature-item-img"><span class="feature-img1"></span></div>
+                </div>
+                <div class="feature-item-wrap">
+                    <dl>
+                        <dt>{% trans "Your Digital Life in Your Hands" %}</dt>
+                        <dd {% arabic_change_style %}>
+                            {% trans "Your data is yours and yours alone. Share it how you like, with who you like, and charge what you want for others to use your data" %}
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="feature-item col-md-4 col-xs-12 slider-item">
+                <div class="feature-item-img">
+                    <div class="feature-item-img"><span class="feature-img2"></span></div>
+                </div>
+                <div class="feature-item-wrap">
+                    <dl>
+                        <dt>{% trans "Get Incentives" %}</dt>
+                        <dd {% arabic_change_style %}>{% trans "Our technology cuts out the middlemen, which brings down costs and rewards everyone involved, whether they're service providers, consumers or others connected by the value-based internet." %}</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="feature-item col-md-4 col-xs-12 slider-item">
+                <div class="feature-item-img">
+                    <div class="feature-item-img"><span class="feature-img3"></span></div>
+                </div>
+                <div class="feature-item-wrap">
+                    <dl>
+                        <dt>{% trans "An Economy for Everyone" %}</dt>
+                        <dd {% arabic_change_style %}>{% trans "We're rewriting the rules of the economy, and taking it back for the rest of us. Wave goodbye to the corporate economy, and say hello to the community economy." %}</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <ul class="slider-button-list">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="more col-md-12 col-xs-12 whitepaper-download">
+                <a href="/whitepaper/" target="_self"><span class="f20">{% trans "White Paper" %}</span></a>
+            </div>
+        </div>
+
+    </div>
+</section><!-- end -->
+
+{% block css %}
+<style>
+    @media (max-width: 768px){
+        .feature-pc{
+            display: none;
+        }
+    }
+</style>
+{% endblock %}
