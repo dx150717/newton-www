@@ -2326,6 +2326,7 @@ input[name="expect_btc"], input[name="expect_ela"]{
     font-weight: lighter;
     line-height: 40px;
     font-weight: lighter;
+    color: #000;
 }
 .newpay-head .screenshot {
     text-align: right;
@@ -2358,6 +2359,16 @@ input[name="expect_btc"], input[name="expect_ela"]{
     height: 40px;
     text-align: left; 
     padding-right: 200px;
+}
+.newpay-head .guide-link a {
+    text-decoration: underline; 
+    font-size: 15px; 
+    display: inline-block; 
+    text-align: center; 
+    height: 100%; 
+    color: #888; 
+    padding-top: 15px; 
+    padding-bottom: 5px;
 }
 
 .newpay-summary {

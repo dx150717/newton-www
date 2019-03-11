@@ -28,16 +28,11 @@
     <a href="{{ android_url }}" style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;" class="google-download">
         <img src="{% version "images/download-logo/newpay-download-icon.svg" %}" alt="" style="height: 100%; vertical-align: sub; padding-right: 10px;">{% trans "Download NewPay APK" %}
     </a>
-    {% if language == "zh-cn" %}
-    <a href="/download/newpay/guide/" style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;" class="appstore-download">
-        {% trans "没有海外Apple ID如何下载?" %}
-    </a>
-    {% endif %}
 </div>
 
 {% if language == "zh-cn" %}
 <p class="hidden-xs guide-link">
-    <a href="/download/newpay/guide/" style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;" class="appstore-download" target="_blank">
+    <a href="/download/newpay/guide/" class="appstore-download" target="_blank">
         {% trans "没有海外Apple ID如何下载?" %}
     </a>
 </p>

@@ -15,6 +15,7 @@
     padding-top: 15px;
     padding-bottom: 10px;
     font-weight: lighter;
+    color: #000;
 }
 .announce-container .download-container {
     margin-top: 0;
@@ -27,9 +28,14 @@
 }
 .announce-container .download-container .guide-link {
     text-align: center;
-    padding-right: 0;
+    padding-right: 150px;
 }
 
 @media (max-width: 768px) {
-
+    .announce-container .announce-title {
+        font-size: 24px;
+    }
+    .announce-container .announce-subtitle {
+        font-size: 18px;
+    }
 }
