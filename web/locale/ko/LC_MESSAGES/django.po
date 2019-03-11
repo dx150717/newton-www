@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-10 10:38+0000\n"
+"POT-Creation-Date: 2019-03-11 02:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -167,17 +167,14 @@ msgid "No"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:9
-#: web/apps/download/templates/download/newpay-download.html:9
 msgid "Newton,NewPay,Download"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:10
-#: web/apps/download/templates/download/newpay-download.html:10
 msgid "NewPay Download"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:32
-#: web/apps/download/templates/download/newpay-download.html:32
 msgid "You are invited to join <br/>Newton"
 msgstr ""
 
@@ -192,13 +189,27 @@ msgid ""
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:47
-#: web/apps/download/templates/download/newpay-download.html:37
+#: web/apps/download/templates/download/newpay-download.html:29
 msgid "Download NewPay Android"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:49
-#: web/apps/download/templates/download/newpay-download.html:39
+#: web/apps/download/templates/download/newpay-download.html:31
 msgid "Download NewPay iOS"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download.html:5
+#: web/apps/download/templates/download/newpay-download.html:21
+#: web/apps/welcome/templates/welcome/newpay.html:5
+#: web/apps/welcome/templates/welcome/sitemap.html:45
+#: web/templates/header.html:42 web/templates/header.html.py:234
+msgid "NewPay"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download.html:23
+#: web/apps/welcome/templates/welcome/include-index-announce.html:10
+#: web/apps/welcome/templates/welcome/newpay.html:15
+msgid "The Digital Wallet of Newton Community Economy"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-guide.html:6
@@ -3709,12 +3720,9 @@ msgstr ""
 "을 것이고, 경제의 한 부분이 될 것입니다."
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:7
-msgid "NewChain mainnet is now launched"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-index-announce.html:10
-msgid "Download NewPay digital wallet to join Newton's economy"
-msgstr ""
+#, fuzzy
+msgid "NewPay 1.0 is now launched"
+msgstr "뉴턴몰 정식 오픈"
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:15
 msgid "Digital wallet in Newton's economy"
@@ -5473,16 +5481,6 @@ msgid ""
 "Proposal (NEP) template for unified numbering and management. The proposals "
 "are then put to the community for broader discussion, getting opinions and "
 "suggestions from all parties involved before forming final conclusions."
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/apps/welcome/templates/welcome/sitemap.html:45
-#: web/templates/header.html:42 web/templates/header.html.py:234
-msgid "NewPay"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/newpay.html:15
-msgid "The Digital Wallet of Newton Community Economy"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:23

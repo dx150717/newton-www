@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-10 10:38+0000\n"
+"POT-Creation-Date: 2019-03-11 02:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,17 +165,14 @@ msgid "No"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:9
-#: web/apps/download/templates/download/newpay-download.html:9
 msgid "Newton,NewPay,Download"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:10
-#: web/apps/download/templates/download/newpay-download.html:10
 msgid "NewPay Download"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:32
-#: web/apps/download/templates/download/newpay-download.html:32
 msgid "You are invited to join <br/>Newton"
 msgstr "邀请您加入牛顿"
 
@@ -190,14 +187,28 @@ msgid ""
 msgstr "通过邀请码在NewPay中创建NewID<br/>加入牛顿社群经济体"
 
 #: web/apps/download/templates/download/newpay-download-invite.html:47
-#: web/apps/download/templates/download/newpay-download.html:37
+#: web/apps/download/templates/download/newpay-download.html:29
 msgid "Download NewPay Android"
 msgstr "NewPay Android 官方下载"
 
 #: web/apps/download/templates/download/newpay-download-invite.html:49
-#: web/apps/download/templates/download/newpay-download.html:39
+#: web/apps/download/templates/download/newpay-download.html:31
 msgid "Download NewPay iOS"
 msgstr "NewPay iOS 官方下载"
+
+#: web/apps/download/templates/download/newpay-download.html:5
+#: web/apps/download/templates/download/newpay-download.html:21
+#: web/apps/welcome/templates/welcome/newpay.html:5
+#: web/apps/welcome/templates/welcome/sitemap.html:45
+#: web/templates/header.html:42 web/templates/header.html.py:234
+msgid "NewPay"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download.html:23
+#: web/apps/welcome/templates/welcome/include-index-announce.html:10
+#: web/apps/welcome/templates/welcome/newpay.html:15
+msgid "The Digital Wallet of Newton Community Economy"
+msgstr "牛顿社群经济体的数字钱包<br/>闪电结算 社群治理 挖矿即收益"
 
 #: web/apps/download/templates/download/newpay-guide.html:6
 msgid "Guide"
@@ -3794,12 +3805,8 @@ msgstr ""
 "按照公平、合理、透明的原则，获得经济体的权益，成为经济体的一部分。"
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:7
-msgid "NewChain mainnet is now launched"
-msgstr "NewChain 主网现已上线"
-
-#: web/apps/welcome/templates/welcome/include-index-announce.html:10
-msgid "Download NewPay digital wallet to join Newton's economy"
-msgstr "立即下载 NewPay 数字钱包加入牛顿经济体"
+msgid "NewPay 1.0 is now launched"
+msgstr "NewPay 1.0 现已正式上线"
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:15
 msgid "Digital wallet in Newton's economy"
@@ -5614,16 +5621,6 @@ msgstr ""
 "写，成为牛顿发展提案（Newton Evolution Proposal），简称NEP，并进行统一编号和"
 "管理，然后提交到社群进行广泛讨论，综合各方意见和建议，形成最终结论。"
 
-#: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/apps/welcome/templates/welcome/sitemap.html:45
-#: web/templates/header.html:42 web/templates/header.html.py:234
-msgid "NewPay"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/newpay.html:15
-msgid "The Digital Wallet of Newton Community Economy"
-msgstr "牛顿社群经济体的数字钱包<br/>闪电结算 社群治理 挖矿即收益"
-
 #: web/apps/welcome/templates/welcome/newpay.html:23
 msgid "newpay-screenshot.png"
 msgstr "newpay-screenshot-zh.png"
@@ -5644,7 +5641,8 @@ msgstr "社群治理"
 msgid ""
 "Vote to take part in community governance and receive incentives in "
 "<strong>NEW</strong>."
-msgstr "参与社群节点投票和竞选<br/>进行牛顿社群治理并收获<strong>NEW</strong>的激励"
+msgstr ""
+"参与社群节点投票和竞选<br/>进行牛顿社群治理并收获<strong>NEW</strong>的激励"
 
 #: web/apps/welcome/templates/welcome/newpay.html:78
 msgid "Mining"
@@ -9824,6 +9822,9 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
+
+#~ msgid "Download NewPay digital wallet to join Newton's economy"
+#~ msgstr "立即下载 NewPay 数字钱包加入牛顿经济体"
 
 #~ msgid "Create and manage decentralized ID's"
 #~ msgstr "创建和管理DID(Decentralized IDs)；"
