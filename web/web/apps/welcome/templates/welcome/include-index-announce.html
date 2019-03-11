@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load utils %}
+{% load download_utils %}
 
 <div class="announce-container">
     {% if is_index %}
@@ -7,7 +8,7 @@
         {% trans "NewPay 1.0 is now launched" %}
     </div>
     <div class="announce-subtitle">
-        {% trans "The Digital Wallet of Newton Community Economy" %}
+        {% trans "Transaction, Governance, Mining, and New Design" %}
     </div>
     {% else %}
     <div class="container text-center download-button more">
@@ -15,77 +16,9 @@
         <h3>{% trans "Digital wallet in Newton's economy" %}</h3>
     </div>
     {% endif %}
-    <div class="announce-content">
-        <table>
-            <tbody>
-                <tr>
-                    <td id="id_appstore_download" class="appstore_download">
-                        <a href="{{ settings.NEWPAY_FOR_IOS_DOWNLOAD_URL }}">
-                            {% if language == "zh-cn" %}
-                            <img src="{% version "images/download-logo/app-store-zh.svg" %}" alt="">
-                            {% else %}
-                            <img src="{% version "images/download-logo/app-store-en.svg" %}" alt="">
-                            {% endif %}
-                        </a>
-                    </td>
-                    <td id="id_google_download" class="google_download">
-                        <a href="{{ settings.NEWPAY_FOR_ANDROID_GOOGLE_DOWNLOAD_URL }}">
-                            {% if language == "zh-cn" %}
-                            <img src="{% version "images/download-logo/google-play-zh.png" %}" alt="">
-                            {% else %}
-                            <img src="{% version "images/download-logo/google-play-en.png" %}" alt="">
-                            {% endif %}
-                        </a>
-                    </td>
-                    <td class="qr-container">
-                        <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title=" " data-template='<div class="popover" role="tooltip"><div class="arrow"></div><img src="{% version "images/download-logo/newpay-qr-rels.png" %}" alt="" style="height: 150px;"></div>' data-container="body">
-                            <span class="glyphicon glyphicon-qrcode qrcode-thumbnail"></span>
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <p style="height: 40px; text-align: center;" class="visible-xs">
-            <a href="/download/newpay/mainnet/" style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;" class="google_download">
-                <img src="{% version "images/download-logo/newpay-download-icon.svg" %}" alt="" style="height: 100%; vertical-align: sub; padding-right: 10px;">{% trans "Download NewPay APK" %}
-            </a>
-
-            {% if language == "zh-cn" %}
-            <a href="/download/newpay/mainnet/" style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;" class="appstore_download">
-                {% trans "没有海外Apple ID如何下载?" %}
-            </a>
-            {% endif %}
-        </p>
-        {% if language == "zh-cn" %}
-        <p style="height: 40px; text-align: center; padding-right: 200px;" class="hidden-xs">
-            <a href="/download/newpay/guide/" style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;" class="appstore_download" target="_blank">
-                {% trans "没有海外Apple ID如何下载?" %}
-            </a>
-        </p>
-        {% endif %}
-        {% comment %}
-        <p class="text-center hidden-xs" style="margin-top:20px;padding-right:50px;">
-            <a href="https://newton-release.oss-cn-beijing.aliyuncs.com/NewPayDesktop-MacOSX-20181229.dmg" style="text-decoration: underline;font-size: 15px;display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;padding-right:20px;">
-                {% trans "NewPay-Desktop for MacOS" %}
-            </a>
-            <a href="https://newton-release.oss-cn-beijing.aliyuncs.com/NewPayDesktop-mini-Windows-20181229.zip" style="text-decoration: underline;font-size:15px; display: inline-block; text-align: center; height: 100%; color: #888; padding-top: 15px; padding-bottom: 5px;">
-                {% trans "NewPay-Desktop for Windows" %}
-            </a>
-        </p>
-       {% endcomment %}
+    <div class="newpay-head">
+        <div class="download-container">
+            {% show_download_buttons %}
+        </div>        
     </div>
 </div>
-
-<script>
-    var u = navigator.userAgent;
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-
-    if (isiOS) {
-        $(".google_download").hide();
-    };
-
-    if (isAndroid) {
-        $(".appstore_download").hide();
-    };
-</script>

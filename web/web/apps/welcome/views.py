@@ -30,7 +30,6 @@ from django.views.decorators.csrf import csrf_exempt
 from webpush import send_user_notification, send_group_notification
 from events.views.entries import EntryDetail as EventsEntryDetail
 from config import codes
-from internal_api_client import internal_api_client
 
 
 logger = logging.getLogger(__name__)
@@ -172,36 +171,6 @@ def show_legal_view(request):
 
 
 def show_newpay_view(request):
-    is_zh = False
-    language = str(translation.get_language())
-    if language.startswith('zh'):
-        is_zh = True
-    client = internal_api_client.InternalAPIClient(settings.INTERNAL_API_HOST_IP, settings.INTERNAL_API_HOST_PORT)
-    # ios
-    ios_url = ''
-    result = None
-    try:
-        result = client.query_upgrade_data(1, 1).upgrade_data
-    except Exception, inst:
-        logger.error("fail to query upgrade:%s" % str(inst))
-    if result:
-        ios_url = result[0].download_url
-    if not ios_url:
-        ios_url = settings.NEWTON_NEWPAY_IOS_URL
-    # android
-    android_url = ''
-    result = None
-    try:
-        result = client.query_upgrade_data(2, 1).upgrade_data
-    except Exception, inst:
-        logger.error("fail to query upgrade:%s" % str(inst))
-    if result:
-        android_url = result[0].download_url
-    if not android_url:
-        if is_zh:
-            android_url = settings.NEWPAY_FOR_ANDROID_ALI_DOWNLOAD_URL
-        else:
-            android_url = settings.NEWPAY_FOR_ANDROID_ALI_SG_DOWNLOAD_URL
     return render(request, 'welcome/newpay.html', locals())
 
 

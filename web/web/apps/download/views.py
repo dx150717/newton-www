@@ -5,8 +5,6 @@ from django.shortcuts import render, redirect
 from django.conf import settings
 from django.utils import translation
 
-from internal_api_client import internal_api_client
-
 logger = logging.getLogger(__name__)
 
 

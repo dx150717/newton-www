@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load utils %}
+{% load download_utils %}
+
 {% block title %}
 {% trans "NewPay" %}
 {% endblock %}
@@ -15,7 +17,7 @@
                         {% trans "The Digital Wallet of Newton Community Economy" %}
                     </p>
                     <div class="download-container hidden-xs">
-                        {% include "welcome/include-newpay-download-button.html" %}
+                        {% show_download_buttons %}
                     </div>
                 </div>
                 <div class="col-md-6">

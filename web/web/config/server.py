@@ -177,5 +177,5 @@ HAYSTACK_CONNECTIONS = {
 # newpay download url
 NEWPAY_FOR_ANDROID_ALI_DOWNLOAD_URL = ""
 NEWPAY_FOR_ANDROID_ALI_SG_DOWNLOAD_URL = ""
-NEWTON_NEWPAY_ANDROID_URL = ""
+NEWTON_NEWPAY_ANDROID_URL = "https://play.google.com/store/apps/details?id=org.newtonproject.newpay.android.release"
 NEWTON_NEWPAY_IOS_URL = "https://itunes.apple.com/app/newpay/id1439660801"

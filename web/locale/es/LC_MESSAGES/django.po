@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-11 06:02+0000\n"
+"POT-Creation-Date: 2019-03-11 07:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,6 +166,15 @@ msgstr ""
 msgid "No"
 msgstr ""
 
+#: web/apps/download/templates/download/include-newpay-download-button.html:29
+msgid "Download NewPay APK"
+msgstr ""
+
+#: web/apps/download/templates/download/include-newpay-download-button.html:33
+#: web/apps/download/templates/download/include-newpay-download-button.html:41
+msgid "没有海外Apple ID如何下载?"
+msgstr ""
+
 #: web/apps/download/templates/download/newpay-download-invite.html:9
 msgid "Newton,NewPay,Download"
 msgstr ""
@@ -192,20 +201,6 @@ msgstr ""
 #, fuzzy
 msgid "Download NewPay"
 msgstr "Descargar Logo"
-
-#: web/apps/download/templates/download/newpay-download.html:5
-#: web/apps/download/templates/download/newpay-download.html:21
-#: web/apps/welcome/templates/welcome/newpay.html:5
-#: web/apps/welcome/templates/welcome/sitemap.html:45
-#: web/templates/header.html:42 web/templates/header.html.py:234
-msgid "NewPay"
-msgstr ""
-
-#: web/apps/download/templates/download/newpay-download.html:23
-#: web/apps/welcome/templates/welcome/include-index-announce.html:10
-#: web/apps/welcome/templates/welcome/newpay.html:15
-msgid "The Digital Wallet of Newton Community Economy"
-msgstr ""
 
 #: web/apps/download/templates/download/newpay-guide.html:6
 msgid "Guide"
@@ -3740,26 +3735,20 @@ msgstr ""
 "racionales, todos los contribuyentes se beneficiarán de la economía y "
 "pasarán a formar parte de ella."
 
-#: web/apps/welcome/templates/welcome/include-index-announce.html:7
+#: web/apps/welcome/templates/welcome/include-index-announce.html:8
 #, fuzzy
 msgid "NewPay 1.0 is now launched"
 msgstr "The NewMall lanzado oficialmente."
 
-#: web/apps/welcome/templates/welcome/include-index-announce.html:15
+#: web/apps/welcome/templates/welcome/include-index-announce.html:11
+#, fuzzy
+msgid "Transaction, Governance, Mining, and New Design"
+msgstr "Compartir información sobre transacciones, precios y beneficios;"
+
+#: web/apps/welcome/templates/welcome/include-index-announce.html:16
+#, fuzzy
 msgid "Digital wallet in Newton's economy"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-index-announce.html:50
-#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:29
-msgid "Download NewPay APK"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/include-index-announce.html:55
-#: web/apps/welcome/templates/welcome/include-index-announce.html:62
-#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:33
-#: web/apps/welcome/templates/welcome/include-newpay-download-button.html:41
-msgid "没有海外Apple ID如何下载?"
-msgstr ""
+msgstr "Marketing Digital"
 
 #: web/apps/welcome/templates/welcome/include-index-card.html:26
 msgid "Enter Website"
@@ -5644,49 +5633,59 @@ msgid ""
 "suggestions from all parties involved before forming final conclusions."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:23
+#: web/apps/welcome/templates/welcome/newpay.html:7
+#: web/apps/welcome/templates/welcome/sitemap.html:45
+#: web/templates/header.html:42 web/templates/header.html.py:234
+msgid "NewPay"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:17
+msgid "The Digital Wallet of Newton Community Economy"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:25
 msgid "newpay-screenshot.png"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:43
+#: web/apps/welcome/templates/welcome/newpay.html:45
 #, fuzzy
 msgid "Digital Wallet on NewChain"
 msgstr "Marketing Digital"
 
-#: web/apps/welcome/templates/welcome/newpay.html:44
+#: web/apps/welcome/templates/welcome/newpay.html:46
 msgid "NewPay is your reliable digital wallet of <strong>NEW</strong>."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:59
+#: web/apps/welcome/templates/welcome/newpay.html:61
 #, fuzzy
 msgid "Community Governance"
 msgstr "Comunidad"
 
-#: web/apps/welcome/templates/welcome/newpay.html:60
+#: web/apps/welcome/templates/welcome/newpay.html:62
 msgid ""
 "Vote to take part in community governance and receive incentives in "
 "<strong>NEW</strong>."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:78
+#: web/apps/welcome/templates/welcome/newpay.html:80
 msgid "Mining"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:79
+#: web/apps/welcome/templates/welcome/newpay.html:81
 msgid "Mining means rewards."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:80
+#: web/apps/welcome/templates/welcome/newpay.html:82
 msgid ""
 "Contribute to Newton's economy <br/>and get your <strong>NEW</strong> "
 "incentives."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:95
+#: web/apps/welcome/templates/welcome/newpay.html:97
 msgid "Brand New User Interface"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:96
+#: web/apps/welcome/templates/welcome/newpay.html:98
 msgid ""
 "Our fresh user interface is more refined, elegant, and efficient than ever."
 msgstr ""
@@ -9478,9 +9477,6 @@ msgstr ""
 
 #~ msgid "Founder of WuZhou Online"
 #~ msgstr "Fundador de WuZhou Online"
-
-#~ msgid "Transaction information sharing pricing and benefit;"
-#~ msgstr "Compartir información sobre transacciones, precios y beneficios;"
 
 #~ msgid "Built-in support for purchases within applications;"
 #~ msgstr "Soporte integrado para compras dentro de las aplicaciones;"
