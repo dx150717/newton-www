@@ -1,12 +1,33 @@
 @font-face {
+    font-family: opensans-regular;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
     font-family: opensans-light;
     src: url(../fonts/OpenSans-Light.ttf);
 }
 
 body {
-    font-family: opensans-light
+    font-family: opensans-regular;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family:opensans-light
+}
+
+section {
+    padding-top:50px;
+    padding-bottom:60px;
+    text-align:center;
+    items-align:center}
+
+1_1 {
+    font-family: opensans-light;
+}
+
+section.1_1 {
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
