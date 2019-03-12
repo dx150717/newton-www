@@ -109,8 +109,19 @@ body {
 .newpay-head .guide-link {
     padding-right: 0;
 }
+.newpay-download .download-container .guide-link {
+    text-align: center;
+    padding-right: 150px;
+}
 @media only screen and (max-width : 768px) {
     .newpay-head .action {
         margin-top: 60px;
+    }
+    .newpay-download .download-container .guide-link {
+        text-align: center;
+        padding-right: 0;
+    }
+    .newpay-head .download-container .item {
+        padding-right: 0;
     }
 }
