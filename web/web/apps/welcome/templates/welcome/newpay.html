@@ -12,7 +12,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="title">NewPay</h1>
+                    {% if is_newpay_release %}
+                    <h2 class="title">{% trans "NewPay" %}</h2>
+                    {% else %}
+                    <h2 class="title">{% trans "NewPay 1.0 Coming Soon" %}</h2>
+                    {% endif %}
                     <p class="slogan">
                         {% trans "The Digital Wallet of Newton Community Economy" %}
                     </p>
@@ -38,7 +42,7 @@
         <div class="container newpay-summary">
             <div class="row">
                 <div class="col-md-6 text-center hidden-xs">
-                    <img class="lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/newpay/newpay-s-1.png" %}" alt="">
+                    <img class="lazy" src="{% version "images/loading.gif" %}" data-original="/static/images/newpay/{% trans "newpay-transfer.png" %}" alt="" />
                 </div>
                 <div class="col-md-6">
                     <div class="text">
@@ -48,7 +52,7 @@
                 </div>
             </div>
             <div class="col-md-6 text-center visible-xs">
-                <img class="lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/newpay/newpay-s-1.png" %}" alt="">
+                <img class="lazy" src="{% version "images/loading.gif" %}" data-original="/static/images/newpay/{% trans "newpay-transfer.png" %}" alt="" />
             </div>
         </div>
     </div>
@@ -63,7 +67,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img class="lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/newpay/newpay-s-2.png" %}" alt="">
+                    <img class="lazy" src="{% version "images/loading.gif" %}" data-original="/static/images/newpay/{% trans "newpay-node.png" %}" alt="" />
                 </div>
             </div>
         </div>
@@ -73,7 +77,7 @@
         <div class="container newpay-summary">
             <div class="row">
                 <div class="col-md-6 text-center hidden-xs">
-                    <img class="lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/newpay/newpay-s-3.png" %}" alt="">
+                    <img class="lazy" src="{% version "images/loading.gif" %}" data-original="/static/images/newpay/{% trans "newpay-mining.png" %}" alt="" />
                 </div>
                 <div class="col-md-6">
                     <div class="text">
@@ -84,7 +88,7 @@
                 </div>
             </div>
             <div class="row text-center visible-xs">
-                <img class="lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/newpay/newpay-s-3.png" %}" alt="">
+                <img class="lazy" src="{% version "images/loading.gif" %}" data-original="/static/images/newpay/{% trans "newpay-mining.png" %}" alt="" />
             </div>
         </div>
     </div>
@@ -99,7 +103,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img class="lazy" src="{% version "images/loading.gif" %}" data-original="{% version "images/newpay/newpay-s-4.png" %}" alt="">
+                    <img class="lazy" src="{% version "images/loading.gif" %}" data-original="/static/images/newpay/{% trans "newpay-homepage.png" %}" alt="" />
                 </div>
             </div>
         </div>

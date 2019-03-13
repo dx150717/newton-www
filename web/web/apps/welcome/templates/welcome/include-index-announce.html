@@ -5,7 +5,11 @@
 <div class="announce-container">
     {% if is_index %}
     <div class="announce-title">
+        {% if is_newpay_release %}
         {% trans "NewPay 1.0 is now launched" %}
+        {% else %}
+        {% trans "NewPay 1.0 Coming Soon" %}
+        {% endif %}
     </div>
     <div class="announce-subtitle">
         {% trans "Transaction, Governance, Mining, and New Design" %}

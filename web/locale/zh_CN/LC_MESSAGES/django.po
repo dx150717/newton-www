@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-11 07:35+0000\n"
+"POT-Creation-Date: 2019-03-13 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -168,8 +168,7 @@ msgstr ""
 msgid "Download NewPay APK"
 msgstr "NewPay APK 官方下载"
 
-#: web/apps/download/templates/download/include-newpay-download-button.html:33
-#: web/apps/download/templates/download/include-newpay-download-button.html:41
+#: web/apps/download/templates/download/include-newpay-download-button.html:36
 msgid "没有海外Apple ID如何下载?"
 msgstr ""
 
@@ -198,6 +197,20 @@ msgstr "通过邀请码在NewPay中创建NewID<br/>加入牛顿社群经济体"
 #: web/apps/download/templates/download/newpay-download-invite.html:47
 msgid "Download NewPay"
 msgstr "立即下载 NewPay"
+
+#: web/apps/download/templates/download/newpay-download.html:7
+#: web/apps/download/templates/download/newpay-download.html:23
+#: web/apps/welcome/templates/welcome/newpay.html:7
+#: web/apps/welcome/templates/welcome/newpay.html:16
+#: web/apps/welcome/templates/welcome/sitemap.html:45
+#: web/templates/header.html:42 web/templates/header.html.py:234
+msgid "NewPay"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download.html:25
+#: web/apps/welcome/templates/welcome/newpay.html:21
+msgid "The Digital Wallet of Newton Community Economy"
+msgstr "牛顿社群经济体的数字钱包<br/>闪电结算 社群治理 挖矿即收益 全新设计"
 
 #: web/apps/download/templates/download/newpay-guide.html:6
 msgid "Guide"
@@ -3793,15 +3806,20 @@ msgstr ""
 "由非盈利基金会管理的社区经济体取代由传统盈利公司管理的垄断平台。每一个贡献者"
 "按照公平、合理、透明的原则，获得经济体的权益，成为经济体的一部分。"
 
-#: web/apps/welcome/templates/welcome/include-index-announce.html:8
+#: web/apps/welcome/templates/welcome/include-index-announce.html:9
 msgid "NewPay 1.0 is now launched"
 msgstr "NewPay 1.0 现已正式上线"
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:11
+#: web/apps/welcome/templates/welcome/newpay.html:18
+msgid "NewPay 1.0 Coming Soon"
+msgstr "NewPay 1.0 即将上线"
+
+#: web/apps/welcome/templates/welcome/include-index-announce.html:15
 msgid "Transaction, Governance, Mining, and New Design"
 msgstr "闪电结算 社群治理 挖矿即收益 全新设计"
 
-#: web/apps/welcome/templates/welcome/include-index-announce.html:16
+#: web/apps/welcome/templates/welcome/include-index-announce.html:20
 msgid "Digital wallet in Newton's economy"
 msgstr "牛顿经济体中的数字钱包"
 
@@ -5602,61 +5620,69 @@ msgstr ""
 "写，成为牛顿发展提案（Newton Evolution Proposal），简称NEP，并进行统一编号和"
 "管理，然后提交到社群进行广泛讨论，综合各方意见和建议，形成最终结论。"
 
-#: web/apps/welcome/templates/welcome/newpay.html:7
-#: web/apps/welcome/templates/welcome/sitemap.html:45
-#: web/templates/header.html:42 web/templates/header.html.py:234
-msgid "NewPay"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/newpay.html:17
-msgid "The Digital Wallet of Newton Community Economy"
-msgstr "牛顿社群经济体的数字钱包<br/>闪电结算 社群治理 挖矿即收益 全新设计"
-
-#: web/apps/welcome/templates/welcome/newpay.html:25
+#: web/apps/welcome/templates/welcome/newpay.html:29
 msgid "newpay-screenshot.png"
 msgstr "newpay-screenshot-zh.png"
 
 #: web/apps/welcome/templates/welcome/newpay.html:45
+#: web/apps/welcome/templates/welcome/newpay.html:55
+msgid "newpay-transfer.png"
+msgstr "newpay-transfer-zh.png"
+
+#: web/apps/welcome/templates/welcome/newpay.html:49
 msgid "Digital Wallet on NewChain"
 msgstr "NewChain 上的数字钱包"
 
-#: web/apps/welcome/templates/welcome/newpay.html:46
+#: web/apps/welcome/templates/welcome/newpay.html:50
 msgid "NewPay is your reliable digital wallet of <strong>NEW</strong>."
 msgstr "NewPay 是您可信赖的数字钱包<br/>闪电结算的特性支持各种支付场景"
 
-#: web/apps/welcome/templates/welcome/newpay.html:61
+#: web/apps/welcome/templates/welcome/newpay.html:65
 msgid "Community Governance"
 msgstr "社群治理"
 
-#: web/apps/welcome/templates/welcome/newpay.html:62
+#: web/apps/welcome/templates/welcome/newpay.html:66
 msgid ""
 "Vote to take part in community governance and receive incentives in "
 "<strong>NEW</strong>."
 msgstr ""
 "参与社群节点投票和竞选<br/>进行牛顿社群治理并收获<strong> NEW </strong>的激励"
 
+#: web/apps/welcome/templates/welcome/newpay.html:70
+msgid "newpay-node.png"
+msgstr "newpay-node-zh.png"
+
 #: web/apps/welcome/templates/welcome/newpay.html:80
+#: web/apps/welcome/templates/welcome/newpay.html:91
+msgid "newpay-mining.png"
+msgstr "newpay-mining-zh.png"
+
+#: web/apps/welcome/templates/welcome/newpay.html:84
 msgid "Mining"
 msgstr "挖矿即收益"
 
-#: web/apps/welcome/templates/welcome/newpay.html:81
+#: web/apps/welcome/templates/welcome/newpay.html:85
 msgid "Mining means rewards."
 msgstr "参与牛顿经济体的活动为牛顿经济体作贡献"
 
-#: web/apps/welcome/templates/welcome/newpay.html:82
+#: web/apps/welcome/templates/welcome/newpay.html:86
 msgid ""
 "Contribute to Newton's economy <br/>and get your <strong>NEW</strong> "
 "incentives."
 msgstr "即可获得<strong> NEW </strong>的激励"
 
-#: web/apps/welcome/templates/welcome/newpay.html:97
+#: web/apps/welcome/templates/welcome/newpay.html:101
 msgid "Brand New User Interface"
 msgstr "焕然一新的界面"
 
-#: web/apps/welcome/templates/welcome/newpay.html:98
+#: web/apps/welcome/templates/welcome/newpay.html:102
 msgid ""
 "Our fresh user interface is more refined, elegant, and efficient than ever."
 msgstr "我们全新设计的用户界面<br/>简洁 优雅 高效"
+
+#: web/apps/welcome/templates/welcome/newpay.html:106
+msgid "newpay-homepage.png"
+msgstr "newpay-homepage-zh.png"
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
 msgid "Newton Community Node Conference"
@@ -9814,6 +9840,9 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
+
+#~ msgid "newpay-profile.png"
+#~ msgstr "newpay-profile-zh.png"
 
 #~ msgid "Download NewPay Android"
 #~ msgstr "NewPay Android 官方下载"

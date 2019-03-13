@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-11 07:35+0000\n"
+"POT-Creation-Date: 2019-03-13 15:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,8 +170,7 @@ msgstr ""
 msgid "Download NewPay APK"
 msgstr ""
 
-#: web/apps/download/templates/download/include-newpay-download-button.html:33
-#: web/apps/download/templates/download/include-newpay-download-button.html:41
+#: web/apps/download/templates/download/include-newpay-download-button.html:36
 msgid "没有海外Apple ID如何下载?"
 msgstr ""
 
@@ -201,6 +200,20 @@ msgstr ""
 #, fuzzy
 msgid "Download NewPay"
 msgstr "로고 다운로드"
+
+#: web/apps/download/templates/download/newpay-download.html:7
+#: web/apps/download/templates/download/newpay-download.html:23
+#: web/apps/welcome/templates/welcome/newpay.html:7
+#: web/apps/welcome/templates/welcome/newpay.html:16
+#: web/apps/welcome/templates/welcome/sitemap.html:45
+#: web/templates/header.html:42 web/templates/header.html.py:234
+msgid "NewPay"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-download.html:25
+#: web/apps/welcome/templates/welcome/newpay.html:21
+msgid "The Digital Wallet of Newton Community Economy"
+msgstr ""
 
 #: web/apps/download/templates/download/newpay-guide.html:6
 msgid "Guide"
@@ -3709,16 +3722,22 @@ msgstr ""
 "을 대체할 것입니다. 모든 기여자는 공평, 합리적, 투명한 원칙을 통해 이익을 얻"
 "을 것이고, 경제의 한 부분이 될 것입니다."
 
-#: web/apps/welcome/templates/welcome/include-index-announce.html:8
+#: web/apps/welcome/templates/welcome/include-index-announce.html:9
 #, fuzzy
 msgid "NewPay 1.0 is now launched"
 msgstr "뉴턴몰 정식 오픈"
 
 #: web/apps/welcome/templates/welcome/include-index-announce.html:11
+#: web/apps/welcome/templates/welcome/newpay.html:18
+#, fuzzy
+msgid "NewPay 1.0 Coming Soon"
+msgstr "뉴턴몰 정식 오픈"
+
+#: web/apps/welcome/templates/welcome/include-index-announce.html:15
 msgid "Transaction, Governance, Mining, and New Design"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-index-announce.html:16
+#: web/apps/welcome/templates/welcome/include-index-announce.html:20
 #, fuzzy
 msgid "Digital wallet in Newton's economy"
 msgstr "디지털 마케팅"
@@ -5466,61 +5485,69 @@ msgid ""
 "suggestions from all parties involved before forming final conclusions."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:7
-#: web/apps/welcome/templates/welcome/sitemap.html:45
-#: web/templates/header.html:42 web/templates/header.html.py:234
-msgid "NewPay"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/newpay.html:17
-msgid "The Digital Wallet of Newton Community Economy"
-msgstr ""
-
-#: web/apps/welcome/templates/welcome/newpay.html:25
+#: web/apps/welcome/templates/welcome/newpay.html:29
 msgid "newpay-screenshot.png"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newpay.html:45
+#: web/apps/welcome/templates/welcome/newpay.html:55
+msgid "newpay-transfer.png"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:49
 #, fuzzy
 msgid "Digital Wallet on NewChain"
 msgstr "디지털 마케팅"
 
-#: web/apps/welcome/templates/welcome/newpay.html:46
+#: web/apps/welcome/templates/welcome/newpay.html:50
 msgid "NewPay is your reliable digital wallet of <strong>NEW</strong>."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:61
+#: web/apps/welcome/templates/welcome/newpay.html:65
 #, fuzzy
 msgid "Community Governance"
 msgstr "커뮤니티"
 
-#: web/apps/welcome/templates/welcome/newpay.html:62
+#: web/apps/welcome/templates/welcome/newpay.html:66
 msgid ""
 "Vote to take part in community governance and receive incentives in "
 "<strong>NEW</strong>."
 msgstr ""
 
+#: web/apps/welcome/templates/welcome/newpay.html:70
+msgid "newpay-node.png"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/newpay.html:80
+#: web/apps/welcome/templates/welcome/newpay.html:91
+msgid "newpay-mining.png"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:84
 msgid "Mining"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:81
+#: web/apps/welcome/templates/welcome/newpay.html:85
 msgid "Mining means rewards."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:82
+#: web/apps/welcome/templates/welcome/newpay.html:86
 msgid ""
 "Contribute to Newton's economy <br/>and get your <strong>NEW</strong> "
 "incentives."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:97
+#: web/apps/welcome/templates/welcome/newpay.html:101
 msgid "Brand New User Interface"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:98
+#: web/apps/welcome/templates/welcome/newpay.html:102
 msgid ""
 "Our fresh user interface is more refined, elegant, and efficient than ever."
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay.html:106
+msgid "newpay-homepage.png"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6

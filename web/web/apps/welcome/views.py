@@ -92,6 +92,11 @@ def show_home_view(request):
                 events_by_language.filter(event_date__gte=month_range[0], event_date__lte=month_range[1])
             )
         )
+    # newpay 1.0 related
+    d = datetime.datetime.now()
+    is_newpay_release = False
+    if d > datetime.datetime(2019,3,15):
+        is_newpay_release = True
     return render(request, 'welcome/index.html', {user: user, 'vapid_key': vapid_key, 'presses': presses,
                                                   'activity_entry': activity_entry, 'operation_entry': operation_entry,
                                                   'blog_entry': blog_entry, 'banner_press': banner_press,
@@ -99,7 +104,7 @@ def show_home_view(request):
                                                   "month_list": month_list,
                                                   "past_events_list": past_events_list,
                                                   "coming_events_list": coming_events_list,
-                                                  "is_index": is_index, "language": language})
+                                                  "is_index": is_index, "language": language, "is_newpay_release": is_newpay_release})
 
 
 def show_technology_view(request):
@@ -171,6 +176,11 @@ def show_legal_view(request):
 
 
 def show_newpay_view(request):
+    # newpay 1.0 related
+    d = datetime.datetime.now()
+    is_newpay_release = False
+    if d > datetime.datetime(2019,3,15):
+        is_newpay_release = True
     return render(request, 'welcome/newpay.html', locals())
 
 
