@@ -18,12 +18,12 @@
         {% if is_zh %}
         <!-- Add Tabs Here-->
         <!--style="margin-top:30px"> -->
-        <ul class="nav nav-tabs col-md-8 col-md-offset-2" style="margin-top:20px;margin-bottom:0px;padding-right:0px">
-            <li class="active col-md-6 col-md-offset-3" style="margin-left:0%;padding-left:0px;padding-right:0px;text-align:center"><a data-toggle="tab" href="#home">海外帐号</a></li>
-            <li class="col-md-6 col-md-offset-3" style="margin-left:0%;padding-left:0px;padding-right:0px;text-align:center"><a data-toggle="tab" href="#enterprise">企业版</a></li>
+        <ul class="nav nav-tabs" style="margin-top:20px;">
+            <li class="active"><a data-toggle="tab" href="#home">海外帐号</a></li>
+            <li><a data-toggle="tab" href="#enterprise">企业版</a></li>
         </ul>
         {% endif %}
-        <div class="tab-content" style="text-align: center; padding-top: 80px;">
+        <div class="tab-content" style="padding-top: 30px;">
             <!-- Default Home GuideList (id:home) -->
             <div class="guides-list tab-pane fade in active" style="text-align: center;margin-top:5px" id="home">
                 <p class="ios reason">由于中国区App Store政策限制，下载NewPay钱包需要使用海外账户登录海外App Store下载</p>
@@ -52,18 +52,18 @@
                 <div class="ios guide">
                     <p style="font-size: 18px; color: #333;">iPhone更换App Store账号教程</p>
                     <div class="image-container">
-                        <img src="{% version " images/newpay-guide/111.png" %}" alt="">
+                        <img src="{% version "images/newpay-guide/111.png" %}" alt="">
                         <p class="tip">1. 点击蓝色App Store 图标进入应用</p>
                         <div class="image-container">
-                            <img src="{% version " images/newpay-guide/222.png" %}" alt="">
+                            <img src="{% version "images/newpay-guide/222.png" %}" alt="">
                             <p class="tip">2. 在Today页面点击右上角图标进入账户页面</p>
                         </div>
                         <div class="image-container">
-                            <img src="{% version " images/newpay-guide/333.png" %}" alt="">
+                            <img src="{% version "images/newpay-guide/333.png" %}" alt="">
                             <p class="tip">3. 进入账户后，点击退出登录</p>
                         </div>
                         <div class="image-container">
-                            <img src="{% version " images/newpay-guide/444.png" %}" alt="">
+                            <img src="{% version "images/newpay-guide/444.png" %}" alt="">
                             <p class="tip">4. 将App Store账号和密码填写进去（建议复制），输入后点击登录</p>
                         </div>
                         <div class="image-container">
@@ -104,9 +104,19 @@
 
 {% block css %}
 <style>
+.guide-page .nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+.guide-page .nav-tabs, .nav-pills {
+    text-align:center;
+}
 .guide-page .nav-tabs>li {
     font-size: 20px;
 }
+
 .ios.reason {font-size: 16px; color: #888;}
 .ios.account-title {font-size: 18px; color: #333;}
 .ios.account-container {background-color: #f3f3f3; padding: 30px; text-align: center; max-width: 400px; margin:50px auto; margin-top: 20px;}
