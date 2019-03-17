@@ -21,4 +21,8 @@ def show_newpay_download_view(request):
 
 
 def show_newpay_guide_view(request):
+    is_zh = False
+    language = str(translation.get_language())
+    if language.startswith('zh'):
+        is_zh = True
     return render(request, "download/newpay-guide.html", locals())

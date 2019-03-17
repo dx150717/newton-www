@@ -9,58 +9,87 @@
 {% block content %}
 <section id="terms" class="section-list">
     <div class="page-title">
-      <div class="container">
-          <p>{% trans "Newpay Download Guide" %}</p>
-      </div>
+        <div class="container">
+            <p>{% trans "Newpay Download Guide" %}</p>
+        </div>
     </div>
 
     <div class="container">
-        <div class="guides-list" style="text-align: center; padding-top: 50px;">
-            <p class="ios reason">由于中国区App Store政策限制，下载NewPay钱包需要使用海外账户登录海外App Store下载</p>
-			<p class="ios account-title">以下是免费的海外App Store账号供您使用</p>
-			<div class="ios account-container">
-				<div>
-					<p>香港账户：h4kxg2v8@icloud.com</p>
-					<p>密码：Newton112233</p>
-				</div>
-				<div>
-					<p>香港账户：s6fn2a6o@icloud.com</p>
-					<p>密码：Newton112233</p>
-				</div>
-				<div>
-					<p>美国账户： j7m13d8@icloud.com</p>
-					<p>密码：Newton332211</p>
-				</div>
-				<div style="margin-bottom: unset;">
-					<p>新加坡账户：sg5ecaq@icloud.com</p>
-					<p>密码：Newton332211</p>
-				</div>
-			</div>
-			<p class="ios warning">
-				为了防止您的手机信息泄露，请您务必不要使用上方Apple ID登录iCloud，使用参考Apple ID下载过APP后，请您及时退出该账号。
-			</p>
-			<div class="ios guide">
-				<p style="font-size: 18px; color: #333;">iPhone更换App Store账号教程</p>
-				<div class="image-container">
-					<img src="{% version "images/newpay-guide/111.png" %}" alt="">
-					<p class="tip">1. 点击蓝色App Store 图标进入应用</p>
-				<div class="image-container">
-					<img src="{% version "images/newpay-guide/222.png" %}" alt="">
-					<p class="tip">2. 在Today页面点击右上角图标进入账户页面</p>
-				</div>
-				<div class="image-container">
-					<img src="{% version "images/newpay-guide/333.png" %}" alt="">
-					<p class="tip">3. 进入账户后，点击退出登录</p>
-				</div>
-				<div class="image-container">
-					<img src="{% version "images/newpay-guide/444.png" %}" alt="">
-					<p class="tip">4. 将App Store账号和密码填写进去（建议复制），输入后点击登录</p>
-				</div>
-				<div class="image-container">
-					<p class="tip">5. 登录成功后，去App Store搜索“NewPay”点击获取按钮即可下载</p>
-				</div>
-				</div>
-			</div>
+        {% if is_zh %}
+        <!-- Add Tabs Here-->
+        <!--style="margin-top:30px"> -->
+        <ul class="nav nav-tabs col-md-8 col-md-offset-2" style="margin-top:10px;margin-bottom:0px;padding-right:0px">
+            <li class="active col-md-6 col-md-offset-3" style="margin-left:0%;padding-left:0px;padding-right:0px;text-align:center"><a data-toggle="tab" href="#home">海外帐号</a></li>
+            <li class="col-md-6 col-md-offset-3" style="margin-left:0%;padding-left:0px;padding-right:0px;text-align:center"><a data-toggle="tab" href="#enterprise">企业版</a></li>
+        </ul>
+        {% endif %}
+        <div class="tab-content" style="text-align: center; padding-top: 80px;">
+            <!-- Default Home GuideList (id:home) -->
+            <div class="guides-list tab-pane fade in active" style="text-align: center;margin-top:5px" id="home">
+                <p class="ios reason">由于中国区App Store政策限制，下载NewPay钱包需要使用海外账户登录海外App Store下载</p>
+                <p class="ios account-title">以下是免费的海外App Store账号供您使用</p>
+                <div class="ios account-container">
+                    <div>
+                        <p>香港账户：h4kxg2v8@icloud.com</p>
+                        <p>密码：Newton112233</p>
+                    </div>
+                    <div>
+                        <p>香港账户：s6fn2a6o@icloud.com</p>
+                        <p>密码：Newton112233</p>
+                    </div>
+                    <div>
+                        <p>美国账户： j7m13d8@icloud.com</p>
+                        <p>密码：Newton332211</p>
+                    </div>
+                    <div style="margin-bottom: unset;">
+                        <p>新加坡账户：sg5ecaq@icloud.com</p>
+                        <p>密码：Newton332211</p>
+                    </div>
+                </div>
+                <p class="ios warning">
+                    为了防止您的手机信息泄露，请您务必不要使用上方Apple ID登录iCloud，使用参考Apple ID下载过APP后，请您及时退出该账号。
+                </p>
+                <div class="ios guide">
+                    <p style="font-size: 18px; color: #333;">iPhone更换App Store账号教程</p>
+                    <div class="image-container">
+                        <img src="{% version " images/newpay-guide/111.png" %}" alt="">
+                        <p class="tip">1. 点击蓝色App Store 图标进入应用</p>
+                        <div class="image-container">
+                            <img src="{% version " images/newpay-guide/222.png" %}" alt="">
+                            <p class="tip">2. 在Today页面点击右上角图标进入账户页面</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="{% version " images/newpay-guide/333.png" %}" alt="">
+                            <p class="tip">3. 进入账户后，点击退出登录</p>
+                        </div>
+                        <div class="image-container">
+                            <img src="{% version " images/newpay-guide/444.png" %}" alt="">
+                            <p class="tip">4. 将App Store账号和密码填写进去（建议复制），输入后点击登录</p>
+                        </div>
+                        <div class="image-container">
+                            <p class="tip">5. 登录成功后，去App Store搜索“NewPay”点击获取按钮即可下载</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if is_zh %}
+            <!-- The Enterprise GuideList(id: enterprise) -->
+            <div id="enterprise" class="guides-list tab-pane fade col-md-11 col-md-offset-1"
+                 style="text-align: center;margin-top:5px">
+                <p class="ios reason">
+                    对于使用企业版下载安装NewPay的用户,
+                    请您进入iOS系统设置-通用-设备管理中将企业证书添加信任，即可正常使用。
+                </p>
+                <p class="ios warning">
+                    请注意：请您务必在使用前备份您的钱包助记词并妥善保管，否则一旦企业证书失效，您将无法打开NewPay。如遇到企业证书失效，请您不要删除NewPay并等待证书更新，或使用海外Apple
+                    ID登陆商店下载并覆盖安装。</p>
+                <a href="{{ settings.NEWTON_NEWPAY_ADHOC_DOWNLOAD }}"
+                                    style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 40px; color: #888; padding-top: 15px; padding-bottom: 5px;"
+                                    class="appstore-download">
+                    <img src="{% version "images/download-logo/newpay-download-icon.svg" %}" alt="" style="height:100%; vertical-align: sub; padding-right: 10px;"/>{% trans "Download NewPay" %}
+                </a>
+            </div>
+            {% endif %}
         </div>
     </div>
 
@@ -85,5 +114,12 @@
 .ios.guide .image-container {text-align: center;}
 .ios.guide .tip {font-size: 16px; color: #888; line-height: unset; margin-bottom: 25px;}
 .ios.guide img {max-width: 300px; height: auto;}
+
+
+
+
+
+
+
 </style>
 {% endblock %}
