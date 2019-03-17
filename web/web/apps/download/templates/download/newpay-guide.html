@@ -23,7 +23,7 @@
         </ul>
         <div class="tab-content" style="text-align: center; padding-top: 10px;">
             <!-- Default Home GuideList (id:home) -->
-            <div class="guides-list tab-pane fade in active" style="text-align: center;margin-top:55px" id="home">
+            <div class="guides-list tab-pane fade in active" style="text-align: center;margin-top:5px" id="home">
                 <p class="ios reason">由于中国区App Store政策限制，下载NewPay钱包需要使用海外账户登录海外App Store下载</p>
                 <p class="ios account-title">以下是免费的海外App Store账号供您使用</p>
                 <div class="ios account-container">
@@ -75,12 +75,19 @@
                 </div>
             </div>
             <!-- The Enterprise GuideList(id: enterprise) -->
-            <div id="enterprise" class="tab-pane fade">
+            <div id="enterprise" class="guides-list tab-pane fade col-md-11 col-md-offset-1"
+                 style="text-align: center;margin-top:5px">
+                <p class="ios reason">
+                    对于使用企业版下载安装NewPay的用户,
+                    请您进入iOS系统设置-通用-设备管理中将企业证书添加信任，即可正常使用。
+                </p>
+                <p class="ios warning">
+                    请注意：请您务必在使用前备份您的钱包助记词并妥善保管，否则一旦企业证书失效，您将无法打开NewPay。如遇到企业证书失效，请您不要删除NewPay并等待证书更新，或使用海外Apple
+                    ID登陆商店下载并覆盖安装。</p>
                 <a href="{{ settings.NEWTON_NEWPAY_ADHOC_DOWNLOAD }}"
-                   style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 40px; color: #888; padding-top: 15px; padding-bottom: 5px;"
-                   class="appstore-download">
-                    <img src="{% version "images/download-logo/newpay-download-icon.svg" %}" alt="" style="height:
-                    100%; vertical-align: sub; padding-right: 10px;"/>{% trans "Download NewPay" %}
+                                    style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 40px; color: #888; padding-top: 15px; padding-bottom: 5px;"
+                                    class="appstore-download">
+                    <img src="{% version "images/download-logo/newpay-download-icon.svg" %}" alt="" style="height:100%; vertical-align: sub; padding-right: 10px;"/>{% trans "Download NewPay" %}
                 </a>
             </div>
         </div>
@@ -92,6 +99,8 @@
 {% block inline_js %}
 <script type="text/javascript">
     showNav();
+
+
 
 
 
@@ -112,6 +121,8 @@
 .ios.guide .image-container {text-align: center;}
 .ios.guide .tip {font-size: 16px; color: #888; line-height: unset; margin-bottom: 25px;}
 .ios.guide img {max-width: 300px; height: auto;}
+
+
 
 
 
