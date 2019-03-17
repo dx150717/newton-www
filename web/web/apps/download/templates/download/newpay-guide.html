@@ -83,7 +83,7 @@
                 <p class="ios warning">
                     请注意：请您务必在使用前备份您的钱包助记词并妥善保管，否则一旦企业证书失效，您将无法打开NewPay。如遇到企业证书失效，请您不要删除NewPay并等待证书更新，或使用海外Apple
                     ID登陆商店下载并覆盖安装。</p>
-                <a href="{{ settings.NEWTON_NEWPAY_ADHOC_DOWNLOAD }}"
+                <a href="itms-services://?action=download-manifest&url={{ settings.NEWTON_NEWPAY_ADHOC_DOWNLOAD }}"
                                     style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 40px; color: #888; padding-top: 15px; padding-bottom: 5px;"
                                     class="appstore-download">
                     <img src="{% version "images/download-logo/newpay-download-icon.svg" %}" alt="" style="height:100%; vertical-align: sub; padding-right: 10px;"/>{% trans "Download NewPay" %}
