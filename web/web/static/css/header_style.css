@@ -1,20 +1,21 @@
 @font-face {
-    font-family: opensans-light;
-    src: url(../fonts/OpenSans-Light.ttf);
+	font-family: opensans-light;
+	src: url(../fonts/OpenSans-Light.ttf);
 }
 
 #intro_animation {
-    }
+	height: 70vh;
+}
 
 #intro_text {
-        font-family: opensans-light;
+	font-family: opensans-light;
 	color: #fff;
 	width: 100%;
 	height: auto;
-        padding-top: 40px;
-        padding-bottom: 40px;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
 	padding-right: 40px;
-        padding-left: 40px;
+	padding-left: 40px;
 	text-align: center;
 }
 
@@ -23,10 +24,26 @@
 }
 
 #intro_text h2 {
-        font-family: opensans-light;
+	margin-top: 10vh;
+	font-family: opensans-light;
 }
 
 #intro_text button {
-	margin-top: 40px;
+	margin-top: 10vh;
 }
 
+/* Mobile section */
+
+#intro_animation_mobile {
+	height: 70vh;
+}
+
+#intro_text_mobile {
+	font-family: opensans-light;
+	color: #fff;
+	width: 100%;
+	height: auto;
+	padding-right: 40px;
+	padding-left: 40px;
+	text-align: center;
+}
