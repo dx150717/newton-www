@@ -20,7 +20,8 @@ section {
     padding-top:50px;
     padding-bottom:60px;
     text-align:center;
-    items-align:center}
+    items-align:center;
+}
 
 1_1 {
     font-family: opensans-light;
@@ -30,4 +31,13 @@ section.1_1 {
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+	width: 100%;
+}
+
+/* NewPay include */
+
+section#download_newpay {
+	background-image: url(../static/images/newpay/newpay_trans_bg.png, linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(156,17,134,1) 33%, rgba(9,9,121,1) 66%, rgba(0,212,255,1) 100%);
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: 90% 100%, 0 0, 0 0; background-size: 20%, 100%, 100%;
 }
