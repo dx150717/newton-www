@@ -1,11 +1,23 @@
-@font-face {
+/* @font-face {
 	font-family: opensans-light;
 	src: url(../fonts/OpenSans-Light.ttf);
-}
+} */
 
 #intro_animation {
 	height: 70vh;
         width: 100%;
+}
+
+#intro_video {
+	font-family: opensans-light;
+	color: #fff;
+	width: 100%;
+	height: auto;
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	padding-right: 40px;
+	padding-left: 40px;
+	text-align: center;
 }
 
 #intro_text {
