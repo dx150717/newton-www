@@ -4,15 +4,20 @@
 <script src="/static/js/three.r92.min.js"></script>
 <script src="/static/js/vanta.net.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/static/css/header_style.css">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 <div id="intro_animation">
 	<div id="intro_text">
 		<img src="static/images/logo_text_white.svg" width=300>
 		<h1 class="m-5" style="color:#fff">Technology for a Freer, Fairer Economy</h1>
-		<button type="button" class="btn btn-primary btn-lg btn_trans" style="background-color:rgba(0, 0, 0, 0); border: 1px solid #fff" onclick="window.alert('foo!')">
+		<button type="button" class="btn btn-primary btn-lg btn_trans" style="background-color:rgba(0, 0, 0, 0); border: 1px solid #fff" onclick="jQuery('#intro_text').replaceWith(jQuery('#intro_video'));">
 			<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
 			Learn More
 		</button>
 	</div>
 </div>
+
+<div id="intro_video">
+	<h2>Video</h2>
+</div>
+
 <script> VANTA.NET({ el: "#intro_animation", color: 0x24405f, backgroundColor: 0x30d20, spacing: 16.00 }) </script>
