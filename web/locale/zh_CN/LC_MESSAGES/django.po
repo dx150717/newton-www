@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-14 05:45+0000\n"
+"POT-Creation-Date: 2019-03-22 14:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -164,11 +164,11 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: web/apps/download/templates/download/include-newpay-download-button.html:29
+#: web/apps/download/templates/download/include-newpay-download-button.html:30
 msgid "Download NewPay APK"
 msgstr "NewPay APK 官方下载"
 
-#: web/apps/download/templates/download/include-newpay-download-button.html:36
+#: web/apps/download/templates/download/include-newpay-download-button.html:38
 msgid "没有海外Apple ID如何下载?"
 msgstr ""
 
@@ -195,6 +195,7 @@ msgid ""
 msgstr "通过邀请码在NewPay中创建NewID<br/>加入牛顿社群经济体"
 
 #: web/apps/download/templates/download/newpay-download-invite.html:47
+#: web/apps/download/templates/download/newpay-guide.html:89
 msgid "Download NewPay"
 msgstr "立即下载 NewPay"
 
@@ -3766,7 +3767,7 @@ msgstr ""
 #: web/apps/welcome/templates/welcome/whitepaper.html:6
 #: web/apps/welcome/templates/welcome/whitepaper.html:13
 #: web/apps/welcome/templates/welcome/whitepaper.html:18
-#: web/apps/welcome/templates/welcome/whitepaper.html:90
+#: web/apps/welcome/templates/welcome/whitepaper.html:100
 msgid "White Paper"
 msgstr "白皮书"
 
@@ -4404,8 +4405,7 @@ msgid "Newton's main chain and NewPay launched."
 msgstr "牛顿主链和NewPay钱包正式上线"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:71
-#: web/apps/welcome/templates/welcome/include-roadmap.html:128
-msgid "NewMall launched."
+msgid "NewMall will launch."
 msgstr "NewMall 正式上线"
 
 #: web/apps/welcome/templates/welcome/include-roadmap.html:84
@@ -4419,6 +4419,10 @@ msgstr "牛顿官网正式发布"
 #: web/apps/welcome/templates/welcome/include-roadmap.html:106
 msgid "Newton's Testnet launched."
 msgstr "测试网正式上线"
+
+#: web/apps/welcome/templates/welcome/include-roadmap.html:128
+msgid "NewMall launched."
+msgstr "NewMall 正式上线"
 
 #: web/apps/welcome/templates/welcome/include-team.html:9
 #: web/apps/welcome/templates/welcome/team.html:13
@@ -9598,7 +9602,7 @@ msgstr ""
 msgid "Latest Version："
 msgstr "最新版本："
 
-#: web/apps/welcome/templates/welcome/whitepaper.html:91
+#: web/apps/welcome/templates/welcome/whitepaper.html:101
 msgid "History Version："
 msgstr "历史版本："
 
@@ -9843,108 +9847,3 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr "请输入6~16个字符，必须包含大小写字母和数字"
-
-#~ msgid "The Digital Wallet of Newton Community Economy"
-#~ msgstr "牛顿社群经济体的数字钱包<br/>闪电结算 社群治理 挖矿即收益 全新设计"
-
-#~ msgid "newpay-profile.png"
-#~ msgstr "newpay-profile-zh.png"
-
-#~ msgid "Download NewPay Android"
-#~ msgstr "NewPay Android 官方下载"
-
-#~ msgid "Download NewPay digital wallet to join Newton's economy"
-#~ msgstr "立即下载 NewPay 数字钱包加入牛顿经济体"
-
-#~ msgid "Create and manage decentralized ID's"
-#~ msgstr "创建和管理DID(Decentralized IDs)；"
-
-#~ msgid "Set privacy preferences for personal information;"
-#~ msgstr "设置个人信息隐私模式；"
-
-#~ msgid "Transaction management;"
-#~ msgstr "交易信息管理；"
-
-#~ msgid "Set pricing and benefits for sharing transaction information"
-#~ msgstr "设置个人信息隐私模式；"
-
-#~ msgid "Digital asset management, including NEW, BTC, ETH, etc"
-#~ msgstr "数字资产管理，包括NEW、BTC、ETH等。"
-
-#~ msgid "Cross-border transactions;"
-#~ msgstr "支持跨境交易；"
-
-#~ msgid "Micro-payments;"
-#~ msgstr "支持超小额度支付；"
-
-#~ msgid "Rapid transaction confirmation."
-#~ msgstr "极快的交易确认速度。"
-
-#~ msgid "Joint Login"
-#~ msgstr "联合登录"
-
-#~ msgid "Log into multiple Dapps with one unified identity"
-#~ msgstr "使用统一身份登录多个Dapp；"
-
-#~ msgid "Dapp management and permission control"
-#~ msgstr "Dapp管理和权限控制；"
-
-#~ msgid "Security audit"
-#~ msgstr "安全审计。"
-
-#~ msgid "App Support"
-#~ msgstr "内置应用"
-
-#~ msgid "Free and open-source apps"
-#~ msgstr "支持采用自由开源方式发布的内置应用；"
-
-#~ msgid "In-app purchases"
-#~ msgstr "应用内支付；"
-
-#~ msgid "App development tools"
-#~ msgstr "应用开发工具"
-
-#~ msgid "Co-founder of Elastos"
-#~ msgstr "亦来云联合创始人"
-
-#~ msgid ""
-#~ "Han Feng is a Visiting Scholar and Researcher at Columbia University and "
-#~ "former blockchain Advisor at Huawei Central Institute. He has a PhD in "
-#~ "quantum physics from Tsinghua University and has been a tutor at the "
-#~ "university's Icenter. He us also editor of Wanxiang Blockchain Labs book "
-#~ "series. Han teaches blockchain in Internet finance course in Tsinghua "
-#~ "University and has a lifetime membership of the Bitcoin foundation. He "
-#~ "previously led the important research project of China's Tenth Five-Year "
-#~ "Plan in Tsinghua University's “Evaluation and selection of innovative "
-#~ "talents based on Internet (big data)”. He also served as the Chinese "
-#~ "partner of the Oracle Education Foundation of the United States."
-#~ msgstr ""
-#~ "哥伦比亚大学访问研究员、前华为中央研究院区块链顾问。清华量子物理博士生，清"
-#~ "华大学iCenter导师，万向区块链实验室丛书主编。在清华大学的互联网金融课程中"
-#~ "讲授区块链。比特币基金会终生会员，曾任清华大学十五规划重点课题“基于网络(大"
-#~ "数据)的创新人才评价和选拔”项目负责人，美国甲骨文教育基金会中国合伙人。"
-
-#~ msgid ""
-#~ "Elastos Community Capital (ELA FOUNDATION LTD. ) is a community ecosystem-"
-#~ "investment fund initiated by Elastos’ private equity investors and "
-#~ "registered in Singapore, focusing on the Elastos ecosystem-project. The "
-#~ "foundation community covers more than 50,000 members. Through the high-"
-#~ "quality flow of the Elastos community, it can provide investment and "
-#~ "financing, brand promotion, community operation and other services for "
-#~ "ecological projects."
-#~ msgstr ""
-#~ "亦来社区资本（ELA FOUNDTION LTD.）是由亦来云私募投资人发起的社区生态投资基"
-#~ "金，专注于亦来云生态项目，注册地在新加坡。基金会社区覆盖成员达5万人以上，"
-#~ "通过亦来云社区的优质流量，可以为生态项目提供投融资、品牌宣传、社区运营等服"
-#~ "务。"
-
-#~ msgid ""
-#~ "Our mission is to deeply participate in project operations and share "
-#~ "project development dividends."
-#~ msgstr "我们的宗旨是深度参与项目运营，共享项目发展红利。"
-
-#~ msgid "ELAFUND"
-#~ msgstr "亦来资本"
-
-#~ msgid "The NewMall will officially launch."
-#~ msgstr "NewMall 正式上线"
