@@ -24,11 +24,13 @@
         <span class="glyphicon glyphicon-qrcode qrcode-thumbnail"></span>
     </a>
 </div>
+{% if language == "zh-cn" %}
 <div class="item visible-xs">
     <a href="{{ android_url }}" style="text-decoration: underline; font-size: 15px; display: inline-block; text-align: center; height: 40px; color: #888; padding-top: 15px; padding-bottom: 5px;" class="google-download">
         <img src="{% version "images/download-logo/newpay-download-icon.svg" %}" alt="" style="height: 100%; vertical-align: sub; padding-right: 10px;"/>{% trans "Download NewPay APK" %}
     </a>
 </div>
+{% endif %}
 
 {% if language == "zh-cn" %}
 <p class="guide-link">
