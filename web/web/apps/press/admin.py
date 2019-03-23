@@ -6,7 +6,8 @@ reload(sys)
 sys.setdefaultencoding('utf8')   
 
 class PressAdmin(admin.ModelAdmin):
-    fields = ('press_title', 'press_link', 'press_summary', 'press_partner', 'press_img')
-    list_display = ('press_title', 'press_link', 'created_at', 'press_partner', 'press_img')
+    fields = ('press_title', 'press_link', 'press_summary', 'press_partner', 'press_img','updated_at')
+    list_display = ('press_title', 'press_link', 'created_at', 'press_partner', 'press_img', 'updated_at')
+
 
 admin.site.register(models.PressModel, PressAdmin)
