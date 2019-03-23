@@ -7,11 +7,12 @@ class PressModel(models.Model):
     Entry of press.
     """
     press_title = models.CharField(max_length=200)
+    ###Add PressDate
     press_link = models.CharField(max_length=200)
     press_partner = models.CharField(max_length=200)
     press_summary = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(verbose_name='Medium Post Time')
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
     press_img = models.FileField(upload_to='uploads/press/%Y/%m/%d')
     

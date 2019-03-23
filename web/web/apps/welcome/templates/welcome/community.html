@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load utils %}
+{% load welcome_tags %}
 
 {% block title %}
 {% trans "Community" %}
@@ -70,6 +71,15 @@
                 <div class="col-md-3 col-sm-3 item">
                     <a href="https://t.me/Newtonproject" target="_blank"><img src="{% version "images/social/telegram.svg" %}" />Telegram</a>
                 </div>
+                {% if True|is_zh_language %}
+                <div class="col-md-3 col-sm-3 item">
+                    <a href="http://v.qq.com/vplus/ae778e5803773be81fb5fe43f2b7a119" target="_blank"><img src="{% version "images/social/tencentvideo.svg" %}" />Tencent Video</a>
+                </div>
+                {% else %}
+                <div class="col-md-3 col-sm-3 item">
+                    <a href="https://www.youtube.com/channel/UCO3hbqzT5abDbVKzK5EQigg" target="_blank"><img src="{% version "images/social/youtube.svg" %}" />YouTube</a>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>

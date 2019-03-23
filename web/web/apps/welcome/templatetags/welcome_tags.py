@@ -7,6 +7,7 @@ __author__ = 'tony.liu@diynova.com'
 import logging
 
 from django import template
+from django.utils import translation
 
 logger = logging.getLogger(__name__)
 register = template.Library()
@@ -53,3 +54,12 @@ def get_event_url(event):
     except Exception, inst:
         logger.exception("fail to get event url: %s" % str(inst))
         return ""
+
+
+@register.filter
+def is_zh_language(value):
+    is_zh = False
+    language = str(translation.get_language())
+    if language.startswith('zh'):
+        is_zh = True
+    return is_zh
