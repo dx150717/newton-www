@@ -12,7 +12,9 @@ class PressModel(models.Model):
     press_partner = models.CharField(max_length=200)
     press_summary = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(verbose_name='Medium Post Time')
+    updated_at = models.DateTimeField(auto_now=True)
+    #Add Medium Publish Date(By Author: ZeTian Zhang 2019-03-23 17:16:56)
+    medium_published_at = models.DateTimeField(verbose_name='Medium Post Time')
     status = models.IntegerField(default=codes.StatusCode.AVAILABLE.value, db_index=True)
     press_img = models.FileField(upload_to='uploads/press/%Y/%m/%d')
     
