@@ -76,12 +76,21 @@
 			<table class="table table-bordered" style="margin-bottom:0px;border: none;">
 				<tr>
 					<th style="border: none;"><strong>{% trans "Announcement" %}</strong>&nbsp;
-						<a href="https://www.newtonproject.org/announcement/2018/12/22/Newton3rnendingannouncement/" style="color: #888">
+                        {% ifequal language "zh-cn" %}
+						<a href="https://www.newtonproject.org/announcement/2018/12/22/Newton3rnendingannouncement/">
 							《关于牛顿第三轮通证交换结束的公告》</a>
 						&nbsp;
-						<a href="https://www.newtonproject.org/announcement/2019/02/18/new/" style="color: #888">
+						<a href="https://www.newtonproject.org/announcement/2019/02/18/new/">
 							《关于销毁牛顿第三轮通证交换中未完成交换NEW的公告》
 						</a>
+                        {% else %}
+						<a href="https://www.newtonproject.org/announcement/2018/12/07/ending-newtons-third-token-exchange/">
+							&lt;Announcement on ending Newton’s Third Token Exchange&gt;</a>
+						&nbsp;&nbsp;
+						<a href="https://www.newtonproject.org/announcement/2019/02/18/announcement-new-not-exchanged-3rd-token-exchange-have-been-destroyed/">
+							&lt;NEW Not Exchanged in the 3rd Token Exchange Have Been Destroyed&gt;
+						</a>                        
+                        {% endifequal %}
 					</th>
 				</tr>
 			</table>
