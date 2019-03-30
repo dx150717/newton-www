@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-22 14:04+0000\n"
+"POT-Creation-Date: 2019-03-30 02:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -583,6 +583,7 @@ msgstr "בלוג"
 #: web/apps/welcome/templates/welcome/announcement-detail.html:9
 #: web/apps/welcome/templates/welcome/announcement-detail.html:17
 #: web/apps/welcome/templates/welcome/events-detail.html:9
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:79
 #: web/apps/zinnia/models/category.py:26
 #: web/apps/zinnia/models_bases/entry.py:56
 msgid "Announcement"
@@ -2201,7 +2202,7 @@ msgid ""
 "org</a>."
 msgstr ""
 
-#: web/apps/press/models.py:22
+#: web/apps/press/models.py:25
 msgid "press"
 msgstr "לחץ על"
 
@@ -2510,10 +2511,10 @@ msgstr ""
 msgid "Community Voice"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/community.html:6
-#: web/apps/welcome/templates/welcome/community.html:13
-#: web/apps/welcome/templates/welcome/community.html:22
-#: web/apps/welcome/templates/welcome/community.html:90
+#: web/apps/welcome/templates/welcome/community.html:7
+#: web/apps/welcome/templates/welcome/community.html:14
+#: web/apps/welcome/templates/welcome/community.html:23
+#: web/apps/welcome/templates/welcome/community.html:100
 #: web/apps/welcome/templates/welcome/include-allocation.html:63
 #: web/apps/welcome/templates/welcome/sitemap.html:70
 #: web/apps/welcome/templates/welcome/wechat.html:6
@@ -2522,28 +2523,28 @@ msgstr ""
 msgid "Community"
 msgstr "קהילה"
 
-#: web/apps/welcome/templates/welcome/community.html:24
-#: web/apps/welcome/templates/welcome/community.html:125
+#: web/apps/welcome/templates/welcome/community.html:25
+#: web/apps/welcome/templates/welcome/community.html:135
 #: web/apps/welcome/templates/welcome/sitemap.html:71
 msgid "Add Community"
 msgstr "הוסף קהילה"
 
-#: web/apps/welcome/templates/welcome/community.html:51
+#: web/apps/welcome/templates/welcome/community.html:52
 msgid "Social Network"
 msgstr "רשת חברתית"
 
-#: web/apps/welcome/templates/welcome/community.html:60
+#: web/apps/welcome/templates/welcome/community.html:61
 #: web/apps/welcome/templates/welcome/include-community-region.html:15
 #: web/apps/welcome/templates/welcome/include-index-community.html:38
 #: web/apps/welcome/templates/welcome/wechat.html:20
 msgid "Scan QR Code to join us"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/community.html:79
+#: web/apps/welcome/templates/welcome/community.html:89
 msgid "Email List"
 msgstr "רשימת דואל"
 
-#: web/apps/welcome/templates/welcome/community.html:122
+#: web/apps/welcome/templates/welcome/community.html:132
 msgid "Create a Newton community with us"
 msgstr "צור קהילת ניוטון איתנו"
 
@@ -3413,48 +3414,48 @@ msgid "England"
 msgstr "אנגליה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:115
-#: web/apps/welcome/templates/welcome/include-community-region.html:291
+#: web/apps/welcome/templates/welcome/include-community-region.html:287
 msgid "Germany"
 msgstr "גרמניה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:119
-#: web/apps/welcome/templates/welcome/include-community-region.html:306
+#: web/apps/welcome/templates/welcome/include-community-region.html:302
 msgid "Portugal"
 msgstr "פורטוגל"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:123
-#: web/apps/welcome/templates/welcome/include-community-region.html:318
+#: web/apps/welcome/templates/welcome/include-community-region.html:314
 msgid "Romania"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:127
-#: web/apps/welcome/templates/welcome/include-community-region.html:345
+#: web/apps/welcome/templates/welcome/include-community-region.html:341
 msgid "Serbia"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:131
+#: web/apps/welcome/templates/welcome/include-community-region.html:474
 #: web/apps/welcome/templates/welcome/include-community-region.html:478
-#: web/apps/welcome/templates/welcome/include-community-region.html:482
 msgid "South America"
 msgstr "דרום אמריקה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:135
-#: web/apps/welcome/templates/welcome/include-community-region.html:494
+#: web/apps/welcome/templates/welcome/include-community-region.html:490
 msgid "Brazil"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:139
-#: web/apps/welcome/templates/welcome/include-community-region.html:465
+#: web/apps/welcome/templates/welcome/include-community-region.html:461
 msgid "Australia"
 msgstr "אוסטרליה"
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:143
-#: web/apps/welcome/templates/welcome/include-community-region.html:354
+#: web/apps/welcome/templates/welcome/include-community-region.html:350
 msgid "Belarus"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:147
-#: web/apps/welcome/templates/welcome/include-community-region.html:372
+#: web/apps/welcome/templates/welcome/include-community-region.html:368
 msgid "Ukraine"
 msgstr ""
 
@@ -3464,32 +3465,32 @@ msgid "Kazakhstan"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:155
-#: web/apps/welcome/templates/welcome/include-community-region.html:505
+#: web/apps/welcome/templates/welcome/include-community-region.html:501
 msgid "South Africa"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:159
-#: web/apps/welcome/templates/welcome/include-community-region.html:363
+#: web/apps/welcome/templates/welcome/include-community-region.html:359
 msgid "France"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:163
-#: web/apps/welcome/templates/welcome/include-community-region.html:336
+#: web/apps/welcome/templates/welcome/include-community-region.html:332
 msgid "Spain"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:167
-#: web/apps/welcome/templates/welcome/include-community-region.html:327
+#: web/apps/welcome/templates/welcome/include-community-region.html:323
 msgid "Italy"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:171
-#: web/apps/welcome/templates/welcome/include-community-region.html:381
+#: web/apps/welcome/templates/welcome/include-community-region.html:377
 msgid "Estonia"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-community-map.html:175
-#: web/apps/welcome/templates/welcome/include-community-region.html:390
+#: web/apps/welcome/templates/welcome/include-community-region.html:386
 msgid "Moldova"
 msgstr ""
 
@@ -3519,39 +3520,39 @@ msgstr "אירופה"
 msgid "United Kingdom"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:399
+#: web/apps/welcome/templates/welcome/include-community-region.html:395
 msgid "Poland"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:408
+#: web/apps/welcome/templates/welcome/include-community-region.html:404
 msgid "Bulgaria"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:417
+#: web/apps/welcome/templates/welcome/include-community-region.html:413
 msgid "Greece"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:426
+#: web/apps/welcome/templates/welcome/include-community-region.html:422
 msgid "Denmark"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:435
+#: web/apps/welcome/templates/welcome/include-community-region.html:431
 msgid "Czech Republic"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:444
+#: web/apps/welcome/templates/welcome/include-community-region.html:440
 msgid "Norway"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:453
+#: web/apps/welcome/templates/welcome/include-community-region.html:449
 msgid "Latvia"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:461
+#: web/apps/welcome/templates/welcome/include-community-region.html:457
 msgid "Oceania"
 msgstr "אוקיאניה"
 
-#: web/apps/welcome/templates/welcome/include-community-region.html:501
+#: web/apps/welcome/templates/welcome/include-community-region.html:497
 msgid "Africa"
 msgstr ""
 
@@ -3580,34 +3581,30 @@ msgid "BTC"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:20
-msgid "Lock Time"
-msgstr "זמן נעילה"
-
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:21
 msgid "Duration"
 msgstr "משך"
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:22
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:21
 msgid "Status"
 msgstr "מצב"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:22
+msgid "Lock Time"
+msgstr "זמן נעילה"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:26
 msgid "7.5&nbsp;billions"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:33
-msgid "1 Year"
-msgstr "1 שנה"
-
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:34
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:32
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:30
 msgid "March 1,2018 - April 30,2018"
 msgstr "במרץ 1,2018 - אפריל 30,2018"
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:35
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:48
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:64
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:34
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:63
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:33
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:58
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:89
@@ -3617,20 +3614,24 @@ msgstr "במרץ 1,2018 - אפריל 30,2018"
 msgid "Finished"
 msgstr "סיים"
 
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:35
+msgid "1 Year(from mainnet launched)"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:39
 msgid "6&nbsp;billions"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:46
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:62
-msgid "No Lock"
-msgstr "ללא נעילה"
-
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:47
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:57
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:54
 msgid "July 1,2018 - July 31,2018"
 msgstr "יולי 1,2018 - 31,2018 יולי"
+
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:48
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:64
+msgid "No Lock"
+msgstr "ללא נעילה"
 
 #: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:52
 msgid "1.5&nbsp;billions"
@@ -3648,7 +3649,7 @@ msgstr ""
 msgid "Actuals:"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:63
+#: web/apps/welcome/templates/welcome/include-economy-token-exchange.html:62
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange-mobile.html:88
 #: web/apps/welcome/templates/welcome/include-intro-token-exchange.html:84
 msgid "October 29，2018 - December 8, 2018"
@@ -4606,24 +4607,24 @@ msgid ""
 "devices and gateways, and NewChain IoT device development specifications."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-video.html:28
+#: web/apps/welcome/templates/welcome/include-video.html:32
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:84
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:604
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:605
 msgid "2018 Newton Community Node Conference"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-video.html:29
+#: web/apps/welcome/templates/welcome/include-video.html:33
 msgid ""
 "On December 11, 2018, Newton held its first community node conference at the "
 "MGM Cotai, Macao."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-video.html:34
+#: web/apps/welcome/templates/welcome/include-video.html:38
 msgid "What is Newton"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/include-video.html:35
+#: web/apps/welcome/templates/welcome/include-video.html:39
 #: web/apps/welcome/templates/welcome/index.html:21
 msgid "Newton: Infrastructure for the Community Economy"
 msgstr "ניוטון: תשתיות עבור כלכלה אקונומית"
@@ -9405,6 +9406,9 @@ msgid ""
 "Please input 6～16 characters，must contain upper-case, lower-case letters "
 "and numbers."
 msgstr ""
+
+#~ msgid "1 Year"
+#~ msgstr "1 שנה"
 
 #, fuzzy
 #~ msgid "The Digital Wallet of Newton Community Economy"
