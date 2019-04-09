@@ -71,6 +71,13 @@
 }
 
 @media(max-width: 768px) {
+
+    .VideoScroll{
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
     .video-container {
         height: auto;
     }
@@ -90,6 +97,8 @@
         padding-left: unset;
         padding-right: 5px;
         padding-top: 5px;
+        display: inline-block;
+        float:none;
 	}
 
 	.tabs-container .tab-container.padding-top-10 {
