@@ -10,14 +10,14 @@ function initIndexVideos () {
         var VideoObj = videojs('video-list-'+(video_id+1));
         VideoPlayerList[video_id+1] = VideoObj;
     }
-    console.log(VideoPlayerList);
+//    console.log(VideoPlayerList);
 
     $('.video-link').click(function(event){
         var videoID = $(this).attr("video_id");
-        console.log("Current Video ID: " + videoID);
+//        console.log("Current Video ID: " + videoID);
 
         for(var _video=0;_video<VideoNumber;_video++){
-            console.log(_video+1);
+//            console.log(_video+1);
             VideoPlayerList[_video+1].pause();
         }
 
@@ -33,33 +33,6 @@ function initIndexVideos () {
         });
 
     });
-}
-function NewtonVideoPlay(PlayID,VideoNumber,VideoIDList,ApiIDList,VideoList,VideoPlayer){
-        console.log(VideoNumber);
-        console.log(VideoPlayer);
-
-//    var VideoList = ['','newton-video-1','newton-video-2'];
-//    var VideoNumber = VideoList.length - 1; // Number Start From 1
-//
-//    var VideoIDList = ['','#newton-video-1','#newton-video-2'];
-//    var ApiIDList=['','#newton-video-1_html5_api','#newton-video-2_html5_api'];
-
-        for(var _video=1;_video<VideoNumber+1;_video++){
-            VideoPlayer[_video].pause();
-        }
-
-//        $("#newton-video-2").hide();
-        for(var _video_id=1;_video_id<VideoNumber+1;_video_id++){
-            if(_video_id != PlayID)
-                $(VideoIDList[_video_id]).hide();
-        }
-        $(VideoIDList[PlayID]).show();
-        $(ApiIDList[PlayID]).show();
-        videojs(VideoList[PlayID], {}, function() {
-            var player = VideoPlayer[PlayID];
-            window.player = this;
-            player.play();
-        });
 }
 
 initIndexVideos();
