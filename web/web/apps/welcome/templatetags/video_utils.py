@@ -46,12 +46,12 @@ class ShowHomepageVideoNode(template.Node):
                 '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
                 'https://newton-video.oss-cn-beijing.aliyuncs.com/EP5Newtech.mp4',display=''),
             #2
-            VideoItem(
-                _(u"2018 Newton Community Node Conference"),
-                _(u"On December 11, 2018, Newton held its first community node conference at the MGM Cotai, Macao."),
-                '%simages/meeting/videos/A.jpg' % settings.STATIC_URL,
-                'https://newton-video.oss-cn-beijing.aliyuncs.com/macao-2019-a.mp4'
-            ),
+            # VideoItem(
+            #     _(u"2018 Newton Community Node Conference"),
+            #     _(u"On December 11, 2018, Newton held its first community node conference at the MGM Cotai, Macao."),
+            #     '%simages/meeting/videos/A.jpg' % settings.STATIC_URL,
+            #     'https://newton-video.oss-cn-beijing.aliyuncs.com/macao-2019-a.mp4'
+            # ),
             #3
             #4
             #5
@@ -63,8 +63,8 @@ class ShowHomepageVideoNode(template.Node):
                 '%simages/whats-newton.jpeg' % settings.STATIC_URL,
                 'https://www.newtonproject.org/filestorage/uploads/newton-introduction.mp4'),
         ]
-        #You must manual specific the video_sum for high performance
-        video_sum = 3
+        #You need manual specific the video_sum for high performance
+        video_sum = 2
         context = RequestContext(request, locals())
         html = template.render(context)
         return html
