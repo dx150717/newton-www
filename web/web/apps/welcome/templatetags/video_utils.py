@@ -46,16 +46,40 @@ class ShowHomepageVideoNode(template.Node):
                 '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
                 'https://newton-video.oss-cn-beijing.aliyuncs.com/EP5Newtech.mp4',display=''),
             #2
-            # VideoItem(
-            #     _(u"2018 Newton Community Node Conference"),
-            #     _(u"On December 11, 2018, Newton held its first community node conference at the MGM Cotai, Macao."),
-            #     '%simages/meeting/videos/A.jpg' % settings.STATIC_URL,
-            #     'https://newton-video.oss-cn-beijing.aliyuncs.com/macao-2019-a.mp4'
-            # ),
+            VideoItem(
+                _(u"New Blockchain"),
+                _(u"How does Newton use the Blockchain?"),
+                '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/EP2NewBlockchain.mp4'
+            ),
             #3
+            VideoItem(
+                _(u"New Ecosystem"),
+                _(u"How to build this Ecosystem?"),
+                '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/EP3NewEcosystem.mp4'
+            ),
             #4
+            VideoItem(
+                _(u"New Coin"),
+                _(u"What are the utilities of New Coin?"),
+                '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/EP4NewCoin.mp4'
+            ),
             #5
+            VideoItem(
+                _(u"New Philosophy"),
+                _(u"How can we upgrade the economy?"),
+                '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/EP1NewPhilosophy.mp4'
+            ),
             #6
+            VideoItem(
+                _(u"2018 Newton Community Node Conference"),
+                _(u"On December 11, 2018, Newton held its first community node conference at the MGM Cotai, Macao."),
+                '%simages/meeting/videos/A.jpg' % settings.STATIC_URL,
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/macao-2019-a.mp4'
+            ),
             #7
             VideoItem(
                 _(u"What is Newton"),
@@ -64,7 +88,7 @@ class ShowHomepageVideoNode(template.Node):
                 'https://www.newtonproject.org/filestorage/uploads/newton-introduction.mp4'),
         ]
         #You need manual specific the video_sum for high performance
-        video_sum = 2
+        video_sum = 7
         context = RequestContext(request, locals())
         html = template.render(context)
         return html
