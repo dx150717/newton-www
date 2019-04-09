@@ -30,11 +30,12 @@
     background-color: #ddd;
 }
 
-.VideoScroll {
-    overflow-y: auto;
-}
-
 @media (min-width: 991px) {
+
+    .VideoScroll {
+        overflow-y: auto;
+    }
+
     .tabs-container {
         height: 100%;
     }
@@ -88,6 +89,7 @@
 	.tabs-container .tab-container.padding-bottom-10 {
         padding-left: unset;
         padding-right: 5px;
+        padding-top: 5px;
 	}
 
 	.tabs-container .tab-container.padding-top-10 {
