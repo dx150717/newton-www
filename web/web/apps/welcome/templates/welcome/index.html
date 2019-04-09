@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load utils %}
+{% load video_utils %}
 
 {% block webpush %}
 <meta name="vapid-key" content="{{ vapid_key }}">
@@ -66,7 +67,7 @@
     </div>
 </section>
 
-{% include "welcome/include-video.html" %}
+{% show_homepage_video %}
 
 {% comment %}
 {% include "welcome/countdown.html" %}
@@ -123,7 +124,7 @@
 <script type="text/javascript">
 var video_player;
 $(document).ready(function(){
-    videojs("newton-video-1", {}, function(){
+    videojs("video-list-1", {}, function(){
         video_player = this;
         video_player.on('ended', function(){
             video_player.load();

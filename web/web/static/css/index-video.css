@@ -30,6 +30,10 @@
     background-color: #ddd;
 }
 
+.VideoScroll {
+    overflow-y: auto;
+}
+
 @media (min-width: 991px) {
     .tabs-container {
         height: 100%;
@@ -103,3 +107,4 @@
         overflow: hidden;
 	}
 }
+
