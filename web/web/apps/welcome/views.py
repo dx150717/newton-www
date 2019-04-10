@@ -42,7 +42,7 @@ def show_home_view(request):
         if language.startswith(language_item[0]):
             language_code = language_item[1]
             break
-    presses = PressModel.objects.order_by('-created_at')[0:3]
+    presses = PressModel.objects.order_by('-medium_published_at')[0:3]
     entry = EntryDetail()
     activity_entry = entry.get_queryset().filter(language=language_code, status=PUBLISHED,
                                                  entry_type=TYPE_ANNOUNCEMENT, entry_sub_type=0).order_by(
@@ -60,7 +60,7 @@ def show_home_view(request):
         operation_entry.urls = operation_entry.get_absolute_url().replace('/blog/', '/announcement/')
     if blog_entry:
         blog_entry.urls = blog_entry.get_absolute_url()
-    banner_press = PressModel.objects.order_by('-created_at').first()
+    banner_press = PressModel.objects.order_by('-medium_published_at').first()
     webpush_settings = getattr(settings, 'WEBPUSH_SETTINGS', {})
     vapid_key = webpush_settings.get('VAPID_PUBLIC_KEY')
     user = request.user
@@ -193,7 +193,7 @@ def show_business_proposal_view(request):
 
 
 def show_community_view(request):
-    presses = PressModel.objects.order_by('-created_at')[0:4]
+    presses = PressModel.objects.order_by('-medium_published_at')[0:4]
     language = translation.get_language()
     language_code = codes.EntryLanguage.ENGLISH.value
     for language_item in settings.LANGUAGE_LIST:

@@ -9,4 +9,4 @@ class PressView(generic.ListView):
     paginate_by = 20
     
     def get_queryset(self):
-        return models.PressModel.objects.order_by('-created_at')
+        return models.PressModel.objects.order_by('-medium_published_at')
