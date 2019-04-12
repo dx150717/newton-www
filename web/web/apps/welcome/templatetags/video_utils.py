@@ -60,12 +60,12 @@ class ShowHomepageVideoNode(template.Node):
                 'https://newton-video.oss-cn-beijing.aliyuncs.com/EP3NewEcosystem.mp4'
             ),
             #4
-            VideoItem(
-                _(u"NEW Token"),
-                _(u"What are the utilities of NEW Token?"),
-                '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
-                'https://newton-video.oss-cn-beijing.aliyuncs.com/EP4NewCoin.mp4'
-            ),
+            #VideoItem(
+            #    _(u"NEW Token"),
+            #    _(u"What are the utilities of NEW Token?"),
+            #    '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
+            #    'https://newton-video.oss-cn-beijing.aliyuncs.com/EP4NewCoin.mp4'
+            #),
             #5
             VideoItem(
                 _(u"New Philosophy"),
