@@ -88,7 +88,7 @@ class ShowHomepageVideoNode(template.Node):
                 'https://www.newtonproject.org/filestorage/uploads/newton-introduction.mp4'),
         ]
         #You need manual specific the video_sum for high performance
-        video_sum = 7
+        video_sum = len(videos)
         context = RequestContext(request, locals())
         html = template.render(context)
         return html
