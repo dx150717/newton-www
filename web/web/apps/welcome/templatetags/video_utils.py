@@ -61,8 +61,8 @@ class ShowHomepageVideoNode(template.Node):
             ),
             #4
             VideoItem(
-                _(u"New Coin"),
-                _(u"What are the utilities of New Coin?"),
+                _(u"NEW Token"),
+                _(u"What are the utilities of NEW Token?"),
                 '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
                 'https://newton-video.oss-cn-beijing.aliyuncs.com/EP4NewCoin.mp4'
             ),
