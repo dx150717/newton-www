@@ -3,24 +3,41 @@
 
 <section class="listed-exchange-notice section bg-gray">
     <div class="row">
-        <div class="col-md-12">
+        <div class="listed-exchange-title col-md-12">
             <h2 class="title text-center">
                 <strong>{% trans "Listed Exchange" %}</strong>
             </h2>
         </div>
-        <a href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000229141" target="_blank">
-            <div align="center">
-                <img class="listed_exchange" src="{% version "images/huobi-singin-exchange.png" %}"/>
+        <div class="listed-exchange-items col-md-6 col-md-offset-3" align="center">
+            <div class="listed-exchange-item">
+                <a href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000229141" target="_blank">
+                    <img class="listed_exchange" src="{% version "images/huobi-singin-exchange.png" %}"/>
+                </a>
             </div>
-        </a>
+        </div>
     </div>
 </section>
 
 {% block css %}
 <style>
-    .listed-exchange-notice{padding-bottom: 50px;}
+    .listed-exchange-notice{padding-bottom: 70px;}
+
+    .listed-exchange-items{padding-top: 10px;}
+
+    .listed_exchange{width:100%;}
+    @media (min-width: 991px) {
+    .listed-exchange-item{width: 450px;padding-bottom: 10px;}
+    }
+    @media (max-width: 991px) and (min-width: 768px) {
+    }
     @media(max-width: 768px){
-        .listed_exchange{width:60%;padding-top: 30px;}
+        .listed-exchange-notice{padding-bottom: 45px;}
+        .listed-exchange-title{padding-bottom: 20px;}
+        .listed-exchange-item{
+            width: 260px;
+            margin-bottom: 14px;
+        }
+        .listed_exchange{width:100%;}
     }
 </style>
 {% endblock %}
