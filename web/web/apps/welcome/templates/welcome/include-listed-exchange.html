@@ -8,7 +8,7 @@
                 <strong>{% trans "Listed Exchange" %}</strong>
             </h2>
         </div>
-        <div class="listed-exchange-items" align="center">
+        <div class="listed-exchange-items col-md-6 col-md-offset-3" align="center">
             <div class="listed-exchange-item">
                 <a href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000229141" target="_blank">
                     <img class="listed_exchange" src="{% version "images/huobi-singin-exchange.png" %}"/>
@@ -26,13 +26,17 @@
 
     .listed_exchange{width:100%;}
     @media (min-width: 991px) {
-        .listed-exchange-items{
+        /*.listed-exchange-items{
             margin-left: 15%;
-        }
+        }*/
         .listed-exchange-item{
-            float: left;
+            /*float: left;
             width: 260px;
             margin-left: 40px;
+            padding-bottom: 10px;
+            float:left;*/
+            width: 300px;
+            padding-left: 10px;
             padding-bottom: 10px;
         }
     }
