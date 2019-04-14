@@ -1,7 +1,7 @@
-<!--{% load i18n %}-->
-<!--{% load utils %}-->
+{% load i18n %}
+{% load utils %}
 
-<div class="token-exchange-notice section bg-gray" id="signin-exchange-section">
+<section class="listed-exchange-notice section bg-gray">
     <div class="row">
         <div class="col-md-12">
             <h2 class="title text-center">
@@ -10,8 +10,17 @@
         </div>
         <a href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000229141" target="_blank">
             <div align="center">
-                <img src="{% version "images/huobi-singin-exchange.png" %}" />
+                <img class="listed_exchange" src="{% version "images/huobi-singin-exchange.png" %}"/>
             </div>
         </a>
     </div>
-</div>
+</section>
+
+{% block css %}
+<style>
+    .listed-exchange-notice{padding-bottom: 30px;}
+    @media(max-width: 768px){
+        .listed_exchange{width:60%;}
+    }
+</style>
+{% endblock %}
