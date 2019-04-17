@@ -2,6 +2,7 @@
 {% load i18n %}
 {% load utils %}
 {% load download_utils %}
+{% load video_utils %}
 
 {% block title %}
 {% trans "NewPay" %}
@@ -107,11 +108,10 @@
                 </div>
             </div>
         </div>
-    </div>  
-
+    </div>
+    {% show_newpay_video %}
 </section>
 {% endblock %}
-
 {% block css %}
 <style type="text/css">
     #float-nav {
@@ -145,9 +145,14 @@
     }
 </style>
 <link href="{% version "css/index-announce.css" %}" rel="stylesheet">
+<link href="{% version "css/gallery-clean.css" %}" rel="stylesheet">
+<link href="{% version "css/index-video.css" %}" rel="stylesheet">
+<link href="{% version "css/video-js.css" %}" rel="stylesheet">
 {% endblock %}
 
 {% block js %}
+<script src="{% version "js/video.js" %}"></script>
+<script src="{% version "js/index-video.js" %}"></script>
 {% endblock %}
 
 {% block inline_js %}
@@ -175,6 +180,18 @@
                 ;
             });
         };
+    });
+    var VideoNumber_NewPay = $("#video_block").attr("video_sum");
+    var VideoPlayerList_NewPay = new Array(VideoNumber_NewPay+1);
+    VideoPlayerList_NewPay.push(null);
+    for(var video_id=0;video_id < VideoNumber_NewPay;video_id++){
+        var VideoObj = videojs('video-list-'+(video_id+1));
+        VideoPlayerList_NewPay[video_id+1] = VideoObj;
+    }
+    $("#videoModal").on('hidden.bs.modal', function (e) {
+        for(var _video=0;_video<VideoNumber_NewPay;_video++){
+            VideoPlayerList_NewPay[_video+1].pause();
+        }
     });
 </script>
 {% endblock %}
