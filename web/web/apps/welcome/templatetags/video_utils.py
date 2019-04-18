@@ -41,7 +41,7 @@ class ShowHomepageVideoNode(template.Node):
         videos = [
             #1
             VideoItem(
-                _(u"The tech behind Newton"),
+                _(u"The Tech Behind Newton"),
                 _(u"What is Newton's Key Tech"),
                 '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
                 'https://newton-video.oss-cn-beijing.aliyuncs.com/EP5Newtech.mp4',display=''),
