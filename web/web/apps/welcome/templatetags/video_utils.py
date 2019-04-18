@@ -114,12 +114,12 @@ class ShowNewPayVideoNode(template.Node):
                 '%simages/newpay/videos/How_to_Keep_Newtons_NewPay_Wallet_Safe.jpg' % settings.STATIC_URL,
                 'http://localhost/newton/How_to_Keep_Newtons_NewPay_Wallet_Safe.mp4'),
 
-            # 3
+            # 3 Attention Plz, This is Multi Language!
             VideoItem(
                 _(u"How To Use NewPay To Earn Money"),
                 _(u"NewPay App Tutorial"),
                 '%simages/newpay/videos/How_to_use_NewPay_to_Earn_Money.jpg' % settings.STATIC_URL,
-                'http://localhost/newton/How_to_use_NewPay_to_Earn_Money.mp4'),
+                _('http://localhost/newton/How_to_use_NewPay_to_Earn_Money.mp4')),
 
             # 4
             VideoItem(
