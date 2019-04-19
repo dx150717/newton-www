@@ -106,27 +106,27 @@ class ShowNewPayVideoNode(template.Node):
                 _(u"All About NewForce And How to Earn NEW"),
                 _(u"NewForce Introduction"),
                 '%simages/newpay/videos/All_About_NewForce_and_how_to_earn_NEW.jpg' % settings.STATIC_URL,
-                'http://localhost/newton/All_About_NewForce_and_how_to_earn_NEW.mp4', display=''),
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/newpayintro/All_About_NewForce_and_how_to_earn_NEW.mp4', display=''),
             # 2
             VideoItem(
                 _(u"How To Keep Newton's NewPay Wallet Safe?"),
                 _(u"Keep your Mnemonic Phrase safe"),
                 '%simages/newpay/videos/How_to_Keep_Newtons_NewPay_Wallet_Safe.jpg' % settings.STATIC_URL,
-                'http://localhost/newton/How_to_Keep_Newtons_NewPay_Wallet_Safe.mp4'),
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/newpayintro/How_to_Keep_Newtons_NewPay_Wallet_Safe.mp4'),
 
             # 3 Attention Plz, This is Multi Language!
             VideoItem(
                 _(u"How To Use NewPay To Earn Money"),
                 _(u"NewPay App Tutorial"),
                 '%simages/newpay/videos/How_to_use_NewPay_to_Earn_Money.jpg' % settings.STATIC_URL,
-                _('http://localhost/newton/How_to_use_NewPay_to_Earn_Money.mp4')),
+                _('https://newton-video.oss-cn-beijing.aliyuncs.com/newpayintro/How_to_use_NewPay_to_Earn_Money.mp4')),
 
             # 4
             VideoItem(
                 _(u"Only Crypto Wallet You May Need In the Future"),
                 _(u"Crypto Strategy"),
                 '%simages/newpay/videos/Only_Crypto_Wallet_You_May_Need_in_the_Future.jpg' % settings.STATIC_URL,
-                'http://localhost/newton/Only_Crypto_Wallet_You_May_Need_in_the_Future.mp4')
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/newpayintro/Only_Crypto_Wallet_You_May_Need_in_the_Future.mp4')
         ]
         # You need manual specific the video_sum for high performance
         video_sum = len(videos)
