@@ -8,10 +8,15 @@
                 <strong>{% trans "Listed Exchange" %}</strong>
             </h2>
         </div>
-        <div class="listed-exchange-items col-md-6 col-md-offset-3" align="center">
-            <div class="listed-exchange-item">
-                <a href="https://huobiglobal.zendesk.com/hc/zh-cn/articles/360000229141" target="_blank">
+        <div class="listed-exchange-items col-md-8 col-md-offset-2">
+            <div class="listed-exchange-item listed-exchange-left">
+                <a href={% trans "https://huobiglobal.zendesk.com/hc/en-us/articles/360000229141" %} target="_blank">
                     <img class="listed_exchange" src="{% version "images/huobi-singin-exchange.png" %}"/>
+                </a>
+            </div>
+            <div class="listed-exchange-item listed-exchange-right">
+                <a href={% trans "https://www.huobi.co.kr/en-US/" %} target="_blank">
+                    <img class="listed_exchange" src="{% version "images/huobi-singin-exchange-korean.png" %}"/>
                 </a>
             </div>
         </div>
@@ -22,22 +27,23 @@
 <style>
     .listed-exchange-notice{padding-bottom: 70px;}
 
-    .listed-exchange-items{padding-top: 10px;}
-
     .listed_exchange{width:100%;}
     @media (min-width: 991px) {
-        /*.listed-exchange-items{
-            margin-left: 15%;
-        }*/
         .listed-exchange-item{
-            /*float: left;
             width: 260px;
-            margin-left: 40px;
             padding-bottom: 10px;
-            float:left;*/
+            float:left;
             width: 300px;
             padding-left: 10px;
             padding-bottom: 10px;
+        }
+        .listed-exchange-left{
+            float:left;
+            margin-left: 50px;
+        }
+        .listed-exchange-right{
+            float:right;
+            margin-right: 50px;
         }
     }
     @media (max-width: 991px) and (min-width: 768px) {
@@ -45,11 +51,26 @@
     @media(max-width: 768px){
         .listed-exchange-notice{padding-bottom: 45px;}
         .listed-exchange-title{padding-bottom: 20px;}
+        .listed-exchange-items{
+
+        }
         .listed-exchange-item{
             width: 260px;
             margin-bottom: 14px;
+            float:none;
+            margin-left:0px;
+            margin-right:0px;
         }
         .listed_exchange{width:100%;}
+
+        .listed-exchange-left{
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .listed-exchange-right{
+            margin-left:auto;
+            margin-right:auto;
+        }
     }
 </style>
 {% endblock %}
