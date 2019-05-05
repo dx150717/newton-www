@@ -1,13 +1,13 @@
 {% load i18n %}
 {% load utils %}
 {% load welcome_tags %}
-<!--
+
 <div>
     <div class="container newpay-summary">
         <div class="row" video_sum="{{ video_sum }}" id="video_block">
--->
+
             <!-- Modal -->
-<!--
+
             <div class="videoModalClass modal fade" id="videoModal" tabindex="-1" role="dialog"
                  aria-labelledby="videoModalLabel" aria-hidden="true" style="top:0%;">
                 <div class="modal-dialog" role="document">
@@ -34,20 +34,19 @@
                 </div>
             </div>
         </div>
--->
+
         <!-- Gallery -->
-<!--
+
         <div class="row gallery-container">
-            <!--<h1>{% trans "NewPay Tutorial" }</h1>-->
--->
-<!--
-            <h1>NewPay教程</h1>
+            <div class="text">
+                <h2>{% trans "Tutorial" %}</h2>
+            </div>
             <div class="tz-gallery">
                 <div class="row">
                     {% for item in videos %}
                     <div class="video-link col-sm-6 col-md-4" video_id="{{ forloop.counter }}" data-toggle="modal" data-target="#videoModal">
                         <div class="thumbnail">
-                            <img src="{{ item.poster }}" alt="Park" style="width:100%">
+                            <img src="{{ item.poster }}" alt="Park" style="width:100%;margin-top:0px">
                             <div class="caption">
                                 <h3>{{ item.title }}</h3>
                                 <p>{{ item.summary }}</p>
@@ -60,5 +59,10 @@
         </div>
     </div>
 </div>
--->
-
+<style>
+@media (min-width: 991px) {
+    .video-link{
+        width:32%;
+    }
+}
+</style>
