@@ -185,4 +185,4 @@ NEWTON_NEWPAY_ADHOC_DOWNLOAD = ""
 DAPP_REDPOCKET_SCHEME = 'newpay://dapp?dapp_id=redpocket&pocket_id=%s'
 DAPP_REDPOCKET_DOWNLOAD_URL = '/download/newpay/mainnet/dapp/redpocket/download/?pocket_id=%s'
 DAPP_REDPOCKET_REDIRECT_URL = '/download/newpay/mainnet/'
-DAPP_REDPOCKET_HEP_API = 'https://api.newtonproject.org/api/v1/dapp/redpocket/public/'
+DAPP_REDPOCKET_HEP_API = 'https://example.com/api/v1/dapp/redpocket/public/'
