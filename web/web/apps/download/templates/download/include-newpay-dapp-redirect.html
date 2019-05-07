@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load utils %}
+<div role="main" id="main" class="container main">
+    <div class="row">
+        
+        <span class="pull-left">
+            <img src="{% version "images/newpay/logo.png" %}" class="logo" />
+        </span>
+    </div>
+    <div class="row redirect-content">
+        <div class="profile">
+            <p class="text-center head">
+                {% if giver_avatar %}
+                <img src="{{ giver_avatar }}"/>
+                {% else %}
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                {% endif %}
+            </p>
+            <p class="text-center name">{{ giver_name }}</p>
+            <p class="text-center message">{{ pocket_message }}</p>
+        </div>
+        <p class="text-center">
+            <a href="{{ redirect_scheme|safe }}"><img src="/static/images/newpay/btn_open_nor{% if is_zh %}_zh{% endif %}.png" class="open" /></a>
+        </p>
+    </div>
+    <div class="row redirect-footer">
+        <p class="text-center slogan">
+            <img src="/static/images/newpay/word_slogan.png" />
+        </p>
+    </div>
+</div>

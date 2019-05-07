@@ -11,4 +11,6 @@ from . import views
 urlpatterns = patterns('',
                        url(r'^newpay/mainnet/$', views.show_newpay_download_view),
                        url(r'^newpay/guide/$', views.show_newpay_guide_view),
+                       url(r'^newpay/mainnet/dapp/(?P<dapp_id>(redpocket))/$', views.show_newpay_dapp_home_view),
+                       url(r'^newpay/mainnet/dapp/(?P<dapp_id>(redpocket))/download/$', views.show_newpay_dapp_download_view),
                        )

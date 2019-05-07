@@ -180,3 +180,9 @@ NEWPAY_FOR_ANDROID_ALI_SG_DOWNLOAD_URL = ""
 NEWTON_NEWPAY_ANDROID_URL = "https://play.google.com/store/apps/details?id=org.newtonproject.newpay.android.release"
 NEWTON_NEWPAY_IOS_URL = "https://itunes.apple.com/app/newpay/id1439660801"
 NEWTON_NEWPAY_ADHOC_DOWNLOAD = ""
+
+# redpocket settings
+DAPP_REDPOCKET_SCHEME = 'newpay://dapp?dapp_id=redpocket&pocket_id=%s'
+DAPP_REDPOCKET_DOWNLOAD_URL = '/download/newpay/mainnet/dapp/redpocket/download/?pocket_id=%s'
+DAPP_REDPOCKET_REDIRECT_URL = '/download/newpay/mainnet/'
+DAPP_REDPOCKET_HEP_API = 'https://api.newtonproject.org/api/v1/dapp/redpocket/public/'

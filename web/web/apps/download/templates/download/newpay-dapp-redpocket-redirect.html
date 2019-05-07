@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load utils %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="keywords" content="{% trans "Newton,NewPay,Download" %}"/>
+        <title>{% trans "NewPay Download" %}</title>
+        <!-- Fav and touch icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <!-- CSS -->
+        <!-- HTML5 IE Enabling Script -->
+        <link rel="shortcut icon" href="{% version "images/logo-new.png" %}" type="image/x-icon" />
+    	<!--==== style css ====-->
+        <link href="{% version "css/bootstrap.min.css" %}" rel="stylesheet" />
+        <link href="{% version "css/dapp.css" %}" rel="stylesheet" />
+        <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116218760-1"></script>
+    </head>
+    <body class="dapp-redpocket">
+        <div role="main" id="main" class="container main">
+            <a href="">{% trans "Open" %}</a>
+        </div>
+        <script type="text/javascript" src="{% version "js/dapp.js" %}"></script>
+    </body>
+</html>
+

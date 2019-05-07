@@ -1,0 +1,70 @@
+{% load i18n %}
+{% load utils %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta name="keywords" content="{% trans "Newton,NewPay,Download" %}"/>
+        <title>{% trans "Redeem RedPocket" %}</title>
+        <!-- Fav and touch icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <!-- CSS -->
+        <!-- HTML5 IE Enabling Script -->
+        <link rel="shortcut icon" href="{% version "images/logo-new.png" %}" type="image/x-icon" />
+    	<!--==== style css ====-->
+        <link href="{% version "css/bootstrap.min.css" %}" rel="stylesheet" />
+        <link href="{% version "css/libs/nsprogress/nsprogress.css" %}" rel="stylesheet" />
+        <link href="{% version "css/style.css" %}" rel="stylesheet" />
+        <link href="{% version "css/dapp.css" %}" rel="stylesheet" />
+        
+        <script src="{% version "js/jquery-2.1.4.min.js" %}"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116218760-1"></script>
+        <!--[if lt IE 9]>
+        <script src="{% version "js/html5shiv/3.7.2/html5shiv.min.js" %}"></script>
+        <script src="{% version "js/respond/1.4.2/respond.min.js" %}"></script>
+        <![endif]-->
+    </head>
+    <body class="dapp-redpocket">
+        {% include "developer/include-newpay-dapp-redirect.html" %}
+        
+        <div id="zh-mask" class="zh-mask">
+	        <img src="{% version "images/newpay/mask-zh.png" %}" />
+        </div>
+        <div id="en-mask" class="en-mask">
+		    <img src="{% version "images/newpay/mask-en.png" %}" />
+	    </div>
+        
+        <div id="id_loading"></div>
+        
+         <script type="text/javascript" src="{% version "js/dapp.js" %}"></script>
+
+         <script language="javascript">
+             window.onload = function() {
+               var is_zh = {% if is_zh %} true {% else %}false{% endif %};
+               var redirect_scheme = "{{ redirect_scheme|safe }}";
+               var download_url = "{{ download_url }}";
+
+               var u = navigator.userAgent;
+               var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+               var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+               var zhMask = document.getElementById('zh-mask');
+               var enMask = document.getElementById('en-mask');
+               
+               if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger") {
+                 if (is_zh) {
+                   zhMask.style.display = 'block';
+                 } else {
+                   enMask.style.display = 'block';
+                 }
+               } else {
+                 checkDirect(redirect_scheme, download_url);
+               }
+          }
+
+       </script>         
+    </body>
+</html>
+
