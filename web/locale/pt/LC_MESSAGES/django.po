@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-12 04:41+0000\n"
+"POT-Creation-Date: 2019-05-08 02:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -175,12 +175,38 @@ msgstr ""
 msgid "没有海外Apple ID如何下载?"
 msgstr ""
 
+#: web/apps/download/templates/download/newpay-dapp-redpocket-download.html:9
+#: web/apps/download/templates/download/newpay-dapp-redpocket-loading.html:9
+#: web/apps/download/templates/download/newpay-dapp-redpocket-redirect.html:9
 #: web/apps/download/templates/download/newpay-download-invite.html:9
 msgid "Newton,NewPay,Download"
 msgstr ""
 
+#: web/apps/download/templates/download/newpay-dapp-redpocket-download.html:10
+#: web/apps/download/templates/download/newpay-dapp-redpocket-loading.html:10
+msgid "Redeem RedPocket"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-dapp-redpocket-download.html:40
+msgid "You've received "
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-dapp-redpocket-download.html:40
+msgid "'s redpocket"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-dapp-redpocket-download.html:48
+msgid ""
+"To Receive NEW, You have to download NewPay and create a NEW wallet address"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-dapp-redpocket-redirect.html:10
 #: web/apps/download/templates/download/newpay-download-invite.html:10
 msgid "NewPay Download"
+msgstr ""
+
+#: web/apps/download/templates/download/newpay-dapp-redpocket-redirect.html:25
+msgid "Open"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download-invite.html:32
@@ -204,15 +230,15 @@ msgstr ""
 
 #: web/apps/download/templates/download/newpay-download.html:7
 #: web/apps/download/templates/download/newpay-download.html:23
-#: web/apps/welcome/templates/welcome/newpay.html:7
-#: web/apps/welcome/templates/welcome/newpay.html:16
+#: web/apps/welcome/templates/welcome/newpay.html:8
+#: web/apps/welcome/templates/welcome/newpay.html:17
 #: web/apps/welcome/templates/welcome/sitemap.html:45
 #: web/templates/header.html:42 web/templates/header.html.py:234
 msgid "NewPay"
 msgstr ""
 
 #: web/apps/download/templates/download/newpay-download.html:25
-#: web/apps/welcome/templates/welcome/newpay.html:21
+#: web/apps/welcome/templates/welcome/newpay.html:22
 #, fuzzy
 msgid "The Digital Wallet of <br/>Newton Community Economy"
 msgstr "Economia Comunitária de Newton"
@@ -1829,7 +1855,7 @@ msgstr ""
 
 #: web/apps/events/templates/zinnia/skeleton.html:6
 #: web/apps/welcome/templates/welcome/dashboard.html:9
-#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:17
+#: web/apps/zinnia/templates/zinnia/skeleton.html:6 web/templates/base.html:18
 #: web/templates/email-template.html:32
 msgid "Newton"
 msgstr ""
@@ -4280,6 +4306,19 @@ msgstr ""
 msgid "WEMERGE"
 msgstr ""
 
+#: web/apps/welcome/templates/welcome/include-listed-exchange.html:8
+#, fuzzy
+msgid "Listed Exchange"
+msgstr "Troca de Token"
+
+#: web/apps/welcome/templates/welcome/include-listed-exchange.html:13
+msgid "https://huobiglobal.zendesk.com/hc/en-us/articles/360000229141"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/include-listed-exchange.html:18
+msgid "https://www.huobi.co.kr/en-US/"
+msgstr ""
+
 #: web/apps/welcome/templates/welcome/include-notice-token-exchange.html:6
 msgid "The third round of Newton's token exchange is coming soon."
 msgstr ""
@@ -4695,7 +4734,7 @@ msgstr "Newton: Infraestrutura para a economia comunitária"
 msgid "More..."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/index.html:118
+#: web/apps/welcome/templates/welcome/index.html:116
 msgid ""
 "Paying tribute to Sir Isaac Newton, the great scientist who made a "
 "significant impact on our lives!"
@@ -5774,74 +5813,78 @@ msgid ""
 "suggestions from all parties involved before forming final conclusions."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:18
+#: web/apps/welcome/templates/welcome/newpay.html:19
 #, fuzzy
 msgid "NewPay 1.0 <br/>Coming Soon"
 msgstr "Foi oficialmente lançado a NewMall."
 
-#: web/apps/welcome/templates/welcome/newpay.html:29
+#: web/apps/welcome/templates/welcome/newpay.html:30
 msgid "newpay-screenshot.png"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:45
-#: web/apps/welcome/templates/welcome/newpay.html:55
+#: web/apps/welcome/templates/welcome/newpay.html:46
+#: web/apps/welcome/templates/welcome/newpay.html:56
 msgid "newpay-transfer.png"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:49
+#: web/apps/welcome/templates/welcome/newpay.html:50
 #, fuzzy
 msgid "Digital Wallet on NewChain"
 msgstr "Marketing Digital"
 
-#: web/apps/welcome/templates/welcome/newpay.html:50
+#: web/apps/welcome/templates/welcome/newpay.html:51
 msgid "NewPay is your reliable digital wallet of <strong>NEW</strong>."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:65
+#: web/apps/welcome/templates/welcome/newpay.html:66
 #, fuzzy
 msgid "Community Governance"
 msgstr "Voz da Comunidade"
 
-#: web/apps/welcome/templates/welcome/newpay.html:66
+#: web/apps/welcome/templates/welcome/newpay.html:67
 msgid ""
 "Vote to take part in community governance and receive incentives in "
 "<strong>NEW</strong>."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:70
+#: web/apps/welcome/templates/welcome/newpay.html:71
 msgid "newpay-node.png"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:80
-#: web/apps/welcome/templates/welcome/newpay.html:91
+#: web/apps/welcome/templates/welcome/newpay.html:81
+#: web/apps/welcome/templates/welcome/newpay.html:92
 msgid "newpay-mining.png"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:84
+#: web/apps/welcome/templates/welcome/newpay.html:85
 msgid "Mining"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:85
+#: web/apps/welcome/templates/welcome/newpay.html:86
 msgid "Mining means rewards."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:86
+#: web/apps/welcome/templates/welcome/newpay.html:87
 msgid ""
 "Contribute to Newton's economy <br/>and get your <strong>NEW</strong> "
 "incentives."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:101
+#: web/apps/welcome/templates/welcome/newpay.html:102
 msgid "Brand New User Interface"
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:102
+#: web/apps/welcome/templates/welcome/newpay.html:103
 msgid ""
 "Our fresh user interface is more refined, elegant, and efficient than ever."
 msgstr ""
 
-#: web/apps/welcome/templates/welcome/newpay.html:106
+#: web/apps/welcome/templates/welcome/newpay.html:107
 msgid "newpay-homepage.png"
+msgstr ""
+
+#: web/apps/welcome/templates/welcome/newpay_video.html:42
+msgid "Tutorial"
 msgstr ""
 
 #: web/apps/welcome/templates/welcome/newton-community-node-conference.html:6
@@ -9453,7 +9496,7 @@ msgid "History Version："
 msgstr ""
 
 #: web/apps/welcome/templatetags/video_utils.py:44
-msgid "The tech behind Newton"
+msgid "The Tech Behind Newton"
 msgstr ""
 
 #: web/apps/welcome/templatetags/video_utils.py:45
@@ -9476,14 +9519,6 @@ msgstr ""
 msgid "How to build this Ecosystem?"
 msgstr ""
 
-#: web/apps/welcome/templatetags/video_utils.py:64
-msgid "NEW Token"
-msgstr ""
-
-#: web/apps/welcome/templatetags/video_utils.py:65
-msgid "What are the utilities of NEW Token?"
-msgstr ""
-
 #: web/apps/welcome/templatetags/video_utils.py:71
 msgid "New Philosophy"
 msgstr ""
@@ -9500,6 +9535,44 @@ msgstr ""
 
 #: web/apps/welcome/templatetags/video_utils.py:85
 msgid "What is Newton"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:106
+msgid "All About NewForce And How to Earn NEW"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:107
+msgid "NewForce Introduction"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:112
+msgid "How To Keep Newton's NewPay Wallet Safe?"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:113
+msgid "Keep your Mnemonic Phrase safe"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:119
+msgid "How To Use NewPay To Earn Money"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:120
+msgid "NewPay App Tutorial"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:122
+msgid ""
+"https://newton-video.oss-cn-beijing.aliyuncs.com/newpayintro/"
+"How_to_use_NewPay_to_Earn_Money.mp4"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:126
+msgid "Only Crypto Wallet You May Need In the Future"
+msgstr ""
+
+#: web/apps/welcome/templatetags/video_utils.py:127
+msgid "Crypto Strategy"
 msgstr ""
 
 #: web/apps/zinnia/models_bases/entry.py:57
