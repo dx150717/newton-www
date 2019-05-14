@@ -39,12 +39,18 @@ class ShowHomepageVideoNode(template.Node):
         request = context['request']
         template = loader.get_template('welcome/include-video.html')
         videos = [
+            #0
+            VideoItem(
+                _(u"Newton Roadmap"),
+                _(u"Newton's Growing Process"),
+                '%simages/meeting/videos/newroadmap.png' % settings.STATIC_URL,
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/New%20Roadmap.mp4', display=''),
             #1
             VideoItem(
                 _(u"The Tech Behind Newton"),
                 _(u"What is Newton's Key Tech"),
                 '%simages/meeting/videos/new-tech.jpg' % settings.STATIC_URL,
-                'https://newton-video.oss-cn-beijing.aliyuncs.com/EP5Newtech.mp4',display=''),
+                'https://newton-video.oss-cn-beijing.aliyuncs.com/EP5Newtech.mp4'),
             #2
             VideoItem(
                 _(u"New Blockchain"),
