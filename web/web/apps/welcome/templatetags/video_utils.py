@@ -41,8 +41,8 @@ class ShowHomepageVideoNode(template.Node):
         videos = [
             #0
             VideoItem(
-                _(u"Newton Roadmap"),
-                _(u"Newton's Growing Process"),
+                _(u"Newton's Roadmap"),
+                _(u"Newton's Process"),
                 '%simages/meeting/videos/newroadmap.png' % settings.STATIC_URL,
                 'https://newton-video.oss-cn-beijing.aliyuncs.com/New%20Roadmap.mp4', display=''),
             #1
