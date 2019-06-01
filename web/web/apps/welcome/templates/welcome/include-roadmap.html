@@ -64,14 +64,33 @@
                 </div>
             </div>
             <div class="entry-lg">
+                <div class="date-lg">
+                    <dl class="date-top">
+                        <dt>2019.3</dt>
+                        <dd>{% trans "Community incentive launched." %}</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="entry-lg">
                 <!--<div class="delay">-->
                     <div class="date-lg">
-                        <dl class="date-top">
+                        <dl class="date-bottom">
                             <dt>2019.4</dt>
                             <dd>{% trans "NewMall officially launched." %}</dd>
                         </dl>
                     </div>
                 <!--</div>-->
+            </div>
+            <div class="entry-lg">
+                <div class="delay">
+                    <div class="date-lg">
+                        <dl class="date-top">
+                            <dt>2019.6</dt>
+                            <dd>{% trans "NewPay 1.3 launching." %}</dd>
+                            <dd>{% trans "Multiple DApps coming." %}</dd>
+                        </dl>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- end -->
@@ -121,11 +140,26 @@
                 </div>
             </div>
             <div class="entry">
+                <div class="date"></div>
+                <div class="body">
+                    <dt>2019.3</dt>
+                        <dd>{% trans "Community incentive launched." %}</dd>
+                </div>
+            </div>
+            <div class="entry">
+                <div class="date"></div>
+                <div class="body">
+                    <dt>2019.4</dt>
+                        <dd>{% trans "NewMall launched." %}</dd>
+                </div>
+            </div>
+            <div class="entry">
                 <div class="delay">
                     <div class="date"></div>
                     <div class="body">
-                        <dt>2019.Q2</dt>
-                        <dd>{% trans "NewMall launched." %}</dd>
+                        <dt>2019.6</dt>
+                        <dd>{% trans "NewPay 1.3 launching." %}</dd>
+                        <dd>{% trans "Multiple DApps coming." %}</dd>
                     </div>
                 </div>
             </div>
@@ -137,17 +171,18 @@
 
 <style>
     .entry-lg .date-lg {
-        width: 150px;
+        width: 115px;
     }
-
+    /*.entry-lg .date-lg {*/
+    /*    width: 150px;*/
+    /*}*/
     .entry-lg .delay dl dt,
     .delay dt {
         color: #ccc;
     }
-
     @media (max-width: 1199px) and (min-width: 992px) {
         .entry-lg .date-lg {
-            width: 125px;
+            width: 95px;
         }
     }
 </style>
