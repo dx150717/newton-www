@@ -2560,3 +2560,19 @@ input[name="expect_btc"], input[name="expect_ela"]{
         line-height: 1.1em;
     }
 }
+
+/*css for header*/
+@media (min-width: 768px) {
+    .hid {
+        white-space: nowrap;
+        max-width: 85px;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+    .hid_log{
+        white-space: nowrap;
+        max-width: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+}

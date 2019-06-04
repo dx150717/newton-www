@@ -32,31 +32,31 @@
                     </li>
                     {% endcomment %}
                     <li>
-                        <a href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
+                        <a class="hid" title='{% trans "Industry" %}' href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
                     </li>
                     <li>
-                        <a href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
+                        <a class="hid" title='{% trans "Technology" %}' href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
                     </li>
                     <li>
-                        <a href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
+                        <a class="hid" title='{% trans "NewPay" %}' href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
                     </li>
                     <li>
-                        <a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
+                        <a class="hid" title='{% trans "Community" %}' href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
                     </li>
                     <li>
-                        <a href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
+                        <a class="hid" title='{% trans "Economy" %}' href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
                     </li>
                     <li>
-                        <a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
+                        <a class="hid" title='{% trans "NewFund" %}' href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
                     </li>
                     <li>
-                        <a href="{{ settings.NEWTON_DEVELOPER_URL }}" {% language_change_header_style %}>{% trans "Developer" %}</a>
+                        <a class="hid" title='{% trans "Developer" %}' href="{{ settings.NEWTON_DEVELOPER_URL }}" {% language_change_header_style %}>{% trans "Developer" %}</a>
                     </li>
 <!--                    <li>-->
 <!--                        <a href="/nep/" {% language_change_header_style %}>{% trans "NEP" %}</a>-->
 <!--                    </li>-->
                     <li>
-                        <a href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
+                        <a class="hid" title='{% trans "NewExplorer" %}' href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
                     </li>
 
 
@@ -225,31 +225,31 @@
                     </li>
                     {% endcomment %}
                     <li>
-                        <a href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
+                        <a class="hid" title='{% trans "Industry" %}' href="/solutions/" {% language_change_header_style %}>{% trans "Industry" %}</a>
                     </li>
                     <li>
-                        <a href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
+                        <a class="hid" title='{% trans "Technology" %}' href="/technology/" {% language_change_header_style %}>{% trans "Technology" %}</a>
                     </li>
                     <li>
-                        <a href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
+                        <a class="hid" title='{% trans "NewPay" %}' href="/newpay/" {% language_change_header_style %}>{% trans "NewPay" %}</a>
                     </li>
                     <li>
-                        <a href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
+                        <a class="hid" title='{% trans "Community" %}' href="/community/" {% language_change_header_style %}>{% trans "Community" %}</a>
                     </li>
                     <li>
-                        <a href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
+                        <a class="hid" title='{% trans "Economy" %}' href="/economy/" {% language_change_header_style %}>{% trans "Economy" %}</a>
                     </li>
                     <li>
-                        <a href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
+                        <a class="hid" title='{% trans "NewFund" %}' href="/newfund/" {% language_change_header_style %}>{% trans "NewFund" %}</a>
                     </li>
                     <li>
-                        <a href="{{ settings.NEWTON_DEV_URL }}" {% language_change_header_style %}>{% trans "Developer" %}</a>
+                        <a class="hid" title='{% trans "Developer" %}' href="{{ settings.NEWTON_DEVELOPER_URL }}" {% language_change_header_style %}>{% trans "Developer" %}</a>
                     </li>
 <!--                    <li>-->
 <!--                        <a href="/nep/" {% language_change_header_style %}>{% trans "NEP" %}</a>-->
 <!--                    </li>-->
                     <li>
-                        <a href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
+                        <a class="hid" title='{% trans "NewExplorer" %}' href="{{ settings.NEWTON_EXPLORER_URL }}" target="_blank" {% language_change_header_style %}>{% trans "NewExplorer" %}</a>
                     </li>
 
 
@@ -313,18 +313,18 @@
                             </li>
                         {% else %}
                             <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
+                                <a class="hid_log" title='{% trans "Register" %}' href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
                             </li>
                             <li class="toolbar-item hidden-xs hidden-sm">
-                                <a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
+                                <a class="hid_log" title='{% trans "Login" %}' href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
                             </li>
                         {% endif %}
                     {% else %}
                         <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
+                            <a class="hid_log" title='{% trans "Register" %}' href="{{ settings.NEWTON_HOME_URL }}/register/" {% russian_change_header_style %}>{% trans "Register" %}</a>
                         </li>
                         <li class="toolbar-item hidden-xs hidden-sm">
-                            <a href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
+                            <a class="hid_log" title='{% trans "Login" %}' href="{{ settings.NEWTON_HOME_URL }}/login/" {% russian_change_header_style %}>{% trans "Login" %}</a>
                         </li>
                     {% endif %}
                     <li class="language-drop-down visible-xs-block visible-sm-block">
@@ -390,7 +390,6 @@
 {% endif %}
 
 <style>
-
 @media (max-width: 768px) {
     nav.navbar.sticky-navigation.NavBg {
         max-height: 900px;
