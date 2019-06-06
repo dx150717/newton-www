@@ -144,6 +144,7 @@ NEWTON_WEB_URL = ''
 NEWTON_HOME_URL = ''
 NEWTON_GRAVITY_URL = ''
 NEWTON_DEVELOPER_URL = ''
+NEWTON_EXPLORER_URL = ''
 
 # celery settings
 import djcelery
