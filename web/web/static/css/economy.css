@@ -29,3 +29,15 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (min-width: 992px) {
+    .new-address {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .new-address {
+        font-size: 1.2rem;
+    }
+}
