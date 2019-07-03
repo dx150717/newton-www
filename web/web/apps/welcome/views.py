@@ -249,6 +249,10 @@ def show_economy_view(request):
     return render(request, 'welcome/economy.html', locals())
 
 
+def show_release_view(request):
+    return render(request, 'welcome/release.html', locals())
+
+
 def show_whitepaper_view(request):
     return render(request, 'welcome/whitepaper.html', locals())
 
